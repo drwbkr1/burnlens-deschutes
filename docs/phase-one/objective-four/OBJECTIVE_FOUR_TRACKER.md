@@ -4,22 +4,23 @@
 
 **Repository Operating System, Issue Architecture, and Codex Work Protocol**
 
-Objective Four created the repository operating system for BurnLens Deschutes: issues, labels, project-board logic, branch/PR rules, Codex guidance, prompt/build logging, Phase Two intake templates, and transition records.
+Objective Four created the repository operating system for BurnLens Deschutes: issues, labels, project-board logic, branch/PR rules, Codex guidance, prompt/build logging, Phase Two intake templates, transition records, and a release-note baseline.
 
 ## Current status
 
 | Field | Status |
 |---|---|
 | Parent issue | #119 |
-| Completed task issues | #117, #118, #120, #121, #122, #123, #124, #125, #126, #127, #128 |
-| Quality pass issue | #141 |
-| Remaining planned issue before full Objective Four close | #129 - P1O4-T12 Create Objective Four release note |
-| Objective status | Portfolio-quality repo-operations baseline created; release note still pending |
+| Completed task issues | #117, #118, #120, #121, #122, #123, #124, #125, #126, #127, #128, #141 |
+| Release-note task issue | #129 |
+| Release-note artifact | `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` |
+| Proposed tag | `v0.0.4-objective-four-repo-ops` |
+| Objective status | Portfolio-quality repo-operations baseline drafted for release-note PR review |
 | Data-work status | Not started and still prohibited |
 
 ## Boundary
 
-Objective Four is documentation, repository-control, prompt-control, and intake-template work only.
+Objective Four is documentation, repository-control, prompt-control, release-note, and intake-template work only.
 
 It does not authorize data acquisition, imagery download, final AOI selection, retained source data, label creation, mask creation, baseline generation, model training, inference, metric computation, map publication, website demo integration, outside validation claims, or endorsement claims.
 
@@ -39,7 +40,7 @@ Prompt-assisted work that changes files or creates task artifacts must also crea
 
 | Artifact | Status | Purpose |
 |---|---|---|
-| `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md` | Updated in QA pass | Current objective map and completion tracker. |
+| `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md` | Updated in Task 12 branch | Current objective map and completion tracker. |
 | `docs/phase-one/objective-four/ISSUE_ARCHITECTURE.md` | Merged | Defines parent/task issue structure and task sequencing. |
 | `docs/phase-one/objective-four/ISSUE_TAXONOMY.md` | Merged | Defines labels, issue types, metadata, and classification logic. |
 | `docs/phase-one/objective-four/PROJECT_BOARD_SPEC.md` | Merged | Defines project-board fields, views, and status logic. |
@@ -49,11 +50,12 @@ Prompt-assisted work that changes files or creates task artifacts must also crea
 | `.github/PULL_REQUEST_TEMPLATE.md` | Merged | Standard PR checklist. |
 | `AGENTS.md` | Merged | Repository-level Codex and prompt-assisted work instructions. |
 | `templates/CODEX_TASK_PACKET.md` | Merged | Reusable task packet for Codex or prompt-assisted repository work. |
-| `records/PROMPT_BUILD_LOG.md` | Merged; QA-updated | Prompt/build log protocol and index. |
+| `records/PROMPT_BUILD_LOG.md` | Updated in Task 12 branch | Prompt/build log protocol and index. |
 | `templates/PROMPT_LOG_ENTRY.md` | Merged | Reusable prompt-log entry template. |
 | Phase Two intake templates in `templates/` | Merged | Blank AOI, source, access, CRS, provenance, claim, and no-go templates. |
-| `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md` | Merged; QA-updated | Closeout standard and pre-data gates. |
-| `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Merged; QA-updated | First context block for Objective Five or Phase Two. |
+| `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md` | Updated in Task 12 branch | Closeout standard and pre-data gates. |
+| `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Updated in Task 12 branch | First context block for Objective Five or Phase Two. |
+| `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Drafted in Task 12 branch | Objective Four repo-operations release-note baseline. |
 
 ## Task completion table
 
@@ -70,8 +72,8 @@ Prompt-assisted work that changes files or creates task artifacts must also crea
 | P1O4-T09 | #126 | #138 | `records/PROMPT_BUILD_LOG.md`; `templates/PROMPT_LOG_ENTRY.md` | Merged |
 | P1O4-T10 | #127 | #139 | Phase Two intake templates; Task 10 prompt log entry | Merged |
 | P1O4-T11 | #128 | #140 | closeout; handoff; Task 11 prompt log entry | Merged |
-| P1O4-QA | #141 | pending | tracker, closeout, handoff, prompt-log cohesion updates | In review after PR creation |
-| P1O4-T12 | #129 | pending | `OBJECTIVE_FOUR_RELEASE_NOTE.md` | Not started |
+| P1O4-QA | #141 | #142 | tracker, closeout, handoff, prompt-log cohesion updates | Merged |
+| P1O4-T12 | #129 | pending | `OBJECTIVE_FOUR_RELEASE_NOTE.md`; adjacent tracker/closeout/handoff/log updates | Drafted in branch |
 
 ## Research validation summary
 
@@ -104,21 +106,22 @@ Prompt-assisted work that changes files or creates task artifacts must also crea
 | Phase Two can begin intake records. | Satisfied | Seven blank intake templates. |
 | Phase Two data use is blocked until intake gates exist. | Satisfied | Closeout, handoff, intake templates, and prompt log entries preserve no-data boundary. |
 | Public/portfolio claims are constrained. | Satisfied | Claims checks and warning language across governing docs. |
-| Objective Four is fully released/tagged. | Pending | P1O4-T12 remains. |
+| Release-note artifact is drafted. | Satisfied in branch | `OBJECTIVE_FOUR_RELEASE_NOTE.md`. |
+| Objective Four is fully released/tagged. | Pending | Release-note PR must merge; tag/release can be created after merge if desired. |
 
-## Safe claims after this QA pass
+## Safe claims after this Task 12 branch
 
 ```text
-BurnLens has a portfolio-level repository operating system for issue-controlled, branch-controlled, PR-reviewed, prompt-logged work.
+BurnLens has a drafted Objective Four release note for the repo-operations baseline.
 ```
 
 ```text
 BurnLens has blank Phase Two intake templates and pre-data gates, but no Phase Two data work has begun.
 ```
 
-## Unsupported claims after this QA pass
+## Unsupported claims after this Task 12 branch
 
-- Objective Four has been released/tagged.
+- Objective Four has been tagged/released.
 - Phase Two data work has begun.
 - An AOI has been selected.
 - Data has been downloaded.
@@ -127,4 +130,4 @@ BurnLens has blank Phase Two intake templates and pre-data gates, but no Phase T
 
 ## Handoff
 
-Proceed to P1O4-T12 only after the QA PR is reviewed and merged. Task 12 should use this tracker, the closeout, and the handoff to create the Objective Four release note and final repo-control baseline summary.
+After the Task 12 PR is reviewed and merged, update parent issue #119 with the final Objective Four completion summary and decide whether to create the proposed tag `v0.0.4-objective-four-repo-ops`.
