@@ -4,7 +4,7 @@
 
 **Objective Two is complete.**
 
-Objective Two defined BurnLens Deschutes' first computer vision task tightly enough that later Phase One objectives and Phase Two data/label/baseline work can proceed without ambiguity, scope creep, or operational overclaiming.
+Objective Two defined BurnLens Deschutes' first computer vision task tightly enough that later Phase One objectives and Phase Two data, label, baseline, and model work can proceed without ambiguity, scope creep, or operational overclaiming.
 
 This handoff is documentation-only. It does not authorize data ingestion, imagery download, AOI tile selection, label creation, baseline generation, model training, inference, metric computation, model-card completion, website demo integration, or public performance claims.
 
@@ -14,7 +14,7 @@ Objective Two answers:
 
 > What exactly is the first BurnLens computer vision task, what should it output, how should it be evaluated, what can go wrong, and what boundaries must govern future model or baseline outputs?
 
-The resulting answer is a constrained, transparent, portfolio-safe CV task definition.
+The result is a constrained, transparent, portfolio-safe CV task definition.
 
 ## Completed task index
 
@@ -31,7 +31,7 @@ The resulting answer is a constrained, transparent, portfolio-safe CV task defin
 | P1O2-T09 — Define evaluation metrics plan | #61 | #68 | `EVALUATION_METRICS_PLAN.md` | Selected IoU/Jaccard as the primary metric with supporting metrics and exclusion-mask rules. |
 | P1O2-T10 — Define known failure modes | #70 | #77 | `FAILURE_MODES.md` | Defined imagery, label, model, geospatial, metric, and communication failure modes. |
 | P1O2-T11 — Define CV-specific use boundaries | #79 | #81 | `CV_USE_BOUNDARIES.md` | Locked allowed/prohibited uses and required visible warning language. |
-| P1O2-T12 — Create Objective Two final handoff | #83 | TBD | `OBJECTIVE_TWO_FINAL_HANDOFF.md` | Closes the objective and prepares transition to the next objective. |
+| P1O2-T12 — Create Objective Two final handoff | #83 | #84 | `OBJECTIVE_TWO_FINAL_HANDOFF.md` | Closed Objective Two and prepared transition to the next objective. |
 
 ## Locked CV task
 
@@ -49,29 +49,21 @@ imagery → preprocessing → segmentation or baseline mask → raster output �
 
 ## Locked target
 
-### Primary target
-
-The first target is:
+Primary target:
 
 > **Active-fire / hotspot-informed binary fire mask.**
 
-This target is selected because it creates a direct bridge between public active-fire/hotspot reference sources and a future segmentation-style portfolio workflow.
-
-### Fallback target
-
-The fallback target is:
+Fallback target:
 
 > **Burn-scar binary mask.**
 
-Fallback may be used only if Phase Two shows active-fire / hotspot-informed labels are too weak, sparse, noisy, misaligned, or otherwise indefensible for a portfolio model.
-
-Changing to the fallback target requires a documented decision update.
+The fallback may be used only if Phase Two shows active-fire / hotspot-informed labels are too weak, sparse, noisy, misaligned, or otherwise indefensible for a portfolio model. Changing to the fallback target requires a documented decision update.
 
 ## Locked class handling
 
 Future label logic must preserve at least three pathways:
 
-| Value / path | Meaning | Rule |
+| Path | Meaning | Rule |
 |---|---|---|
 | Positive | Fire-relevant / target-positive | May be included as positive class. |
 | Negative / background | Not target-positive under current label rules | May be included as background. |
@@ -95,55 +87,21 @@ input tile
 → documented run package
 ```
 
-Future outputs must distinguish:
+Future outputs must distinguish official/reference sources, reference-derived labels, baseline outputs, model outputs, map overlays, and portfolio interpretations.
 
-- official/reference sources
-- reference-derived labels
-- baseline outputs
-- model outputs
-- map overlays
-- portfolio interpretations
+## Imagery and label assumptions
 
-No artifact may blur those categories.
-
-## Imagery assumptions
-
-Imagery remains a Phase Two feasibility question.
-
-Candidate imagery/source categories include:
-
-- Sentinel-2 MSI
-- Landsat Collection 2 Level-2
-- NASA FIRMS / MODIS / VIIRS active-fire products
-- harmonized Landsat/Sentinel sources
-- public sample imagery if needed for prototype scaffolding
+Imagery remains a Phase Two feasibility question. Candidate categories include Sentinel-2 MSI, Landsat Collection 2 Level-2, NASA FIRMS / MODIS / VIIRS active-fire products, harmonized Landsat/Sentinel sources, and public sample imagery if needed for prototype scaffolding.
 
 No final imagery source, AOI tile, band set, cloud mask, preprocessing method, or data-access path has been selected by Objective Two.
 
-## Label assumptions
-
-Future labels may be:
-
-- reference-derived
-- weak
-- manually reviewed
-- baseline-derived
-- excluded or unknown where evidence is insufficient
-
-Active-fire/hotspot products may support reference, baseline, weak-label, sampling, or comparison logic, but must not be treated as pixel-perfect ground-truth segmentation masks unless separately validated.
+Future labels may be reference-derived, weak, manually reviewed, baseline-derived, or excluded/unknown where evidence is insufficient. Active-fire/hotspot products may support reference, baseline, weak-label, sampling, or comparison logic, but must not be treated as pixel-perfect ground-truth segmentation masks unless separately validated.
 
 ## Baseline comparison requirement
 
 Future model outputs must be compared against simpler non-model baselines before any model-value claim.
 
-Candidate baselines include:
-
-- all-background sanity baseline
-- class-prior/random sanity baseline
-- FIRMS reference-display baseline
-- FIRMS buffer/raster baseline
-- simple spectral/threshold baseline if supported by data feasibility
-- burn-scar fallback baseline only if the target changes
+Candidate baselines include all-background, class-prior/random, FIRMS reference-display, FIRMS buffer/raster, simple spectral/threshold if supported by data feasibility, and burn-scar fallback baseline only if the target changes.
 
 The baseline question is:
 
@@ -155,19 +113,7 @@ The first model family is:
 
 > **U-Net-style binary semantic segmentation.**
 
-This is a future implementation-planning decision only.
-
-It does not authorize:
-
-- model code
-- architecture implementation
-- dependency selection
-- weights
-- training
-- inference
-- metric computation
-- model-card completion
-- public performance claims
+This is a future implementation-planning decision only. It does not authorize model code, architecture implementation, dependency selection, weights, training, inference, metric computation, model-card completion, or public performance claims.
 
 Fallback families include DeepLabV3-style segmentation, FCN-style segmentation, lightweight encoder-decoder CNN, or a baseline-only path if data and labels are not defensible enough to train a model.
 
@@ -177,32 +123,13 @@ Future evaluation will use:
 
 > **IoU / Jaccard as the primary segmentation metric.**
 
-Supporting metrics and checks include:
+Supporting metrics and checks include Dice/F1, precision, recall, false-positive review, false-negative review, positive-area difference, per-scene or per-tile summaries, component/polygon quality once vectorization exists, and qualitative failure-mode review.
 
-- Dice / F1
-- precision
-- recall
-- false-positive review
-- false-negative review
-- positive-area difference
-- per-scene or per-tile summaries
-- component/polygon quality once vectorization exists
-- qualitative failure-mode review
-
-Every future model metric must be reported against at least one relevant baseline.
-
-Unknown, exclude, review-needed, nodata, or quality-masked regions must not be silently treated as background.
+Every future model metric must be reported against at least one relevant baseline. Unknown, exclude, review-needed, nodata, or quality-masked regions must not be silently treated as background.
 
 ## Known failure modes
 
-Future work must explicitly track at least these failure-mode categories:
-
-- imagery/source-quality failure modes
-- reference/label failure modes
-- baseline/model failure modes
-- geospatial-processing failure modes
-- evaluation/metric failure modes
-- communication/use-boundary failure modes
+Future work must explicitly track imagery/source-quality, reference/label, baseline/model, geospatial-processing, evaluation/metric, and communication/use-boundary failure modes.
 
 Required responses are:
 
@@ -219,26 +146,9 @@ Example risks include cloud, cloud shadow, smoke/haze, bright bare ground, roads
 
 Future BurnLens CV outputs are experimental portfolio artifacts only.
 
-Allowed uses:
+Allowed uses include portfolio demonstration, methods explanation, reproducibility demonstration, non-operational screening examples, error analysis, and case-study storytelling.
 
-- portfolio demonstration
-- methods explanation
-- reproducibility demonstration
-- non-operational screening examples
-- error analysis
-- case-study storytelling
-
-Prohibited uses:
-
-- emergency alerts
-- evacuation decisions
-- routing or road-closure guidance
-- tactical fire decisions
-- incident command
-- property-level hazard determinations
-- insurance/legal/regulatory decisions
-- official map replacement
-- standalone public interpretation
+Prohibited uses include emergency alerts, evacuation decisions, routing or road-closure guidance, tactical fire decisions, incident command, property-level hazard determinations, insurance/legal/regulatory decisions, official map replacement, and standalone public interpretation.
 
 Required visible warning language:
 
@@ -260,39 +170,13 @@ BurnLens outputs are experimental portfolio artifacts and must not override, rep
 
 ## Versioning and traceability expectations for later work
 
-Future data, baseline, model, evaluation, run, map, or portfolio artifacts should remain traceable to:
-
-- repository commit
-- repo/app version
-- AOI version where relevant
-- dataset version where relevant
-- label schema version where relevant
-- baseline version where relevant
-- model version where relevant
-- source imagery/reference metadata
-- run ID
-- timestamp
-- warning flags and limitations
+Future data, baseline, model, evaluation, run, map, or portfolio artifacts should remain traceable to repository commit, repo/app version, AOI version where relevant, dataset version where relevant, label schema version where relevant, baseline version where relevant, model version where relevant, source imagery/reference metadata, run ID, timestamp, warning flags, and limitations.
 
 No public output should be portfolio-ready unless it can be traced.
 
 ## Phase boundary after Objective Two
 
-Objective Two does not authorize:
-
-- data ingestion
-- final AOI tile selection
-- imagery download
-- label creation
-- dataset splitting
-- baseline generation
-- model code
-- model training
-- inference
-- metric computation
-- model-card completion
-- website demo integration
-- public performance claims
+Objective Two does not authorize data ingestion, final AOI tile selection, imagery download, label creation, dataset splitting, baseline generation, model code, model training, inference, metric computation, model-card completion, website demo integration, or public performance claims.
 
 Those remain future work.
 
@@ -308,7 +192,7 @@ Recommended first next-objective tasks:
 
 1. Create the next objective tracker issue.
 2. Define candidate data/source feasibility criteria.
-3. Inventory source access paths for Sentinel-2, Landsat, FIRMS, and any allowed public sample imagery.
+3. Inventory source access paths for Sentinel-2, Landsat, FIRMS, and allowed public sample imagery.
 4. Define AOI tile-selection criteria without downloading imagery yet, unless the next objective explicitly authorizes source testing.
 5. Update research validation logs and claims register.
 6. Preserve all Objective Two boundaries in any future data decision.
@@ -330,4 +214,4 @@ Recommended first next-objective tasks:
 
 ## Final closeout statement
 
-Objective Two is complete when this artifact and the running Objective Two handoff are merged to `main`.
+Objective Two is complete.
