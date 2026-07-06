@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: BurnLens repository workflow
+    url: https://github.com/drwbkr1/burnlens-deschutes
+    about: Use repository issues and pull requests for controlled BurnLens task work. For emergency, incident, evacuation, or official wildfire information, use official public agencies instead of BurnLens.
