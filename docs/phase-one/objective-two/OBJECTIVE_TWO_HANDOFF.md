@@ -33,6 +33,7 @@ GitHub issue
 | P1O2-T07 — Define baseline comparison plan | #23 | `p1o2/t07-baseline-comparison` | #44 | `docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md` | Complete |
 | P1O2-T08 — Define first model family | #46 | `p1o2/t08-model-family-decision` | #58 | `docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md` | Complete |
 | P1O2-T09 — Define evaluation metrics plan | #61 | `p1o2/t09-evaluation-metrics` | #68 | `docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md` | Complete |
+| P1O2-T10 — Define known failure modes | #70 | `p1o2/t10-failure-modes` | #77 | `docs/phase-one/objective-two/FAILURE_MODES.md` | Complete |
 
 ## Current locked decisions
 
@@ -90,28 +91,35 @@ Unknown, exclude, review-needed, nodata, or quality-masked regions must not be s
 
 Every future model metric must be reported against at least one relevant baseline.
 
+### Known failure modes
+
+Future BurnLens work must explicitly track imagery/source-quality, reference/label, baseline/model, geospatial-processing, evaluation/metric, and communication/use-boundary failure modes.
+
+Required responses include flag, review, exclude, or stop. Unknown or excluded areas must not be silently treated as background.
+
+Examples include cloud, cloud shadow, smoke or haze, bright bare ground, roads or rooftops, water or glare, snow or ice, sensor saturation, nodata, terrain occlusion, low spatial resolution, mixed pixels, stale imagery, hotspot point uncertainty, label noise, class imbalance, CRS mismatch, raster-grid mismatch, threshold sensitivity, and official-use confusion risk.
+
 ## Still in scope for Objective Two
 
 Remaining Objective Two tasks should define:
 
-- failure modes
 - CV-specific use boundaries
 - final Objective Two handoff
 
 ## Next task
 
-**P1O2-T10 — Define known failure modes**
+**P1O2-T11 — Define CV-specific use boundaries**
 
 Recommended branch:
 
 ```text
-p1o2/t10-failure-modes
+p1o2/t11-cv-use-boundaries
 ```
 
 Recommended artifact:
 
 ```text
-docs/phase-one/objective-two/FAILURE_MODES.md
+docs/phase-one/objective-two/CV_USE_BOUNDARIES.md
 ```
 
 ## Phase boundary
