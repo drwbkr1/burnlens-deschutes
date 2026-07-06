@@ -4,15 +4,16 @@
 
 BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOINT wildfire screening project for Deschutes County, Oregon. It is not official wildfire information, not emergency guidance, and not evacuation, routing, tactical, or incident-command support. Official sources govern.
 
-Objective Four created the repository operating system for future work: issue architecture, issue taxonomy, project-board specification, branch/PR workflow, issue and PR templates, Codex guidance, Codex task packet, prompt/build log protocol, Phase Two intake templates, closeout/handoff docs, and a QA-refreshed tracker.
+Objective Four created the repository operating system for future work: issue architecture, issue taxonomy, project-board specification, branch/PR workflow, issue and PR templates, Codex guidance, Codex task packet, prompt/build log protocol, Phase Two intake templates, closeout/handoff docs, QA-refreshed tracker, and release-note baseline.
 
 Use this handoff before starting Objective Five or Phase Two.
 
 ## Current objective state
 
-- Phase One / Objective Four task issues #117 through #128 are merged/closed.
-- Quality pass issue #141 should close when the QA PR merges.
-- Parent issue #119 should remain open until the P1O4-T12 release/tag note is complete.
+- Phase One / Objective Four task issues #117 through #128 and #141 are merged/closed.
+- P1O4-T12 issue #129 has a drafted release-note artifact in branch `p1o4t12b`.
+- Parent issue #119 should remain open until the P1O4-T12 release-note PR is merged and the final parent update is made.
+- Proposed tag after release-note merge: `v0.0.4-objective-four-repo-ops`.
 - Objective Four has prepared future data intake, but it has not started data work.
 
 ## Core rule
@@ -48,6 +49,7 @@ templates/CODEX_TASK_PACKET.md
 records/PROMPT_BUILD_LOG.md
 templates/PROMPT_LOG_ENTRY.md
 docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md
+docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md
 ```
 
 For Phase Two intake, use these templates:
@@ -75,7 +77,8 @@ The repo is ready to create:
 - no-go source or claim notes;
 - prompt/build log entries;
 - task-scoped issues and PRs;
-- release notes and objective-level handoffs.
+- objective-level handoffs;
+- release/tag documentation after the release-note PR merges.
 
 ## What remains prohibited
 
@@ -164,18 +167,14 @@ Boundary: no data download; no labels; no masks; no outputs; no maps.
 
 If Objective Five begins before Phase Two, start by defining exactly what Objective Five is meant to produce and which Objective Four standards govern it. Create an objective parent issue, task sequence, artifact contracts, and prompt/build log entries before writing new deliverables.
 
-## Task 12 starting recommendation
+## Task 12 merge recommendation
 
-If continuing with P1O4-T12, create the Objective Four release note from these governing inputs:
+After the P1O4-T12 release-note PR is reviewed and merged:
 
-- `OBJECTIVE_FOUR_TRACKER.md`
-- `OBJECTIVE_FOUR_CLOSEOUT.md`
-- `OBJECTIVE_FOUR_HANDOFF.md`
-- merged PR trail #130 through #140 plus the QA PR
-- issue #129
-- parent issue #119
-
-The release note should close Objective Four only after confirming the QA PR is merged and no data work has begun.
+1. confirm issue #129 is closed;
+2. update parent issue #119 with a final Objective Four completion summary;
+3. decide whether to create tag/release `v0.0.4-objective-four-repo-ops`;
+4. keep data work blocked until Phase Two intake records exist.
 
 ## Handoff checklist
 
@@ -192,4 +191,4 @@ Before proceeding, confirm:
 
 ## One-paragraph handoff summary
 
-Objective Four established the BurnLens repository operating system: issue architecture, taxonomy, project-board rules, branch/PR workflow, templates, Codex instructions, task packets, prompt/build logging, Phase Two intake templates, closeout/handoff standards, and QA-refreshed transition records. Future work should use these artifacts as controlling context. Phase Two is ready to begin intake records, but not data use. Before any data is touched, create AOI, source, access, format/CRS, provenance, claims, no-go, and prompt-log records. BurnLens remains experimental, non-official, and non-emergency; official sources govern.
+Objective Four established the BurnLens repository operating system: issue architecture, taxonomy, project-board rules, branch/PR workflow, templates, Codex instructions, task packets, prompt/build logging, Phase Two intake templates, closeout/handoff standards, QA-refreshed transition records, and a release-note baseline. Future work should use these artifacts as controlling context. Phase Two is ready to begin intake records, but not data use. Before any data is touched, create AOI, source, access, format/CRS, provenance, claims, no-go, and prompt-log records. BurnLens remains experimental, non-official, and non-emergency; official sources govern.
