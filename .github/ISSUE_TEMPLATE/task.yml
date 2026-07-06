@@ -1,0 +1,143 @@
+name: BurnLens task artifact
+about: Create a controlled BurnLens task issue with artifact, research, boundary, and handoff requirements.
+title: "P1O4-TXX Short task title"
+labels: documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for BurnLens repo-control and artifact tasks.
+
+        Boundary reminder: BurnLens Deschutes is an experimental portfolio-first CV and GEOINT project. This issue template does not authorize data acquisition, imagery download, AOI selection, label or mask creation, baseline generation, model training, inference, metrics, maps, website demo integration, outside validation claims, or endorsement claims.
+
+  - type: input
+    id: task_id
+    attributes:
+      label: Task ID
+      description: Use the project task pattern.
+      placeholder: P1O4-T06
+    validations:
+      required: true
+
+  - type: input
+    id: parent_issue
+    attributes:
+      label: Parent issue
+      description: Link the objective parent issue.
+      placeholder: "#119"
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Branch
+      description: Use the compact branch pattern from BRANCH_AND_PR_WORKFLOW.md.
+      placeholder: p1o4t06b
+    validations:
+      required: true
+
+  - type: input
+    id: artifact_path
+    attributes:
+      label: Artifact path
+      description: Exact file path or paths expected from this task.
+      placeholder: .github/ISSUE_TEMPLATE/task.yml
+    validations:
+      required: true
+
+  - type: dropdown
+    id: artifact_type
+    attributes:
+      label: Artifact type
+      options:
+        - documentation
+        - template
+        - records
+        - workflow
+        - template-only future implementation support
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: Explain why this artifact exists and what later work it controls.
+      placeholder: This task creates templates that encode the repo workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: required_decisions
+    attributes:
+      label: Required decisions
+      description: List decisions this artifact must make.
+      placeholder: |
+        - Confirm template paths.
+        - Confirm required fields.
+        - Confirm boundary checks.
+    validations:
+      required: true
+
+  - type: textarea
+    id: required_research
+    attributes:
+      label: Required research claims
+      description: List claims that must be validated after branch creation and before artifact writing.
+      placeholder: |
+        - GitHub issue form location and syntax.
+        - GitHub pull request template location and behavior.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: workflow_gate
+    attributes:
+      label: Workflow gate
+      options:
+        - label: Artifact contract has been defined before artifact creation.
+          required: true
+        - label: Task branch will be created before fresh research.
+          required: true
+        - label: Fresh research will be completed before artifact writing.
+          required: true
+        - label: A claims-register check will be included where relevant.
+          required: true
+        - label: PR close keyword will close only this task issue, not the parent issue.
+          required: true
+
+  - type: checkboxes
+    id: boundary_checks
+    attributes:
+      label: Boundary checks
+      description: Confirm this issue stays within the current phase boundary.
+      options:
+        - label: This task is documentation, template, workflow, or records work only.
+          required: true
+        - label: This task does not create or process imagery, AOI data, labels, masks, baselines, model outputs, metrics, maps, or public demo artifacts.
+          required: true
+        - label: This task does not claim operational reliability, official status, field validation, agency endorsement, or emergency-use readiness.
+          required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checklist
+      description: Define what must be true before the task can be merged.
+      placeholder: |
+        - [ ] Correct files are changed.
+        - [ ] Research basis is recorded.
+        - [ ] Boundary language is present.
+        - [ ] Handoff note is present.
+    validations:
+      required: true
+
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Handoff note
+      description: State what the next task should use from this artifact.
+      placeholder: Proceed to the next task after this PR is reviewed and merged.
+    validations:
+      required: true
