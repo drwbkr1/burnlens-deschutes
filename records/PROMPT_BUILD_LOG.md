@@ -4,22 +4,25 @@
 
 This protocol defines how BurnLens Deschutes records prompt-assisted repository work.
 
-The prompt/build log is a traceability record. It should show what task was attempted, which repo standards governed the work, which prompts or task packets were used, which source checks were made, which files changed, what verification occurred, and what was handed off next.
+The prompt/build log is a traceability record. It shows what task was attempted, which repo standards governed the work, which prompts or task packets were used, which source checks were made, which files changed, what verification occurred, and what was handed off next.
 
 The log must not become a transcript dump, private reasoning record, credential store, or replacement for GitHub issues, branches, pull requests, commits, artifacts, or release notes.
 
-## Status
+## Current status
 
-- Task issue: #126
-- Parent issue: #119
-- Branch: `p1o4t09b`
-- Protocol file: `records/PROMPT_BUILD_LOG.md`
-- Entry template: `templates/PROMPT_LOG_ENTRY.md`
-- Current task: P1O4-T09 - Create prompt build log protocol
+| Field | Value |
+|---|---|
+| Protocol task issue | #126 |
+| Parent issue | #119 |
+| Protocol PR | #138 |
+| Protocol status | merged |
+| Protocol file | `records/PROMPT_BUILD_LOG.md` |
+| Entry template | `templates/PROMPT_LOG_ENTRY.md` |
+| Active entry directory | `records/prompt-build-log/` |
 
 ## Research basis
 
-Fresh research was conducted after branch creation and before artifact writing.
+Fresh research was conducted after branch creation and before the protocol was written.
 
 | Claim ID | Claim | Source authority | Evidence summary | Decision for this protocol |
 |---|---|---|---|---|
@@ -47,6 +50,9 @@ Prompt/build log entries should reference the standards that governed the work:
 - `docs/phase-one/objective-four/ISSUE_ARCHITECTURE.md`
 - `docs/phase-one/objective-four/ISSUE_TAXONOMY.md`
 - `docs/phase-one/objective-four/PROJECT_BOARD_SPEC.md`
+- `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md`
+- `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md`
+- `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`
 
 ## What the prompt/build log records
 
@@ -81,7 +87,7 @@ If a useful fact depends on private reasoning, summarize the decision and eviden
 
 ## Log location and naming
 
-The persistent index is:
+The protocol index is:
 
 ```text
 records/PROMPT_BUILD_LOG.md
@@ -93,13 +99,24 @@ The reusable entry template is:
 templates/PROMPT_LOG_ENTRY.md
 ```
 
-For Objective Four, entries may be appended to `records/PROMPT_BUILD_LOG.md`. If the log becomes too long in a later phase, split entries into dated files under:
+Individual entries should be stored under:
 
 ```text
 records/prompt-build-log/YYYY-MM-DD-task-id.md
 ```
 
-Do not split the log during Objective Four unless needed.
+Use dated entry files once prompt/build logging is active. This keeps the protocol readable while preserving task-level traceability.
+
+## Entry index
+
+| Task | Entry path | Status | Notes |
+|---|---|---|---|
+| P1O4-T01 through P1O4-T08 | Not retroactively required | historical | Traceability exists through issues, PRs, and artifacts before this protocol existed. |
+| P1O4-T09 | `records/PROMPT_BUILD_LOG.md` | merged via PR #138 | Protocol and template task. |
+| P1O4-T10 | `records/prompt-build-log/2026-07-06-p1o4-t10.md` | merged via PR #139 | Phase Two intake template task. |
+| P1O4-T11 | `records/prompt-build-log/2026-07-06-p1o4-t11.md` | merged via PR #140 | Closeout and handoff task. |
+| P1O4-QA | `records/prompt-build-log/2026-07-06-p1o4-qa.md` | in review after PR creation | Quality pass before P1O4-T12. |
+| P1O4-T12 | pending | not started | Objective Four release/tag note. |
 
 ## Entry creation timing
 
@@ -113,9 +130,9 @@ Create or update a prompt/build log entry at these points:
 | Artifact drafted | Record files changed and material decisions. |
 | Verification complete | Record checks run or not run. |
 | PR opened | Record PR number and close-keyword behavior. |
-| PR merged | Record merge method and handoff update. |
+| PR merged | Record merge method and handoff update when the log is updated in a later QA/closeout pass. |
 
-For lightweight documentation tasks, a single complete entry before PR is acceptable if it covers the required fields.
+For lightweight documentation tasks, a single complete entry before PR is acceptable if it covers the required fields. If a later QA pass reveals stale pending language, update the entry.
 
 ## Prompt summary rule
 
@@ -123,7 +140,7 @@ Record a useful prompt summary, not necessarily every word.
 
 Good prompt summary:
 
-> Create the Task 9 prompt/build log protocol using merged repo standards and OpenAI Codex docs. Limit changes to `records/PROMPT_BUILD_LOG.md` and `templates/PROMPT_LOG_ENTRY.md`.
+> Create the Task 10 Phase Two intake templates using merged repo standards. Limit changes to the seven requested templates and the prompt log entry. Do not start data work.
 
 Too thin:
 
@@ -139,7 +156,7 @@ For each source-backed claim, record:
 
 - claim ID;
 - source name;
-- source URL;
+- source URL or repo path;
 - what the source supports;
 - decision made from the source;
 - date checked.
@@ -155,6 +172,7 @@ Examples:
 - Diff check: one expected file added.
 - Markdown review: headings and checklists are readable.
 - YAML check: issue form syntax reviewed.
+- JSON review: manifest template remains valid JSON.
 - Tests: not applicable because documentation only.
 - Tests not run: no code changed.
 
@@ -169,7 +187,7 @@ Every entry must include:
 - safe claim after the task;
 - unsupported claims after the task.
 
-For Objective Four, the expected result is usually documentation, template, workflow, or records work only.
+For Objective Four, the expected result is documentation, template, workflow, or records work only.
 
 ## Entry approval rule
 
@@ -184,46 +202,18 @@ A prompt/build log entry is acceptable when a reviewer can answer:
 7. Which claims are safe or unsupported?
 8. What happens next?
 
-## Initial Objective Four entries
-
-Task 9 creates the protocol and template. Earlier Objective Four tasks were tracked through issues, PRs, and artifacts before this protocol existed. They do not require retroactive full entries unless requested during closeout.
-
-| Task | Prompt log status | Notes |
-|---|---|---|
-| P1O4-T01 through P1O4-T08 | Not retroactively required | Traceability exists through issues, PRs, and artifacts. |
-| P1O4-T09 | Required | This protocol and template establish logging rules going forward. |
-| P1O4-T10 onward | Required | Use this protocol and `templates/PROMPT_LOG_ENTRY.md`. |
-
-## P1O4-T09 log entry
-
-Use `templates/PROMPT_LOG_ENTRY.md` as the source format. Fill this section after PR creation and before merge if a complete live entry is needed. Minimum entry for this task:
-
-```text
-Task ID: P1O4-T09
-Task issue: #126
-Parent issue: #119
-Branch: p1o4t09b
-Files changed: records/PROMPT_BUILD_LOG.md; templates/PROMPT_LOG_ENTRY.md
-Research sources: OpenAI Codex AGENTS.md docs; OpenAI Codex prompting docs
-Verification: diff check; file review; documentation-only boundary check
-PR: pending until PR opened
-Handoff: P1O4-T10 should use this protocol when creating Phase Two intake templates
-```
-
 ## Acceptance checklist
 
 | Check | Status | Notes |
 |---|---|---|
-| Task issue exists. | Satisfied | #126. |
-| Parent issue is referenced. | Satisfied | #119. |
-| Branch exists before artifact writing. | Satisfied | `p1o4t09b`. |
-| Fresh research completed before artifact writing. | Satisfied | OpenAI Codex docs checked. |
+| Protocol file exists. | Satisfied | `records/PROMPT_BUILD_LOG.md`. |
+| Entry template exists. | Satisfied | `templates/PROMPT_LOG_ENTRY.md`. |
+| Entry directory pattern is defined. | Satisfied | `records/prompt-build-log/YYYY-MM-DD-task-id.md`. |
 | Protocol defines required log fields. | Satisfied | Field groups table included. |
 | Protocol defines exclusions. | Satisfied | Sensitive/private material excluded. |
 | Protocol defines timing. | Satisfied | Entry creation timing table included. |
 | Protocol defines verification logging. | Satisfied | Verification logging rule included. |
 | Protocol defines boundary and claims logging. | Satisfied | Boundary and claims rule included. |
-| Template file is created. | Satisfied | `templates/PROMPT_LOG_ENTRY.md`. |
 | Documentation-only boundary is preserved. | Satisfied | No data/model/map/public output authorized. |
 
 ## Rejection and defer criteria
@@ -263,11 +253,11 @@ Each prompt/build log entry should preserve:
 
 ## Claims-register check
 
-Safe claim after Task 9:
+Safe claim:
 
-> BurnLens has a prompt/build log protocol and reusable entry template for recording prompt-assisted repository work.
+> BurnLens has a prompt/build log protocol, reusable entry template, and dated entry pattern for recording prompt-assisted repository work.
 
-Unsupported claims after Task 9:
+Unsupported claims:
 
 - Prompt/build logging has been applied retroactively to every earlier task.
 - Codex has been automated.
@@ -276,4 +266,4 @@ Unsupported claims after Task 9:
 
 ## Handoff note
 
-Proceed to P1O4-T10 after this protocol and template are reviewed and merged. P1O4-T10 should use this protocol to record prompt-assisted creation of Phase Two intake templates, including source checks, file scope, boundary decisions, verification results, and handoff notes.
+Proceed to P1O4-T12 only after the QA PR is reviewed and merged. P1O4-T12 should use this protocol, the updated tracker, closeout, and handoff to create the Objective Four release/tag note.
