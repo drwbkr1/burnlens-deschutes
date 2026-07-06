@@ -32,6 +32,7 @@ GitHub issue
 | P1O2-T06 — Define label assumptions | #19 | `p1o2/t06-label-assumptions` | #20 | `docs/phase-one/objective-two/LABEL_ASSUMPTIONS.md` | Complete |
 | P1O2-T07 — Define baseline comparison plan | #23 | `p1o2/t07-baseline-comparison` | #44 | `docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md` | Complete |
 | P1O2-T08 — Define first model family | #46 | `p1o2/t08-model-family-decision` | #58 | `docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md` | Complete |
+| P1O2-T09 — Define evaluation metrics plan | #61 | `p1o2/t09-evaluation-metrics` | #68 | `docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md` | Complete |
 
 ## Current locked decisions
 
@@ -79,29 +80,38 @@ This decision is documentation-only. It does not authorize model code, architect
 
 Fallback families include DeepLabV3-style segmentation, FCN-style segmentation, lightweight encoder-decoder CNN, or a baseline-only path if Phase Two data and labels are not defensible enough to train a model.
 
+### Evaluation metrics plan
+
+Future evaluation will use **IoU / Jaccard** as the primary segmentation metric.
+
+Supporting metrics include Dice / F1, precision, recall, false-positive review, false-negative review, positive-area difference, per-scene or per-tile summaries, and component or polygon quality once vectorization exists.
+
+Unknown, exclude, review-needed, nodata, or quality-masked regions must not be silently treated as background. They must be excluded from metric computation or reported separately with an explicit ignore value or mask rule.
+
+Every future model metric must be reported against at least one relevant baseline.
+
 ## Still in scope for Objective Two
 
 Remaining Objective Two tasks should define:
 
-- evaluation metrics plan
 - failure modes
 - CV-specific use boundaries
 - final Objective Two handoff
 
 ## Next task
 
-**P1O2-T09 — Define evaluation metrics plan**
+**P1O2-T10 — Define known failure modes**
 
 Recommended branch:
 
 ```text
-p1o2/t09-evaluation-metrics
+p1o2/t10-failure-modes
 ```
 
 Recommended artifact:
 
 ```text
-docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md
+docs/phase-one/objective-two/FAILURE_MODES.md
 ```
 
 ## Phase boundary
