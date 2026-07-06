@@ -4,12 +4,12 @@
 
 - Objective: Phase One / Objective Four - Repository Operating System, Issue Architecture, and Codex Work Protocol
 - Parent issue: #119
-- Closeout task issue: #128
-- Branch: `p1o4t11b`
+- Completed task issues: #117, #118, #120, #121, #122, #123, #124, #125, #126, #127, #128
+- Quality pass issue: #141
+- Remaining planned issue before final Objective Four closure: #129 - P1O4-T12 Create Objective Four release note
 - Closeout artifact: `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md`
 - Handoff artifact: `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`
-- Prompt log entry: `records/prompt-build-log/2026-07-06-p1o4-t11.md`
-- Status at drafting: Tasks 1 through 10 are merged; Task 11 is in progress; release/tag note remains a later Objective Four step.
+- Status after QA pass: Objective Four repository-control baseline is portfolio-ready for release-note drafting; release/tag note remains pending.
 
 ## Purpose
 
@@ -25,7 +25,7 @@ Experimental BurnLens repository-transition record. Not official wildfire inform
 
 | Area | Created artifact(s) | Purpose |
 |---|---|---|
-| Objective tracking | `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md` | Tracks Objective Four task sequence, status, dependencies, and completion evidence. |
+| Objective tracking | `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md` | Current status map for Objective Four task sequence, governing artifacts, and remaining release-note work. |
 | Issue architecture | `docs/phase-one/objective-four/ISSUE_ARCHITECTURE.md` | Defines parent/task issue structure and how task work is organized. |
 | Issue taxonomy | `docs/phase-one/objective-four/ISSUE_TAXONOMY.md` | Defines labels, issue types, milestones, and classification logic. |
 | Project board specification | `docs/phase-one/objective-four/PROJECT_BOARD_SPEC.md` | Defines project board fields, views, automation expectations, and review use. |
@@ -35,12 +35,10 @@ Experimental BurnLens repository-transition record. Not official wildfire inform
 | Codex task packet | `templates/CODEX_TASK_PACKET.md` | Provides a reusable task-packet format for scoped Codex or prompt-assisted tasks. |
 | Prompt/build log protocol | `records/PROMPT_BUILD_LOG.md`; `templates/PROMPT_LOG_ENTRY.md` | Defines how prompt-assisted work is logged, what must be recorded, and what must not be recorded. |
 | Phase Two intake templates | `templates/AOI_RECORD_TEMPLATE.md`; `templates/SOURCE_RECORD_TEMPLATE.md`; `templates/ACCESS_LOG_TEMPLATE.md`; `templates/FORMAT_CRS_PRECHECK_TEMPLATE.md`; `templates/PROVENANCE_MANIFEST_TEMPLATE.json`; `templates/CLAIM_REGISTER_ENTRY_TEMPLATE.md`; `templates/NO_GO_SOURCE_NOTE_TEMPLATE.md` | Prepares blank records for future AOI, source, access, CRS, provenance, claims, and no-go decisions before data use. |
-| Prompt log entries | `records/prompt-build-log/2026-07-06-p1o4-t10.md`; `records/prompt-build-log/2026-07-06-p1o4-t11.md` | Records prompt-assisted work from the point the prompt/build log protocol became active. |
+| Prompt log entries | `records/prompt-build-log/2026-07-06-p1o4-t10.md`; `records/prompt-build-log/2026-07-06-p1o4-t11.md`; `records/prompt-build-log/2026-07-06-p1o4-qa.md` | Records prompt-assisted work from the point the prompt/build log protocol became active. |
 | Closeout and handoff | `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md`; `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Provides transition standard and first-context block for Objective Five or Phase Two. |
 
 ## Issues closed or expected to close
-
-The following task issues were closed by merged task PRs before this closeout was drafted:
 
 | Task | Issue | PR | Status |
 |---|---:|---:|---|
@@ -54,8 +52,9 @@ The following task issues were closed by merged task PRs before this closeout wa
 | P1O4-T08 | #125 | #137 | Closed/merged. |
 | P1O4-T09 | #126 | #138 | Closed/merged. |
 | P1O4-T10 | #127 | #139 | Closed/merged. |
-
-Task 11 issue #128 should close when the PR containing this closeout and handoff is merged. The parent issue #119 should remain open until the Objective Four release/tag note is complete and the objective is deliberately closed.
+| P1O4-T11 | #128 | #140 | Closed/merged. |
+| P1O4-QA | #141 | pending | Should close when this QA PR merges. |
+| P1O4-T12 | #129 | pending | Release/tag note remains before parent issue #119 is closed. |
 
 ## Documents that govern future work
 
@@ -71,8 +70,9 @@ Future work should treat these documents as controlling repo standards:
 8. `templates/CODEX_TASK_PACKET.md`
 9. `records/PROMPT_BUILD_LOG.md`
 10. `templates/PROMPT_LOG_ENTRY.md`
-11. `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`
-12. Phase Two intake templates in `templates/`
+11. `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md`
+12. `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`
+13. Phase Two intake templates in `templates/`
 
 If future instructions conflict, follow the user only when the requested work remains inside BurnLens safety, source-precedence, phase-boundary, and repository-workflow rules.
 
@@ -97,7 +97,7 @@ Objective Four does not authorize any of the following:
 
 ## What is ready for Phase Two
 
-Phase Two can now start with a structured intake process because Objective Four has created:
+Phase Two can start structured intake records because Objective Four created:
 
 - the issue/branch/PR workflow for scoped data-readiness tasks;
 - Codex guidance and task packet structure for prompt-assisted work;
@@ -142,26 +142,22 @@ If any gate cannot be completed, data use must stop or be deferred until the mis
 | Prompt-assisted work can be logged. | Satisfied | Prompt/build log protocol and entry template exist. |
 | Phase Two can begin intake records. | Satisfied | Seven Phase Two intake templates exist. |
 | Phase Two data work has begun. | Not satisfied and intentionally prohibited | No selected AOI, downloaded data, labels, masks, model outputs, run outputs, metrics, maps, or public demos were created. |
-| Objective Four can be fully closed. | Deferred | Release/tag note remains a later closeout step. |
+| Objective Four can be fully closed. | Pending | P1O4-T12 release/tag note remains. |
 
 ## Claims-register check
 
-Safe claims after Task 11 is merged:
+Safe claims after this QA pass:
 
 ```text
-BurnLens has an Objective Four closeout and handoff standard for transitioning future work from repository operations into later objectives or Phase Two intake.
+BurnLens has repository standards, prompt-assisted work controls, transition docs, and Phase Two intake templates ready for future intake records.
 ```
 
-```text
-BurnLens has repository standards, prompt-assisted work controls, and Phase Two intake templates ready for future intake records.
-```
-
-Unsupported claims after Task 11:
+Unsupported claims after this QA pass:
 
 ```text
-Phase Two data work has begun; an AOI has been selected; data has been downloaded; labels, masks, model outputs, run outputs, metrics, maps, or public demos have been created; BurnLens is official, operational, field-validated, emergency-ready, or agency-endorsed.
+Objective Four is released/tagged; Phase Two data work has begun; an AOI has been selected; data has been downloaded; labels, masks, model outputs, run outputs, metrics, maps, or public demos have been created; BurnLens is official, operational, field-validated, emergency-ready, or agency-endorsed.
 ```
 
 ## Handoff
 
-Use `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` as the first context block for Objective Five or Phase Two. Do not begin data work from this closeout alone; begin by creating the required Phase Two intake records.
+Use `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` as the first context block for Objective Five or Phase Two. Do not begin data work from this closeout alone; begin by creating the required Phase Two intake records. Proceed to P1O4-T12 after the QA PR is reviewed and merged.
