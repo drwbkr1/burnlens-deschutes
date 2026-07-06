@@ -1,7 +1,7 @@
 name: BurnLens task artifact
-about: Create a controlled BurnLens task issue with artifact, research, boundary, and handoff requirements.
+description: Create a controlled BurnLens task issue with artifact, research, boundary, and handoff requirements.
 title: "P1O4-TXX Short task title"
-labels: documentation
+labels: ["documentation"]
 body:
   - type: markdown
     attributes:
