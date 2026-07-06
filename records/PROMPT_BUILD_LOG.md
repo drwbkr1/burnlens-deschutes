@@ -53,6 +53,7 @@ Prompt/build log entries should reference the standards that governed the work:
 - `docs/phase-one/objective-four/OBJECTIVE_FOUR_TRACKER.md`
 - `docs/phase-one/objective-four/OBJECTIVE_FOUR_CLOSEOUT.md`
 - `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`
+- `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md`
 
 ## What the prompt/build log records
 
@@ -115,8 +116,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O4-T09 | `records/PROMPT_BUILD_LOG.md` | merged via PR #138 | Protocol and template task. |
 | P1O4-T10 | `records/prompt-build-log/2026-07-06-p1o4-t10.md` | merged via PR #139 | Phase Two intake template task. |
 | P1O4-T11 | `records/prompt-build-log/2026-07-06-p1o4-t11.md` | merged via PR #140 | Closeout and handoff task. |
-| P1O4-QA | `records/prompt-build-log/2026-07-06-p1o4-qa.md` | in review after PR creation | Quality pass before P1O4-T12. |
-| P1O4-T12 | pending | not started | Objective Four release/tag note. |
+| P1O4-QA | `records/prompt-build-log/2026-07-06-p1o4-qa.md` | merged via PR #142 | Quality pass before P1O4-T12. |
+| P1O4-T12 | `records/prompt-build-log/2026-07-06-p1o4-t12.md` | drafted in branch | Objective Four release/tag note. |
 
 ## Entry creation timing
 
@@ -140,7 +141,7 @@ Record a useful prompt summary, not necessarily every word.
 
 Good prompt summary:
 
-> Create the Task 10 Phase Two intake templates using merged repo standards. Limit changes to the seven requested templates and the prompt log entry. Do not start data work.
+> Create the Task 12 Objective Four release note using merged repo standards. Update adjacent tracker, closeout, handoff, and prompt-log index files. Do not create a tag or start data work.
 
 Too thin:
 
@@ -187,7 +188,7 @@ Every entry must include:
 - safe claim after the task;
 - unsupported claims after the task.
 
-For Objective Four, the expected result is documentation, template, workflow, or records work only.
+For Objective Four, the expected result is documentation, template, workflow, release-note, or records work only.
 
 ## Entry approval rule
 
@@ -266,4 +267,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Proceed to P1O4-T12 only after the QA PR is reviewed and merged. P1O4-T12 should use this protocol, the updated tracker, closeout, and handoff to create the Objective Four release/tag note.
+After the P1O4-T12 PR is reviewed and merged, update parent issue #119 with the final Objective Four completion summary and decide whether to create tag `v0.0.4-objective-four-repo-ops`.
