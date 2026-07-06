@@ -1,0 +1,152 @@
+{
+  "manifest_template_status": "blank Phase Two intake template; no actual data, AOI, labels, masks, model outputs, run outputs, or public-demo artifacts are recorded here",
+  "manifest_version": "0.1.0-template",
+  "project": "BurnLens Deschutes",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "manifest_id": "MANIFEST-YYYY-NNN",
+  "phase": "Phase Two",
+  "task_issue": "#",
+  "parent_issue": "#119",
+  "branch": "",
+  "pull_request": "#",
+  "created_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "updated_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "created_by": "",
+  "status": "template | planned | active | complete | retired",
+  "source_precedence": {
+    "official_sources_govern": true,
+    "burnlens_authority_level": "experimental portfolio artifact only",
+    "emergency_use_allowed": false,
+    "notes": "BurnLens outputs must not override official county, state, federal, fire-service, emergency-management, evacuation, transportation, or incident information."
+  },
+  "aoi_records": [
+    {
+      "aoi_record_id": "AOI-YYYY-NNN",
+      "aoi_record_path": "records/phase-two/aoi/AOI-YYYY-NNN.md",
+      "status": "candidate | accepted | deferred | rejected",
+      "geometry_file_path": "",
+      "geometry_checksum": "",
+      "crs": "",
+      "notes": "Do not use actual AOI content until Phase Two authorizes selection."
+    }
+  ],
+  "source_records": [
+    {
+      "source_record_id": "SRC-YYYY-NNN",
+      "source_record_path": "records/phase-two/sources/SRC-YYYY-NNN.md",
+      "provider": "",
+      "source_url": "",
+      "metadata_url": "",
+      "license_or_terms": "",
+      "status": "candidate | approved-for-access | deferred | rejected"
+    }
+  ],
+  "access_events": [
+    {
+      "access_log_id": "ACCESS-YYYY-NNN",
+      "access_log_path": "records/phase-two/access/ACCESS-YYYY-NNN.md",
+      "access_time_utc": "YYYY-MM-DDTHH:MM:SSZ",
+      "method": "browser | API | CLI | bulk download | manual request | other",
+      "result": "planned | success | failed | cancelled | no-go",
+      "credentials_recorded_in_repo": false,
+      "notes": "Do not record tokens, cookies, API keys, or private URLs."
+    }
+  ],
+  "source_files": [
+    {
+      "file_id": "FILE-YYYY-NNN",
+      "source_record_id": "SRC-YYYY-NNN",
+      "access_log_id": "ACCESS-YYYY-NNN",
+      "original_filename": "",
+      "stored_path": "",
+      "media_type": "",
+      "format": "",
+      "file_size_bytes": null,
+      "checksum_algorithm": "sha256",
+      "checksum": "",
+      "downloaded_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+      "license_or_terms_snapshot": "",
+      "sensitive_or_restricted": "unknown"
+    }
+  ],
+  "format_crs_prechecks": [
+    {
+      "precheck_id": "PRECHECK-YYYY-NNN",
+      "precheck_path": "records/phase-two/prechecks/PRECHECK-YYYY-NNN.md",
+      "file_id": "FILE-YYYY-NNN",
+      "format": "",
+      "crs_authority": "EPSG | OGC WKT | PROJJSON | source metadata | unknown",
+      "crs_code": "",
+      "crs_wkt_available": false,
+      "bounds": {
+        "xmin": null,
+        "ymin": null,
+        "xmax": null,
+        "ymax": null
+      },
+      "precheck_status": "planned | passed | failed | deferred | no-go",
+      "reprojection_required": "unknown",
+      "target_crs": ""
+    }
+  ],
+  "processing_steps": [
+    {
+      "step_id": "STEP-YYYY-NNN",
+      "step_type": "future placeholder only",
+      "input_file_ids": [],
+      "output_file_ids": [],
+      "tool_name": "",
+      "tool_version": "",
+      "parameters_path": "",
+      "executed_at_utc": "",
+      "status": "not-started",
+      "notes": "No processing steps are authorized by this template."
+    }
+  ],
+  "outputs": [
+    {
+      "output_id": "OUTPUT-YYYY-NNN",
+      "output_type": "future placeholder only",
+      "path": "",
+      "checksum": "",
+      "status": "not-created",
+      "public_facing": false,
+      "warning_required": true
+    }
+  ],
+  "claim_register_entries": [
+    {
+      "claim_id": "CLAIM-YYYY-NNN",
+      "claim_entry_path": "records/phase-two/claims/CLAIM-YYYY-NNN.md",
+      "claim_status": "draft | supported | unsupported | rejected | retired",
+      "supported_by_source_records": [],
+      "supported_by_outputs": [],
+      "public_safe": false
+    }
+  ],
+  "no_go_notes": [
+    {
+      "no_go_id": "NOGO-YYYY-NNN",
+      "no_go_note_path": "records/phase-two/no-go/NOGO-YYYY-NNN.md",
+      "subject_type": "AOI | source | access | format | CRS | claim | other",
+      "decision": "defer | reject | retire",
+      "reason_summary": ""
+    }
+  ],
+  "verification": {
+    "manifest_schema_reviewed": false,
+    "source_records_complete": false,
+    "access_logs_complete": false,
+    "format_crs_prechecks_complete": false,
+    "claims_review_complete": false,
+    "no_go_review_complete": false,
+    "ready_for_data_use": false
+  },
+  "prohibited_status": {
+    "selected_aoi_created_by_this_template": false,
+    "data_downloaded_by_this_template": false,
+    "labels_or_masks_created_by_this_template": false,
+    "model_or_run_outputs_created_by_this_template": false,
+    "public_map_or_demo_created_by_this_template": false
+  }
+}
