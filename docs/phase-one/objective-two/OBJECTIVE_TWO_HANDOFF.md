@@ -1,14 +1,16 @@
 # Phase 1 / Objective Two Handoff
 
-## Current objective
+## Objective status
 
-Objective Two defines the first BurnLens Deschutes computer vision task before Phase Two data, label, baseline, or model work begins.
+**Objective Two is complete.**
 
-The current focus is documentation and scope control only.
+Objective Two defined the first BurnLens Deschutes computer vision task before Phase Two data, label, baseline, or model work begins.
+
+The current focus remains documentation and scope control only.
 
 ## Repo use pattern
 
-For P1O2 onward, each task should continue to use this loop:
+For P1O2 onward, each task used this loop:
 
 ```text
 GitHub issue
@@ -35,6 +37,7 @@ GitHub issue
 | P1O2-T09 — Define evaluation metrics plan | #61 | `p1o2/t09-evaluation-metrics` | #68 | `docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md` | Complete |
 | P1O2-T10 — Define known failure modes | #70 | `p1o2/t10-failure-modes` | #77 | `docs/phase-one/objective-two/FAILURE_MODES.md` | Complete |
 | P1O2-T11 — Define CV-specific use boundaries | #79 | `p1o2/t11-cv-use-boundaries` | #81 | `docs/phase-one/objective-two/CV_USE_BOUNDARIES.md` | Complete |
+| P1O2-T12 — Create Objective Two final handoff | #83 | `p1o2/t12-objective-two-handoff` | TBD | `docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md` | Complete when merged |
 
 ## Current locked decisions
 
@@ -110,31 +113,27 @@ They must not be used for emergency alerts, evacuation decisions, routing or roa
 
 Every future map, screenshot, report, model card, public site card, or run package must include visible warning language such as: **Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.**
 
-## Still in scope for Objective Two
+## Final handoff artifact
 
-Remaining Objective Two tasks should define:
-
-- final Objective Two handoff
-
-## Next task
-
-**P1O2-T12 — Create Objective Two handoff**
-
-Recommended branch:
-
-```text
-p1o2/t12-objective-two-handoff
-```
-
-Recommended artifact:
+The final Objective Two closeout artifact is:
 
 ```text
 docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md
 ```
 
+That artifact should be treated as the Objective Two transition record for the next objective.
+
+## Still in scope for the next objective
+
+The next objective should begin turning these scope decisions into data/source feasibility and research records, while preserving Objective Two boundaries.
+
+Recommended next-objective focus:
+
+> Determine which imagery, reference products, AOI constraints, and data-access paths are feasible for the locked binary segmentation task.
+
 ## Phase boundary
 
-Do not start data ingestion, final AOI tile selection, imagery download, label creation, dataset splitting, baseline generation, model training, inference, or website demo integration during the remaining Objective Two documentation tasks.
+Do not start data ingestion, final AOI tile selection, imagery download, label creation, dataset splitting, baseline generation, model training, inference, or website demo integration until a later objective explicitly authorizes the relevant work.
 
 ## Persistent source-precedence rule
 
