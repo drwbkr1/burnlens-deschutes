@@ -1,8 +1,8 @@
-# Area Notes
+# AOI Selection Criteria
 
 Draft created after branch creation and research.
 
-Documentation only.
+Documentation only. No final area is selected here.
 
 ## Criteria
 

@@ -1,21 +1,5 @@
-# Task 09
+# Moved
 
-Draft created after branch creation and research.
+This simplified filename has been superseded by `PROVENANCE_FIELDS_SPEC.md`.
 
-Docs only.
-
-## Fields
-
-- name
-- authority
-- link
-- id
-- version
-- date
-- extent
-- coordinate system
-- resolution
-- layers
-- quality notes
-- limits
-- citation
+Kept only as a compatibility pointer.
