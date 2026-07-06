@@ -34,6 +34,7 @@ GitHub issue
 | P1O2-T08 — Define first model family | #46 | `p1o2/t08-model-family-decision` | #58 | `docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md` | Complete |
 | P1O2-T09 — Define evaluation metrics plan | #61 | `p1o2/t09-evaluation-metrics` | #68 | `docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md` | Complete |
 | P1O2-T10 — Define known failure modes | #70 | `p1o2/t10-failure-modes` | #77 | `docs/phase-one/objective-two/FAILURE_MODES.md` | Complete |
+| P1O2-T11 — Define CV-specific use boundaries | #79 | `p1o2/t11-cv-use-boundaries` | #81 | `docs/phase-one/objective-two/CV_USE_BOUNDARIES.md` | Complete |
 
 ## Current locked decisions
 
@@ -99,27 +100,36 @@ Required responses include flag, review, exclude, or stop. Unknown or excluded a
 
 Examples include cloud, cloud shadow, smoke or haze, bright bare ground, roads or rooftops, water or glare, snow or ice, sensor saturation, nodata, terrain occlusion, low spatial resolution, mixed pixels, stale imagery, hotspot point uncertainty, label noise, class imbalance, CRS mismatch, raster-grid mismatch, threshold sensitivity, and official-use confusion risk.
 
+### CV-specific use boundaries
+
+Future BurnLens CV outputs are experimental portfolio artifacts only.
+
+They may be used for portfolio demonstration, methods explanation, reproducibility demonstration, non-operational screening examples, error analysis, and case-study storytelling.
+
+They must not be used for emergency alerts, evacuation decisions, routing or road-closure guidance, tactical fire decisions, incident command, property-level hazard determinations, insurance/legal/regulatory decisions, official map replacement, or standalone public interpretation.
+
+Every future map, screenshot, report, model card, public site card, or run package must include visible warning language such as: **Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.**
+
 ## Still in scope for Objective Two
 
 Remaining Objective Two tasks should define:
 
-- CV-specific use boundaries
 - final Objective Two handoff
 
 ## Next task
 
-**P1O2-T11 — Define CV-specific use boundaries**
+**P1O2-T12 — Create Objective Two handoff**
 
 Recommended branch:
 
 ```text
-p1o2/t11-cv-use-boundaries
+p1o2/t12-objective-two-handoff
 ```
 
 Recommended artifact:
 
 ```text
-docs/phase-one/objective-two/CV_USE_BOUNDARIES.md
+docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md
 ```
 
 ## Phase boundary
