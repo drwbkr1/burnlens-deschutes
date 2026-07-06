@@ -37,7 +37,7 @@ GitHub issue
 | P1O2-T09 — Define evaluation metrics plan | #61 | `p1o2/t09-evaluation-metrics` | #68 | `docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md` | Complete |
 | P1O2-T10 — Define known failure modes | #70 | `p1o2/t10-failure-modes` | #77 | `docs/phase-one/objective-two/FAILURE_MODES.md` | Complete |
 | P1O2-T11 — Define CV-specific use boundaries | #79 | `p1o2/t11-cv-use-boundaries` | #81 | `docs/phase-one/objective-two/CV_USE_BOUNDARIES.md` | Complete |
-| P1O2-T12 — Create Objective Two final handoff | #83 | `p1o2/t12-objective-two-handoff` | TBD | `docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md` | Complete when merged |
+| P1O2-T12 — Create Objective Two final handoff | #83 | `p1o2/t12-objective-two-handoff` | #84 | `docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md` | Complete |
 
 ## Current locked decisions
 
