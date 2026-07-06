@@ -1,16 +1,14 @@
 # Phase 1 / Objective Three — Handoff
 
-Draft created after branch creation and fresh source research.
-
 ## Status
 
-Objective Three is complete enough to hand off to the next Phase One objective.
+Objective Three is complete and ready to hand off to the next Phase One objective.
 
 ## What this objective established
 
 - Candidate source categories are identified.
 - Feasibility criteria are documented.
-- Imagery, active-fire reference, local overlay, AOI, format, CRS, provenance, and stack-synthesis notes exist in the repo.
+- Imagery, active-fire reference, local overlay, AOI, format, CRS, provenance, data-stack, and closeout notes exist in the repo.
 - The work remains documentation-only.
 
 ## Accepted candidate roles

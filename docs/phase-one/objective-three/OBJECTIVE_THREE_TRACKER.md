@@ -1,6 +1,6 @@
 # Objective Three Tracker
 
-Objective Three is active.
+Objective Three is complete.
 
 Purpose: determine which source families and access paths are feasible for later BurnLens Deschutes data planning.
 
@@ -17,11 +17,12 @@ Purpose: determine which source families and access paths are feasible for later
 | P1O3-T07 | #101 | AOI_SELECTION_CRITERIA.md | Merged |
 | P1O3-T08 | #102 | FORMAT_AND_CRS_PRECHECK.md | Merged |
 | P1O3-T09 | #103 | PROVENANCE_FIELDS_SPEC.md | Merged |
-| P1O3-T10 | #109 | DATA_STACK_DECISION_MATRIX.md | Drafted |
-| P1O3-T11 | #110 | OBJECTIVE_THREE_HANDOFF.md | Drafted |
+| P1O3-T10 | #109 | DATA_STACK_DECISION_MATRIX.md | Merged |
+| P1O3-T11 | #110 | OBJECTIVE_THREE_HANDOFF.md | Merged |
+| P1O3-T12 | #113 | OBJECTIVE_THREE_CLOSEOUT.md | Merged |
 
 Parent issue: #91.
 
 ## Boundary
 
-Docs only.
+Documentation only.
