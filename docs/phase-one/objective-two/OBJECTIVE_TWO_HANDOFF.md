@@ -30,55 +30,29 @@ GitHub issue
 | P1O2-T04 — Define model output contract | #15 | `p1o2/t04-output-contract` | #16 | `docs/phase-one/objective-two/CV_OUTPUT_CONTRACT.md` | Complete |
 | P1O2-T05 — Define imagery assumptions | #17 | `p1o2/t05-imagery-assumptions` | #18 | `docs/phase-one/objective-two/IMAGERY_ASSUMPTIONS.md` | Complete |
 | P1O2-T06 — Define label assumptions | #19 | `p1o2/t06-label-assumptions` | #20 | `docs/phase-one/objective-two/LABEL_ASSUMPTIONS.md` | Complete |
+| P1O2-T07 — Define baseline comparison plan | #23 | `p1o2/t07-baseline-comparison` | #44 | `docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md` | Complete |
 
 ## Current locked decisions
 
 ### CV task
 
-BurnLens Deschutes' first computer vision task is:
-
-**experimental binary semantic segmentation for wildfire-relevant screening.**
-
-It is not wildfire prediction, evacuation routing, incident detection, fire spread modeling, emergency guidance, or official wildfire information.
+BurnLens Deschutes' first computer vision task is **experimental binary semantic segmentation for wildfire-relevant screening**.
 
 ### Primary target
 
-The selected primary target is:
-
-**active-fire / hotspot-informed binary fire mask.**
+The selected primary target is **active-fire / hotspot-informed binary fire mask**.
 
 ### Fallback target
 
-The fallback target is:
-
-**burn-scar binary mask**, only if Phase Two shows that active-fire / hotspot-informed labels are too weak, noisy, sparse, or misaligned for a defensible portfolio model.
+The fallback target is **burn-scar binary mask**, only if Phase Two shows that active-fire / hotspot-informed labels are too weak, noisy, sparse, or misaligned for a defensible portfolio model.
 
 ### Class handling
 
-Future label logic should preserve three pathways:
-
-| Value | Class | Role |
-|---:|---|---|
-| 1 | Positive / fire-relevant | Positive class |
-| 0 | Negative / background | Negative class |
-| 255 or null | Unknown / exclude / review needed | Excluded or flagged for review |
-
-Ambiguous pixels or regions should not be forced into positive or negative classes.
+Future label logic should preserve positive, negative/background, and unknown/exclude/review-needed pathways. Ambiguous pixels or regions should not be forced into positive or negative classes.
 
 ### Output contract
 
-Future CV or baseline outputs must remain mask-first and traceable. Expected future levels are:
-
-1. input tile or scene reference
-2. binary mask
-3. unknown/exclude mask when needed
-4. optional confidence/probability raster
-5. georeferenced raster
-6. vector polygons in a later integration phase
-7. exposure-style summary fields in a later integration phase
-8. documented run package once inference exists
-
-Model outputs, baseline outputs, and official/reference source outputs must remain separated.
+Future CV or baseline outputs must remain mask-first and traceable. Model outputs, baseline outputs, and official/reference source outputs must remain separated.
 
 ### Imagery assumptions
 
@@ -88,15 +62,22 @@ No final imagery source, AOI tile, band set, cloud mask, preprocessing method, o
 
 ### Label assumptions
 
-Future labels may be reference-derived, weak, manually reviewed, or baseline-derived. NASA FIRMS and other active-fire products may support reference, baseline, weak-label, sampling, or comparison logic, but must not be treated as pixel-perfect ground-truth segmentation masks.
+Future labels may be reference-derived, weak, manually reviewed, or baseline-derived. Active-fire products may support reference, baseline, weak-label, sampling, or comparison logic, but must not be treated as pixel-perfect ground-truth segmentation masks.
 
-Future labels must preserve ambiguity/exclusion handling and document source, source time, conversion method, quality flags, review status, and label schema version.
+### Baseline comparison plan
+
+Future BurnLens model outputs must be compared against simpler non-model baselines before making any model-value claim.
+
+The baseline comparison question is whether a future segmentation model adds measurable, inspectable, and portfolio-relevant value beyond simpler non-model approaches for the same AOI, source window, task definition, and label assumptions.
+
+Candidate baselines include all-background, class-prior/random, FIRMS reference-display, FIRMS buffer/raster, simple spectral/threshold if supported, and burn-scar fallback only if the target changes.
+
+Reference products, baseline outputs, and model outputs must remain separate.
 
 ## Still in scope for Objective Two
 
 Remaining Objective Two tasks should define:
 
-- baseline comparison plan
 - model family decision
 - evaluation metrics plan
 - failure modes
@@ -105,38 +86,24 @@ Remaining Objective Two tasks should define:
 
 ## Next task
 
-**P1O2-T07 — Define baseline comparison plan**
+**P1O2-T08 — Define first model family**
 
 Recommended branch:
 
 ```text
-p1o2/t07-baseline-comparison
+p1o2/t08-model-family-decision
 ```
 
 Recommended artifact:
 
 ```text
-docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md
+docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md
 ```
 
 ## Phase boundary
 
-Do not start:
-
-- data ingestion
-- final AOI tile selection
-- imagery download
-- label creation
-- dataset splitting
-- baseline generation
-- model training
-- inference
-- website demo integration
-
-Those belong to later phases or later objectives.
+Do not start data ingestion, final AOI tile selection, imagery download, label creation, dataset splitting, baseline generation, model training, inference, or website demo integration during the remaining Objective Two documentation tasks.
 
 ## Persistent source-precedence rule
 
-Official sources govern.
-
-BurnLens outputs are experimental portfolio artifacts and must never override county, state, federal, fire-service, emergency-management, transportation, evacuation, hazard, or incident information.
+Official sources govern. BurnLens outputs are experimental portfolio artifacts.
