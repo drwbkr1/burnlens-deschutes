@@ -31,6 +31,7 @@ GitHub issue
 | P1O2-T05 — Define imagery assumptions | #17 | `p1o2/t05-imagery-assumptions` | #18 | `docs/phase-one/objective-two/IMAGERY_ASSUMPTIONS.md` | Complete |
 | P1O2-T06 — Define label assumptions | #19 | `p1o2/t06-label-assumptions` | #20 | `docs/phase-one/objective-two/LABEL_ASSUMPTIONS.md` | Complete |
 | P1O2-T07 — Define baseline comparison plan | #23 | `p1o2/t07-baseline-comparison` | #44 | `docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md` | Complete |
+| P1O2-T08 — Define first model family | #46 | `p1o2/t08-model-family-decision` | #58 | `docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md` | Complete |
 
 ## Current locked decisions
 
@@ -68,17 +69,20 @@ Future labels may be reference-derived, weak, manually reviewed, or baseline-der
 
 Future BurnLens model outputs must be compared against simpler non-model baselines before making any model-value claim.
 
-The baseline comparison question is whether a future segmentation model adds measurable, inspectable, and portfolio-relevant value beyond simpler non-model approaches for the same AOI, source window, task definition, and label assumptions.
-
 Candidate baselines include all-background, class-prior/random, FIRMS reference-display, FIRMS buffer/raster, simple spectral/threshold if supported, and burn-scar fallback only if the target changes.
 
-Reference products, baseline outputs, and model outputs must remain separate.
+### Model family decision
+
+The first model family is **U-Net-style binary semantic segmentation**.
+
+This decision is documentation-only. It does not authorize model code, architecture implementation, weights, training, inference, metrics computation, model-card completion, or public demo claims.
+
+Fallback families include DeepLabV3-style segmentation, FCN-style segmentation, lightweight encoder-decoder CNN, or a baseline-only path if Phase Two data and labels are not defensible enough to train a model.
 
 ## Still in scope for Objective Two
 
 Remaining Objective Two tasks should define:
 
-- model family decision
 - evaluation metrics plan
 - failure modes
 - CV-specific use boundaries
@@ -86,18 +90,18 @@ Remaining Objective Two tasks should define:
 
 ## Next task
 
-**P1O2-T08 — Define first model family**
+**P1O2-T09 — Define evaluation metrics plan**
 
 Recommended branch:
 
 ```text
-p1o2/t08-model-family-decision
+p1o2/t09-evaluation-metrics
 ```
 
 Recommended artifact:
 
 ```text
-docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md
+docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md
 ```
 
 ## Phase boundary
