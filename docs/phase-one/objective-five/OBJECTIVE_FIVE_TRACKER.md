@@ -17,7 +17,7 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Current artifact set | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; `records/prompt-build-log/2026-07-07-p1o5-t01.md` |
 | Next task issue | #146 |
 | Next task | P1O5-T02 - Reconcile current repo status and README handoff |
-| Objective status | Started; tracker and artifact-contract baseline in progress |
+| Objective status | Started; Task 1 artifacts drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 
@@ -93,7 +93,7 @@ For Objective Five, this means:
 
 | Task | Issue | Branch | Primary artifact(s) | Status | Starts data/model/map work? |
 |---|---:|---|---|---|---|
-| P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | In progress | No |
+| P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | Drafted in branch | No |
 | P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update if needed; P1O5-T02 prompt log | Open / next | No |
 | P1O5-T03 Expand version taxonomy | planned | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md` if protocol changes; prompt log | Planned | No |
 | P1O5-T04 Define release and tag control | planned | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Planned | No |
@@ -177,9 +177,9 @@ Do not claim:
 | Task branch exists. | Satisfied | `p1o5t01b`. |
 | Artifact contract posted to task issue. | Satisfied | Comment on #145. |
 | Tracker created. | Satisfied in branch | This file. |
-| Artifact-contracts file created. | Pending until sibling file exists | `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`. |
-| Prompt/build log entry created. | Pending until log file exists | `records/prompt-build-log/2026-07-07-p1o5-t01.md`. |
-| Prompt/build log index updated if needed. | Pending | `records/PROMPT_BUILD_LOG.md`. |
+| Artifact-contracts file created. | Satisfied in branch | `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`. |
+| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-07-p1o5-t01.md`. |
+| Prompt/build log index updated if needed. | Deferred | Entry file is canonical for Task 1; index reconciliation may occur in P1O5-T02 if current-status artifacts are updated. |
 | Boundary language present. | Satisfied | Boundary section above. |
 | Claims check present. | Satisfied | Safe and unsupported claims listed above. |
 | Handoff present. | Satisfied | Handoff section below. |
