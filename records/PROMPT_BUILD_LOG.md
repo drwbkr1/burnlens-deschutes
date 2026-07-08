@@ -74,15 +74,7 @@ Record the durable facts needed to understand prompt-assisted work later.
 
 ## What the log must not record
 
-Do not record:
-
-- secrets, access tokens, API keys, credentials, session cookies, private URLs, or environment variables;
-- private chain-of-thought or hidden reasoning;
-- raw full transcripts unless they are intentionally public and reviewed;
-- personal information not needed for the artifact;
-- unredacted proprietary or sensitive source material;
-- unreviewed operational wildfire guidance;
-- unsupported claims that BurnLens is official, validated, operational, emergency-ready, or agency-endorsed.
+Do not record secrets, credentials, private chain-of-thought, raw full transcripts, unnecessary personal information, sensitive source material, unreviewed operational wildfire guidance, or unsupported claims that BurnLens is official, validated, operational, emergency-ready, or agency-endorsed.
 
 If a useful fact depends on private reasoning, summarize the decision and evidence instead of recording the reasoning process.
 
@@ -122,7 +114,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-T02 | `records/prompt-build-log/2026-07-08-p1o5-t02.md` | merged via PR #149 | Current status reconciliation and README handoff update. |
 | P1O5-T03 | `records/prompt-build-log/2026-07-08-p1o5-t03.md` | merged via PR #152 | Expanded version taxonomy and VERSIONING.md protocol update. |
 | P1O5-SYNC-03 | `records/prompt-build-log/2026-07-08-p1o5-sync-03.md` | merged via PR #154 | Status sync after P1O5-T03 merge. |
-| P1O5-T04 | `records/prompt-build-log/2026-07-08-p1o5-t04.md` | drafted in branch | Release and tag control spec and release-note template. |
+| P1O5-T04 | `records/prompt-build-log/2026-07-08-p1o5-t04.md` | merged via PR #156 | Release and tag control spec and release-note template. |
+| P1O5-SYNC-04 | `records/prompt-build-log/2026-07-08-p1o5-sync-04.md` | drafted in branch | Status sync after P1O5-T04 merge. |
 
 ## Entry creation timing
 
@@ -142,58 +135,21 @@ For lightweight documentation tasks, a single complete entry before PR is accept
 
 ## Prompt summary rule
 
-Record a useful prompt summary, not necessarily every word.
-
-Good prompt summary:
-
-> Create the Task 12 Objective Four release note using merged repo standards. Update adjacent tracker, closeout, handoff, and prompt-log index files. Do not create a tag or start data work.
-
-Too thin:
-
-> Create log.
-
-Too much:
-
-> Full unredacted transcript with all intermediate reasoning, credentials, and abandoned drafts.
+Record a useful prompt summary, not necessarily every word. Do not record full unredacted transcripts with intermediate reasoning, credentials, or abandoned drafts.
 
 ## Research logging rule
 
-For each source-backed claim, record:
-
-- claim ID;
-- source name;
-- source URL or repo path;
-- what the source supports;
-- decision made from the source;
-- date checked.
+For each source-backed claim, record the claim ID, source name, source URL or repo path, what the source supports, decision made from the source, and date checked.
 
 When source access fails, record the failure and whether the task can proceed without the source. Do not fabricate source support.
 
 ## Verification logging rule
 
-Every entry must state what was verified.
-
-Examples:
-
-- Diff check: one expected file added.
-- Markdown review: headings and checklists are readable.
-- YAML check: issue form syntax reviewed.
-- JSON review: manifest template remains valid JSON.
-- Tests: not applicable because documentation only.
-- Tests not run: no code changed.
-
-Do not write that tests passed unless a named test or check was actually run.
+Every entry must state what was verified. Do not write that tests passed unless a named test or check was actually run.
 
 ## Boundary and claims logging rule
 
-Every entry must include:
-
-- current phase boundary;
-- whether data/model/map/public-output work occurred;
-- safe claim after the task;
-- unsupported claims after the task.
-
-For Objective Four, the expected result is documentation, template, workflow, release-note, or records work only.
+Every entry must include current phase boundary, whether data/model/map/public-output work occurred, safe claims after the task, and unsupported claims after the task.
 
 ## Entry approval rule
 
@@ -224,16 +180,7 @@ A prompt/build log entry is acceptable when a reviewer can answer:
 
 ## Rejection and defer criteria
 
-Revise or defer this protocol if:
-
-- it requires recording private chain-of-thought;
-- it allows secrets or credentials in logs;
-- it permits vague prompt summaries with no file scope;
-- it omits research/source checks;
-- it omits verification results;
-- it fails to distinguish allowed files from actual changed files;
-- it allows unsupported official, operational, validation, or endorsement claims;
-- it replaces issues or PRs instead of complementing them.
+Revise or defer this protocol if it requires recording private chain-of-thought, allows secrets or credentials in logs, permits vague prompt summaries with no file scope, omits research/source checks, omits verification results, fails to distinguish allowed files from actual changed files, allows unsupported official/operational/validation/endorsement claims, or replaces issues/PRs instead of complementing them.
 
 ## Allowed uses
 
@@ -245,17 +192,7 @@ This protocol must not be used to publish private reasoning, expose credentials,
 
 ## Versioning and provenance implications
 
-Each prompt/build log entry should preserve:
-
-- task issue number;
-- parent issue number;
-- branch;
-- PR number;
-- artifact paths;
-- source links;
-- verification notes;
-- merge method;
-- handoff note.
+Each prompt/build log entry should preserve task issue number, parent issue number, branch, PR number, artifact paths, source links, verification notes, merge method, and handoff note.
 
 ## Claims-register check
 
@@ -272,4 +209,4 @@ Unsupported claims:
 
 ## Handoff note
 
-After the P1O5-T04 PR is reviewed and merged, update parent issue #144 with the P1O5-T04 completion summary and proceed to P1O5-T05 / #155 from current `main`.
+After the P1O5-SYNC-04 PR is reviewed and merged, update parent issue #144 with the sync completion summary and proceed to P1O5-T05 / #155 from current `main`.
