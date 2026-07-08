@@ -26,25 +26,7 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 
 Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, and records work only.
 
-It does not authorize:
-
-- final AOI selection;
-- source data acquisition;
-- imagery download;
-- retained source data;
-- preprocessing;
-- labels;
-- masks;
-- baseline outputs;
-- model inputs;
-- model training;
-- inference;
-- metric computation;
-- raster/vector processing outputs;
-- map publication;
-- website demo integration;
-- public operational claims;
-- official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
+It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
 Required warning for future public-facing outputs remains:
 
@@ -54,7 +36,7 @@ Experimental BurnLens CV output. Not official wildfire information. Not emergenc
 
 ## Controlling sources for Objective Five
 
-Use the current Prompt-to-Repo SOP as the primary operating instruction for task workflow. Use the following repo artifacts as controlling context for Objective Five work:
+Use the current Prompt-to-Repo SOP as the primary operating instruction for task workflow. Use these repo artifacts as controlling context for Objective Five work:
 
 | Control area | Governing artifact(s) | Objective Five use |
 |---|---|---|
@@ -68,19 +50,16 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Use boundaries | `docs/objective-one/USE_BOUNDARIES.md` | Appropriate/prohibited uses, stop rules, disclaimer language. |
 | Source precedence | `docs/objective-one/SOURCE_PRECEDENCE.md` | Official sources govern; BurnLens-derived outputs remain lowest priority. |
 | Versioning | `VERSIONING.md`; `docs/phase-one/objective-five/VERSION_TAXONOMY.md` | Expanded traceability rule and version/identifier taxonomy. |
-| Objective Four handoff | `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Starting instruction for Objective Five and no-data transition rule. |
-| Objective Four release note | `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Repo-ops baseline and Phase Two intake-readiness boundary. |
+| Objective Four handoff/release | `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`; `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Repo-ops baseline and Phase Two intake-readiness boundary. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
-
-Use this loop for each Objective Five task:
 
 ```text
 prompt -> task framing -> artifact contract -> issue -> branch -> research if needed -> artifact work -> prompt log if needed -> self-audit -> PR -> merge -> parent/current-status update
 ```
 
-For Objective Five, this means:
+For Objective Five:
 
 1. Use one task issue per task unless the user explicitly approves bundling.
 2. Post the artifact contract before artifact creation.
@@ -112,7 +91,6 @@ For Objective Five, this means:
 
 | Dependency | Rule |
 |---|---|
-| T02 after T01 | Current status reconciliation uses the tracker and artifact-contracts file after merge. |
 | T03 after T02 | Version taxonomy happens after top-level status and current controlling handoff are reconciled. |
 | T04 after T03 | Release control should use the expanded version taxonomy. |
 | T05 after T03 | Provenance traceability should use the version taxonomy and existing Objective Three provenance fields. |
@@ -181,8 +159,8 @@ Do not claim:
 | VERSIONING.md updated. | Satisfied in branch | Protocol changes in P1O5-T03. |
 | Version classes separated. | Satisfied in branch | Taxonomy sections separate each class. |
 | Version numbers do not imply readiness. | Satisfied | Boundary and claim rules. |
-| Prompt/build log entry created. | Pending until log file exists | `records/prompt-build-log/2026-07-08-p1o5-t03.md`. |
-| Prompt/build log index updated. | Pending | `records/PROMPT_BUILD_LOG.md`. |
+| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t03.md`. |
+| Prompt/build log index updated. | Satisfied in branch | `records/PROMPT_BUILD_LOG.md`. |
 | Boundary language present. | Satisfied | Boundary section above. |
 | Claims check present. | Satisfied | Safe and unsupported claims listed above. |
 | Handoff present. | Satisfied | Handoff section below. |
