@@ -11,14 +11,14 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T02 |
-| Current task issue | #146 |
-| Current branch | `p1o5t02b` |
-| Current artifact set | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; `records/PROMPT_BUILD_LOG.md`; `records/prompt-build-log/2026-07-08-p1o5-t02.md` |
-| Previous task | P1O5-T01 / #145 / PR #147 / merged |
-| Next task issue | #148 |
-| Next task | P1O5-T03 - Expand version taxonomy |
-| Objective status | Active; current-status reconciliation drafted in branch for PR review |
+| Current task | P1O5-T03 |
+| Current task issue | #148 |
+| Current branch | `p1o5t03b` |
+| Current artifact set | `VERSION_TAXONOMY.md`; `VERSIONING.md`; `records/prompt-build-log/2026-07-08-p1o5-t03.md`; tracker/index updates |
+| Previous task | P1O5-T02 / #146 / PR #149 / merged |
+| Next task issue | #150 |
+| Next task | P1O5-T04 - Define release and tag control |
+| Objective status | Active; version taxonomy drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 
@@ -26,25 +26,7 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 
 Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, and records work only.
 
-It does not authorize:
-
-- final AOI selection;
-- source data acquisition;
-- imagery download;
-- retained source data;
-- preprocessing;
-- labels;
-- masks;
-- baseline outputs;
-- model inputs;
-- model training;
-- inference;
-- metric computation;
-- raster/vector processing outputs;
-- map publication;
-- website demo integration;
-- public operational claims;
-- official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
+It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
 Required warning for future public-facing outputs remains:
 
@@ -54,7 +36,7 @@ Experimental BurnLens CV output. Not official wildfire information. Not emergenc
 
 ## Controlling sources for Objective Five
 
-Use the current Prompt-to-Repo SOP as the primary operating instruction for task workflow. Use the following repo artifacts as controlling context for Objective Five work:
+Use the current Prompt-to-Repo SOP as the primary operating instruction for task workflow. Use these repo artifacts as controlling context for Objective Five work:
 
 | Control area | Governing artifact(s) | Objective Five use |
 |---|---|---|
@@ -67,20 +49,17 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Project identity and technical chain | `README.md`; `docs/objective-one/TECHNICAL_DESCRIPTION.md` | Portfolio-first CV/GEOINT identity and future technical workflow. |
 | Use boundaries | `docs/objective-one/USE_BOUNDARIES.md` | Appropriate/prohibited uses, stop rules, disclaimer language. |
 | Source precedence | `docs/objective-one/SOURCE_PRECEDENCE.md` | Official sources govern; BurnLens-derived outputs remain lowest priority. |
-| Versioning | `VERSIONING.md` | Existing traceability rule and version fields to be expanded in P1O5-T03. |
-| Objective Four handoff | `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Starting instruction for Objective Five and no-data transition rule. |
-| Objective Four release note | `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Repo-ops baseline and Phase Two intake-readiness boundary. |
+| Versioning | `VERSIONING.md`; `docs/phase-one/objective-five/VERSION_TAXONOMY.md` | Expanded traceability rule and version/identifier taxonomy. |
+| Objective Four handoff/release | `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md`; `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Repo-ops baseline and Phase Two intake-readiness boundary. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
-
-Use this loop for each Objective Five task:
 
 ```text
 prompt -> task framing -> artifact contract -> issue -> branch -> research if needed -> artifact work -> prompt log if needed -> self-audit -> PR -> merge -> parent/current-status update
 ```
 
-For Objective Five, this means:
+For Objective Five:
 
 1. Use one task issue per task unless the user explicitly approves bundling.
 2. Post the artifact contract before artifact creation.
@@ -96,9 +75,9 @@ For Objective Five, this means:
 | Task | Issue | Branch | Primary artifact(s) | Status | Starts data/model/map work? |
 |---|---:|---|---|---|---|
 | P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | Merged via PR #147 | No |
-| P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; prompt-log updates | In progress | No |
-| P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md` if protocol changes; prompt log | Open / next | No |
-| P1O5-T04 Define release and tag control | planned | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Planned | No |
+| P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; prompt-log updates | Merged via PR #149 | No |
+| P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md`; prompt log | In progress | No |
+| P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Open / next | No |
 | P1O5-T05 Create provenance traceability spec | planned | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Planned | No |
 | P1O5-T06 Define future run manifest and run package contract | planned | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Planned | No |
 | P1O5-T07 Create artifact registry specification | planned | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Planned | No |
@@ -112,8 +91,7 @@ For Objective Five, this means:
 
 | Dependency | Rule |
 |---|---|
-| T02 after T01 | Current status reconciliation uses the tracker and artifact-contracts file after merge. |
-| T03 after T02 | Version taxonomy should happen after top-level status and current controlling handoff are reconciled. |
+| T03 after T02 | Version taxonomy happens after top-level status and current controlling handoff are reconciled. |
 | T04 after T03 | Release control should use the expanded version taxonomy. |
 | T05 after T03 | Provenance traceability should use the version taxonomy and existing Objective Three provenance fields. |
 | T06 after T05 | Future run package contract should link to provenance entities, activities, outputs, and source records. |
@@ -130,7 +108,7 @@ For Objective Five, this means:
 |---|---:|---|
 | P1O5-T01 | No external research required | Controlling repo docs and SOP were sufficient. |
 | P1O5-T02 | No external research required | Repo state and GitHub issue/PR records govern. |
-| P1O5-T03 | Yes | SemVer and existing `VERSIONING.md`; official/primary versioning references. |
+| P1O5-T03 | Completed in branch | SemVer 2.0.0 and GitHub release/tag docs; existing `VERSIONING.md`. |
 | P1O5-T04 | Yes | GitHub releases/tags docs and existing repo workflow. |
 | P1O5-T05 | Yes | W3C PROV or comparable primary provenance standard; Objective Three provenance fields. |
 | P1O5-T06 | Yes | Existing technical/run package requirements; STAC or geospatial metadata references if invoked. |
@@ -143,14 +121,14 @@ For Objective Five, this means:
 
 ## Current safe claims
 
-After P1O5-T02 is merged, safe claims will be limited to:
+After P1O5-T03 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has reconciled its current repository status for Phase One / Objective Five and updated current-status records so future Objective Five tasks begin from the correct handoff.
+BurnLens has an expanded version taxonomy that separates software versions, objective baseline tags, AOI versions, source record IDs, dataset versions, label schema versions, baseline method versions, model versions, run IDs, and report versions.
 ```
 
 ```text
-Objective Five is active documentation and traceability-control work; Phase Two data work has not begun.
+BurnLens version numbers support traceability but do not imply operational readiness, official status, field validation, emergency readiness, or agency endorsement.
 ```
 
 ## Unsupported claims
@@ -158,7 +136,6 @@ Objective Five is active documentation and traceability-control work; Phase Two 
 Do not claim:
 
 - Objective Five is complete;
-- Versioning has already been expanded beyond `VERSIONING.md`;
 - release/tag policy has been finalized;
 - provenance traceability has been fully specified;
 - run package contracts exist;
@@ -166,21 +143,23 @@ Do not claim:
 - an AOI has been selected;
 - data has been downloaded;
 - labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, or public demos have been created;
-- BurnLens outputs are official, operational, field-validated, emergency-ready, agency-endorsed, or suitable for evacuation/routing/tactical/incident-command support.
+- any BurnLens version number means an artifact is official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
-## Acceptance checklist for P1O5-T02
+## Acceptance checklist for P1O5-T03
 
 | Check | Status | Notes |
 |---|---|---|
 | Parent issue exists. | Satisfied | #144. |
-| Task issue exists. | Satisfied | #146. |
-| Next task issue exists. | Satisfied | #148. |
-| Task branch exists. | Satisfied | `p1o5t02b`. |
-| Artifact contract posted to task issue. | Satisfied | Comment on #146. |
-| Current status reconciliation created. | Satisfied in branch | `CURRENT_STATUS_RECONCILIATION.md`. |
-| README update justified. | Satisfied in branch | README previously pointed to Objective Two. |
-| Tracker update justified. | Satisfied in branch | P1O5-T01 merged; P1O5-T02 active; P1O5-T03 issue exists. |
-| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t02.md`. |
+| Task issue exists. | Satisfied | #148. |
+| Next task issue exists. | Satisfied | #150. |
+| Task branch exists. | Satisfied | `p1o5t03b`. |
+| Artifact contract posted to task issue. | Satisfied | Comment on #148. |
+| Fresh research completed. | Satisfied | SemVer 2.0.0 and GitHub release/tag docs. |
+| Version taxonomy created. | Satisfied in branch | `VERSION_TAXONOMY.md`. |
+| VERSIONING.md updated. | Satisfied in branch | Protocol changes in P1O5-T03. |
+| Version classes separated. | Satisfied in branch | Taxonomy sections separate each class. |
+| Version numbers do not imply readiness. | Satisfied | Boundary and claim rules. |
+| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t03.md`. |
 | Prompt/build log index updated. | Satisfied in branch | `records/PROMPT_BUILD_LOG.md`. |
 | Boundary language present. | Satisfied | Boundary section above. |
 | Claims check present. | Satisfied | Safe and unsupported claims listed above. |
@@ -188,9 +167,9 @@ Do not claim:
 
 ## Handoff
 
-After the P1O5-T02 PR is reviewed and merged:
+After the P1O5-T03 PR is reviewed and merged:
 
-1. confirm issue #146 closes;
+1. confirm issue #148 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T03 / #148;
+3. proceed to P1O5-T04 / #150;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
