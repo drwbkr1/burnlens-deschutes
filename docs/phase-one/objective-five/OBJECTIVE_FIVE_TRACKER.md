@@ -11,14 +11,13 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T03 |
-| Current task issue | #148 |
-| Current branch | `p1o5t03b` |
-| Current artifact set | `VERSION_TAXONOMY.md`; `VERSIONING.md`; `records/prompt-build-log/2026-07-08-p1o5-t03.md`; tracker/index updates |
-| Previous task | P1O5-T02 / #146 / PR #149 / merged |
-| Next task issue | #150 |
-| Next task | P1O5-T04 - Define release and tag control |
-| Objective status | Active; version taxonomy drafted in branch for PR review |
+| Current task | P1O5-T04 |
+| Current task issue | #150 |
+| Current branch | pending creation after P1O5-SYNC-03 merge |
+| Current artifact set | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log; tracker/index updates |
+| Previous task | P1O5-T03 / #148 / PR #152 / merged |
+| Status-sync task | P1O5-SYNC-03 / #153 / `p1o5sync03` |
+| Objective status | Active; current-status cleanup in progress before T04 artifact work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 
@@ -68,7 +67,8 @@ For Objective Five:
 5. Create or update a prompt/build log entry when ChatGPT/Codex creates or materially changes files.
 6. Open a PR that closes only the task issue.
 7. Do not close parent #144 from a normal task PR.
-8. Update this tracker only when current Objective Five status changes.
+8. Update this tracker and other current-status artifacts whenever their truth changes, especially after merge.
+9. Historical logs should not be rewritten unless stale pending status affects current handoff clarity.
 
 ## Objective Five task sequence
 
@@ -76,8 +76,9 @@ For Objective Five:
 |---|---:|---|---|---|---|
 | P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | Merged via PR #147 | No |
 | P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; prompt-log updates | Merged via PR #149 | No |
-| P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md`; prompt log | In progress | No |
-| P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Open / next | No |
+| P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md`; prompt log | Merged via PR #152 | No |
+| P1O5-SYNC-03 Sync status after version taxonomy merge | #153 | `p1o5sync03` | README; tracker; prompt-log index; P1O5-T03 log | In progress | No |
+| P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Open / current next task | No |
 | P1O5-T05 Create provenance traceability spec | planned | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Planned | No |
 | P1O5-T06 Define future run manifest and run package contract | planned | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Planned | No |
 | P1O5-T07 Create artifact registry specification | planned | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Planned | No |
@@ -91,7 +92,6 @@ For Objective Five:
 
 | Dependency | Rule |
 |---|---|
-| T03 after T02 | Version taxonomy happens after top-level status and current controlling handoff are reconciled. |
 | T04 after T03 | Release control should use the expanded version taxonomy. |
 | T05 after T03 | Provenance traceability should use the version taxonomy and existing Objective Three provenance fields. |
 | T06 after T05 | Future run package contract should link to provenance entities, activities, outputs, and source records. |
@@ -108,7 +108,8 @@ For Objective Five:
 |---|---:|---|
 | P1O5-T01 | No external research required | Controlling repo docs and SOP were sufficient. |
 | P1O5-T02 | No external research required | Repo state and GitHub issue/PR records govern. |
-| P1O5-T03 | Completed in branch | SemVer 2.0.0 and GitHub release/tag docs; existing `VERSIONING.md`. |
+| P1O5-T03 | Complete | SemVer 2.0.0 and GitHub release/tag docs; existing `VERSIONING.md`. |
+| P1O5-SYNC-03 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T04 | Yes | GitHub releases/tags docs and existing repo workflow. |
 | P1O5-T05 | Yes | W3C PROV or comparable primary provenance standard; Objective Three provenance fields. |
 | P1O5-T06 | Yes | Existing technical/run package requirements; STAC or geospatial metadata references if invoked. |
@@ -121,14 +122,14 @@ For Objective Five:
 
 ## Current safe claims
 
-After P1O5-T03 is merged, safe claims will be limited to:
+After P1O5-SYNC-03 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has an expanded version taxonomy that separates software versions, objective baseline tags, AOI versions, source record IDs, dataset versions, label schema versions, baseline method versions, model versions, run IDs, and report versions.
+BurnLens has synchronized its current-status artifacts after the P1O5-T03 version taxonomy merge and is ready to begin P1O5-T04 release and tag control work.
 ```
 
 ```text
-BurnLens version numbers support traceability but do not imply operational readiness, official status, field validation, emergency readiness, or agency endorsement.
+BurnLens has an expanded version taxonomy, but release/tag policy has not yet been finalized.
 ```
 
 ## Unsupported claims
@@ -145,31 +146,11 @@ Do not claim:
 - labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, or public demos have been created;
 - any BurnLens version number means an artifact is official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
-## Acceptance checklist for P1O5-T03
-
-| Check | Status | Notes |
-|---|---|---|
-| Parent issue exists. | Satisfied | #144. |
-| Task issue exists. | Satisfied | #148. |
-| Next task issue exists. | Satisfied | #150. |
-| Task branch exists. | Satisfied | `p1o5t03b`. |
-| Artifact contract posted to task issue. | Satisfied | Comment on #148. |
-| Fresh research completed. | Satisfied | SemVer 2.0.0 and GitHub release/tag docs. |
-| Version taxonomy created. | Satisfied in branch | `VERSION_TAXONOMY.md`. |
-| VERSIONING.md updated. | Satisfied in branch | Protocol changes in P1O5-T03. |
-| Version classes separated. | Satisfied in branch | Taxonomy sections separate each class. |
-| Version numbers do not imply readiness. | Satisfied | Boundary and claim rules. |
-| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t03.md`. |
-| Prompt/build log index updated. | Satisfied in branch | `records/PROMPT_BUILD_LOG.md`. |
-| Boundary language present. | Satisfied | Boundary section above. |
-| Claims check present. | Satisfied | Safe and unsupported claims listed above. |
-| Handoff present. | Satisfied | Handoff section below. |
-
 ## Handoff
 
-After the P1O5-T03 PR is reviewed and merged:
+After the P1O5-SYNC-03 PR is reviewed and merged:
 
-1. confirm issue #148 closes;
+1. confirm issue #153 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T04 / #150;
+3. proceed to P1O5-T04 / #150 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
