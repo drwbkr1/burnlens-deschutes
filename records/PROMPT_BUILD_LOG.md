@@ -119,7 +119,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O4-QA | `records/prompt-build-log/2026-07-06-p1o4-qa.md` | merged via PR #142 | Quality pass before P1O4-T12. |
 | P1O4-T12 | `records/prompt-build-log/2026-07-06-p1o4-t12.md` | merged via PR #143 | Objective Four release note task. |
 | P1O5-T01 | `records/prompt-build-log/2026-07-07-p1o5-t01.md` | merged via PR #147 | Objective Five tracker and artifact-contract baseline. |
-| P1O5-T02 | `records/prompt-build-log/2026-07-08-p1o5-t02.md` | drafted in branch | Current status reconciliation and README handoff update. |
+| P1O5-T02 | `records/prompt-build-log/2026-07-08-p1o5-t02.md` | merged via PR #149 | Current status reconciliation and README handoff update. |
+| P1O5-T03 | `records/prompt-build-log/2026-07-08-p1o5-t03.md` | drafted in branch | Expanded version taxonomy and VERSIONING.md protocol update. |
 
 ## Entry creation timing
 
@@ -269,4 +270,4 @@ Unsupported claims:
 
 ## Handoff note
 
-After the P1O5-T02 PR is reviewed and merged, update parent issue #144 with the P1O5-T02 completion summary and proceed to P1O5-T03 / #148.
+After the P1O5-T03 PR is reviewed and merged, update parent issue #144 with the P1O5-T03 completion summary and proceed to P1O5-T04 / #150.
