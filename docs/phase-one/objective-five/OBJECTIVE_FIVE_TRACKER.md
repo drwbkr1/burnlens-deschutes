@@ -11,15 +11,13 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T05 |
-| Current task issue | #155 |
-| Current branch | `p1o5t05b` |
-| Current artifact set | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; `records/prompt-build-log/2026-07-08-p1o5-t05.md`; README/tracker/index updates |
-| Previous task | P1O5-SYNC-04 / #157 / PR #158 / merged |
-| Previous primary task | P1O5-T04 / #150 / PR #156 / merged |
-| Next task issue | #159 |
-| Next task | P1O5-T06 - Define future run manifest and run package contract |
-| Objective status | Active; provenance traceability artifacts drafted in branch for PR review |
+| Current task | P1O5-T06 |
+| Current task issue | #159 |
+| Current branch | pending creation after P1O5-SYNC-05 merge |
+| Current artifact set | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log; tracker/index updates |
+| Previous task | P1O5-T05 / #155 / PR #160 / merged |
+| Status-sync task | P1O5-SYNC-05 / #161 / `p1o5sync05` |
+| Objective status | Active; current-status cleanup in progress before T06 artifact work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
@@ -83,7 +81,8 @@ For Objective Five:
 | P1O5-SYNC-03 Sync status after version taxonomy merge | #153 | `p1o5sync03` | README; tracker; prompt-log index; P1O5-T03 log | Merged via PR #154 | No |
 | P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Merged via PR #156 | No |
 | P1O5-SYNC-04 Sync status after release-control merge | #157 | `p1o5sync04` | README; tracker; prompt-log index; P1O5-T04 log | Merged via PR #158 | No |
-| P1O5-T05 Create provenance traceability spec | #155 | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | In progress | No |
+| P1O5-T05 Create provenance traceability spec | #155 | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Merged via PR #160 | No |
+| P1O5-SYNC-05 Sync status after provenance traceability merge | #161 | `p1o5sync05` | README; tracker; prompt-log index; P1O5-T05 log | In progress | No |
 | P1O5-T06 Define future run manifest and run package contract | #159 | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Open / next | No |
 | P1O5-T07 Create artifact registry specification | planned | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Planned | No |
 | P1O5-T08 Define claim-to-evidence protocol | planned | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; prompt log | Planned | No |
@@ -102,7 +101,8 @@ For Objective Five:
 | P1O5-SYNC-03 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T04 | Complete | GitHub releases/tags docs and existing repo workflow. |
 | P1O5-SYNC-04 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T05 | Complete in branch | W3C PROV overview/data model and existing Objective Four intake/provenance templates. |
+| P1O5-T05 | Complete | W3C PROV overview/data model and existing Objective Four intake/provenance templates. |
+| P1O5-SYNC-05 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T06 | Yes | Existing technical/run package requirements; STAC or geospatial metadata references if invoked. |
 | P1O5-T07 | Conditional | Repo artifacts govern unless registry claims invoke external metadata standards. |
 | P1O5-T08 | Conditional | Repo claims controls govern; external model/data-card standards only if cited. |
@@ -113,14 +113,14 @@ For Objective Five:
 
 ## Current safe claims
 
-After P1O5-T05 is merged, safe claims will be limited to:
+After P1O5-SYNC-05 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has a provenance traceability spec and reusable traceability record template that map W3C PROV-inspired entity, activity, and agent concepts to BurnLens source records, access logs, prechecks, provenance manifests, processing steps, method versions, output artifacts, run reports, claim-register entries, and public-facing claims.
+BurnLens has synchronized current-status artifacts after the P1O5-T05 provenance traceability merge and is ready to begin P1O5-T06 run package contract work.
 ```
 
 ```text
-BurnLens provenance traceability does not create data, models, maps, runs, reports, public demos, tags, GitHub releases, operational wildfire products, or official wildfire information.
+BurnLens has provenance traceability documentation, but no run package contract, data product, model product, map product, run package, report package, public demo, tag, GitHub release, or operational wildfire product has been created.
 ```
 
 ## Unsupported claims
@@ -128,7 +128,6 @@ BurnLens provenance traceability does not create data, models, maps, runs, repor
 Do not claim:
 
 - Objective Five is complete;
-- a full formal W3C PROV implementation exists;
 - run package contracts exist;
 - Phase Two data work has begun;
 - an AOI has been selected;
@@ -139,9 +138,9 @@ Do not claim:
 
 ## Handoff
 
-After the P1O5-T05 PR is reviewed and merged:
+After the P1O5-SYNC-05 PR is reviewed and merged:
 
-1. confirm issue #155 closes;
+1. confirm issue #161 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
 3. proceed to P1O5-T06 / #159 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.

@@ -22,7 +22,9 @@ P1O5-T04 is complete. It created release and tag control, a reusable release-not
 
 P1O5-SYNC-04 is complete. It synchronized current-status artifacts after the P1O5-T04 merge.
 
-P1O5-T05 / #155 is active on branch `p1o5t05b`. It defines the provenance traceability spec and reusable traceability record template for proving lineage from source records through processing, outputs, reports, claim-register entries, and public-facing claims.
+P1O5-T05 is complete. It created the provenance traceability spec and reusable traceability record template.
+
+P1O5-SYNC-05 is synchronizing post-merge status so P1O5-T06 / #159 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, or GitHub release has been authorized.
 
@@ -44,8 +46,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#155 - P1O5-T05 Create provenance traceability spec
 #159 - P1O5-T06 Define future run manifest and run package contract
+#161 - P1O5-SYNC-05 Sync status after provenance traceability merge
 ```
 
 ## Locked computer vision task
@@ -149,7 +151,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T05 is reviewed and merged, proceed to:
+After P1O5-SYNC-05 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T06 - Define future run manifest and run package contract
