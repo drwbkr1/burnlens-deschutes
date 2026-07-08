@@ -11,13 +11,14 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T01 |
-| Current task issue | #145 |
-| Current branch | `p1o5t01b` |
-| Current artifact set | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; `records/prompt-build-log/2026-07-07-p1o5-t01.md` |
-| Next task issue | #146 |
-| Next task | P1O5-T02 - Reconcile current repo status and README handoff |
-| Objective status | Started; Task 1 artifacts drafted in branch for PR review |
+| Current task | P1O5-T02 |
+| Current task issue | #146 |
+| Current branch | `p1o5t02b` |
+| Current artifact set | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; `records/PROMPT_BUILD_LOG.md`; `records/prompt-build-log/2026-07-08-p1o5-t02.md` |
+| Previous task | P1O5-T01 / #145 / PR #147 / merged |
+| Next task issue | #148 |
+| Next task | P1O5-T03 - Expand version taxonomy |
+| Objective status | Active; current-status reconciliation drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 
@@ -66,9 +67,10 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Project identity and technical chain | `README.md`; `docs/objective-one/TECHNICAL_DESCRIPTION.md` | Portfolio-first CV/GEOINT identity and future technical workflow. |
 | Use boundaries | `docs/objective-one/USE_BOUNDARIES.md` | Appropriate/prohibited uses, stop rules, disclaimer language. |
 | Source precedence | `docs/objective-one/SOURCE_PRECEDENCE.md` | Official sources govern; BurnLens-derived outputs remain lowest priority. |
-| Versioning | `VERSIONING.md` | Existing traceability rule and version fields to be expanded in later Objective Five tasks. |
+| Versioning | `VERSIONING.md` | Existing traceability rule and version fields to be expanded in P1O5-T03. |
 | Objective Four handoff | `docs/phase-one/objective-four/OBJECTIVE_FOUR_HANDOFF.md` | Starting instruction for Objective Five and no-data transition rule. |
 | Objective Four release note | `docs/phase-one/objective-four/OBJECTIVE_FOUR_RELEASE_NOTE.md` | Repo-ops baseline and Phase Two intake-readiness boundary. |
+| Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
 
@@ -93,9 +95,9 @@ For Objective Five, this means:
 
 | Task | Issue | Branch | Primary artifact(s) | Status | Starts data/model/map work? |
 |---|---:|---|---|---|---|
-| P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | Drafted in branch | No |
-| P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update if needed; P1O5-T02 prompt log | Open / next | No |
-| P1O5-T03 Expand version taxonomy | planned | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md` if protocol changes; prompt log | Planned | No |
+| P1O5-T01 Create Objective Five tracker and artifact contracts | #145 | `p1o5t01b` | `OBJECTIVE_FIVE_TRACKER.md`; `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`; P1O5-T01 prompt log | Merged via PR #147 | No |
+| P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; prompt-log updates | In progress | No |
+| P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md` if protocol changes; prompt log | Open / next | No |
 | P1O5-T04 Define release and tag control | planned | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Planned | No |
 | P1O5-T05 Create provenance traceability spec | planned | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Planned | No |
 | P1O5-T06 Define future run manifest and run package contract | planned | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Planned | No |
@@ -110,7 +112,7 @@ For Objective Five, this means:
 
 | Dependency | Rule |
 |---|---|
-| T02 after T01 | Current status reconciliation should use this tracker and artifact-contracts file after merge. |
+| T02 after T01 | Current status reconciliation uses the tracker and artifact-contracts file after merge. |
 | T03 after T02 | Version taxonomy should happen after top-level status and current controlling handoff are reconciled. |
 | T04 after T03 | Release control should use the expanded version taxonomy. |
 | T05 after T03 | Provenance traceability should use the version taxonomy and existing Objective Three provenance fields. |
@@ -126,8 +128,8 @@ For Objective Five, this means:
 
 | Task | Fresh research required? | Minimum source standard |
 |---|---:|---|
-| P1O5-T01 | No external research required | Controlling repo docs and SOP are sufficient. |
-| P1O5-T02 | No external research expected | Repo state and GitHub issue/PR records govern. |
+| P1O5-T01 | No external research required | Controlling repo docs and SOP were sufficient. |
+| P1O5-T02 | No external research required | Repo state and GitHub issue/PR records govern. |
 | P1O5-T03 | Yes | SemVer and existing `VERSIONING.md`; official/primary versioning references. |
 | P1O5-T04 | Yes | GitHub releases/tags docs and existing repo workflow. |
 | P1O5-T05 | Yes | W3C PROV or comparable primary provenance standard; Objective Three provenance fields. |
@@ -141,14 +143,14 @@ For Objective Five, this means:
 
 ## Current safe claims
 
-After P1O5-T01 is merged, safe claims will be limited to:
+After P1O5-T02 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has started Phase One / Objective Five and has an Objective Five parent issue, first task issue, tracker, artifact-contract baseline, and prompt/build log entry for Task 1.
+BurnLens has reconciled its current repository status for Phase One / Objective Five and updated current-status records so future Objective Five tasks begin from the correct handoff.
 ```
 
 ```text
-Objective Five is documentation and traceability-control work only; Phase Two data work has not begun.
+Objective Five is active documentation and traceability-control work; Phase Two data work has not begun.
 ```
 
 ## Unsupported claims
@@ -156,7 +158,6 @@ Objective Five is documentation and traceability-control work only; Phase Two da
 Do not claim:
 
 - Objective Five is complete;
-- all Objective Five task issues exist;
 - Versioning has already been expanded beyond `VERSIONING.md`;
 - release/tag policy has been finalized;
 - provenance traceability has been fully specified;
@@ -167,32 +168,29 @@ Do not claim:
 - labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, or public demos have been created;
 - BurnLens outputs are official, operational, field-validated, emergency-ready, agency-endorsed, or suitable for evacuation/routing/tactical/incident-command support.
 
-## Acceptance checklist for P1O5-T01
+## Acceptance checklist for P1O5-T02
 
 | Check | Status | Notes |
 |---|---|---|
 | Parent issue exists. | Satisfied | #144. |
-| Task issue exists. | Satisfied | #145. |
-| Next task issue exists. | Satisfied | #146. |
-| Task branch exists. | Satisfied | `p1o5t01b`. |
-| Artifact contract posted to task issue. | Satisfied | Comment on #145. |
-| Tracker created. | Satisfied in branch | This file. |
-| Artifact-contracts file created. | Satisfied in branch | `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md`. |
-| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-07-p1o5-t01.md`. |
-| Prompt/build log index updated if needed. | Deferred | Entry file is canonical for Task 1; index reconciliation may occur in P1O5-T02 if current-status artifacts are updated. |
+| Task issue exists. | Satisfied | #146. |
+| Next task issue exists. | Satisfied | #148. |
+| Task branch exists. | Satisfied | `p1o5t02b`. |
+| Artifact contract posted to task issue. | Satisfied | Comment on #146. |
+| Current status reconciliation created. | Satisfied in branch | `CURRENT_STATUS_RECONCILIATION.md`. |
+| README update justified. | Satisfied in branch | README previously pointed to Objective Two. |
+| Tracker update justified. | Satisfied in branch | P1O5-T01 merged; P1O5-T02 active; P1O5-T03 issue exists. |
+| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t02.md`. |
+| Prompt/build log index updated. | Satisfied in branch | `records/PROMPT_BUILD_LOG.md`. |
 | Boundary language present. | Satisfied | Boundary section above. |
 | Claims check present. | Satisfied | Safe and unsupported claims listed above. |
 | Handoff present. | Satisfied | Handoff section below. |
 
-## Connector-friction note
-
-Before this branch was successfully used, several accidental empty branches were created while attempting to continue the SOP workflow through the GitHub connector. No files were committed to those branches by this task. They should be cleaned up manually in GitHub UI or local git if desired because the available connector actions do not expose branch deletion.
-
 ## Handoff
 
-After the P1O5-T01 PR is reviewed and merged:
+After the P1O5-T02 PR is reviewed and merged:
 
-1. confirm issue #145 closes;
+1. confirm issue #146 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T02 using this tracker and `OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md` as current Objective Five controls;
+3. proceed to P1O5-T03 / #148;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.

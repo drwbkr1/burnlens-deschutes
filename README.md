@@ -6,16 +6,30 @@ The project demonstrates a reproducible workflow for turning wildfire-relevant i
 
 ## Current status
 
-**Phase 1 / Objective Two is complete.**
+**Phase One / Objective Five is active.**
 
-Objective Two defined the first BurnLens Deschutes computer vision task tightly enough that later Phase One objectives and Phase Two data, label, baseline, and model work can proceed without ambiguity, scope creep, or operational overclaiming.
+Objective Five is expanding BurnLens Deschutes' lightweight versioning and traceability posture into a fuller control baseline for versioning, provenance, release control, run packages, artifact registries, source-precedence gates, QA, and claim traceability.
 
-The current repository state is still documentation and scope-control focused. No data ingestion, imagery download, AOI tile selection, label creation, baseline generation, model training, inference, metric computation, model-card completion, website demo integration, or public performance claim has been authorized by Objective Two.
+P1O5-T01 is complete. It created the Objective Five parent issue, first task issue, tracker, artifact-contract baseline, and prompt/build log entry for Task 1.
 
-Current controlling handoff:
+P1O5-T02 is the current reconciliation task. It updates this README, the current Objective Five tracker, and prompt/build log index where the repository truth changed after Objective Four and P1O5-T01.
+
+The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, or public performance claim has been authorized.
+
+Current controlling handoff / current-status records:
 
 ```text
-docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md
+docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
+```
+
+Current parent/task issues:
+
+```text
+#144 - Phase 1 Objective Five parent
+#146 - P1O5-T02 Reconcile current repo status and README handoff
+#148 - P1O5-T03 Expand version taxonomy
 ```
 
 ## Locked computer vision task
@@ -73,60 +87,73 @@ No report, map, model card, run package, website card, or screenshot should blur
 
 ```text
 docs/
+  objective-one/          Project identity, thesis, technical description, source precedence, and use boundaries
   phase-one/
-    objective-two/       Completed Objective Two CV task-definition docs and final handoff
-templates/               Reusable documentation templates
-records/                 Project logs, claims register, research validation, and decision records when present
-README.md                Repository overview and current status
-VERSIONING.md            Versioning and traceability expectations
+    objective-two/        Completed CV task-definition docs and final handoff
+    objective-three/      Completed source/AOI/CRS/provenance feasibility controls
+    objective-four/       Completed repo operating-system, workflow, and release-note baseline
+    objective-five/       Active versioning, provenance, release-control, and claim-traceability objective
+templates/                Reusable documentation and future intake templates
+records/                  Prompt/build logs, claims records, research validation, and decision records when present
+README.md                 Repository overview and current status
+VERSIONING.md             Versioning and traceability expectations
 ```
 
-Key Objective Two artifacts:
+Key current Objective Five artifacts:
 
 ```text
-docs/phase-one/objective-two/CV_TASK_DEFINITION.md
-docs/phase-one/objective-two/TARGET_CLASS_DECISION.md
-docs/phase-one/objective-two/CLASS_DEFINITIONS.md
-docs/phase-one/objective-two/CV_OUTPUT_CONTRACT.md
-docs/phase-one/objective-two/IMAGERY_ASSUMPTIONS.md
-docs/phase-one/objective-two/LABEL_ASSUMPTIONS.md
-docs/phase-one/objective-two/BASELINE_COMPARISON_PLAN.md
-docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md
-docs/phase-one/objective-two/EVALUATION_METRICS_PLAN.md
-docs/phase-one/objective-two/FAILURE_MODES.md
-docs/phase-one/objective-two/CV_USE_BOUNDARIES.md
-docs/phase-one/objective-two/OBJECTIVE_TWO_FINAL_HANDOFF.md
+docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
+records/prompt-build-log/2026-07-07-p1o5-t01.md
+records/prompt-build-log/2026-07-08-p1o5-t02.md
 ```
 
-## Recommended next objective
+Key earlier governing artifacts:
 
-The next objective should begin turning Objective Two's scope decisions into data/source feasibility and research records while avoiding premature implementation.
+```text
+AGENTS.md
+VERSIONING.md
+docs/objective-one/TECHNICAL_DESCRIPTION.md
+docs/objective-one/USE_BOUNDARIES.md
+docs/objective-one/SOURCE_PRECEDENCE.md
+docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md
+templates/CODEX_TASK_PACKET.md
+records/PROMPT_BUILD_LOG.md
+templates/PROMPT_LOG_ENTRY.md
+```
 
-Recommended next-objective focus:
+## Recommended next task
 
-> Determine which imagery, reference products, AOI constraints, and data-access paths are feasible for the locked binary segmentation task.
+After P1O5-T02 is reviewed and merged, proceed to:
 
-Recommended early tasks:
+```text
+P1O5-T03 - Expand version taxonomy
+```
 
-1. Create the next objective tracker issue.
-2. Define candidate data/source feasibility criteria.
-3. Inventory source access paths for Sentinel-2, Landsat, FIRMS, and allowed public sample imagery.
-4. Define AOI tile-selection criteria without downloading imagery unless the next objective explicitly authorizes source testing.
-5. Update research validation logs and the claims register.
-6. Preserve Objective Two boundaries in every future data decision.
+Recommended focus:
+
+> Define how BurnLens names and controls objective baselines, repo/app versions, source records, AOI versions, dataset versions, label schema versions, baseline versions, model versions, run IDs, reports, screenshots, maps, releases, and public portfolio claims.
+
+P1O5-T03 should complete fresh research after branch creation because versioning and release semantics require current, source-backed technical claims.
 
 ## Repo workflow
 
 Use this loop for objective tasks:
 
 ```text
-GitHub issue
-→ task branch
-→ repo artifact
-→ commit
+prompt
+→ task framing
+→ artifact contract
+→ issue
+→ branch
+→ research if needed
+→ artifact work
+→ prompt log if needed
+→ self-audit
 → pull request
 → merge
-→ objective handoff update
+→ parent/current-status update
 ```
 
 Every future public-facing output should be traceable to a commit, version, source metadata, run ID where relevant, timestamp, warning flags, and limitations.
