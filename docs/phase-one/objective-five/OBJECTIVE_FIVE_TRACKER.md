@@ -180,8 +180,8 @@ Do not claim:
 | Current status reconciliation created. | Satisfied in branch | `CURRENT_STATUS_RECONCILIATION.md`. |
 | README update justified. | Satisfied in branch | README previously pointed to Objective Two. |
 | Tracker update justified. | Satisfied in branch | P1O5-T01 merged; P1O5-T02 active; P1O5-T03 issue exists. |
-| Prompt/build log entry created. | Pending until log file exists | `records/prompt-build-log/2026-07-08-p1o5-t02.md`. |
-| Prompt/build log index updated. | Pending | `records/PROMPT_BUILD_LOG.md`. |
+| Prompt/build log entry created. | Satisfied in branch | `records/prompt-build-log/2026-07-08-p1o5-t02.md`. |
+| Prompt/build log index updated. | Satisfied in branch | `records/PROMPT_BUILD_LOG.md`. |
 | Boundary language present. | Satisfied | Boundary section above. |
 | Claims check present. | Satisfied | Safe and unsupported claims listed above. |
 | Handoff present. | Satisfied | Handoff section below. |
