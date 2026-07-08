@@ -30,7 +30,9 @@ P1O5-T06 is complete. It created the future run package contract and reusable ru
 
 P1O5-SYNC-06 is complete. It synchronized current-status artifacts after the P1O5-T06 merge.
 
-P1O5-T07 / #163 is active on branch `p1o5t07b`. It defines where future BurnLens artifacts live, how they are named, and how registry entries separate templates, completed records, official/reference sources, and BurnLens-derived outputs.
+P1O5-T07 is complete. It created the artifact registry specification.
+
+P1O5-SYNC-07 is synchronizing post-merge status so P1O5-T08 / #167 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, or registry database has been authorized.
 
@@ -55,8 +57,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#163 - P1O5-T07 Create artifact registry specification
 #167 - P1O5-T08 Define claim-to-evidence protocol
+#169 - P1O5-SYNC-07 Sync status after artifact registry merge
 ```
 
 ## Locked computer vision task
@@ -165,7 +167,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T07 is reviewed and merged, proceed to:
+After P1O5-SYNC-07 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T08 - Define claim-to-evidence protocol
