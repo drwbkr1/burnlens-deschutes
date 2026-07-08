@@ -18,7 +18,11 @@ P1O5-T03 is complete. It created the expanded version taxonomy and updated `VERS
 
 P1O5-SYNC-03 is complete. It synchronized current-status artifacts after the P1O5-T03 merge.
 
-P1O5-T04 is complete. It created release and tag control, a reusable release-note template, and current-status updates. P1O5-SYNC-04 is synchronizing post-merge status so P1O5-T05 / #155 can start from clean `main`.
+P1O5-T04 is complete. It created release and tag control, a reusable release-note template, and current-status updates.
+
+P1O5-SYNC-04 is complete. It synchronized current-status artifacts after the P1O5-T04 merge.
+
+P1O5-T05 / #155 is active on branch `p1o5t05b`. It defines the provenance traceability spec and reusable traceability record template for proving lineage from source records through processing, outputs, reports, claim-register entries, and public-facing claims.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, or GitHub release has been authorized.
 
@@ -30,8 +34,10 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
+docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
 VERSIONING.md
 templates/RELEASE_NOTE_TEMPLATE.md
+templates/TRACEABILITY_RECORD_TEMPLATE.md
 ```
 
 Current parent/task issues:
@@ -39,7 +45,7 @@ Current parent/task issues:
 ```text
 #144 - Phase 1 Objective Five parent
 #155 - P1O5-T05 Create provenance traceability spec
-#157 - P1O5-SYNC-04 Sync status after release-control merge
+#159 - P1O5-T06 Define future run manifest and run package contract
 ```
 
 ## Locked computer vision task
@@ -117,11 +123,14 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
+docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
 templates/RELEASE_NOTE_TEMPLATE.md
+templates/TRACEABILITY_RECORD_TEMPLATE.md
 records/prompt-build-log/2026-07-07-p1o5-t01.md
 records/prompt-build-log/2026-07-08-p1o5-t02.md
 records/prompt-build-log/2026-07-08-p1o5-t03.md
 records/prompt-build-log/2026-07-08-p1o5-t04.md
+records/prompt-build-log/2026-07-08-p1o5-t05.md
 ```
 
 Key earlier governing artifacts:
@@ -140,17 +149,17 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-SYNC-04 is reviewed and merged, proceed to:
+After P1O5-T05 is reviewed and merged, proceed to:
 
 ```text
-P1O5-T05 - Create provenance traceability spec
+P1O5-T06 - Define future run manifest and run package contract
 ```
 
 Recommended focus:
 
-> Define how BurnLens source, activity, artifact, version, output, report, and claim records connect before future data/model/run/report releases can be considered.
+> Define the future run manifest and run package contract using the provenance traceability spec, version taxonomy, release-control gates, output inventory rules, checksums, warnings, and claim-register links.
 
-P1O5-T05 should complete fresh research after branch creation because provenance traceability requires source-backed technical claims.
+P1O5-T06 should complete fresh research after branch creation if it invokes external geospatial metadata or run-package standards.
 
 ## Repo workflow
 
