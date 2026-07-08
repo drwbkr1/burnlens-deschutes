@@ -13,20 +13,23 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Parent issue | #144 |
 | Current task | P1O5-T06 |
 | Current task issue | #159 |
-| Current branch | pending creation after P1O5-SYNC-05 merge |
-| Current artifact set | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log; tracker/index updates |
-| Previous task | P1O5-T05 / #155 / PR #160 / merged |
-| Status-sync task | P1O5-SYNC-05 / #161 / `p1o5sync05` |
-| Objective status | Active; current-status cleanup in progress before T06 artifact work |
+| Current branch | `p1o5t06b` |
+| Current artifact set | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; `records/prompt-build-log/2026-07-08-p1o5-t06.md`; README/tracker/index updates |
+| Previous task | P1O5-SYNC-05 / #161 / PR #162 / merged |
+| Previous primary task | P1O5-T05 / #155 / PR #160 / merged |
+| Next task issue | #163 |
+| Next task | P1O5-T07 - Create artifact registry specification |
+| Objective status | Active; run package contract artifacts drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
+| Run package status | Not created; T06 defines contract/template only |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
 
 Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, and records work only.
 
-It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
+It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
 Required warning for future public-facing outputs remains:
 
@@ -51,6 +54,7 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Versioning | `VERSIONING.md`; `docs/phase-one/objective-five/VERSION_TAXONOMY.md` | Expanded traceability rule and version/identifier taxonomy. |
 | Release control | `docs/phase-one/objective-five/RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md` | Release classes, tag eligibility, release-note requirements, and do-not-release triggers. |
 | Provenance traceability | `docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md` | Source-to-claim lineage, BurnLens entity/activity/agent equivalents, and claim evidence gates. |
+| Run package control | `docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json` | Future run folder contract, manifest requirements, output inventory, warnings, and screenshot run-ID rule. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
@@ -82,9 +86,9 @@ For Objective Five:
 | P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Merged via PR #156 | No |
 | P1O5-SYNC-04 Sync status after release-control merge | #157 | `p1o5sync04` | README; tracker; prompt-log index; P1O5-T04 log | Merged via PR #158 | No |
 | P1O5-T05 Create provenance traceability spec | #155 | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Merged via PR #160 | No |
-| P1O5-SYNC-05 Sync status after provenance traceability merge | #161 | `p1o5sync05` | README; tracker; prompt-log index; P1O5-T05 log | In progress | No |
-| P1O5-T06 Define future run manifest and run package contract | #159 | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Open / next | No |
-| P1O5-T07 Create artifact registry specification | planned | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Planned | No |
+| P1O5-SYNC-05 Sync status after provenance traceability merge | #161 | `p1o5sync05` | README; tracker; prompt-log index; P1O5-T05 log | Merged via PR #162 | No |
+| P1O5-T06 Define future run manifest and run package contract | #159 | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | In progress | No |
+| P1O5-T07 Create artifact registry specification | #163 | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Open / next | No |
 | P1O5-T08 Define claim-to-evidence protocol | planned | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; prompt log | Planned | No |
 | P1O5-T09 Integrate source precedence into release control | planned | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Planned | No |
 | P1O5-T10 Create reproducibility and release QA checklist | planned | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Planned | No |
@@ -103,7 +107,7 @@ For Objective Five:
 | P1O5-SYNC-04 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T05 | Complete | W3C PROV overview/data model and existing Objective Four intake/provenance templates. |
 | P1O5-SYNC-05 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T06 | Yes | Existing technical/run package requirements; STAC or geospatial metadata references if invoked. |
+| P1O5-T06 | Complete in branch | W3C PROV overview/data model, OGC STAC Community Standard as lightweight geospatial asset metadata reference, and existing repo controls. |
 | P1O5-T07 | Conditional | Repo artifacts govern unless registry claims invoke external metadata standards. |
 | P1O5-T08 | Conditional | Repo claims controls govern; external model/data-card standards only if cited. |
 | P1O5-T09 | Conditional | Existing `SOURCE_PRECEDENCE.md` governs unless new official-source claims are added. |
@@ -113,14 +117,14 @@ For Objective Five:
 
 ## Current safe claims
 
-After P1O5-SYNC-05 is merged, safe claims will be limited to:
+After P1O5-T06 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has synchronized current-status artifacts after the P1O5-T05 provenance traceability merge and is ready to begin P1O5-T06 run package contract work.
+BurnLens has a future run package contract and reusable run manifest template that define how future run folders must record commit SHA, app/repo version, AOI version, dataset/source versions, method version, timestamps, warnings, use boundaries, output inventory, and public screenshot run-ID references.
 ```
 
 ```text
-BurnLens has provenance traceability documentation, but no run package contract, data product, model product, map product, run package, report package, public demo, tag, GitHub release, or operational wildfire product has been created.
+BurnLens has not created a run folder, run package, prediction mask, prediction polygons, exposure summary, map export, public screenshot, tag, GitHub release, data product, model product, or operational wildfire product.
 ```
 
 ## Unsupported claims
@@ -128,19 +132,19 @@ BurnLens has provenance traceability documentation, but no run package contract,
 Do not claim:
 
 - Objective Five is complete;
-- run package contracts exist;
+- a run package exists;
 - Phase Two data work has begun;
 - an AOI has been selected;
 - data has been downloaded;
-- labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, or public demos have been created;
+- labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, screenshots, or public demos have been created;
 - a tag or GitHub release has been created;
-- provenance traceability makes BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
+- run package controls make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
 ## Handoff
 
-After the P1O5-SYNC-05 PR is reviewed and merged:
+After the P1O5-T06 PR is reviewed and merged:
 
-1. confirm issue #161 closes;
+1. confirm issue #159 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T06 / #159 from current `main`;
+3. proceed to P1O5-T07 / #163 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.

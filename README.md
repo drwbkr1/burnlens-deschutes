@@ -24,9 +24,11 @@ P1O5-SYNC-04 is complete. It synchronized current-status artifacts after the P1O
 
 P1O5-T05 is complete. It created the provenance traceability spec and reusable traceability record template.
 
-P1O5-SYNC-05 is synchronizing post-merge status so P1O5-T06 / #159 can start from clean `main`.
+P1O5-SYNC-05 is complete. It synchronized current-status artifacts after the P1O5-T05 merge.
 
-The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, or GitHub release has been authorized.
+P1O5-T06 / #159 is active on branch `p1o5t06b`. It defines the future run folder contract and reusable run manifest template so future run packages are traceable before any run exists.
+
+The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, or public screenshot has been authorized.
 
 Current controlling handoff / current-status records:
 
@@ -37,9 +39,11 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
 docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
+docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
 VERSIONING.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
+templates/RUN_MANIFEST_TEMPLATE.json
 ```
 
 Current parent/task issues:
@@ -47,7 +51,7 @@ Current parent/task issues:
 ```text
 #144 - Phase 1 Objective Five parent
 #159 - P1O5-T06 Define future run manifest and run package contract
-#161 - P1O5-SYNC-05 Sync status after provenance traceability merge
+#163 - P1O5-T07 Create artifact registry specification
 ```
 
 ## Locked computer vision task
@@ -126,13 +130,16 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
 docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
+docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
+templates/RUN_MANIFEST_TEMPLATE.json
 records/prompt-build-log/2026-07-07-p1o5-t01.md
 records/prompt-build-log/2026-07-08-p1o5-t02.md
 records/prompt-build-log/2026-07-08-p1o5-t03.md
 records/prompt-build-log/2026-07-08-p1o5-t04.md
 records/prompt-build-log/2026-07-08-p1o5-t05.md
+records/prompt-build-log/2026-07-08-p1o5-t06.md
 ```
 
 Key earlier governing artifacts:
@@ -151,17 +158,17 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-SYNC-05 is reviewed and merged, proceed to:
+After P1O5-T06 is reviewed and merged, proceed to:
 
 ```text
-P1O5-T06 - Define future run manifest and run package contract
+P1O5-T07 - Create artifact registry specification
 ```
 
 Recommended focus:
 
-> Define the future run manifest and run package contract using the provenance traceability spec, version taxonomy, release-control gates, output inventory rules, checksums, warnings, and claim-register links.
+> Define how future BurnLens artifacts, manifests, source records, outputs, reports, screenshots, and claim-evidence links will be indexed without creating those artifacts yet.
 
-P1O5-T06 should complete fresh research after branch creation if it invokes external geospatial metadata or run-package standards.
+P1O5-T07 should complete fresh research only if it invokes external metadata-standard claims.
 
 ## Repo workflow
 
