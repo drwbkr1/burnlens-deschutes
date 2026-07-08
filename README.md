@@ -12,7 +12,11 @@ Objective Five is expanding BurnLens Deschutes' lightweight versioning and trace
 
 P1O5-T01 is complete. It created the Objective Five parent issue, first task issue, tracker, artifact-contract baseline, and prompt/build log entry for Task 1.
 
-P1O5-T02 is the current reconciliation task. It updates this README, the current Objective Five tracker, and prompt/build log index where the repository truth changed after Objective Four and P1O5-T01.
+P1O5-T02 is complete. It reconciled the current repository status after Objective Four and P1O5-T01, updated this README, updated the Objective Five tracker, and updated the prompt/build log index.
+
+P1O5-T03 is complete. It created the expanded version taxonomy and updated `VERSIONING.md` because the versioning protocol itself changed.
+
+P1O5-T04 / #150 is the current next task: define release and tag control using the expanded version taxonomy, GitHub release/tag semantics, and the existing repo workflow controls.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, or public performance claim has been authorized.
 
@@ -22,14 +26,16 @@ Current controlling handoff / current-status records:
 docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
+docs/phase-one/objective-five/VERSION_TAXONOMY.md
+VERSIONING.md
 ```
 
 Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#146 - P1O5-T02 Reconcile current repo status and README handoff
-#148 - P1O5-T03 Expand version taxonomy
+#150 - P1O5-T04 Define release and tag control
+#153 - P1O5-SYNC-03 Sync status after version taxonomy merge
 ```
 
 ## Locked computer vision task
@@ -105,8 +111,10 @@ Key current Objective Five artifacts:
 docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_TRACKER.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_ARTIFACT_CONTRACTS.md
+docs/phase-one/objective-five/VERSION_TAXONOMY.md
 records/prompt-build-log/2026-07-07-p1o5-t01.md
 records/prompt-build-log/2026-07-08-p1o5-t02.md
+records/prompt-build-log/2026-07-08-p1o5-t03.md
 ```
 
 Key earlier governing artifacts:
@@ -125,17 +133,17 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T02 is reviewed and merged, proceed to:
+After the P1O5-SYNC-03 cleanup is reviewed and merged, proceed to:
 
 ```text
-P1O5-T03 - Expand version taxonomy
+P1O5-T04 - Define release and tag control
 ```
 
 Recommended focus:
 
-> Define how BurnLens names and controls objective baselines, repo/app versions, source records, AOI versions, dataset versions, label schema versions, baseline versions, model versions, run IDs, reports, screenshots, maps, releases, and public portfolio claims.
+> Define release classes, tag eligibility, release-note requirements, do-not-release triggers, boundary checks, and source-precedence gates so future tags or GitHub releases cannot imply data/model/map/public-output readiness unless those artifacts actually exist.
 
-P1O5-T03 should complete fresh research after branch creation because versioning and release semantics require current, source-backed technical claims.
+P1O5-T04 should complete fresh research after branch creation because release and tag semantics require current, source-backed technical claims.
 
 ## Repo workflow
 
