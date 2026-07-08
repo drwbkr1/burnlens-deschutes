@@ -28,9 +28,11 @@ P1O5-SYNC-05 is complete. It synchronized current-status artifacts after the P1O
 
 P1O5-T06 is complete. It created the future run package contract and reusable run manifest template.
 
-P1O5-SYNC-06 is synchronizing post-merge status so P1O5-T07 / #163 can start from clean `main`.
+P1O5-SYNC-06 is complete. It synchronized current-status artifacts after the P1O5-T06 merge.
 
-The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, or public screenshot has been authorized.
+P1O5-T07 / #163 is active on branch `p1o5t07b`. It defines where future BurnLens artifacts live, how they are named, and how registry entries separate templates, completed records, official/reference sources, and BurnLens-derived outputs.
+
+The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, or registry database has been authorized.
 
 Current controlling handoff / current-status records:
 
@@ -42,6 +44,7 @@ docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
 docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
 docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
+docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md
 VERSIONING.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
@@ -53,7 +56,7 @@ Current parent/task issues:
 ```text
 #144 - Phase 1 Objective Five parent
 #163 - P1O5-T07 Create artifact registry specification
-#165 - P1O5-SYNC-06 Sync status after run package contract merge
+#167 - P1O5-T08 Define claim-to-evidence protocol
 ```
 
 ## Locked computer vision task
@@ -133,6 +136,7 @@ docs/phase-one/objective-five/VERSION_TAXONOMY.md
 docs/phase-one/objective-five/RELEASE_CONTROL.md
 docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
 docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
+docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
 templates/RUN_MANIFEST_TEMPLATE.json
@@ -142,6 +146,7 @@ records/prompt-build-log/2026-07-08-p1o5-t03.md
 records/prompt-build-log/2026-07-08-p1o5-t04.md
 records/prompt-build-log/2026-07-08-p1o5-t05.md
 records/prompt-build-log/2026-07-08-p1o5-t06.md
+records/prompt-build-log/2026-07-08-p1o5-t07.md
 ```
 
 Key earlier governing artifacts:
@@ -160,17 +165,17 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-SYNC-06 is reviewed and merged, proceed to:
+After P1O5-T07 is reviewed and merged, proceed to:
 
 ```text
-P1O5-T07 - Create artifact registry specification
+P1O5-T08 - Define claim-to-evidence protocol
 ```
 
 Recommended focus:
 
-> Define how future BurnLens artifacts, manifests, source records, outputs, reports, screenshots, and claim-evidence links will be indexed without creating those artifacts yet.
+> Define what evidence a future claim must cite, which registry entries can support it, and which claims are blocked when evidence is incomplete, ambiguous, unofficial, BurnLens-derived, or source-precedence unresolved.
 
-P1O5-T07 should complete fresh research only if it invokes external metadata-standard claims.
+P1O5-T08 should complete fresh research only if it invokes external model-card, data-card, or claims-standard references.
 
 ## Repo workflow
 
