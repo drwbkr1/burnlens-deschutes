@@ -122,7 +122,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-T02 | `records/prompt-build-log/2026-07-08-p1o5-t02.md` | merged via PR #149 | Current status reconciliation and README handoff update. |
 | P1O5-T03 | `records/prompt-build-log/2026-07-08-p1o5-t03.md` | merged via PR #152 | Expanded version taxonomy and VERSIONING.md protocol update. |
 | P1O5-SYNC-03 | `records/prompt-build-log/2026-07-08-p1o5-sync-03.md` | merged via PR #154 | Status sync after P1O5-T03 merge. |
-| P1O5-T04 | `records/prompt-build-log/2026-07-08-p1o5-t04.md` | drafted in branch | Release and tag control spec and release-note template. |
+| P1O5-T04 | `records/prompt-build-log/2026-07-08-p1o5-t04.md` | merged via PR #156 | Release and tag control spec and release-note template. |
+| P1O5-SYNC-04 | `records/prompt-build-log/2026-07-08-p1o5-sync-04.md` | drafted in branch | Status sync after P1O5-T04 merge. |
 
 ## Entry creation timing
 
@@ -272,4 +273,4 @@ Unsupported claims:
 
 ## Handoff note
 
-After the P1O5-T04 PR is reviewed and merged, update parent issue #144 with the P1O5-T04 completion summary and proceed to P1O5-T05 / #155 from current `main`.
+After the P1O5-SYNC-04 PR is reviewed and merged, update parent issue #144 with the sync completion summary and proceed to P1O5-T05 / #155 from current `main`.

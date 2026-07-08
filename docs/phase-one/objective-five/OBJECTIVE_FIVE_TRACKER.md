@@ -11,15 +11,13 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T04 |
-| Current task issue | #150 |
-| Current branch | `p1o5t04b` |
-| Current artifact set | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; `records/prompt-build-log/2026-07-08-p1o5-t04.md`; README/tracker/index updates |
-| Previous task | P1O5-SYNC-03 / #153 / PR #154 / merged |
-| Previous primary task | P1O5-T03 / #148 / PR #152 / merged |
-| Next task issue | #155 |
-| Next task | P1O5-T05 - Create provenance traceability spec |
-| Objective status | Active; release-control artifacts drafted in branch for PR review |
+| Current task | P1O5-T05 |
+| Current task issue | #155 |
+| Current branch | pending creation after P1O5-SYNC-04 merge |
+| Current artifact set | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log; tracker/index updates |
+| Previous task | P1O5-T04 / #150 / PR #156 / merged |
+| Status-sync task | P1O5-SYNC-04 / #157 / `p1o5sync04` |
+| Objective status | Active; current-status cleanup in progress before T05 artifact work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
@@ -46,7 +44,6 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Issue creation | `.github/ISSUE_TEMPLATE/task.yml` | Required task issue fields, boundary checks, research gate, acceptance checklist. |
 | Pull requests | `.github/PULL_REQUEST_TEMPLATE.md` | Task linkage, artifact contract, research gate, boundary gate, close keyword. |
 | Branch/PR workflow | `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` | Branch naming, PR title/body rules, close-keyword rule, merge/update sequence. |
-| Codex task packet | `templates/CODEX_TASK_PACKET.md` | Prompt-assisted task framing and verification expectations. |
 | Prompt/build logging | `records/PROMPT_BUILD_LOG.md`; `templates/PROMPT_LOG_ENTRY.md` | Required task log for prompt-assisted file creation or edits. |
 | Project identity and technical chain | `README.md`; `docs/objective-one/TECHNICAL_DESCRIPTION.md` | Portfolio-first CV/GEOINT identity and future technical workflow. |
 | Use boundaries | `docs/objective-one/USE_BOUNDARIES.md` | Appropriate/prohibited uses, stop rules, disclaimer language. |
@@ -81,7 +78,8 @@ For Objective Five:
 | P1O5-T02 Reconcile current repo status and README handoff | #146 | `p1o5t02b` | `CURRENT_STATUS_RECONCILIATION.md`; README update; tracker update; prompt-log updates | Merged via PR #149 | No |
 | P1O5-T03 Expand version taxonomy | #148 | `p1o5t03b` | `VERSION_TAXONOMY.md`; `VERSIONING.md`; prompt log | Merged via PR #152 | No |
 | P1O5-SYNC-03 Sync status after version taxonomy merge | #153 | `p1o5sync03` | README; tracker; prompt-log index; P1O5-T03 log | Merged via PR #154 | No |
-| P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | In progress | No |
+| P1O5-T04 Define release and tag control | #150 | `p1o5t04b` | `RELEASE_CONTROL.md`; `templates/RELEASE_NOTE_TEMPLATE.md`; prompt log | Merged via PR #156 | No |
+| P1O5-SYNC-04 Sync status after release-control merge | #157 | `p1o5sync04` | README; tracker; prompt-log index; P1O5-T04 log | In progress | No |
 | P1O5-T05 Create provenance traceability spec | #155 | `p1o5t05b` | `PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md`; prompt log | Open / next | No |
 | P1O5-T06 Define future run manifest and run package contract | planned | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Planned | No |
 | P1O5-T07 Create artifact registry specification | planned | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Planned | No |
@@ -99,7 +97,8 @@ For Objective Five:
 | P1O5-T02 | No external research required | Repo state and GitHub issue/PR records govern. |
 | P1O5-T03 | Complete | SemVer 2.0.0 and GitHub release/tag docs; existing `VERSIONING.md`. |
 | P1O5-SYNC-03 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T04 | Complete in branch | GitHub releases/tags docs and existing repo workflow. |
+| P1O5-T04 | Complete | GitHub releases/tags docs and existing repo workflow. |
+| P1O5-SYNC-04 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T05 | Yes | W3C PROV or comparable primary provenance standard; Objective Three provenance fields. |
 | P1O5-T06 | Yes | Existing technical/run package requirements; STAC or geospatial metadata references if invoked. |
 | P1O5-T07 | Conditional | Repo artifacts govern unless registry claims invoke external metadata standards. |
@@ -111,14 +110,14 @@ For Objective Five:
 
 ## Current safe claims
 
-After P1O5-T04 is merged, safe claims will be limited to:
+After P1O5-SYNC-04 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has a release-control specification and reusable release-note template that define release classes, tag eligibility, included/excluded artifact requirements, do-not-release triggers, and boundary/source-precedence gates.
+BurnLens has synchronized current-status artifacts after the P1O5-T04 release-control merge and is ready to begin P1O5-T05 provenance traceability work.
 ```
 
 ```text
-BurnLens release and tag control does not create a tag, GitHub release, data product, model product, map product, run package, report package, public demo, or operational wildfire product.
+BurnLens has release-control documentation, but no tag, GitHub release, data product, model product, map product, run package, report package, public demo, or operational wildfire product has been created.
 ```
 
 ## Unsupported claims
@@ -126,20 +125,20 @@ BurnLens release and tag control does not create a tag, GitHub release, data pro
 Do not claim:
 
 - Objective Five is complete;
-- a tag or GitHub release has been created;
 - provenance traceability has been fully specified;
 - run package contracts exist;
 - Phase Two data work has begun;
 - an AOI has been selected;
 - data has been downloaded;
 - labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, or public demos have been created;
+- a tag or GitHub release has been created;
 - release control makes BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
 ## Handoff
 
-After the P1O5-T04 PR is reviewed and merged:
+After the P1O5-SYNC-04 PR is reviewed and merged:
 
-1. confirm issue #150 closes;
+1. confirm issue #157 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
 3. proceed to P1O5-T05 / #155 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
