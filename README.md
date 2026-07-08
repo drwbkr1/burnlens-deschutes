@@ -26,7 +26,9 @@ P1O5-T05 is complete. It created the provenance traceability spec and reusable t
 
 P1O5-SYNC-05 is complete. It synchronized current-status artifacts after the P1O5-T05 merge.
 
-P1O5-T06 / #159 is active on branch `p1o5t06b`. It defines the future run folder contract and reusable run manifest template so future run packages are traceable before any run exists.
+P1O5-T06 is complete. It created the future run package contract and reusable run manifest template.
+
+P1O5-SYNC-06 is synchronizing post-merge status so P1O5-T07 / #163 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, or public screenshot has been authorized.
 
@@ -50,8 +52,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#159 - P1O5-T06 Define future run manifest and run package contract
 #163 - P1O5-T07 Create artifact registry specification
+#165 - P1O5-SYNC-06 Sync status after run package contract merge
 ```
 
 ## Locked computer vision task
@@ -158,7 +160,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T06 is reviewed and merged, proceed to:
+After P1O5-SYNC-06 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T07 - Create artifact registry specification
