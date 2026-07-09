@@ -42,7 +42,9 @@ P1O5-T09 is complete. It created the source-precedence release gate.
 
 P1O5-SYNC-09 is complete. It synchronized current-status artifacts after the P1O5-T09 merge.
 
-P1O5-T10 / #175 is active on branch `p1o5t10b`. It creates reusable BurnLens-specific reproducibility and release QA checklists for objective baselines, future dataset releases, model/baseline releases, run/report releases, and public demo releases.
+P1O5-T10 is complete. It created reusable BurnLens-specific reproducibility and release QA checklists.
+
+P1O5-SYNC-10 is synchronizing post-merge status so P1O5-T11 / #179 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, QA-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, source-precedence review record, completed reproducibility review, or release QA decision has been authorized.
 
@@ -72,8 +74,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#175 - P1O5-T10 Create reproducibility and release QA checklist
 #179 - P1O5-T11 Create Objective Five research and claims records
+#181 - P1O5-SYNC-10 Sync status after T10 merge
 ```
 
 ## Locked computer vision task
@@ -202,7 +204,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T10 is reviewed and merged, proceed to:
+After P1O5-SYNC-10 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T11 - Create Objective Five research and claims records
