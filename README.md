@@ -34,7 +34,9 @@ P1O5-T07 is complete. It created the artifact registry specification.
 
 P1O5-SYNC-07 is complete. It synchronized current-status artifacts after the P1O5-T07 merge.
 
-P1O5-T08 / #167 is active on branch `p1o5t08b`. It defines the claim-to-evidence protocol and reusable claim evidence link template so portfolio claims cannot become stronger than repo evidence.
+P1O5-T08 is complete. It created the claim-to-evidence protocol and reusable claim evidence link template.
+
+P1O5-SYNC-08 is synchronizing post-merge status so P1O5-T09 / #171 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, or completed claim record has been authorized.
 
@@ -61,8 +63,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#167 - P1O5-T08 Define claim-to-evidence protocol
 #171 - P1O5-T09 Integrate source precedence into release control
+#173 - P1O5-SYNC-08 Sync status after claim protocol merge
 ```
 
 ## Locked computer vision task
@@ -178,7 +180,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T08 is reviewed and merged, proceed to:
+After P1O5-SYNC-08 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T09 - Integrate source precedence into release control
