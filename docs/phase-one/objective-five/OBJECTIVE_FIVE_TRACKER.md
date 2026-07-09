@@ -4,7 +4,7 @@
 
 **Versioning, Provenance, Release Control, and Claim Traceability**
 
-Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, use-boundary statements, claim-evidence links, and release-status decisions.
+Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, use-boundary statements, claim-evidence links, release-status decisions, reproducibility reviews, and release QA decisions.
 
 ## Current status
 
@@ -13,25 +13,28 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Parent issue | #144 |
 | Current task | P1O5-T10 |
 | Current task issue | #175 |
-| Current branch | pending creation after P1O5-SYNC-09 merge |
-| Current artifact set | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log; tracker/index updates |
-| Previous task | P1O5-T09 / #171 / PR #176 / merged |
-| Status-sync task | P1O5-SYNC-09 / #177 / `p1o5sync09` |
-| Objective status | Active; current-status cleanup in progress before T10 artifact work |
+| Current branch | `p1o5t10b` |
+| Current artifact set | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; `records/prompt-build-log/2026-07-08-p1o5-t10.md`; README/tracker/index updates |
+| Previous task | P1O5-SYNC-09 / #177 / PR #178 / merged |
+| Previous primary task | P1O5-T09 / #171 / PR #176 / merged |
+| Next task issue | #179 |
+| Next task | P1O5-T11 - Create Objective Five research and claims records |
+| Objective status | Active; reproducibility and release QA checklists drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
 | Registry database status | Not created; T07 defined spec only |
 | Completed claim-register status | Not created; T08 defined protocol/template only |
 | Source-precedence review record status | Not created; T09 defined gate only |
-| Release QA checklist status | Not created; T10 next |
+| Reproducibility review status | Not created; T10 defines reusable checklist only |
+| Release QA decision status | Not created; T10 defines reusable checklist only |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
 
-Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, and records work only.
+Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, QA-control, and records work only.
 
-It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, registry database creation, completed claim record creation, source-precedence review record creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
+It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, registry database creation, completed claim record creation, source-precedence review record creation, completed reproducibility review creation, release QA decision creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
 Required warning for future public-facing outputs remains:
 
@@ -60,6 +63,7 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Artifact registry | `docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md` | Future artifact locations, naming patterns, registry states, and source-separation controls. |
 | Claim traceability | `docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md` | Future claim ladder, evidence links, forbidden-claim checks, and source-precedence language requirements. |
 | Source-precedence release gate | `docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md` | Future run-report conflict handling, public artifact status decisions, and release blockers. |
+| Reproducibility and release QA | `docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md`; `docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md` | Future objective baseline, dataset, model/baseline, run/report, and public demo review gates. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
@@ -99,9 +103,9 @@ For Objective Five:
 | P1O5-T08 Define claim-to-evidence protocol | #167 | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md`; prompt log | Merged via PR #172 | No |
 | P1O5-SYNC-08 Sync status after claim protocol merge | #173 | `p1o5sync08` | README; tracker; prompt-log index; P1O5-T08 log | Merged via PR #174 | No |
 | P1O5-T09 Integrate source precedence into release control | #171 | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Merged via PR #176 | No |
-| P1O5-SYNC-09 Sync status after source-precedence release gate merge | #177 | `p1o5sync09` | README; tracker; prompt-log index; P1O5-T09 log | In progress | No |
-| P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Open / next | No |
-| P1O5-T11 Create Objective Five research and claims records | planned | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Planned | No |
+| P1O5-SYNC-09 Sync status after source-precedence release gate merge | #177 | `p1o5sync09` | README; tracker; prompt-log index; P1O5-T09 log | Merged via PR #178 | No |
+| P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | In progress | No |
+| P1O5-T11 Create Objective Five research and claims records | #179 | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Open / next | No |
 | P1O5-T12 Close out Objective Five and prepare handoff | planned | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Planned | No |
 
 ## Research requirements by task
@@ -124,20 +128,20 @@ For Objective Five:
 | P1O5-SYNC-08 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T09 | Not required | Existing source-precedence, claim protocol, release-control, run-package, artifact-registry, and versioning controls govern; no new official-source claims introduced. |
 | P1O5-SYNC-09 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T10 | Conditional | Repo QA/release controls govern; external QA or reproducibility claims require primary sources. |
+| P1O5-T10 | Not required | Existing repo QA/release controls govern; no new external QA or reproducibility claims introduced. |
 | P1O5-T11 | Yes | Sources actually used in T03-T10. |
 | P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
 
 ## Current safe claims
 
-After P1O5-SYNC-09 is merged, safe claims will be limited to:
+After P1O5-T10 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has synchronized current-status artifacts after the P1O5-T09 source-precedence release gate merge and is ready to begin P1O5-T10 reproducibility and release QA checklist work.
+BurnLens has reusable reproducibility and release QA checklists for future objective baseline, dataset, model/baseline, run/report, and public demo release candidates.
 ```
 
 ```text
-BurnLens has source-precedence release gate documentation, but no source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product has been created.
+BurnLens has not completed a reproducibility review or release QA decision, created a source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product.
 ```
 
 ## Unsupported claims
@@ -145,7 +149,9 @@ BurnLens has source-precedence release gate documentation, but no source-precede
 Do not claim:
 
 - Objective Five is complete;
-- release QA checklists exist;
+- Objective Five research/claims records exist;
+- a completed reproducibility review exists;
+- a release QA decision exists;
 - a source-precedence review record exists;
 - a completed claim register exists;
 - any public-facing claim has been approved;
@@ -154,13 +160,13 @@ Do not claim:
 - data has been downloaded;
 - source records, AOI records, labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, screenshots, or public demos have been created;
 - a tag or GitHub release has been created;
-- source-precedence release gates make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
+- reproducibility and release QA checklists make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
 ## Handoff
 
-After the P1O5-SYNC-09 PR is reviewed and merged:
+After the P1O5-T10 PR is reviewed and merged:
 
-1. confirm issue #177 closes;
+1. confirm issue #175 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T10 / #175 from current `main`;
+3. proceed to P1O5-T11 / #179 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
