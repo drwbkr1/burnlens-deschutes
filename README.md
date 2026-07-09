@@ -8,49 +8,23 @@ The project demonstrates a reproducible workflow for turning wildfire-relevant i
 
 **Phase One / Objective Five is active.**
 
-Objective Five is expanding BurnLens Deschutes' lightweight versioning and traceability posture into a fuller control baseline for versioning, provenance, release control, run packages, artifact registries, source-precedence gates, QA, and claim traceability.
+Objective Five is in closeout. It expanded BurnLens Deschutes' lightweight versioning and traceability posture into a fuller control baseline for versioning, provenance, release control, run packages, artifact registries, source-precedence gates, reproducibility QA, research validation, claim traceability, closeout, handoff, and release-note drafting.
 
-P1O5-T01 is complete. It created the Objective Five parent issue, first task issue, tracker, artifact-contract baseline, and prompt/build log entry for Task 1.
+P1O5-T01 through P1O5-T11 are complete. They created the Objective Five tracker, artifact contracts, current-status reconciliation, version taxonomy, VERSIONING.md update, release control, release-note template, provenance traceability spec, traceability record template, run package contract, run manifest template, artifact registry spec, claim-to-evidence protocol, claim evidence template, source-precedence release gate, reproducibility checklist, release QA checklist, research validation log, and claims check.
 
-P1O5-T02 is complete. It reconciled the current repository status after Objective Four and P1O5-T01, updated this README, updated the Objective Five tracker, and updated the prompt/build log index.
+P1O5-SYNC-03 through P1O5-SYNC-11 are complete. They synchronized current-status artifacts after prior Objective Five task merges.
 
-P1O5-T03 is complete. It created the expanded version taxonomy and updated `VERSIONING.md` because the versioning protocol itself changed.
+P1O5-T12 / #183 is active on branch `p1o5t12b`. It creates Objective Five closeout, handoff, and release-note draft artifacts.
 
-P1O5-SYNC-03 is complete. It synchronized current-status artifacts after the P1O5-T03 merge.
+The proposed Objective Five baseline tag is:
 
-P1O5-T04 is complete. It created release and tag control, a reusable release-note template, and current-status updates.
+```text
+v0.0.5-objective-five-traceability
+```
 
-P1O5-SYNC-04 is complete. It synchronized current-status artifacts after the P1O5-T04 merge.
+The proposed tag has not been created. No GitHub Release has been published.
 
-P1O5-T05 is complete. It created the provenance traceability spec and reusable traceability record template.
-
-P1O5-SYNC-05 is complete. It synchronized current-status artifacts after the P1O5-T05 merge.
-
-P1O5-T06 is complete. It created the future run package contract and reusable run manifest template.
-
-P1O5-SYNC-06 is complete. It synchronized current-status artifacts after the P1O5-T06 merge.
-
-P1O5-T07 is complete. It created the artifact registry specification.
-
-P1O5-SYNC-07 is complete. It synchronized current-status artifacts after the P1O5-T07 merge.
-
-P1O5-T08 is complete. It created the claim-to-evidence protocol and reusable claim evidence link template.
-
-P1O5-SYNC-08 is complete. It synchronized current-status artifacts after the P1O5-T08 merge.
-
-P1O5-T09 is complete. It created the source-precedence release gate.
-
-P1O5-SYNC-09 is complete. It synchronized current-status artifacts after the P1O5-T09 merge.
-
-P1O5-T10 is complete. It created reusable BurnLens-specific reproducibility and release QA checklists.
-
-P1O5-SYNC-10 is complete. It synchronized current-status artifacts after the P1O5-T10 merge.
-
-P1O5-T11 is complete. It created Objective Five research validation and claims-check records.
-
-P1O5-SYNC-11 is synchronizing post-merge status so P1O5-T12 / #183 can start from clean `main`.
-
-The current repository state is still documentation, workflow, template, traceability-control, QA-control, research-validation, claims-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, source-precedence review record, completed reproducibility review, release QA decision, or approved public-facing claim has been authorized.
+The current repository state is still documentation, workflow, template, traceability-control, QA-control, research-validation, claims-control, closeout, handoff, release-note draft, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, source-precedence review record, completed reproducibility review, release QA decision, or approved public-facing claim has been authorized.
 
 Current controlling handoff / current-status records:
 
@@ -69,6 +43,9 @@ docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md
 docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_CLAIMS_CHECK.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_CLOSEOUT.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_HANDOFF.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_RELEASE_NOTE.md
 VERSIONING.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
@@ -81,7 +58,6 @@ Current parent/task issues:
 ```text
 #144 - Phase 1 Objective Five parent
 #183 - P1O5-T12 Close out Objective Five and prepare handoff
-#185 - P1O5-SYNC-11 Sync status after T11 merge
 ```
 
 ## Locked computer vision task
@@ -151,6 +127,10 @@ Future objective baselines, dataset releases, model/baseline releases, run/repor
 
 Objective Five research validation records the evidence basis for SemVer, GitHub release/tag, W3C PROV, STAC, and experimental/non-operational posture decisions. Objective Five claims checks separate safe claims, caveated claims, and unsupported claims before closeout or public-facing use.
 
+## Closeout and handoff controls
+
+Objective Five closeout records what was created, what remains prohibited, which artifacts govern Phase Two, what must exist before data is touched, the VERSIONING.md update status, safe claims, unsupported claims, and parent-issue close readiness. The handoff is the first context block for Phase Two or Objective Six.
+
 ## Repository structure
 
 ```text
@@ -184,6 +164,9 @@ docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md
 docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_CLAIMS_CHECK.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_CLOSEOUT.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_HANDOFF.md
+docs/phase-one/objective-five/OBJECTIVE_FIVE_RELEASE_NOTE.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
 templates/RUN_MANIFEST_TEMPLATE.json
@@ -199,6 +182,7 @@ records/prompt-build-log/2026-07-08-p1o5-t08.md
 records/prompt-build-log/2026-07-08-p1o5-t09.md
 records/prompt-build-log/2026-07-08-p1o5-t10.md
 records/prompt-build-log/2026-07-08-p1o5-t11.md
+records/prompt-build-log/2026-07-08-p1o5-t12.md
 ```
 
 Key earlier governing artifacts:
@@ -217,17 +201,15 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-SYNC-11 is reviewed and merged, proceed to:
+After P1O5-T12 is reviewed, merged, and final status synchronization is complete, proceed to one of:
 
 ```text
-P1O5-T12 - Close out Objective Five and prepare handoff
+Phase Two data-intake preparation
+Objective Six portfolio packaging
+Objective Five baseline tag QA for v0.0.5-objective-five-traceability
 ```
 
-Recommended focus:
-
-> Create Objective Five closeout, handoff, and release-note artifacts using the merged Objective Five artifact set, research validation log, and claims check.
-
-P1O5-T12 should not create a tag or GitHub Release unless separately authorized.
+P1O5-T12 does not create a tag or GitHub Release.
 
 ## Repo workflow
 

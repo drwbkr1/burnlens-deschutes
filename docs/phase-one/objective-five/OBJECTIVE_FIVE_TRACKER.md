@@ -4,7 +4,7 @@
 
 **Versioning, Provenance, Release Control, and Claim Traceability**
 
-Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, use-boundary statements, claim-evidence links, release-status decisions, reproducibility reviews, release QA decisions, research validation, and claims checks.
+Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, use-boundary statements, claim-evidence links, release-status decisions, reproducibility reviews, release QA decisions, research validation, claims checks, closeout records, handoff records, and release-note drafts.
 
 ## Current status
 
@@ -13,11 +13,14 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Parent issue | #144 |
 | Current task | P1O5-T12 |
 | Current task issue | #183 |
-| Current branch | pending creation after P1O5-SYNC-11 merge |
-| Current artifact set | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log; tracker/index updates |
-| Previous task | P1O5-T11 / #179 / PR #184 / merged |
-| Status-sync task | P1O5-SYNC-11 / #185 / `p1o5sync11` |
-| Objective status | Active; current-status cleanup in progress before T12 closeout work |
+| Current branch | `p1o5t12b` |
+| Current artifact set | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; `records/prompt-build-log/2026-07-08-p1o5-t12.md`; README/tracker/index updates |
+| Previous task | P1O5-SYNC-11 / #185 / PR #186 / merged |
+| Previous primary task | P1O5-T11 / #179 / PR #184 / merged |
+| Objective status | Active; closeout, handoff, and release-note draft in branch for PR review |
+| Proposed baseline tag | `v0.0.5-objective-five-traceability` |
+| Proposed tag status | Proposed only; not created by this task |
+| GitHub Release status | Not created |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
@@ -27,11 +30,12 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Reproducibility review status | Not created; T10 defined reusable checklist only |
 | Release QA decision status | Not created; T10 defined reusable checklist only |
 | Research/claims records status | Merged via PR #184 |
-| Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
+| Closeout/handoff/release-note status | Drafted in branch; not merged until PR closes #183 |
+| Parent close readiness | Ready after P1O5-T12 PR and final status sync merge |
 
 ## Boundary
 
-Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, QA-control, research-validation, and records work only.
+Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, QA-control, research-validation, closeout, handoff, release-note drafting, and records work only.
 
 It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, registry database creation, completed claim record creation, source-precedence review record creation, completed reproducibility review creation, release QA decision creation, approved public-facing claim creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
@@ -64,6 +68,7 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Source-precedence release gate | `docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md` | Future run-report conflict handling, public artifact status decisions, and release blockers. |
 | Reproducibility and release QA | `docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md`; `docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md` | Future objective baseline, dataset, model/baseline, run/report, and public demo review gates. |
 | Research validation and claims check | `docs/phase-one/objective-five/OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `docs/phase-one/objective-five/OBJECTIVE_FIVE_CLAIMS_CHECK.md` | Source-backed decisions, safe/caveated/unsupported claim boundaries, and closeout claim control. |
+| Closeout, handoff, release note | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md` | Objective closeout, next-context handoff, and proposed tag release-note draft. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
@@ -75,7 +80,7 @@ prompt -> task framing -> artifact contract -> issue -> branch -> research if ne
 For Objective Five:
 
 1. Use one task issue per task unless the user explicitly approves bundling.
-2. Post the artifact contract before artifact creation.
+2. Post or preserve the artifact contract before artifact creation.
 3. Create a compact task branch from current `main`.
 4. Complete fresh research after branch creation and before artifact writing when the task makes current, technical, source, tooling, policy, legal, safety, data, model, or public-claim statements.
 5. Create or update a prompt/build log entry when ChatGPT/Codex creates or materially changes files.
@@ -107,8 +112,8 @@ For Objective Five:
 | P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Merged via PR #180 | No |
 | P1O5-SYNC-10 Sync status after T10 merge | #181 | `p1o5sync10` | README; tracker; prompt-log index; P1O5-T10 log | Merged via PR #182 | No |
 | P1O5-T11 Create Objective Five research and claims records | #179 | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Merged via PR #184 | No |
-| P1O5-SYNC-11 Sync status after T11 merge | #185 | `p1o5sync11` | README; tracker; prompt-log index; P1O5-T11 log | In progress | No |
-| P1O5-T12 Close out Objective Five and prepare handoff | #183 | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Open / next | No |
+| P1O5-SYNC-11 Sync status after T11 merge | #185 | `p1o5sync11` | README; tracker; prompt-log index; P1O5-T11 log | Merged via PR #186 | No |
+| P1O5-T12 Close out Objective Five and prepare handoff | #183 | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | In progress | No |
 
 ## Research requirements by task
 
@@ -134,40 +139,46 @@ For Objective Five:
 | P1O5-SYNC-10 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T11 | Complete | SemVer 2.0.0, GitHub release/tag docs, W3C PROV overview/data model, OGC STAC Community Standard, and current merged repo controls. |
 | P1O5-SYNC-11 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
+| P1O5-T12 | No new external research required | Merged Objective Five artifacts, especially research validation and claims check, govern. |
 
 ## Current safe claims
 
-After P1O5-SYNC-11 is merged, safe claims will be limited to:
+After P1O5-T12 is merged and final status synchronization is complete, safe claims will be limited to:
 
 ```text
-BurnLens has synchronized current-status artifacts after the P1O5-T11 research validation and claims-check merge and is ready to begin P1O5-T12 closeout and handoff work.
+BurnLens has completed Phase One / Objective Five documentation and control work for versioning, provenance, release control, run-package planning, artifact registry planning, source-precedence release gates, reproducibility QA, research validation, and claim traceability.
 ```
 
 ```text
-BurnLens has Objective Five research validation and claims-check records, but no Objective Five closeout, release note, completed claim register, approved public claim, completed reproducibility review, release QA decision, tag, GitHub release, source record, AOI record, data product, model product, run product, map product, report, screenshot, or public demo has been created.
+BurnLens remains experimental and non-operational. Official sources govern.
+```
+
+```text
+The proposed Objective Five baseline tag is v0.0.5-objective-five-traceability, but it has not been created unless a later authorized release task creates it.
 ```
 
 ## Unsupported claims
 
 Do not claim:
 
-- Objective Five is complete;
-- an Objective Five closeout, handoff, or release note exists;
-- a completed claim register exists;
-- any public-facing claim has been approved;
 - Phase Two data work has begun;
 - an AOI has been selected;
 - data has been downloaded;
 - source records, AOI records, labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, screenshots, or public demos have been created;
-- a tag or GitHub release has been created;
+- a tag or GitHub Release has been created;
+- the proposed tag has been created;
+- a completed claim register exists;
+- any public-facing claim has been approved;
+- a completed reproducibility review exists;
+- a release QA decision exists;
 - Objective Five controls make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
 ## Handoff
 
-After the P1O5-SYNC-11 PR is reviewed and merged:
+After the P1O5-T12 PR is reviewed and merged:
 
-1. confirm issue #185 closes;
-2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T12 / #183 from current `main`;
-4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
+1. confirm issue #183 closes;
+2. run a final current-status sync if README, tracker, or prompt logs still describe P1O5-T12 as active;
+3. confirm parent issue #144 is closeable;
+4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist;
+5. use `OBJECTIVE_FIVE_HANDOFF.md` as the first context block for Phase Two or Objective Six.
