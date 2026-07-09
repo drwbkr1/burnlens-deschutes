@@ -4,7 +4,7 @@
 
 **Versioning, Provenance, Release Control, and Claim Traceability**
 
-Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, and use-boundary statements.
+Objective Five expands BurnLens Deschutes' lightweight traceability rules into a complete Phase Two-ready control system. It defines how future AOI records, source records, dataset records, baseline methods, model packages, run packages, maps, screenshots, reports, and portfolio claims will trace back to issues, branches, pull requests, commits, versions, source records, provenance records, run IDs, source-precedence notes, use-boundary statements, and claim-evidence links.
 
 ## Current status
 
@@ -13,22 +13,25 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Parent issue | #144 |
 | Current task | P1O5-T08 |
 | Current task issue | #167 |
-| Current branch | pending creation after P1O5-SYNC-07 merge |
-| Current artifact set | `CLAIM_TRACEABILITY_PROTOCOL.md`; prompt log; tracker/index updates |
-| Previous task | P1O5-T07 / #163 / PR #168 / merged |
-| Status-sync task | P1O5-SYNC-07 / #169 / `p1o5sync07` |
-| Objective status | Active; current-status cleanup in progress before T08 artifact work |
+| Current branch | `p1o5t08b` |
+| Current artifact set | `CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md`; `records/prompt-build-log/2026-07-08-p1o5-t08.md`; README/tracker/index updates |
+| Previous task | P1O5-SYNC-07 / #169 / PR #170 / merged |
+| Previous primary task | P1O5-T07 / #163 / PR #168 / merged |
+| Next task issue | #171 |
+| Next task | P1O5-T09 - Integrate source precedence into release control |
+| Objective status | Active; claim-to-evidence protocol drafted in branch for PR review |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
 | Registry database status | Not created; T07 defined spec only |
+| Completed claim-register status | Not created; T08 defines protocol/template only |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
 
 Objective Five is documentation, workflow, template, release-control, provenance-planning, claims-control, and records work only.
 
-It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, registry database creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
+It does not authorize final AOI selection, source data acquisition, imagery download, retained source data, preprocessing, labels, masks, baseline outputs, model inputs, model training, inference, metric computation, raster/vector processing outputs, map publication, website demo integration, public operational claims, tag creation, GitHub release publication, run folder creation, run package creation, run output creation, public screenshot creation, registry database creation, completed claim record creation, or official, field-validation, agency-endorsement, emergency-readiness, evacuation, routing, tactical, or incident-command claims.
 
 Required warning for future public-facing outputs remains:
 
@@ -55,6 +58,7 @@ Use the current Prompt-to-Repo SOP as the primary operating instruction for task
 | Provenance traceability | `docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md`; `templates/TRACEABILITY_RECORD_TEMPLATE.md` | Source-to-claim lineage, BurnLens entity/activity/agent equivalents, and claim evidence gates. |
 | Run package control | `docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json` | Future run folder contract, manifest requirements, output inventory, warnings, and screenshot run-ID rule. |
 | Artifact registry | `docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md` | Future artifact locations, naming patterns, registry states, and source-separation controls. |
+| Claim traceability | `docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md` | Future claim ladder, evidence links, forbidden-claim checks, and source-precedence language requirements. |
 | Current reconciliation | `docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md` | Live status reconciliation after Objective Four and P1O5-T01. |
 
 ## Required workflow
@@ -90,9 +94,9 @@ For Objective Five:
 | P1O5-T06 Define future run manifest and run package contract | #159 | `p1o5t06b` | `RUN_PACKAGE_CONTRACT.md`; `templates/RUN_MANIFEST_TEMPLATE.json`; prompt log | Merged via PR #164 | No |
 | P1O5-SYNC-06 Sync status after run package contract merge | #165 | `p1o5sync06` | README; tracker; prompt-log index; P1O5-T06 log | Merged via PR #166 | No |
 | P1O5-T07 Create artifact registry specification | #163 | `p1o5t07b` | `ARTIFACT_REGISTRY_SPEC.md`; prompt log | Merged via PR #168 | No |
-| P1O5-SYNC-07 Sync status after artifact registry merge | #169 | `p1o5sync07` | README; tracker; prompt-log index; P1O5-T07 log | In progress | No |
-| P1O5-T08 Define claim-to-evidence protocol | #167 | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; prompt log | Open / next | No |
-| P1O5-T09 Integrate source precedence into release control | planned | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Planned | No |
+| P1O5-SYNC-07 Sync status after artifact registry merge | #169 | `p1o5sync07` | README; tracker; prompt-log index; P1O5-T07 log | Merged via PR #170 | No |
+| P1O5-T08 Define claim-to-evidence protocol | #167 | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md`; prompt log | In progress | No |
+| P1O5-T09 Integrate source precedence into release control | #171 | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Open / next | No |
 | P1O5-T10 Create reproducibility and release QA checklist | planned | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Planned | No |
 | P1O5-T11 Create Objective Five research and claims records | planned | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Planned | No |
 | P1O5-T12 Close out Objective Five and prepare handoff | planned | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Planned | No |
@@ -113,22 +117,22 @@ For Objective Five:
 | P1O5-SYNC-06 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T07 | Not required | Existing repo controls govern; no external metadata-standard claims introduced. |
 | P1O5-SYNC-07 | No external research required | Repo state and current-status artifacts govern. |
-| P1O5-T08 | Conditional | Repo claims controls govern; external model/data-card standards only if cited. |
-| P1O5-T09 | Conditional | Existing `SOURCE_PRECEDENCE.md` governs unless new official-source claims are added. |
+| P1O5-T08 | Not required | Existing repo controls govern; no external model-card, data-card, or claims-standard references introduced. |
+| P1O5-T09 | Conditional | Existing `SOURCE_PRECEDENCE.md`, claim protocol, and release controls govern unless new official-source claims are added. |
 | P1O5-T10 | Conditional | Repo QA/release controls govern; external QA claims require primary sources. |
 | P1O5-T11 | Yes | Sources actually used in T03-T10. |
 | P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
 
 ## Current safe claims
 
-After P1O5-SYNC-07 is merged, safe claims will be limited to:
+After P1O5-T08 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has synchronized current-status artifacts after the P1O5-T07 artifact registry merge and is ready to begin P1O5-T08 claim-to-evidence protocol work.
+BurnLens has a claim-to-evidence protocol and reusable claim evidence link template that require future public-facing claims to link to supporting evidence, limitation statements, forbidden-claim checks, source-precedence status, and release-control decisions.
 ```
 
 ```text
-BurnLens has artifact registry specification documentation, but no registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product has been created.
+BurnLens has not created a completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product.
 ```
 
 ## Unsupported claims
@@ -136,19 +140,21 @@ BurnLens has artifact registry specification documentation, but no registry data
 Do not claim:
 
 - Objective Five is complete;
-- claim-to-evidence protocol exists;
+- source-precedence release gates are integrated;
+- a completed claim register exists;
+- any public-facing claim has been approved;
 - Phase Two data work has begun;
 - an AOI has been selected;
 - data has been downloaded;
 - source records, AOI records, labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, screenshots, or public demos have been created;
 - a tag or GitHub release has been created;
-- registry controls make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
+- claim controls make BurnLens official, operational, field-validated, emergency-ready, agency-endorsed, production-stable, or suitable for evacuation/routing/tactical/incident-command support.
 
 ## Handoff
 
-After the P1O5-SYNC-07 PR is reviewed and merged:
+After the P1O5-T08 PR is reviewed and merged:
 
-1. confirm issue #169 closes;
+1. confirm issue #167 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
-3. proceed to P1O5-T08 / #167 from current `main`;
+3. proceed to P1O5-T09 / #171 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
