@@ -11,23 +11,22 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T10 |
-| Current task issue | #175 |
-| Current branch | `p1o5t10b` |
-| Current artifact set | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; `records/prompt-build-log/2026-07-08-p1o5-t10.md`; README/tracker/index updates |
-| Previous task | P1O5-SYNC-09 / #177 / PR #178 / merged |
-| Previous primary task | P1O5-T09 / #171 / PR #176 / merged |
-| Next task issue | #179 |
-| Next task | P1O5-T11 - Create Objective Five research and claims records |
-| Objective status | Active; reproducibility and release QA checklists drafted in branch for PR review |
+| Current task | P1O5-T11 |
+| Current task issue | #179 |
+| Current branch | pending creation after P1O5-SYNC-10 merge |
+| Current artifact set | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log; tracker/index updates |
+| Previous task | P1O5-T10 / #175 / PR #180 / merged |
+| Status-sync task | P1O5-SYNC-10 / #181 / `p1o5sync10` |
+| Objective status | Active; current-status cleanup in progress before T11 artifact work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
 | Registry database status | Not created; T07 defined spec only |
 | Completed claim-register status | Not created; T08 defined protocol/template only |
 | Source-precedence review record status | Not created; T09 defined gate only |
-| Reproducibility review status | Not created; T10 defines reusable checklist only |
-| Release QA decision status | Not created; T10 defines reusable checklist only |
+| Reproducibility review status | Not created; T10 defined reusable checklist only |
+| Release QA decision status | Not created; T10 defined reusable checklist only |
+| Research/claims records status | Not created; T11 next |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
@@ -104,7 +103,8 @@ For Objective Five:
 | P1O5-SYNC-08 Sync status after claim protocol merge | #173 | `p1o5sync08` | README; tracker; prompt-log index; P1O5-T08 log | Merged via PR #174 | No |
 | P1O5-T09 Integrate source precedence into release control | #171 | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Merged via PR #176 | No |
 | P1O5-SYNC-09 Sync status after source-precedence release gate merge | #177 | `p1o5sync09` | README; tracker; prompt-log index; P1O5-T09 log | Merged via PR #178 | No |
-| P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | In progress | No |
+| P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Merged via PR #180 | No |
+| P1O5-SYNC-10 Sync status after T10 merge | #181 | `p1o5sync10` | README; tracker; prompt-log index; P1O5-T10 log | In progress | No |
 | P1O5-T11 Create Objective Five research and claims records | #179 | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Open / next | No |
 | P1O5-T12 Close out Objective Five and prepare handoff | planned | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Planned | No |
 
@@ -129,19 +129,20 @@ For Objective Five:
 | P1O5-T09 | Not required | Existing source-precedence, claim protocol, release-control, run-package, artifact-registry, and versioning controls govern; no new official-source claims introduced. |
 | P1O5-SYNC-09 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T10 | Not required | Existing repo QA/release controls govern; no new external QA or reproducibility claims introduced. |
+| P1O5-SYNC-10 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T11 | Yes | Sources actually used in T03-T10. |
 | P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
 
 ## Current safe claims
 
-After P1O5-T10 is merged, safe claims will be limited to:
+After P1O5-SYNC-10 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has reusable reproducibility and release QA checklists for future objective baseline, dataset, model/baseline, run/report, and public demo release candidates.
+BurnLens has synchronized current-status artifacts after the P1O5-T10 reproducibility and release QA checklist merge and is ready to begin P1O5-T11 research validation and claims-check work.
 ```
 
 ```text
-BurnLens has not completed a reproducibility review or release QA decision, created a source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product.
+BurnLens has reproducibility and release QA checklist documentation, but no completed reproducibility review, release QA decision, source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product has been created.
 ```
 
 ## Unsupported claims
@@ -164,9 +165,9 @@ Do not claim:
 
 ## Handoff
 
-After the P1O5-T10 PR is reviewed and merged:
+After the P1O5-SYNC-10 PR is reviewed and merged:
 
-1. confirm issue #175 closes;
+1. confirm issue #181 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
 3. proceed to P1O5-T11 / #179 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
