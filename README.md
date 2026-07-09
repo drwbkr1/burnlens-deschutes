@@ -38,7 +38,9 @@ P1O5-T08 is complete. It created the claim-to-evidence protocol and reusable cla
 
 P1O5-SYNC-08 is complete. It synchronized current-status artifacts after the P1O5-T08 merge.
 
-P1O5-T09 / #171 is active on branch `p1o5t09b`. It integrates source-precedence checks into versioning and release control so future public artifacts must state whether BurnLens-derived output is `normal`, `provisional`, `degraded`, `superseded`, or `withheld` before release.
+P1O5-T09 is complete. It created the source-precedence release gate.
+
+P1O5-SYNC-09 is synchronizing post-merge status so P1O5-T10 / #175 can start from clean `main`.
 
 The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, or source-precedence review record has been authorized.
 
@@ -66,8 +68,8 @@ Current parent/task issues:
 
 ```text
 #144 - Phase 1 Objective Five parent
-#171 - P1O5-T09 Integrate source precedence into release control
 #175 - P1O5-T10 Create reproducibility and release QA checklist
+#177 - P1O5-SYNC-09 Sync status after source-precedence release gate merge
 ```
 
 ## Locked computer vision task
@@ -189,7 +191,7 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-T09 is reviewed and merged, proceed to:
+After P1O5-SYNC-09 is reviewed and merged, proceed to:
 
 ```text
 P1O5-T10 - Create reproducibility and release QA checklist

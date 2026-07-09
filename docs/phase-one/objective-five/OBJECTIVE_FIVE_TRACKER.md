@@ -11,21 +11,20 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T09 |
-| Current task issue | #171 |
-| Current branch | `p1o5t09b` |
-| Current artifact set | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; `records/prompt-build-log/2026-07-08-p1o5-t09.md`; README/tracker/index updates |
-| Previous task | P1O5-SYNC-08 / #173 / PR #174 / merged |
-| Previous primary task | P1O5-T08 / #167 / PR #172 / merged |
-| Next task issue | #175 |
-| Next task | P1O5-T10 - Create reproducibility and release QA checklist |
-| Objective status | Active; source-precedence release gate drafted in branch for PR review |
+| Current task | P1O5-T10 |
+| Current task issue | #175 |
+| Current branch | pending creation after P1O5-SYNC-09 merge |
+| Current artifact set | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log; tracker/index updates |
+| Previous task | P1O5-T09 / #171 / PR #176 / merged |
+| Status-sync task | P1O5-SYNC-09 / #177 / `p1o5sync09` |
+| Objective status | Active; current-status cleanup in progress before T10 artifact work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
 | Registry database status | Not created; T07 defined spec only |
 | Completed claim-register status | Not created; T08 defined protocol/template only |
-| Source-precedence review record status | Not created; T09 defines gate only |
+| Source-precedence review record status | Not created; T09 defined gate only |
+| Release QA checklist status | Not created; T10 next |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
@@ -99,7 +98,8 @@ For Objective Five:
 | P1O5-SYNC-07 Sync status after artifact registry merge | #169 | `p1o5sync07` | README; tracker; prompt-log index; P1O5-T07 log | Merged via PR #170 | No |
 | P1O5-T08 Define claim-to-evidence protocol | #167 | `p1o5t08b` | `CLAIM_TRACEABILITY_PROTOCOL.md`; `templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md`; prompt log | Merged via PR #172 | No |
 | P1O5-SYNC-08 Sync status after claim protocol merge | #173 | `p1o5sync08` | README; tracker; prompt-log index; P1O5-T08 log | Merged via PR #174 | No |
-| P1O5-T09 Integrate source precedence into release control | #171 | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | In progress | No |
+| P1O5-T09 Integrate source precedence into release control | #171 | `p1o5t09b` | `SOURCE_PRECEDENCE_RELEASE_GATE.md`; prompt log | Merged via PR #176 | No |
+| P1O5-SYNC-09 Sync status after source-precedence release gate merge | #177 | `p1o5sync09` | README; tracker; prompt-log index; P1O5-T09 log | In progress | No |
 | P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Open / next | No |
 | P1O5-T11 Create Objective Five research and claims records | planned | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Planned | No |
 | P1O5-T12 Close out Objective Five and prepare handoff | planned | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Planned | No |
@@ -123,20 +123,21 @@ For Objective Five:
 | P1O5-T08 | Not required | Existing repo controls govern; no external model-card, data-card, or claims-standard references introduced. |
 | P1O5-SYNC-08 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T09 | Not required | Existing source-precedence, claim protocol, release-control, run-package, artifact-registry, and versioning controls govern; no new official-source claims introduced. |
+| P1O5-SYNC-09 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T10 | Conditional | Repo QA/release controls govern; external QA or reproducibility claims require primary sources. |
 | P1O5-T11 | Yes | Sources actually used in T03-T10. |
 | P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
 
 ## Current safe claims
 
-After P1O5-T09 is merged, safe claims will be limited to:
+After P1O5-SYNC-09 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has a source-precedence release gate that requires future public artifacts involving BurnLens-derived outputs to record source-precedence status and assign a release status of normal, provisional, degraded, superseded, or withheld.
+BurnLens has synchronized current-status artifacts after the P1O5-T09 source-precedence release gate merge and is ready to begin P1O5-T10 reproducibility and release QA checklist work.
 ```
 
 ```text
-BurnLens has not created a source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product.
+BurnLens has source-precedence release gate documentation, but no source-precedence review record, completed claim register, public claim approval, registry database, source record, AOI record, data manifest, label manifest, model package, baseline package, run package, report, screenshot, public site asset, tag, GitHub release, data product, model product, or operational wildfire product has been created.
 ```
 
 ## Unsupported claims
@@ -157,9 +158,9 @@ Do not claim:
 
 ## Handoff
 
-After the P1O5-T09 PR is reviewed and merged:
+After the P1O5-SYNC-09 PR is reviewed and merged:
 
-1. confirm issue #171 closes;
+1. confirm issue #177 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
 3. proceed to P1O5-T10 / #175 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
