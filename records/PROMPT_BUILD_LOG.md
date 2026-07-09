@@ -138,7 +138,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-SYNC-10 | `records/prompt-build-log/2026-07-08-p1o5-sync-10.md` | merged via PR #182 | Status sync after P1O5-T10 merge. |
 | P1O5-T11 | `records/prompt-build-log/2026-07-08-p1o5-t11.md` | merged via PR #184 | Objective Five research validation and claims check. |
 | P1O5-SYNC-11 | `records/prompt-build-log/2026-07-08-p1o5-sync-11.md` | merged via PR #186 | Status sync after P1O5-T11 merge. |
-| P1O5-T12 | `records/prompt-build-log/2026-07-08-p1o5-t12.md` | drafted in branch | Objective Five closeout, handoff, and release-note draft. |
+| P1O5-T12 | `records/prompt-build-log/2026-07-08-p1o5-t12.md` | merged via PR #187 | Objective Five closeout, handoff, and release-note draft. |
+| P1O5-SYNC-12 | `records/prompt-build-log/2026-07-08-p1o5-sync-12.md` | drafted in branch | Final Objective Five status sync. |
 
 ## Entry creation timing
 
@@ -288,4 +289,4 @@ Unsupported claims:
 
 ## Handoff note
 
-After the P1O5-T12 PR is reviewed and merged, run final current-status synchronization if needed, confirm parent issue #144 is closeable, and use `OBJECTIVE_FIVE_HANDOFF.md` as the first context block for Phase Two or Objective Six.
+After the P1O5-SYNC-12 PR is reviewed and merged, parent issue #144 can be closed and `OBJECTIVE_FIVE_HANDOFF.md` can be used as the first context block for Phase Two or Objective Six.
