@@ -11,24 +11,22 @@ Objective Five expands BurnLens Deschutes' lightweight traceability rules into a
 | Field | Status |
 |---|---|
 | Parent issue | #144 |
-| Current task | P1O5-T11 |
-| Current task issue | #179 |
-| Current branch | `p1o5t11b` |
-| Current artifact set | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; `records/prompt-build-log/2026-07-08-p1o5-t11.md`; README/tracker/index updates |
-| Previous task | P1O5-SYNC-10 / #181 / PR #182 / merged |
-| Previous primary task | P1O5-T10 / #175 / PR #180 / merged |
-| Next task issue | #183 |
-| Next task | P1O5-T12 - Close out Objective Five and prepare handoff |
-| Objective status | Active; research validation and claims-check records drafted in branch for PR review |
+| Current task | P1O5-T12 |
+| Current task issue | #183 |
+| Current branch | pending creation after P1O5-SYNC-11 merge |
+| Current artifact set | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log; tracker/index updates |
+| Previous task | P1O5-T11 / #179 / PR #184 / merged |
+| Status-sync task | P1O5-SYNC-11 / #185 / `p1o5sync11` |
+| Objective status | Active; current-status cleanup in progress before T12 closeout work |
 | Data-work status | Not started and still prohibited |
 | Model/map/public-output status | Not started and still prohibited |
 | Run package status | Not created; T06 defined contract/template only |
 | Registry database status | Not created; T07 defined spec only |
-| Completed claim-register status | Not created; T08 defined protocol/template only; T11 defines claims check only |
+| Completed claim-register status | Not created; T08 defined protocol/template only; T11 defined claims check only |
 | Source-precedence review record status | Not created; T09 defined gate only |
 | Reproducibility review status | Not created; T10 defined reusable checklist only |
 | Release QA decision status | Not created; T10 defined reusable checklist only |
-| Research/claims records status | Drafted in branch; not merged until PR closes #179 |
+| Research/claims records status | Merged via PR #184 |
 | Tag/release status | Not created and still prohibited unless release-control gates pass and user explicitly authorizes publication |
 
 ## Boundary
@@ -108,7 +106,8 @@ For Objective Five:
 | P1O5-SYNC-09 Sync status after source-precedence release gate merge | #177 | `p1o5sync09` | README; tracker; prompt-log index; P1O5-T09 log | Merged via PR #178 | No |
 | P1O5-T10 Create reproducibility and release QA checklist | #175 | `p1o5t10b` | `REPRODUCIBILITY_CHECKLIST.md`; `RELEASE_QA_CHECKLIST.md`; prompt log | Merged via PR #180 | No |
 | P1O5-SYNC-10 Sync status after T10 merge | #181 | `p1o5sync10` | README; tracker; prompt-log index; P1O5-T10 log | Merged via PR #182 | No |
-| P1O5-T11 Create Objective Five research and claims records | #179 | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | In progress | No |
+| P1O5-T11 Create Objective Five research and claims records | #179 | `p1o5t11b` | `OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md`; `OBJECTIVE_FIVE_CLAIMS_CHECK.md`; prompt log | Merged via PR #184 | No |
+| P1O5-SYNC-11 Sync status after T11 merge | #185 | `p1o5sync11` | README; tracker; prompt-log index; P1O5-T11 log | In progress | No |
 | P1O5-T12 Close out Objective Five and prepare handoff | #183 | `p1o5t12b` | `OBJECTIVE_FIVE_CLOSEOUT.md`; `OBJECTIVE_FIVE_HANDOFF.md`; `OBJECTIVE_FIVE_RELEASE_NOTE.md`; prompt log | Open / next | No |
 
 ## Research requirements by task
@@ -134,18 +133,19 @@ For Objective Five:
 | P1O5-T10 | Not required | Existing repo QA/release controls govern; no new external QA or reproducibility claims introduced. |
 | P1O5-SYNC-10 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T11 | Complete | SemVer 2.0.0, GitHub release/tag docs, W3C PROV overview/data model, OGC STAC Community Standard, and current merged repo controls. |
+| P1O5-SYNC-11 | No external research required | Repo state and current-status artifacts govern. |
 | P1O5-T12 | No external research expected | Merged Objective Five artifacts govern. |
 
 ## Current safe claims
 
-After P1O5-T11 is merged, safe claims will be limited to:
+After P1O5-SYNC-11 is merged, safe claims will be limited to:
 
 ```text
-BurnLens has Objective Five research validation and claims-check records that document source-backed decisions and distinguish safe, caveated, and unsupported claims.
+BurnLens has synchronized current-status artifacts after the P1O5-T11 research validation and claims-check merge and is ready to begin P1O5-T12 closeout and handoff work.
 ```
 
 ```text
-BurnLens has not completed Objective Five closeout, created a completed claim register, approved a public claim, created a completed reproducibility review, created a release QA decision, selected an AOI, acquired source data, created labels, masks, baseline outputs, model outputs, run outputs, metrics, maps, reports, screenshots, public demos, tags, or GitHub releases.
+BurnLens has Objective Five research validation and claims-check records, but no Objective Five closeout, release note, completed claim register, approved public claim, completed reproducibility review, release QA decision, tag, GitHub release, source record, AOI record, data product, model product, run product, map product, report, screenshot, or public demo has been created.
 ```
 
 ## Unsupported claims
@@ -165,9 +165,9 @@ Do not claim:
 
 ## Handoff
 
-After the P1O5-T11 PR is reviewed and merged:
+After the P1O5-SYNC-11 PR is reviewed and merged:
 
-1. confirm issue #179 closes;
+1. confirm issue #185 closes;
 2. comment on parent #144 with the PR number, changed files, and next task;
 3. proceed to P1O5-T12 / #183 from current `main`;
 4. keep Phase Two data work blocked until later tasks explicitly authorize intake records and all required gates exist.
