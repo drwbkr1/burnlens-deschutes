@@ -40,9 +40,11 @@ P1O5-SYNC-08 is complete. It synchronized current-status artifacts after the P1O
 
 P1O5-T09 is complete. It created the source-precedence release gate.
 
-P1O5-SYNC-09 is synchronizing post-merge status so P1O5-T10 / #175 can start from clean `main`.
+P1O5-SYNC-09 is complete. It synchronized current-status artifacts after the P1O5-T09 merge.
 
-The current repository state is still documentation, workflow, template, traceability-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, or source-precedence review record has been authorized.
+P1O5-T10 / #175 is active on branch `p1o5t10b`. It creates reusable BurnLens-specific reproducibility and release QA checklists for objective baselines, future dataset releases, model/baseline releases, run/report releases, and public demo releases.
+
+The current repository state is still documentation, workflow, template, traceability-control, QA-control, and records work. No data ingestion, imagery download, AOI selection, source-data acquisition, label creation, mask creation, baseline generation, model training, inference, metric computation, raster/vector output generation, map publication, website demo integration, public performance claim, tag, GitHub release, run folder, run package, run output, report package, public screenshot, registry database, completed claim record, source-precedence review record, completed reproducibility review, or release QA decision has been authorized.
 
 Current controlling handoff / current-status records:
 
@@ -57,6 +59,8 @@ docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
 docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md
 docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md
 docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md
+docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md
+docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md
 VERSIONING.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
@@ -69,7 +73,7 @@ Current parent/task issues:
 ```text
 #144 - Phase 1 Objective Five parent
 #175 - P1O5-T10 Create reproducibility and release QA checklist
-#177 - P1O5-SYNC-09 Sync status after source-precedence release gate merge
+#179 - P1O5-T11 Create Objective Five research and claims records
 ```
 
 ## Locked computer vision task
@@ -131,6 +135,10 @@ Every future public-facing claim must link to evidence. Claims involving fire, w
 
 Future public artifacts involving BurnLens-derived outputs must state whether the output is `normal`, `provisional`, `degraded`, `superseded`, or `withheld`. Outputs that conflict with official information or cannot be caveated responsibly are blocked from release.
 
+## Reproducibility and release QA gates
+
+Future objective baselines, dataset releases, model/baseline releases, run/report releases, and public demo releases must pass BurnLens-specific reproducibility and release QA checks before release-like action. These checks include issue, branch, PR, prompt-log, allowed-file, version, provenance, source-precedence, use-boundary, claim-evidence, and included/excluded release-note review.
+
 ## Repository structure
 
 ```text
@@ -160,6 +168,8 @@ docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
 docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md
 docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md
 docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md
+docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md
+docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md
 templates/RELEASE_NOTE_TEMPLATE.md
 templates/TRACEABILITY_RECORD_TEMPLATE.md
 templates/RUN_MANIFEST_TEMPLATE.json
@@ -173,6 +183,7 @@ records/prompt-build-log/2026-07-08-p1o5-t06.md
 records/prompt-build-log/2026-07-08-p1o5-t07.md
 records/prompt-build-log/2026-07-08-p1o5-t08.md
 records/prompt-build-log/2026-07-08-p1o5-t09.md
+records/prompt-build-log/2026-07-08-p1o5-t10.md
 ```
 
 Key earlier governing artifacts:
@@ -191,17 +202,17 @@ templates/PROMPT_LOG_ENTRY.md
 
 ## Recommended next task
 
-After P1O5-SYNC-09 is reviewed and merged, proceed to:
+After P1O5-T10 is reviewed and merged, proceed to:
 
 ```text
-P1O5-T10 - Create reproducibility and release QA checklist
+P1O5-T11 - Create Objective Five research and claims records
 ```
 
 Recommended focus:
 
-> Create reproducibility and release QA checklists that verify source-precedence status, responsible caveat review, evidence links, run/report identifiers, warning language, and explicit public-use decisions before any release-like action occurs.
+> Create Objective Five research validation and claims-check records using the sources actually relied on during P1O5-T03 through P1O5-T10 and the merged repo controls.
 
-P1O5-T10 should complete fresh research only if it introduces new external QA or reproducibility claims.
+P1O5-T11 requires research and claims reconciliation across the Objective Five artifact set.
 
 ## Repo workflow
 
@@ -222,7 +233,7 @@ prompt
 → parent/current-status update
 ```
 
-Every future public-facing output should be traceable to a commit, version, source metadata, run ID where relevant, timestamp, warning flags, limitations, source-precedence release status, and claim-evidence links.
+Every future public-facing output should be traceable to a commit, version, source metadata, run ID where relevant, timestamp, warning flags, limitations, source-precedence release status, reproducibility review, release QA decision, and claim-evidence links.
 
 ## Public site
 
