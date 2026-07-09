@@ -135,7 +135,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-T09 | `records/prompt-build-log/2026-07-08-p1o5-t09.md` | merged via PR #176 | Source-precedence release gate. |
 | P1O5-SYNC-09 | `records/prompt-build-log/2026-07-08-p1o5-sync-09.md` | merged via PR #178 | Status sync after P1O5-T09 merge. |
 | P1O5-T10 | `records/prompt-build-log/2026-07-08-p1o5-t10.md` | merged via PR #180 | Reproducibility and release QA checklists. |
-| P1O5-SYNC-10 | `records/prompt-build-log/2026-07-08-p1o5-sync-10.md` | drafted in branch | Status sync after P1O5-T10 merge. |
+| P1O5-SYNC-10 | `records/prompt-build-log/2026-07-08-p1o5-sync-10.md` | merged via PR #182 | Status sync after P1O5-T10 merge. |
+| P1O5-T11 | `records/prompt-build-log/2026-07-08-p1o5-t11.md` | drafted in branch | Objective Five research validation and claims check. |
 
 ## Entry creation timing
 
@@ -285,4 +286,4 @@ Unsupported claims:
 
 ## Handoff note
 
-After the P1O5-SYNC-10 PR is reviewed and merged, update parent issue #144 with the sync completion summary and proceed to P1O5-T11 / #179 from current `main`.
+After the P1O5-T11 PR is reviewed and merged, update parent issue #144 with the P1O5-T11 completion summary and proceed to P1O5-T12 / #183 from current `main`.
