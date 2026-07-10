@@ -151,7 +151,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-SYNC-12 | `records/prompt-build-log/2026-07-08-p1o5-sync-12.md` | drafted in branch | Final Objective Five status sync. |
 | P1O6-T01 | `records/prompt-build-log/2026-07-09-p1o6-t01.md` | merged via PR #197 | Objective Six tracker, artifact contracts, protocol architecture, README status, and canonical naming decisions. |
 | P1O6-SYNC-01 | `records/prompt-build-log/2026-07-09-p1o6-sync-01.md` | merged via PR #199 | Synchronized README, tracker, prompt-log index, and T01 task log after merge. |
-| P1O6-T02 | `records/prompt-build-log/2026-07-09-p1o6-t02.md` | drafted on `p1o6t02b`; PR pending | Root prompt-log navigation entry, canonical index acknowledgement, and README navigation update. |
+| P1O6-T02 | `records/prompt-build-log/2026-07-09-p1o6-t02.md` | merged via PR #201 | Root prompt-log navigation entry, canonical index acknowledgement, and README navigation update. |
+| P1O6-SYNC-02 | `records/prompt-build-log/2026-07-09-p1o6-sync-02.md` | merged via PR #203 | Synchronized README, tracker, prompt-log index, and T02 task log after merge. |
 
 ## Entry creation timing
 
@@ -301,4 +302,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T02 is drafted on `p1o6t02b` for review; after merge and any required status synchronization, proceed to P1O6-T03.
+Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T02 is merged and synchronized. Proceed to P1O6-T03, which may create `templates/CODEX_TASK_TEMPLATE.md` only as a concise compatibility and discoverability wrapper for the canonical `templates/CODEX_TASK_PACKET.md`.
