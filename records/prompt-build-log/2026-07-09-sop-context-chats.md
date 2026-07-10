@@ -8,8 +8,9 @@
 | Task | Update Prompt-to-Repo SOP for context-tiered chats |
 | Task issue | #190 |
 | Branch | `sop-context-chats` |
-| Pull request | pending |
-| Merge method | pending |
+| Pull request | #191 |
+| Merge method | squash |
+| Merge commit | `5989d6eff3c4848ae2669218b25430179835b258` |
 | Primary artifact | `docs/workflows/PROMPT_TO_REPO_SOP.md` |
 | Supporting artifact | `templates/CODEX_TASK_PACKET.md` |
 | Prompt assistant | ChatGPT |
@@ -48,8 +49,9 @@ No new external research was required. The task updates internal workflow guidan
 | SOP avoids fixed task-count rule | Passed. |
 | SOP distinguishes full reference from quickstart | Passed. |
 | Task packet references SOP | Passed. |
+| PR merged | Passed: #191. |
 | Tests | Not run; documentation/template only. |
 
 ## Handoff
 
-After merge, use `docs/workflows/PROMPT_TO_REPO_SOP.md` as the repo-level SOP and `templates/CODEX_TASK_PACKET.md` as the compact task-chat packet.
+Use `docs/workflows/PROMPT_TO_REPO_SOP.md` as the repo-level SOP and `templates/CODEX_TASK_PACKET.md` as the compact task-chat packet.
