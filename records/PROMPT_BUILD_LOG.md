@@ -153,6 +153,7 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O6-SYNC-01 | `records/prompt-build-log/2026-07-09-p1o6-sync-01.md` | merged via PR #199 | Synchronized README, tracker, prompt-log index, and T01 task log after merge. |
 | P1O6-T02 | `records/prompt-build-log/2026-07-09-p1o6-t02.md` | merged via PR #201 | Root prompt-log navigation entry, canonical index acknowledgement, and README navigation update. |
 | P1O6-SYNC-02 | `records/prompt-build-log/2026-07-09-p1o6-sync-02.md` | merged via PR #203 | Synchronized README, tracker, prompt-log index, and T02 task log after merge. |
+| P1O6-T03 | `records/prompt-build-log/2026-07-09-p1o6-t03.md` | drafted on `p1o6t03b`; PR pending | Codex task template entry point, README navigation update, and T03 traceability record. |
 
 ## Entry creation timing
 
