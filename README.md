@@ -18,8 +18,9 @@ Current Objective Six status:
 #195 - Phase 1 Objective Six parent — open
 P1O6-T01 / #196 - merged through PR #197
 P1O6-T02 / #200 - merged through PR #201
-P1O6-T03 / #204 - merged through PR #206; status synchronized through P1O6-SYNC-03
-P1O6-T04 / #205 - next task; refresh repository agent instructions
+P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
+P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
+P1O6-T05 - next task; create contributor guidance
 ```
 
 Current Objective Six records:
@@ -44,6 +45,7 @@ The controlling relationship is:
 
 ```text
 full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
+repository agent instructions: AGENTS.md
 canonical task capsule: templates/CODEX_TASK_PACKET.md
 task template entry point: templates/CODEX_TASK_TEMPLATE.md (non-canonical)
 root prompt-log navigation: PROMPT_LOG.md (non-canonical)
@@ -51,6 +53,8 @@ canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
 current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 ```
+
+Root `AGENTS.md` now routes prompt-assisted agents to the merged Objective Six workflow, scope, verification, human-review, boundary, and release controls.
 
 `templates/CODEX_TASK_TEMPLATE.md` is a concise compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
 
@@ -126,10 +130,10 @@ Future BurnLens artifacts must keep these categories separate:
 Proceed to:
 
 ```text
-P1O6-T04 — Refresh repository agent instructions
+P1O6-T05 — Create contributor guidance
 ```
 
-P1O6-T04 / #205 may update `AGENTS.md` to replace stale Objective Four current-phase language and route agents to the final canonical SOP, task packet, prompt-log sources, human-review rule, and tests/checks rule.
+P1O6-T05 may create `CONTRIBUTING.md` as the human-facing guide for issue, branch, prompt-log, verification, PR, review, merge, boundary-escalation, and handoff requirements. It must agree with `AGENTS.md` and the canonical SOP without duplicating them in full.
 
 ## Public site
 
