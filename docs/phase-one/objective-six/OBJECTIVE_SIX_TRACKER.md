@@ -5,10 +5,10 @@
 | Field | Current value |
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
-| Parent issue | #195 |
-| Active task | P1O6-T01 / #196 |
-| Working branch | `p1o6t01b` |
-| Current state | Build complete on task branch; human review and PR merge pending |
+| Parent issue | #195 — open |
+| Completed task | P1O6-T01 / #196; merged through PR #197 |
+| Next task | P1O6-T02; issue and branch not yet created |
+| Current state | T01 architecture is merged and synchronized; T02 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -53,8 +53,8 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 
 | Task | Owner / responsibility | Primary deliverable(s) | Dependency | Status |
 |---|---|---|---|---|
-| P1O6-T01 | Protocol architecture owner | `OBJECTIVE_SIX_TRACKER.md`; `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`; `PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`; README status update | Objective Five handoff and SOP | Build complete; review pending |
-| P1O6-T02 | Prompt-log navigation owner | Future root `PROMPT_LOG.md`; prompt-log protocol/index adjustments if authorized | T01 merged | Planned |
+| P1O6-T01 | Protocol architecture owner | `OBJECTIVE_SIX_TRACKER.md`; `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`; `PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`; README status update | Objective Five handoff and SOP | Merged via PR #197; status synchronized via PR #199 |
+| P1O6-T02 | Prompt-log navigation owner | Future root `PROMPT_LOG.md`; prompt-log protocol/index adjustments if authorized | T01 merged | Next; issue and branch not yet created |
 | P1O6-T03 | Codex task-interface owner | Future `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01 merged | Planned |
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Planned |
 | P1O6-T05 | Contributor-guidance owner | Future `CONTRIBUTING.md` | T01-T04 merged | Planned |
@@ -123,26 +123,29 @@ Every task must record:
 
 `Not applicable` is acceptable only with a task-specific reason. A task may not claim that tests passed unless a named check was actually executed.
 
-## Current acceptance state for P1O6-T01
+## Final acceptance state for P1O6-T01
 
 | Criterion | State |
 |---|---|
-| Objective purpose and success gate defined | Satisfied on branch |
-| Planned tasks, dependencies, paths, and owners listed | Satisfied on branch |
-| Prompt-log canonical and compatibility roles decided | Satisfied on branch |
-| Codex-template canonical and compatibility roles decided | Satisfied on branch |
-| Human review distinct from AI review | Satisfied on branch |
-| Tests-or-documented-non-applicability rule defined | Satisfied on branch |
-| Duplicate source of truth prevented | Satisfied on branch |
-| README Objective Six status update drafted | Satisfied on branch |
-| Required research recorded | Satisfied on branch |
-| Human review and merge | Pending |
+| Objective purpose and success gate defined | Satisfied on `main` |
+| Planned tasks, dependencies, paths, and owners listed | Satisfied on `main` |
+| Prompt-log canonical and compatibility roles decided | Satisfied on `main` |
+| Codex-template canonical and compatibility roles decided | Satisfied on `main` |
+| Human review distinct from AI review | Satisfied; human merge authorization and AI-assisted review were recorded separately in PR #197 |
+| Tests-or-documented-non-applicability rule defined | Satisfied on `main` |
+| Duplicate source of truth prevented | Satisfied on `main` |
+| README Objective Six status updated | Satisfied and synchronized |
+| Required research recorded | Satisfied on `main` |
+| Human review and merge | Satisfied through PR #197 |
+| Task issue closure | Satisfied; #196 closed |
+| Parent issue closure avoided | Satisfied; #195 remains open |
 
 ## Safe claims
 
-- Objective Six has an issue-backed architecture and tracker on branch `p1o6t01b` pending human review.
-- The proposed protocol preserves the existing prompt/build log and Codex task packet as canonical sources.
-- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by P1O6-T01.
+- Objective Six has a merged issue-backed architecture, tracker, artifact-contract map, and prompt-built development protocol.
+- The merged protocol preserves the existing prompt/build log and Codex task packet as canonical sources.
+- P1O6-T01 merged through PR #197 and its current-status records were synchronized through PR #199.
+- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by P1O6-T01 or its sync.
 
 ## Unsupported claims
 
@@ -150,7 +153,6 @@ Do not claim that:
 
 - Objective Six is complete;
 - later Objective Six deliverables exist;
-- human review has occurred before it is recorded;
 - AI review is equivalent to human approval;
 - repository settings enforce this protocol;
 - BurnLens has started data, model, run, map, or public-demo work;
@@ -170,4 +172,4 @@ Revise or defer work if:
 
 ## Handoff
 
-After P1O6-T01 is reviewed and merged, proceed to P1O6-T02. T02 must use the naming decisions in this tracker and `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md` to create only the approved prompt-log navigation entry point and any explicitly authorized canonical-index adjustment.
+Proceed to P1O6-T02. T02 must use the naming decisions in this tracker and `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md` to create only the approved prompt-log navigation entry point and any explicitly authorized canonical-index adjustment.
