@@ -18,7 +18,8 @@ Current Objective Six status:
 #195 - Phase 1 Objective Six parent — open
 P1O6-T01 / #196 - merged through PR #197
 P1O6-T02 / #200 - merged through PR #201
-P1O6-T03 / #204 - active on branch p1o6t03b; Codex task template entry point drafted for review
+P1O6-T03 / #204 - merged through PR #206; status synchronized through P1O6-SYNC-03
+P1O6-T04 / #205 - next task; refresh repository agent instructions
 ```
 
 Current Objective Six records:
@@ -122,19 +123,13 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-Complete:
-
-```text
-P1O6-T03 — Create the Codex task template entry point
-```
-
-After P1O6-T03 receives human review, merges, and any required current-status synchronization is complete, proceed to:
+Proceed to:
 
 ```text
 P1O6-T04 — Refresh repository agent instructions
 ```
 
-P1O6-T04 may update `AGENTS.md` to point to the final canonical SOP, task packet, prompt-log sources, human-review rule, and tests/checks rule.
+P1O6-T04 / #205 may update `AGENTS.md` to replace stale Objective Four current-phase language and route agents to the final canonical SOP, task packet, prompt-log sources, human-review rule, and tests/checks rule.
 
 ## Public site
 
