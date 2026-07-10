@@ -17,7 +17,8 @@ Current Objective Six status:
 ```text
 #195 - Phase 1 Objective Six parent — open
 P1O6-T01 / #196 - merged through PR #197
-P1O6-T02 / #200 - active on branch p1o6t02b; root prompt-log navigation drafted for review
+P1O6-T02 / #200 - merged through PR #201
+P1O6-T03 - next planned task; task issue and branch not yet created
 ```
 
 Current Objective Six records:
@@ -120,19 +121,13 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-Complete:
-
-```text
-P1O6-T02 — Create the prompt-log navigation entry point and strengthen traceability
-```
-
-After P1O6-T02 receives human review, merges, and any required current-status synchronization is complete, proceed to:
+Proceed to:
 
 ```text
 P1O6-T03 — Create the Codex task template entry point
 ```
 
-P1O6-T03 must preserve `templates/CODEX_TASK_PACKET.md` as the canonical executable task capsule.
+P1O6-T03 must preserve `templates/CODEX_TASK_PACKET.md` as the canonical executable task capsule and may create `templates/CODEX_TASK_TEMPLATE.md` only as a concise compatibility and discoverability wrapper.
 
 ## Public site
 
