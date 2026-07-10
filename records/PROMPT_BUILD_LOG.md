@@ -155,6 +155,7 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O6-SYNC-02 | `records/prompt-build-log/2026-07-09-p1o6-sync-02.md` | merged via PR #203 | Synchronized README, tracker, prompt-log index, and T02 task log after merge. |
 | P1O6-T03 | `records/prompt-build-log/2026-07-09-p1o6-t03.md` | merged via PR #206 | Codex task template entry point, README navigation update, and T03 traceability record. |
 | P1O6-SYNC-03 | `records/prompt-build-log/2026-07-10-p1o6-sync-03.md` | merged via PR #208 | Reconciles README, tracker, prompt-log index, and T03 task log after merge. |
+| P1O6-T04 | `records/prompt-build-log/2026-07-10-p1o6-t04.md` | drafted on `p1o6t04b`; PR pending | Refreshes repository agent instructions and records T04 verification. |
 
 ## Entry creation timing
 
@@ -304,4 +305,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T03 is merged through PR #206 and synchronized through PR #208. Proceed to P1O6-T04 / #205 to refresh repository agent instructions.
+Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T04 is drafted on `p1o6t04b` for human review; no PR has been opened. Prompt 3 should review the three-file diff and preserve P1O6-T05 as the post-merge handoff.
