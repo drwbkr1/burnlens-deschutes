@@ -18,7 +18,7 @@ Current Objective Six status:
 #195 - Phase 1 Objective Six parent — open
 P1O6-T01 / #196 - merged through PR #197
 P1O6-T02 / #200 - merged through PR #201
-P1O6-T03 - next planned task; task issue and branch not yet created
+P1O6-T03 / #204 - active on branch p1o6t03b; Codex task template entry point drafted for review
 ```
 
 Current Objective Six records:
@@ -44,15 +44,16 @@ The controlling relationship is:
 ```text
 full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
 canonical task capsule: templates/CODEX_TASK_PACKET.md
+task template entry point: templates/CODEX_TASK_TEMPLATE.md (non-canonical)
 root prompt-log navigation: PROMPT_LOG.md (non-canonical)
 canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
 current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 ```
 
-Root `PROMPT_LOG.md` is a concise navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
+`templates/CODEX_TASK_TEMPLATE.md` is a concise compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
 
-Future `templates/CODEX_TASK_TEMPLATE.md` remains a planned compatibility and discoverability entry point. It does not exist yet and must not become a duplicate task schema.
+Root `PROMPT_LOG.md` is a concise navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
 
 Human review is distinct from AI-assisted review. AI may draft, test, inspect, and recommend changes, but a human must inspect the proposed diff and record the merge decision.
 
@@ -121,13 +122,19 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-Proceed to:
+Complete:
 
 ```text
 P1O6-T03 — Create the Codex task template entry point
 ```
 
-P1O6-T03 must preserve `templates/CODEX_TASK_PACKET.md` as the canonical executable task capsule and may create `templates/CODEX_TASK_TEMPLATE.md` only as a concise compatibility and discoverability wrapper.
+After P1O6-T03 receives human review, merges, and any required current-status synchronization is complete, proceed to:
+
+```text
+P1O6-T04 — Refresh repository agent instructions
+```
+
+P1O6-T04 may update `AGENTS.md` to point to the final canonical SOP, task packet, prompt-log sources, human-review rule, and tests/checks rule.
 
 ## Public site
 
