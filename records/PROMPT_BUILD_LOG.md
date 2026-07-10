@@ -17,6 +17,7 @@ The log must not become a transcript dump, private reasoning record, credential 
 | Protocol PR | #138 |
 | Protocol status | merged |
 | Protocol file | `records/PROMPT_BUILD_LOG.md` |
+| Root navigation | `PROMPT_LOG.md` — non-canonical compatibility entry point |
 | Entry template | `templates/PROMPT_LOG_ENTRY.md` |
 | Active entry directory | `records/prompt-build-log/` |
 
@@ -94,6 +95,14 @@ The protocol index is:
 records/PROMPT_BUILD_LOG.md
 ```
 
+The repository-root navigation entry is:
+
+```text
+PROMPT_LOG.md
+```
+
+`PROMPT_LOG.md` is a non-canonical router to this protocol, the canonical entry template, and the dated-entry directory. It does not own logging rules or entry status.
+
 The reusable entry template is:
 
 ```text
@@ -142,6 +151,7 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-SYNC-12 | `records/prompt-build-log/2026-07-08-p1o5-sync-12.md` | drafted in branch | Final Objective Five status sync. |
 | P1O6-T01 | `records/prompt-build-log/2026-07-09-p1o6-t01.md` | merged via PR #197 | Objective Six tracker, artifact contracts, protocol architecture, README status, and canonical naming decisions. |
 | P1O6-SYNC-01 | `records/prompt-build-log/2026-07-09-p1o6-sync-01.md` | merged via PR #199 | Synchronized README, tracker, prompt-log index, and T01 task log after merge. |
+| P1O6-T02 | `records/prompt-build-log/2026-07-09-p1o6-t02.md` | drafted on `p1o6t02b`; PR pending | Root prompt-log navigation entry, canonical index acknowledgement, and README navigation update. |
 
 ## Entry creation timing
 
@@ -280,7 +290,7 @@ Each prompt/build log entry should preserve:
 
 Safe claim:
 
-> BurnLens has a prompt/build log protocol, reusable entry template, and dated entry pattern for recording prompt-assisted repository work.
+> BurnLens has a prompt/build log protocol, reusable entry template, root navigation entry point, and dated entry pattern for recording prompt-assisted repository work.
 
 Unsupported claims:
 
@@ -291,4 +301,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md`, `docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`, and `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md` as the current Objective Six architecture. P1O6-T01 is merged and synchronized. The next planned task is P1O6-T02, which may create a root prompt-log navigation entry point without replacing this canonical protocol or its index.
+Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T02 is drafted on `p1o6t02b` for review; after merge and any required status synchronization, proceed to P1O6-T03.

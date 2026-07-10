@@ -17,7 +17,7 @@ Current Objective Six status:
 ```text
 #195 - Phase 1 Objective Six parent — open
 P1O6-T01 / #196 - merged through PR #197
-P1O6-T02 - next planned task; task issue and branch not yet created
+P1O6-T02 / #200 - active on branch p1o6t02b; root prompt-log navigation drafted for review
 ```
 
 Current Objective Six records:
@@ -43,12 +43,15 @@ The controlling relationship is:
 ```text
 full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
 canonical task capsule: templates/CODEX_TASK_PACKET.md
+root prompt-log navigation: PROMPT_LOG.md (non-canonical)
 canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
 current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 ```
 
-Future root `PROMPT_LOG.md` and `templates/CODEX_TASK_TEMPLATE.md` paths are planned compatibility and navigation entry points only. They do not exist yet and must not become duplicate protocols or task schemas.
+Root `PROMPT_LOG.md` is a concise navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
+
+Future `templates/CODEX_TASK_TEMPLATE.md` remains a planned compatibility and discoverability entry point. It does not exist yet and must not become a duplicate task schema.
 
 Human review is distinct from AI-assisted review. AI may draft, test, inspect, and recommend changes, but a human must inspect the proposed diff and record the merge decision.
 
@@ -117,13 +120,19 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-Proceed to:
+Complete:
 
 ```text
 P1O6-T02 — Create the prompt-log navigation entry point and strengthen traceability
 ```
 
-P1O6-T02 must preserve `records/PROMPT_BUILD_LOG.md` and `templates/PROMPT_LOG_ENTRY.md` as the canonical prompt-log sources.
+After P1O6-T02 receives human review, merges, and any required current-status synchronization is complete, proceed to:
+
+```text
+P1O6-T03 — Create the Codex task template entry point
+```
+
+P1O6-T03 must preserve `templates/CODEX_TASK_PACKET.md` as the canonical executable task capsule.
 
 ## Public site
 
