@@ -21,21 +21,6 @@ It is not meant to be pasted in full into every ChatGPT chat. Each task chat sho
 11. Open a PR that closes only the task issue.
 12. Run a status sync only when README, tracker, or prompt logs are stale after merge.
 
-## Chat terminology
-
-Use **chat** for ChatGPT conversations.
-
-| Term | Meaning |
-|---|---|
-| Parent chat | A planning/context chat for an objective or major workstream. |
-| Task chat | A focused ChatGPT conversation for one or more closely related GitHub task branches when context remains manageable. |
-| Review chat | A focused ChatGPT conversation for PR review, merge, sync, or closeout. |
-| Chat handoff | A compact summary passed from one ChatGPT chat to another. |
-
-Do not use a fixed rule for how many tasks may happen in one chat. Start a new chat when context is saturated, when the workstream changes materially, or when a clean handoff would reduce risk.
-
-Regardless of how many tasks are discussed in one chat, each GitHub task still needs its own issue, branch, artifact contract, PR, and handoff unless the user explicitly approves bundling.
-
 ## Operating model
 
 The full SOP is a reference manual. The task capsule is the executable prompt.
