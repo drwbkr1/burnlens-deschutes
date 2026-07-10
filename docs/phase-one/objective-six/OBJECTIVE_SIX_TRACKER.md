@@ -6,9 +6,9 @@
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
-| Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206 |
-| Next task | P1O6-T04 / #205 — refresh repository agent instructions; branch not yet created |
-| Current state | T01-T03 are merged; T03 current-status records are synchronized through P1O6-SYNC-03; T04 is next |
+| Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209 |
+| Next task | P1O6-T05 — create contributor guidance; issue and branch not yet created |
+| Current state | T01-T04 are merged; T04 current-status records are synchronized through P1O6-SYNC-04; T05 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -55,9 +55,9 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 |---|---|---|---|---|
 | P1O6-T01 | Protocol architecture owner | `OBJECTIVE_SIX_TRACKER.md`; `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`; `PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`; README status update | Objective Five handoff and SOP | Merged via PR #197; status synchronized via PR #199 |
 | P1O6-T02 | Prompt-log navigation owner | Root `PROMPT_LOG.md`; prompt-log protocol/index acknowledgement; README navigation update | T01 merged | Merged via PR #201; status synchronized via PR #203 |
-| P1O6-T03 | Codex task-interface owner | `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Merged via PR #206; status synchronized through P1O6-SYNC-03 |
-| P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Next; issue #205 open; branch not yet created |
-| P1O6-T05 | Contributor-guidance owner | Future `CONTRIBUTING.md` | T01-T04 merged | Planned |
+| P1O6-T03 | Codex task-interface owner | `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Merged via PR #206; status synchronized via PR #208 |
+| P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Merged via PR #209; status synchronized through P1O6-SYNC-04 |
+| P1O6-T05 | Contributor-guidance owner | Future `CONTRIBUTING.md` | T01-T04 merged | Next; issue and branch not yet created |
 | P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Planned |
 | P1O6-T07 | Issue-intake owner | Authorized issue-form modernization and SOP integration | T01-T06 merged | Planned |
 | P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned |
@@ -92,6 +92,12 @@ No blocked task is authorized to proceed around an unmet dependency. A dependenc
 |---|---|---|
 | `templates/CODEX_TASK_PACKET.md` | Canonical executable task capsule | Remains the source of truth for task identity, context tiers, scope, research, verification, PR requirements, and handoff. |
 | `templates/CODEX_TASK_TEMPLATE.md` | Compatibility and discoverability entry point | Exists as a concise wrapper that directs users to instantiate the canonical packet. It does not duplicate or diverge from packet fields. |
+
+### Repository agent instructions
+
+| Path | Role | Decision |
+|---|---|---|
+| `AGENTS.md` | Repository-level agent instructions | Routes prompt-assisted agents to the canonical SOP, task packet, prompt-log controls, verification rules, human-review gate, and boundary/release controls without reproducing them in full. |
 
 ## Review model
 
@@ -166,11 +172,28 @@ Every task must record:
 | Correct relative link | Satisfied through T03 review |
 | Concise instantiation guidance and bounded example | Satisfied through PR #206 |
 | Parallel packet, schema, tier tables, or workflow avoided | Satisfied through diff and content review |
-| README and prompt-log records updated | Satisfied and synchronized through P1O6-SYNC-03 |
+| README and prompt-log records updated | Satisfied and synchronized through PR #208 |
 | Tests/checks or non-applicability recorded | Satisfied in the T03 dated log and PR #206 |
 | Human review distinct from AI review | Satisfied; the human outcome was Approve and was recorded separately from AI-assisted findings |
 | Human review and merge | Satisfied through PR #206 |
 | Task issue closure | Satisfied; #204 closed |
+| Parent issue closure avoided | Satisfied; #195 remains open |
+
+## Final acceptance state for P1O6-T04
+
+| Criterion | State |
+|---|---|
+| Root agent instructions refreshed | Satisfied; `AGENTS.md` reflects Objective Six on `main` |
+| Stale Objective Four authorization language removed | Satisfied through PR #209 review |
+| Canonical workflow and task-capsule roles routed correctly | Satisfied through PR #209 |
+| Prompt-log roles routed correctly | Satisfied through PR #209 |
+| Issue, branch, allowed-file, PR, and task-only close rules present | Satisfied on `main` |
+| Human review distinct from AI review | Satisfied; Drew approved and AI-assisted findings were recorded separately |
+| Tests/checks or task-specific non-applicability required | Satisfied on `main` |
+| Before-data, claim, source-precedence, version, tag, and Release gates preserved | Satisfied through content and boundary review |
+| Duplicate packet, schema, tier table, or checklist avoided | Satisfied through diff and content review |
+| Human review and merge | Satisfied through PR #209 |
+| Task issue closure | Satisfied; #205 closed |
 | Parent issue closure avoided | Satisfied; #195 remains open |
 
 ## Safe claims
@@ -181,17 +204,19 @@ Every task must record:
 - `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template.
 - `templates/CODEX_TASK_PACKET.md` remains the canonical executable task capsule.
 - `templates/CODEX_TASK_TEMPLATE.md` is a merged non-canonical compatibility and discoverability wrapper.
+- Root `AGENTS.md` contains merged repository-level prompt-assisted work instructions aligned with Objective Six.
 - P1O6-T01 merged through PR #197 and was synchronized through PR #199.
 - P1O6-T02 merged through PR #201 and was synchronized through PR #203.
-- P1O6-T03 merged through PR #206 and was synchronized through P1O6-SYNC-03.
-- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T03 or their synchronization tasks.
+- P1O6-T03 merged through PR #206 and was synchronized through PR #208.
+- P1O6-T04 merged through PR #209 and was synchronized through P1O6-SYNC-04.
+- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T04 or their synchronization tasks.
 
 ## Unsupported claims
 
 Do not claim that:
 
 - Objective Six is complete;
-- `AGENTS.md`, `CONTRIBUTING.md`, or later Objective Six deliverables have been refreshed or created before their tasks merge;
+- `CONTRIBUTING.md` or later Objective Six deliverables exist before their tasks merge;
 - AI review is equivalent to human approval;
 - repository settings enforce this protocol;
 - BurnLens has started data, model, run, map, or public-demo work;
@@ -211,4 +236,4 @@ Revise or defer work if:
 
 ## Handoff
 
-Proceed to P1O6-T04 / #205. T04 may refresh `AGENTS.md` so repository-level agent instructions point to the merged SOP, canonical task packet, non-canonical task-template entry point, canonical prompt-log sources, human-review rule, and tests/checks rule without authorizing implementation or later Objective Six work.
+Proceed to P1O6-T05. T05 may create `CONTRIBUTING.md` as the human-facing guide for issue, branch, prompt-log, checks, PR, review, merge, boundary-escalation, and handoff requirements. It must agree with `AGENTS.md`, the SOP, and the canonical task and prompt-log controls without duplicating them in full.
