@@ -281,14 +281,6 @@ unsupported claims remain blocked
 no unauthorized data, model, public-output, tag, or release work occurred
 ```
 
-## Next-chat starter
-
-Use this starter for the next major workstream:
-
-```text
-We are starting from completed Phase One / Objective Five. Use OBJECTIVE_FIVE_HANDOFF.md as the first context block. Load Tier 0. Select Tier 1 based on whether this is Phase Two data-intake preparation, Objective Six portfolio packaging, or baseline-tag QA. Do not load Tier 2 unless verification requires it.
-```
-
 ## Success standard
 
 This SOP succeeds when each task can be completed with:
