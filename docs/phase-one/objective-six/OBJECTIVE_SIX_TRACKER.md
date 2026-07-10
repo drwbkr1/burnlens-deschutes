@@ -6,9 +6,9 @@
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
-| Completed task | P1O6-T01 / #196; merged through PR #197 |
-| Next task | P1O6-T02; issue and branch not yet created |
-| Current state | T01 architecture is merged and synchronized; T02 is next |
+| Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201 |
+| Next task | P1O6-T03; issue and branch not yet created |
+| Current state | T01 architecture and T02 prompt-log navigation are merged and synchronized; T03 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -54,8 +54,8 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | Task | Owner / responsibility | Primary deliverable(s) | Dependency | Status |
 |---|---|---|---|---|
 | P1O6-T01 | Protocol architecture owner | `OBJECTIVE_SIX_TRACKER.md`; `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`; `PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`; README status update | Objective Five handoff and SOP | Merged via PR #197; status synchronized via PR #199 |
-| P1O6-T02 | Prompt-log navigation owner | Future root `PROMPT_LOG.md`; prompt-log protocol/index adjustments if authorized | T01 merged | Next; issue and branch not yet created |
-| P1O6-T03 | Codex task-interface owner | Future `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01 merged | Planned |
+| P1O6-T02 | Prompt-log navigation owner | Root `PROMPT_LOG.md`; prompt-log protocol/index acknowledgement; README navigation update | T01 merged | Merged via PR #201; status synchronized via PR #203 |
+| P1O6-T03 | Codex task-interface owner | Future `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Next; issue and branch not yet created |
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Planned |
 | P1O6-T05 | Contributor-guidance owner | Future `CONTRIBUTING.md` | T01-T04 merged | Planned |
 | P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Planned |
@@ -84,7 +84,7 @@ No blocked task is authorized to proceed around an unmet dependency. A dependenc
 |---|---|---|
 | `records/PROMPT_BUILD_LOG.md` | Canonical protocol and index | Remains the source of truth for prompt/build logging rules and entry indexing. |
 | `templates/PROMPT_LOG_ENTRY.md` | Canonical detailed entry template | Remains the source of truth for task-level prompt/build-log content. |
-| Future root `PROMPT_LOG.md` | Compatibility and navigation entry point | May be created by T02 only as a concise router to the canonical protocol, template, and dated entries. It must not contain a parallel log index or restate the protocol in full. |
+| Root `PROMPT_LOG.md` | Compatibility and navigation entry point | Exists as a concise router to the canonical protocol, template, and dated entries. It does not contain a parallel log index or restate the protocol in full. |
 
 ### Codex task artifacts
 
@@ -140,19 +140,39 @@ Every task must record:
 | Task issue closure | Satisfied; #196 closed |
 | Parent issue closure avoided | Satisfied; #195 remains open |
 
+## Final acceptance state for P1O6-T02
+
+| Criterion | State |
+|---|---|
+| Root `PROMPT_LOG.md` exists | Satisfied on `main` |
+| Root file is navigation and compatibility only | Satisfied on `main` |
+| Canonical protocol/index preserved | Satisfied; `records/PROMPT_BUILD_LOG.md` remains canonical |
+| Canonical detailed entry template preserved | Satisfied; `templates/PROMPT_LOG_ENTRY.md` remains canonical |
+| Dated-entry directory linked | Satisfied; `records/prompt-build-log/` is routed from the root file |
+| Parallel protocol, index, schema, or transcript store avoided | Satisfied through content and diff review |
+| Repository paths and links reviewed | Satisfied through PR #201 review |
+| Tests/checks or non-applicability recorded | Satisfied in the T02 dated log and PR #201 |
+| Human review distinct from AI review | Satisfied; human merge authorization and AI-assisted review were recorded separately in PR #201 |
+| Human review and merge | Satisfied through PR #201 |
+| Task issue closure | Satisfied; #200 closed |
+| Parent issue closure avoided | Satisfied; #195 remains open |
+
 ## Safe claims
 
 - Objective Six has a merged issue-backed architecture, tracker, artifact-contract map, and prompt-built development protocol.
-- The merged protocol preserves the existing prompt/build log and Codex task packet as canonical sources.
-- P1O6-T01 merged through PR #197 and its current-status records were synchronized through PR #199.
-- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by P1O6-T01 or its sync.
+- Root `PROMPT_LOG.md` is a merged non-canonical navigation entry point to the canonical prompt-log sources.
+- `records/PROMPT_BUILD_LOG.md` remains the canonical prompt/build-log protocol and index.
+- `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template.
+- P1O6-T01 merged through PR #197 and was synchronized through PR #199.
+- P1O6-T02 merged through PR #201 and was synchronized through PR #203.
+- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01, T02, or their synchronization tasks.
 
 ## Unsupported claims
 
 Do not claim that:
 
 - Objective Six is complete;
-- later Objective Six deliverables exist;
+- `templates/CODEX_TASK_TEMPLATE.md` or later Objective Six deliverables exist;
 - AI review is equivalent to human approval;
 - repository settings enforce this protocol;
 - BurnLens has started data, model, run, map, or public-demo work;
@@ -172,4 +192,4 @@ Revise or defer work if:
 
 ## Handoff
 
-Proceed to P1O6-T02. T02 must use the naming decisions in this tracker and `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md` to create only the approved prompt-log navigation entry point and any explicitly authorized canonical-index adjustment.
+Proceed to P1O6-T03. T03 must preserve `templates/CODEX_TASK_PACKET.md` as the canonical executable task capsule and may create `templates/CODEX_TASK_TEMPLATE.md` only as the compatibility and discoverability wrapper defined by the merged Objective Six architecture.
