@@ -140,7 +140,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O5-SYNC-11 | `records/prompt-build-log/2026-07-08-p1o5-sync-11.md` | merged via PR #186 | Status sync after P1O5-T11 merge. |
 | P1O5-T12 | `records/prompt-build-log/2026-07-08-p1o5-t12.md` | merged via PR #187 | Objective Five closeout, handoff, and release-note draft. |
 | P1O5-SYNC-12 | `records/prompt-build-log/2026-07-08-p1o5-sync-12.md` | drafted in branch | Final Objective Five status sync. |
-| P1O6-T01 | `records/prompt-build-log/2026-07-09-p1o6-t01.md` | drafted on `p1o6t01b`; PR pending | Objective Six tracker, artifact contracts, protocol architecture, README status, and canonical naming decisions. |
+| P1O6-T01 | `records/prompt-build-log/2026-07-09-p1o6-t01.md` | merged via PR #197 | Objective Six tracker, artifact contracts, protocol architecture, README status, and canonical naming decisions. |
+| P1O6-SYNC-01 | `records/prompt-build-log/2026-07-09-p1o6-sync-01.md` | merged via PR #199 | Synchronized README, tracker, prompt-log index, and T01 task log after merge. |
 
 ## Entry creation timing
 
@@ -290,4 +291,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md`, `docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`, and `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md` as the current Objective Six architecture after P1O6-T01 is human-reviewed and merged. The next planned task is P1O6-T02, which may create a root prompt-log navigation entry point without replacing this canonical protocol or its index.
+Use `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md`, `docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`, and `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md` as the current Objective Six architecture. P1O6-T01 is merged and synchronized. The next planned task is P1O6-T02, which may create a root prompt-log navigation entry point without replacing this canonical protocol or its index.
