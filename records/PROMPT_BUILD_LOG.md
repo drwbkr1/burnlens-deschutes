@@ -153,7 +153,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O6-SYNC-01 | `records/prompt-build-log/2026-07-09-p1o6-sync-01.md` | merged via PR #199 | Synchronized README, tracker, prompt-log index, and T01 task log after merge. |
 | P1O6-T02 | `records/prompt-build-log/2026-07-09-p1o6-t02.md` | merged via PR #201 | Root prompt-log navigation entry, canonical index acknowledgement, and README navigation update. |
 | P1O6-SYNC-02 | `records/prompt-build-log/2026-07-09-p1o6-sync-02.md` | merged via PR #203 | Synchronized README, tracker, prompt-log index, and T02 task log after merge. |
-| P1O6-T03 | `records/prompt-build-log/2026-07-09-p1o6-t03.md` | drafted on `p1o6t03b`; PR pending | Codex task template entry point, README navigation update, and T03 traceability record. |
+| P1O6-T03 | `records/prompt-build-log/2026-07-09-p1o6-t03.md` | merged via PR #206 | Codex task template entry point, README navigation update, and T03 traceability record. |
+| P1O6-SYNC-03 | `records/prompt-build-log/2026-07-10-p1o6-sync-03.md` | synchronized on `p1o6sync03b`; PR pending | Reconciles README, tracker, prompt-log index, and T03 task log after merge. |
 
 ## Entry creation timing
 
@@ -303,4 +304,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T02 is merged and synchronized. Proceed to P1O6-T03, which may create `templates/CODEX_TASK_TEMPLATE.md` only as a concise compatibility and discoverability wrapper for the canonical `templates/CODEX_TASK_PACKET.md`.
+Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T03 is merged through PR #206 and synchronized through P1O6-SYNC-03. Proceed to P1O6-T04 / #205 to refresh repository agent instructions.
