@@ -12,11 +12,12 @@ Objective Five is complete and remains the control baseline for versioning, prov
 
 Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, and handed off without creating duplicate sources of truth.
 
-Current Objective Six issue references:
+Current Objective Six status:
 
 ```text
-#195 - Phase 1 Objective Six parent — Prompt-Built Development Protocol
-#196 - P1O6-T01 Define Objective Six architecture and artifact contracts
+#195 - Phase 1 Objective Six parent — open
+P1O6-T01 / #196 - merged through PR #197
+P1O6-T02 - next planned task; task issue and branch not yet created
 ```
 
 Current Objective Six records:
@@ -116,7 +117,7 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-After P1O6-T01 is human-reviewed and merged, proceed to:
+Proceed to:
 
 ```text
 P1O6-T02 — Create the prompt-log navigation entry point and strengthen traceability
