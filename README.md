@@ -6,13 +6,28 @@ The project demonstrates a reproducible workflow for turning wildfire-relevant i
 
 ## Current status
 
-**Phase One / Objective Five is complete.**
+**Phase One / Objective Six is the active repository-control workstream.**
 
-Objective Five created the BurnLens Deschutes control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, claim traceability, closeout, handoff, and release-note drafting.
+Objective Five is complete and remains the control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, and claim traceability.
 
-P1O5-T01 through P1O5-T12 are complete. P1O5-SYNC-03 through P1O5-SYNC-12 synchronized current-status artifacts after Objective Five task merges.
+Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, and handed off without creating duplicate sources of truth.
 
-The proposed Objective Five baseline tag is:
+Current Objective Six issue references:
+
+```text
+#195 - Phase 1 Objective Six parent — Prompt-Built Development Protocol
+#196 - P1O6-T01 Define Objective Six architecture and artifact contracts
+```
+
+Current Objective Six records:
+
+```text
+docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
+docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md
+docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
+```
+
+The proposed Objective Five baseline tag remains:
 
 ```text
 v0.0.5-objective-five-traceability
@@ -20,14 +35,25 @@ v0.0.5-objective-five-traceability
 
 The proposed tag has not been created. No GitHub Release has been published.
 
-Current parent/task issue status:
+## Prompt-built development architecture
+
+The controlling relationship is:
 
 ```text
-#144 - Phase 1 Objective Five parent - closeable after final sync
-#188 - P1O5-SYNC-12 Final Objective Five status sync
+full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
+canonical task capsule: templates/CODEX_TASK_PACKET.md
+canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
+canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
+current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 ```
 
-## Current governing records
+Future root `PROMPT_LOG.md` and `templates/CODEX_TASK_TEMPLATE.md` paths are planned compatibility and navigation entry points only. They do not exist yet and must not become duplicate protocols or task schemas.
+
+Human review is distinct from AI-assisted review. AI may draft, test, inspect, and recommend changes, but a human must inspect the proposed diff and record the merge decision.
+
+Every task must report named tests or checks and actual results, or state a task-specific reason that a check does not apply.
+
+## Objective Five governing records
 
 ```text
 docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
@@ -59,7 +85,9 @@ records/PROMPT_BUILD_LOG.md
 
 BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, tag, or GitHub Release artifact has been created by Objective Five.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, tag, or GitHub Release artifact has been created by Objective Six.
+
+Objective Six does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, later operational templates, implementation work, or public-output work unless a later task explicitly allows the named change.
 
 ## Locked computer vision task
 
@@ -88,15 +116,13 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Recommended next task
 
-Proceed to one of:
+After P1O6-T01 is human-reviewed and merged, proceed to:
 
 ```text
-Phase Two data-intake preparation
-Objective Six portfolio packaging
-Objective Five baseline tag QA for v0.0.5-objective-five-traceability
+P1O6-T02 — Create the prompt-log navigation entry point and strengthen traceability
 ```
 
-The baseline tag has not been created. Tag creation requires a separate authorized release-control task.
+P1O6-T02 must preserve `records/PROMPT_BUILD_LOG.md` and `templates/PROMPT_LOG_ENTRY.md` as the canonical prompt-log sources.
 
 ## Public site
 
