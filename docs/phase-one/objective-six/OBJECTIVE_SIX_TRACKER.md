@@ -7,9 +7,8 @@
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
 | Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209; P1O6-T05 / #212 through PR #213 |
-| Active synchronization | P1O6-SYNC-05 / #214 on `p1o6sync05b` |
 | Next task | P1O6-T06 — define the human review checklist and modernize pull-request intake |
-| Current state | T01-T05 are merged; T05 current-status records are being synchronized; T06 is next after synchronization |
+| Current state | T01-T05 are merged; T05 current-status records are synchronized through PR #215; T06 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -58,8 +57,8 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | P1O6-T02 | Prompt-log navigation owner | Root `PROMPT_LOG.md`; prompt-log protocol/index acknowledgement; README navigation update | T01 merged | Merged via PR #201; status synchronized via PR #203 |
 | P1O6-T03 | Codex task-interface owner | `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Merged via PR #206; status synchronized via PR #208 |
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Merged via PR #209; status synchronized through P1O6-SYNC-04 |
-| P1O6-T05 | Contributor-guidance owner | `CONTRIBUTING.md` | T01-T04 merged | Merged via PR #213; status synchronization in P1O6-SYNC-05 |
-| P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Next after P1O6-SYNC-05 |
+| P1O6-T05 | Contributor-guidance owner | `CONTRIBUTING.md` | T01-T04 merged | Merged via PR #213; status synchronized via PR #215 |
+| P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Next |
 | P1O6-T07 | Issue-intake owner | Authorized issue-form modernization and SOP integration | T01-T06 merged | Planned |
 | P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned |
 | P1O6-T09 | Closeout owner | Closeout, handoff, current-status synchronization, and parent summary | T01-T08 merged or deliberately deferred | Planned |
@@ -234,7 +233,7 @@ Every task must record:
 - P1O6-T02 merged through PR #201 and was synchronized through PR #203.
 - P1O6-T03 merged through PR #206 and was synchronized through PR #208.
 - P1O6-T04 merged through PR #209 and was synchronized through P1O6-SYNC-04.
-- P1O6-T05 merged through PR #213 and is being synchronized through P1O6-SYNC-05.
+- P1O6-T05 merged through PR #213 and was synchronized through PR #215.
 - No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T05 or their synchronization tasks.
 
 ## Unsupported claims
@@ -262,4 +261,4 @@ Revise or defer work if:
 
 ## Handoff
 
-Complete P1O6-SYNC-05, then proceed to P1O6-T06 — Define the human review checklist and modernize pull-request intake. T06 must use the merged `CONTRIBUTING.md`, `AGENTS.md`, SOP, Objective Six protocol, current PR template, and official GitHub review research without claiming repository-settings enforcement.
+Proceed to P1O6-T06 — Define the human review checklist and modernize pull-request intake. T06 must use the merged `CONTRIBUTING.md`, `AGENTS.md`, SOP, Objective Six protocol, current PR template, and official GitHub review research without claiming repository-settings enforcement.
