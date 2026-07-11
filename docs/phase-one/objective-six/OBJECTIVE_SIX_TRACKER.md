@@ -7,8 +7,10 @@
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
 | Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209; P1O6-T05 / #212 through PR #213; P1O6-T06 / #216 through PR #217 |
-| Next task | P1O6-T07 — modernize task issue intake |
-| Current state | T01-T06 are merged; T06 current-status records are synchronized through PR #219; T07 is next |
+| Active task | P1O6-T07 / #220 — modernize task issue intake |
+| Branch | `p1o6t07b` — build drafted; review pending |
+| Next task after merge and any required sync | P1O6-T08 — research validation and protocol cohesion review |
+| Current state | T01-T06 are merged; T06 current-status records are synchronized through PR #219; T07 is drafted on its authorized branch and has not been reviewed, merged, or synchronized |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -59,8 +61,8 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Merged via PR #209; status synchronized through P1O6-SYNC-04 |
 | P1O6-T05 | Contributor-guidance owner | `CONTRIBUTING.md` | T01-T04 merged | Merged via PR #213; status synchronized via PR #215 |
 | P1O6-T06 | Human-review owner | `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md`; `.github/PULL_REQUEST_TEMPLATE.md` | T01-T05 merged | Merged via PR #217; status synchronized via PR #219 |
-| P1O6-T07 | Issue-intake owner | Authorized issue-form modernization and SOP integration | T01-T06 merged | Next |
-| P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned |
+| P1O6-T07 | Issue-intake owner | `.github/ISSUE_TEMPLATE/task.yml`; SOP integration; tracker and prompt-log records | T01-T06 merged | Issue #220 open; branch `p1o6t07b`; build drafted; review pending |
+| P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned; blocked until T07 merge and any required synchronization |
 | P1O6-T09 | Closeout owner | Closeout, handoff, current-status synchronization, and parent summary | T01-T08 merged or deliberately deferred | Planned |
 
 ## Dependency rules
@@ -71,7 +73,7 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 - T05 follows the repository-instruction refresh so contributor guidance does not conflict with `AGENTS.md`.
 - T06 defines the human-review surface after contributor and agent guidance are aligned.
 - T07 modernizes issue intake only after the downstream task and review requirements are stable.
-- T08 validates the complete protocol before closeout.
+- T08 validates the complete protocol only after T07 is merged and current-status truth is synchronized when needed.
 - T09 closes the objective only after the tracker, README, prompt-log index, closeout, and handoff all describe the same state.
 
 No blocked task is authorized to proceed around an unmet dependency. A dependency override requires an explicit issue and PR note from the human project owner.
@@ -111,6 +113,13 @@ No blocked task is authorized to proceed around an unmet dependency. A dependenc
 |---|---|---|
 | `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` | Detailed reusable human-review record | Owns the five-stage review evidence: author self-audit, actual checks, optional AI-assisted findings, human inspection, and merge authorization. Merged through PR #217. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Concise PR intake and evidence surface | Routes to the standalone checklist and captures generic task linkage, scope, research, verification, security, boundaries, review separation, close behavior, and handoff without duplicating the checklist in full. Modernized through PR #217. |
+
+### Issue-intake and SOP artifacts
+
+| Path | Role | Current T07 state |
+|---|---|---|
+| `.github/ISSUE_TEMPLATE/task.yml` | Structured issue-first intake surface for a bounded task contract. It captures authorization inputs but does not replace the canonical task packet. | Modernized on `p1o6t07b`; review pending; not on `main`. |
+| `docs/workflows/PROMPT_TO_REPO_SOP.md` | Full repository workflow reference and context/gate authority. | Integrated with stable Objective Six artifact roles on `p1o6t07b`; review pending; not on `main`. |
 
 ## Review model
 
@@ -258,6 +267,25 @@ Every task must record:
 | Status synchronization | Satisfied through P1O6-SYNC-06 / PR #219 |
 | Handoff | P1O6-T07 |
 
+## Draft acceptance state for P1O6-T07
+
+| Criterion | Current branch state |
+|---|---|
+| Task issue and branch | Issue #220 exists; `p1o6t07b` created from current `main` |
+| Allowed-file scope | Five paths authorized; branch diff must remain limited to them |
+| Issue-form modernization | Drafted on `p1o6t07b`; human review pending |
+| SOP integration | Drafted on `p1o6t07b`; human review pending |
+| Tier behavior | Draft preserves Tier 0, selective Tier 1, and Tier 2 exclusion with justification |
+| Research | Current official GitHub and OpenAI sources checked after branch creation and recorded in the dated log |
+| Verification | YAML, schema, ID/label, requirement, path, consistency, boundary, claims, and branch-diff checks recorded in the dated log |
+| Prompt/build logging | Dated T07 record and canonical index drafted on branch |
+| Human review | Pending; AI-assisted build and checks do not satisfy the gate |
+| Pull request | Not created |
+| Merge | Not authorized and not performed |
+| Task issue closure | Pending; #220 remains open |
+| Parent issue closure avoided | Satisfied so far; #195 remains open |
+| Handoff | Review T07; proceed to T08 only after merge and any required synchronization |
+
 ## Safe claims
 
 - Objective Six has a merged issue-backed architecture, tracker, artifact-contract map, and prompt-built development protocol.
@@ -275,14 +303,16 @@ Every task must record:
 - P1O6-T05 merged through PR #213 and was synchronized through PR #215.
 - P1O6-T06 merged through PR #217 and was synchronized through PR #219.
 - BurnLens has a merged reusable human PR review checklist and generic PR template that separate author self-audit, actual checks, optional AI-assisted findings, human inspection, and merge authorization without claiming repository-settings enforcement.
-- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T06 or their synchronization tasks.
+- P1O6-T07 has an open task issue and an authorized branch containing draft issue-intake, SOP, tracker, and prompt-log changes for human review.
+- No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T07 or their synchronization tasks.
 
 ## Unsupported claims
 
 Do not claim that:
 
 - Objective Six is complete;
-- P1O6-T07 or later Objective Six deliverables exist before their tasks merge;
+- P1O6-T07 is reviewed, approved, merged, synchronized, or available on `main`;
+- P1O6-T08 or later Objective Six deliverables exist;
 - author self-audit or AI review is equivalent to human approval;
 - repository settings enforce this protocol;
 - another eligible human reviewer currently exists;
@@ -305,4 +335,4 @@ Revise or defer work if:
 
 ## Handoff
 
-P1O6-T06 / #216 merged through PR #217 and was synchronized through PR #219. Proceed to P1O6-T07 — Modernize task issue intake.
+Review P1O6-T07 / #220 on branch `p1o6t07b` against the issue, task capsule, official-source research, five-file diff, verification results, and `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md`. Do not merge without Drew's recorded human outcome and separate merge authorization. Do not proceed to P1O6-T08 until T07 is merged, #220 closes as intended, parent #195 remains open, and any required status synchronization is complete.
