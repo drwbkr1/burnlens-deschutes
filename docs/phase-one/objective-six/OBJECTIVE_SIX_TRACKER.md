@@ -8,7 +8,7 @@
 | Parent issue | #195 — open |
 | Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209; P1O6-T05 / #212 through PR #213; P1O6-T06 / #216 through PR #217 |
 | Next task | P1O6-T07 — modernize task issue intake |
-| Current state | T01-T06 are merged; T06 current-status synchronization is in progress through P1O6-SYNC-06; T07 is next |
+| Current state | T01-T06 are merged; T06 current-status records are synchronized through PR #219; T07 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -58,7 +58,7 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | P1O6-T03 | Codex task-interface owner | `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Merged via PR #206; status synchronized via PR #208 |
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Merged via PR #209; status synchronized through P1O6-SYNC-04 |
 | P1O6-T05 | Contributor-guidance owner | `CONTRIBUTING.md` | T01-T04 merged | Merged via PR #213; status synchronized via PR #215 |
-| P1O6-T06 | Human-review owner | `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md`; `.github/PULL_REQUEST_TEMPLATE.md` | T01-T05 merged | Merged via PR #217; status synchronization in progress through P1O6-SYNC-06 |
+| P1O6-T06 | Human-review owner | `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md`; `.github/PULL_REQUEST_TEMPLATE.md` | T01-T05 merged | Merged via PR #217; status synchronized via PR #219 |
 | P1O6-T07 | Issue-intake owner | Authorized issue-form modernization and SOP integration | T01-T06 merged | Next |
 | P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned |
 | P1O6-T09 | Closeout owner | Closeout, handoff, current-status synchronization, and parent summary | T01-T08 merged or deliberately deferred | Planned |
@@ -255,7 +255,8 @@ Every task must record:
 | Human review and merge | Satisfied through squash merge PR #217 at `c6db812af8887bf7c6718f9e38aaaf130923e7b4` |
 | Task issue closure | Satisfied; #216 closed |
 | Parent issue closure avoided | Satisfied; #195 remains open |
-| Handoff | P1O6-T07 after SYNC-06 completes |
+| Status synchronization | Satisfied through P1O6-SYNC-06 / PR #219 |
+| Handoff | P1O6-T07 |
 
 ## Safe claims
 
@@ -272,8 +273,8 @@ Every task must record:
 - P1O6-T03 merged through PR #206 and was synchronized through PR #208.
 - P1O6-T04 merged through PR #209 and was synchronized through P1O6-SYNC-04.
 - P1O6-T05 merged through PR #213 and was synchronized through PR #215.
-- P1O6-T06 merged through PR #217 and its current-status synchronization is in progress through P1O6-SYNC-06.
-- BurnLens now has a merged reusable human PR review checklist and generic PR template that separate author self-audit, actual checks, optional AI-assisted findings, human inspection, and merge authorization without claiming repository-settings enforcement.
+- P1O6-T06 merged through PR #217 and was synchronized through PR #219.
+- BurnLens has a merged reusable human PR review checklist and generic PR template that separate author self-audit, actual checks, optional AI-assisted findings, human inspection, and merge authorization without claiming repository-settings enforcement.
 - No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T06 or their synchronization tasks.
 
 ## Unsupported claims
@@ -304,4 +305,4 @@ Revise or defer work if:
 
 ## Handoff
 
-P1O6-T06 / #216 merged through PR #217. Complete P1O6-SYNC-06, then proceed to P1O6-T07 — Modernize task issue intake.
+P1O6-T06 / #216 merged through PR #217 and was synchronized through PR #219. Proceed to P1O6-T07 — Modernize task issue intake.
