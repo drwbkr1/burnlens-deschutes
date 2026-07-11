@@ -161,7 +161,8 @@ Use dated entry files once prompt/build logging is active. This keeps the protoc
 | P1O6-SYNC-05 | `records/prompt-build-log/2026-07-11-p1o6-sync-05.md` | merged via PR #215 | Reconciles README, tracker, prompt-log index, and T05 task log after merge. |
 | P1O6-T06 | `records/prompt-build-log/2026-07-11-p1o6-t06.md` | merged via PR #217 | Creates the reusable PR review checklist, modernizes the PR template, and records GitHub/OpenAI review research. |
 | P1O6-SYNC-06 | `records/prompt-build-log/2026-07-11-p1o6-sync-06.md` | merged via PR #219 | Reconciles README, tracker, prompt-log index, and T06 task log after merge. |
-| P1O6-T07 | `records/prompt-build-log/2026-07-11-p1o6-t07.md` | drafted on `p1o6t07b`; review pending | Modernizes task issue intake, integrates Objective Six controls into the SOP, updates current tracker state, and records official GitHub/OpenAI research and verification. |
+| P1O6-T07 | `records/prompt-build-log/2026-07-11-p1o6-t07.md` | merged via PR #221 | Modernizes task issue intake, integrates Objective Six controls into the SOP, updates current tracker state, and records official GitHub/OpenAI research and verification. |
+| P1O6-SYNC-07 | `records/prompt-build-log/2026-07-11-p1o6-sync-07.md` | merged via PR #225 | Reconciles README, tracker, prompt-log index, and T07 task log after merge. |
 
 ## Entry creation timing
 
@@ -311,4 +312,4 @@ Unsupported claims:
 
 ## Handoff note
 
-Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T07 / #220 is drafted on `p1o6t07b` and awaits review. Do not treat T07 as merged or proceed to T08 until the T07 PR is human-approved, merged, and any required current-status synchronization is complete.
+Use `PROMPT_LOG.md` only as the root navigation entry point. `records/PROMPT_BUILD_LOG.md` remains the canonical protocol/index, and `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template. P1O6-T07 / #220 merged through PR #221 and was synchronized through P1O6-SYNC-07 / PR #225. Proceed to P1O6-T08 — Research validation and protocol cohesion review.

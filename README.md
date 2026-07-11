@@ -22,7 +22,8 @@ P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
 P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
 P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
 P1O6-T06 / #216 - merged through PR #217; status synchronized through PR #219
-P1O6-T07 - next task; modernize task issue intake
+P1O6-T07 / #220 - merged through PR #221; status synchronized through PR #225
+P1O6-T08 - next task; run research validation and protocol cohesion review
 ```
 
 Current Objective Six records:
@@ -33,6 +34,7 @@ docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
+.github/ISSUE_TEMPLATE/task.yml
 .github/PULL_REQUEST_TEMPLATE.md
 ```
 
@@ -52,6 +54,7 @@ The controlling relationship is:
 full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
 human contributor guidance: CONTRIBUTING.md
 repository agent instructions: AGENTS.md
+structured task issue intake: .github/ISSUE_TEMPLATE/task.yml
 canonical task capsule: templates/CODEX_TASK_PACKET.md
 task template entry point: templates/CODEX_TASK_TEMPLATE.md (non-canonical)
 root prompt-log navigation: PROMPT_LOG.md (non-canonical)
@@ -66,9 +69,11 @@ Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first
 
 Root `AGENTS.md` routes prompt-assisted agents to the merged Objective Six workflow, scope, verification, human-review, boundary, and release controls.
 
+`.github/ISSUE_TEMPLATE/task.yml` now provides the merged generic task-intake surface for bounded task identity, scope, selective context loading, research, prompt logging, verification, human review, task-only closure, parent protection, and handoff. It does not replace the canonical task capsule.
+
 `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` provides the merged five-stage review record for author self-audit, actual checks, optional AI-assisted findings, mandatory human inspection, and separate merge authorization.
 
-`.github/PULL_REQUEST_TEMPLATE.md` now uses generic task patterns and records concise linkage, scope, research, verification, security, boundary, review-separation, close-keyword, and handoff evidence while routing detailed inspection to the standalone checklist.
+`.github/PULL_REQUEST_TEMPLATE.md` uses generic task patterns and records concise linkage, scope, research, verification, security, boundary, review-separation, close-keyword, and handoff evidence while routing detailed inspection to the standalone checklist.
 
 `templates/CODEX_TASK_TEMPLATE.md` is a concise compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
 
@@ -144,10 +149,10 @@ Future BurnLens artifacts must keep these categories separate:
 Proceed to:
 
 ```text
-P1O6-T07 — Modernize task issue intake
+P1O6-T08 — Run research validation and protocol cohesion review
 ```
 
-P1O6-T07 may modernize `.github/ISSUE_TEMPLATE/task.yml` and integrate the stable Objective Six issue, scope, research, verification, review, close-keyword, and handoff requirements. It must not change repository settings or begin implementation, data, model, public-output, tag, or GitHub Release work.
+P1O6-T08 should validate the complete Objective Six protocol, recheck current tooling claims against official sources, confirm canonical links and review surfaces agree, and record any remediation needed before closeout. It must not begin implementation, data, model, public-output, repository-setting, tag, or GitHub Release work.
 
 ## Public site
 
