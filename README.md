@@ -21,7 +21,7 @@ P1O6-T02 / #200 - merged through PR #201
 P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
 P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
 P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
-P1O6-T06 / #216 - merged through PR #217; status synchronization in progress through P1O6-SYNC-06
+P1O6-T06 / #216 - merged through PR #217; status synchronized through PR #219
 P1O6-T07 - next task; modernize task issue intake
 ```
 
