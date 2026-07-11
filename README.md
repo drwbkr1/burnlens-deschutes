@@ -20,7 +20,7 @@ P1O6-T01 / #196 - merged through PR #197
 P1O6-T02 / #200 - merged through PR #201
 P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
 P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
-P1O6-T05 / #212 - merged through PR #213; status synchronization in P1O6-SYNC-05
+P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
 P1O6-T06 - next task; define the human review checklist and modernize pull-request intake
 ```
 
