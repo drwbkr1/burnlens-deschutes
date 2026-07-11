@@ -6,9 +6,9 @@
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
-| Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209 |
-| Active task | P1O6-T05 / #212 — create contributor guidance on `p1o6t05b`; pre-PR |
-| Current state | T01-T04 are merged; T04 current-status records are synchronized through P1O6-SYNC-04; T05 is active; T06 is the post-merge handoff |
+| Completed tasks | P1O6-T01 / #196 through PR #197; P1O6-T02 / #200 through PR #201; P1O6-T03 / #204 through PR #206; P1O6-T04 / #205 through PR #209; P1O6-T05 / #212 through PR #213 |
+| Next task | P1O6-T06 — define the human review checklist and modernize pull-request intake |
+| Current state | T01-T05 are merged; T05 current-status records are synchronized through PR #215; T06 is next |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -57,8 +57,8 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | P1O6-T02 | Prompt-log navigation owner | Root `PROMPT_LOG.md`; prompt-log protocol/index acknowledgement; README navigation update | T01 merged | Merged via PR #201; status synchronized via PR #203 |
 | P1O6-T03 | Codex task-interface owner | `templates/CODEX_TASK_TEMPLATE.md`; compatibility relationship with `templates/CODEX_TASK_PACKET.md` | T01-T02 merged | Merged via PR #206; status synchronized via PR #208 |
 | P1O6-T04 | Repository-instruction owner | Refresh `AGENTS.md` to reflect current phase and merged protocol | T01-T03 merged | Merged via PR #209; status synchronized through P1O6-SYNC-04 |
-| P1O6-T05 | Contributor-guidance owner | Future `CONTRIBUTING.md` | T01-T04 merged | Active; issue #212; branch `p1o6t05b`; pre-PR |
-| P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Planned; post-T05 handoff |
+| P1O6-T05 | Contributor-guidance owner | `CONTRIBUTING.md` | T01-T04 merged | Merged via PR #213; status synchronized via PR #215 |
+| P1O6-T06 | Human-review owner | Future standalone review checklist and authorized PR-template modernization | T01-T05 merged | Next |
 | P1O6-T07 | Issue-intake owner | Authorized issue-form modernization and SOP integration | T01-T06 merged | Planned |
 | P1O6-T08 | Cohesion and research owner | Objective Six research validation and protocol cohesion review | T01-T07 merged | Planned |
 | P1O6-T09 | Closeout owner | Closeout, handoff, current-status synchronization, and parent summary | T01-T08 merged or deliberately deferred | Planned |
@@ -98,6 +98,12 @@ No blocked task is authorized to proceed around an unmet dependency. A dependenc
 | Path | Role | Decision |
 |---|---|---|
 | `AGENTS.md` | Repository-level agent instructions | Routes prompt-assisted agents to the canonical SOP, task packet, prompt-log controls, verification rules, human-review gate, and boundary/release controls without reproducing them in full. |
+
+### Contributor guidance
+
+| Path | Role | Decision |
+|---|---|---|
+| `CONTRIBUTING.md` | Human-facing repository workflow | Routes human contributors and the solo maintainer to canonical controls, mandatory human review, honest verification, policy-versus-enforcement distinctions, scope escalation, and handoff without duplicating the full SOP or future T06 checklist. |
 
 ## Review model
 
@@ -196,6 +202,23 @@ Every task must record:
 | Task issue closure | Satisfied; #205 closed |
 | Parent issue closure avoided | Satisfied; #195 remains open |
 
+## Final acceptance state for P1O6-T05
+
+| Criterion | State |
+|---|---|
+| Root contributor guidance exists | Satisfied; `CONTRIBUTING.md` is on `main` |
+| Human-facing workflow routes to canonical sources | Satisfied through PR #213 review |
+| Issue-first and compact-branch requirements | Satisfied on `main` |
+| Prompt logging and honest verification rules | Satisfied on `main` |
+| Human review distinct from AI-assisted review | Satisfied; Drew's `Approve` outcome was recorded separately from AI findings |
+| Solo-maintainer evidence defined without formal self-approval claim | Satisfied on `main` |
+| Documented policy separated from GitHub enforcement | Satisfied; no configured-settings claim was introduced |
+| Outside-contribution and support promises avoided | Satisfied through content review |
+| Duplicate SOP, packet, schema, or future review checklist avoided | Satisfied through content and diff review |
+| Human review and merge | Satisfied through PR #213 |
+| Task issue closure | Satisfied; #212 closed |
+| Parent issue closure avoided | Satisfied; #195 remains open |
+
 ## Safe claims
 
 - Objective Six has a merged issue-backed architecture, tracker, artifact-contract map, and prompt-built development protocol.
@@ -205,11 +228,12 @@ Every task must record:
 - `templates/CODEX_TASK_PACKET.md` remains the canonical executable task capsule.
 - `templates/CODEX_TASK_TEMPLATE.md` is a merged non-canonical compatibility and discoverability wrapper.
 - Root `AGENTS.md` contains merged repository-level prompt-assisted work instructions aligned with Objective Six.
+- Root `CONTRIBUTING.md` contains merged human-facing workflow guidance aligned with Objective Six.
 - P1O6-T01 merged through PR #197 and was synchronized through PR #199.
 - P1O6-T02 merged through PR #201 and was synchronized through PR #203.
 - P1O6-T03 merged through PR #206 and was synchronized through PR #208.
 - P1O6-T04 merged through PR #209 and was synchronized through P1O6-SYNC-04.
-- P1O6-T05 has an issue-backed branch-scoped contributor-guidance draft on `p1o6t05b`; it is not merged.
+- P1O6-T05 merged through PR #213 and was synchronized through PR #215.
 - No data, model, run, map, public-output, tag, Release, or repository-settings work was authorized by T01-T05 or their synchronization tasks.
 
 ## Unsupported claims
@@ -217,8 +241,7 @@ Every task must record:
 Do not claim that:
 
 - Objective Six is complete;
-- `CONTRIBUTING.md` is merged or available on `main` before P1O6-T05 merges;
-- later Objective Six deliverables exist before their tasks merge;
+- P1O6-T06 or later Objective Six deliverables exist before their tasks merge;
 - AI review is equivalent to human approval;
 - repository settings enforce this protocol;
 - BurnLens has started data, model, run, map, or public-demo work;
@@ -238,4 +261,4 @@ Revise or defer work if:
 
 ## Handoff
 
-P1O6-T05 / #212 is active on `p1o6t05b`. Complete its human review, task-scoped PR, merge, and any required current-status synchronization before proceeding to P1O6-T06 — Define the human review checklist and modernize pull-request intake.
+Proceed to P1O6-T06 — Define the human review checklist and modernize pull-request intake. T06 must use the merged `CONTRIBUTING.md`, `AGENTS.md`, SOP, Objective Six protocol, current PR template, and official GitHub review research without claiming repository-settings enforcement.
