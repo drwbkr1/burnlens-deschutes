@@ -1,21 +1,25 @@
-name: BurnLens task artifact
-description: Create a controlled BurnLens task issue with artifact, research, boundary, and handoff requirements.
-title: "P1O4-TXX Short task title"
-labels: ["documentation"]
+name: BurnLens task
+
+description: Create one bounded BurnLens task contract for issue-first, prompt-assisted repository work.
+
+title: "P#O#-T## "
+
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form for BurnLens repo-control and artifact tasks.
+        Use this form for one reviewable BurnLens repository task.
 
-        Boundary reminder: BurnLens Deschutes is an experimental portfolio-first CV and GEOINT project. This issue template does not authorize data acquisition, imagery download, AOI selection, label or mask creation, baseline generation, model training, inference, metrics, maps, website demo integration, outside validation claims, or endorsement claims.
+        Start from `docs/workflows/PROMPT_TO_REPO_SOP.md`, instantiate the canonical capsule in `templates/CODEX_TASK_PACKET.md`, and keep work inside the allowed-file contract.
+
+        BurnLens is an experimental portfolio-first computer vision and GEOINT project. This form does not authorize data, imagery, AOIs, labels, masks, baselines, models, metrics, runs, maps, screenshots, demos, public claims, repository settings, tags, or GitHub Releases unless the task explicitly names the work and its governing gates are satisfied.
 
   - type: input
     id: task_id
     attributes:
       label: Task ID
-      description: Use the project task pattern.
-      placeholder: P1O4-T06
+      description: Use the generic project pattern shown in the issue title.
+      placeholder: P#O#-T##
     validations:
       required: true
 
@@ -23,121 +27,236 @@ body:
     id: parent_issue
     attributes:
       label: Parent issue
-      description: Link the objective parent issue.
-      placeholder: "#119"
-    validations:
-      required: true
-
-  - type: input
-    id: branch
-    attributes:
-      label: Branch
-      description: Use the compact branch pattern from BRANCH_AND_PR_WORKFLOW.md.
-      placeholder: p1o4t06b
-    validations:
-      required: true
-
-  - type: input
-    id: artifact_path
-    attributes:
-      label: Artifact path
-      description: Exact file path or paths expected from this task.
-      placeholder: .github/ISSUE_TEMPLATE/task.yml
-    validations:
-      required: true
-
-  - type: dropdown
-    id: artifact_type
-    attributes:
-      label: Artifact type
-      options:
-        - documentation
-        - template
-        - records
-        - workflow
-        - template-only future implementation support
+      description: Link the objective or workstream parent. Ordinary task pull requests must not close it.
+      placeholder: "#NNN"
     validations:
       required: true
 
   - type: textarea
     id: purpose
     attributes:
-      label: Purpose
-      description: Explain why this artifact exists and what later work it controls.
-      placeholder: This task creates templates that encode the repo workflow.
+      label: Task purpose
+      description: State the bounded result this task must produce and why it is needed.
+      placeholder: Describe the task outcome in one to three sentences.
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Intended branch
+      description: Use the compact branch pattern from the governing workflow.
+      placeholder: p#o#t##b
+    validations:
+      required: true
+
+  - type: input
+    id: base
+    attributes:
+      label: Base branch or ref
+      description: Use current main unless an explicit dependency requires another base.
+      value: main
     validations:
       required: true
 
   - type: textarea
-    id: required_decisions
+    id: dependencies
     attributes:
-      label: Required decisions
-      description: List decisions this artifact must make.
+      label: Dependencies
+      description: List required issues, pull requests, commits, or artifacts. Enter "None" when the task is independent.
       placeholder: |
-        - Confirm template paths.
-        - Confirm required fields.
-        - Confirm boundary checks.
+        - #NNN or PR #NNN
+        - Required merged artifact
     validations:
       required: true
 
   - type: textarea
-    id: required_research
+    id: primary_artifacts
     attributes:
-      label: Required research claims
-      description: List claims that must be validated after branch creation and before artifact writing.
+      label: Primary artifacts
+      description: List the exact primary repository paths this task creates or changes.
       placeholder: |
-        - GitHub issue form location and syntax.
-        - GitHub pull request template location and behavior.
+        - path/to/primary-artifact
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting_artifacts
+    attributes:
+      label: Supporting artifacts
+      description: List adjacent records or status files allowed by the task. Enter "None" when not applicable.
+      placeholder: |
+        - path/to/supporting-record
+    validations:
+      required: true
+
+  - type: textarea
+    id: allowed_files
+    attributes:
+      label: Allowed file changes
+      description: List every path that may be created, edited, moved, or deleted. Scope expansion requires human approval before another path changes.
+      placeholder: |
+        path/to/allowed-file-1
+        path/to/allowed-file-2
+    validations:
+      required: true
+
+  - type: textarea
+    id: forbidden_work
+    attributes:
+      label: Forbidden work and governing references
+      description: Name the governing boundary files and any task-specific exclusions. Do not copy long boundary language when a precise path reference is sufficient.
+      placeholder: |
+        Follow AGENTS.md and the task-specific controls.
+        Do not create or authorize ...
     validations:
       required: true
 
   - type: checkboxes
-    id: workflow_gate
+    id: tier_zero
     attributes:
-      label: Workflow gate
+      label: Tier 0 context acknowledgement
+      description: Tier 0 is always loaded or summarized before repository work.
       options:
-        - label: Artifact contract has been defined before artifact creation.
-          required: true
-        - label: Task branch will be created before fresh research.
-          required: true
-        - label: Fresh research will be completed before artifact writing.
-          required: true
-        - label: A claims-register check will be included where relevant.
-          required: true
-        - label: PR close keyword will close only this task issue, not the parent issue.
+        - label: I will load or summarize the Tier 0 artifacts listed in `docs/workflows/PROMPT_TO_REPO_SOP.md`.
           required: true
 
   - type: checkboxes
-    id: boundary_checks
+    id: tier_one
     attributes:
-      label: Boundary checks
-      description: Confirm this issue stays within the current phase boundary.
+      label: Relevant Tier 1 context
+      description: Select only the task-specific control groups that apply. Exact paths belong in the task capsule.
       options:
-        - label: This task is documentation, template, workflow, or records work only.
+        - label: GitHub workflow, issue, pull-request, review, or prompt-log controls
+        - label: Computer-vision task or model-direction controls
+        - label: Source, AOI, CRS, provenance, or run-package controls
+        - label: Versioning, tag, Release, or baseline controls
+        - label: Claims, public copy, source-precedence, or use-boundary controls
+        - label: Reproducibility or release-QA controls
+        - label: Research-validation or current external-fact controls
+        - label: Current objective or phase handoff controls
+
+  - type: textarea
+    id: tier_two
+    attributes:
+      label: Tier 2 use and justification
+      description: Enter "Not used" by default. When historical material is necessary, list each exact artifact and explain why current Tier 0 and Tier 1 controls were insufficient.
+      placeholder: Not used
+    validations:
+      required: true
+
+  - type: dropdown
+    id: research_required
+    attributes:
+      label: Research requirement
+      description: Current technical, tooling, API, official, policy, legal, safety, source, dataset, model, or public-claim facts require fresh official or primary research after branch creation.
+      options:
+        - "Yes - fresh official or primary research is required"
+        - "No - repository-internal verification is sufficient"
+    validations:
+      required: true
+
+  - type: textarea
+    id: research_plan
+    attributes:
+      label: Research plan or no-research rationale
+      description: List the official or primary sources and claims to verify, or explain why merged repository evidence is sufficient.
+      placeholder: |
+        - Official source and claim to verify
+        - Adopted decision expected from the check
+    validations:
+      required: true
+
+  - type: dropdown
+    id: prompt_assisted
+    attributes:
+      label: Prompt-assisted status
+      description: State whether ChatGPT, Codex, or another prompt-assisted agent will materially create or change files.
+      options:
+        - "Yes - prompt-assisted file changes are planned"
+        - "No - no prompt-assisted file changes are planned"
+    validations:
+      required: true
+
+  - type: input
+    id: prompt_log
+    attributes:
+      label: Prompt/build-log path or non-applicability reason
+      description: Prompt-assisted file changes require a dated entry under records/prompt-build-log/. Otherwise provide the task-specific reason it is not applicable.
+      placeholder: records/prompt-build-log/YYYY-MM-DD-task-id.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: Test and check plan
+      description: Name the exact commands or manual inspection methods that will apply. Every completed check must report its actual result.
+      placeholder: |
+        - Check name — command or inspection method
+        - Diff review — compare branch with current main
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_applicable_checks
+    attributes:
+      label: Checks not applicable or not planned
+      description: Give a task-specific reason for each expected check that does not apply. Enter "None identified" when every expected check is planned.
+      placeholder: Code tests are not applicable because ...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: review_gate
+    attributes:
+      label: Review separation and human gate
+      options:
+        - label: Author self-audit and author checkboxes will be treated as assertions, not independent approval.
           required: true
-        - label: This task does not create or process imagery, AOI data, labels, masks, baselines, model outputs, metrics, maps, or public demo artifacts.
+        - label: AI-assisted review, when used, will be labeled supplemental and will not authorize merge or scope expansion.
           required: true
-        - label: This task does not claim operational reliability, official status, field validation, agency endorsement, or emergency-use readiness.
+        - label: A human will inspect the issue, capsule, complete diff, research, checks, acceptance criteria, boundaries, close keyword, and handoff before merge.
           required: true
 
   - type: textarea
     id: acceptance
     attributes:
-      label: Acceptance checklist
-      description: Define what must be true before the task can be merged.
+      label: Acceptance criteria
+      description: Define observable conditions that must be satisfied before human approval and merge authorization.
       placeholder: |
-        - [ ] Correct files are changed.
-        - [ ] Research basis is recorded.
-        - [ ] Boundary language is present.
-        - [ ] Handoff note is present.
+        - [ ] Only allowed files changed.
+        - [ ] Required research and verification are recorded.
+        - [ ] The handoff is complete.
     validations:
       required: true
 
   - type: textarea
     id: handoff
     attributes:
-      label: Handoff note
-      description: State what the next task should use from this artifact.
-      placeholder: Proceed to the next task after this PR is reviewed and merged.
+      label: Handoff target
+      description: State the next task, review, closeout, or synchronization action and the context it must use.
+      placeholder: Proceed to P#O#-T## only after review, merge, and any required status synchronization.
     validations:
       required: true
+
+  - type: input
+    id: close_keyword
+    attributes:
+      label: Task-scoped pull-request close keyword
+      description: Replace the placeholder with this task issue only. Closing keywords act when the pull request targets the default branch and is merged.
+      value: "Closes #TASK_ISSUE"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: parent_guard
+    attributes:
+      label: Parent-issue and scope protection
+      options:
+        - label: The ordinary task pull request will close only the task issue and will not close the parent issue.
+          required: true
+        - label: This issue does not configure or claim GitHub settings enforcement, required checks, CI, branch protection, rulesets, or approvals.
+          required: true
+        - label: Any required scope expansion will stop before an unauthorized file changes and will require human approval.
+          required: true
