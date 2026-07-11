@@ -21,7 +21,8 @@ P1O6-T02 / #200 - merged through PR #201
 P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
 P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
 P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
-P1O6-T06 - next task; define the human review checklist and modernize pull-request intake
+P1O6-T06 / #216 - merged through PR #217; status synchronization in progress through P1O6-SYNC-06
+P1O6-T07 - next task; modernize task issue intake
 ```
 
 Current Objective Six records:
@@ -31,6 +32,8 @@ CONTRIBUTING.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
+docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
+.github/PULL_REQUEST_TEMPLATE.md
 ```
 
 The proposed Objective Five baseline tag remains:
@@ -55,11 +58,17 @@ root prompt-log navigation: PROMPT_LOG.md (non-canonical)
 canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
 current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
+detailed PR review record: docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
+concise PR intake surface: .github/PULL_REQUEST_TEMPLATE.md
 ```
 
-Root `CONTRIBUTING.md` now provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
+Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
 
 Root `AGENTS.md` routes prompt-assisted agents to the merged Objective Six workflow, scope, verification, human-review, boundary, and release controls.
+
+`docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` provides the merged five-stage review record for author self-audit, actual checks, optional AI-assisted findings, mandatory human inspection, and separate merge authorization.
+
+`.github/PULL_REQUEST_TEMPLATE.md` now uses generic task patterns and records concise linkage, scope, research, verification, security, boundary, review-separation, close-keyword, and handoff evidence while routing detailed inspection to the standalone checklist.
 
 `templates/CODEX_TASK_TEMPLATE.md` is a concise compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
 
@@ -135,10 +144,10 @@ Future BurnLens artifacts must keep these categories separate:
 Proceed to:
 
 ```text
-P1O6-T06 — Define the human review checklist and modernize pull-request intake
+P1O6-T07 — Modernize task issue intake
 ```
 
-P1O6-T06 may create `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` and modernize `.github/PULL_REQUEST_TEMPLATE.md` so human review outcomes, tests or documented non-applicability, AI-review separation, task-only close behavior, and no-settings-enforcement claims are explicit.
+P1O6-T07 may modernize `.github/ISSUE_TEMPLATE/task.yml` and integrate the stable Objective Six issue, scope, research, verification, review, close-keyword, and handoff requirements. It must not change repository settings or begin implementation, data, model, public-output, tag, or GitHub Release work.
 
 ## Public site
 
