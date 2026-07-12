@@ -9,7 +9,7 @@
 | Completed planned tasks | P1O6-T01 through P1O6-T08 |
 | Prerequisite closeout remediation | P1O6-REM-09A / #238 — merged through PR #240 |
 | Prerequisite status synchronization | P1O6-SYNC-09A / #241 — merged through PR #242 |
-| Active task | P1O6-T09 / #239 — final closeout revision on `p1o6t09b` |
+| Active task | P1O6-T09 / #239 — review-ready final closeout revision on `p1o6t09b` |
 | Objective complete | Conditional: yes only when this T09 revision is merged to `main`, final status is verified, and parent closure is separately authorized |
 | Recommended next workstream | Phase Two data-intake preparation — planning/control records only |
 | Phase Two data or implementation authorization | Not authorized |
@@ -146,11 +146,11 @@ Written policy does not create CI, required checks, required approvals, branch p
 | Prerequisite #238 / PR #240 | Merged |
 | Required synchronization #241 / PR #242 | Merged |
 | Branch created from current `main` | Satisfied; `p1o6t09b` from `f25c6b9d77b1a19900f27b8a85354d3b63466a60` |
-| Six authorized paths only | Pending final branch diff |
+| Six authorized paths only | Satisfied; final comparison shows exactly six paths and zero commits behind `main` |
 | Closeout and handoff exist | Satisfied on review branch |
-| README, tracker, and prompt-log agreement | Drafted on review branch; final check pending |
+| README, tracker, and prompt-log agreement | Satisfied on review branch |
 | T08 cohesion passes | Satisfied |
-| No material status contradiction | Satisfied before final diff |
+| No material status contradiction | Satisfied |
 | Human closeout review | Pending |
 | Merge authorization | Pending |
 | Parent close readiness | Pending T09 merge and final `main` verification |
