@@ -5,13 +5,12 @@
 | Field | Value |
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
-| Parent issue | #195 — remains open through T09 merge and final `main` verification |
-| Closeout task | P1O6-T09 / #239 |
-| Branch / base | `p1o6t09b` / `main` at `f25c6b9d77b1a19900f27b8a85354d3b63466a60` |
-| Prerequisite remediation | P1O6-REM-09A / #238 — merged through PR #240 |
-| Prerequisite synchronization | P1O6-SYNC-09A / #241 — merged through PR #242 |
+| Parent issue | #195 — open; ready for manual closure only after Drew's separate explicit authorization |
+| Closeout task | P1O6-T09 / #239 — merged through PR #243 |
+| T09 merge commit | `1a142633e8d91ad7451f3ac4cc3c86dc7ddd2640` |
+| Final status synchronization | P1O6-SYNC-09 / #244 — this revision finalizes repository truth when merged |
 | Cohesion gate | Passed; 0 Critical, 0 High, and 0 Medium findings open |
-| Completion posture | Completion candidate on this branch; Objective Six becomes complete only when the reviewed T09 revision is merged to `main` and final `main` verification passes |
+| Completion posture | **Complete as a documented, reviewable repository-control baseline** |
 | Data/model/map/public-output work | Not authorized and not performed |
 | Proposed Objective Five baseline tag | `v0.0.5-objective-five-traceability` — not created |
 | GitHub Release | Not created |
@@ -24,18 +23,19 @@ This closeout records the documentation and control state only. It does not clai
 
 ## Completion decision
 
-All nine planned Objective Six tasks are accounted for. P1O6-T01 through P1O6-T08 are merged. The T08 cohesion review passed after bounded remediation. REM-09A and SYNC-09A resolved the final stale current-status controls before T09 began. No planned task is deferred.
+Objective Six is complete as documentation, workflow, template, and administrative-control work.
 
-P1O6-T09 is the final planned task. The completion decision becomes repository truth only after:
+The completion decision is supported by:
 
-1. the six-file T09 diff receives a recorded human **Approve** outcome;
-2. blocking findings, if any, are resolved;
-3. separate merge authorization is recorded;
-4. the T09 PR merges to `main` using `Closes #239` only;
-5. issue #239 closes while parent #195 remains open;
-6. the T09 files are rechecked on `main`;
-7. any required bounded status synchronization is completed;
-8. Drew explicitly authorizes manual closure of parent #195.
+1. all nine planned tasks being merged;
+2. bounded remediation of every material T08 finding;
+3. a T08 cohesion review with no unresolved Critical, High, or Medium finding;
+4. a human-reviewed T09 closeout and handoff merged through PR #243;
+5. final reinspection of the merged T09 files on `main`;
+6. bounded synchronization of stale post-merge status through P1O6-SYNC-09;
+7. continued protection of parent #195 pending separate closure authorization.
+
+No planned task or required remediation is deferred.
 
 ## Planned task and remediation record
 
@@ -51,14 +51,13 @@ P1O6-T09 is the final planned task. The completion decision becomes repository t
 | P1O6-REM-08A | #227 | PR #228; synchronized by #229 / PR #230 | Aligned the canonical prompt-log protocol and detailed entry template. |
 | P1O6-REM-08B | #231 | PR #232; synchronized by #233 / PR #234 | Reconciled stale contributor, path, and architecture wording. |
 | P1O6-T08 | #226 | PR #235; synchronized by #236 / PR #237 | Validated current external claims and passed the protocol cohesion gate. |
-| P1O6-REM-09A | #238 | PR #240; synchronized by #241 / PR #242 | Reconciled the final stale Objective Six status controls before closeout. |
-| P1O6-T09 | #239 | Review branch `p1o6t09b`; PR pending | Creates final closeout, handoff, and synchronized completion-candidate status. |
-
-No task or remediation is intentionally deferred.
+| P1O6-REM-09A | #238 | PR #240; synchronized by #241 / PR #242 | Reconciled final stale Objective Six status controls before closeout. |
+| P1O6-T09 | #239 | PR #243 | Added the final closeout, handoff, and completion-state records. |
+| P1O6-SYNC-09 | #244 | Final status synchronization revision | Reconciles post-merge status without changing the completed protocol architecture. |
 
 ## Deliverable inventory
 
-### Objective architecture and current state
+### Objective architecture and state
 
 ```text
 docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
@@ -109,8 +108,6 @@ docs/workflows/PROMPT_TO_REPO_SOP.md
 README.md
 ```
 
-All listed paths were selected from current merged controls. The two T09 primary artifacts are created by this task.
-
 ## Canonical and compatibility roles
 
 | Control | Role |
@@ -126,7 +123,7 @@ All listed paths were selected from current merged controls. The two T09 primary
 | `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` | Detailed reusable human-review and merge-authorization record. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Concise PR evidence and routing surface. |
 
-No second task capsule, prompt-log protocol, detailed log template, review authority, or approval mechanism is introduced.
+No second task capsule, prompt-log protocol, detailed log template, review authority, or approval mechanism was introduced.
 
 ## Implemented control baseline
 
@@ -153,8 +150,6 @@ Objective Six documents and connects these controls:
 
 ## T08 cohesion result
 
-The T08 cohesion review records:
-
 ```text
 Critical findings open: 0
 High findings open: 0
@@ -165,33 +160,33 @@ Informational findings: 2 accepted
 
 The accepted Low finding is a historical status header in the Objective Four branch/PR baseline. Current SOP, README, tracker, and Objective Six controls govern present status, so the historical header is non-blocking.
 
-The accepted informational observations concern official documentation redirects and the issue form using the general handoff field rather than a dedicated synchronization field. Neither creates a current contradiction.
+The informational observations concern official-documentation redirects and the issue form using the general handoff field rather than a dedicated synchronization field. Neither creates a current contradiction.
 
 ## Research status
 
-No new external research was required for T09. The task introduces no new OpenAI, GitHub, data, model, legal, safety, or public capability claim. It relies on the merged T08 official-source validation and current repository-state verification.
+No new external research was required for T09 or the final synchronization. These tasks introduced no new OpenAI, GitHub, data, model, legal, safety, or public capability claim. They relied on the merged T08 official-source validation and current repository-state verification.
 
-The T08 research record explicitly distinguishes available platform capabilities from features actually configured in this repository. Objective Six does not claim that branch protection, rulesets, CI, required approvals, required checks, CODEOWNERS, automatic Codex review, or other settings are enabled.
+The T08 research record distinguishes available platform capabilities from features actually configured in this repository. Objective Six does not claim that branch protection, rulesets, CI, required approvals, required checks, CODEOWNERS, automatic Codex review, or other settings are enabled.
 
-## Verification and test status
+## Final verification
 
-T09 requires repository-state and documentation verification, including:
+| Check | Result |
+|---|---|
+| Issue #239 authorization and task-only close keyword | Passed |
+| T09 six-file scope | Passed; PR #243 contained exactly six authorized files |
+| Human review and separate merge authorization | Passed; Drew approved the reviewed head and authorized squash merge |
+| T09 merge | Passed; PR #243 merged at `1a142633e8d91ad7451f3ac4cc3c86dc7ddd2640` |
+| Task issue closure | Passed; #239 closed |
+| Parent protection | Passed; #195 remained open |
+| Post-merge file inspection | Passed; six T09 files were re-read on `main` |
+| Final status consistency | Passed through P1O6-SYNC-09 |
+| Canonical-versus-compatibility roles | Passed |
+| Human-versus-AI review separation | Passed |
+| Controlled-work boundaries | Passed |
+| Tag and GitHub Release state | Passed; neither created |
+| Markdown, paths, stale wording, sensitive material, and unsupported claims | Passed |
 
-- issue #239 authorization and six-file scope;
-- prerequisite PRs #240 and #242;
-- every planned task, remediation, and required synchronization;
-- deliverable-path inventory;
-- T08 cohesion and research state;
-- README, tracker, prompt-log index, closeout, and handoff agreement;
-- canonical versus compatibility roles;
-- human-versus-AI review separation;
-- parent #195 protection and closure readiness;
-- proposed tag and GitHub Release status;
-- no Phase Two, data, model, run, map, or public-output work;
-- source-precedence and use-boundary preservation;
-- Markdown, links, paths, stale wording, sensitive material, unsupported claims, and complete branch diff.
-
-Code, application, build, lint, type, data, model, CRS, inference, map, website, browser, and runtime tests are not applicable because T09 creates and updates closeout, handoff, status, and administrative Markdown records only. This non-applicability does not imply implementation was tested.
+Code, application, build, lint, type, data, model, CRS, inference, map, website, browser, and runtime tests were not applicable because T09 and its synchronization changed documentation and administrative Markdown records only. This non-applicability does not imply implementation was tested.
 
 ## Documented protocol versus executed reliability
 
@@ -233,28 +228,27 @@ BurnLens remains an experimental, non-operational computer vision and GEOINT por
 
 | Claim | Required caveat |
 |---|---|
-| Objective Six is complete. | Safe only after the reviewed T09 revision is merged to `main`, final status is verified, and parent closure is separately authorized. |
 | BurnLens has a reproducible development workflow. | The repository-control workflow is documented and reviewable; no executed data/model/run workflow has been demonstrated. |
 | BurnLens has human review controls. | The controls are written policy and review records; configured GitHub enforcement is not claimed. |
 | BurnLens is ready for Phase Two planning. | Only a bounded planning/control task may begin; data and implementation remain separately gated. |
+| Objective Six is complete. | This means the documented repository-control baseline is complete; it does not mean implementation reliability was demonstrated. |
 
 ## Unsupported claims
 
 Do not claim that:
 
-- the objective is complete before T09 merge and final `main` verification;
-- the parent issue is closed before explicit human closure authorization;
+- parent #195 is closed before explicit human closure authorization;
 - repository settings enforce the written protocol;
 - AI-assisted review or author self-audit satisfies human approval;
 - Phase Two, data acquisition, AOI selection, labeling, modeling, inference, map production, demos, or public-output work has begun;
 - data, models, runs, metrics, maps, reports, public outputs, tags, or GitHub Releases exist;
 - BurnLens is official, operational, field-validated, emergency-ready, production-ready, suitable for evacuation or incident-command support, or agency-endorsed.
 
-## Deferred and unresolved items
+## Deferred and outside-scope work
 
 No Objective Six task or required remediation is deferred.
 
-The following work remains outside Objective Six rather than unresolved within it:
+The following work remains outside Objective Six:
 
 - Phase Two intake planning and later controlled data work;
 - executed reproducibility and release QA;
@@ -266,18 +260,14 @@ Each requires a separate issue and its applicable controls.
 
 ## Parent issue close recommendation
 
-Parent #195 should remain open through the T09 PR merge.
+Parent #195 has satisfied its substantive closeout gate and is ready for manual closure after:
 
-After merge, recheck the six T09 files on `main`, confirm #239 closed, confirm no bounded sync remains, add the final completion summary to #195, and request Drew's explicit manual-closure authorization. Parent #195 is ready for manual closure only after those conditions are satisfied.
+1. P1O6-SYNC-09 reaches `main`;
+2. the final completion summary is posted to #195;
+3. Drew explicitly authorizes manual closure.
 
-The T09 PR must use:
-
-```text
-Closes #239
-```
-
-It must not include a close keyword for #195.
+The synchronization PR must not close #195 automatically.
 
 ## Handoff
 
-After T09 merge, final verification, and parent closure authorization, use `OBJECTIVE_SIX_HANDOFF.md` to begin the next separately authorized workstream. The recommended next workstream is Phase Two data-intake preparation limited initially to planning and control records; it does not authorize data access, AOI creation, or implementation.
+Use `OBJECTIVE_SIX_HANDOFF.md` to begin the next separately authorized workstream. The recommended next workstream is Phase Two data-intake preparation limited initially to planning and control records; it does not authorize data access, AOI creation, or implementation.
