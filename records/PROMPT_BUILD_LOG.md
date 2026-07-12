@@ -142,9 +142,11 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O6-SYNC-06 | `records/prompt-build-log/2026-07-11-p1o6-sync-06.md` | merged via PR #219 | Status sync. |
 | P1O6-T07 | `records/prompt-build-log/2026-07-11-p1o6-t07.md` | merged via PR #221 | Issue form and SOP integration. |
 | P1O6-SYNC-07 | `records/prompt-build-log/2026-07-11-p1o6-sync-07.md` | merged via PR #225 | Status sync. |
-| P1O6-T08 | `records/prompt-build-log/2026-07-11-p1o6-t08.md` | audit draft on `p1o6t08b` | Blocked pending remaining remediation and revalidation. |
+| P1O6-T08 | `records/prompt-build-log/2026-07-11-p1o6-t08.md` | audit draft on `p1o6t08b` | Remediation merged; revalidation pending. |
 | P1O6-REM-08A | `records/prompt-build-log/2026-07-11-p1o6-rem-08a.md` | merged via PR #228 | Canonical prompt-log controls aligned; issue #227 closed. |
-| P1O6-SYNC-08A | `records/prompt-build-log/2026-07-11-p1o6-sync-08a.md` | drafted on `p1o6sync08ab` | Synchronize REM-08A status; issue #229. |
+| P1O6-SYNC-08A | `records/prompt-build-log/2026-07-11-p1o6-sync-08a.md` | merged via PR #230 | REM-08A status synchronized; issue #229 closed. |
+| P1O6-REM-08B | `records/prompt-build-log/2026-07-11-p1o6-rem-08b.md` | merged via PR #232 | Objective Six routing and path wording reconciled; issue #231 closed. |
+| P1O6-SYNC-08B | `records/prompt-build-log/2026-07-11-p1o6-sync-08b.md` | drafted on `p1o6sync08bb` | Synchronize REM-08B status; issue #233. |
 
 ## Acceptance and remediation triggers
 
@@ -163,4 +165,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-P1O6-SYNC-08A records the REM-08A merge state. T08 remains blocked pending remaining remediation and revalidation; P1O6-T09 remains blocked until T08 passes.
+P1O6-SYNC-08B records the REM-08B merge state. T08 remediation is merged and revalidation is next; P1O6-T09 remains blocked until T08 passes and merges.
