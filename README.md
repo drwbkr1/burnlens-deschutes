@@ -6,16 +6,18 @@ The repository currently documents the controls and future workflow for turning 
 
 ## Current status
 
-**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline. Parent issue #195 remains open only for separate manual-closure authorization.**
+**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven is active but incomplete. The Phase One acceptance gate has not been conducted, and Phase One has not been accepted or released.**
 
 Objective Five is complete and remains the control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, and claim traceability.
 
 Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, synchronized, and handed off without creating duplicate sources of truth.
 
+Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 establishes controls and artifact contracts only; it does not conduct the gate, mark a criterion passed, decide a release identifier or class, create a tag, or publish a GitHub Release.
+
 Current Objective Six status:
 
 ```text
-#195 - Phase 1 Objective Six parent — open; ready for manual closure only after Drew's separate explicit authorization
+#195 - Phase 1 Objective Six parent — closed as completed
 P1O6-T01 / #196 - merged through PR #197; synchronized through PR #199
 P1O6-T02 / #200 - merged through PR #201; synchronized through PR #203
 P1O6-T03 / #204 - merged through PR #206; synchronized through PR #208
@@ -45,13 +47,34 @@ docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 .github/PULL_REQUEST_TEMPLATE.md
 ```
 
-The proposed Objective Five baseline tag remains:
+Current Objective Seven status:
+
+```text
+#246 - Phase 1 Objective Seven parent — open
+P1O7-T01 / #247 - active; controls and artifact contracts in review branch
+Phase One acceptance - not evaluated
+Gate criteria passed - none recorded by T01
+Release identifier and class - not decided
+Objective Seven tag - not authorized or created
+GitHub Release - not authorized or published
+```
+
+Current Objective Seven records in the T01 branch:
+
+```text
+docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
+docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
+```
+
+The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
+
+The Objective Five baseline identifier remains:
 
 ```text
 v0.0.5-objective-five-traceability
 ```
 
-The proposed tag has not been created. No GitHub Release has been published.
+At this status snapshot, that tag has not been created. No GitHub Release has been published. Any later Phase One release path is conditional and not guaranteed.
 
 ## Prompt-built development architecture
 
@@ -74,6 +97,8 @@ research validation: docs/phase-one/objective-six/OBJECTIVE_SIX_RESEARCH_VALIDAT
 protocol cohesion review: docs/phase-one/objective-six/OBJECTIVE_SIX_COHESION_REVIEW.md
 closeout decision: docs/phase-one/objective-six/OBJECTIVE_SIX_CLOSEOUT.md
 next-workstream handoff: docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
+current acceptance-gate tracker: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
+current acceptance-gate contracts: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -130,9 +155,11 @@ records/PROMPT_BUILD_LOG.md
 
 BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, tag, or GitHub Release artifact has been created by Objective Six.
+Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Objective Six does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01.
+
+Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
 ## Locked computer vision task
 
@@ -165,17 +192,21 @@ Future BurnLens artifacts must keep these categories separate:
 
 This claim concerns documented repository controls. It does not mean the future CV/GEOINT workflow has been executed or proven reliable.
 
-## Recommended next bounded workstream
+## Current bounded workstream
 
-The selected recommendation is:
+The active workstream is:
 
 ```text
-Phase Two data-intake preparation — planning and control records only
+Phase One / Objective Seven — Phase One acceptance gate
 ```
 
-The first task should create a Phase Two parent tracker and a bounded source/AOI intake planning issue. It must not download data, select or create a final AOI, create source packages, labels, masks, baselines, models, runs, maps, screenshots, demos, public outputs, tags, or GitHub Releases.
+P1O7-T01 creates the current tracker and artifact contracts. After human approval, authorized merge, and any necessary synchronization, the next planned task is:
 
-Alternative unselected workstreams remain Objective Five baseline-tag QA and Objective Six portfolio-packaging planning. Either requires a separate issue.
+```text
+P1O7-T02 — Define the Phase One gate evidence model
+```
+
+T02 may define evidence requirements and state vocabulary. It must not conduct the later audits, declare Phase One accepted, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
 
 ## Public site
 

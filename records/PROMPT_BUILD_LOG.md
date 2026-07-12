@@ -152,6 +152,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O6-SYNC-09A | `records/prompt-build-log/2026-07-12-p1o6-sync-09a.md` | merged via PR #242 | REM-09A merge evidence synchronized; issue #241 closed. |
 | P1O6-T09 | `records/prompt-build-log/2026-07-12-p1o6-t09.md` | merged via PR #243 | Objective Six closeout and handoff; issue #239 closed. |
 | P1O6-SYNC-09 | `records/prompt-build-log/2026-07-12-p1o6-sync-09.md` | final synchronization record | Issue #244; PR and merge evidence are retained in the issue, PR, and dated log. |
+| P1O7-T01 | `records/prompt-build-log/2026-07-12-p1o7-t01.md` | review-ready on `p1o7t01b` | Objective Seven tracker, artifact contracts, and current-status update; issue #247 remains open and no PR exists. |
 
 ## Acceptance and remediation triggers
 
@@ -170,4 +171,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline. P1O6-T09 merged through PR #243, issue #239 is closed, and P1O6-SYNC-09 carries the final status record. Parent #195 remains open pending Drew's separate explicit closure authorization. Phase Two data or implementation work has not begun.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 / #247 establishes controls and artifact contracts only; it does not conduct or pass the Phase One gate. Phase Two data or implementation work has not begun, and no Objective Seven tag or GitHub Release has been created.
