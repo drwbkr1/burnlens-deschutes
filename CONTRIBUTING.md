@@ -201,7 +201,7 @@ After an authorized merge:
 - synchronize README, tracker, or prompt-log records only when their truth changed;
 - avoid rewriting completed objective records.
 
-For Objective Six, complete P1O6-T05 review, merge, and any required synchronization before proceeding to P1O6-T06 — Define the human review checklist and modernize pull-request intake.
+Use `README.md` and `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md` to identify the current Objective Six task and dependency state. Do not rely on historical task-specific handoff sentences after later tasks have merged.
 
 ## GitHub research basis
 
