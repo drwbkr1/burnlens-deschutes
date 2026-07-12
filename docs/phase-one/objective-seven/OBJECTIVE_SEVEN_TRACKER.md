@@ -6,12 +6,13 @@
 |---|---|
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open |
-| Current task | P1O7-T01 / #247 — build stage complete on `p1o7t01b`; human review pending |
+| Last completed task | P1O7-T01 / #247 — merged through PR #248; synchronized through P1O7-SYNC-01 / #249 |
+| Next planned task | P1O7-T02 — Define the Phase One gate evidence model; issue not yet created |
 | Objective state | Active and incomplete |
 | Phase One acceptance | Not evaluated; no gate conclusion exists |
 | Criterion status | No criterion is marked passed by P1O7-T01 |
 | Release posture | Conditional and not guaranteed |
-| Tag status | No Objective Seven or Phase One acceptance tag is authorized or created by this task |
+| Tag status | No Objective Seven or Phase One acceptance tag is authorized or created |
 | GitHub Release status | Not authorized or published |
 | Phase Two data work | Not authorized by Objective Seven planning |
 
@@ -19,7 +20,7 @@
 
 Objective Seven defines and applies the evidence-based acceptance gate for deciding whether the documented Phase One control baseline is sufficient to enter Phase Two planning and, separately, whether later data-touch work may be considered for authorization.
 
-P1O7-T01 establishes only the tracker, task order, dependencies, and artifact contracts. It does not conduct an audit, score a criterion, decide the gate, remediate prior work, choose a release identifier or class, create a tag, or publish a GitHub Release.
+P1O7-T01 established only the tracker, task order, dependencies, and artifact contracts. It did not conduct an audit, score a criterion, decide the gate, remediate prior work, choose a release identifier or class, create a tag, or publish a GitHub Release.
 
 ## Verified start state
 
@@ -29,11 +30,26 @@ P1O7-T01 establishes only the tracker, task order, dependencies, and artifact co
 | Authorized base | `main` |
 | Base commit | `f9df743472d1f7a581caec000a7b803f82c535fb` |
 | Objective Six parent | #195 — closed |
-| README status | Stale on `main`; it still describes #195 as open |
+| README status | Stale at branch creation; it still described #195 as open |
 | Objective Seven parent | #246 — open |
-| Objective Seven task | #247 — open and authorizing P1O7-T01 |
+| Objective Seven task | #247 — open at branch creation and authorizing P1O7-T01 |
 | Existing Objective Seven primary artifacts before T01 | None found |
 | Separate Objective Five tag issue | #194 — open, separate, and outside Objective Seven T01 |
+
+## T01 merge and synchronization record
+
+| Item | Verified state |
+|---|---|
+| Reviewed branch | `p1o7t01b` |
+| Reviewed head | `8a10f3b9fdbdfc5af9a26ecb2209a14cd9ca4828` |
+| Human outcome | Drew — **Approve** |
+| Merge authorization | Separate squash-merge authorization recorded against the reviewed head |
+| Pull request | #248 |
+| Merge method | Squash |
+| Merge commit | `d6c12fa7bfee2886d98493ee9b8783121cc823d0` |
+| Task issue | #247 — closed |
+| Parent issue | #246 — remains open |
+| Status synchronization | P1O7-SYNC-01 / #249 |
 
 ## Objective boundary
 
@@ -55,8 +71,8 @@ Official sources continue to govern over BurnLens outputs. Version or release id
 
 | Order | Task | Primary output | Dependency | Current status | Handoff |
 |---:|---|---|---|---|---|
-| 1 | P1O7-T01 — Establish Objective Seven controls and artifact contracts | `OBJECTIVE_SEVEN_TRACKER.md`; `OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md` | Parent #246 open; current `main` verified | Build complete; review pending | P1O7-T02 after merge and any required sync |
-| 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MODEL.md` | T01 merged and current status coherent | Planned | P1O7-T03 |
+| 1 | P1O7-T01 — Establish Objective Seven controls and artifact contracts | `OBJECTIVE_SEVEN_TRACKER.md`; `OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md` | Parent #246 open; current `main` verified | Complete; PR #248 merged; synchronized through #249 | P1O7-T02 |
+| 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MODEL.md` | T01 merged and current status coherent | Next planned; issue not yet created | P1O7-T03 |
 | 3 | P1O7-T03 — Audit project identity, boundaries, and active-scope language | `PROJECT_IDENTITY_BOUNDARY_AUDIT.md` | T02 merged | Planned | P1O7-T04 or remediation if a gate-critical finding is recorded |
 | 4 | P1O7-T04 — Audit CV and Phase Two technical readiness | `CV_PHASE_TWO_READINESS_AUDIT.md` | T02 and T03 merged | Planned | P1O7-T05 or remediation if required |
 | 5 | P1O7-T05 — Audit repository controls and live GitHub state | `REPOSITORY_CONTROL_STATE_AUDIT.md` | T02 through T04 merged | Planned | P1O7-T06 or remediation if required |
@@ -93,7 +109,7 @@ Future gate artifacts must use explicit states rather than implying success:
 | `deferred` | The criterion or work item is intentionally postponed with rationale and consequence. |
 | `not applicable` | The evidence model explicitly defines why the criterion does not apply. |
 
-P1O7-T01 does not assign any of these states to a gate criterion.
+P1O7-T01 did not assign any of these states to a gate criterion.
 
 ## Release separation
 
@@ -118,19 +134,21 @@ Future artifacts become current only after their authorized task PR is reviewed 
 
 ## P1O7-T01 acceptance status
 
-| Acceptance condition | Build-stage state |
+| Acceptance condition | Final state |
 |---|---|
-| Tracker identifies all planned tasks and dependencies | Drafted; human review pending |
-| Artifact contracts cover each planned task | Drafted; human review pending |
-| Objective Seven shown as active but incomplete | Satisfied in branch draft |
-| Release described as conditional, not guaranteed | Satisfied in branch draft |
-| README does not imply Phase One passed | Updated in branch draft; verification pending final diff |
-| Objective Six archival files untouched | Required; final diff check controls this |
-| Human review distinct from AI-assisted work | Required before merge |
+| Tracker identifies all planned tasks and dependencies | Satisfied; reviewed and merged through PR #248 |
+| Artifact contracts cover each planned task | Satisfied; reviewed and merged through PR #248 |
+| Objective Seven shown as active but incomplete | Satisfied |
+| Release described as conditional, not guaranteed | Satisfied |
+| README does not imply Phase One passed | Satisfied |
+| Objective Six archival files untouched | Satisfied; PR #248 changed only five authorized paths |
+| Human review distinct from AI-assisted work | Satisfied; Drew recorded **Approve** and separate merge authorization |
+
+These statements concern P1O7-T01 acceptance only. They do not evaluate or pass any Phase One gate criterion.
 
 ## Handoff
 
-After P1O7-T01 receives human approval, authorized merge, and any necessary status synchronization, proceed to:
+Proceed to:
 
 ```text
 P1O7-T02 — Define the Phase One gate evidence model
