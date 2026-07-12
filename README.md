@@ -6,30 +6,32 @@ The project demonstrates a reproducible workflow for turning wildfire-relevant i
 
 ## Current status
 
-**Phase One / Objective Six is the active repository-control workstream.**
+**Phase One / Objective Six is in final closeout review. This revision marks the objective complete only when it is merged to `main`, final `main` status is verified, and parent issue #195 receives separate closure authorization.**
 
 Objective Five is complete and remains the control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, and claim traceability.
 
-Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, and handed off without creating duplicate sources of truth.
+Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, synchronized, and handed off without creating duplicate sources of truth.
 
 Current Objective Six status:
 
 ```text
-#195 - Phase 1 Objective Six parent — open
-P1O6-T01 / #196 - merged through PR #197
-P1O6-T02 / #200 - merged through PR #201
-P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
-P1O6-T04 / #205 - merged through PR #209; status synchronized through PR #211
-P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
-P1O6-T06 / #216 - merged through PR #217; status synchronized through PR #219
-P1O6-T07 / #220 - merged through PR #221; status synchronized through PR #225
-P1O6-T08 / #226 - merged through PR #235; remediation merged through PRs #228 and #232
-P1O6-T09 - next task; close out Objective Six and synchronize final status
+#195 - Phase 1 Objective Six parent — open through T09 merge and final verification
+P1O6-T01 / #196 - merged through PR #197; synchronized through PR #199
+P1O6-T02 / #200 - merged through PR #201; synchronized through PR #203
+P1O6-T03 / #204 - merged through PR #206; synchronized through PR #208
+P1O6-T04 / #205 - merged through PR #209; synchronized through PR #211
+P1O6-T05 / #212 - merged through PR #213; synchronized through PR #215
+P1O6-T06 / #216 - merged through PR #217; synchronized through PR #219
+P1O6-T07 / #220 - merged through PR #221; synchronized through PR #225
+P1O6-T08 / #226 - merged through PR #235; synchronized through PR #237
+P1O6-REM-09A / #238 - merged through PR #240; synchronized through PR #242
+P1O6-T09 / #239 - final closeout revision on p1o6t09b; PR and human review pending
 ```
 
 Current Objective Six records:
 
 ```text
+AGENTS.md
 CONTRIBUTING.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md
@@ -37,6 +39,8 @@ docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_RESEARCH_VALIDATION_LOG.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_COHESION_REVIEW.md
+docs/phase-one/objective-six/OBJECTIVE_SIX_CLOSEOUT.md
+docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 .github/ISSUE_TEMPLATE/task.yml
 .github/PULL_REQUEST_TEMPLATE.md
 ```
@@ -63,11 +67,13 @@ task template entry point: templates/CODEX_TASK_TEMPLATE.md (non-canonical)
 root prompt-log navigation: PROMPT_LOG.md (non-canonical)
 canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
-current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
+Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 detailed PR review record: docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
 concise PR intake surface: .github/PULL_REQUEST_TEMPLATE.md
 research validation: docs/phase-one/objective-six/OBJECTIVE_SIX_RESEARCH_VALIDATION_LOG.md
 protocol cohesion review: docs/phase-one/objective-six/OBJECTIVE_SIX_COHESION_REVIEW.md
+closeout decision: docs/phase-one/objective-six/OBJECTIVE_SIX_CLOSEOUT.md
+next-workstream handoff: docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -84,7 +90,9 @@ Root `AGENTS.md` routes prompt-assisted agents to the merged Objective Six workf
 
 Root `PROMPT_LOG.md` is a navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
 
-The T08 research and cohesion records validate current OpenAI/GitHub claims, map the Objective Six rules to their controlling surfaces, and record resolved remediation and remaining limitations. T08 does not complete Objective Six; T09 closeout remains required.
+The T08 research and cohesion records validate current OpenAI/GitHub claims, map the Objective Six rules to their controlling surfaces, and record resolved remediation and remaining limitations. T08 passed with zero unresolved Critical, High, or Medium findings.
+
+The T09 closeout and handoff distinguish the documented repository-control protocol from future executed reliability. The closeout does not claim implementation, data, model, run, map, demo, operational, field-validation, platform-enforcement, tag, or Release status.
 
 Human review is distinct from AI-assisted review. AI may draft, test, inspect, and recommend changes, but a human must inspect the proposed diff and record the merge decision.
 
@@ -151,15 +159,25 @@ Future BurnLens artifacts must keep these categories separate:
 - map overlays;
 - portfolio interpretations.
 
-## Recommended next task
+## Objective Six completion claim
 
-Proceed to:
+Safe only after the T09 revision is merged to `main` and final status is verified:
+
+> BurnLens Deschutes has a documented, reviewable prompt-built development protocol connecting issue-backed authorization, bounded task capsules and branches, selective context loading, prompt/build logging, named verification, task-scoped pull requests, mandatory human review distinct from AI-assisted review, controlled merge authorization, conditional status synchronization, and handoff.
+
+This claim concerns documented repository controls. It does not mean the future CV/GEOINT workflow has been executed or proven reliable.
+
+## Recommended next bounded workstream
+
+After T09 merge, final verification, and parent closure authorization, the selected recommendation is:
 
 ```text
-P1O6-T09 — Close out Objective Six and synchronize final status
+Phase Two data-intake preparation — planning and control records only
 ```
 
-P1O6-T09 should create the Objective Six closeout and handoff, reconcile README/tracker/prompt-log/parent status, state safe and unsupported claims, and recommend whether parent #195 may close. It must not begin implementation, data, model, public-output, repository-setting, tag, or GitHub Release work.
+The first task should create a Phase Two parent tracker and a bounded source/AOI intake planning issue. It must not download data, select or create a final AOI, create source packages, labels, masks, baselines, models, runs, maps, screenshots, demos, public outputs, tags, or GitHub Releases.
+
+Alternative unselected workstreams remain Objective Five baseline-tag QA and Objective Six portfolio-packaging planning. Either requires a separate issue.
 
 ## Public site
 
