@@ -6,7 +6,7 @@ The repository currently documents the controls and future workflow for turning 
 
 ## Current status
 
-**Phase One / Objective Six is in final closeout review. This revision marks the objective complete only when it is merged to `main`, final `main` status is verified, and parent issue #195 receives separate closure authorization.**
+**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline. Parent issue #195 remains open only for separate manual-closure authorization.**
 
 Objective Five is complete and remains the control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, and claim traceability.
 
@@ -15,7 +15,7 @@ Objective Six defines how prompt-assisted repository work is issue-backed, branc
 Current Objective Six status:
 
 ```text
-#195 - Phase 1 Objective Six parent — open through T09 merge and final verification
+#195 - Phase 1 Objective Six parent — open; ready for manual closure only after Drew's separate explicit authorization
 P1O6-T01 / #196 - merged through PR #197; synchronized through PR #199
 P1O6-T02 / #200 - merged through PR #201; synchronized through PR #203
 P1O6-T03 / #204 - merged through PR #206; synchronized through PR #208
@@ -25,7 +25,7 @@ P1O6-T06 / #216 - merged through PR #217; synchronized through PR #219
 P1O6-T07 / #220 - merged through PR #221; synchronized through PR #225
 P1O6-T08 / #226 - merged through PR #235; synchronized through PR #237
 P1O6-REM-09A / #238 - merged through PR #240; synchronized through PR #242
-P1O6-T09 / #239 - final closeout revision on p1o6t09b; PR and human review pending
+P1O6-T09 / #239 - merged through PR #243; issue #239 closed
 ```
 
 Current Objective Six records:
@@ -161,15 +161,13 @@ Future BurnLens artifacts must keep these categories separate:
 
 ## Objective Six completion claim
 
-Safe only after the T09 revision is merged to `main` and final status is verified:
-
 > BurnLens Deschutes has a documented, reviewable prompt-built development protocol connecting issue-backed authorization, bounded task capsules and branches, selective context loading, prompt/build logging, named verification, task-scoped pull requests, mandatory human review distinct from AI-assisted review, controlled merge authorization, conditional status synchronization, and handoff.
 
 This claim concerns documented repository controls. It does not mean the future CV/GEOINT workflow has been executed or proven reliable.
 
 ## Recommended next bounded workstream
 
-After T09 merge, final verification, and parent closure authorization, the selected recommendation is:
+The selected recommendation is:
 
 ```text
 Phase Two data-intake preparation — planning and control records only

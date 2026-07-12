@@ -150,7 +150,8 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O6-SYNC-08 | `records/prompt-build-log/2026-07-11-p1o6-sync-08.md` | merged via PR #237 | T08 status synchronized; issue #236 closed. |
 | P1O6-REM-09A | `records/prompt-build-log/2026-07-12-p1o6-rem-09a.md` | merged via PR #240 | Remaining stale Objective Six status controls reconciled; issue #238 closed. |
 | P1O6-SYNC-09A | `records/prompt-build-log/2026-07-12-p1o6-sync-09a.md` | merged via PR #242 | REM-09A merge evidence synchronized; issue #241 closed. |
-| P1O6-T09 | `records/prompt-build-log/2026-07-12-p1o6-t09.md` | review-ready on `p1o6t09b` | Objective Six closeout, handoff, and final status candidate; issue #239 open. |
+| P1O6-T09 | `records/prompt-build-log/2026-07-12-p1o6-t09.md` | merged via PR #243 | Objective Six closeout and handoff; issue #239 closed. |
+| P1O6-SYNC-09 | `records/prompt-build-log/2026-07-12-p1o6-sync-09.md` | final synchronization record | Issue #244; PR and merge evidence are retained in the issue, PR, and dated log. |
 
 ## Acceptance and remediation triggers
 
@@ -169,4 +170,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-P1O6-T08 is merged and synchronized through PR #237. P1O6-REM-09A and P1O6-SYNC-09A are merged through PRs #240 and #242. P1O6-T09 / #239 is review-ready on `p1o6t09b`; Objective Six becomes complete only after T09 human approval, merge, final `main` verification, and separate parent-closure authorization.
+Objective Six is complete as a documented, reviewable repository-control baseline. P1O6-T09 merged through PR #243, issue #239 is closed, and P1O6-SYNC-09 carries the final status record. Parent #195 remains open pending Drew's separate explicit closure authorization. Phase Two data or implementation work has not begun.
