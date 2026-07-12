@@ -12,7 +12,7 @@ Objective Five is complete and remains the control baseline for versioning, prov
 
 Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, synchronized, and handed off without creating duplicate sources of truth.
 
-Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 establishes controls and artifact contracts only; it does not conduct the gate, mark a criterion passed, decide a release identifier or class, create a tag, or publish a GitHub Release.
+Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts only; it did not conduct the gate, mark a criterion passed, decide a release identifier or class, create a tag, or publish a GitHub Release.
 
 Current Objective Six status:
 
@@ -51,7 +51,8 @@ Current Objective Seven status:
 
 ```text
 #246 - Phase 1 Objective Seven parent — open
-P1O7-T01 / #247 - active; controls and artifact contracts in review branch
+P1O7-T01 / #247 - merged through PR #248; synchronized through P1O7-SYNC-01 / #249
+P1O7-T02 - next planned task; issue not yet created
 Phase One acceptance - not evaluated
 Gate criteria passed - none recorded by T01
 Release identifier and class - not decided
@@ -59,7 +60,7 @@ Objective Seven tag - not authorized or created
 GitHub Release - not authorized or published
 ```
 
-Current Objective Seven records in the T01 branch:
+Current Objective Seven records:
 
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
@@ -200,7 +201,7 @@ The active workstream is:
 Phase One / Objective Seven — Phase One acceptance gate
 ```
 
-P1O7-T01 creates the current tracker and artifact contracts. After human approval, authorized merge, and any necessary synchronization, the next planned task is:
+P1O7-T01 is complete. The next planned task is:
 
 ```text
 P1O7-T02 — Define the Phase One gate evidence model
