@@ -12,7 +12,7 @@ Objective Five is complete and remains the control baseline for versioning, prov
 
 Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, synchronized, and handed off without creating duplicate sources of truth.
 
-Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts only; it did not conduct the gate, mark a criterion passed, decide a release identifier or class, create a tag, or publish a GitHub Release.
+Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts. P1O7-T02 added the merged gate evidence matrix and defined how future tasks must evaluate evidence; it did not conduct the gate, mark a criterion passed, authorize data work, decide a release identifier or class, create a tag, or publish a GitHub Release.
 
 Current Objective Six status:
 
@@ -52,9 +52,10 @@ Current Objective Seven status:
 ```text
 #246 - Phase 1 Objective Seven parent — open
 P1O7-T01 / #247 - merged through PR #248; synchronized through P1O7-SYNC-01 / #249
-P1O7-T02 - next planned task; issue not yet created
+P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #253
+P1O7-T03 - next planned task; issue not yet created
 Phase One acceptance - not evaluated
-Gate criteria passed - none recorded by T01
+Gate criteria passed - none; every original criterion remains not evaluated
 Release identifier and class - not decided
 Objective Seven tag - not authorized or created
 GitHub Release - not authorized or published
@@ -65,6 +66,7 @@ Current Objective Seven records:
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
+docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 ```
 
 The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
@@ -100,6 +102,7 @@ closeout decision: docs/phase-one/objective-six/OBJECTIVE_SIX_CLOSEOUT.md
 next-workstream handoff: docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 current acceptance-gate tracker: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 current acceptance-gate contracts: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
+current acceptance-gate evidence matrix: docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -158,7 +161,7 @@ BurnLens remains an experimental, non-operational portfolio project. Official so
 
 Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01 or P1O7-T02.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -201,13 +204,13 @@ The active workstream is:
 Phase One / Objective Seven — Phase One acceptance gate
 ```
 
-P1O7-T01 is complete. The next planned task is:
+P1O7-T02 is complete. The next planned task is:
 
 ```text
-P1O7-T02 — Define the Phase One gate evidence model
+P1O7-T03 — Audit project identity, boundaries, and active-scope language
 ```
 
-T02 may define evidence requirements and state vocabulary. It must not conduct the later audits, declare Phase One accepted, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
+T03 may inspect and record evidence-backed findings only within its own issue scope. It must not silently remediate evaluated files, conduct later technical or repository-state audits, declare the final Phase One decision, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
 
 ## Public site
 
