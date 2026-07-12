@@ -7,10 +7,11 @@
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open |
 | Last completed task | P1O7-T01 / #247 — merged through PR #248; synchronized through P1O7-SYNC-01 / #249 |
-| Next planned task | P1O7-T02 — Define the Phase One gate evidence model; issue not yet created |
+| Current task | P1O7-T02 / #251 — build stage complete on `p1o7t02b`; human review pending |
+| Next planned task | P1O7-T03 — Audit project identity, boundaries, and active-scope language; begin only after T02 merge and any required sync |
 | Objective state | Active and incomplete |
 | Phase One acceptance | Not evaluated; no gate conclusion exists |
-| Criterion status | No criterion is marked passed by P1O7-T01 |
+| Criterion status | Every original gate criterion remains `not evaluated` in P1O7-T02 |
 | Release posture | Conditional and not guaranteed |
 | Tag status | No Objective Seven or Phase One acceptance tag is authorized or created |
 | GitHub Release status | Not authorized or published |
@@ -20,21 +21,32 @@
 
 Objective Seven defines and applies the evidence-based acceptance gate for deciding whether the documented Phase One control baseline is sufficient to enter Phase Two planning and, separately, whether later data-touch work may be considered for authorization.
 
-P1O7-T01 established only the tracker, task order, dependencies, and artifact contracts. It did not conduct an audit, score a criterion, decide the gate, remediate prior work, choose a release identifier or class, create a tag, or publish a GitHub Release.
+P1O7-T01 established the tracker, task order, dependencies, and artifact contracts. P1O7-T02 defines the evidence requirements, evidence authority, currency rules, status vocabulary, blocker logic, and decision routing for the original gate statements. T02 does not audit evidence, assign a criterion verdict, remediate earlier work, authorize data touch, choose a release identifier or class, create a tag, or publish a GitHub Release.
 
-## Verified start state
+## Verified T02 start state
 
-| Item | Verified state at P1O7-T01 branch creation |
+| Item | Verified state |
 |---|---|
 | Repository | `drwbkr1/burnlens-deschutes` |
-| Authorized base | `main` |
-| Base commit | `f9df743472d1f7a581caec000a7b803f82c535fb` |
-| Objective Six parent | #195 — closed |
-| README status | Stale at branch creation; it still described #195 as open |
-| Objective Seven parent | #246 — open |
-| Objective Seven task | #247 — open at branch creation and authorizing P1O7-T01 |
-| Existing Objective Seven primary artifacts before T01 | None found |
-| Separate Objective Five tag issue | #194 — open, separate, and outside Objective Seven T01 |
+| Authorized base | current `main` |
+| Base commit | `34c5b49695faf62f75c6afb5750ba87901ea8425` |
+| Authorized task issue | #251 — open |
+| Authorized branch | `p1o7t02b` |
+| Parent issue | #246 — open |
+| T01 dependency | #247 complete through PR #248; status synchronized through #249 / PR #250 |
+| Existing matrix before T02 | None found |
+| Competing T02 branch or PR before branch creation | None found |
+| External research | Not required; no new current GitHub capability claim introduced |
+| Tier 2 | Not used |
+| Separate Objective Five tag issue | #194 — separate and untouched |
+
+Issue #251 explicitly revises the planned T02 filename from `PHASE_1_GATE_EVIDENCE_MODEL.md` to:
+
+```text
+docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
+```
+
+README is not an allowed T02 file. The task-specific issue and approved capsule control this narrower four-file scope.
 
 ## T01 merge and synchronization record
 
@@ -49,7 +61,7 @@ P1O7-T01 established only the tracker, task order, dependencies, and artifact co
 | Merge commit | `d6c12fa7bfee2886d98493ee9b8783121cc823d0` |
 | Task issue | #247 — closed |
 | Parent issue | #246 — remains open |
-| Status synchronization | P1O7-SYNC-01 / #249 |
+| Status synchronization | P1O7-SYNC-01 / #249; PR #250 |
 
 ## Objective boundary
 
@@ -71,17 +83,17 @@ Official sources continue to govern over BurnLens outputs. Version or release id
 
 | Order | Task | Primary output | Dependency | Current status | Handoff |
 |---:|---|---|---|---|---|
-| 1 | P1O7-T01 — Establish Objective Seven controls and artifact contracts | `OBJECTIVE_SEVEN_TRACKER.md`; `OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md` | Parent #246 open; current `main` verified | Complete; PR #248 merged; synchronized through #249 | P1O7-T02 |
-| 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MODEL.md` | T01 merged and current status coherent | Next planned; issue not yet created | P1O7-T03 |
+| 1 | P1O7-T01 — Establish Objective Seven controls and artifact contracts | `OBJECTIVE_SEVEN_TRACKER.md`; `OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md` | Parent #246 open; current `main` verified | Complete; PR #248 merged; synchronized through #249 / PR #250 | P1O7-T02 |
+| 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MATRIX.md` | T01 merged and current status coherent | Build stage complete on `p1o7t02b`; human review pending | P1O7-T03 after merge and any required sync |
 | 3 | P1O7-T03 — Audit project identity, boundaries, and active-scope language | `PROJECT_IDENTITY_BOUNDARY_AUDIT.md` | T02 merged | Planned | P1O7-T04 or remediation if a gate-critical finding is recorded |
 | 4 | P1O7-T04 — Audit CV and Phase Two technical readiness | `CV_PHASE_TWO_READINESS_AUDIT.md` | T02 and T03 merged | Planned | P1O7-T05 or remediation if required |
 | 5 | P1O7-T05 — Audit repository controls and live GitHub state | `REPOSITORY_CONTROL_STATE_AUDIT.md` | T02 through T04 merged | Planned | P1O7-T06 or remediation if required |
 | 6 | P1O7-T06 — Decide the Phase One baseline identifier and release class | `PHASE_1_BASELINE_RELEASE_DECISION.md` | T03 through T05 complete; blocking findings resolved or explicitly carried | Planned | Conditional remediation or P1O7-T07 |
-| 7 | P1O7-REM-## — Remediate a gate-critical finding | Exact issue-defined remediation record and exact affected paths | Separate issue tied to one recorded finding | Conditional; not authorized by T01 | Return to the task or gate artifact that required remediation |
+| 7 | P1O7-REM-## — Remediate a gate-critical finding | Exact issue-defined remediation record and exact affected paths | Separate issue tied to one recorded finding | Conditional; not authorized by T02 | Return to the task or gate artifact that required remediation |
 | 8 | P1O7-T07 — Create the Phase One exit checklist | `PHASE_1_EXIT_CHECKLIST.md` | T03 through T06 complete; required remediation merged or explicitly deferred | Planned | P1O7-T08 |
 | 9 | P1O7-T08 — Create the Phase One decision memo | `PHASE_1_DECISION_MEMO.md` | T07 complete and evidence package coherent | Planned | P1O7-T09 only after human review of the decision |
 | 10 | P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate | `OBJECTIVE_SEVEN_CLOSEOUT.md`; `OBJECTIVE_SEVEN_HANDOFF.md`; conditional `PHASE_1_BASELINE_CANDIDATE.md` | T08 decision reviewed; required status synchronization complete | Planned | Conditional P1O7-T10 or next approved workstream |
-| 11 | P1O7-T10 — Create a tag | Git tag named in its own issue | T09 supports tagging; exact identifier and target commit authorized separately | Conditional; may never run | Conditional P1O7-T11 or stop |
+| 11 | P1O7-T10 — Create a tag | Git tag named in its own issue | T09 supports tagging; exact identifier and target commit authorized separately | Conditional; may never run | Post-tag verification and synchronization; conditional P1O7-T11 or stop |
 | 12 | P1O7-T11 — Publish a GitHub Release | GitHub Release named in its own issue | Authorized tag exists; Release separately authorized | Conditional; may never run | Release handoff or stop |
 
 ## Dependency rules
@@ -94,6 +106,7 @@ Official sources continue to govern over BurnLens outputs. Version or release id
 6. P1O7-T09 records and hands off the reviewed decision. A baseline candidate is prepared only when the decision supports one.
 7. P1O7-T10 and P1O7-T11 are optional controlled actions, not promised outcomes.
 8. Tag creation and GitHub Release publication remain separate authorizations.
+9. Because the original gate requires a live first tag, parent #246 cannot close until any required T10 action and post-tag status verification are complete.
 
 ## Gate state vocabulary
 
@@ -109,7 +122,7 @@ Future gate artifacts must use explicit states rather than implying success:
 | `deferred` | The criterion or work item is intentionally postponed with rationale and consequence. |
 | `not applicable` | The evidence model explicitly defines why the criterion does not apply. |
 
-P1O7-T01 did not assign any of these states to a gate criterion.
+P1O7-T02 defines how these states may be assigned later. It does not assign a verdict to any original gate criterion.
 
 ## Release separation
 
@@ -125,33 +138,50 @@ Issue #194 remains a separate Objective Five tag action and is not modified, exe
 
 ## Current artifact set
 
+Current merged Objective Seven controls on `main`:
+
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 ```
 
-Future artifacts become current only after their authorized task PR is reviewed and merged.
+T02 review candidate on `p1o7t02b`:
 
-## P1O7-T01 acceptance status
+```text
+docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
+```
 
-| Acceptance condition | Final state |
+The matrix does not become a current merged control until its task PR is reviewed and merged.
+
+## P1O7-T02 build-stage acceptance status
+
+| Acceptance condition | Build-stage state |
 |---|---|
-| Tracker identifies all planned tasks and dependencies | Satisfied; reviewed and merged through PR #248 |
-| Artifact contracts cover each planned task | Satisfied; reviewed and merged through PR #248 |
-| Objective Seven shown as active but incomplete | Satisfied |
-| Release described as conditional, not guaranteed | Satisfied |
-| README does not imply Phase One passed | Satisfied |
-| Objective Six archival files untouched | Satisfied; PR #248 changed only five authorized paths |
-| Human review distinct from AI-assisted work | Satisfied; Drew recorded **Approve** and separate merge authorization |
+| Every original criterion is preserved and mapped | Satisfied in branch draft; human review pending |
+| Every criterion defines evidence, disqualifier, currency, owner, vocabulary, and blocker | Satisfied in branch draft; human review pending |
+| Board specification and live configuration are separate | Satisfied in branch draft |
+| Feasibility research and data-touch authorization are separate | Satisfied in branch draft |
+| Git tag and GitHub Release existence are separate | Satisfied in branch draft |
+| Active and archival scope are separate | Satisfied in branch draft |
+| Planning, data-touch, and executed technical readiness are separate | Satisfied in branch draft |
+| All criterion verdicts remain `not evaluated` | Satisfied in branch draft |
+| Document-existence-only passing is prohibited | Satisfied in branch draft |
+| Human review remains distinct from author or AI review | Required before merge |
 
-These statements concern P1O7-T01 acceptance only. They do not evaluate or pass any Phase One gate criterion.
+These statements concern T02 artifact completeness only. They do not evaluate or pass a Phase One gate criterion.
+
+## Sequencing limitation recorded by the evidence model
+
+The original gate requires a live first release tag, while the current sequence places T08 decision and T09 closeout preparation before conditional T10 tag creation. T02 does not change that sequence.
+
+T07 and T08 must report the tag criterion accurately if no tag exists. Any later T10 action requires post-tag live verification and current-status synchronization before parent #246 can close.
 
 ## Handoff
 
-Proceed to:
+After P1O7-T02 receives human approval, authorized merge, and any materially required status synchronization, proceed to:
 
 ```text
-P1O7-T02 — Define the Phase One gate evidence model
+P1O7-T03 — Audit project identity, boundaries, and active-scope language
 ```
 
-T02 must use the merged tracker and artifact contracts, must not conduct the later audits, and must not choose or create a tag or GitHub Release.
+T03 must use the merged evidence matrix, apply it only to its authorized scope, preserve active-versus-archival distinctions, and avoid silent remediation.
