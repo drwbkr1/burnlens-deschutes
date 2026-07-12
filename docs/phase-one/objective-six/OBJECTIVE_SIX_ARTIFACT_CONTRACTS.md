@@ -191,6 +191,6 @@ Routing and compatibility artifacts must remain concise and clearly non-canonica
 
 ## Current handoff
 
-T08 is active. REM-08A aligned canonical prompt-log controls. REM-08B reconciles stale contributor, contract, and architecture wording. After remediation and any required synchronization, T08 must rerun the affected checks.
+P1O6-T08 merged through PR #235, and its final current-status synchronization merged through PR #237. The T08 cohesion review records no unresolved Critical, High, or Medium contradiction.
 
-Do not begin T09 until T08 passes, merges, and current-status truth is synchronized.
+P1O6-T09 / #239 is the next planned task. Before creating `p1o6t09b`, confirm prerequisite remediation #238 has merged and any required status synchronization is complete. T09 remains bounded to closeout, handoff, final status, and parent-close recommendation; it does not authorize Phase Two, data, model, public-output, repository-setting, tag, or GitHub Release work.

@@ -6,10 +6,10 @@
 |---|---|
 | Objective | Phase One / Objective Six |
 | Parent issue | #195 — open |
-| Completed planned tasks | P1O6-T01 through P1O6-T07 |
-| Active task | P1O6-T08 — research validation and protocol cohesion review |
-| Remediation state | REM-08A merged; REM-08B in progress |
-| Next planned task | P1O6-T09, only after T08 passes |
+| Completed planned tasks | P1O6-T01 through P1O6-T08 |
+| Last completed task | P1O6-T08 / #226 — merged through PR #235 |
+| T08 synchronization | P1O6-SYNC-08 / #236 — merged through PR #237 |
+| Next planned task | P1O6-T09 / #239 — after prerequisite remediation #238 |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -244,6 +244,6 @@ Stop, narrow, or create a control task when:
 
 ## Current handoff
 
-P1O6-T08 remains the active task. REM-08A aligned the canonical prompt-log controls. REM-08B reconciles stale Objective Six routing and path language. After remediation merges and status is synchronized where necessary, T08 must rerun the affected cohesion checks.
+P1O6-T08 merged through PR #235 and was synchronized through PR #237. Its cohesion review records no unresolved Critical, High, or Medium contradiction.
 
-P1O6-T09 may begin only after T08 is reviewed, passes without unresolved Critical or High findings, merges, and current-status truth is synchronized.
+P1O6-T09 / #239 is the next planned task. Before creating `p1o6t09b`, confirm prerequisite remediation #238 has merged and any required status synchronization is complete. T09 may document Objective Six completion only after its closeout and handoff receive separate human review and merge; parent #195 remains open until final `main` verification and explicit closure authorization.
