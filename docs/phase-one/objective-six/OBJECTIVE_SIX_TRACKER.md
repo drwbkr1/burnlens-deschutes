@@ -6,12 +6,11 @@
 |---|---|
 | Objective | Phase One / Objective Six — Prompt-Built Development Protocol |
 | Parent issue | #195 — open |
-| Completed planned tasks | P1O6-T01 through P1O6-T07 |
-| Active task | P1O6-T08 / #226 — research validation and protocol cohesion review |
-| T08 state | Revalidated and review-ready on `p1o6t08b`; PR not yet created |
+| Completed planned tasks | P1O6-T01 through P1O6-T08 |
+| Last completed task | P1O6-T08 / #226 — merged through PR #235 |
 | T08 remediation | REM-08A PR #228; SYNC-08A PR #230; REM-08B PR #232; SYNC-08B PR #234 — merged |
-| Next planned task | P1O6-T09 — only after T08 review, merge, and required status sync |
-| Objective complete | No |
+| Next planned task | P1O6-T09 — closeout, handoff, final status, and parent summary |
+| Objective complete | No; T09 remains required |
 | Data/model/map/public-output authorization | Not authorized |
 | Tag or GitHub Release authorization | Not authorized |
 
@@ -19,7 +18,7 @@
 
 Objective Six defines how prompt-assisted BurnLens repository work is authorized, scoped, executed, recorded, verified, reviewed, merged, synchronized, and handed off.
 
-It integrates the existing SOP, task packet, prompt/build-log controls, issue intake, branch/PR workflow, contributor guidance, agent guidance, and human-review surfaces without creating duplicate sources of truth.
+It integrates the SOP, task packet, prompt/build-log controls, issue intake, branch/PR workflow, contributor guidance, agent guidance, and human-review surfaces without creating duplicate sources of truth.
 
 ## Success gate
 
@@ -63,15 +62,15 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 | P1O6-T07 | #220 | Task issue form and SOP integration | Merged via PR #221; synchronized via PR #225 |
 | P1O6-REM-08A | #227 | Canonical prompt-log controls | Merged via PR #228; synchronized via PR #230 |
 | P1O6-REM-08B | #231 | Objective Six routing and path language | Merged via PR #232; synchronized via PR #234 |
-| P1O6-T08 | #226 | Research validation and protocol cohesion review | Revalidated; review-ready on `p1o6t08b` |
-| P1O6-T09 | pending | Closeout, handoff, final status, parent summary | Planned; blocked until T08 merges |
+| P1O6-T08 | #226 | Research validation and protocol cohesion review | Merged via PR #235; post-merge synchronization performed by P1O6-SYNC-08 |
+| P1O6-T09 | pending | Closeout, handoff, final status, parent summary | Next; not started |
 
 ## Dependency rules
 
-- T08 may proceed only after T01-T07 and required remediation are merged.
-- T09 may proceed only after T08 merges and current status is synchronized where needed.
+- T09 may begin only after T08 merges and current status is synchronized where needed.
 - A dependency override requires an explicit issue and recorded human approval.
 - Parallel branches must not modify the same files without an explicit dependency and merge order.
+- Parent #195 remains open until T09 closeout recommends and authorizes closure.
 
 ## Canonical artifact roles
 
@@ -104,7 +103,7 @@ Objective Six does not authorize imagery or data acquisition, AOI selection, lab
 
 Written policy does not create CI, required checks, required approvals, branch protection, rulesets, CODEOWNERS, or other GitHub enforcement.
 
-## T08 revalidation result
+## T08 final result
 
 | Criterion | State |
 |---|---|
@@ -126,14 +125,15 @@ Written policy does not create CI, required checks, required approvals, branch p
 | High findings open | 0 |
 | Medium findings open | 0 |
 | Low findings open | 1 accepted historical-status caveat |
-| T08 human review and merge | Pending |
+| Human approval and merge | Satisfied through PR #235 |
+| Task issue closure | Satisfied; #226 closed |
 | Parent closure avoided | Satisfied; #195 remains open |
 
 ## Safe claims
 
 - Objective Six has a merged issue-backed prompt-to-repository architecture and current canonical-role map.
-- T01-T07 and the two T08 remediation tasks are merged.
-- T08 has been revalidated and is ready for human review.
+- T01-T08 and both T08 remediation tasks are merged.
+- T08 provides a current research validation log and cohesion review with no unresolved Critical, High, or Medium contradiction.
 - Human review remains distinct from AI-assisted review.
 - Every task requires named checks and results or task-specific non-applicability.
 - No data, model, run, map, public-output, repository-setting, tag, or GitHub Release work was authorized by Objective Six.
@@ -143,8 +143,7 @@ Written policy does not create CI, required checks, required approvals, branch p
 Do not claim that:
 
 - Objective Six is complete before T09;
-- T08 is merged before its PR merges;
-- T09 has started;
+- T09 has started before its issue and branch exist;
 - author self-audit or AI review is human approval;
 - repository settings enforce the written workflow;
 - data, models, runs, maps, public outputs, tags, or GitHub Releases exist;
@@ -152,4 +151,4 @@ Do not claim that:
 
 ## Handoff
 
-Review and merge T08 only after the final five-file diff is confirmed clean and Drew records **Approve**. After merge, inspect README, this tracker, the canonical prompt-log index, and the dated T08 log. Synchronize stale status in a separate task, then proceed to P1O6-T09.
+Proceed to P1O6-T09. T09 must create the closeout and handoff, reconcile final README/tracker/prompt-log/parent state, state safe and unsupported claims, and determine whether parent #195 may close. It must not begin implementation, data, model, public-output, repository-setting, tag, or GitHub Release work.
