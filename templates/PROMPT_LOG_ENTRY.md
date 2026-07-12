@@ -1,160 +1,167 @@
 # Prompt Log Entry Template
 
-Use this template with `records/PROMPT_BUILD_LOG.md` for prompt-assisted BurnLens Deschutes repository work.
+Use this with `records/PROMPT_BUILD_LOG.md`. This is the canonical detailed prompt/build-log entry template; it is not a transcript, task authorization, task packet, PR, or approval record.
 
-Do not record secrets, credentials, private chain-of-thought, private session material, or unreviewed operational wildfire guidance.
+Do not record secrets, credentials, tokens, cookies, private URLs, private chain-of-thought, raw private transcripts, unnecessary personal information, unapproved proprietary material, or unreviewed operational wildfire guidance.
 
 ## Entry metadata
 
 | Field | Value |
 |---|---|
-| Log entry date | YYYY-MM-DD |
-| Task ID | P1O4-TXX |
-| Task title |  |
-| Task issue | # |
-| Parent issue | #119 |
-| Branch |  |
-| Pull request | # |
-| Merge method | squash / merge / rebase / pending |
-| Primary artifact path |  |
-| Artifact type | documentation / template / records / workflow / implementation |
-| Prompt assistant or Codex mode | ChatGPT / Codex app / Codex CLI / Codex IDE / other |
+| Date | `YYYY-MM-DD` |
+| Task ID and title | `P#O#-T## — title` |
+| Task issue / parent issue | `# / #` |
+| Branch / base | `branch / main` |
+| Dependencies | issues, PRs, commits, artifacts, or `None` |
+| PR / reviewed head | `# or pending / SHA or pending` |
+| Merge method / merge commit | `pending / pending` |
+| Primary artifacts |  |
+| Supporting artifacts |  |
+| Artifact class | documentation / template / workflow / records / code / configuration / data / model / public output / other |
+| Prompt-assisted mode | ChatGPT / Codex cloud / Codex CLI / Codex IDE / other |
+| Current state | draft / blocked / review-ready / merged / deferred / rejected |
 
-## Task summary
-
-Briefly state what the prompt-assisted task was asked to produce.
-
-```text
-[One to three sentences.]
-```
-
-## Prompt or task packet summary
-
-Record the durable task instruction or summary. Do not paste private reasoning or sensitive transcript material.
+## Authorized task summary
 
 ```text
-[Prompt summary or task packet summary.]
+[Durable task instruction derived from the issue and templates/CODEX_TASK_PACKET.md.]
 ```
 
-## Governing standards used
+## Governing context
 
-Check all that apply:
-
-- [ ] `AGENTS.md`
-- [ ] `.github/ISSUE_TEMPLATE/task.yml`
-- [ ] `.github/PULL_REQUEST_TEMPLATE.md`
-- [ ] `templates/CODEX_TASK_PACKET.md`
-- [ ] `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md`
-- [ ] `docs/phase-one/objective-four/ISSUE_ARCHITECTURE.md`
-- [ ] `docs/phase-one/objective-four/ISSUE_TAXONOMY.md`
-- [ ] `docs/phase-one/objective-four/PROJECT_BOARD_SPEC.md`
-- [ ] Other: 
-
-## Allowed file scope
-
-Files the assistant/Codex was allowed to change:
+- Tier 0 loaded or summarized: `yes / no`
+- Exact Tier 1 artifacts:
 
 ```text
 [path]
-[path]
 ```
 
-## Actual files changed
+- Tier 2 used: `yes / no`
+- Exact Tier 2 artifacts and why current controls were insufficient:
 
-Files actually changed:
+```text
+[path and reason / not used]
+```
+
+## File scope
+
+Allowed files:
 
 ```text
 [path]
+```
+
+Actual files changed:
+
+```text
 [path]
 ```
 
-## Research/source checks
+- Scope expansion: `none / requested`
+- Human authorization evidence: `[evidence / not applicable]`
+- Overlapping-branch or dependency caveat: `[none / explanation]`
 
-| Claim ID | Source name | Source URL | What it supports | Decision made | Date checked |
-|---|---|---|---|---|---|
-|  |  |  |  |  |  |
+## Research
+
+| Claim ID | Official or primary source | URL or repo path | Fact supported | Affected artifact or decision | Adopted wording or decision | Date checked | Status |
+|---|---|---|---|---|---|---|---|
+|  |  |  |  |  |  |  | supported / caveated / obsolete / unresolved |
+
+No-research rationale:
+
+```text
+[Task-specific reason repository-internal verification was sufficient / not applicable.]
+```
 
 ## Material decisions
 
-| Decision | Rationale | Source or artifact basis |
+| Decision | Rationale | Evidence |
 |---|---|---|
 |  |  |  |
 
-## Verification performed
+## Verification
 
-| Check | Result | Notes |
-|---|---|---|
-| Diff check | pending / passed / failed / not applicable |  |
-| File review | pending / passed / failed / not applicable |  |
-| Markdown/YAML/schema review | pending / passed / failed / not applicable |  |
-| Tests | not run / passed / failed / not applicable | Do not claim tests passed unless actually run. |
-| Boundary check | pending / passed / failed |  |
-| Claims check | pending / passed / failed |  |
+| Check | Exact command or inspection method | Actual result | Evidence or output | Limitation or unresolved finding |
+|---|---|---|---|---|
+|  |  | passed / failed / partial / blocked / not applicable |  |  |
 
-## Tests or checks not run
+Checks not run or not applicable:
 
-State any checks not run and why.
+| Check | Task-specific reason |
+|---|---|
+|  |  |
 
-```text
-[Example: No code tests run because documentation-only files changed.]
-```
+Do not write `tests passed` unless named tests or commands actually ran.
 
-## Boundary review
+## Boundary, claims, and controlled-work status
 
-- [ ] Work stayed within the task issue.
-- [ ] Work stayed within the current phase boundary.
-- [ ] No imagery, AOI data, labels, masks, model outputs, metrics, maps, or public-demo artifacts were created.
-- [ ] No official, operational, field-validation, emergency-readiness, or endorsement claims were introduced.
+- [ ] Work stayed within the issue, approved files, and current phase boundary.
 - [ ] Official source precedence was preserved.
-
-## Claims-register check
-
-Safe claim after this task:
-
-```text
-[Safe claim.]
-```
-
-Unsupported claims after this task:
+- [ ] No unsupported official, operational, field-validation, emergency-readiness, agency-endorsement, production-readiness, or decision-authority claim was introduced.
+- [ ] Written policy was not represented as configured platform enforcement.
+- [ ] Sensitive and private material was excluded.
 
 ```text
-[Unsupported claims.]
+Data/AOI/imagery:
+Labels/masks/baselines/models:
+Runs/reports/maps/screenshots/demos:
+Repository settings or CI:
+Tag:
+GitHub Release:
+Safe claims:
+Unsupported claims:
 ```
 
-## Sensitive material exclusion check
+## Review separation
 
-- [ ] No secrets, API keys, credentials, tokens, cookies, or private URLs were recorded.
-- [ ] No private chain-of-thought or hidden reasoning was recorded.
-- [ ] No unnecessary personal information was recorded.
-- [ ] No unreviewed emergency guidance was recorded.
+| Stage | Evidence and status |
+|---|---|
+| Author self-audit | completed by / date / known findings |
+| Executable checks | named methods and actual results |
+| AI-assisted review | tool, target, findings, fixes, unresolved findings, or not used |
+| Human review | reviewer or evidence owner, date, outcome, evidence, blocking findings |
+| Merge authorization | authorized by, evidence, final head, method, task-only close keyword, parent protection |
 
-## PR and issue linkage
+Author self-audit and AI review are supplemental evidence. Neither satisfies the human-review gate or authorizes merge or scope expansion.
+
+## Review-driven revisions
+
+| Finding or request | Source and severity | Revision | Follow-up verification | Status |
+|---|---|---|---|---|
+|  |  |  |  | resolved / accepted / open |
+
+## PR, issue, and synchronization status
 
 | Field | Value |
 |---|---|
-| PR title |  |
-| PR close keyword | Closes # |
-| Parent issue close avoided? | yes / no |
-| Parent issue update needed? | yes / no |
-| Tracker or handoff update needed? | yes / no |
+| PR title / close keyword | `title / Closes #TASK_ISSUE` |
+| Task issue closure | confirmed / pending |
+| Parent issue protected and updated | yes / no / pending |
+| README inspection | current / stale / not applicable / pending |
+| Tracker inspection | current / stale / not applicable / pending |
+| Canonical index inspection | current / stale / not applicable / pending |
+| Dated task-log inspection | current / stale / not applicable / pending |
+| Separate sync task | issue/PR / not required / pending |
 
-## Handoff note
-
-State what the next task should use from this work.
+## Handoff
 
 ```text
-[Handoff note.]
+[Next task or action and required context.]
 ```
 
-## Entry completeness checklist
+## Do not carry forward
 
-- [ ] Task identity recorded.
-- [ ] Prompt/task packet summarized.
-- [ ] Governing standards listed.
-- [ ] Allowed files and actual changed files recorded.
-- [ ] Research/source checks recorded or explicitly not required.
-- [ ] Verification recorded.
-- [ ] Boundary and claims checks completed.
-- [ ] Sensitive material excluded.
-- [ ] PR and issue linkage recorded.
-- [ ] Handoff note included.
+```text
+[Superseded drafting details, resolved findings, temporary troubleshooting, or historical material to discard.]
+```
+
+## Completeness check
+
+- [ ] Identity, authorization, branch/base, dependencies, artifacts, and state are recorded.
+- [ ] Tier 0, exact Tier 1, and justified Tier 2 use are recorded.
+- [ ] Allowed and actual files are recorded.
+- [ ] Research and decisions are recorded, or a no-research rationale is present.
+- [ ] Named checks, exact methods, actual results, limitations, and non-applicability reasons are recorded.
+- [ ] Boundaries, claims, sensitive material, and controlled-work status are recorded.
+- [ ] Author, AI, human review, and merge authorization remain distinct.
+- [ ] PR linkage, parent protection, synchronization, handoff, and `Do not carry forward` are complete.
