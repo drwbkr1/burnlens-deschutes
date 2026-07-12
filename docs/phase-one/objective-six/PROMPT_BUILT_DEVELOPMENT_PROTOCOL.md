@@ -1,388 +1,249 @@
 # BurnLens Prompt-Built Development Protocol
 
-## Purpose
+## Status
 
-This protocol defines the architecture for prompt-assisted repository work in BurnLens Deschutes.
+| Field | Value |
+|---|---|
+| Objective | Phase One / Objective Six |
+| Parent issue | #195 — open |
+| Completed planned tasks | P1O6-T01 through P1O6-T07 |
+| Active task | P1O6-T08 — research validation and protocol cohesion review |
+| Remediation state | REM-08A merged; REM-08B in progress |
+| Next planned task | P1O6-T09, only after T08 passes |
+| Data/model/map/public-output authorization | Not authorized |
+| Tag or GitHub Release authorization | Not authorized |
 
-It does not replace the full SOP, issue form, Codex task packet, prompt/build-log protocol, branch-and-PR workflow, or future contributor guidance. It defines how those artifacts work together and which source is canonical when names overlap.
+## Purpose and scope
 
-## Scope
+This protocol explains how BurnLens prompt-assisted repository work moves from authorization to merge and handoff.
 
-This protocol applies to prompt-assisted documentation, workflow, template, records, implementation, data, model, and public-output tasks only when the task is separately authorized by its issue and governing phase controls.
+It does not replace the full SOP, task issue, canonical task packet, prompt/build-log protocol, branch-and-PR baseline, contributor guidance, issue form, PR template, or PR review checklist. It defines how those controls work together and which source owns each rule.
 
-P1O6-T01 itself authorizes documentation and records work only. It does not authorize data, imagery, AOIs, labels, masks, baselines, models, metrics, runs, maps, screenshots, public demos, public claims, tags, GitHub Releases, or repository-settings changes.
+The protocol can govern documentation, workflow, template, records, code, configuration, data, model, and public-output tasks only when a separate issue and the applicable phase controls explicitly authorize that work. Objective Six itself remains documentation, workflow, template, and records work.
 
 ## Governing source order
 
-Use these sources without duplicating them:
+Use these sources according to their roles:
 
-1. `docs/workflows/PROMPT_TO_REPO_SOP.md` — full repository workflow reference.
-2. `AGENTS.md` — repository-level instructions loaded by Codex and other agents when applicable.
-3. `templates/CODEX_TASK_PACKET.md` — canonical executable task capsule.
-4. Task issue and approved task-specific capsule — exact authorization and file scope.
+1. `docs/workflows/PROMPT_TO_REPO_SOP.md` — full workflow, context tiers, gates, and closeout rules.
+2. `AGENTS.md` — repository-level prompt-assisted agent instructions.
+3. GitHub task issue — task authorization and exact allowed scope.
+4. `templates/CODEX_TASK_PACKET.md` — canonical executable task capsule.
 5. `records/PROMPT_BUILD_LOG.md` — canonical prompt/build-log protocol and index.
-6. `templates/PROMPT_LOG_ENTRY.md` — canonical detailed log-entry template.
-7. `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` — branch, PR, review, merge, and post-merge baseline.
-8. Objective- and workstream-specific controls selected through the SOP tiers.
+6. `templates/PROMPT_LOG_ENTRY.md` — canonical detailed prompt/build-log entry template.
+7. `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` — branch, PR, merge, and post-merge baseline.
+8. Objective- and workstream-specific controls selected through the SOP.
+9. `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` — detailed human-review and merge-authorization record.
 
-When two sources appear to conflict, stop before editing and resolve the conflict through the task issue or a new control task. Do not silently choose the broader interpretation.
+When sources conflict, stop before editing. Resolve the conflict through the issue or a separate control task. Do not silently choose the broader interpretation.
 
-## Canonical naming decisions
+## Canonical and routing artifacts
+
+### Task briefing
+
+- `templates/CODEX_TASK_PACKET.md` is the sole canonical executable task capsule.
+- `templates/CODEX_TASK_TEMPLATE.md` is a merged, non-canonical compatibility and discoverability wrapper.
+- The wrapper must route to the packet and must not maintain a second required-field schema or workflow.
 
 ### Prompt logging
 
-- `records/PROMPT_BUILD_LOG.md` remains the canonical logging protocol and entry index.
-- `templates/PROMPT_LOG_ENTRY.md` remains the canonical detailed entry template.
-- A future root `PROMPT_LOG.md` may exist only as a compatibility and navigation entry point. It must link to the canonical files and must not maintain a second protocol, second index, or transcript archive.
+- `records/PROMPT_BUILD_LOG.md` is the sole canonical protocol and dated-entry index.
+- `templates/PROMPT_LOG_ENTRY.md` is the sole canonical detailed entry template.
+- `PROMPT_LOG.md` is a merged, non-canonical root router.
+- The router must not become a second protocol, index, template, status register, or transcript archive.
 
-### Codex task briefing
+### Issue and pull-request intake
 
-- `templates/CODEX_TASK_PACKET.md` remains the canonical task capsule.
-- A future `templates/CODEX_TASK_TEMPLATE.md` may exist only as a compatibility and discoverability wrapper. It must direct users to instantiate the canonical packet and must not duplicate or alter its required fields.
+- `.github/ISSUE_TEMPLATE/task.yml` is the structured task-authorization intake surface.
+- `.github/PULL_REQUEST_TEMPLATE.md` is the concise PR evidence surface.
+- `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` is the detailed reusable review record.
+- Intake and review surfaces route to canonical controls; they do not replace them.
 
 ## Required workflow
-
-Every meaningful prompt-assisted task follows this chain:
 
 ```text
 approved task issue
 → compact task capsule
 → branch from current main
-→ relevant Tier 0 and Tier 1 context
-→ bounded research when required
-→ prompt-assisted changes within allowed files
-→ task prompt/build log
-→ tests/checks or documented non-applicability
-→ diff review against main
-→ pull request closing only the task issue
-→ AI-assisted review when useful
-→ distinct human review
+→ Tier 0 plus selective Tier 1 context
+→ justified Tier 2 only when needed
+→ fresh research when required
+→ edits within allowed files
+→ dated prompt/build log
+→ named checks and actual results
+→ branch diff against main
+→ task-scoped pull request
+→ optional AI-assisted review
+→ mandatory human review
+→ separate merge authorization
 → authorized merge
-→ handoff and current-status synchronization
+→ parent update and conditional status synchronization
+→ handoff
 ```
 
-Skipping a step requires an explicit task-level reason recorded in the issue, prompt log, or PR. A skipped human-review step is not permitted.
+Skipping human review is never permitted. Any other skipped step requires a task-specific reason in the issue, log, or PR.
 
-## 1. Issue-first authorization
+## Authorization and task capsule
 
-Every task begins from a GitHub task issue or an explicitly approved bundled-task issue.
+Every meaningful task begins with its own issue or an explicitly approved bundled-task issue.
 
-The issue must identify:
+The issue identifies:
 
-- task ID and title;
-- parent issue;
-- recommended branch;
-- primary and supporting artifacts;
-- allowed file changes;
-- forbidden work;
+- task and parent;
+- branch and base;
 - dependencies;
-- required research;
-- acceptance criteria;
-- verification expectations;
-- expected PR close keyword;
-- handoff target.
+- primary and supporting artifacts;
+- allowed files;
+- forbidden work;
+- context requirements;
+- research;
+- verification;
+- acceptance;
+- human-review requirement;
+- task-only close keyword;
+- parent protection;
+- handoff.
 
-An issue describes authorized work. It does not prove that the work is complete.
+The task capsule is instantiated from `templates/CODEX_TASK_PACKET.md`. It may narrow the issue but may not add files, claims, or work the issue did not authorize.
 
-## 2. Task capsule
+## Branch and file-scope discipline
 
-The task capsule is the executable prompt derived from the issue and canonical `templates/CODEX_TASK_PACKET.md`.
-
-The capsule must be compact enough to use operationally and complete enough to prevent scope drift. References to governing boundary files are preferred over copying large sections into every prompt.
-
-The capsule cannot broaden the task issue. When the capsule conflicts with the issue, stop and revise the contract before editing.
-
-## 3. Branch isolation
-
-Create one compact task branch from current `main` unless the issue explicitly documents a dependency branch.
+Create one compact task branch from current `main` unless the issue authorizes another base.
 
 Prompt-assisted edits must not be made directly to `main`.
 
-The branch name should preserve task identity, for example:
-
-```text
-p1o6t01b
-p1o6t01fixb
-p2o1t01b
-```
-
-Parallel branches must not edit the same files unless the dependency and merge order are explicit.
-
-## 4. Context loading
-
-Load Tier 0 for every task and only the Tier 1 artifacts that match the work.
-
-Tier 2 historical artifacts are verification evidence, not default working context. When Tier 2 is used, the prompt/build log records the exact artifact and why current controls were insufficient.
-
-This keeps task context small while preventing historical drafts from overriding merged controls.
-
-## 5. Research gate
-
-Fresh research is required when a task makes current technical, tooling, API, official, policy, legal, safety, source, model, or public-claim statements.
-
-Research occurs after branch creation and before final research-backed language is written.
-
-Use official or primary sources where available. Record:
-
-- claim identifier;
-- source name;
-- source URL or repository path;
-- what the source supports;
-- decision adopted;
-- date checked.
-
-A source link without an adopted decision is incomplete. An adopted decision without verifiable support must be labeled as an internal design choice rather than a researched fact.
-
-## 6. Allowed-file discipline
-
-Prompt-assisted work may create or edit only the paths listed in the task contract.
-
-When an additional file becomes necessary:
+When another file becomes necessary:
 
 1. stop before changing it;
-2. explain why the original contract is insufficient;
+2. explain why the current contract is insufficient;
 3. revise the issue and capsule or create a separate task;
-4. proceed only after the human owner approves the scope change.
+4. proceed only after human approval.
 
-Connector friction does not authorize broader file scope or thinner artifacts.
+Connector friction does not authorize broader scope, temporary files on `main`, thinner artifacts, or bypassed review.
 
-## 7. Prompt/build logging
+## Context loading
 
-Prompt/build logs are administrative traceability records, not transcripts.
+Load or summarize Tier 0 for every task. Select only the Tier 1 artifacts that match the work.
 
-For each prompt-assisted task that changes files, create or update a dated entry under:
+Tier 2 is historical or verification context only. Record every Tier 2 artifact and the specific reason current controls were insufficient. Historical drafts must not override current merged controls.
+
+## Research
+
+Fresh research is required after branch creation when the task depends on current technical, tooling, API, official, policy, legal, safety, source, dataset, model, or public-claim facts.
+
+Prefer official or primary sources. Record:
+
+- claim ID;
+- source and URL or repository path;
+- fact supported;
+- affected artifact or decision;
+- adopted wording or decision;
+- date checked;
+- support status or unresolved limitation.
+
+When external research is not required, record why repository-internal verification is sufficient.
+
+## Prompt/build logging
+
+Prompt-assisted file changes require a dated entry under:
 
 ```text
 records/prompt-build-log/YYYY-MM-DD-task-id.md
 ```
 
-The entry records:
+Use the canonical protocol and detailed template. Record identity, authorization, context, files, research, decisions, checks, boundaries, claims, review separation, merge state, synchronization, handoff, and `Do not carry forward`.
 
-- task, issue, parent, branch, and future PR identity;
-- prompt or task-packet summary;
-- governing context used;
-- allowed and actual files;
-- research sources and adopted decisions;
-- material architecture or debugging decisions;
-- tests, checks, commands, inspection methods, and actual results;
-- checks not run and reasons;
-- boundary and claims review;
-- sensitive-material exclusion;
-- review-driven revisions;
-- handoff.
+Do not record secrets, credentials, private reasoning, unnecessary transcripts, unnecessary personal information, or unreviewed operational guidance.
 
-Do not log credentials, tokens, cookies, secrets, private chain-of-thought, raw private transcripts, unnecessary personal data, or unreviewed emergency guidance.
+## Verification and diff review
 
-## 8. Tests and verification
+Every task requires named verification.
 
-Verification is mandatory for every task.
+For each applicable check, record the exact command or manual method, actual result, evidence, and limitation. A non-applicable check requires a task-specific reason.
 
-### Applicable checks
+Do not claim tests passed unless named tests or commands ran. Written policy does not create CI jobs, required checks, branch protection, rulesets, approvals, or other platform enforcement.
 
-Choose the smallest checks that can actually support the task claim, including:
-
-- unit, integration, regression, or smoke tests;
-- linting and formatting;
-- type checking;
-- schema or syntax validation;
-- JSON, YAML, or manifest validation;
-- link and path checks;
-- rendered documentation review;
-- diff inspection;
-- UI or browser inspection;
-- data, CRS, provenance, or run-package checks when later authorized.
-
-### Reporting rule
-
-For each check, record:
-
-- exact command or manual inspection method;
-- result: passed, failed, partial, blocked, or not applicable;
-- relevant output or finding;
-- unresolved limitation.
-
-Do not write `tests passed` without naming the tests or commands that ran.
-
-### Non-applicability rule
-
-`Not applicable` must include a task-specific reason.
-
-Acceptable example:
-
-> Code tests were not applicable because this task changed Markdown documentation and administrative records only. Verification used branch diff inspection, path resolution, Markdown readability, research-source review, requirement coverage, and boundary checks.
-
-Unacceptable example:
-
-> Tests not needed.
-
-## 9. Diff review
-
-Before a PR, compare the task branch with `main` and confirm:
+Before PR, compare the complete branch with its authorized base and confirm:
 
 - every changed file is allowed;
-- no scratch, generated, credential, or connector-test file is present;
-- no unrelated completed-objective record changed;
-- research claims have evidence;
+- no scratch, generated, credential, or connector-test file exists;
 - acceptance criteria are covered;
-- current-status language is accurate;
+- research-backed statements have support;
+- status language is accurate;
+- boundaries and source precedence are preserved;
 - unsupported claims are absent;
 - the handoff is clear.
 
-A clean file list is necessary but not sufficient. Review the content of each changed file.
+## Pull request, review, and merge
 
-## 10. Pull request
+Every meaningful task reaches `main` through a task-scoped PR.
 
-Every meaningful task artifact reaches `main` through a pull request.
+The PR targets `main` unless the issue authorizes another base, reports files/research/checks/boundaries, and uses:
 
-The PR must:
+```text
+Closes #TASK_ISSUE
+```
 
-- target `main` unless explicitly authorized otherwise;
-- use the task title pattern;
-- summarize changed files and material decisions;
-- report research and verification;
-- state tests/checks not run and why;
-- preserve boundary and source-precedence status;
-- identify dependencies and next task;
-- use `Closes #TASK_ISSUE` for the task issue only.
+Ordinary task PRs do not close the parent objective issue.
 
-Ordinary task PRs must not close the parent objective issue.
+Keep review stages distinct:
 
-GitHub closing keywords work when the PR targets the default branch and is merged. The issue link is workflow metadata, not proof that acceptance criteria were satisfied.
+| Stage | Role | Satisfies human gate? |
+|---|---|---:|
+| Author self-audit | Author assertions about scope and evidence | No |
+| Executable checks | Commands or manual methods with actual results | No |
+| AI-assisted review | Supplemental defect and consistency findings | No |
+| Human review | Inspection and `Approve`, `Request changes`, or `Defer or reject` outcome | Yes, when recorded |
+| Merge authorization | Separate authorization after approval and resolved blockers | Required before merge |
 
-## 11. AI-assisted review
+For the solo-maintainer workflow, an explicit PR comment or completed checklist may record the human policy outcome. It is not formal GitHub author self-approval.
 
-AI-assisted review is optional but encouraged for complex or high-risk diffs.
+Merge only when:
 
-It may:
+- the human outcome is **Approve**;
+- blocking findings are resolved;
+- dependencies are resolved or explicitly accepted;
+- the final diff remains in scope;
+- checks are accurately reported;
+- task-only closure and parent protection are correct;
+- the merge method is permitted and authorized.
 
-- inspect working-tree or PR changes;
-- find missing requirements;
-- flag defects, security concerns, inconsistent claims, or boundary violations;
-- suggest focused tests;
-- confirm whether identified findings were addressed.
+Prefer squash merge for bounded task branches when allowed and authorized.
 
-AI review output must be labeled as AI-assisted. The authoring agent must not treat its own self-audit as independent approval.
-
-## 12. Human review
-
-Human review is mandatory before merge and is distinct from AI-assisted review.
-
-The human reviewer must inspect:
-
-1. the task issue and capsule;
-2. the PR file list and diff;
-3. research evidence where applicable;
-4. tests/checks and actual results;
-5. checks not run and reasons;
-6. boundary and source-precedence status;
-7. acceptance criteria;
-8. handoff and close-keyword behavior.
-
-The human records one outcome:
-
-- **Approve** — ready for authorized merge;
-- **Request changes** — findings must be addressed and re-reviewed;
-- **Defer/reject** — task should not merge in its current form.
-
-In a personal repository where the author cannot provide a meaningful separate GitHub self-approval, human review may be recorded through a completed PR checklist or explicit PR comment. It must name the human decision and remain separate from any AI review.
-
-## 13. Merge
-
-Merge only after:
-
-- all required checks are accurately reported;
-- blocking review findings are resolved;
-- human approval is recorded;
-- dependencies are merged or explicitly resolved;
-- the diff contains only authorized files;
-- the task issue close keyword is correct.
-
-Prefer squash merge for bounded task branches when the repository allows it. GitHub documents that squash merging combines the topic-branch commits into one commit, which supports the BurnLens goal of one clear task-level history entry.
-
-Merge method preference does not override repository settings or human authorization.
-
-## 14. Post-merge handoff and synchronization
+## Post-merge synchronization
 
 After merge:
 
-- confirm the task issue closed as intended;
-- comment on the parent objective issue with task, PR, artifact paths, status, and next task;
-- update the current tracker, README, handoff, or prompt-log index only when their truth changed;
-- avoid rewriting completed objective records;
-- preserve merge commit and review evidence in later closeout records when applicable.
+- confirm the task issue closed;
+- confirm the parent stayed open unless closeout explicitly authorized closure;
+- comment on the parent with task, PR, artifacts, state, and next action;
+- inspect README, the current tracker, canonical prompt-log index, and dated task log;
+- create a separate sync task only when those records are stale;
+- avoid rewriting completed-objective records.
 
-A separate sync task is appropriate when a merge leaves current-status records stale and those files were outside the original task scope.
+## Data, claim, version, tag, and Release gates
 
-## Review separation matrix
+This protocol does not authorize data, imagery, AOIs, labels, masks, baselines, models, metrics, runs, reports, maps, screenshots, public demos, public claims, repository settings, tags, or GitHub Releases.
 
-| Activity | AI may perform | Human must perform | Satisfies human gate? |
-|---|---:|---:|---:|
-| Draft files | Yes | Optional | No |
-| Run named checks | Yes | May independently rerun | No |
-| Inspect diff and flag issues | Yes | Yes | No when AI-only |
-| Suggest changes | Yes | Yes | No |
-| Confirm AI findings addressed | Yes | Human verifies material fixes | No |
-| Approve merge | No | Yes | Yes |
-| Authorize scope expansion | No | Yes | Yes |
-| Authorize tag, Release, settings, or blocked work | No | Yes through a separate task | Yes only for that explicit authorization |
+Before controlled work, apply the matching SOP and Objective Five gates. Official sources govern. Version identifiers do not imply readiness. Tag creation and GitHub Release publication require separate explicit authorization.
 
 ## Stop conditions
 
 Stop, narrow, or create a control task when:
 
-- the issue or capsule is missing;
+- the issue or capsule is missing or conflicting;
 - branch base or dependency state is unclear;
-- a required file falls outside allowed scope;
-- current tooling claims cannot be verified;
+- required work is outside the allowed paths;
+- current external claims cannot be verified;
 - canonical sources conflict;
 - a compatibility file would duplicate a canonical source;
-- tests or checks cannot be stated honestly;
+- checks cannot be reported honestly;
 - AI review is being substituted for human approval;
-- data, model, public-output, release, or settings work lacks explicit authorization;
+- controlled data, model, public-output, setting, tag, or Release work lacks explicit authorization;
 - the work would imply official, operational, emergency, field-validated, or endorsed status.
 
-## Research validation summary
+## Current handoff
 
-Research checked on 2026-07-09:
+P1O6-T08 remains the active task. REM-08A aligned the canonical prompt-log controls. REM-08B reconciles stale Objective Six routing and path language. After remediation merges and status is synchronized where necessary, T08 must rerun the affected cohesion checks.
 
-- OpenAI, Custom instructions with AGENTS.md: https://developers.openai.com/codex/guides/agents-md
-- OpenAI, Prompting: https://developers.openai.com/codex/prompting
-- GitHub, Linking a pull request to an issue: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
-- GitHub, About pull request reviews: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
-- GitHub, About merge methods: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github
-
-The protocol adopts only architecture-level behavior from these sources. It does not configure Codex, GitHub reviews, protected branches, rulesets, Actions, or merge settings.
-
-## Acceptance checklist
-
-- [x] Issue-first and branch-scoped work is mandatory.
-- [x] Canonical prompt-log and Codex task artifacts are identified.
-- [x] Compatibility artifacts are constrained to routing roles.
-- [x] Research timing and recording are explicit.
-- [x] Allowed-file expansion requires human approval.
-- [x] Prompt/build logging is mandatory for prompt-assisted file changes.
-- [x] Tests/checks or documented non-applicability are mandatory.
-- [x] AI-assisted review is separate from human approval.
-- [x] Human review is mandatory before merge.
-- [x] Task PRs close only task issues.
-- [x] Post-merge synchronization is conditional on truth changing.
-- [x] No settings or implementation work is authorized.
-
-## Safe claim
-
-BurnLens has drafted an Objective Six architecture for issue-backed, branch-scoped, prompt-logged, test-aware, human-reviewed repository work. The architecture becomes a merged repository control only after the P1O6-T01 PR receives human review and is merged.
-
-## Unsupported claims
-
-Do not claim that:
-
-- repository settings enforce this protocol;
-- AI review replaces human approval;
-- all past work followed the Objective Six protocol;
-- later Objective Six templates or guidance already exist;
-- data, models, runs, maps, demos, tags, or Releases are authorized;
-- BurnLens is official, operational, field-validated, emergency-ready, or agency-endorsed.
-
-## Handoff
-
-P1O6-T02 should use this protocol and `OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md` to create a root prompt-log navigation entry point that routes to the existing canonical protocol, entry template, and dated entries without creating a parallel source of truth.
+P1O6-T09 may begin only after T08 is reviewed, passes without unresolved Critical or High findings, merges, and current-status truth is synchronized.
