@@ -2,15 +2,13 @@
 
 ## Handoff status
 
-This handoff becomes the current Objective Six completion handoff only after the reviewed P1O6-T09 revision is merged to `main`, final `main` verification passes, and parent issue #195 receives explicit manual-closure authorization.
+Objective Six is complete as a documented, reviewable repository-control baseline after P1O6-T09 merged through PR #243 and the final status was rechecked and synchronized.
 
-Until then, it is a reviewable completion candidate on branch `p1o6t09b` under issue #239.
+Parent issue #195 remains open only for a separate manual-closure action. Drew must explicitly authorize that closure after P1O6-SYNC-09 reaches `main` and the final completion summary is posted.
 
 ## Completed baseline
 
-Objective Six provides a documented and reviewable prompt-built development control system for BurnLens repository work.
-
-The merged baseline connects:
+Objective Six connects:
 
 ```text
 task issue
@@ -94,23 +92,23 @@ Do not load every Objective Five file for every task. Use the SOP to select only
 
 ## Non-negotiable workflow rules
 
-Future tasks must preserve these Objective Six rules:
+Future tasks must:
 
-1. Start from an authorized GitHub issue.
-2. Instantiate the canonical task capsule without broadening the issue.
-3. Create a compact task branch from current `main` unless another base is authorized.
-4. Load Tier 0 and only relevant Tier 1 artifacts.
-5. Use Tier 2 only for a specific verification question and record why it was needed.
-6. Research current external claims after branch creation when the task depends on them.
-7. Edit only allowed files and stop before scope expansion.
-8. Create or update a dated prompt/build log for material prompt-assisted changes.
-9. Name checks, methods, actual results, limitations, and task-specific non-applicability.
-10. Inspect the complete branch and PR diff.
-11. Use a PR that closes only the task issue.
-12. Keep author self-audit, executable checks, AI-assisted review, human review, and merge authorization distinct.
-13. Require a human **Approve** outcome and separate merge authorization before merge.
-14. Inspect current status after merge and synchronize only when truth is stale.
-15. Protect parent issues until their explicit closeout gate is satisfied.
+1. start from an authorized GitHub issue;
+2. instantiate the canonical task capsule without broadening the issue;
+3. create a compact task branch from current `main` unless another base is authorized;
+4. load Tier 0 and only relevant Tier 1 artifacts;
+5. use Tier 2 only for a specific verification question and record why it was needed;
+6. research current external claims after branch creation when the task depends on them;
+7. edit only allowed files and stop before scope expansion;
+8. create or update a dated prompt/build log for material prompt-assisted changes;
+9. name checks, methods, actual results, limitations, and task-specific non-applicability;
+10. inspect the complete branch and PR diff;
+11. use a PR that closes only the task issue;
+12. keep author self-audit, executable checks, AI-assisted review, human review, and merge authorization distinct;
+13. require a human **Approve** outcome and separate merge authorization before merge;
+14. inspect current status after merge and synchronize only when truth is stale;
+15. protect parent issues until their explicit closeout gate is satisfied.
 
 Written policy must not be represented as configured GitHub enforcement.
 
@@ -197,7 +195,7 @@ A future tag or Release requires a separately authorized issue, applicable relea
 | BurnLens has a reproducible development workflow. | The repository-control workflow is documented; no executed data/model/run workflow has been demonstrated. |
 | BurnLens has human review controls. | The controls are documented policy and records; configured GitHub enforcement is not claimed. |
 | BurnLens is ready for Phase Two planning. | Only a bounded planning/control task may begin; data and implementation remain separately gated. |
-| Objective Six is complete. | Safe only after the T09 revision is on `main`, final status is verified, and parent #195 is separately authorized for closure. |
+| Objective Six is complete. | This means the documented repository-control baseline is complete; it does not mean implementation reliability was demonstrated. |
 
 ### Unsupported claims
 
@@ -280,23 +278,21 @@ Then select only the additional Objective Three or Objective Five Tier 1 control
 
 ## Parent closure sequence
 
-After the T09 PR merges:
+After P1O6-SYNC-09 reaches `main`:
 
-1. confirm issue #239 closed;
-2. confirm parent #195 remained open through merge;
-3. inspect README, tracker, canonical prompt-log index, dated T09 log, closeout, and handoff on `main`;
-4. complete a bounded sync only if any current-status record is stale;
-5. add the final completion summary to #195;
-6. obtain Drew's explicit manual-closure authorization;
-7. close #195 as completed;
-8. do not create a tag or GitHub Release as part of parent closure.
+1. confirm issue #244 closed;
+2. confirm parent #195 remains open;
+3. post the final Objective Six completion summary to #195;
+4. obtain Drew's explicit manual-closure authorization;
+5. close #195 as completed;
+6. do not create a tag or GitHub Release as part of parent closure.
 
 ## Do not carry forward
 
 Do not carry forward:
 
-- obsolete statements that T08 is active or T09 has not begun;
-- REM-09A or SYNC-09A drafting and connector troubleshooting details;
+- obsolete review-branch, PR-pending, or T09-unmerged language;
+- REM-09A, SYNC-09A, T09, or SYNC-09 drafting and connector troubleshooting details;
 - the assumption that documented protocol controls prove executed reliability;
 - the assumption that Phase Two data work is authorized by this handoff;
 - sponsor, partner, field-review, agency-endorsement, or authoritative-field-note expectations;
