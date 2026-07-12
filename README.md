@@ -19,11 +19,12 @@ Current Objective Six status:
 P1O6-T01 / #196 - merged through PR #197
 P1O6-T02 / #200 - merged through PR #201
 P1O6-T03 / #204 - merged through PR #206; status synchronized through PR #208
-P1O6-T04 / #205 - merged through PR #209; status synchronized through P1O6-SYNC-04
+P1O6-T04 / #205 - merged through PR #209; status synchronized through PR #211
 P1O6-T05 / #212 - merged through PR #213; status synchronized through PR #215
 P1O6-T06 / #216 - merged through PR #217; status synchronized through PR #219
 P1O6-T07 / #220 - merged through PR #221; status synchronized through PR #225
-P1O6-T08 - next task; run research validation and protocol cohesion review
+P1O6-T08 / #226 - merged through PR #235; remediation merged through PRs #228 and #232
+P1O6-T09 - next task; close out Objective Six and synchronize final status
 ```
 
 Current Objective Six records:
@@ -34,6 +35,8 @@ docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
+docs/phase-one/objective-six/OBJECTIVE_SIX_RESEARCH_VALIDATION_LOG.md
+docs/phase-one/objective-six/OBJECTIVE_SIX_COHESION_REVIEW.md
 .github/ISSUE_TEMPLATE/task.yml
 .github/PULL_REQUEST_TEMPLATE.md
 ```
@@ -63,21 +66,25 @@ canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
 current Objective Six architecture: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
 detailed PR review record: docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
 concise PR intake surface: .github/PULL_REQUEST_TEMPLATE.md
+research validation: docs/phase-one/objective-six/OBJECTIVE_SIX_RESEARCH_VALIDATION_LOG.md
+protocol cohesion review: docs/phase-one/objective-six/OBJECTIVE_SIX_COHESION_REVIEW.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
 
 Root `AGENTS.md` routes prompt-assisted agents to the merged Objective Six workflow, scope, verification, human-review, boundary, and release controls.
 
-`.github/ISSUE_TEMPLATE/task.yml` now provides the merged generic task-intake surface for bounded task identity, scope, selective context loading, research, prompt logging, verification, human review, task-only closure, parent protection, and handoff. It does not replace the canonical task capsule.
+`.github/ISSUE_TEMPLATE/task.yml` provides the merged generic task-intake surface for bounded task identity, scope, selective context loading, research, prompt logging, verification, human review, task-only closure, parent protection, and handoff. It does not replace the canonical task capsule.
 
 `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md` provides the merged five-stage review record for author self-audit, actual checks, optional AI-assisted findings, mandatory human inspection, and separate merge authorization.
 
-`.github/PULL_REQUEST_TEMPLATE.md` uses generic task patterns and records concise linkage, scope, research, verification, security, boundary, review-separation, close-keyword, and handoff evidence while routing detailed inspection to the standalone checklist.
+`.github/PULL_REQUEST_TEMPLATE.md` records concise linkage, scope, research, verification, security, boundary, review-separation, close-keyword, and handoff evidence while routing detailed inspection to the standalone checklist.
 
-`templates/CODEX_TASK_TEMPLATE.md` is a concise compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
+`templates/CODEX_TASK_TEMPLATE.md` is a compatibility and discoverability wrapper only. It directs users to instantiate `templates/CODEX_TASK_PACKET.md`, which remains the canonical executable task capsule.
 
-Root `PROMPT_LOG.md` is a concise navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
+Root `PROMPT_LOG.md` is a navigation and compatibility entry point only. It does not replace the canonical protocol, entry index, or detailed entry template.
+
+The T08 research and cohesion records validate current OpenAI/GitHub claims, map the Objective Six rules to their controlling surfaces, and record resolved remediation and remaining limitations. T08 does not complete Objective Six; T09 closeout remains required.
 
 Human review is distinct from AI-assisted review. AI may draft, test, inspect, and recommend changes, but a human must inspect the proposed diff and record the merge decision.
 
@@ -117,7 +124,7 @@ BurnLens remains an experimental, non-operational portfolio project. Official so
 
 Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, tag, or GitHub Release artifact has been created by Objective Six.
 
-Objective Six does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, later operational templates, implementation work, or public-output work unless a later task explicitly allows the named change.
+Objective Six does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
 ## Locked computer vision task
 
@@ -137,22 +144,22 @@ This chain is a future workflow contract. It does not mean those stages have alr
 
 Future BurnLens artifacts must keep these categories separate:
 
-- official/reference sources
-- reference-derived labels
-- baseline outputs
-- model outputs
-- map overlays
-- portfolio interpretations
+- official/reference sources;
+- reference-derived labels;
+- baseline outputs;
+- model outputs;
+- map overlays;
+- portfolio interpretations.
 
 ## Recommended next task
 
 Proceed to:
 
 ```text
-P1O6-T08 — Run research validation and protocol cohesion review
+P1O6-T09 — Close out Objective Six and synchronize final status
 ```
 
-P1O6-T08 should validate the complete Objective Six protocol, recheck current tooling claims against official sources, confirm canonical links and review surfaces agree, and record any remediation needed before closeout. It must not begin implementation, data, model, public-output, repository-setting, tag, or GitHub Release work.
+P1O6-T09 should create the Objective Six closeout and handoff, reconcile README/tracker/prompt-log/parent status, state safe and unsupported claims, and recommend whether parent #195 may close. It must not begin implementation, data, model, public-output, repository-setting, tag, or GitHub Release work.
 
 ## Public site
 
