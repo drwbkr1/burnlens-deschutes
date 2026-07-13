@@ -5,13 +5,14 @@
 | Field | Current state |
 |---|---|
 | Task | P1O7-T08 — Create the Phase One decision memo |
-| Task issue | #289 — open |
+| Task issue | #289 — closed through PR #294 |
 | Parent issue | #246 — open and protected |
 | Repository | `drwbkr1/burnlens-deschutes` |
 | Branch / base | `p1o7t08b` / `main` at `8084cbed12046cee5424307c412e164bdd3d688d` |
-| Authoring date | 2026-07-13 |
 | Evidence package | P1O7-T07 exit checklist, reviewed and merged through PR #284 at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae` |
-| Memo state | Human-owned decision recorded; exact-head PR review and separate merge authorization remain required |
+| Reviewed head | `71cdcdae7b987c497d39b002aae7a7b668cd6edd` |
+| Pull request / merge | #294 / `69c0b7322f5c2a556f285ad639a8df467494979f` |
+| Memo state | Human-owned decision reviewed and squash-merged |
 | Human decision owner | Drew |
 | Human decision date | 2026-07-13 |
 | Full Phase One completion | Blocked by G10 |
@@ -25,7 +26,7 @@
 APPROVE — PHASE TWO PLANNING ONLY
 ```
 
-Drew reviewed the evidence-backed recommendation and recorded this human-owned Phase One decision on 2026-07-13. The decision remains subject to a clean final review of the exact branch head and separate squash-merge authorization recorded on the task-scoped PR.
+Drew reviewed the evidence-backed recommendation and recorded this human-owned Phase One decision on 2026-07-13. Drew approved exact head `71cdcdae7b987c497d39b002aae7a7b668cd6edd`, separately authorized squash merge for that exact head, and PR #294 merged at `69c0b7322f5c2a556f285ad639a8df467494979f`.
 
 The decision authorizes a bounded planning lane only. It does not declare full Phase One complete, does not satisfy G10, and does not authorize source access, AOI creation, data download, data processing, labels, masks, baselines, models, runs, maps, public outputs, a tag, or a GitHub Release.
 
@@ -46,26 +47,25 @@ The checklist therefore supports a bounded planning decision while requiring the
 
 ### Work authorized by this decision
 
-After this memo is merged through the task-only workflow and any materially required status synchronization is complete, the following planning and control work may be proposed under separate issues:
+After P1O7-SYNC-08 makes current repository truth coherent, the following planning and control work may be proposed under separate issues:
 
-1. create the Phase Two parent issue and tracker;
-2. define Phase Two objectives, task sequence, dependencies, acceptance gates, stop rules, and handoff conditions;
-3. plan source/AOI intake tasks and the order in which required records would be instantiated;
-4. prepare no-data repository documentation for future source, access, terms, AOI, CRS, provenance, registry, source-precedence, and use-boundary reviews;
-5. create exact task issues, task capsules, branch names, file scopes, research plans, verification plans, and review gates for later work;
-6. reconcile planning dependencies with the current Phase One closeout and release-control sequence.
+1. complete P1O7-T09 closeout, handoff, and reviewed baseline-candidate preparation;
+2. create the Phase Two planning parent issue and tracker;
+3. define Phase Two objectives, task sequence, dependencies, acceptance gates, stop rules, and handoff conditions;
+4. plan source/AOI intake tasks and the order in which required records would be instantiated;
+5. prepare no-data repository documentation for future source, access, terms, AOI, CRS, provenance, registry, source-precedence, and use-boundary reviews;
+6. create exact task issues, task capsules, branch names, file scopes, research plans, verification plans, and review gates for later work;
+7. reconcile planning dependencies with the current Phase One closeout and release-control sequence.
 
 Authorization is limited to issue-backed planning and control artifacts. Every future task remains subject to its own allowed-file contract, research requirement, verification plan, human review, and separate merge authorization.
 
 ### Immediate next repository task
 
-The immediate Objective Seven handoff is:
-
 ```text
 P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate
 ```
 
-T09 may begin only after T08 is reviewed and merged and any required synchronization makes current repository truth coherent. T08 does not start T09 or Phase Two work inside this branch.
+T09 may begin only under its own task issue after P1O7-SYNC-08 merges. This memo does not start T09 or Phase Two work.
 
 ## Work that remains prohibited
 
@@ -88,7 +88,7 @@ A future task may authorize one exact controlled action only after its required 
 
 | Readiness lane | Decision posture | Consequence |
 |---|---|---|
-| Phase Two planning | Authorized after T08 merge and separate issue authorization | Planning and control records may be created; no source or data action may occur. |
+| Phase Two planning | Authorized after status synchronization and separate issue authorization | Planning and control records may be created; no source or data action may occur. |
 | Source/AOI intake planning | Authorized as documentation planning only | Future intake tasks and record requirements may be specified, but no source access, AOI geometry, download, or source-specific execution may occur. |
 | Data touch | Not authorized | F04-A remains incomplete; the SOP before-data gate must be satisfied for one named action. |
 | Labels, baselines, models, runs, metrics, maps, and outputs | Not authorized | No executed technical readiness exists. |
@@ -102,10 +102,12 @@ A future task may authorize one exact controlled action only after its required 
 
 - **State:** `evidence incomplete`.
 - **Class:** mandatory blocker to full Phase One completion and parent #246 closure.
-- **Current evidence:** the exact Phase One candidate ref did not resolve during the T08 build recheck; complete tag enumeration is unavailable through the connected GitHub action set.
+- **Current evidence:** the exact Phase One candidate ref did not resolve during the T08 build recheck; complete tag enumeration remains `inaccessible/unresolved` through the connected GitHub action set.
 - **Consequence:** the project must not claim Phase One complete or released.
-- **Required future action:** after a reviewed T08 decision and T09 closeout, a separately authorized T10 must complete tag enumeration, select one exact reviewed synchronized `main` target, run release/reproducibility QA, create the tag only if explicitly authorized, and verify the live name and target afterward.
+- **Required future action:** after T09 closeout identifies the exact synchronized target, issue #292 may establish complete inventory and T10 readiness. A new exact T10 issue may create one tag only if the readiness record supports it and Drew explicitly authorizes the exact name, target SHA, method, and post-action verification.
 - **Owner:** Drew as human decision and controlled-action owner; the future T10 issue must identify the executing agent and exact authorization.
+
+Issue #292 is preparation only. It does not authorize tag creation.
 
 ### F04-A — authorization to touch data
 
@@ -113,8 +115,10 @@ A future task may authorize one exact controlled action only after its required 
 - **Class:** mandatory blocker to data access, acquisition, AOI creation, preprocessing, and derived-data work.
 - **Current evidence:** no exact data action and no complete source/access/terms/AOI/format/CRS/provenance/registry review package exists.
 - **Consequence:** planning permission cannot be converted into data permission.
-- **Required future action:** a separately authorized intake task must identify the exact action and satisfy the complete before-data gate before any data touch.
+- **Required future action:** after an authorized Phase Two planning parent exists, issue #293 may instantiate the before-data intake package for one exact future Sentinel-2 metadata-only action. A separate exact action issue remains mandatory before any query or source access.
 - **Owner:** the future Phase Two parent and exact intake-task owner, subject to Drew’s authorization.
+
+Issue #293 is preparation only. It does not authorize a source query, AOI creation, download, or processing.
 
 ### F06-C — live GitHub Project state
 
@@ -183,41 +187,42 @@ A repository note, tag, and GitHub Release are separate artifacts and must never
 
 Official sources govern over every BurnLens-derived artifact. BurnLens remains an experimental computer-vision and GEOINT portfolio project for technical demonstration and planning-style screening only.
 
-This decision does not weaken the governing boundary:
-
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
 
 No BurnLens output may override county, state, federal, fire-service, emergency-management, hazard, evacuation, transportation, or incident information. No version, decision memo, tag candidate, future tag, repository note, or release object may be used as evidence of operational readiness, official authority, field validation, agency endorsement, emergency readiness, production stability, or decision authority.
 
 ## Required remediation and future controlled actions
 
-| Action | Owner | Satisfaction evidence | Consequence if incomplete |
+| Action | Owner | Satisfaction evidence | Current state / consequence |
 |---|---|---|---|
-| Record the human decision and actual date for T08 | Drew | **Completed 2026-07-13:** `APPROVE — PHASE TWO PLANNING ONLY` | N/A; decision/date recorded. |
-| Complete T08 review and separate merge authorization | Drew | Review record and exact-head authorization | T09 and planning handoff do not begin. |
-| Complete T09 closeout, handoff, and baseline-note preparation | Future T09 issue owner; Drew approves | Reviewed T09 artifacts, synchronized current status, exact included/excluded scope | No baseline target or T10 readiness. |
-| Complete tag enumeration and release/reproducibility QA | Future T10 issue owner; Drew authorizes | Complete inventory, exact reviewed target, QA results, no collision, exact action authorization | G10 remains incomplete; no tag or parent closure. |
-| Satisfy the before-data gate for one named action | Future Phase Two intake-task owner; Drew authorizes | Source/access/terms/AOI/CRS/provenance/registry/boundary records and exact task authorization | No source access or data touch. |
+| Record the human decision and actual date for T08 | Drew | Decision record and PR review | **Complete:** planning-only decision recorded 2026-07-13. |
+| Complete T08 review and separate merge authorization | Drew | Exact-head review and separate authorization | **Complete:** PR #294 reviewed and squash-merged. |
+| Synchronize T08 lifecycle truth | P1O7-SYNC-08 / #296 | Reviewed six-file synchronization | Required before T09 starts. |
+| Complete T09 closeout, handoff, and baseline-note preparation | Future T09 issue owner; Drew approves | Reviewed T09 artifacts, synchronized current status, exact included/excluded scope | No baseline target or T10 readiness until complete. |
+| Complete tag enumeration and release/reproducibility QA | #292 and future T10 owner; Drew authorizes | Complete inventory, exact reviewed target, QA results, no collision, exact action authorization | G10 remains incomplete; no tag or parent closure. |
+| Satisfy the before-data gate for one named action | #293 and future exact action owner; Drew authorizes | Source/access/terms/AOI/CRS/provenance/registry/boundary records and exact task authorization | No source access or data touch. |
 | Reconcile stale routing only if material | Separate remediation owner | Exact-scope issue, corrected paths, review and merge evidence | Non-blocking navigation limitation remains visible. |
 
 No remediation is hidden inside this memo. Every file or live-platform change requires its own authorization when it falls outside T08’s four-file scope.
 
 ## Human decision record
 
-| Field | Required record |
+| Field | Final record |
 |---|---|
 | Decision owner | Drew |
 | Decision date | 2026-07-13 |
-| Review target | Final exact head of `p1o7t08b`, to be recorded on the PR |
+| Review target | `71cdcdae7b987c497d39b002aae7a7b668cd6edd` |
 | Human outcome | **Approve — Phase Two planning only** |
-| Blocking review item | None; merge remains conditional on a clean exact-head review |
-| Merge authorization | Pending separate exact-head PR record |
+| Pull request | #294 |
+| Merge authorization | Separate exact-head squash authorization recorded on PR #294 |
+| Merge commit | `69c0b7322f5c2a556f285ad639a8df467494979f` |
+| Blocking review item | None |
 
-The author self-audit and any AI-assisted review are supplemental evidence only. They do not substitute for the recorded human decision or the separate merge authorization.
+The author self-audit and any AI-assisted review are supplemental evidence only. They do not substitute for the recorded human decision or separate merge authorization.
 
 ## Handoff
 
-After all blocking review findings are resolved, the exact head is approved, T08 is merged, and current status is synchronized if needed:
+After P1O7-SYNC-08 / #296 is reviewed and merged:
 
 1. proceed to P1O7-T09 under its own issue;
 2. preserve G10 as incomplete until a separately authorized tag action succeeds and is verified;
@@ -232,10 +237,12 @@ Parent #246 remains open. It cannot close through T08 or T09 alone while G10 rem
 
 Do not carry forward:
 
+- duplicate issue #295 as an active synchronization authorization;
 - PR #258 or its wrong-repository findings;
 - exact-ref failures as proof of an empty inventory;
 - the conditional candidate as a created tag;
-- the planning-only decision as data-touch or executed-technical readiness;
+- the former pending human decision/date;
+- the planning-only decision as data-touch or executed technical readiness;
 - F06-C or F10-R as newly invented mandatory criteria;
 - a repository baseline note as a GitHub Release;
 - author or AI self-review as Drew’s decision;
