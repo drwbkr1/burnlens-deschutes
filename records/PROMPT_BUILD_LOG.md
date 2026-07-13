@@ -161,7 +161,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T03 | `records/prompt-build-log/2026-07-12-p1o7-t03.md` | merged via PR #263 | Corrected repository-only audit; issue #257 closed; G01, G02, and G11 reviewed `meets criterion` / `pass`. |
 | P1O7-SYNC-03 | `records/prompt-build-log/2026-07-12-p1o7-sync-03.md` | final synchronization record | Issue #264; source T03 review and merge evidence are retained in issue #257, PR #263, and the dated logs. |
 | P1O7-T04 | `records/prompt-build-log/2026-07-12-p1o7-t04.md` | merged via PR #270 | Issue #269 closed; G03 reviewed `meets criterion`, G04 reviewed `meets with limitation`, and F04-A remains `evidence incomplete`. |
-| P1O7-SYNC-04 | `records/prompt-build-log/2026-07-12-p1o7-sync-04.md` | review-ready sync candidate | Issue #271; synchronizes README, tracker, canonical index, and T04 log after PR #270. |
+| P1O7-SYNC-04 | `records/prompt-build-log/2026-07-12-p1o7-sync-04.md` | final synchronization record | Issue #271; PR #272 and final merge evidence are retained in the issue, PR, and dated log. |
 
 ## Acceptance and remediation triggers
 
