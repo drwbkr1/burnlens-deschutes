@@ -186,4 +186,72 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_CLOSEOUT.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_HANDOFF.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_RELEASE_NOTE.md
 VERSIONING.md
+templates/RELEASE_NOTE_TEMPLATE.md
+templates/TRACEABILITY_RECORD_TEMPLATE.md
+templates/RUN_MANIFEST_TEMPLATE.json
+templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md
+records/PROMPT_BUILD_LOG.md
 ```
+
+## Current work boundary
+
+BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
+
+Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
+
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-T07.
+
+Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
+
+## Locked computer vision task
+
+BurnLens Deschutes' first computer vision task is experimental binary semantic segmentation for wildfire-relevant screening.
+
+The primary target is active-fire / hotspot-informed binary fire mask. The fallback target is burn-scar binary mask. The fallback may be used only if later feasibility work shows the primary target is not defensible for the portfolio model. Changing to the fallback requires a documented decision update.
+
+## Core workflow
+
+```text
+imagery → preprocessing → segmentation or baseline mask → raster output → vector polygons → map overlay → exposure-style summary → documented run package
+```
+
+This chain is a future workflow contract. It does not mean those stages have already been implemented.
+
+## Source separation rule
+
+Future BurnLens artifacts must keep these categories separate:
+
+- official/reference sources;
+- reference-derived labels;
+- baseline outputs;
+- model outputs;
+- map overlays;
+- portfolio interpretations.
+
+## Objective Six completion claim
+
+> BurnLens Deschutes has a documented, reviewable prompt-built development protocol connecting issue-backed authorization, bounded task capsules and branches, selective context loading, prompt/build logging, named verification, task-scoped pull requests, mandatory human review distinct from AI-assisted review, controlled merge authorization, conditional status synchronization, and handoff.
+
+This claim concerns documented repository controls. It does not mean the future CV/GEOINT workflow has been executed or proven reliable.
+
+## Current bounded workstream
+
+The active workstream is:
+
+```text
+Phase One / Objective Seven — Phase One acceptance gate
+```
+
+Current bounded work is:
+
+```text
+P1O7-T08 — Create the Phase One decision memo (next; not started)
+```
+
+P1O7-T07 is reviewed and merged through PR #284, and P1O7-SYNC-07 / #285 synchronizes that repository truth. T08 must begin only under its own issue and task capsule. It must use the merged exit checklist without upgrading G10, F04-A, F06-C, or F10-R; distinguish full completion from any narrower planning-only or conditional decision; and avoid authorizing data touch, public claims, a tag, or a GitHub Release.
+
+## Public site
+
+The public website lives separately at `burnlensproject.org` and is backed by the `burnlens-site` repository.
+
+This technical repository controls the scope, documentation, versioning, and future CV/GEOINT workflow artifacts. The public site should not make claims that are stronger than the artifacts in this repository support.
