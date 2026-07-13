@@ -5,15 +5,17 @@
 | Field | Current state |
 |---|---|
 | Task | P1O7-T07 — Create the Phase One exit checklist |
-| Task issue | #283 — open |
+| Task issue | #283 — closed through PR #284 |
 | Parent issue | #246 — open and protected |
 | Repository | `drwbkr1/burnlens-deschutes` |
-| Branch / base | `p1o7t07b` / `main` at `2a624b86eeb7478e26272eff92736421c59d7eb7` |
+| Reviewed branch / base | `p1o7t07b` / `main` at `2a624b86eeb7478e26272eff92736421c59d7eb7` |
+| Reviewed head | `ce5466b5df97d7bb6f44c3050363b23f1ad448ea` |
+| Pull request / merge | #284 / `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae` |
 | Evidence compilation date | 2026-07-13 |
 | Artifact role | Evidence-backed gate checklist; not the Phase One decision memo |
-| Human review | Pending for T07 |
+| Human review | Drew — **Approve**; separate exact-head squash authorization recorded in PR #284 |
 | Full Phase One completion | **Blocked** by G10 while no authorized live Phase One baseline tag is verified |
-| T08 synthesis eligibility | Review candidate; every original criterion and required distinction is represented, subject to T07 human review |
+| T08 synthesis eligibility | Reviewed and merged evidence package; every original criterion and required distinction is represented; T08 owns the decision |
 | Data-touch readiness | Blocked by F04-A |
 | Tag / GitHub Release action | Not authorized or performed |
 
@@ -48,7 +50,7 @@ A document, proposal, issue, identifier, release-note file, or inaccessible plat
 
 ## Current live-state revalidation
 
-Read-only checks were repeated after `p1o7t07b` was created.
+Read-only checks were repeated after `p1o7t07b` was created and were reviewed through PR #284.
 
 | Item | Method | Result | Checklist effect |
 |---|---|---|---|
@@ -225,7 +227,7 @@ No new external research was required. T07 interprets current repository evidenc
 | Exact evidence | T05 live-state methods; T07 connector action-catalog inspection found no Project enumeration action; no board ID/URL or observable configuration record |
 | Source task | P1O7-T05; revalidated by P1O7-T07 |
 | Evidence date | 2026-07-12 T05 audit; revalidated 2026-07-13 |
-| Reviewer | Drew — **Approve** of T05 disposition, PR #274; T07 human review pending |
+| Reviewer | Drew — **Approve** of T05 disposition, PR #274; T07 checklist review approved in PR #284 |
 | Limitation | Live status is `inaccessible/unresolved`; neither existence nor absence is established. |
 | Blocker / consequence | Informational/supporting fact only; does not independently block T08 synthesis. |
 | Required next action | Reverify only if T08 or later work relies on a live Project. Do not infer configuration from the specification. |
@@ -342,9 +344,9 @@ These lanes preserve distinctions discovered by T04–T06. They are not addition
 |---|---|
 | Are all original O1–O11 criteria preserved? | Yes. |
 | Are all required G/F distinctions represented? | Yes: G01–G11 plus F04-A, F06-C, and F10-R. |
-| Does every row have exact evidence, date, reviewer, limitation, blocker, next action, and release dependency? | Yes, as an author-assembled review candidate pending T07 human review. |
+| Does every row have exact evidence, date, reviewer, limitation, blocker, next action, and release dependency? | Yes; reviewed and merged through PR #284. |
 | Is full Phase One completion supported now? | **No. G10 is an unresolved mandatory blocker.** |
-| Is the package eligible for T08 evidence synthesis after T07 review? | Yes, because every original criterion has an evidence-backed recorded state and no criterion is silently omitted or auto-passed. |
+| Is the package eligible for T08 evidence synthesis? | Yes, because every original criterion has an evidence-backed reviewed state and no criterion is silently omitted or auto-passed. T08 still owns the decision. |
 | Is data touch authorized? | No. F04-A blocks it. |
 | Is a tag authorized or created? | No. |
 | Is a GitHub Release authorized or published? | No. |
@@ -352,7 +354,7 @@ These lanes preserve distinctions discovered by T04–T06. They are not addition
 
 ## Required handoff
 
-After human review, a task-scoped PR, separate exact-head merge authorization, merge, and any materially necessary status synchronization, hand off to:
+After P1O7-SYNC-07 synchronizes the merged lifecycle truth, hand off under a separate task issue to:
 
 ```text
 P1O7-T08 — Create the Phase One decision memo
