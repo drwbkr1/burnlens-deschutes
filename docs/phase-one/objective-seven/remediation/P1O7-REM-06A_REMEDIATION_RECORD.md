@@ -5,17 +5,20 @@
 | Field | State |
 |---|---|
 | Task | P1O7-REM-06A — Resolve T06 tag and Release inventory finding |
-| Task issue | #279 — open during build |
+| Task issue | #279 — closed as completed |
 | Parent issue | #246 — open and protected |
 | Source task | P1O7-T06 / #277 |
 | Source PR | #278 |
 | Source reviewed head | `7d912920e09a22dff9b90a2104a2112b1a237cc1` |
 | Source merge commit | `3f0e158c44e608267cfbba31d21103f99f584123` |
 | Branch / base | `p1o7rem06ab` / `main` at `3f0e158c44e608267cfbba31d21103f99f584123` |
+| Reviewed head | `d9f4567e59893b61956d131a198bd2021327b771` |
+| Pull request / merge | PR #280 / `5e6d0d111dc44eabfb056426c1d1c9bb868456c7` |
 | Source finding | T06-F01 — complete live tag inventory could not be enumerated |
 | Supporting limitation | T06-F02 — complete GitHub Release inventory could not be enumerated |
 | Remediation disposition | **Accepted with documented limitation** |
 | Human decision | Conditional candidate approved; legacy candidate rejection/reconciliation approved; resolution and merge directed by repository owner |
+| Status synchronization | P1O7-SYNC-06A / #281 finalizes current repository truth |
 | Tag action | Not authorized or performed |
 | GitHub Release action | Not authorized or performed |
 | Final Phase One decision | Not made |
@@ -154,8 +157,8 @@ T06/REM-06A merge != final Phase One decision
 | Approved disposition | Compared owner instruction to T06 candidate and legacy dispositions. | Passed; no decision drift. |
 | G10/F10-R separation | Compared disposition to the gate evidence matrix and T06 decision. | Passed; both remain `evidence incomplete`. |
 | T10/parent-close condition | Manual review of the remediation text and release controls. | Passed; successful enumeration remains mandatory. |
-| Scope | Complete branch comparison must contain only this record and the dated REM-06A log. | Pending final PR-level verification. |
-| Controlled side effects | Read-only repository checks; no tag, Release, issue #194, settings, Phase Two, data, model, or public-output action. | Passed. |
+| Scope | Final branch comparison contained exactly the remediation record and dated REM-06A log; PR #280 reviewed exact head `d9f4567e59893b61956d131a198bd2021327b771`. | Passed. |
+| Controlled side effects | Read-only repository checks and two documentation records only; no tag, Release, issue #194, settings, Phase Two, data, model, or public-output action. | Passed. |
 
 ## Checks not applicable
 
@@ -170,7 +173,7 @@ T06/REM-06A merge != final Phase One decision
 
 ## Safe claims
 
-After review and merge, the repository may state:
+The reviewed and merged remediation supports these narrow claims:
 
 - the owner approved `v0.0.7-objective-seven-phase-one-baseline` as a conditional decision candidate;
 - the legacy candidates remain rejected or historical as recorded by T06;
@@ -195,14 +198,13 @@ This remediation does not support claims that:
 
 ## Handoff
 
-After this remediation is reviewed and squash-merged:
+After P1O7-SYNC-06A merges:
 
-1. inspect README, the Objective Seven tracker, the canonical prompt-log index, and the T06 dated log;
-2. create a separate exact-scope status-synchronization issue if those files remain materially stale;
-3. proceed to P1O7-T07 only after current status is coherent;
-4. carry the conditional candidate approval and accepted limitation;
-5. keep G10 incomplete and complete enumeration mandatory before T10 and parent closure;
-6. keep issue #194 untouched.
+1. P1O7-T07 is the next task but must begin under its own issue and task capsule;
+2. carry the conditional candidate approval and accepted limitation;
+3. retain complete enumeration as mandatory before T10 and parent closure;
+4. retain G10/F10-R as incomplete and separate;
+5. keep issue #194 unchanged.
 
 ## Do not carry forward
 
