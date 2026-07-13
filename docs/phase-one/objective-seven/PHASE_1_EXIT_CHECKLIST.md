@@ -200,7 +200,7 @@ No new external research was required. T07 interprets current repository evidenc
 | Reviewer | Drew — **Approve**, PR #274 |
 | Limitation | Written controls and representative records do not prove repository-settings enforcement. |
 | Blocker / consequence | No blocker. Parent/task separation and task-only closure are observable. |
-| Required next action | Use `Closes #283` and `Refs #246` in the future T07 PR; preserve separate human review and merge authorization. |
+| Required next action | Preserve PR #284 as task-only closure evidence and repeat the same parent-protection, human-review, and separate merge-authorization pattern in T08. |
 | Release dependency | Issue/PR/approval traceability is required for T09/T10 release QA. |
 
 ### O6 / G06-B — Project-board specification and controls exist
@@ -260,7 +260,7 @@ No new external research was required. T07 interprets current repository evidenc
 | Reviewer | Drew — **Approve**, PR #274 |
 | Limitation | Identified active-routing wording remains stale in some surfaces. Written policy is not platform enforcement. |
 | Blocker / consequence | Non-blocking limitation; authorization, review, and merge stages remain unambiguous. |
-| Required next action | Complete T07 through task-only PR, human review, and separate merge authorization; remediate stale routing only under separate scope. |
+| Required next action | Use the same task-only PR, human-review, and separate merge-authorization pattern for T08; remediate stale routing only under separate scope. |
 | Release dependency | Complete issue/branch/log/check/review/merge trace is required before closeout and tag QA. |
 
 ### O9 / G09 — A documentation skeleton exists and is coherent
@@ -275,7 +275,7 @@ No new external research was required. T07 interprets current repository evidenc
 | Reviewer | Drew — **Approve**, PR #274 |
 | Limitation | Navigation and historical status headers reduce currentness but no required core class is missing. |
 | Blocker / consequence | Non-blocking limitation. |
-| Required next action | Add this checklist to the canonical Objective Seven artifact set through T07; synchronize status after merge only if materially stale. |
+| Required next action | Keep this checklist in the canonical Objective Seven artifact set; preserve synchronized lifecycle truth and recheck navigation before T09/T10. |
 | Release dependency | Current canonical paths and synchronized status are required for T09/T10 QA. |
 
 ### O10 / G10 — A first release tag exists
@@ -329,7 +329,7 @@ These lanes preserve distinctions discovered by T04–T06. They are not addition
 
 | Readiness lane | Current evidence state | Consequence / next action |
 |---|---|---|
-| Phase Two planning synthesis | Evidence package is complete enough for T08 to evaluate a bounded planning-only or conditional outcome, subject to T07 human review | T08 owns the decision. No Phase Two work is authorized by T07. |
+| Phase Two planning synthesis | Reviewed T07 evidence package is complete enough for T08 to evaluate a bounded planning-only or conditional outcome | T08 owns the decision. No Phase Two work is authorized by T07. |
 | Source/AOI intake | `evidence incomplete` | No selected source, AOI record, terms review, or source-specific precheck. A later exact intake issue is required. |
 | Data touch | `evidence incomplete`; blocked by F04-A | No access, download, AOI file, preprocessing, or derived-data action may occur. |
 | Label work | `evidence incomplete` | Label assumptions exist, but no selected data, schema package, labels, split, or QA record exists. |
