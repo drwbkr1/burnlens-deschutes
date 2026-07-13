@@ -4,7 +4,7 @@
 
 This document expands the Phase One objective summarized in `docs/roadmap/BURNLENS_BUILD_ROADMAP.md`.
 
-It is a status-aware control document, not a declaration that Phase One is complete. Current merged trackers, audits, handoffs, and the Phase One decision memo control live gate truth.
+It is a status-aware control document, not a declaration that Phase One has a released implementation baseline. The execution goal and current phase-status record control live authority and status; merged trackers, audits, handoffs, and the decision memo provide evidence.
 
 ## Phase name
 
@@ -16,13 +16,13 @@ Establish the documented project identity, bounded CV task, source-feasibility p
 
 ## Current status
 
-**Active — incomplete.**
+**Accepted for Phase Two planning only; release reconciliation incomplete.**
 
 - Objectives One through Six are complete as documentation and repository-control baselines.
-- Objective Seven is active and incomplete.
-- P1O7-T08 is reserved for the Phase One decision memo.
-- No final Phase One acceptance or release decision exists.
-- Phase Two planning and all data touch remain separately gated.
+- P1O7-T08 / PR #294 records `APPROVE — PHASE TWO PLANNING ONLY`.
+- Objective Seven remains the acceptance evidence trail; its historical task sequence no longer controls current authority.
+- Full Phase One release/tag reconciliation is incomplete.
+- Phase Two planning is authorized; data touch remains blocked pending resolved before-data evidence.
 
 ## Phase purpose
 
@@ -108,7 +108,7 @@ Phase One must establish:
 
 **Purpose:** Make prompt-assisted work durable, issue-backed, selective in context, verifiable, reviewable, and human-governed.
 
-**Required result:** Canonical task capsule; context-tier rules; dated prompt/build logs; named checks; diff review; task-scoped PRs; optional AI-assisted review distinct from mandatory human review; separate merge authorization; status synchronization and handoff.
+**Required result:** Issue-backed task scope; context routing; dated prompt/build logs; named checks; diff review; task-scoped PRs; documented review evidence; goal-governed merge authority; status synchronization and handoff.
 
 **Status:** Complete as a documented, reviewable repository-control baseline.
 
@@ -122,7 +122,7 @@ Phase One must establish:
 
 **Status:** Active and incomplete.
 
-**Current known constraints:** Data touch remains blocked by incomplete before-data evidence. Full Phase One completion remains blocked by unresolved gate evidence. The final decision belongs to P1O7-T08 and subsequent controlled closeout work.
+**Current known constraints:** Data touch remains blocked by incomplete before-data evidence and unresolved source terms/licensing. P1O7-T08 has already accepted the baseline for Phase Two planning only; release/tag reconciliation remains incomplete.
 
 **Gate:** A reviewed human decision determines whether Phase One is accepted, accepted with limitations, remediated, or stopped. This document does not make that decision.
 
@@ -145,8 +145,8 @@ Phase One has no predecessor phase, but its tasks depend on:
 
 - current merged repository truth;
 - the user-authorized portfolio-first scope;
-- human review distinct from agent authorship;
-- issue-backed changes and explicit merge authorization.
+- issue-backed, branch-scoped changes;
+- the controlling execution goal and its stop conditions.
 
 ## Non-goals
 
@@ -163,11 +163,11 @@ Phase One does not:
 
 - BurnLens is experimental and portfolio-first.
 - Official sources govern.
-- The first CV task remains bounded binary semantic segmentation unless a human-approved objective change occurs.
+- The first CV task remains bounded binary semantic segmentation unless the owner approves an objective change.
 - Unknown and excluded pixels must not be silently treated as background.
 - Model evidence must be compared with a relevant non-model baseline.
 - Every later public claim must trace to versioned evidence.
-- Human review and separate merge authorization remain mandatory.
+- Checkpoints remain issue-backed, branch-scoped, versioned, and verified; Codex may merge after quality gates pass under the controlling goal.
 
 ## Known risks and assumptions
 
@@ -178,36 +178,34 @@ Phase One does not:
 
 ## Authority delegated to Codex
 
-Within an authorized Phase One task, Codex may:
+Within the controlling goal and an issue-backed Phase One checkpoint, Codex may:
 
 - inspect merged controls and repository metadata available through approved tools;
 - draft audits, matrices, decision support, remediation, and status records;
 - identify inconsistencies and propose bounded fixes;
 - maintain roadmap and phase-document consistency when explicitly in scope;
-- recommend acceptance, limitation, remediation, or stop outcomes based on evidence.
+- recommend and execute accepted checkpoint outcomes based on evidence;
+- version, commit, push, open and merge PRs, create tags, and verify repository baselines when quality gates pass.
 
-Codex may not:
+Codex must not:
 
-- make the human Phase One acceptance decision on its own;
-- treat its self-audit as human approval;
-- activate Phase Two or touch data;
-- create tags, Releases, settings changes, or public claims without separate authorization;
-- merge its own work without the required human review and merge authorization.
+- change the project promise, target user, CV task, phase outcomes, or use boundaries without owner approval;
+- touch data before terms/licensing and the before-data evidence are resolved;
+- change access, ownership, or public-sharing status, spend money, add paid services or secrets, or take irreversible action without owner approval;
+- imply official, operational, emergency-ready, field-validated, or endorsed status;
+- ship anything it cannot verify.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- changing the project promise, target user, CV task, fallback target, or use boundaries;
-- weakening official-source precedence or traceability;
-- treating incomplete evidence as passed;
-- marking Phase One accepted or complete;
-- authorizing Phase Two planning or data touch;
-- changing release class, tag posture, access, ownership, or public status.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Routine phase planning, issue creation, implementation, versioning, commits, PRs, merges, tags, deployments, and verified checkpoint selection do not require separate approval.
+
+Owner approval is required before changing the project promise, target user, CV task, phase outcomes, or use boundaries; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, or public-sharing status; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable.
 
 ## Expected handoff to Phase Two
 
 The Phase One handoff must identify:
 
-- the reviewed acceptance outcome;
+- the reviewed `APPROVE — PHASE TWO PLANNING ONLY` outcome;
 - all carried limitations and unresolved findings;
 - the exact first Phase Two planning task allowed;
 - whether the before-data gate is satisfied;

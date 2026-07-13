@@ -1,22 +1,22 @@
-# BurnLens Deschutes — Working Build Roadmap
+# BurnLens Deschutes — Build Roadmap
 
 ## Purpose
 
 This document is the durable, repository-level roadmap for the six-phase BurnLens Deschutes build.
 
-It gives Codex and human reviewers enough whole-project context to choose the next bounded checkpoint without turning the project into a rigid feature checklist. It records the current best sequence, the outcome each phase must prove, the dependency gates between phases, and the decisions that remain reserved for the human owner.
+It gives Codex and reviewers enough whole-project context to choose the next bounded checkpoint without turning the project into a rigid feature checklist. It records the current best sequence, the outcome each phase must prove, the dependency gates between phases, and the owner's explicit stop conditions.
 
 ## Roadmap authority
 
-This roadmap is a **versioned planning hypothesis**, not an automatic authorization to perform every listed activity.
+This roadmap is a **versioned planning hypothesis**, not a rigid checklist. `docs/governance/BURNLENS_EXECUTION_GOAL.md` controls execution authority.
 
 - The roadmap defines intended phase outcomes and dependencies.
 - The phase objective documents expand those outcomes without changing their meaning.
-- GitHub issues, task capsules, branches, allowed-file contracts, and pull requests authorize actual work.
-- Current merged repository controls override stale roadmap language.
-- A later phase does not become active merely because its objective document exists.
+- GitHub issues, branches, allowed-file contracts, and pull requests bound actual work.
+- The execution goal overrides stale roadmap, issue, handoff, prompt, and repository-control language.
+- A later phase becomes active when its predecessor evidence and issue-backed gate are satisfied; routine activation does not require separate owner approval.
 
-Codex may reorder, split, merge, defer, or replace tasks and checkpoints inside an authorized phase when verified evidence supports a better route. Codex must document the rationale and preserve the phase objective, project promise, use boundaries, source precedence, and traceability requirements.
+Codex may reorder, split, merge, defer, or replace tasks and checkpoints when verified evidence supports a better route. Codex must document the rationale and preserve the phase objective, project promise, use boundaries, source precedence, and traceability requirements.
 
 A material change to a phase objective requires explicit human approval and a coordinated update to this roadmap and the affected phase document.
 
@@ -52,7 +52,7 @@ Official and authoritative sources always govern over BurnLens-derived outputs.
 
 No public map, screenshot, summary, report, model output, application view, run artifact, website card, or portfolio claim is portfolio-ready unless it traces to the applicable repository commit, app or objective baseline version, AOI version, source records, dataset version, label schema version, baseline or model version, immutable run ID, processing timestamp, warning flags, limitations, and source-precedence note.
 
-Traceability does not by itself authorize publication. Claims review, release QA, licensing, human review, and explicit release authorization still apply.
+Traceability does not by itself make publication responsible. Claims review, release QA, resolved licensing, actual-output inspection, and production verification still apply.
 
 ## Status vocabulary
 
@@ -60,7 +60,8 @@ Traceability does not by itself authorize publication. Claims review, release QA
 |---|---|
 | `active — incomplete` | Authorized work exists, but the phase gate has not passed. |
 | `proposed — blocked` | The phase objective is documented, but predecessor or authorization gates prevent execution. |
-| `ready for authorization` | Predecessor evidence is accepted, but issue-backed activation is still required. |
+| `planning authorized — data blocked` | Planning may proceed, but data touch is blocked by unresolved before-data evidence. |
+| `accepted for planning only` | The phase supports successor planning but does not claim an implementation or release baseline. |
 | `accepted with caveats` | The phase gate passed with documented limitations that must carry forward. |
 | `accepted` | The phase gate passed and the successor may be considered for authorization. |
 | `remediate` | A correctable blocker prevents phase acceptance. |
@@ -70,12 +71,12 @@ Traceability does not by itself authorize publication. Claims review, release QA
 
 | Phase | Name | Canonical objective summary | Current status | Primary dependency | Detailed objectives |
 |---|---|---|---|---|---|
-| 1 | Scope, technical contracts, repository controls, and acceptance gate | Establish the documented project identity, bounded CV task, source-feasibility posture, repository operating system, version/provenance/claims controls, and prompt-built workflow, then make an evidence-backed Phase One acceptance decision before implementation begins. | **active — incomplete** | P1O7-T08 decision and remaining Objective Seven closeout work; no final Phase One acceptance exists. | [Phase One objectives](../phases/phase-01/PHASE_01_OBJECTIVES.md) |
-| 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **proposed — blocked** | Phase One acceptance plus the task-specific before-data gate. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
+| 1 | Scope, technical contracts, repository controls, and acceptance gate | Establish the documented project identity, bounded CV task, source-feasibility posture, repository operating system, version/provenance/claims controls, and prompt-built workflow, then make an evidence-backed Phase One acceptance decision before implementation begins. | **accepted for planning only; release reconciliation incomplete** | P1O7-T08 / PR #294 records `APPROVE — PHASE TWO PLANNING ONLY`; #290 / PR #291 reconciles the execution goal and roadmap. | [Phase One objectives](../phases/phase-01/PHASE_01_OBJECTIVES.md) |
+| 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **planning authorized — data blocked** | Resolve primary-source terms/licensing and complete the task-specific before-data gate before first data touch. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **proposed — blocked** | Accepted Phase Two dataset package, locked split, baseline evidence, and target decision. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **proposed — blocked** | Accepted Phase Three model package or approved Phase Two baseline-only path. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
 | 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **proposed — blocked** | Accepted Phase Four integrated run package and interface candidate. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
-| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repositories, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **proposed — blocked** | Accepted Phase Five release candidate, approved public claims, resolved licensing, and explicit release authorization. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
+| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **proposed — blocked** | Accepted Phase Five release candidate, verified public claims, resolved licensing, and a repository-owned release surface. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
 
 ## Phase One — scope and control baseline
 
@@ -83,7 +84,7 @@ Traceability does not by itself authorize publication. Claims review, release QA
 
 **What this phase must prove:** BurnLens can enter implementation with a coherent promise, bounded task, traceable operating rules, safe claims, and an explicit gate rather than relying on conversation context or informal assumptions.
 
-**Current status:** Objectives One through Six are complete as documentation/control baselines. Objective Seven remains active and incomplete. The Phase One decision has not been made. Data touch remains blocked.
+**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. Release/tag reconciliation is incomplete, and data touch remains blocked pending resolved Phase Two before-data evidence.
 
 ## Phase Two — data foundation
 
@@ -119,7 +120,7 @@ Traceability does not by itself authorize publication. Claims review, release QA
 
 ## Phase Six — publication and closeout
 
-**Objective:** Publish one coherent, traceable portfolio release whose demo, case study, repositories, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations.
+**Objective:** Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations.
 
 **What this phase must prove:** A technical reviewer can understand, inspect, reproduce, evaluate, cite, and responsibly interpret BurnLens without relying on private project context or unsupported claims.
 
@@ -128,38 +129,39 @@ Traceability does not by itself authorize publication. Claims review, release QA
 ## Dependency and gate chain
 
 ```text
-Phase One accepted
-→ Phase Two authorized and data-ready
+Phase One accepted for Phase Two planning
+→ source/licensing and before-data gate resolved
+→ Phase Two data-ready
 → Phase Three model or baseline decision accepted
 → Phase Four integrated run accepted
 → Phase Five release candidate accepted
-→ Phase Six publication explicitly authorized
+→ Phase Six publication verified
 ```
 
 A predecessor gate may approve a narrower fallback path. The roadmap does not require a model-centered release when the evidence supports a stronger baseline-first portfolio story.
 
 ## Codex execution authority
 
-Within an active, issue-authorized phase, Codex may:
+Within the controlling goal and an issue-backed checkpoint, Codex may:
 
 - inspect current repository and rendered outputs;
 - choose the highest-leverage bounded weakness;
 - propose and decompose issues and checkpoints;
 - reorder task sequence when dependencies allow;
-- select among already approved implementation options;
+- select bounded implementation options;
 - stop a run or phase when evidence fails a gate;
 - recommend remediation, fallback, or scope reduction;
-- maintain roadmap status, changelog, prompt/build logs, devlog, versions, and handoffs when the task contract permits;
-- commit, push, open pull requests, deploy previews, and verify authorized checkpoints when repository controls and quality gates permit.
+- maintain roadmap status, changelog, prompt/build logs, devlog, versions, and handoffs;
+- create issues and branches; version, commit, push, open and merge pull requests; deploy; roll back; and verify checkpoints after quality gates pass.
 
 Codex must not silently:
 
 - change the project promise, target audience, core CV task, phase objective, use boundaries, source precedence, or traceability standard;
-- activate a successor phase before its predecessor gate and task authorization;
 - touch data before the before-data gate is satisfied;
 - change a locked test split, canonical run, model threshold, public metric, or analytical output after its controlling phase freezes it;
-- spend money, add paid services or secrets, alter ownership or access, publish a tag or GitHub Release, or take an irreversible action without explicit approval;
-- merge its own work without the required human review and separate merge authorization;
+- proceed with unresolved source licensing or terms;
+- spend money, add paid services or secrets, alter ownership, access, or public-sharing status, or take an irreversible action without explicit approval;
+- imply official, operational, emergency-ready, field-validated, or endorsed status;
 - publish anything it cannot verify.
 
 ## Roadmap revision protocol
@@ -172,23 +174,23 @@ A roadmap revision must identify:
 4. the artifacts and claims affected;
 5. the proposed replacement route;
 6. the boundaries preserved;
-7. the approval required.
+7. whether an owner stop condition is triggered.
 
-Task-level and checkpoint-level changes may be made through ordinary issue-backed work. Objective-level changes require explicit human approval and updates to both this roadmap and the affected phase objective document in the same pull request.
+Task-level and checkpoint-level changes may be made through ordinary issue-backed work. Objective-level changes require explicit owner approval and updates to both this roadmap and the affected phase objective document in the same pull request.
 
 ## Current next checkpoint
 
-The current repository truth places Phase One / Objective Seven at the acceptance-gate decision stage. P1O7-T08 is reserved for the Phase One decision memo. This roadmap does not make that decision and does not authorize Phase Two.
+The current repository truth is `APPROVE — PHASE TWO PLANNING ONLY`. Issue #290 / PR #291 reconciles the governing goal and roadmap. After it ships, the next checkpoint is a bounded Phase Two source/licensing/access decision and before-data evidence update. It must stop before data touch if terms remain unresolved and should unblock the smallest defensible executable vertical slice.
 
 ## Required reading order for long-running Codex work
 
-1. `AGENTS.md`
-2. `README.md`
-3. `docs/workflows/PROMPT_TO_REPO_SOP.md`
+1. `docs/governance/BURNLENS_EXECUTION_GOAL.md`
+2. `AGENTS.md`
+3. `docs/status/PHASE_STATUS.md`
 4. this roadmap
 5. the active phase objective document
-6. current phase tracker, handoff, gate, and issue contract
-7. only the workstream controls relevant to the next bounded checkpoint
+6. the active issue and branch contract
+7. only the workflow and archival evidence relevant to the next bounded checkpoint
 
 ## Consistency rule
 

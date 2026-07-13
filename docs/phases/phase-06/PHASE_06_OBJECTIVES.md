@@ -12,13 +12,13 @@ It defines the final publication and closeout outcome. It does not authorize pro
 
 ## Canonical objective summary
 
-Publish one coherent, traceable portfolio release whose demo, case study, repositories, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations.
+Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations.
 
 ## Current status
 
 **Proposed — blocked.**
 
-Phase Six depends on an accepted Phase Five release candidate, approved public claims, resolved licensing for every published artifact, exact cross-repository version linkage, and explicit release authorization.
+Phase Six depends on an accepted Phase Five release candidate, verified public claims, resolved licensing for every published artifact, exact in-repository version linkage, and a reversible verified release path.
 
 ## Phase purpose
 
@@ -79,7 +79,7 @@ Phase Six must produce:
 
 ### Objective Three — Finalize public documentation and repository experience
 
-**Purpose:** Make the analytical and website repositories understandable, reproducible, licensed, citable, and navigable without prior project context.
+**Purpose:** Make this repository's analytical system, application, and case study understandable, reproducible, licensed, citable, and navigable without prior project context.
 
 **Required result:** Clear repository roles; README and quickstart; architecture, data, labels, model, evaluation, methods, limitations, reproducibility, versioning, security, known issues, citation, licensing, run manifest, and release notes; contribution and maintenance posture.
 
@@ -89,7 +89,7 @@ Phase Six must produce:
 
 **Purpose:** Promote the accepted candidate to the canonical domain and create exact repository release records.
 
-**Required result:** Production site; public evidence sections; metadata; social preview; sitemap and crawler policy; draft-then-publish release sequence; permitted assets and checksums; cross-repo linkage; post-deployment verification and rollback record.
+**Required result:** Repository-owned production site; public evidence sections; metadata; social preview; sitemap and crawler policy; draft-then-publish release sequence; permitted assets and checksums; exact commit/version linkage; post-deployment verification and rollback record.
 
 **Acceptance gate:** Production displays the accepted run and version chain; releases point to exact commits; restricted assets are excluded; previews and stale deployments cannot impersonate the canonical release.
 
@@ -128,7 +128,7 @@ These classes must remain distinguishable enough that interpretation is not mist
 
 Phase Six is complete only when:
 
-- one canonical run is used consistently across the site, repositories, screenshots, case study, deck, and release notes;
+- one canonical run is used consistently across the repository-owned site, screenshots, case study, deck, and release notes;
 - all public versions and commits reconcile;
 - every public artifact has an explicit license/terms and attribution decision;
 - the production deployment passes post-release verification;
@@ -145,7 +145,7 @@ Phase Six is complete only when:
 - approved public claims and warning language;
 - resolved source, code, documentation, asset, model-weight, and derived-artifact licensing;
 - canonical domain and deployment authorization;
-- exact analytical and website commits;
+- exact analytical and application commits from this repository;
 - authorized tag and GitHub Release actions where applicable.
 
 ## Non-goals
@@ -168,7 +168,7 @@ Phase Six does not:
 - Limitations and failure cases are central, not hidden in a footer.
 - A public repository is not assumed open source without an explicit license.
 - A deployment is not called production-ready wildfire infrastructure.
-- Tags and GitHub Releases require separate explicit authorization.
+- Tags and GitHub Releases require issue-backed evidence and verification under the controlling goal.
 
 ## Known risks and assumptions
 
@@ -182,26 +182,21 @@ Phase Six does not:
 
 ## Authority delegated to Codex
 
-After activation and within the frozen release scope, Codex may:
+After the predecessor evidence gate and within the frozen release scope, Codex may:
 
 - draft and refine the case study, documentation, release notes, metadata, presentation, captions, and closeout records;
 - correct broken links, citations, accessibility defects, version inconsistencies, misleading wording, and release-blocking documentation defects;
 - assemble permitted assets and checksums;
-- deploy authorized previews and perform post-deployment verification;
+- deploy repository-owned previews and production checkpoints and perform post-deployment verification;
 - recommend model-centered, caveated, baseline-first, case-study-only, maintenance, archive, or withdrawal outcomes.
 
-Codex must not change analytical evidence, public scope, licensing, access, ownership, or canonical run without approval.
+Codex must not silently change analytical evidence or the canonical run, proceed with unresolved licensing, change access/ownership/public-sharing status without owner approval, or ship an unverified release.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- freezing the public scope and selecting the canonical run;
-- licensing code, documentation, weights, data, or derived artifacts;
-- making repositories or assets public, private, archived, or transferable;
-- promoting production, changing the canonical domain, or changing access/ownership;
-- creating tags, GitHub Releases, immutable releases, DOI/archive records, or public downloads;
-- accepting unresolved licensing, critical defects, or unsupported claims;
-- choosing maintenance, archive, withdrawal, or final closeout status;
-- spending money or adding paid services.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Codex may freeze the evidence-backed public scope, select the canonical verified run, create versions/tags/releases, deploy from this repository, and choose the next reversible release or maintenance checkpoint without routine approval.
+
+Owner approval is required before changing the core promise, target user, CV task, phase outcomes, or use boundaries; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, public-sharing status, or the canonical domain; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable.
 
 ## Final outcome options
 

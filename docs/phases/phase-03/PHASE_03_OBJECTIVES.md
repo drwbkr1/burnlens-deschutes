@@ -162,7 +162,7 @@ Phase Three does not:
 
 ## Authority delegated to Codex
 
-After activation and within the approved experiment contract, Codex may:
+After the Phase Two evidence gate and within an issue-backed experiment contract, Codex may:
 
 - implement the reference training system;
 - select among approved loss, augmentation, regularization, and capacity options;
@@ -172,17 +172,13 @@ After activation and within the approved experiment contract, Codex may:
 - stop model work when no candidate adds credible value;
 - package the selected model and evidence.
 
-Codex must not expand the architecture search, unlock the test set, alter labels, reinterpret metrics, or publish performance claims outside the evaluated evidence.
+Codex must not expand the architecture search without evidence, unlock the test set, alter labels after the split is frozen, reinterpret metrics, or publish performance claims outside evaluated evidence.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- activating model training;
-- changing target class, model family, dataset, label schema, or split;
-- materially expanding experiment count, compute cost, or paid services;
-- changing the predeclared model-value threshold after seeing test results;
-- exposing probability as confidence without calibration evidence;
-- accepting a model that fails the approved baseline or safety gate;
-- publishing weights or restricted assets.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Model training and bounded experiment selection do not require routine approval once Phase Two's gate passes and the issue contract records the frozen evidence.
+
+Owner approval is required before changing the core CV task or phase outcome; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, or public-sharing status; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable. Restricted assets may not be published while terms remain unresolved.
 
 ## Expected handoff to Phase Four
 

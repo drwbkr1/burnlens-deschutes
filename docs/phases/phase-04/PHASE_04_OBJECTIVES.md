@@ -32,7 +32,8 @@ The phase must answer:
 
 ```text
 burnlens-deschutes
-    approved source package
+    analytical pipeline
+    accepted source package
     → preprocessing
     → model or baseline inference
     → georeferenced outputs
@@ -40,7 +41,7 @@ burnlens-deschutes
     → summary generation
     → immutable run package
 
-burnlens-site
+    repository-owned application
     accepted static run package
     → web-ready raster/vector assets
     → interactive map
@@ -48,7 +49,7 @@ burnlens-site
     → methods, metadata, and warnings
 ```
 
-Cross-repository integration requires explicit task scope and exact commit/version linkage. The site presents accepted static artifacts; it must not silently perform or alter analytical processing.
+The analytical system, application, website, and case study are owned by this repository. The interface presents accepted versioned artifacts; it must not silently perform or alter analytical processing.
 
 ## Required outcomes
 
@@ -71,9 +72,9 @@ Phase Four must produce:
 
 ### Objective One — Authorize the integration architecture
 
-**Purpose:** Lock the accepted analytical package, repository responsibilities, input/output contracts, run schema, website consumption contract, failure states, and successor gate.
+**Purpose:** Lock the accepted analytical package, in-repository component responsibilities, input/output contracts, run schema, application consumption contract, failure states, and successor gate.
 
-**Acceptance gate:** Work can proceed without ambiguity about which model or baseline is authorized, which repo owns each artifact, how runs are identified, and what Phase Four cannot change.
+**Acceptance gate:** Work can proceed without ambiguity about which model or baseline is accepted, which in-repository component owns each artifact, how runs are identified, and what Phase Four cannot change.
 
 ### Objective Two — Build inference and run orchestration
 
@@ -148,7 +149,7 @@ Phase Four is complete only when:
 - exact inference input/output and exclusion contracts;
 - approved context-layer records and terms;
 - current geospatial, versioning, run-package, claims, and source-precedence controls;
-- cross-repository access and version-linking authorization for site integration.
+- repository-owned application structure and exact commit/version linkage.
 
 ## Non-goals
 
@@ -180,11 +181,11 @@ Phase Four does not:
 - Large assets may degrade browser performance and tempt uncontrolled simplification.
 - Map symbology can imply false authority or confidence.
 - Missing assets can appear as empty or safe conditions unless failure states are explicit.
-- Cross-repo deployments can drift from the analytical commit unless version linkage is enforced.
+- Deployments can drift from the analytical commit unless version linkage is enforced.
 
 ## Authority delegated to Codex
 
-After activation and within approved contracts, Codex may:
+After the predecessor evidence gate and within issue-backed contracts, Codex may:
 
 - implement deterministic inference, tiling, stitching, raster, vector, and summary pipelines;
 - choose the simplest approved web artifact format that meets performance needs;
@@ -193,23 +194,20 @@ After activation and within approved contracts, Codex may:
 - create immutable run packages and app candidates;
 - recommend model, caveated, baseline-first, remediation, or stop outcomes.
 
-Codex must not retrain, change the frozen threshold or calibration, add unapproved layers, reinterpret descriptive summaries as decisions, or publish an unverified run.
+Codex must not silently retrain, change the frozen threshold or calibration, add unevaluated layers, reinterpret descriptive summaries as decisions, or publish an unverified run.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- activating cross-repository site integration;
-- changing model/baseline version, AOI, context layer scope, threshold, calibration, or summary logic;
-- adding live services, secrets, paid tiles, paid hosting, or user uploads;
-- exposing new public downloads or restricted source-derived assets;
-- changing source precedence, warning language, or run-state meanings;
-- promoting an app version or deployment beyond preview.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Codex may build, version, deploy, and verify the repository-owned application and may revise bounded integration details through issue-backed evidence.
+
+Owner approval is required before changing the core task, phase outcome, or use boundaries; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, or public-sharing status; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable. Restricted source-derived assets must not be exposed while terms remain unresolved.
 
 ## Expected handoff to Phase Five
 
 The handoff must provide:
 
 - accepted run ID and status;
-- analytical and site commits;
+- analytical and application commits;
 - app candidate, model/baseline, dataset, label, and AOI versions;
 - complete manifest and checksums;
 - raster/vector validation results;

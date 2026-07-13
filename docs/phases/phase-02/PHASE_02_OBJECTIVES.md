@@ -16,9 +16,9 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Proposed — blocked.**
+**Planning authorized — data blocked.**
 
-Phase Two may be considered only after the Phase One acceptance decision and task-specific before-data gate. No final AOI, retained imagery, labels, dataset, baseline output, or model input is authorized or implied by this document.
+P1O7-T08 / PR #294 authorizes Phase Two planning only. Data touch remains blocked until an issue-backed before-data gate resolves current primary-source terms/licensing, access, AOI rationale, provenance, and no-go conditions. No final AOI, retained imagery, labels, dataset, baseline output, or model input exists or is implied by this document.
 
 ## Phase purpose
 
@@ -162,7 +162,7 @@ Phase Two does not:
 
 ## Authority delegated to Codex
 
-After Phase Two activation and within issue-backed tasks, Codex may:
+Within issue-backed Phase Two checkpoints, Codex may:
 
 - run bounded source access and format/CRS tests;
 - propose AOI candidates and score them against approved criteria;
@@ -171,18 +171,13 @@ After Phase Two activation and within issue-backed tasks, Codex may:
 - exclude ambiguous or degraded evidence according to the label contract;
 - recommend active-fire, fallback, baseline-only, remediation, or stop outcomes.
 
-Codex must not silently change the target, approve data terms, unlock the test set, or treat weak labels as ground truth.
+Codex must not silently change the target, proceed with unresolved data terms, unlock the test set, or treat weak labels as ground truth.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- activating Phase Two or authorizing first data touch;
-- selecting the final AOI;
-- accepting source terms that impose material restrictions or cost;
-- changing the primary target or adopting the burn-scar fallback;
-- altering the positive/background/unknown contract;
-- changing the split after evaluation evidence exists;
-- expanding geography, source scope, storage cost, or paid services;
-- publishing or redistributing source or derived assets.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Codex may plan Phase Two, select a bounded AOI under the established Deschutes County rationale, and begin data work once source terms/licensing and the before-data gate are resolved and recorded.
+
+Owner approval is required before changing the CV task, primary target, controlled-fallback rule, phase outcome, or use boundaries; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, or public-sharing status; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable.
 
 ## Expected handoff to Phase Three
 

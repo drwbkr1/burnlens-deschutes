@@ -128,7 +128,7 @@ Phase Five must produce:
 Phase Five is complete only when:
 
 - the release candidate is traceable to exact commits, run, model/baseline, dataset, label, AOI, source dates, configs, and checksums;
-- mandatory checks pass or documented caveats are accepted by the human owner;
+- mandatory checks pass or documented non-stop-condition caveats are accepted and recorded under the execution goal;
 - a clean environment reconstructs the candidate within declared exact, tolerance, or semantic rules;
 - failure injection proves missing/corrupt/mismatched assets remain visible;
 - accessibility and browser evidence covers the declared support matrix;
@@ -178,7 +178,7 @@ Phase Five does not:
 
 ## Authority delegated to Codex
 
-After activation and within approved hardening scope, Codex may:
+After the predecessor evidence gate and within issue-backed hardening scope, Codex may:
 
 - add tests, fixtures, validation, error handling, documentation, and non-analytical performance fixes;
 - classify defects using the approved severity model;
@@ -187,17 +187,13 @@ After activation and within approved hardening scope, Codex may:
 - prepare and deploy an authorized preview candidate;
 - recommend accept, caveated, baseline-first, remediate, rollback, or stop outcomes.
 
-Codex must not change frozen analytical evidence, conceal failing tests, silently regenerate the canonical run, or promote production without approval.
+Codex must not change frozen analytical evidence without a new traceable run, conceal failing tests, silently regenerate the canonical run, or promote production without verification.
 
-## Changes requiring explicit approval
+## Changes requiring owner approval
 
-- modifying analytical results or frozen versions;
-- changing required checks, severity definitions, support matrix, or performance budgets after results are known;
-- configuring branch protection, secrets, scanners, deployment access, ownership, or permissions;
-- adding paid infrastructure or services;
-- accepting critical or high defects;
-- promoting a release candidate or changing the rollback target;
-- creating tags or GitHub Releases.
+The stop conditions in `docs/governance/BURNLENS_EXECUTION_GOAL.md` control. Codex may version, tag, harden, roll back, promote, and verify release candidates when the evidence gates pass and actions are reversible.
+
+Owner approval is required before changing the core task, phase outcome, or use boundaries; crossing a no-go boundary; proceeding with unresolved licensing/terms; spending money or adding a paid service/secret; changing access, ownership, or public-sharing status; taking an irreversible action; implying official/operational/emergency-ready/field-validated/endorsed status; or shipping something unverifiable. Critical or high defects cannot be concealed or silently accepted.
 
 ## Expected handoff to Phase Six
 
