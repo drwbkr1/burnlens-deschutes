@@ -155,7 +155,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T01 | `records/prompt-build-log/2026-07-12-p1o7-t01.md` | merged via PR #248 | Objective Seven tracker and artifact contracts; issue #247 closed and status synchronized through #249. |
 | P1O7-SYNC-01 | `records/prompt-build-log/2026-07-12-p1o7-sync-01.md` | final synchronization record | Issue #249; PR and merge evidence are retained in the issue, PR, and dated log. |
 | P1O7-T02 | `records/prompt-build-log/2026-07-12-p1o7-t02.md` | merged via PR #252 | Phase One gate evidence matrix; issue #251 closed and status synchronized through #253. |
-| P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253; PR and merge evidence are retained in the issue, PR, and dated log. |
+| P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253 and PR #254 contain the source sync evidence; issue #255 authorizes final record correction and its GitHub history retains completion evidence. |
 
 ## Acceptance and remediation triggers
 
