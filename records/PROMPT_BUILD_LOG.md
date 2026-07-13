@@ -18,66 +18,23 @@ Do not create a second protocol, index, detailed template, transcript store, or 
 
 ## Governing routes
 
-Load Tier 0 from `docs/workflows/PROMPT_TO_REPO_SOP.md`, then record only the relevant Tier 1 artifacts. Common routes include:
-
-- `AGENTS.md`;
-- `CONTRIBUTING.md`;
-- `.github/ISSUE_TEMPLATE/task.yml`;
-- `.github/PULL_REQUEST_TEMPLATE.md`;
-- `templates/CODEX_TASK_PACKET.md`;
-- `templates/CODEX_TASK_TEMPLATE.md`;
-- `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md`;
-- `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`;
-- `docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md`;
-- applicable data, provenance, claim, version, release, or workstream controls selected through the SOP.
+Load Tier 0 from `docs/workflows/PROMPT_TO_REPO_SOP.md`, then record only the relevant Tier 1 artifacts. Common routes include `AGENTS.md`, `CONTRIBUTING.md`, issue/PR templates, the canonical task packet, the branch/PR workflow, the Objective Six protocol and review checklist, and applicable data/provenance/claim/version/release controls.
 
 Historical controls may remain baselines, but current merged controls govern when requirements differ.
 
 ## Required entry content
 
-Use `templates/PROMPT_LOG_ENTRY.md`. Each material prompt-assisted entry must record:
-
-| Group | Required record |
-|---|---|
-| Identity | Date, task, issue, parent, branch, base, dependencies, PR, reviewed/merge SHA, artifact class, state |
-| Artifacts and prompt | Primary/supporting artifacts and durable issue-backed task summary |
-| Context | Tier 0 acknowledgement, exact Tier 1 selection, justified Tier 2 use |
-| File scope | Allowed files, actual files, approved expansion, concurrency caveats |
-| Research and decisions | Sources, supported facts, adopted decisions, dates, status, or no-research rationale |
-| Verification | Named checks, exact methods, actual results, evidence, limitations, and task-specific non-applicability |
-| Boundaries and claims | Source precedence, sensitive-material status, safe/unsupported claims, data/model/public-output/settings/tag/Release status |
-| Review | Author self-audit, executable checks, optional AI review, mandatory human outcome, separate merge authorization |
-| Revisions | Findings, changes, follow-up checks, unresolved items |
-| Linkage and sync | PR, task-only close keyword, parent protection, issue closure, parent update, README/tracker/index/log inspection |
-| Handoff | Next action, required context, remaining caveats, and `Do not carry forward` |
+Use `templates/PROMPT_LOG_ENTRY.md`. Each material prompt-assisted entry must record identity, authorization, artifacts, context, file scope, research, decisions, named verification and actual results, boundaries and claims, review separation, revisions, PR/issue/sync linkage, handoff, and `Do not carry forward`.
 
 ## Research and verification rules
 
 When current external behavior matters, use official or primary sources and record the source, fact supported, affected decision, adopted wording, date, and status. Do not carry platform claims forward solely from an old log.
 
-For every applicable check record:
-
-```text
-check name
-exact command or manual method
-actual result: passed, failed, partial, blocked, or not applicable
-evidence or output
-limitation or unresolved finding
-```
-
 `Not applicable` requires a task-specific reason. Do not write `tests passed` unless named tests or commands ran. Written templates do not create CI, required checks, branch protection, rulesets, required approvals, CODEOWNERS, or other enforcement.
 
 ## Review separation
 
-Keep these stages distinct:
-
-1. author self-audit;
-2. automated or executable checks;
-3. AI-assisted review, when used;
-4. human review and outcome;
-5. merge authorization.
-
-Author assertions and AI findings are evidence only. Neither satisfies the human gate or authorizes merge or scope expansion. Solo-maintainer policy evidence may be an explicit PR comment or completed checklist; it is not formal GitHub author self-approval.
+Keep author self-audit, executable checks, AI-assisted review, human review, and merge authorization distinct. Author assertions and AI findings are evidence only. Neither satisfies the human gate or authorizes merge or scope expansion.
 
 ## Sensitive-material and boundary rules
 
@@ -94,7 +51,7 @@ Root router: PROMPT_LOG.md
 Dated entries: records/prompt-build-log/YYYY-MM-DD-task-id.md
 ```
 
-Update entries when the issue/capsule is approved, branch is created, research completes, files change, checks complete, a PR opens, review changes the work, the human outcome is recorded, merge occurs, and post-merge status is inspected.
+Update entries when authorization, branch, research, files, checks, PR, review, merge, or post-merge truth changes.
 
 ## Entry index
 
@@ -155,7 +112,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T01 | `records/prompt-build-log/2026-07-12-p1o7-t01.md` | merged via PR #248 | Objective Seven tracker and artifact contracts; issue #247 closed and status synchronized through #249. |
 | P1O7-SYNC-01 | `records/prompt-build-log/2026-07-12-p1o7-sync-01.md` | final synchronization record | Issue #249; PR and merge evidence are retained in the issue, PR, and dated log. |
 | P1O7-T02 | `records/prompt-build-log/2026-07-12-p1o7-t02.md` | merged via PR #252 | Phase One gate evidence matrix; issue #251 closed and status synchronized through #253. |
-| P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253 and PR #254 contain the source sync evidence; issue #255 authorizes final record correction and its GitHub history retains completion evidence. |
+| P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253 and PR #254 contain source sync evidence; issue #255 retains final record correction evidence. |
 | P1O7-REM-03A | `records/prompt-build-log/2026-07-12-p1o7-rem-03a.md` | merged via PR #260 | Issue #259 closed; status-routing remediation merged at `d1cb6cffa01402627c9e4b208139dc1a87c97552`. |
 | P1O7-SYNC-03A | `records/prompt-build-log/2026-07-12-p1o7-sync-03a.md` | final synchronization record | Issue #261; PR and merge evidence are retained in the issue, PR, and dated log. |
 | P1O7-T03 | `records/prompt-build-log/2026-07-12-p1o7-t03.md` | merged via PR #263 | Corrected repository-only audit; issue #257 closed; G01, G02, and G11 reviewed `meets criterion` / `pass`. |
@@ -164,28 +121,24 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-SYNC-04 | `records/prompt-build-log/2026-07-12-p1o7-sync-04.md` | final synchronization record | Issue #271; PR #272 and final merge evidence are retained in the issue, PR, and dated log. |
 | P1O7-T05 | `records/prompt-build-log/2026-07-12-p1o7-t05.md` | merged via PR #274 | Issue #273 closed; G05/G06-B/G08/G09 reviewed `meets with limitation`, G06-A/G07 reviewed `meets criterion`, and F06-C/G10/F10-R remain `evidence incomplete`. |
 | P1O7-SYNC-05 | `records/prompt-build-log/2026-07-12-p1o7-sync-05.md` | final synchronization record | Issue #275; PR and merge evidence are retained in the issue, PR, and dated log. |
-| P1O7-T06 | `records/prompt-build-log/2026-07-12-p1o7-t06.md` | merged via PR #278 | Issue #277 closed; conditional candidate approved; legacy dispositions approved; no tag or GitHub Release created. |
-| P1O7-REM-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | merged via PR #280 | Issue #279 closed; T06-F01 accepted with documented limitation; inventory remains unresolved and mandatory before T10 and parent closure. |
-| P1O7-SYNC-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | final synchronization record | Issue #281; final PR and merge evidence remain in issue and PR history. |
-| P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | merged via PR #284 | Issue #283 closed; exit checklist reviewed and merged at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`; G10 and F04-A blockers preserved. |
-| P1O7-SYNC-07 | `records/prompt-build-log/2026-07-13-p1o7-sync-07.md` | final synchronization record | Issue #285; README, tracker, checklist lifecycle, and prompt-log truth synchronized after T07 merge. |
+| P1O7-T06 | `records/prompt-build-log/2026-07-12-p1o7-t06.md` | merged via PR #278 | Issue #277 closed; conditional candidate approved; no tag or GitHub Release created. |
+| P1O7-REM-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | merged via PR #280 | Issue #279 closed; inventory limitation accepted for sequencing; complete enumeration remains mandatory. |
+| P1O7-SYNC-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | final synchronization record | Issue #281; final evidence remains in issue and PR history. |
+| P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | merged via PR #284 | Issue #283 closed; exit checklist reviewed and merged; G10 and F04-A preserved. |
+| P1O7-SYNC-07 | `records/prompt-build-log/2026-07-13-p1o7-sync-07.md` | final synchronization record | Issue #285 and finalization #287 synchronized T07 truth. |
+| P1O7-T08 | `records/prompt-build-log/2026-07-13-p1o7-t08.md` | merged via PR #294 | Issue #289 closed; Drew recorded planning-only approval; blockers preserved. |
+| P1O7-SYNC-08 | `records/prompt-build-log/2026-07-13-p1o7-sync-08.md` | final synchronization record | Issue #296 synchronized T08 truth. |
+| P1O7-T09 | `records/prompt-build-log/2026-07-13-p1o7-t09.md` | merged via PR #299 | Issue #298 closed; Drew approved exact head; separate squash authorization; merge `d7ad8f063239a61e9212e6eac562deffa50a7a88`. |
+| P1O7-SYNC-09 | `records/prompt-build-log/2026-07-13-p1o7-sync-09.md` | merged via PR #301 | Issue #300 closed; lifecycle truth synchronized at `10caebb3d61ff622dc6dfe8809a63886089eba4e`. |
+| P1O7-SYNC-09F | `records/prompt-build-log/2026-07-13-p1o7-sync-09f.md` | merged via PR #303 | Issue #302 closed; exact eligible target finalized as `10caebb3d61ff622dc6dfe8809a63886089eba4e`; merge `49701a42b4dda849cea5976fb580dbd155931195`. |
+| P1O7-SYNC-09F-SYNC | `records/prompt-build-log/2026-07-13-p1o7-sync-09f-sync.md` | final synchronization record | Issue #304; final task-scoped PR and merge evidence remain in GitHub history. No further T09 lifecycle sync expected. |
 
 ## Acceptance and remediation triggers
 
-An entry is reviewable when a reviewer can identify authorization, context, file scope, research, decisions, checks, boundaries, review separation, merge state, sync state, and handoff.
-
-Revise the protocol, template, or an entry if it:
-
-- stores sensitive/private material;
-- omits materially applicable issue, branch/base, file-scope, research, verification, review, or handoff evidence;
-- describes checks without methods and actual results;
-- allows AI or author self-audit to satisfy human approval;
-- represents written policy as configured enforcement;
-- replaces issues, PRs, artifacts, reviews, or releases;
-- introduces unsupported readiness, authority, data/model, or release claims.
+Revise the protocol, template, or an entry if it stores sensitive material; omits materially applicable authorization, scope, verification, review, or handoff evidence; invents checks; substitutes author/AI review for human approval; represents policy as enforcement; replaces repository evidence; or introduces unsupported readiness, authority, data/model, or release claims.
 
 Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 through T06 and REM-06A are reviewed and merged. P1O7-T07 / #283 is reviewed and merged through PR #284; the checklist preserves all original criteria and required distinctions, records full Phase One completion as blocked by G10, and records data touch as blocked by F04-A. P1O7-T08 is next but not started or planned by P1O7-SYNC-07. Complete Project/tag/Release inventories remain `inaccessible/unresolved` where stated. The final Phase One decision remains unmade, Phase Two work has not begun, and no Objective Seven tag or GitHub Release is authorized or created.
+Objective Seven remains active and incomplete under parent #246. T09 closeout, lifecycle synchronization, and exact-target finalization are reviewed and merged. The exact eligible synchronized `main` target is `10caebb3d61ff622dc6dfe8809a63886089eba4e`. G10 still blocks full Phase One completion; F04-A still blocks every data-touch action; F06-C and F10-R remain supporting incomplete facts. The candidate is not a tag, no Objective Seven tag or GitHub Release was authorized or created, and #292 is now the next read-only release-control readiness task.

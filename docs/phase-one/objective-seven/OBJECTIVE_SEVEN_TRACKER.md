@@ -1,352 +1,107 @@
 # Phase One / Objective Seven Tracker
 
-## Status
+## Current status
 
 | Field | Current state |
 |---|---|
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open and protected |
-| Last completed task | P1O7-T07 / #283 — squash-merged through PR #284 at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae` |
-| Current synchronization | P1O7-SYNC-07 / #285 — final T07 lifecycle synchronization record |
-| Next task | P1O7-T08 — Create the Phase One decision memo; not started or planned by this synchronization |
-| Superseded history | PR #258 — closed unmerged; wrong cross-repository scope and findings are not current evidence |
+| Last reviewed and merged task | P1O7-SYNC-09F / #302 — PR #303; merge `49701a42b4dda849cea5976fb580dbd155931195` |
+| T09 source task | P1O7-T09 / #298 — PR #299; reviewed head `e287343c0ccaa3072097b643b4012aa15ed79bd2`; merge `d7ad8f063239a61e9212e6eac562deffa50a7a88` |
+| Lifecycle synchronization | P1O7-SYNC-09 / #300 — PR #301; merge `10caebb3d61ff622dc6dfe8809a63886089eba4e` |
 | Objective state | Active and incomplete |
-| Phase One acceptance | Not evaluated; T07 compiles evidence but T08 owns the decision |
-| Criterion status | G01, G02, G03, G06-A, G07, and G11 have reviewed `meets criterion` results. G04, G05, G06-B, G08, and G09 have reviewed `meets with limitation` results. F04-A, F06-C, G10, and F10-R remain `evidence incomplete`; F04-A blocks data touch and G10 blocks full Phase One completion. |
-| T07 checklist state | Reviewed and merged; all O1–O11 and required G/F distinctions are present; eligible for T08 synthesis, but T08 owns the decision |
-| Release posture | Existing objective-baseline class and conditional candidate `v0.0.7-objective-seven-phase-one-baseline` remain approved as a decision candidate; the candidate is not a tag |
-| T06-F01 | **Accepted with documented limitation** for T07 sequencing; complete tag enumeration remains mandatory before T10/tag creation and parent closure |
-| Tag status | Complete inventory remains `inaccessible/unresolved`; exact candidate refs did not resolve; G10 remains `evidence incomplete` |
-| GitHub Release status | Complete inventory remains `inaccessible/unresolved`; T06 rejects a GitHub Release for the current documentation/control candidate; F10-R remains separate |
-| Phase Two planning / data work | Not authorized by T07; F04-A continues to block data touch |
+| Phase One decision | `APPROVE — PHASE TWO PLANNING ONLY` — Drew, 2026-07-13 |
+| Full Phase One completion | Blocked by G10 |
+| Data touch | Blocked by F04-A |
+| Candidate identifier | `v0.0.7-objective-seven-phase-one-baseline` — candidate only, not a tag |
+| Candidate release class | Conditional documentation/control objective baseline plus repository release note |
+| Exact eligible synchronized `main` target | `10caebb3d61ff622dc6dfe8809a63886089eba4e` |
+| Reproducibility decision | `blocked` for tag/release action pending complete inventory/readiness and exact T10 authorization |
+| Release-QA decision | `blocked` for tag/release action pending complete inventory/readiness and exact T10 authorization |
+| Tag status | Not authorized or created |
+| GitHub Release status | Not authorized, not published, and not recommended |
+| Next release-control task | P1O7-T10-PREP / #292 — complete authenticated tag inventory and readiness only |
+| Parent-close readiness | Not ready; G10, tag verification, final synchronization, summary, and human authorization remain outstanding |
 
-## Purpose
+## Purpose and decision boundary
 
-Objective Seven defines and applies the evidence-based acceptance gate for deciding whether the documented Phase One control baseline is sufficient to enter Phase Two planning and, separately, whether later data-touch work may be considered for authorization.
+Objective Seven separates documentation/planning readiness, Phase Two planning permission, source/AOI intake preparation, data-touch authorization, executed technical readiness, public-claim/release readiness, an identifier candidate from a created tag, and a tag from a GitHub Release.
 
-P1O7-T01 established the tracker, task order, dependencies, and artifact contracts. P1O7-T02 merged the evidence requirements, evidence authority, currency rules, status vocabulary, blocker logic, and decision routing for the original gate statements. T02 did not audit evidence, assign a criterion verdict, remediate earlier work, authorize data touch, choose a release identifier or class, create a tag, or publish a GitHub Release.
+The reviewed human decision authorizes bounded, separately issue-backed planning and control work only. It does not authorize source access, AOI creation, data processing, implementation, public outputs, tags, or GitHub Releases.
 
-P1O7-T03 / #257 was first drafted with an incorrect cross-repository scope. PR #258 was closed unmerged and marked superseded. P1O7-REM-03A / #259 corrected current-status and routing surfaces inside `drwbkr1/burnlens-deschutes` and merged through PR #260. The corrected T03 audit was rebuilt from current `main`, reviewed by Drew, and squash-merged through PR #263. It assigns reviewed statuses only to G01, G02, and G11 within the corrected repository-only scope. T03 does not make the final Phase One decision.
+## Criterion state
 
-P1O7-T04 / #269 completed the documented CV and data-feasibility readiness audit through PR #270. Drew reviewed and approved exact head `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` and separately authorized squash merge. G03 received reviewed `meets criterion` / `pass`; G04 received reviewed `meets with limitation` / `pass with limitation`; F04-A remains `evidence incomplete` and a mandatory blocker for touching data. These results preserve the distinction between planning readiness, source/AOI intake, data touch, labels, baselines, and executed technical evidence. T04 does not authorize Phase Two work or make the final Phase One decision.
+| Original criterion or distinction | Matrix row | Current reviewed state | Effect |
+|---|---|---|---|
+| O1 — project name and thesis locked | G01 | `meets criterion` | No blocker |
+| O2 — use boundaries written | G02 | `meets criterion` | No blocker |
+| O3 — CV task bounded | G03 | `meets criterion` | No blocker for planning |
+| O4 — data feasibility researched | G04 | `meets with limitation` | Non-blocking for planning; source-specific checks remain required |
+| O4 distinction — permission to touch data | F04-A | `evidence incomplete` | Mandatory blocker to all source/data actions |
+| O5 — repository structure exists | G05 | `meets with limitation` | Navigation/status limitation |
+| O6 — issue controls exist | G06-A | `meets criterion` | No blocker |
+| O6 — Project-board specification exists | G06-B | `meets with limitation` | Specification is not live enforcement |
+| O6 distinction — live Project configured | F06-C | `evidence incomplete` | Supporting fact only; existence/absence unresolved |
+| O7 — versioning protocol exists | G07 | `meets criterion` | No blocker |
+| O8 — prompt-built workflow exists | G08 | `meets with limitation` | Stale routing limitation remains |
+| O9 — documentation skeleton exists | G09 | `meets with limitation` | Navigation/historical-status limitation remains |
+| O10 — first release tag exists | G10 | `evidence incomplete` | Mandatory blocker to full Phase One completion and parent closure |
+| O10 distinction — GitHub Release exists | F10-R | `evidence incomplete` | Supporting fact only; Release not required or recommended |
+| O11 — prohibited relationship/validation language absent | G11 | `meets criterion` | No blocker |
 
-## Verified T02 start state
+## Recent task lifecycle
 
-| Item | Verified state |
-|---|---|
-| Repository | `drwbkr1/burnlens-deschutes` |
-| Authorized base | current `main` |
-| Base commit | `34c5b49695faf62f75c6afb5750ba87901ea8425` |
-| Authorized task issue | #251 — open at branch creation |
-| Authorized branch | `p1o7t02b` |
-| Parent issue | #246 — open |
-| T01 dependency | #247 complete through PR #248; status synchronized through #249 / PR #250 |
-| Existing matrix before T02 | None found |
-| Competing T02 branch or PR before branch creation | None found |
-| External research | Not required; no new current GitHub capability claim introduced |
-| Tier 2 | Not used |
-| Separate Objective Five tag issue | #194 — separate and untouched |
+| Task | Result | Current disposition |
+|---|---|---|
+| P1O7-T07 / #283 | Exit checklist | Reviewed/merged through PR #284 and synchronized |
+| P1O7-T08 / #289 | Decision memo | Reviewed/merged through PR #294; planning-only decision recorded |
+| P1O7-T09 / #298 | Closeout, handoff, release note, reproducibility and release-QA reviews | Reviewed/merged through PR #299 |
+| P1O7-SYNC-09 / #300 | T09 lifecycle/status synchronization | Reviewed/merged through PR #301 |
+| P1O7-SYNC-09F / #302 | Exact synchronized target finalization | Reviewed/merged through PR #303 |
+| P1O7-T10-PREP / #292 | Complete tag inventory/readiness | Eligible to begin; cannot create a tag |
+| P1O7-T10 | Conditional tag creation | Deferred and unauthorized; no exact issue exists |
+| P1O7-T11 | Conditional GitHub Release | Deferred, optional, and not recommended |
 
-Issue #251 explicitly revised the planned T02 filename from `PHASE_1_GATE_EVIDENCE_MODEL.md` to:
+## Exact target decision
+
+The exact eligible synchronized `main` target is:
 
 ```text
-docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
+10caebb3d61ff622dc6dfe8809a63886089eba4e
 ```
 
-README was not an allowed T02 file. The task-specific issue and approved capsule controlled the narrower four-file source-task scope.
+This commit contains the reviewed T09 documentation/control package and the merged SYNC-09 lifecycle/status corrections. The target decision does not create a tag, satisfy G10, prove a complete or collision-free inventory, authorize #292 to create a tag, authorize T10, authorize a GitHub Release, or imply technical/operational readiness.
 
-## T01 merge and synchronization record
+## Remaining release gates
 
-| Item | Verified state |
-|---|---|
-| Reviewed branch | `p1o7t01b` |
-| Reviewed head | `8a10f3b9fdbdfc5af9a26ecb2209a14cd9ca4828` |
-| Human outcome | Drew — **Approve** |
-| Merge authorization | Separate squash-merge authorization recorded against the reviewed head |
-| Pull request | #248 |
-| Merge method | Squash |
-| Merge commit | `d6c12fa7bfee2886d98493ee9b8783121cc823d0` |
-| Task issue | #247 — closed |
-| Parent issue | #246 — remains open |
-| Status synchronization | P1O7-SYNC-01 / #249; PR #250 |
+Issue #292 may now perform complete authenticated tag enumeration and readiness review. It cannot create a tag.
 
-## T02 merge and synchronization record
+A future exact P1O7-T10 issue may be considered only if #292 records `READY FOR SEPARATE T10 AUTHORIZATION` and Drew separately authorizes the exact tag spelling, target SHA, creation method, verification, and close behavior.
 
-| Item | Verified state |
-|---|---|
-| Reviewed branch | `p1o7t02b` |
-| Reviewed head | `5f615510afdec474f943ce7bec52786a57f706bb` |
-| Human outcome | Drew — **Approve** |
-| Merge authorization | Separate squash-merge authorization recorded against the reviewed head |
-| Pull request | #252 |
-| Merge method | Squash |
-| Merge commit | `26a799478cd3c8cbddefc1c539d85d0d0d31d5b3` |
-| Task issue | #251 — closed |
-| Parent issue | #246 — remains open |
-| Status synchronization | P1O7-SYNC-02 / #253 and record finalization #255 |
+The reproducibility and release-QA decisions remain `blocked` for tag/release action because complete inventory/readiness evidence and exact T10 authorization are absent.
 
-## Corrected T03 and REM-03A state
-
-| Item | Verified state |
-|---|---|
-| Current repository | `drwbkr1/burnlens-deschutes` only |
-| REM branch base | `103b7078bbe4ca81b4ac4a10437d1aad7c4c6d0c` |
-| Source audit task | P1O7-T03 / #257 — closed after PR #263 merge |
-| Corrected T03 branch | `p1o7t03b` — reset to `main` at `92b530138da5f29e1f1428976fead5dd604b785b` before rebuilding |
-| Corrected T03 primary artifact | `docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` |
-| Corrected T03 scope | 19 current merged files inside `drwbkr1/burnlens-deschutes`; `burnlens-site` and deployed copy excluded by controlling issue correction |
-| Corrected T03 search method | Connector code search returned a known false negative; complete exact-file, case-insensitive review used as the compensating method |
-| Corrected T03 reviewed results | G01 `meets criterion` / `pass`; G02 `meets criterion` / `pass`; G11 `meets criterion` / `pass` |
-| Reviewed T03 head | `ac39943396ba5ea1c4d28fcd1f9084d38a94cc21` |
-| T03 human outcome | Drew — **Approve** |
-| T03 merge authorization | Separate squash-merge authorization recorded against the reviewed head |
-| T03 pull request | #263 |
-| T03 merge method | Squash |
-| T03 merge commit | `3d7e6d5a2de7fcc527803ae06d9b746143084207` |
-| Superseded audit PR | #258 — closed unmerged; wrong-scope findings are not evidence |
-| Completed status remediation | P1O7-REM-03A / #259 — PR #260 squash-merged |
-| Reviewed REM head | `ce2893cfe36e33f418e999c73d52979ae0bb4b0a` |
-| REM human outcome | Drew — **Approve** |
-| REM merge authorization | Separate squash-merge authorization recorded against the reviewed head |
-| REM merge commit | `d1cb6cffa01402627c9e4b208139dc1a87c97552` |
-| REM-03A file scope | `AGENTS.md`; `README.md`; this tracker; canonical prompt-log index; dated REM log |
-| Research | Repository-internal verification only; no external claim introduced |
-| Parent protection | #246 remains open; #257 is closed |
-| Post-T03 synchronization | P1O7-SYNC-03 / #264 synchronizes merged T03 truth |
-
-## P1O7-T04 reviewed and merged state
-
-| Item | Final state |
-|---|---|
-| Task issue | #269 — closed as completed |
-| Branch / base | `p1o7t04b` / `main` |
-| Verified base | `6999974ca7ad5a3119ae4cac2db89f2d97131544` |
-| Primary artifact | `docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md` |
-| Contract revision | Issue #269 replaced the planned `CV_PHASE_TWO_READINESS_AUDIT.md` path and made README read-only for the source task |
-| Research | Repository-internal review; no current provider/API/access claim repeated, so no fresh external research performed |
-| G03 reviewed result | `meets criterion` / `pass`; no blocker |
-| G04 reviewed result | `meets with limitation` / `pass with limitation`; source- and AOI-specific intake evidence remains uninstantiated |
-| F04-A reviewed result | `evidence incomplete`; mandatory blocker for touching data, supporting fact for planning-only evaluation |
-| Reviewed head | `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` |
-| Human outcome | Drew — **Approve** |
-| Merge authorization | Separate squash-merge authorization recorded against the exact reviewed head |
-| Pull request | #270 |
-| Merge method | Squash |
-| Merge commit | `d3f05322eb0bf2c9802bba59bd6c3ad2484288f4` |
-| Phase Two planning | Evidence is coherent enough for later gate synthesis; P1O7-T08 still owns the decision |
-| Data/AOI/labels/baseline/model/run status | Not authorized and not created |
-| Parent protection | #246 remains open |
-
-## P1O7-T05 reviewed and merged state
-
-| Item | Final state |
-|---|---|
-| Task issue | #273 — closed as completed |
-| Branch / base | `p1o7t05b` / `main` |
-| Verified base | `9b9da04ed9771099dfb3e3eeab808635cca58f28` |
-| Primary artifact | `docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md` |
-| Contract revision | Issue #273 replaced the planned `REPOSITORY_CONTROL_STATE_AUDIT.md` path and made README read-only |
-| Research | Exact current-file reads and read-only live GitHub metadata; Project/tag/Release enumeration remained inaccessible |
-| G05 reviewed result | `meets with limitation`; stale active routing requires separate correction |
-| G06-A reviewed result | `meets criterion`; bounded issue and task-only PR evidence exists |
-| G06-B reviewed result | `meets with limitation`; specification is complete but retains a stale historical header |
-| F06-C reviewed result | `evidence incomplete`; live Project state `inaccessible/unresolved` |
-| G07 reviewed result | `meets criterion` |
-| G08 reviewed result | `meets with limitation`; workflow is complete with stale active routing |
-| G09 reviewed result | `meets with limitation`; all core documentation classes exist with navigation/status limitations |
-| G10 reviewed result | `evidence incomplete`; mandatory blocker to Phase One completion |
-| F10-R reviewed result | `evidence incomplete`; supporting fact only |
-| Proposed separate remediation | P1O7-REM-05A for exact active-routing corrections; proposal only, not created |
-| Reviewed head | `e960b73dad99b8f6e7aecd759a3718c8e2b107c4` |
-| Human outcome | Drew — **Approve** |
-| Merge authorization | Separate squash-merge authorization recorded against the exact reviewed head |
-| Pull request | #274 |
-| Merge method | Squash |
-| Merge commit | `43a776f85ca84749d07d95afd71dda062b505e2c` |
-| Parent protection | #246 remains open |
-| Controlled actions | No Project, setting, tag, Release, or Phase Two action authorized or performed |
-
-## P1O7-T06 and REM-06A reviewed and merged state
-
-| Item | Final state |
-|---|---|
-| T06 task issue | #277 — closed as completed |
-| T06 branch / base | `p1o7t06b` / `main` at `6691cb8986df879e4b81b0704fe33ec0b92ca06c` |
-| T06 primary artifact | `docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md` |
-| T06 reviewed head | `7d912920e09a22dff9b90a2104a2112b1a237cc1` |
-| T06 human outcome | Drew — **Approve**; conditional candidate and legacy dispositions approved |
-| T06 merge authorization | Separate squash authorization recorded against exact reviewed head |
-| T06 pull request / merge | #278 / `3f0e158c44e608267cfbba31d21103f99f584123` |
-| Decision state | **Approved with conditions** |
-| Legacy `v0.0.1-project-scope` | Rejected |
-| Historical `v0.0.1-objective-one` | Replaced for current use; no retroactive tag |
-| Objective Five candidate / #194 | Separate Objective Five controlled action; unchanged and untouched |
-| Conditional Phase One candidate | `v0.0.7-objective-seven-phase-one-baseline` using existing objective-baseline class; approved as a decision candidate only |
-| Release class | Conditional objective-baseline tag plus repository release-note/baseline-note document |
-| GitHub Release | Rejected for current documentation/control candidate |
-| Pre-release / latest / assets | N/A because no GitHub Release candidate |
-| Complete tag inventory | `inaccessible/unresolved`; exact candidate-ref failures are not an empty-inventory result |
-| Complete Release inventory | `inaccessible/unresolved`; F10-R remains supporting evidence only |
-| REM-06A task issue | #279 — closed as completed |
-| REM-06A branch / base | `p1o7rem06ab` / `main` at `3f0e158c44e608267cfbba31d21103f99f584123` |
-| REM-06A reviewed head | `d9f4567e59893b61956d131a198bd2021327b771` |
-| REM-06A pull request / merge | #280 / `5e6d0d111dc44eabfb056426c1d1c9bb868456c7` |
-| T06-F01 disposition | **Accepted with documented limitation** for T07 sequencing |
-| T10 and parent-close condition | Successful complete tag enumeration remains mandatory |
-| G10 | `evidence incomplete`; mandatory blocker to Phase One completion |
-| F10-R | `evidence incomplete`; separate supporting fact |
-| Parent protection | #246 remains open |
-
-## P1O7-T07 reviewed and merged state
-
-| Item | Final state |
-|---|---|
-| Task issue | #283 — closed as completed |
-| Branch / base | `p1o7t07b` / `main` at `2a624b86eeb7478e26272eff92736421c59d7eb7` |
-| Reviewed head | `ce5466b5df97d7bb6f44c3050363b23f1ad448ea` |
-| Human outcome | Drew — **Approve** |
-| Merge authorization | Separate squash authorization recorded against the exact reviewed head |
-| Pull request / merge | #284 / `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae` |
-| Primary artifact | `docs/phase-one/objective-seven/PHASE_1_EXIT_CHECKLIST.md` |
-| Scope | Exactly four files; README and source audits/controls remain read-only |
-| Checklist coverage | All O1–O11 criteria plus F04-A, F06-C, and F10-R distinctions |
-| Aggregate full-completion state | **Blocked** by G10 |
-| T08 synthesis posture | Eligible; T08 owns the actual Phase One decision |
-| Data touch | Blocked by F04-A |
-| Project/tag/Release inventories | Revalidated read-only; complete enumeration remains `inaccessible/unresolved` |
-| Parent protection | #246 remains open |
-| Controlled actions | No remediation, Phase Two action, public claim, tag, GitHub Release, or settings change authorized or performed |
-
-## Objective boundary
-
-Objective Seven is a documentation, evidence-review, decision, remediation-routing, and controlled-release workstream. Each child task must stay within its own issue and artifact contract.
-
-Unless a later issue explicitly authorizes the exact controlled action, Objective Seven does not authorize:
-
-- data, AOI, imagery, label, mask, baseline, model, metric, run, report, map, screenshot, demo, or public-output creation;
-- repository settings, CI, Actions, branch protection, rulesets, Projects, labels, or milestones;
-- remediation outside the exact paths and findings named in a dedicated remediation issue;
-- a Phase One pass claim;
-- a release identifier or release-class decision before P1O7-T06;
-- tag creation before a separately authorized P1O7-T10;
-- GitHub Release publication before a separately authorized P1O7-T11.
-
-Official sources continue to govern over BurnLens outputs. Version or release identifiers do not imply readiness, authority, field validation, operational use, or emergency suitability.
-
-## Planned task sequence and dependencies
-
-| Order | Task | Primary output | Dependency | Current status | Handoff |
-|---:|---|---|---|---|---|
-| 1 | P1O7-T01 — Establish Objective Seven controls and artifact contracts | `OBJECTIVE_SEVEN_TRACKER.md`; `OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md` | Parent #246 open; current `main` verified | Complete; PR #248 merged; synchronized through #249 / PR #250 | P1O7-T02 |
-| 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MATRIX.md` | T01 merged and current status coherent | Complete; PR #252 merged; synchronized through #253 and #255 | P1O7-T03 |
-| 3 | P1O7-REM-03A — Correct Objective Seven active-status routing | `AGENTS.md`; `README.md`; this tracker; prompt-log records | Wrong-scope PR #258 closed; #257 remains open | Complete; PR #260 squash-merged; no criterion verdict | Rebuild P1O7-T03 |
-| 4 | P1O7-T03 — Audit project identity, boundaries, and active-scope language | `PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` | T02 and #259 merged; rebuild from current `main` under corrected repository-only scope | Complete; PR #263 squash-merged; G01/G02/G11 reviewed pass | P1O7-T04 |
-| 5 | P1O7-T04 — Audit CV and Phase Two technical readiness | `PHASE_1_TECHNICAL_READINESS_AUDIT.md` | T02 and corrected T03 merged | Complete; PR #270 squash-merged; G03 pass, G04 pass with limitation, F04-A incomplete | P1O7-T05 |
-| 6 | P1O7-T05 — Audit repository controls and live GitHub state | `PHASE_1_REPOSITORY_CONTROL_AUDIT.md` | T02 through T04 merged | Complete; PR #274 squash-merged; reviewed dispositions and limitations retained | P1O7-T06 or separately authorized remediation |
-| 7 | P1O7-T06 — Decide the Phase One baseline identifier and release class | `PHASE_1_BASELINE_RELEASE_DECISION.md` | T03 through reviewed T05 complete; findings resolved or explicitly carried | Complete; PR #278 squash-merged; conditional candidate and release class approved | P1O7-REM-06A |
-| 8 | P1O7-REM-06A — Resolve T06 tag and Release inventory finding | `remediation/P1O7-REM-06A_REMEDIATION_RECORD.md`; dated log | T06 merged; owner approved conditional disposition | Complete; PR #280 squash-merged; T06-F01 accepted with documented limitation | P1O7-SYNC-06A then P1O7-T07 |
-| 9 | P1O7-T07 — Create the Phase One exit checklist | `PHASE_1_EXIT_CHECKLIST.md` | T03 through T06 complete; REM-06A merged; current status synchronized | Complete; PR #284 squash-merged; all criteria and distinctions preserved | P1O7-SYNC-07 then P1O7-T08 |
-| 10 | P1O7-T08 — Create the Phase One decision memo | `PHASE_1_DECISION_MEMO.md` | T07 complete and evidence package coherent | Planned | P1O7-T09 only after human review of the decision |
-| 11 | P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate | `OBJECTIVE_SEVEN_CLOSEOUT.md`; `OBJECTIVE_SEVEN_HANDOFF.md`; conditional `PHASE_1_BASELINE_CANDIDATE.md` | T08 decision reviewed; required status synchronization complete | Planned | Conditional P1O7-T10 or next approved workstream |
-| 12 | P1O7-T10 — Create a tag | Git tag named in its own issue | T09 supports tagging; exact identifier and target commit authorized separately; complete enumeration succeeds | Conditional; may never run | Post-tag verification and synchronization; conditional P1O7-T11 or stop |
-| 13 | P1O7-T11 — Publish a GitHub Release | GitHub Release named in its own issue | Authorized tag exists; Release separately authorized | Conditional; may never run | Release handoff or stop |
-
-## Dependency rules
-
-1. Task order is sequential unless the parent issue and affected task issues explicitly approve a different dependency relationship.
-2. An audit task may create findings but must not silently remediate files outside its allowed scope.
-3. A gate-critical finding requiring file changes must receive a separate `P1O7-REM-##` issue with exact affected paths before remediation begins.
-4. P1O7-T07 may assemble criterion states only from completed evidence and review records; it must not invent missing evidence.
-5. P1O7-T08 owns the Phase One decision. Earlier tasks do not declare the gate passed.
-6. P1O7-T09 records and hands off the reviewed decision. A baseline candidate is prepared only when the decision supports one.
-7. P1O7-T10 and P1O7-T11 are optional controlled actions, not promised outcomes.
-8. Tag creation and GitHub Release publication remain separate authorizations.
-9. Because the original gate requires a live first tag, parent #246 cannot close until any required T10 action and post-tag status verification are complete.
-10. Accepting T06-F01 with documented limitation unblocks T07 sequencing only; it does not satisfy G10 or remove the complete-enumeration requirement before T10 and parent closure.
-
-## Gate state vocabulary
-
-Future gate artifacts must use explicit states rather than implying success:
-
-| State | Meaning |
-|---|---|
-| `not evaluated` | No authorized review has assessed the criterion. |
-| `evidence incomplete` | Required evidence is absent or insufficient. |
-| `meets criterion` | Evidence supports the criterion, subject to the task's human review. |
-| `meets with limitation` | Evidence supports the criterion with a recorded limitation that does not automatically block the gate. |
-| `does not meet` | Evidence fails the criterion or a blocking contradiction exists. |
-| `deferred` | The criterion or work item is intentionally postponed with rationale and consequence. |
-| `not applicable` | The evidence model explicitly defines why the criterion does not apply. |
-
-P1O7-T02 defined how these states may be assigned later. P1O7-REM-03A changed status routing only and assigned no verdict. P1O7-T03 assigned reviewed evidence-backed statuses to G01, G02, and G11. P1O7-T04 assigned reviewed evidence-backed statuses to G03, G04, and F04-A. P1O7-T05 assigned reviewed evidence-backed statuses to G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. P1O7-T06 made the reviewed identifier/release-class decision while leaving G10 and F10-R incomplete. P1O7-REM-06A accepted T06-F01 with documented limitation for sequencing without changing G10 or F10-R. P1O7-T07 assembles those states into a checklist and does not make the final Phase One decision.
-
-## Release separation
+## Controlled-action separation
 
 ```text
 Gate evidence != gate decision.
-Gate decision != release identifier decision.
-Release identifier decision != created tag.
+Planning-only decision != full Phase One completion.
+Planning permission != data permission.
+Identifier candidate != created tag.
 Created tag != GitHub Release.
-Conditional release path != guaranteed release.
+Repository release note != GitHub Release.
 Accepted inventory limitation != complete inventory.
-Checklist synthesis eligibility != Phase One decision.
+Author or AI review != human approval.
 ```
 
-Issue #194 remains a separate Objective Five tag action and is not modified, executed, superseded, or absorbed by Objective Seven.
+Issue #293 remains blocked until a Phase Two planning parent exists and adopts the planning-only boundary. It cannot query or download a source. Issue #194 remains separate, open, unchanged, and limited to the Objective Five tag action at its historical target.
 
-## Current artifact set
+## Parent-close behavior
 
-Current merged Objective Seven controls, audits, decision, T06 remediation, and reviewed T07 checklist:
-
-```text
-docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
-docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
-docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
-docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
-docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
-docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
-docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md
-docs/phase-one/objective-seven/remediation/P1O7-REM-06A_REMEDIATION_RECORD.md
-docs/phase-one/objective-seven/PHASE_1_EXIT_CHECKLIST.md
-```
-
-The T03 audit is reviewed merged evidence for G01, G02, and G11. The T04 audit is reviewed merged evidence for G03, G04, and F04-A. The T05 audit is reviewed merged evidence for G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. T06 and REM-06A are reviewed and merged. T07 compiles this evidence in the merged checklist; none of these artifacts makes the final Phase One decision.
-
-## P1O7-T02 final acceptance status
-
-| Acceptance condition | Final state |
-|---|---|
-| Every original criterion is preserved and mapped | Satisfied; reviewed and merged through PR #252 |
-| Every criterion defines evidence, disqualifier, currency, owner, vocabulary, and blocker | Satisfied; reviewed and merged through PR #252 |
-| Board specification and live configuration are separate | Satisfied |
-| Feasibility research and data-touch authorization are separate | Satisfied |
-| Git tag and GitHub Release existence are separate | Satisfied |
-| Active and archival scope are separate | Satisfied |
-| Planning, data-touch, and executed technical readiness are separate | Satisfied |
-| All criterion verdicts remain `not evaluated` | Satisfied for T02 itself |
-| Document-existence-only passing is prohibited | Satisfied |
-| Human review remains distinct from author or AI review | Satisfied; Drew recorded **Approve** and separate merge authorization |
-
-These statements concern T02 artifact completeness only. They do not evaluate or pass a Phase One gate criterion.
-
-## Sequencing limitation recorded by the evidence model
-
-The original gate requires a live first release tag, while the current sequence places T08 decision and T09 closeout preparation before conditional T10 tag creation. T02 did not change that sequence.
-
-T07 and T08 must report the tag criterion accurately if no tag exists. Any later T10 action requires complete tag enumeration, post-tag live verification, and current-status synchronization before parent #246 can close.
+Parent #246 remains open. Closure remains blocked until successful tag-readiness work, an explicitly authorized tag action if supported, live tag verification, final status synchronization, a parent summary, and explicit human parent-close authorization are complete.
 
 ## Handoff
 
-Proceed under a separate task issue to:
-
-```text
-P1O7-T08 — Create the Phase One decision memo
-source checklist: docs/phase-one/objective-seven/PHASE_1_EXIT_CHECKLIST.md
-source merge: 69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae
-aggregate full-completion state: blocked by G10
-data touch: blocked by F04-A
-```
-
-P1O7-SYNC-07 does not plan or start T08.
-
-Do not carry forward PR #258, wrong-repository evidence, exact-ref failures as proof of an empty inventory, the conditional candidate as a tag, T07 synthesis eligibility as the T08 decision, or any implication that Phase Two, data touch, public claims, a tag, or a GitHub Release is authorized.
+1. Run P1O7-T10-PREP / #292 as a read-only complete tag inventory and readiness task; no tag creation.
+2. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
+3. Keep #293 blocked until that parent adopts the planning-only boundary.
+4. Do not create a tag or GitHub Release without separate exact authorization.
