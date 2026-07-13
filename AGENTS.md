@@ -48,16 +48,18 @@ Do not create a parallel task schema, prompt-log protocol, workflow, status regi
 
 ## Current phase boundary
 
-Phase One / Objective Six is the active repository-control workstream.
+Phase One / Objective Seven is the active acceptance-gate workstream under parent issue #246.
 
-Objective Six work is limited to explicitly authorized documentation, workflow, template, and records changes. It does not authorize implementation, data acquisition, imagery download, AOI selection, labels, masks, baselines, models, metrics, runs, reports, maps, screenshots, demos, public claims, repository settings, tags, or GitHub Releases unless a later task issue names and authorizes the exact work.
+Objective Seven work is limited to explicitly authorized evidence, audit, status, remediation, decision, and closeout tasks. It does not authorize implementation, data acquisition, imagery download, AOI selection, labels, masks, baselines, models, metrics, runs, reports, maps, screenshots, demos, public claims, repository settings, tags, or GitHub Releases unless a later task issue names and authorizes the exact work.
 
 Follow the current status and dependency order in:
 
 - `README.md`
-- `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md`
-- `docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md`
-- `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md`
+- `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md`
+- `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md`
+- `docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md`
+
+P1O7-T03 / #257 is active and must be rebuilt under the corrected `burnlens-deschutes`-only scope after the bounded status-routing remediation in P1O7-REM-03A / #259. PR #258 is closed unmerged and superseded; its wrong-scope findings are not current evidence and must not be carried into the corrected audit.
 
 Treat completed-objective trackers, handoffs, closeouts, old issues, old PR bodies, and historical logs as archival context unless a task explicitly requires verification or correction.
 

@@ -6,13 +6,15 @@ The repository currently documents the controls and future workflow for turning 
 
 ## Current status
 
-**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven is active but incomplete. The Phase One acceptance gate has not been conducted, and Phase One has not been accepted or released.**
+**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven is active but incomplete under parent issue #246. The Phase One acceptance gate has not been completed, and Phase One has not been accepted or released.**
 
 Objective Five is complete and remains the control baseline for versioning, provenance, release control, future run-package planning, artifact registry planning, source-precedence gates, reproducibility QA, research validation, and claim traceability.
 
 Objective Six defines how prompt-assisted repository work is issue-backed, branch-scoped, prompt-logged, test-aware, reviewed by a human, merged, synchronized, and handed off without creating duplicate sources of truth.
 
 Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts. P1O7-T02 added the merged gate evidence matrix and defined how future tasks must evaluate evidence; it did not conduct the gate, mark a criterion passed, authorize data work, decide a release identifier or class, create a tag, or publish a GitHub Release.
+
+P1O7-T03 / #257 is active and is being rebuilt under a corrected `burnlens-deschutes`-only scope. P1O7-REM-03A / #259 is the bounded status-routing remediation that must complete before the corrected T03 audit is rebuilt. The abandoned wrong-scope PR #258 is closed unmerged and superseded; its findings are not current evidence.
 
 Current Objective Six status:
 
@@ -50,12 +52,14 @@ docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 Current Objective Seven status:
 
 ```text
-#246 - Phase 1 Objective Seven parent — open
+#246 - Phase 1 Objective Seven parent — open and protected
 P1O7-T01 / #247 - merged through PR #248; synchronized through P1O7-SYNC-01 / #249
-P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #253
-P1O7-T03 - next planned task; issue not yet created
-Phase One acceptance - not evaluated
-Gate criteria passed - none; every original criterion remains not evaluated
+P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #253 and finalized through #255
+P1O7-T03 / #257 - active; corrected burnlens-deschutes-only audit rebuild pending P1O7-REM-03A
+P1O7-REM-03A / #259 - active status-routing remediation on p1o7rem03a
+PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
+Phase One acceptance - not evaluated; no final gate conclusion exists
+G01, G02, and G11 - pending corrected P1O7-T03 audit; no verdict assigned by #259
 Release identifier and class - not decided
 Objective Seven tag - not authorized or created
 GitHub Release - not authorized or published
@@ -107,7 +111,7 @@ current acceptance-gate evidence matrix: docs/phase-one/objective-seven/PHASE_1_
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
 
-Root `AGENTS.md` routes prompt-assisted agents to the merged Objective Six workflow, scope, verification, human-review, boundary, and release controls.
+Root `AGENTS.md` routes prompt-assisted agents to the merged issue-first workflow, the active Objective Seven workstream, current status controls, verification, human-review, boundary, and release controls while retaining completed Objective Six records as the documented repository-control baseline.
 
 `.github/ISSUE_TEMPLATE/task.yml` provides the merged generic task-intake surface for bounded task identity, scope, selective context loading, research, prompt logging, verification, human review, task-only closure, parent protection, and handoff. It does not replace the canonical task capsule.
 
@@ -159,9 +163,9 @@ records/PROMPT_BUILD_LOG.md
 
 BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
 
-Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
+Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01 or P1O7-T02.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01, P1O7-T02, or P1O7-REM-03A.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -204,11 +208,13 @@ The active workstream is:
 Phase One / Objective Seven — Phase One acceptance gate
 ```
 
-P1O7-T02 is complete. The next planned task is:
+Current bounded work is:
 
 ```text
-P1O7-T03 — Audit project identity, boundaries, and active-scope language
+P1O7-REM-03A / #259 — Correct Objective Seven active-status routing
 ```
+
+After #259 is reviewed and merged, P1O7-T03 / #257 must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. G01, G02, and G11 remain pending that corrected audit. PR #258 is superseded and must not be used as evidence.
 
 T03 may inspect and record evidence-backed findings only within its own issue scope. It must not silently remediate evaluated files, conduct later technical or repository-state audits, declare the final Phase One decision, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
 
