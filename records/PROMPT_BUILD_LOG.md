@@ -170,7 +170,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | merged via PR #284 | Issue #283 closed; exit checklist reviewed and merged at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`; G10 and F04-A blockers preserved. |
 | P1O7-SYNC-07 | `records/prompt-build-log/2026-07-13-p1o7-sync-07.md` | final synchronization record | Issue #285 and finalization #287; README, tracker, checklist lifecycle, and prompt-log truth synchronized after T07 merge. |
 | P1O7-T08 | `records/prompt-build-log/2026-07-13-p1o7-t08.md` | merged via PR #294 | Issue #289 closed; Drew recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13; merge `69c0b7322f5c2a556f285ad639a8df467494979f`; G10 and F04-A blockers preserved. |
-| P1O7-SYNC-08 | `records/prompt-build-log/2026-07-13-p1o7-sync-08.md` | final synchronization record | Issue #295; T08 decision, review, merge, blocker, routing, and handoff truth synchronized. Final PR and merge evidence remain in GitHub history. |
+| P1O7-SYNC-08 | `records/prompt-build-log/2026-07-13-p1o7-sync-08.md` | final synchronization record | Issue #296; T08 decision, review, merge, blocker, routing, and handoff truth synchronized. Final PR and merge evidence remain in GitHub history. |
 
 ## Acceptance and remediation triggers
 
