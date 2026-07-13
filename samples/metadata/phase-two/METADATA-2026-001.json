@@ -1,0 +1,151 @@
+{
+  "metadata_fixture_id": "METADATA-2026-001",
+  "schema_version": "0.1.0",
+  "created_at_utc": "2026-07-13T23:06:49.608Z",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "git_base_commit": "a72e88234f4e4e8ebb3dcb5c1a4aab14e06a9103",
+  "task_issue": 293,
+  "branch": "codex/p2o1-t01-source-readiness",
+  "status": "normalized metadata only; no source assets downloaded",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "aoi": {
+    "aoi_id": "AOI-2026-001",
+    "aoi_version": "aoi-darlene3-discovery-v0.1.0",
+    "crs": "EPSG:4326",
+    "bbox": [-121.56, 43.61, -121.40, 43.75],
+    "role": "metadata-discovery envelope; not an official incident perimeter"
+  },
+  "event_context": {
+    "name": "Darlene 3 Fire",
+    "official_source": "https://apps.oregon.gov/oregon-newsroom/OR/OSFM/Posts/Post/darlene-three-conflagration",
+    "reported_start": "around 1 p.m. Tuesday, 2024-06-25, local time",
+    "normalized_start_utc": "2024-06-25T20:00:00Z",
+    "normalization_note": "UTC value is a BurnLens inference using Pacific Daylight Time and preserves the source's approximate precision.",
+    "reported_location": "one mile south of La Pine on the east side of Darlene Way"
+  },
+  "discovery_window": {
+    "start": "2024-06-24T00:00:00Z",
+    "end": "2024-07-06T23:59:59Z"
+  },
+  "sentinel_2_l2a": {
+    "source_record_id": "SOURCE-2026-001",
+    "catalog": "https://stac.dataspace.copernicus.eu/v1",
+    "collection": "sentinel-2-l2a",
+    "query_result_count": 5,
+    "items": [
+      {
+        "id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349",
+        "datetime": "2024-06-25T18:59:41.024000Z",
+        "bbox": [-121.76796729995817, 43.23947301948164, -120.37335402628887, 44.24655093494868],
+        "eo_cloud_cover_percent": 0.78,
+        "platform": "sentinel-2a",
+        "product_type": "S2MSI2A"
+      },
+      {
+        "id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644",
+        "datetime": "2024-06-27T18:49:19.024000Z",
+        "bbox": [-121.76796729995817, 43.235600960154144, -120.37335402628887, 44.24321330733643],
+        "eo_cloud_cover_percent": 0.53,
+        "platform": "sentinel-2b",
+        "product_type": "S2MSI2A"
+      },
+      {
+        "id": "S2B_MSIL2A_20240630T185919_N0510_R013_T10TFP_20240630T215047",
+        "datetime": "2024-06-30T18:59:19.024000Z",
+        "bbox": [-121.76796729995817, 43.23951669611836, -120.37335402628887, 44.24655093494868],
+        "eo_cloud_cover_percent": 56.13,
+        "platform": "sentinel-2b",
+        "product_type": "S2MSI2A"
+      },
+      {
+        "id": "S2A_MSIL2A_20240702T184921_N0510_R113_T10TFP_20240703T012344",
+        "datetime": "2024-07-02T18:49:21.024000Z",
+        "bbox": [-121.76796729995817, 43.235600960154144, -120.37335402628887, 44.243094904948684],
+        "eo_cloud_cover_percent": 0.02,
+        "platform": "sentinel-2a",
+        "product_type": "S2MSI2A"
+      },
+      {
+        "id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448",
+        "datetime": "2024-07-05T18:59:21.024000Z",
+        "bbox": [-121.76796729995817, 43.2394563222035, -120.37335402628887, 44.24655093494868],
+        "eo_cloud_cover_percent": 0.01,
+        "platform": "sentinel-2a",
+        "product_type": "S2MSI2A"
+      }
+    ]
+  },
+  "nasa_viirs_active_fire": {
+    "source_record_id": "SOURCE-2026-002",
+    "catalog": "https://cmr.earthdata.nasa.gov/search/",
+    "query_result_count": 124,
+    "collections": [
+      {
+        "short_name": "VNP14IMG",
+        "version": "002",
+        "collection_concept_id": "C2734202914-LPCLOUD",
+        "provider": "LPCLOUD",
+        "matched_granules": 41,
+        "first_begin": "2024-06-24T09:30:00.000Z",
+        "last_begin": "2024-07-06T22:12:00.000Z"
+      },
+      {
+        "short_name": "VJ114IMG",
+        "version": "002",
+        "collection_concept_id": "C2734197957-LPCLOUD",
+        "provider": "LPCLOUD",
+        "matched_granules": 41,
+        "first_begin": "2024-06-24T10:00:00.000Z",
+        "last_begin": "2024-07-06T20:54:00.000Z"
+      },
+      {
+        "short_name": "VJ214IMG",
+        "version": "002",
+        "collection_concept_id": "C2831626262-LPCLOUD",
+        "provider": "LPCLOUD",
+        "matched_granules": 42,
+        "first_begin": "2024-06-24T09:06:00.000Z",
+        "last_begin": "2024-07-06T21:48:00.000Z"
+      }
+    ],
+    "selected_event_start_granules": [
+      {
+        "collection": "VJ214IMG",
+        "concept_id": "G3944894524-LPCLOUD",
+        "native_id": "VJ214IMG.A2024177.2012.002.2025284184449",
+        "begin": "2024-06-25T20:12:00.000Z",
+        "end": "2024-06-25T20:18:00.000Z"
+      },
+      {
+        "collection": "VNP14IMG",
+        "concept_id": "G3135707718-LPCLOUD",
+        "native_id": "VNP14IMG.A2024177.2036.002.2024178042652",
+        "begin": "2024-06-25T20:36:00.000Z",
+        "end": "2024-06-25T20:42:00.000Z"
+      },
+      {
+        "collection": "VJ114IMG",
+        "concept_id": "G3135697131-LPCLOUD",
+        "native_id": "VJ114IMG.A2024177.2100.002.2024178025146",
+        "begin": "2024-06-25T21:00:00.000Z",
+        "end": "2024-06-25T21:06:00.000Z"
+      },
+      {
+        "collection": "VJ214IMG",
+        "concept_id": "G3944901484-LPCLOUD",
+        "native_id": "VJ214IMG.A2024177.2154.002.2025284184450",
+        "begin": "2024-06-25T21:54:00.000Z",
+        "end": "2024-06-25T22:00:00.000Z"
+      }
+    ],
+    "interpretation_limit": "Granule/AOI intersection proves swath coverage only; it does not prove an active-fire detection in the AOI."
+  },
+  "retention": {
+    "source_asset_count": 0,
+    "asset_urls_retained": false,
+    "credentials_used": false,
+    "credentials_retained": false,
+    "derived_analytical_outputs": 0
+  }
+}

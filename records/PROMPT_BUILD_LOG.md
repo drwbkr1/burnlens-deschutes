@@ -132,6 +132,9 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P1O7-SYNC-09 | `records/prompt-build-log/2026-07-13-p1o7-sync-09.md` | merged via PR #301 | Issue #300 closed; lifecycle truth synchronized at `10caebb3d61ff622dc6dfe8809a63886089eba4e`. |
 | P1O7-SYNC-09F | `records/prompt-build-log/2026-07-13-p1o7-sync-09f.md` | merged via PR #303 | Issue #302 closed; exact eligible target finalized as `10caebb3d61ff622dc6dfe8809a63886089eba4e`; merge `49701a42b4dda849cea5976fb580dbd155931195`. |
 | P1O7-SYNC-09F-SYNC | `records/prompt-build-log/2026-07-13-p1o7-sync-09f-sync.md` | final synchronization record | Issue #304; final task-scoped PR and merge evidence remain in GitHub history. No further T09 lifecycle sync expected. |
+| BL-GOV-001 | `docs/devlog/2026-07-13-goal-activation.md` | merged via PR #291; tagged | Controlling execution goal and roadmap at `v0.0.8-execution-goal-baseline`. |
+| BL-GOV-001-SYNC | `records/prompt-build-log/2026-07-13-bl-gov-001-sync.md` | merged via PR #309 | Governance lifecycle truth synchronized; issue #308 closed. |
+| P2O1-T01 | `records/prompt-build-log/2026-07-13-p2o1-t01.md` | active candidate | Issue #293; first source stack, before-data records, and no-secret metadata fixture. |
 
 ## Acceptance and remediation triggers
 
@@ -141,4 +144,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Seven remains active and incomplete under parent #246. T09 closeout, lifecycle synchronization, and exact-target finalization are reviewed and merged. The exact eligible synchronized `main` target is `10caebb3d61ff622dc6dfe8809a63886089eba4e`. G10 still blocks full Phase One completion; F04-A still blocks every data-touch action; F06-C and F10-R remain supporting incomplete facts. The candidate is not a tag, no Objective Seven tag or GitHub Release was authorized or created, and #292 is now the next read-only release-control readiness task.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 / issue #293 is the current bounded checkpoint: it verifies public metadata access and instantiates the source-readiness record set while keeping every source-asset and analytical action blocked. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

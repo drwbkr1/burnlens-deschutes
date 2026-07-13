@@ -1,0 +1,71 @@
+{
+  "manifest_id": "MANIFEST-2026-001",
+  "manifest_version": "0.1.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-13T23:06:49.608Z",
+  "task_issue": 293,
+  "branch": "codex/p2o1-t01-source-readiness",
+  "git_base_commit": "a72e88234f4e4e8ebb3dcb5c1a4aab14e06a9103",
+  "checkpoint_commit": "pending PR merge",
+  "status": "complete for metadata-only source readiness",
+  "aoi": {
+    "record_id": "AOI-2026-001",
+    "version": "aoi-darlene3-discovery-v0.1.0",
+    "path": "records/phase-two/aoi/AOI-2026-001.md"
+  },
+  "source_records": [
+    "SOURCE-2026-001",
+    "SOURCE-2026-002",
+    "SOURCE-2026-003"
+  ],
+  "access_record": "ACCESS-2026-001",
+  "terms_record": "TERMS-2026-001",
+  "precheck_record": "PRECHECK-2026-001",
+  "registry_record": "REGISTRY-2026-001",
+  "source_precedence_review": "SOURCE_PRECEDENCE-2026-001",
+  "use_boundary_review": "USE_BOUNDARY-2026-001",
+  "fixture": {
+    "id": "METADATA-2026-001",
+    "path": "samples/metadata/phase-two/METADATA-2026-001.json",
+    "media_type": "application/json",
+    "sha256": "803db2b82c7d6ef23d12c34f370dd9a7504bf181f772db22d1ed55c83c6b791a"
+  },
+  "source_assets": [],
+  "processing_steps": [
+    {
+      "step_id": "STEP-2026-001",
+      "type": "metadata query and field normalization",
+      "tooling": "PowerShell 5.1.26100.8655 Invoke-RestMethod plus official catalog JSON inspection",
+      "inputs": [
+        "CDSE STAC sentinel-2-l2a search response",
+        "NASA CMR VNP14IMG/VJ114IMG/VJ214IMG collection and granule metadata"
+      ],
+      "retained_fields": [
+        "provider identifiers",
+        "collection and product versions",
+        "acquisition intervals",
+        "WGS 84 bounding boxes",
+        "Sentinel platform/product type/cloud cover",
+        "query counts"
+      ],
+      "discarded_fields": [
+        "asset hrefs",
+        "signed or protected URLs",
+        "unneeded provider response fields"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "METADATA-2026-001",
+      "type": "internal normalized metadata fixture",
+      "path": "samples/metadata/phase-two/METADATA-2026-001.json",
+      "public_facing": false,
+      "analytical_output": false
+    }
+  ],
+  "credentials_used": false,
+  "ready_for_source_asset_use": false,
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
