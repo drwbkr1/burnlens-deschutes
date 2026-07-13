@@ -17,6 +17,7 @@
 |---|---|
 | Git baseline | `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` via merged PR #291 |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to the Git baseline |
+| Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-discovery-v0.1.0`, accepted for metadata discovery only; not a fire perimeter or final modeling AOI |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-003`, reviewed for metadata roles |
@@ -32,15 +33,15 @@
 
 ## Latest shipped checkpoint
 
-Issue #290 / PR #291 adopted the controlling execution goal, reconciled active repository instructions, and established the six-phase roadmap and required status/version/log records. The checkpoint is merged, tagged, rendered, and verified.
+P2O1-T01 / issue #293 selected the first source roles, verified no-secret public metadata discovery for the Darlene 3 feasibility slice, and retained `METADATA-2026-001`. PR #310 merged at `6abe87bba486e3fe49b6c06178b454335663cb73`; the annotated `v0.1.0-source-metadata-baseline` tag resolves to that commit, and the rendered status, F04-A, and fixture views passed post-merge verification.
 
 ## Current checkpoint
 
-P2O1-T01 / issue #293 is the active checkpoint. It selects Copernicus Sentinel-2 L2A as the primary optical candidate, NASA VIIRS Collection 2 active-fire products as coarse reference candidates, and official Oregon incident context for the historical Darlene 3 feasibility slice. Its candidate version is `v0.1.0-source-metadata-baseline`. Merge, tag, and rendered-repository verification remain pending.
+P2O1-T02 / issue #312 is active. It will verify one exact Sentinel-2 scene and temporally relevant NASA VIIRS product route at the asset-access boundary, including access, format, CRS, geolocation, quality, checksum, retention, terms, and defensible reference role. It is a readiness checkpoint only.
 
 ## Selected next checkpoint
 
-After P2O1-T01 ships, verify one exact Sentinel scene and temporally relevant VIIRS reference path at the asset-access boundary. That issue must resolve access, format, CRS, companion geolocation, quality fields, immutable retention, checksums, and terms before any asset is downloaded. It must not add a secret or treat granule intersection as a fire detection without owner approval and direct evidence.
+Complete P2O1-T02's fresh primary-source review and re-open F04-A for one precisely described future action. Stop before credentials or provider-asset download if access, terms, retention, or label fitness cannot be verified. Granule intersection remains coverage evidence, never a fire detection.
 
 ## Boundaries carried forward
 

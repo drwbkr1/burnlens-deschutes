@@ -21,7 +21,7 @@ This decision does **not** authorize imagery, raster, vector, NetCDF, HDF, SAFE,
 | Required evidence | Instantiated record | Result |
 |---|---|---|
 | Exact issue authorization | GitHub issue #293 | Passed for metadata-only discovery |
-| Branch and PR scope | `codex/p2o1-t01-source-readiness`; PR pending | Passed for branch scope; PR evidence pending |
+| Branch and PR scope | `codex/p2o1-t01-source-readiness`; PR #310 | Passed; 21 authorized files merged at `6abe87bba486e3fe49b6c06178b454335663cb73` |
 | AOI record and identifier | `records/phase-two/aoi/AOI-2026-001.md` | Passed for a discovery envelope; not a fire perimeter or final modeling AOI |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-003` | Passed |
 | Access method record | `records/phase-two/access/ACCESS-2026-001.md` | Passed; no credential used or recorded |

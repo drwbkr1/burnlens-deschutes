@@ -6,6 +6,8 @@
 
 **Branch:** `codex/p2o1-t01-source-readiness`
 
+**Shipment:** PR #310; merge `6abe87bba486e3fe49b6c06178b454335663cb73`; annotated tag `v0.1.0-source-metadata-baseline`
+
 ## Weakness selected
 
 At cycle start, BurnLens still could not demonstrate that its preferred sources existed for a concrete historical Deschutes experiment under current access and licensing conditions. The repository had excellent source templates but no instantiated AOI, source record, access result, terms decision, or verified sample metadata.
@@ -24,6 +26,8 @@ The checkpoint chose one Darlene 3 metadata-discovery envelope, resolved the fir
 The official CDSE STAC catalog returned five event-window Sentinel-2 L2A items. NASA CMR returned 124 intersecting VIIRS granule records across S-NPP, NOAA-20, and NOAA-21, including four granules beginning after the incident's approximate reported ignition time.
 
 This proves source metadata availability and coverage candidates. It does not prove that a VIIRS fire pixel exists at Darlene 3 or that any optical scene is label-ready.
+
+The committed result was independently re-queried before review, merged through PR #310, tagged at the exact merge commit, and checked in GitHub's rendered Phase Status, F04-A decision, and metadata-fixture views.
 
 ## Reliability decisions
 
