@@ -8,13 +8,13 @@ The repository documents the controls and future workflow for turning wildfire-r
 
 **Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven remains active and incomplete under parent issue #246. Drew recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13 through P1O7-T08 / PR #294. Full Phase One completion remains blocked by G10, and every data-touch action remains blocked by F04-A. Phase One has not been accepted as complete or released.**
 
-P1O7-T09 / issue #298 was human-reviewed and squash-merged through PR #299 at `d7ad8f063239a61e9212e6eac562deffa50a7a88`. P1O7-SYNC-09 / issue #300 then synchronized T09 lifecycle truth through PR #301 at:
+P1O7-T09 / issue #298 was human-reviewed and squash-merged through PR #299 at `d7ad8f063239a61e9212e6eac562deffa50a7a88`. P1O7-SYNC-09 / issue #300 synchronized T09 lifecycle truth through PR #301 at `10caebb3d61ff622dc6dfe8809a63886089eba4e`. P1O7-SYNC-09F / issue #302 finalized that synchronization merge as the exact eligible candidate target through PR #303 at `49701a42b4dda849cea5976fb580dbd155931195`.
+
+The exact eligible synchronized `main` target is:
 
 ```text
 10caebb3d61ff622dc6dfe8809a63886089eba4e
 ```
-
-P1O7-SYNC-09F / issue #302 designates that reviewed synchronization merge as the exact eligible synchronized `main` target for the conditional Phase One documentation/control baseline candidate. The designation becomes final when the #302 record is reviewed and merged.
 
 The approved conditional candidate remains:
 
@@ -66,8 +66,8 @@ P1O7-T08 / #289 - reviewed and merged through PR #294 at 69c0b7322f5c2a556f285ad
 P1O7-SYNC-08 / #296 - merged through PR #297 at 23d57ab96071e21068ab7c02ae970b2968e10c04
 P1O7-T09 / #298 - reviewed and merged through PR #299 at d7ad8f063239a61e9212e6eac562deffa50a7a88
 P1O7-SYNC-09 / #300 - reviewed and merged through PR #301 at 10caebb3d61ff622dc6dfe8809a63886089eba4e
-P1O7-SYNC-09F / #302 - exact-target finalization record
-P1O7-T10-PREP / #292 - complete tag inventory/readiness only; no tag authorization
+P1O7-SYNC-09F / #302 - reviewed and merged through PR #303 at 49701a42b4dda849cea5976fb580dbd155931195
+P1O7-T10-PREP / #292 - eligible to begin complete tag inventory/readiness; no tag authorization
 P2O1-T01 / #293 - blocked before-data intake preparation only; no source-access authorization
 #194 - separate Objective Five tag action; open, unchanged, and outside Objective Seven
 ```
@@ -76,44 +76,21 @@ Duplicate issue #295 is not an active authorization. PR #258 is closed unmerged 
 
 ## Candidate target and remaining tag gate
 
-The exact eligible synchronized `main` target is:
+The exact eligible synchronized `main` target is `10caebb3d61ff622dc6dfe8809a63886089eba4e`. Recording the target does not create a tag, satisfy G10, prove an empty or collision-free tag inventory, or authorize tag creation.
 
-```text
-10caebb3d61ff622dc6dfe8809a63886089eba4e
-```
-
-This target contains the reviewed T09 closeout package and the merged SYNC-09 lifecycle/status corrections. Recording the target does not create a tag, satisfy G10, prove an empty or collision-free tag inventory, or authorize tag creation.
-
-After P1O7-SYNC-09F merges, issue #292 may begin its complete authenticated tag inventory and readiness review. #292 cannot create a tag. A future exact P1O7-T10 issue may be considered only if #292 records readiness and Drew separately authorizes the exact tag name, target, method, and verification.
+Issue #292 may now begin its complete authenticated tag inventory and readiness review. #292 cannot create a tag. A future exact P1O7-T10 issue may be considered only if #292 records readiness and Drew separately authorizes the exact tag name, target, method, and verification.
 
 The T09 reproducibility and release-QA decisions remain `blocked` for tag or release action until complete inventory/readiness evidence and exact T10 authorization exist.
 
 ## Required next sequence
 
-1. Review and merge P1O7-SYNC-09F / #302.
-2. Allow #292 to begin complete authenticated tag inventory and readiness review; no tag creation.
-3. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
-4. Keep #293 blocked until that parent adopts the planning-only boundary.
-5. Permit a future exact T10 issue only if #292 establishes readiness and Drew authorizes the exact tag action.
-6. Do not publish a GitHub Release for the current candidate.
+1. Run #292 complete authenticated tag inventory and readiness review; no tag creation.
+2. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
+3. Keep #293 blocked until that parent adopts the planning-only boundary.
+4. Permit a future exact T10 issue only if #292 establishes readiness and Drew authorizes the exact tag action.
+5. Do not publish a GitHub Release for the current candidate.
 
 Parent #246 remains open. G10 resolution, authorized tag creation if supported, post-tag verification, final status synchronization, a parent summary, and explicit human parent-close authorization remain required.
-
-## Prompt-built development architecture
-
-```text
-full workflow reference: docs/workflows/PROMPT_TO_REPO_SOP.md
-human contributor guidance: CONTRIBUTING.md
-repository agent instructions: AGENTS.md
-structured task issue intake: .github/ISSUE_TEMPLATE/task.yml
-canonical task capsule: templates/CODEX_TASK_PACKET.md
-root prompt-log navigation: PROMPT_LOG.md
-canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
-canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
-Objective Six protocol: docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md
-detailed human review record: docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.md
-concise PR intake: .github/PULL_REQUEST_TEMPLATE.md
-```
 
 ## Current work boundary
 
