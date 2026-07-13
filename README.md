@@ -18,6 +18,8 @@ P1O7-T03 / #257 completed the corrected `burnlens-deschutes`-only identity, boun
 
 P1O7-T04 / #269 completed the technical-readiness audit through PR #270 and squash merge commit `d3f05322eb0bf2c9802bba59bd6c3ad2484288f4`. Drew approved reviewed head `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` and separately authorized squash merge. G03 received reviewed `meets criterion` / `pass`; G04 received reviewed `meets with limitation` / `pass with limitation`; F04-A remains `evidence incomplete` and continues to block data touch. These results support later gate synthesis only. They do not authorize Phase Two work or make the final Phase One decision.
 
+P1O7-T05 / #273 completed the repository-control and live-state audit through PR #274 and squash merge commit `43a776f85ca84749d07d95afd71dda062b505e2c`. Drew approved exact head `e960b73dad99b8f6e7aecd759a3718c8e2b107c4` and separately authorized squash merge. G06-A and G07 received reviewed `meets criterion`; G05, G06-B, G08, and G09 received reviewed `meets with limitation`; F06-C, G10, and F10-R remain `evidence incomplete`. Live Project status is `inaccessible/unresolved`; complete tag and GitHub Release inventories were inaccessible, and the known proposed Objective Five tag ref did not resolve. These findings do not make the final Phase One decision, authorize Phase Two work, create a Project, or create a tag or GitHub Release.
+
 Current Objective Six status:
 
 ```text
@@ -60,15 +62,19 @@ P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #2
 P1O7-REM-03A / #259 - complete through PR #260; merge commit d1cb6cffa01402627c9e4b208139dc1a87c97552
 P1O7-T03 / #257 - merged through PR #263; merge commit 3d7e6d5a2de7fcc527803ae06d9b746143084207; issue closed
 P1O7-T04 / #269 - merged through PR #270; merge commit d3f05322eb0bf2c9802bba59bd6c3ad2484288f4; issue closed
+P1O7-T05 / #273 - merged through PR #274; merge commit 43a776f85ca84749d07d95afd71dda062b505e2c; issue closed
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
-G01, G02, G03, and G11 - reviewed meets criterion / pass
-G04 - reviewed meets with limitation / pass with limitation
+G01, G02, G03, G06-A, G07, and G11 - reviewed meets criterion / pass where applicable
+G04, G05, G06-B, G08, and G09 - reviewed meets with limitation / pass with limitation where applicable
 F04-A - evidence incomplete; mandatory blocker for data touch and supporting fact for planning-only evaluation
-P1O7-T05 - next task: audit repository controls and live GitHub state
+F06-C - evidence incomplete; live Project status inaccessible/unresolved
+G10 - evidence incomplete; mandatory blocker to claiming Phase One complete
+F10-R - evidence incomplete; supporting fact only
+P1O7-T06 - next task: decide the Phase One baseline identifier and release class
 Phase One acceptance - not evaluated; no final gate conclusion exists
 Release identifier and class - not decided
-Objective Seven tag - not authorized or created
-GitHub Release - not authorized or published
+Objective Seven tag - not selected, authorized, or created; complete tag inventory inaccessible
+GitHub Release - complete inventory inaccessible; no Objective Seven Release is authorized
 ```
 
 Current Objective Seven records:
@@ -79,6 +85,7 @@ docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
+docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
 ```
 
 The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
@@ -89,7 +96,7 @@ The Objective Five baseline identifier remains:
 v0.0.5-objective-five-traceability
 ```
 
-At this status snapshot, that tag has not been created. No GitHub Release has been published. Any later Phase One release path is conditional and not guaranteed.
+During T05, that exact proposed tag ref did not resolve. Complete tag and GitHub Release inventories were inaccessible, so the repository does not claim an empty inventory. No Objective Seven tag or GitHub Release is authorized by the current workflow, and any later Phase One release path remains conditional and not guaranteed.
 
 ## Prompt-built development architecture
 
@@ -117,6 +124,7 @@ current acceptance-gate contracts: docs/phase-one/objective-seven/OBJECTIVE_SEVE
 current acceptance-gate evidence matrix: docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 current scope-and-boundary audit: docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 current technical-readiness audit: docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
+current repository-control audit: docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -175,7 +183,7 @@ BurnLens remains an experimental, non-operational portfolio project. Official so
 
 Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01 through P1O7-T04.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-T05.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -221,10 +229,10 @@ Phase One / Objective Seven — Phase One acceptance gate
 Current bounded work is:
 
 ```text
-P1O7-T05 — Audit repository controls and live GitHub state
+P1O7-T06 — Decide the Phase One baseline identifier and release class
 ```
 
-P1O7-T04 is complete through PR #270. P1O7-T05 may audit documented repository policy against current files and live GitHub state under its own issue. It must not change settings, begin Phase Two work, make the final Phase One decision, create a tag, or publish a GitHub Release.
+P1O7-T05 is complete through PR #274. P1O7-T06 may decide only the Phase One baseline identifier and release class under its own issue while carrying the reviewed T05 findings and limitations. It must not make the final Phase One decision, create a Project, begin Phase Two work, create a tag, or publish a GitHub Release.
 
 ## Public site
 
