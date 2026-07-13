@@ -162,7 +162,8 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-SYNC-03 | `records/prompt-build-log/2026-07-12-p1o7-sync-03.md` | final synchronization record | Issue #264; source T03 review and merge evidence are retained in issue #257, PR #263, and the dated logs. |
 | P1O7-T04 | `records/prompt-build-log/2026-07-12-p1o7-t04.md` | merged via PR #270 | Issue #269 closed; G03 reviewed `meets criterion`, G04 reviewed `meets with limitation`, and F04-A remains `evidence incomplete`. |
 | P1O7-SYNC-04 | `records/prompt-build-log/2026-07-12-p1o7-sync-04.md` | final synchronization record | Issue #271; PR #272 and final merge evidence are retained in the issue, PR, and dated log. |
-| P1O7-T05 | `records/prompt-build-log/2026-07-12-p1o7-t05.md` | review-ready branch candidate | Issue #273; G05/G06-B/G08/G09 author `meets with limitation`, G06-A/G07 author `meets criterion`, F06-C/G10/F10-R `evidence incomplete`; human review pending. |
+| P1O7-T05 | `records/prompt-build-log/2026-07-12-p1o7-t05.md` | merged via PR #274 | Issue #273 closed; G05/G06-B/G08/G09 reviewed `meets with limitation`, G06-A/G07 reviewed `meets criterion`, and F06-C/G10/F10-R remain `evidence incomplete`. |
+| P1O7-SYNC-05 | `records/prompt-build-log/2026-07-12-p1o7-sync-05.md` | final synchronization record | Issue #275; PR and merge evidence are retained in the issue, PR, and dated log. |
 
 ## Acceptance and remediation triggers
 
@@ -182,4 +183,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 and P1O7-T04 have reviewed criterion evidence. P1O7-T05 / #273 is a branch review candidate only; its author results remain pending human review. The final Phase One decision remains unmade, Phase Two work has not begun, live Project/tag/Release inventories remain unresolved where stated, and no Objective Seven tag or GitHub Release is authorized or created.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 and P1O7-T04 have reviewed criterion evidence. P1O7-T05 / #273 is reviewed and merged through PR #274 at `43a776f85ca84749d07d95afd71dda062b505e2c`. The final Phase One decision remains unmade, Phase Two work has not begun, live Project/tag/Release inventories remain unresolved where stated, and no Objective Seven tag or GitHub Release is authorized or created.
