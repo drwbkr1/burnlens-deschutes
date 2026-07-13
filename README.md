@@ -1,107 +1,88 @@
 # BurnLens Deschutes
 
-BurnLens Deschutes is a computer vision + GEOINT portfolio project focused on experimental wildfire-related screening in Deschutes County, Oregon.
+BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOINT project. It is designed to show technical and technical-adjacent reviewers how a bounded wildfire-screening workflow can move from versioned imagery through a segmentation model or justified baseline into transparent, reproducible geospatial evidence.
 
-The repository documents the controls and future workflow for turning wildfire-relevant imagery, public geospatial layers, and experimental segmentation or baseline outputs into traceable map-ready artifacts.
+## Verified status
 
-## Current status
+The project is at a planning/control baseline, not an analytical release.
 
-**Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven remains active and incomplete under parent issue #246. Drew recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13 through P1O7-T08 / PR #294. Full Phase One completion remains blocked by G10, and every data-touch action remains blocked by F04-A. Phase One has not been accepted as complete or released.**
+- Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
+- Full Phase One release/tag reconciliation is not complete.
+- Phase Two data work has not begun.
+- No accepted source data, final AOI, labels, dataset, runnable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical result exists yet.
+- The latest verified `main` baseline entering the execution-goal checkpoint is `01df0632647224622b894511abaac5d48f2b6f6f`.
+- Issue #290 / PR #291 is reconciling the approved long-running goal, six-phase roadmap, and active controls.
 
-P1O7-T09 / issue #298 was human-reviewed and squash-merged through PR #299 at `d7ad8f063239a61e9212e6eac562deffa50a7a88`. P1O7-SYNC-09 / issue #300 synchronized T09 lifecycle truth through PR #301 at `10caebb3d61ff622dc6dfe8809a63886089eba4e`. P1O7-SYNC-09F / issue #302 finalized that synchronization merge as the exact eligible candidate target through PR #303 at `49701a42b4dda849cea5976fb580dbd155931195`.
+Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
-The exact eligible synchronized `main` target is:
+## Project promise
+
+BurnLens will demonstrate one defensible, traceable CV-to-GEOINT workflow for a bounded Deschutes County study area:
 
 ```text
-10caebb3d61ff622dc6dfe8809a63886089eba4e
+versioned imagery
+→ deterministic preprocessing
+→ segmentation or justified baseline mask
+→ georeferenced raster
+→ vector polygons
+→ transparent geospatial overlays
+→ descriptive exposure-style summary
+→ immutable run package
+→ repository-owned application and portfolio case study
 ```
 
-The approved conditional candidate remains:
+The primary audience is technical and technical-adjacent portfolio reviewers. The reference user evaluates whether the work demonstrates credible computer vision, remote-sensing, geospatial engineering, reproducibility, reliability, and responsible judgment.
 
-```text
-v0.0.7-objective-seven-phase-one-baseline
-```
+## Locked computer-vision task
 
-It is not a Git tag. No Objective Seven tag is authorized or created. No GitHub Release is authorized or published, and a GitHub Release is not recommended for the current documentation/control candidate.
+- **Task:** experimental binary semantic segmentation for wildfire-relevant screening.
+- **Primary target:** active-fire / hotspot-informed binary fire mask.
+- **Controlled fallback:** burn-scar binary mask, only if Phase Two evidence shows the primary target is too sparse, noisy, misaligned, or otherwise indefensible.
+- **Reference model family:** U-Net-style segmentation, evaluated only after a strong non-model baseline.
+- **Output posture:** mask-first, georeferenced, uncertainty-aware, and explicit about unknown/excluded areas.
 
-## Phase One decision and readiness lanes
+Hotspot detections may support reference, sampling, weak-label, or comparison logic. They are not exact fire perimeters or pixel-perfect ground truth.
 
-| Lane | Current posture | Consequence |
+## Six outcomes to prove
+
+The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable planning hypothesis. Its task order may change; these outcomes may not change without owner approval.
+
+| Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
-| Phase Two planning | Authorized under separate issue-backed planning/control tasks | The first permitted Phase Two action is creation of a Phase Two planning parent and tracker. |
-| Source/AOI intake planning | Documentation planning only | Future records and task order may be planned; no source access or AOI geometry may occur. |
-| Data touch | Not authorized | F04-A remains `evidence incomplete`. |
-| Labels, baselines, models, runs, metrics, maps, and outputs | Not authorized | No executed technical readiness exists. |
-| Public claims and publication | Not authorized | Claim evidence, source-precedence review, and release QA remain mandatory. |
-| Objective Seven tag | Not authorized | G10 remains incomplete; #292 is readiness preparation only. |
-| GitHub Release | Not authorized and not recommended | Documentation-only repository note is the selected release posture. |
+| 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted for Phase Two planning; release reconciliation remains. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Planning authorized; data blocked pending before-data evidence and resolved terms. |
+| 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
+| 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
+| 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
+| 6 | One coherent, licensed, citable, traceable portfolio release can be published and maintained or closed honestly. | Blocked by Phase Five and publication gates. |
 
-## Objective Seven evidence summary
+## Repository boundary
 
-| Evidence class | Reviewed result |
-|---|---|
-| G01, G02, G03, G06-A, G07, G11 | `meets criterion` |
-| G04, G05, G06-B, G08, G09 | `meets with limitation` |
-| F04-A | `evidence incomplete`; blocks every data-touch action |
-| F06-C | `evidence incomplete`; supporting live-Project fact only |
-| G10 | `evidence incomplete`; blocks full Phase One completion and parent #246 closure |
-| F10-R | `evidence incomplete`; supporting GitHub Release fact only |
+This repository owns the full BurnLens product: analytical code, data contracts, model and run artifacts, application, public website, case study, documentation, and release records.
 
-Complete Project, tag, and GitHub Release inventories remain `inaccessible/unresolved` where stated in the reviewed records. Exact-ref failures are targeted observations and are not evidence of an empty inventory.
+BurnLens execution must not read, change, publish, depend on, or use the separate `burnlens-site` repository. Any future public surface will be built and deployed from `drwbkr1/burnlens-deschutes`.
 
-## Objective Seven lifecycle
+## Safety and source precedence
 
-```text
-#246 - Phase 1 Objective Seven parent — open and protected
-P1O7-T01 / #247 - merged through PR #248; synchronized through #249 / PR #250
-P1O7-T02 / #251 - merged through PR #252; synchronized through #253 and finalization #255
-P1O7-REM-03A / #259 - merged through PR #260
-P1O7-T03 / #257 - merged through PR #263
-P1O7-T04 / #269 - merged through PR #270
-P1O7-T05 / #273 - merged through PR #274
-P1O7-T06 / #277 - merged through PR #278
-P1O7-REM-06A / #279 - merged through PR #280; synchronized through #281 / PR #282
-P1O7-T07 / #283 - merged through PR #284; synchronized through #285 / PR #286 and #287 / PR #288
-P1O7-T08 / #289 - reviewed and merged through PR #294 at 69c0b7322f5c2a556f285ad639a8df467494979f
-P1O7-SYNC-08 / #296 - merged through PR #297 at 23d57ab96071e21068ab7c02ae970b2968e10c04
-P1O7-T09 / #298 - reviewed and merged through PR #299 at d7ad8f063239a61e9212e6eac562deffa50a7a88
-P1O7-SYNC-09 / #300 - reviewed and merged through PR #301 at 10caebb3d61ff622dc6dfe8809a63886089eba4e
-P1O7-SYNC-09F / #302 - reviewed and merged through PR #303 at 49701a42b4dda849cea5976fb580dbd155931195
-P1O7-T10-PREP / #292 - eligible to begin complete tag inventory/readiness; no tag authorization
-P2O1-T01 / #293 - blocked before-data intake preparation only; no source-access authorization
-#194 - separate Objective Five tag action; open, unchanged, and outside Objective Seven
-```
+> Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
 
-Duplicate issue #295 is not an active authorization. PR #258 is closed unmerged and superseded; its wrong-repository findings are not current evidence.
+BurnLens is not field-validated, agency-endorsed, operational, emergency-ready, or suitable for property-level, insurance, legal, regulatory, evacuation, routing, tactical, suppression, or incident-command decisions.
 
-## Candidate target and remaining tag gate
+Official county, state, federal, fire-service, emergency-management, transportation, air-quality, and incident sources govern whenever they differ from BurnLens-derived output.
 
-The exact eligible synchronized `main` target is `10caebb3d61ff622dc6dfe8809a63886089eba4e`. Recording the target does not create a tag, satisfy G10, prove an empty or collision-free tag inventory, or authorize tag creation.
+## Traceability requirement
 
-Issue #292 may now begin its complete authenticated tag inventory and readiness review. #292 cannot create a tag. A future exact P1O7-T10 issue may be considered only if #292 records readiness and Drew separately authorizes the exact tag name, target, method, and verification.
+Every future public output and claim must trace to its Git commit, application version, AOI version, source records, dataset version, label-schema version, baseline or model version, immutable run ID, processing timestamp, checksums, warning flags, limitations, and source-precedence note. Traceability is required but does not replace licensing, claims review, release QA, or rendered-output verification.
 
-The T09 reproducibility and release-QA decisions remain `blocked` for tag or release action until complete inventory/readiness evidence and exact T10 authorization exist.
+## Active controls
 
-## Required next sequence
+- [Execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md)
+- [Six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md)
+- [Phase status](docs/status/PHASE_STATUS.md)
+- [Version history](docs/status/VERSION_HISTORY.md)
+- [Versioning protocol](VERSIONING.md)
+- [Changelog](CHANGELOG.md)
+- [Agent instructions](AGENTS.md)
+- [Prompt-to-repository SOP](docs/workflows/PROMPT_TO_REPO_SOP.md)
 
-1. Run #292 complete authenticated tag inventory and readiness review; no tag creation.
-2. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
-3. Keep #293 blocked until that parent adopts the planning-only boundary.
-4. Permit a future exact T10 issue only if #292 establishes readiness and Drew authorizes the exact tag action.
-5. Do not publish a GitHub Release for the current candidate.
-
-Parent #246 remains open. G10 resolution, authorized tag creation if supported, post-tag verification, final status synchronization, a parent summary, and explicit human parent-close authorization remain required.
-
-## Current work boundary
-
-BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
-
-Phase Two data work has not begun. No source query, AOI geometry, source data, label, model, run, map, public demo, completed public claim, Objective Seven tag, or GitHub Release artifact has been created by Objective Seven work.
-
-Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
-
-## Public site
-
-The public website lives separately at `burnlensproject.org` and is backed by the `burnlens-site` repository.
-
-This technical repository controls the scope, documentation, versioning, and future CV/GEOINT workflow artifacts. The public site should not make claims stronger than the artifacts in this repository support.
+Historical Objective Seven trackers, handoffs, audits, and release notes remain the evidence trail for the Phase One planning-only decision. Their obsolete sequencing and permission limits do not override the execution goal.

@@ -36,10 +36,10 @@ Experimental BurnLens CV output. Not official wildfire information. Not emergenc
 
 ## Core traceability rule
 
-No public map, screenshot, summary, report, model output, app view, run artifact, website card, or portfolio claim is portfolio-ready unless it can trace back to the applicable items below:
+No public map, screenshot, summary, report, model output, application view, run artifact, case-study card, or portfolio claim is portfolio-ready unless it can trace back to the applicable items below:
 
 - GitHub commit;
-- objective baseline or app/site version;
+- objective baseline or application version;
 - AOI version;
 - source record ID(s);
 - dataset version, when data exists;
@@ -58,7 +58,7 @@ Traceability is necessary but not sufficient for public release. Release control
 | Component | Example | Type | Rule summary |
 |---|---|---|---|
 | Objective baseline | `v0.0.5-objective-five-traceability` | Repository baseline tag / release label | Use a SemVer-core tag plus descriptive suffix for reviewed objective-level repository states. |
-| App/site version | `burnlens-app-v0.1.0` | Software/app version | Use SemVer. Stay in `0.y.z` until later release-control criteria define stability. |
+| Application version | `burnlens-app-v0.1.0` | Software/application version | Use SemVer. Stay in `0.y.z` until later release-control criteria define stability. |
 | AOI version | `deschutes-aoi01-v0.1` | Geospatial scope identifier | Use a SemVer-inspired AOI version tied to geometry/source/rationale records. |
 | Source record ID | `SRC-2026-001` | Immutable record ID | Use sequential IDs, not SemVer. Revisions occur inside the record or through superseding records. |
 | Dataset version | `deschutes-aoi01-dataset-v0.1.0` | Data package version | Use SemVer-inspired data package versions tied to AOI/source/access/CRS/provenance records. |
@@ -73,7 +73,7 @@ Traceability is necessary but not sufficient for public release. Release control
 | Component | Increment or creation rule |
 |---|---|
 | Objective baseline | Increment the `v0.0.N` baseline for each reviewed objective-level baseline. |
-| App/site version | Increment MINOR for material new user-visible capability; PATCH for compatible fixes/copy/metadata corrections. |
+| Application version | Increment MINOR for material new user-visible capability; PATCH for compatible fixes/copy/metadata corrections. |
 | AOI version | New AOI number for a different geography; increment MINOR for geometry/scope changes; PATCH or record revision for metadata-only fixes. |
 | Source record ID | Assign a new sequential `SRC-YYYY-NNN`; do not treat as a version. Use internal revision or superseding records for changes. |
 | Dataset version | Increment MINOR for data/source/time-window/tile/label changes affecting downstream use; PATCH for metadata/checksum/manifest corrections that do not change the package. |
@@ -119,12 +119,14 @@ A BurnLens version number means the artifact is operational, official, field-val
 
 | Field | Value |
 |---|---|
-| Current protocol expansion task | P1O5-T03 / #148 |
+| Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase | Phase One / Objective Five |
-| Data/model/map/public-output status | Not started and not authorized by this protocol update |
-| Next related task | P1O5-T04 / #150 - release and tag control |
+| Current phase posture | Phase One accepted for Phase Two planning only; Phase Two data blocked |
+| Planned repository baseline | `v0.0.8-execution-goal-baseline` after #291 merges and is verified |
+| Live tag inventory at goal activation | No tags |
+| Data/model/run/map/application status | Not created |
+| Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
 
-P1O5-T04 should use this protocol and `docs/phase-one/objective-five/VERSION_TAXONOMY.md` to define release and tag control, including release classes, tag eligibility, release-note requirements, do-not-release triggers, and boundary checks.
+Every shipped checkpoint must update `docs/status/VERSION_HISTORY.md` with the exact identifier, commit, evidence meaning, and explicit non-implications. Tags and releases are governed by the execution goal, issue-backed quality gates, and the existing release-control evidence—not by stale historical sequencing restrictions.

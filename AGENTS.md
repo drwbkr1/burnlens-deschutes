@@ -1,249 +1,149 @@
 # AGENTS.md
 
-## Purpose
+## Purpose and authority
 
-This file provides repository-level operating instructions for Codex, ChatGPT, and other prompt-assisted agents working in BurnLens Deschutes.
+This file is the active repository instruction surface for prompt-assisted BurnLens work.
 
-Use it together with the repository’s governing documents. A task-specific instruction may narrow this file, but it must not bypass BurnLens safety boundaries, source precedence, issue authorization, allowed-file scope, human review, or release controls.
+The controlling source of truth is `docs/governance/BURNLENS_EXECUTION_GOAL.md`. That goal makes Codex BurnLens's technical, product, and reliability director. It supersedes conflicting repository instructions, historical controls, task restrictions, permission notes, roadmaps, handoffs, issues, pull-request bodies, and prior prompts. Historical artifacts remain evidence; they do not narrow authority the goal grants.
+
+Authority order:
+
+1. applicable law, platform safety requirements, spending limits, account ownership, and access controls outside the project;
+2. the owner's latest explicit instruction;
+3. `docs/governance/BURNLENS_EXECUTION_GOAL.md`;
+4. the active issue and branch contract;
+5. `docs/roadmap/BURNLENS_BUILD_ROADMAP.md` and the active phase objective;
+6. current top-level controls and workflow documents;
+7. archival trackers, handoffs, logs, issues, PR bodies, and prior prompts.
+
+When an active control conflicts with the goal, follow the goal and update the active control in the same bounded checkpoint when practical.
+
+## Repository boundary
+
+All BurnLens work occurs in `drwbkr1/burnlens-deschutes`.
+
+Do not read, change, publish, depend on, or use the separate `burnlens-site` repository. Any application, public website, interactive demonstration, or case study must be implemented, versioned, deployed, and verified from this repository.
 
 ## Project identity
 
-BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOINT wildfire screening project for Deschutes County, Oregon.
+BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOINT wildfire-screening project for a bounded Deschutes County, Oregon study area. Its primary audience is technical and technical-adjacent portfolio reviewers.
 
-The project is intended to demonstrate technical capability, reproducibility, traceability, usefulness, and transparent limitations. It is not an official wildfire information source and is not emergency guidance.
+The first task is experimental binary semantic segmentation for wildfire-relevant screening. The primary target is an active-fire / hotspot-informed binary fire mask. A burn-scar binary mask is the controlled fallback only if Phase Two shows the primary target cannot support a defensible portfolio model.
+
+The analytical chain is:
+
+```text
+versioned imagery
+→ deterministic preprocessing
+→ segmentation or justified baseline mask
+→ georeferenced raster
+→ vector polygons
+→ transparent geospatial overlays
+→ descriptive exposure-style summary
+→ immutable run package
+→ repository-owned application and case study
+```
 
 ## Non-negotiable boundary language
 
-Use this warning, or a tighter equivalent, for future public-facing BurnLens CV outputs:
+Every future public-facing BurnLens CV output must display this warning or a tighter equivalent:
 
 ```text
 Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
 ```
 
-Do not describe BurnLens outputs as safe, official, validated, authoritative, emergency-ready, operational, field-confirmed, agency-endorsed, or suitable for evacuation, routing, tactical, or incident-command decisions.
+Do not describe BurnLens as official, authoritative, operational, emergency-ready, field-validated, agency-endorsed, production-stable wildfire infrastructure, or suitable for evacuation, routing, tactical, suppression, incident-command, property-level, insurance, legal, or regulatory decisions.
 
-## Source precedence
+Official sources govern over every BurnLens-derived artifact. Hotspot detections are reference evidence, not exact fire perimeters or pixel-perfect ground truth.
 
-Official sources govern over BurnLens outputs.
+## Current checkpoint
 
-BurnLens-derived outputs are lowest-priority experimental project artifacts. They must never override county, state, federal, fire-service, emergency-management, hazard, evacuation, transportation, or incident information.
+The latest verified project checkpoint is the Phase One planning/control baseline on `main` at `01df0632647224622b894511abaac5d48f2b6f6f`.
 
-If BurnLens output conflicts with official information, state that official sources govern. Do not reconcile the conflict as though BurnLens were authoritative.
+- The owner recorded `APPROVE — PHASE TWO PLANNING ONLY` through P1O7-T08 / PR #294.
+- The repository has no accepted source data, final AOI, labels, dataset, executable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical claim.
+- Phase Two planning is authorized. Data touch may proceed only through an issue-backed before-data gate after source licensing/terms and other required evidence are resolved.
+- Issue #290 / PR #291 is the active goal-and-roadmap reconciliation checkpoint.
 
-## Governing workflow routes
+Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 
-Use these artifacts according to their roles:
+## Six-phase outcomes
 
-1. `docs/workflows/PROMPT_TO_REPO_SOP.md` — full repository workflow reference and context-tier rules.
-2. `templates/CODEX_TASK_PACKET.md` — canonical executable task capsule.
-3. `templates/CODEX_TASK_TEMPLATE.md` — non-canonical compatibility and discoverability entry point only.
-4. Task issue and approved task capsule — exact task authorization, branch, file scope, research, verification, and handoff.
-5. `records/PROMPT_BUILD_LOG.md` — canonical prompt/build-log protocol and entry index.
-6. `templates/PROMPT_LOG_ENTRY.md` — canonical detailed prompt/build-log entry template.
-7. `PROMPT_LOG.md` — non-canonical root navigation for prompt logging.
-8. `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` — branch, PR, review, merge, and post-merge baseline.
-9. Objective- and workstream-specific controls selected through the SOP.
+The six phase objectives are outcomes BurnLens must prove. Their listed task sequences are revisable planning hypotheses.
 
-Do not create a parallel task schema, prompt-log protocol, workflow, status register, verification checklist, or authorization mechanism.
+1. Establish the bounded promise, CV contract, source posture, repository controls, traceability system, and acceptance evidence.
+2. Build a legally usable, versioned, leakage-resistant data/label/baseline foundation and decide whether model training is defensible.
+3. Determine whether one bounded U-Net-style model adds reproducible value beyond the strongest relevant baseline.
+4. Convert the accepted model or baseline into a georeferenced, reproducible CV-to-GEOINT run and evidence interface.
+5. Prove reliability, reproducibility, accessibility, security, failure visibility, performance, and rollback.
+6. Publish one coherent, licensed, citable, traceable portfolio release and close or maintain it honestly.
 
-## Current phase boundary
+Codex may reorder, split, merge, replace, or defer checkpoints when evidence supports a better route, without changing these outcomes.
 
-Phase One / Objective Seven is the active acceptance-gate workstream under parent issue #246.
+## Cycle protocol
 
-Objective Seven work is limited to explicitly authorized evidence, audit, status, remediation, decision, and closeout tasks. It does not authorize implementation, data acquisition, imagery download, AOI selection, labels, masks, baselines, models, metrics, runs, reports, maps, screenshots, demos, public claims, repository settings, tags, or GitHub Releases unless a later task issue names and authorizes the exact work.
+Every cycle must:
 
-Follow the current status and dependency order in:
+1. run the current tool, repository-owned public surface, and relevant pipeline path on verified inputs;
+2. if no runnable path exists, confirm that fact and build the smallest end-to-end vertical slice allowed by resolved gates;
+3. identify the highest-leverage user-visible or evidence-visible weakness;
+4. create or update one issue-backed, branch-scoped checkpoint with allowed files, non-goals, research needs, and quality gates;
+5. perform fresh primary-source research when current technical, data, tooling, safety, licensing, or public-facing claims require validation;
+6. implement one bounded, meaningful improvement;
+7. validate actual rendered behavior and real pipeline outputs, not only tests or code;
+8. compare the result with requirements, reference outputs, the active phase objective, and the portfolio narrative;
+9. update roadmap, phase status, changelog, version history, prompt/build log, and human-readable devlog;
+10. review the diff, version, commit, push, open and merge the PR, deploy when applicable, and verify the shipped checkpoint;
+11. choose the next checkpoint without routine approval.
 
-- `README.md`
-- `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md`
-- `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md`
-- `docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md`
+## Issue, branch, and release discipline
 
-P1O7-T03 / #257 is active and must be rebuilt under the corrected `burnlens-deschutes`-only scope after the bounded status-routing remediation in P1O7-REM-03A / #259. PR #258 is closed unmerged and superseded; its wrong-scope findings are not current evidence and must not be carried into the corrected audit.
+Meaningful work remains issue-backed, branch-scoped, versioned, and reviewable. Each issue must name the intended outcome, allowed files, non-goals, research needs, quality gates, and public-claim impact.
 
-Treat completed-objective trackers, handoffs, closeouts, old issues, old PR bodies, and historical logs as archival context unless a task explicitly requires verification or correction.
+Codex has standing authority to create and revise issues, branches, versions, commits, PRs, tags, releases, deployments, and rollback records; merge its own work after quality gates pass; close superseded or completed work; and continue to the next checkpoint. Historical requirements for separate human review, exact merge authorization, tag authorization, or routine phase activation no longer apply.
 
-## Required task workflow
+This authority does not waive required evidence, unresolved licensing/terms, account controls, or the stop conditions below. Publication and deployment must always be verifiable and reversible.
 
-Every meaningful prompt-assisted task follows this chain:
+## Data, model, and output gates
 
-```text
-approved task issue
-→ compact task capsule
-→ branch from current main
-→ Tier 0 plus relevant Tier 1 context
-→ bounded research when required
-→ edits within allowed files
-→ dated prompt/build log
-→ named checks or documented non-applicability
-→ diff review against main
-→ task-scoped pull request
-→ optional AI-assisted review
-→ mandatory human review
-→ authorized merge
-→ handoff and status synchronization when needed
-```
+Before first data touch, record the source's current primary-source terms, access method, redistribution/derivative posture, intended role, provenance fields, AOI rationale, CRS/grid assumptions, and no-go conditions. Do not proceed while licensing or terms remain unresolved.
 
-Do not skip the issue, branch, allowed-file, prompt-log, PR, or human-review gates.
+Before treating output as evidence, record the applicable commit, application version, AOI version, source records, dataset version, label-schema version, baseline/model version, immutable run ID, processing timestamp, checksums, warning flags, limitations, and source-precedence note.
 
-## Context loading
+Unknown or excluded pixels must never be silently coerced to background. Split leakage, temporal mismatch, geolocation uncertainty, cloud/smoke/snow/haze/shadow, class imbalance, raster-grid mismatch, and baseline comparison must be visible in the relevant evidence.
 
-Use the SOP quickstart:
+No public map, screenshot, report, model output, application view, run artifact, case-study card, or portfolio claim is ready unless it traces through that version chain and passes claims, licensing, release-QA, and rendered-output review.
 
-- load Tier 0 for every repository task;
-- select only Tier 1 artifacts relevant to the task;
-- use Tier 2 only when current controls are insufficient for a specific verification question;
-- record any Tier 2 use and its reason in the prompt/build log.
+## Required records
 
-Do not let historical drafts override current merged controls.
+Maintain these active records as part of every shipped checkpoint:
 
-## Issue, branch, and PR rules
+- `docs/roadmap/BURNLENS_BUILD_ROADMAP.md`;
+- `docs/status/PHASE_STATUS.md`;
+- `CHANGELOG.md`;
+- `docs/status/VERSION_HISTORY.md`;
+- a dated entry under `records/prompt-build-log/`;
+- a human-readable entry under `docs/devlog/`.
 
-Every meaningful task must have its own task issue unless the human owner explicitly approves bundling.
+Do not record secrets, credentials, cookies, private URLs, raw private transcripts, chain-of-thought, or unnecessary personal information.
 
-Use compact task branches created from current `main`, unless the issue explicitly authorizes another base. Examples:
+## Stop conditions
 
-```text
-p1o6t04b
-p1o6t04fixb
-p2o1t01b
-```
+Stop and ask the owner only before:
 
-Prompt-assisted edits must not be made directly to `main`.
+- changing the core project promise, target user, first CV task, any of the six phase outcomes, or the use boundaries;
+- crossing an explicit no-go boundary;
+- proceeding with unresolved source licensing or terms;
+- spending money or adding a paid service or secret;
+- changing access, ownership, or public-sharing status;
+- taking an irreversible action;
+- implying official, operational, emergency-ready, field-validated, agency-endorsed, or practitioner-endorsed status;
+- shipping something BurnLens cannot verify.
 
-Use task PR titles in this form:
+Do not stop for routine task ordering, issue creation, branch creation, implementation choices within the locked task, versioning, commits, PRs, merges, deployments, or checkpoint selection.
 
-```text
-P#O#-T## Short task title
-```
+## Verification and handoff
 
-The PR must close only the task issue:
+Name every check, method, and result. Documentation-only checkpoints still require link, status, authority, boundary, claims, scope, and rendered-document review. Technical checkpoints require the applicable unit/integration checks plus real input-to-output and rendered-interface inspection.
 
-```text
-Closes #TASK_ISSUE
-```
-
-Do not close a parent objective issue from an ordinary task PR. Prefer squash merge for bounded task branches when repository settings allow it and the human reviewer authorizes merge.
-
-## Allowed-file discipline
-
-Before editing, identify:
-
-- task issue and parent issue;
-- branch and base;
-- primary and supporting artifacts;
-- allowed file changes;
-- forbidden work;
-- required research;
-- acceptance criteria;
-- verification plan;
-- intended PR close keyword;
-- handoff target.
-
-Edit only the paths named in the task contract.
-
-If another path becomes necessary, stop before changing it. Explain why the contract is insufficient and obtain a human-approved scope revision or create a separate task.
-
-Connector friction does not authorize broader scope, thinner artifacts, temporary files on `main`, or bypassing review.
-
-## Research rule
-
-Research must occur after branch creation and before final artifact language when a task depends on current technical, tooling, API, official, policy, legal, safety, source, dataset, model, or public-claim facts.
-
-Prefer official or primary sources. Record the source, what it supports, the adopted decision, and the date checked.
-
-When no fresh research is required, state why merged repository controls and repository-internal verification are sufficient. Do not introduce current external claims from memory.
-
-## Prompt/build logging
-
-Prompt-assisted tasks that materially change files must create or update a dated record under:
-
-```text
-records/prompt-build-log/YYYY-MM-DD-task-id.md
-```
-
-Use `records/PROMPT_BUILD_LOG.md` and `templates/PROMPT_LOG_ENTRY.md` as the canonical controls.
-
-Record task identity, issue, branch, future or actual PR, governing context, allowed and actual files, research, material decisions, checks, results, checks not run, boundary review, claims review, review-driven revisions, and handoff.
-
-Do not record secrets, credentials, tokens, cookies, private URLs, private chain-of-thought, raw private transcripts, unnecessary personal information, or unreviewed operational guidance.
-
-## Verification and test reporting
-
-Verification is mandatory for every task.
-
-Report each applicable check by name, method or command, and actual result. Examples include:
-
-- unit, integration, regression, or smoke tests;
-- linting, formatting, and type checking;
-- YAML, JSON, schema, or manifest validation;
-- link and path checks;
-- rendered-document or UI inspection;
-- branch and PR diff inspection;
-- data, CRS, provenance, or run-package checks when later authorized.
-
-Do not write `tests passed` unless named tests or commands actually ran.
-
-When a check does not apply, give a task-specific reason. For documentation-only work, code tests may be non-applicable while Markdown, path, link, scope, consistency, boundary, claims, and diff checks remain required.
-
-## Review separation
-
-AI-assisted review is supplemental. It may inspect diffs, identify omissions, flag defects or boundary violations, suggest checks, and confirm whether findings appear addressed.
-
-AI-assisted review does not approve a merge. An authoring agent must not treat its own self-review as independent approval.
-
-A human must inspect the task issue, capsule, changed-file list, diff, research where applicable, checks and results, acceptance criteria, boundary status, close keyword, and handoff. The human records one outcome:
-
-- **Approve**;
-- **Request changes**;
-- **Defer or reject**.
-
-Merge only after blocking findings are resolved and human approval is recorded.
-
-## Data, claim, version, tag, and release gates
-
-Before touching data, imagery, AOIs, labels, masks, baselines, model inputs, or run outputs, apply the before-data gate in `docs/workflows/PROMPT_TO_REPO_SOP.md` and the applicable Objective Three and Objective Five controls.
-
-Before public-facing language or outputs, apply:
-
-- `docs/objective-one/USE_BOUNDARIES.md`;
-- `docs/objective-one/SOURCE_PRECEDENCE.md`;
-- `docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md`;
-- `docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md`;
-- `docs/phase-one/objective-five/OBJECTIVE_FIVE_CLAIMS_CHECK.md`;
-- applicable reproducibility and release-QA controls.
-
-Follow `VERSIONING.md` for version and identifier rules. Update it only when the versioning protocol itself changes.
-
-A proposed tag is not a created tag. A release-note draft is not a GitHub Release. Tag creation and GitHub Release publication require separate explicit authorization.
-
-## Claims rules
-
-Safe internal claims must be limited to evidence that exists in merged repository artifacts.
-
-Do not claim operational reliability, field validation, emergency readiness, agency endorsement, official wildfire information status, live incident accuracy, completed data/model/map work, configured repository enforcement, or published releases unless the relevant evidence and explicit authorization exist.
-
-## Future implementation caution
-
-When later tasks authorize data or model work, add source records, provenance, versioning, run IDs, boundary records, and applicable checks before treating outputs as portfolio evidence.
-
-The locked future technical chain remains:
-
-```text
-imagery → preprocessing → segmentation or baseline mask → raster output → vector polygons → map overlay → exposure-style summary → documented run package
-```
-
-Do not skip traceability or limitation steps to make the project appear more complete.
-
-## Handoff rule
-
-Every task must end with a compact handoff stating:
-
-- what was completed;
-- issue, branch, PR, and merge status;
-- files changed;
-- checks and results;
-- safe, caveated, and unsupported claims;
-- status synchronization completed or still needed;
-- next task and required context;
-- drafting details or historical context that should not carry forward.
+Each checkpoint handoff states what shipped; issue, branch, PR, merge, version, deployment, and run identity; files and artifacts changed; checks and failures; claims permitted and prohibited; carried risks; and the next selected checkpoint.
