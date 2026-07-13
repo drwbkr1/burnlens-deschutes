@@ -162,12 +162,14 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-SYNC-03 | `records/prompt-build-log/2026-07-12-p1o7-sync-03.md` | final synchronization record | Issue #264; source T03 review and merge evidence are retained in issue #257, PR #263, and the dated logs. |
 | P1O7-T04 | `records/prompt-build-log/2026-07-12-p1o7-t04.md` | merged via PR #270 | Issue #269 closed; G03 reviewed `meets criterion`, G04 reviewed `meets with limitation`, and F04-A remains `evidence incomplete`. |
 | P1O7-SYNC-04 | `records/prompt-build-log/2026-07-12-p1o7-sync-04.md` | final synchronization record | Issue #271; PR #272 and final merge evidence are retained in the issue, PR, and dated log. |
+| P1O7-T05 | `records/prompt-build-log/2026-07-12-p1o7-t05.md` | review-ready branch candidate | Issue #273; G05/G06-B/G08/G09 author `meets with limitation`, G06-A/G07 author `meets criterion`, F06-C/G10/F10-R `evidence incomplete`; human review pending. |
 
 ## Acceptance and remediation triggers
 
 An entry is reviewable when a reviewer can identify authorization, context, file scope, research, decisions, checks, boundaries, review separation, merge state, sync state, and handoff.
 
 Revise the protocol, template, or an entry if it:
+
 - stores sensitive/private material;
 - omits materially applicable issue, branch/base, file-scope, research, verification, review, or handoff evidence;
 - describes checks without methods and actual results;
@@ -180,4 +182,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 / #247 and P1O7-T02 / #251 are complete. P1O7-REM-03A / #259 merged through PR #260 and corrected status routing only. P1O7-T03 / #257 completed the corrected `burnlens-deschutes`-only audit through PR #263 at `3d7e6d5a2de7fcc527803ae06d9b746143084207`; Drew approved reviewed head `ac39943396ba5ea1c4d28fcd1f9084d38a94cc21` and separately authorized squash merge. G01, G02, and G11 have reviewed `meets criterion` / `pass` results within that scope. P1O7-T04 / #269 completed through PR #270 at `d3f05322eb0bf2c9802bba59bd6c3ad2484288f4`; Drew approved reviewed head `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` and separately authorized squash merge. G03 has reviewed `meets criterion` / `pass`; G04 has reviewed `meets with limitation` / `pass with limitation`; F04-A remains `evidence incomplete` and blocks data touch. The final Phase One decision remains unmade, Phase Two data or implementation work has not begun, P1O7-T05 is next, and no Objective Seven tag or GitHub Release has been created.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 and P1O7-T04 have reviewed criterion evidence. P1O7-T05 / #273 is a branch review candidate only; its author results remain pending human review. The final Phase One decision remains unmade, Phase Two work has not begun, live Project/tag/Release inventories remain unresolved where stated, and no Objective Seven tag or GitHub Release is authorized or created.
