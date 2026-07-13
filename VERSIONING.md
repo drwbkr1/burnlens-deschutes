@@ -122,8 +122,8 @@ A BurnLens version number means the artifact is operational, official, field-val
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
 | Current phase posture | Phase One accepted for Phase Two planning only; Phase Two data blocked |
-| Planned repository baseline | `v0.0.8-execution-goal-baseline` after #291 merges and is verified |
-| Live tag inventory at goal activation | No tags |
+| Current repository baseline | `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
+| Baseline verification | Annotated tag resolves to the exact merged PR #291 commit |
 | Data/model/run/map/application status | Not created |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 

@@ -8,10 +8,10 @@ BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repositor
 
 | Identifier | State | Commit | Meaning |
 |---|---|---|---|
-| `v0.0.8-execution-goal-baseline` | Planned for the verified merge of #291 | Pending merge | Controlling execution goal, six-phase roadmap, repository-only product boundary, and active status/log baseline. No analytical capability. |
+| `v0.0.8-execution-goal-baseline` | Verified annotated tag | `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` | Controlling execution goal, six-phase roadmap, repository-only product boundary, and active status/log baseline. No analytical capability. |
 | `v0.0.7-objective-seven-phase-one-baseline` | Historical candidate only; never created as a tag | Eligible historical target `10caebb3d61ff622dc6dfe8809a63886089eba4e` | Phase One documentation/control candidate approved for Phase Two planning only. |
 
-An authenticated tag inventory at goal activation on 2026-07-13 returned no tag refs. Historical text that treated the tag inventory as inaccessible is superseded for current status, but remains part of the audit trail.
+An authenticated tag inventory at goal activation on 2026-07-13 returned no tag refs. After PR #291 merged, the annotated `v0.0.8-execution-goal-baseline` tag was created, pushed, and independently dereferenced to the exact merge commit. Historical text that treated the tag inventory as inaccessible is superseded for current status, but remains part of the audit trail.
 
 ## Artifact versions
 

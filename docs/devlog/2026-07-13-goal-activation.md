@@ -35,3 +35,7 @@ No data, AOI, labels, executable pipeline, model, metric, run, map, deployment, 
 ## Next highest-leverage checkpoint
 
 Use fresh primary-source research to resolve the preferred imagery/reference source terms, access path, and intended evidence roles. Update the before-data gate and select the smallest legally usable input package that can support an end-to-end vertical slice. Stop before acquisition if licensing or terms remain unresolved.
+
+## Shipped result
+
+PR #291 merged as `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. Issue #290 closed. The annotated tag `v0.0.8-execution-goal-baseline` was pushed and verified to resolve to that exact commit. The GitHub-rendered main README was rechecked and shows the intended planning-only status, absent capability inventory, six phase outcomes, required warning, repository-only rule, and working control links.
