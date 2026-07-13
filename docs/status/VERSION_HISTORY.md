@@ -8,7 +8,7 @@ BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repositor
 
 | Identifier | State | Commit | Meaning |
 |---|---|---|---|
-| `v0.1.0-source-metadata-baseline` | Candidate; merge and annotated tag pending | Pending PR merge | First Phase Two source-readiness package: versioned discovery AOI, three reviewed source records, terms/access/precheck/provenance controls, and a normalized public-metadata fixture. No source assets or analytical capability. |
+| `v0.1.0-source-metadata-baseline` | Verified annotated tag | `6abe87bba486e3fe49b6c06178b454335663cb73` | First Phase Two source-readiness package: versioned discovery AOI, three reviewed source records, terms/access/precheck/provenance controls, and a normalized public-metadata fixture. No source assets or analytical capability. |
 | `v0.0.8-execution-goal-baseline` | Verified annotated tag | `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` | Controlling execution goal, six-phase roadmap, repository-only product boundary, and active status/log baseline. No analytical capability. |
 | `v0.0.7-objective-seven-phase-one-baseline` | Historical candidate only; never created as a tag | Eligible historical target `10caebb3d61ff622dc6dfe8809a63886089eba4e` | Phase One documentation/control candidate approved for Phase Two planning only. |
 
@@ -29,6 +29,6 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | Run | Not created |
 | Report/interface | Not created |
 
-The source-metadata candidate records availability and governance evidence only. It does not imply that any scene contains a Darlene 3 detection, that source assets have been accessed, or that the active-fire target is label-ready.
+The source-metadata baseline records availability and governance evidence only. It does not imply that any scene contains a Darlene 3 detection, that source assets have been accessed, or that the active-fire target is label-ready.
 
 Every shipped checkpoint must update this file with its version, exact commit, evidence meaning, and explicit non-implications.

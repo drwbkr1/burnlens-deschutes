@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The current control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 has now verified the first no-secret source metadata path and created the candidate `v0.1.0-source-metadata-baseline`. After that candidate is merged and versioned, the next checkpoint is a bounded asset-access readiness slice: verify one Sentinel scene and its temporally relevant NASA VIIRS reference path, their exact formats/CRS/geolocation requirements, and whether active-fire labels remain defensible. It must open a new F04-A gate and stop before credentials, asset download, processing, or label work if access or terms are unresolved.
+The control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 shipped through PR #310 at `6abe87bba486e3fe49b6c06178b454335663cb73` and is versioned by the annotated `v0.1.0-source-metadata-baseline` tag. P2O1-T02 / issue #312 is the current bounded asset-access readiness slice: verify one Sentinel scene and its temporally relevant NASA VIIRS reference path, their exact formats/CRS/geolocation requirements, and whether active-fire labels remain defensible. It must open a new F04-A gate and stop before credentials, asset download, processing, or label work if access or terms are unresolved.
 
 ## Required reading order for long-running Codex work
 

@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.1.0-source-metadata-baseline — 2026-07-13 (candidate)
+## v0.1.0-source-metadata-baseline — 2026-07-13
 
 ### P2O1-T01 — First source stack and metadata discovery
 
@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Defer FIRMS archive/API delivery because it requires Earthdata/email authentication or a map key.
 - Pass F04-A only for the completed metadata action; keep all asset intake, processing, labels, baselines, models, runs, maps, and analytical claims blocked.
 
-Merge commit and annotated tag are pending. No application, dataset, label, baseline, model, metric, run, raster, vector, map, or public analytical result is created by this checkpoint.
+Shipped through PR #310 at merge commit `6abe87bba486e3fe49b6c06178b454335663cb73`; the annotated `v0.1.0-source-metadata-baseline` tag resolves to that commit. The rendered Phase Status, F04-A decision, and metadata fixture were verified on GitHub after merge. No application, dataset, label, baseline, model, metric, run, raster, vector, map, or public analytical result is created by this checkpoint.
 
 ## v0.0.8-execution-goal-baseline — 2026-07-13
 

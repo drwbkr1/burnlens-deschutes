@@ -134,7 +134,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P1O7-SYNC-09F-SYNC | `records/prompt-build-log/2026-07-13-p1o7-sync-09f-sync.md` | final synchronization record | Issue #304; final task-scoped PR and merge evidence remain in GitHub history. No further T09 lifecycle sync expected. |
 | BL-GOV-001 | `docs/devlog/2026-07-13-goal-activation.md` | merged via PR #291; tagged | Controlling execution goal and roadmap at `v0.0.8-execution-goal-baseline`. |
 | BL-GOV-001-SYNC | `records/prompt-build-log/2026-07-13-bl-gov-001-sync.md` | merged via PR #309 | Governance lifecycle truth synchronized; issue #308 closed. |
-| P2O1-T01 | `records/prompt-build-log/2026-07-13-p2o1-t01.md` | active candidate | Issue #293; first source stack, before-data records, and no-secret metadata fixture. |
+| P2O1-T01 | `records/prompt-build-log/2026-07-13-p2o1-t01.md` | merged via PR #310; tagged | Issue #293 closed; merge `6abe87bba486e3fe49b6c06178b454335663cb73`; `v0.1.0-source-metadata-baseline`. |
 
 ## Acceptance and remediation triggers
 
@@ -144,4 +144,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 / issue #293 is the current bounded checkpoint: it verifies public metadata access and instantiates the source-readiness record set while keeping every source-asset and analytical action blocked. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`, while keeping every source-asset and analytical action blocked. P2O1-T02 / issue #312 is the current bounded checkpoint for one exact asset-access readiness route. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
