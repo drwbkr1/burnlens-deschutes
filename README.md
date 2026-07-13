@@ -14,7 +14,7 @@ Objective Six defines how prompt-assisted repository work is issue-backed, branc
 
 Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts. P1O7-T02 added the merged gate evidence matrix and defined how future tasks must evaluate evidence; it did not conduct the gate, mark a criterion passed, authorize data work, decide a release identifier or class, create a tag, or publish a GitHub Release.
 
-P1O7-REM-03A / #259 is complete through PR #260 and merge commit `d1cb6cffa01402627c9e4b208139dc1a87c97552`. P1O7-T03 / #257 is the next active task and must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. The abandoned wrong-scope PR #258 remains closed unmerged and superseded; its findings are not current evidence.
+P1O7-T03 / #257 completed the corrected `burnlens-deschutes`-only identity, boundary, and active-scope audit through PR #263 and squash merge commit `3d7e6d5a2de7fcc527803ae06d9b746143084207`. Drew reviewed and approved source head `ac39943396ba5ea1c4d28fcd1f9084d38a94cc21` and separately authorized the squash merge. Within the corrected repository-only scope, G01, G02, and G11 received reviewed `meets criterion` / `pass` results. These criterion findings do not make the final Phase One decision. The abandoned wrong-scope PR #258 remains closed unmerged and superseded; its findings are not current evidence.
 
 Current Objective Six status:
 
@@ -56,10 +56,12 @@ Current Objective Seven status:
 P1O7-T01 / #247 - merged through PR #248; synchronized through P1O7-SYNC-01 / #249
 P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #253 and finalized through #255
 P1O7-REM-03A / #259 - complete through PR #260; merge commit d1cb6cffa01402627c9e4b208139dc1a87c97552
-P1O7-T03 / #257 - next active task; corrected burnlens-deschutes-only audit rebuild from current main
+P1O7-T03 / #257 - merged through PR #263; merge commit 3d7e6d5a2de7fcc527803ae06d9b746143084207; issue closed
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
+G01, G02, and G11 - reviewed meets criterion / pass within the corrected burnlens-deschutes-only scope
+G03-G10 - not evaluated by T03
+P1O7-T04 - next task: audit CV and Phase Two technical readiness
 Phase One acceptance - not evaluated; no final gate conclusion exists
-G01, G02, and G11 - pending corrected P1O7-T03 audit; no verdict assigned by #259
 Release identifier and class - not decided
 Objective Seven tag - not authorized or created
 GitHub Release - not authorized or published
@@ -71,6 +73,7 @@ Current Objective Seven records:
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
+docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 ```
 
 The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
@@ -107,6 +110,7 @@ next-workstream handoff: docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 current acceptance-gate tracker: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 current acceptance-gate contracts: docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 current acceptance-gate evidence matrix: docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
+current scope-and-boundary audit: docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -165,7 +169,7 @@ BurnLens remains an experimental, non-operational portfolio project. Official so
 
 Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01, P1O7-T02, or P1O7-REM-03A.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact has been created by P1O7-T01, P1O7-T02, P1O7-REM-03A, or P1O7-T03.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -211,12 +215,10 @@ Phase One / Objective Seven — Phase One acceptance gate
 Current bounded work is:
 
 ```text
-P1O7-T03 / #257 — Audit project identity, boundaries, and active-scope language
+P1O7-T04 — Audit CV and Phase Two technical readiness
 ```
 
-P1O7-T03 must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. G01, G02, and G11 remain pending that corrected audit. PR #258 is superseded and must not be used as evidence.
-
-T03 may inspect and record evidence-backed findings only within its own issue scope. It must not silently remediate evaluated files, conduct later technical or repository-state audits, declare the final Phase One decision, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
+P1O7-T03 is complete through PR #263. P1O7-T04 may audit only the documented CV task, data-intake prerequisites, provenance, reproducibility, and Phase Two planning controls authorized by its own issue. It must not begin Phase Two data work, silently remediate completed records, declare the final Phase One decision, choose or create a tag, or publish a GitHub Release.
 
 ## Public site
 
