@@ -8,9 +8,9 @@ The repository documents the controls and future workflow for turning wildfire-r
 
 **Phase One / Objective Six is complete as a documented, reviewable repository-control baseline, and parent issue #195 is closed. Phase One / Objective Seven remains active and incomplete under parent issue #246. Drew recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13 through P1O7-T08 / PR #294. Full Phase One completion remains blocked by G10, and every data-touch action remains blocked by F04-A. Phase One has not been accepted as complete or released.**
 
-P1O7-T09 / issue #298 is active on branch `p1o7t09b`. The branch contains a review-ready Objective Seven closeout, handoff, Phase One documentation/control release-note candidate, reproducibility review, release-QA review, and synchronized status/log records.
+P1O7-T09 / issue #298 was human-reviewed and squash-merged through PR #299 at `d7ad8f063239a61e9212e6eac562deffa50a7a88`. Drew approved exact reviewed head `e287343c0ccaa3072097b643b4012aa15ed79bd2` and separately authorized squash merge for that exact head.
 
-T09 has no pull request, human outcome, merge authorization, or merge commit yet. The candidate’s exact eligible `main` target is therefore unresolved and must be recorded through a bounded post-merge synchronization after T09 is reviewed and merged.
+P1O7-SYNC-09 / issue #300 is synchronizing T09 lifecycle truth. The T09 merge is the reviewed source merge, but it is not automatically the exact eligible baseline target because the merged status records were stale. The exact eligible synchronized `main` target remains pending a bounded post-sync finalization after this synchronization merges.
 
 The approved conditional candidate remains:
 
@@ -60,7 +60,8 @@ P1O7-REM-06A / #279 - merged through PR #280; synchronized through #281 / PR #28
 P1O7-T07 / #283 - merged through PR #284; synchronized through #285 / PR #286 and #287 / PR #288
 P1O7-T08 / #289 - reviewed and merged through PR #294 at 69c0b7322f5c2a556f285ad639a8df467494979f
 P1O7-SYNC-08 / #296 - merged through PR #297 at 23d57ab96071e21068ab7c02ae970b2968e10c04
-P1O7-T09 / #298 - review-ready branch build on p1o7t09b; PR, human review, and merge pending
+P1O7-T09 / #298 - reviewed and merged through PR #299 at d7ad8f063239a61e9212e6eac562deffa50a7a88
+P1O7-SYNC-09 / #300 - active lifecycle synchronization; exact eligible target still pending finalization
 P1O7-T10-PREP / #292 - open and blocked; complete tag inventory/readiness only; no tag authorization
 P2O1-T01 / #293 - open and blocked; before-data intake preparation only; no source-access authorization
 #194 - separate Objective Five tag action; open, unchanged, and outside Objective Seven
@@ -88,40 +89,19 @@ docs/phase-one/objective-seven/OBJECTIVE_SEVEN_REPRODUCIBILITY_REVIEW.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_RELEASE_QA_REVIEW.md
 ```
 
-The five T09 primary artifacts are branch candidates until human review and merge. The T07 checklist and T08 decision memo retain their reviewed source-task roles and were not rewritten during the T09 build stage.
-
-## T09 candidate and review posture
-
-The T09 package prepares a conditional documentation/control objective-baseline candidate only.
-
-| Item | Build-stage state |
-|---|---|
-| Closeout and handoff | Review-ready on `p1o7t09b` |
-| Phase One release note | Review-ready repository candidate; not publication |
-| Reproducibility review | Complete with decision `blocked` |
-| Release-QA review | Complete with decision `blocked` |
-| PR and reviewed head | Pending |
-| Human review | Pending |
-| Merge authorization | Pending |
-| Eligible `main` target | Pending post-merge synchronization |
-| Tag | Not created or authorized |
-| GitHub Release | Not published, not authorized, not recommended |
-
-The reviews are blocked from release action because the PR, human gate, merge, synchronized target, complete tag inventory, and exact tag authorization do not exist yet. The branch may proceed to human review without weakening those blockers.
+The T09 package is merged documentation/control evidence. Its reproducibility and release-QA decisions remain `blocked` for tag or release action until an exact synchronized target and complete #292 readiness evidence exist.
 
 ## Required next sequence
 
-1. Human-review the complete `p1o7t09b` diff under issue #298.
-2. Open a task-scoped PR using `Closes #298` only.
-3. Record one human outcome and separate exact-head merge authorization.
-4. After merge, run a bounded synchronization that records the exact eligible `main` target.
-5. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
-6. Keep #293 blocked until that parent adopts the planning-only boundary.
-7. Keep #292 blocked until T09 is merged and the exact synchronized target exists.
-8. Permit a future exact T10 issue only if #292 establishes readiness and Drew authorizes the exact tag action.
-9. Do not publish a GitHub Release for the current candidate.
+1. Complete and merge P1O7-SYNC-09 / #300.
+2. Run a minimal finalization task that records the synchronization merge SHA as the exact eligible synchronized `main` target across the candidate and current-status records.
+3. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
+4. Keep #293 blocked until that parent adopts the planning-only boundary.
+5. Keep #292 blocked until the exact synchronized target exists.
+6. Permit a future exact T10 issue only if #292 establishes readiness and Drew authorizes the exact tag action.
+7. Do not publish a GitHub Release for the current candidate.
 
-Parent #246 cannot close through T09 alone. G10 resolution, post-tag verification, final synchronization, a parent summary, and explicit human parent-close authorization remain required.
+Parent #246 cannot close through T09 or this synchronization alone. G10 resolution, post-tag verification, final synchronization, a parent summary, and explicit human parent-close authorization remain required.
 
 ## Prompt-built development architecture
 
@@ -131,7 +111,6 @@ human contributor guidance: CONTRIBUTING.md
 repository agent instructions: AGENTS.md
 structured task issue intake: .github/ISSUE_TEMPLATE/task.yml
 canonical task capsule: templates/CODEX_TASK_PACKET.md
-non-canonical task wrapper: templates/CODEX_TASK_TEMPLATE.md
 root prompt-log navigation: PROMPT_LOG.md
 canonical prompt-log protocol/index: records/PROMPT_BUILD_LOG.md
 canonical prompt-log entry template: templates/PROMPT_LOG_ENTRY.md
@@ -140,65 +119,16 @@ detailed human review record: docs/phase-one/objective-six/PR_REVIEW_CHECKLIST.m
 concise PR intake: .github/PULL_REQUEST_TEMPLATE.md
 ```
 
-Issue authorization, task capsule, branch scope, prompt logging, named checks, human review, and merge authorization remain distinct. Written policy does not prove that GitHub branch protection, rulesets, required approvals, CI, or other enforcement is configured.
-
-## Objective Five governing controls
-
-Objective Five remains the control baseline for future work:
-
-```text
-docs/phase-one/objective-five/VERSION_TAXONOMY.md
-docs/phase-one/objective-five/RELEASE_CONTROL.md
-docs/phase-one/objective-five/PROVENANCE_TRACEABILITY_SPEC.md
-docs/phase-one/objective-five/RUN_PACKAGE_CONTRACT.md
-docs/phase-one/objective-five/ARTIFACT_REGISTRY_SPEC.md
-docs/phase-one/objective-five/CLAIM_TRACEABILITY_PROTOCOL.md
-docs/phase-one/objective-five/SOURCE_PRECEDENCE_RELEASE_GATE.md
-docs/phase-one/objective-five/REPRODUCIBILITY_CHECKLIST.md
-docs/phase-one/objective-five/RELEASE_QA_CHECKLIST.md
-docs/phase-one/objective-five/OBJECTIVE_FIVE_RESEARCH_VALIDATION_LOG.md
-docs/phase-one/objective-five/OBJECTIVE_FIVE_CLAIMS_CHECK.md
-docs/phase-one/objective-five/OBJECTIVE_FIVE_CLOSEOUT.md
-docs/phase-one/objective-five/OBJECTIVE_FIVE_HANDOFF.md
-docs/phase-one/objective-five/OBJECTIVE_FIVE_RELEASE_NOTE.md
-templates/RELEASE_NOTE_TEMPLATE.md
-records/PROMPT_BUILD_LOG.md
-```
-
 ## Current work boundary
 
-BurnLens remains an experimental, non-operational portfolio project. Official sources govern.
+BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
 
-Phase Two data work has not begun. No source query, AOI geometry, source data, label, baseline, model, run, metric, map, report, screenshot, demo, deployment, completed public claim, Objective Seven tag, or GitHub Release was created by Objective Seven or T09.
+Phase Two data work has not begun. No source query, AOI geometry, source data, label, model, run, map, public demo, completed public claim, Objective Seven tag, or GitHub Release artifact has been created by Objective Seven work.
 
-Required warning for future BurnLens-derived outputs:
-
-```text
-Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
-```
-
-## Locked computer-vision task
-
-BurnLens Deschutes’ first computer-vision task remains experimental binary semantic segmentation for wildfire-relevant screening.
-
-- Primary target: active-fire / hotspot-informed binary fire mask.
-- Fallback target: burn-scar binary mask, only after a documented future feasibility decision.
-- Required future chain:
-
-```text
-imagery → preprocessing → segmentation or baseline mask → raster output → vector polygons → map overlay → exposure-style summary → documented run package
-```
-
-This is a future workflow contract, not evidence that implementation or outputs exist.
-
-Future artifacts must keep official/reference sources, reference-derived labels, baseline outputs, model outputs, map overlays, and portfolio interpretations separate.
-
-## Known navigation limitation
-
-`AGENTS.md` retains an obsolete T03-active sentence, and some completed-objective artifacts retain historical status headers. Current README, the Objective Seven tracker, the decision memo, and merged lifecycle records govern current truth. Those stale files were outside issue #298’s allowed scope and were not changed.
+Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
 ## Public site
 
 The public website lives separately at `burnlensproject.org` and is backed by the `burnlens-site` repository.
 
-This technical repository controls project scope, documentation, versioning, and future CV/GEOINT workflow artifacts. T09 does not publish or change the site, and public copy must never make claims stronger than the reviewed repository evidence supports.
+This technical repository controls the scope, documentation, versioning, and future CV/GEOINT workflow artifacts. The public site should not make claims stronger than the artifacts in this repository support.
