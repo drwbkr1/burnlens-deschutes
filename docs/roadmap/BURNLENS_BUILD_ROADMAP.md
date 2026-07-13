@@ -71,7 +71,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 | Phase | Name | Canonical objective summary | Current status | Primary dependency | Detailed objectives |
 |---|---|---|---|---|---|
-| 1 | Scope, technical contracts, repository controls, and acceptance gate | Establish the documented project identity, bounded CV task, source-feasibility posture, repository operating system, version/provenance/claims controls, and prompt-built workflow, then make an evidence-backed Phase One acceptance decision before implementation begins. | **accepted for planning only; release reconciliation incomplete** | P1O7-T08 / PR #294 records `APPROVE — PHASE TWO PLANNING ONLY`; #290 / PR #291 reconciles the execution goal and roadmap. | [Phase One objectives](../phases/phase-01/PHASE_01_OBJECTIVES.md) |
+| 1 | Scope, technical contracts, repository controls, and acceptance gate | Establish the documented project identity, bounded CV task, source-feasibility posture, repository operating system, version/provenance/claims controls, and prompt-built workflow, then make an evidence-backed Phase One acceptance decision before implementation begins. | **accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records `APPROVE — PHASE TWO PLANNING ONLY`; #290 / PR #291 shipped the controlling goal and roadmap at `v0.0.8-execution-goal-baseline`. | [Phase One objectives](../phases/phase-01/PHASE_01_OBJECTIVES.md) |
 | 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **planning authorized — data blocked** | Resolve primary-source terms/licensing and complete the task-specific before-data gate before first data touch. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **proposed — blocked** | Accepted Phase Two dataset package, locked split, baseline evidence, and target decision. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **proposed — blocked** | Accepted Phase Three model package or approved Phase Two baseline-only path. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
@@ -84,7 +84,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 **What this phase must prove:** BurnLens can enter implementation with a coherent promise, bounded task, traceable operating rules, safe claims, and an explicit gate rather than relying on conversation context or informal assumptions.
 
-**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. Release/tag reconciliation is incomplete, and data touch remains blocked pending resolved Phase Two before-data evidence.
+**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists, and data touch remains blocked pending resolved Phase Two before-data evidence.
 
 ## Phase Two — data foundation
 
@@ -180,7 +180,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The current repository truth is `APPROVE — PHASE TWO PLANNING ONLY`. Issue #290 / PR #291 reconciles the governing goal and roadmap. After it ships, the next checkpoint is a bounded Phase Two source/licensing/access decision and before-data evidence update. It must stop before data touch if terms remain unresolved and should unblock the smallest defensible executable vertical slice.
+The current repository truth is `APPROVE — PHASE TWO PLANNING ONLY`, versioned by `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. The next checkpoint is a bounded Phase Two source/licensing/access decision and before-data evidence update. It must stop before data touch if terms remain unresolved and should unblock the smallest defensible executable vertical slice.
 
 ## Required reading order for long-running Codex work
 

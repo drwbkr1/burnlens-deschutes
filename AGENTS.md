@@ -58,12 +58,12 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest verified project checkpoint is the Phase One planning/control baseline on `main` at `01df0632647224622b894511abaac5d48f2b6f6f`.
+The latest verified project checkpoint is the execution-goal and six-phase-roadmap baseline on `main` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`, tagged `v0.0.8-execution-goal-baseline`.
 
 - The owner recorded `APPROVE — PHASE TWO PLANNING ONLY` through P1O7-T08 / PR #294.
 - The repository has no accepted source data, final AOI, labels, dataset, executable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical claim.
 - Phase Two planning is authorized. Data touch may proceed only through an issue-backed before-data gate after source licensing/terms and other required evidence are resolved.
-- Issue #290 / PR #291 is the active goal-and-roadmap reconciliation checkpoint.
+- Issue #290 / PR #291 is closed and merged. The next selected checkpoint is a bounded Phase Two source/licensing/access decision and before-data evidence update.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 
