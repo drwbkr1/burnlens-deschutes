@@ -20,6 +20,8 @@ P1O7-T04 / #269 completed the technical-readiness audit through PR #270 and squa
 
 P1O7-T05 / #273 completed the repository-control and live-state audit through PR #274 and squash merge commit `43a776f85ca84749d07d95afd71dda062b505e2c`. Drew approved exact head `e960b73dad99b8f6e7aecd759a3718c8e2b107c4` and separately authorized squash merge. G06-A and G07 received reviewed `meets criterion`; G05, G06-B, G08, and G09 received reviewed `meets with limitation`; F06-C, G10, and F10-R remain `evidence incomplete`. Live Project status is `inaccessible/unresolved`; complete tag and GitHub Release inventories were inaccessible, and the known proposed Objective Five tag ref did not resolve. These findings do not make the final Phase One decision, authorize Phase Two work, create a Project, or create a tag or GitHub Release.
 
+P1O7-T06 / #277 completed the baseline-identifier and release-class decision through PR #278 and squash merge commit `3f0e158c44e608267cfbba31d21103f99f584123`. Drew approved exact head `7d912920e09a22dff9b90a2104a2112b1a237cc1`, the conditional candidate `v0.0.7-objective-seven-phase-one-baseline`, and the rejection or historical-only treatment of the legacy candidates. P1O7-REM-06A / #279 then resolved T06-F01 through PR #280 and squash merge commit `5e6d0d111dc44eabfb056426c1d1c9bb868456c7`. T06-F01 is accepted with documented limitation for T07 sequencing; complete tag and GitHub Release inventories remain `inaccessible/unresolved`, G10 and F10-R remain incomplete and separate, and successful complete tag enumeration remains mandatory before T10 and parent #246 closure. No tag or GitHub Release was created.
+
 Current Objective Six status:
 
 ```text
@@ -63,18 +65,22 @@ P1O7-REM-03A / #259 - complete through PR #260; merge commit d1cb6cffa01402627c9
 P1O7-T03 / #257 - merged through PR #263; merge commit 3d7e6d5a2de7fcc527803ae06d9b746143084207; issue closed
 P1O7-T04 / #269 - merged through PR #270; merge commit d3f05322eb0bf2c9802bba59bd6c3ad2484288f4; issue closed
 P1O7-T05 / #273 - merged through PR #274; merge commit 43a776f85ca84749d07d95afd71dda062b505e2c; issue closed
+P1O7-T06 / #277 - merged through PR #278; merge commit 3f0e158c44e608267cfbba31d21103f99f584123; issue closed
+P1O7-REM-06A / #279 - merged through PR #280; merge commit 5e6d0d111dc44eabfb056426c1d1c9bb868456c7; issue closed
+P1O7-SYNC-06A / #281 - final status synchronization record
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
 G01, G02, G03, G06-A, G07, and G11 - reviewed meets criterion / pass where applicable
 G04, G05, G06-B, G08, and G09 - reviewed meets with limitation / pass with limitation where applicable
 F04-A - evidence incomplete; mandatory blocker for data touch and supporting fact for planning-only evaluation
 F06-C - evidence incomplete; live Project status inaccessible/unresolved
+T06-F01 - accepted with documented limitation for T07 sequencing; complete enumeration still mandatory before T10 and parent closure
 G10 - evidence incomplete; mandatory blocker to claiming Phase One complete
 F10-R - evidence incomplete; supporting fact only
-P1O7-T06 - next task: decide the Phase One baseline identifier and release class
+P1O7-T07 - next task; not started or planned by P1O7-SYNC-06A
 Phase One acceptance - not evaluated; no final gate conclusion exists
-Release identifier and class - not decided
-Objective Seven tag - not selected, authorized, or created; complete tag inventory inaccessible
-GitHub Release - complete inventory inaccessible; no Objective Seven Release is authorized
+Release identifier and class - conditional objective-baseline candidate approved; no tag authorized or created
+Objective Seven tag - not authorized or created; complete tag inventory remains inaccessible/unresolved
+GitHub Release - not recommended for the current documentation/control candidate; complete inventory remains inaccessible/unresolved
 ```
 
 Current Objective Seven records:
@@ -86,6 +92,8 @@ docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
+docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md
+docs/phase-one/objective-seven/remediation/P1O7-REM-06A_REMEDIATION_RECORD.md
 ```
 
 The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
@@ -96,7 +104,7 @@ The Objective Five baseline identifier remains:
 v0.0.5-objective-five-traceability
 ```
 
-During T05, that exact proposed tag ref did not resolve. Complete tag and GitHub Release inventories were inaccessible, so the repository does not claim an empty inventory. No Objective Seven tag or GitHub Release is authorized by the current workflow, and any later Phase One release path remains conditional and not guaranteed.
+During T05, that exact proposed tag ref did not resolve. Complete tag and GitHub Release inventories remain inaccessible, so the repository does not claim an empty inventory. The approved Objective Seven candidate is conditional and is not a tag. No Objective Seven tag or GitHub Release is authorized by the current workflow, and any later Phase One release path remains conditional and not guaranteed.
 
 ## Prompt-built development architecture
 
@@ -125,6 +133,8 @@ current acceptance-gate evidence matrix: docs/phase-one/objective-seven/PHASE_1_
 current scope-and-boundary audit: docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 current technical-readiness audit: docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
 current repository-control audit: docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
+current baseline/release decision: docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md
+current T06 inventory remediation: docs/phase-one/objective-seven/remediation/P1O7-REM-06A_REMEDIATION_RECORD.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -183,7 +193,7 @@ BurnLens remains an experimental, non-operational portfolio project. Official so
 
 Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-T05.
+Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-REM-06A.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -229,10 +239,10 @@ Phase One / Objective Seven — Phase One acceptance gate
 Current bounded work is:
 
 ```text
-P1O7-T06 — Decide the Phase One baseline identifier and release class
+P1O7-T07 — Create the Phase One exit checklist (next; not started)
 ```
 
-P1O7-T05 is complete through PR #274. P1O7-T06 may decide only the Phase One baseline identifier and release class under its own issue while carrying the reviewed T05 findings and limitations. It must not make the final Phase One decision, create a Project, begin Phase Two work, create a tag, or publish a GitHub Release.
+P1O7-T06 is complete through PR #278, and P1O7-REM-06A is complete through PR #280. P1O7-SYNC-06A / #281 synchronizes that repository truth and stops before planning T07. T07 must begin only under its own issue and task capsule. It must carry the approved conditional candidate, the accepted inventory limitation, G10/F10-R separation, the mandatory pre-tag enumeration condition, and all other reviewed findings without creating a tag, GitHub Release, or Phase Two data authorization.
 
 ## Public site
 
