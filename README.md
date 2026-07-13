@@ -14,7 +14,7 @@ Objective Six defines how prompt-assisted repository work is issue-backed, branc
 
 Objective Seven defines the evidence model, audits, decision records, remediation routing, exit checklist, and closeout sequence for the Phase One acceptance gate. P1O7-T01 established controls and artifact contracts. P1O7-T02 added the merged gate evidence matrix and defined how future tasks must evaluate evidence; it did not conduct the gate, mark a criterion passed, authorize data work, decide a release identifier or class, create a tag, or publish a GitHub Release.
 
-P1O7-T03 / #257 is active and is being rebuilt under a corrected `burnlens-deschutes`-only scope. P1O7-REM-03A / #259 is the bounded status-routing remediation that must complete before the corrected T03 audit is rebuilt. The abandoned wrong-scope PR #258 is closed unmerged and superseded; its findings are not current evidence.
+P1O7-REM-03A / #259 is complete through PR #260 and merge commit `d1cb6cffa01402627c9e4b208139dc1a87c97552`. P1O7-T03 / #257 is the next active task and must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. The abandoned wrong-scope PR #258 remains closed unmerged and superseded; its findings are not current evidence.
 
 Current Objective Six status:
 
@@ -55,8 +55,8 @@ Current Objective Seven status:
 #246 - Phase 1 Objective Seven parent — open and protected
 P1O7-T01 / #247 - merged through PR #248; synchronized through P1O7-SYNC-01 / #249
 P1O7-T02 / #251 - merged through PR #252; synchronized through P1O7-SYNC-02 / #253 and finalized through #255
-P1O7-T03 / #257 - active; corrected burnlens-deschutes-only audit rebuild pending P1O7-REM-03A
-P1O7-REM-03A / #259 - active status-routing remediation on p1o7rem03a
+P1O7-REM-03A / #259 - complete through PR #260; merge commit d1cb6cffa01402627c9e4b208139dc1a87c97552
+P1O7-T03 / #257 - next active task; corrected burnlens-deschutes-only audit rebuild from current main
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
 Phase One acceptance - not evaluated; no final gate conclusion exists
 G01, G02, and G11 - pending corrected P1O7-T03 audit; no verdict assigned by #259
@@ -211,10 +211,10 @@ Phase One / Objective Seven — Phase One acceptance gate
 Current bounded work is:
 
 ```text
-P1O7-REM-03A / #259 — Correct Objective Seven active-status routing
+P1O7-T03 / #257 — Audit project identity, boundaries, and active-scope language
 ```
 
-After #259 is reviewed and merged, P1O7-T03 / #257 must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. G01, G02, and G11 remain pending that corrected audit. PR #258 is superseded and must not be used as evidence.
+P1O7-T03 must be rebuilt from current `main` under the corrected `burnlens-deschutes`-only scope. G01, G02, and G11 remain pending that corrected audit. PR #258 is superseded and must not be used as evidence.
 
 T03 may inspect and record evidence-backed findings only within its own issue scope. It must not silently remediate evaluated files, conduct later technical or repository-state audits, declare the final Phase One decision, begin Phase Two data work, choose or create a tag, or publish a GitHub Release.
 
