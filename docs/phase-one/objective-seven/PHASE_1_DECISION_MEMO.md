@@ -11,9 +11,9 @@
 | Branch / base | `p1o7t08b` / `main` at `8084cbed12046cee5424307c412e164bdd3d688d` |
 | Authoring date | 2026-07-13 |
 | Evidence package | P1O7-T07 exit checklist, reviewed and merged through PR #284 at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae` |
-| Memo state | Review-ready author recommendation; not yet a human-owned final decision |
+| Memo state | Human-owned decision recorded; exact-head PR review and separate merge authorization remain required |
 | Human decision owner | Drew |
-| Human decision date | **Pending human review; must be replaced with the actual decision date before merge** |
+| Human decision date | 2026-07-13 |
 | Full Phase One completion | Blocked by G10 |
 | Phase Two data execution | Prohibited; blocked by F04-A and the before-data gate |
 | Tag action | Not authorized or performed |
@@ -25,7 +25,7 @@
 APPROVE — PHASE TWO PLANNING ONLY
 ```
 
-This is the authoring-stage recommendation produced from the reviewed Phase One evidence package. It becomes the human-owned Phase One decision only when Drew inspects the issue, task capsule, complete branch diff, evidence, limitations, checks, and handoff, then records the decision and actual date. The memo must not merge with the human decision date still pending.
+Drew reviewed the evidence-backed recommendation and recorded this human-owned Phase One decision on 2026-07-13. The decision remains subject to a clean final review of the exact branch head and separate squash-merge authorization recorded on the task-scoped PR.
 
 The decision authorizes a bounded planning lane only. It does not declare full Phase One complete, does not satisfy G10, and does not authorize source access, AOI creation, data download, data processing, labels, masks, baselines, models, runs, maps, public outputs, a tag, or a GitHub Release.
 
@@ -46,7 +46,7 @@ The checklist therefore supports a bounded planning decision while requiring the
 
 ### Work authorized by this decision
 
-After this memo receives human approval, is merged through the task-only workflow, and any materially required status synchronization is complete, the following planning and control work may be proposed under separate issues:
+After this memo is merged through the task-only workflow and any materially required status synchronization is complete, the following planning and control work may be proposed under separate issues:
 
 1. create the Phase Two parent issue and tracker;
 2. define Phase Two objectives, task sequence, dependencies, acceptance gates, stop rules, and handoff conditions;
@@ -65,7 +65,7 @@ The immediate Objective Seven handoff is:
 P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate
 ```
 
-T09 may begin only after Drew records the human decision and date for this memo, T08 is reviewed and merged, and any required synchronization makes current repository truth coherent. T08 does not start T09 or Phase Two work inside this branch.
+T09 may begin only after T08 is reviewed and merged and any required synchronization makes current repository truth coherent. T08 does not start T09 or Phase Two work inside this branch.
 
 ## Work that remains prohibited
 
@@ -88,7 +88,7 @@ A future task may authorize one exact controlled action only after its required 
 
 | Readiness lane | Decision posture | Consequence |
 |---|---|---|
-| Phase Two planning | Authorized after human approval, T08 merge, and separate issue authorization | Planning and control records may be created; no source or data action may occur. |
+| Phase Two planning | Authorized after T08 merge and separate issue authorization | Planning and control records may be created; no source or data action may occur. |
 | Source/AOI intake planning | Authorized as documentation planning only | Future intake tasks and record requirements may be specified, but no source access, AOI geometry, download, or source-specific execution may occur. |
 | Data touch | Not authorized | F04-A remains incomplete; the SOP before-data gate must be satisfied for one named action. |
 | Labels, baselines, models, runs, metrics, maps, and outputs | Not authorized | No executed technical readiness exists. |
@@ -193,7 +193,7 @@ No BurnLens output may override county, state, federal, fire-service, emergency-
 
 | Action | Owner | Satisfaction evidence | Consequence if incomplete |
 |---|---|---|---|
-| Record the human decision and actual date for T08 | Drew | Explicit human review outcome against the final exact branch head | T08 must not merge. |
+| Record the human decision and actual date for T08 | Drew | **Completed 2026-07-13:** `APPROVE — PHASE TWO PLANNING ONLY` | N/A; decision/date recorded. |
 | Complete T08 review and separate merge authorization | Drew | Review record and exact-head authorization | T09 and planning handoff do not begin. |
 | Complete T09 closeout, handoff, and baseline-note preparation | Future T09 issue owner; Drew approves | Reviewed T09 artifacts, synchronized current status, exact included/excluded scope | No baseline target or T10 readiness. |
 | Complete tag enumeration and release/reproducibility QA | Future T10 issue owner; Drew authorizes | Complete inventory, exact reviewed target, QA results, no collision, exact action authorization | G10 remains incomplete; no tag or parent closure. |
@@ -207,17 +207,17 @@ No remediation is hidden inside this memo. Every file or live-platform change re
 | Field | Required record |
 |---|---|
 | Decision owner | Drew |
-| Decision date | Pending; record the actual date during human review before merge |
-| Review target | Final exact head of `p1o7t08b` |
-| Human outcome | Pending |
-| Blocking review item | Human decision/date not yet recorded |
-| Merge authorization | Pending and separate from review |
+| Decision date | 2026-07-13 |
+| Review target | Final exact head of `p1o7t08b`, to be recorded on the PR |
+| Human outcome | **Approve — Phase Two planning only** |
+| Blocking review item | None; merge remains conditional on a clean exact-head review |
+| Merge authorization | Pending separate exact-head PR record |
 
-The author self-audit and any AI-assisted review are supplemental evidence only. They do not satisfy this decision record.
+The author self-audit and any AI-assisted review are supplemental evidence only. They do not substitute for the recorded human decision or the separate merge authorization.
 
 ## Handoff
 
-After the human decision and date are recorded, all blocking review findings are resolved, the exact head is approved, T08 is merged, and current status is synchronized if needed:
+After all blocking review findings are resolved, the exact head is approved, T08 is merged, and current status is synchronized if needed:
 
 1. proceed to P1O7-T09 under its own issue;
 2. preserve G10 as incomplete until a separately authorized tag action succeeds and is verified;
