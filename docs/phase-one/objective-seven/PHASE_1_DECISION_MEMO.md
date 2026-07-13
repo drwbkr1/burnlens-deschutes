@@ -197,7 +197,7 @@ No BurnLens output may override county, state, federal, fire-service, emergency-
 |---|---|---|---|
 | Record the human decision and actual date for T08 | Drew | Decision record and PR review | **Complete:** planning-only decision recorded 2026-07-13. |
 | Complete T08 review and separate merge authorization | Drew | Exact-head review and separate authorization | **Complete:** PR #294 reviewed and squash-merged. |
-| Synchronize T08 lifecycle truth | P1O7-SYNC-08 / #295 | Reviewed six-file synchronization | Required before T09 starts. |
+| Synchronize T08 lifecycle truth | P1O7-SYNC-08 / #296 | Reviewed six-file synchronization | Required before T09 starts. |
 | Complete T09 closeout, handoff, and baseline-note preparation | Future T09 issue owner; Drew approves | Reviewed T09 artifacts, synchronized current status, exact included/excluded scope | No baseline target or T10 readiness until complete. |
 | Complete tag enumeration and release/reproducibility QA | #292 and future T10 owner; Drew authorizes | Complete inventory, exact reviewed target, QA results, no collision, exact action authorization | G10 remains incomplete; no tag or parent closure. |
 | Satisfy the before-data gate for one named action | #293 and future exact action owner; Drew authorizes | Source/access/terms/AOI/CRS/provenance/registry/boundary records and exact task authorization | No source access or data touch. |
@@ -222,7 +222,7 @@ The author self-audit and any AI-assisted review are supplemental evidence only.
 
 ## Handoff
 
-After P1O7-SYNC-08 is reviewed and merged:
+After P1O7-SYNC-08 / #296 is reviewed and merged:
 
 1. proceed to P1O7-T09 under its own issue;
 2. preserve G10 as incomplete until a separately authorized tag action succeeds and is verified;
@@ -237,6 +237,7 @@ Parent #246 remains open. It cannot close through T08 or T09 alone while G10 rem
 
 Do not carry forward:
 
+- duplicate issue #295 as an active synchronization authorization;
 - PR #258 or its wrong-repository findings;
 - exact-ref failures as proof of an empty inventory;
 - the conditional candidate as a created tag;
