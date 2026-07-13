@@ -22,7 +22,7 @@ P1O7-T05 / #273 completed the repository-control and live-state audit through PR
 
 P1O7-T06 / #277 completed the baseline-identifier and release-class decision through PR #278 and squash merge commit `3f0e158c44e608267cfbba31d21103f99f584123`. Drew approved exact head `7d912920e09a22dff9b90a2104a2112b1a237cc1`, the conditional candidate `v0.0.7-objective-seven-phase-one-baseline`, and the rejection or historical-only treatment of the legacy candidates. P1O7-REM-06A / #279 then resolved T06-F01 through PR #280 and squash merge commit `5e6d0d111dc44eabfb056426c1d1c9bb868456c7`. T06-F01 is accepted with documented limitation for T07 sequencing; complete tag and GitHub Release inventories remain `inaccessible/unresolved`, G10 and F10-R remain incomplete and separate, and successful complete tag enumeration remains mandatory before T10 and parent #246 closure. No tag or GitHub Release was created.
 
-P1O7-T07 / #283 completed the evidence-backed Phase One exit checklist through PR #284 and squash merge commit `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`. Drew approved exact head `ce5466b5df97d7bb6f44c3050363b23f1ad448ea` and separately authorized squash merge. The checklist preserves all O1–O11 criteria and the required F04-A, F06-C, and F10-R distinctions. It records full Phase One completion as blocked by G10 and data touch as blocked by F04-A. It is eligible for P1O7-T08 evidence synthesis, but it does not make the Phase One decision or authorize Phase Two work, a tag, a GitHub Release, or public claims.
+P1O7-T07 / #283 completed the evidence-backed Phase One exit checklist through PR #284 and squash merge commit `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`. Drew approved exact head `ce5466b5df7bb6f44c3050363b23f1ad448ea` and separately authorized squash merge. The checklist preserves all O1–O11 criteria and the required F04-A, F06-C, and F10-R distinctions. It records full Phase One completion as blocked by G10 and data touch as blocked by F04-A. It is eligible for P1O7-T08 evidence synthesis, but it does not make the Phase One decision or authorize Phase Two work, a tag, a GitHub Release, or public claims.
 
 P1O7-T08 / #289 completed the Phase One decision memo through PR #294 and squash merge commit `69c0b7322f5c2a556f285ad639a8df467494979f`. Drew reviewed exact head `71cdcdae7b987c497d39b002aae7a7b668cd6edd`, recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13, and separately authorized squash merge. The decision authorizes bounded, separately issue-backed planning and control work only after synchronization. It does not authorize source access, AOI creation, data download or processing, labels, baselines, models, runs, maps, public claims, a tag, or a GitHub Release. G10 and F04-A remain unresolved blockers for their respective lanes.
 
@@ -75,7 +75,7 @@ P1O7-SYNC-06A / #281 - merged through PR #282; final prior synchronization recor
 P1O7-T07 / #283 - merged through PR #284; merge commit 69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae; issue closed
 P1O7-SYNC-07 / #285 - final T07 status synchronization record
 P1O7-T08 / #289 - reviewed and merged through PR #294; merge commit 69c0b7322f5c2a556f285ad639a8df467494979f; issue closed
-P1O7-SYNC-08 / #296 - current bounded lifecycle synchronization
+P1O7-SYNC-08 / #296 - current bounded lifecycle synchronization; duplicate #295 closed
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
 G01, G02, G03, G06-A, G07, and G11 - reviewed meets criterion / pass where applicable
 G04, G05, G06-B, G08, and G09 - reviewed meets with limitation / pass with limitation where applicable
@@ -203,9 +203,11 @@ records/PROMPT_BUILD_LOG.md
 
 BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
 
-Objective Seven is the active repository workstream. Drew's reviewed T08 decision authorizes bounded Phase Two planning and control work only under separate issues after synchronization. Objective Seven remains incomplete because G10 is unresolved, and F04-A continues to prohibit all source and data touch. No Phase One completion, release, implementation-readiness, public-claim, or data-execution claim is supported.
+Objective Seven is the active repository workstream. Its reviewed decision authorizes bounded Phase Two planning and control work only. Objective Seven remains incomplete because G10 is unresolved, and no full Phase One completion, release, implementation-readiness, operational-readiness, or Phase Two data authorization claim is supported.
 
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-T08.
+Phase Two data work has not begun. No source query, AOI geometry, source data, label, model, run, map, public demo, completed public claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-T08.
+
+Issues #292 and #293 remain blocked preparation tasks. Issue #292 does not authorize a tag. Issue #293 does not authorize source access, AOI creation, imagery download, or processing.
 
 Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
 
@@ -254,7 +256,7 @@ Current bounded work is:
 P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate (next; not started by P1O7-SYNC-08)
 ```
 
-P1O7-T08 is reviewed and merged through PR #294, and P1O7-SYNC-08 / #296 synchronizes that repository truth. T09 must begin only under its own issue and task capsule. It must preserve the planning-only decision, keep G10 and F04-A unresolved, keep F06-C and F10-R as supporting facts, prepare an exact reviewed baseline candidate without creating a tag, and avoid authorizing source access, data touch, public claims, or a GitHub Release.
+P1O7-T09 must begin only under its own issue and task capsule. It must carry the planning-only decision without converting it into full Phase One completion or data authorization; preserve G10 and F04-A; prepare the reviewed baseline candidate and exact included/excluded scope; and keep any tag action separate under the #292/T10 dependency chain.
 
 ## Public site
 
