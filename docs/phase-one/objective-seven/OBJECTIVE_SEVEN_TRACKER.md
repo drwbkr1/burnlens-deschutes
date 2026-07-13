@@ -6,13 +6,12 @@
 |---|---|
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open and protected |
-| Last completed task | P1O7-T03 / #257 — squash-merged through PR #263 at `3d7e6d5a2de7fcc527803ae06d9b746143084207` |
-| Active task | P1O7-T04 / #269 — build complete on `p1o7t04b`; human review and PR pending |
-| Next audit after approved T04 merge | P1O7-T05 — Audit repository controls and live GitHub state |
+| Last completed task | P1O7-T04 / #269 — squash-merged through PR #270 at `d3f05322eb0bf2c9802bba59bd6c3ad2484288f4` |
+| Next audit task | P1O7-T05 — Audit repository controls and live GitHub state |
 | Superseded history | PR #258 — closed unmerged; wrong cross-repository scope and findings are not current evidence |
 | Objective state | Active and incomplete |
 | Phase One acceptance | Not evaluated; no final gate conclusion exists |
-| Criterion status | G01, G02, and G11 have reviewed `meets criterion` / `pass` results. T04 author self-audit assigns G03 `meets criterion` / `pass`, G04 `meets with limitation` / `pass with limitation`, and F04-A `evidence incomplete`; T04 human review remains pending. |
+| Criterion status | G01, G02, G03, and G11 have reviewed `meets criterion` / `pass` results. G04 has reviewed `meets with limitation` / `pass with limitation`. F04-A remains `evidence incomplete` and blocks data touch. G05-G10 remain for later tasks. |
 | Release posture | Conditional and not guaranteed |
 | Tag status | No Objective Seven or Phase One acceptance tag is authorized or created |
 | GitHub Release status | Not authorized or published |
@@ -26,7 +25,7 @@ P1O7-T01 established the tracker, task order, dependencies, and artifact contrac
 
 P1O7-T03 / #257 was first drafted with an incorrect cross-repository scope. PR #258 was closed unmerged and marked superseded. P1O7-REM-03A / #259 corrected current-status and routing surfaces inside `drwbkr1/burnlens-deschutes` and merged through PR #260. The corrected T03 audit was rebuilt from current `main`, reviewed by Drew, and squash-merged through PR #263. It assigns reviewed statuses only to G01, G02, and G11 within the corrected repository-only scope. T03 does not make the final Phase One decision.
 
-P1O7-T04 / #269 audits documented CV and data-feasibility readiness. Its review-candidate artifact assigns author self-audit results to G03 and G04, preserves F04-A as a separate data-touch fact, and explicitly separates planning readiness from source/AOI intake, data-touch, label, baseline, and executed technical readiness. These results remain pending human review and do not authorize Phase Two work.
+P1O7-T04 / #269 completed the documented CV and data-feasibility readiness audit through PR #270. Drew reviewed and approved exact head `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` and separately authorized squash merge. G03 received reviewed `meets criterion` / `pass`; G04 received reviewed `meets with limitation` / `pass with limitation`; F04-A remains `evidence incomplete` and a mandatory blocker for touching data. These results preserve the distinction between planning readiness, source/AOI intake, data touch, labels, baselines, and executed technical evidence. T04 does not authorize Phase Two work or make the final Phase One decision.
 
 ## Verified T02 start state
 
@@ -112,22 +111,28 @@ README was not an allowed T02 file. The task-specific issue and approved capsule
 | Parent protection | #246 remains open; #257 is closed |
 | Post-T03 synchronization | P1O7-SYNC-03 / #264 synchronizes merged T03 truth |
 
-## P1O7-T04 review-candidate state
+## P1O7-T04 reviewed and merged state
 
-| Item | Current branch state |
+| Item | Final state |
 |---|---|
-| Task issue | #269 — open |
+| Task issue | #269 — closed as completed |
 | Branch / base | `p1o7t04b` / `main` |
 | Verified base | `6999974ca7ad5a3119ae4cac2db89f2d97131544` |
 | Primary artifact | `docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md` |
-| Contract revision | Issue #269 replaces the planned `CV_PHASE_TWO_READINESS_AUDIT.md` path and makes README read-only |
+| Contract revision | Issue #269 replaced the planned `CV_PHASE_TWO_READINESS_AUDIT.md` path and made README read-only for the source task |
 | Research | Repository-internal review; no current provider/API/access claim repeated, so no fresh external research performed |
-| G03 author result | `meets criterion` / `pass`; no blocker |
-| G04 author result | `meets with limitation` / `pass with limitation`; source- and AOI-specific intake evidence remains uninstantiated |
-| F04-A author result | `evidence incomplete`; mandatory blocker for touching data, supporting fact for planning-only evaluation |
-| Phase Two planning | Coherent enough for later gate synthesis, subject to human review and P1O7-T08 decision |
+| G03 reviewed result | `meets criterion` / `pass`; no blocker |
+| G04 reviewed result | `meets with limitation` / `pass with limitation`; source- and AOI-specific intake evidence remains uninstantiated |
+| F04-A reviewed result | `evidence incomplete`; mandatory blocker for touching data, supporting fact for planning-only evaluation |
+| Reviewed head | `a8f84a7226e9bf059b805c2f9dbe0d6bdb8fb50b` |
+| Human outcome | Drew — **Approve** |
+| Merge authorization | Separate squash-merge authorization recorded against the exact reviewed head |
+| Pull request | #270 |
+| Merge method | Squash |
+| Merge commit | `d3f05322eb0bf2c9802bba59bd6c3ad2484288f4` |
+| Phase Two planning | Evidence is coherent enough for later gate synthesis; P1O7-T08 still owns the decision |
 | Data/AOI/labels/baseline/model/run status | Not authorized and not created |
-| Human review / merge | Pending / not authorized |
+| Parent protection | #246 remains open |
 
 ## Objective boundary
 
@@ -153,8 +158,8 @@ Official sources continue to govern over BurnLens outputs. Version or release id
 | 2 | P1O7-T02 — Define the Phase One gate evidence model | `PHASE_1_GATE_EVIDENCE_MATRIX.md` | T01 merged and current status coherent | Complete; PR #252 merged; synchronized through #253 and #255 | P1O7-T03 |
 | 3 | P1O7-REM-03A — Correct Objective Seven active-status routing | `AGENTS.md`; `README.md`; this tracker; prompt-log records | Wrong-scope PR #258 closed; #257 remains open | Complete; PR #260 squash-merged; no criterion verdict | Rebuild P1O7-T03 |
 | 4 | P1O7-T03 — Audit project identity, boundaries, and active-scope language | `PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` | T02 and #259 merged; rebuild from current `main` under corrected repository-only scope | Complete; PR #263 squash-merged; G01/G02/G11 reviewed pass | P1O7-T04 |
-| 5 | P1O7-T04 — Audit CV and Phase Two technical readiness | `PHASE_1_TECHNICAL_READINESS_AUDIT.md` | T02 and corrected T03 merged | Build complete on `p1o7t04b`; issue #269 open; human review and PR pending | P1O7-T05 or remediation if review identifies a gate-critical defect |
-| 6 | P1O7-T05 — Audit repository controls and live GitHub state | `REPOSITORY_CONTROL_STATE_AUDIT.md` | T02 through T04 merged | Planned | P1O7-T06 or remediation if required |
+| 5 | P1O7-T04 — Audit CV and Phase Two technical readiness | `PHASE_1_TECHNICAL_READINESS_AUDIT.md` | T02 and corrected T03 merged | Complete; PR #270 squash-merged; G03 pass, G04 pass with limitation, F04-A incomplete | P1O7-T05 |
+| 6 | P1O7-T05 — Audit repository controls and live GitHub state | `REPOSITORY_CONTROL_STATE_AUDIT.md` | T02 through T04 merged | Next | P1O7-T06 or remediation if required |
 | 7 | P1O7-T06 — Decide the Phase One baseline identifier and release class | `PHASE_1_BASELINE_RELEASE_DECISION.md` | T03 through T05 complete; blocking findings resolved or explicitly carried | Planned | Conditional remediation or P1O7-T07 |
 | 8 | P1O7-REM-## — Remediate a gate-critical finding | Exact issue-defined remediation record and exact affected paths | Separate issue tied to one recorded finding | Conditional | Return to the task or gate artifact that required remediation |
 | 9 | P1O7-T07 — Create the Phase One exit checklist | `PHASE_1_EXIT_CHECKLIST.md` | T03 through T06 complete; required remediation merged or explicitly deferred | Planned | P1O7-T08 |
@@ -189,7 +194,7 @@ Future gate artifacts must use explicit states rather than implying success:
 | `deferred` | The criterion or work item is intentionally postponed with rationale and consequence. |
 | `not applicable` | The evidence model explicitly defines why the criterion does not apply. |
 
-P1O7-T02 defined how these states may be assigned later. P1O7-REM-03A changed status routing only and assigned no verdict. P1O7-T03 assigned reviewed evidence-backed statuses to G01, G02, and G11 only. P1O7-T04 contains author self-audit results for G03, G04, and F04-A; those results remain pending human review and do not make the final Phase One decision.
+P1O7-T02 defined how these states may be assigned later. P1O7-REM-03A changed status routing only and assigned no verdict. P1O7-T03 assigned reviewed evidence-backed statuses to G01, G02, and G11. P1O7-T04 assigned reviewed evidence-backed statuses to G03, G04, and F04-A. Neither task makes the final Phase One decision.
 
 ## Release separation
 
@@ -205,22 +210,17 @@ Issue #194 remains a separate Objective Five tag action and is not modified, exe
 
 ## Current artifact set
 
-Current merged Objective Seven controls and audit on `main`:
+Current merged Objective Seven controls and audits on `main`:
 
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
-```
-
-Current T04 review-candidate artifact on `p1o7t04b`:
-
-```text
 docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
 ```
 
-The T03 audit is reviewed merged evidence for G01, G02, and G11 within its corrected repository-only scope. The T04 audit is author self-audit evidence for G03, G04, and F04-A pending human review. Neither artifact is the final Phase One decision.
+The T03 audit is reviewed merged evidence for G01, G02, and G11 within its corrected repository-only scope. The T04 audit is reviewed merged evidence for G03, G04, and F04-A. Neither artifact is the final Phase One decision.
 
 ## P1O7-T02 final acceptance status
 
@@ -247,12 +247,12 @@ T07 and T08 must report the tag criterion accurately if no tag exists. Any later
 
 ## Handoff
 
-After T04 human review, PR, approved merge, and any required bounded status synchronization, proceed to:
+Proceed to:
 
 ```text
 P1O7-T05 — Audit repository controls and live GitHub state
 ```
 
-If review identifies a genuine gate-critical defect requiring source-file changes, create a separate exact-path P1O7-REM-## issue instead. T04 does not authorize source/AOI intake, data touch, label work, baseline implementation, model work, the final Phase One decision, a tag, or a GitHub Release.
+T05 must use current Tier 0, the merged Objective Seven controls, reviewed T03 and T04 evidence, and only its issue-selected repository/live-state context. It must distinguish documented policy from observed live state, must not change settings, and must not make the final Phase One decision, create a tag, or publish a GitHub Release.
 
-Do not carry forward PR #258, `burnlens-site` issue #17 or PR #18, duplicate sync issue #265, stale branch `p1o7sync03ab`, the abandoned cross-repository audit, prospective T03 wording, or any findings derived from that wrong scope. Preserve the T03 connector-search limitation and corrected repository-only scope when citing T03 evidence.
+Do not carry forward PR #258, `burnlens-site` issue #17 or PR #18, duplicate sync issue #265, stale branch `p1o7sync03ab`, the abandoned cross-repository audit, prospective T03/T04 review wording, or any findings derived from the wrong scope. Preserve the T03 connector-search limitation and corrected repository-only scope when citing T03 evidence.
