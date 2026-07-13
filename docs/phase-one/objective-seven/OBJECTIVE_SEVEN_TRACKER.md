@@ -7,15 +7,16 @@
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open and protected |
 | Last completed task | P1O7-T05 / #273 — squash-merged through PR #274 at `43a776f85ca84749d07d95afd71dda062b505e2c` |
-| Next task | P1O7-T06 — Decide the Phase One baseline identifier and release class, carrying reviewed T05 findings and limitations |
+| Active task | P1O7-T06 / #277 — build complete on `p1o7t06b`; human review and PR pending |
+| Next task after approved T06 merge and required inventory remediation | P1O7-T07 — Create the Phase One exit checklist; do not finalize while T06-F01 is unresolved or unreviewed |
 | Superseded history | PR #258 — closed unmerged; wrong cross-repository scope and findings are not current evidence |
 | Objective state | Active and incomplete |
 | Phase One acceptance | Not evaluated; no final gate conclusion exists |
 | Criterion status | G01, G02, G03, G06-A, G07, and G11 have reviewed `meets criterion` results where applicable. G04, G05, G06-B, G08, and G09 have reviewed `meets with limitation` results. F04-A, F06-C, G10, and F10-R remain `evidence incomplete`; F04-A blocks data touch and G10 blocks claiming Phase One complete. |
-| Release posture | Conditional and not guaranteed |
-| Tag status | Complete inventory inaccessible; known proposed Objective Five tag ref did not resolve; no Phase One acceptance tag is authorized or created by T05 |
-| GitHub Release status | Complete inventory inaccessible; no Release is authorized or published by T05 |
-| Phase Two data work | Not authorized by Objective Seven or T05 |
+| Release posture | T06 conditionally proposes existing objective-baseline class candidate `v0.0.7-objective-seven-phase-one-baseline`; proposal is not a tag and remains subject to live inventory, later decision/closeout/QA, and separate T10 authorization |
+| Tag status | Complete inventory remains `inaccessible/unresolved`; four targeted candidate refs did not resolve; G10 remains `evidence incomplete` and blocks claiming Phase One complete |
+| GitHub Release status | Complete inventory remains `inaccessible/unresolved`; T06 rejects a GitHub Release for the current documentation/control candidate and keeps F10-R separate |
+| Phase Two data work | Not authorized by Objective Seven or T06 |
 
 ## Purpose
 
@@ -163,6 +164,31 @@ README was not an allowed T02 file. The task-specific issue and approved capsule
 | Parent protection | #246 remains open |
 | Controlled actions | No Project, setting, tag, Release, or Phase Two action authorized or performed |
 
+## P1O7-T06 review-candidate state
+
+| Item | Current branch state |
+|---|---|
+| Task issue | #277 — open |
+| Branch / base | `p1o7t06b` / `main` |
+| Verified base | `6691cb8986df879e4b81b0704fe33ec0b92ca06c` |
+| Primary artifact | `docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md` |
+| Decision state | **Propose with conditions** |
+| Legacy `v0.0.1-project-scope` | Rejected |
+| Historical `v0.0.1-objective-one` | Replaced for current use; no retroactive tag |
+| Objective Five candidate / #194 | Separate Objective Five controlled action; unchanged and untouched |
+| Conditional Phase One candidate | `v0.0.7-objective-seven-phase-one-baseline` using existing objective-baseline class |
+| Release class | Conditional objective-baseline tag plus repository release-note/baseline-note document |
+| GitHub Release | Rejected for current documentation/control candidate |
+| Pre-release / latest / assets | N/A because no GitHub Release candidate |
+| Complete tag inventory | `inaccessible/unresolved`; exact candidate-ref failures are not an empty-inventory result |
+| Complete Release inventory | `inaccessible/unresolved`; F10-R remains supporting evidence only |
+| G10 | `evidence incomplete`; mandatory blocker to Phase One completion |
+| Proposed gate-critical route | P1O7-REM-06A read-only live tag/Release inventory verification; proposal only, not created |
+| `VERSIONING.md` | Read-only; no genuine protocol change and no SemVer revalidation |
+| Human review / merge | Pending / not authorized |
+| Parent protection | #246 remains open |
+| Controlled actions | No tag, Release, asset, deployment, final gate decision, Phase Two work, or remediation authorized or performed |
+
 ## Objective boundary
 
 Objective Seven is a documentation, evidence-review, decision, remediation-routing, and controlled-release workstream. Each child task must stay within its own issue and artifact contract.
@@ -189,7 +215,7 @@ Official sources continue to govern over BurnLens outputs. Version or release id
 | 4 | P1O7-T03 — Audit project identity, boundaries, and active-scope language | `PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` | T02 and #259 merged; rebuild from current `main` under corrected repository-only scope | Complete; PR #263 squash-merged; G01/G02/G11 reviewed pass | P1O7-T04 |
 | 5 | P1O7-T04 — Audit CV and Phase Two technical readiness | `PHASE_1_TECHNICAL_READINESS_AUDIT.md` | T02 and corrected T03 merged | Complete; PR #270 squash-merged; G03 pass, G04 pass with limitation, F04-A incomplete | P1O7-T05 |
 | 6 | P1O7-T05 — Audit repository controls and live GitHub state | `PHASE_1_REPOSITORY_CONTROL_AUDIT.md` | T02 through T04 merged | Complete; PR #274 squash-merged; reviewed dispositions and limitations retained | P1O7-T06 or separately authorized remediation |
-| 7 | P1O7-T06 — Decide the Phase One baseline identifier and release class | `PHASE_1_BASELINE_RELEASE_DECISION.md` | T03 through reviewed T05 complete; findings resolved or explicitly carried | Planned | Conditional remediation or P1O7-T07 |
+| 7 | P1O7-T06 — Decide the Phase One baseline identifier and release class | `PHASE_1_BASELINE_RELEASE_DECISION.md` | T03 through reviewed T05 complete; findings resolved or explicitly carried | Build complete; human review pending; conditional candidate and REM-06A route recorded | P1O7-REM-06A before T07 finalization, then P1O7-T07 |
 | 8 | P1O7-REM-## — Remediate a gate-critical finding | Exact issue-defined remediation record and exact affected paths | Separate issue tied to one recorded finding | Conditional | Return to the task or gate artifact that required remediation |
 | 9 | P1O7-T07 — Create the Phase One exit checklist | `PHASE_1_EXIT_CHECKLIST.md` | T03 through T06 complete; required remediation merged or explicitly deferred | Planned | P1O7-T08 |
 | 10 | P1O7-T08 — Create the Phase One decision memo | `PHASE_1_DECISION_MEMO.md` | T07 complete and evidence package coherent | Planned | P1O7-T09 only after human review of the decision |
@@ -223,7 +249,7 @@ Future gate artifacts must use explicit states rather than implying success:
 | `deferred` | The criterion or work item is intentionally postponed with rationale and consequence. |
 | `not applicable` | The evidence model explicitly defines why the criterion does not apply. |
 
-P1O7-T02 defined how these states may be assigned later. P1O7-REM-03A changed status routing only and assigned no verdict. P1O7-T03 assigned reviewed evidence-backed statuses to G01, G02, and G11. P1O7-T04 assigned reviewed evidence-backed statuses to G03, G04, and F04-A. P1O7-T05 assigned reviewed evidence-backed statuses to G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. None of these tasks makes the final Phase One decision.
+P1O7-T02 defined how these states may be assigned later. P1O7-REM-03A changed status routing only and assigned no verdict. P1O7-T03 assigned reviewed evidence-backed statuses to G01, G02, and G11. P1O7-T04 assigned reviewed evidence-backed statuses to G03, G04, and F04-A. P1O7-T05 assigned reviewed evidence-backed statuses to G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. P1O7-T06 now records an author candidate identifier/release-class decision pending human review; it leaves G10 and F10-R incomplete. None of these tasks makes the final Phase One decision.
 
 ## Release separation
 
@@ -239,7 +265,7 @@ Issue #194 remains a separate Objective Five tag action and is not modified, exe
 
 ## Current artifact set
 
-Current merged Objective Seven controls and audits on `main`:
+Current merged Objective Seven controls and audits on `main`, plus the current T06 review candidate on `p1o7t06b`:
 
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
@@ -247,15 +273,11 @@ docs/phase-one/objective-seven/OBJECTIVE_SEVEN_ARTIFACT_CONTRACTS.md
 docs/phase-one/objective-seven/PHASE_1_GATE_EVIDENCE_MATRIX.md
 docs/phase-one/objective-seven/PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
-```
-
-The merged Objective Seven artifact set also includes:
-
-```text
 docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
+docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md  # review candidate only
 ```
 
-The T03 audit is reviewed merged evidence for G01, G02, and G11 within its corrected repository-only scope. The T04 audit is reviewed merged evidence for G03, G04, and F04-A. The T05 audit is reviewed merged evidence for G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. None is the final Phase One decision.
+The T03 audit is reviewed merged evidence for G01, G02, and G11 within its corrected repository-only scope. The T04 audit is reviewed merged evidence for G03, G04, and F04-A. The T05 audit is reviewed merged evidence for G05, G06-A, G06-B, F06-C, G07, G08, G09, G10, and F10-R. The T06 artifact is an author review candidate only. None is the final Phase One decision.
 
 ## P1O7-T02 final acceptance status
 
@@ -282,12 +304,14 @@ T07 and T08 must report the tag criterion accurately if no tag exists. Any later
 
 ## Handoff
 
-After P1O7-SYNC-05 completes the bounded status update, proceed to:
+After T06 human review, an approved PR, merge, and any materially necessary bounded synchronization, create and review the separately authorized P1O7-REM-06A live-inventory evidence task. Do not finalize T07 while T06-F01 remains unresolved or unreviewed.
+
+Then proceed under a separate task issue to:
 
 ```text
-P1O7-T06 — Decide the Phase One baseline identifier and release class
+P1O7-T07 — Create the Phase One exit checklist
 ```
 
-Carry the reviewed T05 limitations. Consider a separately authorized exact-path P1O7-REM-05A for stale active routing before T07/T08 if the human reviewer requires it.
+Carry the conditional `v0.0.7-objective-seven-phase-one-baseline` candidate, objective-baseline plus repository-note class, no-GitHub-Release decision, G10/F10-R separation, #194 isolation, and all reviewed T03–T05 limitations. P1O7-REM-05A remains a proposal only unless separately authorized.
 
-Do not carry forward PR #258, `burnlens-site` issue #17 or PR #18, duplicate sync issue #265, stale branch `p1o7sync03ab`, the abandoned cross-repository audit, prospective T03/T04 review wording, an assumption that a Project specification proves live configuration, an inference that inaccessible inventory means no tags/Releases, or any implication that T05 makes the final Phase One decision or authorizes Phase Two, a tag, or a GitHub Release.
+Do not carry forward PR #258, `burnlens-site` issue #17 or PR #18, duplicate sync issue #265, stale branch `p1o7sync03ab`, the rejected `v0.0.1-project-scope` candidate, the historical `v0.0.1-objective-one` proposal as current authority, the Objective Five candidate or #194 target as the Phase One candidate/target, exact-ref failures as proof of an empty inventory, the conditional T06 candidate as an authorized tag, or any implication that T06 makes the final Phase One decision or authorizes Phase Two, a tag, or a GitHub Release.
