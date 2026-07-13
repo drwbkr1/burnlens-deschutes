@@ -158,7 +158,7 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253 and PR #254 contain the source sync evidence; issue #255 authorizes final record correction and its GitHub history retains completion evidence. |
 | P1O7-REM-03A | `records/prompt-build-log/2026-07-12-p1o7-rem-03a.md` | merged via PR #260 | Issue #259 closed; status-routing remediation merged at `d1cb6cffa01402627c9e4b208139dc1a87c97552`. |
 | P1O7-SYNC-03A | `records/prompt-build-log/2026-07-12-p1o7-sync-03a.md` | final synchronization record | Issue #261; PR and merge evidence are retained in the issue, PR, and dated log. |
-| P1O7-T03 | `records/prompt-build-log/2026-07-12-p1o7-t03.md` | active issue #257; corrected rebuild next | Wrong-scope PR #258 is closed unmerged and superseded; no criterion verdict carries forward. |
+| P1O7-T03 | `records/prompt-build-log/2026-07-12-p1o7-t03.md` | build complete on `p1o7t03b`; human review pending | Corrected repository-only audit proposes `meets criterion` / `pass` for G01, G02, and G11. PR #258 remains superseded. |
 
 ## Acceptance and remediation triggers
 
@@ -177,4 +177,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 / #247 and P1O7-T02 / #251 are complete. P1O7-REM-03A / #259 merged through PR #260 and corrected status routing only. P1O7-T03 / #257 is the next active corrected `burnlens-deschutes`-only rebuild; PR #258 remains closed unmerged and superseded. Phase One acceptance remains undecided, G01/G02/G11 remain pending the corrected audit, Phase Two data or implementation work has not begun, and no Objective Seven tag or GitHub Release has been created.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 / #247 and P1O7-T02 / #251 are complete. P1O7-REM-03A / #259 merged through PR #260 and corrected status routing only. The corrected P1O7-T03 / #257 build is review-ready on `p1o7t03b` and proposes evidence-backed pass results for G01, G02, and G11 within `burnlens-deschutes` only; human review is pending and the final Phase One decision remains undecided. G03-G10 remain outside T03, Phase Two data or implementation work has not begun, and no Objective Seven tag or GitHub Release has been created.
