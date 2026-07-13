@@ -22,6 +22,8 @@ P1O7-T05 / #273 completed the repository-control and live-state audit through PR
 
 P1O7-T06 / #277 completed the baseline-identifier and release-class decision through PR #278 and squash merge commit `3f0e158c44e608267cfbba31d21103f99f584123`. Drew approved exact head `7d912920e09a22dff9b90a2104a2112b1a237cc1`, the conditional candidate `v0.0.7-objective-seven-phase-one-baseline`, and the rejection or historical-only treatment of the legacy candidates. P1O7-REM-06A / #279 then resolved T06-F01 through PR #280 and squash merge commit `5e6d0d111dc44eabfb056426c1d1c9bb868456c7`. T06-F01 is accepted with documented limitation for T07 sequencing; complete tag and GitHub Release inventories remain `inaccessible/unresolved`, G10 and F10-R remain incomplete and separate, and successful complete tag enumeration remains mandatory before T10 and parent #246 closure. No tag or GitHub Release was created.
 
+P1O7-T07 / #283 completed the evidence-backed Phase One exit checklist through PR #284 and squash merge commit `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`. Drew approved exact head `ce5466b5df97d7bb6f44c3050363b23f1ad448ea` and separately authorized squash merge. The checklist preserves all O1–O11 criteria and the required F04-A, F06-C, and F10-R distinctions. It records full Phase One completion as blocked by G10 and data touch as blocked by F04-A. It is eligible for P1O7-T08 evidence synthesis, but it does not make the Phase One decision or authorize Phase Two work, a tag, a GitHub Release, or public claims.
+
 Current Objective Six status:
 
 ```text
@@ -67,7 +69,9 @@ P1O7-T04 / #269 - merged through PR #270; merge commit d3f05322eb0bf2c9802bba59b
 P1O7-T05 / #273 - merged through PR #274; merge commit 43a776f85ca84749d07d95afd71dda062b505e2c; issue closed
 P1O7-T06 / #277 - merged through PR #278; merge commit 3f0e158c44e608267cfbba31d21103f99f584123; issue closed
 P1O7-REM-06A / #279 - merged through PR #280; merge commit 5e6d0d111dc44eabfb056426c1d1c9bb868456c7; issue closed
-P1O7-SYNC-06A / #281 - final status synchronization record
+P1O7-SYNC-06A / #281 - merged through PR #282; final prior synchronization record
+P1O7-T07 / #283 - merged through PR #284; merge commit 69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae; issue closed
+P1O7-SYNC-07 / #285 - final T07 status synchronization record
 PR #258 - closed unmerged and superseded; wrong-scope findings are not current evidence
 G01, G02, G03, G06-A, G07, and G11 - reviewed meets criterion / pass where applicable
 G04, G05, G06-B, G08, and G09 - reviewed meets with limitation / pass with limitation where applicable
@@ -76,7 +80,7 @@ F06-C - evidence incomplete; live Project status inaccessible/unresolved
 T06-F01 - accepted with documented limitation for T07 sequencing; complete enumeration still mandatory before T10 and parent closure
 G10 - evidence incomplete; mandatory blocker to claiming Phase One complete
 F10-R - evidence incomplete; supporting fact only
-P1O7-T07 - next task; not started or planned by P1O7-SYNC-06A
+P1O7-T08 - next task; not started or planned by P1O7-SYNC-07
 Phase One acceptance - not evaluated; no final gate conclusion exists
 Release identifier and class - conditional objective-baseline candidate approved; no tag authorized or created
 Objective Seven tag - not authorized or created; complete tag inventory remains inaccessible/unresolved
@@ -94,6 +98,7 @@ docs/phase-one/objective-seven/PHASE_1_TECHNICAL_READINESS_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
 docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md
 docs/phase-one/objective-seven/remediation/P1O7-REM-06A_REMEDIATION_RECORD.md
+docs/phase-one/objective-seven/PHASE_1_EXIT_CHECKLIST.md
 ```
 
 The Objective Five baseline tag action remains separate in open issue #194. Objective Seven does not execute, modify, supersede, or close that issue.
@@ -135,6 +140,7 @@ current technical-readiness audit: docs/phase-one/objective-seven/PHASE_1_TECHNI
 current repository-control audit: docs/phase-one/objective-seven/PHASE_1_REPOSITORY_CONTROL_AUDIT.md
 current baseline/release decision: docs/phase-one/objective-seven/PHASE_1_BASELINE_RELEASE_DECISION.md
 current T06 inventory remediation: docs/phase-one/objective-seven/remediation/P1O7-REM-06A_REMEDIATION_RECORD.md
+current Phase One exit checklist: docs/phase-one/objective-seven/PHASE_1_EXIT_CHECKLIST.md
 ```
 
 Root `CONTRIBUTING.md` provides the merged human-facing workflow for issue-first work, compact branches, allowed-file scope, prompt logging, verification, task-scoped pull requests, mandatory human review, solo-maintainer review evidence, policy-versus-enforcement distinctions, boundary escalation, and handoff.
@@ -180,72 +186,4 @@ docs/phase-one/objective-five/OBJECTIVE_FIVE_CLOSEOUT.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_HANDOFF.md
 docs/phase-one/objective-five/OBJECTIVE_FIVE_RELEASE_NOTE.md
 VERSIONING.md
-templates/RELEASE_NOTE_TEMPLATE.md
-templates/TRACEABILITY_RECORD_TEMPLATE.md
-templates/RUN_MANIFEST_TEMPLATE.json
-templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md
-records/PROMPT_BUILD_LOG.md
 ```
-
-## Current work boundary
-
-BurnLens remains an experimental, non-operational portfolio project. Official sources govern. Future public-facing output must follow `docs/objective-one/USE_BOUNDARIES.md`, `docs/objective-one/SOURCE_PRECEDENCE.md`, and Objective Five release, source-precedence, reproducibility, QA, and claim-traceability controls.
-
-Objective Seven is the active repository workstream. It is evaluating the documented Phase One control baseline through separately authorized evidence, audit, decision, remediation, and closeout tasks. Objective Seven is incomplete, and no Phase One pass, release, implementation-readiness, or Phase Two data authorization claim is currently supported.
-
-Phase Two data work has not begun. No AOI, source-data, label, model, run, map, public-demo, completed claim, Objective Seven tag, or GitHub Release artifact was created by P1O7-T01 through P1O7-REM-06A.
-
-Objective Seven does not authorize repository settings, branch protection, rulesets, Actions, labels, milestones, Projects, implementation work, or public-output work unless a later task explicitly allows the named change.
-
-## Locked computer vision task
-
-BurnLens Deschutes' first computer vision task is experimental binary semantic segmentation for wildfire-relevant screening.
-
-The primary target is active-fire / hotspot-informed binary fire mask. The fallback target is burn-scar binary mask. The fallback may be used only if later feasibility work shows the primary target is not defensible for the portfolio model. Changing to the fallback requires a documented decision update.
-
-## Core workflow
-
-```text
-imagery → preprocessing → segmentation or baseline mask → raster output → vector polygons → map overlay → exposure-style summary → documented run package
-```
-
-This chain is a future workflow contract. It does not mean those stages have already been implemented.
-
-## Source separation rule
-
-Future BurnLens artifacts must keep these categories separate:
-
-- official/reference sources;
-- reference-derived labels;
-- baseline outputs;
-- model outputs;
-- map overlays;
-- portfolio interpretations.
-
-## Objective Six completion claim
-
-> BurnLens Deschutes has a documented, reviewable prompt-built development protocol connecting issue-backed authorization, bounded task capsules and branches, selective context loading, prompt/build logging, named verification, task-scoped pull requests, mandatory human review distinct from AI-assisted review, controlled merge authorization, conditional status synchronization, and handoff.
-
-This claim concerns documented repository controls. It does not mean the future CV/GEOINT workflow has been executed or proven reliable.
-
-## Current bounded workstream
-
-The active workstream is:
-
-```text
-Phase One / Objective Seven — Phase One acceptance gate
-```
-
-Current bounded work is:
-
-```text
-P1O7-T07 — Create the Phase One exit checklist (next; not started)
-```
-
-P1O7-T06 is complete through PR #278, and P1O7-REM-06A is complete through PR #280. P1O7-SYNC-06A / #281 synchronizes that repository truth and stops before planning T07. T07 must begin only under its own issue and task capsule. It must carry the approved conditional candidate, the accepted inventory limitation, G10/F10-R separation, the mandatory pre-tag enumeration condition, and all other reviewed findings without creating a tag, GitHub Release, or Phase Two data authorization.
-
-## Public site
-
-The public website lives separately at `burnlensproject.org` and is backed by the `burnlens-site` repository.
-
-This technical repository controls the scope, documentation, versioning, and future CV/GEOINT workflow artifacts. The public site should not make claims that are stronger than the artifacts in this repository support.
