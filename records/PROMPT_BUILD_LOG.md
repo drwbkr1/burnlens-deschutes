@@ -167,7 +167,8 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T06 | `records/prompt-build-log/2026-07-12-p1o7-t06.md` | merged via PR #278 | Issue #277 closed; conditional candidate approved; legacy dispositions approved; no tag or GitHub Release created. |
 | P1O7-REM-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | merged via PR #280 | Issue #279 closed; T06-F01 accepted with documented limitation; inventory remains unresolved and mandatory before T10 and parent closure. |
 | P1O7-SYNC-06A | `records/prompt-build-log/2026-07-12-p1o7-rem-06a.md` | final synchronization record | Issue #281; final PR and merge evidence remain in issue and PR history. |
-| P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | review-ready branch candidate | Issue #283; complete exit checklist assembled; full Phase One completion remains blocked by G10; human review pending. |
+| P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | merged via PR #284 | Issue #283 closed; exit checklist reviewed and merged at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`; G10 and F04-A blockers preserved. |
+| P1O7-SYNC-07 | `records/prompt-build-log/2026-07-13-p1o7-sync-07.md` | final synchronization record | Issue #285; README, tracker, checklist lifecycle, and prompt-log truth synchronized after T07 merge. |
 
 ## Acceptance and remediation triggers
 
@@ -187,4 +188,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 through T06 and REM-06A are reviewed and merged. P1O7-T07 / #283 is a branch review candidate that preserves all original criteria and required distinctions; it records full Phase One completion as blocked by G10 and data touch as blocked by F04-A. Complete Project/tag/Release inventories remain `inaccessible/unresolved` where stated. The final Phase One decision remains unmade, Phase Two work has not begun, and no Objective Seven tag or GitHub Release is authorized or created.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T03 through T06 and REM-06A are reviewed and merged. P1O7-T07 / #283 is reviewed and merged through PR #284; the checklist preserves all original criteria and required distinctions, records full Phase One completion as blocked by G10, and records data touch as blocked by F04-A. P1O7-T08 is next but not started or planned by P1O7-SYNC-07. Complete Project/tag/Release inventories remain `inaccessible/unresolved` where stated. The final Phase One decision remains unmade, Phase Two work has not begun, and no Objective Seven tag or GitHub Release is authorized or created.
