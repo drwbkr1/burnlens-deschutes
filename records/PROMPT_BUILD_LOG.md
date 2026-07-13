@@ -170,26 +170,19 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-T07 | `records/prompt-build-log/2026-07-13-p1o7-t07.md` | merged via PR #284 | Issue #283 closed; exit checklist reviewed and merged at `69eea57597a27c58d3e9b8ffe2a1b07a8c4826ae`; G10 and F04-A blockers preserved. |
 | P1O7-SYNC-07 | `records/prompt-build-log/2026-07-13-p1o7-sync-07.md` | final synchronization record | Issue #285 and finalization #287; README, tracker, checklist lifecycle, and prompt-log truth synchronized after T07 merge. |
 | P1O7-T08 | `records/prompt-build-log/2026-07-13-p1o7-t08.md` | merged via PR #294 | Issue #289 closed; Drew recorded `APPROVE — PHASE TWO PLANNING ONLY` on 2026-07-13; merge `69c0b7322f5c2a556f285ad639a8df467494979f`; G10 and F04-A blockers preserved. |
-| P1O7-SYNC-08 | `records/prompt-build-log/2026-07-13-p1o7-sync-08.md` | final synchronization record | Issue #296; T08 decision, review, merge, blocker, routing, and handoff truth synchronized. Final PR and merge evidence remain in GitHub history. |
-| P1O7-T09 | `records/prompt-build-log/2026-07-13-p1o7-t09.md` | merged via PR #299 | Issue #298 closed; Drew approved exact head `e287343c0ccaa3072097b643b4012aa15ed79bd2`; separate squash authorization recorded; merge `d7ad8f063239a61e9212e6eac562deffa50a7a88`; G10 and F04-A preserved; no tag or GitHub Release created. |
-| P1O7-SYNC-09 | `records/prompt-build-log/2026-07-13-p1o7-sync-09.md` | active synchronization | Issue #300; records T09 review/merge truth and routes exact synchronized target to bounded finalization. |
+| P1O7-SYNC-08 | `records/prompt-build-log/2026-07-13-p1o7-sync-08.md` | final synchronization record | Issue #296; T08 decision, review, merge, blocker, routing, and handoff truth synchronized. |
+| P1O7-T09 | `records/prompt-build-log/2026-07-13-p1o7-t09.md` | merged via PR #299 | Issue #298 closed; Drew approved exact head `e287343c0ccaa3072097b643b4012aa15ed79bd2`; separate squash authorization; merge `d7ad8f063239a61e9212e6eac562deffa50a7a88`; no tag or Release. |
+| P1O7-SYNC-09 | `records/prompt-build-log/2026-07-13-p1o7-sync-09.md` | merged via PR #301 | Issue #300 closed; lifecycle truth synchronized at `10caebb3d61ff622dc6dfe8809a63886089eba4e`. |
+| P1O7-SYNC-09F | `records/prompt-build-log/2026-07-13-p1o7-sync-09f.md` | active finalization | Issue #302; designates `10caebb3d61ff622dc6dfe8809a63886089eba4e` as the exact eligible synchronized candidate target; no tag or Release action. |
 
 ## Acceptance and remediation triggers
 
 An entry is reviewable when a reviewer can identify authorization, context, file scope, research, decisions, checks, boundaries, review separation, merge state, sync state, and handoff.
 
-Revise the protocol, template, or an entry if it:
-
-- stores sensitive/private material;
-- omits materially applicable issue, branch/base, file-scope, research, verification, review, or handoff evidence;
-- describes checks without methods and actual results;
-- allows AI or author self-audit to satisfy human approval;
-- represents written policy as configured enforcement;
-- replaces issues, PRs, artifacts, reviews, or releases;
-- introduces unsupported readiness, authority, data/model, or release claims.
+Revise the protocol, template, or an entry if it stores sensitive/private material; omits materially applicable authorization, scope, research, verification, review, or handoff evidence; describes checks without actual results; allows author or AI review to satisfy the human gate; represents written policy as configured enforcement; replaces issues/PRs/artifacts/reviews/releases; or introduces unsupported readiness, authority, data/model, or release claims.
 
 Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven remains active and incomplete under parent #246. P1O7-T09 / #298 was reviewed and merged through PR #299 at `d7ad8f063239a61e9212e6eac562deffa50a7a88`. Drew approved exact head `e287343c0ccaa3072097b643b4012aa15ed79bd2` and separately authorized squash merge. P1O7-SYNC-09 / #300 is synchronizing lifecycle truth; the exact eligible synchronized `main` target remains pending bounded finalization after the sync merge. G10 remains `evidence incomplete` and blocks full Phase One completion; F04-A remains `evidence incomplete` and blocks every data-touch action. F06-C and F10-R remain supporting incomplete facts. Complete Project/tag/Release inventories remain `inaccessible/unresolved` where stated. The candidate is not a tag, no Objective Seven tag or GitHub Release was authorized or created, and issues #292 and #293 remain blocked under their dependency gates.
+Objective Seven remains active and incomplete under parent #246. P1O7-T09 and P1O7-SYNC-09 were reviewed and merged through PRs #299 and #301. The exact eligible synchronized `main` target is `10caebb3d61ff622dc6dfe8809a63886089eba4e`, subject to reviewed merge of the #302 finalization record. G10 still blocks full Phase One completion; F04-A still blocks every data-touch action; F06-C and F10-R remain supporting incomplete facts. The candidate is not a tag, no Objective Seven tag or GitHub Release was authorized or created, and #292 remains a readiness task only.

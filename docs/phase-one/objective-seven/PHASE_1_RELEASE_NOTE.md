@@ -2,15 +2,13 @@
 
 ## Release-note status
 
-This is a **review-ready repository release-note candidate** for the conditional documentation/control objective-baseline identifier:
+This is the reviewed repository release-note candidate for the conditional documentation/control objective-baseline identifier:
 
 ```text
 v0.0.7-objective-seven-phase-one-baseline
 ```
 
 The identifier is **not a Git tag**. No tag was created. No GitHub Release was created or published. A GitHub Release is not recommended for the current candidate.
-
-The release note cannot become final until P1O7-T09 receives human review, merges to `main`, and a bounded post-merge synchronization records the exact eligible target commit.
 
 ## Release identity
 
@@ -19,20 +17,21 @@ The release note cannot become final until P1O7-T09 receives human review, merge
 | Release title | BurnLens Deschutes Phase One documentation/control baseline candidate |
 | Release class | Conditional objective baseline plus repository documentation release note |
 | Version / candidate identifier | `v0.0.7-objective-seven-phase-one-baseline` |
-| Release date | Not released; candidate prepared 2026-07-13 |
+| Release date | Not released; candidate prepared and reviewed in 2026-07 |
 | Repository | `drwbkr1/burnlens-deschutes` |
-| Candidate branch | `p1o7t09b` |
-| Authorized base | `main` at `23d57ab96071e21068ab7c02ae970b2968e10c04` |
-| Candidate PR | Not opened |
-| Reviewed head | Pending human review |
-| Eligible `main` target | Unresolved pending T09 merge and bounded post-merge synchronization |
+| T09 branch / PR | `p1o7t09b` / PR #299 |
+| T09 reviewed head | `e287343c0ccaa3072097b643b4012aa15ed79bd2` |
+| T09 source merge | `d7ad8f063239a61e9212e6eac562deffa50a7a88` |
+| SYNC-09 PR / merge | PR #301 / `10caebb3d61ff622dc6dfe8809a63886089eba4e` |
+| Exact eligible synchronized `main` target | `10caebb3d61ff622dc6dfe8809a63886089eba4e` |
+| Target-finalization issue | #302 |
 | Parent issue | #246 — open and protected |
-| Task issue | #298 — open |
 | Decision owner | Drew |
-| Decision source | `docs/phase-one/objective-seven/PHASE_1_DECISION_MEMO.md` |
 | Decision | `APPROVE — PHASE TWO PLANNING ONLY` — 2026-07-13 |
 | Tag status | Explicitly uncreated and unauthorized |
 | GitHub Release status | Explicitly unpublished, unauthorized, and not recommended |
+
+The exact target is eligible to be supplied to #292 after the #302 finalization record is reviewed and merged. Recording a target does not create a tag, satisfy G10, prove a collision-free inventory, or authorize T10.
 
 ## Required boundary statement
 
@@ -48,7 +47,7 @@ Experimental BurnLens CV output. Not official wildfire information. Not emergenc
 Official sources govern when BurnLens differs from county, state, federal, fire-service, emergency-management, transportation, air-quality, or incident sources.
 ```
 
-This release-note candidate includes no BurnLens-derived output and makes no incident, hazard, evacuation, road, or public-safety conclusion.
+This candidate includes no BurnLens-derived output and makes no incident, hazard, evacuation, road, or public-safety conclusion.
 
 ## Versioning statement
 
@@ -60,9 +59,9 @@ The `v0.0.7` core is an objective-baseline namespace decision. It does not claim
 
 ## Included work
 
-Only the exact documentation and control artifacts below are included in the candidate scope. The release note does not claim that every repository file is released.
+Only the exact documentation and control artifacts below are included. This note does not claim that every repository file is released.
 
-### Root and repository workflow controls
+### Root and workflow controls
 
 ```text
 README.md
@@ -77,7 +76,7 @@ templates/CODEX_TASK_PACKET.md
 templates/CODEX_TASK_TEMPLATE.md
 ```
 
-### Objective One — project identity, technical scope, and boundaries
+### Objective One
 
 ```text
 docs/objective-one/TECHNICAL_DESCRIPTION.md
@@ -85,7 +84,7 @@ docs/objective-one/USE_BOUNDARIES.md
 docs/objective-one/SOURCE_PRECEDENCE.md
 ```
 
-### Objective Two — bounded computer-vision planning controls
+### Objective Two
 
 ```text
 docs/phase-one/objective-two/CV_TASK_DEFINITION.md
@@ -101,7 +100,7 @@ docs/phase-one/objective-two/FAILURE_MODES.md
 docs/phase-one/objective-two/CV_USE_BOUNDARIES.md
 ```
 
-### Objective Three — data-feasibility and future intake controls
+### Objective Three
 
 ```text
 docs/phase-one/objective-three/DATA_FEASIBILITY_CRITERIA.md
@@ -117,7 +116,7 @@ docs/phase-one/objective-three/RESEARCH_VALIDATION_LOG.md
 docs/phase-one/objective-three/CLAIMS_REGISTER_UPDATE.md
 ```
 
-### Objective Four — repository issue, branch, PR, and intake controls
+### Objective Four
 
 ```text
 docs/phase-one/objective-four/ISSUE_ARCHITECTURE.md
@@ -127,10 +126,9 @@ docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md
 .github/ISSUE_TEMPLATE/task.yml
 .github/ISSUE_TEMPLATE/config.yml
 .github/PULL_REQUEST_TEMPLATE.md
-templates/CODEX_TASK_PACKET.md
 ```
 
-### Objective Five — versioning, release, traceability, QA, and claims controls
+### Objective Five
 
 ```text
 docs/phase-one/objective-five/CURRENT_STATUS_RECONCILIATION.md
@@ -156,7 +154,7 @@ templates/RUN_MANIFEST_TEMPLATE.json
 templates/CLAIM_EVIDENCE_LINK_TEMPLATE.md
 ```
 
-### Objective Six — prompt-built development and review controls
+### Objective Six
 
 ```text
 docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md
@@ -169,7 +167,7 @@ docs/phase-one/objective-six/OBJECTIVE_SIX_CLOSEOUT.md
 docs/phase-one/objective-six/OBJECTIVE_SIX_HANDOFF.md
 ```
 
-### Objective Seven — gate evidence, decisions, and candidate reviews
+### Objective Seven
 
 ```text
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_TRACKER.md
@@ -188,125 +186,51 @@ docs/phase-one/objective-seven/PHASE_1_RELEASE_NOTE.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_REPRODUCIBILITY_REVIEW.md
 docs/phase-one/objective-seven/OBJECTIVE_SEVEN_RELEASE_QA_REVIEW.md
 records/prompt-build-log/2026-07-13-p1o7-t09.md
+records/prompt-build-log/2026-07-13-p1o7-sync-09.md
+records/prompt-build-log/2026-07-13-p1o7-sync-09f.md
 ```
-
-### Evidence linkage
-
-The issue, PR, commit, review, and synchronization history referenced by the included records is evidence for the candidate. GitHub issue and PR objects are not bundled release assets. Historical dated prompt/build logs remain indexed by `records/PROMPT_BUILD_LOG.md`; they are traceability evidence rather than a claim that every historical draft is current governing text.
 
 ## Excluded work and unsupported claims
 
 | Excluded item or claim | Reason excluded | Future gate if applicable |
 |---|---|---|
 | Phase Two execution authorization | T08 authorizes planning only. | Separate Phase Two parent and exact task issues. |
-| Source queries or source access | F04-A remains incomplete. | Before-data records and a separate exact action issue. |
-| AOI selection or geometry | Not authorized or created. | Reviewed AOI record under a future exact issue. |
+| Source queries or source access | F04-A remains incomplete. | Before-data records and separate exact action issue. |
+| AOI selection or geometry | Not authorized or created. | Reviewed AOI record under future exact issue. |
 | Imagery or source-data download, retention, or processing | Not authorized or created. | Source/access/terms/precheck/provenance gates. |
-| Completed source, access, terms, AOI, CRS, provenance, or registry records for real intake | Planning templates and criteria are not completed intake evidence. | #293 after its parent dependency, then separate action issue. |
+| Completed source/access/terms/AOI/CRS/provenance/registry records for real intake | Planning controls are not completed intake evidence. | #293 after parent dependency, then separate action issue. |
 | Labels, masks, datasets, splits, or data manifests | Not authorized or created. | Future data and labeling gates. |
 | Baseline implementation or output | Planning only; no method execution. | Future method issue and evidence package. |
 | Model code, training, weights, inference, or metrics | Not authorized or created. | Dataset/label/model-card/metrics gates. |
 | Run folders or run packages | Not authorized or created. | Run-package contract and exact execution issue. |
-| Raster or vector outputs, exposure summaries, maps, reports, or screenshots | Not authorized or created. | Run, source-precedence, claim, and QA gates. |
+| Raster/vector outputs, exposure summaries, maps, reports, or screenshots | Not authorized or created. | Run, source-precedence, claim, and QA gates. |
 | Public demo, deployment, site publication, or portfolio asset | Not authorized or created. | Public-output and claim-evidence gates. |
-| Approved public-facing claim | T09 does not create a completed claim record or approve public copy. | Completed claim evidence and release QA. |
-| Repository settings, CI, branch protection, rulesets, Projects, required approvals, or enforcement claims | Not inspected or changed by T09. Written policy is not platform enforcement. | Separate exact settings issue and live verification. |
+| Approved public-facing claim | No completed claim record or public-copy approval exists. | Completed claim evidence and release QA. |
+| Repository settings or enforcement claims | Not inspected or changed. Written policy is not platform enforcement. | Separate exact settings issue and live verification. |
 | Git tag | Candidate is not a tag; G10 remains incomplete. | #292 and separate exact T10 authorization. |
-| GitHub Release or release assets | Documentation-only note is sufficient; T06 rejects this class for the candidate. | Separate T11 only with new value justification. |
-| Empty tag or GitHub Release inventory claim | Complete inventories remain unresolved. | Successful complete authenticated enumeration. |
-| Full Phase One completion, closure, acceptance, or release | G10 remains incomplete and T09 is unreviewed/unmerged. | Verified tag, synchronization, and explicit parent-close authorization. |
-| Operational, official, field-validated, emergency-ready, agency-endorsed, production-stable, evacuation, routing, tactical, or incident-command claims | Prohibited by governing boundaries. | Not supported under the current project boundary. |
+| GitHub Release or assets | Documentation note is sufficient; T06 rejects this class for the candidate. | Separate T11 only with new value justification. |
+| Empty tag or Release inventory claim | Complete inventories remain unresolved. | Successful complete authenticated enumeration. |
+| Full Phase One completion, closure, acceptance, or release | G10 remains incomplete. | Verified tag, synchronization, and explicit parent-close authorization. |
+| Operational, official, field-validated, emergency-ready, agency-endorsed, production-stable, evacuation, routing, tactical, or incident-command claims | Prohibited by governing boundaries. | Not supported under current project boundary. |
 
-## Artifact and release-object status
-
-| Object | Status |
-|---|---|
-| Repository release-note document | Created on the authorized branch for review |
-| Candidate identifier | Approved conditionally; not a tag |
-| Exact candidate target | Unresolved pending reviewed merge and post-merge synchronization |
-| Git tag | Not created; no creation authorization |
-| GitHub Release | Not published; no publication authorization; not recommended |
-| Release assets | None |
-| Pre-release setting | N/A; there is no GitHub Release candidate |
-| Latest-release setting | N/A; there is no GitHub Release candidate |
-
-## Evidence links
-
-| Evidence type | Link / reference |
-|---|---|
-| Parent issue | #246 |
-| T09 task issue | #298 |
-| T08 decision issue / PR / merge | #289 / PR #294 / `69c0b7322f5c2a556f285ad639a8df467494979f` |
-| T08 synchronization issue / PR / merge | #296 / PR #297 / `23d57ab96071e21068ab7c02ae970b2968e10c04` |
-| T09 branch | `p1o7t09b` |
-| T09 PR / reviewed head / merge | Pending |
-| Candidate target synchronization | Required after T09 merge; not yet created |
-| Version taxonomy | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Versioning protocol | `VERSIONING.md` |
-| Release control | `docs/phase-one/objective-five/RELEASE_CONTROL.md` |
-| Reproducibility review | `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_REPRODUCIBILITY_REVIEW.md` |
-| Release-QA review | `docs/phase-one/objective-seven/OBJECTIVE_SEVEN_RELEASE_QA_REVIEW.md` |
-| Source precedence | `docs/objective-one/SOURCE_PRECEDENCE.md` |
-| Use boundaries | `docs/objective-one/USE_BOUNDARIES.md` |
-| Prompt/build log | `records/prompt-build-log/2026-07-13-p1o7-t09.md` |
-
-## Release-class checklist
-
-- [x] Objective baseline candidate.
-- [x] Documentation release note.
-- [ ] Documentation task PR — pending future PR.
-- [ ] Status-sync PR — expected after T09 merge.
-- [ ] App/site release — not included.
-- [ ] Data package release — not included.
-- [ ] Model/baseline release — not included.
-- [ ] Run/report release — not included.
-- [ ] Public portfolio release — not included.
-
-## Tag checklist status
+## Current release-control decision
 
 | Check | Current result |
 |---|---|
-| Tag name matches taxonomy | Pass for candidate syntax |
-| Tag target is the intended reviewed `main` commit | Blocked; exact synchronized target does not yet exist |
-| Relevant task issues and PRs are merged | Blocked; #298 has no PR or merge |
-| Current-status artifacts are synchronized | Pass for branch-build truth; final merge truth requires post-merge sync |
-| Prompt/build logs exist | Pass for build-stage record |
-| Included and excluded artifacts are listed | Pass |
-| Boundary and source-precedence language is present | Pass |
-| Unsupported claims are absent | Pass by author inspection; human review pending |
-| Explicit tag creation authorization exists | Fail; no exact T10 issue exists |
-| Tag created | No |
+| Candidate name matches taxonomy | Pass for candidate syntax. |
+| Exact synchronized target recorded | Pass — `10caebb3d61ff622dc6dfe8809a63886089eba4e`. |
+| T09 and synchronization merged | Pass — PRs #299 and #301. |
+| Complete tag inventory and readiness | Blocked — #292 not yet executed. |
+| Explicit tag creation authorization | Fail — no exact T10 issue exists. |
+| Tag created | No. |
+| GitHub Release candidate | No; not recommended. |
 
-No tag may be created from this checklist state.
-
-## GitHub Release checklist status
-
-A GitHub Release is not a candidate action. There is no deployable package, no release asset inventory, no authorized tag, no release title/publication authorization, and no value justification beyond the repository note. Pre-release and latest-release decisions are therefore N/A.
-
-## Verification performed
-
-| Check | Build-stage result | Notes |
-|---|---|---|
-| Issue and branch contract | Passed | #298 and `p1o7t09b` at the authorized base were verified. |
-| T08 decision and synchronization | Passed | Decision owner/date and PR/merge evidence match current records. |
-| Included artifact inventory | Passed by exact-path inspection | Inventory lists bounded documentation/control artifacts only. |
-| Excluded work and unsupported claims | Passed by requirement-coverage inspection | All prohibited technical, public, tag, and Release classes are excluded. |
-| Boundary and source precedence | Passed by exact-text inspection | Governing statements are present. |
-| Candidate syntax | Passed | Matches `v0.0.N-short-objective-slug`. |
-| Candidate target | Blocked by lifecycle order | No T09 merge or synchronized target exists. |
-| Reproducibility review | Complete with `blocked` decision | Does not authorize release-like action. |
-| Release QA | Complete with `blocked` decision | Does not authorize tag or GitHub Release. |
-| Tag mutation | Not performed | Forbidden by #298. |
-| GitHub Release publication | Not performed | Forbidden and not recommended. |
-
-## Checks not run
-
-Code, application, build, lint, type, unit, integration, model, data, geospatial, runtime, deployment, tag-mutation, GitHub Release publication, and repository-settings tests were not run because issue #298 authorizes documentation, closeout, and release-control review only.
+The reproducibility and release-QA decisions remain `blocked` for tag/release action because complete inventory/readiness evidence and exact T10 authorization are absent. No tag may be created from this state.
 
 ## Safe claims
 
 ```text
-BurnLens Deschutes has prepared a review-ready Phase One documentation/control baseline candidate and repository release note on an issue-backed branch.
+BurnLens Deschutes has a reviewed Phase One documentation/control baseline candidate with an exact synchronized main target.
 ```
 
 Required adjacent limitation:
@@ -327,24 +251,13 @@ Planning permission does not authorize source access, AOI creation, data work, m
 
 ## Claims not allowed
 
-Do not use this release note to claim that:
-
-- Phase One is complete, closed, accepted, tagged, or released;
-- the candidate is a tag or has an eligible final target already;
-- the repository has no tags or no GitHub Releases;
-- Phase Two data work has begun;
-- an AOI, source package, dataset, label set, baseline, model, run, metric, map, report, screenshot, demo, deployment, or public output exists;
-- a public-facing claim is approved;
-- GitHub settings or enforcement are configured;
-- BurnLens is official, operational, field-validated, emergency-ready, agency-endorsed, production-ready, or suitable for evacuation, routing, tactical, or incident-command support.
+Do not claim that Phase One is complete, closed, accepted, tagged, or released; that the candidate is a tag; that the repository has no tags or Releases; that Phase Two data work has begun; that an AOI, dataset, model, run, map, report, demo, deployment, or public output exists; that a public claim is approved; that settings enforcement is configured; or that BurnLens is official, operational, field-validated, emergency-ready, agency-endorsed, production-ready, or suitable for evacuation, routing, tactical, or incident-command support.
 
 ## Handoff
 
-1. Human-review issue #298 and the complete branch diff.
-2. Open and merge a task-scoped PR only after **Approve** and separate exact-head merge authorization.
-3. Run a bounded post-merge synchronization that records the exact eligible `main` target.
+1. Review and merge P1O7-SYNC-09F / #302.
+2. Allow #292 to begin complete authenticated tag inventory and readiness review; #292 cannot create a tag.
+3. Consider a future exact T10 issue only if #292 records readiness and Drew separately authorizes the exact action.
 4. Create the Phase Two planning parent/tracker as the first permitted Phase Two action.
-5. Keep #293 blocked until that parent exists and adopts the planning-only boundary.
-6. Keep #292 blocked until the exact synchronized target exists.
-7. Do not create a tag except through a later exact T10 authorization after #292 records readiness.
-8. Do not publish a GitHub Release for this candidate.
+5. Keep #293 blocked until that parent adopts the planning-only boundary.
+6. Do not publish a GitHub Release for this candidate.
