@@ -7,7 +7,7 @@
 | Objective | Phase One / Objective Seven — Phase One Acceptance Gate |
 | Parent issue | #246 — open and protected |
 | Last completed task | P1O7-T08 / #289 — reviewed and squash-merged through PR #294 at `69c0b7322f5c2a556f285ad639a8df467494979f` |
-| Latest synchronization record | P1O7-SYNC-08 / #295 — synchronizes T08 decision, review, merge, blocker, routing, and handoff truth |
+| Latest synchronization record | P1O7-SYNC-08 / #296 — synchronizes T08 decision, review, merge, blocker, routing, and handoff truth; duplicate #295 closed |
 | Next task | P1O7-T09 — Close out Objective Seven and prepare the reviewed baseline candidate; not started by this synchronization |
 | Superseded history | PR #258 — closed unmerged; wrong cross-repository scope and findings are not current evidence |
 | Objective state | Active and incomplete |
@@ -383,6 +383,6 @@ G10 preparation: #292, blocked by its dependency gate
 F04-A preparation: #293, blocked by its dependency gate
 ```
 
-P1O7-SYNC-08 does not start T09, create a tag, publish a GitHub Release, or authorize source/data access.
+P1O7-SYNC-08 / #296 does not start T09, create a tag, publish a GitHub Release, or authorize source/data access.
 
-Do not carry forward PR #258, wrong-repository evidence, exact-ref failures as proof of an empty inventory, the conditional candidate as a tag, the former pending T08 decision/date, planning permission as data permission, or any implication that Phase One is complete, Phase Two data work has begun, public claims are approved, or a tag or GitHub Release is authorized.
+Do not carry forward duplicate issue #295 as an active authorization, PR #258, wrong-repository evidence, exact-ref failures as proof of an empty inventory, the conditional candidate as a tag, the former pending T08 decision/date, planning permission as data permission, or any implication that Phase One is complete, Phase Two data work has begun, public claims are approved, or a tag or GitHub Release is authorized.
