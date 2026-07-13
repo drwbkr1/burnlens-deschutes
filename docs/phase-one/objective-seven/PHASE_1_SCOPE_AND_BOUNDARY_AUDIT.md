@@ -163,8 +163,8 @@ G03-G10 were not evaluated by this task.
 | No final Phase One decision | satisfied |
 | No public claim approved, rewritten, or published | satisfied |
 | No audited source file changed | satisfied |
-| Tracker uses `PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` and protects #246 | pending companion tracker update on this branch |
-| Exactly four authorized repository paths change | pending final complete-branch comparison |
+| Tracker uses `PHASE_1_SCOPE_AND_BOUNDARY_AUDIT.md` and protects #246 | satisfied — companion tracker updated on this branch |
+| Exactly four authorized repository paths change | satisfied — complete comparison showed four authorized paths and zero commits behind; definitive final-head comparison is retained in the dated log and review handoff |
 | Research method, actual results, limitations, and Tier 2 non-use recorded | satisfied here and in dated prompt log |
 
 ## Limitations
