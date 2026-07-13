@@ -156,12 +156,14 @@ Update entries when the issue/capsule is approved, branch is created, research c
 | P1O7-SYNC-01 | `records/prompt-build-log/2026-07-12-p1o7-sync-01.md` | final synchronization record | Issue #249; PR and merge evidence are retained in the issue, PR, and dated log. |
 | P1O7-T02 | `records/prompt-build-log/2026-07-12-p1o7-t02.md` | merged via PR #252 | Phase One gate evidence matrix; issue #251 closed and status synchronized through #253. |
 | P1O7-SYNC-02 | `records/prompt-build-log/2026-07-12-p1o7-sync-02.md` | final synchronization record | Issue #253 and PR #254 contain the source sync evidence; issue #255 authorizes final record correction and its GitHub history retains completion evidence. |
+| P1O7-T03 | `records/prompt-build-log/2026-07-12-p1o7-t03.md` | review-ready on `p1o7t03b` | Issue #257 open; audit records G01, G02, and G11 as `does not meet` / `blocked` pending human review; no PR created. |
 
 ## Acceptance and remediation triggers
 
 An entry is reviewable when a reviewer can identify authorization, context, file scope, research, decisions, checks, boundaries, review separation, merge state, sync state, and handoff.
 
 Revise the protocol, template, or an entry if it:
+
 - stores sensitive/private material;
 - omits materially applicable issue, branch/base, file-scope, research, verification, review, or handoff evidence;
 - describes checks without methods and actual results;
@@ -174,4 +176,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 / #247 merged through PR #248 and established controls and artifact contracts. P1O7-T02 / #251 merged through PR #252 and established the Phase One gate evidence matrix; all gate criteria remain `not evaluated`. P1O7-T03 is the next planned task. Phase Two data or implementation work has not begun, and no Objective Seven tag or GitHub Release has been created.
+Objective Six is complete as a documented, reviewable repository-control baseline, and parent #195 is closed. Objective Seven is active and incomplete under parent #246. P1O7-T01 established Objective Seven controls; P1O7-T02 established the evidence matrix. P1O7-T03 / #257 is review-ready on `p1o7t03b` and records mandatory G01, G02, and G11 blockers in active public scope. These are criterion-level audit findings pending human review, not the final Phase One decision. Phase Two data or implementation work has not begun, and no Objective Seven tag or GitHub Release has been created.
