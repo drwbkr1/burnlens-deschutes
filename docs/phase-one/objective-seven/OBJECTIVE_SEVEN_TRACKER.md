@@ -103,7 +103,7 @@ README was not an allowed T02 file. The task-specific issue and approved capsule
 | T03 merge commit | `3d7e6d5a2de7fcc527803ae06d9b746143084207` |
 | Superseded audit PR | #258 — closed unmerged; wrong-scope findings are not evidence |
 | Completed status remediation | P1O7-REM-03A / #259 — PR #260 squash-merged |
-| Reviewed REM head | `ce2893cfe36e33f418946cf026237681b2e0` |
+| Reviewed REM head | `ce2893cfe36e33f418e999c73d52979ae0bb4b0a` |
 | REM human outcome | Drew — **Approve** |
 | REM merge authorization | Separate squash-merge authorization recorded against the reviewed head |
 | REM merge commit | `d1cb6cffa01402627c9e4b208139dc1a87c97552` |
