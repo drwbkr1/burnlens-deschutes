@@ -58,13 +58,16 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped analytical-evidence checkpoint is P2O2-T01 / issue #321 / PR #322 at `fffd3dda123d7c43fe678dca9adfd8feb73de158`, tagged `v0.2.0-aoi-baseline`. P2O2-T02 / issue #325 is the active `0.3.0` candidate on `codex/p2o2-t02-intake-transaction`.
+The latest shipped checkpoint is P2O2-T02 / issue #325 / PR #326 at `ee1a1d678ad888b595dc3c7b215f787ea5156582`, tagged `v0.3.0-intake-transaction-baseline`. P2O2-T03 / issue #329 is the active `0.4.0` candidate on `codex/p2o2-t03-authenticated-intake`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
-- The repository has executable access-validation and AOI-evidence paths. The candidate adds a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
-- Provider imagery assets and bytes remain zero. No credential, imagery-derived raster/vector, label, dataset, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists.
-- Exact real paired intake remains stopped until the owner explicitly approves both CDSE and Earthdata credentials. Do not add, inspect, or use credentials without that approval.
-- After approval, the next bounded checkpoint is exact asset quarantine, transaction validation, and real rendered/visual source inspection; passing registration alone does not establish fire presence or data fitness.
+- The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
+- Issue #329 has now exercised both credentials through the secret-safe runtime wrapper. Three exact provider assets totaling 1,169,997,942 bytes are registered only in ignored local raw storage; no raw provider byte or secret material is committed.
+- `SOURCE-INSPECTION-2026-001` renders real Sentinel AOI pixels, real VIIRS provider records, QA exclusions, scan-edge risk, and full lineage. Its decision is `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`.
+- No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
+- Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
+
+If P2O2-T03 ships, the selected next evidence checkpoint is alternate-observation geometry plus a versioned weak/reference-label feasibility protocol that preserves positive, negative, unknown, and excluded states. Do not coerce the current 375 m points or later NIFC perimeter into 10-20 m labels.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 

@@ -1,0 +1,642 @@
+{
+  "report_id": "SOURCE-INSPECTION-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "source-inspection-v0.1.0",
+  "generated_at_utc": "2026-07-14T18:22:11Z",
+  "run_id": "BL-2026-07-14-source-inspection-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 329,
+  "branch": "codex/p2o2-t03-authenticated-intake",
+  "git_source_commit": "9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc",
+  "software_version": "0.4.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+  "package_verification": {
+    "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+    "registered_package_present": true,
+    "expected_entry_count": 4,
+    "observed_entry_count": 4,
+    "unexpected_entries": [],
+    "missing_entries": [],
+    "registration": {
+      "registration_schema_version": "0.2.0",
+      "contract_version": "paired-intake-contract-v0.4.0",
+      "contract_sha256": "5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d",
+      "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+      "generated_at_utc": "2026-07-14T17:58:40Z",
+      "run_id": "BL-2026-07-14-authenticated-intake-r001",
+      "synthetic_fixture": false,
+      "asset_count": 3,
+      "assets": [
+        {
+          "role": "sentinel-2-l2a",
+          "source_record_id": "SOURCE-2026-004",
+          "native_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+          "filename": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip",
+          "bytes": 1127031562,
+          "sha256": "b2cfcf3c2003ff6adbe74fe3ea8fbbc65409ea7034e010b001ec5601d3dd81dc",
+          "md5": "3806a834a97ab2eb41f1edf5496b433c",
+          "blake3": "546336e996586f4c276eb9ed3d9818f9574edbed24334dce74a394bd3759cb10"
+        },
+        {
+          "role": "viirs-active-fire",
+          "source_record_id": "SOURCE-2026-005",
+          "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+          "filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+          "bytes": 2710616,
+          "sha256": "7f370161de57af826740a5913d6ee5de79b56153d26bfb17406af9838054cad9",
+          "md5": "b6ce12244c98d16f9ad64a172e8896a7",
+          "blake3": "aae568c00ba6c204bb14e4dc85b4073a2b35e7fd81da5bc63c61fff16018cfc6"
+        },
+        {
+          "role": "viirs-geolocation",
+          "source_record_id": "SOURCE-2026-006",
+          "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+          "filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+          "bytes": 40255764,
+          "sha256": "df7ec749f794fa42286bb61b4ef2b8dda3032ef909eb0c1914b8850510bae281",
+          "md5": "6b6a8870458331dc4f59f67ebc0e2b8b",
+          "blake3": "293b9383338e9afb7b8fb26114252eaba3456da6fd9e86d8226b9c628654aa34"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "role": "sentinel-2-l2a",
+        "source_record_id": "SOURCE-2026-004",
+        "provider_id": "58cebcf0-c417-4384-a93a-2d6b15344117",
+        "native_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+        "expected_filename": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip",
+        "expected_size_bytes": 1127031562,
+        "container": "zip-safe",
+        "observed_bytes": 1127031562,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1126996576,
+          "expected_root": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "b2cfcf3c2003ff6adbe74fe3ea8fbbc65409ea7034e010b001ec5601d3dd81dc",
+          "md5": "3806a834a97ab2eb41f1edf5496b433c",
+          "blake3": "546336e996586f4c276eb9ed3d9818f9574edbed24334dce74a394bd3759cb10"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      },
+      {
+        "role": "viirs-active-fire",
+        "source_record_id": "SOURCE-2026-005",
+        "provider_id": "G3944882727-LPCLOUD",
+        "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+        "expected_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+        "expected_size_bytes": 2710616,
+        "container": "hdf5",
+        "observed_bytes": 2710616,
+        "observed_magic_hex": "894844460d0a1a0a",
+        "container_details": null,
+        "provider_checksum_available": false,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "7f370161de57af826740a5913d6ee5de79b56153d26bfb17406af9838054cad9",
+          "md5": "b6ce12244c98d16f9ad64a172e8896a7",
+          "blake3": "aae568c00ba6c204bb14e4dc85b4073a2b35e7fd81da5bc63c61fff16018cfc6"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      },
+      {
+        "role": "viirs-geolocation",
+        "source_record_id": "SOURCE-2026-006",
+        "provider_id": "G4037038741-LPCLOUD",
+        "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+        "expected_filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+        "expected_size_bytes": 40255764,
+        "container": "hdf5",
+        "observed_bytes": 40255764,
+        "observed_magic_hex": "894844460d0a1a0a",
+        "container_details": null,
+        "provider_checksum_available": false,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "df7ec749f794fa42286bb61b4ef2b8dda3032ef909eb0c1914b8850510bae281",
+          "md5": "6b6a8870458331dc4f59f67ebc0e2b8b",
+          "blake3": "293b9383338e9afb7b8fb26114252eaba3456da6fd9e86d8226b9c628654aa34"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      }
+    ],
+    "accepted_as_unchanged_registered_package": true,
+    "reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "aoi": {
+    "bbox_utm10n": [
+      620000.0,
+      4831000.0,
+      632000.0,
+      4840000.0
+    ],
+    "bbox_wgs84": [
+      -121.512668,
+      43.620281,
+      -121.361791,
+      43.703322
+    ],
+    "width_m": 12000,
+    "height_m": 9000,
+    "area_km2": 108.0
+  },
+  "sentinel_2_l2a": {
+    "product_filename": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip",
+    "true_color": {
+      "member": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE/GRANULE/L2A_T10TFP_A038177_20240627T185741/IMG_DATA/R10m/T10TFP_20240627T184919_TCI_10m.jp2",
+      "driver": "JP2OpenJPEG",
+      "crs": "EPSG:32610",
+      "source_width": 10980,
+      "source_height": 10980,
+      "source_band_count": 3,
+      "source_dtype": [
+        "uint8",
+        "uint8",
+        "uint8"
+      ],
+      "source_bounds_utm10n": [
+        600000.0,
+        4790220.0,
+        709800.0,
+        4900020.0
+      ],
+      "source_transform": [
+        10.0,
+        0.0,
+        600000.0,
+        0.0,
+        -10.0,
+        4900020.0
+      ],
+      "aoi_window": {
+        "column_offset": 2000,
+        "row_offset": 6002,
+        "width": 1200,
+        "height": 900
+      },
+      "aoi_bounds_utm10n": [
+        620000.0,
+        4831000.0,
+        632000.0,
+        4840000.0
+      ],
+      "observed_min": 2,
+      "observed_max": 255,
+      "channel_means": [
+        111.3314,
+        104.6639,
+        90.2432
+      ]
+    },
+    "scene_classification": {
+      "member": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE/GRANULE/L2A_T10TFP_A038177_20240627T185741/IMG_DATA/R20m/T10TFP_20240627T184919_SCL_20m.jp2",
+      "crs": "EPSG:32610",
+      "source_width": 5490,
+      "source_height": 5490,
+      "aoi_window": {
+        "column_offset": 1000,
+        "row_offset": 3001,
+        "width": 600,
+        "height": 450
+      },
+      "aoi_bounds_utm10n": [
+        620000.0,
+        4831000.0,
+        632000.0,
+        4840000.0
+      ],
+      "summary": {
+        "pixel_count": 270000,
+        "classes": [
+          {
+            "value": 0,
+            "name": "No data",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 1,
+            "name": "Saturated or defective",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 2,
+            "name": "Dark area pixels",
+            "pixels": 687,
+            "percent": 0.2544
+          },
+          {
+            "value": 3,
+            "name": "Cloud shadows",
+            "pixels": 314,
+            "percent": 0.1163
+          },
+          {
+            "value": 4,
+            "name": "Vegetation",
+            "pixels": 56708,
+            "percent": 21.003
+          },
+          {
+            "value": 5,
+            "name": "Bare soils",
+            "pixels": 173601,
+            "percent": 64.2967
+          },
+          {
+            "value": 6,
+            "name": "Water",
+            "pixels": 269,
+            "percent": 0.0996
+          },
+          {
+            "value": 7,
+            "name": "Clouds low probability or unclassified",
+            "pixels": 14045,
+            "percent": 5.2019
+          },
+          {
+            "value": 8,
+            "name": "Clouds medium probability",
+            "pixels": 23225,
+            "percent": 8.6019
+          },
+          {
+            "value": 9,
+            "name": "Clouds high probability",
+            "pixels": 1151,
+            "percent": 0.4263
+          },
+          {
+            "value": 10,
+            "name": "Cirrus",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 11,
+            "name": "Snow or ice",
+            "pixels": 0,
+            "percent": 0.0
+          }
+        ],
+        "medium_high_cloud_pixels": 24376,
+        "medium_high_cloud_percent": 9.0281,
+        "cloud_shadow_pixels": 314,
+        "cloud_shadow_percent": 0.1163,
+        "no_data_pixels": 0,
+        "no_data_percent": 0.0
+      }
+    },
+    "interpretation": "The true-color and SCL crops are real source observations over the frozen AOI. They establish readable pixels and visible conditions, not burned-area labels."
+  },
+  "viirs_active_fire": {
+    "product_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+    "attributes": {
+      "LocalGranuleID": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "ShortName": "VJ214IMG",
+      "VersionID": "002",
+      "RangeBeginningDate": "2024-06-27",
+      "RangeBeginningTime": "19:36:00.00000",
+      "RangeEndingDate": "2024-06-27",
+      "RangeEndingTime": "19:42:00.00000",
+      "DayNightFlag": "Day"
+    },
+    "upstream_input_filenames": [
+      "VJ202CCIMG.A2024179.1936.021.2025284033011.nc",
+      "VJ202CCMOD.A2024179.1936.021.2025284033011.nc",
+      "VJ202GDC.A2024179.1936.021.2024327212646.nc",
+      "VJ203IMG.A2024179.1936.021.2024327203454.nc"
+    ],
+    "fire_mask_shape": [
+      6464,
+      6400
+    ],
+    "global_fire_record_count": 65,
+    "aoi_fire_record_count": 8,
+    "aoi_confidence_counts": {
+      "low": 0,
+      "nominal": 6,
+      "high": 2
+    },
+    "aoi_residual_bowtie_count": 3,
+    "aoi_bad_geolocation_qa_count": 0,
+    "aoi_non_bowtie_reference_count": 5,
+    "aoi_non_bowtie_confidence_counts": {
+      "low": 0,
+      "nominal": 4,
+      "high": 1
+    },
+    "aoi_inside_nifc_reference_count": 6,
+    "aoi_non_bowtie_inside_nifc_reference_count": 4,
+    "aoi_view_zenith_range_degrees": [
+      69.02,
+      69.07
+    ],
+    "aoi_records": [
+      {
+        "sparse_index": 54,
+        "line": 2938,
+        "sample": 6375,
+        "latitude": 43.6490822,
+        "longitude": -121.4242325,
+        "utm10n_x": 627078.77,
+        "utm10n_y": 4834104.71,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 18.952276,
+        "view_zenith_degrees": 69.04,
+        "solar_zenith_degrees": 21.31,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": true,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      },
+      {
+        "sparse_index": 55,
+        "line": 2939,
+        "sample": 6375,
+        "latitude": 43.6553612,
+        "longitude": -121.4289093,
+        "utm10n_x": 626688.4,
+        "utm10n_y": 4834794.92,
+        "confidence_class": 9,
+        "confidence_name": "high",
+        "fire_mask_class": 9,
+        "fire_radiative_power_mw": 18.952276,
+        "view_zenith_degrees": 69.04,
+        "solar_zenith_degrees": 21.31,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": true,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      },
+      {
+        "sparse_index": 56,
+        "line": 2939,
+        "sample": 6374,
+        "latitude": 43.6585197,
+        "longitude": -121.4199829,
+        "utm10n_x": 627401.53,
+        "utm10n_y": 4835159.39,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 18.952276,
+        "view_zenith_degrees": 69.02,
+        "solar_zenith_degrees": 21.32,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": true,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": false
+      },
+      {
+        "sparse_index": 57,
+        "line": 2955,
+        "sample": 6374,
+        "latitude": 43.6487389,
+        "longitude": -121.4211578,
+        "utm10n_x": 627327.46,
+        "utm10n_y": 4834071.29,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 12.744905,
+        "view_zenith_degrees": 69.02,
+        "solar_zenith_degrees": 21.3,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": false,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      },
+      {
+        "sparse_index": 58,
+        "line": 2955,
+        "sample": 6375,
+        "latitude": 43.645649,
+        "longitude": -121.4297562,
+        "utm10n_x": 626640.52,
+        "utm10n_y": 4833714.96,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 12.744905,
+        "view_zenith_degrees": 69.04,
+        "solar_zenith_degrees": 21.3,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": false,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      },
+      {
+        "sparse_index": 59,
+        "line": 2956,
+        "sample": 6374,
+        "latitude": 43.655056,
+        "longitude": -121.4257202,
+        "utm10n_x": 626946.21,
+        "utm10n_y": 4834765.9,
+        "confidence_class": 9,
+        "confidence_name": "high",
+        "fire_mask_class": 9,
+        "fire_radiative_power_mw": 24.707285,
+        "view_zenith_degrees": 69.02,
+        "solar_zenith_degrees": 21.31,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": false,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      },
+      {
+        "sparse_index": 60,
+        "line": 2957,
+        "sample": 6374,
+        "latitude": 43.6613998,
+        "longitude": -121.4302063,
+        "utm10n_x": 626571.12,
+        "utm10n_y": 4835463.62,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 24.707285,
+        "view_zenith_degrees": 69.02,
+        "solar_zenith_degrees": 21.32,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": false,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": false
+      },
+      {
+        "sparse_index": 61,
+        "line": 2960,
+        "sample": 6377,
+        "latitude": 43.6710892,
+        "longitude": -121.4697495,
+        "utm10n_x": 623362.91,
+        "utm10n_y": 4836480.18,
+        "confidence_class": 8,
+        "confidence_name": "nominal",
+        "fire_mask_class": 8,
+        "fire_radiative_power_mw": 20.508297,
+        "view_zenith_degrees": 69.07,
+        "solar_zenith_degrees": 21.34,
+        "adjacent_cloud_pixels": 0,
+        "adjacent_water_pixels": 0,
+        "qa_geolocation_non_nominal": false,
+        "qa_residual_bowtie": false,
+        "inside_modeling_aoi": true,
+        "inside_nifc_final_reference": true
+      }
+    ],
+    "interpretation": "NASA fire classes are coarse thermal-anomaly reference evidence. Residual-bowtie records remain visible and are excluded from the non-bowtie count; no record is expanded into a Sentinel-resolution label."
+  },
+  "viirs_geolocation": {
+    "product_filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+    "attributes": {
+      "LocalGranuleID": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "ShortName": "VJ203MODLL",
+      "VersionID": "021",
+      "RangeBeginningDate": "2024-06-27",
+      "RangeBeginningTime": "19:36:00.000",
+      "RangeEndingDate": "2024-06-27",
+      "RangeEndingTime": "19:42:00.000",
+      "DayNightFlag": "Day"
+    },
+    "upstream_input_filenames": [
+      "VJ203MOD.A2024179.1936.021.2024327203454.nc"
+    ],
+    "array_shape": [
+      3232,
+      3200
+    ],
+    "valid_coordinate_count": 10342400,
+    "total_coordinate_count": 10342400,
+    "valid_coordinate_percent": 100.0,
+    "observed_latitude_range": [
+      34.809452,
+      60.954651
+    ],
+    "observed_longitude_range": [
+      -131.353088,
+      -81.977425
+    ],
+    "aoi_bbox_candidate_pixel_count": 99,
+    "aoi_bbox_row_range": [
+      1466,
+      1491
+    ],
+    "aoi_bbox_column_range": [
+      3183,
+      3192
+    ],
+    "aoi_bbox_nearest_east_edge_columns": 7,
+    "interpretation": "The real 750 m geolocation grid covers the AOI but places it at the far eastern scan edge. This is source-fitness evidence and a review constraint, not a label."
+  },
+  "decision": "ACCEPT_SOURCE_REFERENCE_DEFER_LABELS",
+  "decision_detail": "Accept the exact package as authenticated, readable source/reference evidence. Defer label and dataset promotion because the VIIRS AOI observations are near the swath edge at approximately 69 degrees view zenith, three of eight AOI records are residual-bowtie observations, and 375 m thermal-anomaly evidence is not 10-20 m segmentation truth.",
+  "quality_gates": {
+    "registered_package_reverified": true,
+    "sentinel_aoi_exact_grid_crop": true,
+    "sentinel_scl_read": true,
+    "viirs_fire_mask_and_sparse_vectors_consistent": true,
+    "viirs_geolocation_real_arrays_cover_aoi_bbox": true,
+    "viirs_bad_geolocation_qa_count_zero": true,
+    "direct_label_promotion_allowed": false
+  },
+  "claims": {
+    "permitted": [
+      "BurnLens authenticated and independently reverified the exact frozen three-asset package.",
+      "The real Sentinel-2 AOI crop is readable and has an explicit SCL distribution.",
+      "The real VIIRS product contains eight provider fire-pixel records inside the modeling AOI, three marked as residual bowtie."
+    ],
+    "prohibited": [
+      "The VIIRS points or NIFC perimeter are pixel-perfect segmentation labels.",
+      "The Sentinel pixels prove burned area or model readiness.",
+      "The report is official, operational, emergency-ready, field-validated, or endorsed."
+    ]
+  },
+  "limitations": [
+    "VIIRS identifies active fires and other thermal anomalies; false alarms and omissions can occur.",
+    "The AOI is at the far VIIRS scan edge and observed fire-record view zenith is approximately 69 degrees.",
+    "Residual-bowtie detections can duplicate observations and are excluded from the non-bowtie count.",
+    "The 46 minute 40.976 second Sentinel-to-VIIRS offset permits scene change.",
+    "SCL is a scene-classification aid, not a perfect cloud or usability truth layer.",
+    "The NIFC final perimeter is later incident-reference geometry and not a segmentation label."
+  ],
+  "source_guidance": [
+    {
+      "organization": "NASA Earthdata / LP DAAC",
+      "url": "https://www.earthdata.nasa.gov/data/catalog/lpcloud-vj214img-002",
+      "role": "VJ214IMG product definition, companion requirement, citation, and open-sharing posture",
+      "accessed_at_utc": "2026-07-14T18:22:11Z"
+    },
+    {
+      "organization": "NASA",
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2024-07/VIIRS_C2_AF-375m_User_Guide_1.0.pdf",
+      "role": "fire classes, QA bits, sparse arrays, scan geometry, and limitations",
+      "accessed_at_utc": "2026-07-14T18:22:11Z"
+    },
+    {
+      "organization": "Copernicus Data Space Ecosystem",
+      "url": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S2L2A.html",
+      "role": "Sentinel-2 L2A band resolutions and SCL classes",
+      "accessed_at_utc": "2026-07-14T18:22:11Z"
+    },
+    {
+      "organization": "Copernicus Data Space Ecosystem",
+      "url": "https://documentation.dataspace.copernicus.eu/FAQ.html",
+      "role": "modified Sentinel data attribution wording",
+      "accessed_at_utc": "2026-07-14T18:22:11Z"
+    }
+  ],
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2024.",
+    "NASA VIIRS/JPSS2 VJ214IMG.002 and VJ203MODLL.021 data accessed 2026-07-14.",
+    "NIFC WFIGS Interagency Fire Perimeters final-reference feature SOURCE-2026-007."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "png": "SOURCE-INSPECTION-2026-001.png",
+    "png_sha256": "da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966",
+    "html": "SOURCE-INSPECTION-2026-001.html",
+    "json": "SOURCE-INSPECTION-2026-001.json"
+  }
+}

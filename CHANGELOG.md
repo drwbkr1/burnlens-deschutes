@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.4.0-authenticated-source-baseline — 2026-07-14 (candidate)
+
+### P2O2-T03 — Authenticated exact-package acquisition and real-source inspection
+
+- Add a secret-safe CDSE/Earthdata acquisition path for the exact frozen package: exact authentication hosts, HTTPS-only allowlisted redirects, cross-host authorization stripping, redacted errors, sanitized state, bounded/resumable partial downloads, native signatures, exact sizes, checksums, and atomic promotion.
+- Exercise the owner-authorized machine-bound credentials without committing usernames, passwords, tokens, cookies, signed URLs, credential payloads, or credential-store details.
+- Acquire and register the exact three provider assets totaling 1,169,997,942 bytes in ignored local raw storage; independently re-verify the exact four-entry registered package and all current hashes.
+- Open the real Sentinel SAFE/JP2 and VIIRS HDF5/NetCDF-4 files, enforce expected grids and arrays, decode relevant QA flags, and inspect the frozen AOI.
+- Render `SOURCE-INSPECTION-2026-001` as normalized JSON, semantic HTML, and a 1600x1100 evidence image with the real Sentinel crop, NIFC incident-reference outline, all eight AOI VIIRS records, residual-bowtie exclusions, scan-edge warning, attribution, and full traceability.
+- Record a real-file decision of `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`: the package is readable and reference-relevant, but approximately 69-degree VIIRS view geometry, residual-bowtie records, temporal offset, and 375 m-to-10/20 m scale mismatch prevent direct label or dataset promotion.
+- Pin `h5py==3.16.0`, `numpy==2.5.1`, and `rasterio==1.5.0` for reproducible native source inspection.
+
+Issue #329 / draft PR #330 carries the candidate. Acquisition run `BL-2026-07-14-authenticated-intake-r001` and inspection run `BL-2026-07-14-source-inspection-r001` are the real workflow evidence. All 56 tests, compilation, dependency health, offline wheel build/import, secret/raw-byte exclusion, and diff checks pass. A second inspection reproduces JSON, HTML, and PNG byte for byte, and the semantic page passes in-app browser review with no console errors or horizontal overflow. Raw provider bytes committed: zero. Label schema, dataset, split, baseline, model, application, deployment, and performance claim: none.
+
 ## v0.3.0-intake-transaction-baseline — 2026-07-14
 
 ### P2O2-T02 — Atomic exact-pair intake before credentials

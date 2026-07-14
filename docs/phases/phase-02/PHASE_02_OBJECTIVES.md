@@ -16,9 +16,11 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active — final AOI and exact-pair transaction shipped; credential use authorized; provider imagery not acquired.**
+**Active — authenticated source/reference package accepted; labels and dataset deferred on real evidence.**
 
-P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 / PR #326 ships the tested all-or-none transaction for the exact three provider assets at `v0.3.0-intake-transaction-baseline`, using temporary synthetic fixtures and retaining zero provider or synthetic bytes. `ACCESS-2026-006` clears both owner credential gates. Sentinel/VIIRS provider imagery, labels, a dataset, baseline output, and model inputs do not exist; authenticated intake still requires its own issue-backed before-data action.
+P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 / PR #326 ships the tested all-or-none transaction for the exact three provider assets at `v0.3.0-intake-transaction-baseline`. P2O2-T03 / issue #329 / PR #330 exercises `ACCESS-2026-006`, retains the exact 1.17 GB raw package only in ignored local storage, and inspects the real Sentinel/VIIRS arrays. The package passes access, raw integrity, grid, and reference-evidence gates. Approximately 69-degree VIIRS view geometry, residual-bowtie observations, temporal offset, and scale mismatch prevent direct label promotion. No label schema, dataset, split, baseline, or model exists.
+
+Current objective posture: Objective One is satisfied for the bounded acquisition action; Objective Two has a real accepted source/reference stack but still needs label-path feasibility; Objective Three has immutable raw registration and source inspection but not full preprocessing; Objectives Four through Six remain open. This ordering is evidence-responsive, not a checklist completion claim.
 
 ## Phase purpose
 
