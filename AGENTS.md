@@ -58,14 +58,14 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. P2O2-T05 / issue #337 / PR #338 on `codex/p2o2-t05-burn-scar-target` is the active target-path checkpoint.
+P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e` and activates the burn-scar target path. Its `v0.6.0-burn-scar-target-baseline` tag is intentionally withheld while issue #339 on `codex/p2o2-t05-eol-determinism` remediates the post-merge line-ending determinism failure. The latest verified tagged analytical checkpoint remains P2O2-T04 at `v0.5.0-observation-geometry-baseline`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
 - Issue #329 has now exercised both credentials through the secret-safe runtime wrapper. Three exact provider assets totaling 1,169,997,942 bytes are registered only in ignored local raw storage; no raw provider byte or secret material is committed.
 - `SOURCE-INSPECTION-2026-001` renders real Sentinel AOI pixels, real VIIRS provider records, QA exclusions, scan-edge risk, and full lineage. Its decision is `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`.
 - `OBSERVATION-GEOMETRY-2026-001` compares all 23 bounded NOAA-21 candidates. The selected `A2024179.2118` day observation materially improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, but its 2.48-hour offset and 375 m support still defer labels and a dataset.
-- `TARGET-DECISION-2026-001` activates `target-burn-scar-v0.2.0`, retains the active-fire path as complementary reference only, and records that the current official MTBS occurrence layers expose no Darlene 3 feature in the frozen AOI. MTBS remains relevant methodology and potential cross-fire or future reference evidence, not current Darlene 3 truth.
+- `TARGET-DECISION-2026-001` is the preserved pre-remediation run that exposed checkout-dependent input hashing after merge. Corrected run `TARGET-DECISION-2026-002` activates `target-burn-scar-v0.2.0`, retains the active-fire path as complementary reference only, and records that the current official MTBS occurrence layers expose no Darlene 3 feature in the frozen AOI. MTBS remains relevant methodology and potential cross-fire or future reference evidence, not current Darlene 3 truth.
 - No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 

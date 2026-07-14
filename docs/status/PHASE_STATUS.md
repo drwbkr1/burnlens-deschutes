@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar fallback approved; labels and dataset not created** | P2O2-T04 rejects direct active-fire label promotion. P2O2-T05 / #337 / PR #338 activates `target-burn-scar-v0.2.0`, records no current MTBS Darlene 3 feature, and requires a defensible pre/post optical pair plus label protocol next. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar fallback approved; labels and dataset not created** | P2O2-T04 rejects direct active-fire label promotion. P2O2-T05 / #337 / PR #338 activates `target-burn-scar-v0.2.0`; #339 corrects a caught post-merge determinism defect before tagging. A defensible pre/post optical pair plus label protocol remains next. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -17,7 +17,7 @@
 |---|---|
 | Latest repository evidence baseline | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` via merged PR #334 and verified annotated `v0.5.0-observation-geometry-baseline` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
-| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338; generator source `de884e439896b87bbdc41be9d159ff647b35726b`; target `target-burn-scar-v0.2.0`; no label, dataset, baseline, or model |
+| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; issue #339 remediation source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; tag pending; no label, dataset, baseline, or model |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -38,12 +38,12 @@
 | Authenticated raw package | `darlene3-s2-viirs-pair-v0.1.0`; acquisition run `BL-2026-07-14-authenticated-intake-r001`; three exact provider assets / 1,169,997,942 bytes in ignored local storage; zero raw provider bytes committed |
 | Source inspection report | `SOURCE-INSPECTION-2026-001`; run `BL-2026-07-14-source-inspection-r001`; JSON `cbd4dfba840680256a100aeca1a2e0b28483796f7e7b79b90de8b933d58b0a53`; HTML `76d13d3e105f053410d0063b17eb740f732c786dc395fe13335701496cbb41a0`; PNG `da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966`; decision `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS` |
 | Observation geometry report | `OBSERVATION-GEOMETRY-2026-001`; run `BL-2026-07-14-observation-geometry-r002`; JSON `c1da1c47483ab573a8a123a26f7c5b2f111b57b4eaedb05ffb2d3aafa46e881d`; HTML `a63ee62c660c7b573d829847ac008786a6ecff91c61f5433365e640f64742ad2`; PNG `4dd21c3df693856fda47d23cd763054016a105d8c760181c4052411fa4ff6687`; decision `ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS` |
-| Target decision report | `TARGET-DECISION-2026-001`; run `BL-2026-07-14-target-decision-r001`; JSON `933f5d92bdf25af12356f91e69eb9eb32a963b0c3acb81a84a5459721329d4aa`; HTML `7b043d349ea7dd978ce875e5e2c50ea6db53a53c0c924df991e504340f2481bf`; PNG `4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b`; fallback active; all analytical versions null |
+| Target decision report | Corrected `TARGET-DECISION-2026-002`; run `BL-2026-07-14-target-decision-r002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`; fallback active; all analytical versions null; `001` retained as the superseded pre-remediation run |
 | Dataset version | Not created |
 | Label-schema implementation | Not created |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Latest evidence run is `BL-2026-07-14-target-decision-r001`; no label, dataset, baseline, model, or analytical inference output |
+| Run IDs | Latest corrected evidence run is `BL-2026-07-14-target-decision-r002`; `r001` is preserved as pre-remediation evidence; no label, dataset, baseline, model, or analytical inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static control evidence, one source-inspection visualization, and one observation-comparison visualization; no segmentation, imagery-derived analytical raster/vector, or fire perimeter |
 | Repository-owned public application | Not created |
 | Public performance claim | None authorized or supported |
@@ -54,7 +54,7 @@ P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially impr
 
 ## Current checkpoint
 
-P2O2-T05 / issue #337 / PR #338 on `codex/p2o2-t05-burn-scar-target` is the active checkpoint. It records the owner's `ACTIVATE_BURN_SCAR_BINARY_MASK_FALLBACK` decision, renders the target-path evidence, and reconciles active project truth. It changes no phase outcome or use boundary and creates no label, dataset, baseline, model, or analytical wildfire output.
+P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`. Post-merge verification correctly withheld the tag when `r001` reconstruction exposed checkout-dependent input hashing. Issue #339 on `codex/p2o2-t05-eol-determinism` is the active bounded remediation; it preserves `r001`, adds explicit LF-normalized structured-input hashes and LF serialization, and publishes immutable corrected run `r002`. It changes no target, phase outcome, use boundary, or scientific finding and creates no label, dataset, baseline, model, or analytical wildfire output.
 
 The next analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
 
