@@ -16,9 +16,9 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Planning authorized — data blocked.**
+**Active — final AOI candidate accepted; provider imagery blocked.**
 
-P1O7-T08 / PR #294 authorizes Phase Two planning only. Data touch remains blocked until an issue-backed before-data gate resolves current primary-source terms/licensing, access, AOI rationale, provenance, and no-go conditions. No final AOI, retained imagery, labels, dataset, baseline output, or model input exists or is implied by this document.
+P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 now accepts `aoi-darlene3-model-v0.2.0` as the final modeling AOI candidate and retains one public NIFC reference-geometry source asset under an exact before-data contract. Sentinel/VIIRS provider imagery, labels, a dataset, baseline output, and model inputs do not exist. Paired imagery intake remains blocked until the owner explicitly approves both CDSE and Earthdata credentials and a new issue reopens the before-data gate for that exact action.
 
 ## Phase purpose
 
