@@ -1,6 +1,6 @@
 # REGISTRY-2026-003 — Access-Integrity Artifacts
 
-**Checkpoint:** Issue #317; branch `codex/p2o1-t03-viirs-inspection`; PR/merge/tag pending
+**Checkpoint:** Issue #317 closed; PR #318 merged at `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`; annotated tag `v0.1.2-access-integrity-baseline` verified to resolve to that exact commit
 
 | Artifact | Class | Version/state | Provider bytes |
 |---|---|---|---:|
@@ -14,6 +14,6 @@
 | `ACCESS-2026-003.md` | Access and credential-boundary record | Complete | No |
 | `PRECHECK-2026-003.md` | Payload acceptance contract | Complete | No |
 | `ACCESS_INTEGRITY-2026-001.md` | Requirement/portfolio review | Pass; intake blocked | No |
-| `MANIFEST-2026-003.json` | Checkpoint provenance manifest | Candidate pending merge | No |
+| `MANIFEST-2026-003.json` | Checkpoint provenance manifest | Shipped and post-merge verified | No |
 
 Rejected login-response bodies are not registry artifacts and were deleted. No entry is a provider source asset, fire observation, label, dataset, model input, baseline, model, analytical run, map, application, or official product.

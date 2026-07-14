@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`; P2O1-T02 shipped through PR #314 and `v0.1.1-asset-readiness-baseline`. P2O1-T03 / issue #317 is the active access-integrity checkpoint and proposes `v0.1.2-access-integrity-baseline`. After it ships, the highest-leverage checkpoint remains exact paired asset intake and visual inspection, but it must not begin until the owner explicitly authorizes both CDSE and Earthdata credentials. Granule intersection and access responses remain coverage/access evidence rather than a detection.
+The control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`; P2O1-T02 shipped through PR #314 and `v0.1.1-asset-readiness-baseline`; P2O1-T03 shipped through PR #318 at `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` and is versioned by `v0.1.2-access-integrity-baseline`. The highest-leverage next checkpoint remains exact paired asset intake and visual inspection, but it must not begin until the owner explicitly authorizes both CDSE and Earthdata credentials. Granule intersection and access responses remain coverage/access evidence rather than a detection.
 
 ## Required reading order for long-running Codex work
 
