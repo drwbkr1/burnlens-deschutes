@@ -1,6 +1,6 @@
 # REGISTRY-2026-005 - Paired-Intake Transaction Artifacts
 
-**Checkpoint:** Issue #325 / PR #326; candidate branch `codex/p2o2-t02-intake-transaction`; proposed tag `v0.3.0-intake-transaction-baseline`
+**Checkpoint:** Issue #325 / PR #326; merged at `ee1a1d678ad888b595dc3c7b215f787ea5156582`; annotated `v0.3.0-intake-transaction-baseline` tag verified; lifecycle sync issue #327 / PR #328
 
 | Artifact | Class | Version/state | Provider/synthetic bytes retained |
 |---|---|---|---:|
@@ -10,7 +10,7 @@
 | `PAIR-INTAKE-REHEARSAL-2026-001.json` | Normalized transaction evidence | SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234` | 0 / 0 |
 | `PAIR-INTAKE-REHEARSAL-2026-001.html` | Semantic evidence report | SHA-256 `b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c` | 0 / 0 |
 | `PAIR-INTAKE-REHEARSAL-2026-001.png` | Rendered evidence card | SHA-256 `c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0` | 0 / 0 |
-| `MANIFEST-2026-005.json` | Candidate checkpoint provenance manifest | Issue #325 / PR #326; merge/tag identity pending | 0 / 0 |
+| `MANIFEST-2026-005.json` | Checkpoint provenance manifest | Shipped identity: issue #325, PR #326, merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`, tag `v0.3.0-intake-transaction-baseline` | 0 / 0 |
 | `ACCESS-2026-006` | Owner authorization record; no secret material or provider request | `AUTHORIZED_NOT_ACCESSED` | 0 / 0 |
 
 The test-only synthetic fixture is created in a temporary directory and deleted in the same run. It is not source data, a retained dataset, a model input, or evidence that the exact provider package is usable.

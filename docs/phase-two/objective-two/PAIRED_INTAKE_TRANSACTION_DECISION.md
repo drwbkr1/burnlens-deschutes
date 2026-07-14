@@ -42,4 +42,4 @@ For a portfolio reviewer, the value is reliability discipline made visible: Burn
 
 ## Next gate
 
-After this candidate ships, open a new issue-backed branch, use the authorized credentials to acquire only the exact three assets into excluded quarantine, apply this contract, visually inspect the real source package and AOI-relevant contents, and either register the complete package or delete the rejected quarantine. A passing transaction must still be followed by a separate pixel-, quality-, geolocation-, and target-fitness decision.
+The transaction baseline shipped through issue #325 / PR #326 at `ee1a1d678ad888b595dc3c7b215f787ea5156582` and annotated tag `v0.3.0-intake-transaction-baseline`. After lifecycle sync issue #327 ships, open a new issue-backed branch, use the authorized credentials to acquire only the exact three assets into excluded quarantine, apply this contract, visually inspect the real source package and AOI-relevant contents, and either register the complete package or delete the rejected quarantine. A passing transaction must still be followed by a separate pixel-, quality-, geolocation-, and target-fitness decision.
