@@ -7,7 +7,13 @@ name = "burnlens-deschutes"
 version = "0.4.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.11"
-dependencies = ["blake3==1.0.9", "Pillow==12.2.0"]
+dependencies = [
+  "blake3==1.0.9",
+  "h5py==3.16.0",
+  "numpy==2.5.1",
+  "Pillow==12.2.0",
+  "rasterio==1.5.0",
+]
 
 [project.scripts]
 burnlens-viirs-access-precheck = "burnlens.viirs_access_precheck:main"
@@ -15,6 +21,7 @@ burnlens-render-access-report = "burnlens.render_access_report:main"
 burnlens-finalize-aoi = "burnlens.finalize_aoi:main"
 burnlens-rehearse-paired-intake = "burnlens.rehearse_paired_intake:main"
 burnlens-acquire-provider-package = "burnlens.acquire_provider_package:main"
+burnlens-inspect-source-package = "burnlens.inspect_source_package:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
