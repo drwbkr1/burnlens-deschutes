@@ -10,6 +10,7 @@ from PIL import Image
 
 from burnlens.source_inspection import (
     InspectionError,
+    _short_input_names,
     point_in_geometry,
     render_html,
     render_png,
@@ -61,6 +62,21 @@ def minimal_report() -> dict:
 
 
 class SourceInspectionTests(unittest.TestCase):
+    def test_upstream_inputs_drop_provider_internal_paths(self) -> None:
+        value = (
+            "/provider/internal/VJ202CCIMG.A2024179.1936.021.2025284033011.nc, "
+            "/provider/other/VJ203IMG.A2024179.1936.021.2024327203454.nc"
+        )
+        result = _short_input_names(value)
+        self.assertEqual(
+            result,
+            [
+                "VJ202CCIMG.A2024179.1936.021.2025284033011.nc",
+                "VJ203IMG.A2024179.1936.021.2024327203454.nc",
+            ],
+        )
+        self.assertTrue(all("/" not in name and "\\" not in name for name in result))
+
     def test_scl_summary_preserves_classes_and_quality_counts(self) -> None:
         values = np.array([[0, 3, 8], [9, 4, 4]], dtype=np.uint8)
         result = summarize_scl(values)

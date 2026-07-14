@@ -299,6 +299,7 @@ def _read_viirs_fire(
         )
         if not np.array_equal(mask_values, vectors["FP_confidence"]):
             raise InspectionError("VIIRS sparse confidence does not match fire mask class")
+        input_pointer = _scalar(source.attrs["InputPointer"])
         attributes = {
             name: _scalar(source.attrs[name])
             for name in (
@@ -310,7 +311,6 @@ def _read_viirs_fire(
                 "RangeEndingDate",
                 "RangeEndingTime",
                 "DayNightFlag",
-                "InputPointer",
             )
         }
 
@@ -360,7 +360,7 @@ def _read_viirs_fire(
     return {
         "product_filename": FIRE_FILENAME,
         "attributes": attributes,
-        "upstream_input_filenames": _short_input_names(str(attributes["InputPointer"])),
+        "upstream_input_filenames": _short_input_names(str(input_pointer)),
         "fire_mask_shape": [6464, 6400],
         "global_fire_record_count": fire_count,
         "aoi_fire_record_count": len(aoi_records),
@@ -403,6 +403,7 @@ def _read_viirs_geolocation(
     with h5py.File(path, "r") as source:
         latitude = source[f"{base}/Latitude"][:]
         longitude = source[f"{base}/Longitude"][:]
+        input_pointer = _scalar(source.attrs["InputPointer"])
         attributes = {
             name: _scalar(source.attrs[name])
             for name in (
@@ -414,7 +415,6 @@ def _read_viirs_geolocation(
                 "RangeEndingDate",
                 "RangeEndingTime",
                 "DayNightFlag",
-                "InputPointer",
             )
         }
     if latitude.shape != (3232, 3200) or longitude.shape != latitude.shape:
@@ -441,6 +441,7 @@ def _read_viirs_geolocation(
     return {
         "product_filename": GEOLOCATION_FILENAME,
         "attributes": attributes,
+        "upstream_input_filenames": _short_input_names(str(input_pointer)),
         "array_shape": list(latitude.shape),
         "valid_coordinate_count": int(valid.sum()),
         "total_coordinate_count": int(valid.size),
