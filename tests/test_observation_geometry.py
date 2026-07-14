@@ -153,8 +153,8 @@ class ObservationGeometryTests(unittest.TestCase):
         with TemporaryDirectory() as directory:
             path = Path(directory) / "candidate.nc"
             with h5py.File(path, "w") as target:
-                target.create_dataset("fire mask", shape=(6464, 6400), dtype="u1", chunks=(1, 6400))
-                target.create_dataset("algorithm QA", shape=(6464, 6400), dtype="u4", chunks=(1, 6400))
+                target.create_dataset("fire mask", shape=(6432, 6400), dtype="u1", chunks=(1, 6400))
+                target.create_dataset("algorithm QA", shape=(6432, 6400), dtype="u4", chunks=(1, 6400))
                 target["fire mask"][10, 20] = 8
                 vectors = {
                     "FP_line": np.array([10], dtype="u2"),

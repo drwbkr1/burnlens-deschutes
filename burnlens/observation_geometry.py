@@ -414,7 +414,9 @@ def _inspect_fire_product(
         missing = [name for name in required if name not in source]
         if missing:
             raise ObservationGeometryError(f"VIIRS_FIRE_DATASET_MISSING:{','.join(missing)}")
-        if source["fire mask"].shape != (6464, 6400) or source["algorithm QA"].shape != (6464, 6400):
+        fire_shape = source["fire mask"].shape
+        qa_shape = source["algorithm QA"].shape
+        if fire_shape != qa_shape or len(fire_shape) != 2 or fire_shape[0] not in (6432, 6464) or fire_shape[1] != 6400:
             raise ObservationGeometryError("VIIRS_FIRE_GRID_SHAPE_UNEXPECTED")
         fire_count = int(_scalar(source.attrs["FirePix"]))
         vectors = {
@@ -426,7 +428,12 @@ def _inspect_fire_product(
             raise ObservationGeometryError("VIIRS_SPARSE_VECTOR_COUNT_MISMATCH")
         lines = vectors["FP_line"].astype(int)
         samples = vectors["FP_sample"].astype(int)
-        if np.any(lines < 0) or np.any(lines >= 6464) or np.any(samples < 0) or np.any(samples >= 6400):
+        if (
+            np.any(lines < 0)
+            or np.any(lines >= fire_shape[0])
+            or np.any(samples < 0)
+            or np.any(samples >= fire_shape[1])
+        ):
             raise ObservationGeometryError("VIIRS_SPARSE_INDEX_OUT_OF_RANGE")
         mask_values = np.array(
             [source["fire mask"][line, sample] for line, sample in zip(lines, samples)],
@@ -494,6 +501,7 @@ def _inspect_fire_product(
         "product_filename": path.name,
         "attributes": attributes,
         "upstream_input_filenames": _short_input_names(str(input_pointer)),
+        "fire_mask_shape": list(fire_shape),
         "global_fire_record_count": fire_count,
         "aoi_fire_record_count": len(records),
         "aoi_confidence_counts": {name: confidence.get(name, 0) for name in ("low", "nominal", "high")},
