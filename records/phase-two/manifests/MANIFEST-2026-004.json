@@ -1,0 +1,73 @@
+{
+  "manifest_id": "MANIFEST-2026-004",
+  "manifest_version": "0.2.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-14T01:30:00Z",
+  "task_issue": 321,
+  "branch": "codex/p2o2-t01-final-aoi",
+  "git_base_commit": "23affc85ac2c2c6cfd427cb954739e6c7b44fa66",
+  "generator_source_commit": "bcc1d9aa494c5511ff824692199b40717d320dd4",
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.2.0-aoi-baseline",
+  "version_tag_state": "proposed until verified shipment",
+  "status": "reviewable final-AOI candidate; shipment identity pending",
+  "software_version": "0.2.0",
+  "runtime": {
+    "python": "3.12.13",
+    "pillow": "12.2.0",
+    "setuptools": "82.0.1"
+  },
+  "source_records": ["SOURCE-2026-007"],
+  "access_record": "ACCESS-2026-004",
+  "terms_record": "TERMS-2026-003",
+  "precheck_record": "PRECHECK-2026-004",
+  "registry_record": "REGISTRY-2026-004",
+  "review_records": [
+    "AOI_FITNESS-2026-001",
+    "SOURCE_PRECEDENCE-2026-002",
+    "USE_BOUNDARY-2026-003"
+  ],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_id": "BL-2026-07-14-aoi-final-r001",
+  "report_version": "aoi-evidence-v0.1.0",
+  "source_assets": [
+    {
+      "path": "samples/reference/phase-two/NIFC-DARLENE3-PERIMETER-2026-001.geojson",
+      "media_type": "application/geo+json",
+      "bytes": 47483,
+      "sha256": "3d615d4be88f65806399e3733491ab0d95e16ac91ea86b5a00b3ead81ec17abe",
+      "role": "official incident-reference geometry; not label or ground truth"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.json",
+      "media_type": "application/json",
+      "sha256": "305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c"
+    },
+    {
+      "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.html",
+      "media_type": "text/html",
+      "sha256": "b45b6659f74249966368e3b2f024363469f88fa6f8f23fc4c1631b39ec009ef2"
+    },
+    {
+      "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.png",
+      "media_type": "image/png",
+      "sha256": "73463794d765ca1e19051bb1f5b6dac163c82da5d11a6ea3ca77ce1ea0aeb736"
+    }
+  ],
+  "reference_source_asset_count": 1,
+  "reference_source_asset_bytes": 47483,
+  "provider_imagery_asset_count": 0,
+  "provider_imagery_asset_bytes": 0,
+  "credentials_used": false,
+  "decision": "ACCEPT_FINAL_MODELING_AOI",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

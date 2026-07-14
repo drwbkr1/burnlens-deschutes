@@ -121,10 +121,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase One accepted for Phase Two planning only; Phase Two data blocked |
+| Current phase posture | Phase Two active; final modeling AOI candidate accepted; provider imagery intake blocked on owner-approved CDSE and Earthdata credentials |
 | Current repository baseline | `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Baseline verification | Annotated tag resolves to the exact merged PR #291 commit |
-| Data/model/run/map/application status | Not created |
+| Data/model/run/map/application status | One public NIFC reference vector, one derived AOI, and one static evidence map exist; no provider imagery, labels, dataset, baseline, model, analytical result, or application exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff

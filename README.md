@@ -7,9 +7,10 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 The project is at a Phase Two source-readiness baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, and delivery-integrity evidence are now complete through P2O1-T03.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, and delivery-integrity evidence are complete through P2O1-T03, and issue #321 now has a reviewable final-AOI candidate.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
-- No credential or provider source asset has been used or retained. A runnable access-integrity precheck exists, but no pixel-processing pipeline, final AOI, label, dataset, baseline output, trained model, analytical metric, raster, vector, map, application demonstration, or public analytical result exists yet.
+- `aoi-darlene3-model-v0.2.0` is the candidate final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
+- No credential or provider imagery asset has been used or retained. One public NIFC reference vector is checksummed and retained, but no imagery pixel-processing pipeline, label, dataset, baseline output, trained model, analytical metric, imagery-derived raster/vector, application demonstration, or public analytical result exists yet.
 - The latest verified repository evidence baseline on `main` is `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` from issue #317 / PR #318; the annotated `v0.1.2-access-integrity-baseline` tag resolves to that exact commit.
 - The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using both a CDSE credential and a NASA Earthdata Login credential. The exact LP DAAC routes return login responses without Earthdata authentication; NASA-only intake is not a substitute for the pair.
 
@@ -50,7 +51,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; exact routes and open-use terms verified, delivery validation added, provider asset intake blocked on owner-approved CDSE and Earthdata credentials. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; a final modeling AOI is reviewable, exact routes and open-use terms are verified, and provider imagery intake is blocked on owner-approved CDSE and Earthdata credentials. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -87,9 +88,9 @@ Every future public output and claim must trace to its Git commit, application v
 
 Historical Objective Seven trackers, handoffs, audits, and release notes remain the evidence trail for the Phase One planning-only decision. Their obsolete sequencing and permission limits do not override the execution goal.
 
-## Run the current evidence tool
+## Run the current evidence tools
 
-The current executable surface is an access-integrity precheck, not an analytical wildfire pipeline or application.
+The executable surface now includes fail-closed access validation and deterministic AOI evidence. It is not an analytical wildfire pipeline or application.
 
 ```powershell
 python -m pip install .
@@ -99,6 +100,14 @@ python -m burnlens.render_access_report `
   --input-json samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json `
   --output-html samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html `
   --output-png samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png
+python -m burnlens.finalize_aoi `
+  --source samples/reference/phase-two/NIFC-DARLENE3-PERIMETER-2026-001.geojson `
+  --output-dir samples/aoi/phase-two `
+  --generated-at-utc 2026-07-14T01:30:00Z `
+  --run-id BL-2026-07-14-aoi-final-r001 `
+  --source-commit bcc1d9aa494c5511ff824692199b40717d320dd4
 ```
 
 The committed [normalized precheck](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json), [semantic report](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html), and [visual evidence card](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png) record a credential block. They do not contain provider pixels or rejected login-response bodies.
+
+The [final AOI record](records/phase-two/aoi/AOI-2026-002.md), [normalized AOI evidence](samples/aoi/phase-two/AOI-FINAL-2026-001.json), [semantic report](samples/aoi/phase-two/AOI-FINAL-2026-001.html), [visual evidence map](samples/aoi/phase-two/AOI-FINAL-2026-001.png), and [living case study](docs/case-study/BURNLENS_CASE_STUDY.md) explain the source/reference relationship and the remaining credential/data risks. They do not claim a detection, label, model, or operational product.

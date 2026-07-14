@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.2.0-aoi-baseline — candidate, 2026-07-13
+
+### P2O2-T01 — Final Darlene 3 modeling AOI
+
+- Retain the exact public NIFC WFIGS Darlene 3 final-perimeter feature as an immutable 47,483-byte reference snapshot with SHA-256 `3d615d4be88f65806399e3733491ab0d95e16ac91ea86b5a00b3ead81ec17abe`.
+- Add checksum/identity/geometry validation plus deterministic WGS84-to-UTM projection that matches NIFC's independent EPSG:32610 extent within 0.000220 m.
+- Derive `aoi-darlene3-model-v0.2.0`: 12 km by 9 km / 108 km2, using 2 km context and a 1 km outward grid snap.
+- Correct the discovery-box assumption: the final AOI is 48.096% smaller by projected bounding-area comparison but extends 2.883 km farther east to contain the complete official reference.
+- Verify the final envelope within Census Deschutes County and within the selected Sentinel/VIIRS metadata footprints.
+- Render deterministic JSON, semantic HTML, and PNG evidence; add the living repository case study; pass 16 tests and original-resolution visual review.
+- Preserve the credential stop and all no-model/no-operational boundaries. One reference vector exists; provider imagery, labels, datasets, baselines, models, detections, and performance claims do not.
+
+Issue #321 is active. PR, merge, annotated tag, issue closure, and post-merge verification remain pending and will replace this candidate lifecycle note after shipment.
+
 ## v0.1.2-access-integrity-baseline — 2026-07-13
 
 ### P2O1-T03 — VIIRS delivery validation and credential boundary

@@ -1,0 +1,231 @@
+{
+  "report_id": "AOI-FINAL-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "aoi-evidence-v0.1.0",
+  "generated_at_utc": "2026-07-14T01:30:00Z",
+  "run_id": "BL-2026-07-14-aoi-final-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 321,
+  "branch": "codex/p2o2-t01-final-aoi",
+  "git_base_commit": "23affc85ac2c2c6cfd427cb954739e6c7b44fa66",
+  "source_commit": "bcc1d9aa494c5511ff824692199b40717d320dd4",
+  "software_version": "0.2.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "source": {
+    "record_id": "SOURCE-2026-007",
+    "organization": "National Interagency Fire Center",
+    "dataset": "WFIGS Interagency Fire Perimeters",
+    "item_id": "5e72b1699bf74eefb3f3aff6f4ba5511",
+    "item_url": "https://www.arcgis.com/home/item.html?id=5e72b1699bf74eefb3f3aff6f4ba5511",
+    "service_url": "https://services3.arcgis.com/T4QMspbfLg3qTGWY/ArcGIS/rest/services/WFIGS_Interagency_Perimeters/FeatureServer/0",
+    "query_url": "https://services3.arcgis.com/T4QMspbfLg3qTGWY/ArcGIS/rest/services/WFIGS_Interagency_Perimeters/FeatureServer/0/query?where=OBJECTID%3D36462&outFields=OBJECTID%2Cpoly_SourceOID%2Cpoly_IncidentName%2Cpoly_FeatureCategory%2Cpoly_MapMethod%2Cpoly_GISAcres%2Cpoly_Acres_AutoCalc%2Cpoly_PolygonDateTime%2Cpoly_CreateDate%2Cpoly_DateCurrent%2Cpoly_IRWINID%2Cpoly_Source%2Cattr_IncidentName%2Cattr_UniqueFireIdentifier%2Cattr_FireDiscoveryDateTime%2Cattr_IncidentSize%2Cattr_POOState%2Cattr_POOCounty%2Cattr_IsValid%2Cattr_IsQuarantined%2Cattr_Source&returnGeometry=true&outSR=4326&f=geojson",
+    "object_id": 36462,
+    "incident_name": "0289 NE DARLENE 3",
+    "unique_fire_identifier": "2024-ORPRD-000289",
+    "feature_category": "Wildfire Final Fire Perimeter",
+    "map_method": "Mixed Methods",
+    "valid": true,
+    "quarantined": false,
+    "source_crs": "EPSG:4326",
+    "geometry_type": "MultiPolygon",
+    "coordinate_count": 1458,
+    "source_sha256": "3d615d4be88f65806399e3733491ab0d95e16ac91ea86b5a00b3ead81ec17abe",
+    "source_bytes": 47483,
+    "stored_gis_acres": 3903.653,
+    "auto_geodesic_acres": 3903.6532057778168,
+    "reference_area_km2": 15.797524,
+    "bbox_wgs84": [
+      -121.480785,
+      43.643314,
+      -121.39445,
+      43.681725
+    ],
+    "bbox_utm10n": [
+      622519.473,
+      4833503.355,
+      629489.216,
+      4837710.667
+    ],
+    "reference_extent_check_max_delta_m": 0.00022,
+    "role": "authoritative incident-reference geometry only"
+  },
+  "derivation": {
+    "analysis_crs": "EPSG:32610",
+    "display_crs": "EPSG:4326",
+    "buffer_m": 2000,
+    "grid_snap_m": 1000,
+    "rule": "Project the immutable reference geometry to EPSG:32610; expand its extent by 2,000 m on every side; snap each boundary outward to the nearest 1,000 m grid line.",
+    "aoi_bbox_utm10n": [
+      620000,
+      4831000,
+      632000,
+      4840000
+    ],
+    "aoi_bbox_wgs84": [
+      -121.512668,
+      43.620281,
+      -121.361791,
+      43.703322
+    ],
+    "aoi_polygon_utm10n": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            620000,
+            4831000
+          ],
+          [
+            632000,
+            4831000
+          ],
+          [
+            632000,
+            4840000
+          ],
+          [
+            620000,
+            4840000
+          ],
+          [
+            620000,
+            4831000
+          ]
+        ]
+      ]
+    },
+    "aoi_polygon_wgs84": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.512668,
+            43.622313
+          ],
+          [
+            -121.363992,
+            43.620281
+          ],
+          [
+            -121.361791,
+            43.701284
+          ],
+          [
+            -121.510667,
+            43.703322
+          ],
+          [
+            -121.512668,
+            43.622313
+          ]
+        ]
+      ]
+    },
+    "width_m": 12000,
+    "height_m": 9000,
+    "area_km2": 108.0,
+    "reference_to_aoi_area_ratio": 0.146273,
+    "supersedes_discovery_aoi": "aoi-darlene3-discovery-v0.1.0",
+    "discovery_bbox_wgs84": [
+      -121.56,
+      43.61,
+      -121.4,
+      43.75
+    ],
+    "discovery_projected_bbox_utm10n": [
+      615934.94,
+      4829565.211,
+      629116.698,
+      4845350.438
+    ],
+    "discovery_projected_area_km2": 208.07705,
+    "area_reduction_from_discovery_percent": 48.096,
+    "eastward_extension_beyond_discovery_m": 2883.302
+  },
+  "checks": {
+    "source_checksum_exact": true,
+    "source_identity_exact": true,
+    "source_feature_count": 1,
+    "source_rings_closed": true,
+    "source_valid_and_not_quarantined": true,
+    "local_projection_matches_nifc_reference_extent_within_0_10_m": true,
+    "aoi_contains_complete_reference_geometry": true,
+    "source_intersects_discovery_envelope": true,
+    "aoi_truthfully_supersedes_discovery_envelope": true,
+    "distance_and_area_measured_in_metric_analysis_crs": true,
+    "aoi_within_deschutes_county": true,
+    "selected_sentinel_metadata_footprint_contains_aoi": true,
+    "selected_viirs_pair_metadata_footprints_contain_aoi": true
+  },
+  "geography_check": {
+    "organization": "U.S. Census Bureau",
+    "service": "TIGERweb State_County",
+    "service_vintage": "2025-01-01",
+    "layer": 9,
+    "county_geoid": "41017",
+    "county_name": "Deschutes County",
+    "query_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/9/query",
+    "spatial_relation": "esriSpatialRelWithin",
+    "input_geometry": "final AOI WGS84 envelope",
+    "result_count": 1,
+    "checked_at_utc": "2026-07-14T01:37:00Z"
+  },
+  "source_stack_coverage": {
+    "meaning": "metadata footprint coverage only; no provider asset or fire detection verified",
+    "sentinel_2_l2a": {
+      "item_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644",
+      "mgrs_tile": "10TFP",
+      "metadata_bbox_wgs84": [
+        -121.76796729995817,
+        43.235600960154144,
+        -120.37335402628887,
+        44.24321330733643
+      ],
+      "aoi_contained": true,
+      "evidence": "METADATA-2026-001 and ASSET-READINESS-2026-001"
+    },
+    "noaa_21_viirs_pair": {
+      "active_fire_concept_id": "G3944882727-LPCLOUD",
+      "geolocation_concept_id": "G4037038741-LPCLOUD",
+      "shared_begin_utc": "2024-06-27T19:36:00.000Z",
+      "cmr_umm_json_checked_at_utc": "2026-07-14T01:39:00Z",
+      "aoi_corner_containment": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "aoi_contained": true,
+      "evidence": "official NASA CMR UMM JSON plus ASSET-READINESS-2026-001"
+    }
+  },
+  "decision": "ACCEPT_FINAL_MODELING_AOI",
+  "decision_detail": "The 12 km by 9 km analysis boundary contains the complete cited NIFC reference perimeter, preserves 2 km of context before outward grid snap, and supersedes the earlier discovery envelope because the official reference itself extends farther east.",
+  "claims": {
+    "permitted": [
+      "BurnLens has selected a reproducible modeling AOI from a cited public NIFC final-perimeter reference.",
+      "The committed tool regenerates the documented AOI boundary and evidence artifacts."
+    ],
+    "prohibited": [
+      "The NIFC reference geometry is a BurnLens detection or label.",
+      "The BurnLens AOI is an official incident perimeter, evacuation area, hazard zone, or operational product.",
+      "Imagery, a dataset, model output, fire detection, or performance result exists."
+    ]
+  },
+  "limitations": [
+    "NIFC describes the source as dynamic, not a legal document, and without warranty of accuracy, reliability, or completeness.",
+    "The mixed-method final perimeter is reference evidence only; it is not pixel-perfect segmentation truth.",
+    "The rectangular AOI intentionally includes context outside the reference perimeter and says nothing about fire presence there.",
+    "The final AOI extends east of and supersedes the discovery-only envelope; the earlier record remains historical metadata-discovery evidence.",
+    "Sentinel and VIIRS provider assets remain unacquired pending owner-approved credentials.",
+    "No imagery quality, label fitness, or model readiness conclusion follows from AOI acceptance alone.",
+    "Catalog-footprint containment confirms coverage metadata only; it does not establish usable pixels or a fire detection."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
