@@ -74,6 +74,11 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
+!samples/target/
+!samples/target/phase-two/
+!samples/target/phase-two/*.json
+!samples/target/phase-two/*.html
+!samples/target/phase-two/*.png
 
 # Jupyter Notebook
 .ipynb_checkpoints
