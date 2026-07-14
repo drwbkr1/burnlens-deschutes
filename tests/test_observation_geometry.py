@@ -17,6 +17,7 @@ from burnlens.observation_geometry import (
     normalize_inventory,
     render_html,
     render_png,
+    valid_geolocation_shape,
     validate_screen_contracts,
 )
 from burnlens.paired_intake import AssetContract
@@ -148,6 +149,11 @@ class ObservationGeometryTests(unittest.TestCase):
             native_pair_token="A2024180.2054",
         )
         self.assertEqual(validate_screen_contracts((fire, geo)), [])
+
+    def test_geolocation_shape_tracks_both_observed_scan_counts(self) -> None:
+        self.assertTrue(valid_geolocation_shape((3216, 3200)))
+        self.assertTrue(valid_geolocation_shape((3232, 3200)))
+        self.assertFalse(valid_geolocation_shape((3200, 3200)))
 
     def test_real_array_reader_preserves_native_reference_semantics(self) -> None:
         with TemporaryDirectory() as directory:

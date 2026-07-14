@@ -584,6 +584,12 @@ def choose_geometry_candidate(
     )
 
 
+def valid_geolocation_shape(shape: tuple[int, ...]) -> bool:
+    """Accept the observed half-resolution forms of valid 201/202-scan swaths."""
+
+    return shape in ((3216, 3200), (3232, 3200))
+
+
 def _inspect_geolocation(path: Path, aoi_bbox_wgs84: list[float]) -> dict[str, Any]:
     base = "HDFEOS/SWATHS/VJ2_750M_GEOLOCATION/Geolocation Fields"
     with h5py.File(path, "r") as source:
@@ -603,7 +609,7 @@ def _inspect_geolocation(path: Path, aoi_bbox_wgs84: list[float]) -> dict[str, A
                 "DayNightFlag",
             )
         }
-    if latitude.shape != (3232, 3200) or longitude.shape != latitude.shape:
+    if not valid_geolocation_shape(latitude.shape) or longitude.shape != latitude.shape:
         raise ObservationGeometryError("VIIRS_GEOLOCATION_SHAPE_UNEXPECTED")
     valid = (
         np.isfinite(latitude)
