@@ -1,6 +1,6 @@
 # REGISTRY-2026-004 - Final AOI Artifacts
 
-**Checkpoint:** Issue #321 branch candidate; PR, merge, and tag identity pending
+**Checkpoint:** Issue #321 / PR #322; merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`; annotated `v0.2.0-aoi-baseline` tag verified; lifecycle sync tracked by issue #323 / PR #324
 
 | Artifact | Class | Version/state | Source/analytical bytes |
 |---|---|---|---:|
@@ -12,6 +12,6 @@
 | `AOI-FINAL-2026-001.html` | Semantic evidence report | SHA-256 `b45b6659f74249966368e3b2f024363469f88fa6f8f23fc4c1631b39ec009ef2` | Derived geometry/metadata only |
 | `AOI-FINAL-2026-001.png` | Rendered evidence map | SHA-256 `73463794d765ca1e19051bb1f5b6dac163c82da5d11a6ea3ca77ce1ea0aeb736` | Derived geometry/metadata only |
 | `AOI-2026-002` | Final modeling AOI record | `aoi-darlene3-model-v0.2.0` | Derived geometry only |
-| `MANIFEST-2026-004.json` | Checkpoint provenance manifest | Candidate pending shipment identity | No additional source bytes |
+| `MANIFEST-2026-004.json` | Checkpoint provenance manifest | Shipped identity: issue #321, PR #322, merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`, tag `v0.2.0-aoi-baseline` | No additional source bytes |
 
 The official reference and BurnLens AOI are vector geometry artifacts. They are not imagery, a fire mask, a label, a dataset, a model input, a baseline, a model, a fire detection, a current incident map, or an operational product.

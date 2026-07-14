@@ -8,7 +8,7 @@ BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repositor
 
 | Identifier | State | Commit | Meaning |
 |---|---|---|---|
-| `v0.2.0-aoi-baseline` | Candidate on issue #321 branch; not yet a tag | Generator source `bcc1d9aa494c5511ff824692199b40717d320dd4`; checkpoint commit pending | Deterministic final modeling AOI, exact public NIFC reference snapshot, county/source coverage checks, and rendered non-operational evidence. No imagery, label, dataset, baseline, model, or detection. |
+| `v0.2.0-aoi-baseline` | Verified annotated tag | `fffd3dda123d7c43fe678dca9adfd8feb73de158` | Deterministic final modeling AOI, exact public NIFC reference snapshot, county/source coverage checks, and rendered non-operational evidence, shipped through PR #322. Generator source commit `bcc1d9aa494c5511ff824692199b40717d320dd4`. No imagery, label, dataset, baseline, model, or detection. |
 | `v0.1.2-access-integrity-baseline` | Verified annotated tag | `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` | Runnable fail-closed provider-payload validator plus normalized and rendered credential-block evidence, shipped through PR #318. Zero provider assets or analytical pixels. |
 | `v0.1.1-asset-readiness-baseline` | Verified annotated tag | `cf4aba2f40aa426f28f09b1b1b1bad895394198b` | Exact Sentinel-2 product and same-day NOAA-21 VIIRS fire/geolocation route contract plus metadata-only readiness fixture, shipped through PR #314. No credential, provider asset, detection, label, dataset, or analytical capability. |
 | `v0.1.0-source-metadata-baseline` | Verified annotated tag | `6abe87bba486e3fe49b6c06178b454335663cb73` | First Phase Two source-readiness package: versioned discovery AOI, three reviewed source records, terms/access/precheck/provenance controls, and a normalized public-metadata fixture. No source assets or analytical capability. |
@@ -22,7 +22,7 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | Class | Current version |
 |---|---|
 | Application | Not created |
-| AOI | `aoi-darlene3-model-v0.2.0` — accepted final modeling AOI candidate; supersedes the discovery version for modeling |
+| AOI | `aoi-darlene3-model-v0.2.0` — accepted and shipped final modeling AOI; supersedes the discovery version for modeling |
 | Source record set | `SOURCE-2026-001` through `SOURCE-2026-007`; newest is one public NIFC reference vector |
 | Metadata fixture | `METADATA-2026-001`; SHA-256 `803db2b82c7d6ef23d12c34f370dd9a7504bf181f772db22d1ed55c83c6b791a` |
 | Asset-readiness record set | `SOURCE-2026-004` through `SOURCE-2026-006`; shipped at `v0.1.1-asset-readiness-baseline`; no provider asset retained |

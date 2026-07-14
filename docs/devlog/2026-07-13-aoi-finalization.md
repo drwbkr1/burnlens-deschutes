@@ -24,6 +24,10 @@ The evidence map intentionally has no basemap. It shows only the source/referenc
 
 This is the first accepted geospatial scope rather than another planning document. It demonstrates that BurnLens can let authoritative evidence revise an earlier assumption, keep the provenance trail intact, and produce a reproducible visual artifact without inflating it into an analytical claim.
 
+## Shipment proof
+
+PR #322 merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`, issue #321 closed, and the annotated `v0.2.0-aoi-baseline` tag resolves to that exact commit. From merged `main`, all 16 tests passed and a fresh AOI pipeline execution reproduced the committed JSON, HTML, and PNG hashes byte for byte. The public rendered PR, README, living case study, source record, and PNG were also inspected. Issue #323 / PR #324 carries the provenance-only lifecycle sync.
+
 ## Next boundary
 
 The AOI is no longer the blocker. Actual source pixels are. Exact paired Sentinel/VIIRS intake still requires explicit owner approval for both credentials and must pass the existing fail-closed validator before any label or model decision.

@@ -48,8 +48,9 @@ Until that boundary is crossed, BurnLens can demonstrate careful source selectio
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Tool: BurnLens package `0.2.0`
 - Generator source commit: `bcc1d9aa494c5511ff824692199b40717d320dd4`
+- Repository baseline: `v0.2.0-aoi-baseline`
+- Checkpoint: issue #321 / PR #322 / merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`
 - Dataset / label schema / baseline / model: not created
-- Issue: #321
 - Public application: not created; this repository case study, README, and static evidence report are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
