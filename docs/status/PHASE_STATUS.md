@@ -15,10 +15,11 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `cf4aba2f40aa426f28f09b1b1b1bad895394198b` via merged PR #314 |
+| Latest repository evidence baseline | `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` via merged PR #318 |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
 | Asset-readiness baseline | `v0.1.1-asset-readiness-baseline`, verified annotated tag resolving to `cf4aba2f40aa426f28f09b1b1b1bad895394198b` via PR #314 |
+| Access-integrity baseline | `v0.1.2-access-integrity-baseline`, verified annotated tag resolving to `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` via PR #318 |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-discovery-v0.1.0`, accepted for metadata discovery only; not a fire perimeter or final modeling AOI |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-006`, reviewed for discovery and exact-route roles |
@@ -37,15 +38,15 @@
 
 ## Latest shipped checkpoint
 
-P2O1-T02 / issue #312 pins one exact Sentinel-2 L2A product plus the closest same-day NOAA-21 VIIRS active-fire/geolocation pair and retains `ASSET-READINESS-2026-001` as metadata only. PR #314 merged at `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; the annotated `v0.1.1-asset-readiness-baseline` tag resolves to that commit. The rendered PR, merged F04-A, normalized fixture, and closed issue passed post-merge verification.
+P2O1-T03 / issue #317 adds the fail-closed delivery validator and `VIIRS-ACCESS-PRECHECK-2026-001`. PR #318 merged at `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`; the annotated `v0.1.2-access-integrity-baseline` tag resolves to that exact commit. The rendered PR, branch README, normalized and visual evidence, closed issue, eight tests, and deterministic report rebuild passed post-merge verification.
 
 ## Current checkpoint
 
-P2O1-T03 / issue #317 is active on `codex/p2o1-t03-viirs-inspection`. The exact NASA routes were exercised without credentials. A default GET ended at `401`; browser-style GETs ended at `200` Earthdata Login HTML. The new validator rejected both bodies, generated a normalized and rendered blocked report, and deleted the rejected responses. Provider asset count and retained provider bytes remain zero.
+No execution checkpoint is active. BurnLens is stopped at the owner-decision boundary before credentialed paired acquisition. P2O1-T03 proved that the exact NASA responses require Earthdata authentication and fail closed without it; provider asset count and retained provider bytes remain zero.
 
 ## Selected next checkpoint
 
-After P2O1-T03 ships and the owner explicitly approves adding or using both a CDSE credential and an Earthdata Login credential, open one issue-backed checkpoint to acquire, checksum, inspect, and render the exact paired Sentinel/VIIRS source package. Until then, take no provider source-asset action. Login redirects, route resolution, and granule intersection are access/coverage evidence, never a fire detection.
+After the owner explicitly approves adding or using both a CDSE credential and an Earthdata Login credential, open one issue-backed checkpoint to acquire, checksum, inspect, and render the exact paired Sentinel/VIIRS source package. Until then, take no provider source-asset action. Login redirects, route resolution, and granule intersection are access/coverage evidence, never a fire detection.
 
 ## Boundaries carried forward
 

@@ -24,4 +24,8 @@ This checkpoint is deliberately small: it demonstrates reliability judgment at t
 
 The exact pair now has two owner-gated credentials: CDSE for Sentinel and Earthdata Login for LP DAAC. Acquisition may resume only after explicit approval for both, using secret-safe handling and the validator added here.
 
+## Shipment evidence
+
+Issue #317 closed through PR #318. The pull request was squash-merged at `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`, and the annotated `v0.1.2-access-integrity-baseline` tag was verified to dereference to that exact commit. The rendered PR and branch README passed review; all eight tests and deterministic HTML/PNG rebuild checks passed again on `main`.
+
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

@@ -8,6 +8,8 @@
 
 **Repository base:** `1858f3d5ad3c193f997bef4f9142c996e174af27`
 
+**Verified shipment:** PR #318; merge `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`; annotated tag `v0.1.2-access-integrity-baseline`; issue #317 closed; rendered PR, branch README, post-merge tests, deterministic report rebuild, and exact tag dereference passed
+
 **Decision:** `STOP — DELIVERY VALIDATOR PASSES; EARTHDATA CREDENTIAL REQUIRED`
 
 ## Action reviewed

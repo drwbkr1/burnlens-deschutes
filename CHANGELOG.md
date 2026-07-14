@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.1.2-access-integrity-baseline — 2026-07-13 (candidate)
+## v0.1.2-access-integrity-baseline — 2026-07-13
 
 ### P2O1-T03 — VIIRS delivery validation and credential boundary
 
@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Correct the access posture: NASA-led product use remains open and citable, while LP DAAC byte delivery requires Earthdata Login authentication and application authorization.
 - Preserve the paired-source STOP. Both CDSE and Earthdata credentials now require explicit owner approval before source-asset intake.
 
-Issue #317 is the active checkpoint. No provider source asset, fire-mask pixel, geolocation array, label, dataset, baseline, model, analytical metric, raster, vector, map, application, or wildfire detection is created.
+Shipped through PR #318 at merge commit `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`; issue #317 closed and the annotated `v0.1.2-access-integrity-baseline` tag resolves to that exact commit. The rendered PR and branch README, post-merge tests, deterministic report rebuild, and evidence hashes were verified. No provider source asset, fire-mask pixel, geolocation array, label, dataset, baseline, model, analytical metric, raster, vector, map, application, or wildfire detection is created.
 
 ## v0.1.1-asset-readiness-baseline — 2026-07-13
 

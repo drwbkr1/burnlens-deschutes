@@ -7,10 +7,10 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 The project is at a Phase Two source-readiness baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery and exact asset-access readiness are now complete.
-- `v0.1.1-asset-readiness-baseline` pins one exact Sentinel-2 product and the closest same-day NOAA-21 VIIRS fire/geolocation pair. P2O1-T03 / issue #317 now adds a runnable fail-closed delivery validator and an access-precheck evidence candidate.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, and delivery-integrity evidence are now complete through P2O1-T03.
+- `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - No credential or provider source asset has been used or retained. A runnable access-integrity precheck exists, but no pixel-processing pipeline, final AOI, label, dataset, baseline output, trained model, analytical metric, raster, vector, map, application demonstration, or public analytical result exists yet.
-- The latest verified repository evidence baseline on `main` is `cf4aba2f40aa426f28f09b1b1b1bad895394198b` from issue #312 / PR #314; the annotated `v0.1.1-asset-readiness-baseline` tag resolves to that commit.
+- The latest verified repository evidence baseline on `main` is `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` from issue #317 / PR #318; the annotated `v0.1.2-access-integrity-baseline` tag resolves to that exact commit.
 - The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using both a CDSE credential and a NASA Earthdata Login credential. The exact LP DAAC routes return login responses without Earthdata authentication; NASA-only intake is not a substitute for the pair.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
