@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import replace
 import json
+import os
 from pathlib import Path
 import shutil
 from tempfile import TemporaryDirectory
@@ -142,6 +143,43 @@ class PairedIntakeTests(unittest.TestCase):
         self.assertFalse(evaluation["accepted_for_atomic_promotion"])
         self.assertEqual(evaluation["unexpected_entries"], ["unplanned.txt"])
         self.assertIn("UNEXPECTED_QUARANTINE_ENTRY", evaluation["reason_codes"])
+
+    def test_multiply_linked_asset_cannot_enter_registration(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            seed = root / "seed"
+            seed.mkdir()
+            contracts = _synthetic_contracts(seed)
+            quarantine = root / "linked-asset"
+            quarantine.mkdir()
+            shutil.copy2(seed / contracts[0].expected_filename, quarantine / contracts[0].expected_filename)
+            os.link(seed / contracts[1].expected_filename, quarantine / contracts[1].expected_filename)
+            shutil.copy2(seed / contracts[2].expected_filename, quarantine / contracts[2].expected_filename)
+
+            evaluation = evaluate_quarantine(quarantine, contracts)
+
+        fire = next(item for item in evaluation["observations"] if item["role"] == "fire")
+        self.assertFalse(evaluation["accepted_for_atomic_promotion"])
+        self.assertEqual(fire["reason_codes"], ["ASSET_MULTILINK_NOT_ALLOWED"])
+        self.assertIsNone(fire["local_hashes"])
+
+    def test_linked_quarantine_is_rejected_when_supported(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            target = root / "target"
+            target.mkdir()
+            contracts = _synthetic_contracts(target)
+            linked = root / "linked-quarantine"
+            try:
+                linked.symlink_to(target, target_is_directory=True)
+            except OSError as error:
+                self.skipTest(f"directory symlink unavailable: {error}")
+
+            evaluation = evaluate_quarantine(linked, contracts)
+
+        self.assertFalse(evaluation["accepted_for_atomic_promotion"])
+        self.assertTrue(evaluation["quarantine_present"])
+        self.assertIn("QUARANTINE_LINK_NOT_ALLOWED", evaluation["reason_codes"])
 
     def test_partial_set_cannot_create_raw_destination(self) -> None:
         with TemporaryDirectory() as directory:

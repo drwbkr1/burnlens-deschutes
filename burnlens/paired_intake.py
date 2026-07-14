@@ -140,6 +140,13 @@ def _safe_zip_name(name: str) -> bool:
     return bool(path.parts)
 
 
+def _is_link_like(path: Path) -> bool:
+    """Reject filesystem indirection that could alias bytes outside quarantine."""
+
+    is_junction = getattr(path, "is_junction", None)
+    return path.is_symlink() or bool(is_junction and is_junction())
+
+
 def _inspect_zip(path: Path, expected_root: str) -> tuple[list[str], dict[str, Any]]:
     reasons: list[str] = []
     details: dict[str, Any] = {
@@ -194,14 +201,27 @@ def _missing_observation(contract: AssetContract) -> dict[str, Any]:
     }
 
 
+def _rejected_observation(contract: AssetContract, reason: str) -> dict[str, Any]:
+    observation = _missing_observation(contract)
+    observation["reason_codes"] = [reason]
+    return observation
+
+
 def inspect_asset(quarantine: Path, contract: AssetContract) -> dict[str, Any]:
     """Validate one exact file without trusting its suffix or location label."""
 
     path = quarantine / contract.expected_filename
-    if not path.exists() or not path.is_file():
+    if _is_link_like(path):
+        return _rejected_observation(contract, "ASSET_LINK_NOT_ALLOWED")
+    if not path.exists():
         return _missing_observation(contract)
+    if not path.is_file():
+        return _rejected_observation(contract, "ASSET_NOT_REGULAR_FILE")
 
-    observed_bytes = path.stat().st_size
+    file_stat = path.stat()
+    if file_stat.st_nlink != 1:
+        return _rejected_observation(contract, "ASSET_MULTILINK_NOT_ALLOWED")
+    observed_bytes = file_stat.st_size
     with path.open("rb") as handle:
         magic = handle.read(8)
     reasons: list[str] = []
@@ -274,13 +294,19 @@ def validate_contract_set(contracts: Iterable[AssetContract]) -> list[str]:
 def evaluate_quarantine(quarantine: Path, contracts: Iterable[AssetContract]) -> dict[str, Any]:
     items = list(contracts)
     contract_reasons = validate_contract_set(items)
-    exists = quarantine.exists() and quarantine.is_dir()
+    quarantine_link = _is_link_like(quarantine)
+    path_present = quarantine.exists() or quarantine_link
+    exists = path_present and quarantine.is_dir() and not quarantine_link
     observations = [inspect_asset(quarantine, item) if exists else _missing_observation(item) for item in items]
     expected_entries = {item.expected_filename for item in items}
     observed_entries = sorted(entry.name for entry in quarantine.iterdir()) if exists else []
     unexpected_entries = sorted(set(observed_entries) - expected_entries)
     transaction_reasons = list(contract_reasons)
-    if not exists:
+    if quarantine_link:
+        transaction_reasons.append("QUARANTINE_LINK_NOT_ALLOWED")
+    elif path_present and not quarantine.is_dir():
+        transaction_reasons.append("QUARANTINE_NOT_DIRECTORY")
+    elif not exists:
         transaction_reasons.append("QUARANTINE_MISSING")
     if unexpected_entries:
         transaction_reasons.append("UNEXPECTED_QUARANTINE_ENTRY")
@@ -289,7 +315,7 @@ def evaluate_quarantine(quarantine: Path, contracts: Iterable[AssetContract]) ->
     accepted = not transaction_reasons
     return {
         "package_id": items[0].package_id if items else None,
-        "quarantine_present": exists,
+        "quarantine_present": path_present,
         "expected_asset_count": len(items),
         "observed_entry_count": len(observed_entries),
         "accepted_asset_count": sum(1 for item in observations if item["accepted"]),
@@ -315,9 +341,11 @@ def promote_quarantine(
     evaluation = evaluate_quarantine(quarantine, items)
     if not evaluation["accepted_for_atomic_promotion"]:
         raise ValueError("quarantine failed the paired-intake contract")
-    if destination.exists():
+    if destination.exists() or _is_link_like(destination):
         raise FileExistsError(f"destination already exists: {destination.name}")
     destination.parent.mkdir(parents=True, exist_ok=True)
+    if _is_link_like(destination.parent):
+        raise OSError("destination parent must not be a filesystem link or junction")
     if quarantine.stat().st_dev != destination.parent.stat().st_dev:
         raise OSError("quarantine and destination must be on the same filesystem")
 
@@ -568,6 +596,7 @@ def build_report(
         "transaction_invariants": [
             "Exactly three named assets are required in one quarantine directory.",
             "Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.",
+            "Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.",
             "The two VIIRS native IDs must share the recorded acquisition token.",
             "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
             "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
