@@ -16,7 +16,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record decision `ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS`: the 2.48-hour time offset and 375 m support still cannot define 10-20 m segmentation truth.
 - Preserve fail-closed link safety when OneDrive temporarily exposed an asset through a second hard link; the unchanged exact retry passed after the link disappeared.
 
-Issue #333 governs the verified release candidate on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`. Sixty-five tests, compilation, dependency health, deterministic reconstruction, original-resolution visual review, real in-app browser validation, secret/raw-byte exclusion, and diff checks are the release gates. Raw provider bytes committed: zero. Label array, dataset, split, baseline, model, application, deployment, and performance claim: none. PR, merge, annotated tag, issue closure, and post-merge verification are recorded after shipment.
+Issue #333 governs the verified release candidate in PR #334 on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`. Sixty-five tests, compilation, dependency health, deterministic reconstruction, original-resolution visual review, real in-app browser validation, secret/raw-byte exclusion, and diff checks are the release gates. Raw provider bytes committed: zero. Label array, dataset, split, baseline, model, application, deployment, and performance claim: none. Merge, annotated tag, issue closure, and post-merge verification are recorded after shipment.
 
 ## v0.4.0-authenticated-source-baseline — 2026-07-14
 

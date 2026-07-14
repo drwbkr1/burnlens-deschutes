@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-14
 
-**Issue:** #333
+**Issue / PR:** #333 / #334
 
 ## Weakness selected
 

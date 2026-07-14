@@ -144,7 +144,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T02-SYNC | `records/prompt-build-log/2026-07-14-p2o2-t02-sync.md` | issue #327 / PR #328 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs or exercising credentials. |
 | P2O2-T03 | `records/prompt-build-log/2026-07-14-p2o2-t03.md` | merged via PR #330; tagged | Issue #329 closed; merge `7678cf41b64e128106c199b913fe74590a52cf80`; `v0.4.0-authenticated-source-baseline`; authenticated source/reference evidence accepted and labels/dataset deferred. |
 | P2O2-T03-SYNC | `records/prompt-build-log/2026-07-14-p2o2-t03-sync.md` | issue #331 / PR #332; shipped | Exact analytical PR/merge/tag/post-merge verification synchronized at `5f7461ac4cc8caa48f029776e5797023f27eaec5`; no credential, raw-byte, or scientific-output change. |
-| P2O2-T04 | `records/prompt-build-log/2026-07-14-p2o2-t04.md` | issue #333; verified release candidate | Complete 23-granule NOAA-21 geometry comparison, exact selected companion, uncertainty-preserving feasibility protocol, and direct-label deferral; PR/merge/tag pending. |
+| P2O2-T04 | `records/prompt-build-log/2026-07-14-p2o2-t04.md` | issue #333 / PR #334; verified release candidate | Complete 23-granule NOAA-21 geometry comparison, exact selected companion, uncertainty-preserving feasibility protocol, and direct-label deferral; merge/tag pending. |
 
 ## Acceptance and remediation triggers
 

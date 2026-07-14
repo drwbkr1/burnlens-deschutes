@@ -108,7 +108,7 @@ The next step is a product decision, not another silent implementation choice: a
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`
-- Active candidate: issue #333 / `v0.5.0-observation-geometry-baseline`; PR/merge/tag pending
+- Active candidate: issue #333 / PR #334 / `v0.5.0-observation-geometry-baseline`; merge/tag pending
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, source-inspection report, and observation-geometry report are the current presentation surfaces
 

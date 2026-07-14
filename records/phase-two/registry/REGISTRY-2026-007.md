@@ -1,6 +1,6 @@
 # REGISTRY-2026-007 - Observation Geometry Artifacts
 
-**Checkpoint:** Issue #333 on `codex/p2o2-t04-observation-geometry`; release candidate `v0.5.0-observation-geometry-baseline`
+**Checkpoint:** Issue #333 / PR #334 on `codex/p2o2-t04-observation-geometry`; release candidate `v0.5.0-observation-geometry-baseline`
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|
@@ -16,4 +16,3 @@
 | `LABEL_FITNESS-2026-003` / `USE_BOUNDARY-2026-006` | Improved-reference acceptance, direct-label deferral, and claims boundary | `ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS` | 0 |
 
 The exact raw package is retained only in ignored local storage for reproducible inspection. Provider bytes, secrets, signed delivery URLs, and provider response bodies are not committed. No label array, dataset, split, baseline, model, analytical application, or deployment artifact exists.
-

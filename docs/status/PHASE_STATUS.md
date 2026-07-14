@@ -16,7 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | `7678cf41b64e128106c199b913fe74590a52cf80` via merged PR #330 and verified annotated `v0.4.0-authenticated-source-baseline` |
-| Observation-geometry release candidate | BurnLens `0.5.0`; issue #333; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; 65 candidate-gate tests passing; PR/merge/tag pending |
+| Observation-geometry release candidate | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; 65 candidate-gate tests passing; merge/tag pending |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |

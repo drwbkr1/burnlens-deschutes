@@ -9,7 +9,7 @@
   "git_base_commit": "5f7461ac4cc8caa48f029776e5797023f27eaec5",
   "generator_source_commit": "89d50c24a696cc7e3ec023eec00b021a4a0cdda6",
   "checkpoint_commit": null,
-  "pull_request": null,
+  "pull_request": 334,
   "version_tag": "v0.5.0-observation-geometry-baseline",
   "version_tag_object": null,
   "version_tag_state": "release candidate pending merge and annotated-tag verification",

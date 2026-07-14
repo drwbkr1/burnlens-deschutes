@@ -69,5 +69,4 @@ The active-fire target still lacks defensible segmentation truth after the best 
 
 ## Shipment state
 
-Issue #333 is the governing checkpoint on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; release and post-merge identities are recorded after the quality-gated PR ships.
-
+Issue #333 and PR #334 are the governing checkpoint on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; merge, tag, and post-merge identities are recorded after the quality-gated PR ships.
