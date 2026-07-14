@@ -17,6 +17,7 @@ from burnlens.paired_intake import (
     PACKAGE_ID,
     PUBLIC_METADATA_OBSERVED_AT_UTC,
     REPORT_ID,
+    TRANSACTION_INVARIANTS,
     AssetContract,
     _stream_hashes,
     _synthetic_contracts,
@@ -57,6 +58,10 @@ class PairedIntakeTests(unittest.TestCase):
             {"A2024179.1936"},
         )
         self.assertEqual(len(contract_digest()), 64)
+
+    def test_contract_digest_covers_transaction_invariants(self) -> None:
+        changed = (*TRANSACTION_INVARIANTS, "A future invariant must change the digest.")
+        self.assertNotEqual(contract_digest(), contract_digest(transaction_invariants=changed))
 
     def test_missing_provider_quarantine_fails_closed(self) -> None:
         with TemporaryDirectory() as directory:

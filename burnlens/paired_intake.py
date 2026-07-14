@@ -32,7 +32,7 @@ WARNING = (
     "incident-command support. Official sources govern."
 )
 PACKAGE_ID = "darlene3-s2-viirs-pair-v0.1.0"
-CONTRACT_VERSION = "paired-intake-contract-v0.1.0"
+CONTRACT_VERSION = "paired-intake-contract-v0.2.0"
 REPORT_VERSION = "paired-intake-rehearsal-v0.2.0"
 REPORT_ID = "PAIR-INTAKE-REHEARSAL-2026-001"
 SOFTWARE_VERSION = "0.3.0"
@@ -112,6 +112,15 @@ EXACT_CONTRACTS = (
         package_id=PACKAGE_ID,
         native_pair_token="A2024179.1936",
     ),
+)
+
+TRANSACTION_INVARIANTS = (
+    "Exactly three named assets are required in one quarantine directory.",
+    "Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.",
+    "Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.",
+    "The two VIIRS native IDs must share the recorded acquisition token.",
+    "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
+    "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
 )
 
 
@@ -522,8 +531,16 @@ def contracts_as_dicts(contracts: Iterable[AssetContract] = EXACT_CONTRACTS) -> 
     return [asdict(item) for item in contracts]
 
 
-def contract_digest(contracts: Iterable[AssetContract] = EXACT_CONTRACTS) -> str:
-    payload = json.dumps(contracts_as_dicts(contracts), sort_keys=True, separators=(",", ":")).encode("utf-8")
+def contract_digest(
+    contracts: Iterable[AssetContract] = EXACT_CONTRACTS,
+    transaction_invariants: Iterable[str] = TRANSACTION_INVARIANTS,
+) -> str:
+    contract = {
+        "contract_version": CONTRACT_VERSION,
+        "asset_contracts": contracts_as_dicts(contracts),
+        "transaction_invariants": list(transaction_invariants),
+    }
+    payload = json.dumps(contract, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return sha256(payload).hexdigest()
 
 
@@ -593,14 +610,7 @@ def build_report(
             "evaluation": provider_evaluation,
         },
         "synthetic_transaction_rehearsal": rehearsal,
-        "transaction_invariants": [
-            "Exactly three named assets are required in one quarantine directory.",
-            "Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.",
-            "Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.",
-            "The two VIIRS native IDs must share the recorded acquisition token.",
-            "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
-            "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
-        ],
+        "transaction_invariants": list(TRANSACTION_INVARIANTS),
         "decision": decision,
         "decision_detail": decision_detail,
         "claims": {
