@@ -15,6 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Add a deterministic temporary synthetic rehearsal that proves partial rejection, checksum-tamper rejection, successful complete-set promotion, and zero retained fixture bytes.
 - Render `PAIR-INTAKE-REHEARSAL-2026-001` as normalized JSON, semantic HTML, and a 1600x1200 evidence card that separates real `BLOCKED_OWNER_CREDENTIAL` state from synthetic transaction proof.
 - Record the exact public CDSE/CMR metadata snapshot with a fixed observation time, explicitly separate it from later deterministic run times, and preserve the owner stop: zero credentials, live provider requests, provider assets, provider bytes, and promoted real packages.
+- Record the owner's later CDSE and Earthdata authorization in `ACCESS-2026-006` without storing or exercising credential material; authenticated delivery and provider-file fitness remain unverified.
 
 Candidate report-generator source is commit `ac8ee43151991c38ccf5d446a53c09b617afeb54` on issue #325 / PR #326. Thirty-seven tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
 

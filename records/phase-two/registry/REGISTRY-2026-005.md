@@ -11,5 +11,6 @@
 | `PAIR-INTAKE-REHEARSAL-2026-001.html` | Semantic evidence report | SHA-256 `b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c` | 0 / 0 |
 | `PAIR-INTAKE-REHEARSAL-2026-001.png` | Rendered evidence card | SHA-256 `c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0` | 0 / 0 |
 | `MANIFEST-2026-005.json` | Candidate checkpoint provenance manifest | Issue #325 / PR #326; merge/tag identity pending | 0 / 0 |
+| `ACCESS-2026-006` | Owner authorization record; no secret material or provider request | `AUTHORIZED_NOT_ACCESSED` | 0 / 0 |
 
 The test-only synthetic fixture is created in a temporary directory and deleted in the same run. It is not source data, a retained dataset, a model input, or evidence that the exact provider package is usable.

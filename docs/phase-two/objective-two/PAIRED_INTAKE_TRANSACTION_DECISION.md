@@ -2,7 +2,7 @@
 
 ## Decision
 
-Accept `paired-intake-contract-v0.4.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. Keep real intake at `BLOCKED_OWNER_CREDENTIAL` until the owner explicitly approves both credential boundaries.
+Accept `paired-intake-contract-v0.4.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. The rehearsal correctly remained at `BLOCKED_OWNER_CREDENTIAL` when it ran. `ACCESS-2026-006` records the owner's later approval for both credential boundaries; no authenticated request or provider byte has yet been exercised.
 
 ## Weakness addressed
 
@@ -42,4 +42,4 @@ For a portfolio reviewer, the value is reliability discipline made visible: Burn
 
 ## Next gate
 
-After explicit owner approval for both credentials, acquire only the exact three assets into quarantine, apply this contract, visually inspect the real source package and AOI-relevant contents, and either register the complete package or delete the rejected quarantine. A passing transaction must still be followed by a separate pixel-, quality-, geolocation-, and target-fitness decision.
+After this candidate ships, open a new issue-backed branch, use the authorized credentials to acquire only the exact three assets into excluded quarantine, apply this contract, visually inspect the real source package and AOI-relevant contents, and either register the complete package or delete the rejected quarantine. A passing transaction must still be followed by a separate pixel-, quality-, geolocation-, and target-fitness decision.

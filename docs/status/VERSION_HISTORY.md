@@ -33,7 +33,8 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | AOI finalizer | BurnLens package `0.2.0`; generator source commit `bcc1d9aa494c5511ff824692199b40717d320dd4`; 16 repository tests passing |
 | AOI evidence | `AOI-FINAL-2026-001`; JSON `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; HTML `b45b6659f74249966368e3b2f024363469f88fa6f8f23fc4c1631b39ec009ef2`; PNG `73463794d765ca1e19051bb1f5b6dac163c82da5d11a6ea3ca77ce1ea0aeb736` |
 | Paired-intake transaction | BurnLens package `0.3.0`; `paired-intake-contract-v0.4.0`; full contract SHA-256 `5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d`; report-generator source `ac8ee43151991c38ccf5d446a53c09b617afeb54`; 37 repository tests passing |
-| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; JSON `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; HTML `b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c`; PNG `c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0`; real decision `BLOCKED_OWNER_CREDENTIAL` |
+| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; JSON `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; HTML `b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c`; PNG `c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL` |
+| Credential authorization | `ACCESS-2026-006`; owner-authorized CDSE and Earthdata use on 2026-07-14; owner-attested setup `PASS`; no credential loaded, request made, or provider byte retained by BurnLens in that record |
 | Dataset | Not created |
 | Label schema implementation | Not created |
 | Baseline method | Not created |

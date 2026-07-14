@@ -121,7 +121,7 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; final modeling AOI shipped; exact-pair transaction candidate verified without provider data; real imagery intake blocked on owner-approved CDSE and Earthdata credentials |
+| Current phase posture | Phase Two active; final modeling AOI shipped; exact-pair transaction candidate verified without provider data; CDSE and Earthdata use owner-authorized but not yet exercised; provider imagery absent |
 | Current repository baseline | Latest shipped: `v0.2.0-aoi-baseline` at `fffd3dda123d7c43fe678dca9adfd8feb73de158`; candidate: `v0.3.0-intake-transaction-baseline` on issue #325 |
 | Baseline verification | Shipped AOI tag resolves to merged PR #322; candidate transaction has 37 passing tests, byte-identical report reconstruction, and original-resolution rendered review |
 | Data/model/run/map/application status | One public NIFC reference vector, one derived AOI, static AOI/intake evidence, and a temporary-synthetic transaction rehearsal exist; no provider imagery, retained synthetic data, labels, dataset, baseline, model, analytical result, or application exists |
