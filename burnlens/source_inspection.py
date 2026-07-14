@@ -538,7 +538,7 @@ def render_png(
     draw.text((1145, 250), "WHAT THE REAL FILES SHOW", fill=muted, font=_font(18))
     cards = [
         (
-            "1,200 × 900",
+            "1,200 x 900",
             "Sentinel AOI pixels at 10 m",
             teal,
         ),
@@ -567,7 +567,7 @@ def render_png(
     view_range = report["viirs_active_fire"]["aoi_view_zenith_range_degrees"]
     draw.line((1145, 747, 1495, 747), fill="#d4cec1", width=2)
     draw.text((1145, 774), "SCAN-EDGE RISK", fill="#9c2f13", font=_font(18))
-    draw.text((1145, 810), f"View zenith {view_range[0]:.2f}–{view_range[1]:.2f}°", fill=ink, font=_font(21))
+    draw.text((1145, 810), f"View zenith {view_range[0]:.2f}-{view_range[1]:.2f} deg", fill=ink, font=_font(21))
     draw.text((1145, 846), "3 residual-bowtie records", fill=ink, font=_font(20))
     draw.text((1145, 882), "0 bad-geolocation QA records", fill=ink, font=_font(20))
     draw.text((1145, 925), "Do not promote to labels.", fill="#9c2f13", font=_font(21))
