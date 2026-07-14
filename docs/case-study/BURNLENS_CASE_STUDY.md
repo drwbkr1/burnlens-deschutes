@@ -42,7 +42,7 @@ These are source, geometry, coverage, and reproducibility claims. They are not f
 
 ## Reliability before data touch
 
-The `0.3.0` candidate pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, checksum-invalid, link-backed, or multiply linked. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected. Contract `v0.4.0` hashes the asset identities and the complete transaction-invariant set together. If the final rename fails, its provisional manifest is removed and the same validated quarantine remains retryable. After promotion, the verifier rechecks the manifest, contract digest, exact files, and current hashes so later mutation is visible.
+BurnLens `0.3.0` pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, checksum-invalid, link-backed, or multiply linked. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected. Contract `v0.4.0` hashes the asset identities and the complete transaction-invariant set together. If the final rename fails, its provisional manifest is removed and the same validated quarantine remains retryable. After promotion, the verifier rechecks the manifest, contract digest, exact files, and current hashes so later mutation is visible.
 
 Before the owner authorized real access, BurnLens tested the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. Its rendered `BLOCKED_OWNER_CREDENTIAL` state is historical evidence from before `ACCESS-2026-006`: provider assets, provider bytes, promoted real packages, and retained synthetic bytes remain zero.
 
@@ -59,12 +59,12 @@ Until the exact pair is acquired, validated, and inspected, BurnLens can demonst
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Latest evidence run: `BL-2026-07-14-paired-intake-rehearsal-r001`
-- Tool: BurnLens package `0.3.0` candidate
+- Tool: BurnLens package `0.3.0`, shipped transaction baseline
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Credential authorization: `ACCESS-2026-006`; owner-authorized, not yet exercised by BurnLens
 - Generator source commit: `ac8ee43151991c38ccf5d446a53c09b617afeb54`
-- Latest shipped repository baseline: `v0.2.0-aoi-baseline`; proposed transaction tag: `v0.3.0-intake-transaction-baseline`
-- Active checkpoint: issue #325 / PR #326; merge pending
+- Latest shipped repository baseline: `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582`
+- Shipped checkpoint: issue #325 / PR #326; lifecycle sync issue #327
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, and static evidence report are the current presentation surfaces
 

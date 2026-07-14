@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.3.0-intake-transaction-baseline — candidate, 2026-07-13
+## v0.3.0-intake-transaction-baseline — 2026-07-14
 
 ### P2O2-T02 — Atomic exact-pair intake before credentials
 
@@ -17,7 +17,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record the exact public CDSE/CMR metadata snapshot with a fixed observation time, explicitly separate it from later deterministic run times, and preserve the owner stop: zero credentials, live provider requests, provider assets, provider bytes, and promoted real packages.
 - Record the owner's later CDSE and Earthdata authorization in `ACCESS-2026-006` without storing or exercising credential material; authenticated delivery and provider-file fitness remain unverified.
 
-Candidate report-generator source is commit `ac8ee43151991c38ccf5d446a53c09b617afeb54` on issue #325 / PR #326. Thirty-seven tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
+Issue #325 closed through PR #326 at merge commit `ee1a1d678ad888b595dc3c7b215f787ea5156582`; the annotated `v0.3.0-intake-transaction-baseline` tag resolves to that exact commit. Report-generator source remains `ac8ee43151991c38ccf5d446a53c09b617afeb54`. Thirty-seven post-merge tests, dependency checks, deterministic reconstruction, original-resolution visual review, claims review, remote tag verification, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
 
 ## v0.2.0-aoi-baseline — 2026-07-13
 

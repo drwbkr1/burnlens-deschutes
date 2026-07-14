@@ -16,9 +16,9 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active — final AOI shipped; exact-pair transaction candidate verified; provider imagery blocked.**
+**Active — final AOI and exact-pair transaction shipped; credential use authorized; provider imagery not acquired.**
 
-P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 adds a tested all-or-none transaction candidate for the exact three provider assets, using temporary synthetic fixtures and retaining zero provider or synthetic bytes. Sentinel/VIIRS provider imagery, labels, a dataset, baseline output, and model inputs do not exist. Paired imagery intake remains blocked until the owner explicitly approves both CDSE and Earthdata credentials and a new issue reopens the before-data gate for that exact action.
+P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 / PR #326 ships the tested all-or-none transaction for the exact three provider assets at `v0.3.0-intake-transaction-baseline`, using temporary synthetic fixtures and retaining zero provider or synthetic bytes. `ACCESS-2026-006` clears both owner credential gates. Sentinel/VIIRS provider imagery, labels, a dataset, baseline output, and model inputs do not exist; authenticated intake still requires its own issue-backed before-data action.
 
 ## Phase purpose
 

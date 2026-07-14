@@ -14,11 +14,11 @@ That matters because the active-fire granule is not spatially useful without its
 
 The new contract treats the exact three files as one transaction. It checks identity, exact size, native container, pair token, archive safety, and every provider checksum that exists. It writes local hashes and a registration manifest only after the whole set passes, then promotes the quarantine directory with one same-filesystem rename. It refuses to overwrite an existing destination.
 
-The real package is still absent because credentials remain owner-gated. To test the state machine without weakening that boundary, the CLI creates a tiny temporary synthetic package, proves two failure paths and one successful promotion, and deletes every synthetic byte. The evidence card shows the real blocked state and synthetic mechanics as separate sections.
+At rehearsal time the real package was absent because credentials remained owner-gated. To test the state machine without weakening that boundary, the CLI created a tiny temporary synthetic package, proved failure and promotion paths, and deleted every synthetic byte. The evidence card keeps that historical real blocked state separate from synthetic mechanics. The owner later authorized both credential boundaries in `ACCESS-2026-006`; they have not yet been exercised by BurnLens.
 
 An audit before shipment found that the first report schema called its pinned metadata facts a refresh performed at the caller-supplied run time. The committed run used the correct time, but later reruns could imply newer research than actually occurred. Report schema `0.2.0` now fixes the observation time, links `ACCESS-2026-005`, and says directly that the deterministic run performs no live provider request.
 
-A second filesystem audit rejected another form of hidden state: symlink, junction, and multiply-linked inputs. Without that rule, a correctly named quarantine entry could hash bytes stored elsewhere and remain mutable after registration through another path. The candidate contract's SHA-256 covers both the three exact asset records and all transaction invariants, so changing a security rule changes the contract identity.
+A second filesystem audit rejected another form of hidden state: symlink, junction, and multiply-linked inputs. Without that rule, a correctly named quarantine entry could hash bytes stored elsewhere and remain mutable after registration through another path. The contract's SHA-256 covers both the three exact asset records and all transaction invariants, so changing a security rule changes the contract identity.
 
 A final recovery audit forced the atomic rename itself to fail. The earlier implementation left its provisional registration manifest in quarantine, making an otherwise valid package fail as unexpected state on retry. Contract `v0.3.0` removes that manifest on rename failure, preserves the original files, and proves that the next ordinary retry succeeds.
 
@@ -34,6 +34,10 @@ No Sentinel or VIIRS provider file has been downloaded or inspected. BurnLens st
 
 ## Next boundary
 
-Credential approval remains the only owner decision. If approved for both CDSE and Earthdata, the next checkpoint will place the exact assets in quarantine, run this gate, visually inspect real outputs, and accept or reject the source package without bypassing its unknowns.
+The credential decision is resolved, but authenticated delivery and source fitness are not. After provenance-only lifecycle sync issue #327 ships, the next checkpoint will place the exact assets in excluded quarantine, run this gate, visually inspect real outputs, and accept or reject the source package without bypassing its unknowns.
+
+## Shipment proof
+
+PR #326 merged at `ee1a1d678ad888b595dc3c7b215f787ea5156582`, issue #325 closed through that PR, and the annotated `v0.3.0-intake-transaction-baseline` tag resolves to the same commit. From merged `main`, all 37 tests, compilation, dependency health, deterministic output verification, and the remote tag check passed. Issue #327 carries the provenance-only lifecycle sync.
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
