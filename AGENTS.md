@@ -58,12 +58,13 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest verified project checkpoint is the execution-goal and six-phase-roadmap baseline on `main` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`, tagged `v0.0.8-execution-goal-baseline`.
+The latest shipped analytical-evidence checkpoint is P2O2-T01 / issue #321 / PR #322 at `fffd3dda123d7c43fe678dca9adfd8feb73de158`, tagged `v0.2.0-aoi-baseline`. P2O2-T02 / issue #325 is the active `0.3.0` candidate on `codex/p2o2-t02-intake-transaction`.
 
-- The owner recorded `APPROVE — PHASE TWO PLANNING ONLY` through P1O7-T08 / PR #294.
-- The repository has no accepted source data, final AOI, labels, dataset, executable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical claim.
-- Phase Two planning is authorized. Data touch may proceed only through an issue-backed before-data gate after source licensing/terms and other required evidence are resolved.
-- Issue #290 / PR #291 is closed and merged. The next selected checkpoint is a bounded Phase Two source/licensing/access decision and before-data evidence update.
+- `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
+- The repository has executable access-validation and AOI-evidence paths. The candidate adds a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
+- Provider imagery assets and bytes remain zero. No credential, imagery-derived raster/vector, label, dataset, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists.
+- Exact real paired intake remains stopped until the owner explicitly approves both CDSE and Earthdata credentials. Do not add, inspect, or use credentials without that approval.
+- After approval, the next bounded checkpoint is exact asset quarantine, transaction validation, and real rendered/visual source inspection; passing registration alone does not establish fire presence or data fitness.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 

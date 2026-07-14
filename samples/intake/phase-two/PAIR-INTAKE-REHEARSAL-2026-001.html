@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BurnLens paired-intake transaction rehearsal</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f3f0e8; color: #17211b; }
+    body { margin: 0; } main { max-width: 74rem; margin: auto; padding: 2rem 1.25rem 4rem; }
+    .eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; font-weight: 800; color: #59645c; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: .94; max-width: 13ch; margin: .4rem 0 1rem; }
+    .warning, .status, .synthetic { border: 2px solid #17211b; padding: 1rem; margin: 1rem 0; box-shadow: .35rem .35rem 0 #17211b; }
+    .warning { background: #fff0ac; } .status { background: #f4b8a7; } .synthetic { background: #c8ebd2; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .card { background: white; border: 1px solid #9aa39c; padding: 1rem; } .metric { display: block; font-size: 2.3rem; font-weight: 850; }
+    table { border-collapse: collapse; width: 100%; background: white; margin: 1rem 0 2rem; }
+    th, td { border: 1px solid #929b94; padding: .75rem; text-align: left; vertical-align: top; } thead th { background: #dce4de; }
+    code { overflow-wrap: anywhere; } a { color: #005b46; } footer { border-top: 1px solid #929b94; margin-top: 2rem; padding-top: 1rem; color: #4e5951; }
+    @media (max-width: 50rem) { table, thead, tbody, tr, th, td { display: block; } thead { position: absolute; left: -9999px; } tr { border: 1px solid #929b94; margin-bottom: 1rem; } th, td { border: 0; } }
+  </style>
+</head>
+<body><main>
+  <p class="eyebrow">Phase Two · paired intake reliability · paired-intake-contract-v0.4.0</p>
+  <h1>Three assets. One transaction.</h1>
+  <p class="warning"><strong>Use boundary:</strong> Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</p>
+  <section class="status" aria-labelledby="status-heading"><h2 id="status-heading">Blocked — owner credentials required</h2><p>Owner approval for both CDSE and Earthdata credentials is still required; no provider quarantine or raw package exists.</p></section>
+  <section class="grid" aria-label="Real provider state">
+    <div class="card"><span class="metric">0</span>provider assets</div>
+    <div class="card"><span class="metric">0</span>provider bytes</div>
+    <div class="card"><span class="metric">0</span>credentials used</div>
+  </section>
+  <section aria-labelledby="contract-heading"><h2 id="contract-heading">Exact provider contract</h2>
+    <p>Every named asset must be present in one quarantine directory and pass before any raw package is registered.</p>
+    <table><thead><tr><th>Role</th><th>Source identity</th><th>Exact file</th><th>Bytes</th><th>Container</th><th>Provider checksum</th></tr></thead><tbody><tr><th scope="row">sentinel-2-l2a</th><td><code>SOURCE-2026-004</code><br>58cebcf0-c417-4384-a93a-2d6b15344117</td><td><code>S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip</code></td><td>1,127,031,562</td><td>zip-safe</td><td>MD5, BLAKE3</td></tr><tr><th scope="row">viirs-active-fire</th><td><code>SOURCE-2026-005</code><br>G3944882727-LPCLOUD</td><td><code>VJ214IMG.A2024179.1936.002.2025284191612.nc</code></td><td>2,710,616</td><td>hdf5</td><td>No provider checksum</td></tr><tr><th scope="row">viirs-geolocation</th><td><code>SOURCE-2026-006</code><br>G4037038741-LPCLOUD</td><td><code>VJ203MODLL.A2024179.1936.021.2024327213621.h5</code></td><td>40,255,764</td><td>hdf5</td><td>No provider checksum</td></tr></tbody></table>
+  </section>
+  <section class="synthetic" aria-labelledby="synthetic-heading"><h2 id="synthetic-heading">Synthetic transaction rehearsal — test fixture only</h2>
+    <p><strong>No provider data is used.</strong> Temporary synthetic ZIP/HDF5 fixtures exercise failure and atomic-promotion behavior and are deleted after the run.</p><ul><li><strong>Pass:</strong> partial set rejected</li><li><strong>Pass:</strong> checksum tamper rejected</li><li><strong>Pass:</strong> complete set promoted atomically</li><li><strong>Pass:</strong> post promotion tamper detected</li></ul>
+  </section>
+  <section aria-labelledby="invariants-heading"><h2 id="invariants-heading">Transaction invariants</h2><ul><li>Exactly three named assets are required in one quarantine directory.</li><li>Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.</li><li>Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.</li><li>The two VIIRS native IDs must share the recorded acquisition token.</li><li>Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.</li><li>No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.</li><li>If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable.</li><li>Registered packages are re-verifiable against their manifest, contract digest, exact assets, and current local hashes so later mutation fails visibly.</li></ul></section>
+  <section aria-labelledby="meaning-heading"><h2 id="meaning-heading">What this proves</h2>
+    <p>BurnLens prevents partial exact-pair registration. This report does not prove source fitness, a fire observation, a label, a dataset, a model, or an analytical result.</p>
+  </section>
+  <section aria-labelledby="trace-heading"><h2 id="trace-heading">Traceability</h2><dl>
+    <dt>Run ID</dt><dd><code>BL-2026-07-14-paired-intake-rehearsal-r001</code></dd>
+    <dt>Generator source commit</dt><dd><code>ac8ee43151991c38ccf5d446a53c09b617afeb54</code></dd>
+    <dt>AOI version</dt><dd><code>aoi-darlene3-model-v0.2.0</code></dd>
+    <dt>Contract SHA-256</dt><dd><code>5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d</code></dd>
+    <dt>Public metadata snapshot</dt><dd>Observed <code>2026-07-14T02:32:52Z</code>. No live provider request was performed by this run; see <code>ACCESS-2026-005</code>.</dd>
+    <dt>Dataset / label schema / baseline / model / application</dt><dd>Not created</dd>
+  </dl></section>
+  <footer>Official provider metadata and source documentation govern over this BurnLens transaction evidence. Generated 2026-07-14T02:32:52Z.</footer>
+</main></body></html>

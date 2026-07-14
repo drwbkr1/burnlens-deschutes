@@ -4,15 +4,16 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 ## Verified status
 
-The project is at a Phase Two source-readiness baseline, not an analytical release.
+The project is at a Phase Two source-readiness and intake-reliability baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
 - The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, delivery integrity, and final-AOI evidence are shipped through P2O2-T01 / PR #322.
+- P2O2-T02 / issue #325 / PR #326 is the active `0.3.0` candidate: an exact three-asset intake contract rejects partial or tampered packages and permits raw registration only through one all-or-none atomic promotion. Its proof uses temporary synthetic fixtures; it does not use or validate provider data.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
-- No credential or provider imagery asset has been used or retained. One public NIFC reference vector is checksummed and retained, but no imagery pixel-processing pipeline, label, dataset, baseline output, trained model, analytical metric, imagery-derived raster/vector, application demonstration, or public analytical result exists yet.
+- No credential has been exercised by the BurnLens pipeline, and no provider imagery asset has been used or retained. One public NIFC reference vector is checksummed and retained; temporary intake fixtures are deleted after rehearsal. No imagery pixel-processing pipeline, label, dataset, baseline output, trained model, analytical metric, imagery-derived raster/vector, application demonstration, or public analytical result exists yet.
 - The latest verified analytical repository baseline is `fffd3dda123d7c43fe678dca9adfd8feb73de158` from issue #321 / PR #322; the annotated `v0.2.0-aoi-baseline` tag resolves to that exact merge commit.
-- The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using both a CDSE credential and a NASA Earthdata Login credential. The exact LP DAAC routes return login responses without Earthdata authentication; NASA-only intake is not a substitute for the pair.
+- On 2026-07-14 the owner authorized both the CDSE and NASA Earthdata credentials and reported that each authentication setup passes. `ACCESS-2026-006` records that authorization without secret material. BurnLens has not independently exercised either credential; the next paired source-intake checkpoint begins only after PR #326 ships and a new issue-backed branch exists.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
@@ -51,7 +52,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final modeling AOI is shipped, exact routes and open-use terms are verified, and provider imagery intake is blocked on owner-approved CDSE and Earthdata credentials. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final modeling AOI is shipped, exact routes and open-use terms are verified, and an all-or-none intake transaction is tested without provider bytes. Both credential boundaries are owner-authorized; authenticated delivery and real-file fitness remain unverified. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -90,7 +91,7 @@ Historical Objective Seven trackers, handoffs, audits, and release notes remain 
 
 ## Run the current evidence tools
 
-The executable surface now includes fail-closed access validation and deterministic AOI evidence. It is not an analytical wildfire pipeline or application.
+The executable surface now includes fail-closed access validation, deterministic AOI evidence, and a credential-free exact-pair transaction rehearsal. It is not an analytical wildfire pipeline or application.
 
 ```powershell
 python -m pip install .
@@ -106,8 +107,17 @@ python -m burnlens.finalize_aoi `
   --generated-at-utc 2026-07-14T01:30:00Z `
   --run-id BL-2026-07-14-aoi-final-r001 `
   --source-commit bcc1d9aa494c5511ff824692199b40717d320dd4
+python -m burnlens.rehearse_paired_intake `
+  --generated-at-utc 2026-07-14T02:32:52Z `
+  --run-id BL-2026-07-14-paired-intake-rehearsal-r001 `
+  --source-commit ac8ee43151991c38ccf5d446a53c09b617afeb54 `
+  --output-dir samples/intake/phase-two
 ```
 
-The committed [normalized precheck](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json), [semantic report](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html), and [visual evidence card](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png) record a credential block. They do not contain provider pixels or rejected login-response bodies.
+The committed rehearsal predates `ACCESS-2026-006` and intentionally exits with status `2`: its `BLOCKED_OWNER_CREDENTIAL` decision is a historical run state, not the current authorization state and not a successful provider intake. Provider assets remain absent.
+
+The committed [normalized precheck](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json), [semantic report](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html), and [visual evidence card](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png) record the earlier unauthenticated delivery result. They do not contain provider pixels or rejected login-response bodies. The later [owner authorization](records/phase-two/access/ACCESS-2026-006.md) clears the approval stop without claiming that authentication or source delivery has been exercised.
 
 The [final AOI record](records/phase-two/aoi/AOI-2026-002.md), [normalized AOI evidence](samples/aoi/phase-two/AOI-FINAL-2026-001.json), [semantic report](samples/aoi/phase-two/AOI-FINAL-2026-001.html), [visual evidence map](samples/aoi/phase-two/AOI-FINAL-2026-001.png), and [living case study](docs/case-study/BURNLENS_CASE_STUDY.md) explain the source/reference relationship and the remaining credential/data risks. They do not claim a detection, label, model, or operational product.
+
+The [paired-intake decision](docs/phase-two/objective-two/PAIRED_INTAKE_TRANSACTION_DECISION.md), [normalized rehearsal](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.json), [semantic report](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.html), and [rendered evidence card](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png) show the exact contract, real zero-provider state, and synthetic-only transaction proof. The report pins its public-metadata observation time separately and states that a rehearsal run makes no live provider request. These artifacts do not establish provider delivery or source fitness.

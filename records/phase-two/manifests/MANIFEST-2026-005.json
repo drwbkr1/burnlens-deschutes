@@ -1,0 +1,68 @@
+{
+  "manifest_id": "MANIFEST-2026-005",
+  "manifest_version": "0.4.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-14T02:32:52Z",
+  "task_issue": 325,
+  "branch": "codex/p2o2-t02-intake-transaction",
+  "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
+  "generator_source_commit": "ac8ee43151991c38ccf5d446a53c09b617afeb54",
+  "checkpoint_commit": null,
+  "pull_request": 326,
+  "version_tag": "v0.3.0-intake-transaction-baseline",
+  "version_tag_state": "candidate; not created",
+  "status": "candidate transaction baseline in PR #326; report captures pre-authorization state; later owner authorization recorded separately; provider package absent",
+  "software_version": "0.3.0",
+  "runtime": {
+    "python": "3.12.13",
+    "blake3": "1.0.9",
+    "pillow": "12.2.0",
+    "setuptools": "82.0.1"
+  },
+  "source_records": ["SOURCE-2026-004", "SOURCE-2026-005", "SOURCE-2026-006"],
+  "access_record": "ACCESS-2026-005",
+  "authorization_record": "ACCESS-2026-006",
+  "authorization_received_after_run": true,
+  "terms_records": ["TERMS-2026-001", "TERMS-2026-002"],
+  "precheck_record": "PRECHECK-2026-005",
+  "registry_record": "REGISTRY-2026-005",
+  "review_records": ["USE_BOUNDARY-2026-004"],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_id": "BL-2026-07-14-paired-intake-rehearsal-r001",
+  "report_version": "paired-intake-rehearsal-v0.2.0",
+  "contract_version": "paired-intake-contract-v0.4.0",
+  "contract_sha256": "5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d",
+  "outputs": [
+    {
+      "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 9281,
+      "sha256": "94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234"
+    },
+    {
+      "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 6800,
+      "sha256": "b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c"
+    },
+    {
+      "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 113346,
+      "sha256": "c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0"
+    }
+  ],
+  "provider_source_asset_count": 0,
+  "provider_source_asset_bytes": 0,
+  "promoted_raw_package_count": 0,
+  "synthetic_fixture_bytes_retained": 0,
+  "credentials_used": false,
+  "decision": "BLOCKED_OWNER_CREDENTIAL",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
