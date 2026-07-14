@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BurnLens VIIRS access precheck</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f4f1ea; color: #17211b; }
+    body { margin: 0; }
+    main { max-width: 72rem; margin: auto; padding: 2rem 1.25rem 4rem; }
+    .eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; font-weight: 800; color: #5a645d; }
+    h1 { font-size: clamp(2rem, 5vw, 4.5rem); line-height: .96; max-width: 12ch; margin: .4rem 0 1rem; }
+    .warning, .status { border: 2px solid #17211b; padding: 1rem; margin: 1rem 0; box-shadow: .35rem .35rem 0 #17211b; }
+    .warning { background: #fff4c2; }
+    .status { background: #f8c6b8; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .card { background: white; border: 1px solid #aab0ab; padding: 1rem; }
+    .metric { display: block; font-size: 2.2rem; font-weight: 850; }
+    table { border-collapse: collapse; width: 100%; background: white; margin: 1rem 0 2rem; }
+    caption { text-align: left; font-weight: 800; padding: .75rem 0; }
+    th, td { border: 1px solid #9aa19b; padding: .75rem; text-align: left; vertical-align: top; }
+    thead th { background: #dde5df; }
+    code { overflow-wrap: anywhere; }
+    a { color: #005b46; }
+    footer { border-top: 1px solid #9aa19b; margin-top: 2rem; padding-top: 1rem; color: #4d5750; }
+    @media (max-width: 48rem) { table, thead, tbody, tr, th, td { display: block; } thead { position: absolute; left: -9999px; } tr { border: 1px solid #9aa19b; margin-bottom: 1rem; } th, td { border: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Phase Two · access integrity · viirs-access-precheck-v0.1.0</p>
+  <h1>Provider bytes did not pass.</h1>
+  <p class="warning"><strong>Use boundary:</strong> Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</p>
+  <section class="status" aria-labelledby="status-heading">
+    <h2 id="status-heading">Blocked — credential required</h2>
+    <p>Both exact LP DAAC routes require an owner-supplied Earthdata Login credential before provider bytes can be inspected.</p>
+  </section>
+  <section class="grid" aria-label="Precheck summary">
+    <div class="card"><span class="metric">0</span>accepted provider assets</div>
+    <div class="card"><span class="metric">2</span>rejected delivery responses</div>
+    <div class="card"><span class="metric">0</span>credentials used</div>
+  </section>
+  <section aria-labelledby="observations-heading">
+    <h2 id="observations-heading">Observed delivery responses</h2>
+    <p>A successful HTTP status and expected filename are insufficient. BurnLens requires the native HDF5/NetCDF-4 signature and plausible size before registering provider bytes.</p>
+    <table>
+      <caption>Exact route results; response bodies are not retained</caption>
+      <thead><tr><th>Role</th><th>Collection</th><th>HTTP</th><th>Observed</th><th>Bytes</th><th>Decision</th></tr></thead>
+      <tbody><tr><th scope="row">active-fire</th><td><code>VJ214IMG.002</code></td><td>200</td><td>html</td><td>11,137</td><td><strong>Rejected</strong><br><small>HTML_LOGIN_OR_ERROR_RESPONSE, EXPECTED_SIGNATURE_MISSING, PAYLOAD_BELOW_EXPECTED_MINIMUM</small></td></tr><tr><th scope="row">terrain-corrected-geolocation</th><td><code>VJ203MODLL.021</code></td><td>200</td><td>html</td><td>11,149</td><td><strong>Rejected</strong><br><small>HTML_LOGIN_OR_ERROR_RESPONSE, EXPECTED_SIGNATURE_MISSING, PAYLOAD_BELOW_EXPECTED_MINIMUM</small></td></tr></tbody>
+    </table>
+  </section>
+  <section aria-labelledby="meaning-heading">
+    <h2 id="meaning-heading">What this means</h2>
+    <p>BurnLens has verified an access boundary, not a fire observation. No mask, QA field, geolocation array, Sentinel pixel, label, dataset, model, metric, or map was created.</p>
+    <h3>Carried limitations</h3>
+    <ul><li>HTTP status and filename suffix do not establish payload identity.</li><li>This precheck does not inspect fire-mask, QA, or geolocation arrays.</li><li>AOI-2026-001 remains a metadata-discovery envelope, not incident geometry or a final modeling AOI.</li></ul>
+  </section>
+  <section aria-labelledby="trace-heading">
+    <h2 id="trace-heading">Traceability</h2>
+    <dl>
+      <dt>Run ID</dt><dd><code>BL-2026-07-14-access-precheck-r001</code></dd>
+      <dt>Base commit</dt><dd><code>1858f3d5ad3c193f997bef4f9142c996e174af27</code></dd>
+      <dt>AOI version</dt><dd><code>aoi-darlene3-discovery-v0.1.0</code> — discovery only</dd>
+      <dt>Dataset / label schema / model</dt><dd>Not created</dd>
+    </dl>
+    <h3>Stable source routes</h3><ul><li><a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ214IMG.002/VJ214IMG.A2024179.1936.002.2025284191612/VJ214IMG.A2024179.1936.002.2025284191612.nc">VJ214IMG.002 stable route</a> — <code>VJ214IMG.A2024179.1936.002.2025284191612</code></li><li><a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ203MODLL.021/VJ203MODLL.A2024179.1936.021.2024327213621/VJ203MODLL.A2024179.1936.021.2024327213621.h5">VJ203MODLL.021 stable route</a> — <code>VJ203MODLL.A2024179.1936.021.2024327213621</code></li></ul>
+  </section>
+  <footer>Official sources govern over every BurnLens-derived artifact. Generated 2026-07-14T00:26:03Z.</footer>
+</main>
+</body>
+</html>

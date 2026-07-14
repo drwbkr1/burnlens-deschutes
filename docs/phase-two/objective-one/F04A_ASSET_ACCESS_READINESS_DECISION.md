@@ -36,9 +36,11 @@ The selected Sentinel product is public/open data, but both documented native do
 
 The selected NASA files expose stable, no-secret HTTPS routes that currently return transient signed redirects, but their provider metadata supplies no file checksum. Downloading them alone would not provide the optical/reference pair, and the current issue explicitly stops before provider bytes.
 
+P2O1-T03 later proved that the signed redirect is not anonymous byte delivery: the exact GET path ends at Earthdata Login without authentication. `F04B_VIIRS_ACCESS_INTEGRITY_DECISION.md` supersedes the no-secret NASA delivery assumption while preserving this checkpoint's metadata-only historical result.
+
 ## Exact future action that may be proposed
 
-After owner approval for the CDSE credential boundary, a new issue may authorize one acquisition run that:
+After owner approval for both the CDSE and Earthdata credential boundaries, a new issue may authorize one acquisition run that:
 
 1. downloads the exact Sentinel SAFE archive through product UUID `58cebcf0-c417-4384-a93a-2d6b15344117`;
 2. verifies provider MD5 and BLAKE3 before recording a local SHA-256;

@@ -1,0 +1,90 @@
+{
+  "report_id": "VIIRS-ACCESS-PRECHECK-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "viirs-access-precheck-v0.1.0",
+  "generated_at_utc": "2026-07-14T00:26:03Z",
+  "run_id": "BL-2026-07-14-access-precheck-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 317,
+  "branch": "codex/p2o1-t03-viirs-inspection",
+  "git_base_commit": "1858f3d5ad3c193f997bef4f9142c996e174af27",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-discovery-v0.1.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "observations": [
+    {
+      "role": "active-fire",
+      "source_record_id": "SOURCE-2026-005",
+      "collection": "VJ214IMG.002",
+      "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+      "expected_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "stable_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ214IMG.002/VJ214IMG.A2024179.1936.002.2025284191612/VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "http_status": 200,
+      "observed_bytes": 11137,
+      "observed_magic_hex": "3c21444f43545950",
+      "observed_media_hint": "html",
+      "response_title": "Earthdata Login",
+      "expected_signature": "HDF5/NetCDF-4",
+      "minimum_size_bytes": 1000000,
+      "accepted_as_source_asset": false,
+      "sha256": null,
+      "reason_codes": [
+        "HTML_LOGIN_OR_ERROR_RESPONSE",
+        "EXPECTED_SIGNATURE_MISSING",
+        "PAYLOAD_BELOW_EXPECTED_MINIMUM"
+      ]
+    },
+    {
+      "role": "terrain-corrected-geolocation",
+      "source_record_id": "SOURCE-2026-006",
+      "collection": "VJ203MODLL.021",
+      "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+      "expected_filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "stable_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ203MODLL.021/VJ203MODLL.A2024179.1936.021.2024327213621/VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "http_status": 200,
+      "observed_bytes": 11149,
+      "observed_magic_hex": "3c21444f43545950",
+      "observed_media_hint": "html",
+      "response_title": "Earthdata Login",
+      "expected_signature": "HDF5/NetCDF-4",
+      "minimum_size_bytes": 20000000,
+      "accepted_as_source_asset": false,
+      "sha256": null,
+      "reason_codes": [
+        "HTML_LOGIN_OR_ERROR_RESPONSE",
+        "EXPECTED_SIGNATURE_MISSING",
+        "PAYLOAD_BELOW_EXPECTED_MINIMUM"
+      ]
+    }
+  ],
+  "retention": {
+    "provider_source_asset_count": 0,
+    "provider_source_asset_bytes": 0,
+    "rejected_delivery_response_count": 2,
+    "rejected_delivery_response_bytes_retained": 0,
+    "credentials_used": false,
+    "signed_urls_retained": false
+  },
+  "decision": "BLOCKED_OWNER_CREDENTIAL",
+  "decision_detail": "Both exact LP DAAC routes require an owner-supplied Earthdata Login credential before provider bytes can be inspected.",
+  "claims": {
+    "permitted": [
+      "BurnLens fails closed when a provider route returns HTML instead of the expected data format.",
+      "The exact LP DAAC delivery routes are credential-gated in the tested environment."
+    ],
+    "prohibited": [
+      "Provider pixels were inspected.",
+      "A wildfire detection, label, paired source package, dataset, model, metric, or map exists."
+    ]
+  },
+  "limitations": [
+    "HTTP status and filename suffix do not establish payload identity.",
+    "This precheck does not inspect fire-mask, QA, or geolocation arrays.",
+    "AOI-2026-001 remains a metadata-discovery envelope, not incident geometry or a final modeling AOI."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
