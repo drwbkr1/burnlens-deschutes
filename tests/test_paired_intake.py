@@ -7,6 +7,7 @@ from pathlib import Path
 import shutil
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 import zipfile
 
 from PIL import Image
@@ -258,6 +259,41 @@ class PairedIntakeTests(unittest.TestCase):
 
             self.assertEqual(marker.read_text(encoding="utf-8"), "existing")
             self.assertTrue(quarantine.exists())
+
+    def test_failed_atomic_rename_rolls_back_registration_and_allows_retry(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            quarantine = root / "complete"
+            quarantine.mkdir()
+            contracts = _synthetic_contracts(quarantine)
+            destination = root / "raw" / "package"
+
+            with patch("burnlens.paired_intake.os.replace", side_effect=OSError("synthetic rename failure")):
+                with self.assertRaisesRegex(OSError, "synthetic rename failure"):
+                    promote_quarantine(
+                        quarantine,
+                        destination,
+                        contracts,
+                        generated_at_utc=GENERATED,
+                        run_id=RUN_ID,
+                        synthetic_fixture=True,
+                    )
+
+            self.assertTrue(quarantine.is_dir())
+            self.assertFalse(destination.exists())
+            self.assertFalse((quarantine / ".burnlens-registration.json").exists())
+            self.assertTrue(evaluate_quarantine(quarantine, contracts)["accepted_for_atomic_promotion"])
+
+            registration = promote_quarantine(
+                quarantine,
+                destination,
+                contracts,
+                generated_at_utc=GENERATED,
+                run_id=RUN_ID,
+                synthetic_fixture=True,
+            )
+            self.assertEqual(registration["asset_count"], 3)
+            self.assertTrue(destination.is_dir())
 
     def test_synthetic_rehearsal_is_explicit_and_passes(self) -> None:
         result = run_synthetic_rehearsal(generated_at_utc=GENERATED, run_id=RUN_ID)

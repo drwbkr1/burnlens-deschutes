@@ -32,7 +32,7 @@ WARNING = (
     "incident-command support. Official sources govern."
 )
 PACKAGE_ID = "darlene3-s2-viirs-pair-v0.1.0"
-CONTRACT_VERSION = "paired-intake-contract-v0.2.0"
+CONTRACT_VERSION = "paired-intake-contract-v0.3.0"
 REPORT_VERSION = "paired-intake-rehearsal-v0.2.0"
 REPORT_ID = "PAIR-INTAKE-REHEARSAL-2026-001"
 SOFTWARE_VERSION = "0.3.0"
@@ -121,6 +121,7 @@ TRANSACTION_INVARIANTS = (
     "The two VIIRS native IDs must share the recorded acquisition token.",
     "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
     "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
+    "If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable.",
 )
 
 
@@ -380,10 +381,15 @@ def promote_quarantine(
             for item in evaluation["observations"]
         ],
     }
-    (quarantine / ".burnlens-registration.json").write_text(
+    registration_path = quarantine / ".burnlens-registration.json"
+    registration_path.write_text(
         json.dumps(registration, indent=2) + "\n", encoding="utf-8"
     )
-    os.replace(quarantine, destination)
+    try:
+        os.replace(quarantine, destination)
+    except OSError:
+        registration_path.unlink(missing_ok=True)
+        raise
     return registration
 
 
