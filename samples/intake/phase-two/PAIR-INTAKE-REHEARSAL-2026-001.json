@@ -1,0 +1,195 @@
+{
+  "report_id": "PAIR-INTAKE-REHEARSAL-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "paired-intake-rehearsal-v0.1.0",
+  "contract_version": "paired-intake-contract-v0.1.0",
+  "contract_sha256": "85b6934ed3fe47dabfdddd47375dc07fc78bd0db8d15c24cb3a50c53e65b8362",
+  "software_version": "0.3.0",
+  "generated_at_utc": "2026-07-14T02:32:52Z",
+  "run_id": "BL-2026-07-14-paired-intake-rehearsal-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 325,
+  "branch": "codex/p2o2-t02-intake-transaction",
+  "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
+  "generator_source_commit": "2491766022b549402b64e3136a79fd9c046beff5",
+  "checkpoint_commit": null,
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+  "public_metadata_refresh": {
+    "performed_at_utc": "2026-07-14T02:32:52Z",
+    "cdse_product_match": true,
+    "cdse_online": true,
+    "cdse_checksum_date_utc": "2026-05-26T02:59:48.810650Z",
+    "viirs_fire_cmr_match": true,
+    "viirs_geolocation_cmr_match": true,
+    "viirs_provider_checksums_available": false
+  },
+  "asset_contracts": [
+    {
+      "role": "sentinel-2-l2a",
+      "provider": "Copernicus Data Space Ecosystem",
+      "source_record_id": "SOURCE-2026-004",
+      "provider_id": "58cebcf0-c417-4384-a93a-2d6b15344117",
+      "native_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+      "expected_filename": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip",
+      "stable_route": "https://download.dataspace.copernicus.eu/odata/v1/Products(58cebcf0-c417-4384-a93a-2d6b15344117)/$value",
+      "expected_size_bytes": 1127031562,
+      "container": "zip-safe",
+      "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+      "provider_md5": "3806a834a97ab2eb41f1edf5496b433c",
+      "provider_blake3": "546336e996586f4c276eb9ed3d9818f9574edbed24334dce74a394bd3759cb10",
+      "expected_zip_root": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+      "native_pair_token": null
+    },
+    {
+      "role": "viirs-active-fire",
+      "provider": "NASA LP DAAC",
+      "source_record_id": "SOURCE-2026-005",
+      "provider_id": "G3944882727-LPCLOUD",
+      "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+      "expected_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "stable_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ214IMG.002/VJ214IMG.A2024179.1936.002.2025284191612/VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "expected_size_bytes": 2710616,
+      "container": "hdf5",
+      "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+      "provider_md5": null,
+      "provider_blake3": null,
+      "expected_zip_root": null,
+      "native_pair_token": "A2024179.1936"
+    },
+    {
+      "role": "viirs-geolocation",
+      "provider": "NASA LP DAAC",
+      "source_record_id": "SOURCE-2026-006",
+      "provider_id": "G4037038741-LPCLOUD",
+      "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+      "expected_filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "stable_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ203MODLL.021/VJ203MODLL.A2024179.1936.021.2024327213621/VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "expected_size_bytes": 40255764,
+      "container": "hdf5",
+      "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+      "provider_md5": null,
+      "provider_blake3": null,
+      "expected_zip_root": null,
+      "native_pair_token": "A2024179.1936"
+    }
+  ],
+  "provider_package": {
+    "credential_approval": "OWNER_APPROVAL_REQUIRED",
+    "quarantine_supplied": false,
+    "provider_source_asset_count": 0,
+    "provider_source_asset_bytes": 0,
+    "promoted_raw_package_count": 0,
+    "credentials_used": false,
+    "evaluation": {
+      "package_id": "darlene3-s2-viirs-pair-v0.1.0",
+      "quarantine_present": false,
+      "expected_asset_count": 3,
+      "observed_entry_count": 0,
+      "accepted_asset_count": 0,
+      "unexpected_entries": [],
+      "observations": [
+        {
+          "role": "sentinel-2-l2a",
+          "source_record_id": "SOURCE-2026-004",
+          "provider_id": "58cebcf0-c417-4384-a93a-2d6b15344117",
+          "native_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+          "expected_filename": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE.zip",
+          "expected_size_bytes": 1127031562,
+          "container": "zip-safe",
+          "observed_bytes": 0,
+          "observed_magic_hex": null,
+          "container_details": null,
+          "provider_checksum_available": true,
+          "accepted": false,
+          "local_hashes": null,
+          "reason_codes": [
+            "ASSET_MISSING"
+          ]
+        },
+        {
+          "role": "viirs-active-fire",
+          "source_record_id": "SOURCE-2026-005",
+          "provider_id": "G3944882727-LPCLOUD",
+          "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+          "expected_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+          "expected_size_bytes": 2710616,
+          "container": "hdf5",
+          "observed_bytes": 0,
+          "observed_magic_hex": null,
+          "container_details": null,
+          "provider_checksum_available": false,
+          "accepted": false,
+          "local_hashes": null,
+          "reason_codes": [
+            "ASSET_MISSING"
+          ]
+        },
+        {
+          "role": "viirs-geolocation",
+          "source_record_id": "SOURCE-2026-006",
+          "provider_id": "G4037038741-LPCLOUD",
+          "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+          "expected_filename": "VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+          "expected_size_bytes": 40255764,
+          "container": "hdf5",
+          "observed_bytes": 0,
+          "observed_magic_hex": null,
+          "container_details": null,
+          "provider_checksum_available": false,
+          "accepted": false,
+          "local_hashes": null,
+          "reason_codes": [
+            "ASSET_MISSING"
+          ]
+        }
+      ],
+      "accepted_for_atomic_promotion": false,
+      "reason_codes": [
+        "QUARANTINE_NOT_SUPPLIED",
+        "INCOMPLETE_OR_INVALID_ASSET_SET"
+      ]
+    }
+  },
+  "synthetic_transaction_rehearsal": {
+    "fixture_class": "SYNTHETIC_TEST_ONLY",
+    "provider_data": false,
+    "credential_used": false,
+    "asset_contract_count": 3,
+    "checks": {
+      "partial_set_rejected": true,
+      "checksum_tamper_rejected": true,
+      "complete_set_promoted_atomically": true,
+      "synthetic_bytes_deleted_after_run": true
+    },
+    "passed": true,
+    "retained_fixture_bytes": 0
+  },
+  "transaction_invariants": [
+    "Exactly three named assets are required in one quarantine directory.",
+    "Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.",
+    "The two VIIRS native IDs must share the recorded acquisition token.",
+    "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
+    "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem."
+  ],
+  "decision": "BLOCKED_OWNER_CREDENTIAL",
+  "decision_detail": "Owner approval for both CDSE and Earthdata credentials is still required; no provider quarantine or raw package exists.",
+  "claims": {
+    "permitted": [
+      "BurnLens has a tested all-or-none intake transaction for the exact three-asset contract.",
+      "Temporary synthetic fixtures prove rejection and atomic-promotion behavior, not provider data fitness."
+    ],
+    "prohibited": [
+      "Sentinel or VIIRS provider data were acquired or inspected.",
+      "The selected acquisition contains fire or is label-ready.",
+      "A dataset, baseline, model, detection, performance result, application, or operational product exists."
+    ]
+  },
+  "source_precedence": "Official provider metadata and source documentation govern over this BurnLens transaction evidence.",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

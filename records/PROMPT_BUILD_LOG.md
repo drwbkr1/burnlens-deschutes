@@ -140,6 +140,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O1-T03-SYNC | `records/prompt-build-log/2026-07-13-p2o1-t03.md` | merged via PR #320 | Issue #319 closed; exact access-integrity shipment lifecycle synchronized at `23affc85ac2c2c6cfd427cb954739e6c7b44fa66`. |
 | P2O2-T01 | `records/prompt-build-log/2026-07-13-p2o2-t01.md` | merged via PR #322; tagged | Issue #321 closed; merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`; `v0.2.0-aoi-baseline`; final modeling AOI and deterministic evidence shipped. |
 | P2O2-T01-SYNC | `records/prompt-build-log/2026-07-13-p2o2-t01-sync.md` | issue #323 / PR #324 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs. |
+| P2O2-T02 | `records/prompt-build-log/2026-07-13-p2o2-t02.md` | active issue #325 | BurnLens `0.3.0` exact-pair transaction candidate; real state credential-blocked; temporary synthetic failure/promotion proof; zero provider or retained fixture bytes. |
 
 ## Acceptance and remediation triggers
 
@@ -149,4 +150,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O2-T01 are shipped through `v0.2.0-aoi-baseline` at `fffd3dda123d7c43fe678dca9adfd8feb73de158`. Paired imagery intake remains blocked on explicit owner approval for both CDSE and Earthdata credentials. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O2-T01 are shipped through `v0.2.0-aoi-baseline` at `fffd3dda123d7c43fe678dca9adfd8feb73de158`. P2O2-T02 / issue #325 is the active `0.3.0` transaction candidate. Paired provider imagery intake remains blocked on explicit owner approval for both CDSE and Earthdata credentials. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

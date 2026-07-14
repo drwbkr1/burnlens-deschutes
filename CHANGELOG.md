@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.3.0-intake-transaction-baseline — candidate, 2026-07-13
+
+### P2O2-T02 — Atomic exact-pair intake before credentials
+
+- Add `paired-intake-contract-v0.1.0`, pinning the exact Sentinel-2 SAFE ZIP and NOAA-21 VIIRS active-fire/geolocation files, identities, sizes, containers, pair token, and available provider checksums.
+- Fail closed on incomplete, unexpected, renamed, malformed, size-mismatched, unsafe/corrupt ZIP, checksum-invalid, pair-mismatched, cross-filesystem, or destination-colliding input.
+- Record local SHA-256, MD5, and BLAKE3 only after all three assets pass; write provenance in quarantine and atomically promote the complete directory without overwriting existing raw state.
+- Add a deterministic temporary synthetic rehearsal that proves partial rejection, checksum-tamper rejection, successful complete-set promotion, and zero retained fixture bytes.
+- Render `PAIR-INTAKE-REHEARSAL-2026-001` as normalized JSON, semantic HTML, and a 1600x1200 evidence card that separates real `BLOCKED_OWNER_CREDENTIAL` state from synthetic transaction proof.
+- Refresh exact public CDSE/CMR metadata and preserve the owner stop: zero credentials, provider assets, provider bytes, and promoted real packages.
+
+Candidate source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5` on issue #325. Thirty-one tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass before PR. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
+
 ## v0.2.0-aoi-baseline — 2026-07-13
 
 ### P2O2-T01 — Final Darlene 3 modeling AOI

@@ -14,6 +14,10 @@ The next evidence-visible weakness was spatial scope. The original AOI was only 
 
 ![BurnLens final modeling AOI evidence](../../samples/aoi/phase-two/AOI-FINAL-2026-001.png)
 
+With the boundary fixed, issue #325 addressed the next reliability gap before credentials: the exact Sentinel scene and its VIIRS fire/geolocation pair must enter raw registration together or not at all.
+
+![BurnLens paired-intake transaction evidence](../../samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png)
+
 ## Why the AOI matters
 
 The final AOI is a 12 km by 9 km rectangle in WGS 84 / UTM zone 10N. It is derived by adding 2 km of context around the complete NIFC reference and snapping outward to a 1 km grid. That makes later clipping, tiling, checks, and explanation deterministic.
@@ -36,9 +40,17 @@ The real reference exposed and corrected an earlier planning assumption: it exte
 
 These are source, geometry, coverage, and reproducibility claims. They are not fire-detection, label, dataset, baseline, model, or accuracy claims.
 
+## Reliability before data touch
+
+The `0.3.0` candidate pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, or checksum-invalid. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected.
+
+Because real access remains owner-gated, BurnLens tests the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. The rendered report keeps that software proof separate from the real `BLOCKED_OWNER_CREDENTIAL` state: provider assets, provider bytes, promoted real packages, and retained synthetic bytes are all zero.
+
+Thirty-one repository tests and a byte-identical second report build pass. This proves transaction behavior, not source delivery or remote-sensing fitness.
+
 ## Current risk and next checkpoint
 
-The strongest remaining risk is still data evidence. BurnLens has zero Sentinel/VIIRS provider assets and does not know whether the chosen acquisition contains usable active-fire pixels, acceptable quality, or defensible label evidence. Exact paired intake requires owner-approved CDSE and NASA Earthdata credentials.
+The strongest remaining risk is still data evidence. BurnLens has zero Sentinel/VIIRS provider assets and does not know whether the chosen acquisition contains usable active-fire pixels, acceptable quality, correct real-array geolocation, or defensible label evidence. Exact paired intake requires owner-approved CDSE and NASA Earthdata credentials.
 
 Until that boundary is crossed, BurnLens can demonstrate careful source selection, fail-closed access handling, deterministic geospatial scope, and honest uncertainty - not computer-vision performance.
 
@@ -46,10 +58,12 @@ Until that boundary is crossed, BurnLens can demonstrate careful source selectio
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
-- Tool: BurnLens package `0.2.0`
-- Generator source commit: `bcc1d9aa494c5511ff824692199b40717d320dd4`
-- Repository baseline: `v0.2.0-aoi-baseline`
-- Checkpoint: issue #321 / PR #322 / merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`
+- Latest evidence run: `BL-2026-07-14-paired-intake-rehearsal-r001`
+- Tool: BurnLens package `0.3.0` candidate
+- Transaction contract: `paired-intake-contract-v0.1.0`
+- Generator source commit: `2491766022b549402b64e3136a79fd9c046beff5`
+- Latest shipped repository baseline: `v0.2.0-aoi-baseline`; proposed transaction tag: `v0.3.0-intake-transaction-baseline`
+- Active checkpoint: issue #325; PR/merge pending
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, and static evidence report are the current presentation surfaces
 
