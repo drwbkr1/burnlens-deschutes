@@ -14,6 +14,7 @@ from burnlens.paired_intake import (
     CONTRACT_VERSION,
     EXACT_CONTRACTS,
     PACKAGE_ID,
+    PUBLIC_METADATA_OBSERVED_AT_UTC,
     REPORT_ID,
     AssetContract,
     _stream_hashes,
@@ -234,6 +235,18 @@ class PairedIntakeTests(unittest.TestCase):
         self.assertIsNone(report["dataset_version"])
         self.assertIn("provider data were acquired", report["claims"]["prohibited"][0].lower())
 
+    def test_metadata_observation_time_is_not_inflated_to_run_time(self) -> None:
+        report = build_report(
+            generated_at_utc="2030-01-01T00:00:00Z",
+            run_id=RUN_ID,
+            source_commit=SOURCE_COMMIT,
+        )
+        snapshot = report["public_metadata_snapshot"]
+        self.assertEqual(snapshot["observed_at_utc"], PUBLIC_METADATA_OBSERVED_AT_UTC)
+        self.assertFalse(snapshot["live_refresh_performed_by_this_run"])
+        self.assertEqual(snapshot["evidence_record"], "ACCESS-2026-005")
+        self.assertNotIn("public_metadata_refresh", report)
+
     def test_report_and_outputs_are_byte_deterministic(self) -> None:
         first = build_report(generated_at_utc=GENERATED, run_id=RUN_ID, source_commit=SOURCE_COMMIT)
         second = build_report(generated_at_utc=GENERATED, run_id=RUN_ID, source_commit=SOURCE_COMMIT)
@@ -253,6 +266,7 @@ class PairedIntakeTests(unittest.TestCase):
         self.assertIn("<table>", html)
         self.assertIn("Synthetic transaction rehearsal — test fixture only", html)
         self.assertIn("No provider data is used", html)
+        self.assertIn("No live provider request was performed by this run", html)
         self.assertIn("Not official wildfire information", html)
         self.assertNotIn("provider data were acquired</p>", html.lower())
 

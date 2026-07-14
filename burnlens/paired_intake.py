@@ -33,9 +33,10 @@ WARNING = (
 )
 PACKAGE_ID = "darlene3-s2-viirs-pair-v0.1.0"
 CONTRACT_VERSION = "paired-intake-contract-v0.1.0"
-REPORT_VERSION = "paired-intake-rehearsal-v0.1.0"
+REPORT_VERSION = "paired-intake-rehearsal-v0.2.0"
 REPORT_ID = "PAIR-INTAKE-REHEARSAL-2026-001"
 SOFTWARE_VERSION = "0.3.0"
+PUBLIC_METADATA_OBSERVED_AT_UTC = "2026-07-14T02:32:52Z"
 
 
 @dataclass(frozen=True)
@@ -520,7 +521,7 @@ def build_report(
     decision_detail = "Owner approval for both CDSE and Earthdata credentials is still required; no provider quarantine or raw package exists."
     return {
         "report_id": REPORT_ID,
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "report_version": REPORT_VERSION,
         "contract_version": CONTRACT_VERSION,
         "contract_sha256": contract_digest(),
@@ -540,8 +541,10 @@ def build_report(
         "baseline_version": None,
         "model_version": None,
         "package_id": PACKAGE_ID,
-        "public_metadata_refresh": {
-            "performed_at_utc": generated_at_utc,
+        "public_metadata_snapshot": {
+            "observed_at_utc": PUBLIC_METADATA_OBSERVED_AT_UTC,
+            "live_refresh_performed_by_this_run": False,
+            "evidence_record": "ACCESS-2026-005",
             "cdse_product_match": True,
             "cdse_online": True,
             "cdse_checksum_date_utc": "2026-05-26T02:59:48.810650Z",
@@ -672,7 +675,13 @@ def render_png(report: dict[str, Any], path: Path) -> None:
 
     draw.rounded_rectangle((88, 1062, 1512, 1134), radius=9, fill=card, outline=border, width=2)
     draw.text((112, 1081), "PROVES: partial registration is prevented. DOES NOT PROVE: source fitness or fire presence.", fill=ink, font=_font(20))
-    draw.text((88, 1162), f"{report['run_id']}  ·  {report['contract_version']}  ·  synthetic bytes retained: 0", fill=muted, font=_font(17))
+    draw.text((88, 1148), f"{report['run_id']}  ·  {report['contract_version']}", fill=muted, font=_font(16))
+    draw.text(
+        (88, 1173),
+        "Metadata observed 2026-07-14 · no live provider request · synthetic bytes retained: 0",
+        fill=muted,
+        font=_font(15),
+    )
     path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(path, format="PNG", optimize=False)
 
@@ -749,6 +758,7 @@ def render_html(report: dict[str, Any]) -> str:
     <dt>Generator source commit</dt><dd><code>{escape(report['generator_source_commit'])}</code></dd>
     <dt>AOI version</dt><dd><code>{escape(report['aoi_version'])}</code></dd>
     <dt>Contract SHA-256</dt><dd><code>{escape(report['contract_sha256'])}</code></dd>
+    <dt>Public metadata snapshot</dt><dd>Observed <code>{escape(report['public_metadata_snapshot']['observed_at_utc'])}</code>. No live provider request was performed by this run; see <code>{escape(report['public_metadata_snapshot']['evidence_record'])}</code>.</dd>
     <dt>Dataset / label schema / baseline / model / application</dt><dd>Not created</dd>
   </dl></section>
   <footer>{escape(report['source_precedence'])} Generated {escape(report['generated_at_utc'])}.</footer>
