@@ -1,0 +1,3 @@
+# Target-decision evidence has an explicit cross-platform serialization contract.
+samples/target/phase-two/*.json text eol=lf
+samples/target/phase-two/*.html text eol=lf

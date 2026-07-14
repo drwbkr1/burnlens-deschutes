@@ -12,8 +12,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 REPORT_ID = "TARGET-DECISION-2026-001"
-REPORT_SCHEMA_VERSION = "0.1.0"
-REPORT_VERSION = "target-path-decision-v0.1.0"
+REPORT_SCHEMA_VERSION = "0.2.0"
+REPORT_VERSION = "target-path-decision-v0.2.0"
 SOFTWARE_VERSION = "0.6.0"
 TARGET_DECISION_VERSION = "target-burn-scar-v0.2.0"
 AOI_VERSION = "aoi-darlene3-model-v0.2.0"
@@ -37,6 +37,21 @@ def _sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _sha256_lf_text(path: Path) -> str:
+    """Hash UTF-8 text after universal-newline decoding and LF serialization."""
+    try:
+        with path.open("r", encoding="utf-8", newline=None) as handle:
+            normalized = handle.read().encode("utf-8")
+    except (OSError, UnicodeError) as error:
+        raise TargetDecisionError(f"INPUT_TEXT_INVALID:{path.name}") from error
+    return sha256(normalized).hexdigest()
+
+
+def _write_utf8_lf(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(text)
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -73,6 +88,8 @@ def _validate_inputs(
         raise TargetDecisionError("MTBS_INVENTORY_COUNT_UNEXPECTED")
     if mtbs.get("rights_review", {}).get("metadata_use_status") != "RESOLVED_WITH_CITATION":
         raise TargetDecisionError("MTBS_METADATA_RIGHTS_UNRESOLVED")
+    if mtbs.get("serialization") != "UTF-8 JSON with LF canonical line endings":
+        raise TargetDecisionError("MTBS_SERIALIZATION_CONTRACT_UNEXPECTED")
 
 
 def build_report(
@@ -119,15 +136,15 @@ def build_report(
             "observation_report": {
                 "report_id": observation["report_id"],
                 "run_id": observation["run_id"],
-                "sha256": _sha256(observation_path),
+                "sha256_lf_normalized": _sha256_lf_text(observation_path),
             },
             "aoi_report": {
                 "report_id": aoi["report_id"],
-                "sha256": _sha256(aoi_path),
+                "sha256_lf_normalized": _sha256_lf_text(aoi_path),
             },
             "mtbs_availability_record": {
                 "record_id": mtbs["record_id"],
-                "sha256": _sha256(mtbs_path),
+                "sha256_lf_normalized": _sha256_lf_text(mtbs_path),
             },
         },
         "owner_decision": {
@@ -226,6 +243,7 @@ def build_report(
             "mtbs_current_exact_fire_availability_checked": True,
             "mtbs_exact_darlene_record_available": False,
             "target_fallback_activated": True,
+            "structured_input_hashes_lf_normalized": True,
             "label_array_created": False,
             "dataset_created": False,
             "baseline_created": False,
@@ -396,7 +414,7 @@ code{{overflow-wrap:anywhere}} a{{color:var(--teal)}} dt{{font-weight:750;margin
 <section><h2>Primary sources</h2><ul>{sources}</ul><p>{escape(report['source_precedence'])}</p></section>
 <p class="warning">{escape(report['warning'])}</p>
 </main></body></html>"""
-    path.write_text(html, encoding="utf-8")
+    _write_utf8_lf(path, html)
 
 
 def write_report(report: dict[str, Any], output_directory: Path) -> dict[str, Path]:
@@ -413,7 +431,7 @@ def write_report(report: dict[str, Any], output_directory: Path) -> dict[str, Pa
         "png": paths["png"].name,
         "png_sha256": _sha256(paths["png"]),
     }
-    paths["json"].write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    _write_utf8_lf(paths["json"], json.dumps(report, indent=2) + "\n")
     render_html(report, paths["png"].name, paths["html"])
     return paths
 
