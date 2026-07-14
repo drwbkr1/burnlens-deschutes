@@ -255,7 +255,11 @@ class ObservationGeometryTests(unittest.TestCase):
             ],
             "label_feasibility_protocol": protocol,
             "claims": {"permitted": ["Bounded evidence."], "prohibited": ["Pixel-perfect truth."]},
-            "screen_rule": {"material_improvement_rule": "Relative rule.", "rule_scope": "Evidence only."},
+            "screen_rule": {
+                "material_improvement_rule": "Relative rule.",
+                "promotion_priority": "Day, then time, then geometry.",
+                "rule_scope": "Evidence only.",
+            },
             "source_guidance": [{"url": "https://earthdata.nasa.gov", "organization": "NASA", "role": "Primary source"}],
             "report_id": "TEST",
             "run_id": "TEST-RUN",
