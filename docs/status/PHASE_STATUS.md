@@ -50,11 +50,9 @@ P2O2-T03 / issue #329 accepts the exact authenticated package for source/referen
 
 ## Current checkpoint
 
-P2O2-T03-SYNC / issue #331 / PR #332 on `codex/p2o2-t03-sync` is the active provenance-only checkpoint. It records the exact PR #330 merge, annotated tag, post-merge checks, run/output identities, and next evidence checkpoint. It changes no scientific output, credential state, or raw provider byte.
+P2O2-T03-SYNC / issue #331 / PR #332 shipped the lifecycle record at `5f7461ac4cc8caa48f029776e5797023f27eaec5`. P2O2-T04 / issue #333 on `codex/p2o2-t04-observation-geometry` is active. It compares the complete bounded NOAA-21 `VJ214IMG.002` inventory on real AOI sparse-record confidence, QA, view geometry, time offset, and reference agreement; it acquires a matching `VJ203MODLL.021` companion only for a material geometry improvement or rejection proof.
 
-## Selected next checkpoint
-
-After P2O2-T03-SYNC ships, investigate whether alternate temporally relevant VIIRS observations materially improve scan geometry and define a versioned weak/reference-label feasibility protocol that preserves unknown and excluded pixels. The current package remains valid source/reference evidence but cannot be promoted directly to labels. Changing to the controlled burn-scar fallback still requires the owner decision defined by the execution goal.
+The checkpoint also defines positive/reference, negative-candidate, unknown, excluded, and review-needed semantics without creating a label array or dataset. The current package remains valid source/reference evidence and cannot be promoted directly to segmentation truth. Changing to the controlled burn-scar fallback still requires the owner decision defined by the execution goal.
 
 ## Boundaries carried forward
 

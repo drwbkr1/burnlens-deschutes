@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 through P2O2-T03 are shipped and tagged through `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`; `aoi-darlene3-model-v0.2.0` remains frozen for modeling. P2O2-T03-SYNC / issue #331 / PR #332 is the active provenance-only checkpoint. After it ships, the highest-leverage checkpoint is alternate-observation geometry and an explicit weak/reference-label feasibility protocol. It must preserve unknown/excluded pixels and compare real candidates without treating provider points, buffers, or the NIFC reference as segmentation truth.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 through P2O2-T03 are shipped and tagged through `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`; lifecycle sync issue #331 / PR #332 shipped at `5f7461ac4cc8caa48f029776e5797023f27eaec5`; `aoi-darlene3-model-v0.2.0` remains frozen for modeling. P2O2-T04 / issue #333 is active on `codex/p2o2-t04-observation-geometry`. It compares the complete bounded NOAA-21 candidate inventory on actual sparse-record geometry and formalizes positive/reference, negative-candidate, unknown, excluded, and review-needed semantics without treating provider points, non-detections, buffers, or the NIFC reference as segmentation truth.
 
 ## Required reading order for long-running Codex work
 

@@ -29,6 +29,7 @@ from burnlens.paired_intake import (
     promote_quarantine,
     render_html,
     run_synthetic_rehearsal,
+    validate_asset_contracts,
     verify_registered_package,
     write_report,
 )
@@ -64,6 +65,41 @@ class PairedIntakeTests(unittest.TestCase):
     def test_contract_digest_covers_transaction_invariants(self) -> None:
         changed = (*TRANSACTION_INVARIANTS, "A future invariant must change the digest.")
         self.assertNotEqual(contract_digest(), contract_digest(transaction_invariants=changed))
+
+    def test_generic_exact_asset_package_reuses_atomic_registration(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            seed = root / "seed"
+            seed.mkdir()
+            contracts = _synthetic_contracts(seed)[1:]
+            quarantine = root / "quarantine"
+            self._copy_all(seed, quarantine, contracts)
+            destination = root / "raw" / contracts[0].package_id
+
+            evaluation = evaluate_quarantine(
+                quarantine,
+                contracts,
+                contract_validator=validate_asset_contracts,
+            )
+            self.assertTrue(evaluation["accepted_for_atomic_promotion"])
+            promote_quarantine(
+                quarantine,
+                destination,
+                contracts,
+                generated_at_utc=GENERATED,
+                run_id=RUN_ID,
+                synthetic_fixture=True,
+                contract_validator=validate_asset_contracts,
+                contract_version="generic-exact-package-v0.1.0",
+            )
+            verification = verify_registered_package(
+                destination,
+                contracts,
+                contract_validator=validate_asset_contracts,
+                contract_version="generic-exact-package-v0.1.0",
+            )
+
+        self.assertTrue(verification["accepted_as_unchanged_registered_package"])
 
     def test_missing_provider_quarantine_fails_closed(self) -> None:
         with TemporaryDirectory() as directory:
