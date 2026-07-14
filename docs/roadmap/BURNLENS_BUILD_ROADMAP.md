@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O2-T04 / issue #333 / PR #334 shipped at `1c85496d9d488c0d2d5a58207d8b4786a683ba52` and is tagged `v0.5.0-observation-geometry-baseline`; lifecycle sync issue #335 is active. `aoi-darlene3-model-v0.2.0` remains frozen. The result supports complementary native-scale reference use but not labels. The next analytical checkpoint requires the owner's target-path decision: activate the established burn-scar fallback or stop active-fire modeling. No target change has occurred.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O2-T04 / issue #333 / PR #334 shipped at `1c85496d9d488c0d2d5a58207d8b4786a683ba52` and is tagged `v0.5.0-observation-geometry-baseline`; lifecycle sync issue #335 / PR #336 is active. `aoi-darlene3-model-v0.2.0` remains frozen. The result supports complementary native-scale reference use but not labels. The next analytical checkpoint requires the owner's target-path decision: activate the established burn-scar fallback or stop active-fire modeling. No target change has occurred.
 
 ## Required reading order for long-running Codex work
 

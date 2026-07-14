@@ -12,6 +12,7 @@
   "pull_request": 334,
   "version_tag": "v0.5.0-observation-geometry-baseline",
   "lifecycle_sync_issue": 335,
+  "lifecycle_sync_pull_request": 336,
   "version_tag_object": "cb9e675789d8ca4c4f8a5f4828331d41d023038e",
   "version_tag_state": "verified annotated tag resolving to checkpoint_commit",
   "status": "shipped observation-geometry baseline; complementary reference accepted; labels and dataset deferred; post-merge verification passed",

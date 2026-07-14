@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. Its lifecycle synchronization is issue #335 on `codex/p2o2-t04-lifecycle-sync`.
+The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. Its lifecycle synchronization is issue #335 / PR #336 on `codex/p2o2-t04-lifecycle-sync`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.

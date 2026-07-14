@@ -39,6 +39,6 @@ No segmentation label schema implementation, dataset, split, baseline, model, an
 
 ## Shipment proof
 
-PR #334 merged at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, closing issue #333. Annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit as `v0.5.0-observation-geometry-baseline`. From merged `main`, all 65 tests, compilation, dependency health, clean-worktree checks, and byte-identical real-package JSON/HTML/PNG reconstruction pass. Issue #335 carries the provenance-only lifecycle synchronization.
+PR #334 merged at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, closing issue #333. Annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit as `v0.5.0-observation-geometry-baseline`. From merged `main`, all 65 tests, compilation, dependency health, clean-worktree checks, and byte-identical real-package JSON/HTML/PNG reconstruction pass. Issue #335 / PR #336 carries the provenance-only lifecycle synchronization.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

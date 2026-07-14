@@ -52,7 +52,7 @@ P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially impr
 
 ## Current checkpoint
 
-P2O2-T04-SYNC / issue #335 on `codex/p2o2-t04-lifecycle-sync` is the active provenance-only checkpoint. It changes no code, source package, scientific output, geometry rule, protocol, label decision, target, or use boundary.
+P2O2-T04-SYNC / issue #335 / PR #336 on `codex/p2o2-t04-lifecycle-sync` is the active provenance-only checkpoint. It changes no code, source package, scientific output, geometry rule, protocol, label decision, target, or use boundary.
 
 The next analytical gate is owner-reserved: activate the established burn-scar fallback or stop the active-fire modeling path. No target change has been made.
 

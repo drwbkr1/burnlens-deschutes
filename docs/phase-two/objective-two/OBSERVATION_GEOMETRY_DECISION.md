@@ -69,4 +69,4 @@ The active-fire target still lacks defensible segmentation truth after the best 
 
 ## Shipment
 
-Issue #333 closed through PR #334 at merge `1c85496d9d488c0d2d5a58207d8b4786a683ba52`. Annotated `v0.5.0-observation-geometry-baseline` tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit. Generator source remains `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; merged-main verification passes. Lifecycle synchronization is issue #335.
+Issue #333 closed through PR #334 at merge `1c85496d9d488c0d2d5a58207d8b4786a683ba52`. Annotated `v0.5.0-observation-geometry-baseline` tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit. Generator source remains `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; merged-main verification passes. Lifecycle synchronization is issue #335 / PR #336.

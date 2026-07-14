@@ -1,6 +1,6 @@
 # REGISTRY-2026-007 - Observation Geometry Artifacts
 
-**Checkpoint:** Issue #333 / PR #334; merge `1c85496d9d488c0d2d5a58207d8b4786a683ba52`; verified annotated `v0.5.0-observation-geometry-baseline`; lifecycle sync issue #335
+**Checkpoint:** Issue #333 / PR #334; merge `1c85496d9d488c0d2d5a58207d8b4786a683ba52`; verified annotated `v0.5.0-observation-geometry-baseline`; lifecycle sync issue #335 / PR #336
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|
