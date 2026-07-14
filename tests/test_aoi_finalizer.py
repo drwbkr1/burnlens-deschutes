@@ -73,6 +73,9 @@ class AoiFinalizerTests(unittest.TestCase):
         self.assertEqual(derivation["area_km2"], 108.0)
         self.assertTrue(report["checks"]["aoi_contains_complete_reference_geometry"])
         self.assertTrue(report["checks"]["aoi_truthfully_supersedes_discovery_envelope"])
+        self.assertTrue(report["checks"]["aoi_within_deschutes_county"])
+        self.assertTrue(report["checks"]["selected_sentinel_metadata_footprint_contains_aoi"])
+        self.assertTrue(report["checks"]["selected_viirs_pair_metadata_footprints_contain_aoi"])
         self.assertGreater(derivation["eastward_extension_beyond_discovery_m"], 2800)
         self.assertGreater(derivation["area_reduction_from_discovery_percent"], 48)
 

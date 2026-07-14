@@ -420,6 +420,46 @@ def build_aoi_evidence(
             "source_intersects_discovery_envelope": source_intersects_discovery,
             "aoi_truthfully_supersedes_discovery_envelope": True,
             "distance_and_area_measured_in_metric_analysis_crs": True,
+            "aoi_within_deschutes_county": True,
+            "selected_sentinel_metadata_footprint_contains_aoi": True,
+            "selected_viirs_pair_metadata_footprints_contain_aoi": True,
+        },
+        "geography_check": {
+            "organization": "U.S. Census Bureau",
+            "service": "TIGERweb State_County",
+            "service_vintage": "2025-01-01",
+            "layer": 9,
+            "county_geoid": "41017",
+            "county_name": "Deschutes County",
+            "query_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/9/query",
+            "spatial_relation": "esriSpatialRelWithin",
+            "input_geometry": "final AOI WGS84 envelope",
+            "result_count": 1,
+            "checked_at_utc": "2026-07-14T01:37:00Z",
+        },
+        "source_stack_coverage": {
+            "meaning": "metadata footprint coverage only; no provider asset or fire detection verified",
+            "sentinel_2_l2a": {
+                "item_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644",
+                "mgrs_tile": "10TFP",
+                "metadata_bbox_wgs84": [
+                    -121.76796729995817,
+                    43.235600960154144,
+                    -120.37335402628887,
+                    44.24321330733643,
+                ],
+                "aoi_contained": True,
+                "evidence": "METADATA-2026-001 and ASSET-READINESS-2026-001",
+            },
+            "noaa_21_viirs_pair": {
+                "active_fire_concept_id": "G3944882727-LPCLOUD",
+                "geolocation_concept_id": "G4037038741-LPCLOUD",
+                "shared_begin_utc": "2024-06-27T19:36:00.000Z",
+                "cmr_umm_json_checked_at_utc": "2026-07-14T01:39:00Z",
+                "aoi_corner_containment": [True, True, True, True],
+                "aoi_contained": True,
+                "evidence": "official NASA CMR UMM JSON plus ASSET-READINESS-2026-001",
+            },
         },
         "decision": "ACCEPT_FINAL_MODELING_AOI",
         "decision_detail": (
@@ -446,6 +486,7 @@ def build_aoi_evidence(
             "The final AOI extends east of and supersedes the discovery-only envelope; the earlier record remains historical metadata-discovery evidence.",
             "Sentinel and VIIRS provider assets remain unacquired pending owner-approved credentials.",
             "No imagery quality, label fitness, or model readiness conclusion follows from AOI acceptance alone.",
+            "Catalog-footprint containment confirms coverage metadata only; it does not establish usable pixels or a fire detection.",
         ],
         "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
         "warning": WARNING,
@@ -669,6 +710,8 @@ def render_html(
         <tr><th scope="row">Reference identity</th><td><code>{escape(source['unique_fire_identifier'])}</code>; object {source['object_id']}; {escape(source['feature_category'])}; {escape(source['map_method'])}</td></tr>
         <tr><th scope="row">Containment</th><td>Complete reference geometry contained.</td></tr>
         <tr><th scope="row">Discovery relationship</th><td>Supersedes <code>AOI-2026-001</code>; {derivation['area_reduction_from_discovery_percent']:.1f}% smaller by projected bounding-area comparison while extending {derivation['eastward_extension_beyond_discovery_m'] / 1000:.2f} km farther east to avoid clipping the official reference.</td></tr>
+        <tr><th scope="row">Geography</th><td>Official Census TIGERweb check returns the AOI envelope within Deschutes County, <code>GEOID 41017</code>.</td></tr>
+        <tr><th scope="row">Source-stack coverage</th><td>Selected Sentinel-2 and paired NOAA-21 VIIRS metadata footprints contain the AOI. This is coverage evidence only, not pixel or detection evidence.</td></tr>
       </tbody>
     </table>
   </section>
