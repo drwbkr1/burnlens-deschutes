@@ -67,6 +67,6 @@ This advances Phase Two source comparison, raw integrity, QA, and label-semantic
 
 The active-fire target still lacks defensible segmentation truth after the best bounded complementary reference was inspected. Activating the established burn-scar fallback or stopping active-fire modeling changes the target path and therefore requires the owner's explicit decision under the controlling goal.
 
-## Shipment state
+## Shipment
 
-Issue #333 and PR #334 are the governing checkpoint on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; merge, tag, and post-merge identities are recorded after the quality-gated PR ships.
+Issue #333 closed through PR #334 at merge `1c85496d9d488c0d2d5a58207d8b4786a683ba52`. Annotated `v0.5.0-observation-geometry-baseline` tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit. Generator source remains `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; merged-main verification passes. Lifecycle synchronization is issue #335.

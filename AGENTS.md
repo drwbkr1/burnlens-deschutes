@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped analytical checkpoint is P2O2-T03 / issue #329 / PR #330 at `7678cf41b64e128106c199b913fe74590a52cf80`, tagged `v0.4.0-authenticated-source-baseline`. Its lifecycle sync shipped through issue #331 / PR #332 at `5f7461ac4cc8caa48f029776e5797023f27eaec5`. P2O2-T04 / issue #333 / PR #334 is the verified release candidate on `codex/p2o2-t04-observation-geometry` for `v0.5.0-observation-geometry-baseline`.
+The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. Its lifecycle synchronization is issue #335 on `codex/p2o2-t04-lifecycle-sync`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
@@ -68,7 +68,7 @@ The latest shipped analytical checkpoint is P2O2-T03 / issue #329 / PR #330 at `
 - No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 
-P2O2-T04 preserves positive/reference, negative-candidate, unknown, excluded, and review-needed states under `weak-reference-label-feasibility-v0.1.0`; it creates no label array. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels. After this release candidate ships, activating the burn-scar fallback or stopping active-fire modeling requires the owner's target-path decision.
+P2O2-T04 preserves positive/reference, negative-candidate, unknown, excluded, and review-needed states under `weak-reference-label-feasibility-v0.1.0`; it creates no label array. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels. Activating the burn-scar fallback or stopping active-fire modeling now requires the owner's target-path decision.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 

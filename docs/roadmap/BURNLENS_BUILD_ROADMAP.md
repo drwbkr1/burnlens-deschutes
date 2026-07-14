@@ -84,7 +84,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 **What this phase must prove:** BurnLens can enter implementation with a coherent promise, bounded task, traceable operating rules, safe claims, and an explicit gate rather than relying on conversation context or informal assumptions.
 
-**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists. Phase Two metadata, route, access-integrity, final-AOI, intake-transaction, and authenticated source/reference evidence is shipped through P2O2-T03 / `v0.4.0-authenticated-source-baseline`; P2O2-T04 / issue #333 is the verified observation-geometry release candidate. Authorized credentials were exercised without committing raw source bytes or secret material.
+**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists. Phase Two metadata, route, access-integrity, final-AOI, intake-transaction, authenticated source/reference inspection, and complete observation-geometry evidence are shipped through P2O2-T04 / `v0.5.0-observation-geometry-baseline`. Authorized credentials were exercised without committing raw source bytes or secret material.
 
 ## Phase Two — data foundation
 
@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 through P2O2-T03 are shipped and tagged through `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`; lifecycle sync issue #331 / PR #332 shipped at `5f7461ac4cc8caa48f029776e5797023f27eaec5`; `aoi-darlene3-model-v0.2.0` remains frozen. P2O2-T04 / issue #333 is the verified `v0.5.0-observation-geometry-baseline` candidate. Its result supports complementary native-scale reference use but not labels. Once it ships, the next checkpoint requires the owner's target-path decision: activate the established burn-scar fallback or stop active-fire modeling. No target change has occurred.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O2-T04 / issue #333 / PR #334 shipped at `1c85496d9d488c0d2d5a58207d8b4786a683ba52` and is tagged `v0.5.0-observation-geometry-baseline`; lifecycle sync issue #335 is active. `aoi-darlene3-model-v0.2.0` remains frozen. The result supports complementary native-scale reference use but not labels. The next analytical checkpoint requires the owner's target-path decision: activate the established burn-scar fallback or stop active-fire modeling. No target change has occurred.
 
 ## Required reading order for long-running Codex work
 

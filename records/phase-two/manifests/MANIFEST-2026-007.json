@@ -8,12 +8,13 @@
   "branch": "codex/p2o2-t04-observation-geometry",
   "git_base_commit": "5f7461ac4cc8caa48f029776e5797023f27eaec5",
   "generator_source_commit": "89d50c24a696cc7e3ec023eec00b021a4a0cdda6",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "1c85496d9d488c0d2d5a58207d8b4786a683ba52",
   "pull_request": 334,
   "version_tag": "v0.5.0-observation-geometry-baseline",
-  "version_tag_object": null,
-  "version_tag_state": "release candidate pending merge and annotated-tag verification",
-  "status": "verified observation-geometry release candidate; complementary reference accepted; labels and dataset deferred",
+  "lifecycle_sync_issue": 335,
+  "version_tag_object": "cb9e675789d8ca4c4f8a5f4828331d41d023038e",
+  "version_tag_state": "verified annotated tag resolving to checkpoint_commit",
+  "status": "shipped observation-geometry baseline; complementary reference accepted; labels and dataset deferred; post-merge verification passed",
   "software_version": "0.5.0",
   "runtime": {
     "python": "3.12.13",
@@ -81,6 +82,14 @@
     "deterministic_json_html_png": "byte-identical",
     "rendered_browser_review": "pass",
     "raw_provider_bytes_committed": 0
+  },
+  "post_merge_verification": {
+    "repository_tests": 65,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "deterministic_json_html_png": "byte-identical",
+    "remote_tag_identity": "pass",
+    "issue_closed": true
   },
   "decision": "ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS",
   "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
