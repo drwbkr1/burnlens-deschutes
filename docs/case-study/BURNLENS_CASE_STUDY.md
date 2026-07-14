@@ -63,7 +63,7 @@ Until that boundary is crossed, BurnLens can demonstrate careful source selectio
 - Transaction contract: `paired-intake-contract-v0.1.0`
 - Generator source commit: `2491766022b549402b64e3136a79fd9c046beff5`
 - Latest shipped repository baseline: `v0.2.0-aoi-baseline`; proposed transaction tag: `v0.3.0-intake-transaction-baseline`
-- Active checkpoint: issue #325; PR/merge pending
+- Active checkpoint: issue #325 / PR #326; merge pending
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, and static evidence report are the current presentation surfaces
 

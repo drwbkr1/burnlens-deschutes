@@ -46,7 +46,7 @@ P2O2-T01 / issue #321 accepts the final modeling AOI and adds `AOI-FINAL-2026-00
 
 ## Current checkpoint
 
-P2O2-T02 / issue #325 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5`; candidate PR, merge, and tag identities are pending. Provider imagery count and bytes remain zero.
+P2O2-T02 / issue #325 / PR #326 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5`; merge and tag identities are pending. Provider imagery count and bytes remain zero.
 
 ## Selected next checkpoint
 

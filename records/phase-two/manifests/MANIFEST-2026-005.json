@@ -9,10 +9,10 @@
   "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
   "generator_source_commit": "2491766022b549402b64e3136a79fd9c046beff5",
   "checkpoint_commit": null,
-  "pull_request": null,
+  "pull_request": 326,
   "version_tag": "v0.3.0-intake-transaction-baseline",
   "version_tag_state": "candidate; not created",
-  "status": "candidate transaction baseline; real provider package blocked on owner credential approval",
+  "status": "candidate transaction baseline in PR #326; real provider package blocked on owner credential approval",
   "software_version": "0.3.0",
   "runtime": {
     "python": "3.12.13",

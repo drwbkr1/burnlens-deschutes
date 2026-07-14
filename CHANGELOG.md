@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render `PAIR-INTAKE-REHEARSAL-2026-001` as normalized JSON, semantic HTML, and a 1600x1200 evidence card that separates real `BLOCKED_OWNER_CREDENTIAL` state from synthetic transaction proof.
 - Refresh exact public CDSE/CMR metadata and preserve the owner stop: zero credentials, provider assets, provider bytes, and promoted real packages.
 
-Candidate source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5` on issue #325. Thirty-one tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass before PR. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
+Candidate source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5` on issue #325 / PR #326. Thirty-one tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
 
 ## v0.2.0-aoi-baseline — 2026-07-13
 
