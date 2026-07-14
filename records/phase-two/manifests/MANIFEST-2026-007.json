@@ -1,0 +1,87 @@
+{
+  "manifest_id": "MANIFEST-2026-007",
+  "manifest_version": "0.7.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-14T20:09:07Z",
+  "task_issue": 333,
+  "branch": "codex/p2o2-t04-observation-geometry",
+  "git_base_commit": "5f7461ac4cc8caa48f029776e5797023f27eaec5",
+  "generator_source_commit": "89d50c24a696cc7e3ec023eec00b021a4a0cdda6",
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.5.0-observation-geometry-baseline",
+  "version_tag_object": null,
+  "version_tag_state": "release candidate pending merge and annotated-tag verification",
+  "status": "verified observation-geometry release candidate; complementary reference accepted; labels and dataset deferred",
+  "software_version": "0.5.0",
+  "runtime": {
+    "python": "3.12.13",
+    "blake3": "1.0.9",
+    "h5py": "3.16.0",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "source_records": ["SOURCE-2026-004", "SOURCE-2026-005", "SOURCE-2026-006", "SOURCE-2026-007", "SOURCE-2026-008"],
+  "authorization_record": "ACCESS-2026-006",
+  "access_record": "ACCESS-2026-008",
+  "terms_records": ["TERMS-2026-002", "TERMS-2026-003"],
+  "precheck_record": "PRECHECK-2026-007",
+  "registry_record": "REGISTRY-2026-007",
+  "review_records": ["LABEL_FITNESS-2026-003", "USE_BOUNDARY-2026-006"],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "source_package_id": "darlene3-vj214img-observation-screen-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_id": "BL-2026-07-14-observation-geometry-r002",
+  "report_version": "observation-geometry-v0.2.0",
+  "protocol_version": "weak-reference-label-feasibility-v0.1.0",
+  "contract_version": "observation-screen-contract-v0.2.0",
+  "contract_sha256": "af396fcbf6fb32860c4f76111ab74ac0f3d2c810ab2c1aba19903337a757ad3c",
+  "raw_assets": {
+    "active_fire_count": 23,
+    "selected_companion_count": 1,
+    "total_count": 24,
+    "total_bytes_local": 83723055,
+    "total_bytes_committed": 0,
+    "exact_asset_index": "samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.json"
+  },
+  "outputs": [
+    {
+      "path": "samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 185283,
+      "sha256": "c1da1c47483ab573a8a123a26f7c5b2f111b57b4eaedb05ffb2d3aafa46e881d"
+    },
+    {
+      "path": "samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 10859,
+      "sha256": "a63ee62c660c7b573d829847ac008786a6ecff91c61f5433365e640f64742ad2"
+    },
+    {
+      "path": "samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 87051,
+      "sha256": "4dd21c3df693856fda47d23cd763054016a105d8c760181c4052411fa4ff6687"
+    }
+  ],
+  "credentials_used": true,
+  "credential_or_token_material_retained": false,
+  "quality_gates": {
+    "repository_tests": 65,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "deterministic_json_html_png": "byte-identical",
+    "rendered_browser_review": "pass",
+    "raw_provider_bytes_committed": 0
+  },
+  "decision": "ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

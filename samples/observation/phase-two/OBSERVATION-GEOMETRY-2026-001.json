@@ -1,0 +1,5024 @@
+{
+  "report_id": "OBSERVATION-GEOMETRY-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "observation-geometry-v0.2.0",
+  "generated_at_utc": "2026-07-14T20:09:07Z",
+  "run_id": "BL-2026-07-14-observation-geometry-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 333,
+  "branch": "codex/p2o2-t04-observation-geometry",
+  "git_source_commit": "89d50c24a696cc7e3ec023eec00b021a4a0cdda6",
+  "software_version": "0.5.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "model_version": null,
+  "package_id": "darlene3-vj214img-observation-screen-v0.2.0",
+  "search_scope": {
+    "collection": "VJ214IMG.002",
+    "companion_collection": "VJ203MODLL.021",
+    "window_start": "2024-06-25T00:00:00Z",
+    "window_end": "2024-07-01T23:59:59Z",
+    "approximate_event_start": "2024-06-25T20:00:00Z",
+    "sentinel_observation": "2024-06-27T18:49:19.024Z",
+    "aoi_bbox_utm10n": [
+      620000.0,
+      4831000.0,
+      632000.0,
+      4840000.0
+    ],
+    "aoi_bbox_wgs84": [
+      -121.512668,
+      43.620281,
+      -121.361791,
+      43.703322
+    ],
+    "inventory_query": "https://cmr.earthdata.nasa.gov/search/granules.umm_json?collection_concept_id=C2831626262-LPCLOUD&temporal=2024-06-25T00%3A00%3A00Z%2C2024-07-01T23%3A59%3A59Z&bounding_box=-121.512668%2C43.620281%2C-121.361791%2C43.703322&page_size=200&sort_key%5B%5D=start_date&sort_key%5B%5D=granule_ur",
+    "companion_query": "https://cmr.earthdata.nasa.gov/search/granules.umm_json?short_name=VJ203MODLL&version=021&temporal=2024-06-27T21%3A18%3A00.000Z%2C2024-06-27T21%3A24%3A00.000Z&page_size=20&sort_key%5B%5D=granule_ur",
+    "inventory_count": 23,
+    "metadata_ranking_role": "Deterministic discovery priority only. CMR footprint centrality does not establish actual record geometry or fire presence."
+  },
+  "screen_rule": {
+    "rule_version": "observation-geometry-screen-v0.1.0",
+    "baseline_native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+    "baseline_qualified_view_zenith_range_degrees": [
+      69.02,
+      69.07
+    ],
+    "baseline_residual_bowtie_share": 0.375,
+    "material_improvement_rule": "Post-approximate-start candidate; at least one nominal/high, nominal-geolocation, non-bowtie AOI record; candidate maximum qualified view zenith at least 10 degrees below the baseline minimum; residual-bowtie share no worse than baseline.",
+    "promotion_priority": "Among materially improved candidates, prefer the Sentinel day regime, then smallest absolute Sentinel time offset, then lower median view zenith and more qualified records.",
+    "rule_scope": "Conservative BurnLens evidence-screen rule, not a NASA validation threshold and not a label-validity claim."
+  },
+  "registration": {
+    "package_id": "darlene3-vj214img-observation-screen-v0.2.0",
+    "accepted_as_unchanged_registered_package": true,
+    "contract_version": "observation-screen-contract-v0.2.0",
+    "contract_sha256": "af396fcbf6fb32860c4f76111ab74ac0f3d2c810ab2c1aba19903337a757ad3c",
+    "asset_count": 24,
+    "registered_bytes": 83723055,
+    "assets": [
+      {
+        "role": "viirs-active-fire:A2024177.0848",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024177.0848.002.2025284184447",
+        "filename": "VJ214IMG.A2024177.0848.002.2025284184447.nc",
+        "bytes": 1669036,
+        "sha256": "93372fcdcdec5f89c87b129ca754867fd9b18e397c25265bed795252b85b8073",
+        "md5": "9b2b44e53813e8a9771e0e6641dee7d8",
+        "blake3": "9f6ec604d6b56fbba71c8e187dd7db9ae095e3eb7e155979cb6818031d260517"
+      },
+      {
+        "role": "viirs-active-fire:A2024177.1030",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024177.1030.002.2025284184452",
+        "filename": "VJ214IMG.A2024177.1030.002.2025284184452.nc",
+        "bytes": 881442,
+        "sha256": "129a4056022d178989b7d8d92ec359b84bd3d88d74944eea30307ef20fae69a1",
+        "md5": "e1391750357fa7ff6b4f34d18cbc07c2",
+        "blake3": "cdb5155758c1ad9fcd07f49704fafdb82a6bde577a36bba2123dfe2f58d5d7a1"
+      },
+      {
+        "role": "viirs-active-fire:A2024177.2012",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024177.2012.002.2025284184449",
+        "filename": "VJ214IMG.A2024177.2012.002.2025284184449.nc",
+        "bytes": 4029499,
+        "sha256": "7e2d78577eb7311a591d797be03d67581e9fb02aaa280cf8fb2deca876637ea6",
+        "md5": "d0a300709905b47aa3aa904f4a533d05",
+        "blake3": "c201bceeecac8d78853cb6cd594556564392d792688fb283648aa66198284597"
+      },
+      {
+        "role": "viirs-active-fire:A2024177.2154",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024177.2154.002.2025284184450",
+        "filename": "VJ214IMG.A2024177.2154.002.2025284184450.nc",
+        "bytes": 2072151,
+        "sha256": "9588a5b6c373fdb4877e48bd4c23bdfb077ee385fe96cfaa9a6899dc4cc3d604",
+        "md5": "56f75d4dc5a0b59c6029a6ea1bcf81d0",
+        "blake3": "d7bce3845ea7ab8d1eb99b89c2ac258b9bbf918cab981ba55794a4288ef1e32b"
+      },
+      {
+        "role": "viirs-active-fire:A2024178.1012",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024178.1012.002.2025284190344",
+        "filename": "VJ214IMG.A2024178.1012.002.2025284190344.nc",
+        "bytes": 828376,
+        "sha256": "a81935e291473d1706054e8f200b75cf0f56d7f0bbe6fa0d3a898208d6de0b8b",
+        "md5": "ce14a62108b6da37bd50a4d9784ad28b",
+        "blake3": "4a8c41fd286643752cb2897be805f796761061d4b8e0da8791df41329a191999"
+      },
+      {
+        "role": "viirs-active-fire:A2024178.1954",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024178.1954.002.2025284190343",
+        "filename": "VJ214IMG.A2024178.1954.002.2025284190343.nc",
+        "bytes": 3651172,
+        "sha256": "1ced8e5638809bf7c92707a7cc0c129a7c58e13e1cd782b89c184fb6ec0f49df",
+        "md5": "3c84e17765c368ac30b0c7abf31f97a6",
+        "blake3": "9bebe470f4ecd850c2a538e6811c41614190fe6ff5d0cfa360b6b4c4d922cff6"
+      },
+      {
+        "role": "viirs-active-fire:A2024178.2136",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024178.2136.002.2025284190348",
+        "filename": "VJ214IMG.A2024178.2136.002.2025284190348.nc",
+        "bytes": 2012145,
+        "sha256": "2c77d4af90266175328f74e66913f3c65ec6ca5723a9aecf3b9d27d6659be87c",
+        "md5": "19e4cbf6f336a946d3a2268c4ab3eec7",
+        "blake3": "882123595f3f3df2e8f6b51c1faafefcd9c0731c3b63d7fbfd7b23caa57494a4"
+      },
+      {
+        "role": "viirs-active-fire:A2024179.0954",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024179.0954.002.2025284191612",
+        "filename": "VJ214IMG.A2024179.0954.002.2025284191612.nc",
+        "bytes": 654238,
+        "sha256": "0da65de30b49ec8a8bf85b537dd22f3cdb97a5ed96de109d3c6d600321cdd306",
+        "md5": "a59bcc2602138fedb23ec9ca2d3bf2fd",
+        "blake3": "f45898f2dda191c6651966f2826e7afcc0aaea573ffae40e132056241bd3c895"
+      },
+      {
+        "role": "viirs-active-fire:A2024179.1936",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+        "filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+        "bytes": 2710616,
+        "sha256": "7f370161de57af826740a5913d6ee5de79b56153d26bfb17406af9838054cad9",
+        "md5": "b6ce12244c98d16f9ad64a172e8896a7",
+        "blake3": "aae568c00ba6c204bb14e4dc85b4073a2b35e7fd81da5bc63c61fff16018cfc6"
+      },
+      {
+        "role": "viirs-active-fire:A2024179.2118",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024179.2118.002.2025284191612",
+        "filename": "VJ214IMG.A2024179.2118.002.2025284191612.nc",
+        "bytes": 2038800,
+        "sha256": "ac8fc658d4f963d58e6d6acac4af07beb2e94f436dd392591a849e0a588d46a3",
+        "md5": "3d4f166454445f8a2a617dbdf817dd5a",
+        "blake3": "11e40f24b2af0055f697d69d5d4540dd0a4dd0ac1dfff3f4ad90f299f4329663"
+      },
+      {
+        "role": "viirs-active-fire:A2024180.0930",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024180.0930.002.2025284193416",
+        "filename": "VJ214IMG.A2024180.0930.002.2025284193416.nc",
+        "bytes": 1578840,
+        "sha256": "63b6ff19444829391ef52fe73d0cdf62bf2fad15dffde016fefb36307d85a087",
+        "md5": "d2a8a223e2f1bddd45b6906806eb36a8",
+        "blake3": "6a96cfc303fce281f631b80b00f6292bfa0895b91aea0f0a894a45c383a45ca6"
+      },
+      {
+        "role": "viirs-active-fire:A2024180.1112",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024180.1112.002.2025284193413",
+        "filename": "VJ214IMG.A2024180.1112.002.2025284193413.nc",
+        "bytes": 1091074,
+        "sha256": "87710b7268816789e5173eebd9f25feced3021ebc4b8cfb718c478c69b44b79d",
+        "md5": "f030a5c137b81829b83f5f7c05a66c2d",
+        "blake3": "a52446e4dea6b3875bb93254a2260310e37cd3b441e6731d7586f50a04a0a157"
+      },
+      {
+        "role": "viirs-active-fire:A2024180.2054",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024180.2054.002.2025284193420",
+        "filename": "VJ214IMG.A2024180.2054.002.2025284193420.nc",
+        "bytes": 3826373,
+        "sha256": "fa5ab59db61cc05f55d21cdb794aa94a9fd5b40e36ca8cac79e2003eed26ed2c",
+        "md5": "56d9d3d2c5169fef2a733f0ca440d1f1",
+        "blake3": "c26df13d4eee60d6c35ee76f9e600e423f0da763768602b2995078bf10659215"
+      },
+      {
+        "role": "viirs-active-fire:A2024181.0912",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024181.0912.002.2025284194650",
+        "filename": "VJ214IMG.A2024181.0912.002.2025284194650.nc",
+        "bytes": 1418736,
+        "sha256": "c33821676897e1fe7d14f34a6b5bf17af7c9c5695dbd5c594a2e270948bf68b4",
+        "md5": "710443e029b3df455828e58918d43312",
+        "blake3": "3362260ef925400a9c625a9238a6eb26ecb822db5b324332e27d4a70e1a4f64c"
+      },
+      {
+        "role": "viirs-active-fire:A2024181.1054",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024181.1054.002.2025284194650",
+        "filename": "VJ214IMG.A2024181.1054.002.2025284194650.nc",
+        "bytes": 1026999,
+        "sha256": "2110524ce74826d408fdc2c4d5979b5703ff7562639e10e540e69d2888cbac6d",
+        "md5": "766f10c70e23894c2c20a40483147e2f",
+        "blake3": "1be64cd7ca4d7e9404e5ca456f7070a26629fbd346edef3ca33fc4711d89176a"
+      },
+      {
+        "role": "viirs-active-fire:A2024181.2036",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024181.2036.002.2025284194653",
+        "filename": "VJ214IMG.A2024181.2036.002.2025284194653.nc",
+        "bytes": 4027532,
+        "sha256": "03f00509744928f3462a0e1222fc87a97a2b30683de6911fe4283d679e32420f",
+        "md5": "c6d842c2f94eb5a86709d4673e0f4fa8",
+        "blake3": "4db95feff71fa78142f2ab00541f3afe9b3af86723bb3e8bdf4efd81766cde2b"
+      },
+      {
+        "role": "viirs-active-fire:A2024182.0854",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024182.0854.002.2025284200523",
+        "filename": "VJ214IMG.A2024182.0854.002.2025284200523.nc",
+        "bytes": 1444815,
+        "sha256": "1d8344a40c9df7caf764791b62e131b95ab4d7382fa5cd53fc4bed1dea2d11ba",
+        "md5": "49c812e3a66f4725d386f32f531d2726",
+        "blake3": "f36b7d604148b673d8f7ea636d27327661c163b5bd16db6743852a625fdb1bcf"
+      },
+      {
+        "role": "viirs-active-fire:A2024182.1036",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024182.1036.002.2025284200520",
+        "filename": "VJ214IMG.A2024182.1036.002.2025284200520.nc",
+        "bytes": 835964,
+        "sha256": "f8f2fa00a4718eaecef1af51f3855fe4c28005f57b5c2548deceb51c6fd4fcc3",
+        "md5": "dc61442128e83176d30c309bb9a1a1db",
+        "blake3": "ddf5af7a8fd644d27bac016cfbd9edd2a7e0094ce49d6f8748c6de24f3714c44"
+      },
+      {
+        "role": "viirs-active-fire:A2024182.2018",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024182.2018.002.2025284200521",
+        "filename": "VJ214IMG.A2024182.2018.002.2025284200521.nc",
+        "bytes": 3906765,
+        "sha256": "494663e890fbff443e5a80ea29b1f5d09cfd51dde39334751310dbff9808b0f9",
+        "md5": "18fb56cce992124bd6ec3669ac134266",
+        "blake3": "de3d73bb9c171af36d01fde6e07b50840a26b5335f967c543d731edb4ec586bd"
+      },
+      {
+        "role": "viirs-active-fire:A2024182.2200",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024182.2200.002.2025284200521",
+        "filename": "VJ214IMG.A2024182.2200.002.2025284200521.nc",
+        "bytes": 2057369,
+        "sha256": "83011f7e3840de509d3f5c88478e3e6672e6eaa17800dcd5ab638bc9d9396bc8",
+        "md5": "93519df6cb818c211eaa6adc06dc6a39",
+        "blake3": "045b09a58b497447a1f0396134be2f167a2b0d9726c406ca16e21e913a8c259b"
+      },
+      {
+        "role": "viirs-active-fire:A2024183.1018",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024183.1018.002.2025284202322",
+        "filename": "VJ214IMG.A2024183.1018.002.2025284202322.nc",
+        "bytes": 612068,
+        "sha256": "7633776d47817396be10fc1442e8150834363b161fca0d913fb545d516ddfb3d",
+        "md5": "38cabe4c98e5288b66bfc7ff6653e657",
+        "blake3": "47cbb08e96a26dbcedfdd7588d84a3fdf7628043748b6c133cd4a9cef1444902"
+      },
+      {
+        "role": "viirs-active-fire:A2024183.2000",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024183.2000.002.2025284202318",
+        "filename": "VJ214IMG.A2024183.2000.002.2025284202318.nc",
+        "bytes": 3261063,
+        "sha256": "0156d1cbcf26d1ee2bab945c2643f27b531e6db275111589a2d58543e557af1d",
+        "md5": "daebddf5847274c821562cb19b8782cb",
+        "blake3": "dcd97e407ba1b35baf3f74ead797678cc3b2f756a4acd1eafd3491bbaff8d45d"
+      },
+      {
+        "role": "viirs-active-fire:A2024183.2142",
+        "source_record_id": "SOURCE-2026-005",
+        "native_id": "VJ214IMG.A2024183.2142.002.2025284202321",
+        "filename": "VJ214IMG.A2024183.2142.002.2025284202321.nc",
+        "bytes": 2522508,
+        "sha256": "8a075e11be400650820e703871f64430066df6fcabd9b4a5e8ad017f40bc2911",
+        "md5": "188bc76090d619d1e936df35646c5fad",
+        "blake3": "e262b128fd049337aa026ca1cf6b4d94fbdb3346c31bc10d4bb809abc06a8ce9"
+      },
+      {
+        "role": "viirs-geolocation:A2024179.2118",
+        "source_record_id": "SOURCE-2026-006",
+        "native_id": "VJ203MODLL.A2024179.2118.021.2024327213228",
+        "filename": "VJ203MODLL.A2024179.2118.021.2024327213228.h5",
+        "bytes": 35565474,
+        "sha256": "ad16070d08cc41a7dd5349f2610276a31d6266e73ddeee4aab27adba0cafd1c8",
+        "md5": "53e611d4c0be94e4c2773983fff453db",
+        "blake3": "7aca6a029255f2917e4b07fcabf05451122aa2b8145311e0e6914017421541dd"
+      }
+    ],
+    "reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "candidate_summary": {
+    "inventory_count": 23,
+    "pre_approximate_start_count": 2,
+    "aoi_detection_candidate_count": 9,
+    "reference_qualified_candidate_count": 8,
+    "materially_improved_candidate_count": 5,
+    "selected_native_id": "VJ214IMG.A2024179.2118.002.2025284191612"
+  },
+  "candidates": [
+    {
+      "concept_id": "G3944901407-LPCLOUD",
+      "native_id": "VJ214IMG.A2024177.0848.002.2025284184447",
+      "filename": "VJ214IMG.A2024177.0848.002.2025284184447.nc",
+      "pair_token": "A2024177.0848",
+      "begin": "2024-06-25T08:48:00.000Z",
+      "end": "2024-06-25T08:54:00.000Z",
+      "size_bytes": 1669036,
+      "revision_date": "2026-01-03T02:10:46.442Z",
+      "footprint_wgs84": [
+        [
+          -79.2007828,
+          48.0342598
+        ],
+        [
+          -121.9969559,
+          54.5769768
+        ],
+        [
+          -122.8031006,
+          33.7655449
+        ],
+        [
+          -91.5785217,
+          28.9712009
+        ],
+        [
+          -79.2007828,
+          48.0342598
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.482671,
+      "seconds_from_approximate_event_start": -40320.0,
+      "seconds_from_sentinel_observation": -208879.024,
+      "pre_event_reference_only": true,
+      "metadata_rank": 22,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024177.0848.002.2025284184447.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024177.0848.002.2025284184447.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-25",
+          "RangeBeginningTime": "08:48:00.00000",
+          "RangeEndingDate": "2024-06-25",
+          "RangeEndingTime": "08:54:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024177.0848.021.2025284030515.nc",
+          "VJ202CCMOD.A2024177.0848.021.2025284030515.nc",
+          "VJ202GDC.A2024177.0848.021.2024327165716.nc",
+          "VJ203IMG.A2024177.0848.021.2024327161125.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 187,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "PRE_APPROXIMATE_EVENT_START",
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944895603-LPCLOUD",
+      "native_id": "VJ214IMG.A2024177.1030.002.2025284184452",
+      "filename": "VJ214IMG.A2024177.1030.002.2025284184452.nc",
+      "pair_token": "A2024177.1030",
+      "begin": "2024-06-25T10:30:00.000Z",
+      "end": "2024-06-25T10:36:00.000Z",
+      "size_bytes": 881442,
+      "revision_date": "2026-01-03T02:05:48.626Z",
+      "footprint_wgs84": [
+        [
+          -105.9378662,
+          46.586731
+        ],
+        [
+          -147.3454437,
+          52.9067154
+        ],
+        [
+          -148.3557892,
+          32.086586
+        ],
+        [
+          -117.6653366,
+          27.3739243
+        ],
+        [
+          -105.9378662,
+          46.586731
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.25199,
+      "seconds_from_approximate_event_start": -34200.0,
+      "seconds_from_sentinel_observation": -202759.024,
+      "pre_event_reference_only": true,
+      "metadata_rank": 23,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024177.1030.002.2025284184452.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024177.1030.002.2025284184452.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-25",
+          "RangeBeginningTime": "10:30:00.00000",
+          "RangeEndingDate": "2024-06-25",
+          "RangeEndingTime": "10:36:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024177.1030.021.2025284030515.nc",
+          "VJ202CCMOD.A2024177.1030.021.2025284030515.nc",
+          "VJ202GDC.A2024177.1030.021.2024327165707.nc",
+          "VJ203IMG.A2024177.1030.021.2024327161126.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 57,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "PRE_APPROXIMATE_EVENT_START",
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944894524-LPCLOUD",
+      "native_id": "VJ214IMG.A2024177.2012.002.2025284184449",
+      "filename": "VJ214IMG.A2024177.2012.002.2025284184449.nc",
+      "pair_token": "A2024177.2012",
+      "begin": "2024-06-25T20:12:00.000Z",
+      "end": "2024-06-25T20:18:00.000Z",
+      "size_bytes": 4029499,
+      "revision_date": "2026-01-03T02:04:49.957Z",
+      "footprint_wgs84": [
+        [
+          -122.2822418,
+          28.1850433
+        ],
+        [
+          -91.2993317,
+          32.896431
+        ],
+        [
+          -92.1934357,
+          53.8124771
+        ],
+        [
+          -134.4204254,
+          47.408123
+        ],
+        [
+          -122.2822418,
+          28.1850433
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.271362,
+      "seconds_from_approximate_event_start": 720.0,
+      "seconds_from_sentinel_observation": -167839.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 13,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024177.2012.002.2025284184449.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024177.2012.002.2025284184449.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-25",
+          "RangeBeginningTime": "20:12:00.00000",
+          "RangeEndingDate": "2024-06-25",
+          "RangeEndingTime": "20:18:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024177.2012.021.2025284030516.nc",
+          "VJ202CCMOD.A2024177.2012.021.2025284030516.nc",
+          "VJ202GDC.A2024177.2012.021.2024327182254.nc",
+          "VJ203IMG.A2024177.2012.021.2024327173654.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 177,
+        "aoi_fire_record_count": 2,
+        "aoi_confidence_counts": {
+          "low": 1,
+          "nominal": 1,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 1,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          49.14,
+          49.14
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 49.14,
+        "aoi_records": [
+          {
+            "sparse_index": 157,
+            "line": 4329,
+            "sample": 4975,
+            "latitude": 43.6468811,
+            "longitude": -121.4733429,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 55.859184,
+            "view_zenith_degrees": 49.14,
+            "solar_zenith_degrees": 20.35,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 158,
+            "line": 4329,
+            "sample": 4976,
+            "latitude": 43.6451912,
+            "longitude": -121.4799423,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 55.924374,
+            "view_zenith_degrees": 49.16,
+            "solar_zenith_degrees": 20.35,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          }
+        ]
+      },
+      "material_geometry_improvement": true,
+      "geometry_screen_reason_codes": [
+        "MATERIAL_GEOMETRY_IMPROVEMENT"
+      ],
+      "observed_geometry_rank": 4
+    },
+    {
+      "concept_id": "G3944901484-LPCLOUD",
+      "native_id": "VJ214IMG.A2024177.2154.002.2025284184450",
+      "filename": "VJ214IMG.A2024177.2154.002.2025284184450.nc",
+      "pair_token": "A2024177.2154",
+      "begin": "2024-06-25T21:54:00.000Z",
+      "end": "2024-06-25T22:00:00.000Z",
+      "size_bytes": 2072151,
+      "revision_date": "2026-01-03T02:10:48.852Z",
+      "footprint_wgs84": [
+        [
+          -148.4211426,
+          29.877615
+        ],
+        [
+          -116.8956451,
+          34.676281
+        ],
+        [
+          -117.4988937,
+          55.480526
+        ],
+        [
+          -161.1844482,
+          48.8509789
+        ],
+        [
+          -148.4211426,
+          29.877615
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.463021,
+      "seconds_from_approximate_event_start": 6840.0,
+      "seconds_from_sentinel_observation": -161719.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 3,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024177.2154.002.2025284184450.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024177.2154.002.2025284184450.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-25",
+          "RangeBeginningTime": "21:54:00.00000",
+          "RangeEndingDate": "2024-06-25",
+          "RangeEndingTime": "22:00:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024177.2154.021.2025284030518.nc",
+          "VJ202CCMOD.A2024177.2154.021.2025284030518.nc",
+          "VJ202GDC.A2024177.2154.021.2024327182230.nc",
+          "VJ203IMG.A2024177.2154.021.2024327173654.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 63,
+        "aoi_fire_record_count": 25,
+        "aoi_confidence_counts": {
+          "low": 11,
+          "nominal": 9,
+          "high": 5
+        },
+        "aoi_residual_bowtie_count": 7,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 23,
+        "aoi_reference_qualified_count": 9,
+        "aoi_reference_qualified_inside_nifc_count": 8,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          62.19,
+          62.24
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 62.22,
+        "aoi_records": [
+          {
+            "sparse_index": 29,
+            "line": 2770,
+            "sample": 504,
+            "latitude": 43.6426735,
+            "longitude": -121.4723587,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 85.704185,
+            "view_zenith_degrees": 62.19,
+            "solar_zenith_degrees": 30.03,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 30,
+            "line": 2771,
+            "sample": 503,
+            "latitude": 43.64888,
+            "longitude": -121.4664841,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 53.217731,
+            "view_zenith_degrees": 62.2,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 31,
+            "line": 2771,
+            "sample": 502,
+            "latitude": 43.6490326,
+            "longitude": -121.4603271,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 53.217731,
+            "view_zenith_degrees": 62.22,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 32,
+            "line": 2771,
+            "sample": 504,
+            "latitude": 43.6487274,
+            "longitude": -121.4726486,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 85.704185,
+            "view_zenith_degrees": 62.19,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 33,
+            "line": 2771,
+            "sample": 505,
+            "latitude": 43.6485748,
+            "longitude": -121.4788055,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 85.704185,
+            "view_zenith_degrees": 62.18,
+            "solar_zenith_degrees": 30.03,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 34,
+            "line": 2772,
+            "sample": 502,
+            "latitude": 43.6550827,
+            "longitude": -121.4606781,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 363.875092,
+            "view_zenith_degrees": 62.22,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 35,
+            "line": 2772,
+            "sample": 501,
+            "latitude": 43.6552353,
+            "longitude": -121.4545059,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 49.465908,
+            "view_zenith_degrees": 62.23,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 36,
+            "line": 2772,
+            "sample": 503,
+            "latitude": 43.6549301,
+            "longitude": -121.4668274,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 363.875092,
+            "view_zenith_degrees": 62.2,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 37,
+            "line": 2772,
+            "sample": 504,
+            "latitude": 43.6547737,
+            "longitude": -121.4729614,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 221.240585,
+            "view_zenith_degrees": 62.19,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 38,
+            "line": 2772,
+            "sample": 505,
+            "latitude": 43.6546173,
+            "longitude": -121.4791183,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 221.240585,
+            "view_zenith_degrees": 62.18,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 39,
+            "line": 2773,
+            "sample": 501,
+            "latitude": 43.6612892,
+            "longitude": -121.4548187,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 49.465908,
+            "view_zenith_degrees": 62.23,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 40,
+            "line": 2773,
+            "sample": 500,
+            "latitude": 43.6614456,
+            "longitude": -121.4486847,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 49.465908,
+            "view_zenith_degrees": 62.24,
+            "solar_zenith_degrees": 30.06,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 41,
+            "line": 2773,
+            "sample": 505,
+            "latitude": 43.6606712,
+            "longitude": -121.4793701,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 221.240585,
+            "view_zenith_degrees": 62.18,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 42,
+            "line": 2773,
+            "sample": 502,
+            "latitude": 43.6611328,
+            "longitude": -121.460968,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 363.875092,
+            "view_zenith_degrees": 62.22,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 43,
+            "line": 2773,
+            "sample": 503,
+            "latitude": 43.6609802,
+            "longitude": -121.4670715,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 363.875092,
+            "view_zenith_degrees": 62.2,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 44,
+            "line": 2773,
+            "sample": 504,
+            "latitude": 43.6608276,
+            "longitude": -121.4732056,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 221.240585,
+            "view_zenith_degrees": 62.19,
+            "solar_zenith_degrees": 30.04,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 45,
+            "line": 2774,
+            "sample": 503,
+            "latitude": 43.6670303,
+            "longitude": -121.4673462,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 12.837687,
+            "view_zenith_degrees": 62.2,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 46,
+            "line": 2774,
+            "sample": 504,
+            "latitude": 43.6668739,
+            "longitude": -121.473465,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 14.202026,
+            "view_zenith_degrees": 62.19,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 47,
+            "line": 2788,
+            "sample": 500,
+            "latitude": 43.6624374,
+            "longitude": -121.4560776,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 204.286072,
+            "view_zenith_degrees": 62.24,
+            "solar_zenith_degrees": 30.06,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 48,
+            "line": 2788,
+            "sample": 498,
+            "latitude": 43.6626816,
+            "longitude": -121.4438095,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 11.183805,
+            "view_zenith_degrees": 62.27,
+            "solar_zenith_degrees": 30.07,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 49,
+            "line": 2788,
+            "sample": 499,
+            "latitude": 43.6625633,
+            "longitude": -121.449913,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 11.183805,
+            "view_zenith_degrees": 62.26,
+            "solar_zenith_degrees": 30.06,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 50,
+            "line": 2788,
+            "sample": 501,
+            "latitude": 43.6623116,
+            "longitude": -121.4622116,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 204.286072,
+            "view_zenith_degrees": 62.23,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 51,
+            "line": 2788,
+            "sample": 502,
+            "latitude": 43.6621895,
+            "longitude": -121.4683304,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 137.626801,
+            "view_zenith_degrees": 62.22,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 52,
+            "line": 2789,
+            "sample": 502,
+            "latitude": 43.6682434,
+            "longitude": -121.4686279,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 137.626801,
+            "view_zenith_degrees": 62.22,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 53,
+            "line": 2789,
+            "sample": 503,
+            "latitude": 43.6681175,
+            "longitude": -121.4747467,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 137.626801,
+            "view_zenith_degrees": 62.2,
+            "solar_zenith_degrees": 30.05,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          }
+        ]
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "VIEW_GEOMETRY_MARGIN_NOT_MET"
+      ],
+      "observed_geometry_rank": 7
+    },
+    {
+      "concept_id": "G3944894615-LPCLOUD",
+      "native_id": "VJ214IMG.A2024178.1012.002.2025284190344",
+      "filename": "VJ214IMG.A2024178.1012.002.2025284190344.nc",
+      "pair_token": "A2024178.1012",
+      "begin": "2024-06-26T10:12:00.000Z",
+      "end": "2024-06-26T10:18:00.000Z",
+      "size_bytes": 828376,
+      "revision_date": "2026-01-03T02:04:51.660Z",
+      "footprint_wgs84": [
+        [
+          -103.7504578,
+          43.4950905
+        ],
+        [
+          -142.5404205,
+          49.4181595
+        ],
+        [
+          -144.0114288,
+          28.5814552
+        ],
+        [
+          -114.2959595,
+          24.0171051
+        ],
+        [
+          -103.7504578,
+          43.4950905
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.120225,
+      "seconds_from_approximate_event_start": 51120.0,
+      "seconds_from_sentinel_observation": -117439.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 18,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024178.1012.002.2025284190344.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024178.1012.002.2025284190344.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-26",
+          "RangeBeginningTime": "10:12:00.00000",
+          "RangeEndingDate": "2024-06-26",
+          "RangeEndingTime": "10:18:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024178.1012.021.2025284031744.nc",
+          "VJ202CCMOD.A2024178.1012.021.2025284031744.nc",
+          "VJ202GDC.A2024178.1012.021.2024327182254.nc",
+          "VJ203IMG.A2024178.1012.021.2024327173653.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 265,
+        "aoi_fire_record_count": 56,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 56,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 50,
+        "aoi_reference_qualified_count": 56,
+        "aoi_reference_qualified_inside_nifc_count": 50,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          13.43,
+          13.78
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 13.64,
+        "aoi_records": [
+          {
+            "sparse_index": 8,
+            "line": 1242,
+            "sample": 3652,
+            "latitude": 43.6789665,
+            "longitude": -121.4434662,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.227564,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 9,
+            "line": 1242,
+            "sample": 3653,
+            "latitude": 43.6780968,
+            "longitude": -121.4385757,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.227564,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.16,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 10,
+            "line": 1243,
+            "sample": 3651,
+            "latitude": 43.6765327,
+            "longitude": -121.4494934,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.201456,
+            "view_zenith_degrees": 13.58,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 11,
+            "line": 1243,
+            "sample": 3652,
+            "latitude": 43.6756592,
+            "longitude": -121.4445877,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.227564,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 12,
+            "line": 1243,
+            "sample": 3653,
+            "latitude": 43.6747856,
+            "longitude": -121.4396973,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.227564,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 13,
+            "line": 1243,
+            "sample": 3655,
+            "latitude": 43.6730347,
+            "longitude": -121.4299164,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.37937,
+            "view_zenith_degrees": 13.7,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 14,
+            "line": 1244,
+            "sample": 3651,
+            "latitude": 43.6732216,
+            "longitude": -121.4506149,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.08288,
+            "view_zenith_degrees": 13.58,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 15,
+            "line": 1244,
+            "sample": 3655,
+            "latitude": 43.6697197,
+            "longitude": -121.4310532,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 4.198331,
+            "view_zenith_degrees": 13.7,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 16,
+            "line": 1244,
+            "sample": 3650,
+            "latitude": 43.6741028,
+            "longitude": -121.455513,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.08288,
+            "view_zenith_degrees": 13.55,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 17,
+            "line": 1244,
+            "sample": 3652,
+            "latitude": 43.672348,
+            "longitude": -121.4457321,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.168578,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 18,
+            "line": 1244,
+            "sample": 3653,
+            "latitude": 43.6714745,
+            "longitude": -121.440834,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.168578,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 19,
+            "line": 1244,
+            "sample": 3654,
+            "latitude": 43.6705971,
+            "longitude": -121.4359436,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 4.198331,
+            "view_zenith_degrees": 13.67,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 20,
+            "line": 1244,
+            "sample": 3656,
+            "latitude": 43.6688461,
+            "longitude": -121.4261627,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.016492,
+            "view_zenith_degrees": 13.73,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 21,
+            "line": 1245,
+            "sample": 3648,
+            "latitude": 43.6725388,
+            "longitude": -121.4664307,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.345813,
+            "view_zenith_degrees": 13.49,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 22,
+            "line": 1245,
+            "sample": 3655,
+            "latitude": 43.6664085,
+            "longitude": -121.4321747,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 4.198331,
+            "view_zenith_degrees": 13.7,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 23,
+            "line": 1245,
+            "sample": 3646,
+            "latitude": 43.6742897,
+            "longitude": -121.4761963,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.439652,
+            "view_zenith_degrees": 13.43,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 24,
+            "line": 1245,
+            "sample": 3647,
+            "latitude": 43.6734161,
+            "longitude": -121.4713211,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.439652,
+            "view_zenith_degrees": 13.46,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 25,
+            "line": 1245,
+            "sample": 3649,
+            "latitude": 43.6716652,
+            "longitude": -121.4615402,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.345813,
+            "view_zenith_degrees": 13.52,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 26,
+            "line": 1245,
+            "sample": 3650,
+            "latitude": 43.6707878,
+            "longitude": -121.4566345,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.08288,
+            "view_zenith_degrees": 13.55,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 27,
+            "line": 1245,
+            "sample": 3651,
+            "latitude": 43.6699142,
+            "longitude": -121.4517441,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.08288,
+            "view_zenith_degrees": 13.58,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 28,
+            "line": 1245,
+            "sample": 3652,
+            "latitude": 43.6690369,
+            "longitude": -121.4468536,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.168578,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 29,
+            "line": 1245,
+            "sample": 3653,
+            "latitude": 43.6681633,
+            "longitude": -121.4419556,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.168578,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 30,
+            "line": 1245,
+            "sample": 3654,
+            "latitude": 43.6672897,
+            "longitude": -121.4370651,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 4.198331,
+            "view_zenith_degrees": 13.67,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 31,
+            "line": 1245,
+            "sample": 3656,
+            "latitude": 43.665535,
+            "longitude": -121.4272919,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.016492,
+            "view_zenith_degrees": 13.73,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 32,
+            "line": 1246,
+            "sample": 3654,
+            "latitude": 43.6639748,
+            "longitude": -121.438179,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.523619,
+            "view_zenith_degrees": 13.67,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 33,
+            "line": 1246,
+            "sample": 3655,
+            "latitude": 43.6630974,
+            "longitude": -121.4332886,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.523619,
+            "view_zenith_degrees": 13.7,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 34,
+            "line": 1246,
+            "sample": 3646,
+            "latitude": 43.6709747,
+            "longitude": -121.4773178,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.994377,
+            "view_zenith_degrees": 13.43,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 35,
+            "line": 1246,
+            "sample": 3649,
+            "latitude": 43.6683578,
+            "longitude": -121.4626465,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.149989,
+            "view_zenith_degrees": 13.52,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 36,
+            "line": 1246,
+            "sample": 3650,
+            "latitude": 43.6674805,
+            "longitude": -121.457756,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.289084,
+            "view_zenith_degrees": 13.55,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 37,
+            "line": 1246,
+            "sample": 3651,
+            "latitude": 43.6666031,
+            "longitude": -121.4528656,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.289084,
+            "view_zenith_degrees": 13.58,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 38,
+            "line": 1246,
+            "sample": 3652,
+            "latitude": 43.6657257,
+            "longitude": -121.4479752,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.178311,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 39,
+            "line": 1246,
+            "sample": 3653,
+            "latitude": 43.6648483,
+            "longitude": -121.4430695,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.178311,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 40,
+            "line": 1246,
+            "sample": 3656,
+            "latitude": 43.6622238,
+            "longitude": -121.4284134,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.944585,
+            "view_zenith_degrees": 13.73,
+            "solar_zenith_degrees": 107.17,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 41,
+            "line": 1247,
+            "sample": 3654,
+            "latitude": 43.6606636,
+            "longitude": -121.4393005,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.523619,
+            "view_zenith_degrees": 13.67,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 42,
+            "line": 1247,
+            "sample": 3646,
+            "latitude": 43.6676674,
+            "longitude": -121.4784393,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.994377,
+            "view_zenith_degrees": 13.43,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 43,
+            "line": 1247,
+            "sample": 3649,
+            "latitude": 43.6650391,
+            "longitude": -121.463768,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.149989,
+            "view_zenith_degrees": 13.52,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 44,
+            "line": 1247,
+            "sample": 3651,
+            "latitude": 43.6632881,
+            "longitude": -121.4539871,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.289084,
+            "view_zenith_degrees": 13.58,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 45,
+            "line": 1247,
+            "sample": 3652,
+            "latitude": 43.6624146,
+            "longitude": -121.4490814,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.178311,
+            "view_zenith_degrees": 13.61,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 46,
+            "line": 1247,
+            "sample": 3653,
+            "latitude": 43.661541,
+            "longitude": -121.444191,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.178311,
+            "view_zenith_degrees": 13.64,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 47,
+            "line": 1247,
+            "sample": 3655,
+            "latitude": 43.6597862,
+            "longitude": -121.4344101,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.523619,
+            "view_zenith_degrees": 13.7,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 48,
+            "line": 1247,
+            "sample": 3656,
+            "latitude": 43.6589088,
+            "longitude": -121.4295349,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.944585,
+            "view_zenith_degrees": 13.73,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 49,
+            "line": 1248,
+            "sample": 3655,
+            "latitude": 43.6593323,
+            "longitude": -121.4411469,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.514955,
+            "view_zenith_degrees": 13.72,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 50,
+            "line": 1248,
+            "sample": 3652,
+            "latitude": 43.6619339,
+            "longitude": -121.4558411,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.19774,
+            "view_zenith_degrees": 13.63,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 51,
+            "line": 1248,
+            "sample": 3653,
+            "latitude": 43.6610641,
+            "longitude": -121.450943,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.19774,
+            "view_zenith_degrees": 13.66,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 52,
+            "line": 1248,
+            "sample": 3654,
+            "latitude": 43.660202,
+            "longitude": -121.4460373,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.514955,
+            "view_zenith_degrees": 13.69,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 53,
+            "line": 1248,
+            "sample": 3656,
+            "latitude": 43.6584663,
+            "longitude": -121.4362717,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.18716,
+            "view_zenith_degrees": 13.75,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 54,
+            "line": 1248,
+            "sample": 3657,
+            "latitude": 43.6576042,
+            "longitude": -121.431366,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.18716,
+            "view_zenith_degrees": 13.78,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 55,
+            "line": 1249,
+            "sample": 3652,
+            "latitude": 43.6586151,
+            "longitude": -121.4569626,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.19774,
+            "view_zenith_degrees": 13.63,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 56,
+            "line": 1249,
+            "sample": 3653,
+            "latitude": 43.657753,
+            "longitude": -121.4520569,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.19774,
+            "view_zenith_degrees": 13.66,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 57,
+            "line": 1249,
+            "sample": 3654,
+            "latitude": 43.6568871,
+            "longitude": -121.4471664,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.514955,
+            "view_zenith_degrees": 13.69,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 58,
+            "line": 1249,
+            "sample": 3655,
+            "latitude": 43.6560173,
+            "longitude": -121.4422684,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.514955,
+            "view_zenith_degrees": 13.72,
+            "solar_zenith_degrees": 107.18,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 59,
+            "line": 1250,
+            "sample": 3648,
+            "latitude": 43.6587715,
+            "longitude": -121.4776764,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.926821,
+            "view_zenith_degrees": 13.51,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 60,
+            "line": 1250,
+            "sample": 3652,
+            "latitude": 43.6553078,
+            "longitude": -121.4580841,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.257047,
+            "view_zenith_degrees": 13.63,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 61,
+            "line": 1250,
+            "sample": 3653,
+            "latitude": 43.6544418,
+            "longitude": -121.4531784,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.257047,
+            "view_zenith_degrees": 13.66,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 62,
+            "line": 1250,
+            "sample": 3654,
+            "latitude": 43.6535683,
+            "longitude": -121.4482803,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.253928,
+            "view_zenith_degrees": 13.69,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 63,
+            "line": 1250,
+            "sample": 3655,
+            "latitude": 43.65271,
+            "longitude": -121.4433899,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.253928,
+            "view_zenith_degrees": 13.72,
+            "solar_zenith_degrees": 107.19,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          }
+        ]
+      },
+      "material_geometry_improvement": true,
+      "geometry_screen_reason_codes": [
+        "MATERIAL_GEOMETRY_IMPROVEMENT"
+      ],
+      "observed_geometry_rank": 1
+    },
+    {
+      "concept_id": "G3944888872-LPCLOUD",
+      "native_id": "VJ214IMG.A2024178.1954.002.2025284190343",
+      "filename": "VJ214IMG.A2024178.1954.002.2025284190343.nc",
+      "pair_token": "A2024178.1954",
+      "begin": "2024-06-26T19:54:00.000Z",
+      "end": "2024-06-26T20:00:00.000Z",
+      "size_bytes": 3651172,
+      "revision_date": "2026-01-03T01:59:51.339Z",
+      "footprint_wgs84": [
+        [
+          -119.0746231,
+          31.509346
+        ],
+        [
+          -86.8914795,
+          36.4021263
+        ],
+        [
+          -87.1832962,
+          57.2934952
+        ],
+        [
+          -132.6683807,
+          50.4007988
+        ],
+        [
+          -119.0746231,
+          31.509346
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.402892,
+      "seconds_from_approximate_event_start": 86040.0,
+      "seconds_from_sentinel_observation": -82519.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 7,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024178.1954.002.2025284190343.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024178.1954.002.2025284190343.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-26",
+          "RangeBeginningTime": "19:54:00.00000",
+          "RangeEndingDate": "2024-06-26",
+          "RangeEndingTime": "20:00:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024178.1954.021.2025284031745.nc",
+          "VJ202CCMOD.A2024178.1954.021.2025284031745.nc",
+          "VJ202GDC.A2024178.1954.021.2024327195008.nc",
+          "VJ203IMG.A2024178.1954.021.2024327190336.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 209,
+        "aoi_fire_record_count": 22,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 15,
+          "high": 7
+        },
+        "aoi_residual_bowtie_count": 6,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 17,
+        "aoi_reference_qualified_count": 16,
+        "aoi_reference_qualified_inside_nifc_count": 14,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          60.87,
+          60.96
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 60.94,
+        "aoi_records": [
+          {
+            "sparse_index": 179,
+            "line": 3605,
+            "sample": 5806,
+            "latitude": 43.6486778,
+            "longitude": -121.4556427,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 42.146633,
+            "view_zenith_degrees": 60.94,
+            "solar_zenith_degrees": 20.47,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 180,
+            "line": 3606,
+            "sample": 5802,
+            "latitude": 43.6607628,
+            "longitude": -121.4367905,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 20.432446,
+            "view_zenith_degrees": 60.88,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 181,
+            "line": 3606,
+            "sample": 5806,
+            "latitude": 43.6541481,
+            "longitude": -121.4587021,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 17.31484,
+            "view_zenith_degrees": 60.94,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 182,
+            "line": 3606,
+            "sample": 5801,
+            "latitude": 43.6624298,
+            "longitude": -121.4312439,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 9.835415,
+            "view_zenith_degrees": 60.87,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 183,
+            "line": 3606,
+            "sample": 5805,
+            "latitude": 43.6557808,
+            "longitude": -121.4532776,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 19.268156,
+            "view_zenith_degrees": 60.92,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 184,
+            "line": 3606,
+            "sample": 5807,
+            "latitude": 43.652504,
+            "longitude": -121.4641342,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 17.31484,
+            "view_zenith_degrees": 60.95,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 185,
+            "line": 3608,
+            "sample": 5807,
+            "latitude": 43.6633987,
+            "longitude": -121.4703827,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 33.349827,
+            "view_zenith_degrees": 60.95,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 1,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 186,
+            "line": 3608,
+            "sample": 5808,
+            "latitude": 43.6617584,
+            "longitude": -121.4758148,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 18.160017,
+            "view_zenith_degrees": 60.96,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 187,
+            "line": 3609,
+            "sample": 5807,
+            "latitude": 43.6688385,
+            "longitude": -121.4735107,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 33.349827,
+            "view_zenith_degrees": 60.95,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 1,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 188,
+            "line": 3609,
+            "sample": 5805,
+            "latitude": 43.672123,
+            "longitude": -121.4626083,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 5.162479,
+            "view_zenith_degrees": 60.92,
+            "solar_zenith_degrees": 20.5,
+            "adjacent_cloud_pixels": 1,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 189,
+            "line": 3609,
+            "sample": 5808,
+            "latitude": 43.6672058,
+            "longitude": -121.4789429,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 18.160017,
+            "view_zenith_degrees": 60.96,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 190,
+            "line": 3610,
+            "sample": 5807,
+            "latitude": 43.6742821,
+            "longitude": -121.4766464,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 11.980926,
+            "view_zenith_degrees": 60.95,
+            "solar_zenith_degrees": 20.5,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 191,
+            "line": 3610,
+            "sample": 5806,
+            "latitude": 43.6759186,
+            "longitude": -121.4712143,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 11.980926,
+            "view_zenith_degrees": 60.94,
+            "solar_zenith_degrees": 20.5,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 192,
+            "line": 3620,
+            "sample": 5804,
+            "latitude": 43.6548653,
+            "longitude": -121.4568939,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 14.225498,
+            "view_zenith_degrees": 60.92,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 193,
+            "line": 3620,
+            "sample": 5800,
+            "latitude": 43.6616058,
+            "longitude": -121.4350128,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 9.649454,
+            "view_zenith_degrees": 60.86,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 194,
+            "line": 3620,
+            "sample": 5801,
+            "latitude": 43.6599083,
+            "longitude": -121.4405212,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 9.649454,
+            "view_zenith_degrees": 60.88,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 195,
+            "line": 3620,
+            "sample": 5805,
+            "latitude": 43.6531982,
+            "longitude": -121.4623032,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 14.225498,
+            "view_zenith_degrees": 60.93,
+            "solar_zenith_degrees": 20.48,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 196,
+            "line": 3622,
+            "sample": 5805,
+            "latitude": 43.6640968,
+            "longitude": -121.4685211,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 26.51438,
+            "view_zenith_degrees": 60.93,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 1,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 197,
+            "line": 3622,
+            "sample": 5806,
+            "latitude": 43.662426,
+            "longitude": -121.4739456,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 28.419603,
+            "view_zenith_degrees": 60.94,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 198,
+            "line": 3623,
+            "sample": 5805,
+            "latitude": 43.6695442,
+            "longitude": -121.471611,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 26.51438,
+            "view_zenith_degrees": 60.93,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 1,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 199,
+            "line": 3623,
+            "sample": 5806,
+            "latitude": 43.6678772,
+            "longitude": -121.4770432,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 28.419603,
+            "view_zenith_degrees": 60.94,
+            "solar_zenith_degrees": 20.49,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 200,
+            "line": 3624,
+            "sample": 5805,
+            "latitude": 43.6749916,
+            "longitude": -121.4747391,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 16.493767,
+            "view_zenith_degrees": 60.93,
+            "solar_zenith_degrees": 20.5,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          }
+        ]
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "VIEW_GEOMETRY_MARGIN_NOT_MET"
+      ],
+      "observed_geometry_rank": 6
+    },
+    {
+      "concept_id": "G3944894604-LPCLOUD",
+      "native_id": "VJ214IMG.A2024178.2136.002.2025284190348",
+      "filename": "VJ214IMG.A2024178.2136.002.2025284190348.nc",
+      "pair_token": "A2024178.2136",
+      "begin": "2024-06-26T21:36:00.000Z",
+      "end": "2024-06-26T21:42:00.000Z",
+      "size_bytes": 2012145,
+      "revision_date": "2026-01-03T02:04:51.412Z",
+      "footprint_wgs84": [
+        [
+          -145.2896423,
+          33.1850815
+        ],
+        [
+          -112.490097,
+          38.1818695
+        ],
+        [
+          -112.3866882,
+          58.9570122
+        ],
+        [
+          -159.6247253,
+          51.7986526
+        ],
+        [
+          -145.2896423,
+          33.1850815
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.329467,
+      "seconds_from_approximate_event_start": 92160.0,
+      "seconds_from_sentinel_observation": -76399.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 10,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024178.2136.002.2025284190348.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024178.2136.002.2025284190348.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-26",
+          "RangeBeginningTime": "21:36:00.00000",
+          "RangeEndingDate": "2024-06-26",
+          "RangeEndingTime": "21:42:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024178.2136.021.2025284031747.nc",
+          "VJ202CCMOD.A2024178.2136.021.2025284031747.nc",
+          "VJ202GDC.A2024178.2136.021.2024327195012.nc",
+          "VJ203IMG.A2024178.2136.021.2024327190321.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 81,
+        "aoi_fire_record_count": 2,
+        "aoi_confidence_counts": {
+          "low": 1,
+          "nominal": 1,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 1,
+        "aoi_reference_qualified_count": 1,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          49.75,
+          49.75
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 49.75,
+        "aoi_records": [
+          {
+            "sparse_index": 48,
+            "line": 1748,
+            "sample": 1400,
+            "latitude": 43.6472626,
+            "longitude": -121.4600143,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 82.710846,
+            "view_zenith_degrees": 49.75,
+            "solar_zenith_degrees": 27.31,
+            "adjacent_cloud_pixels": 2,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 51,
+            "line": 1749,
+            "sample": 1399,
+            "latitude": 43.6524887,
+            "longitude": -121.4536057,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 179.681381,
+            "view_zenith_degrees": 49.78,
+            "solar_zenith_degrees": 27.32,
+            "adjacent_cloud_pixels": 6,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          }
+        ]
+      },
+      "material_geometry_improvement": true,
+      "geometry_screen_reason_codes": [
+        "MATERIAL_GEOMETRY_IMPROVEMENT"
+      ],
+      "observed_geometry_rank": 5
+    },
+    {
+      "concept_id": "G3944888851-LPCLOUD",
+      "native_id": "VJ214IMG.A2024179.0954.002.2025284191612",
+      "filename": "VJ214IMG.A2024179.0954.002.2025284191612.nc",
+      "pair_token": "A2024179.0954",
+      "begin": "2024-06-27T09:54:00.000Z",
+      "end": "2024-06-27T10:00:00.000Z",
+      "size_bytes": 654238,
+      "revision_date": "2026-01-03T01:59:51.051Z",
+      "footprint_wgs84": [
+        [
+          -101.2542267,
+          40.325489
+        ],
+        [
+          -137.8447266,
+          45.9200287
+        ],
+        [
+          -139.7101593,
+          25.0732651
+        ],
+        [
+          -110.809967,
+          20.6298962
+        ],
+        [
+          -101.2542267,
+          40.325489
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.01157,
+      "seconds_from_approximate_event_start": 136440.0,
+      "seconds_from_sentinel_observation": -32119.024,
+      "pre_event_reference_only": false,
+      "metadata_rank": 21,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024179.0954.002.2025284191612.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024179.0954.002.2025284191612.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-27",
+          "RangeBeginningTime": "09:54:00.00000",
+          "RangeEndingDate": "2024-06-27",
+          "RangeEndingTime": "10:00:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024179.0954.021.2025284033009.nc",
+          "VJ202CCMOD.A2024179.0954.021.2025284033009.nc",
+          "VJ202GDC.A2024179.0954.021.2024327195015.nc",
+          "VJ203IMG.A2024179.0954.021.2024327190336.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 291,
+        "aoi_fire_record_count": 20,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 20,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 18,
+        "aoi_reference_qualified_count": 20,
+        "aoi_reference_qualified_inside_nifc_count": 18,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          14.47,
+          14.95
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 14.62,
+        "aoi_records": [
+          {
+            "sparse_index": 4,
+            "line": 374,
+            "sample": 2705,
+            "latitude": 43.6730309,
+            "longitude": -121.4720078,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.8588,
+            "view_zenith_degrees": 14.95,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 5,
+            "line": 375,
+            "sample": 2705,
+            "latitude": 43.6696625,
+            "longitude": -121.4728546,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 0.8588,
+            "view_zenith_degrees": 14.95,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 6,
+            "line": 375,
+            "sample": 2706,
+            "latitude": 43.6689873,
+            "longitude": -121.4678268,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.097863,
+            "view_zenith_degrees": 14.92,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 7,
+            "line": 377,
+            "sample": 2715,
+            "latitude": 43.6561737,
+            "longitude": -121.4242172,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.560687,
+            "view_zenith_degrees": 14.65,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 8,
+            "line": 377,
+            "sample": 2716,
+            "latitude": 43.6554947,
+            "longitude": -121.4191971,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 3.250697,
+            "view_zenith_degrees": 14.62,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 9,
+            "line": 378,
+            "sample": 2715,
+            "latitude": 43.6528053,
+            "longitude": -121.4250793,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.067347,
+            "view_zenith_degrees": 14.65,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 10,
+            "line": 378,
+            "sample": 2716,
+            "latitude": 43.6521301,
+            "longitude": -121.4200516,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.256984,
+            "view_zenith_degrees": 14.62,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 11,
+            "line": 378,
+            "sample": 2719,
+            "latitude": 43.6501007,
+            "longitude": -121.4049301,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.048684,
+            "view_zenith_degrees": 14.53,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 12,
+            "line": 378,
+            "sample": 2720,
+            "latitude": 43.6494217,
+            "longitude": -121.3998795,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.026869,
+            "view_zenith_degrees": 14.5,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 13,
+            "line": 379,
+            "sample": 2719,
+            "latitude": 43.6467361,
+            "longitude": -121.4057922,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.048684,
+            "view_zenith_degrees": 14.53,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 14,
+            "line": 379,
+            "sample": 2721,
+            "latitude": 43.6453819,
+            "longitude": -121.3956985,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.026869,
+            "view_zenith_degrees": 14.47,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 15,
+            "line": 379,
+            "sample": 2714,
+            "latitude": 43.6501122,
+            "longitude": -121.4309387,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.067347,
+            "view_zenith_degrees": 14.68,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 16,
+            "line": 379,
+            "sample": 2715,
+            "latitude": 43.649437,
+            "longitude": -121.4259109,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.067347,
+            "view_zenith_degrees": 14.65,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 17,
+            "line": 379,
+            "sample": 2716,
+            "latitude": 43.6487656,
+            "longitude": -121.4208984,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.256984,
+            "view_zenith_degrees": 14.62,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 18,
+            "line": 379,
+            "sample": 2717,
+            "latitude": 43.6480904,
+            "longitude": -121.415863,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.256984,
+            "view_zenith_degrees": 14.59,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 19,
+            "line": 379,
+            "sample": 2720,
+            "latitude": 43.6460609,
+            "longitude": -121.4007416,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 2.026869,
+            "view_zenith_degrees": 14.5,
+            "solar_zenith_degrees": 108.81,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 20,
+            "line": 380,
+            "sample": 2721,
+            "latitude": 43.6420135,
+            "longitude": -121.3965302,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 4.513514,
+            "view_zenith_degrees": 14.47,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 21,
+            "line": 380,
+            "sample": 2715,
+            "latitude": 43.6460648,
+            "longitude": -121.4267578,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.27781,
+            "view_zenith_degrees": 14.65,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 22,
+            "line": 380,
+            "sample": 2716,
+            "latitude": 43.6453972,
+            "longitude": -121.4217453,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.09966,
+            "view_zenith_degrees": 14.62,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 23,
+            "line": 380,
+            "sample": 2717,
+            "latitude": 43.644722,
+            "longitude": -121.4167099,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 1.09966,
+            "view_zenith_degrees": 14.59,
+            "solar_zenith_degrees": 108.82,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          }
+        ]
+      },
+      "material_geometry_improvement": true,
+      "geometry_screen_reason_codes": [
+        "MATERIAL_GEOMETRY_IMPROVEMENT"
+      ],
+      "observed_geometry_rank": 2
+    },
+    {
+      "concept_id": "G3944882727-LPCLOUD",
+      "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+      "filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "pair_token": "A2024179.1936",
+      "begin": "2024-06-27T19:36:00.000Z",
+      "end": "2024-06-27T19:42:00.000Z",
+      "size_bytes": 2710616,
+      "revision_date": "2026-01-03T01:53:50.819Z",
+      "footprint_wgs84": [
+        [
+          -116.0006027,
+          34.8094521
+        ],
+        [
+          -82.4206085,
+          39.9095116
+        ],
+        [
+          -81.9774246,
+          60.7683296
+        ],
+        [
+          -131.3530884,
+          53.2915802
+        ],
+        [
+          -116.0006027,
+          34.8094521
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.465051,
+      "seconds_from_approximate_event_start": 171360.0,
+      "seconds_from_sentinel_observation": 2800.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 2,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024179.1936.002.2025284191612.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-27",
+          "RangeBeginningTime": "19:36:00.00000",
+          "RangeEndingDate": "2024-06-27",
+          "RangeEndingTime": "19:42:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024179.1936.021.2025284033011.nc",
+          "VJ202CCMOD.A2024179.1936.021.2025284033011.nc",
+          "VJ202GDC.A2024179.1936.021.2024327212646.nc",
+          "VJ203IMG.A2024179.1936.021.2024327203454.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 65,
+        "aoi_fire_record_count": 8,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 6,
+          "high": 2
+        },
+        "aoi_residual_bowtie_count": 3,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 6,
+        "aoi_reference_qualified_count": 5,
+        "aoi_reference_qualified_inside_nifc_count": 4,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          69.02,
+          69.07
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 69.02,
+        "aoi_records": [
+          {
+            "sparse_index": 54,
+            "line": 2938,
+            "sample": 6375,
+            "latitude": 43.6490822,
+            "longitude": -121.4242325,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 18.952276,
+            "view_zenith_degrees": 69.04,
+            "solar_zenith_degrees": 21.31,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 55,
+            "line": 2939,
+            "sample": 6375,
+            "latitude": 43.6553612,
+            "longitude": -121.4289093,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 18.952276,
+            "view_zenith_degrees": 69.04,
+            "solar_zenith_degrees": 21.31,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 56,
+            "line": 2939,
+            "sample": 6374,
+            "latitude": 43.6585197,
+            "longitude": -121.4199829,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 18.952276,
+            "view_zenith_degrees": 69.02,
+            "solar_zenith_degrees": 21.32,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": true,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 57,
+            "line": 2955,
+            "sample": 6374,
+            "latitude": 43.6487389,
+            "longitude": -121.4211578,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 12.744905,
+            "view_zenith_degrees": 69.02,
+            "solar_zenith_degrees": 21.3,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 58,
+            "line": 2955,
+            "sample": 6375,
+            "latitude": 43.645649,
+            "longitude": -121.4297562,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 12.744905,
+            "view_zenith_degrees": 69.04,
+            "solar_zenith_degrees": 21.3,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 59,
+            "line": 2956,
+            "sample": 6374,
+            "latitude": 43.655056,
+            "longitude": -121.4257202,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 24.707285,
+            "view_zenith_degrees": 69.02,
+            "solar_zenith_degrees": 21.31,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 60,
+            "line": 2957,
+            "sample": 6374,
+            "latitude": 43.6613998,
+            "longitude": -121.4302063,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 24.707285,
+            "view_zenith_degrees": 69.02,
+            "solar_zenith_degrees": 21.32,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 61,
+            "line": 2960,
+            "sample": 6377,
+            "latitude": 43.6710892,
+            "longitude": -121.4697495,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 20.508297,
+            "view_zenith_degrees": 69.07,
+            "solar_zenith_degrees": 21.34,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          }
+        ]
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "VIEW_GEOMETRY_MARGIN_NOT_MET"
+      ],
+      "observed_geometry_rank": 8
+    },
+    {
+      "concept_id": "G3944882738-LPCLOUD",
+      "native_id": "VJ214IMG.A2024179.2118.002.2025284191612",
+      "filename": "VJ214IMG.A2024179.2118.002.2025284191612.nc",
+      "pair_token": "A2024179.2118",
+      "begin": "2024-06-27T21:18:00.000Z",
+      "end": "2024-06-27T21:24:00.000Z",
+      "size_bytes": 2038800,
+      "revision_date": "2026-01-03T01:53:50.994Z",
+      "footprint_wgs84": [
+        [
+          -142.3210754,
+          36.4602623
+        ],
+        [
+          -107.9694977,
+          41.6884766
+        ],
+        [
+          -107.0617142,
+          62.4264259
+        ],
+        [
+          -158.5457458,
+          54.6315498
+        ],
+        [
+          -142.3210754,
+          36.4602623
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.195154,
+      "seconds_from_approximate_event_start": 177480.0,
+      "seconds_from_sentinel_observation": 8920.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 15,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024179.2118.002.2025284191612.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024179.2118.002.2025284191612.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-27",
+          "RangeBeginningTime": "21:18:00.00000",
+          "RangeEndingDate": "2024-06-27",
+          "RangeEndingTime": "21:24:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024179.2118.021.2025284033012.nc",
+          "VJ202CCMOD.A2024179.2118.021.2025284033012.nc",
+          "VJ202GDC.A2024179.2118.021.2024327212642.nc",
+          "VJ203IMG.A2024179.2118.021.2024327203451.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 515,
+        "aoi_fire_record_count": 13,
+        "aoi_confidence_counts": {
+          "low": 2,
+          "nominal": 10,
+          "high": 1
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 12,
+        "aoi_reference_qualified_count": 11,
+        "aoi_reference_qualified_inside_nifc_count": 10,
+        "aoi_reference_qualified_view_zenith_range_degrees": [
+          30.86,
+          31.2
+        ],
+        "aoi_reference_qualified_view_zenith_median_degrees": 31.01,
+        "aoi_records": [
+          {
+            "sparse_index": 24,
+            "line": 781,
+            "sample": 2176,
+            "latitude": 43.6454124,
+            "longitude": -121.3972244,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 24.763206,
+            "view_zenith_degrees": 31.2,
+            "solar_zenith_degrees": 24.94,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 25,
+            "line": 781,
+            "sample": 2177,
+            "latitude": 43.6447601,
+            "longitude": -121.4034576,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 24.763206,
+            "view_zenith_degrees": 31.17,
+            "solar_zenith_degrees": 24.94,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 26,
+            "line": 781,
+            "sample": 2178,
+            "latitude": 43.644104,
+            "longitude": -121.4097137,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 39.127262,
+            "view_zenith_degrees": 31.14,
+            "solar_zenith_degrees": 24.93,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 27,
+            "line": 782,
+            "sample": 2180,
+            "latitude": 43.6465569,
+            "longitude": -121.422966,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 13.477634,
+            "view_zenith_degrees": 31.08,
+            "solar_zenith_degrees": 24.93,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 28,
+            "line": 782,
+            "sample": 2181,
+            "latitude": 43.6458931,
+            "longitude": -121.4292908,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 13.477634,
+            "view_zenith_degrees": 31.04,
+            "solar_zenith_degrees": 24.92,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 29,
+            "line": 784,
+            "sample": 2180,
+            "latitude": 43.6540909,
+            "longitude": -121.4244156,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 88.538422,
+            "view_zenith_degrees": 31.07,
+            "solar_zenith_degrees": 24.93,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 30,
+            "line": 785,
+            "sample": 2182,
+            "latitude": 43.6565361,
+            "longitude": -121.4376221,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 19.159536,
+            "view_zenith_degrees": 31.01,
+            "solar_zenith_degrees": 24.93,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 31,
+            "line": 785,
+            "sample": 2180,
+            "latitude": 43.6578598,
+            "longitude": -121.4251328,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 88.538422,
+            "view_zenith_degrees": 31.07,
+            "solar_zenith_degrees": 24.94,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 32,
+            "line": 788,
+            "sample": 2186,
+            "latitude": 43.6651535,
+            "longitude": -121.4649963,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 70.681168,
+            "view_zenith_degrees": 30.89,
+            "solar_zenith_degrees": 24.92,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 33,
+            "line": 788,
+            "sample": 2187,
+            "latitude": 43.6644859,
+            "longitude": -121.4712524,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 70.681168,
+            "view_zenith_degrees": 30.86,
+            "solar_zenith_degrees": 24.92,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 34,
+            "line": 789,
+            "sample": 2187,
+            "latitude": 43.6682396,
+            "longitude": -121.4720154,
+            "confidence_class": 9,
+            "confidence_name": "high",
+            "fire_radiative_power_mw": 70.681168,
+            "view_zenith_degrees": 30.86,
+            "solar_zenith_degrees": 24.92,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 35,
+            "line": 790,
+            "sample": 2186,
+            "latitude": 43.6726685,
+            "longitude": -121.4664841,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 13.672071,
+            "view_zenith_degrees": 30.89,
+            "solar_zenith_degrees": 24.93,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          },
+          {
+            "sparse_index": 36,
+            "line": 790,
+            "sample": 2187,
+            "latitude": 43.6719971,
+            "longitude": -121.4727554,
+            "confidence_class": 8,
+            "confidence_name": "nominal",
+            "fire_radiative_power_mw": 13.672071,
+            "view_zenith_degrees": 30.86,
+            "solar_zenith_degrees": 24.92,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": true
+          }
+        ]
+      },
+      "material_geometry_improvement": true,
+      "geometry_screen_reason_codes": [
+        "MATERIAL_GEOMETRY_IMPROVEMENT"
+      ],
+      "observed_geometry_rank": 3
+    },
+    {
+      "concept_id": "G3944937293-LPCLOUD",
+      "native_id": "VJ214IMG.A2024180.0930.002.2025284193416",
+      "filename": "VJ214IMG.A2024180.0930.002.2025284193416.nc",
+      "pair_token": "A2024180.0930",
+      "begin": "2024-06-28T09:30:00.000Z",
+      "end": "2024-06-28T09:36:00.000Z",
+      "size_bytes": 1578840,
+      "revision_date": "2026-01-03T02:42:51.453Z",
+      "footprint_wgs84": [
+        [
+          -81.9704285,
+          55.0754395
+        ],
+        [
+          -134.2331543,
+          63.0340462
+        ],
+        [
+          -133.2335358,
+          42.3022728
+        ],
+        [
+          -98.5618668,
+          36.9946213
+        ],
+        [
+          -81.9704285,
+          55.0754395
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.15371,
+      "seconds_from_approximate_event_start": 221400.0,
+      "seconds_from_sentinel_observation": 52840.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 17,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024180.0930.002.2025284193416.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024180.0930.002.2025284193416.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-28",
+          "RangeBeginningTime": "09:30:00.00000",
+          "RangeEndingDate": "2024-06-28",
+          "RangeEndingTime": "09:36:00.00000",
+          "DayNightFlag": "Both"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024180.0930.021.2025284034245.nc",
+          "VJ202CCMOD.A2024180.0930.021.2025284034245.nc",
+          "VJ202GDC.A2024180.0930.021.2024327212720.nc",
+          "VJ203IMG.A2024180.0930.021.2024327203450.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 653,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944882677-LPCLOUD",
+      "native_id": "VJ214IMG.A2024180.1112.002.2025284193413",
+      "filename": "VJ214IMG.A2024180.1112.002.2025284193413.nc",
+      "pair_token": "A2024180.1112",
+      "begin": "2024-06-28T11:12:00.000Z",
+      "end": "2024-06-28T11:18:00.000Z",
+      "size_bytes": 1091074,
+      "revision_date": "2026-01-03T01:53:49.725Z",
+      "footprint_wgs84": [
+        [
+          -109.2418518,
+          53.7587585
+        ],
+        [
+          -159.292099,
+          61.3748169
+        ],
+        [
+          -158.7124023,
+          40.5203209
+        ],
+        [
+          -124.8755417,
+          35.3351135
+        ],
+        [
+          -109.2418518,
+          53.7587585
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.425451,
+      "seconds_from_approximate_event_start": 227520.0,
+      "seconds_from_sentinel_observation": 58960.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 5,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024180.1112.002.2025284193413.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024180.1112.002.2025284193413.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-28",
+          "RangeBeginningTime": "11:12:00.00000",
+          "RangeEndingDate": "2024-06-28",
+          "RangeEndingTime": "11:18:00.00000",
+          "DayNightFlag": "Both"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024180.1112.021.2025284034253.nc",
+          "VJ202CCMOD.A2024180.1112.021.2025284034253.nc",
+          "VJ202GDC.A2024180.1112.021.2024327212702.nc",
+          "VJ203IMG.A2024180.1112.021.2024327203452.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 10,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944930037-LPCLOUD",
+      "native_id": "VJ214IMG.A2024180.2054.002.2025284193420",
+      "filename": "VJ214IMG.A2024180.2054.002.2025284193420.nc",
+      "pair_token": "A2024180.2054",
+      "begin": "2024-06-28T20:54:00.000Z",
+      "end": "2024-06-28T21:00:00.000Z",
+      "size_bytes": 3826373,
+      "revision_date": "2026-01-03T02:36:48.368Z",
+      "footprint_wgs84": [
+        [
+          -130.1761169,
+          20.0744972
+        ],
+        [
+          -101.4331207,
+          24.4559269
+        ],
+        [
+          -103.3391724,
+          45.3060646
+        ],
+        [
+          -139.5984955,
+          39.7969398
+        ],
+        [
+          -130.1761169,
+          20.0744972
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.047329,
+      "seconds_from_approximate_event_start": 262440.0,
+      "seconds_from_sentinel_observation": 93880.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 20,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024180.2054.002.2025284193420.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024180.2054.002.2025284193420.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-28",
+          "RangeBeginningTime": "20:54:00.00000",
+          "RangeEndingDate": "2024-06-28",
+          "RangeEndingTime": "21:00:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024180.2054.021.2025284034244.nc",
+          "VJ202CCMOD.A2024180.2054.021.2025284034244.nc",
+          "VJ202GDC.A2024180.2054.021.2024327224330.nc",
+          "VJ203IMG.A2024180.2054.021.2024327220456.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 88,
+        "aoi_fire_record_count": 4,
+        "aoi_confidence_counts": {
+          "low": 4,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 3,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": [
+          {
+            "sparse_index": 83,
+            "line": 6301,
+            "sample": 3044,
+            "latitude": 43.6438026,
+            "longitude": -121.4088364,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 4.850402,
+            "view_zenith_degrees": 4.72,
+            "solar_zenith_degrees": 22.95,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": false,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 84,
+            "line": 6302,
+            "sample": 3044,
+            "latitude": 43.6470757,
+            "longitude": -121.4097443,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 5.580997,
+            "view_zenith_degrees": 4.72,
+            "solar_zenith_degrees": 22.95,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 85,
+            "line": 6304,
+            "sample": 3042,
+            "latitude": 43.6543999,
+            "longitude": -121.4090881,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 5.830104,
+            "view_zenith_degrees": 4.82,
+            "solar_zenith_degrees": 22.96,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          },
+          {
+            "sparse_index": 86,
+            "line": 6311,
+            "sample": 3054,
+            "latitude": 43.6689453,
+            "longitude": -121.4720764,
+            "confidence_class": 7,
+            "confidence_name": "low",
+            "fire_radiative_power_mw": 12.542415,
+            "view_zenith_degrees": 4.44,
+            "solar_zenith_degrees": 22.95,
+            "adjacent_cloud_pixels": 0,
+            "adjacent_water_pixels": 0,
+            "qa_geolocation_non_nominal": false,
+            "qa_residual_bowtie": false,
+            "inside_nifc_final_reference": true,
+            "reference_qualified": false
+          }
+        ]
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944935641-LPCLOUD",
+      "native_id": "VJ214IMG.A2024181.0912.002.2025284194650",
+      "filename": "VJ214IMG.A2024181.0912.002.2025284194650.nc",
+      "pair_token": "A2024181.0912",
+      "begin": "2024-06-29T09:12:00.000Z",
+      "end": "2024-06-29T09:18:00.000Z",
+      "size_bytes": 1418736,
+      "revision_date": "2026-01-03T02:41:51.904Z",
+      "footprint_wgs84": [
+        [
+          -80.9848099,
+          52.2655945
+        ],
+        [
+          -128.844162,
+          59.5655479
+        ],
+        [
+          -128.7103119,
+          38.7944221
+        ],
+        [
+          -95.6191406,
+          33.7225075
+        ],
+        [
+          -80.9848099,
+          52.2655945
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.288168,
+      "seconds_from_approximate_event_start": 306720.0,
+      "seconds_from_sentinel_observation": 138160.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 12,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024181.0912.002.2025284194650.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024181.0912.002.2025284194650.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-29",
+          "RangeBeginningTime": "09:12:00.00000",
+          "RangeEndingDate": "2024-06-29",
+          "RangeEndingTime": "09:18:00.00000",
+          "DayNightFlag": "Both"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024181.0912.021.2025284035449.nc",
+          "VJ202CCMOD.A2024181.0912.021.2025284035449.nc",
+          "VJ202GDC.A2024181.0912.021.2024327224318.nc",
+          "VJ203IMG.A2024181.0912.021.2024327220451.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 867,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944930366-LPCLOUD",
+      "native_id": "VJ214IMG.A2024181.1054.002.2025284194650",
+      "filename": "VJ214IMG.A2024181.1054.002.2025284194650.nc",
+      "pair_token": "A2024181.1054",
+      "begin": "2024-06-29T10:54:00.000Z",
+      "end": "2024-06-29T11:00:00.000Z",
+      "size_bytes": 1026999,
+      "revision_date": "2026-01-03T02:36:52.589Z",
+      "footprint_wgs84": [
+        [
+          -108.0020828,
+          50.8839874
+        ],
+        [
+          -154.0394592,
+          57.9006271
+        ],
+        [
+          -154.225174,
+          37.0116119
+        ],
+        [
+          -121.8488235,
+          32.0457382
+        ],
+        [
+          -108.0020828,
+          50.8839874
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.442562,
+      "seconds_from_approximate_event_start": 312840.0,
+      "seconds_from_sentinel_observation": 144280.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 4,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024181.1054.002.2025284194650.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024181.1054.002.2025284194650.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-29",
+          "RangeBeginningTime": "10:54:00.00000",
+          "RangeEndingDate": "2024-06-29",
+          "RangeEndingTime": "11:00:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024181.1054.021.2025284035446.nc",
+          "VJ202CCMOD.A2024181.1054.021.2025284035446.nc",
+          "VJ202GDC.A2024181.1054.021.2024327224307.nc",
+          "VJ203IMG.A2024181.1054.021.2024327220456.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 15,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944923049-LPCLOUD",
+      "native_id": "VJ214IMG.A2024181.2036.002.2025284194653",
+      "filename": "VJ214IMG.A2024181.2036.002.2025284194653.nc",
+      "pair_token": "A2024181.2036",
+      "begin": "2024-06-29T20:36:00.000Z",
+      "end": "2024-06-29T20:42:00.000Z",
+      "size_bytes": 4027532,
+      "revision_date": "2026-01-03T02:30:51.786Z",
+      "footprint_wgs84": [
+        [
+          -126.6778107,
+          23.4673443
+        ],
+        [
+          -97.0862808,
+          27.9698219
+        ],
+        [
+          -98.6480637,
+          48.8079453
+        ],
+        [
+          -137.074646,
+          42.9742012
+        ],
+        [
+          -126.6778107,
+          23.4673443
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.079994,
+      "seconds_from_approximate_event_start": 347760.0,
+      "seconds_from_sentinel_observation": 179200.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 19,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024181.2036.002.2025284194653.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024181.2036.002.2025284194653.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-29",
+          "RangeBeginningTime": "20:36:00.00000",
+          "RangeEndingDate": "2024-06-29",
+          "RangeEndingTime": "20:42:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024181.2036.021.2025284035446.nc",
+          "VJ202CCMOD.A2024181.2036.021.2025284035446.nc",
+          "VJ202GDC.A2024181.2036.021.2024327235425.nc",
+          "VJ203IMG.A2024181.2036.021.2024327231553.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 91,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944917934-LPCLOUD",
+      "native_id": "VJ214IMG.A2024182.0854.002.2025284200523",
+      "filename": "VJ214IMG.A2024182.0854.002.2025284200523.nc",
+      "pair_token": "A2024182.0854",
+      "begin": "2024-06-30T08:54:00.000Z",
+      "end": "2024-06-30T09:00:00.000Z",
+      "size_bytes": 1444815,
+      "revision_date": "2026-01-03T02:25:57.361Z",
+      "footprint_wgs84": [
+        [
+          -79.5118866,
+          49.3351898
+        ],
+        [
+          -123.6878815,
+          56.0854683
+        ],
+        [
+          -124.2536011,
+          35.2840462
+        ],
+        [
+          -92.5073547,
+          30.4131527
+        ],
+        [
+          -79.5118866,
+          49.3351898
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.421691,
+      "seconds_from_approximate_event_start": 392040.0,
+      "seconds_from_sentinel_observation": 223480.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 6,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024182.0854.002.2025284200523.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024182.0854.002.2025284200523.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-30",
+          "RangeBeginningTime": "08:54:00.00000",
+          "RangeEndingDate": "2024-06-30",
+          "RangeEndingTime": "09:00:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024182.0854.021.2025284040709.nc",
+          "VJ202CCMOD.A2024182.0854.021.2025284040709.nc",
+          "VJ202GDC.A2024182.0854.021.2024328003552.nc",
+          "VJ203IMG.A2024182.0854.021.2024327235358.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 165,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944918924-LPCLOUD",
+      "native_id": "VJ214IMG.A2024182.1036.002.2025284200520",
+      "filename": "VJ214IMG.A2024182.1036.002.2025284200520.nc",
+      "pair_token": "A2024182.1036",
+      "begin": "2024-06-30T10:36:00.000Z",
+      "end": "2024-06-30T10:42:00.000Z",
+      "size_bytes": 835964,
+      "revision_date": "2026-01-03T02:26:46.848Z",
+      "footprint_wgs84": [
+        [
+          -106.3236389,
+          47.9039879
+        ],
+        [
+          -149.0110321,
+          54.4154358
+        ],
+        [
+          -149.7994385,
+          33.5016174
+        ],
+        [
+          -118.6621857,
+          28.7205086
+        ],
+        [
+          -106.3236389,
+          47.9039879
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.310921,
+      "seconds_from_approximate_event_start": 398160.0,
+      "seconds_from_sentinel_observation": 229600.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 11,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024182.1036.002.2025284200520.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024182.1036.002.2025284200520.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-30",
+          "RangeBeginningTime": "10:36:00.00000",
+          "RangeEndingDate": "2024-06-30",
+          "RangeEndingTime": "10:42:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024182.1036.021.2025284040712.nc",
+          "VJ202CCMOD.A2024182.1036.021.2025284040712.nc",
+          "VJ202GDC.A2024182.1036.021.2024327235507.nc",
+          "VJ203IMG.A2024182.1036.021.2024327231550.nc"
+        ],
+        "fire_mask_shape": [
+          6464,
+          6400
+        ],
+        "global_fire_record_count": 43,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944937157-LPCLOUD",
+      "native_id": "VJ214IMG.A2024182.2018.002.2025284200521",
+      "filename": "VJ214IMG.A2024182.2018.002.2025284200521.nc",
+      "pair_token": "A2024182.2018",
+      "begin": "2024-06-30T20:18:00.000Z",
+      "end": "2024-06-30T20:24:00.000Z",
+      "size_bytes": 3906765,
+      "revision_date": "2026-01-03T02:42:48.143Z",
+      "footprint_wgs84": [
+        [
+          -123.288002,
+          26.8380489
+        ],
+        [
+          -92.7445221,
+          31.4830151
+        ],
+        [
+          -93.8555756,
+          52.3055801
+        ],
+        [
+          -134.8299103,
+          46.088604
+        ],
+        [
+          -123.288002,
+          26.8380489
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.212331,
+      "seconds_from_approximate_event_start": 433080.0,
+      "seconds_from_sentinel_observation": 264520.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 14,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024182.2018.002.2025284200521.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024182.2018.002.2025284200521.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-30",
+          "RangeBeginningTime": "20:18:00.00000",
+          "RangeEndingDate": "2024-06-30",
+          "RangeEndingTime": "20:24:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024182.2018.021.2025284040711.nc",
+          "VJ202CCMOD.A2024182.2018.021.2025284040711.nc",
+          "VJ202GDC.A2024182.2018.021.2024328011558.nc",
+          "VJ203IMG.A2024182.2018.021.2024328003525.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 70,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944917975-LPCLOUD",
+      "native_id": "VJ214IMG.A2024182.2200.002.2025284200521",
+      "filename": "VJ214IMG.A2024182.2200.002.2025284200521.nc",
+      "pair_token": "A2024182.2200",
+      "begin": "2024-06-30T22:00:00.000Z",
+      "end": "2024-06-30T22:06:00.000Z",
+      "size_bytes": 2057369,
+      "revision_date": "2026-01-03T02:25:58.470Z",
+      "footprint_wgs84": [
+        [
+          -149.3550568,
+          28.439621
+        ],
+        [
+          -118.3010178,
+          33.1611748
+        ],
+        [
+          -119.2284088,
+          53.9771156
+        ],
+        [
+          -161.5153961,
+          47.5515289
+        ],
+        [
+          -149.3550568,
+          28.439621
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.476201,
+      "seconds_from_approximate_event_start": 439200.0,
+      "seconds_from_sentinel_observation": 270640.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 1,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024182.2200.002.2025284200521.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024182.2200.002.2025284200521.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-06-30",
+          "RangeBeginningTime": "22:00:00.00000",
+          "RangeEndingDate": "2024-06-30",
+          "RangeEndingTime": "22:06:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024182.2200.021.2025284040713.nc",
+          "VJ202CCMOD.A2024182.2200.021.2025284040713.nc",
+          "VJ202GDC.A2024182.2200.021.2024328011543.nc",
+          "VJ203IMG.A2024182.2200.021.2024328003530.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 15,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944917709-LPCLOUD",
+      "native_id": "VJ214IMG.A2024183.1018.002.2025284202322",
+      "filename": "VJ214IMG.A2024183.1018.002.2025284202322.nc",
+      "pair_token": "A2024183.1018",
+      "begin": "2024-07-01T10:18:00.000Z",
+      "end": "2024-07-01T10:24:00.000Z",
+      "size_bytes": 612068,
+      "revision_date": "2026-01-03T02:25:51.198Z",
+      "footprint_wgs84": [
+        [
+          -104.2739105,
+          44.8344803
+        ],
+        [
+          -144.1421356,
+          50.9211121
+        ],
+        [
+          -145.4289398,
+          30.0910568
+        ],
+        [
+          -115.3092651,
+          25.4672642
+        ],
+        [
+          -104.2739105,
+          44.8344803
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.180252,
+      "seconds_from_approximate_event_start": 483480.0,
+      "seconds_from_sentinel_observation": 314920.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 16,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024183.1018.002.2025284202322.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024183.1018.002.2025284202322.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-07-01",
+          "RangeBeginningTime": "10:18:00.00000",
+          "RangeEndingDate": "2024-07-01",
+          "RangeEndingTime": "10:24:00.00000",
+          "DayNightFlag": "Night"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024183.1018.021.2025284041945.nc",
+          "VJ202CCMOD.A2024183.1018.021.2025284041945.nc",
+          "VJ202GDC.A2024183.1018.021.2024328011557.nc",
+          "VJ203IMG.A2024183.1018.021.2024328003527.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 73,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944917917-LPCLOUD",
+      "native_id": "VJ214IMG.A2024183.2000.002.2025284202318",
+      "filename": "VJ214IMG.A2024183.2000.002.2025284202318.nc",
+      "pair_token": "A2024183.2000",
+      "begin": "2024-07-01T20:00:00.000Z",
+      "end": "2024-07-01T20:06:00.000Z",
+      "size_bytes": 3261063,
+      "revision_date": "2026-01-03T02:25:57.023Z",
+      "footprint_wgs84": [
+        [
+          -120.0269852,
+          30.1831551
+        ],
+        [
+          -88.3562317,
+          34.9980927
+        ],
+        [
+          -88.9117355,
+          55.7989082
+        ],
+        [
+          -132.9175262,
+          49.1287231
+        ],
+        [
+          -120.0269852,
+          30.1831551
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.344862,
+      "seconds_from_approximate_event_start": 518400.0,
+      "seconds_from_sentinel_observation": 349840.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 9,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024183.2000.002.2025284202318.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024183.2000.002.2025284202318.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-07-01",
+          "RangeBeginningTime": "20:00:00.00000",
+          "RangeEndingDate": "2024-07-01",
+          "RangeEndingTime": "20:06:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024183.2000.021.2025284041948.nc",
+          "VJ202CCMOD.A2024183.2000.021.2025284041948.nc",
+          "VJ202GDC.A2024183.2000.021.2024328024745.nc",
+          "VJ203IMG.A2024183.2000.021.2024328015625.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 62,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    },
+    {
+      "concept_id": "G3944917767-LPCLOUD",
+      "native_id": "VJ214IMG.A2024183.2142.002.2025284202321",
+      "filename": "VJ214IMG.A2024183.2142.002.2025284202321.nc",
+      "pair_token": "A2024183.2142",
+      "begin": "2024-07-01T21:42:00.000Z",
+      "end": "2024-07-01T21:48:00.000Z",
+      "size_bytes": 2522508,
+      "revision_date": "2026-01-03T02:25:52.838Z",
+      "footprint_wgs84": [
+        [
+          -146.1612701,
+          31.7698364
+        ],
+        [
+          -113.9247894,
+          36.6755257
+        ],
+        [
+          -114.1726074,
+          57.4657211
+        ],
+        [
+          -159.7897339,
+          50.5471077
+        ],
+        [
+          -146.1612701,
+          31.7698364
+        ]
+      ],
+      "metadata_cross_track_centrality_proxy": 0.390215,
+      "seconds_from_approximate_event_start": 524520.0,
+      "seconds_from_sentinel_observation": 355960.976,
+      "pre_event_reference_only": false,
+      "metadata_rank": 8,
+      "inspection": {
+        "product_filename": "VJ214IMG.A2024183.2142.002.2025284202321.nc",
+        "attributes": {
+          "LocalGranuleID": "VJ214IMG.A2024183.2142.002.2025284202321.nc",
+          "ShortName": "VJ214IMG",
+          "VersionID": "002",
+          "RangeBeginningDate": "2024-07-01",
+          "RangeBeginningTime": "21:42:00.00000",
+          "RangeEndingDate": "2024-07-01",
+          "RangeEndingTime": "21:48:00.00000",
+          "DayNightFlag": "Day"
+        },
+        "upstream_input_filenames": [
+          "VJ202CCIMG.A2024183.2142.021.2025284041946.nc",
+          "VJ202CCMOD.A2024183.2142.021.2025284041946.nc",
+          "VJ202GDC.A2024183.2142.021.2024328024732.nc",
+          "VJ203IMG.A2024183.2142.021.2024328015624.nc"
+        ],
+        "fire_mask_shape": [
+          6432,
+          6400
+        ],
+        "global_fire_record_count": 39,
+        "aoi_fire_record_count": 0,
+        "aoi_confidence_counts": {
+          "low": 0,
+          "nominal": 0,
+          "high": 0
+        },
+        "aoi_residual_bowtie_count": 0,
+        "aoi_bad_geolocation_qa_count": 0,
+        "aoi_inside_nifc_reference_count": 0,
+        "aoi_reference_qualified_count": 0,
+        "aoi_reference_qualified_inside_nifc_count": 0,
+        "aoi_reference_qualified_view_zenith_range_degrees": null,
+        "aoi_reference_qualified_view_zenith_median_degrees": null,
+        "aoi_records": []
+      },
+      "material_geometry_improvement": false,
+      "geometry_screen_reason_codes": [
+        "NO_REFERENCE_QUALIFIED_AOI_RECORD"
+      ]
+    }
+  ],
+  "selected_companion": {
+    "concept_id": "G4037064102-LPCLOUD",
+    "native_id": "VJ203MODLL.A2024179.2118.021.2024327213228",
+    "filename": "VJ203MODLL.A2024179.2118.021.2024327213228.h5",
+    "size_bytes": 35565474,
+    "revision_date": "2026-04-30T04:51:17.259Z"
+  },
+  "selected_geolocation": {
+    "product_filename": "VJ203MODLL.A2024179.2118.021.2024327213228.h5",
+    "attributes": {
+      "LocalGranuleID": "VJ203MODLL.A2024179.2118.021.2024327213228.h5",
+      "ShortName": "VJ203MODLL",
+      "VersionID": "021",
+      "RangeBeginningDate": "2024-06-27",
+      "RangeBeginningTime": "21:18:00.000",
+      "RangeEndingDate": "2024-06-27",
+      "RangeEndingTime": "21:24:00.000",
+      "DayNightFlag": "Day"
+    },
+    "upstream_input_filenames": [
+      "VJ203MOD.A2024179.2118.021.2024327203451.nc"
+    ],
+    "array_shape": [
+      3216,
+      3200
+    ],
+    "valid_coordinate_count": 10291200,
+    "total_coordinate_count": 10291200,
+    "aoi_bbox_candidate_pixel_count": 141,
+    "aoi_bbox_row_range": [
+      387,
+      401
+    ],
+    "aoi_bbox_column_range": [
+      1085,
+      1097
+    ],
+    "aoi_bbox_nearest_scan_edge_columns": 1085,
+    "aoi_bbox_nearest_scan_edge": "west"
+  },
+  "label_feasibility_protocol": {
+    "protocol_version": "weak-reference-label-feasibility-v0.1.0",
+    "implementation_status": "FEASIBILITY_ONLY_NO_LABEL_ARRAY_CREATED",
+    "positive_reference": "A nominal/high VIIRS sparse record with nominal geolocation QA and no residual-bowtie flag may remain a native-scale thermal-anomaly reference at its observation time. It is not a segmentation-positive pixel.",
+    "negative_candidate": "A clear, in-AOI optical location without a coincident qualified VIIRS record is only a negative candidate. Non-detection is not background truth because omission, timing, cloud, smoke, mixed pixels, and scan geometry remain possible.",
+    "unknown": "Every location not supported by an allowed reference or explicitly excluded remains unknown; unknown is never silently converted to background.",
+    "excluded": "Residual-bowtie records, non-nominal geolocation QA, invalid coordinates, and unusable optical quality states are excluded from reference use.",
+    "review_needed": "Qualified native-scale records still require review for time offset, cross-sensor scale, source disagreement, and intended use before any future label proposal.",
+    "prohibited_promotions": [
+      "Do not buffer points into segmentation truth.",
+      "Do not resample 375 m detections and call them genuine 10-20 m labels.",
+      "Do not use the later NIFC perimeter as pixel-perfect active-fire truth.",
+      "Do not convert VIIRS non-detection into ordinary background."
+    ]
+  },
+  "decision": "ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS",
+  "decision_detail": "One day NOAA-21 observation 2.48 hours from the Sentinel scene materially improves qualified AOI view geometry to a 31.01-degree median under the explicit BurnLens screen. Retain it as complementary native-scale reference evidence, but defer labels and a dataset because the larger time offset and 375 m support still cannot define 10-20 m segmentation truth.",
+  "quality_gates": {
+    "fresh_official_cmr_inventory": true,
+    "every_inventory_candidate_exact_size_and_native_container": true,
+    "every_candidate_sparse_record_array_inspected": true,
+    "all_exclusion_reasons_preserved": true,
+    "selected_companion_exact_pair_verified": true,
+    "label_array_created": false,
+    "dataset_created": false,
+    "direct_label_promotion_allowed": false
+  },
+  "claims": {
+    "permitted": [
+      "NASA CMR returned 23 intersecting VJ214IMG.002 granules in the frozen window and AOI.",
+      "BurnLens opened every exact candidate and found AOI sparse fire records in 9 candidates.",
+      "The comparison preserves provider QA, time, geometry, source agreement, and exclusion evidence without creating labels."
+    ],
+    "prohibited": [
+      "A thermal-anomaly point or later perimeter is pixel-perfect segmentation truth.",
+      "No VIIRS detection means ordinary background.",
+      "The screen is official, operational, emergency-ready, field-validated, or endorsed."
+    ]
+  },
+  "source_guidance": [
+    {
+      "organization": "NASA CMR",
+      "url": "https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html",
+      "role": "granule temporal, spatial, paging, and deterministic sort semantics",
+      "accessed_at_utc": "2026-07-14T20:09:07Z"
+    },
+    {
+      "organization": "NASA Earthdata / LP DAAC",
+      "url": "https://www.earthdata.nasa.gov/data/catalog/lpcloud-vj214img-002",
+      "role": "VJ214IMG definition, 375 m support, companion requirement, variables, citation, and open sharing",
+      "accessed_at_utc": "2026-07-14T20:09:07Z"
+    },
+    {
+      "organization": "NASA",
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2024-07/VIIRS_C2_AF-375m_User_Guide_1.0.pdf",
+      "role": "fire-mask classes, sparse arrays, QA bits, scan geometry, and limitations",
+      "accessed_at_utc": "2026-07-14T20:09:07Z"
+    }
+  ],
+  "attribution": [
+    "NASA VIIRS/JPSS2 VJ214IMG.002 and selected VJ203MODLL.021 data accessed 2026-07-14.",
+    "NIFC WFIGS final-perimeter feature remains incident-reference geometry only."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "json": "OBSERVATION-GEOMETRY-2026-001.json",
+    "html": "OBSERVATION-GEOMETRY-2026-001.html",
+    "png": "OBSERVATION-GEOMETRY-2026-001.png",
+    "png_sha256": "4dd21c3df693856fda47d23cd763054016a105d8c760181c4052411fa4ff6687"
+  }
+}

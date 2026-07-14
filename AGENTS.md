@@ -58,16 +58,17 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest analytical checkpoint is P2O2-T03 / issue #329 / PR #330 at `7678cf41b64e128106c199b913fe74590a52cf80`, tagged `v0.4.0-authenticated-source-baseline`. Its lifecycle sync shipped through issue #331 / PR #332 at `5f7461ac4cc8caa48f029776e5797023f27eaec5`. P2O2-T04 / issue #333 is the active evidence checkpoint on `codex/p2o2-t04-observation-geometry`.
+The latest shipped analytical checkpoint is P2O2-T03 / issue #329 / PR #330 at `7678cf41b64e128106c199b913fe74590a52cf80`, tagged `v0.4.0-authenticated-source-baseline`. Its lifecycle sync shipped through issue #331 / PR #332 at `5f7461ac4cc8caa48f029776e5797023f27eaec5`. P2O2-T04 / issue #333 is the verified release candidate on `codex/p2o2-t04-observation-geometry` for `v0.5.0-observation-geometry-baseline`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
 - Issue #329 has now exercised both credentials through the secret-safe runtime wrapper. Three exact provider assets totaling 1,169,997,942 bytes are registered only in ignored local raw storage; no raw provider byte or secret material is committed.
 - `SOURCE-INSPECTION-2026-001` renders real Sentinel AOI pixels, real VIIRS provider records, QA exclusions, scan-edge risk, and full lineage. Its decision is `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`.
+- `OBSERVATION-GEOMETRY-2026-001` compares all 23 bounded NOAA-21 candidates. The selected `A2024179.2118` day observation materially improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, but its 2.48-hour offset and 375 m support still defer labels and a dataset.
 - No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 
-P2O2-T04 compares every bounded NOAA-21 `VJ214IMG.002` candidate on actual AOI sparse-record geometry, acquires one matching `VJ203MODLL.021` companion only for a materially improved candidate, and defines a versioned weak/reference-label feasibility protocol. It must preserve positive/reference, negative-candidate, unknown, excluded, and review-needed states. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels.
+P2O2-T04 preserves positive/reference, negative-candidate, unknown, excluded, and review-needed states under `weak-reference-label-feasibility-v0.1.0`; it creates no label array. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels. After this release candidate ships, activating the burn-scar fallback or stopping active-fire modeling requires the owner's target-path decision.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 
