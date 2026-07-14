@@ -11,7 +11,7 @@ from typing import Any
 from PIL import Image, ImageDraw, ImageFont
 
 
-REPORT_ID = "TARGET-DECISION-2026-001"
+REPORT_ID = "TARGET-DECISION-2026-002"
 REPORT_SCHEMA_VERSION = "0.2.0"
 REPORT_VERSION = "target-path-decision-v0.2.0"
 SOFTWARE_VERSION = "0.6.0"
@@ -121,8 +121,10 @@ def build_report(
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
-        "task_issue": 337,
-        "branch": "codex/p2o2-t05-burn-scar-target",
+        "task_issue": 339,
+        "decision_issue": 337,
+        "decision_pr": 338,
+        "branch": "codex/p2o2-t05-eol-determinism",
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
         "application_version": None,

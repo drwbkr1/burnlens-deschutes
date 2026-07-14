@@ -26,6 +26,9 @@ class TargetDecisionTests(unittest.TestCase):
             run_id="BL-TEST-TARGET-DECISION",
             git_source_commit="a" * 40,
         )
+        self.assertEqual(report["report_id"], "TARGET-DECISION-2026-002")
+        self.assertEqual(report["task_issue"], 339)
+        self.assertEqual(report["decision_issue"], 337)
         self.assertEqual(report["owner_decision"]["status"], "ACTIVE")
         self.assertEqual(report["target_contract"]["active_target"], "burn-scar binary mask")
         self.assertEqual(report["target_contract"]["former_primary_disposition"], "COMPLEMENTARY_REFERENCE_ONLY")
