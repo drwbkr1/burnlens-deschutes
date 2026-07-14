@@ -1,0 +1,96 @@
+{
+  "asset_readiness_fixture_id": "ASSET-READINESS-2026-001",
+  "schema_version": "0.1.0",
+  "created_at_utc": "2026-07-13T23:43:43Z",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 312,
+  "branch": "codex/p2o1-t02-asset-readiness",
+  "git_base_commit": "49943d78016918ab65d2fa0eea9d0e653d905d6f",
+  "status": "metadata-only asset readiness; no provider bytes accessed",
+  "aoi_id": "AOI-2026-001",
+  "sentinel_2_l2a": {
+    "source_record_id": "SOURCE-2026-004",
+    "item_id": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644",
+    "product_uuid": "58cebcf0-c417-4384-a93a-2d6b15344117",
+    "safe_name": "S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+    "acquisition_utc": "2024-06-27T18:49:19.024000Z",
+    "mgrs_tile": "10TFP",
+    "relative_orbit": 113,
+    "processing_baseline_from_id": "N0510",
+    "tile_cloud_cover_percent": 0.534711,
+    "content_length_bytes": 1127031562,
+    "provider_checksums": {
+      "md5": "3806a834a97ab2eb41f1edf5496b433c",
+      "blake3": "546336e996586f4c276eb9ed3d9818f9574edbed24334dce74a394bd3759cb10"
+    },
+    "odata_product_route": "https://download.dataspace.copernicus.eu/odata/v1/Products(58cebcf0-c417-4384-a93a-2d6b15344117)/$value",
+    "s3_product_path": "/eodata/Sentinel-2/MSI/L2A/2024/06/27/S2B_MSIL2A_20240627T184919_N0510_R113_T10TFP_20240627T213644.SAFE",
+    "access_requires_account_credential": true,
+    "selected_inspection_assets": [
+      {"key": "B02_10m", "type": "image/jp2", "native_resolution_m": 10},
+      {"key": "B03_10m", "type": "image/jp2", "native_resolution_m": 10},
+      {"key": "B04_10m", "type": "image/jp2", "native_resolution_m": 10},
+      {"key": "B08_10m", "type": "image/jp2", "native_resolution_m": 10},
+      {"key": "B11_20m", "type": "image/jp2", "native_resolution_m": 20},
+      {"key": "B12_20m", "type": "image/jp2", "native_resolution_m": 20},
+      {"key": "SCL_20m", "type": "image/jp2", "native_resolution_m": 20},
+      {"key": "CLD_20m", "type": "image/jp2", "native_resolution_m": 20}
+    ],
+    "expected_source_crs_inference": "EPSG:32610",
+    "actual_asset_crs_verified": false,
+    "actual_pixel_scaling_verified": false,
+    "actual_aoi_cloud_smoke_state_verified": false
+  },
+  "noaa_21_viirs_pair": {
+    "temporal_offset_from_sentinel_seconds": 2800.976,
+    "active_fire": {
+      "source_record_id": "SOURCE-2026-005",
+      "collection": "VJ214IMG.002",
+      "collection_concept_id": "C2831626262-LPCLOUD",
+      "granule_concept_id": "G3944882727-LPCLOUD",
+      "native_id": "VJ214IMG.A2024179.1936.002.2025284191612",
+      "begin_utc": "2024-06-27T19:36:00.000Z",
+      "end_utc": "2024-06-27T19:42:00.000Z",
+      "cmr_revision_date": "2026-01-03T01:53:50.819Z",
+      "format": "NetCDF-4",
+      "cmr_size_mb": 2.5850448608398438,
+      "stable_https_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ214IMG.002/VJ214IMG.A2024179.1936.002.2025284191612/VJ214IMG.A2024179.1936.002.2025284191612.nc",
+      "provider_checksum": null
+    },
+    "geolocation": {
+      "source_record_id": "SOURCE-2026-006",
+      "collection": "VJ203MODLL.021",
+      "collection_concept_id": "C2885070650-LPCLOUD",
+      "granule_concept_id": "G4037038741-LPCLOUD",
+      "native_id": "VJ203MODLL.A2024179.1936.021.2024327213621",
+      "begin_utc": "2024-06-27T19:36:00.000Z",
+      "end_utc": "2024-06-27T19:42:00.000Z",
+      "cmr_revision_date": "2026-04-30T04:50:17.152Z",
+      "format": "HDF-EOS5/HDF5",
+      "cmr_size_mb": 38.39088821411133,
+      "stable_https_route": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/VJ203MODLL.021/VJ203MODLL.A2024179.1936.021.2024327213621/VJ203MODLL.A2024179.1936.021.2024327213621.h5",
+      "provider_checksum": null
+    },
+    "no_secret_head_result": {
+      "active_fire_status": 303,
+      "geolocation_status": 303,
+      "redirect_host": "d1nklfio7vscoe.cloudfront.net",
+      "signed_query_observed": true,
+      "signed_query_retained": false,
+      "redirect_followed": false
+    },
+    "actual_fire_detection_verified": false,
+    "actual_geolocation_arrays_verified": false,
+    "label_ready": false
+  },
+  "retention": {
+    "provider_asset_count": 0,
+    "provider_asset_bytes": 0,
+    "transient_signed_urls_retained": false,
+    "credentials_used": false,
+    "credentials_retained": false,
+    "derived_analytical_outputs": 0
+  },
+  "decision": "Exact routes are reproducible, but source-asset intake is blocked pending owner approval for the CDSE credential boundary and a new issue-backed acquisition action.",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
