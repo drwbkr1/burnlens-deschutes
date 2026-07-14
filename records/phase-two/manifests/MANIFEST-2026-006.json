@@ -9,11 +9,14 @@
   "git_base_commit": "907a0154d64b40021932387ae78bac4c5fe28128",
   "acquisition_source_commit": "695280f80b09afad91a78b96b809e332bd4bc3b2",
   "generator_source_commit": "9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "7678cf41b64e128106c199b913fe74590a52cf80",
   "pull_request": 330,
+  "lifecycle_sync_issue": 331,
+  "lifecycle_sync_pull_request": 332,
   "version_tag": "v0.4.0-authenticated-source-baseline",
-  "version_tag_state": "candidate; create only after merged quality gates pass",
-  "status": "candidate authenticated source/reference baseline; labels and dataset deferred",
+  "version_tag_object": "98228058b232bc0838eb976f982ef4775b711776",
+  "version_tag_state": "verified annotated tag resolving to checkpoint_commit",
+  "status": "shipped authenticated source/reference baseline; labels and dataset deferred; post-merge verification passed",
   "software_version": "0.4.0",
   "runtime": {
     "python": "3.12.13",
@@ -86,6 +89,13 @@
   "provider_source_asset_bytes_committed": 0,
   "credentials_used": true,
   "credential_or_token_material_retained": false,
+  "post_merge_verification": {
+    "repository_tests": 56,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "deterministic_json_html_png": "byte-identical",
+    "remote_tag_identity": "pass"
+  },
   "decision": "ACCEPT_SOURCE_REFERENCE_DEFER_LABELS",
   "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
 }

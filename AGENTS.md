@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped checkpoint is P2O2-T02 / issue #325 / PR #326 at `ee1a1d678ad888b595dc3c7b215f787ea5156582`, tagged `v0.3.0-intake-transaction-baseline`. P2O2-T03 / issue #329 is the active `0.4.0` candidate on `codex/p2o2-t03-authenticated-intake`.
+The latest shipped checkpoint is P2O2-T03 / issue #329 / PR #330 at `7678cf41b64e128106c199b913fe74590a52cf80`, tagged `v0.4.0-authenticated-source-baseline`. P2O2-T03-SYNC / issue #331 / PR #332 is the active provenance-only checkpoint on `codex/p2o2-t03-sync`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
@@ -67,7 +67,7 @@ The latest shipped checkpoint is P2O2-T02 / issue #325 / PR #326 at `ee1a1d678ad
 - No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 
-If P2O2-T03 ships, the selected next evidence checkpoint is alternate-observation geometry plus a versioned weak/reference-label feasibility protocol that preserves positive, negative, unknown, and excluded states. Do not coerce the current 375 m points or later NIFC perimeter into 10-20 m labels.
+After P2O2-T03-SYNC ships, the selected next evidence checkpoint is alternate-observation geometry plus a versioned weak/reference-label feasibility protocol that preserves positive, negative, unknown, and excluded states. Do not coerce the current 375 m points or later NIFC perimeter into 10-20 m labels.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 

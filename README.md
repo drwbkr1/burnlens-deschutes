@@ -4,16 +4,16 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 ## Verified status
 
-The project is at a Phase Two authenticated-source and reference-inspection candidate, not an analytical release.
+The project is at a shipped Phase Two authenticated-source and reference-inspection baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, delivery integrity, and final-AOI evidence are shipped through P2O2-T01 / PR #322.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata, access, AOI, intake-transaction, and authenticated source/reference evidence are shipped through P2O2-T03 / PR #330.
 - P2O2-T02 / issue #325 / PR #326 is shipped at `v0.3.0-intake-transaction-baseline`: an exact three-asset intake contract rejects partial or tampered packages and permits raw registration only through one all-or-none atomic promotion. Its proof uses temporary synthetic fixtures; it does not use or validate provider data.
-- P2O2-T03 / issue #329 / draft PR #330 has now exercised the owner-authorized CDSE and Earthdata boundaries. The exact three-file, 1,169,997,942-byte package passed authenticated delivery, contract validation, atomic registration, independent re-verification, and real-array inspection. The candidate version is `v0.4.0-authenticated-source-baseline`.
+- P2O2-T03 / issue #329 / PR #330 is shipped at `v0.4.0-authenticated-source-baseline`. The exact three-file, 1,169,997,942-byte package passed authenticated delivery, contract validation, atomic registration, independent re-verification, and real-array inspection.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
 - The local pipeline exercised both credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. Three provider assets are retained only in ignored local raw storage; zero raw provider bytes are committed. The repository now contains bounded derived source-inspection evidence, not labels or detections. No label schema, dataset, split, baseline output, trained model, analytical metric, application demonstration, deployment, or public analytical result exists yet.
-- The latest verified repository evidence baseline is `ee1a1d678ad888b595dc3c7b215f787ea5156582` from issue #325 / PR #326; the annotated `v0.3.0-intake-transaction-baseline` tag resolves to that exact merge commit.
+- The latest verified repository evidence baseline is `7678cf41b64e128106c199b913fe74590a52cf80` from issue #329 / PR #330; the annotated `v0.4.0-authenticated-source-baseline` tag remotely resolves to that exact merge commit.
 - `ACCESS-2026-006` records the owner's authorization without secret material; `ACCESS-2026-007` records successful runtime-only use. Inspection run `BL-2026-07-14-source-inspection-r001` accepts the package for source/reference evidence and explicitly defers labels and a dataset because the AOI lies near the VIIRS scan edge and coarse thermal anomalies cannot become 10-20 m segmentation truth.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
@@ -53,7 +53,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final AOI and intake transaction are shipped. The exact authenticated package is source/reference-ready in the `0.4.0` candidate, while labels and dataset readiness are deferred on real quality evidence. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final AOI, intake transaction, and authenticated source/reference baseline are shipped. Labels and dataset readiness are deferred on real quality evidence. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
