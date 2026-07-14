@@ -4,9 +4,9 @@
 
 **Tool version:** BurnLens package `0.3.0`
 
-**Contract:** `paired-intake-contract-v0.1.0`
+**Contract:** `paired-intake-contract-v0.2.0`
 
-**Contract SHA-256:** `85b6934ed3fe47dabfdddd47375dc07fc78bd0db8d15c24cb3a50c53e65b8362`
+**Full contract SHA-256:** `0bc075bb6cf912e27a6bba6f1c79b10456c9915d0eb20669a9e48e1b9f56d93a`
 
 ## Required package
 
@@ -17,6 +17,8 @@ Exactly three files must appear together in one quarantine directory:
 3. NOAA-21 VIIRS terrain-corrected geolocation granule: `VJ203MODLL.A2024179.1936.021.2024327213621.h5`, exactly 40,255,764 bytes, native HDF5 signature.
 
 The two VIIRS native IDs must share the recorded acquisition token `A2024179.1936`. Unexpected entries, missing files, type mismatch, size mismatch, corrupt or unsafe ZIP structure, duplicate ZIP members, checksum failure, or destination collision fail closed.
+
+Quarantine directories must not be symlinks or junctions. Expected assets must be ordinary single-link files, not symlinks, junction-backed paths, or hardlink aliases. The contract digest covers these transaction invariants together with the exact asset records.
 
 ## Promotion contract
 
@@ -31,7 +33,7 @@ The two VIIRS native IDs must share the recorded acquisition token `A2024179.193
 
 The real package is absent and returns `BLOCKED_OWNER_CREDENTIAL`. A temporary reduced synthetic contract proves the transaction mechanics: partial input fails, checksum tampering fails, a complete exact set promotes atomically, and all synthetic bytes are deleted afterward.
 
-Thirty-two repository tests cover contract identity, pair identity, missing/unexpected inputs, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, complete promotion, deterministic reporting, non-inflating metadata observation time, and the temporary rehearsal.
+Thirty-five repository tests cover full contract identity, pair identity, missing/unexpected inputs, link-alias rejection, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, complete promotion, deterministic reporting, non-inflating metadata observation time, and the temporary rehearsal.
 
 ## Non-implications
 

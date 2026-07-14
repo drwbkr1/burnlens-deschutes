@@ -6,6 +6,7 @@
 - State that BurnLens has tested all-or-none registration behavior for a three-asset package using temporary synthetic fixtures.
 - Use the validator after a separately authorized credentialed acquisition places exact candidate assets in quarantine.
 - Reject partial, unexpected, malformed, mismatched, corrupt, unsafe, or checksum-invalid packages before raw registration.
+- Reject link-backed quarantine paths and linked asset files before hashing or raw registration.
 - Cite refreshed public provider metadata as route and contract evidence only.
 
 ## Not authorized

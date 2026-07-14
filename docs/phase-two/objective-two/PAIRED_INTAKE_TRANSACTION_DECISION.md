@@ -2,7 +2,7 @@
 
 ## Decision
 
-Accept `paired-intake-contract-v0.1.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. Keep real intake at `BLOCKED_OWNER_CREDENTIAL` until the owner explicitly approves both credential boundaries.
+Accept `paired-intake-contract-v0.2.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. Keep real intake at `BLOCKED_OWNER_CREDENTIAL` until the owner explicitly approves both credential boundaries.
 
 ## Weakness addressed
 
@@ -12,11 +12,13 @@ BurnLens already knew the three exact asset identities and could reject a single
 
 - One versioned contract pins all filenames, provider IDs, native IDs, exact sizes, container types, pair token, and available provider checksums.
 - All three files must coexist in a clean quarantine directory.
+- Quarantine paths, destination parents, and asset files must not use symlink/junction indirection; asset files must have one filesystem link.
 - Validation fails closed before registration.
 - Sentinel must pass both provider MD5 and provider BLAKE3 plus ZIP/SAFE integrity checks.
 - VIIRS must pass exact-size and native HDF5 signature checks; local SHA-256, MD5, and BLAKE3 values compensate for the absence of published provider checksums without misrepresenting them as provider attestations.
 - Registration writes the manifest in quarantine and atomically renames the complete directory on the same filesystem.
 - Existing destinations are never overwritten.
+- The contract digest covers the exact asset records and every transaction invariant, not asset identities alone.
 
 ## Evidence
 

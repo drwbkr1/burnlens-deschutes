@@ -21,7 +21,7 @@
 | Asset-readiness baseline | `v0.1.1-asset-readiness-baseline`, verified annotated tag resolving to `cf4aba2f40aa426f28f09b1b1b1bad895394198b` via PR #314 |
 | Access-integrity baseline | `v0.1.2-access-integrity-baseline`, verified annotated tag resolving to `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` via PR #318 |
 | AOI baseline | `v0.2.0-aoi-baseline`, verified annotated tag resolving to `fffd3dda123d7c43fe678dca9adfd8feb73de158` via PR #322 |
-| Intake transaction candidate | BurnLens `0.3.0`; issue #325; `paired-intake-contract-v0.1.0`; proposed `v0.3.0-intake-transaction-baseline`; provider assets/bytes and retained synthetic fixture bytes all zero |
+| Intake transaction candidate | BurnLens `0.3.0`; issue #325; `paired-intake-contract-v0.2.0`; full contract SHA-256 `0bc075bb6cf912e27a6bba6f1c79b10456c9915d0eb20669a9e48e1b9f56d93a`; proposed `v0.3.0-intake-transaction-baseline`; provider assets/bytes and retained synthetic fixture bytes all zero |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-model-v0.2.0`, accepted and shipped final modeling AOI; 12 km by 9 km / 108 km2 in EPSG:32610; lower priority than official sources |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-007`; the newest record is one immutable public NIFC reference vector, not a label or detection |
@@ -30,7 +30,7 @@
 | Evidence tooling | BurnLens package `0.3.0` candidate; access-integrity validation, checksum-gated AOI derivation, exact-pair transaction validation, atomic promotion, normalized JSON, semantic HTML, and PNG rendering |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
-| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `7293b8523d4193d0511426ac06e83353f3b33921b0059ebe3c38fa7f093e8a0b`; real decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; synthetic transaction checks pass |
+| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `c2bed364223184e176b8b58fa366f97df5143b5d3c59bafadacebcaa504f08da`; real decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; synthetic transaction checks pass |
 | Dataset version | Not created |
 | Label-schema implementation | Not created |
 | Baseline-method version | Not created |
@@ -46,7 +46,7 @@ P2O2-T01 / issue #321 accepts the final modeling AOI and adds `AOI-FINAL-2026-00
 
 ## Current checkpoint
 
-P2O2-T02 / issue #325 / PR #326 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The report-generator source is commit `5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f`; merge and tag identities are pending. Provider imagery count and bytes remain zero.
+P2O2-T02 / issue #325 / PR #326 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic, unaliased unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The report-generator source is commit `8f1f82f97afc4fb52f787c6353a9aedd0f36cea3`; merge and tag identities are pending. Provider imagery count and bytes remain zero.
 
 ## Selected next checkpoint
 

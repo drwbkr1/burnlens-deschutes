@@ -7,7 +7,7 @@
   "task_issue": 325,
   "branch": "codex/p2o2-t02-intake-transaction",
   "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
-  "generator_source_commit": "5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f",
+  "generator_source_commit": "8f1f82f97afc4fb52f787c6353a9aedd0f36cea3",
   "checkpoint_commit": null,
   "pull_request": 326,
   "version_tag": "v0.3.0-intake-transaction-baseline",
@@ -34,26 +34,26 @@
   "model_version": null,
   "run_id": "BL-2026-07-14-paired-intake-rehearsal-r001",
   "report_version": "paired-intake-rehearsal-v0.2.0",
-  "contract_version": "paired-intake-contract-v0.1.0",
-  "contract_sha256": "85b6934ed3fe47dabfdddd47375dc07fc78bd0db8d15c24cb3a50c53e65b8362",
+  "contract_version": "paired-intake-contract-v0.2.0",
+  "contract_sha256": "0bc075bb6cf912e27a6bba6f1c79b10456c9915d0eb20669a9e48e1b9f56d93a",
   "outputs": [
     {
       "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.json",
       "media_type": "application/json",
-      "bytes": 8806,
-      "sha256": "7293b8523d4193d0511426ac06e83353f3b33921b0059ebe3c38fa7f093e8a0b"
+      "bytes": 8943,
+      "sha256": "c2bed364223184e176b8b58fa366f97df5143b5d3c59bafadacebcaa504f08da"
     },
     {
       "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.html",
       "media_type": "text/html",
-      "bytes": 6310,
-      "sha256": "767c59ab0a9c4c01968b27169cfcf3157c634cc930a00d8c732720ee74674f14"
+      "bytes": 6447,
+      "sha256": "d47a912d1326743b2a2da64cabeda8321d319ecf81578ae5aea1d4ead797b33c"
     },
     {
       "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png",
       "media_type": "image/png",
-      "bytes": 112486,
-      "sha256": "c35a30384bc1098b361b9cb5ce1036b193b87edf6a9bf7054b40d74ffcbead4c"
+      "bytes": 112508,
+      "sha256": "06d32c6cac853fe3c9c7eea3e042c8612467959536a26a8cfddc64dfde492f1a"
     }
   ],
   "provider_source_asset_count": 0,

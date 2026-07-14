@@ -2,8 +2,8 @@
   "report_id": "PAIR-INTAKE-REHEARSAL-2026-001",
   "schema_version": "0.2.0",
   "report_version": "paired-intake-rehearsal-v0.2.0",
-  "contract_version": "paired-intake-contract-v0.1.0",
-  "contract_sha256": "85b6934ed3fe47dabfdddd47375dc07fc78bd0db8d15c24cb3a50c53e65b8362",
+  "contract_version": "paired-intake-contract-v0.2.0",
+  "contract_sha256": "0bc075bb6cf912e27a6bba6f1c79b10456c9915d0eb20669a9e48e1b9f56d93a",
   "software_version": "0.3.0",
   "generated_at_utc": "2026-07-14T02:32:52Z",
   "run_id": "BL-2026-07-14-paired-intake-rehearsal-r001",
@@ -11,7 +11,7 @@
   "task_issue": 325,
   "branch": "codex/p2o2-t02-intake-transaction",
   "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
-  "generator_source_commit": "5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f",
+  "generator_source_commit": "8f1f82f97afc4fb52f787c6353a9aedd0f36cea3",
   "checkpoint_commit": null,
   "application_version": null,
   "aoi_version": "aoi-darlene3-model-v0.2.0",
@@ -175,6 +175,7 @@
   "transaction_invariants": [
     "Exactly three named assets are required in one quarantine directory.",
     "Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.",
+    "Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.",
     "The two VIIRS native IDs must share the recorded acquisition token.",
     "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
     "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem."

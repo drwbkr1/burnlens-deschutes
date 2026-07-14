@@ -18,6 +18,8 @@ The real package is still absent because credentials remain owner-gated. To test
 
 An audit before shipment found that the first report schema called its pinned metadata facts a refresh performed at the caller-supplied run time. The committed run used the correct time, but later reruns could imply newer research than actually occurred. Report schema `0.2.0` now fixes the observation time, links `ACCESS-2026-005`, and says directly that the deterministic run performs no live provider request.
 
+A second filesystem audit rejected another form of hidden state: symlink, junction, and multiply-linked inputs. Without that rule, a correctly named quarantine entry could hash bytes stored elsewhere and remain mutable after registration through another path. The candidate contract is now `paired-intake-contract-v0.2.0`, and its SHA-256 covers both the three exact asset records and all transaction invariants, so changing a security rule changes the contract identity.
+
 ## Portfolio meaning
 
 This is invisible plumbing made reviewable. It demonstrates that BurnLens is not merely planning to be reproducible later: it is defining the transaction boundary before source bytes arrive, testing incomplete and tampered inputs, and preserving a truthful distinction between software proof and data proof.
