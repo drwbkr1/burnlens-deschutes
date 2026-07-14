@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BurnLens authenticated source inspection</title>
+  <style>
+    :root { color-scheme: light; --ink:#15211d; --muted:#5d6b64; --paper:#f4f0e8; --panel:#fffdf8; --teal:#006b64; --orange:#f05a28; }
+    * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 system-ui,sans-serif; }
+    header { background:#132a26; color:white; padding:3rem max(5vw,2rem); } header p { color:#b9d8cf; margin:.25rem 0; }
+    main { max-width:1180px; margin:auto; padding:2.5rem 1.5rem 5rem; }
+    .warning { background:#fff1ca; border-left:6px solid #d87618; padding:1rem 1.2rem; font-weight:650; }
+    .hero { width:100%; height:auto; border:1px solid #c8c0b2; margin:1.5rem 0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .card { background:var(--panel); border:1px solid #d9d1c4; border-radius:12px; padding:1.2rem; }
+    .value { font-size:2rem; font-weight:800; color:var(--teal); } h2 { margin-top:2.5rem; }
+    table { width:100%; border-collapse:collapse; background:var(--panel); } th,td { padding:.7rem; border-bottom:1px solid #ddd5c9; text-align:left; }
+    code { overflow-wrap:anywhere; } .decision { border:2px solid var(--orange); } a { color:#005f73; }
+  </style>
+</head>
+<body>
+<header><p>BurnLens / Phase Two / real-source evidence</p><h1>Authenticated source inspection</h1><p>Reference accepted; label and dataset readiness deferred.</p></header>
+<main>
+  <p class="warning">Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</p>
+  <img class="hero" src="SOURCE-INSPECTION-2026-001.png" alt="Sentinel-2 AOI crop with NIFC reference outline and VIIRS reference points">
+  <div class="grid">
+    <div class="card"><div class="value">verified</div><div>Exact three-asset package independently rechecked</div></div>
+    <div class="card"><div class="value">9.03%</div><div>SCL medium + high cloud in the AOI</div></div>
+    <div class="card"><div class="value">8</div><div>VIIRS provider fire records inside the AOI</div></div>
+    <div class="card"><div class="value">5</div><div>Records remaining after residual-bowtie exclusion</div></div>
+  </div>
+  <section class="card decision"><h2>Decision</h2><p><strong>Accept the exact package for source and reference inspection. Do not promote it to labels or a dataset yet.</strong></p>
+  <p>The Sentinel crop is readable and the VIIRS product contains AOI reference detections, but the VIIRS observations sit at the far scan edge with approximately 69° view zenith. Three of eight AOI records carry the residual-bowtie QA flag, and the 375 m thermal-anomaly evidence cannot be expanded into 10–20 m segmentation truth.</p></section>
+  <h2>AOI VIIRS records</h2>
+  <table><thead><tr><th>Index</th><th>Confidence</th><th>Residual bowtie</th><th>View zenith</th><th>Inside NIFC reference</th></tr></thead><tbody><tr><td>54</td><td>nominal</td><td>yes</td><td>69.04°</td><td>yes</td></tr><tr><td>55</td><td>high</td><td>yes</td><td>69.04°</td><td>yes</td></tr><tr><td>56</td><td>nominal</td><td>yes</td><td>69.02°</td><td>no</td></tr><tr><td>57</td><td>nominal</td><td>no</td><td>69.02°</td><td>yes</td></tr><tr><td>58</td><td>nominal</td><td>no</td><td>69.04°</td><td>yes</td></tr><tr><td>59</td><td>high</td><td>no</td><td>69.02°</td><td>yes</td></tr><tr><td>60</td><td>nominal</td><td>no</td><td>69.02°</td><td>no</td></tr><tr><td>61</td><td>nominal</td><td>no</td><td>69.07°</td><td>yes</td></tr></tbody></table>
+  <h2>Traceability</h2>
+  <div class="card"><p><strong>Run:</strong> <code>BL-2026-07-14-source-inspection-r001</code><br>
+  <strong>Git source commit:</strong> <code>9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc</code><br>
+  <strong>Software:</strong> <code>0.4.0</code><br>
+  <strong>App / dataset / labels / model:</strong> none<br>
+  <strong>Package:</strong> <code>darlene3-s2-viirs-pair-v0.1.0</code><br>
+  <strong>Contract:</strong> <code>paired-intake-contract-v0.4.0</code></p></div>
+  <h2>Source and use notes</h2>
+  <ul><li>Contains modified Copernicus Sentinel data 2024.</li><li>NASA VIIRS data are coarse thermal-anomaly reference evidence; data imperfections, false alarms, and omissions remain possible.</li><li>The NIFC final perimeter is incident-reference geometry, not a BurnLens detection or pixel-perfect label.</li><li>Official sources govern over every BurnLens-derived artifact.</li></ul>
+</main></body></html>

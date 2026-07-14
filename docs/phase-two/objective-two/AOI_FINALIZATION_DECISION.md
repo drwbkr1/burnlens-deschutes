@@ -26,8 +26,8 @@ The final AOI contains the complete reference, is within Deschutes County, and r
 
 ## Objective status
 
-The AOI portion of Phase Two Objective Two passes. The full objective does not pass because provider assets have not been acquired or inspected. Source-stack metadata coverage, terms, identity, and exact routes are known; usable-pixel, quality, geolocation, detection, uncertainty, and label-fitness evidence is not.
+The AOI portion of Phase Two Objective Two passed at this checkpoint. At that time the full objective did not pass because provider assets had not been acquired or inspected. P2O2-T03 / issue #329 later acquired the exact package and added real usable-pixel, quality, geolocation, reference-evidence, and label-fitness findings without changing `AOI-2026-002`.
 
 ## Next gate
 
-After explicit owner approval for both credentials, acquire and validate the exact paired Sentinel/VIIRS package against `AOI-2026-002`. Do not revise the AOI merely because a future scene is inconvenient; any geometry change requires a new AOI version, source/rationale record, and downstream-impact review.
+P2O2-T03 fulfilled the acquisition/validation gate against `AOI-2026-002`; see `AUTHENTICATED_SOURCE_INSPECTION_DECISION.md`. The AOI remains frozen. Do not revise it merely because a scene is inconvenient; any geometry change requires a new AOI version, source/rationale record, and downstream-impact review.

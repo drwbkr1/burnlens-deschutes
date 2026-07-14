@@ -142,6 +142,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T01-SYNC | `records/prompt-build-log/2026-07-13-p2o2-t01-sync.md` | issue #323 / PR #324 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs. |
 | P2O2-T02 | `records/prompt-build-log/2026-07-13-p2o2-t02.md` | merged via PR #326; tagged | Issue #325 closed; merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`; `v0.3.0-intake-transaction-baseline`; historical credential-blocked report plus later owner authorization; zero provider or retained fixture bytes. |
 | P2O2-T02-SYNC | `records/prompt-build-log/2026-07-14-p2o2-t02-sync.md` | issue #327 / PR #328 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs or exercising credentials. |
+| P2O2-T03 | `records/prompt-build-log/2026-07-14-p2o2-t03.md` | issue #329 / draft PR #330; active candidate | Secret-safe authenticated exact-package acquisition, real Sentinel/VIIRS inspection, deterministic evidence, and explicit label/dataset deferral; candidate `v0.4.0-authenticated-source-baseline`. |
 
 ## Acceptance and remediation triggers
 
@@ -151,4 +152,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O2-T02 are shipped through `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582`. Lifecycle sync issue #327 is active. Both credential boundaries are owner-authorized but unexercised; provider imagery remains absent. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O2-T02 are shipped through `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582`. P2O2-T03 / issue #329 / PR #330 is the active `0.4.0` candidate: both authorized credential boundaries have been exercised without retaining secrets, the exact raw package is local/ignored, and real source/reference evidence defers labels and a dataset. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

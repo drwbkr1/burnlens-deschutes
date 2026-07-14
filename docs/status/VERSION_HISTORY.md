@@ -8,6 +8,7 @@ BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repositor
 
 | Identifier | State | Commit | Meaning |
 |---|---|---|---|
+| `v0.4.0-authenticated-source-baseline` | Candidate on issue #329 / PR #330; tag not yet created | Generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; checkpoint merge pending | Secret-safe authenticated exact-package acquisition, real Sentinel/VIIRS array inspection, deterministic source evidence, and explicit label/dataset deferral. Three raw assets / 1,169,997,942 bytes remain local and ignored; zero raw provider bytes or secret material are committed. |
 | `v0.3.0-intake-transaction-baseline` | Verified annotated tag | `ee1a1d678ad888b595dc3c7b215f787ea5156582` | Exact three-asset and transaction-invariant contract, link-alias rejection, fail-closed validation, local multihash registration, retry-safe atomic promotion, registered-package re-verification, and deterministic real-state/synthetic-rehearsal evidence, shipped through PR #326. Generator source `ac8ee43151991c38ccf5d446a53c09b617afeb54`. Zero credentials exercised, provider assets/bytes, promoted real packages, or retained synthetic bytes. |
 | `v0.2.0-aoi-baseline` | Verified annotated tag | `fffd3dda123d7c43fe678dca9adfd8feb73de158` | Deterministic final modeling AOI, exact public NIFC reference snapshot, county/source coverage checks, and rendered non-operational evidence, shipped through PR #322. Generator source commit `bcc1d9aa494c5511ff824692199b40717d320dd4`. No imagery, label, dataset, baseline, model, or detection. |
 | `v0.1.2-access-integrity-baseline` | Verified annotated tag | `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` | Runnable fail-closed provider-payload validator plus normalized and rendered credential-block evidence, shipped through PR #318. Zero provider assets or analytical pixels. |
@@ -26,7 +27,7 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | AOI | `aoi-darlene3-model-v0.2.0` — accepted and shipped final modeling AOI; supersedes the discovery version for modeling |
 | Source record set | `SOURCE-2026-001` through `SOURCE-2026-007`; newest is one public NIFC reference vector |
 | Metadata fixture | `METADATA-2026-001`; SHA-256 `803db2b82c7d6ef23d12c34f370dd9a7504bf181f772db22d1ed55c83c6b791a` |
-| Asset-readiness record set | `SOURCE-2026-004` through `SOURCE-2026-006`; shipped at `v0.1.1-asset-readiness-baseline`; no provider asset retained |
+| Asset-readiness record set | `SOURCE-2026-004` through `SOURCE-2026-006`; exact assets now registered in ignored local raw storage under the `0.4.0` candidate; zero raw provider bytes committed |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`; SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7` |
 | Access-integrity tool | BurnLens package `0.1.2`; Pillow `12.2.0`; shipped at `v0.1.2-access-integrity-baseline` |
 | Access-precheck fixture | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f` |
@@ -35,13 +36,16 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | Paired-intake transaction | BurnLens package `0.3.0`; `paired-intake-contract-v0.4.0`; full contract SHA-256 `5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d`; report-generator source `ac8ee43151991c38ccf5d446a53c09b617afeb54`; 37 repository tests passing |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; JSON `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; HTML `b76cbf50f60dd112430616b4a472ac440444cbf48194a0672df91876e78ea20c`; PNG `c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL` |
 | Credential authorization | `ACCESS-2026-006`; owner-authorized CDSE and Earthdata use on 2026-07-14; owner-attested setup `PASS`; no credential loaded, request made, or provider byte retained by BurnLens in that record |
+| Authenticated acquisition | `ACCESS-2026-007`; run `BL-2026-07-14-authenticated-intake-r001`; exact three-asset package / 1,169,997,942 bytes accepted locally; credentials used at runtime with zero secret material retained |
+| Source-inspection tool | BurnLens package `0.4.0`; h5py `3.16.0`; NumPy `2.5.1`; Pillow `12.2.0`; Rasterio `1.5.0`; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; 56 repository tests passing |
+| Source-inspection evidence | `SOURCE-INSPECTION-2026-001`; JSON `cbd4dfba840680256a100aeca1a2e0b28483796f7e7b79b90de8b933d58b0a53`; HTML `76d13d3e105f053410d0063b17eb740f732c786dc395fe13335701496cbb41a0`; PNG `da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966`; decision `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS` |
 | Dataset | Not created |
 | Label schema implementation | Not created |
 | Baseline method | Not created |
 | Model | Not created |
-| Run | Latest `BL-2026-07-14-paired-intake-rehearsal-r001` — real empty-provider state plus temporary synthetic transaction; earlier AOI geometry run remains versioned; no imagery/provider pixels or model output |
-| Report/interface | `paired-intake-rehearsal-v0.2.0`; metadata observation is fixed independently of run time and no live provider refresh is implied; semantic HTML and PNG hashes listed above; AOI and access report versions remain unchanged |
+| Run | Latest `BL-2026-07-14-source-inspection-r001` — real source/reference evidence; acquisition run `BL-2026-07-14-authenticated-intake-r001`; no label, dataset, baseline, model, or analytical inference output |
+| Report/interface | `source-inspection-v0.1.0`; semantic HTML and PNG expose source quality, exclusions, scan-edge risk, attribution, limitations, run ID, source commit, and null app/dataset/label/model versions |
 
-The source-metadata, asset-readiness, access-integrity, AOI, and intake-transaction baselines record availability, route, governance, delivery/transaction validation, and geometry evidence only. The one retained NIFC source asset is reference vector geometry, not provider imagery or a label. The intake rehearsal uses temporary synthetic bytes and retains none. None of these baselines implies that a selected scene contains a Darlene 3 detection or that the active-fire target is label-ready.
+The source-metadata, asset-readiness, access-integrity, AOI, and intake-transaction baselines record availability, route, governance, delivery/transaction validation, and geometry evidence. The `0.4.0` candidate adds real provider source/reference inspection, not a BurnLens detection or label set. The one retained NIFC source asset remains reference vector geometry, and no provider hotspot or perimeter is pixel-perfect segmentation truth.
 
 Every shipped checkpoint must update this file with its version, exact commit, evidence meaning, and explicit non-implications.

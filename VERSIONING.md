@@ -121,10 +121,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; final modeling AOI and exact-pair transaction shipped; CDSE and Earthdata use owner-authorized but not yet exercised; provider imagery absent |
+| Current phase posture | Phase Two active; final AOI and exact-pair transaction shipped; authenticated source/reference package accepted in the `0.4.0` candidate; labels and dataset deferred |
 | Current repository baseline | Latest shipped: `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582` via issue #325 / PR #326 |
-| Baseline verification | Annotated transaction tag resolves to merged PR #326; 37 post-merge tests, byte-identical report reconstruction, original-resolution rendered review, and remote tag verification pass |
-| Data/model/run/map/application status | One public NIFC reference vector, one derived AOI, static AOI/intake evidence, and a temporary-synthetic transaction rehearsal exist; no provider imagery, retained synthetic data, labels, dataset, baseline, model, analytical result, or application exists |
+| Active candidate | `v0.4.0-authenticated-source-baseline`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; tag must not be created before merge and shipment verification |
+| Baseline verification | Annotated transaction tag resolves to merged PR #326; the `0.4.0` candidate has byte-identical real-source reconstruction and rendered-browser review, with final repository/PR gates pending |
+| Data/model/run/map/application status | Three exact provider assets are registered only in ignored local raw storage; committed outputs are bounded source/reference inspection evidence. No label schema, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff

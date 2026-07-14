@@ -18,6 +18,10 @@ With the boundary fixed, issue #325 addressed the next reliability gap before cr
 
 ![BurnLens paired-intake transaction evidence](../../samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png)
 
+Issue #329 then crossed the data-evidence boundary. BurnLens acquired the exact package through the authorized CDSE and Earthdata accounts, re-verified all three files, opened the real raster and swath arrays, and rendered the result without committing raw provider bytes.
+
+![BurnLens authenticated source inspection](../../samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.png)
+
 ## Why the AOI matters
 
 The final AOI is a 12 km by 9 km rectangle in WGS 84 / UTM zone 10N. It is derived by adding 2 km of context around the complete NIFC reference and snapping outward to a 1 km grid. That makes later clipping, tiling, checks, and explanation deterministic.
@@ -44,28 +48,46 @@ These are source, geometry, coverage, and reproducibility claims. They are not f
 
 BurnLens `0.3.0` pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, checksum-invalid, link-backed, or multiply linked. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected. Contract `v0.4.0` hashes the asset identities and the complete transaction-invariant set together. If the final rename fails, its provisional manifest is removed and the same validated quarantine remains retryable. After promotion, the verifier rechecks the manifest, contract digest, exact files, and current hashes so later mutation is visible.
 
-Before the owner authorized real access, BurnLens tested the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. Its rendered `BLOCKED_OWNER_CREDENTIAL` state is historical evidence from before `ACCESS-2026-006`: provider assets, provider bytes, promoted real packages, and retained synthetic bytes remain zero.
+Before the owner authorized real access, BurnLens tested the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. Its rendered `BLOCKED_OWNER_CREDENTIAL` state is historical evidence from before `ACCESS-2026-006`; its zero-provider values remain truthful for that run but no longer describe the current local workspace.
 
 Thirty-seven repository tests and a byte-identical second report build pass. The report fixes the public-metadata observation at 2026-07-14 and explicitly states that deterministic rehearsals make no live provider request, so a later run time cannot masquerade as fresh research. A fourth rendered rehearsal check proves post-promotion mutation is detected. This proves transaction behavior and evidence honesty, not source delivery or remote-sensing fitness.
 
+## What the real files prove
+
+The `0.4.0` candidate adds a runtime-only credential wrapper and exact-provider acquisition client. Authentication is host-scoped; redirects are HTTPS-only and allowlisted; cross-host authorization is stripped; signed queries never enter evidence; partial downloads are resumable but size-bounded; invalid partials are deleted. No username, password, token, cookie, signed URL, or credential-store detail is committed.
+
+Acquisition run `BL-2026-07-14-authenticated-intake-r001` registered the exact three-file, 1,169,997,942-byte package in ignored local raw storage. The Sentinel ZIP has 95 members, one expected SAFE root, `manifest.safe`, matching provider MD5/BLAKE3, and clean CRC results. The two VIIRS assets match their exact sizes and native HDF5 signatures; their local SHA-256/MD5/BLAKE3 values are recorded without inventing provider checksums.
+
+Inspection run `BL-2026-07-14-source-inspection-r001` reads the actual arrays:
+
+- Sentinel true color: exact `1,200 x 900` AOI crop at 10 m on EPSG:32610.
+- Sentinel SCL: exact `600 x 450` crop at 20 m, 9.0281% medium/high cloud, 0.1163% cloud shadow, and zero no-data pixels.
+- VIIRS fire product: `6464 x 6400` mask, 65 consistent sparse records, and eight records inside the AOI.
+- AOI fire records: six nominal, two high confidence, three residual-bowtie, and zero non-nominal-geolocation QA flags.
+- Companion geolocation: all 10,342,400 coordinate pairs pass the implemented validity checks; AOI candidates lie only seven columns from the swath edge.
+
+The strongest finding is a limit. The AOI fire records are observed at 69.02-69.07 degrees view zenith. The Sentinel and VIIRS observations are almost 47 minutes apart, and 375 m thermal anomalies cannot define 10-20 m segmentation boundaries. BurnLens therefore accepts the package for source/reference use and defers labels and a dataset. A second full inspection reproduces JSON, HTML, and PNG byte for byte; the semantic page was also verified in the in-app browser with no console errors or horizontal overflow.
+
 ## Current risk and next checkpoint
 
-The strongest remaining risk is still data evidence. BurnLens has zero Sentinel/VIIRS provider assets and does not know whether the chosen acquisition contains usable active-fire pixels, acceptable quality, correct real-array geolocation, or defensible label evidence. The owner authorized the CDSE and NASA Earthdata credentials on 2026-07-14, but BurnLens has not yet exercised them or verified authenticated delivery.
+Access and native-file uncertainty are resolved for the frozen pair. Label evidence is now the highest risk. One oblique, same-day thermal swath is useful reference evidence but insufficient for a leakage-resistant image/label dataset with credible positives, negatives, unknowns, and independent splits.
 
-Until the exact pair is acquired, validated, and inspected, BurnLens can demonstrate careful source selection, fail-closed access handling, deterministic geospatial scope, and honest uncertainty - not computer-vision performance.
+The next checkpoint will compare alternate temporally relevant VIIRS geometry and formalize a weak/reference-label feasibility protocol. It will not buffer the current points into truth or use the later NIFC perimeter as a pixel-perfect label. If active-fire labels remain indefensible, the established burn-scar fallback requires an explicit owner decision under the controlling goal.
 
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
-- Latest evidence run: `BL-2026-07-14-paired-intake-rehearsal-r001`
-- Tool: BurnLens package `0.3.0`, shipped transaction baseline
+- Latest evidence run: `BL-2026-07-14-source-inspection-r001`
+- Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
+- Tool: BurnLens package `0.4.0`, authenticated-source candidate
 - Transaction contract: `paired-intake-contract-v0.4.0`
-- Credential authorization: `ACCESS-2026-006`; owner-authorized, not yet exercised by BurnLens
-- Generator source commit: `ac8ee43151991c38ccf5d446a53c09b617afeb54`
+- Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
+- Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` secret-safe exercise
+- Inspection source commit: `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`
 - Latest shipped repository baseline: `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582`
-- Shipped checkpoint: issue #325 / PR #326; lifecycle sync issue #327
+- Active candidate: `v0.4.0-authenticated-source-baseline`; issue #329 / PR #330
 - Dataset / label schema / baseline / model: not created
-- Public application: not created; this repository case study, README, and static evidence report are the current presentation surfaces
+- Public application: not created; this repository case study, README, and static source-inspection report are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

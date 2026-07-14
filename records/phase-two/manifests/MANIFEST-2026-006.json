@@ -1,0 +1,91 @@
+{
+  "manifest_id": "MANIFEST-2026-006",
+  "manifest_version": "0.6.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-14T18:22:11Z",
+  "task_issue": 329,
+  "branch": "codex/p2o2-t03-authenticated-intake",
+  "git_base_commit": "907a0154d64b40021932387ae78bac4c5fe28128",
+  "acquisition_source_commit": "695280f80b09afad91a78b96b809e332bd4bc3b2",
+  "generator_source_commit": "9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc",
+  "checkpoint_commit": null,
+  "pull_request": 330,
+  "version_tag": "v0.4.0-authenticated-source-baseline",
+  "version_tag_state": "candidate; create only after merged quality gates pass",
+  "status": "candidate authenticated source/reference baseline; labels and dataset deferred",
+  "software_version": "0.4.0",
+  "runtime": {
+    "python": "3.12.13",
+    "blake3": "1.0.9",
+    "h5py": "3.16.0",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "setuptools": "82.0.1",
+    "wheel": "0.47.0"
+  },
+  "source_records": ["SOURCE-2026-004", "SOURCE-2026-005", "SOURCE-2026-006", "SOURCE-2026-007"],
+  "authorization_record": "ACCESS-2026-006",
+  "access_record": "ACCESS-2026-007",
+  "terms_records": ["TERMS-2026-001", "TERMS-2026-002"],
+  "precheck_record": "PRECHECK-2026-006",
+  "registry_record": "REGISTRY-2026-006",
+  "review_records": ["SOURCE_FITNESS-2026-001", "LABEL_FITNESS-2026-002", "USE_BOUNDARY-2026-005"],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "source_package_id": "darlene3-s2-viirs-pair-v0.1.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "acquisition_run_id": "BL-2026-07-14-authenticated-intake-r001",
+  "run_id": "BL-2026-07-14-source-inspection-r001",
+  "report_version": "source-inspection-v0.1.0",
+  "contract_version": "paired-intake-contract-v0.4.0",
+  "contract_sha256": "5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d",
+  "raw_assets": [
+    {
+      "source_record": "SOURCE-2026-004",
+      "bytes": 1127031562,
+      "sha256": "b2cfcf3c2003ff6adbe74fe3ea8fbbc65409ea7034e010b001ec5601d3dd81dc"
+    },
+    {
+      "source_record": "SOURCE-2026-005",
+      "bytes": 2710616,
+      "sha256": "7f370161de57af826740a5913d6ee5de79b56153d26bfb17406af9838054cad9"
+    },
+    {
+      "source_record": "SOURCE-2026-006",
+      "bytes": 40255764,
+      "sha256": "df7ec749f794fa42286bb61b4ef2b8dda3032ef909eb0c1914b8850510bae281"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 23116,
+      "sha256": "cbd4dfba840680256a100aeca1a2e0b28483796f7e7b79b90de8b933d58b0a53"
+    },
+    {
+      "path": "samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 4725,
+      "sha256": "76d13d3e105f053410d0063b17eb740f732c786dc395fe13335701496cbb41a0"
+    },
+    {
+      "path": "samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 1496701,
+      "sha256": "da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966"
+    }
+  ],
+  "provider_source_asset_count_local": 3,
+  "provider_source_asset_bytes_local": 1169997942,
+  "provider_source_asset_bytes_committed": 0,
+  "credentials_used": true,
+  "credential_or_token_material_retained": false,
+  "decision": "ACCEPT_SOURCE_REFERENCE_DEFER_LABELS",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
