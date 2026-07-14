@@ -11,7 +11,7 @@
   "checkpoint_commit": "ee1a1d678ad888b595dc3c7b215f787ea5156582",
   "pull_request": 326,
   "lifecycle_sync_issue": 327,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 328,
   "version_tag": "v0.3.0-intake-transaction-baseline",
   "version_tag_state": "verified annotated tag resolving to checkpoint_commit",
   "status": "shipped exact-pair transaction baseline; post-merge verification passed; report captures pre-authorization state; provider package absent",

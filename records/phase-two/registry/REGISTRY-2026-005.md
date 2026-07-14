@@ -1,6 +1,6 @@
 # REGISTRY-2026-005 - Paired-Intake Transaction Artifacts
 
-**Checkpoint:** Issue #325 / PR #326; merged at `ee1a1d678ad888b595dc3c7b215f787ea5156582`; annotated `v0.3.0-intake-transaction-baseline` tag verified; lifecycle sync issue #327
+**Checkpoint:** Issue #325 / PR #326; merged at `ee1a1d678ad888b595dc3c7b215f787ea5156582`; annotated `v0.3.0-intake-transaction-baseline` tag verified; lifecycle sync issue #327 / PR #328
 
 | Artifact | Class | Version/state | Provider/synthetic bytes retained |
 |---|---|---|---:|

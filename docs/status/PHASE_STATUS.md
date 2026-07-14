@@ -47,7 +47,7 @@ P2O2-T02 / issue #325 accepts the exact-pair transaction and adds `PAIR-INTAKE-R
 
 ## Current checkpoint
 
-P2O2-T02-SYNC / issue #327 is the active provenance-only checkpoint. It records PR #326, merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`, the verified annotated tag, post-merge checks, and the fact that `ACCESS-2026-006` arrived after the historical rehearsal. It changes no output bytes and exercises no credential.
+P2O2-T02-SYNC / issue #327 / PR #328 is the active provenance-only checkpoint. It records PR #326, merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`, the verified annotated tag, post-merge checks, and the fact that `ACCESS-2026-006` arrived after the historical rehearsal. It changes no output bytes and exercises no credential.
 
 ## Selected next checkpoint
 

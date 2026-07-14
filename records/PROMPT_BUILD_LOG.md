@@ -141,7 +141,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T01 | `records/prompt-build-log/2026-07-13-p2o2-t01.md` | merged via PR #322; tagged | Issue #321 closed; merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`; `v0.2.0-aoi-baseline`; final modeling AOI and deterministic evidence shipped. |
 | P2O2-T01-SYNC | `records/prompt-build-log/2026-07-13-p2o2-t01-sync.md` | issue #323 / PR #324 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs. |
 | P2O2-T02 | `records/prompt-build-log/2026-07-13-p2o2-t02.md` | merged via PR #326; tagged | Issue #325 closed; merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`; `v0.3.0-intake-transaction-baseline`; historical credential-blocked report plus later owner authorization; zero provider or retained fixture bytes. |
-| P2O2-T02-SYNC | `records/prompt-build-log/2026-07-14-p2o2-t02-sync.md` | issue #327 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs or exercising credentials. |
+| P2O2-T02-SYNC | `records/prompt-build-log/2026-07-14-p2o2-t02-sync.md` | issue #327 / PR #328 lifecycle synchronization | Exact analytical PR/merge/tag/post-merge verification synchronized without changing outputs or exercising credentials. |
 
 ## Acceptance and remediation triggers
 
