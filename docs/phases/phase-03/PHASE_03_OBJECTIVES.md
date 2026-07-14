@@ -37,7 +37,7 @@ The phase is not an architecture competition. It creates one understandable trai
 ## Locked context
 
 - Task: experimental binary semantic segmentation for wildfire-relevant screening.
-- Primary target: active-fire or hotspot-informed mask unless Phase Two formally approved the fallback.
+- Active target: Phase Two formally approved the burn-scar binary-mask fallback as `target-burn-scar-v0.2.0`; active-fire observations are complementary reference only.
 - Reference family: U-Net-style encoder-decoder.
 - Unknown and excluded pixels remain masked from loss and metrics according to the label contract.
 - The Phase Two test set remains locked until one final evaluation.

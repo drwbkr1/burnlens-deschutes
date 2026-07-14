@@ -1,0 +1,163 @@
+{
+  "report_id": "TARGET-DECISION-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "target-path-decision-v0.1.0",
+  "generated_at_utc": "2026-07-14T21:16:01Z",
+  "run_id": "BL-2026-07-14-target-decision-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 337,
+  "branch": "codex/p2o2-t05-burn-scar-target",
+  "git_source_commit": "de884e439896b87bbdc41be9d159ff647b35726b",
+  "software_version": "0.6.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_decision_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_evidence": {
+    "observation_report": {
+      "report_id": "OBSERVATION-GEOMETRY-2026-001",
+      "run_id": "BL-2026-07-14-observation-geometry-r002",
+      "sha256": "c1da1c47483ab573a8a123a26f7c5b2f111b57b4eaedb05ffb2d3aafa46e881d"
+    },
+    "aoi_report": {
+      "report_id": "AOI-FINAL-2026-001",
+      "sha256": "305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c"
+    },
+    "mtbs_availability_record": {
+      "record_id": "MTBS-DARLENE3-AVAILABILITY-2026-001",
+      "sha256": "085100429fcea4ce1bb8988bd7f6ef58dd91a759c89283ae52754352ad5ef0c4"
+    }
+  },
+  "owner_decision": {
+    "recorded_date": "2026-07-14",
+    "decision": "ACTIVATE_BURN_SCAR_BINARY_MASK_FALLBACK",
+    "status": "ACTIVE",
+    "scope": "Change the active target path from active-fire/hotspot-informed labels to the already established burn-scar binary-mask fallback. The first CV task remains binary semantic segmentation.",
+    "unchanged": [
+      "portfolio promise and technical/technical-adjacent reviewer",
+      "binary semantic-segmentation task and mask-first GEOINT workflow",
+      "use boundaries, official-source precedence, and transparency requirements",
+      "six phase outcomes and baseline-first model decision"
+    ]
+  },
+  "target_contract": {
+    "active_target": "burn-scar binary mask",
+    "former_primary_disposition": "COMPLEMENTARY_REFERENCE_ONLY",
+    "former_primary": "active-fire / hotspot-informed binary fire mask",
+    "positive_class": "Burn-scar pixels supported by a future accepted, temporally appropriate, quality-screened optical-change and review protocol. No positive label exists yet.",
+    "background_candidate": "Clear, observable pixels supported as unburned under the future accepted protocol; outside a perimeter or absence of a hotspot is not automatically background.",
+    "unknown": "Cloud, smoke, haze, shadow, snow, temporal ambiguity, source disagreement, unobserved areas, and other insufficient evidence remain unknown and are never silently converted to background.",
+    "excluded": "Invalid pixels, non-processing masks, failed georegistration, and quality states disallowed by the future accepted protocol are excluded.",
+    "severity_classes_used": false,
+    "multiclass_expansion": false
+  },
+  "active_fire_evidence": {
+    "disposition": "REJECT_DIRECT_LABELS_RETAIN_REFERENCE",
+    "selected_observation": "VJ214IMG.A2024179.2118.002.2025284191612",
+    "support_m": 375,
+    "sentinel_offset_hours": 2.478049,
+    "qualified_median_view_zenith_degrees": 31.01,
+    "qualified_record_count": 11,
+    "reason": "The best bounded observation is useful complementary evidence, but its 375 m support and temporal offset cannot define 10-20 m pixel truth."
+  },
+  "mtbs_assessment": {
+    "disposition": "NO_CURRENT_DARLENE3_RECORD_CONSIDER_METHODS_AND_CROSS_FIRE_REFERENCE",
+    "accessed_at_utc": "2026-07-14T21:10:00Z",
+    "service_version": "11.5",
+    "inventory_feature_count_2024": 941,
+    "darlene_name_match_count_2024": 0,
+    "aoi_feature_count_2024": 0,
+    "aoi_feature_count_all_years": 0,
+    "interpretation": "MTBS is scientifically relevant and publishes fire-level pre/post imagery, burn indices, boundaries, severity, and non-processing masks for mapped fires. Its current official vector services expose no Darlene 3 record in the frozen AOI, so it cannot supply the exact label for this experiment today.",
+    "future_rule": "Re-query the current official inventory before any later MTBS use because releases are quarterly and revised fire products replace prior versions. Treat any future product as analyst-interpreted reference, not field truth; do not convert its six severity classes into a new multiclass target.",
+    "rights_status": {
+      "metadata_use_status": "RESOLVED_WITH_CITATION",
+      "basis": "USGS states that USGS-authored or produced data and information are considered U.S. public domain, while some non-USGS site materials may carry separate rights. This record retains factual public service metadata and citations only.",
+      "future_product_data_touch": "REVALIDATE_EXACT_PRODUCT_METADATA_AND_CURRENT_TERMS_BEFORE_DOWNLOAD_OR_DERIVATIVE_BUILD",
+      "logo_or_identifier_use": "NOT_AUTHORIZED_OR_USED",
+      "endorsement_implication": "PROHIBITED"
+    }
+  },
+  "next_gate": {
+    "decision": "PROCEED_TO_BURN_SCAR_SOURCE_AND_LABEL_PROTOCOL",
+    "required_outcome": "Select and visually validate one legally usable, temporally defensible pre/post optical source pair over the frozen AOI, then approve a binary burn-scar labeling protocol before creating any label array.",
+    "must_prove": [
+      "exact source identity, terms, provenance, acquisition dates, CRS, grid, and AOI coverage",
+      "pre/post optical quality and interpretable burn-change signal on real rendered pixels",
+      "burned, background-candidate, unknown, excluded, and review-needed rules",
+      "georegistration tolerance, non-processing masks, temporal leakage controls, and independent QA",
+      "whether a reproducible non-model spectral baseline is defensible before any model work"
+    ],
+    "not_authorized_yet": [
+      "label array or dataset creation",
+      "train/validation/test split",
+      "baseline mask, model training, inference, or performance claim",
+      "severity, recovery, or multiclass target"
+    ]
+  },
+  "quality_gates": {
+    "owner_decision_recorded": true,
+    "active_fire_direct_label_path_rejected": true,
+    "mtbs_current_exact_fire_availability_checked": true,
+    "mtbs_exact_darlene_record_available": false,
+    "target_fallback_activated": true,
+    "label_array_created": false,
+    "dataset_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "claims": {
+    "permitted": [
+      "BurnLens rejected direct active-fire labels and activated its controlled burn-scar binary-mask fallback.",
+      "The current official MTBS occurrence services returned no Darlene 3 feature in the frozen AOI at the recorded access time.",
+      "MTBS remains relevant as methodology and potential future or cross-fire reference evidence."
+    ],
+    "prohibited": [
+      "A burn-scar label, dataset, baseline, trained model, inference result, or analytical application exists.",
+      "MTBS, NIFC geometry, severity classes, hotspots, or non-detections are pixel-perfect field truth.",
+      "BurnLens is official, operational, emergency-ready, field-validated, or endorsed."
+    ]
+  },
+  "source_guidance": [
+    {
+      "organization": "MTBS Program",
+      "url": "https://www.mtbs.gov/index.php/faqs",
+      "role": "mapping threshold, missing-fire reasons, quarterly revision behavior, fire-level products, scale, and interpretation limits",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "Burn Severity Portal",
+      "url": "https://burnseverity.cr.usgs.gov/products/mtbs",
+      "role": "current MTBS purpose, assessment timing, availability, audience, and data-access route",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "USDA Forest Service Enterprise Map Services",
+      "url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/",
+      "role": "current official occurrence and burned-area service layer inventory",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "role": "USGS public-domain rule, exceptions for third-party materials, credit, and identifier limitations",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    }
+  ],
+  "attribution": [
+    "MTBS Program (U.S. Geological Survey and USDA Forest Service), official services accessed 2026-07-14.",
+    "NASA VIIRS/JPSS2 remains complementary native-scale thermal-anomaly reference evidence.",
+    "NIFC WFIGS final-perimeter geometry remains an incident reference and AOI derivation source only."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "json": "TARGET-DECISION-2026-001.json",
+    "html": "TARGET-DECISION-2026-001.html",
+    "png": "TARGET-DECISION-2026-001.png",
+    "png_sha256": "4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b"
+  }
+}

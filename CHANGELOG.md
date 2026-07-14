@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.6.0-burn-scar-target-baseline - 2026-07-14
+
+### P2O2-T05 - Activate burn-scar binary-mask fallback and publish target-path evidence
+
+- Record the owner's decision to activate the already-established burn-scar binary-mask fallback as `target-burn-scar-v0.2.0` without changing the project promise, audience, binary CV task, phase outcomes, GEOINT workflow, or use boundaries.
+- Retain the best bounded NOAA-21 active-fire observation as complementary native-scale reference evidence only; reject direct labels because 375 m support and a 2.48-hour optical offset cannot define 10-20 m pixel truth.
+- Query the current official MTBS 2024 and all-years occurrence services. The 2024 inventory returns 941 records, no Darlene name match, and zero AOI features; the all-years layer also returns zero AOI features.
+- Preserve MTBS as methodology and potential cross-fire/future reference evidence, not field truth or an available exact Darlene 3 label. Do not convert its six severity classes into a multiclass BurnLens target.
+- Add deterministic `0.6.0` target-decision tooling with fail-closed source evidence validation and render `TARGET-DECISION-2026-001` as normalized JSON, semantic HTML, and a 1600 by 1050 evidence card.
+- Define the next gate: one legally usable, visually validated pre/post optical pair plus an uncertainty-preserving binary protocol before any label array, dataset, spectral baseline, or model.
+- Update the README, controlling goal, agent instructions, roadmap, phase status, version history, case study, prompt/build log, and devlog so no active control still says the owner choice is pending.
+
+Issue #337 / PR #338 is the active checkpoint on `codex/p2o2-t05-burn-scar-target`. Generator source is `de884e439896b87bbdc41be9d159ff647b35726b`. Run `BL-2026-07-14-target-decision-r001` produced JSON `933f5d92bdf25af12356f91e69eb9eb32a963b0c3acb81a84a5459721329d4aa`, HTML `7b043d349ea7dd978ce875e5e2c50ea6db53a53c0c924df991e504340f2481bf`, and PNG `4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b`. All 68 repository tests, compilation, dependency health, byte-identical reconstruction, original-resolution PNG visual review, semantic HTML assertions, offline wheel build, isolated `0.6.0` import, and diff checks pass before PR review. Wheel SHA-256 is `4a9cc3599e465ac35f7437c697fa72cd3d1694cf8d517055dd1086756d36c1bb`. The unavailable `python -m build` entry point and browser policy block are recorded as limitations, not converted into passing claims. Raw provider bytes, label arrays, datasets, splits, baselines, models, analytical metrics, applications, deployments, and performance claims created: zero.
+
 ## v0.5.0-observation-geometry-baseline - 2026-07-14
 
 ### P2O2-T04 - Complete NOAA-21 geometry comparison and label-feasibility protocol

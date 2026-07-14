@@ -1,0 +1,98 @@
+{
+  "record_id": "MTBS-DARLENE3-AVAILABILITY-2026-001",
+  "schema_version": "0.1.0",
+  "accessed_at_utc": "2026-07-14T21:10:00Z",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 337,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "aoi_discovery_bbox_wgs84": [-121.56, 43.61, -121.4, 43.75],
+  "incident_reference": {
+    "name": "0289 NE DARLENE 3",
+    "unique_fire_identifier": "2024-ORPRD-000289",
+    "nifc_gis_acres": 3903.653,
+    "role": "incident reference and AOI derivation only"
+  },
+  "service": {
+    "organization": "Monitoring Trends in Burn Severity Program (U.S. Geological Survey and USDA Forest Service)",
+    "map_service_url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/",
+    "current_version": "11.5",
+    "spatial_reference": "EPSG:4269",
+    "layer_2024_occurrence": 83,
+    "layer_all_years_occurrence": 62,
+    "copyright_text": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
+    "transport": "HTTPS",
+    "access": "public read-only ArcGIS REST query"
+  },
+  "queries": [
+    {
+      "purpose": "inspect 2024 occurrence schema",
+      "url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/83?f=json",
+      "http_status": 200
+    },
+    {
+      "purpose": "enumerate every current 2024 occurrence record and locally check Darlene name, known incident reference, and AOI coordinates",
+      "url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/83/query?where=1%3D1&outFields=fire_id%2Cfire_name%2Cig_date%2Clatitude%2Clongitude%2Cacres%2Cirwinid%2Cmap_id%2Cmap_prog%2Cperim_id%2Cpre_id%2Cpost_id%2Ccomments&returnGeometry=false&f=json",
+      "http_status": 200,
+      "returned_feature_count": 941,
+      "transfer_limit_exceeded": false
+    },
+    {
+      "purpose": "query 2024 occurrence features intersecting the BurnLens discovery envelope that contains the frozen final AOI",
+      "layer": 83,
+      "geometry_wgs84": [-121.56, 43.61, -121.4, 43.75],
+      "spatial_relationship": "esriSpatialRelIntersects",
+      "http_status": 200,
+      "returned_feature_count": 0
+    },
+    {
+      "purpose": "query all-years occurrence features intersecting the same envelope to rule out a year-layer or naming artifact",
+      "layer": 62,
+      "geometry_wgs84": [-121.56, 43.61, -121.4, 43.75],
+      "spatial_relationship": "esriSpatialRelIntersects",
+      "http_status": 200,
+      "returned_feature_count": 0
+    }
+  ],
+  "findings": {
+    "inventory_feature_count_2024": 941,
+    "darlene_name_match_count_2024": 0,
+    "aoi_feature_count_2024": 0,
+    "aoi_feature_count_all_years": 0,
+    "exact_darlene3_fire_level_product_proven": false,
+    "interpretation": "The current official occurrence service does not expose a Darlene 3 record in the BurnLens AOI. This is an availability finding, not evidence that no burn scar exists."
+  },
+  "rights_review": {
+    "metadata_use_status": "RESOLVED_WITH_CITATION",
+    "basis": "USGS states that USGS-authored or produced data and information are considered U.S. public domain, while some non-USGS site materials may carry separate rights. This record retains factual public service metadata and citations only.",
+    "future_product_data_touch": "REVALIDATE_EXACT_PRODUCT_METADATA_AND_CURRENT_TERMS_BEFORE_DOWNLOAD_OR_DERIVATIVE_BUILD",
+    "logo_or_identifier_use": "NOT_AUTHORIZED_OR_USED",
+    "endorsement_implication": "PROHIBITED"
+  },
+  "revision_policy": "Re-query before later use. MTBS publishes approximately quarterly, and a revised fire replaces the original distributed dataset.",
+  "source_guidance": [
+    {
+      "organization": "MTBS Program",
+      "url": "https://www.mtbs.gov/index.php/faqs",
+      "role": "mapping threshold, missing-fire reasons, quarterly revision behavior, fire-level products, scale, and interpretation limits",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "Burn Severity Portal",
+      "url": "https://burnseverity.cr.usgs.gov/products/mtbs",
+      "role": "current MTBS purpose, assessment timing, availability, audience, and data-access route",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "USDA Forest Service Enterprise Map Services",
+      "url": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/",
+      "role": "current official occurrence and burned-area service layer inventory",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    },
+    {
+      "organization": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "role": "USGS public-domain rule, exceptions for third-party materials, credit, and identifier limitations",
+      "accessed_at_utc": "2026-07-14T21:10:00Z"
+    }
+  ]
+}
