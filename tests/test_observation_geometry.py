@@ -98,6 +98,7 @@ class ObservationGeometryTests(unittest.TestCase):
                 "pre_event_reference_only": pre_event,
                 "seconds_from_sentinel_observation": 100.0,
                 "inspection": {
+                    "attributes": {"DayNightFlag": "Day"},
                     "aoi_fire_record_count": 2,
                     "aoi_residual_bowtie_count": bowtie,
                     "aoi_reference_qualified_count": 1,
@@ -120,6 +121,31 @@ class ObservationGeometryTests(unittest.TestCase):
         self.assertEqual(selected["native_id"], candidates[1]["native_id"])
         self.assertIn("VIEW_GEOMETRY_MARGIN_NOT_MET", candidates[0]["geometry_screen_reason_codes"])
         self.assertIn("MATERIAL_GEOMETRY_IMPROVEMENT", candidates[1]["geometry_screen_reason_codes"])
+
+    def test_promotion_prefers_day_and_time_over_lowest_angle_alone(self) -> None:
+        def candidate(native_id: str, regime: str, offset: float, median_view: float) -> dict:
+            return {
+                "native_id": native_id,
+                "pre_event_reference_only": False,
+                "seconds_from_sentinel_observation": offset,
+                "inspection": {
+                    "attributes": {"DayNightFlag": regime},
+                    "aoi_fire_record_count": 10,
+                    "aoi_residual_bowtie_count": 0,
+                    "aoi_reference_qualified_count": 10,
+                    "aoi_reference_qualified_view_zenith_range_degrees": [median_view - 1, median_view + 1],
+                    "aoi_reference_qualified_view_zenith_median_degrees": median_view,
+                },
+            }
+
+        night = candidate("VJ214IMG.A2024178.1012.002.2025284190344", "Night", -117439.0, 13.64)
+        day = candidate("VJ214IMG.A2024179.2118.002.2025284191612", "Day", 8959.0, 31.01)
+        selected = choose_geometry_candidate(
+            [night, day],
+            baseline_view_range=[69.0, 69.1],
+            baseline_residual_bowtie_share=0.375,
+        )
+        self.assertEqual(selected["native_id"], day["native_id"])
 
     def test_screen_contract_reuses_generic_exact_package_and_checks_pair(self) -> None:
         fire = AssetContract(

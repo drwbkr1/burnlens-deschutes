@@ -47,10 +47,10 @@ from .source_inspection import _scalar, _short_input_names, point_in_geometry
 
 SOFTWARE_VERSION = "0.5.0"
 REPORT_ID = "OBSERVATION-GEOMETRY-2026-001"
-REPORT_VERSION = "observation-geometry-v0.1.0"
+REPORT_VERSION = "observation-geometry-v0.2.0"
 REPORT_SCHEMA_VERSION = "0.1.0"
-PACKAGE_ID = "darlene3-vj214img-observation-screen-v0.1.0"
-CONTRACT_VERSION = "observation-screen-contract-v0.1.0"
+PACKAGE_ID = "darlene3-vj214img-observation-screen-v0.2.0"
+CONTRACT_VERSION = "observation-screen-contract-v0.2.0"
 COLLECTION_CONCEPT_ID = "C2831626262-LPCLOUD"
 CMR_GRANULE_URL = "https://cmr.earthdata.nasa.gov/search/granules.umm_json"
 CMR_COLLECTION = "VJ214IMG.002"
@@ -575,10 +575,13 @@ def choose_geometry_candidate(
     return min(
         eligible,
         key=lambda item: (
-            item["inspection"]["aoi_reference_qualified_view_zenith_median_degrees"],
-            item["inspection"]["aoi_reference_qualified_view_zenith_range_degrees"][1],
-            -item["inspection"]["aoi_reference_qualified_count"],
+            {"Day": 0, "Both": 1, "Night": 2}.get(
+                item["inspection"]["attributes"]["DayNightFlag"],
+                3,
+            ),
             abs(item["seconds_from_sentinel_observation"]),
+            item["inspection"]["aoi_reference_qualified_view_zenith_median_degrees"],
+            -item["inspection"]["aoi_reference_qualified_count"],
             item["native_id"],
         ),
     )
@@ -719,13 +722,16 @@ def build_report(
     ):
         item["observed_geometry_rank"] = rank
 
-    decision = "ACCEPT_IMPROVED_REFERENCE_GEOMETRY_DEFER_LABELS" if selected else "RETAIN_BASELINE_REFERENCE_DEFER_LABELS"
+    decision = "ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS" if selected else "RETAIN_BASELINE_REFERENCE_DEFER_LABELS"
     if selected:
         selected_median = selected["inspection"]["aoi_reference_qualified_view_zenith_median_degrees"]
+        selected_offset_hours = abs(selected["seconds_from_sentinel_observation"]) / 3600
+        selected_regime = selected["inspection"]["attributes"]["DayNightFlag"]
         detail = (
-            f"One post-start NOAA-21 observation materially improves qualified AOI view geometry to a {selected_median:.2f}-degree "
-            "median under the explicit BurnLens screen. Retain it as stronger native-scale reference evidence, but defer labels and a "
-            "dataset because its time offset and 375 m support still cannot define 10-20 m segmentation truth."
+            f"One {selected_regime.lower()} NOAA-21 observation {selected_offset_hours:.2f} hours from the Sentinel scene materially improves "
+            f"qualified AOI view geometry to a {selected_median:.2f}-degree median under the explicit BurnLens screen. Retain it as "
+            "complementary native-scale reference evidence, but defer labels and a dataset because the larger time offset and 375 m "
+            "support still cannot define 10-20 m segmentation truth."
         )
     else:
         detail = (
@@ -774,6 +780,9 @@ def build_report(
             "material_improvement_rule": (
                 f"Post-approximate-start candidate; at least one nominal/high, nominal-geolocation, non-bowtie AOI record; candidate maximum "
                 f"qualified view zenith at least {GEOMETRY_MARGIN_DEGREES:.0f} degrees below the baseline minimum; residual-bowtie share no worse than baseline."
+            ),
+            "promotion_priority": (
+                "Among materially improved candidates, prefer the Sentinel day regime, then smallest absolute Sentinel time offset, then lower median view zenith and more qualified records."
             ),
             "rule_scope": "Conservative BurnLens evidence-screen rule, not a NASA validation threshold and not a label-validity claim.",
         },
@@ -974,7 +983,7 @@ dt{{font-weight:750;margin-top:.65rem}} dd{{margin-left:0;color:var(--muted)}}
 <div class="status"><h2>{escape(report['decision'])}</h2><p>{escape(report['decision_detail'])}</p></div>
 <div class="grid"><div class="card"><span class="metric">{report['candidate_summary']['inventory_count']}</span>CMR candidates</div><div class="card"><span class="metric">{report['candidate_summary']['aoi_detection_candidate_count']}</span>with AOI records</div><div class="card"><span class="metric">{report['candidate_summary']['reference_qualified_candidate_count']}</span>with qualified reference records</div><div class="card"><span class="metric">0</span>label arrays</div></div>
 <figure><img src="{escape(image_name)}" width="1600" height="1100" alt="BurnLens chart comparing qualified AOI VIIRS record view angles over time and preserving reference, negative-candidate, unknown, excluded, and review-needed states"><figcaption>Rendered from report <code>{escape(report['report_id'])}</code>, run <code>{escape(report['run_id'])}</code>, source commit <code>{escape(report['git_source_commit'])}</code>.</figcaption></figure>
-<section><h2>What the screen means</h2><p>{escape(report['screen_rule']['material_improvement_rule'])}</p><p>{escape(report['screen_rule']['rule_scope'])}</p></section>
+<section><h2>What the screen means</h2><p>{escape(report['screen_rule']['material_improvement_rule'])}</p><p>{escape(report['screen_rule']['promotion_priority'])}</p><p>{escape(report['screen_rule']['rule_scope'])}</p></section>
 <section><h2>Every candidate and exclusion reason</h2><div class="table-wrap"><table><thead><tr><th>Acquisition</th><th>Begin UTC</th><th>AOI records</th><th>Qualified</th><th>Median view</th><th>Bowtie</th><th>Screen result</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>
 <section><h2>Weak/reference-label feasibility protocol</h2><dl><dt>Positive/reference</dt><dd>{escape(protocol['positive_reference'])}</dd><dt>Negative candidate</dt><dd>{escape(protocol['negative_candidate'])}</dd><dt>Unknown</dt><dd>{escape(protocol['unknown'])}</dd><dt>Excluded</dt><dd>{escape(protocol['excluded'])}</dd><dt>Review needed</dt><dd>{escape(protocol['review_needed'])}</dd></dl></section>
 <div class="grid"><section><h2>Permitted claims</h2><ul>{permitted}</ul></section><section><h2>Prohibited claims</h2><ul>{prohibited}</ul></section></div>
