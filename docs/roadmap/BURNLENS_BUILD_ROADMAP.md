@@ -84,7 +84,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 **What this phase must prove:** BurnLens can enter implementation with a coherent promise, bounded task, traceable operating rules, safe claims, and an explicit gate rather than relying on conversation context or informal assumptions.
 
-**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists, and data touch remains blocked pending resolved Phase Two before-data evidence.
+**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists. Phase Two public metadata actions are complete through P2O1-T02, while provider source-asset access remains blocked.
 
 ## Phase Two — data foundation
 
@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 shipped through PR #310 at `6abe87bba486e3fe49b6c06178b454335663cb73` and is versioned by the annotated `v0.1.0-source-metadata-baseline` tag. P2O1-T02 / issue #312 is the current bounded readiness slice and has completed its metadata-only implementation pending verification and shipment. The highest-leverage next checkpoint is exact paired asset intake and visual inspection, but it must not begin until the owner explicitly authorizes adding or using a CDSE account/token. No NASA-only intake substitutes for the paired source contract.
+The control baseline remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`. P2O1-T02 shipped through PR #314 at `cf4aba2f40aa426f28f09b1b1b1bad895394198b` and is versioned by the annotated `v0.1.1-asset-readiness-baseline` tag. The highest-leverage next checkpoint is exact paired asset intake and visual inspection, but it must not begin until the owner explicitly authorizes adding or using a CDSE account/token. No NASA-only intake substitutes for the paired source contract, and granule intersection remains coverage evidence rather than a detection.
 
 ## Required reading order for long-running Codex work
 

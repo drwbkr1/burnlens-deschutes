@@ -1,5 +1,9 @@
 # REGISTRY-2026-002 — Asset-Readiness Artifacts
 
+**Checkpoint:** PR #314; merge `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; annotated tag `v0.1.1-asset-readiness-baseline`
+
+**Normalized fixture:** `ASSET-READINESS-2026-001`; SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`
+
 | Artifact | Class | State | Provider bytes | Analytical output |
 |---|---|---|---:|---:|
 | `SOURCE-2026-004.md` | Exact optical source record | Metadata verified | No | No |

@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Candidate v0.1.1-asset-readiness-baseline — 2026-07-13
+## v0.1.1-asset-readiness-baseline — 2026-07-13
 
 ### P2O1-T02 — Exact Sentinel/VIIRS asset-access readiness
 
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain `ASSET-READINESS-2026-001`, a metadata-only normalized fixture with SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`.
 - Re-open F04-A and stop: Sentinel product access requires an owner-approved CDSE credential, while no provider asset may be downloaded under this checkpoint.
 
-This candidate creates no application, dataset, source-asset copy, label, baseline, model, metric, run, raster, vector, map, detection, or public analytical result. Its version and exact merge commit remain pending until the issue-backed pull request passes rendered and output verification.
+Shipped through PR #314 at merge commit `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; the annotated `v0.1.1-asset-readiness-baseline` tag resolves to that commit. The rendered PR, merged F04-A, normalized fixture, and issue #312 closure were verified on GitHub. This checkpoint creates no application, dataset, source-asset copy, label, baseline, model, metric, run, raster, vector, map, detection, or public analytical result.
 
 ## v0.1.0-source-metadata-baseline — 2026-07-13
 

@@ -4,14 +4,14 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 ## Verified status
 
-The project is at a planning/control baseline, not an analytical release.
+The project is at a Phase Two source-readiness baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The planning/control baseline is versioned at `v0.0.8-execution-goal-baseline`; this is not an analytical release or GitHub Release.
-- Phase Two data work has not begun.
-- No accepted source data, final AOI, labels, dataset, runnable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical result exists yet.
-- The latest verified `main` baseline is `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` from merged issue #290 / PR #291.
-- The next selected checkpoint is Phase Two source/licensing/access readiness; data remains blocked until terms and before-data evidence are resolved.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery and exact asset-access readiness are now complete.
+- `v0.1.1-asset-readiness-baseline` pins one exact Sentinel-2 product and the closest same-day NOAA-21 VIIRS fire/geolocation pair, with normalized metadata-only evidence and a credential-boundary STOP.
+- No credential or provider source asset has been used or retained. No final AOI, label, dataset, runnable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical result exists yet.
+- The latest verified repository evidence baseline on `main` is `cf4aba2f40aa426f28f09b1b1b1bad895394198b` from issue #312 / PR #314; the annotated `v0.1.1-asset-readiness-baseline` tag resolves to that commit.
+- The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using a CDSE account/token. NASA-only intake is not a substitute.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
@@ -50,7 +50,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Planning authorized; data blocked pending before-data evidence and resolved terms. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; exact routes and terms verified, provider asset intake blocked on owner-approved CDSE credential. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
