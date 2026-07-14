@@ -29,6 +29,7 @@ from burnlens.paired_intake import (
     promote_quarantine,
     render_html,
     run_synthetic_rehearsal,
+    verify_registered_package,
     write_report,
 )
 
@@ -235,6 +236,35 @@ class PairedIntakeTests(unittest.TestCase):
             persisted = json.loads((destination / ".burnlens-registration.json").read_text(encoding="utf-8"))
             self.assertEqual(persisted, registration)
             self.assertEqual(len(persisted["assets"]), 3)
+            verification = verify_registered_package(destination, contracts)
+            self.assertTrue(verification["accepted_as_unchanged_registered_package"])
+            self.assertEqual(verification["reason_codes"], ["REGISTERED_PACKAGE_VERIFIED"])
+
+    def test_registered_package_verifier_detects_later_tamper(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            quarantine = root / "complete"
+            quarantine.mkdir()
+            contracts = _synthetic_contracts(quarantine)
+            destination = root / "raw" / "package"
+            promote_quarantine(
+                quarantine,
+                destination,
+                contracts,
+                generated_at_utc=GENERATED,
+                run_id=RUN_ID,
+                synthetic_fixture=True,
+            )
+            fire = destination / contracts[1].expected_filename
+            payload = bytearray(fire.read_bytes())
+            payload[-1] ^= 0x01
+            fire.write_bytes(payload)
+
+            verification = verify_registered_package(destination, contracts)
+
+        self.assertFalse(verification["accepted_as_unchanged_registered_package"])
+        self.assertIn("REGISTERED_ASSET_VALIDATION_FAILED", verification["reason_codes"])
+        self.assertIn("REGISTRATION_ASSET_MISMATCH", verification["reason_codes"])
 
     def test_existing_destination_is_never_replaced(self) -> None:
         with TemporaryDirectory() as directory:
@@ -302,6 +332,7 @@ class PairedIntakeTests(unittest.TestCase):
         self.assertFalse(result["credential_used"])
         self.assertTrue(result["passed"])
         self.assertTrue(all(result["checks"].values()))
+        self.assertTrue(result["checks"]["post_promotion_tamper_detected"])
         self.assertEqual(result["retained_fixture_bytes"], 0)
 
     def test_real_report_is_blocked_and_does_not_inflate_claims(self) -> None:

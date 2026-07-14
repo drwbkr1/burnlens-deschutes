@@ -32,7 +32,7 @@ WARNING = (
     "incident-command support. Official sources govern."
 )
 PACKAGE_ID = "darlene3-s2-viirs-pair-v0.1.0"
-CONTRACT_VERSION = "paired-intake-contract-v0.3.0"
+CONTRACT_VERSION = "paired-intake-contract-v0.4.0"
 REPORT_VERSION = "paired-intake-rehearsal-v0.2.0"
 REPORT_ID = "PAIR-INTAKE-REHEARSAL-2026-001"
 SOFTWARE_VERSION = "0.3.0"
@@ -122,6 +122,7 @@ TRANSACTION_INVARIANTS = (
     "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
     "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
     "If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable.",
+    "Registered packages are re-verifiable against their manifest, contract digest, exact assets, and current local hashes so later mutation fails visibly.",
 )
 
 
@@ -360,8 +361,9 @@ def promote_quarantine(
         raise OSError("quarantine and destination must be on the same filesystem")
 
     registration = {
-        "registration_schema_version": "0.1.0",
+        "registration_schema_version": "0.2.0",
         "contract_version": CONTRACT_VERSION,
+        "contract_sha256": contract_digest(items),
         "package_id": evaluation["package_id"],
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
@@ -391,6 +393,110 @@ def promote_quarantine(
         registration_path.unlink(missing_ok=True)
         raise
     return registration
+
+
+def verify_registered_package(
+    destination: Path,
+    contracts: Iterable[AssetContract],
+) -> dict[str, Any]:
+    """Re-validate a promoted package against its registration and current bytes."""
+
+    items = list(contracts)
+    reasons = validate_contract_set(items)
+    destination_link = _is_link_like(destination)
+    path_present = destination.exists() or destination_link
+    valid_directory = path_present and destination.is_dir() and not destination_link
+    manifest_name = ".burnlens-registration.json"
+    expected_entries = {item.expected_filename for item in items} | {manifest_name}
+    observed_entries = sorted(entry.name for entry in destination.iterdir()) if valid_directory else []
+
+    if destination_link:
+        reasons.append("REGISTERED_PACKAGE_LINK_NOT_ALLOWED")
+    elif path_present and not destination.is_dir():
+        reasons.append("REGISTERED_PACKAGE_NOT_DIRECTORY")
+    elif not path_present:
+        reasons.append("REGISTERED_PACKAGE_MISSING")
+
+    unexpected_entries = sorted(set(observed_entries) - expected_entries)
+    missing_entries = sorted(expected_entries - set(observed_entries))
+    if unexpected_entries:
+        reasons.append("REGISTERED_PACKAGE_UNEXPECTED_ENTRY")
+    if missing_entries:
+        reasons.append("REGISTERED_PACKAGE_MISSING_ENTRY")
+
+    observations = [inspect_asset(destination, item) for item in items] if valid_directory else []
+    if observations and not all(item["accepted"] for item in observations):
+        reasons.append("REGISTERED_ASSET_VALIDATION_FAILED")
+
+    registration: dict[str, Any] | None = None
+    manifest_path = destination / manifest_name
+    if valid_directory and manifest_name in observed_entries:
+        if _is_link_like(manifest_path) or not manifest_path.is_file():
+            reasons.append("REGISTRATION_MANIFEST_NOT_REGULAR_FILE")
+        else:
+            try:
+                loaded = json.loads(manifest_path.read_text(encoding="utf-8"))
+                if isinstance(loaded, dict):
+                    registration = loaded
+                else:
+                    reasons.append("REGISTRATION_MANIFEST_NOT_OBJECT")
+            except (OSError, UnicodeError, json.JSONDecodeError):
+                reasons.append("REGISTRATION_MANIFEST_INVALID")
+
+    expected_contract_sha = contract_digest(items)
+    if registration is not None:
+        header_matches = (
+            registration.get("registration_schema_version") == "0.2.0"
+            and registration.get("contract_version") == CONTRACT_VERSION
+            and registration.get("contract_sha256") == expected_contract_sha
+            and registration.get("package_id") == (items[0].package_id if items else None)
+            and registration.get("asset_count") == len(items)
+            and isinstance(registration.get("run_id"), str)
+            and bool(registration.get("run_id"))
+            and isinstance(registration.get("generated_at_utc"), str)
+            and bool(registration.get("generated_at_utc"))
+        )
+        if not header_matches:
+            reasons.append("REGISTRATION_HEADER_MISMATCH")
+
+        registered_assets = registration.get("assets")
+        if not isinstance(registered_assets, list) or len(registered_assets) != len(items):
+            reasons.append("REGISTRATION_ASSET_COUNT_MISMATCH")
+        elif observations:
+            observed_by_filename = {item["expected_filename"]: item for item in observations}
+            registered_by_filename = {
+                item.get("filename"): item for item in registered_assets if isinstance(item, dict)
+            }
+            for contract in items:
+                observed = observed_by_filename[contract.expected_filename]
+                registered = registered_by_filename.get(contract.expected_filename)
+                expected_registration = {
+                    "role": contract.role,
+                    "source_record_id": contract.source_record_id,
+                    "native_id": contract.native_id,
+                    "filename": contract.expected_filename,
+                    "bytes": observed["observed_bytes"],
+                    "sha256": observed["local_hashes"]["sha256"] if observed["local_hashes"] else None,
+                    "md5": observed["local_hashes"]["md5"] if observed["local_hashes"] else None,
+                    "blake3": observed["local_hashes"]["blake3"] if observed["local_hashes"] else None,
+                }
+                if registered != expected_registration:
+                    reasons.append("REGISTRATION_ASSET_MISMATCH")
+                    break
+
+    accepted = not reasons and registration is not None
+    return {
+        "package_id": items[0].package_id if items else None,
+        "registered_package_present": path_present,
+        "expected_entry_count": len(expected_entries),
+        "observed_entry_count": len(observed_entries),
+        "unexpected_entries": unexpected_entries,
+        "missing_entries": missing_entries,
+        "registration": registration,
+        "observations": observations,
+        "accepted_as_unchanged_registered_package": accepted,
+        "reason_codes": reasons or ["REGISTERED_PACKAGE_VERIFIED"],
+    }
 
 
 def _write_synthetic_zip(path: Path, root: str) -> None:
@@ -508,18 +614,29 @@ def run_synthetic_rehearsal(*, generated_at_utc: str, run_id: str) -> dict[str, 
             synthetic_fixture=True,
         )
         promoted_entries = sorted(entry.name for entry in complete_destination.iterdir())
+        registered_verification = verify_registered_package(complete_destination, contracts)
         complete_promoted = (
             complete_eval["accepted_for_atomic_promotion"]
             and not complete.exists()
             and complete_destination.exists()
             and registration["synthetic_fixture"] is True
             and ".burnlens-registration.json" in promoted_entries
+            and registered_verification["accepted_as_unchanged_registered_package"]
         )
+        promoted_fire = complete_destination / contracts[1].expected_filename
+        promoted_payload = bytearray(promoted_fire.read_bytes())
+        promoted_payload[-1] ^= 0x01
+        promoted_fire.write_bytes(promoted_payload)
+        tampered_registration = verify_registered_package(complete_destination, contracts)
+        post_promotion_tamper_detected = not tampered_registration[
+            "accepted_as_unchanged_registered_package"
+        ]
 
         checks = {
             "partial_set_rejected": partial_rejected and partial_raw_absent,
             "checksum_tamper_rejected": tamper_rejected and tampered_raw_absent,
             "complete_set_promoted_atomically": complete_promoted,
+            "post_promotion_tamper_detected": post_promotion_tamper_detected,
             "synthetic_bytes_deleted_after_run": True,
         }
         return {
@@ -711,12 +828,13 @@ def render_png(report: dict[str, Any], path: Path) -> None:
         ("partial_set_rejected", "Partial set rejected; no raw package"),
         ("checksum_tamper_rejected", "Checksum tamper rejected; no raw package"),
         ("complete_set_promoted_atomically", "Complete synthetic set promoted atomically"),
+        ("post_promotion_tamper_detected", "Post-promotion mutation detected"),
     )
     for index, (key, label) in enumerate(labels):
-        x = 116 + index * 465
+        x = 116 + index * 350
         mark = "PASS" if checks[key] else "FAIL"
         draw.text((x, 948), mark, fill="#005b46" if checks[key] else "#8b1e0e", font=_font(24))
-        draw.multiline_text((x, 982), _wrapped(label, 34), fill=ink, font=_font(17), spacing=2)
+        draw.multiline_text((x, 982), _wrapped(label, 25), fill=ink, font=_font(17), spacing=2)
 
     draw.rounded_rectangle((88, 1062, 1512, 1134), radius=9, fill=card, outline=border, width=2)
     draw.text((112, 1081), "PROVES: partial registration is prevented. DOES NOT PROVE: source fitness or fire presence.", fill=ink, font=_font(20))
