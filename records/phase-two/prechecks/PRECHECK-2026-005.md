@@ -4,9 +4,9 @@
 
 **Tool version:** BurnLens package `0.3.0`
 
-**Contract:** `paired-intake-contract-v0.3.0`
+**Contract:** `paired-intake-contract-v0.4.0`
 
-**Full contract SHA-256:** `3fb736b4af757260f90affd4b5c0b902a44b0b9e3036158d34b7e5563b0809da`
+**Full contract SHA-256:** `5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d`
 
 ## Required package
 
@@ -29,12 +29,13 @@ Quarantine directories must not be symlinks or junctions. Expected assets must b
 - Only the complete validated directory is renamed with one atomic `os.replace` operation.
 - No partial raw package is created.
 - If the atomic rename fails, the provisional registration manifest is removed; the validated quarantine remains intact and passes the same gates on retry.
+- Registered-package verification requires the exact entry set and registration schema, full contract digest, current container checks, and current SHA-256/MD5/BLAKE3 values to match the promotion record.
 
 ## Actual result
 
 The real package is absent and returns `BLOCKED_OWNER_CREDENTIAL`. A temporary reduced synthetic contract proves the transaction mechanics: partial input fails, checksum tampering fails, a complete exact set promotes atomically, and all synthetic bytes are deleted afterward.
 
-Thirty-six repository tests cover full contract identity, pair identity, missing/unexpected inputs, link-alias rejection, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, failed-rename rollback and retry, complete promotion, deterministic reporting, non-inflating metadata observation time, and the temporary rehearsal.
+Thirty-seven repository tests cover full contract identity, pair identity, missing/unexpected inputs, link-alias rejection, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, failed-rename rollback and retry, complete promotion, post-promotion tamper detection, deterministic reporting, non-inflating metadata observation time, and the temporary rehearsal.
 
 ## Non-implications
 

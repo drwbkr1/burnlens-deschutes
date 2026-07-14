@@ -22,6 +22,8 @@ A second filesystem audit rejected another form of hidden state: symlink, juncti
 
 A final recovery audit forced the atomic rename itself to fail. The earlier implementation left its provisional registration manifest in quarantine, making an otherwise valid package fail as unexpected state on retry. Contract `v0.3.0` removes that manifest on rename failure, preserves the original files, and proves that the next ordinary retry succeeds.
 
+The final immutability audit moved beyond intake-time checks. Contract `v0.4.0` adds a registered-package verifier that re-reads the manifest, confirms the full contract digest, revalidates exact entries, and recomputes current hashes. The synthetic rehearsal mutates one promoted file without changing its size and proves the verifier rejects the package.
+
 ## Portfolio meaning
 
 This is invisible plumbing made reviewable. It demonstrates that BurnLens is not merely planning to be reproducible later: it is defining the transaction boundary before source bytes arrive, testing incomplete and tampered inputs, and preserving a truthful distinction between software proof and data proof.

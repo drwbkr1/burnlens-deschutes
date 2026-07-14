@@ -110,7 +110,7 @@ python -m burnlens.finalize_aoi `
 python -m burnlens.rehearse_paired_intake `
   --generated-at-utc 2026-07-14T02:32:52Z `
   --run-id BL-2026-07-14-paired-intake-rehearsal-r001 `
-  --source-commit 41f86dec62f0a5e8cd159c75932999790ab0f840 `
+  --source-commit ac8ee43151991c38ccf5d446a53c09b617afeb54 `
   --output-dir samples/intake/phase-two
 ```
 

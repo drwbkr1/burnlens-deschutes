@@ -2,7 +2,7 @@
 
 ## Decision
 
-Accept `paired-intake-contract-v0.3.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. Keep real intake at `BLOCKED_OWNER_CREDENTIAL` until the owner explicitly approves both credential boundaries.
+Accept `paired-intake-contract-v0.4.0` as the fail-closed registration boundary for the exact Sentinel-2 plus NOAA-21 VIIRS fire/geolocation package. Keep real intake at `BLOCKED_OWNER_CREDENTIAL` until the owner explicitly approves both credential boundaries.
 
 ## Weakness addressed
 
@@ -20,6 +20,7 @@ BurnLens already knew the three exact asset identities and could reject a single
 - Existing destinations are never overwritten.
 - The contract digest covers the exact asset records and every transaction invariant, not asset identities alone.
 - A failed atomic rename removes its provisional manifest and leaves the validated quarantine available for a clean retry.
+- A promoted package can be re-verified against registration schema `0.2.0`, the full contract digest, exact entry set, container checks, and current local hashes; later mutation fails visibly.
 
 ## Evidence
 

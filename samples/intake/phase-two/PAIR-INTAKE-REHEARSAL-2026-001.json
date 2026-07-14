@@ -2,8 +2,8 @@
   "report_id": "PAIR-INTAKE-REHEARSAL-2026-001",
   "schema_version": "0.2.0",
   "report_version": "paired-intake-rehearsal-v0.2.0",
-  "contract_version": "paired-intake-contract-v0.3.0",
-  "contract_sha256": "3fb736b4af757260f90affd4b5c0b902a44b0b9e3036158d34b7e5563b0809da",
+  "contract_version": "paired-intake-contract-v0.4.0",
+  "contract_sha256": "5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d",
   "software_version": "0.3.0",
   "generated_at_utc": "2026-07-14T02:32:52Z",
   "run_id": "BL-2026-07-14-paired-intake-rehearsal-r001",
@@ -11,7 +11,7 @@
   "task_issue": 325,
   "branch": "codex/p2o2-t02-intake-transaction",
   "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
-  "generator_source_commit": "41f86dec62f0a5e8cd159c75932999790ab0f840",
+  "generator_source_commit": "ac8ee43151991c38ccf5d446a53c09b617afeb54",
   "checkpoint_commit": null,
   "application_version": null,
   "aoi_version": "aoi-darlene3-model-v0.2.0",
@@ -167,6 +167,7 @@
       "partial_set_rejected": true,
       "checksum_tamper_rejected": true,
       "complete_set_promoted_atomically": true,
+      "post_promotion_tamper_detected": true,
       "synthetic_bytes_deleted_after_run": true
     },
     "passed": true,
@@ -179,7 +180,8 @@
     "The two VIIRS native IDs must share the recorded acquisition token.",
     "Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.",
     "No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.",
-    "If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable."
+    "If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable.",
+    "Registered packages are re-verifiable against their manifest, contract digest, exact assets, and current local hashes so later mutation fails visibly."
   ],
   "decision": "BLOCKED_OWNER_CREDENTIAL",
   "decision_detail": "Owner approval for both CDSE and Earthdata credentials is still required; no provider quarantine or raw package exists.",
