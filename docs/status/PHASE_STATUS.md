@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar fallback approved; labels and dataset not created** | P2O2-T04 rejects direct active-fire label promotion. P2O2-T05 / #337 activates `target-burn-scar-v0.2.0`, records no current MTBS Darlene 3 feature, and requires a defensible pre/post optical pair plus label protocol next. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar fallback approved; labels and dataset not created** | P2O2-T04 rejects direct active-fire label promotion. P2O2-T05 / #337 / PR #338 activates `target-burn-scar-v0.2.0`, records no current MTBS Darlene 3 feature, and requires a defensible pre/post optical pair plus label protocol next. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -17,7 +17,7 @@
 |---|---|
 | Latest repository evidence baseline | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` via merged PR #334 and verified annotated `v0.5.0-observation-geometry-baseline` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
-| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337; generator source `de884e439896b87bbdc41be9d159ff647b35726b`; target `target-burn-scar-v0.2.0`; no label, dataset, baseline, or model |
+| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338; generator source `de884e439896b87bbdc41be9d159ff647b35726b`; target `target-burn-scar-v0.2.0`; no label, dataset, baseline, or model |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -54,7 +54,7 @@ P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially impr
 
 ## Current checkpoint
 
-P2O2-T05 / issue #337 on `codex/p2o2-t05-burn-scar-target` is the active checkpoint. It records the owner's `ACTIVATE_BURN_SCAR_BINARY_MASK_FALLBACK` decision, renders the target-path evidence, and reconciles active project truth. It changes no phase outcome or use boundary and creates no label, dataset, baseline, model, or analytical wildfire output.
+P2O2-T05 / issue #337 / PR #338 on `codex/p2o2-t05-burn-scar-target` is the active checkpoint. It records the owner's `ACTIVATE_BURN_SCAR_BINARY_MASK_FALLBACK` decision, renders the target-path evidence, and reconciles active project truth. It changes no phase outcome or use boundary and creates no label, dataset, baseline, model, or analytical wildfire output.
 
 The next analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
 

@@ -115,7 +115,7 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.5.0-observation-geometry-baseline` at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`
 - Latest shipped analytical checkpoint: issue #333 / PR #334; annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; lifecycle sync issue #335 / PR #336 is merged
-- Active checkpoint: P2O2-T05 / issue #337 on `codex/p2o2-t05-burn-scar-target`
+- Active checkpoint: P2O2-T05 / issue #337 / PR #338 on `codex/p2o2-t05-burn-scar-target`
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
 

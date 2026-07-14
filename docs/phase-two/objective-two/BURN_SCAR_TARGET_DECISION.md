@@ -56,7 +56,7 @@ This checkpoint does not authorize a label array, dataset, split, baseline mask,
 
 ## Evidence and traceability
 
-- Issue / branch: #337 / `codex/p2o2-t05-burn-scar-target`
+- Issue / PR / branch: #337 / #338 / `codex/p2o2-t05-burn-scar-target`
 - Software: BurnLens `0.6.0`
 - Target: `target-burn-scar-v0.2.0`
 - AOI: `aoi-darlene3-model-v0.2.0`
