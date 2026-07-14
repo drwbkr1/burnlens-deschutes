@@ -28,7 +28,7 @@ Do not read, change, publish, depend on, or use the separate `burnlens-site` rep
 
 BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOINT wildfire-screening project for a bounded Deschutes County, Oregon study area. Its primary audience is technical and technical-adjacent portfolio reviewers.
 
-The first task is experimental binary semantic segmentation for wildfire-relevant screening. The primary target is an active-fire / hotspot-informed binary fire mask. A burn-scar binary mask is the controlled fallback only if Phase Two shows the primary target cannot support a defensible portfolio model.
+The first task is experimental binary semantic segmentation for wildfire-relevant screening. Active-fire / hotspot-informed masking was the planned primary target, but P2O2-T04 proved it could not define defensible 10-20 m labels. The owner activated the established burn-scar binary-mask fallback on 2026-07-14. Active-fire observations remain complementary reference evidence only.
 
 The analytical chain is:
 
@@ -58,17 +58,18 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. Its lifecycle synchronization is issue #335 / PR #336 on `codex/p2o2-t04-lifecycle-sync`.
+The latest shipped analytical checkpoint is P2O2-T04 / issue #333 / PR #334 at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`, tagged `v0.5.0-observation-geometry-baseline`. P2O2-T05 / issue #337 on `codex/p2o2-t05-burn-scar-target` is the active target-path checkpoint.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
 - Issue #329 has now exercised both credentials through the secret-safe runtime wrapper. Three exact provider assets totaling 1,169,997,942 bytes are registered only in ignored local raw storage; no raw provider byte or secret material is committed.
 - `SOURCE-INSPECTION-2026-001` renders real Sentinel AOI pixels, real VIIRS provider records, QA exclusions, scan-edge risk, and full lineage. Its decision is `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`.
 - `OBSERVATION-GEOMETRY-2026-001` compares all 23 bounded NOAA-21 candidates. The selected `A2024179.2118` day observation materially improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, but its 2.48-hour offset and 375 m support still defer labels and a dataset.
+- `TARGET-DECISION-2026-001` activates `target-burn-scar-v0.2.0`, retains the active-fire path as complementary reference only, and records that the current official MTBS occurrence layers expose no Darlene 3 feature in the frozen AOI. MTBS remains relevant methodology and potential cross-fire or future reference evidence, not current Darlene 3 truth.
 - No label schema, dataset, split, baseline output, trained model, analytical metric, application, deployment, or public analytical result exists. The rendered source card is inspection evidence, not a BurnLens detection or segmentation output.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 
-P2O2-T04 preserves positive/reference, negative-candidate, unknown, excluded, and review-needed states under `weak-reference-label-feasibility-v0.1.0`; it creates no label array. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels. Activating the burn-scar fallback or stopping active-fire modeling now requires the owner's target-path decision.
+P2O2-T04 preserves positive/reference, negative-candidate, unknown, excluded, and review-needed states under `weak-reference-label-feasibility-v0.1.0`; it creates no label array. Do not coerce 375 m points, non-detections, buffers, or the later NIFC perimeter into 10-20 m labels. The owner-approved next gate is one legally usable, visually inspected pre/post optical pair and an uncertainty-preserving burn-scar label protocol. No label, dataset, split, baseline, or model may be created before that gate passes.
 
 Use `docs/status/PHASE_STATUS.md` for current phase truth. Objective Seven records remain the detailed evidence trail for the Phase One decision; stale sequencing and authorization language in them is archival.
 

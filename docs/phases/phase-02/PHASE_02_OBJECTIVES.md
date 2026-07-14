@@ -16,11 +16,11 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active - materially improved complementary reference accepted; labels and dataset deferred on real evidence.**
+**Active - owner-approved burn-scar fallback; labels and dataset not created.**
 
-P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 / PR #326 ships the tested all-or-none transaction for the exact three provider assets at `v0.3.0-intake-transaction-baseline`. P2O2-T03 / issue #329 / PR #330 retains the exact 1.17 GB raw source package only in ignored local storage and inspects the real Sentinel/VIIRS arrays at `v0.4.0-authenticated-source-baseline`. P2O2-T04 / issue #333 / PR #334 ships the complete 23-granule bounded NOAA-21 inventory and one exact selected companion at `v0.5.0-observation-geometry-baseline`. The selected day observation materially improves geometry to a 31.01-degree qualified median with zero residual-bowtie exclusions, but its 2.48-hour offset and 375 m support still prevent direct label promotion. No label schema implementation, dataset, split, baseline, or model exists.
+P2O1-T01 through P2O1-T03 establish the public metadata, exact route, terms, and delivery-integrity baseline. P2O2-T01 / issue #321 / PR #322 ships `aoi-darlene3-model-v0.2.0` as the final modeling AOI at `v0.2.0-aoi-baseline` and retains one public NIFC reference-geometry source asset under an exact before-data contract. P2O2-T02 / issue #325 / PR #326 ships the tested all-or-none transaction for the exact three provider assets at `v0.3.0-intake-transaction-baseline`. P2O2-T03 / issue #329 / PR #330 retains the exact 1.17 GB raw source package only in ignored local storage and inspects the real Sentinel/VIIRS arrays at `v0.4.0-authenticated-source-baseline`. P2O2-T04 / issue #333 / PR #334 ships the complete 23-granule bounded NOAA-21 inventory and one exact selected companion at `v0.5.0-observation-geometry-baseline`. The selected day observation materially improves geometry to a 31.01-degree qualified median with zero residual-bowtie exclusions, but its 2.48-hour offset and 375 m support reject direct label promotion. P2O2-T05 / issue #337 records the owner's activation of `target-burn-scar-v0.2.0` and a current official MTBS no-Darlene/AOI availability result. No label schema implementation, dataset, split, baseline, or model exists.
 
-Current objective posture: Objective One is satisfied for the bounded acquisition actions. Objective Two now has a real accepted source/reference stack, complete observation comparison, and uncertainty-preserving label-feasibility semantics, but no defensible active-fire segmentation truth. Objective Three has immutable raw registration and source inspection but not full preprocessing; Objectives Four through Six remain open. The next path decision is owner-reserved because activating burn-scar changes the primary target path. This ordering is evidence-responsive, not a checklist completion claim.
+Current objective posture: Objective One is satisfied for the bounded acquisition actions. Objective Two has a real accepted source/reference stack, complete observation comparison, an approved burn-scar target path, and uncertainty-preserving pre-label semantics, but no implemented burn-scar truth. Objective Three has immutable raw registration and source inspection but not a validated pre/post pair or full preprocessing; Objectives Four through Six remain open. The next checkpoint is a bounded optical source-and-label-protocol gate. This ordering is evidence-responsive, not a checklist completion claim.
 
 ## Phase purpose
 
@@ -38,8 +38,8 @@ Phase Two does not train the U-Net model.
 
 The initial task remains experimental binary semantic segmentation for wildfire-relevant screening.
 
-- Primary target: active-fire or hotspot-informed binary fire mask.
-- Controlled fallback: burn-scar binary mask if active-fire labels are too sparse, noisy, misaligned, or otherwise indefensible.
+- Planned primary target: active-fire or hotspot-informed binary fire mask; P2O2-T04 rejected direct labels and retains this path as complementary reference only.
+- Active target: owner-approved burn-scar binary mask under `target-burn-scar-v0.2.0`.
 - Required label pathways: positive, negative/background, and unknown/exclude/review-needed.
 - Unknown or invalid regions must not be silently converted to background or counted as ordinary negatives.
 - FIRMS and similar products may serve as references, cues, sampling aids, weak-label sources, or baselines, not pixel-perfect ground truth.

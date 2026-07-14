@@ -88,19 +88,25 @@ This corrects the shipped pass-selection weakness. It does not create segmentati
 
 The exact 24-asset / 83,723,055-byte package remains ignored locally. An initial final-promotion attempt was rejected when OneDrive temporarily exposed one asset through a second hard link. The unchanged retry passed after the link disappeared, showing that an environmental race remains visible without weakening the gate. The committed JSON, HTML, and PNG rebuild byte for byte, and the semantic report passes real browser review with 23 candidate rows, no overflow, and no console warnings or errors.
 
-## Current risk and next checkpoint
+## Target decision: burn-scar fallback active
 
-Access, native-file uncertainty, and bounded pass geometry are now resolved. Label truth is the highest remaining risk. A substantially better thermal swath exists, but it is still insufficient for a leakage-resistant image/label dataset with credible 10-20 m positives and negatives.
+The owner resolved the target-path gate on 2026-07-14: BurnLens will use the established burn-scar binary-mask fallback. The first CV task remains experimental binary semantic segmentation. Active-fire observations remain complementary thermal-anomaly reference evidence, not the direct label target.
 
-The next step is a product decision, not another silent implementation choice: activate the established burn-scar fallback or stop active-fire modeling. The controlling goal reserves that target-path change for the owner. Until that decision, BurnLens will not buffer points into truth, turn non-detections into background, or use the later NIFC perimeter as a pixel-perfect active-fire label.
+`TARGET-DECISION-2026-001` makes the choice inspectable. It carries forward the strongest active-fire evidence—375 m support, 2.48 hours from Sentinel, and a 31.01-degree qualified median view angle—while recording why those facts still cannot define genuine 10-20 m pixel truth. It defines burned, background-candidate, unknown, and excluded states as a design gate and creates no label array.
+
+MTBS was evaluated from current official sources because its analyst-interpreted fire-level products include pre/post imagery, burn indices, boundaries, thematic severity, and non-processing masks. Its current 2024 occurrence inventory returned 941 records but no Darlene name match, and both the 2024 and all-years occurrence layers returned zero features inside the frozen BurnLens AOI. MTBS therefore remains relevant methodology and potential cross-fire or future reference evidence; it cannot provide the exact Darlene 3 label today, and its severity classes will not expand BurnLens into a multiclass task.
+
+The highest remaining risk is now burn-scar label truth. The next checkpoint must identify and visually validate one legally usable, temporally defensible pre/post optical pair, then define a reproducible protocol for burned, background-candidate, unknown, excluded, and review-needed pixels. Only after that gate may BurnLens consider a label array, spectral baseline, dataset, or model.
 
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
-- Latest evidence run: `BL-2026-07-14-observation-geometry-r002`
+- Latest evidence run: `BL-2026-07-14-target-decision-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.5.0`, shipped observation-geometry baseline
+- Tool: BurnLens package `0.6.0`, target-decision candidate; generator source `de884e439896b87bbdc41be9d159ff647b35726b`
+- Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
+- Target evidence: `TARGET-DECISION-2026-001`; JSON `933f5d92bdf25af12356f91e69eb9eb32a963b0c3acb81a84a5459721329d4aa`; HTML `7b043d349ea7dd978ce875e5e2c50ea6db53a53c0c924df991e504340f2481bf`; PNG `4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b`
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -108,8 +114,9 @@ The next step is a product decision, not another silent implementation choice: a
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.5.0-observation-geometry-baseline` at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`
-- Shipped checkpoint: issue #333 / PR #334; annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; lifecycle sync issue #335 / PR #336
+- Latest shipped analytical checkpoint: issue #333 / PR #334; annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; lifecycle sync issue #335 / PR #336 is merged
+- Active checkpoint: P2O2-T05 / issue #337 on `codex/p2o2-t05-burn-scar-target`
 - Dataset / label schema / baseline / model: not created
-- Public application: not created; this repository case study, README, source-inspection report, and observation-geometry report are the current presentation surfaces
+- Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

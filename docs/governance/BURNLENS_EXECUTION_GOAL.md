@@ -24,8 +24,8 @@ The following decisions are fixed unless the owner explicitly approves a change:
 - **Primary audience:** technical and technical-adjacent portfolio reviewers.
 - **Reference user story:** a reviewer should be able to inspect and reproduce a workflow that combines imagery, public geospatial layers, and experimental CV outputs for a defined Deschutes County study area.
 - **CV task:** experimental binary semantic segmentation for wildfire-relevant screening.
-- **Primary target:** active-fire / hotspot-informed binary fire mask.
-- **Controlled fallback:** burn-scar binary mask only if Phase Two evidence makes the primary target indefensible.
+- **Planned primary target:** active-fire / hotspot-informed binary fire mask. P2O2-T04 rejected direct label promotion on observed temporal and spatial-support evidence; this source now remains complementary native-scale reference only.
+- **Owner-approved active target path:** burn-scar binary mask. The owner activated the established fallback on 2026-07-14 through P2O2-T05 as `target-burn-scar-v0.2.0`; this does not change the binary semantic-segmentation task or authorize severity, recovery, or multiclass expansion.
 - **Reference model family:** one bounded U-Net-style segmentation family, compared with the strongest relevant non-model baseline.
 - **GEOINT workflow:** imagery → preprocessing → segmentation or baseline mask → georeferenced raster → vector polygons → transparent overlays → descriptive exposure-style summary → immutable run package → repository-owned evidence interface and case study.
 - **Use boundaries:** experimental, non-operational, non-emergency, not field-validated, not agency-endorsed, and unsuitable for evacuation, routing, tactical, suppression, incident-command, property-level, insurance, legal, or regulatory decisions.
@@ -36,6 +36,8 @@ The following decisions are fixed unless the owner explicitly approves a change:
 Required warning for every future public-facing CV output:
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
+
+The target-path decision is resolved. Future checkpoints must not silently reactivate active-fire label construction. They must first prove a legally usable and visually defensible pre/post optical pair plus a burn-scar protocol that preserves burned, background-candidate, unknown, excluded, and review-needed states before creating any label array.
 
 ## Verified starting checkpoint
 
