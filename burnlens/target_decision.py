@@ -334,7 +334,7 @@ def render_png(report: dict[str, Any], path: Path) -> None:
         _draw_wrapped(draw, (left + 32, 376), body, width=400, size=19, fill=muted, max_lines=5, line_height=28)
 
     draw.rounded_rectangle((60, 550, 1540, 835), radius=22, fill="#e6efeb", outline="#b8cbc3", width=2)
-    draw.text((90, 580), "BINARY LABEL CONTRACT — DESIGN GATE, NOT AN IMPLEMENTED LABEL", fill=teal, font=_font(22))
+    draw.text((90, 580), "BINARY LABEL CONTRACT / DESIGN GATE, NOT AN IMPLEMENTED LABEL", fill=teal, font=_font(22))
     semantics = (
         ("BURNED", "Future positive pixels need accepted optical-change and review evidence."),
         ("BACKGROUND CANDIDATE", "Clear observable unburned evidence; outside a perimeter is not enough."),
