@@ -2,6 +2,8 @@
 
 **Issue:** #321
 
+**Shipment:** PR #322; merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`; verified annotated tag `v0.2.0-aoi-baseline`
+
 **Decision:** `ACCEPT AOI-2026-002; CONTINUE OBJECTIVE TWO AFTER CREDENTIAL APPROVAL`
 
 ## Evidence-driven checkpoint choice

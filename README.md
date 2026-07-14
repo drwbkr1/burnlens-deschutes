@@ -7,11 +7,11 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 The project is at a Phase Two source-readiness baseline, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, and delivery-integrity evidence are complete through P2O1-T03, and issue #321 now has a reviewable final-AOI candidate.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery, exact asset readiness, delivery integrity, and final-AOI evidence are shipped through P2O2-T01 / PR #322.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
-- `aoi-darlene3-model-v0.2.0` is the candidate final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
+- `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
 - No credential or provider imagery asset has been used or retained. One public NIFC reference vector is checksummed and retained, but no imagery pixel-processing pipeline, label, dataset, baseline output, trained model, analytical metric, imagery-derived raster/vector, application demonstration, or public analytical result exists yet.
-- The latest verified repository evidence baseline on `main` is `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` from issue #317 / PR #318; the annotated `v0.1.2-access-integrity-baseline` tag resolves to that exact commit.
+- The latest verified analytical repository baseline is `fffd3dda123d7c43fe678dca9adfd8feb73de158` from issue #321 / PR #322; the annotated `v0.2.0-aoi-baseline` tag resolves to that exact merge commit.
 - The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using both a CDSE credential and a NASA Earthdata Login credential. The exact LP DAAC routes return login responses without Earthdata authentication; NASA-only intake is not a substitute for the pair.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
@@ -51,7 +51,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; a final modeling AOI is reviewable, exact routes and open-use terms are verified, and provider imagery intake is blocked on owner-approved CDSE and Earthdata credentials. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final modeling AOI is shipped, exact routes and open-use terms are verified, and provider imagery intake is blocked on owner-approved CDSE and Earthdata credentials. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |

@@ -138,7 +138,8 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O1-T02 | `records/prompt-build-log/2026-07-13-p2o1-t02.md` | merged via PR #314; tagged | Issue #312 closed; merge `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; `v0.1.1-asset-readiness-baseline`; credential-boundary STOP preserved. |
 | P2O1-T03 | `records/prompt-build-log/2026-07-13-p2o1-t03.md` | merged via PR #318; tagged | Issue #317 closed; merge `d4ce26c87341e4d3798a0d84e257a964ebd2cde0`; `v0.1.2-access-integrity-baseline`; two-credential STOP preserved. |
 | P2O1-T03-SYNC | `records/prompt-build-log/2026-07-13-p2o1-t03.md` | merged via PR #320 | Issue #319 closed; exact access-integrity shipment lifecycle synchronized at `23affc85ac2c2c6cfd427cb954739e6c7b44fa66`. |
-| P2O2-T01 | `records/prompt-build-log/2026-07-13-p2o2-t01.md` | active issue #321 | Final modeling AOI, public NIFC reference, deterministic evidence, and `v0.2.0-aoi-baseline` candidate; shipment pending. |
+| P2O2-T01 | `records/prompt-build-log/2026-07-13-p2o2-t01.md` | merged via PR #322; tagged | Issue #321 closed; merge `fffd3dda123d7c43fe678dca9adfd8feb73de158`; `v0.2.0-aoi-baseline`; final modeling AOI and deterministic evidence shipped. |
+| P2O2-T01-SYNC | `records/prompt-build-log/2026-07-13-p2o2-t01-sync.md` | issue #323 lifecycle synchronization | Exact PR/merge/tag/post-merge verification synchronized without changing analytical outputs. |
 
 ## Acceptance and remediation triggers
 
@@ -148,4 +149,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O1-T03 are shipped through `v0.1.2-access-integrity-baseline`. P2O2-T01 / issue #321 has a reviewable final-AOI candidate; paired imagery intake remains blocked on explicit owner approval for both CDSE and Earthdata credentials. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 through P2O2-T01 are shipped through `v0.2.0-aoi-baseline` at `fffd3dda123d7c43fe678dca9adfd8feb73de158`. Paired imagery intake remains blocked on explicit owner approval for both CDSE and Earthdata credentials. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

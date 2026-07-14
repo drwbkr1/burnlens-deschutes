@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.2.0-aoi-baseline — candidate, 2026-07-13
+## v0.2.0-aoi-baseline — 2026-07-13
 
 ### P2O2-T01 — Final Darlene 3 modeling AOI
 
@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render deterministic JSON, semantic HTML, and PNG evidence; add the living repository case study; pass 16 tests and original-resolution visual review.
 - Preserve the credential stop and all no-model/no-operational boundaries. One reference vector exists; provider imagery, labels, datasets, baselines, models, detections, and performance claims do not.
 
-Issue #321 is active. PR, merge, annotated tag, issue closure, and post-merge verification remain pending and will replace this candidate lifecycle note after shipment.
+Shipped through PR #322 at merge commit `fffd3dda123d7c43fe678dca9adfd8feb73de158`; issue #321 closed and the annotated `v0.2.0-aoi-baseline` tag resolves to that exact commit. Sixteen post-merge tests pass, a fresh pipeline run reproduces the committed JSON/HTML/PNG hashes byte for byte, and the public PR, README, living case study, source record, and PNG render were verified. Issue #323 records the lifecycle synchronization. No credential, provider imagery, label, dataset, baseline, model, detection, performance result, application, or deployment was added.
 
 ## v0.1.2-access-integrity-baseline — 2026-07-13
 
