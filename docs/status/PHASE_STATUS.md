@@ -37,14 +37,16 @@ P2O1-T01 / issue #293 selected the first source roles, verified no-secret public
 
 ## Current checkpoint
 
-P2O1-T02 / issue #312 is active. It will verify one exact Sentinel-2 scene and temporally relevant NASA VIIRS product route at the asset-access boundary, including access, format, CRS, geolocation, quality, checksum, retention, terms, and defensible reference role. It is a readiness checkpoint only.
+P2O1-T02 / issue #312 has completed its bounded evidence implementation on an issue-scoped branch and is awaiting pull-request, rendered-record, normalized-output, merge, and tag verification. It pins one exact Sentinel-2 L2A product plus the closest same-day NOAA-21 VIIRS active-fire/geolocation pair. `ASSET-READINESS-2026-001` contains metadata only; provider asset count and bytes remain zero.
 
 ## Selected next checkpoint
 
-Complete P2O1-T02's fresh primary-source review and re-open F04-A for one precisely described future action. Stop before credentials or provider-asset download if access, terms, retention, or label fitness cannot be verified. Granule intersection remains coverage evidence, never a fire detection.
+Ship and independently verify P2O1-T02. Then stop for the owner's explicit decision before adding or using a CDSE account/token for the first checksummed Sentinel acquisition. The future paired source-intake checkpoint must remain blocked until that decision; NASA route resolution alone is not sufficient to create a paired source package. Granule intersection remains coverage evidence, never a fire detection.
 
 ## Boundaries carried forward
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
 
 All BurnLens work and future public surfaces must originate from `drwbkr1/burnlens-deschutes`; the separate site repository is out of scope.
+
+No application or public companion site exists in this repository yet; public-surface updates therefore remain not applicable at this checkpoint.

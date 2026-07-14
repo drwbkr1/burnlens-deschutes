@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## Candidate v0.1.1-asset-readiness-baseline — 2026-07-13
+
+### P2O1-T02 — Exact Sentinel/VIIRS asset-access readiness
+
+- Pin one post-report Sentinel-2 L2A scene and its exact CDSE product UUID, stable whole-product route, S3 path, provider checksums, native band/quality candidates, and credential requirements.
+- Pin the closest same-day NOAA-21 VIIRS active-fire swath and its required terrain-corrected geolocation companion, stable Earthdata Cloud routes, formats, concept identifiers, and 46-minute-40.976-second offset from the Sentinel acquisition.
+- Record the only defensible future reference role: VIIRS classes 8–9 may become candidate positive evidence after valid geolocation, AOI, temporal/view-angle, and human review; class 7 remains review/unknown, and non-detection is not automatic background.
+- Retain `ASSET-READINESS-2026-001`, a metadata-only normalized fixture with SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`.
+- Re-open F04-A and stop: Sentinel product access requires an owner-approved CDSE credential, while no provider asset may be downloaded under this checkpoint.
+
+This candidate creates no application, dataset, source-asset copy, label, baseline, model, metric, run, raster, vector, map, detection, or public analytical result. Its version and exact merge commit remain pending until the issue-backed pull request passes rendered and output verification.
+
 ## v0.1.0-source-metadata-baseline — 2026-07-13
 
 ### P2O1-T01 — First source stack and metadata discovery

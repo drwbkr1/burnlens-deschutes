@@ -1,0 +1,43 @@
+{
+  "manifest_id": "MANIFEST-2026-002",
+  "manifest_version": "0.1.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-13T23:43:43Z",
+  "task_issue": 312,
+  "branch": "codex/p2o1-t02-asset-readiness",
+  "git_base_commit": "49943d78016918ab65d2fa0eea9d0e653d905d6f",
+  "checkpoint_commit": "pending PR merge",
+  "status": "complete for metadata-only asset-route readiness",
+  "source_records": ["SOURCE-2026-004", "SOURCE-2026-005", "SOURCE-2026-006"],
+  "access_record": "ACCESS-2026-002",
+  "terms_record": "TERMS-2026-002",
+  "precheck_record": "PRECHECK-2026-002",
+  "registry_record": "REGISTRY-2026-002",
+  "label_fitness_review": "LABEL_FITNESS-2026-001",
+  "use_boundary_review": "USE_BOUNDARY-2026-002",
+  "fixture": {
+    "id": "ASSET-READINESS-2026-001",
+    "path": "samples/metadata/phase-two/ASSET-READINESS-2026-001.json",
+    "media_type": "application/json",
+    "sha256": "c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7"
+  },
+  "source_assets": [],
+  "processing_steps": [
+    {
+      "step_id": "STEP-2026-002",
+      "type": "metadata query, route selection, and no-body access check",
+      "inputs": [
+        "CDSE STAC and OData metadata",
+        "NASA CMR collection and granule metadata",
+        "official product/access/terms documentation"
+      ],
+      "outputs": ["ASSET-READINESS-2026-001"],
+      "provider_bytes_downloaded": 0
+    }
+  ],
+  "credentials_used": false,
+  "transient_signed_urls_retained": false,
+  "ready_for_source_asset_use": false,
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
