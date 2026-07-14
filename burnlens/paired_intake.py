@@ -17,7 +17,7 @@ from pathlib import Path, PurePosixPath
 import shutil
 from tempfile import TemporaryDirectory
 import textwrap
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 import zipfile
 
 from blake3 import blake3
@@ -280,20 +280,35 @@ def inspect_asset(quarantine: Path, contract: AssetContract) -> dict[str, Any]:
     }
 
 
-def validate_contract_set(contracts: Iterable[AssetContract]) -> list[str]:
+ContractValidator = Callable[[Iterable[AssetContract]], list[str]]
+
+
+def validate_asset_contracts(contracts: Iterable[AssetContract]) -> list[str]:
+    """Validate invariants shared by every exact BurnLens raw package."""
+
     items = list(contracts)
     reasons: list[str] = []
-    if len(items) != 3:
-        reasons.append("CONTRACT_REQUIRES_THREE_ASSETS")
     roles = [item.role for item in items]
     filenames = [item.expected_filename for item in items]
     package_ids = {item.package_id for item in items}
+    if not items:
+        reasons.append("CONTRACT_REQUIRES_ASSETS")
     if len(roles) != len(set(roles)):
         reasons.append("DUPLICATE_CONTRACT_ROLE")
     if len(filenames) != len(set(filenames)):
         reasons.append("DUPLICATE_CONTRACT_FILENAME")
     if len(package_ids) != 1:
         reasons.append("PACKAGE_ID_MISMATCH")
+    return reasons
+
+
+def validate_contract_set(contracts: Iterable[AssetContract]) -> list[str]:
+    """Validate the original exact Sentinel/fire/geolocation trio."""
+
+    items = list(contracts)
+    reasons = validate_asset_contracts(items)
+    if len(items) != 3:
+        reasons.append("CONTRACT_REQUIRES_THREE_ASSETS")
     pair_tokens = {item.native_pair_token for item in items if item.native_pair_token}
     if len(pair_tokens) != 1:
         reasons.append("VIIRS_NATIVE_PAIR_TOKEN_MISMATCH")
@@ -302,9 +317,14 @@ def validate_contract_set(contracts: Iterable[AssetContract]) -> list[str]:
     return reasons
 
 
-def evaluate_quarantine(quarantine: Path, contracts: Iterable[AssetContract]) -> dict[str, Any]:
+def evaluate_quarantine(
+    quarantine: Path,
+    contracts: Iterable[AssetContract],
+    *,
+    contract_validator: ContractValidator = validate_contract_set,
+) -> dict[str, Any]:
     items = list(contracts)
-    contract_reasons = validate_contract_set(items)
+    contract_reasons = contract_validator(items)
     quarantine_link = _is_link_like(quarantine)
     path_present = quarantine.exists() or quarantine_link
     exists = path_present and quarantine.is_dir() and not quarantine_link
@@ -345,11 +365,17 @@ def promote_quarantine(
     generated_at_utc: str,
     run_id: str,
     synthetic_fixture: bool,
+    contract_validator: ContractValidator = validate_contract_set,
+    contract_version: str = CONTRACT_VERSION,
 ) -> dict[str, Any]:
     """Atomically move one complete quarantine directory into raw storage."""
 
     items = list(contracts)
-    evaluation = evaluate_quarantine(quarantine, items)
+    evaluation = evaluate_quarantine(
+        quarantine,
+        items,
+        contract_validator=contract_validator,
+    )
     if not evaluation["accepted_for_atomic_promotion"]:
         raise ValueError("quarantine failed the paired-intake contract")
     if destination.exists() or _is_link_like(destination):
@@ -362,7 +388,7 @@ def promote_quarantine(
 
     registration = {
         "registration_schema_version": "0.2.0",
-        "contract_version": CONTRACT_VERSION,
+        "contract_version": contract_version,
         "contract_sha256": contract_digest(items),
         "package_id": evaluation["package_id"],
         "generated_at_utc": generated_at_utc,
@@ -398,11 +424,14 @@ def promote_quarantine(
 def verify_registered_package(
     destination: Path,
     contracts: Iterable[AssetContract],
+    *,
+    contract_validator: ContractValidator = validate_contract_set,
+    contract_version: str = CONTRACT_VERSION,
 ) -> dict[str, Any]:
     """Re-validate a promoted package against its registration and current bytes."""
 
     items = list(contracts)
-    reasons = validate_contract_set(items)
+    reasons = contract_validator(items)
     destination_link = _is_link_like(destination)
     path_present = destination.exists() or destination_link
     valid_directory = path_present and destination.is_dir() and not destination_link
@@ -447,7 +476,7 @@ def verify_registered_package(
     if registration is not None:
         header_matches = (
             registration.get("registration_schema_version") == "0.2.0"
-            and registration.get("contract_version") == CONTRACT_VERSION
+            and registration.get("contract_version") == contract_version
             and registration.get("contract_sha256") == expected_contract_sha
             and registration.get("package_id") == (items[0].package_id if items else None)
             and registration.get("asset_count") == len(items)

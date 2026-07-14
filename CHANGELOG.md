@@ -2,6 +2,22 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.5.0-observation-geometry-baseline - 2026-07-14
+
+### P2O2-T04 - Complete NOAA-21 geometry comparison and label-feasibility protocol
+
+- Query the complete official CMR `VJ214IMG.002` inventory for the frozen AOI and event window and inspect all 23 exact active-fire granules.
+- Generalize the fail-closed atomic intake boundary for a caller-supplied exact variable-size contract while preserving the shipped three-asset default behavior.
+- Acquire one exact `VJ203MODLL.021` companion only after a material candidate is identified; register the final 24-asset / 83,723,055-byte package under contract SHA-256 `af396fcbf6fb32860c4f76111ab74ac0f3d2c810ab2c1aba19903337a757ad3c`.
+- Compare real AOI confidence, geolocation QA, residual bowtie, view zenith, time offset, and NIFC-reference agreement for every candidate.
+- Select the `A2024179.2118` day observation: 11 qualified AOI records, zero residual-bowtie exclusions, 31.01-degree median view zenith, and more than 1,000 columns from the nearest scan edge, versus the shipped approximately 69-degree scan-edge baseline.
+- Add `weak-reference-label-feasibility-v0.1.0`, preserving positive reference, negative candidate, unknown, excluded, and review-needed states without creating labels.
+- Render `OBSERVATION-GEOMETRY-2026-001` as deterministic JSON, semantic HTML, and a 1600 by 1100 evidence graphic with complete traceability and public-use boundaries.
+- Record decision `ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS`: the 2.48-hour time offset and 375 m support still cannot define 10-20 m segmentation truth.
+- Preserve fail-closed link safety when OneDrive temporarily exposed an asset through a second hard link; the unchanged exact retry passed after the link disappeared.
+
+Issue #333 governs the verified release candidate in PR #334 on `codex/p2o2-t04-observation-geometry`. Generator source is `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`. Sixty-five tests, compilation, dependency health, deterministic reconstruction, original-resolution visual review, real in-app browser validation, secret/raw-byte exclusion, and diff checks are the release gates. Raw provider bytes committed: zero. Label array, dataset, split, baseline, model, application, deployment, and performance claim: none. Merge, annotated tag, issue closure, and post-merge verification are recorded after shipment.
+
 ## v0.4.0-authenticated-source-baseline — 2026-07-14
 
 ### P2O2-T03 — Authenticated exact-package acquisition and real-source inspection

@@ -22,6 +22,10 @@ Issue #329 then crossed the data-evidence boundary. BurnLens acquired the exact 
 
 ![BurnLens authenticated source inspection](../../samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.png)
 
+Issue #333 tested whether the extreme VIIRS scan geometry was a source limitation or a pass-selection limitation. BurnLens inspected every bounded NOAA-21 candidate and one exact selected companion, then rendered the complete comparison and uncertainty-preserving label-feasibility protocol.
+
+![BurnLens observation geometry comparison](../../samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.png)
+
 ## Why the AOI matters
 
 The final AOI is a 12 km by 9 km rectangle in WGS 84 / UTM zone 10N. It is derived by adding 2 km of context around the complete NIFC reference and snapping outward to a 1 km grid. That makes later clipping, tiling, checks, and explanation deterministic.
@@ -68,26 +72,44 @@ Inspection run `BL-2026-07-14-source-inspection-r001` reads the actual arrays:
 
 The strongest finding is a limit. The AOI fire records are observed at 69.02-69.07 degrees view zenith. The Sentinel and VIIRS observations are almost 47 minutes apart, and 375 m thermal anomalies cannot define 10-20 m segmentation boundaries. BurnLens therefore accepts the package for source/reference use and defers labels and a dataset. A second full inspection reproduces JSON, HTML, and PNG byte for byte; the semantic page was also verified in the in-app browser with no console errors or horizontal overflow.
 
+## What the observation screen changes
+
+BurnLens `0.5.0` queries the complete official CMR `VJ214IMG.002` inventory for the frozen AOI from June 25 through July 1, 2024. All 23 exact active-fire granules were acquired, integrity-checked, registered together, and inspected for actual AOI records. Nine contain AOI records, eight contain reference-qualified records, and five pass the declared conservative material-improvement rule.
+
+The selected `A2024179.2118` day observation is genuinely better source geometry:
+
+- 13 AOI records and 11 qualified native-scale references;
+- zero residual-bowtie exclusions;
+- 30.86-31.20 degree qualified view zenith, with a 31.01-degree median;
+- 10 of 11 qualified records inside the later NIFC reference;
+- an exact companion whose AOI geolocation pixels are more than 1,000 columns from the nearest scan edge.
+
+This corrects the shipped pass-selection weakness. It does not create segmentation truth. The selected observation is 2.48 hours after Sentinel, and its 375 m support cannot define genuine 10-20 m boundaries. Protocol `weak-reference-label-feasibility-v0.1.0` therefore keeps positive references, negative candidates, unknowns, exclusions, and review-needed cases separate. No label array or dataset is created.
+
+The exact 24-asset / 83,723,055-byte package remains ignored locally. An initial final-promotion attempt was rejected when OneDrive temporarily exposed one asset through a second hard link. The unchanged retry passed after the link disappeared, showing that an environmental race remains visible without weakening the gate. The committed JSON, HTML, and PNG rebuild byte for byte, and the semantic report passes real browser review with 23 candidate rows, no overflow, and no console warnings or errors.
+
 ## Current risk and next checkpoint
 
-Access and native-file uncertainty are resolved for the frozen pair. Label evidence is now the highest risk. One oblique, same-day thermal swath is useful reference evidence but insufficient for a leakage-resistant image/label dataset with credible positives, negatives, unknowns, and independent splits.
+Access, native-file uncertainty, and bounded pass geometry are now resolved. Label truth is the highest remaining risk. A substantially better thermal swath exists, but it is still insufficient for a leakage-resistant image/label dataset with credible 10-20 m positives and negatives.
 
-The next checkpoint will compare alternate temporally relevant VIIRS geometry and formalize a weak/reference-label feasibility protocol. It will not buffer the current points into truth or use the later NIFC perimeter as a pixel-perfect label. If active-fire labels remain indefensible, the established burn-scar fallback requires an explicit owner decision under the controlling goal.
+The next step is a product decision, not another silent implementation choice: activate the established burn-scar fallback or stop active-fire modeling. The controlling goal reserves that target-path change for the owner. Until that decision, BurnLens will not buffer points into truth, turn non-detections into background, or use the later NIFC perimeter as a pixel-perfect active-fire label.
 
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
-- Latest evidence run: `BL-2026-07-14-source-inspection-r001`
+- Latest evidence run: `BL-2026-07-14-observation-geometry-r002`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.4.0`, shipped authenticated-source baseline
+- Tool: BurnLens package `0.5.0`, verified observation-geometry release candidate
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
-- Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` secret-safe exercise
-- Inspection source commit: `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`
+- Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
+- Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
+- Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
+- Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`
-- Shipped checkpoint: issue #329 / PR #330; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; lifecycle sync issue #331 / PR #332
+- Active candidate: issue #333 / PR #334 / `v0.5.0-observation-geometry-baseline`; merge/tag pending
 - Dataset / label schema / baseline / model: not created
-- Public application: not created; this repository case study, README, and static source-inspection report are the current presentation surfaces
+- Public application: not created; this repository case study, README, source-inspection report, and observation-geometry report are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

@@ -4,17 +4,18 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 ## Verified status
 
-The project is at a shipped Phase Two authenticated-source and reference-inspection baseline, not an analytical release.
+The project has a verified Phase Two observation-geometry release candidate, not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata, access, AOI, intake-transaction, and authenticated source/reference evidence are shipped through P2O2-T03 / PR #330.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata, access, AOI, intake-transaction, and authenticated source/reference evidence are shipped through P2O2-T03 / PR #330. P2O2-T04 / issue #333 / PR #334 is the verified `v0.5.0-observation-geometry-baseline` release candidate.
 - P2O2-T02 / issue #325 / PR #326 is shipped at `v0.3.0-intake-transaction-baseline`: an exact three-asset intake contract rejects partial or tampered packages and permits raw registration only through one all-or-none atomic promotion. Its proof uses temporary synthetic fixtures; it does not use or validate provider data.
 - P2O2-T03 / issue #329 / PR #330 is shipped at `v0.4.0-authenticated-source-baseline`. The exact three-file, 1,169,997,942-byte package passed authenticated delivery, contract validation, atomic registration, independent re-verification, and real-array inspection.
+- P2O2-T04 inventories and inspects all 23 bounded NOAA-21 active-fire candidates, registers one exact selected companion, and renders `OBSERVATION-GEOMETRY-2026-001`. The selected day observation improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, while still deferring labels and a dataset.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
-- The local pipeline exercised both credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. Three provider assets are retained only in ignored local raw storage; zero raw provider bytes are committed. The repository now contains bounded derived source-inspection evidence, not labels or detections. No label schema, dataset, split, baseline output, trained model, analytical metric, application demonstration, deployment, or public analytical result exists yet.
+- The local pipeline exercised the authorized credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. The exact three-asset source package and 24-asset observation-screen package are retained only in ignored local raw storage; zero raw provider bytes are committed. The repository contains bounded derived source/reference evidence, not labels or detections. No label schema, dataset, split, baseline output, trained model, analytical metric, application demonstration, deployment, or public analytical result exists yet.
 - The latest verified repository evidence baseline is `7678cf41b64e128106c199b913fe74590a52cf80` from issue #329 / PR #330; the annotated `v0.4.0-authenticated-source-baseline` tag remotely resolves to that exact merge commit.
-- `ACCESS-2026-006` records the owner's authorization without secret material; `ACCESS-2026-007` records successful runtime-only use. Inspection run `BL-2026-07-14-source-inspection-r001` accepts the package for source/reference evidence and explicitly defers labels and a dataset because the AOI lies near the VIIRS scan edge and coarse thermal anomalies cannot become 10-20 m segmentation truth.
+- `ACCESS-2026-006` records the owner's authorization without secret material; `ACCESS-2026-007` and `ACCESS-2026-008` record successful runtime-only use. Run `BL-2026-07-14-observation-geometry-r002` accepts one materially improved complementary reference and explicitly defers labels and a dataset because temporal and scale mismatch remain unresolved.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
@@ -53,7 +54,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final AOI, intake transaction, and authenticated source/reference baseline are shipped. Labels and dataset readiness are deferred on real quality evidence. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the final AOI, intake transaction, authenticated source baseline, and observation-geometry candidate are verified. Labels and dataset readiness remain deferred on real quality evidence. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -92,7 +93,7 @@ Historical Objective Seven trackers, handoffs, audits, and release notes remain 
 
 ## Run the current evidence tools
 
-The executable surface now includes fail-closed access validation, deterministic AOI evidence, exact-pair transaction rehearsal, secret-safe authenticated acquisition, registered-package re-verification, and real Sentinel/VIIRS source inspection. It is not a segmentation pipeline or operational application.
+The executable surface now includes fail-closed access validation, deterministic AOI evidence, exact-pair transaction rehearsal, secret-safe authenticated acquisition, registered-package re-verification, real Sentinel/VIIRS source inspection, and bounded NOAA-21 observation-geometry screening. It is not a segmentation pipeline or operational application.
 
 ```powershell
 python -m pip install .
@@ -121,6 +122,16 @@ python -m burnlens.inspect_source_package `
   --generated-at-utc 2026-07-14T18:22:11Z `
   --run-id BL-2026-07-14-source-inspection-r001 `
   --git-source-commit 9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc
+python -m burnlens.screen_observation_geometry `
+  --quarantine downloads/phase-two/quarantine `
+  --raw-parent downloads/phase-two/raw `
+  --aoi-report samples/aoi/phase-two/AOI-FINAL-2026-001.json `
+  --reference-geojson samples/reference/phase-two/NIFC-DARLENE3-PERIMETER-2026-001.geojson `
+  --baseline-report samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.json `
+  --output-directory samples/observation/phase-two `
+  --generated-at-utc 2026-07-14T20:09:07Z `
+  --run-id BL-2026-07-14-observation-geometry-r002 `
+  --git-source-commit 89d50c24a696cc7e3ec023eec00b021a4a0cdda6
 ```
 
 The committed rehearsal predates `ACCESS-2026-006` and intentionally exits with status `2`: its `BLOCKED_OWNER_CREDENTIAL` decision is a historical run state. The later acquisition and inspection runs supersede that access state without rewriting the historical output.
@@ -132,3 +143,5 @@ The [final AOI record](records/phase-two/aoi/AOI-2026-002.md), [normalized AOI e
 The [paired-intake decision](docs/phase-two/objective-two/PAIRED_INTAKE_TRANSACTION_DECISION.md), [normalized rehearsal](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.json), [semantic report](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.html), and [rendered evidence card](samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png) show the exact contract, real zero-provider state, and synthetic-only transaction proof. The report pins its public-metadata observation time separately and states that a rehearsal run makes no live provider request. These artifacts do not establish provider delivery or source fitness.
 
 The [authenticated-source decision](docs/phase-two/objective-two/AUTHENTICATED_SOURCE_INSPECTION_DECISION.md), [normalized inspection](samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.json), [semantic report](samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.html), and [rendered evidence](samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.png) show real AOI pixels, provider records, QA exclusions, scan-edge risk, attribution, and traceability. They accept the package as source/reference evidence and prohibit direct label promotion.
+
+The [observation-geometry decision](docs/phase-two/objective-two/OBSERVATION_GEOMETRY_DECISION.md), [normalized inventory and protocol](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.json), [semantic comparison](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.html), and [rendered evidence](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.png) show every candidate, exclusion reason, selected geometry, and weak/reference-label state. They do not contain labels, a dataset, or a model output.
