@@ -135,7 +135,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | BL-GOV-001 | `docs/devlog/2026-07-13-goal-activation.md` | merged via PR #291; tagged | Controlling execution goal and roadmap at `v0.0.8-execution-goal-baseline`. |
 | BL-GOV-001-SYNC | `records/prompt-build-log/2026-07-13-bl-gov-001-sync.md` | merged via PR #309 | Governance lifecycle truth synchronized; issue #308 closed. |
 | P2O1-T01 | `records/prompt-build-log/2026-07-13-p2o1-t01.md` | merged via PR #310; tagged | Issue #293 closed; merge `6abe87bba486e3fe49b6c06178b454335663cb73`; `v0.1.0-source-metadata-baseline`. |
-| P2O1-T02 | `records/prompt-build-log/2026-07-13-p2o1-t02.md` | candidate on issue-scoped branch | Issue #312; exact Sentinel/VIIRS access-readiness evidence, metadata-only fixture, and credential-boundary STOP. |
+| P2O1-T02 | `records/prompt-build-log/2026-07-13-p2o1-t02.md` | merged via PR #314; tagged | Issue #312 closed; merge `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; `v0.1.1-asset-readiness-baseline`; credential-boundary STOP preserved. |
 
 ## Acceptance and remediation triggers
 
@@ -145,4 +145,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`. P2O1-T02 / issue #312 has completed its metadata-only asset-readiness implementation and is pending shipment; paired source intake remains blocked on the owner's explicit CDSE credential decision. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O1-T01 shipped through PR #310 and `v0.1.0-source-metadata-baseline`. P2O1-T02 shipped through PR #314 at `cf4aba2f40aa426f28f09b1b1b1bad895394198b` and `v0.1.1-asset-readiness-baseline`; paired source intake remains blocked on the owner's explicit CDSE credential decision. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

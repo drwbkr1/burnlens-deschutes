@@ -30,4 +30,8 @@ The strongest reproducible Sentinel route is therefore the full 1,127,031,562-by
 
 BurnLens now has an honest, inspectable acquisition contract instead of a vague data-source claim. It still has no source image, fire mask, label, dataset, baseline, model, run, map, or analytical output. The next checkpoint must acquire and visually inspect the exact pair or stop; it must not imply that metadata intersection proves a Darlene 3 detection.
 
+## Shipment evidence
+
+Issue #312 closed through PR #314. The pull request was squash-merged at `cf4aba2f40aa426f28f09b1b1b1bad895394198b`, and the annotated `v0.1.1-asset-readiness-baseline` tag was independently verified to dereference to that exact commit. The rendered merged F04-A and normalized fixture passed browser verification; the fixture still shows zero provider assets, zero retained provider bytes, no credentials, and no verified fire detection.
+
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

@@ -8,6 +8,8 @@
 
 **Repository base:** `49943d78016918ab65d2fa0eea9d0e653d905d6f`
 
+**Verified shipment:** PR #314; merge `cf4aba2f40aa426f28f09b1b1b1bad895394198b`; annotated tag `v0.1.1-asset-readiness-baseline`; issue #312 closed; merged F04-A and normalized fixture rendered successfully on GitHub
+
 **Decision:** `STOP — ROUTES VERIFIED; SOURCE-ASSET INTAKE NOT AUTHORIZED`
 
 ## Exact action reviewed
