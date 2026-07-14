@@ -31,7 +31,7 @@ The two VIIRS native IDs must share the recorded acquisition token `A2024179.193
 
 The real package is absent and returns `BLOCKED_OWNER_CREDENTIAL`. A temporary reduced synthetic contract proves the transaction mechanics: partial input fails, checksum tampering fails, a complete exact set promotes atomically, and all synthetic bytes are deleted afterward.
 
-Thirty-one repository tests cover contract identity, pair identity, missing/unexpected inputs, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, complete promotion, deterministic reporting, and the temporary rehearsal.
+Thirty-two repository tests cover contract identity, pair identity, missing/unexpected inputs, size and magic failures, unsafe/corrupt ZIP cases, provider checksum mismatch, destination protection, complete promotion, deterministic reporting, non-inflating metadata observation time, and the temporary rehearsal.
 
 ## Non-implications
 

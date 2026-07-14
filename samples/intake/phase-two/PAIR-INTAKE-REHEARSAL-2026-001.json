@@ -1,7 +1,7 @@
 {
   "report_id": "PAIR-INTAKE-REHEARSAL-2026-001",
-  "schema_version": "0.1.0",
-  "report_version": "paired-intake-rehearsal-v0.1.0",
+  "schema_version": "0.2.0",
+  "report_version": "paired-intake-rehearsal-v0.2.0",
   "contract_version": "paired-intake-contract-v0.1.0",
   "contract_sha256": "85b6934ed3fe47dabfdddd47375dc07fc78bd0db8d15c24cb3a50c53e65b8362",
   "software_version": "0.3.0",
@@ -11,7 +11,7 @@
   "task_issue": 325,
   "branch": "codex/p2o2-t02-intake-transaction",
   "git_base_commit": "a3df1cac8d859b27f44d52ef177b5e937dc5fc99",
-  "generator_source_commit": "2491766022b549402b64e3136a79fd9c046beff5",
+  "generator_source_commit": "5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f",
   "checkpoint_commit": null,
   "application_version": null,
   "aoi_version": "aoi-darlene3-model-v0.2.0",
@@ -20,8 +20,10 @@
   "baseline_version": null,
   "model_version": null,
   "package_id": "darlene3-s2-viirs-pair-v0.1.0",
-  "public_metadata_refresh": {
-    "performed_at_utc": "2026-07-14T02:32:52Z",
+  "public_metadata_snapshot": {
+    "observed_at_utc": "2026-07-14T02:32:52Z",
+    "live_refresh_performed_by_this_run": false,
+    "evidence_record": "ACCESS-2026-005",
     "cdse_product_match": true,
     "cdse_online": true,
     "cdse_checksum_date_utc": "2026-05-26T02:59:48.810650Z",

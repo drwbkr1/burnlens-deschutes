@@ -16,6 +16,8 @@ The new contract treats the exact three files as one transaction. It checks iden
 
 The real package is still absent because credentials remain owner-gated. To test the state machine without weakening that boundary, the CLI creates a tiny temporary synthetic package, proves two failure paths and one successful promotion, and deletes every synthetic byte. The evidence card shows the real blocked state and synthetic mechanics as separate sections.
 
+An audit before shipment found that the first report schema called its pinned metadata facts a refresh performed at the caller-supplied run time. The committed run used the correct time, but later reruns could imply newer research than actually occurred. Report schema `0.2.0` now fixes the observation time, links `ACCESS-2026-005`, and says directly that the deterministic run performs no live provider request.
+
 ## Portfolio meaning
 
 This is invisible plumbing made reviewable. It demonstrates that BurnLens is not merely planning to be reproducible later: it is defining the transaction boundary before source bytes arrive, testing incomplete and tampered inputs, and preserving a truthful distinction between software proof and data proof.

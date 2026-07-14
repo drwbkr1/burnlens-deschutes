@@ -46,7 +46,7 @@ The `0.3.0` candidate pins all three expected filenames, provider/native identif
 
 Because real access remains owner-gated, BurnLens tests the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. The rendered report keeps that software proof separate from the real `BLOCKED_OWNER_CREDENTIAL` state: provider assets, provider bytes, promoted real packages, and retained synthetic bytes are all zero.
 
-Thirty-one repository tests and a byte-identical second report build pass. This proves transaction behavior, not source delivery or remote-sensing fitness.
+Thirty-two repository tests and a byte-identical second report build pass. The report fixes the public-metadata observation at 2026-07-14 and explicitly states that deterministic rehearsals make no live provider request, so a later run time cannot masquerade as fresh research. This proves transaction behavior and evidence honesty, not source delivery or remote-sensing fitness.
 
 ## Current risk and next checkpoint
 
@@ -61,7 +61,7 @@ Until that boundary is crossed, BurnLens can demonstrate careful source selectio
 - Latest evidence run: `BL-2026-07-14-paired-intake-rehearsal-r001`
 - Tool: BurnLens package `0.3.0` candidate
 - Transaction contract: `paired-intake-contract-v0.1.0`
-- Generator source commit: `2491766022b549402b64e3136a79fd9c046beff5`
+- Generator source commit: `5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f`
 - Latest shipped repository baseline: `v0.2.0-aoi-baseline`; proposed transaction tag: `v0.3.0-intake-transaction-baseline`
 - Active checkpoint: issue #325 / PR #326; merge pending
 - Dataset / label schema / baseline / model: not created

@@ -20,7 +20,7 @@ BurnLens already knew the three exact asset identities and could reject a single
 
 ## Evidence
 
-Run `BL-2026-07-14-paired-intake-rehearsal-r001` reports the actual empty-provider state and a separate temporary synthetic rehearsal. The synthetic path rejects a partial set and checksum tamper, promotes a complete set atomically, and retains no fixture bytes. The JSON, semantic HTML, and 1600x1200 evidence card reproduce byte for byte from fixed inputs.
+Run `BL-2026-07-14-paired-intake-rehearsal-r001` reports the actual empty-provider state and a separate temporary synthetic rehearsal. The synthetic path rejects a partial set and checksum tamper, promotes a complete set atomically, and retains no fixture bytes. Report schema `0.2.0` fixes the primary-source metadata observation at 2026-07-14 and declares that the deterministic run performs no live provider request. The JSON, semantic HTML, and 1600x1200 evidence card reproduce byte for byte from fixed inputs.
 
 ## Primary-source basis
 

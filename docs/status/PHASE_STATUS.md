@@ -30,7 +30,7 @@
 | Evidence tooling | BurnLens package `0.3.0` candidate; access-integrity validation, checksum-gated AOI derivation, exact-pair transaction validation, atomic promotion, normalized JSON, semantic HTML, and PNG rendering |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
-| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `1eae030c41174fa2806f218bc28db143e83ca08b1eb69230385691e29a6bddbc`; real decision `BLOCKED_OWNER_CREDENTIAL`; synthetic transaction checks pass |
+| Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `7293b8523d4193d0511426ac06e83353f3b33921b0059ebe3c38fa7f093e8a0b`; real decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; synthetic transaction checks pass |
 | Dataset version | Not created |
 | Label-schema implementation | Not created |
 | Baseline-method version | Not created |
@@ -46,7 +46,7 @@ P2O2-T01 / issue #321 accepts the final modeling AOI and adds `AOI-FINAL-2026-00
 
 ## Current checkpoint
 
-P2O2-T02 / issue #325 / PR #326 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The source implementation is commit `2491766022b549402b64e3136a79fd9c046beff5`; merge and tag identities are pending. Provider imagery count and bytes remain zero.
+P2O2-T02 / issue #325 / PR #326 is the active bounded candidate. It proves that the exact Sentinel plus VIIRS fire/geolocation package must validate and register as one atomic unit, using temporary synthetic fixtures while the real provider state remains visibly blocked. The report-generator source is commit `5cd157aaf0a5b372d2052acd7c19fda6b9fbef8f`; merge and tag identities are pending. Provider imagery count and bytes remain zero.
 
 ## Selected next checkpoint
 
