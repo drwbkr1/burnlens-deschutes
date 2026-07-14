@@ -8,7 +8,7 @@ BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repositor
 
 | Identifier | State | Commit | Meaning |
 |---|---|---|---|
-| `v0.5.0-observation-geometry-baseline` | Verified release candidate; annotated tag pending merge | Candidate generator `89d50c24a696cc7e3ec023eec00b021a4a0cdda6` | Complete 23-granule NOAA-21 observation comparison, exact selected companion, uncertainty-preserving weak/reference-label protocol, and explicit label/dataset deferral. Issue #333 / PR #334; merge/tag lifecycle pending. |
+| `v0.5.0-observation-geometry-baseline` | Verified annotated tag; object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` | Complete 23-granule NOAA-21 observation comparison, exact selected companion, uncertainty-preserving weak/reference-label protocol, and explicit label/dataset deferral, shipped through issue #333 / PR #334. Generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; 24 raw assets / 83,723,055 bytes remain local and ignored; zero raw provider bytes or secret material are committed. |
 | `v0.4.0-authenticated-source-baseline` | Verified annotated tag; object `98228058b232bc0838eb976f982ef4775b711776` | `7678cf41b64e128106c199b913fe74590a52cf80` | Secret-safe authenticated exact-package acquisition, real Sentinel/VIIRS array inspection, deterministic source evidence, and explicit label/dataset deferral, shipped through PR #330. Generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`. Three raw assets / 1,169,997,942 bytes remain local and ignored; zero raw provider bytes or secret material are committed. |
 | `v0.3.0-intake-transaction-baseline` | Verified annotated tag | `ee1a1d678ad888b595dc3c7b215f787ea5156582` | Exact three-asset and transaction-invariant contract, link-alias rejection, fail-closed validation, local multihash registration, retry-safe atomic promotion, registered-package re-verification, and deterministic real-state/synthetic-rehearsal evidence, shipped through PR #326. Generator source `ac8ee43151991c38ccf5d446a53c09b617afeb54`. Zero credentials exercised, provider assets/bytes, promoted real packages, or retained synthetic bytes. |
 | `v0.2.0-aoi-baseline` | Verified annotated tag | `fffd3dda123d7c43fe678dca9adfd8feb73de158` | Deterministic final modeling AOI, exact public NIFC reference snapshot, county/source coverage checks, and rendered non-operational evidence, shipped through PR #322. Generator source commit `bcc1d9aa494c5511ff824692199b40717d320dd4`. No imagery, label, dataset, baseline, model, or detection. |
@@ -26,7 +26,7 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 |---|---|
 | Application | Not created |
 | AOI | `aoi-darlene3-model-v0.2.0` — accepted and shipped final modeling AOI; supersedes the discovery version for modeling |
-| Source record set | `SOURCE-2026-001` through `SOURCE-2026-007`; newest is one public NIFC reference vector |
+| Source record set | `SOURCE-2026-001` through `SOURCE-2026-008`; newest is the exact NOAA-21 observation inventory and selected companion |
 | Metadata fixture | `METADATA-2026-001`; SHA-256 `803db2b82c7d6ef23d12c34f370dd9a7504bf181f772db22d1ed55c83c6b791a` |
 | Asset/source record set | `SOURCE-2026-004` through `SOURCE-2026-008`; exact source and observation-screen packages registered in ignored local raw storage; zero raw provider bytes committed |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`; SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7` |
@@ -40,7 +40,7 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | Authenticated acquisition | `ACCESS-2026-007`; run `BL-2026-07-14-authenticated-intake-r001`; exact three-asset package / 1,169,997,942 bytes accepted locally; credentials used at runtime with zero secret material retained |
 | Source-inspection tool | BurnLens package `0.4.0`; h5py `3.16.0`; NumPy `2.5.1`; Pillow `12.2.0`; Rasterio `1.5.0`; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; 56 repository tests passing |
 | Source-inspection evidence | `SOURCE-INSPECTION-2026-001`; JSON `cbd4dfba840680256a100aeca1a2e0b28483796f7e7b79b90de8b933d58b0a53`; HTML `76d13d3e105f053410d0063b17eb740f732c786dc395fe13335701496cbb41a0`; PNG `da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966`; decision `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS` |
-| Observation-geometry tool | BurnLens package `0.5.0`; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`; 65 candidate-gate tests passing |
+| Observation-geometry tool | BurnLens package `0.5.0`; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`; 65 post-merge tests passing |
 | Observation-geometry evidence | `OBSERVATION-GEOMETRY-2026-001`; JSON `c1da1c47483ab573a8a123a26f7c5b2f111b57b4eaedb05ffb2d3aafa46e881d`; HTML `a63ee62c660c7b573d829847ac008786a6ecff91c61f5433365e640f64742ad2`; PNG `4dd21c3df693856fda47d23cd763054016a105d8c760181c4052411fa4ff6687`; decision `ACCEPT_COMPLEMENTARY_REFERENCE_GEOMETRY_DEFER_LABELS` |
 | Dataset | Not created |
 | Label schema implementation | Not created |
@@ -49,6 +49,6 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 | Run | Latest `BL-2026-07-14-observation-geometry-r002` - complete bounded observation comparison; no label, dataset, baseline, model, or analytical inference output |
 | Report/interface | `observation-geometry-v0.2.0`; semantic HTML and PNG expose every candidate, exclusions, selected geometry, protocol, attribution, limitations, run ID, source commit, and null app/dataset/label/model versions |
 
-The source-metadata, asset-readiness, access-integrity, AOI, and intake-transaction baselines record availability, route, governance, delivery/transaction validation, and geometry evidence. The `0.4.0` baseline adds real provider source/reference inspection. The `0.5.0` candidate adds complete observation comparison and an explicit no-label protocol. Neither is a BurnLens detection or label set; no provider hotspot or perimeter is pixel-perfect segmentation truth.
+The source-metadata, asset-readiness, access-integrity, AOI, and intake-transaction baselines record availability, route, governance, delivery/transaction validation, and geometry evidence. The `0.4.0` baseline adds real provider source/reference inspection. The shipped `0.5.0` baseline adds complete observation comparison and an explicit no-label protocol. Neither is a BurnLens detection or label set; no provider hotspot or perimeter is pixel-perfect segmentation truth.
 
 Every shipped checkpoint must update this file with its version, exact commit, evidence meaning, and explicit non-implications.

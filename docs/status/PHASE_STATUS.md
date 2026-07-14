@@ -15,8 +15,8 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `7678cf41b64e128106c199b913fe74590a52cf80` via merged PR #330 and verified annotated `v0.4.0-authenticated-source-baseline` |
-| Observation-geometry release candidate | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; 65 candidate-gate tests passing; merge/tag pending |
+| Latest repository evidence baseline | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` via merged PR #334 and verified annotated `v0.5.0-observation-geometry-baseline` |
+| Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -24,13 +24,13 @@
 | Access-integrity baseline | `v0.1.2-access-integrity-baseline`, verified annotated tag resolving to `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` via PR #318 |
 | AOI baseline | `v0.2.0-aoi-baseline`, verified annotated tag resolving to `fffd3dda123d7c43fe678dca9adfd8feb73de158` via PR #322 |
 | Intake transaction baseline | BurnLens `0.3.0`; issue #325 / PR #326; merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`; annotated `v0.3.0-intake-transaction-baseline`; `paired-intake-contract-v0.4.0`; full contract SHA-256 `5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d`; provider assets/bytes and retained synthetic fixture bytes all zero |
-| Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007` records successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
+| Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007` and `ACCESS-2026-008` record successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-model-v0.2.0`, accepted and shipped final modeling AOI; 12 km by 9 km / 108 km2 in EPSG:32610; lower priority than official sources |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-008`; the newest record is the exact NOAA-21 observation inventory and selected companion, not a label or detection |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | Shipped BurnLens `0.4.0` plus verified `0.5.0` candidate; secret-safe acquisition, resumable exact-size delivery, authenticated atomic registration, real JP2/HDF5 inspection, complete observation screening, geolocation/QA checks, normalized JSON, semantic HTML, and PNG rendering |
+| Evidence tooling | Shipped BurnLens `0.5.0`; secret-safe acquisition, resumable exact-size delivery, authenticated atomic registration, real JP2/HDF5 inspection, complete observation screening, geolocation/QA checks, normalized JSON, semantic HTML, and PNG rendering |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -48,13 +48,13 @@
 
 ## Latest shipped checkpoint
 
-P2O2-T03 / issue #329 accepts the exact authenticated package for source/reference use and adds `SOURCE-INSPECTION-2026-001` while deferring labels and a dataset. PR #330 merged at `7678cf41b64e128106c199b913fe74590a52cf80`; the annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to that exact commit. Fifty-six post-merge tests, compilation, dependency health, byte-identical real-source reconstruction, rendered-browser review, issue closure, raw-byte/secret exclusion, and remote tag identity passed verification.
+P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially improved complementary native-scale reference evidence while deferring labels and a dataset. PR #334 merged at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`; annotated `v0.5.0-observation-geometry-baseline` tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit. Sixty-five post-merge tests, compilation, dependency health, byte-identical real-package reconstruction, rendered-browser review, issue closure, raw-byte/secret exclusion, and remote tag identity passed verification.
 
 ## Current checkpoint
 
-P2O2-T03-SYNC / issue #331 / PR #332 shipped the lifecycle record at `5f7461ac4cc8caa48f029776e5797023f27eaec5`. P2O2-T04 / issue #333 on `codex/p2o2-t04-observation-geometry` is a verified release candidate. It inspected all 23 bounded candidates and one exact selected companion. `A2024179.2118` materially improves the qualified median view zenith from approximately 69 to 31 degrees, but the 2.48-hour offset and 375 m support still defer labels and a dataset.
+P2O2-T04-SYNC / issue #335 / PR #336 on `codex/p2o2-t04-lifecycle-sync` is the active provenance-only checkpoint. It changes no code, source package, scientific output, geometry rule, protocol, label decision, target, or use boundary.
 
-After this checkpoint ships, the next gate is owner-reserved: activate the established burn-scar fallback or stop the active-fire modeling path. No target change has been made.
+The next analytical gate is owner-reserved: activate the established burn-scar fallback or stop the active-fire modeling path. No target change has been made.
 
 The checkpoint also defines positive/reference, negative-candidate, unknown, excluded, and review-needed semantics without creating a label array or dataset. The current package remains valid source/reference evidence and cannot be promoted directly to segmentation truth. Changing to the controlled burn-scar fallback still requires the owner decision defined by the execution goal.
 
