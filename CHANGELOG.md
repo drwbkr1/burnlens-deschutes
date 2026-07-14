@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.1.2-access-integrity-baseline — 2026-07-13 (candidate)
+
+### P2O1-T03 — VIIRS delivery validation and credential boundary
+
+- Exercise both exact LP DAAC delivery routes without credentials and reject a default-client `401` plus two browser-style `200` Earthdata Login HTML bodies as non-assets.
+- Add a fail-closed Python validator that requires the native HDF5/NetCDF-4 signature and a plausible minimum size before provider bytes can enter provenance.
+- Add deterministic JSON, semantic HTML, and PNG evidence rendering. The normalized report is `VIIRS-ACCESS-PRECHECK-2026-001`, run `BL-2026-07-14-access-precheck-r001`.
+- Verify eight unit checks, deterministic JSON/HTML reconstruction, deterministic PNG reconstruction, visual layout, warning language, no signed-URL/credential retention, and deletion of rejected response bodies.
+- Correct the access posture: NASA-led product use remains open and citable, while LP DAAC byte delivery requires Earthdata Login authentication and application authorization.
+- Preserve the paired-source STOP. Both CDSE and Earthdata credentials now require explicit owner approval before source-asset intake.
+
+Issue #317 is the active checkpoint. No provider source asset, fire-mask pixel, geolocation array, label, dataset, baseline, model, analytical metric, raster, vector, map, application, or wildfire detection is created.
+
 ## v0.1.1-asset-readiness-baseline — 2026-07-13
 
 ### P2O1-T02 — Exact Sentinel/VIIRS asset-access readiness

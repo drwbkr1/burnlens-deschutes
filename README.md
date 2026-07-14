@@ -8,10 +8,10 @@ The project is at a Phase Two source-readiness baseline, not an analytical relea
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
 - The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata discovery and exact asset-access readiness are now complete.
-- `v0.1.1-asset-readiness-baseline` pins one exact Sentinel-2 product and the closest same-day NOAA-21 VIIRS fire/geolocation pair, with normalized metadata-only evidence and a credential-boundary STOP.
-- No credential or provider source asset has been used or retained. No final AOI, label, dataset, runnable pipeline, baseline output, trained model, metric, run, raster, vector, map, application demonstration, or public analytical result exists yet.
+- `v0.1.1-asset-readiness-baseline` pins one exact Sentinel-2 product and the closest same-day NOAA-21 VIIRS fire/geolocation pair. P2O1-T03 / issue #317 now adds a runnable fail-closed delivery validator and an access-precheck evidence candidate.
+- No credential or provider source asset has been used or retained. A runnable access-integrity precheck exists, but no pixel-processing pipeline, final AOI, label, dataset, baseline output, trained model, analytical metric, raster, vector, map, application demonstration, or public analytical result exists yet.
 - The latest verified repository evidence baseline on `main` is `cf4aba2f40aa426f28f09b1b1b1bad895394198b` from issue #312 / PR #314; the annotated `v0.1.1-asset-readiness-baseline` tag resolves to that commit.
-- The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using a CDSE account/token. NASA-only intake is not a substitute.
+- The next paired source-intake checkpoint is blocked until the owner explicitly approves adding or using both a CDSE credential and a NASA Earthdata Login credential. The exact LP DAAC routes return login responses without Earthdata authentication; NASA-only intake is not a substitute for the pair.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
@@ -50,7 +50,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; exact routes and terms verified, provider asset intake blocked on owner-approved CDSE credential. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; exact routes and open-use terms verified, delivery validation added, provider asset intake blocked on owner-approved CDSE and Earthdata credentials. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -86,3 +86,19 @@ Every future public output and claim must trace to its Git commit, application v
 - [Prompt-to-repository SOP](docs/workflows/PROMPT_TO_REPO_SOP.md)
 
 Historical Objective Seven trackers, handoffs, audits, and release notes remain the evidence trail for the Phase One planning-only decision. Their obsolete sequencing and permission limits do not override the execution goal.
+
+## Run the current evidence tool
+
+The current executable surface is an access-integrity precheck, not an analytical wildfire pipeline or application.
+
+```powershell
+python -m pip install .
+python -m unittest discover -s tests -v
+python -m burnlens.viirs_access_precheck --help
+python -m burnlens.render_access_report `
+  --input-json samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json `
+  --output-html samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html `
+  --output-png samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png
+```
+
+The committed [normalized precheck](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json), [semantic report](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html), and [visual evidence card](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png) record a credential block. They do not contain provider pixels or rejected login-response bodies.

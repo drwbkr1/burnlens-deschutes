@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; exact routes verified; provider asset intake blocked** | Issue #312 / PR #314 pins one exact Sentinel product and VIIRS fire/geolocation pair. F04-A stops before a CDSE credential or any provider bytes. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; fail-closed delivery check added; provider asset intake blocked** | Issue #317 verifies that both exact LP DAAC routes return login HTML without Earthdata authentication. CDSE and Earthdata credentials remain owner-gated; provider asset count is zero. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | Requires an accepted Phase Two package and target decision. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -24,11 +24,13 @@
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-006`, reviewed for discovery and exact-route roles |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
+| Access-integrity tool | BurnLens package `0.1.2`; HDF5/NetCDF4 signature, minimum-size, HTML/login, checksum, normalized JSON, semantic HTML, and PNG rendering paths |
+| Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | Dataset version | Not created |
 | Label-schema implementation | Not created |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run ID | Not created |
+| Run ID | `BL-2026-07-14-access-precheck-r001`; access-only, zero accepted provider assets; not an analytical/model run |
 | Raster/vector/map output | Not created |
 | Repository-owned public application | Not created |
 | Public performance claim | None authorized or supported |
@@ -39,11 +41,11 @@ P2O1-T02 / issue #312 pins one exact Sentinel-2 L2A product plus the closest sam
 
 ## Current checkpoint
 
-No execution checkpoint is active. BurnLens is stopped at the owner-decision boundary before a credential-gated paired source acquisition. Provider asset count and retained bytes remain zero.
+P2O1-T03 / issue #317 is active on `codex/p2o1-t03-viirs-inspection`. The exact NASA routes were exercised without credentials. A default GET ended at `401`; browser-style GETs ended at `200` Earthdata Login HTML. The new validator rejected both bodies, generated a normalized and rendered blocked report, and deleted the rejected responses. Provider asset count and retained provider bytes remain zero.
 
 ## Selected next checkpoint
 
-After the owner explicitly approves adding or using a CDSE account/token, open one issue-backed checkpoint to acquire, checksum, inspect, and render the exact paired Sentinel/VIIRS source package. Until then, take no provider source-asset action. NASA route resolution alone is not sufficient to create a paired package, and granule intersection remains coverage evidence, never a fire detection.
+After P2O1-T03 ships and the owner explicitly approves adding or using both a CDSE credential and an Earthdata Login credential, open one issue-backed checkpoint to acquire, checksum, inspect, and render the exact paired Sentinel/VIIRS source package. Until then, take no provider source-asset action. Login redirects, route resolution, and granule intersection are access/coverage evidence, never a fire detection.
 
 ## Boundaries carried forward
 

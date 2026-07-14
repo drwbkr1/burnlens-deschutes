@@ -1,0 +1,76 @@
+{
+  "manifest_id": "MANIFEST-2026-003",
+  "manifest_version": "0.1.2",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-14T00:26:03Z",
+  "task_issue": 317,
+  "branch": "codex/p2o1-t03-viirs-inspection",
+  "git_base_commit": "1858f3d5ad3c193f997bef4f9142c996e174af27",
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.1.2-access-integrity-baseline (planned)",
+  "status": "candidate access-integrity evidence; merge verification pending",
+  "software_version": "0.1.2",
+  "runtime": {
+    "python": "3.12.13",
+    "pillow": "12.2.0",
+    "setuptools": "82.0.1"
+  },
+  "source_records": ["SOURCE-2026-005", "SOURCE-2026-006"],
+  "access_record": "ACCESS-2026-003",
+  "terms_record": "TERMS-2026-002",
+  "precheck_record": "PRECHECK-2026-003",
+  "registry_record": "REGISTRY-2026-003",
+  "review_record": "ACCESS_INTEGRITY-2026-001",
+  "aoi_version": "aoi-darlene3-discovery-v0.1.0",
+  "dataset_version": null,
+  "label_schema_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_id": "BL-2026-07-14-access-precheck-r001",
+  "report_version": "viirs-access-precheck-v0.1.0",
+  "outputs": [
+    {
+      "path": "samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json",
+      "media_type": "application/json",
+      "sha256": "107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f"
+    },
+    {
+      "path": "samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html",
+      "media_type": "text/html",
+      "sha256": "8896bf615148511de95fcc7fcdfcf01eb337da58ca7a4c6a9a6943982ccfe0f4"
+    },
+    {
+      "path": "samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png",
+      "media_type": "image/png",
+      "sha256": "ae5ccc6dd6c2665fdf57e4e4b21eab1dcd489b366612252354dbe6a5cc3f5e96"
+    }
+  ],
+  "source_assets": [],
+  "access_observations": [
+    {
+      "source_record": "SOURCE-2026-005",
+      "final_http_status": 200,
+      "observed_bytes": 11137,
+      "observed_magic_hex": "3c21444f43545950",
+      "observed_media_hint": "html",
+      "accepted_as_source_asset": false
+    },
+    {
+      "source_record": "SOURCE-2026-006",
+      "final_http_status": 200,
+      "observed_bytes": 11149,
+      "observed_magic_hex": "3c21444f43545950",
+      "observed_media_hint": "html",
+      "accepted_as_source_asset": false
+    }
+  ],
+  "provider_source_asset_count": 0,
+  "provider_source_asset_bytes": 0,
+  "rejected_delivery_response_bytes_retained": 0,
+  "credentials_used": false,
+  "transient_signed_urls_retained": false,
+  "decision": "BLOCKED_OWNER_CREDENTIAL",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
