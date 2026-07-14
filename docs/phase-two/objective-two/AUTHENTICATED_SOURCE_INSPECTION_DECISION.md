@@ -50,3 +50,7 @@ This advances Phase Two source acquisition, raw integrity, inspection, and QA ou
 ## Next gate
 
 Test whether alternate temporally relevant VIIRS observations materially improve scan geometry and whether a versioned weak/reference-label protocol can preserve positive, negative, unknown, and excluded states. If no defensible path emerges, evaluate the established burn-scar fallback or stop active-fire modeling only through the controlling goal's owner-decision boundary.
+
+## Shipment
+
+Issue #329 closed through PR #330 at merge `7678cf41b64e128106c199b913fe74590a52cf80`. The verified annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to that exact commit. Post-merge tests, dependency health, and byte-identical real-source reconstruction pass. Lifecycle synchronization is tracked by issue #331.

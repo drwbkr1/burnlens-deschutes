@@ -54,7 +54,7 @@ Thirty-seven repository tests and a byte-identical second report build pass. The
 
 ## What the real files prove
 
-The `0.4.0` candidate adds a runtime-only credential wrapper and exact-provider acquisition client. Authentication is host-scoped; redirects are HTTPS-only and allowlisted; cross-host authorization is stripped; signed queries never enter evidence; partial downloads are resumable but size-bounded; invalid partials are deleted. No username, password, token, cookie, signed URL, or credential-store detail is committed.
+BurnLens `0.4.0` adds a runtime-only credential wrapper and exact-provider acquisition client. Authentication is host-scoped; redirects are HTTPS-only and allowlisted; cross-host authorization is stripped; signed queries never enter evidence; partial downloads are resumable but size-bounded; invalid partials are deleted. No username, password, token, cookie, signed URL, or credential-store detail is committed.
 
 Acquisition run `BL-2026-07-14-authenticated-intake-r001` registered the exact three-file, 1,169,997,942-byte package in ignored local raw storage. The Sentinel ZIP has 95 members, one expected SAFE root, `manifest.safe`, matching provider MD5/BLAKE3, and clean CRC results. The two VIIRS assets match their exact sizes and native HDF5 signatures; their local SHA-256/MD5/BLAKE3 values are recorded without inventing provider checksums.
 
@@ -80,13 +80,13 @@ The next checkpoint will compare alternate temporally relevant VIIRS geometry an
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Latest evidence run: `BL-2026-07-14-source-inspection-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.4.0`, authenticated-source candidate
+- Tool: BurnLens package `0.4.0`, shipped authenticated-source baseline
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` secret-safe exercise
 - Inspection source commit: `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`
-- Latest shipped repository baseline: `v0.3.0-intake-transaction-baseline` at `ee1a1d678ad888b595dc3c7b215f787ea5156582`
-- Active candidate: `v0.4.0-authenticated-source-baseline`; issue #329 / PR #330
+- Latest shipped repository baseline: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`
+- Shipped checkpoint: issue #329 / PR #330; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; lifecycle sync issue #331
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, and static source-inspection report are the current presentation surfaces
 

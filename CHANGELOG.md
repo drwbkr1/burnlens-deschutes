@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.4.0-authenticated-source-baseline — 2026-07-14 (candidate)
+## v0.4.0-authenticated-source-baseline — 2026-07-14
 
 ### P2O2-T03 — Authenticated exact-package acquisition and real-source inspection
 
@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record a real-file decision of `ACCEPT_SOURCE_REFERENCE_DEFER_LABELS`: the package is readable and reference-relevant, but approximately 69-degree VIIRS view geometry, residual-bowtie records, temporal offset, and 375 m-to-10/20 m scale mismatch prevent direct label or dataset promotion.
 - Pin `h5py==3.16.0`, `numpy==2.5.1`, and `rasterio==1.5.0` for reproducible native source inspection.
 
-Issue #329 / draft PR #330 carries the candidate. Acquisition run `BL-2026-07-14-authenticated-intake-r001` and inspection run `BL-2026-07-14-source-inspection-r001` are the real workflow evidence. All 56 tests, compilation, dependency health, offline wheel build/import, secret/raw-byte exclusion, and diff checks pass. A second inspection reproduces JSON, HTML, and PNG byte for byte, and the semantic page passes in-app browser review with no console errors or horizontal overflow. Raw provider bytes committed: zero. Label schema, dataset, split, baseline, model, application, deployment, and performance claim: none.
+Issue #329 closed through PR #330 at merge commit `7678cf41b64e128106c199b913fe74590a52cf80`; the annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to that exact commit. Acquisition run `BL-2026-07-14-authenticated-intake-r001` and inspection run `BL-2026-07-14-source-inspection-r001` are the real workflow evidence. All 56 tests, compilation, dependency health, offline wheel build/import, secret/raw-byte exclusion, diff checks, and byte-identical post-merge reconstruction pass. The semantic page passes in-app browser review with no console errors or horizontal overflow. Raw provider bytes committed: zero. Label schema, dataset, split, baseline, model, application, deployment, and performance claim: none.
 
 ## v0.3.0-intake-transaction-baseline — 2026-07-14
 
