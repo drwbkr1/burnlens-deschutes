@@ -26,7 +26,7 @@ This is the first accepted geospatial scope rather than another planning documen
 
 ## Shipment proof
 
-PR #322 merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`, issue #321 closed, and the annotated `v0.2.0-aoi-baseline` tag resolves to that exact commit. From merged `main`, all 16 tests passed and a fresh AOI pipeline execution reproduced the committed JSON, HTML, and PNG hashes byte for byte. The public rendered PR, README, living case study, source record, and PNG were also inspected. Issue #323 carries the provenance-only lifecycle sync.
+PR #322 merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`, issue #321 closed, and the annotated `v0.2.0-aoi-baseline` tag resolves to that exact commit. From merged `main`, all 16 tests passed and a fresh AOI pipeline execution reproduced the committed JSON, HTML, and PNG hashes byte for byte. The public rendered PR, README, living case study, source record, and PNG were also inspected. Issue #323 / PR #324 carries the provenance-only lifecycle sync.
 
 ## Next boundary
 

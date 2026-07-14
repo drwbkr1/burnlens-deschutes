@@ -44,7 +44,7 @@ P2O2-T01 / issue #321 accepts the final modeling AOI and adds `AOI-FINAL-2026-00
 
 ## Current checkpoint
 
-P2O2-T01 is shipped; issue #323 records its provenance-only lifecycle synchronization and does not change analytical outputs. The AOI portion of Phase Two Objective Two passes while the full source-stack objective remains incomplete. Provider imagery count and bytes remain zero, so no unblocked analytical checkpoint follows without owner credential approval.
+P2O2-T01 is shipped; issue #323 / PR #324 records its provenance-only lifecycle synchronization and does not change analytical outputs. The AOI portion of Phase Two Objective Two passes while the full source-stack objective remains incomplete. Provider imagery count and bytes remain zero, so no unblocked analytical checkpoint follows without owner credential approval.
 
 ## Selected next checkpoint
 

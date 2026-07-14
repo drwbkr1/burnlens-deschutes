@@ -1,6 +1,6 @@
 # REGISTRY-2026-004 - Final AOI Artifacts
 
-**Checkpoint:** Issue #321 / PR #322; merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`; annotated `v0.2.0-aoi-baseline` tag verified; lifecycle sync tracked by issue #323
+**Checkpoint:** Issue #321 / PR #322; merged at `fffd3dda123d7c43fe678dca9adfd8feb73de158`; annotated `v0.2.0-aoi-baseline` tag verified; lifecycle sync tracked by issue #323 / PR #324
 
 | Artifact | Class | Version/state | Source/analytical bytes |
 |---|---|---|---:|

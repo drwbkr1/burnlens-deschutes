@@ -11,6 +11,7 @@
   "checkpoint_commit": "fffd3dda123d7c43fe678dca9adfd8feb73de158",
   "pull_request": 322,
   "lifecycle_sync_issue": 323,
+  "lifecycle_sync_pull_request": 324,
   "version_tag": "v0.2.0-aoi-baseline",
   "version_tag_state": "verified annotated tag resolving to checkpoint_commit",
   "status": "shipped final-AOI baseline; post-merge analytical verification passed",
