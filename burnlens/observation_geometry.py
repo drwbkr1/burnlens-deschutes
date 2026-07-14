@@ -390,6 +390,38 @@ def validate_screen_contracts(contracts: Iterable[AssetContract]) -> list[str]:
     return reasons
 
 
+def validate_initial_screen_entries(quarantine: Path, fire_contracts: Iterable[AssetContract]) -> None:
+    """Permit one resumable token-matched companion before final selection."""
+
+    if not quarantine.exists():
+        return
+    fire = list(fire_contracts)
+    expected = {
+        name
+        for contract in fire
+        for name in (contract.expected_filename, f"{contract.expected_filename}.part")
+    }
+    allowed_tokens = {item.native_pair_token for item in fire if item.native_pair_token}
+    companion_ids: set[str] = set()
+    unexpected: list[str] = []
+    pattern = re.compile(r"VJ203MODLL\.(A\d{7}\.\d{4})\.021\.\d{13}\.(?:h5|nc)(?:\.part)?$")
+    for entry in quarantine.iterdir():
+        if entry.name in expected:
+            continue
+        match = pattern.fullmatch(entry.name)
+        if match is None or match.group(1) not in allowed_tokens:
+            unexpected.append(entry.name)
+            continue
+        companion_ids.add(entry.name.removesuffix(".part"))
+    if len(companion_ids) > 1:
+        unexpected.extend(sorted(companion_ids))
+    if unexpected:
+        raise AcquisitionError(
+            "UNEXPECTED_ACQUISITION_WORKING_ENTRY",
+            detail=",".join(sorted(set(unexpected))),
+        )
+
+
 def _inspect_fire_product(
     path: Path,
     *,
@@ -1059,7 +1091,7 @@ def run_observation_geometry_screen(
             raise ObservationGeometryError("EARTHDATA_CREDENTIAL_REQUIRED")
         quarantine.parent.mkdir(parents=True, exist_ok=True)
         raw_parent.mkdir(parents=True, exist_ok=True)
-        _validate_working_entries(quarantine, fire_contracts)
+        validate_initial_screen_entries(quarantine, fire_contracts)
         opener = build_earthdata_opener(credentials.earthdata_username, credentials.earthdata_password)
         for contract in fire_contracts:
             stream_asset(contract, quarantine, opener=opener, progress=progress)

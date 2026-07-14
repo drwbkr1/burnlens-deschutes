@@ -18,9 +18,11 @@ from burnlens.observation_geometry import (
     render_html,
     render_png,
     valid_geolocation_shape,
+    validate_initial_screen_entries,
     validate_screen_contracts,
 )
 from burnlens.paired_intake import AssetContract
+from burnlens.provider_acquisition import AcquisitionError
 
 
 AOI_WGS84 = [-121.512668, 43.620281, -121.361791, 43.703322]
@@ -180,6 +182,28 @@ class ObservationGeometryTests(unittest.TestCase):
         self.assertTrue(valid_geolocation_shape((3216, 3200)))
         self.assertTrue(valid_geolocation_shape((3232, 3200)))
         self.assertFalse(valid_geolocation_shape((3200, 3200)))
+
+    def test_retry_precheck_allows_one_token_matched_companion(self) -> None:
+        fire = AssetContract(
+            role="viirs-active-fire:A2024179.2118",
+            provider="NASA LP DAAC",
+            source_record_id="SOURCE-2026-005",
+            provider_id="G-FIRE",
+            native_id="VJ214IMG.A2024179.2118.002.2025284191612",
+            expected_filename="VJ214IMG.A2024179.2118.002.2025284191612.nc",
+            stable_route="https://data.nasa.gov/fire.nc",
+            expected_size_bytes=10,
+            container="hdf5",
+            package_id=PACKAGE_ID,
+            native_pair_token="A2024179.2118",
+        )
+        with TemporaryDirectory() as directory:
+            quarantine = Path(directory)
+            (quarantine / "VJ203MODLL.A2024179.2118.021.2024327213228.h5").write_bytes(b"candidate")
+            validate_initial_screen_entries(quarantine, (fire,))
+            (quarantine / "unexpected.bin").write_bytes(b"no")
+            with self.assertRaisesRegex(AcquisitionError, "UNEXPECTED_ACQUISITION_WORKING_ENTRY"):
+                validate_initial_screen_entries(quarantine, (fire,))
 
     def test_real_array_reader_preserves_native_reference_semantics(self) -> None:
         with TemporaryDirectory() as directory:
