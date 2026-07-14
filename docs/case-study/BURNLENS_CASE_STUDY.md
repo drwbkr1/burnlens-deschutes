@@ -86,7 +86,7 @@ The next checkpoint will compare alternate temporally relevant VIIRS geometry an
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` secret-safe exercise
 - Inspection source commit: `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`
 - Latest shipped repository baseline: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80`
-- Shipped checkpoint: issue #329 / PR #330; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; lifecycle sync issue #331
+- Shipped checkpoint: issue #329 / PR #330; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; lifecycle sync issue #331 / PR #332
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, and static source-inspection report are the current presentation surfaces
 

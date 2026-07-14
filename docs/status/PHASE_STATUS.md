@@ -50,7 +50,7 @@ P2O2-T03 / issue #329 accepts the exact authenticated package for source/referen
 
 ## Current checkpoint
 
-P2O2-T03-SYNC / issue #331 on `codex/p2o2-t03-sync` is the active provenance-only checkpoint. It records the exact PR #330 merge, annotated tag, post-merge checks, run/output identities, and next evidence checkpoint. It changes no scientific output, credential state, or raw provider byte.
+P2O2-T03-SYNC / issue #331 / PR #332 on `codex/p2o2-t03-sync` is the active provenance-only checkpoint. It records the exact PR #330 merge, annotated tag, post-merge checks, run/output identities, and next evidence checkpoint. It changes no scientific output, credential state, or raw provider byte.
 
 ## Selected next checkpoint
 

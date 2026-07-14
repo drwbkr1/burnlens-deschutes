@@ -123,7 +123,7 @@ A BurnLens version number means the artifact is operational, official, field-val
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
 | Current phase posture | Phase Two active; final AOI, exact-pair transaction, and authenticated source/reference baseline shipped; labels and dataset deferred |
 | Current repository baseline | Latest shipped: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80` via issue #329 / PR #330 |
-| Active lifecycle sync | P2O2-T03-SYNC / issue #331 on `codex/p2o2-t03-sync`; provenance only |
+| Active lifecycle sync | P2O2-T03-SYNC / issue #331 / PR #332 on `codex/p2o2-t03-sync`; provenance only |
 | Baseline verification | Annotated tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to PR #330 merge `7678cf41b64e128106c199b913fe74590a52cf80`; 56 post-merge tests and byte-identical real-source reconstruction pass |
 | Data/model/run/map/application status | Three exact provider assets are registered only in ignored local raw storage; committed outputs are bounded source/reference inspection evidence. No label schema, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |

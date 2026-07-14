@@ -53,4 +53,4 @@ Test whether alternate temporally relevant VIIRS observations materially improve
 
 ## Shipment
 
-Issue #329 closed through PR #330 at merge `7678cf41b64e128106c199b913fe74590a52cf80`. The verified annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to that exact commit. Post-merge tests, dependency health, and byte-identical real-source reconstruction pass. Lifecycle synchronization is tracked by issue #331.
+Issue #329 closed through PR #330 at merge `7678cf41b64e128106c199b913fe74590a52cf80`. The verified annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to that exact commit. Post-merge tests, dependency health, and byte-identical real-source reconstruction pass. Lifecycle synchronization is tracked by issue #331 / PR #332.

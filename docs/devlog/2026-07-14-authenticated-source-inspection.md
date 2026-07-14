@@ -36,6 +36,6 @@ No label schema, dataset, split, baseline, model, application, or deployed analy
 
 ## Shipment proof
 
-PR #330 merged at `7678cf41b64e128106c199b913fe74590a52cf80`, closing issue #329. The annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to the same commit. All 56 tests, compilation, dependency health, and byte-identical real-source reconstruction pass again from merged `main`. Issue #331 carries the provenance-only lifecycle sync.
+PR #330 merged at `7678cf41b64e128106c199b913fe74590a52cf80`, closing issue #329. The annotated `v0.4.0-authenticated-source-baseline` tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to the same commit. All 56 tests, compilation, dependency health, and byte-identical real-source reconstruction pass again from merged `main`. Issue #331 / PR #332 carries the provenance-only lifecycle sync.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
