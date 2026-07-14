@@ -18,7 +18,9 @@ The real package is still absent because credentials remain owner-gated. To test
 
 An audit before shipment found that the first report schema called its pinned metadata facts a refresh performed at the caller-supplied run time. The committed run used the correct time, but later reruns could imply newer research than actually occurred. Report schema `0.2.0` now fixes the observation time, links `ACCESS-2026-005`, and says directly that the deterministic run performs no live provider request.
 
-A second filesystem audit rejected another form of hidden state: symlink, junction, and multiply-linked inputs. Without that rule, a correctly named quarantine entry could hash bytes stored elsewhere and remain mutable after registration through another path. The candidate contract is now `paired-intake-contract-v0.2.0`, and its SHA-256 covers both the three exact asset records and all transaction invariants, so changing a security rule changes the contract identity.
+A second filesystem audit rejected another form of hidden state: symlink, junction, and multiply-linked inputs. Without that rule, a correctly named quarantine entry could hash bytes stored elsewhere and remain mutable after registration through another path. The candidate contract's SHA-256 covers both the three exact asset records and all transaction invariants, so changing a security rule changes the contract identity.
+
+A final recovery audit forced the atomic rename itself to fail. The earlier implementation left its provisional registration manifest in quarantine, making an otherwise valid package fail as unexpected state on retry. Contract `v0.3.0` removes that manifest on rename failure, preserves the original files, and proves that the next ordinary retry succeeds.
 
 ## Portfolio meaning
 

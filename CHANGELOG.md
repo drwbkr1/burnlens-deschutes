@@ -6,15 +6,16 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 
 ### P2O2-T02 — Atomic exact-pair intake before credentials
 
-- Add `paired-intake-contract-v0.2.0`, pinning the exact Sentinel-2 SAFE ZIP and NOAA-21 VIIRS active-fire/geolocation files, identities, sizes, containers, pair token, available provider checksums, and transaction invariants under one digest.
+- Add `paired-intake-contract-v0.3.0`, pinning the exact Sentinel-2 SAFE ZIP and NOAA-21 VIIRS active-fire/geolocation files, identities, sizes, containers, pair token, available provider checksums, and transaction invariants under one digest.
 - Fail closed on incomplete, unexpected, renamed, malformed, size-mismatched, unsafe/corrupt ZIP, checksum-invalid, pair-mismatched, cross-filesystem, or destination-colliding input.
 - Record local SHA-256, MD5, and BLAKE3 only after all three assets pass; write provenance in quarantine and atomically promote the complete directory without overwriting existing raw state.
 - Reject symlink/junction-backed quarantine paths and symlinked or multiply-linked asset files so registered bytes cannot alias mutable storage outside the transaction.
+- Roll back the provisional registration manifest if atomic rename fails, preserving a clean validated quarantine that can be retried without weakening any gate.
 - Add a deterministic temporary synthetic rehearsal that proves partial rejection, checksum-tamper rejection, successful complete-set promotion, and zero retained fixture bytes.
 - Render `PAIR-INTAKE-REHEARSAL-2026-001` as normalized JSON, semantic HTML, and a 1600x1200 evidence card that separates real `BLOCKED_OWNER_CREDENTIAL` state from synthetic transaction proof.
 - Record the exact public CDSE/CMR metadata snapshot with a fixed observation time, explicitly separate it from later deterministic run times, and preserve the owner stop: zero credentials, live provider requests, provider assets, provider bytes, and promoted real packages.
 
-Candidate report-generator source is commit `8f1f82f97afc4fb52f787c6353a9aedd0f36cea3` on issue #325 / PR #326. Thirty-five tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
+Candidate report-generator source is commit `41f86dec62f0a5e8cd159c75932999790ab0f840` on issue #325 / PR #326. Thirty-six tests, isolated install/dependency checks, deterministic reconstruction, original-resolution visual review, claims review, and zero-secret/provider-byte checks pass. This checkpoint does not prove provider delivery, real-file integrity, source fitness, fire presence, label readiness, a dataset, baseline, model, application, deployment, or performance.
 
 ## v0.2.0-aoi-baseline — 2026-07-13
 

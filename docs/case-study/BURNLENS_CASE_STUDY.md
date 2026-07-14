@@ -42,11 +42,11 @@ These are source, geometry, coverage, and reproducibility claims. They are not f
 
 ## Reliability before data touch
 
-The `0.3.0` candidate pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, checksum-invalid, link-backed, or multiply linked. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected. Contract `v0.2.0` hashes the asset identities and the complete transaction-invariant set together.
+The `0.3.0` candidate pins all three expected filenames, provider/native identifiers, exact sizes, container signatures, the VIIRS pair token, and the provider checksums that actually exist. A package fails before raw registration if any file is missing, unexpected, renamed, malformed, corrupt, unsafe, mismatched, checksum-invalid, link-backed, or multiply linked. Only a complete validated quarantine directory can be atomically promoted; an existing destination is protected. Contract `v0.3.0` hashes the asset identities and the complete transaction-invariant set together. If the final rename fails, its provisional manifest is removed and the same validated quarantine remains retryable.
 
 Because real access remains owner-gated, BurnLens tests the transaction state machine with small temporary synthetic fixtures. The rehearsal rejects a partial set, rejects checksum tampering, promotes a complete set atomically, and deletes the synthetic tree. The rendered report keeps that software proof separate from the real `BLOCKED_OWNER_CREDENTIAL` state: provider assets, provider bytes, promoted real packages, and retained synthetic bytes are all zero.
 
-Thirty-five repository tests and a byte-identical second report build pass. The report fixes the public-metadata observation at 2026-07-14 and explicitly states that deterministic rehearsals make no live provider request, so a later run time cannot masquerade as fresh research. This proves transaction behavior and evidence honesty, not source delivery or remote-sensing fitness.
+Thirty-six repository tests and a byte-identical second report build pass. The report fixes the public-metadata observation at 2026-07-14 and explicitly states that deterministic rehearsals make no live provider request, so a later run time cannot masquerade as fresh research. This proves transaction behavior and evidence honesty, not source delivery or remote-sensing fitness.
 
 ## Current risk and next checkpoint
 
@@ -60,8 +60,8 @@ Until that boundary is crossed, BurnLens can demonstrate careful source selectio
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Latest evidence run: `BL-2026-07-14-paired-intake-rehearsal-r001`
 - Tool: BurnLens package `0.3.0` candidate
-- Transaction contract: `paired-intake-contract-v0.2.0`
-- Generator source commit: `8f1f82f97afc4fb52f787c6353a9aedd0f36cea3`
+- Transaction contract: `paired-intake-contract-v0.3.0`
+- Generator source commit: `41f86dec62f0a5e8cd159c75932999790ab0f840`
 - Latest shipped repository baseline: `v0.2.0-aoi-baseline`; proposed transaction tag: `v0.3.0-intake-transaction-baseline`
 - Active checkpoint: issue #325 / PR #326; merge pending
 - Dataset / label schema / baseline / model: not created

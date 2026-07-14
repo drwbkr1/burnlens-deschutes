@@ -20,7 +20,7 @@
   </style>
 </head>
 <body><main>
-  <p class="eyebrow">Phase Two · paired intake reliability · paired-intake-contract-v0.2.0</p>
+  <p class="eyebrow">Phase Two · paired intake reliability · paired-intake-contract-v0.3.0</p>
   <h1>Three assets. One transaction.</h1>
   <p class="warning"><strong>Use boundary:</strong> Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</p>
   <section class="status" aria-labelledby="status-heading"><h2 id="status-heading">Blocked — owner credentials required</h2><p>Owner approval for both CDSE and Earthdata credentials is still required; no provider quarantine or raw package exists.</p></section>
@@ -36,15 +36,15 @@
   <section class="synthetic" aria-labelledby="synthetic-heading"><h2 id="synthetic-heading">Synthetic transaction rehearsal — test fixture only</h2>
     <p><strong>No provider data is used.</strong> Temporary synthetic ZIP/HDF5 fixtures exercise failure and atomic-promotion behavior and are deleted after the run.</p><ul><li><strong>Pass:</strong> partial set rejected</li><li><strong>Pass:</strong> checksum tamper rejected</li><li><strong>Pass:</strong> complete set promoted atomically</li></ul>
   </section>
-  <section aria-labelledby="invariants-heading"><h2 id="invariants-heading">Transaction invariants</h2><ul><li>Exactly three named assets are required in one quarantine directory.</li><li>Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.</li><li>Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.</li><li>The two VIIRS native IDs must share the recorded acquisition token.</li><li>Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.</li><li>No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.</li></ul></section>
+  <section aria-labelledby="invariants-heading"><h2 id="invariants-heading">Transaction invariants</h2><ul><li>Exactly three named assets are required in one quarantine directory.</li><li>Unexpected entries, missing assets, size mismatch, container mismatch, corrupt ZIP, unsafe ZIP paths, and checksum mismatch fail closed.</li><li>Link-like quarantine paths and linked asset files are rejected so registered bytes cannot alias storage outside the transaction.</li><li>The two VIIRS native IDs must share the recorded acquisition token.</li><li>Provider MD5 and BLAKE3 are both required for the Sentinel archive; local SHA-256, MD5, and BLAKE3 are recorded for accepted assets.</li><li>No raw package is created unless the complete quarantine directory passes and is atomically renamed on the same filesystem.</li><li>If atomic promotion fails, the provisional registration manifest is removed and the validated quarantine remains retryable.</li></ul></section>
   <section aria-labelledby="meaning-heading"><h2 id="meaning-heading">What this proves</h2>
     <p>BurnLens prevents partial exact-pair registration. This report does not prove source fitness, a fire observation, a label, a dataset, a model, or an analytical result.</p>
   </section>
   <section aria-labelledby="trace-heading"><h2 id="trace-heading">Traceability</h2><dl>
     <dt>Run ID</dt><dd><code>BL-2026-07-14-paired-intake-rehearsal-r001</code></dd>
-    <dt>Generator source commit</dt><dd><code>8f1f82f97afc4fb52f787c6353a9aedd0f36cea3</code></dd>
+    <dt>Generator source commit</dt><dd><code>41f86dec62f0a5e8cd159c75932999790ab0f840</code></dd>
     <dt>AOI version</dt><dd><code>aoi-darlene3-model-v0.2.0</code></dd>
-    <dt>Contract SHA-256</dt><dd><code>0bc075bb6cf912e27a6bba6f1c79b10456c9915d0eb20669a9e48e1b9f56d93a</code></dd>
+    <dt>Contract SHA-256</dt><dd><code>3fb736b4af757260f90affd4b5c0b902a44b0b9e3036158d34b7e5563b0809da</code></dd>
     <dt>Public metadata snapshot</dt><dd>Observed <code>2026-07-14T02:32:52Z</code>. No live provider request was performed by this run; see <code>ACCESS-2026-005</code>.</dd>
     <dt>Dataset / label schema / baseline / model / application</dt><dd>Not created</dd>
   </dl></section>
