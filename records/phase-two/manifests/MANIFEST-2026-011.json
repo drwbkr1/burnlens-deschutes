@@ -8,7 +8,7 @@
   "branch": "codex/p2o4-t02-cross-event-feasibility",
   "git_base_commit": "67044a51701f0abb3e730d4540ea7cb488801ed8",
   "generator_source_commit": "ea3e164d09872825a0fadc64b9492e30c85c83c8",
-  "candidate_checkpoint_commit": null,
+  "candidate_checkpoint_commit": "58261756a456e5d5963302c9d62c8a6b13d07f14",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
   "pull_request": null,
