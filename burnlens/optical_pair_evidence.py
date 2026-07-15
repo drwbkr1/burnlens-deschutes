@@ -791,6 +791,12 @@ def build_report(
             "nir_band": "B8A at native 20 m",
             "swir_band": "B12 at native 20 m",
             "label_or_severity_interpretation_allowed": False,
+            "display": {
+                "clip_min": -0.5,
+                "clip_max": 0.8,
+                "classification_threshold": None,
+                "note": "The fixed clip is a deterministic color stretch only; it does not classify burned pixels or severity.",
+            },
             "numeric_valid_pixels": int(numeric_valid.sum()),
             "numeric_valid_percent": round(100 * numeric_valid.sum() / total, 4),
             "eligible_comparison_dnbr": _percentiles(dnbr[eligible]),

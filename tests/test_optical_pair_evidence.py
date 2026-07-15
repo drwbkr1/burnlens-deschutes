@@ -94,6 +94,8 @@ class OpticalPairEvidenceTests(unittest.TestCase):
         self.assertIsNone(targets["unknown"])
         self.assertIsNone(targets["excluded"])
         self.assertIsNone(targets["review-needed"])
+        self.assertIn("one-native-pixel", protocol["registration"]["boundary_review"])
+        self.assertIn("incident/event", protocol["temporal_leakage"]["group_before_tiling"])
 
     def test_dnbr_color_render_is_deterministic_and_nan_safe(self) -> None:
         dnbr = np.array([[np.nan, -0.5, 0.1], [0.8, 0.3, -0.2]], dtype=np.float32)
