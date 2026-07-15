@@ -57,6 +57,19 @@ def main() -> int:
         write_private_state(args.state_file, safe_failure)
         print(str(error), file=sys.stderr)
         return 2
+    except (OSError, ValueError) as error:
+        safe_failure = {
+            "decision": "OPTICAL_PAIR_ACQUISITION_FAILED",
+            "reason_code": "LOCAL_TRANSACTION_FAILURE",
+            "role": None,
+            "detail": type(error).__name__,
+        }
+        write_private_state(args.state_file, safe_failure)
+        print(
+            f"LOCAL_TRANSACTION_FAILURE; detail={type(error).__name__}",
+            file=sys.stderr,
+        )
+        return 2
     finally:
         credentials = None
 

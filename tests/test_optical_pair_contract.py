@@ -4,6 +4,9 @@ from dataclasses import replace
 import io
 import json
 import os
+from pathlib import Path
+from types import SimpleNamespace
+from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 from urllib.request import Request
@@ -12,10 +15,12 @@ from burnlens.optical_pair_contract import (
     EXPECTED_METADATA,
     OPTICAL_CONTRACTS,
     CdseCredentials,
+    acquire_optical_pair,
     refresh_optical_metadata,
     validate_optical_contracts,
     validate_optical_metadata,
 )
+from burnlens import acquire_optical_pair as acquire_cli
 from burnlens.provider_acquisition import AcquisitionError
 
 
@@ -130,6 +135,70 @@ class OpticalPairContractTests(unittest.TestCase):
                 observed_at_utc="2026-07-15T16:00:59Z",
                 urlopen_fn=fake_urlopen,
             )
+
+    def test_promotion_rejection_becomes_safe_acquisition_error(self) -> None:
+        evaluation = {
+            "reason_codes": ["INCOMPLETE_OR_INVALID_ASSET_SET"],
+            "observations": [
+                {
+                    "role": "sentinel-2-l2a-pre",
+                    "reason_codes": ["EXACT_ASSET_ACCEPTED"],
+                },
+                {
+                    "role": "sentinel-2-l2a-post",
+                    "reason_codes": ["ASSET_MULTILINK_NOT_ALLOWED"],
+                },
+            ],
+        }
+        with TemporaryDirectory() as directory, patch(
+            "burnlens.optical_pair_contract.validate_optical_contracts", return_value=[]
+        ), patch(
+            "burnlens.optical_pair_contract.validate_optical_metadata", return_value=[]
+        ), patch(
+            "burnlens.optical_pair_contract.request_cdse_access_token", return_value="token"
+        ), patch(
+            "burnlens.optical_pair_contract.stream_asset", return_value={"status": "REUSED"}
+        ), patch(
+            "burnlens.optical_pair_contract.promote_quarantine", side_effect=ValueError("unsafe")
+        ), patch(
+            "burnlens.optical_pair_contract.evaluate_quarantine", return_value=evaluation
+        ):
+            with self.assertRaises(AcquisitionError) as context:
+                acquire_optical_pair(
+                    credentials=CdseCredentials("user", "secret"),
+                    quarantine=Path(directory) / "quarantine",
+                    raw_parent=Path(directory) / "raw",
+                    generated_at_utc="2026-07-15T17:00:00Z",
+                    run_id="BL-TEST-OPTICAL-PAIR",
+                    metadata_snapshot={},
+                )
+        self.assertEqual(context.exception.reason_code, "QUARANTINE_PROMOTION_REJECTED")
+        self.assertIn("sentinel-2-l2a-post:ASSET_MULTILINK_NOT_ALLOWED", context.exception.detail)
+
+    def test_cli_persists_safe_state_for_unexpected_local_failure(self) -> None:
+        with TemporaryDirectory() as directory:
+            state = Path(directory) / "state.json"
+            args = SimpleNamespace(
+                quarantine=Path(directory) / "quarantine",
+                raw_parent=Path(directory) / "raw",
+                state_file=state,
+                generated_at_utc="2026-07-15T17:00:00Z",
+                run_id="BL-TEST-OPTICAL-PAIR",
+            )
+            with patch.object(acquire_cli, "parse_args", return_value=args), patch.object(
+                acquire_cli.CdseCredentials,
+                "from_environment",
+                return_value=CdseCredentials("user", "secret"),
+            ), patch.object(acquire_cli, "refresh_optical_metadata", return_value={}), patch.object(
+                acquire_cli,
+                "acquire_optical_pair",
+                side_effect=ValueError("local path must not be exposed"),
+            ):
+                self.assertEqual(acquire_cli.main(), 2)
+            failure = json.loads(state.read_text(encoding="utf-8"))
+            self.assertEqual(failure["reason_code"], "LOCAL_TRANSACTION_FAILURE")
+            self.assertEqual(failure["detail"], "ValueError")
+            self.assertNotIn("local path", json.dumps(failure))
 
 
 if __name__ == "__main__":

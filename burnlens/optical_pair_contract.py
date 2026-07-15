@@ -17,6 +17,7 @@ from urllib.request import Request, urlopen
 
 from .paired_intake import (
     AssetContract,
+    evaluate_quarantine,
     promote_quarantine,
     validate_asset_contracts,
     verify_registered_package,
@@ -363,16 +364,39 @@ def acquire_optical_pair(
         finally:
             token = None
 
-    registration = promote_quarantine(
-        quarantine,
-        destination,
-        OPTICAL_CONTRACTS,
-        generated_at_utc=generated_at_utc,
-        run_id=run_id,
-        synthetic_fixture=False,
-        contract_validator=validate_optical_contracts,
-        contract_version=CONTRACT_VERSION,
-    )
+    try:
+        registration = promote_quarantine(
+            quarantine,
+            destination,
+            OPTICAL_CONTRACTS,
+            generated_at_utc=generated_at_utc,
+            run_id=run_id,
+            synthetic_fixture=False,
+            contract_validator=validate_optical_contracts,
+            contract_version=CONTRACT_VERSION,
+        )
+    except ValueError:
+        evaluation = evaluate_quarantine(
+            quarantine,
+            OPTICAL_CONTRACTS,
+            contract_validator=validate_optical_contracts,
+        )
+        details = list(evaluation["reason_codes"])
+        details.extend(
+            f"{observation['role']}:{reason}"
+            for observation in evaluation["observations"]
+            for reason in observation["reason_codes"]
+            if reason != "EXACT_ASSET_ACCEPTED"
+        )
+        raise AcquisitionError(
+            "QUARANTINE_PROMOTION_REJECTED",
+            detail=",".join(details),
+        ) from None
+    except OSError as error:
+        raise AcquisitionError(
+            "QUARANTINE_ATOMIC_PROMOTION_FAILED",
+            detail=type(error).__name__,
+        ) from None
     verification = verify_registered_package(
         destination,
         OPTICAL_CONTRACTS,
