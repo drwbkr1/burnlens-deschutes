@@ -96,17 +96,36 @@ Corrected run `TARGET-DECISION-2026-002` makes the choice inspectable. It carrie
 
 MTBS was evaluated from current official sources because its analyst-interpreted fire-level products include pre/post imagery, burn indices, boundaries, thematic severity, and non-processing masks. Its current 2024 occurrence inventory returned 941 records but no Darlene name match, and both the 2024 and all-years occurrence layers returned zero features inside the frozen BurnLens AOI. MTBS therefore remains relevant methodology and potential cross-fire or future reference evidence; it cannot provide the exact Darlene 3 label today, and its severity classes will not expand BurnLens into a multiclass task.
 
-The highest remaining risk is now burn-scar label truth. The next checkpoint must identify and visually validate one legally usable, temporally defensible pre/post optical pair, then define a reproducible protocol for burned, background-candidate, unknown, excluded, and review-needed pixels. Only after that gate may BurnLens consider a label array, spectral baseline, dataset, or model.
+The highest remaining risk is now burn-scar label truth. BurnLens has identified and visually validated one legally usable, temporally defensible pre/post optical pair and defined a reproducible protocol for burned, background-candidate, unknown, excluded, and review-needed pixels. The next checkpoint must measure local content registration and produce an independently reviewable label proposal before BurnLens may consider a dataset, spectral baseline, or model.
+
+## Exact optical pair: clear evidence, deferred truth
+
+Issue #343 selects and acquires two Sentinel-2A L2A Collection 1 products from the same tile, relative orbit, and processing baseline: one about an hour before the approximate incident start and one about ten days after. Both complete SAFE archives pass exact provider MD5/BLAKE3, local SHA-256, 95-member root/manifest/CRC, and independent registered-package verification. Their 2,254,805,631 provider bytes remain local and ignored.
+
+![BurnLens exact optical-pair evidence](../../samples/optical/phase-two/OPTICAL-PAIR-2026-001.png)
+
+The exact AOI windows align without reprojection or resampling: 1,200 by 900 true color at 10 m and 600 by 450 B04/B8A/B12/SCL evidence at 20 m. Pairwise SCL rules retain 267,067 pixels / 98.9137% as eligible comparison, 2,063 / 0.7641% as review-needed, and 870 / 0.3222% as excluded. Both scenes are readable; the continuous dNBR view shows a coherent change pattern around the later incident-reference outline.
+
+That is evidence that the pair is useful, not evidence that every changed pixel is burned. The ten-day interval can include vegetation, moisture, atmosphere, soil, mixed-pixel, and registration effects. The dNBR display uses a fixed disclosed color stretch but no classification or severity threshold. SCL 7 remains review-needed, and the mint NIFC outline is later mixed-method context, never a pixel label.
+
+Protocol `burn-scar-label-protocol-v0.1.0` therefore defines five states. Burned and background-candidate may later map to binary 1/0 only after affirmative evidence and independent review. Unknown, excluded, and review-needed remain outside loss and metrics. A later label checkpoint must measure local content registration, preserve boundary review bands, group events/scenes/geography/time before tiling, record disagreements, and perform an independent second QA pass.
+
+The acquisition itself adds useful reliability evidence. One response ended early and remained resumable; a later server response ignored Range, so the client safely restarted instead of appending. OneDrive twice created temporary upload-staging hard links, and the transaction rejected both races. The second race exposed an unnormalized local `ValueError`; BurnLens added regression-tested secret-free state normalization before the unchanged retry.
+
+The decision is `ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS`. No label array, state raster, dataset, split, baseline, model, metric, application, deployment, or operational claim is created. The next bounded risk is content registration plus a reviewable five-state label proposal, not model training.
 
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Latest evidence run: `BL-2026-07-14-target-decision-r002`
+- Latest optical evidence run: `BL-2026-07-15-optical-pair-evidence-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.6.0`, shipped target-decision baseline; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`
+- Tool: BurnLens package `0.7.0` optical-pair protocol candidate; target evidence generator `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; optical generator source recorded in `OPTICAL-PAIR-2026-001`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
+- Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` design only; 2,254,805,631 local/ignored raw bytes; zero committed
+- Optical evidence: `OPTICAL-PAIR-2026-001`; pair accepted for protocol evidence; artifact hashes recorded in `MANIFEST-2026-008`
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -115,8 +134,8 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.6.0-burn-scar-target-baseline` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887`
 - Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 / PR #342 is documentation-only
-- Active checkpoint: select and visually validate one legally usable pre/post optical pair and define the uncertainty-preserving burn-scar label protocol
+- Active next checkpoint: measure content registration and produce an independently reviewable five-state label proposal; dataset construction remains gated
 - Dataset / label schema / baseline / model: not created
-- Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
+- Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, target-decision report, and optical-pair report are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

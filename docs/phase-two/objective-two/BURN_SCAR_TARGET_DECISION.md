@@ -80,6 +80,10 @@ The corrected JSON, HTML, and PNG reconstruct byte for byte from committed input
 
 PR #340 merged at `bcb71ebd01d3184f8de24318428309e61d33e54f`. A fresh `main` checkout exposed canonical LF input bytes and reproduced all three corrected artifacts byte for byte. All 69 tests, compilation, dependency health, secret/raw-byte exclusion, issue closure, and PR merge passed. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to the remediation merge as `v0.6.0-burn-scar-target-baseline`. Lifecycle synchronization is issue #341 / PR #342.
 
+## Successor gate
+
+P2O2-T06 / issue #343 later accepts one exact same-orbit Sentinel-2A pair for protocol evidence and versions `burn-scar-label-protocol-v0.1.0` without creating label pixels. The active next gate is content-registration measurement plus a reviewable five-state label proposal with independent QA. This successor evidence does not change or rewrite the target decision above.
+
 ## Primary sources
 
 - MTBS FAQ: https://www.mtbs.gov/index.php/faqs

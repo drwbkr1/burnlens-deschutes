@@ -2,6 +2,23 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.7.0-optical-pair-protocol-baseline - 2026-07-15
+
+### P2O2-T06 - Prove the exact optical pair and five-state burn-scar protocol
+
+- Freeze and freshly validate one exact same-Sentinel-2A, same-tile, same-relative-orbit, same-baseline pre/post L2A pair around the approximate Darlene 3 start.
+- Resolve current Copernicus terms, attribution, OData authentication, quota, Collection 1 L2A, and baseline-05.10 SCL semantics from official primary sources.
+- Add a CDSE-only protected-credential boundary, exact public-metadata drift gate, sequential bounded delivery, safe full-response fallback when a server ignores Range, provider MD5/BLAKE3 checks, local SHA-256, SAFE/ZIP/root/manifest/CRC checks, and all-or-none atomic registration.
+- Preserve four failed runs rather than hiding them: an OData attribute projection defect, an early post response, a pre-archive OneDrive hard-link race, and a post-archive promotion race. Add tested safe-state normalization after the fourth run exposed a generic transaction traceback.
+- Open the real TCI/B04/B8A/B12/SCL AOI windows, read product scaling/offsets, require EPSG:32610 and exact native-grid equality, and disclose that source-grid equality does not prove subpixel content registration.
+- Correct the real-file metadata join from raster filename `B04` to physical band `B4` and retain a regression test.
+- Render `OPTICAL-PAIR-2026-001` as deterministic LF-stable JSON, semantic HTML, and an 1800 by 1250 original-resolution pre/post/continuous-dNBR evidence card with Copernicus attribution, NIFC-context limits, warnings, and full null-version traceability.
+- Record pairwise AOI quality of 98.9137% eligible comparison, 0.7641% review-needed, and 0.3222% excluded; accept the pair for protocol evidence only.
+- Version `burn-scar-label-protocol-v0.1.0`: burned/background-candidate may later map to 1/0, while unknown/excluded/review-needed remain ignored. Require a companion state layer, local registration measurement, boundary review, event/scene/geography/time grouping before tiling, independent QA, and disagreement audit.
+- Create no label array, dataset, split, baseline, model, analytical metric, application, deployment, performance claim, or operational wildfire result.
+
+Issue #343 is the issue-backed checkpoint. Shipment identity, artifact hashes, final test/wheel/browser gates, PR, merge, annotated tag, and lifecycle synchronization are recorded after fresh-main reconstruction; this branch text must not be read as a pre-verification release claim.
+
 ## v0.6.0-burn-scar-target-baseline - 2026-07-15
 
 ### P2O2-T05 - Activate burn-scar binary-mask fallback and publish target-path evidence
