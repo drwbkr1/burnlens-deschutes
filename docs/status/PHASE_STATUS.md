@@ -17,7 +17,7 @@
 |---|---|
 | Latest repository evidence baseline | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` via merged PR #334 and verified annotated `v0.5.0-observation-geometry-baseline` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
-| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; issue #339 remediation source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; tag pending; no label, dataset, baseline, or model |
+| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; issue #339 / PR #340 remediation source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; tag pending; no label, dataset, baseline, or model |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -54,7 +54,7 @@ P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially impr
 
 ## Current checkpoint
 
-P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`. Post-merge verification correctly withheld the tag when `r001` reconstruction exposed checkout-dependent input hashing. Issue #339 on `codex/p2o2-t05-eol-determinism` is the active bounded remediation; it preserves `r001`, adds explicit LF-normalized structured-input hashes and LF serialization, and publishes immutable corrected run `r002`. It changes no target, phase outcome, use boundary, or scientific finding and creates no label, dataset, baseline, model, or analytical wildfire output.
+P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`. Post-merge verification correctly withheld the tag when `r001` reconstruction exposed checkout-dependent input hashing. Issue #339 / PR #340 on `codex/p2o2-t05-eol-determinism` is the active bounded remediation; it preserves `r001`, adds explicit LF-normalized structured-input hashes and LF serialization, and publishes immutable corrected run `r002`. It changes no target, phase outcome, use boundary, or scientific finding and creates no label, dataset, baseline, model, or analytical wildfire output.
 
 The next analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
 

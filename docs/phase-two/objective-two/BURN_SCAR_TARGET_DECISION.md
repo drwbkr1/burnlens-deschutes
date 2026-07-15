@@ -63,7 +63,7 @@ BurnLens did not tag or silently rewrite `r001`. Issue #339 preserves that run a
 ## Evidence and traceability
 
 - Decision issue / PR / analytical merge: #337 / #338 / `68971e9709b886adf8575a58d32694aad42f038e`
-- Remediation issue / branch: #339 / `codex/p2o2-t05-eol-determinism`
+- Remediation issue / PR / branch: #339 / #340 / `codex/p2o2-t05-eol-determinism`
 - Software: BurnLens `0.6.0`
 - Target: `target-burn-scar-v0.2.0`
 - AOI: `aoi-darlene3-model-v0.2.0`

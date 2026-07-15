@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-14
 
-**Issue:** #339
+**Issue / PR:** #339 / #340
 
 ## Failure caught before release
 

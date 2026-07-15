@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e` and activates the burn-scar target path. Its `v0.6.0-burn-scar-target-baseline` tag is intentionally withheld while issue #339 on `codex/p2o2-t05-eol-determinism` remediates the post-merge line-ending determinism failure. The latest verified tagged analytical checkpoint remains P2O2-T04 at `v0.5.0-observation-geometry-baseline`.
+P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e` and activates the burn-scar target path. Its `v0.6.0-burn-scar-target-baseline` tag is intentionally withheld while issue #339 / PR #340 on `codex/p2o2-t05-eol-determinism` remediates the post-merge line-ending determinism failure. The latest verified tagged analytical checkpoint remains P2O2-T04 at `v0.5.0-observation-geometry-baseline`.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
