@@ -29,6 +29,12 @@ def _fourier_shift(values: np.ndarray, shift: tuple[float, float]) -> np.ndarray
 
 
 class ContentRegistrationTests(unittest.TestCase):
+    def test_registration_artifacts_have_explicit_lf_checkout_contract(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        attributes = (root / ".gitattributes").read_text(encoding="utf-8").splitlines()
+        self.assertIn("samples/registration/phase-two/*.json text eol=lf", attributes)
+        self.assertIn("samples/registration/phase-two/*.html text eol=lf", attributes)
+
     def test_import_version_matches_registration_checkpoint(self) -> None:
         self.assertEqual(burnlens.__version__, "0.8.0")
 
