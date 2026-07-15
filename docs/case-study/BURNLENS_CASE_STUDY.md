@@ -136,20 +136,20 @@ Decision `ACCEPT_LOCAL_CONTENT_REGISTRATION` clears only the local translation p
 - Latest optical evidence run: `BL-2026-07-15-optical-pair-evidence-r001`
 - Latest registration evidence run: `BL-2026-07-15-content-registration-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: shipped BurnLens `0.7.0` optical baseline plus review-ready BurnLens `0.8.0` registration candidate; registration generator source `5287704a37f03d96e47467afba8623f7be643129`
+- Tool: shipped BurnLens `0.8.0` content-registration baseline; registration generator source `5287704a37f03d96e47467afba8623f7be643129`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` design only; 2,254,805,631 local/ignored raw bytes; zero committed
 - Optical evidence: `OPTICAL-PAIR-2026-001`; pair accepted for protocol evidence; artifact hashes recorded in `MANIFEST-2026-008`
-- Registration evidence: `CONTENT-REGISTRATION-2026-001`; all twelve windows pass; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; artifact hashes in `MANIFEST-2026-009`; tag withheld for issue #349 LF remediation
+- Registration evidence: `CONTENT-REGISTRATION-2026-001`; all twelve windows pass; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; LF-contract remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; artifact hashes in `MANIFEST-2026-009`; verified annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.6.0-burn-scar-target-baseline` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887`
+- Latest shipped repository baseline: `v0.8.0-content-registration-baseline` at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
 - Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 / PR #342 is documentation-only
 - Active next checkpoint: produce an independently reviewable five-state label proposal with separate QA; dataset construction remains gated
 - Dataset / label schema / baseline / model: not created
