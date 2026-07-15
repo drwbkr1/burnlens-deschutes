@@ -1,3 +1,7 @@
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf
 samples/target/phase-two/*.html text eol=lf
+
+# Optical-pair evidence has an explicit cross-platform serialization contract.
+samples/optical/phase-two/*.json text eol=lf
+samples/optical/phase-two/*.html text eol=lf
