@@ -70,11 +70,12 @@ class ContentRegistrationTests(unittest.TestCase):
         self.assertEqual(covered, 450 * 600)
 
     def test_packaged_product_qc_is_preserved_as_context_not_pair_proof(self) -> None:
-        document = """<root><report globalStatus="PASSED" date="2024-07-06T02:50:27Z">
-        <inspection id="Geometric_Refining_Vnir_Swir_Registration" status="PASSED" processingStatus="done">
-        <message>VNIR / SWIR bands have not been registered.</message></inspection>
-        <inspection id="Geometric_Refining_Spatio_Residual_Histograms" status="PASSED" processingStatus="done">
-        <message>Geometric Spatio Residual Histograms not computed.</message></inspection></report></root>"""
+        document = """<root><report globalStatus="PASSED" date="2024-07-06T02:50:27Z"><checkList>
+        <check><inspection id="Geometric_Refining_Vnir_Swir_Registration" status="PASSED" processingStatus="done" />
+        <message>VNIR / SWIR bands have not been registered.</message></check>
+        <check><inspection id="Geometric_Refining_Spatio_Residual_Histograms" status="PASSED" processingStatus="done" />
+        <message>Geometric Spatio Residual Histograms not computed.</message><extraValues><value name="EXPECTED">none</value></extraValues></check>
+        </checkList></report></root>"""
         with TemporaryDirectory() as directory:
             path = Path(directory) / "scene.zip"
             with zipfile.ZipFile(path, "w") as archive:
@@ -84,6 +85,10 @@ class ContentRegistrationTests(unittest.TestCase):
         self.assertIn(
             "have not been registered",
             metadata["inspections"]["Geometric_Refining_Vnir_Swir_Registration"]["message"],
+        )
+        self.assertEqual(
+            metadata["inspections"]["Geometric_Refining_Spatio_Residual_Histograms"]["values"],
+            {"EXPECTED": "none"},
         )
         self.assertIn("does not prove pair-local", metadata["interpretation"])
 

@@ -381,18 +381,23 @@ def _geometric_quality_metadata(archive_path: Path) -> dict[str, Any]:
         "Planimetric_Stability",
         "Ephemeris_Quality",
     }
-    for inspection in [item for item in root.iter() if _local_name(item.tag) == "inspection"]:
+    checks = [item for item in root.iter() if _local_name(item.tag) == "check"]
+    for check in checks:
+        candidates = [item for item in check if _local_name(item.tag) == "inspection"]
+        if len(candidates) != 1:
+            raise ContentRegistrationError("geometric-quality check has ambiguous inspection metadata")
+        inspection = candidates[0]
         identifier = inspection.attrib.get("id", "")
         if identifier not in selected:
             continue
         messages = [
             (item.text or "").strip()
-            for item in inspection.iter()
+            for item in check.iter()
             if _local_name(item.tag) == "message"
         ]
         values = {
             item.attrib.get("name", ""): (item.text or "").strip()
-            for item in inspection.iter()
+            for item in check.iter()
             if _local_name(item.tag) == "value"
         }
         inspections[identifier] = {
