@@ -42,4 +42,4 @@ Accept the exact five-state proposal as reviewable, reproducible, one-event evid
 
 ## Successor status
 
-P2O4-T02 / issue #357 has now completed the metadata-feasibility step named above. `CROSS-EVENT-FITNESS-2026-001` selects exact Tepee and McKay future acquisitions and freezes whole event/scene/geography/time groups without creating a dataset or split. Its PR/merge/tag shipment gates are tracked separately; exact cross-event source pixels and label fitness remain the next evidence boundary.
+P2O4-T02 / issue #357 / PR #358 has shipped the metadata-feasibility step named above at verified `v0.10.0-cross-event-feasibility-baseline`. `CROSS-EVENT-FITNESS-2026-001` selects exact Tepee and McKay future acquisitions and freezes whole event/scene/geography/time groups without creating a dataset or split. Exact cross-event source pixels and label fitness remain the next evidence boundary.

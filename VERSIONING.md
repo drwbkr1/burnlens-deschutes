@@ -121,10 +121,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; one-event proposal/QA shipped and exact Tepee/McKay future acquisition groups frozen in the 0.10.0 working candidate; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.9.0-label-proposal-baseline` at `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3` via issue #353 / PR #354 |
-| Active analytical candidate | P2O4-T02 / issue #357 on `codex/p2o4-t02-cross-event-feasibility`; intended `v0.10.0-cross-event-feasibility-baseline` remains uncreated pending shipment gates |
-| Baseline verification | Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` remotely dereferences to PR #354 merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; 105 post-merge tests and byte-identical eight-artifact reconstruction pass |
+| Current phase posture | Phase Two active; one-event proposal/QA and exact Tepee/McKay future acquisition groups are shipped; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.10.0-cross-event-feasibility-baseline` at `5bfa1527410e98d8034b35ad68f6c50d5a1ec628` via issue #357 / PR #358 |
+| Active analytical candidate | None; the next issue-backed checkpoint must acquire and validate only the four frozen Tepee/McKay products before cross-event label or partition work |
+| Baseline verification | Annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` remotely dereferences to PR #358 merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; 110 post-merge tests and byte-identical JSON/HTML/PNG reconstruction pass |
 | Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; committed outputs include bounded source/reference, one-event proposal/QA, and metadata-only cross-event group evidence. No accepted dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 

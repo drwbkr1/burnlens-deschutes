@@ -10,4 +10,6 @@ The result freezes event, scene, geography, and time groups for Darlene, Tepee, 
 
 This checkpoint selects exact acquisition candidates and nothing more. No selected imagery has been downloaded or locally inspected. No cross-event label, dataset, split, baseline, model, application, or accuracy claim exists. The next meaningful question is whether the four frozen Sentinel products survive authenticated acquisition, integrity, local pixel-quality, and registration gates—not how soon BurnLens can train.
 
+Shipment completed through issue #357 / PR #358 at merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`. A fresh no-hardlink clone passes 110 tests, packaging, manifest and link checks, exact JSON/HTML/PNG reconstruction, original-resolution review, live semantic-browser review, and raw/secret exclusion. Verified annotated tag `v0.10.0-cross-event-feasibility-baseline` has object `dbfda10ca50c39d8e8924096e740e71643e1f133` and remotely peels to that merge.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
