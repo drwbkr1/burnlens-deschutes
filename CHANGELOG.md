@@ -2,6 +2,23 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.9.0-label-proposal-baseline - candidate - 2026-07-15
+
+### P2O4-T01 - Build a reviewable five-state proposal and separate QA
+
+- Run the shipped content-registration tool first and reproduce its JSON, HTML, and PNG byte for byte before choosing the next weakness.
+- Reverify the exact registered pair, AOI, NIFC snapshot, accepted optical/registration predecessors, source roles, terms, and null dataset/split/baseline/model state.
+- Implement `burn-scar-five-state-schema-v0.1.0` and `darlene3-burn-scar-label-proposal-v0.1.0` on the exact 600 by 450 native-20m grid without source reprojection or resampling.
+- Require affirmative context, multi-signal change, and local coherence for burned candidates; affirmative four-signal stability away from expanded context for background candidates; preserve unknown, excluded, and review-needed as explicit `255` ignore.
+- Retain 161,238 background, 18,543 burned, 71,897 unknown, 870 excluded, and 17,452 review-needed pixels; candidate target coverage is 66.5856% and explicit ignore is 33.4144%.
+- Add a separately invoked verifier that imports no proposal-classification helper, reopens exact source pixels, recomputes every signal/state, validates GeoTIFF trace contracts, and compares all 270,000 state and target pixels.
+- Record 100% state and target agreement, zero all-pixel mismatch, and zero disagreement across a deterministic 120-sample audit covering all five states and the candidate-burn transition boundary.
+- Render `LABEL-PROPOSAL-2026-001` and `LABEL-QA-2026-001` as traceable JSON/HTML/PNG plus companion-state and candidate-target GeoTIFFs. Verify both original-resolution images and live semantic HTML in the browser.
+- Make the limitation explicit: separate software agreement under one shared contract is not independent human annotation, field validation, ground truth, accuracy, or generalization evidence.
+- Accept the exact result as reviewable one-event proposal evidence and defer a dataset, split, baseline, model, application, deployment, performance claim, and operational wildfire result.
+
+Issue #353 / PR #354 carries the analytical candidate. Generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1` produces the eight exact artifacts recorded in `MANIFEST-2026-010`. The review-ready checkout passes 105 tests, compilation, dependency health, a 141,846-byte `0.9.0` wheel and isolated import, original-resolution review, live browser review, raw-byte exclusion, and secret scan. Merge, merged-main reconstruction, annotated tag, and lifecycle identities remain pending; the tag must not be created until those release gates pass.
+
 ## v0.8.0-content-registration-baseline - 2026-07-15
 
 ### P2O3-T01 - Measure pair-local optical content registration

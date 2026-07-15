@@ -1,0 +1,409 @@
+{
+  "report_id": "LABEL-PROPOSAL-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "burn-scar-label-proposal-evidence-v0.1.0",
+  "serialization": "UTF-8 JSON and HTML with LF line endings; deterministic GeoTIFF and PNG for fixed inputs",
+  "generated_at_utc": "2026-07-15T21:20:00Z",
+  "run_id": "BL-2026-07-15-label-proposal-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 353,
+  "branch": "codex/p2o4-t01-label-proposal",
+  "git_source_commit": "814bb5402c04708f1515135683eac1304bf075c1",
+  "software_version": "0.9.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "split_version": null,
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_schema_implemented": true,
+  "label_proposal_version": "darlene3-burn-scar-label-proposal-v0.1.0",
+  "label_proposal_status": "candidate-for-separate-qa",
+  "baseline_version": null,
+  "model_version": null,
+  "registration_protocol_version": "local-content-registration-v0.1.0",
+  "package_id": "darlene3-s2-optical-pair-v0.1.0",
+  "package_contract_version": "optical-pair-intake-contract-v0.1.0",
+  "package_verification": {
+    "package_id": "darlene3-s2-optical-pair-v0.1.0",
+    "registered_package_present": true,
+    "expected_entry_count": 3,
+    "observed_entry_count": 3,
+    "unexpected_entries": [],
+    "missing_entries": [],
+    "registration": {
+      "registration_schema_version": "0.2.0",
+      "contract_version": "optical-pair-intake-contract-v0.1.0",
+      "contract_sha256": "4563ce0de71b2d62e6ed91ef60e6a575fb9aea9eea468aaff8f719383cab8bda",
+      "package_id": "darlene3-s2-optical-pair-v0.1.0",
+      "generated_at_utc": "2026-07-15T18:41:02Z",
+      "run_id": "BL-2026-07-15-optical-pair-intake-r005",
+      "synthetic_fixture": false,
+      "asset_count": 2,
+      "assets": [
+        {
+          "role": "sentinel-2-l2a-pre",
+          "source_record_id": "SOURCE-2026-009",
+          "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+          "bytes": 1126185170,
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        {
+          "role": "sentinel-2-l2a-post",
+          "source_record_id": "SOURCE-2026-010",
+          "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+          "bytes": 1128620461,
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "role": "sentinel-2-l2a-pre",
+        "source_record_id": "SOURCE-2026-009",
+        "provider_id": "0303a812-1242-4a09-ae9d-cf905049ca0f",
+        "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+        "expected_size_bytes": 1126185170,
+        "container": "zip-safe",
+        "observed_bytes": 1126185170,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1126150184,
+          "expected_root": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      },
+      {
+        "role": "sentinel-2-l2a-post",
+        "source_record_id": "SOURCE-2026-010",
+        "provider_id": "71429c5a-60f9-4c28-9982-752f8ab1c9fd",
+        "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+        "expected_size_bytes": 1128620461,
+        "container": "zip-safe",
+        "observed_bytes": 1128620461,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1128585475,
+          "expected_root": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      }
+    ],
+    "accepted_as_unchanged_registered_package": true,
+    "reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "terms_review_ids": [
+    "TERMS-2026-004",
+    "TERMS-2026-003",
+    "TERMS-2026-005"
+  ],
+  "input_hashes": {
+    "aoi_report_sha256_lf_normalized": "77a1abdab29eabd79243a4138cc6f1a3d9dff232b7e0e022876ad9406a7a5b75",
+    "reference_geojson_sha256_lf_normalized": "3d615d4be88f65806399e3733491ab0d95e16ac91ea86b5a00b3ead81ec17abe",
+    "optical_report_sha256_lf_normalized": "f0f006863bf7146834834b2a49393a1167ac718c7421f8c21cc376a3b39fbeed",
+    "registration_report_sha256_lf_normalized": "f0682f51bebe93d970774748c23317d8759bae4b7e34478fb6659d9606b28645"
+  },
+  "predecessors": {
+    "optical": {
+      "report_id": "OPTICAL-PAIR-2026-001",
+      "run_id": "BL-2026-07-15-optical-pair-evidence-r001",
+      "decision": "ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS",
+      "git_source_commit": "4b699025f703450f892bc2533c86560f47711aa2"
+    },
+    "registration": {
+      "report_id": "CONTENT-REGISTRATION-2026-001",
+      "run_id": "BL-2026-07-15-content-registration-r001",
+      "decision": "ACCEPT_LOCAL_CONTENT_REGISTRATION",
+      "git_source_commit": "5287704a37f03d96e47467afba8623f7be643129",
+      "maximum_residual_px": 0.0361
+    }
+  },
+  "aoi": {
+    "bbox_utm10n": [
+      620000.0,
+      4831000.0,
+      632000.0,
+      4840000.0
+    ],
+    "width_px": 600,
+    "height_px": 450,
+    "pixel_size_m": 20,
+    "crs": "EPSG:32610",
+    "transform": [
+      20.0,
+      0.0,
+      620000.0,
+      0.0,
+      -20.0,
+      4840000.0
+    ]
+  },
+  "source_roles": {
+    "sentinel_pair": "native-grid optical and quality evidence; not truth alone",
+    "nifc_reference": "later mixed-method incident-reference context; not pixel-perfect truth",
+    "viirs": "complementary native-scale thermal-anomaly reference; not used to assign proposal pixels",
+    "mtbs": "methodology and future/cross-fire reference only; current Darlene AOI evidence absent"
+  },
+  "method": {
+    "resolution": "native 20 m; no source reprojection or resampling",
+    "reference_rasterization": "pixel-center rule (all_touched=false); one-pixel eroded core and expanded boundary",
+    "burned_rule": "reference core plus dNBR minimum, at least two of three independent supporting changes, and local neighborhood coherence",
+    "background_rule": "outside expanded reference plus affirmative stability in dNBR, NDVI, SWIR, and NIR with local neighborhood coherence",
+    "review_rule": "SCL 7, incident-reference boundary, candidate-burn transition, or reference/spectral disagreement",
+    "unknown_rule": "valid evidence that satisfies neither conservative candidate class nor a review trigger",
+    "excluded_rule": "excluded pair quality or invalid reflectance/index arithmetic",
+    "thresholds": {
+      "burn_dnbr_min": 0.1,
+      "burn_ndvi_loss_min": 0.05,
+      "burn_swir_gain_min": 0.02,
+      "burn_nir_loss_min": 0.02,
+      "burn_supporting_signals_min": 2,
+      "burn_neighbor_support_min": 5,
+      "stable_abs_dnbr_max": 0.03,
+      "stable_abs_ndvi_change_max": 0.03,
+      "stable_abs_swir_change_max": 0.01,
+      "stable_abs_nir_change_max": 0.01,
+      "stable_neighbor_support_min": 7,
+      "boundary_review_px": 1,
+      "threshold_scope": "frozen conservative proposal screen for this exact pair; not universal severity calibration"
+    },
+    "primary_sources": [
+      "https://sentiwiki.copernicus.eu/web/s2-processing",
+      "https://sentiwiki.copernicus.eu/__attachments/1672112/OMPC.CS.DQR.002.02-2026-i95r0-MSI-L2A-DQR-March-2026.pdf",
+      "https://www.mtbs.gov/mapping-methods",
+      "https://www.mtbs.gov/faqs",
+      "https://www.fs.usda.gov/rm/pubs_series/rmrs/gtr/rmrs_gtr164.pdf",
+      "https://cds.climate.copernicus.eu/licences/ec-sentinel"
+    ]
+  },
+  "evidence_counts": {
+    "usable": {
+      "pixels": 267067,
+      "percent": 98.9137
+    },
+    "excluded": {
+      "pixels": 870,
+      "percent": 0.3222
+    },
+    "quality_review": {
+      "pixels": 2063,
+      "percent": 0.7641
+    },
+    "burn_evidence": {
+      "pixels": 29989,
+      "percent": 11.107
+    },
+    "burn_coherent": {
+      "pixels": 28796,
+      "percent": 10.6652
+    },
+    "stable_evidence": {
+      "pixels": 189370,
+      "percent": 70.137
+    },
+    "stable_coherent": {
+      "pixels": 161687,
+      "percent": 59.8841
+    },
+    "reference_core": {
+      "pixels": 38039,
+      "percent": 14.0885
+    },
+    "reference_boundary": {
+      "pixels": 2878,
+      "percent": 1.0659
+    },
+    "burned_raw": {
+      "pixels": 26648,
+      "percent": 9.8696
+    },
+    "background_raw": {
+      "pixels": 161238,
+      "percent": 59.7178
+    },
+    "source_conflict": {
+      "pixels": 326,
+      "percent": 0.1207
+    },
+    "burned_boundary": {
+      "pixels": 12933,
+      "percent": 4.79
+    },
+    "review": {
+      "pixels": 17456,
+      "percent": 6.4652
+    }
+  },
+  "summary": {
+    "pixel_count": 270000,
+    "states": [
+      {
+        "state": "background-candidate",
+        "code": 0,
+        "pixels": 161238,
+        "percent": 59.7178,
+        "target_value": 0
+      },
+      {
+        "state": "burned",
+        "code": 1,
+        "pixels": 18543,
+        "percent": 6.8678,
+        "target_value": 1
+      },
+      {
+        "state": "unknown",
+        "code": 2,
+        "pixels": 71897,
+        "percent": 26.6285,
+        "target_value": null
+      },
+      {
+        "state": "excluded",
+        "code": 3,
+        "pixels": 870,
+        "percent": 0.3222,
+        "target_value": null
+      },
+      {
+        "state": "review-needed",
+        "code": 4,
+        "pixels": 17452,
+        "percent": 6.4637,
+        "target_value": null
+      }
+    ],
+    "candidate_target_pixels": 179781,
+    "candidate_target_percent": 66.5856,
+    "ignored_pixels": 90219,
+    "ignored_percent": 33.4144,
+    "machine_decision": "PROPOSAL_READY_FOR_SEPARATE_QA"
+  },
+  "decision": "PROPOSE_FIVE_STATE_LABELS_FOR_SEPARATE_QA",
+  "decision_detail": "Create a deterministic native-grid candidate target and five-state companion raster for separate QA. No candidate pixel is accepted ground truth, and no dataset, split, baseline, or model is created.",
+  "quality_gates": {
+    "registered_pair_reverified": true,
+    "accepted_optical_predecessor_reverified": true,
+    "accepted_registration_predecessor_reverified": true,
+    "native_grid_identity_reverified": true,
+    "real_b04_b8a_b12_scl_pixels_read": true,
+    "source_pixels_resampled": false,
+    "all_five_states_represented": true,
+    "companion_state_raster_created": true,
+    "candidate_target_raster_created": true,
+    "independent_qa_completed": false,
+    "independent_human_inter_rater_validation": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "claims": {
+    "permitted": [
+      "BurnLens produced a traceable five-state candidate proposal for separate QA on one exact native-grid pair.",
+      "Every non-binary state remains ignored in the candidate target raster.",
+      "The proposal exposes its source roles, thresholds, state shares, uncertainty, and decision boundary."
+    ],
+    "prohibited": [
+      "The proposal is accepted ground truth, field validation, a fire perimeter, burn severity, or a detection.",
+      "NIFC, SCL, VIIRS, MTBS, dNBR, or visual appearance is sufficient truth alone.",
+      "The proposal establishes a dataset, split, baseline, model, metric, application, deployment, or operational result."
+    ]
+  },
+  "limitations": [
+    "The approximate incident start does not prove every pre-scene pixel is unburned.",
+    "The approximately ten-day interval permits non-fire vegetation, moisture, atmosphere, soil, and land-surface change.",
+    "The NIFC final perimeter is later mixed-method context and cannot supply pixel-perfect boundaries.",
+    "The proposal thresholds are transparent conservative screens for this exact pair, not universal or field-calibrated severity thresholds.",
+    "A separately implemented software verifier is not independent human inter-rater validation.",
+    "One event cannot support leakage-resistant train, validation, and test groups."
+  ],
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2024.",
+    "NIFC WFIGS final incident-reference feature SOURCE-2026-007."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "json": "LABEL-PROPOSAL-2026-001.json",
+    "html": "LABEL-PROPOSAL-2026-001.html",
+    "png": "LABEL-PROPOSAL-2026-001.png",
+    "state_raster": "LABEL-PROPOSAL-2026-001-state.tif",
+    "target_raster": "LABEL-PROPOSAL-2026-001-target.tif"
+  },
+  "output_rasters": {
+    "state": {
+      "filename": "LABEL-PROPOSAL-2026-001-state.tif",
+      "bytes": 35071,
+      "sha256": "26c2bc308fdf0d33c8fc88432c1ae14ad1fb26a53063ad6e0a791990998fbe8e",
+      "width": 600,
+      "height": 450,
+      "count": 1,
+      "dtype": "uint8",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        620000.0,
+        0.0,
+        -20.0,
+        4840000.0
+      ],
+      "nodata": null
+    },
+    "target": {
+      "filename": "LABEL-PROPOSAL-2026-001-target.tif",
+      "bytes": 32836,
+      "sha256": "075e5c84bcd1bcee894479ca103ac19c3434ca0f82b314bdd92d320baaa6f801",
+      "width": 600,
+      "height": 450,
+      "count": 1,
+      "dtype": "uint8",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        620000.0,
+        0.0,
+        -20.0,
+        4840000.0
+      ],
+      "nodata": 255.0
+    }
+  }
+}

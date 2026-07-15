@@ -1,0 +1,140 @@
+{
+  "manifest_id": "MANIFEST-2026-010",
+  "manifest_version": "0.10.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-15T21:21:00Z",
+  "task_issue": 353,
+  "branch": "codex/p2o4-t01-label-proposal",
+  "git_base_commit": "0a0a9fd912df6dfc3ef89c0bfacf05301e92594d",
+  "generator_source_commit": "814bb5402c04708f1515135683eac1304bf075c1",
+  "candidate_checkpoint_commit": "f6d7bc2293fa2317ceaf9d423934f626c4e32206",
+  "checkpoint_commit": null,
+  "pull_request": 354,
+  "version_tag": "v0.9.0-label-proposal-baseline",
+  "version_tag_object": null,
+  "version_tag_state": "planned; create only after merged-main reconstruction passes",
+  "status": "reviewable five-state proposal accepted; dataset, split, baseline, and model deferred",
+  "software_version": "0.9.0",
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "setuptools": "82.0.1"
+  },
+  "source_records": ["SOURCE-2026-007", "SOURCE-2026-009", "SOURCE-2026-010"],
+  "access_record": "ACCESS-2026-009",
+  "terms_records": ["TERMS-2026-003", "TERMS-2026-004", "TERMS-2026-005"],
+  "precheck_record": "PRECHECK-2026-010",
+  "registry_record": "REGISTRY-2026-010",
+  "review_records": ["LABEL_FITNESS-2026-006", "SOURCE_PRECEDENCE-2026-003", "USE_BOUNDARY-2026-009"],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "source_package_id": "darlene3-s2-optical-pair-v0.1.0",
+  "source_package_contract_version": "optical-pair-intake-contract-v0.1.0",
+  "source_package_contract_sha256": "4563ce0de71b2d62e6ed91ef60e6a575fb9aea9eea468aaff8f719383cab8bda",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_schema_implemented": true,
+  "label_proposal_version": "darlene3-burn-scar-label-proposal-v0.1.0",
+  "qa_protocol_version": "separate-label-proposal-qa-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "application_version": null,
+  "run_ids": [
+    "BL-2026-07-15-label-proposal-r001",
+    "BL-2026-07-15-label-qa-r001"
+  ],
+  "report_versions": [
+    "burn-scar-label-proposal-evidence-v0.1.0",
+    "burn-scar-label-proposal-qa-v0.1.0"
+  ],
+  "raw_assets": {
+    "pre_count": 1,
+    "post_count": 1,
+    "total_count": 2,
+    "total_bytes_local": 2254805631,
+    "total_bytes_committed": 0,
+    "exact_asset_index": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001.json"
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001-state.tif",
+      "media_type": "image/tiff; application=geotiff",
+      "bytes": 35071,
+      "sha256": "26c2bc308fdf0d33c8fc88432c1ae14ad1fb26a53063ad6e0a791990998fbe8e"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001-target.tif",
+      "media_type": "image/tiff; application=geotiff",
+      "bytes": 32836,
+      "sha256": "075e5c84bcd1bcee894479ca103ac19c3434ca0f82b314bdd92d320baaa6f801"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 15371,
+      "sha256": "e9b4199c0d49ffa235f4c8df4277d84b3df2b3c5a3f87d44dcc2ecd9a1d580d5"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 6003,
+      "sha256": "2f823db1a43981b84100c89928777537274eed8de096dac273c1ff17efa158fa"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 560366,
+      "sha256": "0784c4b5cf9f91edd4bed9a44bd073de73f96c0c40e13a89de94e44d1a37f402"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-QA-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 78205,
+      "sha256": "6fc88c784db65f5a35bfc7b88228e65ac28a4965a495d1178275bba4a6674b75"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-QA-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 19943,
+      "sha256": "7d7852a60df53bd4d77da71f328ced48eb0b60781d8344cfde11d4c1e7aa29fd"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-QA-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 332176,
+      "sha256": "d387a97c7306f173bb17824d43cf51f29cc2bfc9d1f036618731d880e277ceba"
+    }
+  ],
+  "credentials_used": false,
+  "credential_or_token_material_retained": false,
+  "quality_gates": {
+    "cycle_start_tool_run": "pass: shipped registration JSON, HTML, and PNG reproduced byte for byte",
+    "registered_pair_reverified": "pass",
+    "accepted_predecessors_reverified": "pass",
+    "native_grid_and_no_source_resampling": "pass",
+    "all_five_states_present": "pass",
+    "nonbinary_states_explicitly_ignored": "pass",
+    "separate_qa_source_reopen": "pass",
+    "state_all_pixel_comparison": "pass: 270000 of 270000",
+    "target_all_pixel_comparison": "pass: 270000 of 270000",
+    "deterministic_audit": "pass: 120 samples; 20 per state plus 20 burned-transition-boundary; zero disagreements",
+    "repository_tests": 105,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "wheel_build_and_isolated_import": "pass: 141846-byte burnlens_deschutes-0.9.0-py3-none-any.whl; sha256 f1a0221e9480edee9561833cd2b626dfbd37f890aad1939c03f27eaf8e4152c3; isolated package import 0.9.0",
+    "original_resolution_visual_review": "pass: proposal and QA PNGs inspected at 1800 by 1250",
+    "rendered_browser_review": "pass: proposal and QA HTML titles, decisions, complete 1800 by 1250 evidence images, warnings, traceability, and null dataset/model boundaries verified",
+    "independent_human_inter_rater_validation": "absent",
+    "raw_provider_bytes_committed": 0
+  },
+  "post_merge_verification": null,
+  "release_verification": null,
+  "decision": "ACCEPT_REVIEWABLE_LABEL_PROPOSAL_DEFER_DATASET",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

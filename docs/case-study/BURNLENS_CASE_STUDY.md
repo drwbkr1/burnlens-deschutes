@@ -128,6 +128,22 @@ The packaged Sentinel geometric reports are preserved but do not substitute for 
 
 Decision `ACCEPT_LOCAL_CONTENT_REGISTRATION` clears only the local translation prerequisite. Window passes never override pixel-level SCL review/excluded states and never assign burned or background. The next bounded risk is a reviewable five-state label proposal with independent QA, not dataset construction or model training.
 
+## Five-state proposal: visible uncertainty, exact software QA
+
+Issue #353 turns the protocol into inspectable native-grid evidence without pretending it is ground truth. BurnLens 0.9.0 recomputes dNBR, NDVI loss, SWIR gain, and NIR loss from the exact registered pair. It requires affirmative context, multi-signal change, and local coherence for burned candidates; affirmative multi-signal stability away from the reference for background candidates; and keeps quality, boundary, disagreement, and inconclusive evidence in explicit ignored states.
+
+![BurnLens five-state label proposal](../../samples/labels/phase-two/LABEL-PROPOSAL-2026-001.png)
+
+The result proposes 161,238 background pixels and 18,543 burned pixels. It does not force complete coverage: 71,897 pixels remain unknown, 870 excluded, and 17,452 review-needed. In total, 33.4144% of the AOI stays outside target use.
+
+The first real diagnostic was visibly speckled. BurnLens responded in the method, not the presentation: burned evidence must be supported in at least five of nine neighboring cells and stable background in at least seven. This reduced isolated candidates while leaving genuine uncertainty visible.
+
+A separate module and CLI then reopen the source package, recompute every signal and state without importing the proposal classifier, validate the GeoTIFF trace contract, and compare all 270,000 pixels. State and target agreement are both 100%. A deterministic audit samples 20 pixels from every state plus 20 burned-transition-boundary pixels; all 120 agree.
+
+![BurnLens separate label-proposal QA](../../samples/labels/phase-two/LABEL-QA-2026-001.png)
+
+That QA proves implementation reproducibility under one frozen contract. It does not prove independent human annotation, field validity, label accuracy, or generalization: the same Codex director authored both paths, only one event is represented, and no leakage-resistant multi-event split exists. Decision `ACCEPT_REVIEWABLE_LABEL_PROPOSAL_DEFER_DATASET` therefore accepts the evidence and stops short of a dataset.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -135,14 +151,18 @@ Decision `ACCEPT_LOCAL_CONTENT_REGISTRATION` clears only the local translation p
 - Latest evidence run: `BL-2026-07-14-target-decision-r002`
 - Latest optical evidence run: `BL-2026-07-15-optical-pair-evidence-r001`
 - Latest registration evidence run: `BL-2026-07-15-content-registration-r001`
+- Latest label-proposal run: `BL-2026-07-15-label-proposal-r001`
+- Latest separate-QA run: `BL-2026-07-15-label-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: shipped BurnLens `0.8.0` content-registration baseline; registration generator source `5287704a37f03d96e47467afba8623f7be643129`
+- Tool: BurnLens `0.9.0` label-proposal candidate; generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` design only; 2,254,805,631 local/ignored raw bytes; zero committed
 - Optical evidence: `OPTICAL-PAIR-2026-001`; pair accepted for protocol evidence; artifact hashes recorded in `MANIFEST-2026-008`
 - Registration evidence: `CONTENT-REGISTRATION-2026-001`; all twelve windows pass; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; LF-contract remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; artifact hashes in `MANIFEST-2026-009`; verified annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
+- Label proposal: `darlene3-burn-scar-label-proposal-v0.1.0`; `LABEL-PROPOSAL-2026-001`; five states; 66.5856% candidate domain and 33.4144% ignored; hashes in `MANIFEST-2026-010`
+- Label QA: `separate-label-proposal-qa-v0.1.0`; `LABEL-QA-2026-001`; zero state/target mismatch across 270,000 pixels; 120/120 deterministic audit agreement; human inter-rater validation absent
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -151,8 +171,8 @@ Decision `ACCEPT_LOCAL_CONTENT_REGISTRATION` clears only the local translation p
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.8.0-content-registration-baseline` at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
 - Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 / PR #342 is documentation-only
-- Active next checkpoint: produce an independently reviewable five-state label proposal with separate QA; dataset construction remains gated
-- Dataset / label schema / baseline / model: not created
-- Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, target-decision report, optical-pair report, and registration report are the current presentation surfaces
+- Active next checkpoint: evaluate cross-event label evidence and leakage-resistant grouping before deciding whether a dataset is supportable
+- Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
+- Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
