@@ -8,14 +8,14 @@
   "branch": "codex/p2o2-t06-optical-pair-protocol",
   "git_base_commit": "f3d528772ac1e0655fe29eda60c95518dc422603",
   "generator_source_commit": "4b699025f703450f892bc2533c86560f47711aa2",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "136d4d0919eba7144881c22163a149c89fee5a76",
   "pull_request": 344,
   "version_tag": "v0.7.0-optical-pair-protocol-baseline",
-  "version_tag_object": null,
-  "version_tag_state": "planned after merged-main reconstruction",
-  "lifecycle_sync_issue": null,
-  "lifecycle_sync_pull_request": null,
-  "status": "review-ready optical-pair protocol candidate in PR #344; merge, post-merge reconstruction, and tag pending",
+  "version_tag_object": "28d12fb5ef5c70054b8af5fd3c4847ba268000a1",
+  "version_tag_state": "verified annotated tag remotely peeling to checkpoint_commit",
+  "lifecycle_sync_issue": 345,
+  "lifecycle_sync_pull_request": 346,
+  "status": "shipped optical-pair protocol baseline; pair accepted for protocol evidence; labels and dataset deferred; post-merge verification passed; lifecycle sync issue #345 / PR #346 active",
   "software_version": "0.7.0",
   "runtime": {
     "python": "3.12.13",
@@ -90,7 +90,19 @@
     "rendered_browser_review": "pass: 1280x720, image 1800x1250 loaded, no horizontal overflow, no console warnings or errors",
     "raw_provider_bytes_committed": 0
   },
-  "post_merge_verification": null,
+  "post_merge_verification": {
+    "recorded_at_utc": "2026-07-15T19:16:37Z",
+    "registered_pair_reverified": "pass: two assets, REGISTERED_PACKAGE_VERIFIED",
+    "repository_tests": 86,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "deterministic_json_html_png": "byte-identical",
+    "wheel_build_and_isolated_import": "pass: 101073-byte burnlens_deschutes-0.7.0-py3-none-any.whl sha256 3f1eae6347ce29abedec6d6374bff6c8d3b69f0bc2e25e98f26a20b94113d0fb",
+    "pull_request_merged": true,
+    "task_issue_closed": true,
+    "remote_tag_identity": "pass: object 28d12fb5ef5c70054b8af5fd3c4847ba268000a1 peels to 136d4d0919eba7144881c22163a149c89fee5a76",
+    "raw_provider_bytes_committed": 0
+  },
   "decision": "ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS",
   "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
 }

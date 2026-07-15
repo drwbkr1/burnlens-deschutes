@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O2-T05 is shipped through issue #337 / PR #338 and determinism remediation issue #339 / PR #340 at verified `v0.6.0-burn-scar-target-baseline`. P2O2-T06 / issue #343 accepts one exact same-orbit Sentinel-2A pair for protocol evidence and versions `burn-scar-label-protocol-v0.1.0` as an unimplemented five-state design gate. The next analytical checkpoint is content-registration measurement plus a reviewable five-state label proposal; it may create neither a dataset nor a baseline before independent label QA passes.
+P2O2-T06 is shipped through issue #343 / PR #344 at merge `136d4d0919eba7144881c22163a149c89fee5a76` and verified annotated `v0.7.0-optical-pair-protocol-baseline` (object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`). It accepts one exact same-orbit Sentinel-2A pair for protocol evidence and versions `burn-scar-label-protocol-v0.1.0` as an unimplemented five-state design gate. Lifecycle issue #345 synchronizes provenance only. The next analytical checkpoint is content-registration measurement plus a reviewable five-state label proposal; it may create neither a dataset nor a baseline before independent label QA passes.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.

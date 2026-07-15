@@ -26,8 +26,10 @@ The final pairwise AOI quality is 98.9137% eligible, 0.7641% review-needed, and 
 
 This is meaningful Phase Two progress because a technical reviewer can inspect the exact real pixels and the proposed truth boundary. It is deliberately not a label checkpoint. No label array, dataset, split, baseline, model, metric, app, deployment, or operational result exists.
 
-## Verification posture
+## Verification and shipment
 
-The release gate requires independent registered-pair re-verification, byte-identical JSON/HTML/PNG reconstruction, original-resolution image review, real semantic-page browser review, full tests/compilation/dependency/wheel/import checks, secret and raw-byte exclusion, merged-main reconstruction, and exact tag identity.
+The registered pair independently reverified after merge. All 86 repository tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, original-resolution image review, real semantic-page browser review, wheel build and isolated import, secret/raw-byte exclusion, issue closure, and PR merge checks pass. PR #344 merged as `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely peels to that exact commit as `v0.7.0-optical-pair-protocol-baseline`.
+
+Lifecycle issue #345 / PR #346 synchronizes the exact shipment identity. It changes no pixels, code, decision, or analytical status.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

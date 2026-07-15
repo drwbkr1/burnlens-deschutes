@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; exact optical pair and protocol accepted; labels and dataset not created** | P2O2-T06 / issue #343 accepts one exact same-orbit Sentinel-2A pair and five-state protocol for evidence only. Content registration and reviewable label construction are next. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; exact optical pair and protocol shipped; labels and dataset not created** | P2O2-T06 / issue #343 / PR #344 ships one exact same-orbit Sentinel-2A pair and five-state protocol for evidence only at `v0.7.0-optical-pair-protocol-baseline`. Content registration and reviewable label construction are next. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -15,10 +15,10 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `bcb71ebd01d3184f8de24318428309e61d33e54f` via merged PR #340 and verified annotated `v0.6.0-burn-scar-target-baseline`; tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` |
+| Latest repository evidence baseline | `136d4d0919eba7144881c22163a149c89fee5a76` via merged PR #344 and verified annotated `v0.7.0-optical-pair-protocol-baseline`; tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
-| Optical-pair protocol candidate | BurnLens `0.7.0`; issue #343; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
+| Optical-pair protocol baseline | BurnLens `0.7.0`; issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -26,13 +26,13 @@
 | Access-integrity baseline | `v0.1.2-access-integrity-baseline`, verified annotated tag resolving to `d4ce26c87341e4d3798a0d84e257a964ebd2cde0` via PR #318 |
 | AOI baseline | `v0.2.0-aoi-baseline`, verified annotated tag resolving to `fffd3dda123d7c43fe678dca9adfd8feb73de158` via PR #322 |
 | Intake transaction baseline | BurnLens `0.3.0`; issue #325 / PR #326; merge `ee1a1d678ad888b595dc3c7b215f787ea5156582`; annotated `v0.3.0-intake-transaction-baseline`; `paired-intake-contract-v0.4.0`; full contract SHA-256 `5135b6b0b554e533df98ede568b1eafbd45c692b73a1e1abd3e50ba098f0958d`; provider assets/bytes and retained synthetic fixture bytes all zero |
-| Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007` and `ACCESS-2026-008` record successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
+| Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007`, `ACCESS-2026-008`, and `ACCESS-2026-009` record successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-model-v0.2.0`, accepted and shipped final modeling AOI; 12 km by 9 km / 108 km2 in EPSG:32610; lower priority than official sources |
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-010`; the newest records are the exact Sentinel-2A pre/post optical products, not labels or detections |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | BurnLens `0.7.0` candidate; acquisition/intake/source/geometry/target paths plus exact optical-pair inspection, LF-stable JSON/HTML, original-resolution PNG rendering, safe transaction-failure state, and five-state protocol evidence |
+| Evidence tooling | BurnLens `0.7.0` shipped baseline; acquisition/intake/source/geometry/target paths plus exact optical-pair inspection, LF-stable JSON/HTML, original-resolution PNG rendering, safe transaction-failure state, and five-state protocol evidence |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -47,17 +47,17 @@
 | Baseline-method version | Not created |
 | Model version | Not created |
 | Run IDs | Latest optical evidence run is `BL-2026-07-15-optical-pair-evidence-r001`; no label, dataset, baseline, model, or analytical inference output |
-| Raster/vector/map output | One official reference vector, one derived AOI vector, static control evidence, one source-inspection visualization, and one observation-comparison visualization; no segmentation, imagery-derived analytical raster/vector, or fire perimeter |
+| Raster/vector/map output | One official reference vector, one derived AOI vector, static control evidence, source-inspection, observation-comparison, target-decision, and optical-pair protocol visualizations; no label/segmentation analytical raster/vector or BurnLens fire perimeter |
 | Repository-owned public application | Not created |
 | Public performance claim | None authorized or supported |
 
 ## Latest shipped checkpoint
 
-P2O2-T05 / issue #337 / PR #338 activates `target-burn-scar-v0.2.0`; issue #339 / PR #340 preserves failed-reconstruction run `r001` and ships corrected run `r002` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to that exact commit as `v0.6.0-burn-scar-target-baseline`. Sixty-nine post-merge tests, compilation, dependency health, canonical LF checkout, byte-identical JSON/HTML/PNG reconstruction, issue closure, PR merge, secret/raw-byte exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #341 / PR #342.
+P2O2-T06 / issue #343 / PR #344 accepts the exact optical pair and `burn-scar-label-protocol-v0.1.0` for protocol evidence only at merge `136d4d0919eba7144881c22163a149c89fee5a76`. Annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely dereferences to that exact commit as `v0.7.0-optical-pair-protocol-baseline`. Registered-pair re-verification, 86 post-merge tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, wheel/isolated import, issue closure, PR merge, raw/secret exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #345 / PR #346.
 
 ## Current checkpoint
 
-P2O2-T06 / issue #343 accepts the exact optical pair and `burn-scar-label-protocol-v0.1.0` for protocol evidence only. The active next gate is local content-registration measurement and a reviewable five-state label proposal with independent QA, disagreement recording, and boundary review. It may defer or reject label construction and must not create a dataset, split, baseline, or model before the label gate passes.
+P2O2-T06 is shipped. The active next analytical gate is local content-registration measurement and a reviewable five-state label proposal with independent QA, disagreement recording, and boundary review. It may defer or reject label construction and must not create a dataset, split, baseline, or model before the label gate passes.
 
 ## Boundaries carried forward
 

@@ -1,6 +1,6 @@
 # REGISTRY-2026-008 - Exact Optical-Pair and Protocol Artifacts
 
-**Checkpoint candidate:** Issue #343 / PR #344 / branch `codex/p2o2-t06-optical-pair-protocol`; merge, post-merge reconstruction, and annotated tag pending
+**Checkpoint:** Issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified annotated `v0.7.0-optical-pair-protocol-baseline` (object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`); lifecycle sync issue #345 / PR #346
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|
@@ -12,7 +12,7 @@
 | `OPTICAL-PAIR-2026-001.json` | Normalized real-pixel, source, protocol, quality, claim, and lineage evidence | 29,552 bytes; SHA-256 `f0f006863bf7146834834b2a49393a1167ac718c7421f8c21cc376a3b39fbeed` | 0 |
 | `OPTICAL-PAIR-2026-001.html` | Semantic evidence report | 6,640 bytes; SHA-256 `df54fc728a79d2231f61a844383d02dc3ddd8367286d8f3f1ca4095f8c6c8075` | 0 |
 | `OPTICAL-PAIR-2026-001.png` | Rendered pre/post/continuous-change protocol evidence | 1,043,786 bytes; SHA-256 `947c65214805d35927307039afb54bd2674c43327f618619f3b87ad50648ec03` | 0 |
-| `MANIFEST-2026-008.json` | Checkpoint provenance manifest | Candidate; shipment identities pending merged-main reconstruction | 0 |
+| `MANIFEST-2026-008.json` | Checkpoint provenance manifest | Exact PR/merge/tag and post-merge verification recorded; lifecycle sync issue #345 / PR #346 | 0 |
 | `ACCESS-2026-009`, `SOURCE-2026-009`, and `SOURCE-2026-010` | Authorized delivery and exact registered source records | Two SAFE archives / 2,254,805,631 ignored local bytes | 0 |
 | `SOURCE_FITNESS-2026-002`, `LABEL_FITNESS-2026-004`, and `USE_BOUNDARY-2026-007` | Source acceptance, protocol-only label decision, and public-claim boundary | `ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS` | 0 |
 
