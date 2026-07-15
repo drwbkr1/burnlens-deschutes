@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-15
 
-**Issue:** #341
+**Issue / PR:** #341 / #342
 
 The first target-decision merge was not released merely because tests passed. Its post-merge real reconstruction failed, so BurnLens withheld the tag, preserved the failed run, corrected the serialization contract, and tried the exact workflow again from `main`.
 

@@ -78,7 +78,7 @@ BurnLens did not tag or silently rewrite `r001`. Issue #339 preserves that run a
 
 The corrected JSON, HTML, and PNG reconstruct byte for byte from committed inputs and fixed `r002` parameters. The original 1600 by 1050 PNG was visually inspected. Semantic HTML content, relative image reference, intrinsic image dimensions, warning, source precedence, null lineage, and LF/CRLF input equivalence are covered by focused tests. The in-app browser rejected the local `file://` URL under its security policy; BurnLens does not claim a passing browser check for this checkpoint. `TARGET-DECISION-2026-001` remains the immutable pre-remediation run and is superseded for current evidence use.
 
-PR #340 merged at `bcb71ebd01d3184f8de24318428309e61d33e54f`. A fresh `main` checkout exposed canonical LF input bytes and reproduced all three corrected artifacts byte for byte. All 69 tests, compilation, dependency health, secret/raw-byte exclusion, issue closure, and PR merge passed. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to the remediation merge as `v0.6.0-burn-scar-target-baseline`. Lifecycle synchronization is issue #341.
+PR #340 merged at `bcb71ebd01d3184f8de24318428309e61d33e54f`. A fresh `main` checkout exposed canonical LF input bytes and reproduced all three corrected artifacts byte for byte. All 69 tests, compilation, dependency health, secret/raw-byte exclusion, issue closure, and PR merge passed. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to the remediation merge as `v0.6.0-burn-scar-target-baseline`. Lifecycle synchronization is issue #341 / PR #342.
 
 ## Primary sources
 

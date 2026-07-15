@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O2-T05 / issues #337 and #339 / PRs #338 and #340 is shipped at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f` and verified annotated `v0.6.0-burn-scar-target-baseline`; lifecycle synchronization is issue #341. `aoi-darlene3-model-v0.2.0` remains frozen. The active checkpoint must visually validate one legally usable pre/post optical source pair and define an uncertainty-preserving burn-scar label protocol before any label or dataset build.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O2-T05 / issues #337 and #339 / PRs #338 and #340 is shipped at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f` and verified annotated `v0.6.0-burn-scar-target-baseline`; lifecycle synchronization is issue #341 / PR #342. `aoi-darlene3-model-v0.2.0` remains frozen. The active checkpoint must visually validate one legally usable pre/post optical source pair and define an uncertainty-preserving burn-scar label protocol before any label or dataset build.
 
 ## Required reading order for long-running Codex work
 

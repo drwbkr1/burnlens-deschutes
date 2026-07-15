@@ -50,11 +50,11 @@
 
 ## Latest shipped checkpoint
 
-P2O2-T05 / issue #337 / PR #338 activates `target-burn-scar-v0.2.0`; issue #339 / PR #340 preserves failed-reconstruction run `r001` and ships corrected run `r002` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to that exact commit as `v0.6.0-burn-scar-target-baseline`. Sixty-nine post-merge tests, compilation, dependency health, canonical LF checkout, byte-identical JSON/HTML/PNG reconstruction, issue closure, PR merge, secret/raw-byte exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #341.
+P2O2-T05 / issue #337 / PR #338 activates `target-burn-scar-v0.2.0`; issue #339 / PR #340 preserves failed-reconstruction run `r001` and ships corrected run `r002` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to that exact commit as `v0.6.0-burn-scar-target-baseline`. Sixty-nine post-merge tests, compilation, dependency health, canonical LF checkout, byte-identical JSON/HTML/PNG reconstruction, issue closure, PR merge, secret/raw-byte exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #341 / PR #342.
 
 ## Current checkpoint
 
-The active analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. Lifecycle issue #341 only synchronizes the shipped identities above. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
+The active analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. Lifecycle issue #341 / PR #342 only synchronizes the shipped identities above. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
 
 ## Boundaries carried forward
 

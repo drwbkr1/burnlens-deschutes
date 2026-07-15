@@ -114,7 +114,7 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.6.0-burn-scar-target-baseline` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887`
-- Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 is documentation-only
+- Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 / PR #342 is documentation-only
 - Active checkpoint: select and visually validate one legally usable pre/post optical pair and define the uncertainty-preserving burn-scar label protocol
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
