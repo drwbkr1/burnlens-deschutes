@@ -742,6 +742,7 @@ def build_report(
         "report_id": REPORT_ID,
         "schema_version": REPORT_SCHEMA_VERSION,
         "report_version": REPORT_VERSION,
+        "serialization": "UTF-8 JSON and HTML with LF line endings; deterministic PNG for fixed inputs",
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
@@ -848,6 +849,11 @@ def build_report(
         ],
         "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
         "warning": WARNING,
+        "rendered_outputs": {
+            "json": f"{REPORT_ID}.json",
+            "html": f"{REPORT_ID}.html",
+            "png": f"{REPORT_ID}.png",
+        },
     }
     return report, {"pre_tci": pre["TCI"], "post_tci": post["TCI"], "dnbr": dnbr, "quality": pair_state}, reference_utm
 

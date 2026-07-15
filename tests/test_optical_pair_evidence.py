@@ -8,11 +8,13 @@ import zipfile
 
 import numpy as np
 from PIL import Image
+from rasterio import Affine
 
 from burnlens.optical_pair_evidence import (
     LABEL_PROTOCOL_VERSION,
     OpticalPairEvidenceError,
     _dnbr_rgb,
+    _integer_window,
     _label_protocol,
     _product_metadata,
     _sha256_lf_text,
@@ -24,6 +26,13 @@ from burnlens.optical_pair_evidence import (
 
 
 class OpticalPairEvidenceTests(unittest.TestCase):
+    def test_aoi_window_requires_exact_native_grid_alignment(self) -> None:
+        transform = Affine(20, 0, 500_000, 0, -20, 4_900_000)
+        window = _integer_window([500_000, 4_899_980, 500_020, 4_900_000], transform)
+        self.assertEqual((window.col_off, window.row_off, window.width, window.height), (0, 0, 1, 1))
+        with self.assertRaisesRegex(OpticalPairEvidenceError, "does not align"):
+            _integer_window([500_000, 4_899_980, 500_019, 4_900_000], transform)
+
     def test_safe_metadata_maps_b04_filename_to_b4_physical_band(self) -> None:
         safe_name = "S2A_TEST.SAFE"
         product = """<root>
