@@ -1,6 +1,7 @@
 {
   "record_id": "MTBS-DARLENE3-AVAILABILITY-2026-001",
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
+  "serialization": "UTF-8 JSON with LF canonical line endings",
   "accessed_at_utc": "2026-07-14T21:10:00Z",
   "repository": "drwbkr1/burnlens-deschutes",
   "task_issue": 337,

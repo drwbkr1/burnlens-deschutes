@@ -26,6 +26,9 @@ class TargetDecisionTests(unittest.TestCase):
             run_id="BL-TEST-TARGET-DECISION",
             git_source_commit="a" * 40,
         )
+        self.assertEqual(report["report_id"], "TARGET-DECISION-2026-002")
+        self.assertEqual(report["task_issue"], 339)
+        self.assertEqual(report["decision_issue"], 337)
         self.assertEqual(report["owner_decision"]["status"], "ACTIVE")
         self.assertEqual(report["target_contract"]["active_target"], "burn-scar binary mask")
         self.assertEqual(report["target_contract"]["former_primary_disposition"], "COMPLEMENTARY_REFERENCE_ONLY")
@@ -53,6 +56,30 @@ class TargetDecisionTests(unittest.TestCase):
                     git_source_commit="a" * 40,
                 )
 
+    def test_structured_input_hashes_are_stable_across_line_endings(self) -> None:
+        with TemporaryDirectory() as directory:
+            lf_path = Path(directory) / "mtbs-lf.json"
+            crlf_path = Path(directory) / "mtbs-crlf.json"
+            normalized = MTBS.read_text(encoding="utf-8").replace("\r\n", "\n")
+            lf_path.write_bytes(normalized.encode("utf-8"))
+            crlf_path.write_bytes(normalized.replace("\n", "\r\n").encode("utf-8"))
+
+            reports = [
+                build_report(
+                    observation_path=OBSERVATION,
+                    aoi_path=AOI,
+                    mtbs_path=path,
+                    generated_at_utc="2026-07-14T21:20:00Z",
+                    run_id="BL-TEST-TARGET-DECISION",
+                    git_source_commit="a" * 40,
+                )
+                for path in (lf_path, crlf_path)
+            ]
+            self.assertEqual(reports[0], reports[1])
+            evidence = reports[0]["input_evidence"]["mtbs_availability_record"]
+            self.assertIn("sha256_lf_normalized", evidence)
+            self.assertNotIn("sha256", evidence)
+
     def test_rendered_outputs_are_traceable_and_real(self) -> None:
         with TemporaryDirectory() as directory:
             paths = run_target_decision(
@@ -68,6 +95,8 @@ class TargetDecisionTests(unittest.TestCase):
             html = paths["html"].read_text(encoding="utf-8")
             with Image.open(paths["png"]) as image:
                 self.assertEqual(image.size, (1600, 1050))
+            self.assertNotIn(b"\r\n", paths["json"].read_bytes())
+            self.assertNotIn(b"\r\n", paths["html"].read_bytes())
             self.assertEqual(report["rendered_outputs"]["png"], paths["png"].name)
             self.assertIn("Burn-scar binary-mask fallback is active", html)
             self.assertIn("Not created / not created / not created / not created / not created", html)

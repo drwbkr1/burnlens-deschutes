@@ -92,7 +92,7 @@ The exact 24-asset / 83,723,055-byte package remains ignored locally. An initial
 
 The owner resolved the target-path gate on 2026-07-14: BurnLens will use the established burn-scar binary-mask fallback. The first CV task remains experimental binary semantic segmentation. Active-fire observations remain complementary thermal-anomaly reference evidence, not the direct label target.
 
-`TARGET-DECISION-2026-001` makes the choice inspectable. It carries forward the strongest active-fire evidence—375 m support, 2.48 hours from Sentinel, and a 31.01-degree qualified median view angle—while recording why those facts still cannot define genuine 10-20 m pixel truth. It defines burned, background-candidate, unknown, and excluded states as a design gate and creates no label array.
+Corrected run `TARGET-DECISION-2026-002` makes the choice inspectable. It carries forward the strongest active-fire evidence—375 m support, 2.48 hours from Sentinel, and a 31.01-degree qualified median view angle—while recording why those facts still cannot define genuine 10-20 m pixel truth. It defines burned, background-candidate, unknown, and excluded states as a design gate and creates no label array. The merged `001` run remains preserved because post-merge validation found that its MTBS input byte hash changed with checkout line endings; issue #339 corrected the serialization contract instead of rewriting that history.
 
 MTBS was evaluated from current official sources because its analyst-interpreted fire-level products include pre/post imagery, burn indices, boundaries, thematic severity, and non-processing masks. Its current 2024 occurrence inventory returned 941 records but no Darlene name match, and both the 2024 and all-years occurrence layers returned zero features inside the frozen BurnLens AOI. MTBS therefore remains relevant methodology and potential cross-fire or future reference evidence; it cannot provide the exact Darlene 3 label today, and its severity classes will not expand BurnLens into a multiclass task.
 
@@ -102,11 +102,11 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
-- Latest evidence run: `BL-2026-07-14-target-decision-r001`
+- Latest evidence run: `BL-2026-07-14-target-decision-r002`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.6.0`, target-decision candidate; generator source `de884e439896b87bbdc41be9d159ff647b35726b`
+- Tool: BurnLens package `0.6.0`, target-decision remediation candidate; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
-- Target evidence: `TARGET-DECISION-2026-001`; JSON `933f5d92bdf25af12356f91e69eb9eb32a963b0c3acb81a84a5459721329d4aa`; HTML `7b043d349ea7dd978ce875e5e2c50ea6db53a53c0c924df991e504340f2481bf`; PNG `4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b`
+- Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -115,7 +115,7 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.5.0-observation-geometry-baseline` at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`
 - Latest shipped analytical checkpoint: issue #333 / PR #334; annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; lifecycle sync issue #335 / PR #336 is merged
-- Active checkpoint: P2O2-T05 / issue #337 / PR #338 on `codex/p2o2-t05-burn-scar-target`
+- Active checkpoint: P2O2-T05-REM / issue #339 / PR #340 on `codex/p2o2-t05-eol-determinism`; analytical PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; `v0.6.0-burn-scar-target-baseline` tag intentionally pending
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
 

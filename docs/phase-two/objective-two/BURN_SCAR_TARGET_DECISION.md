@@ -54,22 +54,29 @@ Proceed to one bounded source-and-protocol checkpoint. Before creating any label
 
 This checkpoint does not authorize a label array, dataset, split, baseline mask, model, inference, metric, deployment, or public wildfire result.
 
+## Reliability remediation
+
+PR #338 merged the first evidence run at `68971e9709b886adf8575a58d32694aad42f038e`. The required post-merge reconstruction then caught a checkout-dependent byte hash: the MTBS JSON source record used LF when `r001` was generated and CRLF after the squash merge. The scientific content, HTML, and PNG did not change, but the regenerated JSON correctly failed its byte-identity gate.
+
+BurnLens did not tag or silently rewrite `r001`. Issue #339 preserves that run and defines a cross-platform contract: structured JSON input hashes are computed after universal-newline decoding and LF serialization; target JSON and HTML are written as explicit UTF-8/LF; repository attributes pin target evidence to LF; and a regression test proves equivalent LF and CRLF source records yield the same report. The immutable corrected evidence is `TARGET-DECISION-2026-002` / `BL-2026-07-14-target-decision-r002`.
+
 ## Evidence and traceability
 
-- Issue / PR / branch: #337 / #338 / `codex/p2o2-t05-burn-scar-target`
+- Decision issue / PR / analytical merge: #337 / #338 / `68971e9709b886adf8575a58d32694aad42f038e`
+- Remediation issue / PR / branch: #339 / #340 / `codex/p2o2-t05-eol-determinism`
 - Software: BurnLens `0.6.0`
 - Target: `target-burn-scar-v0.2.0`
 - AOI: `aoi-darlene3-model-v0.2.0`
-- Run: `BL-2026-07-14-target-decision-r001`
-- Generator source: `de884e439896b87bbdc41be9d159ff647b35726b`
+- Run: `BL-2026-07-14-target-decision-r002`
+- Generator source: `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`
 - MTBS record: `MTBS-DARLENE3-AVAILABILITY-2026-001`
 - Input active-fire evidence: `OBSERVATION-GEOMETRY-2026-001` / `BL-2026-07-14-observation-geometry-r002`
-- JSON SHA-256: `933f5d92bdf25af12356f91e69eb9eb32a963b0c3acb81a84a5459721329d4aa`
-- HTML SHA-256: `7b043d349ea7dd978ce875e5e2c50ea6db53a53c0c924df991e504340f2481bf`
-- PNG SHA-256: `4d48292f75c755b88eac82c452dc741e98c2f86c5dab2448c05ba1a90a520e3b`
+- JSON SHA-256: `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`
+- HTML SHA-256: `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`
+- PNG SHA-256: `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Application / dataset / label schema / baseline / model: not created / not created / not created / not created / not created
 
-The JSON, HTML, and PNG reconstruct byte for byte from committed inputs and the fixed run parameters. The original 1600 by 1050 PNG was visually inspected. Semantic HTML content, relative image reference, intrinsic image dimensions, warning, source precedence, and null lineage are covered by focused tests. The in-app browser rejected the local `file://` URL under its security policy; BurnLens does not claim a passing browser check for this checkpoint.
+The corrected JSON, HTML, and PNG reconstruct byte for byte from committed inputs and fixed `r002` parameters. The original 1600 by 1050 PNG was visually inspected. Semantic HTML content, relative image reference, intrinsic image dimensions, warning, source precedence, null lineage, and LF/CRLF input equivalence are covered by focused tests. The in-app browser rejected the local `file://` URL under its security policy; BurnLens does not claim a passing browser check for this checkpoint. `TARGET-DECISION-2026-001` remains the immutable pre-remediation run and is superseded for current evidence use.
 
 ## Primary sources
 

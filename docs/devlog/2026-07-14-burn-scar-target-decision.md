@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-14
 
-**Issue / PR:** #337 / #338
+**Decision issue / PR; remediation:** #337 / #338; #339
 
 ## Weakness selected
 
@@ -25,6 +25,8 @@ That negative result is useful. BurnLens can borrow method discipline and revisi
 The first 1600 by 1050 render exposed an unsupported font glyph in a heading. The renderer was corrected, committed, and the public artifacts were regenerated against the corrected source commit. The final PNG is visually clean and all three outputs rebuild byte for byte.
 
 The in-app browser refused the local file URL under its security policy. That is recorded as a limitation, not converted into a passing browser claim. Tests verify semantic HTML structure and the linked image contract; original-resolution visual QA covers the generated decision graphic.
+
+Post-merge reconstruction found a subtler reliability defect before tagging. The newly committed MTBS JSON used LF during branch generation and CRLF after checkout on `main`, so its raw byte hash changed and `r001` no longer reproduced. BurnLens preserved `r001`, withheld the tag, and opened #339. Corrected run `r002` normalizes structured-input hashes to LF, explicitly writes target JSON/HTML as UTF-8/LF, and tests LF/CRLF equivalence. Its three artifacts rebuild byte for byte, and the corrected 1600 by 1050 card is visually clean.
 
 ## What remains
 
