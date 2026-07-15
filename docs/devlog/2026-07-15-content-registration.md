@@ -30,4 +30,10 @@ This is the checkpoint's deeper reliability point: passing scientific numbers ar
 
 The next bounded checkpoint may create a reviewable five-state label proposal. It must preserve pixel-level quality, boundary/mixed-pixel uncertainty, temporal ambiguity, disagreement, and independent second-pass QA. No dataset, split, baseline, or model may be created until that separate label gate passes.
 
+## Release remediation
+
+PR #348 analytically merged the accepted measurements, but the first merged-main reconstruction withheld the tag: Windows checked the new JSON and HTML out with CRLF because their paths were missing from `.gitattributes`. The PNG and all analytical checks passed, and a content diff found only line endings.
+
+Issue #349 adds the same explicit LF checkout contract already used by target and optical evidence. A fresh clone proves both text files check out with zero CRLF sequences and all three artifacts reconstruct byte for byte. This correction changes no measurement or artifact content; it makes the repository honor the serialization it already claimed.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

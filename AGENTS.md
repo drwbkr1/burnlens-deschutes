@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O2-T06 is shipped through issue #343 / PR #344 at verified `v0.7.0-optical-pair-protocol-baseline`. P2O3-T01 / issue #347 is the review-ready `0.8.0` candidate: `local-content-registration-v0.1.0` measures twelve fixed native-20m windows, all pass the 0.5-pixel gate, and `CONTENT-REGISTRATION-2026-001` accepts local translation evidence without creating labels. Exact PR/merge/tag identities remain pending. The next analytical checkpoint is a reviewable five-state label proposal with independent QA; it may create neither a dataset nor a baseline before that label gate passes.
+P2O2-T06 is shipped at verified `v0.7.0-optical-pair-protocol-baseline`. P2O3-T01 / issue #347 / PR #348 analytically accepts all twelve local-registration windows at merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d` without creating labels. The `0.8.0` tag is withheld because post-merge Windows checkout exposed CRLF JSON/HTML against the declared LF reconstruction contract. Remediation issue #349 adds the explicit checkout rule; measurements and decisions do not change. Complete that release gate before starting the reviewable five-state label proposal.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
