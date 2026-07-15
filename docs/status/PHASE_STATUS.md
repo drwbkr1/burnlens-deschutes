@@ -58,7 +58,7 @@
 
 ## Latest shipped checkpoint
 
-P2O4-T01 / issue #353 / PR #354 accepts the one-event five-state proposal and separate software QA at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`. A fresh no-hardlink clone reconstructs all eight artifacts byte for byte, passes 105 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, raw exclusion, secret, visual, browser, and remote-tag gates. Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` peels to that merge as `v0.9.0-label-proposal-baseline`. Lifecycle synchronization is issue #355.
+P2O4-T01 / issue #353 / PR #354 accepts the one-event five-state proposal and separate software QA at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`. A fresh no-hardlink clone reconstructs all eight artifacts byte for byte, passes 105 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, raw exclusion, secret, visual, browser, and remote-tag gates. Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` peels to that merge as `v0.9.0-label-proposal-baseline`. Lifecycle synchronization is issue #355 / PR #356.
 
 ## Current checkpoint
 

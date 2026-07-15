@@ -155,7 +155,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O3-T01-REM | `records/prompt-build-log/2026-07-15-p2o3-t01-rem.md` | issue #349 / PR #350; merged and tagged | Explicit LF checkout contract at `1297471be45200c40f9f40746e85b437ce6e0c0d`; fresh merged-main clone reconstructs JSON/HTML/PNG byte for byte; verified `v0.8.0-content-registration-baseline`; no analytical change. |
 | P2O3-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o3-t01-sync.md` | issue #351 / PR #352; lifecycle synchronization | Exact analytical/remediation merge, failed and corrected release gates, wheel, and annotated tag identities synchronized without changing code or analytical outputs. |
 | P2O4-T01 | `records/prompt-build-log/2026-07-15-p2o4-t01.md` | issue #353 / PR #354; shipped at verified `v0.9.0-label-proposal-baseline` | Five-state native-grid proposal, separate all-pixel software QA, deterministic audit, exact merged-main reconstruction, and explicit dataset deferral; lifecycle sync issue #355. |
-| P2O4-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t01-sync.md` | issue #355; PR pending | Documentation-only synchronization of analytical merge, verified tag, merged-main release gates, and active cross-event next checkpoint. |
+| P2O4-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t01-sync.md` | issue #355 / PR #356 | Documentation-only synchronization of analytical merge, verified tag, merged-main release gates, and active cross-event next checkpoint. |
 
 ## Acceptance and remediation triggers
 

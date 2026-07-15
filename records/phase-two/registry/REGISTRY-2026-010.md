@@ -1,6 +1,6 @@
 # REGISTRY-2026-010 - Five-State Label-Proposal Artifacts
 
-**Checkpoint:** Issue #353 / PR #354; branch `codex/p2o4-t01-label-proposal`; generator source `814bb5402c04708f1515135683eac1304bf075c1`; shipped merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; verified `v0.9.0-label-proposal-baseline` tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`; lifecycle issue #355
+**Checkpoint:** Issue #353 / PR #354; branch `codex/p2o4-t01-label-proposal`; generator source `814bb5402c04708f1515135683eac1304bf075c1`; shipped merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; verified `v0.9.0-label-proposal-baseline` tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`; lifecycle issue #355 / PR #356
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|
