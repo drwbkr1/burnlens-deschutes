@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import replace
+from contextlib import redirect_stderr
 import io
 import json
 import os
@@ -194,7 +195,8 @@ class OpticalPairContractTests(unittest.TestCase):
                 "acquire_optical_pair",
                 side_effect=ValueError("local path must not be exposed"),
             ):
-                self.assertEqual(acquire_cli.main(), 2)
+                with redirect_stderr(io.StringIO()):
+                    self.assertEqual(acquire_cli.main(), 2)
             failure = json.loads(state.read_text(encoding="utf-8"))
             self.assertEqual(failure["reason_code"], "LOCAL_TRANSACTION_FAILURE")
             self.assertEqual(failure["detail"], "ValueError")
