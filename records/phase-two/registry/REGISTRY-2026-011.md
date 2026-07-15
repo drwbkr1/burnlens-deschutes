@@ -1,6 +1,6 @@
 # REGISTRY-2026-011 - Cross-Event Feasibility Artifacts
 
-**Checkpoint:** Issue #357; branch `codex/p2o4-t02-cross-event-feasibility`; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; candidate artifact commit `58261756a456e5d5963302c9d62c8a6b13d07f14`; analytical PR/merge/tag pending quality-gate completion
+**Checkpoint:** Issue #357 / PR #358; branch `codex/p2o4-t02-cross-event-feasibility`; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; candidate artifact commit `58261756a456e5d5963302c9d62c8a6b13d07f14`; rendered reviewed head `3ab9ea4de2fe62777c11548e1d3e7465a9f40829`; merge/tag pending quality-gate completion
 
 | Artifact | Class | Version/state | Committed provider imagery bytes |
 |---|---|---|---:|
