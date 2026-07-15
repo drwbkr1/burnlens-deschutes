@@ -158,6 +158,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t01-sync.md` | issue #355 / PR #356 | Documentation-only synchronization of analytical merge, verified tag, merged-main release gates, and active cross-event next checkpoint. |
 | P2O4-T02 | `records/prompt-build-log/2026-07-15-p2o4-t02.md` | issue #357 / PR #358; shipped at verified `v0.10.0-cross-event-feasibility-baseline` | Current MTBS/Census/CDSE metadata selects exact Tepee/McKay acquisition pairs and freezes whole leakage groups; no imagery, dataset, split, baseline, or model. |
 | P2O4-T02-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t02-sync.md` | issue #359 / PR #360 lifecycle synchronization | Exact analytical merge, verified tag, merged-main release gates, and source-acquisition next checkpoint synchronized without changing outputs. |
+| P2O4-T03 | `records/prompt-build-log/2026-07-15-p2o4-t03.md` | issue #361; active exact-source checkpoint | Four frozen Tepee/McKay OData archive contracts, route precedence, secret-safe acquisition, native-pixel fitness, and pair registration; no labels or dataset. |
 
 ## Acceptance and remediation triggers
 
