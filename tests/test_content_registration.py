@@ -9,6 +9,7 @@ import zipfile
 import numpy as np
 from PIL import Image
 
+import burnlens
 from burnlens.content_registration import (
     ContentRegistrationError,
     _geometric_quality_metadata,
@@ -28,6 +29,9 @@ def _fourier_shift(values: np.ndarray, shift: tuple[float, float]) -> np.ndarray
 
 
 class ContentRegistrationTests(unittest.TestCase):
+    def test_import_version_matches_registration_checkpoint(self) -> None:
+        self.assertEqual(burnlens.__version__, "0.8.0")
+
     def test_localized_dft_recovers_subpixel_shift_to_apply(self) -> None:
         reference = np.random.default_rng(7).normal(size=(96, 96))
         for injected in ((0.30, -0.40), (-0.17, 0.22), (1.25, -2.10), (0.0, 0.0)):
