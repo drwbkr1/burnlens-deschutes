@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Preserve null application/dataset/split/baseline/model state and zero provider imagery bytes. A fresh no-hardlink clone of merged `main` passes manifest, LF, local-link, secret/raw-exclusion, original-resolution, and live semantic-browser gates.
 - Ship issue #357 through PR #358 at squash merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; verified annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` remotely peels to that exact merge as `v0.10.0-cross-event-feasibility-baseline`.
 
-Issue #357 / PR #358; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; lifecycle synchronization issue #359.
+Issue #357 / PR #358; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; lifecycle synchronization issue #359 / PR #360.
 
 ## v0.9.0-label-proposal-baseline - 2026-07-15
 

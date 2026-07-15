@@ -1,6 +1,6 @@
 # REGISTRY-2026-011 - Cross-Event Feasibility Artifacts
 
-**Checkpoint:** Issue #357 / PR #358; merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; verified tag `v0.10.0-cross-event-feasibility-baseline`, object `dbfda10ca50c39d8e8924096e740e71643e1f133`; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; candidate artifact commit `58261756a456e5d5963302c9d62c8a6b13d07f14`; lifecycle sync issue #359
+**Checkpoint:** Issue #357 / PR #358; merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; verified tag `v0.10.0-cross-event-feasibility-baseline`, object `dbfda10ca50c39d8e8924096e740e71643e1f133`; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; candidate artifact commit `58261756a456e5d5963302c9d62c8a6b13d07f14`; lifecycle sync issue #359 / PR #360
 
 | Artifact | Class | Version/state | Committed provider imagery bytes |
 |---|---|---|---:|

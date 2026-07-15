@@ -157,7 +157,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T01 | `records/prompt-build-log/2026-07-15-p2o4-t01.md` | issue #353 / PR #354; shipped at verified `v0.9.0-label-proposal-baseline` | Five-state native-grid proposal, separate all-pixel software QA, deterministic audit, exact merged-main reconstruction, and explicit dataset deferral; lifecycle sync issue #355. |
 | P2O4-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t01-sync.md` | issue #355 / PR #356 | Documentation-only synchronization of analytical merge, verified tag, merged-main release gates, and active cross-event next checkpoint. |
 | P2O4-T02 | `records/prompt-build-log/2026-07-15-p2o4-t02.md` | issue #357 / PR #358; shipped at verified `v0.10.0-cross-event-feasibility-baseline` | Current MTBS/Census/CDSE metadata selects exact Tepee/McKay acquisition pairs and freezes whole leakage groups; no imagery, dataset, split, baseline, or model. |
-| P2O4-T02-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t02-sync.md` | issue #359 lifecycle synchronization | Exact analytical merge, verified tag, merged-main release gates, and source-acquisition next checkpoint synchronized without changing outputs. |
+| P2O4-T02-SYNC | `records/prompt-build-log/2026-07-15-p2o4-t02-sync.md` | issue #359 / PR #360 lifecycle synchronization | Exact analytical merge, verified tag, merged-main release gates, and source-acquisition next checkpoint synchronized without changing outputs. |
 
 ## Acceptance and remediation triggers
 

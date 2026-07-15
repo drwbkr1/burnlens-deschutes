@@ -60,7 +60,7 @@
 
 ## Latest shipped checkpoint
 
-P2O4-T02 / issue #357 / PR #358 accepts metadata-feasible Tepee/McKay acquisitions and frozen whole-event groups at analytical merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`. A fresh no-hardlink clone reconstructs JSON, HTML, and PNG byte for byte and passes 110 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, links, raw exclusion, secret, original-resolution, browser, and remote-tag gates. Annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` peels to that merge as `v0.10.0-cross-event-feasibility-baseline`. Lifecycle synchronization is issue #359.
+P2O4-T02 / issue #357 / PR #358 accepts metadata-feasible Tepee/McKay acquisitions and frozen whole-event groups at analytical merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`. A fresh no-hardlink clone reconstructs JSON, HTML, and PNG byte for byte and passes 110 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, links, raw exclusion, secret, original-resolution, browser, and remote-tag gates. Annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` peels to that merge as `v0.10.0-cross-event-feasibility-baseline`. Lifecycle synchronization is issue #359 / PR #360.
 
 ## Current checkpoint
 
