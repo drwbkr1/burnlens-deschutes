@@ -1,11 +1,11 @@
 # BurnLens Phase Status
 
-## Status as of 2026-07-14
+## Status as of 2026-07-15
 
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar fallback approved; labels and dataset not created** | P2O2-T04 rejects direct active-fire label promotion. P2O2-T05 / #337 / PR #338 activates `target-burn-scar-v0.2.0`; #339 corrects a caught post-merge determinism defect before tagging. A defensible pre/post optical pair plus label protocol remains next. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; burn-scar target shipped; labels and dataset not created** | P2O2-T05 and #339 / PR #340 ship `target-burn-scar-v0.2.0` at verified `v0.6.0-burn-scar-target-baseline`. A defensible pre/post optical pair plus label protocol is next. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -15,9 +15,9 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `1c85496d9d488c0d2d5a58207d8b4786a683ba52` via merged PR #334 and verified annotated `v0.5.0-observation-geometry-baseline` |
+| Latest repository evidence baseline | `bcb71ebd01d3184f8de24318428309e61d33e54f` via merged PR #340 and verified annotated `v0.6.0-burn-scar-target-baseline`; tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
-| Burn-scar target decision candidate | BurnLens `0.6.0`; issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; issue #339 / PR #340 remediation source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; tag pending; no label, dataset, baseline, or model |
+| Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -31,7 +31,7 @@
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-008`; the newest record is the exact NOAA-21 observation inventory and selected companion, not a label or detection |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | BurnLens `0.6.0` branch candidate; shipped acquisition/intake/source/geometry paths plus deterministic burn-scar target-decision validation and JSON/HTML/PNG rendering |
+| Evidence tooling | BurnLens `0.6.0` shipped baseline; acquisition/intake/source/geometry paths plus deterministic, LF-stable burn-scar target-decision validation and JSON/HTML/PNG rendering |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -50,13 +50,11 @@
 
 ## Latest shipped checkpoint
 
-P2O2-T04 / issue #333 accepts the `A2024179.2118` observation as materially improved complementary native-scale reference evidence while deferring labels and a dataset. PR #334 merged at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`; annotated `v0.5.0-observation-geometry-baseline` tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e` remotely dereferences to that exact commit. Sixty-five post-merge tests, compilation, dependency health, byte-identical real-package reconstruction, rendered-browser review, issue closure, raw-byte/secret exclusion, and remote tag identity passed verification.
+P2O2-T05 / issue #337 / PR #338 activates `target-burn-scar-v0.2.0`; issue #339 / PR #340 preserves failed-reconstruction run `r001` and ships corrected run `r002` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`. Annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to that exact commit as `v0.6.0-burn-scar-target-baseline`. Sixty-nine post-merge tests, compilation, dependency health, canonical LF checkout, byte-identical JSON/HTML/PNG reconstruction, issue closure, PR merge, secret/raw-byte exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #341 / PR #342.
 
 ## Current checkpoint
 
-P2O2-T05 / issue #337 / PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`. Post-merge verification correctly withheld the tag when `r001` reconstruction exposed checkout-dependent input hashing. Issue #339 / PR #340 on `codex/p2o2-t05-eol-determinism` is the active bounded remediation; it preserves `r001`, adds explicit LF-normalized structured-input hashes and LF serialization, and publishes immutable corrected run `r002`. It changes no target, phase outcome, use boundary, or scientific finding and creates no label, dataset, baseline, model, or analytical wildfire output.
-
-The next analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
+The active analytical gate is one exact, legally usable, visually inspected pre/post optical pair and an uncertainty-preserving binary burn-scar label protocol. Lifecycle issue #341 / PR #342 only synchronizes the shipped identities above. The protocol must distinguish burned, background-candidate, unknown, excluded, and review-needed states and address georegistration, optical quality, temporal leakage, and independent QA before label construction.
 
 ## Boundaries carried forward
 
