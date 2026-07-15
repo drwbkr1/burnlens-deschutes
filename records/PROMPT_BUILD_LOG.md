@@ -150,7 +150,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T05-REM | `records/prompt-build-log/2026-07-14-p2o2-t05-rem.md` | issue #339 / PR #340; merged and tagged | Remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; preserve `r001`; publish LF-stable `r002`; verified annotated `v0.6.0-burn-scar-target-baseline`. |
 | P2O2-T05-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t05-sync.md` | issue #341 / PR #342; active lifecycle synchronization | Record exact analytical/remediation merge, corrected run, post-merge verification, and annotated tag identities; no code or scientific-output change. |
 | P2O2-T06 | `records/prompt-build-log/2026-07-15-p2o2-t06.md` | issue #343 / PR #344; merged and tagged | Exact same-orbit Sentinel-2 pair registered and visually validated; five-state protocol shipped at `v0.7.0-optical-pair-protocol-baseline` without creating label pixels, a dataset, baseline, or model. |
-| P2O2-T06-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t06-sync.md` | issue #345; active lifecycle synchronization | Exact analytical PR/merge/tag and clean-main verification synchronized without changing code or analytical outputs. |
+| P2O2-T06-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t06-sync.md` | issue #345 / PR #346; active lifecycle synchronization | Exact analytical PR/merge/tag and clean-main verification synchronized without changing code or analytical outputs. |
 
 ## Acceptance and remediation triggers
 
@@ -160,4 +160,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O2-T06 / issue #343 / PR #344 is shipped at `v0.7.0-optical-pair-protocol-baseline`; lifecycle issue #345 synchronizes the exact release identity. No label, dataset, baseline, or model exists. Authorized credentials are used without retaining secrets; exact raw packages remain local/ignored. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O2-T06 / issue #343 / PR #344 is shipped at `v0.7.0-optical-pair-protocol-baseline`; lifecycle issue #345 / PR #346 synchronizes the exact release identity. No label, dataset, baseline, or model exists. Authorized credentials are used without retaining secrets; exact raw packages remain local/ignored. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

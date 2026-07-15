@@ -17,7 +17,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Version `burn-scar-label-protocol-v0.1.0`: burned/background-candidate may later map to 1/0, while unknown/excluded/review-needed remain ignored. Require a companion state layer, local registration measurement, boundary review, event/scene/geography/time grouping before tiling, independent QA, and disagreement audit.
 - Create no label array, dataset, split, baseline, model, analytical metric, application, deployment, performance claim, or operational wildfire result.
 
-Issue #343 / PR #344 shipped this checkpoint at merge `136d4d0919eba7144881c22163a149c89fee5a76`. Clean-main pair re-verification, 86 tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, and wheel/isolated-import checks pass. Annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely peels to that merge as `v0.7.0-optical-pair-protocol-baseline`; lifecycle issue #345 records the provenance-only synchronization.
+Issue #343 / PR #344 shipped this checkpoint at merge `136d4d0919eba7144881c22163a149c89fee5a76`. Clean-main pair re-verification, 86 tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, and wheel/isolated-import checks pass. Annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely peels to that merge as `v0.7.0-optical-pair-protocol-baseline`; lifecycle issue #345 / PR #346 records the provenance-only synchronization.
 
 ## v0.6.0-burn-scar-target-baseline - 2026-07-15
 

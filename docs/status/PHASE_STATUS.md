@@ -53,7 +53,7 @@
 
 ## Latest shipped checkpoint
 
-P2O2-T06 / issue #343 / PR #344 accepts the exact optical pair and `burn-scar-label-protocol-v0.1.0` for protocol evidence only at merge `136d4d0919eba7144881c22163a149c89fee5a76`. Annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely dereferences to that exact commit as `v0.7.0-optical-pair-protocol-baseline`. Registered-pair re-verification, 86 post-merge tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, wheel/isolated import, issue closure, PR merge, raw/secret exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #345.
+P2O2-T06 / issue #343 / PR #344 accepts the exact optical pair and `burn-scar-label-protocol-v0.1.0` for protocol evidence only at merge `136d4d0919eba7144881c22163a149c89fee5a76`. Annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1` remotely dereferences to that exact commit as `v0.7.0-optical-pair-protocol-baseline`. Registered-pair re-verification, 86 post-merge tests, compilation, dependency health, byte-identical JSON/HTML/PNG reconstruction, wheel/isolated import, issue closure, PR merge, raw/secret exclusion, and remote tag identity pass. It creates no label, dataset, baseline, model, or analytical wildfire output. Lifecycle synchronization is issue #345 / PR #346.
 
 ## Current checkpoint
 

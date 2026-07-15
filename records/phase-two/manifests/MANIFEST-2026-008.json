@@ -14,8 +14,8 @@
   "version_tag_object": "28d12fb5ef5c70054b8af5fd3c4847ba268000a1",
   "version_tag_state": "verified annotated tag remotely peeling to checkpoint_commit",
   "lifecycle_sync_issue": 345,
-  "lifecycle_sync_pull_request": null,
-  "status": "shipped optical-pair protocol baseline; pair accepted for protocol evidence; labels and dataset deferred; post-merge verification passed; lifecycle sync issue #345 active",
+  "lifecycle_sync_pull_request": 346,
+  "status": "shipped optical-pair protocol baseline; pair accepted for protocol evidence; labels and dataset deferred; post-merge verification passed; lifecycle sync issue #345 / PR #346 active",
   "software_version": "0.7.0",
   "runtime": {
     "python": "3.12.13",
