@@ -101,6 +101,8 @@ class OpticalPairContractTests(unittest.TestCase):
         }
 
         def fake_urlopen(request: Request, timeout: float) -> FakeResponse:
+            self.assertIn("Attributes", request.full_url)
+            self.assertIn("$expand=Attributes", request.full_url)
             provider_id = next(key for key in payloads if key in request.full_url)
             return FakeResponse(payloads[provider_id])
 

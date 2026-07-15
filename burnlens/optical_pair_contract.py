@@ -172,7 +172,7 @@ def _metadata_url(contract: AssetContract) -> str:
     return (
         "https://catalogue.dataspace.copernicus.eu/odata/v1/"
         f"Products({contract.provider_id})"
-        "?$select=Id,Name,ContentLength,Online,Checksum,ContentDate,PublicationDate,S3Path"
+        "?$select=Id,Name,ContentLength,Online,Checksum,ContentDate,PublicationDate,S3Path,Attributes"
         "&$expand=Attributes"
     )
 
