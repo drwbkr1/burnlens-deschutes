@@ -13,7 +13,12 @@
 | `MANIFEST-2026-001.json` | Provenance manifest | Complete for checkpoint | No | BurnLens traceability record |
 | `SOURCE_PRECEDENCE-2026-001.md` | Review | Complete | No | BurnLens control record |
 | `USE_BOUNDARY-2026-001.md` | Review | Complete | No | BurnLens control record |
+| `SOURCE-2026-009.md` | Exact source record | Public metadata accepted; raw acquisition pending | No | Official Sentinel-2 pre-fire product described by BurnLens |
+| `SOURCE-2026-010.md` | Exact source record | Public metadata accepted; raw acquisition pending | No | Official Sentinel-2 post-fire product described by BurnLens |
+| `TERMS-2026-004.md` | Terms review | Complete for issue #343 bounded action | No | BurnLens decision backed by current official terms and legal notice |
+| `ACCESS-2026-009.md` | Access log | Authorized; exact delivery pending | No | BurnLens secret-safe access record |
+| `PRECHECK-2026-008.md` | Technical precheck | Passed for exact two-product action | No | BurnLens before-data verification record |
 
-No entry is a dataset, label, mask, model input, baseline output, model, metric, run, map, report, application result, public release, or official product.
+No entry is a dataset, implemented label, model input, baseline output, model, metric, application result, operational release, or official product. The new source records identify exact provider products; their raw bytes remain ignored and uncommitted.
 
 The fixture checksum is recorded in `MANIFEST-2026-001.json` after file creation and verification.
