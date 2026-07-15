@@ -121,11 +121,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; final AOI, exact-pair transaction, and authenticated source/reference baseline shipped; labels and dataset deferred |
-| Current repository baseline | Latest shipped: `v0.4.0-authenticated-source-baseline` at `7678cf41b64e128106c199b913fe74590a52cf80` via issue #329 / PR #330 |
-| Active lifecycle sync | P2O2-T03-SYNC / issue #331 / PR #332 on `codex/p2o2-t03-sync`; provenance only |
-| Baseline verification | Annotated tag object `98228058b232bc0838eb976f982ef4775b711776` remotely dereferences to PR #330 merge `7678cf41b64e128106c199b913fe74590a52cf80`; 56 post-merge tests and byte-identical real-source reconstruction pass |
-| Data/model/run/map/application status | Three exact provider assets are registered only in ignored local raw storage; committed outputs are bounded source/reference inspection evidence. No label schema, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
+| Current phase posture | Phase Two active; one-event proposal/QA shipped and exact Tepee/McKay future acquisition groups frozen in the 0.10.0 working candidate; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.9.0-label-proposal-baseline` at `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3` via issue #353 / PR #354 |
+| Active analytical candidate | P2O4-T02 / issue #357 on `codex/p2o4-t02-cross-event-feasibility`; intended `v0.10.0-cross-event-feasibility-baseline` remains uncreated pending shipment gates |
+| Baseline verification | Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` remotely dereferences to PR #354 merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; 105 post-merge tests and byte-identical eight-artifact reconstruction pass |
+| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; committed outputs include bounded source/reference, one-event proposal/QA, and metadata-only cross-event group evidence. No accepted dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
