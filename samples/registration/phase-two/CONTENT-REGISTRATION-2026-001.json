@@ -1,0 +1,1302 @@
+{
+  "report_id": "CONTENT-REGISTRATION-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "content-registration-evidence-v0.1.0",
+  "serialization": "UTF-8 JSON and HTML with LF line endings; deterministic PNG for fixed inputs",
+  "generated_at_utc": "2026-07-15T20:25:00Z",
+  "run_id": "BL-2026-07-15-content-registration-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 347,
+  "branch": "codex/p2o3-t01-content-registration",
+  "git_source_commit": "5287704a37f03d96e47467afba8623f7be643129",
+  "software_version": "0.8.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_implemented": false,
+  "baseline_version": null,
+  "model_version": null,
+  "registration_protocol_version": "local-content-registration-v0.1.0",
+  "package_id": "darlene3-s2-optical-pair-v0.1.0",
+  "package_contract_version": "optical-pair-intake-contract-v0.1.0",
+  "package_verification": {
+    "package_id": "darlene3-s2-optical-pair-v0.1.0",
+    "registered_package_present": true,
+    "expected_entry_count": 3,
+    "observed_entry_count": 3,
+    "unexpected_entries": [],
+    "missing_entries": [],
+    "registration": {
+      "registration_schema_version": "0.2.0",
+      "contract_version": "optical-pair-intake-contract-v0.1.0",
+      "contract_sha256": "4563ce0de71b2d62e6ed91ef60e6a575fb9aea9eea468aaff8f719383cab8bda",
+      "package_id": "darlene3-s2-optical-pair-v0.1.0",
+      "generated_at_utc": "2026-07-15T18:41:02Z",
+      "run_id": "BL-2026-07-15-optical-pair-intake-r005",
+      "synthetic_fixture": false,
+      "asset_count": 2,
+      "assets": [
+        {
+          "role": "sentinel-2-l2a-pre",
+          "source_record_id": "SOURCE-2026-009",
+          "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+          "bytes": 1126185170,
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        {
+          "role": "sentinel-2-l2a-post",
+          "source_record_id": "SOURCE-2026-010",
+          "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+          "bytes": 1128620461,
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "role": "sentinel-2-l2a-pre",
+        "source_record_id": "SOURCE-2026-009",
+        "provider_id": "0303a812-1242-4a09-ae9d-cf905049ca0f",
+        "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+        "expected_size_bytes": 1126185170,
+        "container": "zip-safe",
+        "observed_bytes": 1126185170,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1126150184,
+          "expected_root": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      },
+      {
+        "role": "sentinel-2-l2a-post",
+        "source_record_id": "SOURCE-2026-010",
+        "provider_id": "71429c5a-60f9-4c28-9982-752f8ab1c9fd",
+        "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+        "expected_size_bytes": 1128620461,
+        "container": "zip-safe",
+        "observed_bytes": 1128620461,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1128585475,
+          "expected_root": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      }
+    ],
+    "accepted_as_unchanged_registered_package": true,
+    "reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "terms_review_id": "TERMS-2026-004",
+  "input_hashes": {
+    "aoi_report_sha256_lf_normalized": "77a1abdab29eabd79243a4138cc6f1a3d9dff232b7e0e022876ad9406a7a5b75",
+    "optical_report_sha256_lf_normalized": "f0f006863bf7146834834b2a49393a1167ac718c7421f8c21cc376a3b39fbeed"
+  },
+  "predecessor": {
+    "report_id": "OPTICAL-PAIR-2026-001",
+    "report_version": "optical-pair-protocol-evidence-v0.1.0",
+    "run_id": "BL-2026-07-15-optical-pair-evidence-r001",
+    "git_source_commit": "4b699025f703450f892bc2533c86560f47711aa2",
+    "decision": "ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS"
+  },
+  "aoi": {
+    "bbox_utm10n": [
+      620000.0,
+      4831000.0,
+      632000.0,
+      4840000.0
+    ],
+    "width_px_at_20m": 600,
+    "height_px_at_20m": 450,
+    "pixel_size_m": 20
+  },
+  "pair_identity": {
+    "pre_native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+    "post_native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+    "native_20m_grid_equal": true,
+    "reprojection_performed": false,
+    "source_resampling_performed": false
+  },
+  "product_geometric_quality": {
+    "sentinel-2-l2a-pre": {
+      "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/DATASTRIP/DS_2APS_20240626T012349_S20240625T190720/QI_DATA/GEOMETRIC_QUALITY.xml",
+      "member_sha256": "040cd851e664ff7e416e3c592143e721c46a117f686a8b721397f44b51f7f878",
+      "report_global_status": "PASSED",
+      "report_date": "2024-06-26T02:16:30.280Z",
+      "inspections": {
+        "Geometric_Refining_Spatio_Residual_Histograms": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Geometric Spatio Residual Histograms not computed.",
+          "values": {}
+        },
+        "Geometric_Refining_Image_Refining": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Geometric image refining is correct.",
+          "values": {
+            "X_MEAN": "-0.026843",
+            "Y_MEAN": "0.026624",
+            "X_STDV": "4.066355",
+            "Y_STDV": "5.045876"
+          }
+        },
+        "Absolute_Location_Value": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Absolute location is valid (20.0<30.0)",
+          "values": {
+            "VALUE": "20.0",
+            "EXPECTED": "30.0"
+          }
+        },
+        "Planimetric_Stability": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Planimetric stability is valid (3.0<5.0)",
+          "values": {
+            "VALUE": "3.0",
+            "EXPECTED": "5.0"
+          }
+        },
+        "Ephemeris_Quality": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Ephemeris quality is valid (3.0<=20.0)",
+          "values": {
+            "VALUE": "3.0",
+            "EXPECTED": "20.0"
+          }
+        },
+        "Geometric_Refining_Vnir_Swir_Registration": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "VNIR / SWIR bands have not been registered.",
+          "values": {}
+        }
+      },
+      "interpretation": "Product QC is contextual provenance only. It does not prove pair-local content registration; the packaged report says VNIR/SWIR bands have not been registered and spatio-residual histograms were not computed."
+    },
+    "sentinel-2-l2a-post": {
+      "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/DATASTRIP/DS_2APS_20240706T015448_S20240705T190418/QI_DATA/GEOMETRIC_QUALITY.xml",
+      "member_sha256": "9c3572d827e0fe61c12508de5a7d518b1d59080623e4e404719f345916220ba2",
+      "report_global_status": "PASSED",
+      "report_date": "2024-07-06T02:50:27.249Z",
+      "inspections": {
+        "Absolute_Location_Value": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Absolute location is valid (20.0<30.0)",
+          "values": {
+            "VALUE": "20.0",
+            "EXPECTED": "30.0"
+          }
+        },
+        "Geometric_Refining_Image_Refining": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Geometric image refining is correct.",
+          "values": {
+            "X_MEAN": "-0.024032",
+            "Y_MEAN": "0.018354",
+            "X_STDV": "3.828618",
+            "Y_STDV": "4.870766"
+          }
+        },
+        "Geometric_Refining_Vnir_Swir_Registration": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "VNIR / SWIR bands have not been registered.",
+          "values": {}
+        },
+        "Geometric_Refining_Spatio_Residual_Histograms": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Geometric Spatio Residual Histograms not computed.",
+          "values": {}
+        },
+        "Planimetric_Stability": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Planimetric stability is valid (3.0<5.0)",
+          "values": {
+            "VALUE": "3.0",
+            "EXPECTED": "5.0"
+          }
+        },
+        "Ephemeris_Quality": {
+          "status": "PASSED",
+          "processing_status": "done",
+          "message": "Ephemeris quality is valid (4.0<=20.0)",
+          "values": {
+            "VALUE": "4.0",
+            "EXPECTED": "20.0"
+          }
+        }
+      },
+      "interpretation": "Product QC is contextual provenance only. It does not prove pair-local content registration; the packaged report says VNIR/SWIR bands have not been registered and spatio-residual histograms were not computed."
+    }
+  },
+  "pair_quality": {
+    "pixel_count": 270000,
+    "states": [
+      {
+        "state": "eligible-comparison",
+        "code": 0,
+        "pixels": 267067,
+        "percent": 98.9137
+      },
+      {
+        "state": "review-needed",
+        "code": 1,
+        "pixels": 2063,
+        "percent": 0.7641
+      },
+      {
+        "state": "excluded",
+        "code": 2,
+        "pixels": 870,
+        "percent": 0.3222
+      }
+    ]
+  },
+  "method": {
+    "protocol_version": "local-content-registration-v0.1.0",
+    "quantity": "translation shift to apply to post/moving content to align with pre/reference content",
+    "signals": "Independent pre and post native-20m B04, B8A, and B12 reflectance gradient magnitudes; each gradient is clipped at its own AOI 1st/99th percentiles.",
+    "shared_mask_applied_to_correlation": false,
+    "shared_mask_rationale": "A shared stable/quality mask can manufacture a zero-shift correlation peak. Pair quality is used only to classify window usability and never multiplied into either correlation signal.",
+    "taper": "separable Hann taper inside each window",
+    "estimator": "phase-only cross-power spectrum with localized upsampled DFT refinement",
+    "upsample_factor": 100,
+    "sample_resolution_px": 0.01,
+    "window_grid": "4 columns x 3 rows; 12 non-overlapping 150 x 150 native-20m windows covering the AOI",
+    "gates": {
+      "minimum_eligible_fraction": 0.9,
+      "minimum_confident_bands": 2,
+      "minimum_coarse_peak_ratio": 2.0,
+      "maximum_band_deviation_px": 0.15,
+      "maximum_residual_px": 0.5,
+      "maximum_residual_m": 10.0
+    },
+    "selection_boundaries": "NIFC geometry, dNBR, VIIRS observations, burn/background assumptions, and label thresholds do not select pixels, windows, peaks, or decisions.",
+    "signal_details": {
+      "B04": {
+        "pre": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.0723,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00078102,
+            0.05575406
+          ]
+        },
+        "post": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.0727,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00076485,
+            0.05597165
+          ]
+        }
+      },
+      "B8A": {
+        "pre": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.1771,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00085441,
+            0.05770316
+          ]
+        },
+        "post": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.1734,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00086314,
+            0.05975129
+          ]
+        }
+      },
+      "B12": {
+        "pre": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.149,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00101242,
+            0.06154627
+          ]
+        },
+        "post": {
+          "finite_fraction": 1.0,
+          "fill_value": 0.1512,
+          "gradient_clip_percentiles": [
+            1,
+            99
+          ],
+          "gradient_clip_values": [
+            0.00104043,
+            0.06159021
+          ]
+        }
+      }
+    },
+    "primary_sources": [
+      {
+        "title": "Efficient subpixel image registration algorithms",
+        "publisher": "Optica Publishing Group",
+        "doi": "10.1364/OL.33.000156",
+        "url": "https://doi.org/10.1364/OL.33.000156",
+        "use": "Localized upsampled-DFT cross-correlation method basis."
+      },
+      {
+        "title": "Sentinel-2 Products Specification",
+        "publisher": "Copernicus Sentinel Online",
+        "url": "https://sentiwiki.copernicus.eu/web/s2-products",
+        "use": "Product-level geometric context; not pair-local proof."
+      },
+      {
+        "title": "Sentinel-2 MSI L2A Data Quality Report, January 2026",
+        "publisher": "Copernicus Sentinel Online",
+        "url": "https://sentiwiki.copernicus.eu/__attachments/1692737/OMPC.CS.DQR.002.12-2025-Sentinel-2-MSI-L2A-DQR-January2026.pdf",
+        "use": "Current Collection-1 and PB05.10 geometric-quality context; not pair-local proof."
+      }
+    ]
+  },
+  "windows": [
+    {
+      "window_id": "W-R01-C01",
+      "grid_row": 1,
+      "grid_column": 1,
+      "pixel_window": {
+        "row_offset": 0,
+        "column_offset": 0,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        620000.0,
+        4837000.0,
+        623000.0,
+        4840000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.969378,
+        "review_needed_fraction": 0.0204,
+        "excluded_fraction": 0.010222
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 52.6349,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.600727,
+          "moving_energy": 0.612272,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0361,
+          "coarse_peak_ratio": 33.1444,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.730869,
+          "moving_energy": 0.739321,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.03,
+          "magnitude_px": 0.0424,
+          "coarse_peak_ratio": 55.3604,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.769765,
+          "moving_energy": 0.780515,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.03,
+        "column_shift_to_apply_px": -0.02,
+        "magnitude_px": 0.0361,
+        "magnitude_m": 0.721,
+        "max_band_deviation_px": 0.0141,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R01-C02",
+      "grid_row": 1,
+      "grid_column": 2,
+      "pixel_window": {
+        "row_offset": 0,
+        "column_offset": 150,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        623000.0,
+        4837000.0,
+        626000.0,
+        4840000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.999511,
+        "review_needed_fraction": 0.000489,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 100.209,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.568989,
+          "moving_energy": 0.57732,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0361,
+          "coarse_peak_ratio": 31.3887,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.45198,
+          "moving_energy": 0.454784,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 49.7554,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.688811,
+          "moving_energy": 0.693231,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.02,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0224,
+        "magnitude_m": 0.447,
+        "max_band_deviation_px": 0.0141,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R01-C03",
+      "grid_row": 1,
+      "grid_column": 3,
+      "pixel_window": {
+        "row_offset": 0,
+        "column_offset": 300,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        626000.0,
+        4837000.0,
+        629000.0,
+        4840000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 1.0,
+        "review_needed_fraction": 0.0,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 88.6184,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.34775,
+          "moving_energy": 0.355621,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0283,
+          "coarse_peak_ratio": 23.316,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.296391,
+          "moving_energy": 0.306218,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 64.6513,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.449634,
+          "moving_energy": 0.450324,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.02,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0224,
+        "magnitude_m": 0.447,
+        "max_band_deviation_px": 0.01,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R01-C04",
+      "grid_row": 1,
+      "grid_column": 4,
+      "pixel_window": {
+        "row_offset": 0,
+        "column_offset": 450,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        629000.0,
+        4837000.0,
+        632000.0,
+        4840000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.999822,
+        "review_needed_fraction": 0.000178,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.02,
+          "coarse_peak_ratio": 76.7353,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.372556,
+          "moving_energy": 0.374365,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.03,
+          "coarse_peak_ratio": 35.363,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.280078,
+          "moving_energy": 0.286103,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "coarse_peak_ratio": 71.7951,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.509501,
+          "moving_energy": 0.507873,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.03,
+        "column_shift_to_apply_px": 0.0,
+        "magnitude_px": 0.03,
+        "magnitude_m": 0.6,
+        "max_band_deviation_px": 0.01,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R02-C01",
+      "grid_row": 2,
+      "grid_column": 1,
+      "pixel_window": {
+        "row_offset": 150,
+        "column_offset": 0,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        620000.0,
+        4834000.0,
+        623000.0,
+        4837000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.995511,
+        "review_needed_fraction": 0.003111,
+        "excluded_fraction": 0.001378
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 71.4994,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.783366,
+          "moving_energy": 0.779521,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.04,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0447,
+          "coarse_peak_ratio": 27.6587,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.838842,
+          "moving_energy": 0.851822,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "coarse_peak_ratio": 43.0796,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.85064,
+          "moving_energy": 0.842462,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.03,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0316,
+        "magnitude_m": 0.632,
+        "max_band_deviation_px": 0.0141,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R02-C02",
+      "grid_row": 2,
+      "grid_column": 2,
+      "pixel_window": {
+        "row_offset": 150,
+        "column_offset": 150,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        623000.0,
+        4834000.0,
+        626000.0,
+        4837000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.982222,
+        "review_needed_fraction": 0.015511,
+        "excluded_fraction": 0.002267
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": 0.02,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 16.0348,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.785742,
+          "moving_energy": 0.713398,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 7.5916,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.630231,
+          "moving_energy": 0.76165,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": 0.05,
+          "magnitude_px": 0.0539,
+          "coarse_peak_ratio": 10.3305,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.798403,
+          "moving_energy": 0.705872,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.01,
+        "column_shift_to_apply_px": 0.02,
+        "magnitude_px": 0.0224,
+        "magnitude_m": 0.447,
+        "max_band_deviation_px": 0.04,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R02-C03",
+      "grid_row": 2,
+      "grid_column": 3,
+      "pixel_window": {
+        "row_offset": 150,
+        "column_offset": 300,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        626000.0,
+        4834000.0,
+        629000.0,
+        4837000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.949556,
+        "review_needed_fraction": 0.029556,
+        "excluded_fraction": 0.020889
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.01,
+          "coarse_peak_ratio": 49.7958,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.38294,
+          "moving_energy": 0.38524,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": 0.01,
+          "magnitude_px": 0.0316,
+          "coarse_peak_ratio": 22.5057,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.307587,
+          "moving_energy": 0.341988,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": 0.0,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.02,
+          "coarse_peak_ratio": 43.8123,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.5339,
+          "moving_energy": 0.541408,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.01,
+        "column_shift_to_apply_px": 0.0,
+        "magnitude_px": 0.01,
+        "magnitude_m": 0.2,
+        "max_band_deviation_px": 0.0224,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R02-C04",
+      "grid_row": 2,
+      "grid_column": 4,
+      "pixel_window": {
+        "row_offset": 150,
+        "column_offset": 450,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        629000.0,
+        4834000.0,
+        632000.0,
+        4837000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.999822,
+        "review_needed_fraction": 0.000178,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 111.6528,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.425773,
+          "moving_energy": 0.432507,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 38.3785,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.370072,
+          "moving_energy": 0.374522,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "coarse_peak_ratio": 58.9205,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.496311,
+          "moving_energy": 0.499506,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.01,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0141,
+        "magnitude_m": 0.283,
+        "max_band_deviation_px": 0.02,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R03-C01",
+      "grid_row": 3,
+      "grid_column": 1,
+      "pixel_window": {
+        "row_offset": 300,
+        "column_offset": 0,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        620000.0,
+        4831000.0,
+        623000.0,
+        4834000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.999778,
+        "review_needed_fraction": 0.000222,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 109.6864,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.617827,
+          "moving_energy": 0.633887,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.04,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0447,
+          "coarse_peak_ratio": 24.2064,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.469325,
+          "moving_energy": 0.474305,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0361,
+          "coarse_peak_ratio": 45.0299,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.685285,
+          "moving_energy": 0.695245,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.03,
+        "column_shift_to_apply_px": -0.02,
+        "magnitude_px": 0.0361,
+        "magnitude_m": 0.721,
+        "max_band_deviation_px": 0.0141,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R03-C02",
+      "grid_row": 3,
+      "grid_column": 2,
+      "pixel_window": {
+        "row_offset": 300,
+        "column_offset": 150,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        623000.0,
+        4831000.0,
+        626000.0,
+        4834000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 1.0,
+        "review_needed_fraction": 0.0,
+        "excluded_fraction": 0.0
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 100.5254,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.62014,
+          "moving_energy": 0.630641,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": 0.0,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.02,
+          "coarse_peak_ratio": 25.181,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.516757,
+          "moving_energy": 0.523877,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 45.0086,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.701926,
+          "moving_energy": 0.713046,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.01,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0141,
+        "magnitude_m": 0.283,
+        "max_band_deviation_px": 0.0141,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R03-C03",
+      "grid_row": 3,
+      "grid_column": 3,
+      "pixel_window": {
+        "row_offset": 300,
+        "column_offset": 300,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        626000.0,
+        4831000.0,
+        629000.0,
+        4834000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.977067,
+        "review_needed_fraction": 0.019289,
+        "excluded_fraction": 0.003644
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 95.1017,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.486718,
+          "moving_energy": 0.485715,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 42.3548,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.366229,
+          "moving_energy": 0.369697,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 81.8313,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.599787,
+          "moving_energy": 0.598676,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.02,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0224,
+        "magnitude_m": 0.447,
+        "max_band_deviation_px": 0.01,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    },
+    {
+      "window_id": "W-R03-C04",
+      "grid_row": 3,
+      "grid_column": 4,
+      "pixel_window": {
+        "row_offset": 300,
+        "column_offset": 450,
+        "height": 150,
+        "width": 150
+      },
+      "bounds_utm10n": [
+        629000.0,
+        4831000.0,
+        632000.0,
+        4834000.0
+      ],
+      "pair_quality": {
+        "eligible_fraction": 0.996978,
+        "review_needed_fraction": 0.002756,
+        "excluded_fraction": 0.000267
+      },
+      "band_measurements": {
+        "B04": {
+          "row_shift_to_apply_px": -0.01,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0141,
+          "coarse_peak_ratio": 103.9312,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.48131,
+          "moving_energy": 0.478756,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B8A": {
+          "row_shift_to_apply_px": -0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "coarse_peak_ratio": 45.2539,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.419011,
+          "moving_energy": 0.419124,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        },
+        "B12": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "coarse_peak_ratio": 81.5702,
+          "sample_resolution_px": 0.01,
+          "reference_energy": 0.667108,
+          "moving_energy": 0.664251,
+          "confident": true,
+          "reason": "PEAK_RATIO_PASS"
+        }
+      },
+      "consensus": {
+        "row_shift_to_apply_px": -0.02,
+        "column_shift_to_apply_px": -0.01,
+        "magnitude_px": 0.0224,
+        "magnitude_m": 0.447,
+        "max_band_deviation_px": 0.01,
+        "confident_band_count": 3
+      },
+      "state": "pass",
+      "reason_code": "CONTENT_REGISTRATION_PASS",
+      "label_effect": "none; this window result never assigns burned or background and never overrides pixel quality"
+    }
+  ],
+  "summary": {
+    "window_count": 12,
+    "state_counts": {
+      "pass": 12,
+      "review-needed": 0,
+      "excluded": 0,
+      "fail-registration": 0
+    },
+    "p50_px": 0.0224,
+    "p95_px": 0.0361,
+    "max_px": 0.0361,
+    "max_m": 0.722,
+    "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+  },
+  "visual_review": {
+    "decision": "ACCEPT_LOCAL_CONTENT_REGISTRATION",
+    "notes": "Original-resolution PNG and semantic HTML reviewed. Pre/post scenes are readable; all twelve fixed residual cells align with the AOI; every value and state is legible; warnings, product-QC caveat, no-label boundary, and complete source/version/run trace are visible; the browser loaded the referenced image, preserved the table in its responsive container, and emitted no console warning or error.",
+    "rendered_source_pixels_reviewed": true
+  },
+  "decision": "ACCEPT_LOCAL_CONTENT_REGISTRATION",
+  "decision_detail": "Accept the exact pair's measured local content registration for the frozen AOI. Every fixed window passes the residual, confidence, band-consensus, and usable-coverage gates. Pixel-level review and exclusion states remain unchanged, and no label has been created.",
+  "quality_gates": {
+    "registered_pair_reverified": true,
+    "accepted_optical_predecessor_reverified": true,
+    "native_grid_identity_reverified": true,
+    "real_b04_b8a_b12_pixels_measured": true,
+    "all_windows_cover_aoi_once": true,
+    "source_pixels_resampled": false,
+    "shared_mask_used_in_estimator": false,
+    "label_array_created": false,
+    "dataset_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "claims": {
+    "permitted": [
+      "BurnLens measured pair-local translation residuals on the exact native-grid Sentinel-2 pair.",
+      "Window decisions preserve confidence, band-consensus, usable-coverage, and residual evidence.",
+      "Registration evidence is inspectable and traceable to the exact source package and predecessor run."
+    ],
+    "prohibited": [
+      "A passing registration window is burned, unburned, background, or independently validated truth.",
+      "Product-level Sentinel QC alone proves pair-local registration.",
+      "The evidence establishes a label set, dataset, baseline, model, operational result, or field validation."
+    ]
+  },
+  "limitations": [
+    "The estimator tests local translation, not all deformation, parallax, atmosphere, spectral, or temporal differences.",
+    "Gradient structure can change between dates; cross-band consensus and peak-ratio gates reduce but do not eliminate ambiguity.",
+    "The 0.5-pixel residual gate is a BurnLens label-readiness requirement, not a provider guarantee or accuracy claim.",
+    "Pixel-level SCL review and exclusions remain independently binding after any window-level pass.",
+    "One event cannot support leakage-resistant train, validation, and test groups."
+  ],
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2024."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "json": "CONTENT-REGISTRATION-2026-001.json",
+    "html": "CONTENT-REGISTRATION-2026-001.html",
+    "png": "CONTENT-REGISTRATION-2026-001.png"
+  }
+}

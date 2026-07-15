@@ -2,6 +2,23 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.8.0-content-registration-baseline - 2026-07-15
+
+### P2O3-T01 - Measure pair-local optical content registration
+
+- Split registration measurement from later label proposal work at the fail-closed prerequisite instead of creating labels against unproved alignment.
+- Reverify the exact two-product registered package, accepted optical predecessor, AOI, source scaling, native B04/B8A/B12/SCL grids, and null label/dataset/baseline/model state.
+- Freeze `local-content-registration-v0.1.0`: independent per-scene reflectance gradients, no shared correlation mask, twelve fixed 150 by 150 native-20m windows, Hann taper, phase-only cross-power, and localized 100x DFT refinement.
+- Gate each window at 90% eligible pair-quality pixels, two confident bands, peak ratio 2.0, 0.15-pixel maximum band deviation, and 0.50-native-pixel / 10 m consensus residual.
+- Preserve current official Sentinel product-quality context without allowing it to replace local measurement. Both packaged reports pass global QC while explicitly saying VNIR/SWIR bands were not registered and spatio-residual histograms were not computed.
+- Recover synthetic translations within 0.02 pixel at 0.01-pixel sampling and fail closed on textureless signals or incompatible human/machine decisions.
+- Measure the exact pair: all 12 windows pass; median residual `0.0224` pixel, p95/max `0.0361` pixel, minimum eligible coverage `94.9556%`, minimum peak ratio `7.5916`, maximum band deviation `0.0400` pixel.
+- Catch and correct a real XML provenance defect before acceptance: provider messages/values are siblings of inspection metadata, not descendants. The final evidence preserves the exact cautions and values.
+- Render `CONTENT-REGISTRATION-2026-001` as normalized JSON, semantic HTML, and a deterministic 1800 by 1250 PNG with complete source/version/run trace and a visible no-label boundary.
+- Accept local content registration only. Create no label array, companion state layer, dataset, split, baseline, model, metric, application, deployment, performance claim, or operational wildfire result.
+
+Issue #347 is review-ready on `codex/p2o3-t01-content-registration`. Generator source `5287704a37f03d96e47467afba8623f7be643129` produces JSON `f0682f51bebe93d970774748c23317d8759bae4b7e34478fb6659d9606b28645`, HTML `b8ed29f1f18acc75275e0cbef0fd6d0b1d6764ef2737d1f5e53bb45d5fcd407f`, and PNG `70ba55e6a15f2b712bd167e8d3d0736daf19284bae0f3f0f721a07a3e1c017f1`. All 93 tests, compilation, dependency health, exact pair/predecessor re-verification, byte-identical reconstruction, original-resolution review, final semantic browser review, and 0.8.0 wheel/isolated-import checks pass. Exact PR, merge, clean-main verification, and annotated-tag identities remain pending and must be synchronized before the candidate is described as shipped.
+
 ## v0.7.0-optical-pair-protocol-baseline - 2026-07-15
 
 ### P2O2-T06 - Prove the exact optical pair and five-state burn-scar protocol

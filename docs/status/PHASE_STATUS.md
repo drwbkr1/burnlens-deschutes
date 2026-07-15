@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; exact optical pair and protocol shipped; labels and dataset not created** | P2O2-T06 / issue #343 / PR #344 ships one exact same-orbit Sentinel-2A pair and five-state protocol for evidence only at `v0.7.0-optical-pair-protocol-baseline`. Content registration and reviewable label construction are next. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; registration candidate accepted; labels and dataset not created** | P2O2-T06 ships the exact pair/protocol at verified `v0.7.0`. P2O3-T01 / issue #347 is review-ready with all twelve local-registration windows passing. Reviewable label construction and independent QA are next. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -19,6 +19,7 @@
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
 | Optical-pair protocol baseline | BurnLens `0.7.0`; issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
+| Content-registration candidate | BurnLens `0.8.0`; issue #347; generator source `5287704a37f03d96e47467afba8623f7be643129`; `local-content-registration-v0.1.0`; all 12 windows pass; median `0.0224` and maximum `0.0361` native pixel; PR/merge/tag pending; labels remain unimplemented |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -57,7 +58,7 @@ P2O2-T06 / issue #343 / PR #344 accepts the exact optical pair and `burn-scar-la
 
 ## Current checkpoint
 
-P2O2-T06 is shipped. The active next analytical gate is local content-registration measurement and a reviewable five-state label proposal with independent QA, disagreement recording, and boundary review. It may defer or reject label construction and must not create a dataset, split, baseline, or model before the label gate passes.
+P2O2-T06 is shipped. P2O3-T01 / issue #347 accepts local content-registration evidence as a review-ready candidate; exact PR/merge/tag identities remain pending. The active next analytical gate is a reviewable five-state label proposal with independent QA, disagreement recording, and boundary review. It may defer or reject label construction and must not create a dataset, split, baseline, or model before the label gate passes.
 
 ## Boundaries carried forward
 

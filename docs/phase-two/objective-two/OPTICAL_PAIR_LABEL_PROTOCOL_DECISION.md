@@ -66,4 +66,6 @@ The NIFC outline is later mixed-method incident-reference context, not pixel-per
 
 No content-registration measurement, label array, independent annotation QA, dataset, leakage-resistant split, spectral baseline, model, metric, application, deployment, or operational validation exists. The next bounded checkpoint may implement registration measurement and a reviewable five-state label proposal; it may not silently collapse uncertainty or create a dataset before label QA passes.
 
+Successor note: P2O3-T01 / issue #347 later measures pair-local translation under `local-content-registration-v0.1.0` and accepts all twelve fixed AOI windows. This satisfies the bounded registration prerequisite only. Label implementation, independent QA, dataset, split, baseline, model, application, and operational validation remain absent.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
