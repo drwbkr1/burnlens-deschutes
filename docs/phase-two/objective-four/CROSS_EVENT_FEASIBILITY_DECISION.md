@@ -34,4 +34,6 @@ Decision code: `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES`.
 
 Proceed next with exact authenticated acquisition, integrity validation, native-pixel inspection, local quality evidence, and pair registration for the frozen Tepee and McKay products. Treat MTBS as analyst-interpreted reference and STAC cloud cover as availability metadata only. Do not call these groups a dataset or split until the exact source pixels and cross-event label/review evidence pass their own gates.
 
+Shipment: issue #357 / PR #358 squash-merged at `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; verified annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` remotely peels to that merge as `v0.10.0-cross-event-feasibility-baseline`.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

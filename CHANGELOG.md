@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Unreleased - BurnLens 0.10.0 cross-event feasibility candidate - 2026-07-15
+## v0.10.0-cross-event-feasibility-baseline - 2026-07-15
 
 ### P2O4-T02 - Freeze exact cross-event acquisitions and leakage groups
 
@@ -11,10 +11,11 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Select exact Tepee and McKay pre/post product pairs under same-platform/tile/orbit/processing rules; expose and exclude Milli because no one tile covers its full MTBS boundary.
 - Freeze event, scene, geography, and time group IDs before acquisition or tiling; report 10.925 km Darlene-McKay, 34.926 km Darlene-Tepee, and 27.258 km McKay-Tepee representative-point distances as diagnostics, not independence proof.
 - Render deterministic JSON, semantic HTML, and 1,800 by 1,250 PNG; pass original-resolution and live semantic-browser review.
-- Raise BurnLens to `0.10.0`; add five tests for group selection, tile-seam exclusion, source-boundary failure, inclusive geometry, and deterministic rendering. The working branch passes 110 tests, compilation, dependency health, a 164,450-byte candidate wheel, isolated `0.10.0` import, and exact three-artifact reconstruction.
-- Preserve null application/dataset/split/baseline/model state and zero provider imagery bytes. Intended tag `v0.10.0-cross-event-feasibility-baseline` remains uncreated until PR, merged-main reconstruction, packaging, manifest, and remote tag gates pass.
+- Raise BurnLens to `0.10.0`; add five tests for group selection, tile-seam exclusion, source-boundary failure, inclusive geometry, and deterministic rendering. Both the candidate and fresh merged-main clone pass 110 tests, compilation, dependency health, isolated `0.10.0` import, and exact three-artifact reconstruction.
+- Preserve null application/dataset/split/baseline/model state and zero provider imagery bytes. A fresh no-hardlink clone of merged `main` passes manifest, LF, local-link, secret/raw-exclusion, original-resolution, and live semantic-browser gates.
+- Ship issue #357 through PR #358 at squash merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; verified annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` remotely peels to that exact merge as `v0.10.0-cross-event-feasibility-baseline`.
 
-Issue #357; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; analytical PR/merge pending.
+Issue #357 / PR #358; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; lifecycle synchronization issue #359 / PR #360.
 
 ## v0.9.0-label-proposal-baseline - 2026-07-15
 

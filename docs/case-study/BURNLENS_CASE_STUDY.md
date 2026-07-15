@@ -168,7 +168,7 @@ Decision `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES` authorizes only the next so
 - Latest cross-event source run: `RUN-2026-07-15-CROSS-EVENT-SOURCE-001`
 - Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.9.0` remains the latest shipped label-proposal baseline; BurnLens `0.10.0` cross-event working candidate source `ea3e164d09872825a0fadc64b9492e30c85c83c8`
+- Tool: BurnLens `0.10.0` is the latest shipped cross-event feasibility baseline; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -184,9 +184,9 @@ Decision `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES` authorizes only the next so
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.9.0-label-proposal-baseline` at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`
-- Latest shipped analytical checkpoint: issue #353 / PR #354; 105 merged-main tests and byte-identical eight-artifact reconstruction pass; lifecycle sync issue #355 / PR #356 is documentation-only
-- Active next checkpoint: ship the cross-event feasibility candidate, then acquire and validate only the four frozen Tepee/McKay products before cross-event label or partition work
+- Latest shipped repository baseline: `v0.10.0-cross-event-feasibility-baseline` at analytical merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133`
+- Latest shipped analytical checkpoint: issue #357 / PR #358; 110 merged-main tests and byte-identical JSON/HTML/PNG reconstruction pass; lifecycle sync issue #359 is documentation-only
+- Active next checkpoint: acquire and validate only the four frozen Tepee/McKay products before cross-event label or partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 
