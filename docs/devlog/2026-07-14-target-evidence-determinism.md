@@ -24,6 +24,6 @@ The corrected JSON, HTML, and PNG reproduce byte for byte. The 1600 by 1050 evid
 
 ## Release rule
 
-`v0.6.0-burn-scar-target-baseline` remains uncreated until the corrected run also reconstructs after the remediation PR merges to `main`. A clean tag is evidence; it is not a substitute for that check.
+The release rule required `v0.6.0-burn-scar-target-baseline` to remain uncreated until the corrected run reconstructed after the remediation PR merged to `main`. That check passed on 2026-07-15: all three artifacts matched, and annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` now remotely peels to remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`. The tag records the evidence; it did not substitute for the check.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

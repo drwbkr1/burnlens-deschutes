@@ -104,7 +104,7 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Latest evidence run: `BL-2026-07-14-target-decision-r002`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.6.0`, target-decision remediation candidate; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`
+- Tool: BurnLens package `0.6.0`, shipped target-decision baseline; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Transaction contract: `paired-intake-contract-v0.4.0`
@@ -113,9 +113,9 @@ The highest remaining risk is now burn-scar label truth. The next checkpoint mus
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.5.0-observation-geometry-baseline` at `1c85496d9d488c0d2d5a58207d8b4786a683ba52`
-- Latest shipped analytical checkpoint: issue #333 / PR #334; annotated tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; lifecycle sync issue #335 / PR #336 is merged
-- Active checkpoint: P2O2-T05-REM / issue #339 / PR #340 on `codex/p2o2-t05-eol-determinism`; analytical PR #338 merged at `68971e9709b886adf8575a58d32694aad42f038e`; `v0.6.0-burn-scar-target-baseline` tag intentionally pending
+- Latest shipped repository baseline: `v0.6.0-burn-scar-target-baseline` at remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887`
+- Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 is documentation-only
+- Active checkpoint: select and visually validate one legally usable pre/post optical pair and define the uncertainty-preserving burn-scar label protocol
 - Dataset / label schema / baseline / model: not created
 - Public application: not created; this repository case study, README, source-inspection report, observation-geometry report, and target-decision report are the current presentation surfaces
 
