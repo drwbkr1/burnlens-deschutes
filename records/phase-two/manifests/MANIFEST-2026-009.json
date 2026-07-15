@@ -19,6 +19,7 @@
   "remediation_branch": "codex/p2o3-t01-registration-line-endings",
   "remediation_merge_commit": "1297471be45200c40f9f40746e85b437ce6e0c0d",
   "lifecycle_issue": 351,
+  "lifecycle_pull_request": 352,
   "status": "verified content-registration baseline shipped; all twelve measurements pass; label proposal remains deferred",
   "software_version": "0.8.0",
   "runtime": {

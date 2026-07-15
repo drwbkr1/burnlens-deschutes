@@ -55,7 +55,7 @@
 
 ## Latest shipped checkpoint
 
-P2O3-T01 / issue #347 / PR #348 accepts pair-local content-registration evidence at analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`. The first merged-main reconstruction correctly withheld release after finding checkout-dependent CRLF in the JSON and HTML. Issue #349 / PR #350 fixes that repository contract without analytical change at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`. A fresh no-hardlink clone reconstructs all three artifacts byte for byte, passes 94 tests, compilation, dependency health, wheel/isolated import, raw exclusion, and remote tag verification. Annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0` peels to the remediation merge as `v0.8.0-content-registration-baseline`. Lifecycle synchronization is issue #351.
+P2O3-T01 / issue #347 / PR #348 accepts pair-local content-registration evidence at analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`. The first merged-main reconstruction correctly withheld release after finding checkout-dependent CRLF in the JSON and HTML. Issue #349 / PR #350 fixes that repository contract without analytical change at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`. A fresh no-hardlink clone reconstructs all three artifacts byte for byte, passes 94 tests, compilation, dependency health, wheel/isolated import, raw exclusion, and remote tag verification. Annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0` peels to the remediation merge as `v0.8.0-content-registration-baseline`. Lifecycle synchronization is issue #351 / PR #352.
 
 ## Current checkpoint
 

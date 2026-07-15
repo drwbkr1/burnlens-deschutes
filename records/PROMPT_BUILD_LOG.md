@@ -153,7 +153,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T06-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t06-sync.md` | issue #345 / PR #346; active lifecycle synchronization | Exact analytical PR/merge/tag and clean-main verification synchronized without changing code or analytical outputs. |
 | P2O3-T01 | `records/prompt-build-log/2026-07-15-p2o3-t01.md` | issue #347 / PR #348; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d` | Exact pair-local content registration accepted across twelve fixed AOI windows; post-merge LF reconstruction defect preserved and routed to #349. |
 | P2O3-T01-REM | `records/prompt-build-log/2026-07-15-p2o3-t01-rem.md` | issue #349 / PR #350; merged and tagged | Explicit LF checkout contract at `1297471be45200c40f9f40746e85b437ce6e0c0d`; fresh merged-main clone reconstructs JSON/HTML/PNG byte for byte; verified `v0.8.0-content-registration-baseline`; no analytical change. |
-| P2O3-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o3-t01-sync.md` | issue #351; lifecycle synchronization | Exact analytical/remediation merge, failed and corrected release gates, wheel, and annotated tag identities synchronized without changing code or analytical outputs. |
+| P2O3-T01-SYNC | `records/prompt-build-log/2026-07-15-p2o3-t01-sync.md` | issue #351 / PR #352; lifecycle synchronization | Exact analytical/remediation merge, failed and corrected release gates, wheel, and annotated tag identities synchronized without changing code or analytical outputs. |
 
 ## Acceptance and remediation triggers
 
