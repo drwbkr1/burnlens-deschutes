@@ -1,6 +1,6 @@
 # REGISTRY-2026-008 - Exact Optical-Pair and Protocol Artifacts
 
-**Checkpoint candidate:** Issue #343 / branch `codex/p2o2-t06-optical-pair-protocol`; PR, merge, post-merge reconstruction, and annotated tag pending
+**Checkpoint candidate:** Issue #343 / PR #344 / branch `codex/p2o2-t06-optical-pair-protocol`; merge, post-merge reconstruction, and annotated tag pending
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|
