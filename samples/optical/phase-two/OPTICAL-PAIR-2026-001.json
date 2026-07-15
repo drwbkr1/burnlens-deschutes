@@ -1,0 +1,894 @@
+{
+  "report_id": "OPTICAL-PAIR-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "optical-pair-protocol-evidence-v0.1.0",
+  "serialization": "UTF-8 JSON and HTML with LF line endings; deterministic PNG for fixed inputs",
+  "generated_at_utc": "2026-07-15T18:43:26Z",
+  "run_id": "BL-2026-07-15-optical-pair-evidence-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 343,
+  "branch": "codex/p2o2-t06-optical-pair-protocol",
+  "git_source_commit": "4b699025f703450f892bc2533c86560f47711aa2",
+  "software_version": "0.7.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_implemented": false,
+  "baseline_version": null,
+  "model_version": null,
+  "package_id": "darlene3-s2-optical-pair-v0.1.0",
+  "package_contract_version": "optical-pair-intake-contract-v0.1.0",
+  "package_verification": {
+    "package_id": "darlene3-s2-optical-pair-v0.1.0",
+    "registered_package_present": true,
+    "expected_entry_count": 3,
+    "observed_entry_count": 3,
+    "unexpected_entries": [],
+    "missing_entries": [],
+    "registration": {
+      "registration_schema_version": "0.2.0",
+      "contract_version": "optical-pair-intake-contract-v0.1.0",
+      "contract_sha256": "4563ce0de71b2d62e6ed91ef60e6a575fb9aea9eea468aaff8f719383cab8bda",
+      "package_id": "darlene3-s2-optical-pair-v0.1.0",
+      "generated_at_utc": "2026-07-15T18:41:02Z",
+      "run_id": "BL-2026-07-15-optical-pair-intake-r005",
+      "synthetic_fixture": false,
+      "asset_count": 2,
+      "assets": [
+        {
+          "role": "sentinel-2-l2a-pre",
+          "source_record_id": "SOURCE-2026-009",
+          "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+          "bytes": 1126185170,
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        {
+          "role": "sentinel-2-l2a-post",
+          "source_record_id": "SOURCE-2026-010",
+          "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+          "bytes": 1128620461,
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "role": "sentinel-2-l2a-pre",
+        "source_record_id": "SOURCE-2026-009",
+        "provider_id": "0303a812-1242-4a09-ae9d-cf905049ca0f",
+        "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+        "expected_size_bytes": 1126185170,
+        "container": "zip-safe",
+        "observed_bytes": 1126185170,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1126150184,
+          "expected_root": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "90574a05ac4e4454964744452037a9ae215597a4e69dfab0211b88108f8f1321",
+          "md5": "50e66c4667d8c8f012532cf06ae3cde3",
+          "blake3": "7ecba67455786570b2f836e7f2752d2b917bf0ee200831c9ac92de0e694a86a9"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      },
+      {
+        "role": "sentinel-2-l2a-post",
+        "source_record_id": "SOURCE-2026-010",
+        "provider_id": "71429c5a-60f9-4c28-9982-752f8ab1c9fd",
+        "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+        "expected_filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+        "expected_size_bytes": 1128620461,
+        "container": "zip-safe",
+        "observed_bytes": 1128620461,
+        "observed_magic_hex": "504b030414000808",
+        "container_details": {
+          "member_count": 95,
+          "uncompressed_bytes": 1128585475,
+          "expected_root": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+          "manifest_present": true,
+          "crc_test_passed": true
+        },
+        "provider_checksum_available": true,
+        "accepted": true,
+        "local_hashes": {
+          "sha256": "374f34f27901156e10c92fcb890c5e9c77460698135583c6d477b7f334a3aa78",
+          "md5": "329397ed46a25a78d7c4ece8b10e0df0",
+          "blake3": "35c8e710d47e8c1a5a3ef7c2751537f519ff77574db583801450bd3b4d270ee0"
+        },
+        "reason_codes": [
+          "EXACT_ASSET_ACCEPTED"
+        ]
+      }
+    ],
+    "accepted_as_unchanged_registered_package": true,
+    "reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "terms_review_id": "TERMS-2026-004",
+  "input_hashes": {
+    "aoi_report_sha256_lf_normalized": "77a1abdab29eabd79243a4138cc6f1a3d9dff232b7e0e022876ad9406a7a5b75",
+    "reference_geojson_sha256_lf_normalized": "3d615d4be88f65806399e3733491ab0d95e16ac91ea86b5a00b3ead81ec17abe"
+  },
+  "aoi": {
+    "bbox_utm10n": [
+      620000.0,
+      4831000.0,
+      632000.0,
+      4840000.0
+    ],
+    "bbox_wgs84": [
+      -121.512668,
+      43.620281,
+      -121.361791,
+      43.703322
+    ],
+    "width_m": 12000,
+    "height_m": 9000,
+    "area_km2": 108.0
+  },
+  "pre_scene": {
+    "role": "sentinel-2-l2a-pre",
+    "source_record_id": "SOURCE-2026-009",
+    "provider_id": "0303a812-1242-4a09-ae9d-cf905049ca0f",
+    "native_id": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+    "filename": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE.zip",
+    "product_metadata": {
+      "product_metadata_member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/MTD_MSIL2A.xml",
+      "tile_metadata_member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/MTD_TL.xml",
+      "product_uri": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE",
+      "processing_baseline": "05.10",
+      "product_start_utc": "2024-06-25T18:59:41.024Z",
+      "generation_utc": "2024-06-26T01:23:49.000000Z",
+      "tile_id": "S2A_OPER_MSI_L2A_TL_2APS_20240626T012349_A047057_T10TFP_N05.10",
+      "sensing_time_utc": "2024-06-25T19:12:24.001953Z",
+      "horizontal_crs": "EPSG:32610",
+      "boa_quantification_value": 10000.0,
+      "boa_offsets": {
+        "B04": -1000.0,
+        "B8A": -1000.0,
+        "B12": -1000.0
+      },
+      "nodata_dn": 0,
+      "saturated_dn": 65535
+    },
+    "rasters": {
+      "TCI": {
+        "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/IMG_DATA/R10m/T10TFP_20240625T185941_TCI_10m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 10980,
+        "source_height": 10980,
+        "source_count": 3,
+        "source_dtype": [
+          "uint8",
+          "uint8",
+          "uint8"
+        ],
+        "source_transform": [
+          10.0,
+          0.0,
+          600000.0,
+          0.0,
+          -10.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 2000,
+          "row_offset": 6002,
+          "width": 1200,
+          "height": 900
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 4,
+        "observed_max": 255
+      },
+      "B04": {
+        "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/IMG_DATA/R20m/T10TFP_20240625T185941_B04_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1094,
+        "observed_max": 9648
+      },
+      "B8A": {
+        "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/IMG_DATA/R20m/T10TFP_20240625T185941_B8A_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1024,
+        "observed_max": 8838
+      },
+      "B12": {
+        "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/IMG_DATA/R20m/T10TFP_20240625T185941_B12_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1092,
+        "observed_max": 11277
+      },
+      "SCL": {
+        "member": "S2A_MSIL2A_20240625T185941_N0510_R013_T10TFP_20240626T012349.SAFE/GRANULE/L2A_T10TFP_A047057_20240625T190720/IMG_DATA/R20m/T10TFP_20240625T185941_SCL_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint8"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 2,
+        "observed_max": 7
+      }
+    },
+    "scl_summary": {
+      "pixel_count": 270000,
+      "classes": [
+        {
+          "value": 0,
+          "name": "No data",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 1,
+          "name": "Saturated or defective",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 2,
+          "name": "Cast or topographic shadow",
+          "pixels": 320,
+          "percent": 0.1185
+        },
+        {
+          "value": 3,
+          "name": "Cloud shadow",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 4,
+          "name": "Vegetation",
+          "pixels": 76218,
+          "percent": 28.2289
+        },
+        {
+          "value": 5,
+          "name": "Bare soil",
+          "pixels": 192671,
+          "percent": 71.3596
+        },
+        {
+          "value": 6,
+          "name": "Water",
+          "pixels": 198,
+          "percent": 0.0733
+        },
+        {
+          "value": 7,
+          "name": "Unclassified",
+          "pixels": 593,
+          "percent": 0.2196
+        },
+        {
+          "value": 8,
+          "name": "Cloud medium probability",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 9,
+          "name": "Cloud high probability",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 10,
+          "name": "Thin cirrus",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 11,
+          "name": "Snow or ice",
+          "pixels": 0,
+          "percent": 0.0
+        }
+      ],
+      "excluded_pixels": 518,
+      "excluded_percent": 0.1919,
+      "review_needed_pixels": 593,
+      "review_needed_percent": 0.2196,
+      "eligible_land_pixels": 268889,
+      "eligible_land_percent": 99.5885
+    }
+  },
+  "post_scene": {
+    "role": "sentinel-2-l2a-post",
+    "source_record_id": "SOURCE-2026-010",
+    "provider_id": "71429c5a-60f9-4c28-9982-752f8ab1c9fd",
+    "native_id": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+    "filename": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE.zip",
+    "product_metadata": {
+      "product_metadata_member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/MTD_MSIL2A.xml",
+      "tile_metadata_member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/MTD_TL.xml",
+      "product_uri": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE",
+      "processing_baseline": "05.10",
+      "product_start_utc": "2024-07-05T18:59:21.024Z",
+      "generation_utc": "2024-07-06T01:54:48.000000Z",
+      "tile_id": "S2A_OPER_MSI_L2A_TL_2APS_20240706T015448_A047200_T10TFP_N05.10",
+      "sensing_time_utc": "2024-07-05T19:12:24.131136Z",
+      "horizontal_crs": "EPSG:32610",
+      "boa_quantification_value": 10000.0,
+      "boa_offsets": {
+        "B04": -1000.0,
+        "B8A": -1000.0,
+        "B12": -1000.0
+      },
+      "nodata_dn": 0,
+      "saturated_dn": 65535
+    },
+    "rasters": {
+      "TCI": {
+        "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/IMG_DATA/R10m/T10TFP_20240705T185921_TCI_10m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 10980,
+        "source_height": 10980,
+        "source_count": 3,
+        "source_dtype": [
+          "uint8",
+          "uint8",
+          "uint8"
+        ],
+        "source_transform": [
+          10.0,
+          0.0,
+          600000.0,
+          0.0,
+          -10.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 2000,
+          "row_offset": 6002,
+          "width": 1200,
+          "height": 900
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 0,
+        "observed_max": 255
+      },
+      "B04": {
+        "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/IMG_DATA/R20m/T10TFP_20240705T185921_B04_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1089,
+        "observed_max": 9625
+      },
+      "B8A": {
+        "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/IMG_DATA/R20m/T10TFP_20240705T185921_B8A_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1022,
+        "observed_max": 9151
+      },
+      "B12": {
+        "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/IMG_DATA/R20m/T10TFP_20240705T185921_B12_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint16"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 1067,
+        "observed_max": 10857
+      },
+      "SCL": {
+        "member": "S2A_MSIL2A_20240705T185921_N0510_R013_T10TFP_20240706T015448.SAFE/GRANULE/L2A_T10TFP_A047200_20240705T190418/IMG_DATA/R20m/T10TFP_20240705T185921_SCL_20m.jp2",
+        "driver": "JP2OpenJPEG",
+        "crs": "EPSG:32610",
+        "source_width": 5490,
+        "source_height": 5490,
+        "source_count": 1,
+        "source_dtype": [
+          "uint8"
+        ],
+        "source_transform": [
+          20.0,
+          0.0,
+          600000.0,
+          0.0,
+          -20.0,
+          4900020.0
+        ],
+        "aoi_window": {
+          "column_offset": 1000,
+          "row_offset": 3001,
+          "width": 600,
+          "height": 450
+        },
+        "aoi_bounds_utm10n": [
+          620000.0,
+          4831000.0,
+          632000.0,
+          4840000.0
+        ],
+        "observed_min": 2,
+        "observed_max": 7
+      }
+    },
+    "scl_summary": {
+      "pixel_count": 270000,
+      "classes": [
+        {
+          "value": 0,
+          "name": "No data",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 1,
+          "name": "Saturated or defective",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 2,
+          "name": "Cast or topographic shadow",
+          "pixels": 608,
+          "percent": 0.2252
+        },
+        {
+          "value": 3,
+          "name": "Cloud shadow",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 4,
+          "name": "Vegetation",
+          "pixels": 72510,
+          "percent": 26.8556
+        },
+        {
+          "value": 5,
+          "name": "Bare soil",
+          "pixels": 194718,
+          "percent": 72.1178
+        },
+        {
+          "value": 6,
+          "name": "Water",
+          "pixels": 257,
+          "percent": 0.0952
+        },
+        {
+          "value": 7,
+          "name": "Unclassified",
+          "pixels": 1907,
+          "percent": 0.7063
+        },
+        {
+          "value": 8,
+          "name": "Cloud medium probability",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 9,
+          "name": "Cloud high probability",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 10,
+          "name": "Thin cirrus",
+          "pixels": 0,
+          "percent": 0.0
+        },
+        {
+          "value": 11,
+          "name": "Snow or ice",
+          "pixels": 0,
+          "percent": 0.0
+        }
+      ],
+      "excluded_pixels": 865,
+      "excluded_percent": 0.3204,
+      "review_needed_pixels": 1907,
+      "review_needed_percent": 0.7063,
+      "eligible_land_pixels": 267228,
+      "eligible_land_percent": 98.9733
+    }
+  },
+  "pair_identity": {
+    "same_platform": true,
+    "same_tile": true,
+    "same_relative_orbit": true,
+    "same_processing_baseline": true,
+    "native_20m_grid_equal": true,
+    "reprojection_performed": false,
+    "resampling_performed_for_spectral_comparison": false,
+    "elapsed_seconds": 863980.0
+  },
+  "pair_quality": {
+    "pixel_count": 270000,
+    "states": [
+      {
+        "state": "eligible-comparison",
+        "code": 0,
+        "pixels": 267067,
+        "percent": 98.9137
+      },
+      {
+        "state": "review-needed",
+        "code": 1,
+        "pixels": 2063,
+        "percent": 0.7641
+      },
+      {
+        "state": "excluded",
+        "code": 2,
+        "pixels": 870,
+        "percent": 0.3222
+      }
+    ]
+  },
+  "continuous_spectral_evidence": {
+    "index": "dNBR = pre NBR - post NBR",
+    "nir_band": "B8A at native 20 m",
+    "swir_band": "B12 at native 20 m",
+    "label_or_severity_interpretation_allowed": false,
+    "display": {
+      "clip_min": -0.5,
+      "clip_max": 0.8,
+      "classification_threshold": null,
+      "note": "The fixed clip is a deterministic color stretch only; it does not classify burned pixels or severity."
+    },
+    "numeric_valid_pixels": 270000,
+    "numeric_valid_percent": 100.0,
+    "eligible_comparison_dnbr": {
+      "min": -0.43262,
+      "p05": -0.035947,
+      "p25": -0.0172,
+      "median": -0.005588,
+      "p75": 0.010195,
+      "p95": 0.301107,
+      "max": 0.653464
+    },
+    "review_needed_dnbr": {
+      "min": -0.646494,
+      "p05": -0.052158,
+      "p25": 0.050016,
+      "median": 0.160718,
+      "p75": 0.261657,
+      "p95": 0.411437,
+      "max": 0.616415
+    },
+    "excluded_pixels": 870,
+    "interpretation": "Positive and negative dNBR are continuous change evidence only. Values can reflect vegetation, moisture, atmosphere, soil, mixed pixels, registration, or fire effects and are not thresholded here."
+  },
+  "label_protocol": {
+    "version": "burn-scar-label-protocol-v0.1.0",
+    "implemented": false,
+    "target": "target-burn-scar-v0.2.0",
+    "final_target_values": {
+      "background": 0,
+      "burned": 1
+    },
+    "companion_state_required": true,
+    "states": [
+      {
+        "state": "burned",
+        "target_value": 1,
+        "rule": "Requires accepted pre/post optical change, visible boundary review, valid quality, temporal plausibility, and independent approval; no single SCL, index, VIIRS, or perimeter signal is sufficient."
+      },
+      {
+        "state": "background-candidate",
+        "target_value": 0,
+        "rule": "Requires clear observable land and affirmative unchanged/unburned support; outside a perimeter, absent hotspot evidence, or low change alone is insufficient."
+      },
+      {
+        "state": "unknown",
+        "target_value": null,
+        "rule": "Use when valid observations remain insufficient, temporally ambiguous, mixed, or conflicting; exclude from loss and metrics."
+      },
+      {
+        "state": "excluded",
+        "target_value": null,
+        "rule": "Use for no data, saturation/defect, shadow, cloud/cirrus, snow/ice, water, failed registration, or disallowed processing states; never convert to background."
+      },
+      {
+        "state": "review-needed",
+        "target_value": null,
+        "rule": "Use for SCL 7 unclassified, borderline change, boundary/mixed pixels, smoke or atmosphere concerns, local registration doubt, source disagreement, and protocol exceptions until resolved."
+      }
+    ],
+    "scl_rules": {
+      "eligible_comparison": [
+        4,
+        5
+      ],
+      "review_needed": [
+        7
+      ],
+      "excluded": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "note": "Baseline 05.10 SCL 2 is shadow; burned dark features can occur in SCL 7 unclassified. SCL is a quality aid, not truth."
+    },
+    "registration": {
+      "source_grid": "Require exact EPSG:32610 20 m grid equality before comparison; this pair uses no reprojection or resampling for B04/B8A/B12/SCL evidence.",
+      "content_residual_gate": "Before label construction, measure local content registration and require residual <= 0.5 native 20 m pixel (10 m); otherwise remediate or exclude.",
+      "boundary_review": "Keep at least a one-native-pixel review band around candidate class transitions and uncertain edges."
+    },
+    "temporal_leakage": {
+      "group_before_tiling": "Any future split must group by incident/event, scene pair, geography, and time before patches are generated.",
+      "darlene_pair_limit": "This single event cannot independently populate train, validation, and test groups.",
+      "reference_separation": "Post-event imagery and later incident references used to construct labels cannot become evaluation inputs or method-selection evidence for the same held-out group."
+    },
+    "independent_qa": {
+      "required": true,
+      "rule": "A later label checkpoint requires a second review pass independent of the initial proposal, explicit disagreement state, boundary review, and an audit sample of burned, background, unknown, excluded, and review-needed regions."
+    }
+  },
+  "visual_review": {
+    "decision": "ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS",
+    "notes": "Original-resolution registered-pair PNG and numeric report reviewed: same-grid pre/post scenes are readable; continuous dNBR is spatially coherent around the later NIFC context while non-fire change and review/excluded pixels remain visible. Accept for protocol evidence only; labels deferred.",
+    "rendered_source_pixels_reviewed": true
+  },
+  "decision": "ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS",
+  "decision_detail": "Accept the exact same-orbit pair as legally usable, readable source evidence for the burn-scar label protocol. Continuous spectral change and later incident-reference context are visibly useful, but neither is truth. Label construction, content-registration measurement, independent annotation QA, a dataset, and a baseline remain separate gates.",
+  "quality_gates": {
+    "registered_pair_reverified": true,
+    "provider_md5_and_blake3_reverified": true,
+    "safe_archives_and_crc_reverified": true,
+    "aoi_exact_native_grids": true,
+    "pre_post_20m_grid_equal": true,
+    "product_scaling_offsets_parsed": true,
+    "real_tci_b04_b8a_b12_scl_read": true,
+    "structured_input_hashes_lf_normalized": true,
+    "label_array_created": false,
+    "dataset_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "claims": {
+    "permitted": [
+      "BurnLens acquired and independently reverified the exact same-orbit Sentinel-2 pair.",
+      "The real AOI pixels, native grids, SCL quality states, and continuous spectral change are inspectable.",
+      "The five-state label protocol is versioned as a design gate and remains unimplemented."
+    ],
+    "prohibited": [
+      "The dNBR view, SCL, VIIRS observations, or NIFC outline is a burn-scar label or severity map.",
+      "The pair establishes a dataset, baseline, model, metric, application, or operational wildfire result.",
+      "The evidence is official, emergency-ready, field-validated, endorsed, or suitable for incident decisions."
+    ]
+  },
+  "limitations": [
+    "The approximate incident start time is context and does not prove every pre-scene pixel is unburned.",
+    "The post scene is approximately ten days later; non-fire environmental change can contribute to dNBR.",
+    "SCL can misclassify shadows, clouds, smoke, water, dark surfaces, and burned features.",
+    "Exact grid equality does not prove subpixel content registration; the protocol requires a later residual measurement.",
+    "The later NIFC final perimeter is mixed-method incident-reference geometry, not pixel-perfect truth.",
+    "One event cannot support leakage-resistant train, validation, and test groups."
+  ],
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2024.",
+    "NIFC WFIGS final incident-reference feature SOURCE-2026-007."
+  ],
+  "source_precedence": "Official sources govern over every BurnLens-derived artifact.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "rendered_outputs": {
+    "json": "OPTICAL-PAIR-2026-001.json",
+    "html": "OPTICAL-PAIR-2026-001.html",
+    "png": "OPTICAL-PAIR-2026-001.png"
+  }
+}

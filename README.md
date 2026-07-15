@@ -4,7 +4,7 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 ## Verified status
 
-The project has a shipped, verified Phase Two burn-scar target-decision baseline. It is not an analytical release.
+The project has a shipped, verified Phase Two burn-scar target-decision baseline and a real-pixel optical-pair protocol candidate. It is not an analytical release.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
 - The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; Phase Two metadata, access, AOI, intake-transaction, source inspection, observation geometry, and target-decision evidence are shipped through `v0.6.0-burn-scar-target-baseline`.
@@ -12,12 +12,13 @@ The project has a shipped, verified Phase Two burn-scar target-decision baseline
 - P2O2-T03 / issue #329 / PR #330 is shipped at `v0.4.0-authenticated-source-baseline`. The exact three-file, 1,169,997,942-byte package passed authenticated delivery, contract validation, atomic registration, independent re-verification, and real-array inspection.
 - P2O2-T04 inventories and inspects all 23 bounded NOAA-21 active-fire candidates, registers one exact selected companion, and renders `OBSERVATION-GEOMETRY-2026-001`. The selected day observation improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, while still deferring labels and a dataset.
 - P2O2-T05 / issue #337 / PR #338 records the owner's activation of the controlled burn-scar binary-mask fallback as `target-burn-scar-v0.2.0`. Post-merge verification caught checkout-dependent hashing before release; issue #339 / PR #340 corrected it at merge `bcb71ebd01d3184f8de24318428309e61d33e54f` in `TARGET-DECISION-2026-002` while preserving run `001`. Annotated tag `v0.6.0-burn-scar-target-baseline` is verified; neither run creates a label, dataset, baseline, or model.
+- P2O2-T06 / issue #343 registers one exact same-orbit Sentinel-2A pre/post pair, opens the real native AOI pixels, and renders `OPTICAL-PAIR-2026-001`. Pairwise quality is 98.9137% eligible, 0.7641% review-needed, and 0.3222% excluded. `burn-scar-label-protocol-v0.1.0` is an unimplemented five-state design; no label pixel is created.
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
-- The local pipeline exercised the authorized credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. The exact three-asset source package and 24-asset observation-screen package are retained only in ignored local raw storage; zero raw provider bytes are committed. The repository contains bounded derived source/reference and target-decision evidence, not labels or detections. No label schema implementation, dataset, split, baseline output, trained model, analytical metric, application demonstration, deployment, or public analytical result exists yet.
+- The local pipeline exercised the authorized credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. The exact three-asset source package, 24-asset observation-screen package, and 2,254,805,631-byte optical pair are retained only in ignored local raw storage; zero raw provider bytes are committed. The repository contains bounded derived source/reference, target-decision, and optical-protocol evidence, not labels or detections. No label schema implementation, dataset, split, baseline output, trained model, analytical metric, application demonstration, deployment, or public analytical result exists yet.
 - The latest verified repository evidence baseline is remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f` from issue #339 / PR #340; annotated tag object `0b4e0ff226be0d78b3b510b7786be0ca1c817887` remotely dereferences to that exact commit as `v0.6.0-burn-scar-target-baseline`.
 - `ACCESS-2026-006` records the owner's authorization without secret material; `ACCESS-2026-007` and `ACCESS-2026-008` record successful runtime-only use. Run `BL-2026-07-14-observation-geometry-r002` accepts one materially improved complementary reference and explicitly defers labels and a dataset because temporal and scale mismatch remain unresolved.
-- Corrected run `BL-2026-07-14-target-decision-r002` activates the fallback target without creating label pixels; `r001` is preserved as pre-remediation evidence. The next gate is one legally usable, visually validated pre/post optical pair and an uncertainty-preserving burn-scar label protocol.
+- Corrected run `BL-2026-07-14-target-decision-r002` activates the fallback target without creating label pixels; `r001` is preserved as pre-remediation evidence. Optical run `BL-2026-07-15-optical-pair-evidence-r001` accepts the exact pair for protocol evidence only. The next gate is content-registration measurement plus an independently reviewable five-state label proposal.
 
 Current truth lives in [the phase-status record](docs/status/PHASE_STATUS.md). The approved execution authority lives in [the BurnLens execution goal](docs/governance/BURNLENS_EXECUTION_GOAL.md).
 
@@ -56,7 +57,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the burn-scar fallback is approved, the active-fire path is retained as reference only, and current MTBS availability is documented. A real pre/post optical pair, label protocol, dataset, and baseline remain unproved. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; the exact pre/post pair and five-state protocol are accepted as evidence, while label implementation, registration measurement, independent QA, dataset, splits, and baselines remain unproved. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -142,6 +143,16 @@ python -m burnlens.record_target_decision `
   --generated-at-utc 2026-07-14T22:18:21Z `
   --run-id BL-2026-07-14-target-decision-r002 `
   --git-source-commit cfbf357634cdcf9e68c3af78bfcb3e195bebc17a
+python -m burnlens.inspect_optical_pair `
+  --package downloads/phase-two/raw/darlene3-s2-optical-pair-v0.1.0 `
+  --aoi-report samples/aoi/phase-two/AOI-FINAL-2026-001.json `
+  --reference-geojson samples/reference/phase-two/NIFC-DARLENE3-PERIMETER-2026-001.geojson `
+  --output-directory samples/optical/phase-two `
+  --generated-at-utc 2026-07-15T18:43:26Z `
+  --run-id BL-2026-07-15-optical-pair-evidence-r001 `
+  --git-source-commit 4b699025f703450f892bc2533c86560f47711aa2 `
+  --visual-review-decision ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS `
+  --visual-review-notes "Original-resolution registered-pair PNG and numeric report reviewed: same-grid pre/post scenes are readable; continuous dNBR is spatially coherent around the later NIFC context while non-fire change and review/excluded pixels remain visible. Accept for protocol evidence only; labels deferred."
 ```
 
 The committed rehearsal predates `ACCESS-2026-006` and intentionally exits with status `2`: its `BLOCKED_OWNER_CREDENTIAL` decision is a historical run state. The later acquisition and inspection runs supersede that access state without rewriting the historical output.
@@ -157,3 +168,5 @@ The [authenticated-source decision](docs/phase-two/objective-two/AUTHENTICATED_S
 The [observation-geometry decision](docs/phase-two/objective-two/OBSERVATION_GEOMETRY_DECISION.md), [normalized inventory and protocol](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.json), [semantic comparison](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.html), and [rendered evidence](samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.png) show every candidate, exclusion reason, selected geometry, and weak/reference-label state. They do not contain labels, a dataset, or a model output.
 
 The [burn-scar target decision](docs/phase-two/objective-two/BURN_SCAR_TARGET_DECISION.md), corrected [normalized target evidence](samples/target/phase-two/TARGET-DECISION-2026-002.json), [semantic decision page](samples/target/phase-two/TARGET-DECISION-2026-002.html), and [rendered decision card](samples/target/phase-two/TARGET-DECISION-2026-002.png) activate `target-burn-scar-v0.2.0`, explain the current MTBS no-record result, and define the next source/label gate. They create no label, dataset, baseline, model, detection, or operational output. `TARGET-DECISION-2026-001` remains committed as the immutable pre-remediation run that led to issue #339.
+
+The [optical-pair and label-protocol decision](docs/phase-two/objective-two/OPTICAL_PAIR_LABEL_PROTOCOL_DECISION.md), [normalized real-pixel evidence](samples/optical/phase-two/OPTICAL-PAIR-2026-001.json), [semantic evidence page](samples/optical/phase-two/OPTICAL-PAIR-2026-001.html), and [rendered pair card](samples/optical/phase-two/OPTICAL-PAIR-2026-001.png) accept one exact same-orbit pair for protocol work. Continuous dNBR, SCL, VIIRS, and the later NIFC outline remain evidence rather than truth; the five-state protocol is not an implemented label schema.

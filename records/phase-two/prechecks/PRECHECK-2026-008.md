@@ -32,3 +32,7 @@ The checkpoint must define burned, background-candidate, unknown, excluded, and 
 Stop on source, terms, access, identity, availability, checksum, archive, grid, scaling, AOI, quality, secret, or output verification failure; unresolved licensing; any paid-service need; or inability to preserve the established boundaries.
 
 All pre-data gates pass for the exact action above.
+
+## Fulfillment
+
+Run `BL-2026-07-15-optical-pair-intake-r005` satisfied the bounded data-touch gate and atomically registered the exact pair after repeated provider-hash, local-hash, archive-integrity, single-link, and contract verification. Evidence run `BL-2026-07-15-optical-pair-evidence-r001` then inspected only the required AOI bands and created deterministic source/protocol evidence. No label array, dataset, split, baseline mask, model, metric, application, deployment, or official wildfire result was created.
