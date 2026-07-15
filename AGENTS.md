@@ -58,7 +58,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O3-T01 is shipped at verified `v0.8.0-content-registration-baseline`. P2O4-T01 / issue #353 is the active review-ready candidate: BurnLens `0.9.0` implements a native-grid five-state proposal and a separate all-pixel software verifier. The proposal preserves 33.4144% explicit ignore; all 270,000 state and target pixels and all 120 audit samples agree. It is reviewable one-event evidence, not ground truth or a dataset. After merge/release verification, test cross-event label evidence and leakage-resistant grouping before dataset construction.
+P2O4-T01 / issue #353 / PR #354 is shipped at verified `v0.9.0-label-proposal-baseline`: BurnLens `0.9.0` implements a native-grid five-state proposal and a separate all-pixel software verifier. The proposal preserves 33.4144% explicit ignore; all 270,000 state and target pixels and all 120 audit samples agree. It is reviewable one-event evidence, not ground truth or a dataset. The active analytical direction is cross-event label evidence and leakage-resistant event/scene/geography/time grouping before dataset construction.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.

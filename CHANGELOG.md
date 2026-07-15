@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.9.0-label-proposal-baseline - candidate - 2026-07-15
+## v0.9.0-label-proposal-baseline - 2026-07-15
 
 ### P2O4-T01 - Build a reviewable five-state proposal and separate QA
 
@@ -17,7 +17,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Make the limitation explicit: separate software agreement under one shared contract is not independent human annotation, field validation, ground truth, accuracy, or generalization evidence.
 - Accept the exact result as reviewable one-event proposal evidence and defer a dataset, split, baseline, model, application, deployment, performance claim, and operational wildfire result.
 
-Issue #353 / PR #354 carries the analytical candidate. Generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1` produces the eight exact artifacts recorded in `MANIFEST-2026-010`. The review-ready checkout passes 105 tests, compilation, dependency health, a 141,846-byte `0.9.0` wheel and isolated import, original-resolution review, live browser review, raw-byte exclusion, and secret scan. Merge, merged-main reconstruction, annotated tag, and lifecycle identities remain pending; the tag must not be created until those release gates pass.
+Issue #353 / PR #354 shipped the analytical checkpoint at squash merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`. Generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1` produces the eight exact artifacts recorded in `MANIFEST-2026-010`. A fresh no-hardlink clone of merged `main` passes 105 tests, compilation, dependency health, isolated `0.9.0` wheel import, exact eight-artifact reconstruction, LF checks, manifest readback, original-resolution and live-browser review, raw-byte exclusion, and secret scan. The fresh merged-source wheel is 142,050 bytes; its first gate archive is SHA-256 `9f2dbb851cf9bef26c7154842350e26d2fe803efd6a303e6f374d9c32c48c176`. Repeated builds have identical extracted contents but timestamp-dependent ZIP hashes. Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` remotely peels to the analytical merge as `v0.9.0-label-proposal-baseline`; lifecycle synchronization is issue #355 / PR #356.
 
 ## v0.8.0-content-registration-baseline - 2026-07-15
 

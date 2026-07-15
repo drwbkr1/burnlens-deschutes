@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; one-event proposal passes separate software QA; dataset not created** | P2O4-T01 / #353 is a review-ready five-state proposal candidate. Cross-event evidence, independent human review, leakage-resistant grouping, a dataset, baselines, and the model-readiness decision remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; one-event proposal shipped with separate software QA; dataset not created** | P2O4-T01 / #353 / PR #354 is shipped at verified `v0.9.0-label-proposal-baseline`. Cross-event evidence, independent human review, leakage-resistant grouping, a dataset, baselines, and the model-readiness decision remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -15,12 +15,12 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `1297471be45200c40f9f40746e85b437ce6e0c0d` via remediation issue #349 / PR #350 and verified annotated `v0.8.0-content-registration-baseline`; tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0` |
+| Latest repository evidence baseline | `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3` via issue #353 / PR #354 and verified annotated `v0.9.0-label-proposal-baseline`; tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
 | Optical-pair protocol baseline | BurnLens `0.7.0`; issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
 | Content-registration baseline | BurnLens `0.8.0`; issue #347 / PR #348 analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; issue #349 / PR #350 remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; generator `5287704a37f03d96e47467afba8623f7be643129`; verified tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`; all 12 windows pass; labels remain unimplemented |
-| Label-proposal candidate | BurnLens `0.9.0`; issue #353 / PR #354; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
+| Label-proposal baseline | BurnLens `0.9.0`; issue #353 / PR #354; merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; verified tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -34,7 +34,7 @@
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-010`; the newest records are the exact Sentinel-2A pre/post optical products, not labels or detections |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | BurnLens `0.9.0` candidate; acquisition/intake/source/geometry/target paths plus exact optical inspection, pair-local registration, five-state GeoTIFF proposal, separate all-pixel QA, LF-stable JSON/HTML, original-resolution PNG rendering, and safe failure states |
+| Evidence tooling | BurnLens `0.9.0` shipped baseline; acquisition/intake/source/geometry/target paths plus exact optical inspection, pair-local registration, five-state GeoTIFF proposal, separate all-pixel QA, LF-stable JSON/HTML, original-resolution PNG rendering, and safe failure states |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -58,11 +58,11 @@
 
 ## Latest shipped checkpoint
 
-P2O3-T01 / issue #347 / PR #348 accepts pair-local content-registration evidence at analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`. The first merged-main reconstruction correctly withheld release after finding checkout-dependent CRLF in the JSON and HTML. Issue #349 / PR #350 fixes that repository contract without analytical change at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`. A fresh no-hardlink clone reconstructs all three artifacts byte for byte, passes 94 tests, compilation, dependency health, wheel/isolated import, raw exclusion, and remote tag verification. Annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0` peels to the remediation merge as `v0.8.0-content-registration-baseline`. Lifecycle synchronization is issue #351 / PR #352.
+P2O4-T01 / issue #353 / PR #354 accepts the one-event five-state proposal and separate software QA at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`. A fresh no-hardlink clone reconstructs all eight artifacts byte for byte, passes 105 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, raw exclusion, secret, visual, browser, and remote-tag gates. Annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834` peels to that merge as `v0.9.0-label-proposal-baseline`. Lifecycle synchronization is issue #355 / PR #356.
 
 ## Current checkpoint
 
-P2O3-T01 is shipped at verified `v0.8.0-content-registration-baseline`. P2O4-T01 / issue #353 / PR #354 is the review-ready analytical candidate: `LABEL-PROPOSAL-2026-001` and `LABEL-QA-2026-001` pass their proposal and separate-software gates while explicitly deferring a dataset. After merge/release verification, the next checkpoint should test cross-event label evidence and leakage-resistant grouping before any dataset or split.
+P2O4-T01 is shipped at verified `v0.9.0-label-proposal-baseline`. `LABEL-PROPOSAL-2026-001` and `LABEL-QA-2026-001` pass their proposal and separate-software gates while explicitly deferring a dataset. The next analytical checkpoint must begin by running this workflow, then test cross-event label evidence and leakage-resistant event/scene/geography/time grouping before any dataset or split.
 
 ## Boundaries carried forward
 

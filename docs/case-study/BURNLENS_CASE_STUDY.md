@@ -96,7 +96,7 @@ Corrected run `TARGET-DECISION-2026-002` makes the choice inspectable. It carrie
 
 MTBS was evaluated from current official sources because its analyst-interpreted fire-level products include pre/post imagery, burn indices, boundaries, thematic severity, and non-processing masks. Its current 2024 occurrence inventory returned 941 records but no Darlene name match, and both the 2024 and all-years occurrence layers returned zero features inside the frozen BurnLens AOI. MTBS therefore remains relevant methodology and potential cross-fire or future reference evidence; it cannot provide the exact Darlene 3 label today, and its severity classes will not expand BurnLens into a multiclass task.
 
-The highest remaining risk is now burn-scar label truth. BurnLens has identified and visually validated one legally usable, temporally defensible pre/post optical pair, defined a reproducible five-state protocol, and passed a separate pair-local translation gate. The next checkpoint must create an independently reviewable label proposal before BurnLens may consider a dataset, spectral baseline, or model.
+The highest remaining risk is still burn-scar label truth across events. BurnLens has identified and visually validated one legally usable, temporally defensible pre/post optical pair, passed a separate pair-local translation gate, and shipped one reproducible five-state proposal with separate software QA. The next checkpoint must test cross-event support and leakage-resistant grouping before BurnLens may consider a dataset, spectral baseline, or model.
 
 ## Exact optical pair: clear evidence, deferred truth
 
@@ -154,11 +154,11 @@ That QA proves implementation reproducibility under one frozen contract. It does
 - Latest label-proposal run: `BL-2026-07-15-label-proposal-r001`
 - Latest separate-QA run: `BL-2026-07-15-label-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.9.0` label-proposal candidate; generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1`
+- Tool: BurnLens `0.9.0` shipped label-proposal baseline; generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
-- Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` design only; 2,254,805,631 local/ignored raw bytes; zero committed
+- Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` was design-only at the optical checkpoint and is now implemented as one-event proposal evidence; 2,254,805,631 local/ignored raw bytes; zero committed
 - Optical evidence: `OPTICAL-PAIR-2026-001`; pair accepted for protocol evidence; artifact hashes recorded in `MANIFEST-2026-008`
 - Registration evidence: `CONTENT-REGISTRATION-2026-001`; all twelve windows pass; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; LF-contract remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; artifact hashes in `MANIFEST-2026-009`; verified annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
 - Label proposal: `darlene3-burn-scar-label-proposal-v0.1.0`; `LABEL-PROPOSAL-2026-001`; five states; 66.5856% candidate domain and 33.4144% ignored; hashes in `MANIFEST-2026-010`
@@ -169,8 +169,8 @@ That QA proves implementation reproducibility under one frozen contract. It does
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.8.0-content-registration-baseline` at remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
-- Latest shipped analytical checkpoint: issue #337 / PR #338 plus remediation issue #339 / PR #340; 69 post-merge tests and byte-identical corrected reconstruction pass; lifecycle sync issue #341 / PR #342 is documentation-only
+- Latest shipped repository baseline: `v0.9.0-label-proposal-baseline` at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`
+- Latest shipped analytical checkpoint: issue #353 / PR #354; 105 merged-main tests and byte-identical eight-artifact reconstruction pass; lifecycle sync issue #355 / PR #356 is documentation-only
 - Active next checkpoint: evaluate cross-event label evidence and leakage-resistant grouping before deciding whether a dataset is supportable
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
