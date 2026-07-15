@@ -4,6 +4,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 import warnings
+import zipfile
 
 import numpy as np
 from PIL import Image
@@ -13,6 +14,7 @@ from burnlens.optical_pair_evidence import (
     OpticalPairEvidenceError,
     _dnbr_rgb,
     _label_protocol,
+    _product_metadata,
     _sha256_lf_text,
     classify_pair_quality,
     render_html,
@@ -22,6 +24,34 @@ from burnlens.optical_pair_evidence import (
 
 
 class OpticalPairEvidenceTests(unittest.TestCase):
+    def test_safe_metadata_maps_b04_filename_to_b4_physical_band(self) -> None:
+        safe_name = "S2A_TEST.SAFE"
+        product = """<root>
+        <PRODUCT_URI>S2A_TEST.SAFE</PRODUCT_URI><PROCESSING_BASELINE>05.10</PROCESSING_BASELINE>
+        <PRODUCT_START_TIME>2024-06-25T18:59:41.024Z</PRODUCT_START_TIME>
+        <GENERATION_TIME>2024-06-26T01:23:49.000Z</GENERATION_TIME>
+        <Spectral_Information bandId="3" physicalBand="B4" />
+        <Spectral_Information bandId="8" physicalBand="B8A" />
+        <Spectral_Information bandId="12" physicalBand="B12" />
+        <BOA_ADD_OFFSET band_id="3">-1000</BOA_ADD_OFFSET>
+        <BOA_ADD_OFFSET band_id="8">-1000</BOA_ADD_OFFSET>
+        <BOA_ADD_OFFSET band_id="12">-1000</BOA_ADD_OFFSET>
+        <BOA_QUANTIFICATION_VALUE>10000</BOA_QUANTIFICATION_VALUE>
+        <SPECIAL_VALUE_TEXT>NODATA</SPECIAL_VALUE_TEXT><SPECIAL_VALUE_INDEX>0</SPECIAL_VALUE_INDEX>
+        <SPECIAL_VALUE_TEXT>SATURATED</SPECIAL_VALUE_TEXT><SPECIAL_VALUE_INDEX>65535</SPECIAL_VALUE_INDEX>
+        </root>"""
+        tile = """<root><TILE_ID>S2A_OPER_MSI_L2A_TL_TEST</TILE_ID>
+        <SENSING_TIME>2024-06-25T18:59:41.024Z</SENSING_TIME>
+        <HORIZONTAL_CS_CODE>EPSG:32610</HORIZONTAL_CS_CODE></root>"""
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "safe.zip"
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr(f"{safe_name}/MTD_MSIL2A.xml", product)
+                archive.writestr(f"{safe_name}/GRANULE/T/MTD_TL.xml", tile)
+            with zipfile.ZipFile(path) as archive:
+                metadata = _product_metadata(archive, archive.namelist(), safe_name)
+        self.assertEqual(metadata["boa_offsets"], {"B04": -1000.0, "B8A": -1000.0, "B12": -1000.0})
+
     def test_scl_summary_preserves_eligible_review_and_excluded_states(self) -> None:
         values = np.array([[4, 5, 7], [0, 3, 11]], dtype=np.uint8)
         summary = summarize_scl(values)

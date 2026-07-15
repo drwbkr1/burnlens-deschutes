@@ -66,6 +66,7 @@ EXCLUDED_SCL = {0, 1, 2, 3, 6, 8, 9, 10, 11}
 REVIEW_SCL = {7}
 ELIGIBLE_SCL = {4, 5}
 SELECTED_BANDS = ("B04", "B8A", "B12")
+PHYSICAL_BANDS = {"B04": "B4", "B8A": "B8A", "B12": "B12"}
 
 
 class OpticalPairEvidenceError(RuntimeError):
@@ -230,7 +231,7 @@ def _product_metadata(
     }
     band_offsets: dict[str, float] = {}
     for band in SELECTED_BANDS:
-        band_id = spectral.get(band)
+        band_id = spectral.get(PHYSICAL_BANDS[band])
         if band_id is None or band_id not in offsets:
             raise OpticalPairEvidenceError(f"missing BOA offset for {band}")
         band_offsets[band] = offsets[band_id]
