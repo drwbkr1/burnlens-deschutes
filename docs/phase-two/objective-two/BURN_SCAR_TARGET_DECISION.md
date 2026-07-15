@@ -82,7 +82,7 @@ PR #340 merged at `bcb71ebd01d3184f8de24318428309e61d33e54f`. A fresh `main` che
 
 ## Successor gate
 
-P2O2-T06 / issue #343 later accepts one exact same-orbit Sentinel-2A pair for protocol evidence and versions `burn-scar-label-protocol-v0.1.0` without creating label pixels. The active next gate is content-registration measurement plus a reviewable five-state label proposal with independent QA. This successor evidence does not change or rewrite the target decision above.
+P2O2-T06 / issue #343 later accepts one exact same-orbit Sentinel-2A pair for protocol evidence and versions `burn-scar-label-protocol-v0.1.0` without creating label pixels. P2O3-T01 / issue #347 then passes the bounded local-registration prerequisite without creating labels. The active next gate is a reviewable five-state label proposal with independent QA. This successor evidence does not change or rewrite the target decision above.
 
 ## Primary sources
 

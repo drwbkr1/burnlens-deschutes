@@ -151,6 +151,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O2-T05-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t05-sync.md` | issue #341 / PR #342; active lifecycle synchronization | Record exact analytical/remediation merge, corrected run, post-merge verification, and annotated tag identities; no code or scientific-output change. |
 | P2O2-T06 | `records/prompt-build-log/2026-07-15-p2o2-t06.md` | issue #343 / PR #344; merged and tagged | Exact same-orbit Sentinel-2 pair registered and visually validated; five-state protocol shipped at `v0.7.0-optical-pair-protocol-baseline` without creating label pixels, a dataset, baseline, or model. |
 | P2O2-T06-SYNC | `records/prompt-build-log/2026-07-15-p2o2-t06-sync.md` | issue #345 / PR #346; active lifecycle synchronization | Exact analytical PR/merge/tag and clean-main verification synchronized without changing code or analytical outputs. |
+| P2O3-T01 | `records/prompt-build-log/2026-07-15-p2o3-t01.md` | issue #347; review-ready | Exact pair-local content registration accepted across twelve fixed AOI windows; no label, dataset, baseline, or model created. |
 
 ## Acceptance and remediation triggers
 
@@ -160,4 +161,4 @@ Safe claim:
 
 > BurnLens has one canonical prompt/build-log protocol and index, one canonical detailed entry template, one non-canonical root router, and dated task records.
 
-The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O2-T06 / issue #343 / PR #344 is shipped at `v0.7.0-optical-pair-protocol-baseline`; lifecycle issue #345 / PR #346 synchronizes the exact release identity. No label, dataset, baseline, or model exists. Authorized credentials are used without retaining secrets; exact raw packages remain local/ignored. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.
+The controlling execution goal and six-phase roadmap are merged and tagged at `v0.0.8-execution-goal-baseline`. Phase Two is active. P2O2-T06 is shipped at `v0.7.0-optical-pair-protocol-baseline`; P2O3-T01 / issue #347 is the review-ready pair-local registration candidate. No label, dataset, baseline, or model exists. Authorized credentials are used without retaining secrets; exact raw packages remain local/ignored. Historical Objective Seven restrictions that conflict with the controlling goal are retained only as audit evidence and do not govern current execution.

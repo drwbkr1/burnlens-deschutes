@@ -31,8 +31,14 @@ A passing window establishes bounded translation evidence only. It never establi
 
 Both packaged Sentinel datastrip geometric-quality reports have global status `PASSED`, image-refining checks marked `PASSED`, absolute-location values of 20 m against 30 m expectations, and planimetric-stability values of 3 m against 5 m expectations. They also state that VNIR/SWIR bands have not been registered and spatio-residual histograms were not computed. BurnLens therefore records these fields as provenance context and requires its own pair-local evidence.
 
-## Current state
+## Decision
 
-The method and gates are frozen for the bounded run. Machine measurements on the exact pair produced a provisional all-window pass, with residuals far inside the 0.5-pixel gate. The decision remains `PENDING_VISUAL_REVIEW` until the source-bearing implementation is committed, the exact run is reconstructed from that commit, and the real JSON, HTML, and PNG are inspected.
+Decision code: `ACCEPT_LOCAL_CONTENT_REGISTRATION`.
+
+Run `BL-2026-07-15-content-registration-r001` reverified the exact registered package and accepted optical predecessor, then measured all twelve fixed windows. Every window passes. Median residual is `0.0224` native pixel, p95 and maximum are `0.0361` pixel, and the maximum corresponds to approximately `0.72` m. The least eligible window retains `94.9556%` eligible pair-quality pixels, all three bands are confident in every window, the minimum coarse peak ratio is `7.5916`, and maximum band-to-consensus deviation is `0.0400` pixel.
+
+The real original-resolution PNG and semantic HTML were reviewed. The pre/post scenes, window grid, decision, gates, product-QC caution, no-label boundary, warning, and complete source/version/run trace are legible. The referenced image loads and browser logs are empty.
+
+The acceptance is narrow: local translation evidence is sufficient to proceed to a separate five-state label-proposal checkpoint. It creates and accepts no label pixel. Pixel-level review and exclusions remain binding, and a later proposal still requires independent QA, disagreement recording, mixed/boundary review, and an audit sample before dataset work.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
