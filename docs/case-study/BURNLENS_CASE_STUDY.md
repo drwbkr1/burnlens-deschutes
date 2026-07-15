@@ -96,7 +96,7 @@ Corrected run `TARGET-DECISION-2026-002` makes the choice inspectable. It carrie
 
 MTBS was evaluated from current official sources because its analyst-interpreted fire-level products include pre/post imagery, burn indices, boundaries, thematic severity, and non-processing masks. Its current 2024 occurrence inventory returned 941 records but no Darlene name match, and both the 2024 and all-years occurrence layers returned zero features inside the frozen BurnLens AOI. MTBS therefore remains relevant methodology and potential cross-fire or future reference evidence; it cannot provide the exact Darlene 3 label today, and its severity classes will not expand BurnLens into a multiclass task.
 
-The highest remaining risk is still burn-scar label truth across events. BurnLens has identified and visually validated one legally usable, temporally defensible pre/post optical pair, passed a separate pair-local translation gate, and shipped one reproducible five-state proposal with separate software QA. The next checkpoint must test cross-event support and leakage-resistant grouping before BurnLens may consider a dataset, spectral baseline, or model.
+The highest remaining risk is still burn-scar label truth across events. BurnLens has identified and visually validated one legally usable Darlene pair, passed a separate pair-local translation gate, and shipped one reproducible five-state proposal with separate software QA. It has now frozen two additional exact event/scene/geography/time acquisition groups from current official metadata. Those groups reduce planning ambiguity but do not become a dataset until their source pixels, labels, unknown coverage, and whole-group separation are validated.
 
 ## Exact optical pair: clear evidence, deferred truth
 
@@ -144,6 +144,18 @@ A separate module and CLI then reopen the source package, recompute every signal
 
 That QA proves implementation reproducibility under one frozen contract. It does not prove independent human annotation, field validity, label accuracy, or generalization: the same Codex director authored both paths, only one event is represented, and no leakage-resistant multi-event split exists. Decision `ACCEPT_REVIEWABLE_LABEL_PROPOSAL_DEFER_DATASET` therefore accepts the evidence and stops short of a dataset.
 
+## Cross-event feasibility: group first, acquire second
+
+Issue #357 starts by reproducing all eight shipped proposal/QA artifacts byte for byte. Rather than tile Darlene and manufacture sample count, BurnLens 0.10.0 queries current official MTBS, Census TIGERweb, and CDSE STAC metadata and freezes a normalized source snapshot before assessing candidates.
+
+![BurnLens cross-event feasibility](../../samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.png)
+
+The bounded search returns 84 MTBS occurrences in the discovery envelope, 23 with representative points inside Deschutes County, and three recent wildfire candidates under the declared date/type/size rule. Tepee 1144 NE and McKay 1035 NE each have a compatible same-platform, tile, relative-orbit, and processing-baseline Sentinel pair. Milli 0843 CS has many intersecting items but zero single tiles covering its complete MTBS boundary, so it remains visible and excluded instead of being silently cropped or mosaicked.
+
+The report freezes whole event, exact-scene, geography, and time group IDs before any acquisition or tiling. Darlene-McKay, Darlene-Tepee, and McKay-Tepee representative-point distances are 10.925, 34.926, and 27.258 km. Those are transparent diagnostics, not proof that spatial autocorrelation disappears.
+
+Decision `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES` authorizes only the next source-fitness checkpoint. No selected product route was exercised; no provider imagery, cross-event label, dataset, partition, baseline, model, or generalization evidence exists. This is a portfolio-strengthening act of restraint: independence is designed before patch generation, while unsupported readiness stays visibly null.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -153,8 +165,10 @@ That QA proves implementation reproducibility under one frozen contract. It does
 - Latest registration evidence run: `BL-2026-07-15-content-registration-r001`
 - Latest label-proposal run: `BL-2026-07-15-label-proposal-r001`
 - Latest separate-QA run: `BL-2026-07-15-label-qa-r001`
+- Latest cross-event source run: `RUN-2026-07-15-CROSS-EVENT-SOURCE-001`
+- Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.9.0` shipped label-proposal baseline; generator/verifier source `814bb5402c04708f1515135683eac1304bf075c1`
+- Tool: BurnLens `0.9.0` remains the latest shipped label-proposal baseline; BurnLens `0.10.0` cross-event working candidate source `ea3e164d09872825a0fadc64b9492e30c85c83c8`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -163,6 +177,7 @@ That QA proves implementation reproducibility under one frozen contract. It does
 - Registration evidence: `CONTENT-REGISTRATION-2026-001`; all twelve windows pass; analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; LF-contract remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; artifact hashes in `MANIFEST-2026-009`; verified annotated tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`
 - Label proposal: `darlene3-burn-scar-label-proposal-v0.1.0`; `LABEL-PROPOSAL-2026-001`; five states; 66.5856% candidate domain and 33.4144% ignored; hashes in `MANIFEST-2026-010`
 - Label QA: `separate-label-proposal-qa-v0.1.0`; `LABEL-QA-2026-001`; zero state/target mismatch across 270,000 pixels; 120/120 deterministic audit agreement; human inter-rater validation absent
+- Cross-event evidence: `CROSS-EVENT-SOURCE-2026-001` and `CROSS-EVENT-FITNESS-2026-001`; exact hashes in `MANIFEST-2026-011`; Tepee/McKay selected, Milli excluded; no imagery downloaded
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -171,7 +186,7 @@ That QA proves implementation reproducibility under one frozen contract. It does
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.9.0-label-proposal-baseline` at analytical merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; annotated tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`
 - Latest shipped analytical checkpoint: issue #353 / PR #354; 105 merged-main tests and byte-identical eight-artifact reconstruction pass; lifecycle sync issue #355 / PR #356 is documentation-only
-- Active next checkpoint: evaluate cross-event label evidence and leakage-resistant grouping before deciding whether a dataset is supportable
+- Active next checkpoint: ship the cross-event feasibility candidate, then acquire and validate only the four frozen Tepee/McKay products before cross-event label or partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 

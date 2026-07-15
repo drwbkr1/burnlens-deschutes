@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## Unreleased - BurnLens 0.10.0 cross-event feasibility candidate - 2026-07-15
+
+### P2O4-T02 - Freeze exact cross-event acquisitions and leakage groups
+
+- Re-run all eight shipped label-proposal/QA artifacts from synchronized `main`; confirm byte-identical predecessor evidence before selecting work.
+- Add a fail-closed current-source capture for official Census TIGERweb, MTBS occurrence/boundary, and CDSE Sentinel-2 L2A STAC metadata, including current collection/license identity and zero imagery download.
+- Select exact Tepee and McKay pre/post product pairs under same-platform/tile/orbit/processing rules; expose and exclude Milli because no one tile covers its full MTBS boundary.
+- Freeze event, scene, geography, and time group IDs before acquisition or tiling; report 10.925 km Darlene-McKay, 34.926 km Darlene-Tepee, and 27.258 km McKay-Tepee representative-point distances as diagnostics, not independence proof.
+- Render deterministic JSON, semantic HTML, and 1,800 by 1,250 PNG; pass original-resolution and live semantic-browser review.
+- Raise BurnLens to `0.10.0`; add five tests for group selection, tile-seam exclusion, source-boundary failure, inclusive geometry, and deterministic rendering. The working branch passes 110 tests, compilation, dependency health, a 164,450-byte candidate wheel, isolated `0.10.0` import, and exact three-artifact reconstruction.
+- Preserve null application/dataset/split/baseline/model state and zero provider imagery bytes. Intended tag `v0.10.0-cross-event-feasibility-baseline` remains uncreated until PR, merged-main reconstruction, packaging, manifest, and remote tag gates pass.
+
+Issue #357; generator/assessor source `ea3e164d09872825a0fadc64b9492e30c85c83c8`; analytical PR/merge pending.
+
 ## v0.9.0-label-proposal-baseline - 2026-07-15
 
 ### P2O4-T01 - Build a reviewable five-state proposal and separate QA

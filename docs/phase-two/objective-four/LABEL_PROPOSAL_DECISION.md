@@ -39,3 +39,7 @@ Decision code: `ACCEPT_REVIEWABLE_LABEL_PROPOSAL_DEFER_DATASET`.
 Accept the exact five-state proposal as reviewable, reproducible, one-event evidence. Do not call it ground truth and do not create a versioned dataset or split from it yet. The next checkpoint should test whether cross-event evidence and a genuinely leakage-resistant grouping/review plan can support a dataset, or whether Phase Two should defer modeling and take a baseline-only or stop decision.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
+
+## Successor status
+
+P2O4-T02 / issue #357 has now completed the metadata-feasibility step named above. `CROSS-EVENT-FITNESS-2026-001` selects exact Tepee and McKay future acquisitions and freezes whole event/scene/geography/time groups without creating a dataset or split. Its PR/merge/tag shipment gates are tracked separately; exact cross-event source pixels and label fitness remain the next evidence boundary.

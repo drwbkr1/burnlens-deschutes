@@ -1,0 +1,101 @@
+{
+  "manifest_id": "MANIFEST-2026-011",
+  "manifest_version": "0.11.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-15T22:50:00Z",
+  "task_issue": 357,
+  "branch": "codex/p2o4-t02-cross-event-feasibility",
+  "git_base_commit": "67044a51701f0abb3e730d4540ea7cb488801ed8",
+  "generator_source_commit": "ea3e164d09872825a0fadc64b9492e30c85c83c8",
+  "candidate_checkpoint_commit": "58261756a456e5d5963302c9d62c8a6b13d07f14",
+  "reviewed_head_commit": "3ab9ea4de2fe62777c11548e1d3e7465a9f40829",
+  "checkpoint_commit": null,
+  "pull_request": 358,
+  "version_tag": "v0.10.0-cross-event-feasibility-baseline",
+  "version_tag_object": null,
+  "version_tag_state": "intended; create only after merged-main reconstruction and release gates pass",
+  "status": "accepted working-branch analytical candidate; shipment pending pull-request, merged-main, and tag verification",
+  "software_version": "0.10.0",
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "setuptools": "82.0.1"
+  },
+  "source_records": ["SOURCE-2026-011"],
+  "access_record": null,
+  "terms_records": ["TERMS-2026-006"],
+  "precheck_record": "PRECHECK-2026-011",
+  "registry_record": "REGISTRY-2026-011",
+  "review_records": ["CROSS_EVENT_FITNESS-2026-001", "SOURCE_PRECEDENCE-2026-004", "USE_BOUNDARY-2026-010"],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "cross_event_group_version": "burnlens-cross-event-groups-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "application_version": null,
+  "run_ids": [
+    "RUN-2026-07-15-CROSS-EVENT-SOURCE-001",
+    "RUN-2026-07-15-CROSS-EVENT-FITNESS-001"
+  ],
+  "report_versions": ["cross-event-feasibility-v0.1.0"],
+  "selected_event_group_ids": ["event-mckay-1035-ne-2017", "event-tepee-1144-ne-2018"],
+  "outputs": [
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 921818,
+      "sha256": "2c78984d790046db73de68b25e2e0c87a062e2b63a5b957ed10f72382687f6ba"
+    },
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 278263,
+      "sha256": "d320cee1e121c63a5ac8c5cd9f893fb63e6b8bc795b3671e62945850b1d02273"
+    },
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 11603,
+      "sha256": "2fc3bb9b9b69ea494f53c8711d845030ca7a960494664c895d0f8a1b7ed3de13"
+    },
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 122947,
+      "sha256": "19eeb95e4e5362523e308233b6347a620f7c2ed7cb3beccf728522fd2255a1e0"
+    }
+  ],
+  "credentials_used": false,
+  "provider_imagery_downloaded": false,
+  "provider_imagery_bytes_committed": 0,
+  "credential_or_token_material_retained": false,
+  "quality_gates": {
+    "cycle_start_tool_run": "pass: all eight shipped proposal/QA artifacts reproduced byte for byte",
+    "current_official_source_capture": "pass: Census 11.5, MTBS 11.5, CDSE STAC 1.1.0",
+    "arcgis_transfer_limit": "pass: no exceeded transfer limit",
+    "event_ids_unique": "pass",
+    "county_membership": "pass: representative-point rule against GEOID 41017",
+    "selected_boundary_nonoverlap": "pass",
+    "exact_scene_pairs": "pass: two compatible pairs frozen",
+    "tile_seam_exclusion": "pass: Milli disclosed and excluded",
+    "repository_tests": 110,
+    "compileall": "pass",
+    "dependency_health": "pass: no broken requirements",
+    "wheel_build_and_isolated_import": "pass: 164450-byte burnlens_deschutes-0.10.0-py3-none-any.whl; sha256 d619c35ab16353768a90cb613a278b7f64006cce353b47e575c24c5b6e9bc87f; isolated import 0.10.0; both new console entry points present",
+    "byte_deterministic_fixed_input_rebuild": "pass",
+    "original_resolution_visual_review": "pass: 1800 by 1250",
+    "rendered_browser_review": "pass: semantic structure, three candidate rows, exact IDs, native image, warning, trace, and no-partition boundary",
+    "independent_human_or_field_validation": "absent",
+    "dataset_or_partition_created": false,
+    "raw_provider_bytes_committed": 0
+  },
+  "decision": "SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
