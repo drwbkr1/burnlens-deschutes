@@ -1,6 +1,6 @@
 # REGISTRY-2026-010 - Five-State Label-Proposal Artifacts
 
-**Checkpoint:** Issue #353; branch `codex/p2o4-t01-label-proposal`; generator source `814bb5402c04708f1515135683eac1304bf075c1`; analytical PR, merge, and tag pending final lifecycle verification
+**Checkpoint:** Issue #353 / PR #354; branch `codex/p2o4-t01-label-proposal`; generator source `814bb5402c04708f1515135683eac1304bf075c1`; merge and tag pending final lifecycle verification
 
 | Artifact | Class | Version/state | Committed provider raw bytes |
 |---|---|---|---:|

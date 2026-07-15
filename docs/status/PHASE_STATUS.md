@@ -20,7 +20,7 @@
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
 | Optical-pair protocol baseline | BurnLens `0.7.0`; issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
 | Content-registration baseline | BurnLens `0.8.0`; issue #347 / PR #348 analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; issue #349 / PR #350 remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; generator `5287704a37f03d96e47467afba8623f7be643129`; verified tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`; all 12 windows pass; labels remain unimplemented |
-| Label-proposal candidate | BurnLens `0.9.0`; issue #353; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
+| Label-proposal candidate | BurnLens `0.9.0`; issue #353 / PR #354; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -62,7 +62,7 @@ P2O3-T01 / issue #347 / PR #348 accepts pair-local content-registration evidence
 
 ## Current checkpoint
 
-P2O3-T01 is shipped at verified `v0.8.0-content-registration-baseline`. P2O4-T01 / issue #353 is the review-ready analytical candidate: `LABEL-PROPOSAL-2026-001` and `LABEL-QA-2026-001` pass their proposal and separate-software gates while explicitly deferring a dataset. After merge/release verification, the next checkpoint should test cross-event label evidence and leakage-resistant grouping before any dataset or split.
+P2O3-T01 is shipped at verified `v0.8.0-content-registration-baseline`. P2O4-T01 / issue #353 / PR #354 is the review-ready analytical candidate: `LABEL-PROPOSAL-2026-001` and `LABEL-QA-2026-001` pass their proposal and separate-software gates while explicitly deferring a dataset. After merge/release verification, the next checkpoint should test cross-event label evidence and leakage-resistant grouping before any dataset or split.
 
 ## Boundaries carried forward
 
