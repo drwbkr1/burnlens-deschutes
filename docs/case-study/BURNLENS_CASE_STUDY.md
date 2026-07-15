@@ -121,7 +121,8 @@ The decision is `ACCEPT_OPTICAL_PAIR_FOR_PROTOCOL_DEFER_LABELS`. No label array,
 - Latest evidence run: `BL-2026-07-14-target-decision-r002`
 - Latest optical evidence run: `BL-2026-07-15-optical-pair-evidence-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens package `0.7.0` optical-pair protocol candidate; target evidence generator `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; optical generator source recorded in `OPTICAL-PAIR-2026-001`
+- Tool: BurnLens package `0.7.0` at verified `v0.7.0-optical-pair-protocol-baseline`; target evidence generator `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; optical generator source recorded in `OPTICAL-PAIR-2026-001`
+- Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
 - Optical package/protocol: `darlene3-s2-optical-pair-v0.1.0`; `optical-pair-intake-contract-v0.1.0`; `burn-scar-label-protocol-v0.1.0` design only; 2,254,805,631 local/ignored raw bytes; zero committed
