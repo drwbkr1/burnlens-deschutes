@@ -9,3 +9,7 @@ samples/optical/phase-two/*.html text eol=lf
 # Content-registration evidence has an explicit cross-platform serialization contract.
 samples/registration/phase-two/*.json text eol=lf
 samples/registration/phase-two/*.html text eol=lf
+
+# Label-proposal and QA evidence have explicit cross-platform serialization contracts.
+samples/labels/phase-two/*.json text eol=lf
+samples/labels/phase-two/*.html text eol=lf

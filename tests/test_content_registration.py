@@ -11,6 +11,7 @@ from PIL import Image
 
 import burnlens
 from burnlens.content_registration import (
+    SOFTWARE_VERSION as CONTENT_REGISTRATION_SOFTWARE_VERSION,
     ContentRegistrationError,
     _geometric_quality_metadata,
     _validate_visual_decision,
@@ -35,8 +36,9 @@ class ContentRegistrationTests(unittest.TestCase):
         self.assertIn("samples/registration/phase-two/*.json text eol=lf", attributes)
         self.assertIn("samples/registration/phase-two/*.html text eol=lf", attributes)
 
-    def test_import_version_matches_registration_checkpoint(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.8.0")
+    def test_current_import_version_preserves_historical_registration_version(self) -> None:
+        self.assertEqual(burnlens.__version__, "0.9.0")
+        self.assertEqual(CONTENT_REGISTRATION_SOFTWARE_VERSION, "0.8.0")
 
     def test_localized_dft_recovers_subpixel_shift_to_apply(self) -> None:
         reference = np.random.default_rng(7).normal(size=(96, 96))
