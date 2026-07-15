@@ -294,6 +294,36 @@ class ProviderAcquisitionTests(unittest.TestCase):
         self.assertEqual(result["resumed_from_bytes"], offset)
         self.assertEqual(opener.requests[0].get_header("Range"), f"bytes={offset}-")
 
+    def test_stream_asset_rejects_multilink_partial_before_request(self) -> None:
+        full = HDF5_MAGIC + b"data"
+        contract = replace(
+            EXACT_CONTRACTS[1],
+            expected_filename="linked-resume.h5",
+            expected_size_bytes=len(full),
+            stable_route="https://data.nasa.gov/linked-resume.h5",
+        )
+        with TemporaryDirectory() as directory:
+            quarantine = Path(directory) / "quarantine"
+            quarantine.mkdir()
+            part = quarantine / "linked-resume.h5.part"
+            part.write_bytes(full[:9])
+            alias = Path(directory) / "upload-staging-alias"
+            os.link(part, alias)
+            opener = FakeOpener(
+                FakeResponse(
+                    full[9:],
+                    status=206,
+                    headers={
+                        "Content-Type": "application/octet-stream",
+                        "Content-Range": f"bytes 9-{len(full) - 1}/{len(full)}",
+                    },
+                )
+            )
+            with self.assertRaisesRegex(AcquisitionError, "PART_FILE_MULTILINK_NOT_ALLOWED"):
+                stream_asset(contract, quarantine, opener=opener)
+            self.assertEqual(opener.requests, [])
+            self.assertTrue(part.exists())
+
     def test_stream_asset_rejects_html_without_registering_file(self) -> None:
         contract = replace(
             EXACT_CONTRACTS[1],

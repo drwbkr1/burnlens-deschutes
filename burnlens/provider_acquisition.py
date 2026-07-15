@@ -394,6 +394,8 @@ def stream_asset(
         raise AcquisitionError("EXISTING_QUARANTINE_ASSET_INVALID", role=contract.role)
     if _is_link_like(part):
         raise AcquisitionError("PART_FILE_LINK_NOT_ALLOWED", role=contract.role)
+    if part.exists() and part.stat().st_nlink != 1:
+        raise AcquisitionError("PART_FILE_MULTILINK_NOT_ALLOWED", role=contract.role)
 
     offset = part.stat().st_size if part.exists() else 0
     if offset > contract.expected_size_bytes:
