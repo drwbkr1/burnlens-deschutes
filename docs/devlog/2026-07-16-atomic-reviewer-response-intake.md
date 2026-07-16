@@ -8,6 +8,6 @@ The real QA run uses the existing software fixture, not fabricated human evidenc
 
 ![BurnLens atomic reviewer-response intake QA](../../samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.png)
 
-All 171 tests pass. The six previously shipped first-lock and dual-lock artifacts regenerate byte-for-byte. Compileall and dependency health pass, the rendered 1800x1280 card is readable, and privacy checks find no private path, filename, first-response hash, label distribution, timestamp, or reviewer text.
+All 171 tests pass. The six previously shipped first-lock and dual-lock artifacts regenerate byte-for-byte. Compileall, dependency health, Node syntax, 54 tracked JSON parses, 122 local links, the rendered 1800x1280 card, and privacy checks pass. Two fixed-epoch wheels are byte-identical at 315,032 bytes / SHA-256 `436db542b269442060c5a7d3e34323da19be673ab11213b6df9f571be12879b2`; an isolated install reports BurnLens `0.18.0`, 29 console entry points, and zero private/download/build entries.
 
 The owner later waived reviewer two. That does not convert the fixture or waiver into human evidence: the project still has one returned response, no inter-rater validation, and no adjudication. Issue #403 now owns a separate owner-waiver/reveal-readiness and conservative single-reviewer reconciliation checkpoint.

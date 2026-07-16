@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Advance current receipts to `label-review-response-integrity-lock-v0.4.0` / BurnLens `0.18.0` while retaining v0.2.0 / 0.15.0 and v0.3.0 / 0.17.0 compatibility.
 - Require the current returned-response receipt to keep reveal prohibited until a separate public owner-waiver/reveal-readiness checkpoint authorizes reveal.
 - Publish `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001` as JSON, semantic HTML, and a rendered 1800-by-1280 evidence card using only the existing non-human software fixture.
-- Pass 171 tests, compileall, dependency health, exact six-output historical regression, privacy, semantic, and original-resolution visual gates.
+- Pass 171 tests, compileall, dependency health, Node syntax, 54 tracked JSON parses, 122 local links, exact six-output historical regression, privacy, semantic, original-resolution visual, and two byte-identical fixed-epoch 315,032-byte wheel gates; isolated install reports BurnLens `0.18.0`, 29 entry points, and zero private/download/build entries.
 - Preserve the scientific boundary: the project still has one returned human response; the owner waived reviewer two but did not create inter-rater validation, consensus, or adjudication. Reveal, comparison, accepted labels, dataset, split, baseline, model, accuracy, deployment, field, official, endorsed, emergency-ready, and operational claims remain absent.
 
 Issue #402; superseded parent issue #393; replacement issue #403; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; current source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; current public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; PR, merge, verified tag, and fresh-main gates pending.

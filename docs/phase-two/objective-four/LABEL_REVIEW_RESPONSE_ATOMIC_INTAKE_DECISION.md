@@ -31,6 +31,7 @@ The project remains at one returned independent response. Reviewer two is absent
 - Target: `target-burn-scar-v0.2.0`
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model: none
+- Candidate package: two byte-identical fixed-epoch 315,032-byte wheels; SHA-256 `436db542b269442060c5a7d3e34323da19be673ab11213b6df9f571be12879b2`; isolated BurnLens `0.18.0`; 29 console entry points; zero private/download/build entries
 
 ## Technical basis and limits
 
