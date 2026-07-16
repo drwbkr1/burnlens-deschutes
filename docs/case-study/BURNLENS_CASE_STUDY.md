@@ -186,6 +186,22 @@ A separately invoked implementation that does not import the proposal classifier
 
 Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberately narrower than dataset acceptance. Software agreement proves reproducibility of the rules, not independent human label quality, field validity, universal calibration, or model readiness.
 
+## Reviewing the proposal without reviewing our own homework
+
+Issue #375 starts by reopening all six registered Sentinel archives and both MTBS clips, rebuilding the Darlene 3, Tepee, and McKay proposals, and requiring exact agreement with the committed rasters. Only then does BurnLens sample the evidence for review.
+
+![BurnLens proposal-blinded label-review packet](../../samples/labels/review/phase-two/LABEL-REVIEW-PACKET-2026-001.png)
+
+The packet selects four units from every proposal state present in each event: 56 units across 14 present event/state strata. McKay contains no excluded proposal pixels, so that absence remains explicit instead of being filled with a synthetic or off-contract example. Preferred spatial separation reduces near-duplicate context within each stratum, while a second deterministic hash mixes the presentation order.
+
+The first-pass pages show pre/post Sentinel true color, fixed-display continuous dNBR, and NIFC or MTBS context. They do not disclose the sample-specific BurnLens state or binary target. Those values live on a separate reveal page, and the blank response/adjudication templates contain no proposal-value fields. This is proposal-blinded workflow design, not a claim of cryptographic blindness or controlled study conditions.
+
+![BurnLens label-review packet integrity QA](../../samples/labels/review/phase-two/LABEL-REVIEW-PACKET-QA-2026-001.png)
+
+The independent verifier checks the packet JSON binding and 14 referenced packet outputs, 56 unique pixel bindings, coverage, the blind/reveal boundary, blank evidence state, response domains and attestations, timestamp order, and the rule that unknown, excluded, and review-needed never become binary targets. `MANIFEST-2026-015` separately inventories all 18 packet/QA files. All integrity gates pass. Completed independent responses: zero. Completed adjudications: zero.
+
+Decision `ACCEPT_PROPOSAL_BLINDED_REVIEW_READINESS_DEFER_DATASET` therefore accepts the instrument, not the labels. Codex authored the proposal and review tooling and cannot count as an independent reviewer. The next evidence must come from qualifying reviewers whose first-pass responses are locked and hashed before reveal; disagreements must be adjudicated or remain ignored.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -202,8 +218,10 @@ Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberat
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
 - Latest cross-event proposal run: `BL-2026-07-16-cross-event-label-transfer-r004`
 - Latest cross-event proposal-QA run: `BL-2026-07-16-cross-event-label-transfer-qa-r004`
+- Latest label-review packet run: `BL-2026-07-16-label-review-packet-r001`
+- Latest label-review packet-QA run: `BL-2026-07-16-label-review-packet-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.12.1` shipped through issue #371 / PR #372 at merge `e00028509145b439d95eb302591e7cb19bd073fd`; generator/QA source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; verified tag object `8606c61f0e1668f2b057abca177144937eae1036`; the analytical v0.12.0 package remains preserved
+- Tool candidate: BurnLens `0.13.0`; issue #375; generator/verifier source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; PR/merge/tag/fresh-main gates pending
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -215,6 +233,7 @@ Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberat
 - Cross-event evidence: `CROSS-EVENT-SOURCE-2026-001` and `CROSS-EVENT-FITNESS-2026-001`; exact hashes in `MANIFEST-2026-011`; Tepee/McKay selected, Milli excluded; no imagery downloaded
 - Cross-event source fitness: `CROSS-EVENT-SOURCE-FITNESS-2026-001`; exact shipped hashes in `MANIFEST-2026-012`; McKay passes, Tepee exclusions bind; label protocol and implemented five-state schema are explicit; manifest metadata-link exception visible; zero provider bytes committed
 - Cross-event proposal/QA: topology-stable `CROSS-EVENT-LABEL-TRANSFER-2026-002` and `CROSS-EVENT-LABEL-TRANSFER-QA-2026-002`; exact shipped hashes in `MANIFEST-2026-014`; zero mismatch across 63,930 pixels; human validation absent; `2026-001` preserved in `MANIFEST-2026-013`
+- Label-review readiness: `LABEL-REVIEW-PACKET-2026-001` and `LABEL-REVIEW-PACKET-QA-2026-001`; exact 18-output candidate inventory in `MANIFEST-2026-015`; 56 units / 14 present strata / one structural absence; completed independent responses and adjudications both zero
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -222,8 +241,8 @@ Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberat
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.12.1-topology-stable-label-transfer` at merge `e00028509145b439d95eb302591e7cb19bd073fd`; annotated tag object `8606c61f0e1668f2b057abca177144937eae1036`
-- Latest analytical checkpoint: issue #367 / PR #368; 137 tests, exact manifest/semantic/render/LF gates, original-resolution review, live browser review, byte-reproducible fixed-epoch packaging, isolated import, fresh merged-main, and remote-tag verification pass
-- Active next checkpoint: independent label-fitness/adjudication evidence and dataset-candidacy or deferral before any partition work
+- Current candidate checkpoint: issue #375; 144 tests, exact 18-file reconstruction, original-resolution review, byte-reproducible fixed-epoch packaging, isolated import, and packet-integrity QA pass; rendered browser, PR, merge, tag, and fresh-main gates pending
+- Active next checkpoint: obtain qualifying independent responses, preserve pre-reveal hashes, adjudicate disagreements or keep units ignored, and make a dataset-candidacy/remediation decision before any partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 
