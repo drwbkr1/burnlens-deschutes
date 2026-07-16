@@ -30,6 +30,8 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 The first task is experimental binary semantic segmentation for wildfire-relevant screening. Active-fire / hotspot-informed masking was the planned primary target, but P2O2-T04 proved it could not define defensible 10-20 m labels. The owner activated the established burn-scar binary-mask fallback on 2026-07-14. Active-fire observations remain complementary reference evidence only.
 
+P2O4-T10B / issue #403 has opened and reconciled one exact blinded response under the explicit reviewer-two waiver. Candidate BurnLens `0.20.0` retains only six burned units as candidate evidence, retains the other fifty units as ignored, and defers the dataset because zero background units and zero Tepee units survive. One reviewer remains one reviewer. Issue #411 owns reference-evidence remediation; do not begin splits, baselines, or models early.
+
 The analytical chain is:
 
 ```text
@@ -58,7 +60,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O4-T01 through P2O4-T04 ship verified one-event and cross-event five-state proposal evidence, source fitness, all-pixel software QA, and topology-stable provenance through `v0.12.1-topology-stable-label-transfer`. P2O4-T05 through P2O4-T09B ship verified review, handoff, custody, and atomic-intake readiness through `v0.18.0-atomic-response-intake-readiness`. P2O4-T10A / issue #407 / PR #408 ships verified `v0.19.0-owner-waiver-reveal-readiness`: it re-verifies exact pre-reveal bindings, records the explicit waiver and reduced-validation acknowledgement, and authorizes only private issue-#403 reconciliation while performing zero reveal actions. Issue #393 is closed as superseded, not satisfied. Never claim reviewer two, inter-rater agreement, consensus, or adjudication. The reveal remains operator-declared unopened until the reconciliation run records access. No accepted label set, dataset, split, baseline, model, deployed analytical application, or independent scientific fitness decision exists.
+P2O4-T01 through P2O4-T04 ship verified one-event and cross-event five-state proposal evidence, source fitness, all-pixel software QA, and topology-stable provenance through `v0.12.1-topology-stable-label-transfer`. P2O4-T05 through P2O4-T10A ship verified review, handoff, custody, atomic-intake, and owner-waiver readiness through `v0.19.0-owner-waiver-reveal-readiness`. P2O4-T10B / issue #403 is the BurnLens `0.20.0` reconciliation candidate: 6 burned candidate units survive, 0 background units survive, 50 units remain ignored, and Tepee contributes no accepted candidate. The reveal is open and the preflight sequence exception is disclosed. Issue #393 is closed as superseded, not satisfied. Never claim reviewer two, inter-rater agreement, consensus, adjudication, ground truth, or validation. Issue #411 owns reference-evidence remediation. No accepted dataset, split, baseline, model, deployed analytical application, or independent scientific fitness decision exists.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.

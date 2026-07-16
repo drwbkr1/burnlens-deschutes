@@ -1,0 +1,125 @@
+{
+  "manifest_id": "MANIFEST-2026-022",
+  "manifest_version": "0.22.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-16T22:59:01Z",
+  "task_issue": 403,
+  "next_remediation_issue": 411,
+  "branch": "codex/p2o4-t10b-single-reviewer-reconciliation",
+  "git_base_commit": "1c5cadcb6dca9664979ad87a3503f06aeea5fd0f",
+  "generator_source_commit": "fda69a60b0a5e350bfe10e7388571d7c1c103735",
+  "candidate_artifacts_commit": "57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e",
+  "reviewed_head_commit": "67216dc9952427a9c511eb871c12a87f94171bea",
+  "checkpoint_commit": null,
+  "pull_request": 412,
+  "version_tag": "v0.20.0-single-reviewer-reconciliation",
+  "version_tag_object": null,
+  "version_tag_state": "planned after verified merge",
+  "status": "candidate aggregate-only single-reviewer reconciliation; remediation decision; dataset deferred",
+  "software_version": "0.20.0",
+  "private_report_version": "label-review-single-reviewer-reconciliation-v0.1.0",
+  "public_qa_version": "label-review-single-reviewer-reconciliation-qa-v0.1.0",
+  "private_run_id": "BL-2026-07-16-single-reviewer-reconciliation-r001",
+  "public_qa_run_id": "BL-2026-07-16-single-reviewer-reconciliation-qa-r001",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "private_reconciliation_binding": {
+    "bytes": 72628,
+    "sha256": "a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d",
+    "committed": false,
+    "ignored": true
+  },
+  "input_bindings": {
+    "response": {
+      "bytes": 16443,
+      "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9"
+    },
+    "receipt": {
+      "bytes": 2508,
+      "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835"
+    },
+    "packet": {
+      "bytes": 61599,
+      "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c"
+    },
+    "reveal": {
+      "bytes": 9433,
+      "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af"
+    },
+    "authorization": {
+      "bytes": 3643,
+      "sha256": "db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952"
+    }
+  },
+  "owner_waiver_state": {
+    "returned_independent_responses": 1,
+    "reviewer_two_requirement_waived": true,
+    "second_human_response_present": false,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false
+  },
+  "aggregate": {
+    "reviewed_units": 56,
+    "accepted_candidate_units": 6,
+    "accepted_burned_units": 6,
+    "accepted_background_units": 0,
+    "ignored_units": 50,
+    "darlene_accepted_ignored": [3, 17],
+    "mckay_accepted_ignored": [3, 13],
+    "tepee_accepted_ignored": [0, 20]
+  },
+  "reveal_sequence": {
+    "first_access_context": "issue-403-reconciliation-preflight",
+    "first_access_recorded_at_utc": "2026-07-16T22:40:00Z",
+    "authorization_reverified_at_utc": "2026-07-16T22:40:40Z",
+    "authorization_reverified_before_first_reveal_content_access": false,
+    "authorization_reverified_before_private_response_content_access": true,
+    "authorization_reverified_before_unit_comparison": true,
+    "sequence_exception_disclosed": true
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 8133,
+      "sha256": "61cd68a2d0a21a56628213b8ae5ee7656a752d4871004c1aac01c3615256d565"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 4422,
+      "sha256": "a18b3e126592cf9fb550bca9f44a599086e046ef65107765c91764106214e883"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 99046,
+      "sha256": "4fd7b099953b6ab58ff9fb1e032b398df79510681b30db5b819392f829ff9c13"
+    }
+  ],
+  "quality_gates": {
+    "repository_tests": 181,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "exact_input_immutability": "pass",
+    "private_atomic_ignored_no_overwrite": "pass",
+    "deterministic_unit_rule_and_full_coverage": "pass",
+    "public_privacy_and_semantics": "pass",
+    "evidence_card_visual_review": "pass: original 1800x1280 inspected",
+    "installed_chrome_html_render": "pass: complete 1440x2600 render inspected",
+    "wheel_build_and_isolated_import": "pass: two fixed-epoch wheels byte-identical at 341228 bytes / sha256 9645c01b1f0156f358bb020ea6f49eda852b337eb22d765780c0d173cad74faa; isolated BurnLens 0.20.0; 33 console entry points; zero private/download/build entries",
+    "authorization_before_first_reveal_content_access": "fail-disclosed",
+    "authorization_before_private_response_access_and_unit_comparison": "pass",
+    "candidate_pr_merge_tag": "pending",
+    "fresh_merged_main": "pending"
+  },
+  "decision": "REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

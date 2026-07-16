@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens single-reviewer reconciliation QA</title><style>
+:root{--ink:#17332e;--teal:#007c71;--paper:#f5f1e8;--card:#fffdf8;--line:#d7cebe;--orange:#d94b20}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+header{background:#0e302a;color:white;padding:2.5rem max(5vw,1.25rem)}main{max-width:1120px;margin:auto;padding:2rem 1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.3rem;margin-bottom:1rem}
+.metric{font-size:2rem;color:var(--teal)}table{width:100%;border-collapse:collapse}th,td{padding:.65rem;border-bottom:1px solid var(--line);text-align:left}
+code{overflow-wrap:anywhere}.decision{color:var(--orange);font-weight:700}
+</style></head><body><header><p>BurnLens / Phase Two / Objective Four</p><h1>Single-reviewer reconciliation</h1>
+<p>Owner waiver / reduced validation / aggregate-only evidence / dataset deferred</p></header><main>
+<div class="grid"><section><div class="metric">56</div><p>reviewed units</p></section>
+<section><div class="metric">6</div><p>accepted candidate units</p></section>
+<section><div class="metric">50</div><p>ignored units</p></section>
+<section><div class="metric">0</div><p>candidate background units</p></section></div>
+<section><h2>Cross-event result</h2><table><thead><tr><th>Event</th><th>Accepted candidate</th><th>Ignored</th></tr></thead><tbody><tr><td>event-darlene3-or-2024</td><td>3</td><td>17</td></tr><tr><td>event-mckay-1035-ne-2017</td><td>3</td><td>13</td></tr><tr><td>event-tepee-1144-ne-2018</td><td>0</td><td>20</td></tr></tbody></table></section>
+<section><h2>Why evidence was ignored</h2><ul><li><code>label-reason-semantic-conflict</code>: 1</li><li><code>limited-or-insufficient-evidence</code>: 4</li><li><code>proposal-not-binary-candidate</code>: 32</li><li><code>reviewer-proposal-disagreement-or-nonbinary</code>: 10</li><li><code>single-reviewer-supported-binary-match</code>: 6</li><li><code>weak-or-conflicting-evidence-code</code>: 3</li></ul></section>
+<section><h2>Decision</h2><p>6 candidate burned units and 0 candidate background units survive the conservative single-reviewer rule. This is useful proposal-diagnostic evidence, not a balanced or representative dataset.</p><p><strong>Next gate:</strong> Remediate the reference-evidence route, prioritizing independently traceable burned and background evidence across every event; MTBS may support reference context but does not convert this bounded single-reviewer probe into validation or ground truth.</p>
+<p class="decision">REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER</p></section>
+<section><h2>What this proves</h2><ul><li>One exact blinded response was deterministically reconciled against the exact reveal.</li><li>Every reviewed unit has one private traceable accepted-candidate or ignored disposition.</li><li>Only aggregate evidence is public; reviewer free text and unit-level decisions remain withheld.</li><li>The result identifies a bounded proposal-remediation need without creating a dataset.</li><li>The preflight reveal-access sequence exception is disclosed rather than represented as a pass.</li></ul><h2>What remains absent</h2><ul><li>No second reviewer, inter-rater validation, consensus, or adjudication exists.</li><li>Accepted-candidate units are not ground truth, a representative validation sample, or an accuracy estimate.</li><li>No dataset, split, baseline, model, field validation, official status, endorsement, emergency readiness, or operational fitness exists.</li></ul></section>
+<section><h2>Traceability</h2><p>Run <code>BL-2026-07-16-single-reviewer-reconciliation-qa-r001</code><br>Git <code>fda69a60b0a5e350bfe10e7388571d7c1c103735</code><br>
+Software 0.20.0 / issue #403<br>
+Private reconciliation SHA-256 <code>a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d</code><br>
+Dataset / split / baseline / model: none / none / none / none</p></section>
+<section><strong>Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</strong></section></main></body></html>

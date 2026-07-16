@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.20.0-single-reviewer-reconciliation - candidate - 2026-07-16
+
+### P2O4-T10B - Reconcile the exact blinded response without manufacturing consensus
+
+- Add an atomic ignored-storage reconciliation command that re-verifies the exact authorization, response, receipt, packet, and reveal; validates all 56 response units; and records one traceable per-unit accepted-candidate or ignored disposition.
+- Apply a conservative deterministic rule: only a sufficient-evidence binary reviewer/proposal match without weak, conflicting, or label/reason-inconsistent evidence survives. Uncertain, unusable, limited, non-binary, excluded, disputed, or weak units remain ignored.
+- Preserve a 72,628-byte private reconciliation / SHA-256 `a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d` only in ignored storage. Public aggregate QA reports 6 burned candidate units, 0 background units, and 50 ignored units; Tepee contributes 0 accepted candidates.
+- Disclose the issue-#403 preflight sequence exception: a repository search displayed exact reveal HTML before the explicit authorization-verifier invocation. Exact verification passed immediately afterward and before private response access or unit comparison. Reviewer blindness and all locked bytes remained intact.
+- Publish aggregate-only JSON/HTML/PNG with reviewer free text, unit identities, private paths, and private filenames withheld. Inspect both the 1800-by-1280 evidence card and the complete installed-Chrome HTML render.
+- Use current primary MTBS and CEOS LPV sources to confirm that scene-quality masks, independent/reference evidence, uncertainty, and representative sampling remain binding. Candidate units are proposal-diagnostic evidence, not ground truth, validation, or an accuracy sample.
+- Pass 181 tests, compileall, dependency health, privacy, semantic, input-immutability, exact-binding, and rendered-output gates. Two fixed-epoch wheels are byte-identical at 341,228 bytes / SHA-256 `9645c01b1f0156f358bb020ea6f49eda852b337eb22d765780c0d173cad74faa`; isolated BurnLens `0.20.0` exposes 33 entry points and no private evidence. Dataset, split, baseline, and model remain absent; issue #411 owns reference-evidence remediation.
+
+Issue #403 / PR #412; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; reviewed candidate head `67216dc9952427a9c511eb871c12a87f94171bea`; merge/tag pending.
+
 ## v0.19.0-owner-waiver-reveal-readiness - verified - 2026-07-16
 
 ### P2O4-T10A - Establish a separate owner-waiver reveal boundary
