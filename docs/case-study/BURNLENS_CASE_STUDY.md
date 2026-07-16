@@ -236,6 +236,18 @@ The exported labels are deliberately balanced software data: 14 each burned, bac
 
 One actual returned response arrived after this run and is preserved and operator-locked under issue #384. Its exact bytes and notes remain private, it is not folded into the browser fixture evidence, and the reveal remains unopened. A second qualifying response and later adjudication are still required.
 
+## Proving custody without publishing the first review
+
+The first real response changes the evidence problem. Before looking at agreement or label fitness, BurnLens must prove that the returned file is the file later analyzed and must avoid leaking its contents to a second reviewer.
+
+BurnLens `0.16.0` preserves the exact 16,443-byte response and a separate 2,508-byte receipt in ignored repository-local storage. A new public verifier independently checks the response digest, the shipped packet and 56-unit contract, the private receipt binding, and receipt chronology.
+
+![BurnLens first returned-response hash lock](../../samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001.png)
+
+The tracked report publishes both cryptographic bindings, 56-of-56 completion, one response preserved, two required, and zero adjudications. It deliberately withholds label, evidence-sufficiency, confidence, and reason distributions; reviewer experience; response timestamps; free-text notes; private filenames; and private paths. The reveal status is an operator declaration, not a software-verifiable claim.
+
+This is evidence custody, not label acceptance. It makes the eventual comparison more defensible while refusing to manufacture agreement from one response.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -257,8 +269,9 @@ One actual returned response arrived after this run and is preserved and operato
 - Latest offline handoff run: `BL-2026-07-16-label-review-handoff-r001`
 - Latest offline handoff-QA run: `BL-2026-07-16-label-review-handoff-qa-r001`
 - Latest live-browser handoff-QA run: `BL-2026-07-16-label-review-browser-qa-r001`
+- Latest returned-response public-lock run: `BL-2026-07-16-label-review-response-lock-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.15.0`; issue #383 / PR #385; merge `861716be16be3a0469d2268baed971be65684d48`; reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
+- Tool candidate: BurnLens `0.16.0`; issue #384; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; PR/merge/tag pending
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -273,6 +286,7 @@ One actual returned response arrived after this run and is preserved and operato
 - Label-review readiness: `LABEL-REVIEW-PACKET-2026-001` and `LABEL-REVIEW-PACKET-QA-2026-001`; exact 18-output shipped inventory in `MANIFEST-2026-015`; 56 units / 14 present strata / one structural absence; completed independent responses and adjudications both zero
 - Offline reviewer handoff: `LABEL-REVIEW-HANDOFF-2026-001` and `LABEL-REVIEW-HANDOFF-QA-2026-001`; exact seven-output shipped inventory and local archive identity in `MANIFEST-2026-016`; application `label-review-handoff-workbench-v0.1.0`; completed independent responses and adjudications both zero
 - Live-browser handoff QA: shipped `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
+- First returned-response lock: candidate `LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-018`; one private response and receipt ignored; public content withheld; two responses required before adjudication
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -280,8 +294,8 @@ One actual returned response arrived after this run and is preserved and operato
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`; annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
-- Latest checkpoint: issue #383 / PR #385; 154 tests, exact seven-file plus archive reconstruction, new live-browser invalid-state/draft/export/viewport/error/storage evidence with zero human responses, exact five-output manifest, 97 links, byte-reproducible fixed-epoch source packaging, isolated import with 25 entry points, fresh remote-main clone, and remote-tag verification pass
-- Active next checkpoint: issue #384; ship a sanitized public receipt for the first exact operator-locked returned response without exposing notes or opening the reveal, then obtain and lock the required second response before adjudication or dataset-candidacy work
+- Active candidate: issue #384; 158 tests, exact private response/receipt binding, content-leakage audit, semantic/render review, exact three-output manifest, byte-reproducible fixed-epoch source packaging, and isolated import with 26 entry points pass; PR/merge/tag/fresh-main verification remains
+- Next scientific checkpoint: obtain and lock the required second qualifying response without exposing the first response or opening the reveal, then compare and adjudicate before dataset-candidacy work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
