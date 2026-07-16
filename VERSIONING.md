@@ -123,10 +123,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, isolated offline reviewer handoff, and live-browser handoff QA are shipped; first returned-response public-lock candidate exists; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.15.0-live-browser-reviewer-handoff` at `861716be16be3a0469d2268baed971be65684d48` via issue #383 / PR #385 |
-| Active analytical candidate | P2O4-T08 / issue #384 / PR #388 merged at `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390 corrects manifest chronology and completes release gates before tag. A second response remains the next scientific gate. |
-| Baseline verification | Annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` remotely dereferences to PR #385 merge `861716be16be3a0469d2268baed971be65684d48`; fresh remote-main tests, exact handoff reconstruction, fresh browser run, canonical source wheel, manifest/link/LF, and remote-tag gates pass |
+| Current phase posture | Phase Two active; first returned-response hash-lock evidence is shipped; review content withheld; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.16.0-first-reviewer-response-lock` at `27fcd3eadb1473bb603b4275f986bf62022c10bf` via issue #384 / PR #388 and remediation issue #389 / PR #390 |
+| Active analytical candidate | Obtain and lock the required second qualifying response without exposing the first response or opening the reveal; comparison and adjudication remain deferred until both locks exist. |
+| Baseline verification | Annotated tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00` remotely dereferences to corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; fresh remote-main tests, exact response-lock reconstruction, canonical source wheel, manifest/privacy/link/LF, and remote-tag gates pass |
 | Data/model/run/map/application status | Exact provider packages, exact returned-review bytes, and the private receipt remain in ignored local storage. Public run `BL-2026-07-16-label-review-response-lock-qa-r001` exposes only content-withheld cryptographic and completeness evidence. Shipped local application version `label-review-handoff-workbench-v0.1.0` is not deployed. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
