@@ -462,6 +462,8 @@ def verify_registered_package(
     if valid_directory and manifest_name in observed_entries:
         if _is_link_like(manifest_path) or not manifest_path.is_file():
             reasons.append("REGISTRATION_MANIFEST_NOT_REGULAR_FILE")
+        elif manifest_path.stat().st_nlink != 1:
+            reasons.append("REGISTRATION_MANIFEST_MULTILINK_NOT_ALLOWED")
         else:
             try:
                 loaded = json.loads(manifest_path.read_text(encoding="utf-8"))
