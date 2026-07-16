@@ -11,10 +11,10 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Run the verifier against the actual ignored first returned response and receipt plus the exact ignored browser-QA response re-locked as a current-protocol software fixture.
 - Publish `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001` as JSON, semantic HTML, and a rendered 1800-by-1320 evidence card. The public outputs expose one returned-response origin, one software fixture, two distinct exact locks, zero adjudications, and no reveal authorization while withholding response content and private metadata.
 - Preserve exact byte reconstruction for the v0.16.0 public first-lock outputs and the new three-output readiness package.
-- Pass 163 tests, compilation, dependency health, Node syntax, privacy, semantic, original-resolution rendering, and exact-output regeneration gates. Candidate wheel, PR, merge, fresh-main, tag, and lifecycle gates remain pending.
+- Pass 163 tests, compilation, dependency health, Node syntax, privacy, semantic, original-resolution rendering, exact-output regeneration, and two byte-identical detached-source fixed-epoch 302,018-byte wheels / SHA-256 `cac65ceaf6ce75ef67d16d55379df9234a591563c94800791d972965281f80d2`; isolated install reports `0.17.0`, 27 entry points, and zero private/download entries. PR merge, fresh-main, tag, and lifecycle gates remain pending.
 - Keep the scientific gate binding: the software fixture is not a second human response, minimum human custody is unmet, and no reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, metric, deployment, field, official, endorsed, or operational claim is created.
 
-Issue #394; parent second-response issue #393; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; candidate tag withheld pending reviewed merge and fresh-main release gates.
+Issue #394 / draft PR #395; parent second-response issue #393; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c`; candidate tag withheld pending merge and fresh-main release gates.
 
 ## v0.16.0-first-reviewer-response-lock - 2026-07-16
 

@@ -8,4 +8,6 @@ The real readiness run combines the actual first private pair with the already-c
 
 ![BurnLens dual-lock custody readiness](../../samples/labels/review/phase-two/LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001.png)
 
+All 163 tests pass. Two detached-source fixed-epoch wheels from reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c` are byte-identical at 302,018 bytes / SHA-256 `cac65ceaf6ce75ef67d16d55379df9234a591563c94800791d972965281f80d2`. An isolated install reports BurnLens `0.17.0`, all 27 console entry points, and no private/download entries. Draft PR #395 carries the candidate.
+
 The next scientific action has not changed. A second qualifying reviewer must return a completed response. BurnLens must lock those exact bytes before a separate reveal, comparison, and adjudication checkpoint.
