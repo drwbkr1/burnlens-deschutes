@@ -21,6 +21,9 @@ The project remains at one returned independent response. Reviewer two is absent
 - BurnLens: `0.18.0`
 - Generator source: `c4c34dabcde375196dd423d13beb3dd97a32f5e1`
 - Public artifacts: `0e338060d9f70d6aa23916fbf8c1965c33209c72`
+- Reviewed head: `70a0d25042fdef09e2ecfdd118bc761b08eebfd5`
+- PR / merge: #404 / `62a8e8473613938990c40c37f91596470638f036`
+- Verified tag object: `572c8cea4314d89717e3c4204078704e799a5fee`
 - Intake run: `BL-2026-07-16-label-review-response-atomic-intake-fixture-r002`
 - QA run: `BL-2026-07-16-label-review-response-atomic-intake-qa-r002`
 - Report: `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001`
@@ -32,6 +35,7 @@ The project remains at one returned independent response. Reviewer two is absent
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model: none
 - Canonical package proof: two fresh-remote fixed-epoch wheels and one detached `git archive` fixed-epoch wheel from PR head `3d0f46c4160bd0e908bf2367288298cce1f97539` are byte-identical at 314,089 bytes / SHA-256 `857fb6686c83581ddbf6ae98370ac151d4b5c40642fb7bc775173a115a1670af`; isolated BurnLens `0.18.0`; 29 console entry points; zero private/download/build entries. The stale CRLF main-workspace checkout is excluded from canonical package proof.
+- Fresh merged-main proof: the exact same wheel identity, 171 tests, compileall, dependency health, Node syntax, 54 JSON parses, 122 local links, three manifest outputs, and remote annotated-tag peel pass at merge `62a8e8473613938990c40c37f91596470638f036`.
 
 ## Technical basis and limits
 

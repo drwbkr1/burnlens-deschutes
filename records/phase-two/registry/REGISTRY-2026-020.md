@@ -1,6 +1,6 @@
 # REGISTRY-2026-020 - Atomic Reviewer-Response Intake Evidence
 
-**Checkpoint:** Issue #402; superseded parent issue #393; replacement issue #403; branch `codex/p2o4-t09b-atomic-response-intake`; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; intake source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`
+**Checkpoint:** Issue #402 / PR #404; reviewed head `70a0d25042fdef09e2ecfdd118bc761b08eebfd5`; merge `62a8e8473613938990c40c37f91596470638f036`; tag object `572c8cea4314d89717e3c4204078704e799a5fee`; superseded parent issue #393; replacement issue #403; branch `codex/p2o4-t09b-atomic-response-intake`; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; intake source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`
 
 | Artifact | Class | Version/state | Committed private/provider bytes |
 |---|---|---|---:|
@@ -10,7 +10,7 @@
 | Private fixture rehearsal | Exact source, preserved response, and v0.4.0 receipt | 14,749 source/preserved bytes; receipt 2,547 bytes; ignored and untracked | 0 |
 | `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001` JSON/HTML/PNG | Machine-readable, semantic, and rendered content-withheld evidence | Run `BL-2026-07-16-label-review-response-atomic-intake-qa-r002` | 0 |
 | Repository tests and checks | Atomicity, overwrite, duplicate, source-drift, rollback, privacy, symlink, historical compatibility, semantics, rendering, links, JSON, Node, and packaging | 171 tests pass; two fresh-remote and one detached-source wheel are identical at 314,089 bytes / SHA-256 `857fb6686c83581ddbf6ae98370ac151d4b5c40642fb7bc775173a115a1670af`; isolated 0.18.0 / 29 entry points; stale CRLF workspace excluded | 0 |
-| `MANIFEST-2026-020.json` | Exact three-output inventory and bounded release gates | Candidate checkpoint evidence | 0 |
+| `MANIFEST-2026-020.json` | Exact three-output inventory and bounded release gates | Verified checkpoint evidence; fresh merged-main and remote tag pass | 0 |
 
 No second human response, review distribution, reviewer note, response timestamp, private filename, private path, provider archive, secret, credential, reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, accuracy metric, deployment, field claim, official claim, endorsement, emergency-readiness claim, or operational claim is committed.
 
