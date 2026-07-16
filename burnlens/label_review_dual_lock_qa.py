@@ -55,8 +55,8 @@ RETURNED_REVEAL_RULE = (
     "operator may release reveal only after preserving this receipt and exact response bytes"
 )
 CURRENT_RETURNED_REVEAL_RULE = (
-    "prohibited until separate public dual-lock QA verifies two returned-response locks "
-    "and a later checkpoint authorizes reveal"
+    "prohibited until a separate public owner-waiver and reveal-readiness "
+    "checkpoint authorizes reveal"
 )
 FIXTURE_REVEAL_RULE = "prohibited: software fixture cannot authorize proposal reveal"
 

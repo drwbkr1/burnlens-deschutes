@@ -155,8 +155,8 @@ def build_response_lock(
         )
         if (report_version, software_version) == (LOCK_REPORT_VERSION, SOFTWARE_VERSION):
             reveal_release = (
-                "prohibited until separate public dual-lock QA verifies two returned-response "
-                "locks and a later checkpoint authorizes reveal"
+                "prohibited until a separate public owner-waiver and reveal-readiness "
+                "checkpoint authorizes reveal"
             )
         else:
             reveal_release = (

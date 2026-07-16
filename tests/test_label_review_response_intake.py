@@ -137,7 +137,11 @@ class LabelReviewResponseIntakeTests(unittest.TestCase):
             receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
             self.assertEqual(receipt["report_version"], LOCK_REPORT_VERSION)
             self.assertEqual(receipt["software_version"], SOFTWARE_VERSION)
-            self.assertTrue(receipt["reveal_release"].startswith("prohibited until"))
+            self.assertEqual(
+                receipt["reveal_release"],
+                "prohibited until a separate public owner-waiver and reveal-readiness "
+                "checkpoint authorizes reveal",
+            )
             self.assertFalse(report["reveal_authorized_by_this_intake"])
             self.assertIsNone(report["qualifying_independent_human_response"])
             self.assertFalse(report["software_browser_fixture"])
