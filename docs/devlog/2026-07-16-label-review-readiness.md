@@ -12,4 +12,6 @@ The response template contains no proposal-value fields. A separate verifier rej
 
 That distinction is the checkpoint's value. BurnLens now has a real, reproducible path to independent label evidence, while the dataset remains honestly deferred.
 
+PR #376 shipped the instrument at merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`. A detached fresh merged-main checkout repeated 144 tests, compilation, dependency health, the exact manifest/LF/raw gates, 21 declared entry points, and real-source 18-of-18 reconstruction. Annotated tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453` remotely peels to that merge as `v0.13.0-label-review-readiness`.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

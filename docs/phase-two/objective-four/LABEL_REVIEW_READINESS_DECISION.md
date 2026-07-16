@@ -38,6 +38,9 @@ These sources inform the workflow. They do not make BurnLens's bounded packet a 
 
 - Issue: #375
 - Branch: `codex/p2o4-t05-label-review-readiness`
+- Pull request: #376
+- Reviewed head: `119b1e98f7928bb1c2f09d577bfa270d903766c7`
+- Merge: `67dc6023859ba3ec9ce6bb375ae001ff962639c6`
 - Software: BurnLens `0.13.0`
 - Generator/verifier source: `a11ae5123728d3823ba67d22d49250d4affb18f6`
 - Candidate artifacts: `f15cc0608e2093daf0ca339c17145d50933cc743`
@@ -49,6 +52,7 @@ These sources inform the workflow. They do not make BurnLens's bounded packet a 
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model / application: none
 - Exact inventory: `MANIFEST-2026-015`
+- Verified tag: `v0.13.0-label-review-readiness`; object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`
 
 ## Next gate
 

@@ -123,11 +123,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; topology-stable three-event proposal/QA is shipped and a proposal-blinded review-readiness candidate exists; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.12.1-topology-stable-label-transfer` at `e00028509145b439d95eb302591e7cb19bd073fd` via issue #371 / PR #372 |
-| Active analytical candidate | BurnLens `0.13.0` / issue #375: 56-unit proposal-blinded label-review readiness, separate reveal/templates, and packet/response integrity QA; completed independent responses/adjudications zero |
-| Baseline verification | Annotated tag object `8606c61f0e1668f2b057abca177144937eae1036` remotely dereferences to PR #372 merge `e00028509145b439d95eb302591e7cb19bd073fd`; fresh merged-main tests, canonical wheel, exact ten-output reconstruction, and remote-tag gates pass |
-| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; candidate outputs add a proposal-blinded independent-review instrument to topology-stable Darlene/Tepee/McKay proposal evidence. No independently accepted labels, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
+| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA and proposal-blinded review readiness are shipped; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.13.0-label-review-readiness` at `67dc6023859ba3ec9ce6bb375ae001ff962639c6` via issue #375 / PR #376 |
+| Active analytical candidate | None. The next evidence checkpoint is qualifying independent response/adjudication evidence against the shipped 56-unit packet. |
+| Baseline verification | Annotated tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453` remotely dereferences to PR #376 merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; fresh merged-main tests, canonical source wheel, exact 18-output reconstruction, and remote-tag gates pass |
+| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; shipped outputs add a proposal-blinded independent-review instrument to topology-stable Darlene/Tepee/McKay proposal evidence. No independently accepted labels, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
