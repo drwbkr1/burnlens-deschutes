@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; verified live-browser reviewer handoff shipped; first returned-response lock candidate recorded; dataset not created** | P2O4-T07 / issue #383 / PR #385 ships verified v0.15.0 current-Chrome software evidence. P2O4-T08 / issue #384 has a `0.16.0` content-withheld public-lock candidate; PR/merge/tag gates, a second response, adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; first returned-response evidence merged; manifest chronology remediation active; dataset not created** | P2O4-T07 / issue #383 / PR #385 ships verified v0.15.0 current-Chrome software evidence. P2O4-T08 / issue #384 / PR #388 merged `0.16.0` content-withheld public-lock evidence; issue #389 corrects manifest chronology before tag. A second response, adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -16,7 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`; tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`; reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; browser run uses zero human responses |
-| Active evidence checkpoint | P2O4-T08 / issue #384 / BurnLens `0.16.0` candidate; exact response and receipt remain private/ignored; public JSON/HTML/PNG exposes only hashes, completeness, binding, chronology, withholding, and one-of-two state |
+| Active evidence checkpoint | P2O4-T08 / issue #384 / PR #388 merged at `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390 corrects manifest chronology and completes release gates before tag; evidence content remains frozen |
 | Previous repository evidence baseline | Shipped `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
@@ -65,7 +65,7 @@
 | Response locking | Shipped exact-packet response validator and SHA-256 receipt; bounded reviewer metadata, timezone-aware receipt time, overwrite refusal, and proposal-bearing response rejection; synthetic fixture only, not reviewer identity or human evidence |
 | Live-browser handoff QA | Shipped `LABEL-REVIEW-BROWSER-QA-2026-001`; run `BL-2026-07-16-label-review-browser-qa-r001`; exact extracted workbench passes invalid-state, actual draft download/load, 56-unit review/export, desktop/mobile overflow, console/runtime, resource, cookie/storage, and fixture-lock checks in Chrome `150.0.7871.124` |
 | Browser fixture boundary | One balanced 56-unit software fixture only; receipt is `software-browser-fixture`, qualifying-human false, and reveal-prohibited; independent human responses used in this QA: zero |
-| Returned reviewer response state | One exact returned response is preserved and operator-locked under issue #384; exact bytes and notes remain ignored/private; public receipt checkpoint pending; reveal unopened; second qualifying response required |
+| Returned reviewer response state | One exact returned response and receipt are preserved and operator-locked under issue #384; exact bytes and notes remain ignored/private; bounded public evidence merged through PR #388; issue #389 corrects release chronology; reveal operator-declared unopened; second qualifying response required |
 | Dataset version | Not created |
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
@@ -81,7 +81,7 @@ P2O4-T07 / issue #383 / PR #385 ships `v0.15.0-live-browser-reviewer-handoff` at
 
 ## Current checkpoint
 
-P2O4-T08 / issue #384 is active with source `ec41129f9322022f28b8f788a2e08ae22145471b`, public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`, 158 passing tests, and a reproducible 292,068-byte candidate wheel. One actual response and its private receipt are exact, ignored, and operator-locked. Complete PR/merge/tag/fresh-main verification, then obtain a second qualifying response. Keep the first response contents and reveal withheld; do not compare, adjudicate, or create a split before both response locks exist.
+P2O4-T08 / issue #384 / PR #388 merged at `836eef75495dbc671bd74a8ad4112852bbf50ac6` with source `ec41129f9322022f28b8f788a2e08ae22145471b`, public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`, 158 passing tests, and a reproducible 292,068-byte wheel. Post-merge audit withheld the tag because the manifest creation time followed its own commit; issue #389 corrects that record and completes release gates. One actual response and its private receipt remain exact, ignored, and operator-locked. Keep the first response contents and reveal withheld; do not compare, adjudicate, or create a split before a second qualifying response is also locked.
 
 ## Boundaries carried forward
 
