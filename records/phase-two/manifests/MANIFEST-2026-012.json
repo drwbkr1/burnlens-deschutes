@@ -8,7 +8,7 @@
   "branch": "codex/p2o4-t03-cross-event-source-fitness",
   "git_base_commit": "2523207ad10ca88d822bd34d96bb482feded6072",
   "generator_source_commit": "d28c0368c5b71b0c982d056d3db9409a1725f697",
-  "candidate_checkpoint_commit": null,
+  "candidate_checkpoint_commit": "fe1136cad90bf85bd2ce5843a413a7b401196bf7",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
   "pull_request": null,

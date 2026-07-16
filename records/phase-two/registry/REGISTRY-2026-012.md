@@ -1,6 +1,6 @@
 # REGISTRY-2026-012 - Cross-Event Source-Fitness Artifacts
 
-**Checkpoint:** Issue #361; branch `codex/p2o4-t03-cross-event-source-fitness`; generator/assessor source `d28c0368c5b71b0c982d056d3db9409a1725f697`; candidate PR/merge/tag pending
+**Checkpoint:** Issue #361; branch `codex/p2o4-t03-cross-event-source-fitness`; generator/assessor source `d28c0368c5b71b0c982d056d3db9409a1725f697`; candidate artifact commit `fe1136cad90bf85bd2ce5843a413a7b401196bf7`; PR/merge/tag pending
 
 | Artifact | Class | Version/state | Committed provider imagery bytes |
 |---|---|---|---:|
