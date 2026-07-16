@@ -1,6 +1,6 @@
 # PRECHECK-2026-012 - Cross-Event Source-Fitness Entry Gate
 
-**Issue / branch / base:** #361 / `codex/p2o4-t03-cross-event-source-fitness` / `2523207ad10ca88d822bd34d96bb482feded6072`
+**Issue / branch / base:** #361 / `codex/p2o4-t03-cross-event-source-fitness` / `2523207ad10ca88d822bd34d96bb482feded6072`; pre-tag trace remediation #363 / `codex/p2o4-t03-label-trace-remediation` / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`
 
 ## Cycle-start evidence
 
@@ -34,4 +34,4 @@ Decision: `PASS_EXACT_CROSS_EVENT_ACQUISITION_ENTRY_GATE`.
 
 ## Gate fulfillment
 
-The allowed action completed under acquisition run `BL-2026-07-16-cross-event-optical-intake-r005` and source-fitness run `BL-2026-07-16-cross-event-source-fitness-r005`. All four exact archives are registered and reverified. McKay passes; Tepee is accepted only with its SCL and window exclusions binding. The prohibited label/dataset/split/baseline/model/application actions remain absent. The final candidate passes 128 tests, compilation, dependency health, candidate wheel/isolated import, original-resolution review, and live semantic-browser review.
+The allowed action completed under acquisition run `BL-2026-07-16-cross-event-optical-intake-r005`. Analytical source-fitness run `r005` produced the accepted measurements, but fresh merged-main semantic verification correctly withheld the tag because its `label_schema_version` named the earlier design protocol while the manifest named the implemented five-state schema. Issue #363 adds a fail-closed schema-input gate and explicit protocol/schema fields. Remediated run `BL-2026-07-16-cross-event-source-fitness-r006`, source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`, preserves every event, pixel, window, metric, decision, lineage field, and input hash while aligning the trace. All four exact archives remain registered and reverified. McKay passes; Tepee is accepted only with its SCL and window exclusions binding. The prohibited label/dataset/split/baseline/model/application actions remain absent. The remediated candidate passes 129 tests, compilation, dependency health, candidate wheel/isolated import, original-resolution review, and live semantic-browser review; remediation PR/merge/tag gates remain pending.

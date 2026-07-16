@@ -22,7 +22,7 @@
 | Content-registration baseline | BurnLens `0.8.0`; issue #347 / PR #348 analytical merge `c01cdb12033e7a9440ad0502b92a8887fd79ed1d`; issue #349 / PR #350 remediation merge `1297471be45200c40f9f40746e85b437ce6e0c0d`; generator `5287704a37f03d96e47467afba8623f7be643129`; verified tag object `14edfad3ce89dbd9179a54eb1e29811e41d258c0`; all 12 windows pass; labels remain unimplemented |
 | Label-proposal baseline | BurnLens `0.9.0`; issue #353 / PR #354; merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; verified tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
 | Cross-event feasibility baseline | BurnLens `0.10.0`; issue #357 / PR #358; merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; tag object `dbfda10ca50c39d8e8924096e740e71643e1f133`; generator/assessor `ea3e164d09872825a0fadc64b9492e30c85c83c8`; Tepee and McKay selected, Milli tile-seam exclusion; whole groups frozen before acquisition; provider imagery, dataset, and split absent |
-| Cross-event source-fitness candidate | BurnLens `0.11.0`; issue #361; source `d28c0368c5b71b0c982d056d3db9409a1725f697`; four exact archives / 4,551,170,756 ignored local bytes; McKay 100% eligible and 3/3 registration pass; Tepee 86.5217% eligible with visible quality/window exclusions; PR/merge/tag pending |
+| Cross-event source-fitness candidate | BurnLens `0.11.0`; issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; four exact archives / 4,551,170,756 ignored local bytes; McKay 100% eligible and 3/3 registration pass; Tepee 86.5217% eligible with visible quality/window exclusions; remediation PR/merge/tag pending |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -51,7 +51,7 @@
 | Label-QA report | `LABEL-QA-2026-001`; run `BL-2026-07-15-label-qa-r001`; 100% state/target agreement; zero all-pixel or 120-sample disagreement; independent human inter-rater validation absent |
 | Cross-event report | `CROSS-EVENT-FITNESS-2026-001`; run `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`; decision `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES`; two groups selected, one tile-seam exclusion; zero provider imagery bytes; no partition |
 | Cross-event raw package | `burnlens-cross-event-optical-package-v0.1.0`; acquisition `BL-2026-07-16-cross-event-optical-intake-r005`; four exact archives / 4,551,170,756 ignored local bytes; zero raw bytes committed; all provider archives single-linked |
-| Cross-event source-fitness report | `CROSS-EVENT-SOURCE-FITNESS-2026-001`; run `BL-2026-07-16-cross-event-source-fitness-r005`; decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS`; McKay passes and Tepee exclusions bind; exact candidate hashes in `MANIFEST-2026-012` |
+| Cross-event source-fitness report | `CROSS-EVENT-SOURCE-FITNESS-2026-001`; remediated run `BL-2026-07-16-cross-event-source-fitness-r006`; decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS`; McKay passes and Tepee exclusions bind; protocol/schema trace is explicit; exact candidate hashes in `MANIFEST-2026-012` |
 | Dataset version | Not created |
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable one-event proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
@@ -67,7 +67,7 @@ P2O4-T02 / issue #357 / PR #358 accepts metadata-feasible Tepee/McKay acquisitio
 
 ## Current checkpoint
 
-P2O4-T02 remains the latest shipped baseline. P2O4-T03 / issue #361 is the fully rendered `0.11.0` candidate and must still pass PR/merge/tag and fresh merged-main gates. Once shipped, the next bounded checkpoint is cross-event five-state proposal transfer plus separate software QA on the exact Tepee/McKay pixels, with all Tepee exclusions binding and no split creation.
+P2O4-T02 remains the latest verified tag. P2O4-T03 / issue #361 / PR #362 is analytically merged; trace-remediation issue #363 is the fully rendered `0.11.0` candidate and must still pass remediation PR/merge/tag and fresh merged-main gates. Once shipped, the next bounded checkpoint is cross-event five-state proposal transfer plus separate software QA on the exact Tepee/McKay pixels, with all Tepee exclusions binding and no split creation.
 
 ## Boundaries carried forward
 
