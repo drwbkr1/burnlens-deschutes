@@ -73,7 +73,7 @@
 
 ## Latest shipped checkpoint
 
-P2O4-T06 / issue #379 / PR #380 ships `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`. A detached fresh merged-main checkout passes 151 tests, exact seven-output manifest/LF/raw/link gates, compilation, dependency health, 24 declared entry points, the canonical fixed-epoch source wheel, fresh seven-of-seven plus archive reconstruction, and remote annotated-tag verification. Tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a` peels to that merge. Lifecycle synchronization is issue #381.
+P2O4-T06 / issue #379 / PR #380 ships `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`. A detached fresh merged-main checkout passes 151 tests, exact seven-output manifest/LF/raw/link gates, compilation, dependency health, 24 declared entry points, the canonical fixed-epoch source wheel, fresh seven-of-seven plus archive reconstruction, and remote annotated-tag verification. Tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a` peels to that merge. Lifecycle synchronization is issue #381 / PR #382.
 
 ## Current checkpoint
 

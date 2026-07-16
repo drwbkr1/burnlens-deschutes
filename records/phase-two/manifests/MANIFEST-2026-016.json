@@ -18,7 +18,7 @@
   "reviewed_head_commit": "50dc6cc81de58b57ee04c2f6d6c3a1499af55a70",
   "checkpoint_commit": "49c2d2cff03612b9fb4e0644c4c1ee8852a312a4",
   "pull_request": 380,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 382,
   "version_tag": "v0.14.0-offline-reviewer-handoff",
   "version_tag_object": "b4f290fdcc8dad859bdecc7eea54866d0e1b727a",
   "version_tag_state": "verified annotated tag; remote tag peels to checkpoint commit 49c2d2cff03612b9fb4e0644c4c1ee8852a312a4",
