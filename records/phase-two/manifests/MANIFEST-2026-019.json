@@ -15,6 +15,7 @@
   "checkpoint_commit": "eb84aad222a07b89f03a892c2cc0df9540b20d25",
   "pull_request": 395,
   "lifecycle_sync_issue": 396,
+  "lifecycle_sync_pull_request": 397,
   "version_tag": "v0.17.0-dual-lock-custody-readiness",
   "version_tag_object": "8fca2a51548690b710ad3903a19312e77c748420",
   "version_tag_state": "verified annotated tag; remotely peels to checkpoint commit",
