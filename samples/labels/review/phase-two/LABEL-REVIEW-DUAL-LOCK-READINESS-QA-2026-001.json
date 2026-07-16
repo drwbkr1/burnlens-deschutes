@@ -1,0 +1,141 @@
+{
+  "report_id": "LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-dual-lock-readiness-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T19:45:06Z",
+  "run_id": "BL-2026-07-16-label-review-dual-lock-readiness-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 394,
+  "parent_response_issue": 393,
+  "git_source_commit": "ac410ed74a6f5abc13dc8191bac5fa4935e211a5",
+  "software_version": "0.17.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "response_schema_version": "burnlens-label-review-response-v0.1.0",
+    "review_unit_count": 56
+  },
+  "private_lock_bindings": [
+    {
+      "lock_slot": 1,
+      "response": {
+        "bytes": 16443,
+        "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+        "opaque_reviewer_slot": "reviewer-01",
+        "unit_count": 56,
+        "completed_contract": true,
+        "input_filename_retained": false,
+        "content_distribution_withheld": true,
+        "free_text_withheld": true
+      },
+      "receipt": {
+        "report_id": "LABEL-REVIEW-RESPONSE-LOCK-2026-001",
+        "run_id": "BL-2026-07-16-label-review-response-lock-r001",
+        "git_source_commit": "6eec7b01f1d0b0c387267a92deba9ed9b470c24d",
+        "bytes": 2508,
+        "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+        "report_version": "label-review-response-integrity-lock-v0.2.0",
+        "software_version": "0.15.0",
+        "task_issue": 384,
+        "evidence_origin": "returned-independent-response",
+        "input_filename_retained": false
+      }
+    },
+    {
+      "lock_slot": 2,
+      "response": {
+        "bytes": 14749,
+        "sha256": "aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+        "opaque_reviewer_slot": "browser-qa-fixture-not-human",
+        "unit_count": 56,
+        "completed_contract": true,
+        "input_filename_retained": false,
+        "content_distribution_withheld": true,
+        "free_text_withheld": true
+      },
+      "receipt": {
+        "report_id": "LABEL-REVIEW-DUAL-LOCK-FIXTURE-2026-001",
+        "run_id": "BL-2026-07-16-label-review-dual-lock-fixture-r001",
+        "git_source_commit": "397a28cf9c4385050a516a2892085fcd89cbcaae",
+        "bytes": 2516,
+        "sha256": "98ede0e1b2fadc260a307e07f66b8f7ba04602ea3de0f7f06e1eb4d36d2e646c",
+        "report_version": "label-review-response-integrity-lock-v0.3.0",
+        "software_version": "0.17.0",
+        "task_issue": 394,
+        "evidence_origin": "software-browser-fixture",
+        "input_filename_retained": false
+      }
+    }
+  ],
+  "checks": {
+    "two_exact_response_receipt_pairs": "pass",
+    "packet_binding": "pass",
+    "completed_response_contracts": "pass: 56 of 56 units in both pairs",
+    "receipt_response_bindings": "pass",
+    "receipt_chronology": "pass",
+    "distinct_response_hashes": "pass",
+    "distinct_reviewer_slots": "pass",
+    "distinct_receipt_hashes": "pass",
+    "distinct_receipt_ids": "pass",
+    "distinct_receipt_runs": "pass",
+    "distinct_task_issues": "pass",
+    "mixed_receipt_version_compatibility": "pass",
+    "public_content_withholding": "pass"
+  },
+  "origin_classification": {
+    "operator_declared_returned_responses": 1,
+    "software_browser_fixtures": 1,
+    "origin_verified_by_software": false,
+    "human_identity_verified_by_software": false,
+    "reviewer_expertise_verified_by_software": false,
+    "scientific_label_fitness_established": false
+  },
+  "custody_state": {
+    "minimum_operator_declared_returned_responses": 2,
+    "operator_declared_returned_responses_present": 1,
+    "minimum_custody_count_met": false,
+    "second_qualifying_response_established_by_software": false,
+    "reveal_status": "withheld-unopened-after-lock",
+    "reveal_status_verified_by_software": false,
+    "reveal_authorized_by_this_run": false,
+    "response_comparison_performed": false,
+    "adjudication_ready": false,
+    "adjudication_completed": false
+  },
+  "content_withholding": {
+    "withheld": [
+      "first-pass label distributions",
+      "evidence-sufficiency distributions",
+      "confidence distributions",
+      "reason-code distributions",
+      "reviewer experience and attestation text",
+      "response start and completion timestamps",
+      "free-text notes",
+      "private filenames and private paths"
+    ],
+    "reason": "Preserve reviewer independence and keep review content private until a separate verified reveal/comparison checkpoint is authorized after two real locks exist."
+  },
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "PASS_MIXED_VERSION_DUAL_LOCK_READINESS_ONE_RETURNED_ONE_FIXTURE_NO_REVEAL",
+  "decision_detail": "The exact legacy returned-response lock and one current-version software-fixture lock pass two-pair custody, compatibility, distinctness, chronology, and content-withholding checks. The fixture is not human evidence, so the project remains at one returned response and the reveal remains prohibited.",
+  "claims": {
+    "proven": [
+      "Two exact response/receipt pairs can be validated together without publishing review content.",
+      "Legacy first-lock and current second-lock receipt identities can be checked explicitly and fail closed on drift.",
+      "The two response hashes, reviewer slots, receipt hashes, receipt IDs, receipt runs, and task issues are distinct.",
+      "The current readiness run retains one software fixture as non-human evidence and prohibits reveal."
+    ],
+    "not_proven": [
+      "A software fixture is not a second qualifying independent human response.",
+      "Operator-declared origins are not software verification of identity, expertise, independence, or scientific fitness.",
+      "No reveal, response comparison, inter-rater agreement, adjudication, accepted label, dataset, split, baseline, model, accuracy, field validation, deployment, official status, endorsement, or operational readiness is established."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

@@ -24,8 +24,14 @@ from .verify_label_review_packet import (
 
 
 LOCK_SCHEMA_VERSION = "0.1.0"
-LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.2.0"
-SOFTWARE_VERSION = "0.15.0"
+LEGACY_LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.2.0"
+LEGACY_SOFTWARE_VERSION = "0.15.0"
+LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.3.0"
+SOFTWARE_VERSION = "0.17.0"
+SUPPORTED_LOCK_IDENTITIES = {
+    (LEGACY_LOCK_REPORT_VERSION, LEGACY_SOFTWARE_VERSION),
+    (LOCK_REPORT_VERSION, SOFTWARE_VERSION),
+}
 RETURNED_INDEPENDENT_RESPONSE = "returned-independent-response"
 SOFTWARE_BROWSER_FIXTURE = "software-browser-fixture"
 EVIDENCE_ORIGINS = {
@@ -66,6 +72,8 @@ def build_response_lock(
     git_source_commit: str,
     evidence_origin: str,
     task_issue: int,
+    report_version: str = LOCK_REPORT_VERSION,
+    software_version: str = SOFTWARE_VERSION,
 ) -> dict[str, Any]:
     packet = _load_json(packet_path)
     response = _load_json(response_path)
@@ -92,6 +100,10 @@ def build_response_lock(
         raise LabelReviewResponseLockError("response evidence origin is invalid")
     if not isinstance(task_issue, int) or isinstance(task_issue, bool) or task_issue <= 0:
         raise LabelReviewResponseLockError("task issue must be a positive integer")
+    if (report_version, software_version) not in SUPPORTED_LOCK_IDENTITIES:
+        raise LabelReviewResponseLockError(
+            "response-lock report and software versions are not a supported identity"
+        )
     if not receipt_id.strip() or not run_id.strip() or not received_at_utc.strip():
         raise LabelReviewResponseLockError("receipt identity, run identity, and receive time are required")
     try:
@@ -144,13 +156,13 @@ def build_response_lock(
     return {
         "report_id": receipt_id,
         "schema_version": LOCK_SCHEMA_VERSION,
-        "report_version": LOCK_REPORT_VERSION,
+        "report_version": report_version,
         "received_at_utc": received_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
         "task_issue": task_issue,
         "git_source_commit": git_source_commit,
-        "software_version": SOFTWARE_VERSION,
+        "software_version": software_version,
         "application_version": WORKBENCH_VERSION,
         "evidence_origin": evidence_origin,
         "origin_declared_by_operator": True,
