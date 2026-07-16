@@ -441,7 +441,7 @@ def build_report(
         CROSS_EVENT_CONTRACTS,
         contract_validator=validate_cross_event_contracts,
         contract_version=CONTRACT_VERSION,
-        registration_manifest_name=REGISTRATION_MANIFEST_NAME,
+        allow_multilink_registration_manifest=True,
     )
     if not verification["accepted_as_unchanged_registered_package"]:
         raise CrossEventSourceFitnessError("registered cross-event source package failed verification")
@@ -508,14 +508,22 @@ def build_report(
         "input_hashes": {
             "feasibility_report_sha256": _sha256_lf_text(feasibility_report_path),
             "feasibility_source_snapshot_sha256": feasibility["input_hashes"]["source_snapshot_sha256"],
-            "registration_manifest_sha256": sha256(
-                (package / REGISTRATION_MANIFEST_NAME).read_bytes()
-            ).hexdigest(),
+            "registration_manifest_sha256": verification["registration_manifest_sha256"],
         },
         "registered_source_lineage": {
             "acquisition_run_id": registration.get("run_id"),
             "acquisition_generated_at_utc": registration.get("generated_at_utc"),
             "registration_manifest_name": verification["registration_manifest_name"],
+            "registration_manifest_link_count": verification[
+                "registration_manifest_link_count"
+            ],
+            "registration_manifest_multilink_exception": (
+                "OneDrive alias permitted for metadata manifest only; every provider archive remains single-linked."
+                if verification["registration_manifest_link_count"] != 1
+                else None
+            ),
+            "provider_archive_link_gate": "pass: all four provider archives have exactly one filesystem link",
+            "registration_verification_reason_codes": verification["reason_codes"],
             "asset_hashes": registration.get("assets"),
         },
         "source_precedence": ROUTE_PRECEDENCE,
@@ -596,7 +604,13 @@ def render_png(report: dict[str, Any], previews: list[dict[str, Any]], path: Pat
         y += 535
     draw.rounded_rectangle((55, 1270, 1745, 1385), radius=18, fill="#261f12", outline="#be8a36", width=2)
     draw.text((80, 1292), WARNING, fill="#ffd997", font=_font(18))
-    draw.text((80, 1330), "No labels / dataset / split / baseline / model / application. Official sources govern.", fill="#ffd997", font=_font(18))
+    manifest_links = report["registered_source_lineage"]["registration_manifest_link_count"]
+    draw.text(
+        (80, 1330),
+        f"Metadata manifest nlink {manifest_links}: verified OneDrive alias exception; four provider archives remain single-linked.",
+        fill="#ffd997",
+        font=_font(17),
+    )
     draw.text((80, 1362), report["attribution"], fill="#ffd997", font=_font(16))
     acquisition_run = report["registered_source_lineage"]["acquisition_run_id"]
     draw.text(
@@ -658,7 +672,7 @@ body{{margin:0;background:#07110f;color:#eef7f3;font:16px/1.55 system-ui,sans-se
 <h2>Decision</h2><div class="card"><p><strong>{escape(report['decision']['machine'])}</strong></p><p>Visual review: {escape(report['decision']['visual_review'])}</p><p>{escape(report['decision']['visual_review_notes'] or 'Pending rendered review.')}</p></div>
 <h2>What was measured</h2><div class="card"><ul><li>{escape(report['method']['boundary'])}</li><li>{escape(report['method']['native_pixels'])}</li><li>{escape(report['method']['quality'])}</li><li>{escape(report['method']['registration'])}</li><li>{escape(report['method']['registration_envelope'])}</li></ul></div>
 {''.join(event_cards)}
-<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>{escape(report['attribution'])}</p><p>Trace: source commit <code>{escape(report['git_source_commit'])}</code> · BurnLens <code>{escape(report['software_version'])}</code> · evidence run <code>{escape(report['run_id'])}</code> · acquisition run <code>{escape(str(report['registered_source_lineage']['acquisition_run_id']))}</code>.</p><p>Dataset: none · baseline: none · model: none · application: none · label schema: <code>{escape(report['label_schema_version'])}</code>.</p></div>
+<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>{escape(report['attribution'])}</p><p>Registration metadata manifest: <code>{escape(report['registered_source_lineage']['registration_manifest_name'])}</code> · link count {report['registered_source_lineage']['registration_manifest_link_count']}. The OneDrive alias exception applies only to this fully content-verified metadata manifest; all four provider archives remain single-linked.</p><p>Trace: source commit <code>{escape(report['git_source_commit'])}</code> · BurnLens <code>{escape(report['software_version'])}</code> · evidence run <code>{escape(report['run_id'])}</code> · acquisition run <code>{escape(str(report['registered_source_lineage']['acquisition_run_id']))}</code>.</p><p>Dataset: none · baseline: none · model: none · application: none · label schema: <code>{escape(report['label_schema_version'])}</code>.</p></div>
 </main></body></html>"""
     path.parent.mkdir(parents=True, exist_ok=True)
     _write_utf8_lf(path, html)

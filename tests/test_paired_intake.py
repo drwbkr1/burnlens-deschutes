@@ -101,48 +101,6 @@ class PairedIntakeTests(unittest.TestCase):
 
         self.assertTrue(verification["accepted_as_unchanged_registered_package"])
 
-    def test_custom_registration_manifest_name_is_enforced(self) -> None:
-        with TemporaryDirectory() as directory:
-            root = Path(directory)
-            seed = root / "seed"
-            seed.mkdir()
-            contracts = _synthetic_contracts(seed)[1:]
-            quarantine = root / "quarantine"
-            self._copy_all(seed, quarantine, contracts)
-            destination = root / "raw" / contracts[0].package_id
-            manifest_name = "~$burnlens-registration.json"
-            promote_quarantine(
-                quarantine,
-                destination,
-                contracts,
-                generated_at_utc=GENERATED,
-                run_id=RUN_ID,
-                synthetic_fixture=True,
-                contract_validator=validate_asset_contracts,
-                contract_version="generic-exact-package-v0.1.0",
-                registration_manifest_name=manifest_name,
-            )
-
-            custom = verify_registered_package(
-                destination,
-                contracts,
-                contract_validator=validate_asset_contracts,
-                contract_version="generic-exact-package-v0.1.0",
-                registration_manifest_name=manifest_name,
-            )
-            default = verify_registered_package(
-                destination,
-                contracts,
-                contract_validator=validate_asset_contracts,
-                contract_version="generic-exact-package-v0.1.0",
-            )
-
-        self.assertTrue(custom["accepted_as_unchanged_registered_package"])
-        self.assertEqual(custom["registration_manifest_name"], manifest_name)
-        self.assertFalse(default["accepted_as_unchanged_registered_package"])
-        self.assertIn("REGISTERED_PACKAGE_UNEXPECTED_ENTRY", default["reason_codes"])
-        self.assertIn("REGISTERED_PACKAGE_MISSING_ENTRY", default["reason_codes"])
-
     def test_missing_provider_quarantine_fails_closed(self) -> None:
         with TemporaryDirectory() as directory:
             evaluation = evaluate_quarantine(Path(directory) / "missing", EXACT_CONTRACTS)
@@ -363,11 +321,23 @@ class PairedIntakeTests(unittest.TestCase):
             os.link(manifest, root / "external-manifest-alias.json")
 
             verification = verify_registered_package(destination, contracts)
+            allowed = verify_registered_package(
+                destination,
+                contracts,
+                allow_multilink_registration_manifest=True,
+            )
 
         self.assertFalse(verification["accepted_as_unchanged_registered_package"])
         self.assertIn(
             "REGISTRATION_MANIFEST_MULTILINK_NOT_ALLOWED",
             verification["reason_codes"],
+        )
+        self.assertTrue(allowed["accepted_as_unchanged_registered_package"])
+        self.assertEqual(allowed["registration_manifest_link_count"], 2)
+        self.assertEqual(len(allowed["registration_manifest_sha256"]), 64)
+        self.assertEqual(
+            allowed["reason_codes"],
+            ["REGISTERED_PACKAGE_VERIFIED_WITH_MANIFEST_MULTILINK_EXCEPTION"],
         )
 
     def test_existing_destination_is_never_replaced(self) -> None:

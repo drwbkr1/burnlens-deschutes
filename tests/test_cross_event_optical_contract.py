@@ -129,8 +129,7 @@ class CrossEventOpticalContractTests(unittest.TestCase):
     def test_cross_event_working_files_use_onedrive_ignored_tmp_suffix(self) -> None:
         self.assertEqual(TEMPORARY_SUFFIX, ".tmp")
         self.assertEqual(TEMPORARY_PREFIX, "~$")
-        self.assertTrue(REGISTRATION_MANIFEST_NAME.startswith("~$"))
-        self.assertTrue(REGISTRATION_MANIFEST_NAME.endswith(".tmp"))
+        self.assertEqual(REGISTRATION_MANIFEST_NAME, ".burnlens-registration.json")
         with TemporaryDirectory() as directory:
             quarantine = Path(directory)
             accepted = quarantine / f"~${CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"

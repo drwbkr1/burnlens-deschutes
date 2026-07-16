@@ -143,7 +143,11 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             "software_version": "0.11.0",
             "run_id": "BL-TEST-CROSS-EVENT-SOURCE-FITNESS",
             "label_schema_version": "burn-scar-label-protocol-v0.1.0",
-            "registered_source_lineage": {"acquisition_run_id": "BL-TEST-ACQUISITION"},
+            "registered_source_lineage": {
+                "acquisition_run_id": "BL-TEST-ACQUISITION",
+                "registration_manifest_name": ".burnlens-registration.json",
+                "registration_manifest_link_count": 2,
+            },
             "attribution": "Contains modified synthetic fixture data.",
         }
         preview = [{
@@ -167,6 +171,7 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             self.assertIn("4 exact archives", page)
             self.assertIn("0 labels", page)
             self.assertIn("acquisition run", page)
+            self.assertIn("OneDrive alias exception", page)
             self.assertIn("Contains modified synthetic fixture data", page)
             self.assertNotIn(b"\r\n", html.read_bytes())
 

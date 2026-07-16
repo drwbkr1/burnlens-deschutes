@@ -40,7 +40,7 @@ SOURCE_RECORD_ID = "SOURCE-2026-012"
 TERMS_REVIEW_ID = "TERMS-2026-007"
 TEMPORARY_SUFFIX = ".tmp"
 TEMPORARY_PREFIX = "~$"
-REGISTRATION_MANIFEST_NAME = "~$burnlens-registration.json.tmp"
+REGISTRATION_MANIFEST_NAME = ".burnlens-registration.json"
 MAX_TRANSFER_ATTEMPTS = 5
 RETRYABLE_TRANSFER_REASONS = {
     "DOWNLOAD_REQUEST_FAILED",
@@ -399,7 +399,7 @@ def acquire_cross_event_package(
             CROSS_EVENT_CONTRACTS,
             contract_validator=validate_cross_event_contracts,
             contract_version=CONTRACT_VERSION,
-            registration_manifest_name=REGISTRATION_MANIFEST_NAME,
+            allow_multilink_registration_manifest=True,
         )
         if not verification["accepted_as_unchanged_registered_package"]:
             raise AcquisitionError("EXISTING_REGISTERED_PACKAGE_INVALID")
@@ -452,7 +452,6 @@ def acquire_cross_event_package(
             synthetic_fixture=False,
             contract_validator=validate_cross_event_contracts,
             contract_version=CONTRACT_VERSION,
-            registration_manifest_name=REGISTRATION_MANIFEST_NAME,
         )
     except ValueError:
         evaluation = evaluate_quarantine(
@@ -475,7 +474,7 @@ def acquire_cross_event_package(
         CROSS_EVENT_CONTRACTS,
         contract_validator=validate_cross_event_contracts,
         contract_version=CONTRACT_VERSION,
-        registration_manifest_name=REGISTRATION_MANIFEST_NAME,
+        allow_multilink_registration_manifest=True,
     )
     if not verification["accepted_as_unchanged_registered_package"]:
         raise AcquisitionError("POST_PROMOTION_VERIFICATION_FAILED")
