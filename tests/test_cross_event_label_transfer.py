@@ -29,7 +29,7 @@ from burnlens.mtbs_cross_event_reference import (
 
 class CrossEventLabelTransferTests(unittest.TestCase):
     def test_current_package_version_is_cross_event_label_transfer_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.13.0")
+        self.assertEqual(burnlens.__version__, "0.14.0")
 
     def test_cross_event_text_artifacts_have_checkout_stable_lf_contract(self) -> None:
         root = Path(__file__).resolve().parents[1]
