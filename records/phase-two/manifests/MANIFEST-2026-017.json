@@ -18,7 +18,7 @@
   "reviewed_head_commit": "1723f87d252bda7a67680a71108fc0a65b42c587",
   "checkpoint_commit": "861716be16be3a0469d2268baed971be65684d48",
   "pull_request": 385,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 387,
   "version_tag": "v0.15.0-live-browser-reviewer-handoff",
   "version_tag_object": "69b32b076a7fca40ba5eceacb64aeac2a512e7b9",
   "version_tag_state": "verified annotated tag; remote tag peels to checkpoint commit 861716be16be3a0469d2268baed971be65684d48",

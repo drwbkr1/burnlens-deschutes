@@ -53,7 +53,7 @@ These sources support the recorded mechanism. They do not expand the scientific 
 - Dataset / split / baseline / model: none
 - Exact inventory: `MANIFEST-2026-017`
 - Verified tag: `v0.15.0-live-browser-reviewer-handoff`; object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
-- Lifecycle synchronization: issue #386
+- Lifecycle synchronization: issue #386 / PR #387
 
 ## Current project state and next gate
 

@@ -77,7 +77,7 @@
 
 ## Latest shipped checkpoint
 
-P2O4-T07 / issue #383 / PR #385 ships `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`. A fresh remote-main clone passes 154 tests, compilation, Node syntax, dependency health, exact seven-file plus archive reconstruction, a new Chrome roundtrip with zero human evidence, exact five-output manifest hashes, 97 local links, LF package checkout, and the canonical 283,856-byte wheel. Tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` peels to that merge. Lifecycle synchronization is issue #386.
+P2O4-T07 / issue #383 / PR #385 ships `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`. A fresh remote-main clone passes 154 tests, compilation, Node syntax, dependency health, exact seven-file plus archive reconstruction, a new Chrome roundtrip with zero human evidence, exact five-output manifest hashes, 97 local links, LF package checkout, and the canonical 283,856-byte wheel. Tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` peels to that merge. Lifecycle synchronization is issue #386 / PR #387.
 
 ## Current checkpoint
 
