@@ -258,7 +258,7 @@ One actual returned response arrived after this run and is preserved and operato
 - Latest offline handoff-QA run: `BL-2026-07-16-label-review-handoff-qa-r001`
 - Latest live-browser handoff-QA run: `BL-2026-07-16-label-review-browser-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.14.0`; issue #379 / PR #380; merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`
+- Tool: BurnLens `0.15.0`; issue #383 / PR #385; merge `861716be16be3a0469d2268baed971be65684d48`; reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -272,16 +272,15 @@ One actual returned response arrived after this run and is preserved and operato
 - Cross-event proposal/QA: topology-stable `CROSS-EVENT-LABEL-TRANSFER-2026-002` and `CROSS-EVENT-LABEL-TRANSFER-QA-2026-002`; exact shipped hashes in `MANIFEST-2026-014`; zero mismatch across 63,930 pixels; human validation absent; `2026-001` preserved in `MANIFEST-2026-013`
 - Label-review readiness: `LABEL-REVIEW-PACKET-2026-001` and `LABEL-REVIEW-PACKET-QA-2026-001`; exact 18-output shipped inventory in `MANIFEST-2026-015`; 56 units / 14 present strata / one structural absence; completed independent responses and adjudications both zero
 - Offline reviewer handoff: `LABEL-REVIEW-HANDOFF-2026-001` and `LABEL-REVIEW-HANDOFF-QA-2026-001`; exact seven-output shipped inventory and local archive identity in `MANIFEST-2026-016`; application `label-review-handoff-workbench-v0.1.0`; completed independent responses and adjudications both zero
-- Live-browser handoff QA candidate: `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
+- Live-browser handoff QA: shipped `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; annotated tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`
-- Latest checkpoint: issue #379 / PR #380; 151 tests, exact seven-file plus archive reconstruction, original-resolution and served semantic review, byte-reproducible fixed-epoch source packaging, isolated import with 24 entry points, fresh merged-main, independent handoff QA, and remote-tag verification pass; no browser-interaction claim
-- Active candidate: issue #383; BurnLens `0.15.0`; 154 tests; exact live-browser invalid-state/draft/export/viewport/error/storage evidence; byte-reproducible fixed-epoch source packaging; isolated import with 25 entry points; PR/merge/tag/fresh-main pending
+- Latest shipped repository baseline: `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`; annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
+- Latest checkpoint: issue #383 / PR #385; 154 tests, exact seven-file plus archive reconstruction, new live-browser invalid-state/draft/export/viewport/error/storage evidence with zero human responses, exact five-output manifest, 97 links, byte-reproducible fixed-epoch source packaging, isolated import with 25 entry points, fresh remote-main clone, and remote-tag verification pass
 - Active next checkpoint: issue #384; ship a sanitized public receipt for the first exact operator-locked returned response without exposing notes or opening the reveal, then obtain and lock the required second response before adjudication or dataset-candidacy work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces

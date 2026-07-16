@@ -10,6 +10,6 @@ The 1440 by 1000 desktop view and 390 by 844 mobile view have no horizontal over
 
 One real returned response arrived after the browser run and has been preserved and operator-locked under issue #384. Its exact bytes remain ignored and private, its notes are not exposed here, and the reveal remains unopened. That evidence will ship separately so the browser fixture and returned-human evidence cannot be confused.
 
-Candidate source is `74275a061fb4054a535cc8b660bebb0021999c54`; browser evidence is committed at `97ddbaf71372e119428868a37d214c3327523514`; exact inventory is `MANIFEST-2026-017`.
+PR #385 shipped the browser QA at merge `861716be16be3a0469d2268baed971be65684d48` from reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`. A fresh remote-main clone repeats all 154 tests, exact seven-file plus archive reconstruction, a new live-browser run, exact five-output manifest, 97 links, and the canonical 283,856-byte wheel. Annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` remotely peels to that merge as `v0.15.0-live-browser-reviewer-handoff`. Source remains `74275a061fb4054a535cc8b660bebb0021999c54`; browser evidence remains `97ddbaf71372e119428868a37d214c3327523514`; exact inventory is `MANIFEST-2026-017`.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

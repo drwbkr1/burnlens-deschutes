@@ -123,10 +123,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, and isolated offline reviewer handoff are shipped; live-browser handoff QA is the active candidate; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.14.0-offline-reviewer-handoff` at `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; active candidate: BurnLens `0.15.0` / issue #383 |
-| Active analytical candidate | `LABEL-REVIEW-BROWSER-QA-2026-001` under issue #383. It proves one exact current-Chrome interaction run with a non-human fixture. One actual returned response is operator-locked under #384; its separate public receipt and a second response remain pending. |
-| Baseline verification | Annotated tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a` remotely dereferences to PR #380 merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; fresh merged-main tests, canonical source wheel, exact seven-output plus archive reconstruction, LF/raw/link, and remote-tag gates pass |
+| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, isolated offline reviewer handoff, and live-browser handoff QA are shipped; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.15.0-live-browser-reviewer-handoff` at `861716be16be3a0469d2268baed971be65684d48` via issue #383 / PR #385 |
+| Active analytical candidate | P2O4-T08 / issue #384: publish a bounded public receipt for the first exact returned response already preserved and operator-locked. A second response remains required; reveal and adjudication remain deferred. |
+| Baseline verification | Annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` remotely dereferences to PR #385 merge `861716be16be3a0469d2268baed971be65684d48`; fresh remote-main tests, exact handoff reconstruction, fresh browser run, canonical source wheel, manifest/link/LF, and remote-tag gates pass |
 | Data/model/run/map/application status | Exact provider packages and exact returned-review bytes remain in ignored local storage. Shipped local application version `label-review-handoff-workbench-v0.1.0` supports isolated offline review, not a deployed public application. Browser-QA run `BL-2026-07-16-label-review-browser-qa-r001` uses zero human responses. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
