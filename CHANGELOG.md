@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## BL-GOV-002 - GitHub backlog truth reconciliation - 2026-07-16
+
+- Re-run the exact offline reviewer workbench in Chrome `150.0.7871.124`; all 56 units, draft roundtrip, completed export, desktop/mobile overflow, console/runtime, storage, request, and fixture-only gates pass.
+- Re-run the mixed-version dual-lock verifier against the exact first private pair and the current non-human fixture; the result remains one returned response, one fixture, two exact locks, zero adjudications, and no reveal.
+- Use authenticated GitHub API and remote-ref inspection to enumerate 21 tags / normalized inventory SHA-256 `cf9baa414ceca9416a37c4c69621ab4d39c958ff3724973b9ebe05233ce09acf` and zero GitHub Releases.
+- Reconciled obsolete Phase One issue and PR state that contradicted the controlling `v0.0.8-execution-goal-baseline`, current Phase Two status, and verified tag inventory.
+- Closed PR #307 unmerged; closed issues #91, #194, #246, #292, and #306 with evidence-backed comments; retained branch `p1o7t10prepb` at `4e536e034d9c4fe97b723e381ffef26166c295fd`.
+- Preserve every historical branch, commit, issue discussion, and PR diff as audit evidence. Create, move, or delete no tag, Release, branch, analytical artifact, private response, receipt, fixture, or deployment.
+- Leave issue #393 open as the active scientific checkpoint. No second human response, reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, field claim, official claim, or operational claim is created.
+
+Issue #400 / PR #401; branch `codex/bl-gov-002-backlog-truth`; checkpoint source `845125070d5e4c3c4132bae027a786e1cc25bc9c`; reconciliation completed at `2026-07-16T20:49:29Z`; final merge lifecycle remains in GitHub history.
+
 ## v0.17.0-dual-lock-custody-readiness - 2026-07-16
 
 ### P2O4-T09A - Prove mixed-version two-lock custody before the second reviewer returns

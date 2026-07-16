@@ -84,7 +84,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 **What this phase must prove:** BurnLens can enter implementation with a coherent promise, bounded task, traceable operating rules, safe claims, and an explicit gate rather than relying on conversation context or informal assumptions.
 
-**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. No analytical release exists. Phase Two metadata, route, access-integrity, final-AOI, intake-transaction, authenticated source/reference inspection, complete observation geometry, and burn-scar target-decision evidence are shipped through `v0.6.0-burn-scar-target-baseline`. Authorized credentials were exercised without committing raw source bytes or secret material.
+**Current status:** Objectives One through Six are complete as documentation/control baselines. P1O7-T08 / PR #294 accepted the evidence for Phase Two planning only. PR #291 and `v0.0.8-execution-goal-baseline` version that control baseline. BL-GOV-002 / issue #400 / PR #401 has closed the obsolete Phase One GitHub backlog so old issue and PR restrictions remain historical evidence rather than apparently active authority. No Phase One analytical release exists. Phase Two metadata, route, access-integrity, final-AOI, intake-transaction, authenticated source/reference inspection, complete observation geometry, and burn-scar target-decision evidence are shipped through `v0.6.0-burn-scar-target-baseline`. Authorized credentials were exercised without committing raw source bytes or secret material.
 
 ## Phase Two — data foundation
 
@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T09A ships verified `v0.17.0-dual-lock-custody-readiness` through issue #394 / PR #395. Parent issue #393 is the active scientific checkpoint: obtain and lock the required second qualifying human response without exposing the first response or opening the reveal. Only then compare and adjudicate disagreements. Keep all whole-event groups and ignore states binding; do not begin dataset-candidacy or partition work early.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T09A ships verified `v0.17.0-dual-lock-custody-readiness` through issue #394 / PR #395. BL-GOV-002 / issue #400 / PR #401 has reconciled obsolete public GitHub backlog without changing scientific state. Parent issue #393 remains the active scientific checkpoint: obtain and lock the required second qualifying human response without exposing the first response or opening the reveal. Only then compare and adjudicate disagreements. Keep all whole-event groups and ignore states binding; do not begin dataset-candidacy or partition work early.
 
 ## Required reading order for long-running Codex work
 

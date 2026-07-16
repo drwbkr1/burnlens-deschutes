@@ -1,0 +1,137 @@
+{
+  "record_id": "GITHUB-BACKLOG-RECONCILIATION-2026-001",
+  "record_version": "0.1.0",
+  "checkpoint_id": "BL-GOV-002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 400,
+  "branch": "codex/bl-gov-002-backlog-truth",
+  "git_base_commit": "93aa62b5833c1e084194b7ee3788d1772eb714a6",
+  "checkpoint_source_commit": "845125070d5e4c3c4132bae027a786e1cc25bc9c",
+  "pull_request": 401,
+  "captured_at_utc": "2026-07-16T20:39:43Z",
+  "reconciled_at_utc": "2026-07-16T20:49:29Z",
+  "status": "reconciled_terminal_repository_record",
+  "lifecycle_note": "Final PR merge identity and automatic task-issue closure remain in GitHub history; no recursive lifecycle-sync checkpoint is required.",
+  "cycle_runs": [
+    {
+      "run_id": "BL-2026-07-16-cycle-post-v017-browser-r001",
+      "decision": "PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_NO_HUMAN_EVIDENCE_DEFER_DATASET",
+      "git_source_commit": "93aa62b5833c1e084194b7ee3788d1772eb714a6",
+      "browser": "Chrome/150.0.7871.124",
+      "node": "v24.15.0",
+      "human_responses_used": 0
+    },
+    {
+      "run_id": "BL-2026-07-16-cycle-post-v017-dual-lock-r001",
+      "decision": "PASS_MIXED_VERSION_DUAL_LOCK_READINESS_ONE_RETURNED_ONE_FIXTURE_NO_REVEAL",
+      "git_source_commit": "93aa62b5833c1e084194b7ee3788d1772eb714a6",
+      "operator_declared_returned_responses": 1,
+      "software_fixtures": 1,
+      "completed_adjudications": 0,
+      "operator_declared_reveal_status": "withheld-unopened-after-lock"
+    }
+  ],
+  "live_inventory": {
+    "method": "authenticated GitHub API with per_page=100 and pagination, independently checked with git ls-remote --tags origin",
+    "tag_count": 21,
+    "normalized_tag_inventory_bytes": 1600,
+    "normalized_tag_inventory_sha256": "cf9baa414ceca9416a37c4c69621ab4d39c958ff3724973b9ebe05233ce09acf",
+    "github_release_count": 0,
+    "controlling_goal_tag": "v0.0.8-execution-goal-baseline",
+    "latest_evidence_tag": "v0.17.0-dual-lock-custody-readiness"
+  },
+  "before_state": {
+    "open_pull_requests": [
+      {
+        "number": 307,
+        "head": "4e536e034d9c4fe97b723e381ffef26166c295fd",
+        "disposition": "obsolete unmerged blocked-inventory record"
+      }
+    ],
+    "obsolete_open_issues": [
+      91,
+      194,
+      246,
+      292,
+      306
+    ],
+    "active_scientific_issue": 393
+  },
+  "planned_reconciliation": {
+    "close_pull_request_unmerged": 307,
+    "close_obsolete_issues": [
+      91,
+      194,
+      246,
+      292,
+      306
+    ],
+    "retain_open_issue": 393,
+    "delete_branch": false,
+    "create_or_move_tag": false,
+    "create_or_change_release": false
+  },
+  "after_reconciliation_pre_merge_state": {
+    "closed_pull_request": {
+      "number": 307,
+      "state": "CLOSED",
+      "closed_at_utc": "2026-07-16T20:49:29Z",
+      "merged_at_utc": null,
+      "retained_branch": "p1o7t10prepb",
+      "retained_head": "4e536e034d9c4fe97b723e381ffef26166c295fd"
+    },
+    "closed_issues": [
+      {
+        "number": 91,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 194,
+        "state": "CLOSED",
+        "state_reason": "NOT_PLANNED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 246,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 292,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 306,
+        "state": "CLOSED",
+        "state_reason": "NOT_PLANNED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      }
+    ],
+    "open_issues": [
+      393,
+      400
+    ],
+    "open_pull_requests": [
+      401
+    ],
+    "retained_active_scientific_issue": 393,
+    "tag_count": 21,
+    "github_release_count": 0
+  },
+  "software_version": "0.17.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "application_deployment": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "private_response_bytes_committed": 0,
+  "private_receipt_bytes_committed": 0,
+  "software_fixture_bytes_committed": 0,
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

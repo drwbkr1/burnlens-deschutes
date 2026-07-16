@@ -1,5 +1,7 @@
 # Objective Seven Handoff
 
+> **Historical snapshot.** This handoff predates the controlling execution goal and all Phase Two implementation. Current authority and status live in `docs/governance/BURNLENS_EXECUTION_GOAL.md`, `docs/status/PHASE_STATUS.md`, and `docs/roadmap/BURNLENS_BUILD_ROADMAP.md`. BL-GOV-002 preserves this file as audit evidence but supersedes its active routing, permission, tag, issue, and approval language.
+
 ## One-sentence project state
 
 BurnLens Deschutes has a review-ready Objective Seven closeout package on `p1o7t09b`; Drew’s controlling decision is `APPROVE — PHASE TWO PLANNING ONLY`, while G10 still blocks full Phase One completion and F04-A still blocks every data-touch action.
