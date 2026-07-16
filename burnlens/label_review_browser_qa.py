@@ -507,13 +507,13 @@ def run_browser_qa(
             },
         },
         "software_browser_fixtures_executed": 1,
-        "completed_independent_responses": 0,
-        "completed_adjudications": 0,
+        "independent_human_responses_used_in_this_qa": 0,
+        "adjudications_used_in_this_qa": 0,
         "dataset_version": None,
         "split_version": None,
         "baseline_version": None,
         "model_version": None,
-        "decision": "PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_DEFER_HUMAN_REVIEW_AND_DATASET",
+        "decision": "PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_NO_HUMAN_EVIDENCE_DEFER_DATASET",
         "decision_detail": (
             "The exact extracted offline workbench completed invalid-state, draft download/load, "
             "all-unit review, response export, responsive viewport, and fixture-only response-lock "
@@ -573,7 +573,7 @@ def render_browser_qa_png(
         ("56/56", "browser-completed units"),
         ("8/8", "blind images loaded"),
         ("0", "external requests"),
-        ("0", "human responses"),
+        ("0", "human responses used in QA"),
     ]
     for index, (value, label) in enumerate(metrics):
         left = 45 + index * 430
@@ -631,9 +631,9 @@ body{{margin:0;background:#f4f0e8;color:#15211d;font:16px/1.55 system-ui,sans-se
 <li>A seven-unit draft downloaded, the form cleared, and the native file input restored the exact reviewer fields, first label, and 7-of-56 progress.</li>
 <li>All 56 software-fixture entries reviewed and exported; exact label counts were 14 burned, 14 background, 14 uncertain, and 14 unusable.</li>
 <li>Console errors: 0; runtime exceptions: 0; inspected-page external request schemes: 0; cookies and local-storage entries: 0. The QA controller itself uses a short-lived loopback DevTools connection outside the page-network observation boundary.</li>
-<li>The response lock decision is <code>{escape(report['checks']['fixture_lock']['decision'])}</code>; reveal remains prohibited.</li>
+<li>The response lock decision is <code>{escape(report['checks']['fixture_lock']['decision'])}</code>; the software fixture cannot authorize reveal.</li>
 </ul></section>
-<section class="card"><h2>Traceability and boundary</h2><p><strong>Run:</strong> <code>{escape(report['run_id'])}</code><br><strong>Git source:</strong> <code>{escape(report['git_source_commit'])}</code><br><strong>Archive SHA-256:</strong> <code>{escape(report['archive_binding']['sha256'])}</code><br><strong>Browser binary SHA-256:</strong> <code>{escape(report['browser_runtime']['browser_binary_sha256'])}</code><br><strong>Application:</strong> <code>{escape(report['application_version'])}</code><br><strong>Dataset / split / baseline / model:</strong> none / none / none / none<br><strong>Independent human responses / adjudications:</strong> 0 / 0</p><ul>{''.join(f'<li><strong>Not proven:</strong> {escape(item)}</li>' for item in report['claims']['not_proven'])}</ul></section>
+<section class="card"><h2>Traceability and boundary</h2><p><strong>Run:</strong> <code>{escape(report['run_id'])}</code><br><strong>Git source:</strong> <code>{escape(report['git_source_commit'])}</code><br><strong>Archive SHA-256:</strong> <code>{escape(report['archive_binding']['sha256'])}</code><br><strong>Browser binary SHA-256:</strong> <code>{escape(report['browser_runtime']['browser_binary_sha256'])}</code><br><strong>Application:</strong> <code>{escape(report['application_version'])}</code><br><strong>Dataset / split / baseline / model:</strong> none / none / none / none<br><strong>Independent human responses / adjudications used in this QA:</strong> 0 / 0. This run does not establish the project-wide response count.</p><ul>{''.join(f'<li><strong>Not proven:</strong> {escape(item)}</li>' for item in report['claims']['not_proven'])}</ul></section>
 </main></body></html>"""
     _write_utf8_lf(output_path, document)
 

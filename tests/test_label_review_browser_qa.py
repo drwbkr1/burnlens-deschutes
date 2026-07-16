@@ -258,7 +258,7 @@ class LabelReviewBrowserQaTests(unittest.TestCase):
                     "desktop": {"path": "desktop.png", "viewport": "1440x1000"},
                     "mobile": {"path": "mobile.png", "viewport": "390x844"},
                 },
-                "decision": "PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_DEFER_HUMAN_REVIEW_AND_DATASET",
+                "decision": "PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_NO_HUMAN_EVIDENCE_DEFER_DATASET",
                 "decision_detail": "Software-only browser acceptance; human review remains absent.",
                 "claims": {"not_proven": ["Independent human review is absent."]},
                 "warning": "Experimental BurnLens CV evidence. Not official wildfire information.",
@@ -277,7 +277,10 @@ class LabelReviewBrowserQaTests(unittest.TestCase):
             text = html.read_text(encoding="utf-8")
             self.assertIn("<main>", text)
             self.assertIn("Not human label evidence", text)
-            self.assertIn("Independent human responses / adjudications:</strong> 0 / 0", text)
+            self.assertIn(
+                "Independent human responses / adjudications used in this QA:</strong> 0 / 0",
+                text,
+            )
 
 
 if __name__ == "__main__":
