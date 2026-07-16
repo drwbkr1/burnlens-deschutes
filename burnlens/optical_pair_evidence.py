@@ -210,6 +210,8 @@ def _product_metadata(
     archive: zipfile.ZipFile,
     names: list[str],
     expected_safe: str,
+    *,
+    expected_processing_baseline: str = "05.10",
 ) -> dict[str, Any]:
     product_member = _exact_member(names, "/MTD_MSIL2A.xml")
     tile_member = _exact_member(names, "/MTD_TL.xml")
@@ -219,8 +221,10 @@ def _product_metadata(
     baseline = _exact_text(product, "PROCESSING_BASELINE")
     if uri != expected_safe:
         raise OpticalPairEvidenceError("product metadata SAFE identity mismatch")
-    if baseline != "05.10":
-        raise OpticalPairEvidenceError("product processing baseline is not 05.10")
+    if baseline != expected_processing_baseline:
+        raise OpticalPairEvidenceError(
+            f"product processing baseline is not {expected_processing_baseline}"
+        )
     spectral = {
         item.attrib.get("physicalBand"): item.attrib.get("bandId")
         for item in _elements(product, "Spectral_Information")
