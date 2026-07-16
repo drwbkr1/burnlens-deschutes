@@ -30,6 +30,7 @@ It does not prove:
 ## Traceability
 
 - Issue: #384
+- Pull request: #388
 - Branch: `codex/p2o4-t08-first-reviewer-response-lock`
 - Base: `6b13c4f5f128615f42b8897e9c6d8442446a86a2`
 - Software: BurnLens `0.16.0`

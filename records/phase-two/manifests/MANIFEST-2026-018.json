@@ -15,12 +15,12 @@
   "candidate_artifacts_commit": "9fbd97fcb66fd76172fff949580f469fc43b3f40",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
-  "pull_request": null,
+  "pull_request": 388,
   "lifecycle_sync_issue": null,
   "lifecycle_sync_pull_request": null,
   "version_tag": "v0.16.0-first-reviewer-response-lock",
   "version_tag_object": null,
-  "version_tag_state": "pending candidate PR, merge, fresh-main verification, and annotated tag",
+  "version_tag_state": "PR #388 candidate; pending merge, fresh-main verification, and annotated tag",
   "status": "candidate first returned-response hash-lock evidence; review content withheld; dataset deferred",
   "software_version": "0.16.0",
   "runtime": {
@@ -150,7 +150,7 @@
     "adjudication_ready": false,
     "dataset_or_partition_created": false,
     "raw_provider_bytes_committed": 0,
-    "candidate_pr_merge_tag": "pending",
+    "candidate_pr_merge_tag": "PR #388 open and mergeable; merge and annotated tag pending",
     "fresh_merged_main": "pending"
   },
   "decision": "ACCEPT_FIRST_RETURNED_RESPONSE_HASH_LOCK_WITHHOLD_CONTENT_DEFER_DATASET",
