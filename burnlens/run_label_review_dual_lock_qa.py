@@ -11,6 +11,8 @@ from .label_review_dual_lock_qa import (
     CURRENT_RECEIPT_VERSION,
     LEGACY_RECEIPT_SOFTWARE,
     LEGACY_RECEIPT_VERSION,
+    PREVIOUS_RECEIPT_SOFTWARE,
+    PREVIOUS_RECEIPT_VERSION,
     OPERATOR_REVEAL_STATUS,
     ORIGINS,
     LabelReviewDualLockQaError,
@@ -32,12 +34,20 @@ def _add_lock_arguments(parser: argparse.ArgumentParser, number: int) -> None:
     parser.add_argument(f"--{prefix}-task-issue", type=int, required=True)
     parser.add_argument(
         f"--{prefix}-receipt-version",
-        choices=[LEGACY_RECEIPT_VERSION, CURRENT_RECEIPT_VERSION],
+        choices=[
+            LEGACY_RECEIPT_VERSION,
+            PREVIOUS_RECEIPT_VERSION,
+            CURRENT_RECEIPT_VERSION,
+        ],
         required=True,
     )
     parser.add_argument(
         f"--{prefix}-receipt-software",
-        choices=[LEGACY_RECEIPT_SOFTWARE, CURRENT_RECEIPT_SOFTWARE],
+        choices=[
+            LEGACY_RECEIPT_SOFTWARE,
+            PREVIOUS_RECEIPT_SOFTWARE,
+            CURRENT_RECEIPT_SOFTWARE,
+        ],
         required=True,
     )
     parser.add_argument(f"--{prefix}-origin", choices=sorted(ORIGINS), required=True)
@@ -54,6 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--generated-at-utc", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--git-source-commit", required=True)
+    parser.add_argument("--task-issue", type=int, default=394)
     parser.add_argument(
         "--operator-reveal-status",
         choices=[OPERATOR_REVEAL_STATUS],
@@ -90,6 +101,7 @@ def main() -> int:
             run_id=args.run_id,
             git_source_commit=args.git_source_commit,
             operator_reveal_status=args.operator_reveal_status,
+            task_issue=args.task_issue,
         )
         write_dual_lock_outputs(
             report,

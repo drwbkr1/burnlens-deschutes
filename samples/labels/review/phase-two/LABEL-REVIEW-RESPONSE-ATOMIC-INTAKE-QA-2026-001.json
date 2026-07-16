@@ -1,0 +1,93 @@
+{
+  "report_id": "LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-response-atomic-intake-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T21:25:00Z",
+  "run_id": "BL-2026-07-16-label-review-response-atomic-intake-qa-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 402,
+  "parent_response_issue": 393,
+  "git_source_commit": "c4c34dabcde375196dd423d13beb3dd97a32f5e1",
+  "software_version": "0.18.0",
+  "intake_version": "label-review-response-atomic-intake-v0.1.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "fixture_origin": "software-browser-fixture",
+  "source_binding": {
+    "bytes": 14749,
+    "sha256": "aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "preserved_response_binding": {
+    "bytes": 14749,
+    "sha256": "aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+    "opaque_reviewer_slot": "browser-qa-fixture-not-human",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "private_receipt_binding": {
+    "bytes": 2547,
+    "sha256": "47be86c8a7d272ff4aaf3216673275fb9402920a10b307a534bb7bcd21bcb956",
+    "report_version": "label-review-response-integrity-lock-v0.4.0",
+    "software_version": "0.18.0",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "checks": {
+    "source_contract_validation": "pass",
+    "source_stability_across_validation_copy_and_rehash": "pass",
+    "same_directory_temporary_copy_fsync": "pass",
+    "source_to_temporary_exact_bytes": "pass",
+    "temporary_to_promoted_exact_bytes": "pass",
+    "non_overwriting_link_promotion": "pass",
+    "receipt_built_from_source_and_preserved_copy_identically": "pass",
+    "ignored_untracked_private_storage": "pass",
+    "duplicate_hash_and_reviewer_slot_rejection": "pass"
+  },
+  "custody_state": {
+    "atomic_non_overwriting_intake_ready": true,
+    "software_fixture_used": true,
+    "independent_human_responses_added": 0,
+    "project_returned_response_count": 1,
+    "second_human_response_present": false,
+    "reveal_status": "withheld-unopened-after-lock",
+    "reveal_status_verified_by_software": false,
+    "reveal_authorized_by_this_run": false,
+    "response_comparison_performed": false,
+    "adjudication_completed": false
+  },
+  "content_withholding": {
+    "withheld": [
+      "response labels and distributions",
+      "evidence-sufficiency and confidence values",
+      "reason codes and notes",
+      "reviewer experience and attestation text",
+      "response timestamps",
+      "private filenames and private paths"
+    ]
+  },
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "PASS_ATOMIC_RESPONSE_INTAKE_READINESS_FIXTURE_ONLY_NO_REVEAL",
+  "claims": {
+    "proven": [
+      "The fixture source and preserved response are byte-identical after validation, copy, fsync, and no-overwrite promotion.",
+      "The private receipt is built identically from the source and preserved copy.",
+      "Duplicate hashes and reviewer slots, unignored destinations, overwrite, source drift, and partial failure are fail-closed.",
+      "The rehearsal publishes no response content, private filename, or private path."
+    ],
+    "not_proven": [
+      "A software fixture is not a second qualifying independent human response.",
+      "Software does not verify reviewer identity, expertise, independence, scientific fitness, or reveal history.",
+      "No reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, accuracy, field, official, endorsed, or operational claim is created."
+    ]
+  },
+  "research_basis": [
+    "https://docs.python.org/3.12/library/tempfile.html",
+    "https://docs.python.org/3.12/library/os.html#os.link",
+    "https://docs.python.org/3.12/library/os.html#os.fsync"
+  ],
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

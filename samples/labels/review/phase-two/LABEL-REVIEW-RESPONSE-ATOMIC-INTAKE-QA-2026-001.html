@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens atomic response intake QA</title>
+<style>
+:root{--ink:#17332e;--teal:#007c71;--paper:#f5f1e8;--card:#fffdf8;--line:#d7cebe;--warn:#f15a2a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+header{background:#0e302a;color:white;padding:2.5rem max(5vw,1.25rem)}main{max-width:1120px;margin:auto;padding:2rem 1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.3rem;margin-bottom:1rem}
+.metric{font-size:2rem;color:var(--teal)}code{overflow-wrap:anywhere}.decision{color:var(--warn);font-weight:700}
+</style></head><body>
+<header><p>BurnLens / Phase Two / Objective Four</p><h1>Atomic reviewer-response intake QA</h1><p>Exact-byte preservation / fail-closed custody / software fixture only / no reveal</p></header>
+<main>
+<div class="grid">
+<section><div class="metric">14749</div><p>fixture source bytes</p></section>
+<section><div class="metric">14749</div><p>preserved bytes</p></section>
+<section><div class="metric">0</div><p>human responses added</p></section>
+<section><div class="metric">0</div><p>reveal actions</p></section>
+</div>
+<section><h2>Exact bindings</h2><p>Response SHA-256: <code>aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec</code></p>
+<p>Receipt SHA-256: <code>47be86c8a7d272ff4aaf3216673275fb9402920a10b307a534bb7bcd21bcb956</code></p>
+<p>Opaque fixture slot: <code>browser-qa-fixture-not-human</code></p></section>
+<section><h2>Fail-closed checks</h2><ul><li><code>source_contract_validation</code>: pass</li><li><code>source_stability_across_validation_copy_and_rehash</code>: pass</li><li><code>same_directory_temporary_copy_fsync</code>: pass</li><li><code>source_to_temporary_exact_bytes</code>: pass</li><li><code>temporary_to_promoted_exact_bytes</code>: pass</li><li><code>non_overwriting_link_promotion</code>: pass</li><li><code>receipt_built_from_source_and_preserved_copy_identically</code>: pass</li><li><code>ignored_untracked_private_storage</code>: pass</li><li><code>duplicate_hash_and_reviewer_slot_rejection</code>: pass</li></ul></section>
+<section><h2>What this proves</h2><ul><li>The fixture source and preserved response are byte-identical after validation, copy, fsync, and no-overwrite promotion.</li><li>The private receipt is built identically from the source and preserved copy.</li><li>Duplicate hashes and reviewer slots, unignored destinations, overwrite, source drift, and partial failure are fail-closed.</li><li>The rehearsal publishes no response content, private filename, or private path.</li></ul><h2>What remains absent</h2><ul><li>A software fixture is not a second qualifying independent human response.</li><li>Software does not verify reviewer identity, expertise, independence, scientific fitness, or reveal history.</li><li>No reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, accuracy, field, official, endorsed, or operational claim is created.</li></ul>
+<p class="decision">PASS_ATOMIC_RESPONSE_INTAKE_READINESS_FIXTURE_ONLY_NO_REVEAL</p></section>
+<section><h2>Traceability</h2><p>Run <code>BL-2026-07-16-label-review-response-atomic-intake-qa-r002</code><br>Git <code>c4c34dabcde375196dd423d13beb3dd97a32f5e1</code><br>
+Software 0.18.0 / intake label-review-response-atomic-intake-v0.1.0<br>Dataset / split / baseline / model: none / none / none / none</p></section>
+<section><strong>Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</strong></section>
+</main></body></html>
