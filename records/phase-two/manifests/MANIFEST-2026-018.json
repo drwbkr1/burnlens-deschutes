@@ -24,7 +24,7 @@
   "pull_request": 388,
   "remediation_pull_request": 390,
   "lifecycle_sync_issue": 391,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 392,
   "version_tag": "v0.16.0-first-reviewer-response-lock",
   "version_tag_object": "da94fc97efc07b07d9520022fdbff42a85e8ba00",
   "version_tag_state": "verified annotated tag; remote tag peels to corrected checkpoint merge 27fcd3eadb1473bb603b4275f986bf62022c10bf",

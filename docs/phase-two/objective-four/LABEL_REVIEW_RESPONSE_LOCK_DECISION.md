@@ -36,7 +36,7 @@ It does not prove:
 - Release-record remediation: issue #389 / PR #390 / reviewed head `5302cc440b63a70c7ab3f987426d79760447f052`
 - Corrected checkpoint merge: `27fcd3eadb1473bb603b4275f986bf62022c10bf`
 - Verified tag: `v0.16.0-first-reviewer-response-lock`; object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
-- Lifecycle synchronization: issue #391
+- Lifecycle synchronization: issue #391 / PR #392
 - Branch: `codex/p2o4-t08-first-reviewer-response-lock`
 - Base: `6b13c4f5f128615f42b8897e9c6d8442446a86a2`
 - Software: BurnLens `0.16.0`

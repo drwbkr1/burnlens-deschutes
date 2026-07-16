@@ -172,7 +172,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T07-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t07-sync.md` | issue #386 / PR #387; verified v0.15.0 lifecycle synchronization | Synchronizes reviewed head, merge, fresh-main gates, canonical source wheel, remote annotated tag, and issue #384 next checkpoint without changing code or evidence outputs. |
 | P2O4-T08 | `records/prompt-build-log/2026-07-16-p2o4-t08.md` | issue #384 / PR #388; shipped at verified `v0.16.0-first-reviewer-response-lock` | Preserves one exact returned response and private receipt in ignored storage, publishes content-withheld hash-lock evidence, and keeps the one-of-two/no-reveal/no-dataset gates binding. |
 | P2O4-T08-REM | `records/prompt-build-log/2026-07-16-p2o4-t08-rem.md` | issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf` | Corrects only the candidate-manifest creation time and completes the verified v0.16.0 release without changing evidence bytes or scientific state. |
-| P2O4-T08-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t08-sync.md` | issue #391; verified lifecycle synchronization active | Synchronizes analytical/remediation heads and merges, fresh-main gates, canonical wheel, remote annotated tag, and the second-response next checkpoint. |
+| P2O4-T08-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t08-sync.md` | issue #391 / PR #392; verified lifecycle synchronization in review | Synchronizes analytical/remediation heads and merges, fresh-main gates, canonical wheel, remote annotated tag, and the second-response next checkpoint. |
 
 ## Acceptance and remediation triggers
 
