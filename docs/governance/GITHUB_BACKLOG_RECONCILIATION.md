@@ -4,6 +4,8 @@
 
 BL-GOV-002 treats the obsolete Phase One GitHub backlog as a public repository-truth defect and reconciles it without changing BurnLens software or science.
 
+Checkpoint source commit: `845125070d5e4c3c4132bae027a786e1cc25bc9c`.
+
 The application-facing and custody-facing paths pass on merged `main`:
 
 - `BL-2026-07-16-cycle-post-v017-browser-r001` returns `PASS_LIVE_BROWSER_RESPONSE_ROUNDTRIP_NO_HUMAN_EVIDENCE_DEFER_DATASET` in Chrome `150.0.7871.124`;

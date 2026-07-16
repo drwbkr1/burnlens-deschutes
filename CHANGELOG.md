@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Preserve every historical branch, commit, issue discussion, and PR diff as audit evidence. Create, move, or delete no tag, Release, branch, analytical artifact, private response, receipt, fixture, or deployment.
 - Leave issue #393 open as the active scientific checkpoint. No second human response, reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, field claim, official claim, or operational claim is created.
 
-Issue #400; branch `codex/bl-gov-002-backlog-truth`; checkpoint source commit and PR are recorded in `GITHUB-BACKLOG-RECONCILIATION-2026-001`.
+Issue #400; branch `codex/bl-gov-002-backlog-truth`; checkpoint source `845125070d5e4c3c4132bae027a786e1cc25bc9c`; PR is recorded in `GITHUB-BACKLOG-RECONCILIATION-2026-001`.
 
 ## v0.17.0-dual-lock-custody-readiness - 2026-07-16
 
