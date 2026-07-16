@@ -4,7 +4,7 @@
 
 BL-GOV-002 treats the obsolete Phase One GitHub backlog as a public repository-truth defect and reconciles it without changing BurnLens software or science.
 
-Issue #400 / draft PR #401. Checkpoint source commit: `845125070d5e4c3c4132bae027a786e1cc25bc9c`.
+Issue #400 / PR #401. Checkpoint source commit: `845125070d5e4c3c4132bae027a786e1cc25bc9c`. Final merge identity and automatic issue closure remain in GitHub history so this terminal repository record does not create a recursive lifecycle-sync checkpoint.
 
 The application-facing and custody-facing paths pass on merged `main`:
 
@@ -30,7 +30,7 @@ At `2026-07-16T20:39:43Z`:
 
 At `2026-07-16T20:49:29Z`, the checkpoint had closed PR #307 unmerged and closed issues #91, #194, #246, #292, and #306 with explicit comments that link the superseding evidence. The branch `p1o7t10prepb` remains at `4e536e034d9c4fe97b723e381ffef26166c295fd`; every commit, issue body, discussion, and PR diff remains available as historical audit evidence.
 
-The only open issues after reconciliation are scientific gate #393 and checkpoint issue #400 while PR #401 awaits merge. Issue #393 remains open because a second qualifying human response must be returned and exact-locked before reveal, comparison, adjudication, or dataset work.
+Immediately after reconciliation and before checkpoint merge, the only open issues were scientific gate #393 and checkpoint issue #400, and PR #401 was the only open PR. Issue #393 remains open because a second qualifying human response must be returned and exact-locked before reveal, comparison, adjudication, or dataset work.
 
 ## Boundaries
 

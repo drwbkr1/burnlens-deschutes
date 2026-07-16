@@ -10,7 +10,8 @@
   "pull_request": 401,
   "captured_at_utc": "2026-07-16T20:39:43Z",
   "reconciled_at_utc": "2026-07-16T20:49:29Z",
-  "status": "reconciled_pending_pr_merge",
+  "status": "reconciled_terminal_repository_record",
+  "lifecycle_note": "Final PR merge identity and automatic task-issue closure remain in GitHub history; no recursive lifecycle-sync checkpoint is required.",
   "cycle_runs": [
     {
       "run_id": "BL-2026-07-16-cycle-post-v017-browser-r001",
@@ -70,7 +71,7 @@
     "create_or_move_tag": false,
     "create_or_change_release": false
   },
-  "after_state": {
+  "after_reconciliation_pre_merge_state": {
     "closed_pull_request": {
       "number": 307,
       "state": "CLOSED",
