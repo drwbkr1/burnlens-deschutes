@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Preserve exact byte, SHA-256, grid, transform, value-domain, and value-count checks while publishing a stable policy/result summary instead of the transient observed count.
 - Preserve immutable v0.12.0 / `2026-001` evidence and create corrected `2026-002` proposal/QA reports and `r004` runs.
 - Reproduce all ten real outputs byte for byte under ignored one-link and exact-two-link MTBS packages; retain 9,760 candidate and 54,170 ignored pixels plus zero mismatch across 63,930 QA pixels.
-- Raise BurnLens to `0.12.1`; pass 137 tests, dependency health, two byte-identical fixed-epoch 216,405-byte wheels / SHA-256 `3853fc3c52124eb82fba842789bd08269effaa69728819d72874ddc5acdb4c6b`, isolated import, and all 19 entry points.
+- Raise BurnLens to `0.12.1`; pass 137 tests, dependency health, two byte-identical fresh-checkout fixed-epoch 215,461-byte wheels / SHA-256 `e6e45cfc69aebb17b9a6396d593508b297b8461deb69463edd1ba04cc4ad99d3`, isolated import, and all 19 entry points.
 - Change no classifier, threshold, source, target, label protocol, label schema, event group, output pixel, dataset, split, baseline, model, application, field claim, or operational claim.
 
 Issue #371 / draft PR #372; source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; candidate artifacts `567b9cd986a44c3a9b320f558ab7cd156d451fb4`; review, merge, fresh-main verification, and tag pending.
