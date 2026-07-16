@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; verified topology-stable cross-event evidence shipped; dataset not created** | P2O4-T04-REM / issue #371 / PR #372 is shipped at verified v0.12.1. The same ten outputs reproduce across both approved MTBS link topologies without analytical changes. Independent human review, a split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; proposal-blinded review-readiness candidate built; dataset not created** | P2O4-T05 / issue #375 adds a 56-unit, three-event review instrument and integrity QA after exact proposal reconstruction. Independent responses/adjudication, accepted labels, a split, baselines, and model-readiness remain open. Latest verified tag remains v0.12.1 pending candidate shipment. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -15,6 +15,7 @@
 
 | Evidence class | Current state |
 |---|---|
+| Active repository evidence candidate | BurnLens `0.13.0`; issue #375; source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; 56 review units / 14 present event-state strata / one explicit structural absence; 18 packet/QA files reproduce byte for byte; zero independent responses and adjudications; PR/merge/tag/fresh-main gates pending |
 | Latest repository evidence baseline | Shipped `v0.12.1-topology-stable-label-transfer` at merge `e00028509145b439d95eb302591e7cb19bd073fd`; tag object `8606c61f0e1668f2b057abca177144937eae1036`; generator/QA source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; analytical v0.12.0 package preserved |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
@@ -38,7 +39,7 @@
 | Source records | `SOURCE-2026-001` through `SOURCE-2026-013`; the newest record freezes two exact public MTBS annual-reference clips; all native provider bytes remain local/ignored |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | Shipped BurnLens `0.12.1` adds topology-stable public MTBS provenance to the v0.12.0 registration, cross-event five-state/binary rasters, fallback diagnostics, and separately invoked all-source/all-pixel QA |
+| Evidence tooling | Candidate BurnLens `0.13.0` adds exact three-proposal reconstruction, deterministic event/state review sampling, proposal-blinded/reveal-separated rendering, blank response/adjudication schemas, and independently implemented packet/response QA; latest shipped tool remains `0.12.1` until release gates pass |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -56,22 +57,24 @@
 | Cross-event source-fitness report | `CROSS-EVENT-SOURCE-FITNESS-2026-001`; run `BL-2026-07-16-cross-event-source-fitness-r006`; decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS`; McKay passes and Tepee exclusions bind; protocol/schema trace is explicit; exact shipped hashes in `MANIFEST-2026-012` |
 | Cross-event label-transfer report | Topology-stable `CROSS-EVENT-LABEL-TRANSFER-2026-002`; run `BL-2026-07-16-cross-event-label-transfer-r004`; 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, 19,720 review-needed; exact hashes in `MANIFEST-2026-014`; `2026-001` preserved |
 | Cross-event transfer QA | Topology-stable `CROSS-EVENT-LABEL-TRANSFER-QA-2026-002`; run `BL-2026-07-16-cross-event-label-transfer-qa-r004`; 63,930 state/target pixels, zero mismatch, 45 deterministic samples; human inter-rater validation absent |
+| Label-review packet | Candidate `LABEL-REVIEW-PACKET-2026-001`; run `BL-2026-07-16-label-review-packet-r001`; eight proposal-blinded pages, separate reveal, blank response/adjudication templates, 56 unique units across 14 present event/state strata, and explicit McKay/excluded structural absence |
+| Label-review packet QA | Candidate `LABEL-REVIEW-PACKET-QA-2026-001`; run `BL-2026-07-16-label-review-packet-qa-r001`; packet binding, 14 referenced packet outputs, unit bindings, coverage, blind/reveal boundary, blank templates, and target-ignore rules pass; `MANIFEST-2026-015` inventories all 18 packet/QA files; completed independent responses 0; completed adjudications 0 |
 | Dataset version | Not created |
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Latest shipped evidence runs are MTBS registration `BL-2026-07-16-mtbs-cross-event-reference-r003`, proposal `BL-2026-07-16-cross-event-label-transfer-r004`, and QA `BL-2026-07-16-cross-event-label-transfer-qa-r004`; no accepted dataset, split, baseline, model, or inference output |
+| Run IDs | Latest candidate evidence runs are review packet `BL-2026-07-16-label-review-packet-r001` and integrity QA `BL-2026-07-16-label-review-packet-qa-r001`; latest shipped analytical runs remain MTBS registration `r003`, proposal `r004`, and transfer QA `r004`; no accepted dataset, split, baseline, model, or inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static evidence, and two derived native-grid proposal GeoTIFFs; no accepted dataset, model output, or BurnLens fire perimeter |
 | Repository-owned public application | Not created |
 | Public performance claim | None authorized or supported |
 
 ## Latest shipped checkpoint
 
-P2O4-T02 / issue #357 / PR #358 accepts metadata-feasible Tepee/McKay acquisitions and frozen whole-event groups at analytical merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`. A fresh no-hardlink clone reconstructs JSON, HTML, and PNG byte for byte and passes 110 tests, compilation, dependency health, merged-source wheel/isolated import, LF, manifest, links, raw exclusion, secret, original-resolution, browser, and remote-tag gates. Annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` peels to that merge as `v0.10.0-cross-event-feasibility-baseline`. Lifecycle synchronization is issue #359 / PR #360.
+P2O4-T04-REM / issue #371 / PR #372 ships `v0.12.1-topology-stable-label-transfer` at merge `e00028509145b439d95eb302591e7cb19bd073fd`. A fresh no-hardlink merged-main clone passes 137 tests, exact ten-output manifest/LF/raw gates, compilation, dependency health, the canonical fixed-epoch wheel, isolated import, fresh real-source 10-of-10 reconstruction, and remote annotated-tag verification. Tag object `8606c61f0e1668f2b057abca177144937eae1036` peels to that merge. Lifecycle synchronization is issue #373 / PR #374.
 
 ## Current checkpoint
 
-P2O4-T04-REM / issue #371 / PR #372 is shipped at verified `v0.12.1-topology-stable-label-transfer`. The next bounded checkpoint is independent label-fitness/adjudication evidence and a dataset-candidacy or deferral decision; no split creation is authorized yet.
+P2O4-T05 / issue #375 is a BurnLens `0.13.0` candidate that makes independent review executable without claiming it has occurred. The packet and QA are ready, but completed independent responses and adjudications remain zero. The next bounded checkpoint is to obtain qualifying reviewer responses, preserve their pre-reveal hashes, adjudicate disagreements or keep those units ignored, and make an explicit dataset-candidacy or remediation decision. No split creation is authorized yet.
 
 ## Boundaries carried forward
 
@@ -79,4 +82,4 @@ P2O4-T04-REM / issue #371 / PR #372 is shipped at verified `v0.12.1-topology-sta
 
 All BurnLens work and future public surfaces must originate from `drwbkr1/burnlens-deschutes`; the separate site repository is out of scope.
 
-No application or deployed public companion site exists in this repository yet. The repository README, living case study, and static semantic/visual evidence reports, including the cross-event proposal/QA, are the presentation surfaces for this checkpoint.
+No application or deployed public companion site exists in this repository yet. The repository README, living case study, and static semantic/visual evidence reports, including the review packet and integrity QA, are the presentation surfaces for this checkpoint.

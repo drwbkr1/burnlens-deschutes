@@ -2,6 +2,21 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.13.0-label-review-readiness - 2026-07-16
+
+### P2O4-T05 - Make independent label review executable
+
+- Rerun the exact v0.12.1 real-source workflow first and confirm that all ten topology-stable cross-event proposal/QA outputs remain byte-identical; identify missing independent label review, rather than proposal reproducibility, as the highest-leverage evidence weakness.
+- Reopen six registered Sentinel archives and two registered MTBS clips, recompute the Darlene 3, Tepee, and McKay proposal state/target arrays, and require exact agreement with the committed rasters before sampling.
+- Select 56 deterministic review units: four from every state present in each event, covering 14 present event/state strata while recording McKay/excluded as structurally absent.
+- Render eight proposal-blinded first-pass pages with pre/post Sentinel imagery, continuous dNBR, and NIFC or MTBS context; keep sample-specific proposal state/target values on a separate reveal page.
+- Add proposal-value-free response/adjudication templates and a separately implemented verifier that checks the packet JSON binding plus 14 referenced packet outputs, bindings, coverage, blind/reveal separation, blank evidence state, response domains, attestations, timestamps, and target-ignore invariants.
+- Reproduce all 18 real-source packet/QA files byte for byte; pass original-resolution review, 144 tests, compilation, dependency health, and two byte-identical fresh-checkout fixed-epoch 240,661-byte wheels / SHA-256 `6451105a7090e67f2d4b1dee5d28d455db118f9efaf07985b76a948ef388cfeb`.
+- Raise BurnLens to `0.13.0` and expose 21 package entry points, including packet generation and integrity QA.
+- Record zero completed independent responses and zero adjudications. Accept the review instrument only; create no accepted label set, dataset, split, baseline, model, accuracy estimate, application, field claim, official claim, or operational claim.
+
+Issue #375; generator/verifier source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; PR, merge, verified tag, and lifecycle synchronization pending.
+
 ## v0.12.1-topology-stable-label-transfer - 2026-07-16
 
 ### P2O4-T04-REM - Remove filesystem topology from public run identity

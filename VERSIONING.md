@@ -63,6 +63,7 @@ Traceability is necessary but not sufficient for public release. Release control
 | Source record ID | `SRC-2026-001` | Immutable record ID | Use sequential IDs, not SemVer. Revisions occur inside the record or through superseding records. |
 | Dataset version | `deschutes-aoi01-dataset-v0.1.0` | Data package version | Use SemVer-inspired data package versions tied to AOI/source/access/CRS/provenance records. |
 | Label schema version | `fire-mask-labels-v0.1` | Annotation/class contract version | Use SemVer-inspired label schema versions for class definitions and annotation rules. |
+| Review protocol version | `proposal-blinded-label-review-readiness-v0.1.0` | Review workflow contract version | Use SemVer-inspired versions for sampling, blind/reveal ordering, response/adjudication schemas, reviewer qualification, and evidence-sufficiency rules. |
 | Baseline method version | `burnlens-baseline-v0.1.0` | Method artifact version | Use SemVer-inspired artifact versions for non-ML baseline methods. |
 | Model version | `burnlens-cv-unet-v0.1.0` | Model artifact version | Use SemVer-inspired artifact versions for trained model packages and lineage. |
 | Run ID | `BL-YYYY-MM-DD-deschutes-aoiXX-mXXX-dXXX` | Unique run identifier | Use unique immutable run IDs, not SemVer. Never reuse a run ID. |
@@ -78,6 +79,7 @@ Traceability is necessary but not sufficient for public release. Release control
 | Source record ID | Assign a new sequential `SRC-YYYY-NNN`; do not treat as a version. Use internal revision or superseding records for changes. |
 | Dataset version | Increment MINOR for data/source/time-window/tile/label changes affecting downstream use; PATCH for metadata/checksum/manifest corrections that do not change the package. |
 | Label schema version | Increment MINOR for class/rule/format changes affecting labels; PATCH or revision for clarifications. |
+| Review protocol version | Increment MINOR for sampling, presentation ordering, response/adjudication behavior, reviewer qualification, or acceptance-rule changes; PATCH for compatible clarifications or metadata-only corrections. |
 | Baseline method version | Increment MINOR for method/output behavior changes; PATCH for corrections that do not change output behavior. |
 | Model version | Increment MINOR for architecture/data/schema/training/output-contract changes; PATCH for packaging or metadata fixes that do not materially reinterpret the model. |
 | Run ID | Create a new run ID for every execution, rerun, failed run worth preserving, or public-output run. Never increment or reuse. |
@@ -121,11 +123,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; one-event proposal/QA and exact Tepee/McKay source fitness with exclusions are shipped; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.11.0-cross-event-source-fitness-baseline` at `01c3aa4abeb89e3f15771571276a25d33e44d390` via issues #361/#363 and PRs #362/#364 |
-| Active analytical candidate | Next checkpoint not yet frozen: cross-event five-state proposal transfer plus separate software QA on exact Tepee/McKay pixels, with Tepee exclusions binding and no split |
-| Baseline verification | Annotated tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61` remotely dereferences to PR #364 merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; 129 post-merge tests, packaging, exact manifest/semantic/render/link/raw/secret gates, original-resolution review, and live-browser review pass |
-| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; shipped outputs add cross-event native-pixel source fitness to bounded source/reference and one-event proposal/QA evidence. No accepted dataset, split, baseline, model, analytical inference result, application, or deployment exists |
+| Current phase posture | Phase Two active; topology-stable three-event proposal/QA is shipped and a proposal-blinded review-readiness candidate exists; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.12.1-topology-stable-label-transfer` at `e00028509145b439d95eb302591e7cb19bd073fd` via issue #371 / PR #372 |
+| Active analytical candidate | BurnLens `0.13.0` / issue #375: 56-unit proposal-blinded label-review readiness, separate reveal/templates, and packet/response integrity QA; completed independent responses/adjudications zero |
+| Baseline verification | Annotated tag object `8606c61f0e1668f2b057abca177144937eae1036` remotely dereferences to PR #372 merge `e00028509145b439d95eb302591e7cb19bd073fd`; fresh merged-main tests, canonical wheel, exact ten-output reconstruction, and remote-tag gates pass |
+| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; candidate outputs add a proposal-blinded independent-review instrument to topology-stable Darlene/Tepee/McKay proposal evidence. No independently accepted labels, dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff

@@ -1,0 +1,414 @@
+{
+  "adjudication_protocol_version": "burnlens-label-adjudication-v0.1.0",
+  "packet_id": "LABEL-REVIEW-PACKET-2026-001",
+  "packet_run_id": "BL-2026-07-16-label-review-packet-r001",
+  "input_response_sha256": [],
+  "adjudicator": {
+    "adjudicator_id": null,
+    "independent_from_proposal_author": null,
+    "attestation": null
+  },
+  "adjudicated_at_utc": null,
+  "decisions": [
+    {
+      "sample_id": "LRU-001",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-002",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-003",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-004",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-005",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-006",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-007",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-008",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-009",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-010",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-011",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-012",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-013",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-014",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-015",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-016",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-017",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-018",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-019",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-020",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-021",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-022",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-023",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-024",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-025",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-026",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-027",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-028",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-029",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-030",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-031",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-032",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-033",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-034",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-035",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-036",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-037",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-038",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-039",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-040",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-041",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-042",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-043",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-044",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-045",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-046",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-047",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-048",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-049",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-050",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-051",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-052",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-053",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-054",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-055",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    },
+    {
+      "sample_id": "LRU-056",
+      "required": null,
+      "final_label": null,
+      "evidence_sufficiency": null,
+      "reason": null
+    }
+  ],
+  "completed": false,
+  "allowed_final_labels": [
+    "burned",
+    "background",
+    "uncertain",
+    "unusable"
+  ],
+  "privacy": "Use an opaque adjudicator ID. Do not enter credentials, secrets, or unnecessary personal data."
+}

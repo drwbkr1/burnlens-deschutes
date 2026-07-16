@@ -1,0 +1,142 @@
+{
+  "report_id": "LABEL-REVIEW-PACKET-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-packet-integrity-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T15:50:00Z",
+  "run_id": "BL-2026-07-16-label-review-packet-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 375,
+  "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+  "software_version": "0.13.0",
+  "application_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "decision": "READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET"
+  },
+  "checks": {
+    "output_files": [
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001.html",
+        "bytes": 7950,
+        "sha256": "a3fa935f36911ce21365c04071f03839508e75fa1b29c35285ac7d1b5239802b"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001.png",
+        "bytes": 416910,
+        "sha256": "129953da93f17d618d351c4b55a08516f19f2ec10054c3594e59b5db9ef91aed"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND.html",
+        "bytes": 2535,
+        "sha256": "5235fbaa9b1d290589445f7487ed36ec048cafb24c80d8884a1123c04109484f"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-REVEAL.html",
+        "bytes": 9433,
+        "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-RESPONSE-TEMPLATE.json",
+        "bytes": 11610,
+        "sha256": "8eb885be0f301cc1ef3eac8e718a12f96b624877267fd140b6b1a9eabc80627d"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-ADJUDICATION-TEMPLATE.json",
+        "bytes": 9074,
+        "sha256": "cafc67f26e43f847baea2a0f42a6af57478843297ac976cb08b2fbbff2fb9580"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+        "bytes": 1043346,
+        "sha256": "2dffb84b46dd7416b69824f8ef0a46935af347706dc645e14e666e11d55b3703"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+        "bytes": 1189574,
+        "sha256": "74d5046cefae73486db7dab230f6f6b225194a49385988310c705e79d468ca45"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+        "bytes": 1075788,
+        "sha256": "02b8198c473e478bba5786d4ed3b4850ae228dcbecb47ea85fe6dc24b1c05891"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+        "bytes": 944076,
+        "sha256": "e4cbb0c5560ee50c3e051ed4728fe451c29406c9d934a7313517134a514c7768"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+        "bytes": 1048672,
+        "sha256": "2245267e41b3c818fcd6b88d2e15633c5543ee2fe77ea1bb2d53ca890d209005"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+        "bytes": 1052619,
+        "sha256": "632bb4eb8982aa8f2f0040181a342ba8606a7e54ce5dfbfa6f36ec6556cd728c"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+        "bytes": 947497,
+        "sha256": "9ea953c1c55325534c3b2b3ef89012aa01108309b9d20d6bf69cb1432a31f043"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+        "bytes": 1099010,
+        "sha256": "e5f7a13269c761fba8e6b35427b10a432f1b18a703e48470b42fbe411203ba90"
+      }
+    ],
+    "units": {
+      "event_count": 3,
+      "unit_count": 56,
+      "unique_pixel_count": 56,
+      "coverage_strata": 15,
+      "structural_absences": 1
+    },
+    "blind_boundary": {
+      "blind_html_sha256": "5235fbaa9b1d290589445f7487ed36ec048cafb24c80d8884a1123c04109484f",
+      "reveal_html_sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af",
+      "blind_page_count": 8,
+      "forbidden_reveal_tokens_found": [],
+      "reveal_ordering_warning_present": true
+    },
+    "response_template": {
+      "sha256": "8eb885be0f301cc1ef3eac8e718a12f96b624877267fd140b6b1a9eabc80627d",
+      "sample_count": 56,
+      "proposal_value_keys_found": [],
+      "blank": true
+    },
+    "adjudication_template": {
+      "sha256": "cafc67f26e43f847baea2a0f42a6af57478843297ac976cb08b2fbbff2fb9580",
+      "sample_count": 56,
+      "blank": true
+    }
+  },
+  "completed_response_count": 0,
+  "completed_responses": [],
+  "independent_human_review_completed": false,
+  "adjudication_completed": false,
+  "dataset_created": false,
+  "accuracy_claim_created": false,
+  "decision": "PASS_PACKET_INTEGRITY_READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+  "decision_detail": "Packet files, sample bindings, blind/reveal separation, and blank templates passed. No completed independent response was supplied, so dataset candidacy remains deferred.",
+  "claims": {
+    "proven": [
+      "The committed packet files and exact sample bindings pass an independently implemented structural verifier.",
+      "The blank response and adjudication templates contain no proposal-value fields.",
+      "Any supplied response summary is derived only from an actual validated response file."
+    ],
+    "not_proven": [
+      "Packet integrity is not human label fitness, inter-rater agreement, adjudication, field validation, or accuracy.",
+      "No dataset, split, baseline, model, application, deployment, official status, or endorsement is established."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
