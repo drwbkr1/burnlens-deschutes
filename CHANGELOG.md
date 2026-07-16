@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16 (candidate)
+## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16
 
 ### P2O4-T03 - Acquire and inspect the exact cross-event pixels
 
@@ -15,10 +15,10 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Accept McKay at 100% pair-eligible quality and 3/3 registration windows. Accept Tepee only with 8.3441% review-needed, 5.1341% excluded, one excluded window, and one review-needed window binding.
 - Render traceable JSON, semantic HTML, and 1,800 by 1,450 PNG; pass original-resolution and live semantic-browser review.
 - Correct a pre-tag trace mismatch found by fresh merged-main semantic readback: fail closed on frozen feasibility schema drift and expose both label protocol `burn-scar-label-protocol-v0.1.0` and implemented schema `burn-scar-five-state-schema-v0.1.0` across JSON, HTML, and PNG.
-- Raise BurnLens to `0.11.0`; pass 129 tests, compilation, dependency health, a 183,761-byte remediated candidate wheel / isolated import, and four cross-event console entry points.
+- Raise BurnLens to `0.11.0`; pass 129 tests, compilation, dependency health, candidate and fresh merged-main wheel / isolated-import gates, and four cross-event console entry points.
 - Create no label, dataset, split, baseline, model, application, accuracy/generalization claim, independent human validation, or field claim.
 
-Issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; remediated source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; candidate artifacts `621c74f4e6f2d691438736b38d3019a6bd453f50`; remediation PR/merge/tag pending.
+Issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363 / PR #364 / shipped merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; artifacts `621c74f4e6f2d691438736b38d3019a6bd453f50`; verified tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61`; lifecycle sync issue #365.
 
 ## v0.10.0-cross-event-feasibility-baseline - 2026-07-15
 
