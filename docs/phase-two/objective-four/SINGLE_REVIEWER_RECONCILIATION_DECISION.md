@@ -45,6 +45,7 @@ This is recorded as a disclosed sequence exception, not a passing pre-access gat
 - Base: `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`
 - Source: `fda69a60b0a5e350bfe10e7388571d7c1c103735`
 - Public artifacts: `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`
+- Reviewed candidate head: `67216dc9952427a9c511eb871c12a87f94171bea`
 - BurnLens: `0.20.0`
 - Private report version: `label-review-single-reviewer-reconciliation-v0.1.0`
 - Private run: `BL-2026-07-16-single-reviewer-reconciliation-r001`

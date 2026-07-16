@@ -1,6 +1,6 @@
 # REGISTRY-2026-022 - Single-Reviewer Reconciliation Evidence
 
-**Checkpoint:** Issue #403 / PR #412; next issue #411; branch `codex/p2o4-t10b-single-reviewer-reconciliation`; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`
+**Checkpoint:** Issue #403 / PR #412; next issue #411; branch `codex/p2o4-t10b-single-reviewer-reconciliation`; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; reviewed candidate head `67216dc9952427a9c511eb871c12a87f94171bea`
 
 | Artifact | Class | Version/state | Committed private/provider bytes |
 |---|---|---|---:|

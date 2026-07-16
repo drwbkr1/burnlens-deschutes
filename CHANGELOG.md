@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Use current primary MTBS and CEOS LPV sources to confirm that scene-quality masks, independent/reference evidence, uncertainty, and representative sampling remain binding. Candidate units are proposal-diagnostic evidence, not ground truth, validation, or an accuracy sample.
 - Pass 181 tests, compileall, dependency health, privacy, semantic, input-immutability, exact-binding, and rendered-output gates. Two fixed-epoch wheels are byte-identical at 341,228 bytes / SHA-256 `9645c01b1f0156f358bb020ea6f49eda852b337eb22d765780c0d173cad74faa`; isolated BurnLens `0.20.0` exposes 33 entry points and no private evidence. Dataset, split, baseline, and model remain absent; issue #411 owns reference-evidence remediation.
 
-Issue #403 / PR #412; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; merge/tag pending.
+Issue #403 / PR #412; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; reviewed candidate head `67216dc9952427a9c511eb871c12a87f94171bea`; merge/tag pending.
 
 ## v0.19.0-owner-waiver-reveal-readiness - verified - 2026-07-16
 

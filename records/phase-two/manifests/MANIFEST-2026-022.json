@@ -10,7 +10,7 @@
   "git_base_commit": "1c5cadcb6dca9664979ad87a3503f06aeea5fd0f",
   "generator_source_commit": "fda69a60b0a5e350bfe10e7388571d7c1c103735",
   "candidate_artifacts_commit": "57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e",
-  "reviewed_head_commit": null,
+  "reviewed_head_commit": "67216dc9952427a9c511eb871c12a87f94171bea",
   "checkpoint_commit": null,
   "pull_request": 412,
   "version_tag": "v0.20.0-single-reviewer-reconciliation",
