@@ -22,6 +22,8 @@ This run does not claim a second human response. The project remains at one oper
 - Dual-verifier source: `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`
 - Public artifacts: `1fb920eb1476f470ac9f9216e89a70201e643fab`
 - Reviewed candidate head: `125fcc677cba114277b8a066709d753c54ba619c`
+- Merge: `eb84aad222a07b89f03a892c2cc0df9540b20d25`
+- Verified tag: `v0.17.0-dual-lock-custody-readiness`; object `8fca2a51548690b710ad3903a19312e77c748420`
 - Run: `BL-2026-07-16-label-review-dual-lock-readiness-qa-r001`
 - Report: `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001`
 - Exact inventory: `MANIFEST-2026-019`
@@ -30,7 +32,7 @@ This run does not claim a second human response. The project remains at one oper
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model: none
-- Candidate wheel: 302,018 bytes; SHA-256 `cac65ceaf6ce75ef67d16d55379df9234a591563c94800791d972965281f80d2`; isolated BurnLens `0.17.0`; 27 entry points
+- Canonical wheel: 302,018 bytes; SHA-256 `cac65ceaf6ce75ef67d16d55379df9234a591563c94800791d972965281f80d2`; isolated BurnLens `0.17.0`; 27 entry points
 
 ## Next gate
 
