@@ -12,4 +12,6 @@ The operator states that the reveal remains unopened. Software explicitly does n
 
 Candidate source is `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts are `9fbd97fcb66fd76172fff949580f469fc43b3f40`; run is `BL-2026-07-16-label-review-response-lock-qa-r001`. All 158 tests pass. Two fixed-epoch detached-source wheels are byte-identical at 292,068 bytes / SHA-256 `c6a0f320b393ea7aca3aebdc93da97f7ed34901d30df298c1986d1ee4b78ee28`, and an isolated install reports BurnLens `0.16.0` with 26 entry points.
 
+PR #388 reviewed head `7a1345d187def41094ccb9d63d44958a3de809e7` merged to `836eef75495dbc671bd74a8ad4112852bbf50ac6`. The post-merge audit correctly withheld the tag after finding that the candidate manifest's stated creation time was later than both its own commit and the merge. Issue #389 corrects only that chronology and release synchronization; no private byte, public output, code path, or scientific state changes.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

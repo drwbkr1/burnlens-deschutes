@@ -31,6 +31,9 @@ It does not prove:
 
 - Issue: #384
 - Pull request: #388
+- Reviewed head: `7a1345d187def41094ccb9d63d44958a3de809e7`
+- Analytical merge: `836eef75495dbc671bd74a8ad4112852bbf50ac6`
+- Release-record remediation: issue #389 / branch `codex/p2o4-t08-rem-release-sync`
 - Branch: `codex/p2o4-t08-first-reviewer-response-lock`
 - Base: `6b13c4f5f128615f42b8897e9c6d8442446a86a2`
 - Software: BurnLens `0.16.0`
@@ -45,7 +48,7 @@ It does not prove:
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Dataset / split / baseline / model: none
 - Exact inventory: `MANIFEST-2026-018`
-- Intended tag after all gates pass: `v0.16.0-first-reviewer-response-lock`
+- Intended tag after issue #389 and all release gates pass: `v0.16.0-first-reviewer-response-lock`
 
 ## Next gate
 
