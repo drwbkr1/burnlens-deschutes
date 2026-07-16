@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from hashlib import sha256
 from html import escape
 import json
@@ -93,13 +93,18 @@ def _copy_new(source: Path, target: Path) -> None:
     target.write_bytes(source.read_bytes())
 
 
-def _validate_timestamp(value: str) -> None:
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _parse_timestamp(value: str, label: str) -> datetime:
     try:
         parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError as error:
-        raise LabelReviewBrowserQaError("generated timestamp is invalid") from error
+        raise LabelReviewBrowserQaError(f"{label} timestamp is invalid") from error
     if parsed.tzinfo is None:
-        raise LabelReviewBrowserQaError("generated timestamp must be timezone-aware")
+        raise LabelReviewBrowserQaError(f"{label} timestamp must be timezone-aware")
+    return parsed
 
 
 def _assert(condition: bool, message: str) -> None:
@@ -292,7 +297,6 @@ def run_browser_qa(
     browser_executable: Path,
     node_executable: Path,
     work_directory: Path,
-    generated_at_utc: str,
     run_id: str,
     git_source_commit: str,
 ) -> tuple[dict[str, Any], dict[str, Path]]:
@@ -301,7 +305,7 @@ def run_browser_qa(
     browser_executable = browser_executable.resolve()
     node_executable = node_executable.resolve()
     work_directory = work_directory.resolve()
-    _validate_timestamp(generated_at_utc)
+    run_started_at_utc = _utc_now()
     if len(git_source_commit) != 40:
         raise LabelReviewBrowserQaError("git source commit must be a full 40-character SHA")
     for path, label in (
@@ -321,7 +325,7 @@ def run_browser_qa(
     try:
         handoff_qa = verify_handoff(
             archive_path=archive_path,
-            generated_at_utc=generated_at_utc,
+            generated_at_utc=run_started_at_utc,
             run_id=f"{run_id}-HANDOFF-VERIFY",
             git_source_commit=git_source_commit,
         )
@@ -390,13 +394,23 @@ def run_browser_qa(
     experience = response.get("reviewer", {}).get("burned_area_interpretation_experience")
     if experience != EXPECTED_EXPERIENCE:
         raise LabelReviewBrowserQaError("browser response fixture disclosure differs")
+    review_completed_at = _parse_timestamp(
+        response["review_completed_at_utc"],
+        "browser response completion",
+    )
+    recorded_at_utc = _utc_now()
+    recorded_at = _parse_timestamp(recorded_at_utc, "browser QA record")
+    if recorded_at < review_completed_at:
+        raise LabelReviewBrowserQaError(
+            "browser response completion is later than the QA receipt clock"
+        )
 
     lock_path = work_directory / "software-browser-fixture-lock.json"
     lock = build_response_lock(
         packet_path=packet_path,
         response_path=response_path,
         receipt_id="LABEL-REVIEW-BROWSER-FIXTURE-LOCK-2026-001",
-        received_at_utc=generated_at_utc,
+        received_at_utc=recorded_at_utc,
         run_id=f"{run_id}-FIXTURE-LOCK",
         git_source_commit=git_source_commit,
         evidence_origin=SOFTWARE_BROWSER_FIXTURE,
@@ -414,7 +428,8 @@ def run_browser_qa(
         "report_id": BROWSER_QA_ID,
         "schema_version": BROWSER_QA_SCHEMA_VERSION,
         "report_version": BROWSER_QA_VERSION,
-        "generated_at_utc": generated_at_utc,
+        "run_started_at_utc": run_started_at_utc,
+        "generated_at_utc": recorded_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
         "task_issue": TASK_ISSUE,

@@ -26,7 +26,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-png", type=Path, required=True)
     parser.add_argument("--output-desktop-png", type=Path, required=True)
     parser.add_argument("--output-mobile-png", type=Path, required=True)
-    parser.add_argument("--generated-at-utc", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--git-source-commit", required=True)
     return parser.parse_args()
@@ -41,7 +40,6 @@ def main() -> int:
             browser_executable=args.browser_executable,
             node_executable=args.node_executable,
             work_directory=args.work_directory,
-            generated_at_utc=args.generated_at_utc,
             run_id=args.run_id,
             git_source_commit=args.git_source_commit,
         )
