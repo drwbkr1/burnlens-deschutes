@@ -414,6 +414,7 @@ def run_browser_qa(
         run_id=f"{run_id}-FIXTURE-LOCK",
         git_source_commit=git_source_commit,
         evidence_origin=SOFTWARE_BROWSER_FIXTURE,
+        task_issue=TASK_ISSUE,
     )
     write_response_lock(lock, lock_path)
     if (

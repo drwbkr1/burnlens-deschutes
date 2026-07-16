@@ -26,7 +26,6 @@ from .verify_label_review_packet import (
 LOCK_SCHEMA_VERSION = "0.1.0"
 LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.2.0"
 SOFTWARE_VERSION = "0.15.0"
-TASK_ISSUE = 383
 RETURNED_INDEPENDENT_RESPONSE = "returned-independent-response"
 SOFTWARE_BROWSER_FIXTURE = "software-browser-fixture"
 EVIDENCE_ORIGINS = {
@@ -66,6 +65,7 @@ def build_response_lock(
     run_id: str,
     git_source_commit: str,
     evidence_origin: str,
+    task_issue: int,
 ) -> dict[str, Any]:
     packet = _load_json(packet_path)
     response = _load_json(response_path)
@@ -90,6 +90,8 @@ def build_response_lock(
         raise LabelReviewResponseLockError("git source commit must be a full 40-character SHA")
     if evidence_origin not in EVIDENCE_ORIGINS:
         raise LabelReviewResponseLockError("response evidence origin is invalid")
+    if not isinstance(task_issue, int) or isinstance(task_issue, bool) or task_issue <= 0:
+        raise LabelReviewResponseLockError("task issue must be a positive integer")
     if not receipt_id.strip() or not run_id.strip() or not received_at_utc.strip():
         raise LabelReviewResponseLockError("receipt identity, run identity, and receive time are required")
     try:
@@ -98,6 +100,19 @@ def build_response_lock(
         raise LabelReviewResponseLockError("receive time is invalid") from error
     if received.tzinfo is None:
         raise LabelReviewResponseLockError("receive time must be timezone-aware")
+    response_completed_text = response.get("review_completed_at_utc")
+    try:
+        response_completed = datetime.fromisoformat(
+            response_completed_text.replace("Z", "+00:00")
+        )
+    except (AttributeError, ValueError) as error:
+        raise LabelReviewResponseLockError(
+            "response completion time is invalid"
+        ) from error
+    if response_completed.tzinfo is None or received < response_completed:
+        raise LabelReviewResponseLockError(
+            "response receive time predates response completion"
+        )
     reviewer = response["reviewer"]
     reviewer_id = reviewer["reviewer_id"].strip()
     experience = reviewer.get("burned_area_interpretation_experience")
@@ -133,7 +148,7 @@ def build_response_lock(
         "received_at_utc": received_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
-        "task_issue": TASK_ISSUE,
+        "task_issue": task_issue,
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
         "application_version": WORKBENCH_VERSION,
@@ -194,6 +209,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--received-at-utc", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--git-source-commit", required=True)
+    parser.add_argument("--task-issue", type=int, required=True)
     parser.add_argument(
         "--evidence-origin",
         choices=sorted(EVIDENCE_ORIGINS),
@@ -217,6 +233,7 @@ def main() -> int:
             run_id=args.run_id,
             git_source_commit=args.git_source_commit,
             evidence_origin=args.evidence_origin,
+            task_issue=args.task_issue,
         )
         write_response_lock(report, args.output_json)
         print(report["decision"])

@@ -249,6 +249,7 @@ class LabelReviewHandoffTests(unittest.TestCase):
                 run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK",
                 git_source_commit=SOURCE_COMMIT,
                 evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                task_issue=379,
             )
             self.assertEqual(
                 report["decision"],
@@ -287,6 +288,7 @@ class LabelReviewHandoffTests(unittest.TestCase):
                     run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-TAMPER",
                     git_source_commit=SOURCE_COMMIT,
                     evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                    task_issue=379,
                 )
 
             fixture_path = root / "fixture-response.json"
@@ -303,6 +305,7 @@ class LabelReviewHandoffTests(unittest.TestCase):
                 run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-FIXTURE",
                 git_source_commit=SOURCE_COMMIT,
                 evidence_origin=SOFTWARE_BROWSER_FIXTURE,
+                task_issue=383,
             )
             self.assertEqual(
                 fixture["decision"],
@@ -311,6 +314,21 @@ class LabelReviewHandoffTests(unittest.TestCase):
             self.assertTrue(fixture["software_browser_fixture"])
             self.assertFalse(fixture["qualifying_independent_human_response"])
             self.assertTrue(fixture["reveal_release"].startswith("prohibited:"))
+
+            with self.assertRaisesRegex(
+                LabelReviewResponseLockError,
+                "predates response completion",
+            ):
+                build_response_lock(
+                    packet_path=PACKET_PATH,
+                    response_path=fixture_path,
+                    receipt_id="LABEL-REVIEW-RESPONSE-LOCK-TEST-004",
+                    received_at_utc="2026-07-16T17:19:59Z",
+                    run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-EARLY",
+                    git_source_commit=SOURCE_COMMIT,
+                    evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                    task_issue=384,
+                )
 
     def test_builder_refuses_packet_hash_drift_and_output_overwrite(self) -> None:
         with TemporaryDirectory() as temporary:
