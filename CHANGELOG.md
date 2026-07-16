@@ -2,6 +2,17 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## BL-GOV-002 - GitHub backlog truth reconciliation - 2026-07-16
+
+- Re-run the exact offline reviewer workbench in Chrome `150.0.7871.124`; all 56 units, draft roundtrip, completed export, desktop/mobile overflow, console/runtime, storage, request, and fixture-only gates pass.
+- Re-run the mixed-version dual-lock verifier against the exact first private pair and the current non-human fixture; the result remains one returned response, one fixture, two exact locks, zero adjudications, and no reveal.
+- Use authenticated GitHub API and remote-ref inspection to enumerate 21 tags / normalized inventory SHA-256 `cf9baa414ceca9416a37c4c69621ab4d39c958ff3724973b9ebe05233ce09acf` and zero GitHub Releases.
+- Reconcile obsolete Phase One issue and PR state that contradicted the controlling `v0.0.8-execution-goal-baseline`, current Phase Two status, and verified tag inventory.
+- Preserve every historical branch, commit, issue discussion, and PR diff as audit evidence. Create, move, or delete no tag, Release, branch, analytical artifact, private response, receipt, fixture, or deployment.
+- Leave issue #393 open as the active scientific checkpoint. No second human response, reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, field claim, official claim, or operational claim is created.
+
+Issue #400; branch `codex/bl-gov-002-backlog-truth`; checkpoint source commit and PR are recorded in `GITHUB-BACKLOG-RECONCILIATION-2026-001`.
+
 ## v0.17.0-dual-lock-custody-readiness - 2026-07-16
 
 ### P2O4-T09A - Prove mixed-version two-lock custody before the second reviewer returns

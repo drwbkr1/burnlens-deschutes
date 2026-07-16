@@ -1,6 +1,8 @@
 # Phase One / Objective Seven Tracker
 
-## Current status
+> **Historical snapshot.** This tracker records the pre-goal Objective Seven process as it stood on 2026-07-13. The controlling execution goal, current phase status, roadmap, and BL-GOV-002 supersede its active-work and permission language. Its issues, candidate tag, restrictions, and human-approval sequence remain audit evidence only.
+
+## Historical status at 2026-07-13
 
 | Field | Current state |
 |---|---|

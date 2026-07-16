@@ -4,6 +4,12 @@
 
 BurnLens uses the identifier classes in `VERSIONING.md`. A tag records repository state; it does not imply an application, dataset, model, run, public release, operational readiness, or official status.
 
+## Repository-control checkpoints
+
+| Identifier | State | Commit | Meaning |
+|---|---|---|---|
+| `BL-GOV-002` | Issue #400; repository-state reconciliation in review | Source commit pending | Re-runs the current reviewer workbench and dual-lock path, records the authenticated 21-tag / zero-Release inventory, reconciles obsolete Phase One GitHub backlog, preserves historical evidence, and leaves issue #393 as the active scientific checkpoint. No software, tag, Release, analytical output, private custody, reveal, deployment, official, or operational state changes. |
+
 ## Repository baselines
 
 | Identifier | State | Commit | Meaning |

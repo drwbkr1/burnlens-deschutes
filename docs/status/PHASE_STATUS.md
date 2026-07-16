@@ -16,6 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.17.0-dual-lock-custody-readiness` at merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; tag object `8fca2a51548690b710ad3903a19312e77c748420`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; one returned response plus one non-human fixture; content withheld |
+| GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; issue #393 remains active |
 | Active evidence checkpoint | Parent issue #393: obtain and exact-lock the second qualifying human response using the shipped current receipt protocol; do not expose the first response or open the reveal |
 | Previous repository evidence baseline | Shipped `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
@@ -85,6 +86,8 @@ P2O4-T09A ships `v0.17.0-dual-lock-custody-readiness` through issue #394 / PR #3
 P2O4-T09A ships verified `v0.17.0-dual-lock-custody-readiness` at merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`, tag object `8fca2a51548690b710ad3903a19312e77c748420`. Its independent verifier accepts the exact historical first pair and one current-protocol software fixture, proves the two locks are distinct, and publishes only bounded readiness evidence. The fixture is not human evidence, the minimum two-human-response custody gate remains false, and the reveal remains operator-declared unopened.
 
 Parent issue #393 is active for the second qualifying human response. Deliver only the exact isolated handoff, exact-lock the returned response under the current protocol, and keep the first response and reveal withheld. Do not compare, adjudicate, or create a split before the second human response is also locked.
+
+BL-GOV-002 / issue #400 is a repository-truth checkpoint, not a scientific advance. It reconciles obsolete Phase One GitHub backlog and marks the Phase One Objective Seven tracker/handoff as historical snapshots. It changes no tag, Release, software version, analytical output, custody byte, reveal state, or Phase Two gate.
 
 ## Boundaries carried forward
 
