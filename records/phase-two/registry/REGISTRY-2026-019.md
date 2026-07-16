@@ -1,6 +1,6 @@
 # REGISTRY-2026-019 - Dual-Lock Custody Readiness Evidence
 
-**Checkpoint:** Issue #394 / PR #395; lifecycle sync issue #396 / PR #397 / merge `aabd185e289f8b02bb42ac1b2b9133322df82549`; terminal wording closeout issue #398; parent second-response issue #393; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; dual verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c`; analytical merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
+**Checkpoint:** Issue #394 / PR #395; lifecycle sync issue #396 / PR #397 / merge `aabd185e289f8b02bb42ac1b2b9133322df82549`; terminal wording closeout issue #398 / PR #399; parent second-response issue #393; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; dual verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c`; analytical merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
 
 | Artifact | Class | Version/state | Committed private/provider bytes |
 |---|---|---|---:|

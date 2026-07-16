@@ -2,7 +2,7 @@
 
 ## Scope
 
-Issue #398 removes the final provisional draft/in-review wording left after lifecycle sync PR #397 merged. It changes no code, evidence bytes, private response bytes, receipt, fixture, reveal state, scientific decision, version, or tag.
+Issue #398 / PR #399 removes the final provisional draft/in-review wording left after lifecycle sync PR #397 merged. It changes no code, evidence bytes, private response bytes, receipt, fixture, reveal state, scientific decision, version, or tag.
 
 ## Verified state
 
@@ -20,4 +20,4 @@ A new remote-main clone at the lifecycle sync merge passes 163 tests, compilatio
 
 ## Terminal handoff
 
-The final closeout PR and merge evidence remain in issue #398 and its task-scoped GitHub history. No further P2O4-T09A lifecycle sync is expected. Parent issue #393 remains the active scientific checkpoint: obtain and exact-lock a second qualifying human response before reveal, comparison, adjudication, or dataset work.
+The final closeout merge evidence remains in issue #398 / PR #399 and GitHub history. No further P2O4-T09A lifecycle sync is expected. Parent issue #393 remains the active scientific checkpoint: obtain and exact-lock a second qualifying human response before reveal, comparison, adjudication, or dataset work.
