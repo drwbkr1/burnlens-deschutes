@@ -31,7 +31,7 @@ The project remains at one returned independent response. Reviewer two is absent
 - Target: `target-burn-scar-v0.2.0`
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model: none
-- Candidate package: two byte-identical fixed-epoch 315,032-byte wheels; SHA-256 `436db542b269442060c5a7d3e34323da19be673ab11213b6df9f571be12879b2`; isolated BurnLens `0.18.0`; 29 console entry points; zero private/download/build entries
+- Canonical package proof: two fresh-remote fixed-epoch wheels and one detached `git archive` fixed-epoch wheel from PR head `3d0f46c4160bd0e908bf2367288298cce1f97539` are byte-identical at 314,089 bytes / SHA-256 `857fb6686c83581ddbf6ae98370ac151d4b5c40642fb7bc775173a115a1670af`; isolated BurnLens `0.18.0`; 29 console entry points; zero private/download/build entries. The stale CRLF main-workspace checkout is excluded from canonical package proof.
 
 ## Technical basis and limits
 
