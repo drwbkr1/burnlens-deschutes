@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass 158 tests, compilation, dependency health, content-leakage and semantic audits, original-resolution review, and two byte-identical detached-source fixed-epoch 292,068-byte wheels / SHA-256 `c6a0f320b393ea7aca3aebdc93da97f7ed34901d30df298c1986d1ee4b78ee28`; isolated install reports `0.16.0` and 26 entry points.
 - Keep one-of-two response status binding. Create no adjudication, accepted label set, dataset, split, baseline, model, accuracy estimate, deployment, field claim, official claim, or operational claim.
 
-Issue #384 / PR #388 reviewed head `7a1345d187def41094ccb9d63d44958a3de809e7` merged to `836eef75495dbc671bd74a8ad4112852bbf50ac6`. Source is `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts are `9fbd97fcb66fd76172fff949580f469fc43b3f40`. Post-merge chronology audit withheld the tag and opened record-only remediation issue #389 / PR #390; outputs and scientific state are unchanged.
+Issue #384 / PR #388 reviewed head `7a1345d187def41094ccb9d63d44958a3de809e7` merged analytically to `836eef75495dbc671bd74a8ad4112852bbf50ac6`. Record-only issue #389 / PR #390 corrected manifest chronology at checkpoint merge `27fcd3eadb1473bb603b4275f986bf62022c10bf` without changing outputs or scientific state. Source is `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts are `9fbd97fcb66fd76172fff949580f469fc43b3f40`; verified tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`; lifecycle sync issue #391 / PR #392.
 
 ## v0.15.0-live-browser-reviewer-handoff - 2026-07-16
 
