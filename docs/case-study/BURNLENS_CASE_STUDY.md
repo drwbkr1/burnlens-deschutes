@@ -248,6 +248,18 @@ The tracked report publishes both cryptographic bindings, 56-of-56 completion, o
 
 This is evidence custody, not label acceptance. It makes the eventual comparison more defensible while refusing to manufacture agreement from one response.
 
+## Proving the second-lock path without inventing a reviewer
+
+The next custody risk was technical rather than scientific: the first private receipt was created under BurnLens `0.15.0`, while the next returned response will be locked by newer software. BurnLens must preserve the historical bytes exactly and still prove that two independently locked responses can coexist before any content is revealed.
+
+The BurnLens `0.17.0` candidate keeps the v0.2.0 / `0.15.0` historical identity supported and makes new receipts identify v0.3.0 / `0.17.0`. A separately transcribed dual verifier checks two exact response/receipt pairs without importing the receipt builder.
+
+![BurnLens mixed-version dual-lock custody readiness](../../samples/labels/review/phase-two/LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001.png)
+
+The authoritative readiness run uses the actual ignored first response and receipt plus the exact browser-QA response re-locked as a current-protocol software fixture. It proves two distinct exact locks, packet and contract binding, chronology, origin separation, privacy, and a readable public result. It also keeps the most important state red: only one origin is an operator-declared returned response, the other is explicitly non-human and reveal-prohibited, and the minimum human custody count remains unmet.
+
+That is the portfolio point of this checkpoint. BurnLens tests the failure-prone custody mechanism before a second person’s work arrives, but refuses to turn a software fixture into agreement evidence. Reveal, comparison, adjudication, and dataset work remain blocked until a second qualifying human response is locked.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -270,6 +282,7 @@ This is evidence custody, not label acceptance. It makes the eventual comparison
 - Latest offline handoff-QA run: `BL-2026-07-16-label-review-handoff-qa-r001`
 - Latest live-browser handoff-QA run: `BL-2026-07-16-label-review-browser-qa-r001`
 - Latest returned-response public-lock run: `BL-2026-07-16-label-review-response-lock-qa-r001`
+- Active dual-lock custody-readiness run: `BL-2026-07-16-label-review-dual-lock-readiness-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
@@ -287,6 +300,7 @@ This is evidence custody, not label acceptance. It makes the eventual comparison
 - Offline reviewer handoff: `LABEL-REVIEW-HANDOFF-2026-001` and `LABEL-REVIEW-HANDOFF-QA-2026-001`; exact seven-output shipped inventory and local archive identity in `MANIFEST-2026-016`; application `label-review-handoff-workbench-v0.1.0`; completed independent responses and adjudications both zero
 - Live-browser handoff QA: shipped `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
 - First returned-response lock: shipped `LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-018`; one private response and receipt ignored; public content withheld; two responses required before adjudication
+- Dual-lock custody readiness: candidate `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-019`; legacy first pair plus current software fixture; returned-response origins 1; fixture origins 1; no reveal or adjudication
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -295,7 +309,8 @@ This is evidence custody, not label acceptance. It makes the eventual comparison
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.16.0-first-reviewer-response-lock` at corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; annotated tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest checkpoint: 158 tests, exact private response/receipt binding, content-leakage audit, semantic/render review, exact three-output reconstruction, 110 links, 90 LF-governed files, canonical fixed-epoch packaging, isolated import with 26 entry points, fresh remote-main clone, and remote-tag verification pass
-- Active next checkpoint: obtain and lock the required second qualifying response without exposing the first response or opening the reveal, then compare and adjudicate before dataset-candidacy work
+- Active candidate: BurnLens `0.17.0`; issue #394; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; 163 tests and mixed-version custody/readiness gates pass; packaging, PR, merge, fresh-main, and tag pending
+- Active next scientific checkpoint: obtain and lock the required second qualifying human response without exposing the first response or opening the reveal, then compare and adjudicate before dataset-candidacy work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

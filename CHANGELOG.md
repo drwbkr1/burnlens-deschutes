@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.17.0-dual-lock-custody-readiness - candidate 2026-07-16
+
+### P2O4-T09A - Prove mixed-version two-lock custody before the second reviewer returns
+
+- Preserve compatibility with the exact historical `label-review-response-integrity-lock-v0.2.0` / BurnLens `0.15.0` receipt while making future receipts identify `label-review-response-integrity-lock-v0.3.0` / BurnLens `0.17.0`.
+- Add an independently transcribed two-pair verifier that checks exact response and receipt bytes, packet and response-contract binding, supported receipt/software identity pairs, chronology, origin, and cross-pair distinctness without importing the receipt builder.
+- Run the verifier against the actual ignored first returned response and receipt plus the exact ignored browser-QA response re-locked as a current-protocol software fixture.
+- Publish `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001` as JSON, semantic HTML, and a rendered 1800-by-1320 evidence card. The public outputs expose one returned-response origin, one software fixture, two distinct exact locks, zero adjudications, and no reveal authorization while withholding response content and private metadata.
+- Preserve exact byte reconstruction for the v0.16.0 public first-lock outputs and the new three-output readiness package.
+- Pass 163 tests, compilation, dependency health, Node syntax, privacy, semantic, original-resolution rendering, and exact-output regeneration gates. Candidate wheel, PR, merge, fresh-main, tag, and lifecycle gates remain pending.
+- Keep the scientific gate binding: the software fixture is not a second human response, minimum human custody is unmet, and no reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, metric, deployment, field, official, endorsed, or operational claim is created.
+
+Issue #394; parent second-response issue #393; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; candidate tag withheld pending reviewed merge and fresh-main release gates.
+
 ## v0.16.0-first-reviewer-response-lock - 2026-07-16
 
 ### P2O4-T08 - Preserve the first returned response before reveal
