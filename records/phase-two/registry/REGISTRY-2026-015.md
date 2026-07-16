@@ -1,6 +1,6 @@
 # REGISTRY-2026-015 - Label-Review Readiness Evidence
 
-**Checkpoint candidate:** Issue #375; branch `codex/p2o4-t05-label-review-readiness`; source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; PR/merge/tag pending
+**Checkpoint:** Issue #375 / PR #376 / merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; reviewed head `119b1e98f7928bb1c2f09d577bfa270d903766c7`; source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; verified tag `v0.13.0-label-review-readiness`, object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; lifecycle sync issue #377 / PR pending
 
 | Artifact | Class | Version/state | Committed provider bytes |
 |---|---|---|---:|
@@ -13,6 +13,6 @@
 | `LABEL-REVIEW-PACKET-QA-2026-001` JSON/HTML/PNG | Packet binding plus 14 referenced-output integrity and zero-response state | Run `BL-2026-07-16-label-review-packet-qa-r001`; pass integrity / defer dataset; manifest inventories all 18 packet/QA files | 0 |
 | Repository tests | Selection, absence, template, response, target-ignore, predecessor, and historical contracts | 144 pass | 0 |
 | `burnlens_deschutes-0.13.0-py3-none-any.whl` | Reproducible release-wheel evidence; not committed | source `a11ae5123728d3823ba67d22d49250d4affb18f6`; `SOURCE_DATE_EPOCH=1784216759`; 240,661 bytes; SHA-256 `6451105a7090e67f2d4b1dee5d28d455db118f9efaf07985b76a948ef388cfeb`; isolated import `0.13.0`; 21 entry points | 0 |
-| `MANIFEST-2026-015.json` | Exact 18-output inventory and candidate quality gates | PR/merge/tag/fresh-main gates pending | 0 |
+| `MANIFEST-2026-015.json` | Exact 18-output inventory and release gates | Shipped; PR #376, fresh merged-main, canonical-wheel, real-reconstruction, and remote-tag gates pass; lifecycle sync issue #377 | 0 |
 
 No new provider archive, secret, credential, accepted label, dataset, split, baseline, model, metric, application, field claim, official claim, or operational claim is committed.
