@@ -14,7 +14,6 @@ from .label_review_handoff import (
     EXPECTED_PACKET_ID,
     EXPECTED_PACKET_RUN_ID,
     EXPECTED_PACKET_SHA256,
-    SOFTWARE_VERSION,
     WORKBENCH_VERSION,
 )
 from .optical_pair_evidence import WARNING
@@ -25,8 +24,15 @@ from .verify_label_review_packet import (
 
 
 LOCK_SCHEMA_VERSION = "0.1.0"
-LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.1.0"
-TASK_ISSUE = 379
+LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.2.0"
+SOFTWARE_VERSION = "0.15.0"
+TASK_ISSUE = 383
+RETURNED_INDEPENDENT_RESPONSE = "returned-independent-response"
+SOFTWARE_BROWSER_FIXTURE = "software-browser-fixture"
+EVIDENCE_ORIGINS = {
+    RETURNED_INDEPENDENT_RESPONSE,
+    SOFTWARE_BROWSER_FIXTURE,
+}
 
 
 class LabelReviewResponseLockError(RuntimeError):
@@ -59,6 +65,7 @@ def build_response_lock(
     received_at_utc: str,
     run_id: str,
     git_source_commit: str,
+    evidence_origin: str,
 ) -> dict[str, Any]:
     packet = _load_json(packet_path)
     response = _load_json(response_path)
@@ -81,6 +88,8 @@ def build_response_lock(
         raise LabelReviewResponseLockError(f"response validation failed: {error}") from error
     if len(git_source_commit) != 40:
         raise LabelReviewResponseLockError("git source commit must be a full 40-character SHA")
+    if evidence_origin not in EVIDENCE_ORIGINS:
+        raise LabelReviewResponseLockError("response evidence origin is invalid")
     if not receipt_id.strip() or not run_id.strip() or not received_at_utc.strip():
         raise LabelReviewResponseLockError("receipt identity, run identity, and receive time are required")
     try:
@@ -98,6 +107,25 @@ def build_response_lock(
         raise LabelReviewResponseLockError(
             "burned-area interpretation experience is missing or exceeds the bounded length"
         )
+    is_software_fixture = evidence_origin == SOFTWARE_BROWSER_FIXTURE
+    if is_software_fixture:
+        decision = "PASS_SOFTWARE_FIXTURE_CONTRACT_AND_HASH_LOCK_NO_REVEAL"
+        detail = (
+            "The exact browser-generated software-fixture bytes pass the proposal-free response "
+            "contract and are bound to SHA-256. The fixture is not an independent human response, "
+            "cannot authorize reveal, and cannot contribute to label fitness or dataset candidacy."
+        )
+        reveal_release = "prohibited: software fixture cannot authorize proposal reveal"
+    else:
+        decision = "PASS_RESPONSE_CONTRACT_AND_HASH_LOCK_DEFER_SCIENTIFIC_USE"
+        detail = (
+            "The exact returned-response bytes pass the proposal-free response contract and are "
+            "bound to SHA-256. The operator-declared origin is not identity verification; software "
+            "cannot prove reviewer expertise, independence, scientific correctness, or dataset fitness."
+        )
+        reveal_release = (
+            "operator may release reveal only after preserving this receipt and exact response bytes"
+        )
     return {
         "report_id": receipt_id,
         "schema_version": LOCK_SCHEMA_VERSION,
@@ -109,6 +137,9 @@ def build_response_lock(
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
         "application_version": WORKBENCH_VERSION,
+        "evidence_origin": evidence_origin,
+        "origin_declared_by_operator": True,
+        "origin_verified_by_software": False,
         "packet_binding": {
             "report_id": packet["report_id"],
             "run_id": packet["run_id"],
@@ -127,21 +158,19 @@ def build_response_lock(
             "input_filename_retained": False,
         },
         "software_contract_validation": "pass",
-        "submitter_attested_independence_and_blinding": True,
+        "response_contents_include_independence_and_blinding_attestations": True,
+        "qualifying_independent_human_response": False if is_software_fixture else None,
+        "software_browser_fixture": is_software_fixture,
         "human_identity_verified_by_software": False,
         "reviewer_expertise_verified_by_software": False,
         "scientific_label_fitness_established": False,
-        "reveal_release": "operator may release reveal only after preserving this receipt and exact response bytes",
+        "reveal_release": reveal_release,
         "dataset_version": None,
         "split_version": None,
         "baseline_version": None,
         "model_version": None,
-        "decision": "PASS_RESPONSE_CONTRACT_AND_HASH_LOCK_DEFER_SCIENTIFIC_USE",
-        "decision_detail": (
-            "The exact response bytes pass the proposal-free response contract and are bound to "
-            "SHA-256. Software validation cannot prove reviewer identity, expertise, independence, "
-            "scientific correctness, or dataset fitness."
-        ),
+        "decision": decision,
+        "decision_detail": detail,
         "warning": WARNING,
     }
 
@@ -165,6 +194,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--received-at-utc", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--git-source-commit", required=True)
+    parser.add_argument(
+        "--evidence-origin",
+        choices=sorted(EVIDENCE_ORIGINS),
+        required=True,
+        help=(
+            "Operator-declared origin. Use software-browser-fixture for automated QA; that mode "
+            "cannot authorize reveal or count as human evidence."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -178,6 +216,7 @@ def main() -> int:
             received_at_utc=args.received_at_utc,
             run_id=args.run_id,
             git_source_commit=args.git_source_commit,
+            evidence_origin=args.evidence_origin,
         )
         write_response_lock(report, args.output_json)
         print(report["decision"])

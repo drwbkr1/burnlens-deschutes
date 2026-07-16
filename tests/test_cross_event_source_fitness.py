@@ -23,7 +23,7 @@ from burnlens.cross_event_source_fitness import (
 
 class CrossEventSourceFitnessTests(unittest.TestCase):
     def test_current_package_version_is_cross_event_source_fitness_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.14.0")
+        self.assertEqual(burnlens.__version__, "0.15.0")
 
     def test_event_scaled_layout_covers_arbitrary_boundary_envelopes(self) -> None:
         mask = np.zeros((100, 220), dtype=bool)
