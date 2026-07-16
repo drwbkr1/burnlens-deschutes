@@ -9,7 +9,7 @@
   "branch": "codex/p2o4-t03-label-trace-remediation",
   "git_base_commit": "6a6da910849daefa918ed56af6631b2ec44bc211",
   "generator_source_commit": "cf1d9101e2760bf7d779b6fae68e605bb8809c1c",
-  "candidate_checkpoint_commit": null,
+  "candidate_checkpoint_commit": "621c74f4e6f2d691438736b38d3019a6bd453f50",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
   "pull_request": null,

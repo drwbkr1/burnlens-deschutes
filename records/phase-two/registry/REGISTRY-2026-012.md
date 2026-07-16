@@ -1,6 +1,6 @@
 # REGISTRY-2026-012 - Cross-Event Source-Fitness Artifacts
 
-**Checkpoint:** Issue #361 / analytical PR #362 / merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; branch `codex/p2o4-t03-label-trace-remediation`; generator/assessor source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; remediation PR/merge/tag pending
+**Checkpoint:** Issue #361 / analytical PR #362 / merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; branch `codex/p2o4-t03-label-trace-remediation`; generator/assessor source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; remediated candidate artifacts `621c74f4e6f2d691438736b38d3019a6bd453f50`; remediation PR/merge/tag pending
 
 | Artifact | Class | Version/state | Committed provider imagery bytes |
 |---|---|---|---:|

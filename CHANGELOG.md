@@ -18,7 +18,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Raise BurnLens to `0.11.0`; pass 129 tests, compilation, dependency health, a 183,761-byte remediated candidate wheel / isolated import, and four cross-event console entry points.
 - Create no label, dataset, split, baseline, model, application, accuracy/generalization claim, independent human validation, or field claim.
 
-Issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; remediated source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; remediation PR/merge/tag pending.
+Issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; remediated source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; candidate artifacts `621c74f4e6f2d691438736b38d3019a6bd453f50`; remediation PR/merge/tag pending.
 
 ## v0.10.0-cross-event-feasibility-baseline - 2026-07-15
 
