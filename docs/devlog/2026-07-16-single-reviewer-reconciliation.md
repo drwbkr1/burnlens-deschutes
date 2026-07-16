@@ -11,3 +11,5 @@ Public JSON/HTML/PNG expose only aggregates and exact bindings. They withhold re
 The preflight sequence exception is explicit: reveal HTML appeared in a repository-search result before the explicit verifier command. Exact authorization passed immediately afterward and before private-response access or comparison. Reviewer blindness and every locked byte remained intact, but the pre-access gate is recorded as fail-disclosed.
 
 Current official MTBS and CEOS LPV material supports the conservative posture: cloud/shadow and uninterpretable areas must remain masked, scene registration and multitemporal interpretation matter, and limited samples do not justify representative validation claims. Issue #411 now owns the smallest useful reference-evidence remediation. Dataset, split, baseline, and model work remain deferred.
+
+PR #412 carries the bounded candidate. Its terminal merge and tag identities remain pending until the complete branch gates pass.

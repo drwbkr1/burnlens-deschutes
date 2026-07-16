@@ -40,6 +40,7 @@ This is recorded as a disclosed sequence exception, not a passing pre-access gat
 ## Traceability
 
 - Issue: #403
+- Pull request: #412
 - Next remediation issue: #411
 - Base: `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`
 - Source: `fda69a60b0a5e350bfe10e7388571d7c1c103735`
