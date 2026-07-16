@@ -26,10 +26,13 @@ from .verify_label_review_packet import (
 LOCK_SCHEMA_VERSION = "0.1.0"
 LEGACY_LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.2.0"
 LEGACY_SOFTWARE_VERSION = "0.15.0"
-LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.3.0"
-SOFTWARE_VERSION = "0.17.0"
+PREVIOUS_LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.3.0"
+PREVIOUS_SOFTWARE_VERSION = "0.17.0"
+LOCK_REPORT_VERSION = "label-review-response-integrity-lock-v0.4.0"
+SOFTWARE_VERSION = "0.18.0"
 SUPPORTED_LOCK_IDENTITIES = {
     (LEGACY_LOCK_REPORT_VERSION, LEGACY_SOFTWARE_VERSION),
+    (PREVIOUS_LOCK_REPORT_VERSION, PREVIOUS_SOFTWARE_VERSION),
     (LOCK_REPORT_VERSION, SOFTWARE_VERSION),
 }
 RETURNED_INDEPENDENT_RESPONSE = "returned-independent-response"
@@ -150,9 +153,15 @@ def build_response_lock(
             "bound to SHA-256. The operator-declared origin is not identity verification; software "
             "cannot prove reviewer expertise, independence, scientific correctness, or dataset fitness."
         )
-        reveal_release = (
-            "operator may release reveal only after preserving this receipt and exact response bytes"
-        )
+        if (report_version, software_version) == (LOCK_REPORT_VERSION, SOFTWARE_VERSION):
+            reveal_release = (
+                "prohibited until separate public dual-lock QA verifies two returned-response "
+                "locks and a later checkpoint authorizes reveal"
+            )
+        else:
+            reveal_release = (
+                "operator may release reveal only after preserving this receipt and exact response bytes"
+            )
     return {
         "report_id": receipt_id,
         "schema_version": LOCK_SCHEMA_VERSION,

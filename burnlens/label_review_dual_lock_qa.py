@@ -29,6 +29,8 @@ REPORT_ID = "LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001"
 SCHEMA_VERSION = "0.1.0"
 REPORT_VERSION = "label-review-dual-lock-readiness-qa-v0.1.0"
 SOFTWARE_VERSION = "0.17.0"
+CURRENT_REPORT_VERSION = "label-review-dual-lock-readiness-qa-v0.2.0"
+CURRENT_SOFTWARE_VERSION = "0.18.0"
 TASK_ISSUE = 394
 PARENT_RESPONSE_ISSUE = 393
 OPERATOR_REVEAL_STATUS = "withheld-unopened-after-lock"
@@ -36,11 +38,14 @@ RETURNED_INDEPENDENT_RESPONSE = "returned-independent-response"
 SOFTWARE_BROWSER_FIXTURE = "software-browser-fixture"
 EXPECTED_RECEIPT_SCHEMA = "0.1.0"
 LEGACY_RECEIPT_VERSION = "label-review-response-integrity-lock-v0.2.0"
-CURRENT_RECEIPT_VERSION = "label-review-response-integrity-lock-v0.3.0"
 LEGACY_RECEIPT_SOFTWARE = "0.15.0"
-CURRENT_RECEIPT_SOFTWARE = "0.17.0"
+PREVIOUS_RECEIPT_VERSION = "label-review-response-integrity-lock-v0.3.0"
+PREVIOUS_RECEIPT_SOFTWARE = "0.17.0"
+CURRENT_RECEIPT_VERSION = "label-review-response-integrity-lock-v0.4.0"
+CURRENT_RECEIPT_SOFTWARE = "0.18.0"
 SUPPORTED_RECEIPT_IDENTITIES = {
     (LEGACY_RECEIPT_VERSION, LEGACY_RECEIPT_SOFTWARE),
+    (PREVIOUS_RECEIPT_VERSION, PREVIOUS_RECEIPT_SOFTWARE),
     (CURRENT_RECEIPT_VERSION, CURRENT_RECEIPT_SOFTWARE),
 }
 ORIGINS = {RETURNED_INDEPENDENT_RESPONSE, SOFTWARE_BROWSER_FIXTURE}
@@ -48,6 +53,10 @@ RETURNED_DECISION = "PASS_RESPONSE_CONTRACT_AND_HASH_LOCK_DEFER_SCIENTIFIC_USE"
 FIXTURE_DECISION = "PASS_SOFTWARE_FIXTURE_CONTRACT_AND_HASH_LOCK_NO_REVEAL"
 RETURNED_REVEAL_RULE = (
     "operator may release reveal only after preserving this receipt and exact response bytes"
+)
+CURRENT_RETURNED_REVEAL_RULE = (
+    "prohibited until separate public dual-lock QA verifies two returned-response locks "
+    "and a later checkpoint authorizes reveal"
 )
 FIXTURE_REVEAL_RULE = "prohibited: software fixture cannot authorize proposal reveal"
 
@@ -236,7 +245,12 @@ def _validate_private_lock(
             f"{label} lets software qualify a human response",
         )
         _assert(receipt.get("decision") == RETURNED_DECISION, f"{label} returned decision differs")
-        _assert(receipt.get("reveal_release") == RETURNED_REVEAL_RULE, f"{label} reveal rule differs")
+        expected_reveal_rule = (
+            CURRENT_RETURNED_REVEAL_RULE
+            if spec.expected_receipt_version == CURRENT_RECEIPT_VERSION
+            else RETURNED_REVEAL_RULE
+        )
+        _assert(receipt.get("reveal_release") == expected_reveal_rule, f"{label} reveal rule differs")
 
     packet_binding = receipt.get("packet_binding")
     _assert(isinstance(packet_binding, dict), f"{label} packet binding is missing")
@@ -321,9 +335,14 @@ def build_dual_lock_qa(
     run_id: str,
     git_source_commit: str,
     operator_reveal_status: str,
+    task_issue: int = TASK_ISSUE,
 ) -> dict[str, Any]:
     _assert(packet_path.is_file(), "packet is missing")
     _assert(len(locks) == 2, "exactly two lock specifications are required")
+    _assert(
+        isinstance(task_issue, int) and not isinstance(task_issue, bool) and task_issue > 0,
+        "task issue must be a positive integer",
+    )
     _assert(len(git_source_commit) == 40, "git source commit must be a full 40-character SHA")
     _assert(bool(run_id.strip()), "run ID is missing")
     _parse_timestamp(generated_at_utc, "generation time")
@@ -384,18 +403,25 @@ def build_dual_lock_qa(
             "and content-withholding checks. This run does not verify reviewer qualifications or authorize "
             "reveal, comparison, adjudication, or dataset creation."
         )
+    receipt_versions = {item["receipt"]["report_version"] for item in bindings}
+    report_version = (
+        CURRENT_REPORT_VERSION if CURRENT_RECEIPT_VERSION in receipt_versions else REPORT_VERSION
+    )
+    report_software_version = (
+        CURRENT_SOFTWARE_VERSION if CURRENT_RECEIPT_VERSION in receipt_versions else SOFTWARE_VERSION
+    )
 
     report = {
         "report_id": REPORT_ID,
         "schema_version": SCHEMA_VERSION,
-        "report_version": REPORT_VERSION,
+        "report_version": report_version,
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
         "repository": "drwbkr1/burnlens-deschutes",
-        "task_issue": TASK_ISSUE,
+        "task_issue": task_issue,
         "parent_response_issue": PARENT_RESPONSE_ISSUE,
         "git_source_commit": git_source_commit,
-        "software_version": SOFTWARE_VERSION,
+        "software_version": report_software_version,
         "application_version": WORKBENCH_VERSION,
         "packet_binding": {
             "report_id": packet["report_id"],
@@ -420,8 +446,11 @@ def build_dual_lock_qa(
             "distinct_task_issues": "pass",
             "mixed_receipt_version_compatibility": (
                 "pass"
-                if {item["receipt"]["report_version"] for item in bindings}
-                == {LEGACY_RECEIPT_VERSION, CURRENT_RECEIPT_VERSION}
+                if LEGACY_RECEIPT_VERSION in receipt_versions
+                and bool(
+                    receipt_versions
+                    & {PREVIOUS_RECEIPT_VERSION, CURRENT_RECEIPT_VERSION}
+                )
                 else "not exercised"
             ),
             "public_content_withholding": "pass",

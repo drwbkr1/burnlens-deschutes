@@ -16,6 +16,8 @@ from burnlens.label_review_dual_lock_qa import (
     LEGACY_RECEIPT_SOFTWARE,
     LEGACY_RECEIPT_VERSION,
     OPERATOR_REVEAL_STATUS,
+    PREVIOUS_RECEIPT_SOFTWARE,
+    PREVIOUS_RECEIPT_VERSION,
     RETURNED_INDEPENDENT_RESPONSE,
     SOFTWARE_BROWSER_FIXTURE,
     LabelReviewDualLockQaError,
@@ -279,6 +281,55 @@ class LabelReviewDualLockQaTests(unittest.TestCase):
             self.assertFalse(report["custody_state"]["reveal_authorized_by_this_run"])
             self.assertFalse(report["custody_state"]["adjudication_ready"])
 
+    def test_previous_receipt_identity_keeps_historical_report_identity(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            specs = _readiness_specs(root)
+            previous_response, previous_receipt = _private_pair(
+                root,
+                name="previous",
+                reviewer_id="browser-qa-fixture-not-human",
+                private_text=PRIVATE_TWO,
+                started_at="2026-07-16T18:04:09Z",
+                completed_at="2026-07-16T18:04:10Z",
+                received_at="2026-07-16T18:05:00Z",
+                offset=1,
+                origin=SOFTWARE_BROWSER_FIXTURE,
+                task_issue=394,
+                report_version=PREVIOUS_RECEIPT_VERSION,
+                software_version=PREVIOUS_RECEIPT_SOFTWARE,
+            )
+            specs[1] = _spec(
+                previous_response,
+                previous_receipt,
+                reviewer_id="browser-qa-fixture-not-human",
+                task_issue=394,
+                report_version=PREVIOUS_RECEIPT_VERSION,
+                software_version=PREVIOUS_RECEIPT_SOFTWARE,
+                origin=SOFTWARE_BROWSER_FIXTURE,
+            )
+            report = _build(root, specs)
+            self.assertEqual(
+                report["report_version"],
+                "label-review-dual-lock-readiness-qa-v0.1.0",
+            )
+            self.assertEqual(report["software_version"], "0.17.0")
+            self.assertEqual(report["checks"]["mixed_receipt_version_compatibility"], "pass")
+
+    def test_invalid_public_task_issue_fails_closed(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            with self.assertRaisesRegex(LabelReviewDualLockQaError, "positive integer"):
+                build_dual_lock_qa(
+                    packet_path=PACKET_PATH,
+                    locks=_readiness_specs(root),
+                    generated_at_utc="2026-07-16T19:40:00Z",
+                    run_id="BL-TEST-DUAL-LOCK-READINESS-QA",
+                    git_source_commit="3" * 40,
+                    operator_reveal_status=OPERATOR_REVEAL_STATUS,
+                    task_issue=0,
+                )
+
     def test_duplicate_and_receipt_drift_fail_closed(self) -> None:
         with TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -348,7 +399,7 @@ class LabelReviewDualLockQaTests(unittest.TestCase):
                 )
 
     def test_current_versions_and_verifier_independence_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.17.0")
+        self.assertEqual(burnlens.__version__, "0.18.0")
         source = (ROOT / "burnlens" / "label_review_dual_lock_qa.py").read_text(
             encoding="utf-8"
         )
