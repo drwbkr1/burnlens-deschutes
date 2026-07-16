@@ -1,0 +1,111 @@
+{
+  "manifest_id": "MANIFEST-2026-021",
+  "manifest_version": "0.21.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-16T22:16:24Z",
+  "task_issue": 407,
+  "parent_reconciliation_issue": 403,
+  "superseded_second_response_issue": 393,
+  "branch": "codex/p2o4-t10a-owner-waiver-reveal-readiness",
+  "git_base_commit": "25b354b2e18c5e59857d6c8c153274c864eeea42",
+  "generator_source_commit": "bc7542bcdeccadaf40d63b521d7fd5a7fc094c81",
+  "candidate_artifacts_commit": "d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a",
+  "reviewed_head_commit": null,
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.19.0-owner-waiver-reveal-readiness",
+  "version_tag_object": null,
+  "version_tag_state": "planned after verified merge",
+  "status": "candidate content-withheld owner-waiver reveal readiness; one response; no reveal action",
+  "software_version": "0.19.0",
+  "authorization_version": "label-review-owner-waiver-reveal-authorization-v0.1.0",
+  "qa_version": "label-review-owner-waiver-reveal-readiness-qa-v0.1.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "authorization_run_id": "BL-2026-07-16-owner-waiver-reveal-authorization-r001",
+  "qa_run_id": "BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "private_authorization_binding": {
+    "bytes": 3643,
+    "sha256": "db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952",
+    "committed": false,
+    "ignored": true
+  },
+  "response_binding": {
+    "bytes": 16443,
+    "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+    "returned_independent_responses": 1,
+    "second_human_response_present": false,
+    "contents_committed": false
+  },
+  "receipt_binding": {
+    "bytes": 2508,
+    "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+    "contents_committed": false
+  },
+  "packet_binding": {
+    "bytes": 61599,
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c"
+  },
+  "reveal_binding": {
+    "bytes": 9433,
+    "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af",
+    "operator_status_before_run": "withheld-unopened-after-lock",
+    "opened_by_authorization_run": false,
+    "opened_by_qa_run": false,
+    "authorized_for_later_private_reconciliation": true
+  },
+  "owner_waiver": {
+    "waiver_id": "OWNER-WAIVER-2026-001",
+    "decision_date": "2026-07-16",
+    "reviewer_two_requirement_waived": true,
+    "reduced_single_reviewer_validation_acknowledged": true,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 4492,
+      "sha256": "8f4ac109a531d3a673aae318b81d5be7ba384d5976f7ff1bd95b34e076abba7f"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 4055,
+      "sha256": "b54a37f844c4ad07a8cc3248229fed838128d54f310d7d8b0d3fb2d70b689a81"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 110600,
+      "sha256": "1d2ecf1b06f4d032b6f101329c74afa7b49730c6323161f506d5460c4208ecb7"
+    }
+  ],
+  "quality_gates": {
+    "exact_response_receipt_packet_reveal_bindings": "pass",
+    "explicit_owner_waiver": "pass",
+    "reduced_validation_acknowledgement": "pass",
+    "authorization_ignored_untracked_no_overwrite": "pass",
+    "response_and_reveal_content_interpreted": false,
+    "public_privacy_audit": "pass: no response labels/distributions/confidence/reasons/notes/timestamps, reviewer text, private names/paths, or reveal content",
+    "semantic_html": "pass",
+    "original_resolution_visual_review": "pass: 1800x1280 evidence card inspected and readable",
+    "repository_tests": 176,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "wheel_build_and_isolated_import": "pass: two fixed-epoch fresh-source wheels byte-identical at 326372 bytes / sha256 2987698bf86e1d80f8d944e9643ce2bb6171ad658f78d709d83a6fa973d3eb8e; isolated BurnLens 0.19.0; 31 console entry points; zero private/download/build entries",
+    "candidate_pr_merge_tag": "pending",
+    "fresh_merged_main": "pending"
+  },
+  "decision": "PASS_OWNER_WAIVER_REVEAL_READINESS_CONTENT_WITHHELD",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

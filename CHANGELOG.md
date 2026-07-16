@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.19.0-owner-waiver-reveal-readiness - candidate - 2026-07-16
+
+### P2O4-T10A - Establish a separate owner-waiver reveal boundary
+
+- Add a production authorization command that re-verifies the exact first response, receipt, packet, and reveal without interpreting response or proposal content.
+- Require the explicit reviewer-two waiver, reduced single-reviewer validation acknowledgement, and operator-declared unopened status; fail closed on drift, fixture evidence, wrong repository/issue, unignored storage, and overwrite.
+- Add independent public JSON/HTML/PNG QA that withholds response and reveal content while making the one-reviewer/no-inter-rater/no-adjudication boundary visible.
+- Record a 3,643-byte ignored authorization / SHA-256 `db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952`; authorize only a later deterministic private issue-#403 reconciliation and perform zero reveal actions.
+- Pass 176 tests, compileall, dependency health, privacy, semantic, original-resolution visual, exact-binding, and two byte-identical fixed-epoch 326,372-byte wheel gates; isolated BurnLens `0.19.0` exposes 31 entry points and zero private/download/build entries.
+
+Issue #407; parent #403; base `25b354b2e18c5e59857d6c8c153274c864eeea42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; PR, merge, verified tag, and fresh-main gates pending.
+
 ## v0.18.0-atomic-response-intake-readiness - verified - 2026-07-16
 
 ### P2O4-T09B - Preserve a future returned response without a manual custody seam
