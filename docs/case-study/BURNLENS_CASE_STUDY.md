@@ -202,6 +202,22 @@ The independent verifier checks the packet JSON binding and 14 referenced packet
 
 Decision `ACCEPT_PROPOSAL_BLINDED_REVIEW_READINESS_DEFER_DATASET` therefore accepts the instrument, not the labels. Codex authored the proposal and review tooling and cannot count as an independent reviewer. The next evidence must come from qualifying reviewers whose first-pass responses are locked and hashed before reveal; disagreements must be adjudicated or remain ignored.
 
+## Giving the reviewer an isolated offline workbench
+
+Rerunning the shipped packet exposed a practical contradiction: BurnLens had carefully separated the blind pages from the reveal, but the reviewer still had to hand-edit a 56-entry JSON file inside the repository directory that contained proposal-bearing material.
+
+Issue #379 keeps every scientific selection and source pixel fixed while changing the delivery boundary. BurnLens `0.14.0` creates one deterministic offline archive containing only safe instructions, the blank response contract, eight blind pages, and a self-contained workbench.
+
+![BurnLens isolated offline reviewer handoff](../../samples/labels/review/phase-two/LABEL-REVIEW-HANDOFF-2026-001.png)
+
+The workbench uses one labelled form for all 56 units. It supplies the decision vocabulary, progress and error feedback, local draft save/load, a final review step, and exact response JSON export. It makes no network request, stores no response in browser storage, and exposes no proposal reveal.
+
+![BurnLens offline reviewer handoff integrity QA](../../samples/labels/review/phase-two/LABEL-REVIEW-HANDOFF-QA-2026-001.png)
+
+A separately implemented verifier checks the archive allowlist, paths, order, modes, timestamps, hashes, embedded response contract, interface semantics, and eight PNGs. The returned-response path then validates the exact packet binding and writes a SHA-256 receipt before reveal. That digest proves the returned bytes are the recorded bytes; it does not prove reviewer identity, expertise, independence, or scientific correctness.
+
+All seven public outputs and the local 12-member archive reproduce byte for byte. The synthetic complete-response test proves the software contract only. No independent human response or adjudication exists. The interactive browser runtime was unavailable, so the candidate makes no viewport, console, draft/load, or download interaction claim.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -220,8 +236,10 @@ Decision `ACCEPT_PROPOSAL_BLINDED_REVIEW_READINESS_DEFER_DATASET` therefore acce
 - Latest cross-event proposal-QA run: `BL-2026-07-16-cross-event-label-transfer-qa-r004`
 - Latest label-review packet run: `BL-2026-07-16-label-review-packet-r001`
 - Latest label-review packet-QA run: `BL-2026-07-16-label-review-packet-qa-r001`
+- Latest offline handoff run: `BL-2026-07-16-label-review-handoff-r001`
+- Latest offline handoff-QA run: `BL-2026-07-16-label-review-handoff-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.13.0`; issue #375 / PR #376; merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; generator/verifier source `a11ae5123728d3823ba67d22d49250d4affb18f6`; artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`
+- Tool: candidate BurnLens `0.14.0`; issue #379; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; PR/merge/tag pending
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -234,6 +252,7 @@ Decision `ACCEPT_PROPOSAL_BLINDED_REVIEW_READINESS_DEFER_DATASET` therefore acce
 - Cross-event source fitness: `CROSS-EVENT-SOURCE-FITNESS-2026-001`; exact shipped hashes in `MANIFEST-2026-012`; McKay passes, Tepee exclusions bind; label protocol and implemented five-state schema are explicit; manifest metadata-link exception visible; zero provider bytes committed
 - Cross-event proposal/QA: topology-stable `CROSS-EVENT-LABEL-TRANSFER-2026-002` and `CROSS-EVENT-LABEL-TRANSFER-QA-2026-002`; exact shipped hashes in `MANIFEST-2026-014`; zero mismatch across 63,930 pixels; human validation absent; `2026-001` preserved in `MANIFEST-2026-013`
 - Label-review readiness: `LABEL-REVIEW-PACKET-2026-001` and `LABEL-REVIEW-PACKET-QA-2026-001`; exact 18-output shipped inventory in `MANIFEST-2026-015`; 56 units / 14 present strata / one structural absence; completed independent responses and adjudications both zero
+- Offline reviewer handoff: `LABEL-REVIEW-HANDOFF-2026-001` and `LABEL-REVIEW-HANDOFF-QA-2026-001`; exact seven-output candidate inventory and local archive identity in `MANIFEST-2026-016`; application `label-review-handoff-workbench-v0.1.0`; completed independent responses and adjudications both zero
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -241,9 +260,9 @@ Decision `ACCEPT_PROPOSAL_BLINDED_REVIEW_READINESS_DEFER_DATASET` therefore acce
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.13.0-label-review-readiness` at merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; annotated tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`
-- Latest checkpoint: issue #375 / PR #376; 144 tests, exact 18-file reconstruction, original-resolution and served semantic review, byte-reproducible fixed-epoch source packaging, isolated import, fresh merged-main, packet-integrity QA, and remote-tag verification pass; no browser viewport/console claim
-- Active next checkpoint: obtain qualifying independent responses, preserve pre-reveal hashes, adjudicate disagreements or keep units ignored, and make a dataset-candidacy/remediation decision before any partition work
+- Active candidate: `v0.14.0-offline-reviewer-handoff`; issue #379; 151 tests, exact seven-file plus archive reconstruction, original-resolution and served semantic review, byte-reproducible fixed-epoch source packaging, isolated import with 24 entry points, and independent handoff QA pass; PR/merge/tag and browser interaction claims pending/absent
+- Active next checkpoint: ship the isolated handoff, then obtain qualifying independent responses, preserve pre-reveal hashes, adjudicate disagreements or keep units ignored, and make a dataset-candidacy/remediation decision before any partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
-- Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
+- Public application: no deployment; candidate local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

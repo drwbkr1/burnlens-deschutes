@@ -28,6 +28,7 @@ samples/labels/cross-event/phase-two/*.html text eol=lf
 # Label-review packet and integrity QA evidence use the same LF contract.
 samples/labels/review/phase-two/*.json text eol=lf
 samples/labels/review/phase-two/*.html text eol=lf
+samples/labels/review/phase-two/*.txt text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf

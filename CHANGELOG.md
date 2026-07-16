@@ -2,6 +2,22 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.14.0-offline-reviewer-handoff - 2026-07-16
+
+### P2O4-T06 - Isolate reviewer delivery and lock returned responses
+
+- Rerun the shipped v0.13.0 workflow and reproduce all 18 packet/QA files byte for byte; identify manual 56-entry JSON editing beside proposal-bearing files as the highest-leverage user/evidence weakness.
+- Pin the exact shipped packet and response template, then build one deterministic ZIP_STORED archive with a single root and exactly 12 allowlisted members.
+- Exclude the reveal, proposal-bearing packet JSON, adjudication, QA, provider bytes, secrets, links, traversal, and network dependencies from the reviewer handoff.
+- Add a self-contained offline workbench with 56 labelled fieldsets, eight blind images, native controls, decision guidance, errors/progress, local draft roundtrip, review/confirmation, and exact response-schema export.
+- Add an independently implemented archive/interface verifier and a fail-closed response-lock receipt that validates the exact packet contract, records SHA-256, rejects overwrite, and rejects proposal-bearing tampering.
+- Reproduce the seven committed handoff/QA files and 8,652,301-byte archive byte for byte; pass original-resolution review, served semantic/JavaScript checks, 151 tests, compilation, dependency health, and two byte-identical detached-source fixed-epoch 266,291-byte wheels / SHA-256 `08d81d19940812f51efc2673ac4f2e0e6453e134f40a5e996fe81620e003b0ef`.
+- Raise BurnLens to `0.14.0` and expose 24 package entry points.
+- Record the interactive browser runtime as unavailable and make no viewport, console, draft/load, or download interaction claim.
+- Preserve zero completed independent responses and adjudications. Create no accepted label set, dataset, split, baseline, model, accuracy estimate, deployment, field claim, official claim, or operational claim.
+
+Issue #379; source `75102d79e6e184a1ecac941900fd74938cdaa972`; candidate artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; PR, merge, verified tag, and lifecycle synchronization pending.
+
 ## v0.13.0-label-review-readiness - 2026-07-16
 
 ### P2O4-T05 - Make independent label review executable
