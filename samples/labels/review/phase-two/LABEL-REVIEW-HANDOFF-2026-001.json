@@ -1,0 +1,191 @@
+{
+  "report_id": "LABEL-REVIEW-HANDOFF-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "proposal-safe-offline-label-review-handoff-v0.1.0",
+  "generated_at_utc": "2026-07-16T17:00:00Z",
+  "run_id": "BL-2026-07-16-label-review-handoff-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 379,
+  "git_source_commit": "75102d79e6e184a1ecac941900fd74938cdaa972",
+  "software_version": "0.14.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "decision": "READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+    "response_schema_version": "burnlens-label-review-response-v0.1.0",
+    "review_protocol_version": "proposal-blinded-label-review-readiness-v0.1.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "aoi_version": "aoi-darlene3-model-v0.2.0"
+  },
+  "archive_contract": {
+    "root_directory": "BurnLens-Label-Review-Handoff-2026-001",
+    "format": "ZIP",
+    "compression": "stored",
+    "member_timestamp": "2026-07-16T17:00:00Z",
+    "member_mode": "100644",
+    "member_order": [
+      "LABEL-REVIEW-HANDOFF-2026-001.json",
+      "LABEL-REVIEW-HANDOFF-2026-001.html",
+      "LABEL-REVIEW-HANDOFF-2026-001-README.txt",
+      "LABEL-REVIEW-PACKET-2026-001-RESPONSE-TEMPLATE.json",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png"
+    ],
+    "member_count": 12,
+    "path_links_allowed": false,
+    "network_dependencies": 0
+  },
+  "members": [
+    {
+      "path": "LABEL-REVIEW-HANDOFF-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 228723,
+      "sha256": "b11694d8cdf83186035f7832b559757ed2ed6a1bd10cb9ace2c5d56b22184c1c",
+      "role": "offline labelled response workbench; no network or reveal link"
+    },
+    {
+      "path": "LABEL-REVIEW-HANDOFF-2026-001-README.txt",
+      "media_type": "text/plain",
+      "bytes": 1158,
+      "sha256": "1ef5dafd10dfc50bb4e60ba042da0f020f82c2c0fbcaccdd948a7cea90ae2d51",
+      "role": "safe reviewer instructions"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-RESPONSE-TEMPLATE.json",
+      "media_type": "application/json",
+      "bytes": 11610,
+      "sha256": "8eb885be0f301cc1ef3eac8e718a12f96b624877267fd140b6b1a9eabc80627d",
+      "role": "blank proposal-free response contract"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "media_type": "image/png",
+      "bytes": 1043346,
+      "sha256": "2dffb84b46dd7416b69824f8ef0a46935af347706dc645e14e666e11d55b3703",
+      "role": "proposal-blinded review image 01"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "media_type": "image/png",
+      "bytes": 1189574,
+      "sha256": "74d5046cefae73486db7dab230f6f6b225194a49385988310c705e79d468ca45",
+      "role": "proposal-blinded review image 02"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "media_type": "image/png",
+      "bytes": 1075788,
+      "sha256": "02b8198c473e478bba5786d4ed3b4850ae228dcbecb47ea85fe6dc24b1c05891",
+      "role": "proposal-blinded review image 03"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "media_type": "image/png",
+      "bytes": 944076,
+      "sha256": "e4cbb0c5560ee50c3e051ed4728fe451c29406c9d934a7313517134a514c7768",
+      "role": "proposal-blinded review image 04"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "media_type": "image/png",
+      "bytes": 1048672,
+      "sha256": "2245267e41b3c818fcd6b88d2e15633c5543ee2fe77ea1bb2d53ca890d209005",
+      "role": "proposal-blinded review image 05"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "media_type": "image/png",
+      "bytes": 1052619,
+      "sha256": "632bb4eb8982aa8f2f0040181a342ba8606a7e54ce5dfbfa6f36ec6556cd728c",
+      "role": "proposal-blinded review image 06"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "media_type": "image/png",
+      "bytes": 947497,
+      "sha256": "9ea953c1c55325534c3b2b3ef89012aa01108309b9d20d6bf69cb1432a31f043",
+      "role": "proposal-blinded review image 07"
+    },
+    {
+      "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "media_type": "image/png",
+      "bytes": 1099010,
+      "sha256": "e5f7a13269c761fba8e6b35427b10a432f1b18a703e48470b42fbe411203ba90",
+      "role": "proposal-blinded review image 08"
+    }
+  ],
+  "review_contract": {
+    "unit_count": 56,
+    "blind_page_count": 8,
+    "first_pass_labels": [
+      "burned",
+      "background",
+      "uncertain",
+      "unusable"
+    ],
+    "evidence_sufficiency": [
+      "sufficient",
+      "limited",
+      "insufficient"
+    ],
+    "confidence_levels": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "reason_codes": [
+      "pre-post-change",
+      "persistent-darkening",
+      "vegetation-loss",
+      "source-context-support",
+      "source-context-conflict",
+      "cloud-smoke-shadow",
+      "registration-concern",
+      "boundary-ambiguity",
+      "low-severity-ambiguity",
+      "non-fire-change-possible",
+      "other"
+    ],
+    "draft_roundtrip_available": true,
+    "completed_response_export_available": true,
+    "operator_hash_lock_required_before_reveal": true
+  },
+  "exclusions": {
+    "proposal_bearing_packet_json": true,
+    "proposal_reveal": true,
+    "adjudication_material": true,
+    "qa_output": true,
+    "provider_bytes": true,
+    "secrets_or_credentials": true,
+    "network_requests_or_analytics": true
+  },
+  "completed_independent_responses": 0,
+  "completed_adjudications": 0,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "READY_FOR_ISOLATED_INDEPENDENT_REVIEW_DEFER_DATASET",
+  "decision_detail": "The exact shipped blind pages now have a deterministic offline workbench and an allowlisted isolated handoff. No actual independent response is included.",
+  "claims": {
+    "proven": [
+      "The handoff is derived from the exact verified zero-response packet.",
+      "The archive contract excludes reveal, proposal-bearing packet JSON, adjudication material, provider bytes, secrets, and network dependencies.",
+      "The workbench exports the existing proposal-free response schema without transmitting data."
+    ],
+    "not_proven": [
+      "Software-generated handoff readiness is not independent human review, reviewer identity verification, label fitness, adjudication, field validation, or accuracy.",
+      "No accepted label set, dataset, split, baseline, model, application deployment, official status, or endorsement exists."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
