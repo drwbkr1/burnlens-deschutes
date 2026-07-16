@@ -352,8 +352,14 @@ def safe_endpoint(url: str) -> str:
     return f"https://{parts.hostname}{parts.path}"
 
 
-def _part_path(target: Path) -> Path:
-    return target.with_name(f"{target.name}.part")
+def _part_path(target: Path, suffix: str = ".part", prefix: str = "") -> Path:
+    if not suffix.startswith(".") or suffix in {".", ".."} or any(
+        separator in suffix for separator in ("/", "\\")
+    ):
+        raise AcquisitionError("PART_FILE_SUFFIX_INVALID")
+    if prefix in {".", ".."} or any(separator in prefix for separator in ("/", "\\")):
+        raise AcquisitionError("PART_FILE_PREFIX_INVALID")
+    return target.with_name(f"{prefix}{target.name}{suffix}")
 
 
 def _validate_part_magic(path: Path, contract: AssetContract) -> None:
@@ -375,12 +381,14 @@ def stream_asset(
     headers: dict[str, str] | None = None,
     timeout_seconds: float = 120,
     progress: Callable[[str, int, int], None] | None = None,
+    part_suffix: str = ".part",
+    part_prefix: str = "",
 ) -> dict[str, Any]:
     if _is_link_like(quarantine):
         raise AcquisitionError("QUARANTINE_LINK_NOT_ALLOWED")
     quarantine.mkdir(parents=True, exist_ok=True)
     target = quarantine / contract.expected_filename
-    part = _part_path(target)
+    part = _part_path(target, part_suffix, part_prefix)
     if target.exists():
         observation = inspect_asset(quarantine, contract)
         if observation["accepted"]:
@@ -394,6 +402,8 @@ def stream_asset(
         raise AcquisitionError("EXISTING_QUARANTINE_ASSET_INVALID", role=contract.role)
     if _is_link_like(part):
         raise AcquisitionError("PART_FILE_LINK_NOT_ALLOWED", role=contract.role)
+    if part.exists() and part.stat().st_nlink != 1:
+        raise AcquisitionError("PART_FILE_MULTILINK_NOT_ALLOWED", role=contract.role)
 
     offset = part.stat().st_size if part.exists() else 0
     if offset > contract.expected_size_bytes:
@@ -451,6 +461,8 @@ def stream_asset(
             final_endpoint = safe_endpoint(response.geturl())
     except AcquisitionError:
         raise
+    except TimeoutError as error:
+        raise AcquisitionError("DOWNLOAD_STREAM_FAILED", role=contract.role, detail=type(error).__name__) from None
     except OSError as error:
         raise AcquisitionError("DOWNLOAD_WRITE_FAILED", role=contract.role, detail=type(error).__name__) from None
 

@@ -427,6 +427,7 @@ def verify_registered_package(
     *,
     contract_validator: ContractValidator = validate_contract_set,
     contract_version: str = CONTRACT_VERSION,
+    allow_multilink_registration_manifest: bool = False,
 ) -> dict[str, Any]:
     """Re-validate a promoted package against its registration and current bytes."""
 
@@ -458,13 +459,20 @@ def verify_registered_package(
         reasons.append("REGISTERED_ASSET_VALIDATION_FAILED")
 
     registration: dict[str, Any] | None = None
+    manifest_link_count: int | None = None
+    manifest_sha256: str | None = None
     manifest_path = destination / manifest_name
     if valid_directory and manifest_name in observed_entries:
         if _is_link_like(manifest_path) or not manifest_path.is_file():
             reasons.append("REGISTRATION_MANIFEST_NOT_REGULAR_FILE")
         else:
+            manifest_link_count = manifest_path.stat().st_nlink
+            if manifest_link_count != 1 and not allow_multilink_registration_manifest:
+                reasons.append("REGISTRATION_MANIFEST_MULTILINK_NOT_ALLOWED")
             try:
-                loaded = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest_bytes = manifest_path.read_bytes()
+                manifest_sha256 = sha256(manifest_bytes).hexdigest()
+                loaded = json.loads(manifest_bytes.decode("utf-8"))
                 if isinstance(loaded, dict):
                     registration = loaded
                 else:
@@ -514,8 +522,17 @@ def verify_registered_package(
                     break
 
     accepted = not reasons and registration is not None
+    verification_reason = (
+        "REGISTERED_PACKAGE_VERIFIED_WITH_MANIFEST_MULTILINK_EXCEPTION"
+        if accepted and manifest_link_count != 1 and allow_multilink_registration_manifest
+        else "REGISTERED_PACKAGE_VERIFIED"
+    )
     return {
         "package_id": items[0].package_id if items else None,
+        "registration_manifest_name": manifest_name,
+        "registration_manifest_link_count": manifest_link_count,
+        "registration_manifest_sha256": manifest_sha256,
+        "multilink_registration_manifest_allowed": allow_multilink_registration_manifest,
         "registered_package_present": path_present,
         "expected_entry_count": len(expected_entries),
         "observed_entry_count": len(observed_entries),
@@ -524,7 +541,7 @@ def verify_registered_package(
         "registration": registration,
         "observations": observations,
         "accepted_as_unchanged_registered_package": accepted,
-        "reason_codes": reasons or ["REGISTERED_PACKAGE_VERIFIED"],
+        "reason_codes": reasons or [verification_reason],
     }
 
 

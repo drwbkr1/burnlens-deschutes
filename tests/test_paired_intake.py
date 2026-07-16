@@ -302,6 +302,44 @@ class PairedIntakeTests(unittest.TestCase):
         self.assertIn("REGISTERED_ASSET_VALIDATION_FAILED", verification["reason_codes"])
         self.assertIn("REGISTRATION_ASSET_MISMATCH", verification["reason_codes"])
 
+    def test_registered_package_verifier_rejects_multilink_manifest(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            quarantine = root / "complete"
+            quarantine.mkdir()
+            contracts = _synthetic_contracts(quarantine)
+            destination = root / "raw" / "package"
+            promote_quarantine(
+                quarantine,
+                destination,
+                contracts,
+                generated_at_utc=GENERATED,
+                run_id=RUN_ID,
+                synthetic_fixture=True,
+            )
+            manifest = destination / ".burnlens-registration.json"
+            os.link(manifest, root / "external-manifest-alias.json")
+
+            verification = verify_registered_package(destination, contracts)
+            allowed = verify_registered_package(
+                destination,
+                contracts,
+                allow_multilink_registration_manifest=True,
+            )
+
+        self.assertFalse(verification["accepted_as_unchanged_registered_package"])
+        self.assertIn(
+            "REGISTRATION_MANIFEST_MULTILINK_NOT_ALLOWED",
+            verification["reason_codes"],
+        )
+        self.assertTrue(allowed["accepted_as_unchanged_registered_package"])
+        self.assertEqual(allowed["registration_manifest_link_count"], 2)
+        self.assertEqual(len(allowed["registration_manifest_sha256"]), 64)
+        self.assertEqual(
+            allowed["reason_codes"],
+            ["REGISTERED_PACKAGE_VERIFIED_WITH_MANIFEST_MULTILINK_EXCEPTION"],
+        )
+
     def test_existing_destination_is_never_replaced(self) -> None:
         with TemporaryDirectory() as directory:
             root = Path(directory)

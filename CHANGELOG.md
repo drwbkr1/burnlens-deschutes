@@ -2,6 +2,23 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16 (candidate)
+
+### P2O4-T03 - Acquire and inspect the exact cross-event pixels
+
+- Reproduce the shipped v0.10 feasibility evidence before selecting the four exact frozen archives as the highest-leverage weakness.
+- Freeze route precedence so current OData sizes/checksums govern OData archive bytes while STAC remains scene-discovery provenance.
+- Preserve four fail-closed authenticated attempts that exposed early EOF, transient metadata access, non-resumable full responses, and OneDrive hard-link races.
+- Register run `BL-2026-07-16-cross-event-optical-intake-r005`: four exact Sentinel-2 archives / 4,551,170,756 ignored local bytes; provider MD5/BLAKE3, local SHA-256, ZIP/SAFE/root/manifest/CRC/path and atomic-promotion gates pass; zero provider bytes committed.
+- Keep provider archives single-linked while exposing a two-link OneDrive exception for the small registration metadata manifest; verify its one-read SHA-256 and every registration/header/asset field.
+- Inspect full MTBS boundaries on exact native 10 m TCI and 20 m B04/B8A/B12/SCL grids without reprojection, resampling, upsampling, mosaic, or boundary shrink.
+- Accept McKay at 100% pair-eligible quality and 3/3 registration windows. Accept Tepee only with 8.3441% review-needed, 5.1341% excluded, one excluded window, and one review-needed window binding.
+- Render traceable JSON, semantic HTML, and 1,800 by 1,450 PNG; pass original-resolution and live semantic-browser review.
+- Raise BurnLens to `0.11.0`; pass 128 tests, compilation, dependency health, a 183,557-byte wheel / isolated import, and four cross-event console entry points.
+- Create no label, dataset, split, baseline, model, application, accuracy/generalization claim, independent human validation, or field claim.
+
+Issue #361; source `d28c0368c5b71b0c982d056d3db9409a1725f697`; candidate artifacts `fe1136cad90bf85bd2ce5843a413a7b401196bf7`; PR/merge/tag pending.
+
 ## v0.10.0-cross-event-feasibility-baseline - 2026-07-15
 
 ### P2O4-T02 - Freeze exact cross-event acquisitions and leakage groups

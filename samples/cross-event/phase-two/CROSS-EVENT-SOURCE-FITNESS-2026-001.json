@@ -1,0 +1,2150 @@
+{
+  "report_id": "CROSS-EVENT-SOURCE-FITNESS-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "cross-event-source-fitness-v0.1.0",
+  "generated_at_utc": "2026-07-16T01:50:11Z",
+  "run_id": "BL-2026-07-16-cross-event-source-fitness-r005",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 361,
+  "git_source_commit": "d28c0368c5b71b0c982d056d3db9409a1725f697",
+  "software_version": "0.11.0",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "label_schema_version": "burn-scar-label-protocol-v0.1.0",
+  "baseline_version": null,
+  "model_version": null,
+  "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+  "contract_version": "cross-event-optical-intake-contract-v0.1.0",
+  "source_record_id": "SOURCE-2026-012",
+  "terms_review_id": "TERMS-2026-007",
+  "input_hashes": {
+    "feasibility_report_sha256": "d320cee1e121c63a5ac8c5cd9f893fb63e6b8bc795b3671e62945850b1d02273",
+    "feasibility_source_snapshot_sha256": "2c78984d790046db73de68b25e2e0c87a062e2b63a5b957ed10f72382687f6ba",
+    "registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c"
+  },
+  "registered_source_lineage": {
+    "acquisition_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+    "acquisition_generated_at_utc": "2026-07-16T00:55:56Z",
+    "registration_manifest_name": ".burnlens-registration.json",
+    "registration_manifest_link_count": 2,
+    "registration_manifest_multilink_exception": "OneDrive alias permitted for metadata manifest only; every provider archive remains single-linked.",
+    "provider_archive_link_gate": "pass: all four provider archives have exactly one filesystem link",
+    "registration_verification_reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED_WITH_MANIFEST_MULTILINK_EXCEPTION"
+    ],
+    "asset_hashes": [
+      {
+        "role": "tepee-2018-pre",
+        "source_record_id": "SOURCE-2026-012",
+        "native_id": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+        "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip",
+        "bytes": 1129978013,
+        "sha256": "3d99aec012745da9231bec45c294a2914b5d6eb77a27dbbe4a720554ae0af609",
+        "md5": "d88c6f1bdc9e9108c64cb95eaa0da5c9",
+        "blake3": "5c1b3c25b7d2e3e22f1eb474054396a2fb87d0d1748ca7a50edbb9799d523f46"
+      },
+      {
+        "role": "tepee-2018-post",
+        "source_record_id": "SOURCE-2026-012",
+        "native_id": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+        "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip",
+        "bytes": 1144413287,
+        "sha256": "9ff4bf957bfdc8d282ee5799a73d607d12e8c0f0c8499f7ad2e52fada3854366",
+        "md5": "f65b6a470713ee0599df8d16f3ba6e92",
+        "blake3": "87602ae65a1821f0d50bab85fb6775cdcba9ee48a839a96a4d654f28f078829f"
+      },
+      {
+        "role": "mckay-2017-pre",
+        "source_record_id": "SOURCE-2026-012",
+        "native_id": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+        "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip",
+        "bytes": 1132353399,
+        "sha256": "32f5529cc254d74dffca4fc80774b0401dab96aa7dcdfd55d2b0440a7cefa8e7",
+        "md5": "1bd2d39175ac50d2982c806275a57063",
+        "blake3": "20fbb16b1611f9592cb437823f6834ffc8eea57f63866ac2515c7f4e86f020d2"
+      },
+      {
+        "role": "mckay-2017-post",
+        "source_record_id": "SOURCE-2026-012",
+        "native_id": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+        "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip",
+        "bytes": 1144426057,
+        "sha256": "a735ecc6da284dbeb864210928dfc2997a9e2cbf50722b699a5fa6625d874555",
+        "md5": "cb4501abcb2af4b05d7f5b1c55fe6c48",
+        "blake3": "0a68c875b5303a823e44887617c77ea439c39b3e0517d4cc457bf7edf98aa8da"
+      }
+    ]
+  },
+  "source_precedence": {
+    "identity_authority": "Frozen STAC item ID plus CDSE product UUID and SAFE name must agree.",
+    "archive_authority": "Current CDSE OData metadata and documented download route govern acquired archive size and checksums.",
+    "stac_asset_role": "The STAC Product asset is discovery provenance for a distinct zipper route, not the byte contract for the OData archive."
+  },
+  "attribution": "Contains modified Copernicus Sentinel-2 data (2017-2018), accessed through the Copernicus Data Space Ecosystem.",
+  "method": {
+    "boundary": "Full frozen MTBS source geometry; crop covers it outward and counts pixel centers inside it; no shrink.",
+    "native_pixels": "TCI 10 m is preview only. B04, B8A, B12, and SCL remain on their exact native EPSG:32610 20 m grids with no reprojection, resampling, or upsampling.",
+    "quality": "SCL is quantified exactly inside the boundary and remains a quality aid, never truth.",
+    "registration": "Independent B04/B8A/B12 reflectance gradients in deterministic event-scaled windows; Hann taper, phase-only cross-power, and localized 100x DFT refinement.",
+    "registration_envelope": "Rectangular native-pixel windows may include context outside the irregular MTBS boundary only for correlation; quality fractions are computed only from boundary pixels and no outside pixel becomes evidence or a label.",
+    "shared_mask_applied_to_correlation": false
+  },
+  "events": [
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_id": "OR4383912111420180907",
+      "fire_name": "TEPEE 1144 NE",
+      "ignition_date": "2018-09-07",
+      "geography_group_id": "geo-tepee-1144-ne-2018-mtbs-boundary",
+      "scene_group_id": "scene-or4383912111420180907-789704b12eb7",
+      "time_group_id": "time-2018-09-07",
+      "boundary_bbox_wgs84": [
+        -121.12396490810004,
+        43.83291551333916,
+        -121.03661489449347,
+        43.85498351591503
+      ],
+      "source_geometry_sha256": "97bd346487e5fc0a12e62c4625cc6badf9191c949691ab941ab802d14b5d509e",
+      "products": [
+        {
+          "role": "tepee-2018-pre",
+          "source_record_id": "SOURCE-2026-012",
+          "provider_id": "637dfcb9-6a28-487e-b6b3-9645ddc40dcc",
+          "native_id": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+          "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip",
+          "product_metadata": {
+            "product_metadata_member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/MTD_MSIL2A.xml",
+            "tile_metadata_member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/MTD_TL.xml",
+            "product_uri": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+            "processing_baseline": "05.00",
+            "product_start_utc": "2018-08-11T18:59:09.024Z",
+            "generation_utc": "2023-08-15T16:08:27.000000Z",
+            "tile_id": "S2B_OPER_MSI_L2A_TL_S2RP_20230815T160827_A007475_T10TFP_N05.00",
+            "sensing_time_utc": "2018-08-11T19:12:15.299391Z",
+            "horizontal_crs": "EPSG:32610",
+            "boa_quantification_value": 10000.0,
+            "boa_offsets": {
+              "B04": -1000.0,
+              "B8A": -1000.0,
+              "B12": -1000.0
+            },
+            "nodata_dn": 0,
+            "saturated_dn": 65535
+          },
+          "rasters": {
+            "TCI": {
+              "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R10m/T10TFP_20180811T185909_TCI_10m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 10,
+              "source_width": 10980,
+              "source_height": 10980,
+              "source_count": 3,
+              "source_dtype": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "source_transform": [
+                10.0,
+                0.0,
+                600000.0,
+                0.0,
+                -10.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                10.0,
+                0.0,
+                650820.0,
+                0.0,
+                -10.0,
+                4857530.0
+              ],
+              "crop_window": {
+                "column_offset": 5082,
+                "row_offset": 4249,
+                "width": 702,
+                "height": 248
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855050.0,
+                657840.0,
+                4857530.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 86498,
+              "observed_inside_min": 21,
+              "observed_inside_max": 232
+            },
+            "B04": {
+              "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B04_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 1375,
+              "observed_inside_max": 3132
+            },
+            "B8A": {
+              "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B8A_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 2343,
+              "observed_inside_max": 3803
+            },
+            "B12": {
+              "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B12_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 1859,
+              "observed_inside_max": 3823
+            },
+            "SCL": {
+              "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_SCL_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint8"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 2,
+              "observed_inside_max": 7
+            }
+          },
+          "scl_summary_inside_full_boundary": {
+            "pixel_count": 21620,
+            "classes": [
+              {
+                "value": 0,
+                "name": "No data",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 1,
+                "name": "Saturated or defective",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 2,
+                "name": "Cast or topographic shadow",
+                "pixels": 4,
+                "percent": 0.0185
+              },
+              {
+                "value": 3,
+                "name": "Cloud shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 4,
+                "name": "Vegetation",
+                "pixels": 510,
+                "percent": 2.3589
+              },
+              {
+                "value": 5,
+                "name": "Bare soil",
+                "pixels": 21104,
+                "percent": 97.6133
+              },
+              {
+                "value": 6,
+                "name": "Water",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 7,
+                "name": "Unclassified",
+                "pixels": 2,
+                "percent": 0.0093
+              },
+              {
+                "value": 8,
+                "name": "Cloud medium probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 9,
+                "name": "Cloud high probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 10,
+                "name": "Thin cirrus",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 11,
+                "name": "Snow or ice",
+                "pixels": 0,
+                "percent": 0.0
+              }
+            ],
+            "excluded_pixels": 4,
+            "excluded_percent": 0.0185,
+            "review_needed_pixels": 2,
+            "review_needed_percent": 0.0093,
+            "eligible_land_pixels": 21614,
+            "eligible_land_percent": 99.9722
+          },
+          "boundary_mask": {
+            "geometry_sha256": "97bd346487e5fc0a12e62c4625cc6badf9191c949691ab941ab802d14b5d509e",
+            "inside_20m_pixel_centers": 21620,
+            "inside_10m_pixel_centers": 86498
+          }
+        },
+        {
+          "role": "tepee-2018-post",
+          "source_record_id": "SOURCE-2026-012",
+          "provider_id": "84d6af81-f343-4410-a09e-711b553f2f11",
+          "native_id": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+          "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip",
+          "product_metadata": {
+            "product_metadata_member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/MTD_MSIL2A.xml",
+            "tile_metadata_member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/MTD_TL.xml",
+            "product_uri": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+            "processing_baseline": "05.00",
+            "product_start_utc": "2018-09-20T19:00:49.024Z",
+            "generation_utc": "2023-08-03T12:03:58.000000Z",
+            "tile_id": "S2B_OPER_MSI_L2A_TL_S2RP_20230803T120358_A008047_T10TFP_N05.00",
+            "sensing_time_utc": "2018-09-20T19:12:13.124395Z",
+            "horizontal_crs": "EPSG:32610",
+            "boa_quantification_value": 10000.0,
+            "boa_offsets": {
+              "B04": -1000.0,
+              "B8A": -1000.0,
+              "B12": -1000.0
+            },
+            "nodata_dn": 0,
+            "saturated_dn": 65535
+          },
+          "rasters": {
+            "TCI": {
+              "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R10m/T10TFP_20180920T190049_TCI_10m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 10,
+              "source_width": 10980,
+              "source_height": 10980,
+              "source_count": 3,
+              "source_dtype": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "source_transform": [
+                10.0,
+                0.0,
+                600000.0,
+                0.0,
+                -10.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                10.0,
+                0.0,
+                650820.0,
+                0.0,
+                -10.0,
+                4857530.0
+              ],
+              "crop_window": {
+                "column_offset": 5082,
+                "row_offset": 4249,
+                "width": 702,
+                "height": 248
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855050.0,
+                657840.0,
+                4857530.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 86498,
+              "observed_inside_min": 7,
+              "observed_inside_max": 196
+            },
+            "B04": {
+              "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B04_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 1221,
+              "observed_inside_max": 2878
+            },
+            "B8A": {
+              "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B8A_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 1430,
+              "observed_inside_max": 3575
+            },
+            "B12": {
+              "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B12_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 1637,
+              "observed_inside_max": 4003
+            },
+            "SCL": {
+              "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_SCL_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint8"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                650820.0,
+                0.0,
+                -20.0,
+                4857540.0
+              ],
+              "crop_window": {
+                "column_offset": 2541,
+                "row_offset": 2124,
+                "width": 351,
+                "height": 125
+              },
+              "crop_bounds_utm10n": [
+                650820.0,
+                4855040.0,
+                657840.0,
+                4857540.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 21620,
+              "observed_inside_min": 2,
+              "observed_inside_max": 7
+            }
+          },
+          "scl_summary_inside_full_boundary": {
+            "pixel_count": 21620,
+            "classes": [
+              {
+                "value": 0,
+                "name": "No data",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 1,
+                "name": "Saturated or defective",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 2,
+                "name": "Cast or topographic shadow",
+                "pixels": 1110,
+                "percent": 5.1341
+              },
+              {
+                "value": 3,
+                "name": "Cloud shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 4,
+                "name": "Vegetation",
+                "pixels": 52,
+                "percent": 0.2405
+              },
+              {
+                "value": 5,
+                "name": "Bare soil",
+                "pixels": 18654,
+                "percent": 86.2812
+              },
+              {
+                "value": 6,
+                "name": "Water",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 7,
+                "name": "Unclassified",
+                "pixels": 1804,
+                "percent": 8.3441
+              },
+              {
+                "value": 8,
+                "name": "Cloud medium probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 9,
+                "name": "Cloud high probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 10,
+                "name": "Thin cirrus",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 11,
+                "name": "Snow or ice",
+                "pixels": 0,
+                "percent": 0.0
+              }
+            ],
+            "excluded_pixels": 1110,
+            "excluded_percent": 5.1341,
+            "review_needed_pixels": 1804,
+            "review_needed_percent": 8.3441,
+            "eligible_land_pixels": 18706,
+            "eligible_land_percent": 86.5217
+          },
+          "boundary_mask": {
+            "geometry_sha256": "97bd346487e5fc0a12e62c4625cc6badf9191c949691ab941ab802d14b5d509e",
+            "inside_20m_pixel_centers": 21620,
+            "inside_10m_pixel_centers": 86498
+          }
+        }
+      ],
+      "pair_quality": {
+        "inside_boundary": {
+          "pixel_count_inside_full_boundary": 21620,
+          "states": [
+            {
+              "state": "eligible-comparison",
+              "code": 0,
+              "pixels": 18706,
+              "percent": 86.5217
+            },
+            {
+              "state": "review-needed",
+              "code": 1,
+              "pixels": 1804,
+              "percent": 8.3441
+            },
+            {
+              "state": "excluded",
+              "code": 2,
+              "pixels": 1110,
+              "percent": 5.1341
+            }
+          ]
+        },
+        "signal_preprocessing": {
+          "B04": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.1115,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.0004272,
+                0.0340207
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.0897,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00060208,
+                0.03440818
+              ]
+            }
+          },
+          "B8A": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.17299999,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00046097,
+                0.02450037
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.1496,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00065,
+                0.03620872
+              ]
+            }
+          },
+          "B12": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.2133,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00045277,
+                0.04779562
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.19310001,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00065192,
+                0.04724922
+              ]
+            }
+          }
+        }
+      },
+      "registration": {
+        "protocol_version": "cross-event-native-source-fitness-v0.1.0",
+        "summary": {
+          "window_count": 3,
+          "state_counts": {
+            "pass": 1,
+            "review-needed": 1,
+            "excluded": 1,
+            "fail-registration": 0
+          },
+          "p50_px": 0.0361,
+          "p95_px": 0.0976,
+          "max_px": 0.1044,
+          "max_m": 2.088,
+          "machine_decision": "ACCEPT_REGISTRATION_WITH_SPATIAL_EXCLUSIONS"
+        },
+        "windows": [
+          {
+            "window_id": "W-01",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 0,
+              "height": 125,
+              "width": 125
+            },
+            "bounds_utm10n": [
+              650820.0,
+              4855040.0,
+              653320.0,
+              4857540.0
+            ],
+            "inside_boundary_pixels": 8611,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 0.7797,
+              "review_needed_fraction": 0.135873,
+              "excluded_fraction": 0.084427
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": 0.03,
+                "column_shift_to_apply_px": -0.01,
+                "magnitude_px": 0.0316,
+                "coarse_peak_ratio": 16.8472,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.378805,
+                "moving_energy": 0.349923,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": 0.06,
+                "column_shift_to_apply_px": -0.12,
+                "magnitude_px": 0.1342,
+                "coarse_peak_ratio": 5.7801,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.224201,
+                "moving_energy": 0.358995,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B12": {
+                "row_shift_to_apply_px": 0.01,
+                "column_shift_to_apply_px": 0.0,
+                "magnitude_px": 0.01,
+                "coarse_peak_ratio": 15.3403,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.534212,
+                "moving_energy": 0.459341,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": 0.03,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0316,
+              "magnitude_m": 0.632,
+              "max_band_deviation_px": 0.114,
+              "confident_band_count": 3
+            },
+            "state": "excluded",
+            "reason_code": "ELIGIBLE_FRACTION_BELOW_GATE",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          },
+          {
+            "window_id": "W-02",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 113,
+              "height": 125,
+              "width": 125
+            },
+            "bounds_utm10n": [
+              653080.0,
+              4855040.0,
+              655580.0,
+              4857540.0
+            ],
+            "inside_boundary_pixels": 8585,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 0.920326,
+              "review_needed_fraction": 0.055213,
+              "excluded_fraction": 0.024461
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": 0.03,
+                "column_shift_to_apply_px": -0.02,
+                "magnitude_px": 0.0361,
+                "coarse_peak_ratio": 10.5388,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.294538,
+                "moving_energy": 0.317267,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": 0.0,
+                "column_shift_to_apply_px": -0.19,
+                "magnitude_px": 0.19,
+                "coarse_peak_ratio": 3.0087,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.181822,
+                "moving_energy": 0.322464,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B12": {
+                "row_shift_to_apply_px": 0.04,
+                "column_shift_to_apply_px": 0.0,
+                "magnitude_px": 0.04,
+                "coarse_peak_ratio": 16.2425,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.48655,
+                "moving_energy": 0.486541,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": 0.03,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.0361,
+              "magnitude_m": 0.721,
+              "max_band_deviation_px": 0.1726,
+              "confident_band_count": 3
+            },
+            "state": "review-needed",
+            "reason_code": "BAND_CONSENSUS_EXCEEDS_GATE",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          },
+          {
+            "window_id": "W-03",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 226,
+              "height": 125,
+              "width": 125
+            },
+            "bounds_utm10n": [
+              655340.0,
+              4855040.0,
+              657840.0,
+              4857540.0
+            ],
+            "inside_boundary_pixels": 6115,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 0.917743,
+              "review_needed_fraction": 0.045462,
+              "excluded_fraction": 0.036795
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": -0.1,
+                "column_shift_to_apply_px": -0.06,
+                "magnitude_px": 0.1166,
+                "coarse_peak_ratio": 7.3472,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.158257,
+                "moving_energy": 0.278869,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": -0.14,
+                "column_shift_to_apply_px": -0.03,
+                "magnitude_px": 0.1432,
+                "coarse_peak_ratio": 7.6881,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.175659,
+                "moving_energy": 0.358304,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B12": {
+                "row_shift_to_apply_px": -0.01,
+                "column_shift_to_apply_px": -0.02,
+                "magnitude_px": 0.0224,
+                "coarse_peak_ratio": 9.6253,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.233878,
+                "moving_energy": 0.287163,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": -0.1,
+              "column_shift_to_apply_px": -0.03,
+              "magnitude_px": 0.1044,
+              "magnitude_m": 2.088,
+              "max_band_deviation_px": 0.0906,
+              "confident_band_count": 3
+            },
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          }
+        ]
+      }
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_id": "OR4375212142520170829",
+      "fire_name": "MCKAY 1035 NE",
+      "ignition_date": "2017-08-29",
+      "geography_group_id": "geo-mckay-1035-ne-2017-mtbs-boundary",
+      "scene_group_id": "scene-or4375212142520170829-fe36a9c858bd",
+      "time_group_id": "time-2017-08-29",
+      "boundary_bbox_wgs84": [
+        -121.42581594082274,
+        43.74797247961568,
+        -121.3785399342482,
+        43.766635481286265
+      ],
+      "source_geometry_sha256": "9eeca5a4aecec315bfffec913d9445d749c7286fdc2a20fcfaceaf07e609a084",
+      "products": [
+        {
+          "role": "mckay-2017-pre",
+          "source_record_id": "SOURCE-2026-012",
+          "provider_id": "a50825f5-3169-42a7-ae55-2eea540e7330",
+          "native_id": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+          "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip",
+          "product_metadata": {
+            "product_metadata_member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/MTD_MSIL2A.xml",
+            "tile_metadata_member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/MTD_TL.xml",
+            "product_uri": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+            "processing_baseline": "05.00",
+            "product_start_utc": "2017-07-29T18:49:21.026Z",
+            "generation_utc": "2023-09-17T02:28:41.000000Z",
+            "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20230917T022841_A010978_T10TFP_N05.00",
+            "sensing_time_utc": "2017-07-29T19:02:25.781754Z",
+            "horizontal_crs": "EPSG:32610",
+            "boa_quantification_value": 10000.0,
+            "boa_offsets": {
+              "B04": -1000.0,
+              "B8A": -1000.0,
+              "B12": -1000.0
+            },
+            "nodata_dn": 0,
+            "saturated_dn": 65535
+          },
+          "rasters": {
+            "TCI": {
+              "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R10m/T10TFP_20170729T184921_TCI_10m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 10,
+              "source_width": 10980,
+              "source_height": 10980,
+              "source_count": 3,
+              "source_dtype": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "source_transform": [
+                10.0,
+                0.0,
+                600000.0,
+                0.0,
+                -10.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                10.0,
+                0.0,
+                626730.0,
+                0.0,
+                -10.0,
+                4847210.0
+              ],
+              "crop_window": {
+                "column_offset": 2673,
+                "row_offset": 5281,
+                "width": 381,
+                "height": 209
+              },
+              "crop_bounds_utm10n": [
+                626730.0,
+                4845120.0,
+                630540.0,
+                4847210.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 49447,
+              "observed_inside_min": 15,
+              "observed_inside_max": 208
+            },
+            "B04": {
+              "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B04_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 1315,
+              "observed_inside_max": 2830
+            },
+            "B8A": {
+              "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B8A_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 2606,
+              "observed_inside_max": 3992
+            },
+            "B12": {
+              "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B12_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 1725,
+              "observed_inside_max": 3890
+            },
+            "SCL": {
+              "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_SCL_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint8"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 4,
+              "observed_inside_max": 5
+            }
+          },
+          "scl_summary_inside_full_boundary": {
+            "pixel_count": 12359,
+            "classes": [
+              {
+                "value": 0,
+                "name": "No data",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 1,
+                "name": "Saturated or defective",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 2,
+                "name": "Cast or topographic shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 3,
+                "name": "Cloud shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 4,
+                "name": "Vegetation",
+                "pixels": 10131,
+                "percent": 81.9727
+              },
+              {
+                "value": 5,
+                "name": "Bare soil",
+                "pixels": 2228,
+                "percent": 18.0273
+              },
+              {
+                "value": 6,
+                "name": "Water",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 7,
+                "name": "Unclassified",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 8,
+                "name": "Cloud medium probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 9,
+                "name": "Cloud high probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 10,
+                "name": "Thin cirrus",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 11,
+                "name": "Snow or ice",
+                "pixels": 0,
+                "percent": 0.0
+              }
+            ],
+            "excluded_pixels": 0,
+            "excluded_percent": 0.0,
+            "review_needed_pixels": 0,
+            "review_needed_percent": 0.0,
+            "eligible_land_pixels": 12359,
+            "eligible_land_percent": 100.0
+          },
+          "boundary_mask": {
+            "geometry_sha256": "9eeca5a4aecec315bfffec913d9445d749c7286fdc2a20fcfaceaf07e609a084",
+            "inside_20m_pixel_centers": 12359,
+            "inside_10m_pixel_centers": 49447
+          }
+        },
+        {
+          "role": "mckay-2017-post",
+          "source_record_id": "SOURCE-2026-012",
+          "provider_id": "53af4b67-470d-4421-8901-54064d9aab1d",
+          "native_id": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+          "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip",
+          "product_metadata": {
+            "product_metadata_member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/MTD_MSIL2A.xml",
+            "tile_metadata_member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/MTD_TL.xml",
+            "product_uri": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+            "processing_baseline": "05.00",
+            "product_start_utc": "2017-09-27T18:51:31.026Z",
+            "generation_utc": "2023-08-24T18:35:25.000000Z",
+            "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20230824T183525_A011836_T10TFP_N05.00",
+            "sensing_time_utc": "2017-09-27T19:02:20.822324Z",
+            "horizontal_crs": "EPSG:32610",
+            "boa_quantification_value": 10000.0,
+            "boa_offsets": {
+              "B04": -1000.0,
+              "B8A": -1000.0,
+              "B12": -1000.0
+            },
+            "nodata_dn": 0,
+            "saturated_dn": 65535
+          },
+          "rasters": {
+            "TCI": {
+              "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R10m/T10TFP_20170927T185131_TCI_10m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 10,
+              "source_width": 10980,
+              "source_height": 10980,
+              "source_count": 3,
+              "source_dtype": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "source_transform": [
+                10.0,
+                0.0,
+                600000.0,
+                0.0,
+                -10.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                10.0,
+                0.0,
+                626730.0,
+                0.0,
+                -10.0,
+                4847210.0
+              ],
+              "crop_window": {
+                "column_offset": 2673,
+                "row_offset": 5281,
+                "width": 381,
+                "height": 209
+              },
+              "crop_bounds_utm10n": [
+                626730.0,
+                4845120.0,
+                630540.0,
+                4847210.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 49447,
+              "observed_inside_min": 0,
+              "observed_inside_max": 184
+            },
+            "B04": {
+              "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B04_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 1167,
+              "observed_inside_max": 2534
+            },
+            "B8A": {
+              "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B8A_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 1297,
+              "observed_inside_max": 3276
+            },
+            "B12": {
+              "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B12_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint16"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 1492,
+              "observed_inside_max": 3656
+            },
+            "SCL": {
+              "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_SCL_20m.jp2",
+              "driver": "JP2OpenJPEG",
+              "crs": "EPSG:32610",
+              "resolution_m": 20,
+              "source_width": 5490,
+              "source_height": 5490,
+              "source_count": 1,
+              "source_dtype": [
+                "uint8"
+              ],
+              "source_transform": [
+                20.0,
+                0.0,
+                600000.0,
+                0.0,
+                -20.0,
+                4900020.0
+              ],
+              "crop_transform": [
+                20.0,
+                0.0,
+                626720.0,
+                0.0,
+                -20.0,
+                4847220.0
+              ],
+              "crop_window": {
+                "column_offset": 1336,
+                "row_offset": 2640,
+                "width": 191,
+                "height": 105
+              },
+              "crop_bounds_utm10n": [
+                626720.0,
+                4845120.0,
+                630540.0,
+                4847220.0
+              ],
+              "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+              "inside_boundary_pixels": 12359,
+              "observed_inside_min": 4,
+              "observed_inside_max": 5
+            }
+          },
+          "scl_summary_inside_full_boundary": {
+            "pixel_count": 12359,
+            "classes": [
+              {
+                "value": 0,
+                "name": "No data",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 1,
+                "name": "Saturated or defective",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 2,
+                "name": "Cast or topographic shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 3,
+                "name": "Cloud shadow",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 4,
+                "name": "Vegetation",
+                "pixels": 1056,
+                "percent": 8.5444
+              },
+              {
+                "value": 5,
+                "name": "Bare soil",
+                "pixels": 11303,
+                "percent": 91.4556
+              },
+              {
+                "value": 6,
+                "name": "Water",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 7,
+                "name": "Unclassified",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 8,
+                "name": "Cloud medium probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 9,
+                "name": "Cloud high probability",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 10,
+                "name": "Thin cirrus",
+                "pixels": 0,
+                "percent": 0.0
+              },
+              {
+                "value": 11,
+                "name": "Snow or ice",
+                "pixels": 0,
+                "percent": 0.0
+              }
+            ],
+            "excluded_pixels": 0,
+            "excluded_percent": 0.0,
+            "review_needed_pixels": 0,
+            "review_needed_percent": 0.0,
+            "eligible_land_pixels": 12359,
+            "eligible_land_percent": 100.0
+          },
+          "boundary_mask": {
+            "geometry_sha256": "9eeca5a4aecec315bfffec913d9445d749c7286fdc2a20fcfaceaf07e609a084",
+            "inside_20m_pixel_centers": 12359,
+            "inside_10m_pixel_centers": 49447
+          }
+        }
+      ],
+      "pair_quality": {
+        "inside_boundary": {
+          "pixel_count_inside_full_boundary": 12359,
+          "states": [
+            {
+              "state": "eligible-comparison",
+              "code": 0,
+              "pixels": 12359,
+              "percent": 100.0
+            },
+            {
+              "state": "review-needed",
+              "code": 1,
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "state": "excluded",
+              "code": 2,
+              "pixels": 0,
+              "percent": 0.0
+            }
+          ]
+        },
+        "signal_preprocessing": {
+          "B04": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.0601,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00075664,
+                0.03536122
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.0472,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00070711,
+                0.02964058
+              ]
+            }
+          },
+          "B8A": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.2121,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00085079,
+                0.02866105
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.1246,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00121655,
+                0.03985388
+              ]
+            }
+          },
+          "B12": {
+            "pre": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.1204,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00095344,
+                0.04626068
+              ]
+            },
+            "post": {
+              "finite_fraction": 1.0,
+              "fill_value": 0.1198,
+              "gradient_clip_percentiles": [
+                1,
+                99
+              ],
+              "gradient_clip_values": [
+                0.00112361,
+                0.04295483
+              ]
+            }
+          }
+        }
+      },
+      "registration": {
+        "protocol_version": "cross-event-native-source-fitness-v0.1.0",
+        "summary": {
+          "window_count": 3,
+          "state_counts": {
+            "pass": 3,
+            "review-needed": 0,
+            "excluded": 0,
+            "fail-registration": 0
+          },
+          "p50_px": 0.0806,
+          "p95_px": 0.1008,
+          "max_px": 0.103,
+          "max_m": 2.06,
+          "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+        },
+        "windows": [
+          {
+            "window_id": "W-01",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 0,
+              "height": 105,
+              "width": 105
+            },
+            "bounds_utm10n": [
+              626720.0,
+              4845120.0,
+              628820.0,
+              4847220.0
+            ],
+            "inside_boundary_pixels": 6286,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 1.0,
+              "review_needed_fraction": 0.0,
+              "excluded_fraction": 0.0
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": 0.11,
+                "column_shift_to_apply_px": 0.01,
+                "magnitude_px": 0.1105,
+                "coarse_peak_ratio": 11.444,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.308088,
+                "moving_energy": 0.244061,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": -0.01,
+                "column_shift_to_apply_px": 0.06,
+                "magnitude_px": 0.0608,
+                "coarse_peak_ratio": 5.8833,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.219302,
+                "moving_energy": 0.319949,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B12": {
+                "row_shift_to_apply_px": 0.09,
+                "column_shift_to_apply_px": 0.05,
+                "magnitude_px": 0.103,
+                "coarse_peak_ratio": 7.9399,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.389019,
+                "moving_energy": 0.370142,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": 0.09,
+              "column_shift_to_apply_px": 0.05,
+              "magnitude_px": 0.103,
+              "magnitude_m": 2.059,
+              "max_band_deviation_px": 0.1005,
+              "confident_band_count": 3
+            },
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          },
+          {
+            "window_id": "W-02",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 43,
+              "height": 105,
+              "width": 105
+            },
+            "bounds_utm10n": [
+              627580.0,
+              4845120.0,
+              629680.0,
+              4847220.0
+            ],
+            "inside_boundary_pixels": 8602,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 1.0,
+              "review_needed_fraction": 0.0,
+              "excluded_fraction": 0.0
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": 0.06,
+                "column_shift_to_apply_px": -0.03,
+                "magnitude_px": 0.0671,
+                "coarse_peak_ratio": 7.3986,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.275956,
+                "moving_energy": 0.207228,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": -0.11,
+                "column_shift_to_apply_px": -0.07,
+                "magnitude_px": 0.1304,
+                "coarse_peak_ratio": 2.7514,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.213504,
+                "moving_energy": 0.3111,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B12": {
+                "row_shift_to_apply_px": 0.01,
+                "column_shift_to_apply_px": 0.1,
+                "magnitude_px": 0.1005,
+                "coarse_peak_ratio": 6.5936,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.332158,
+                "moving_energy": 0.345789,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": 0.01,
+              "column_shift_to_apply_px": -0.03,
+              "magnitude_px": 0.0316,
+              "magnitude_m": 0.632,
+              "max_band_deviation_px": 0.13,
+              "confident_band_count": 3
+            },
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          },
+          {
+            "window_id": "W-03",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 86,
+              "height": 105,
+              "width": 105
+            },
+            "bounds_utm10n": [
+              628440.0,
+              4845120.0,
+              630540.0,
+              4847220.0
+            ],
+            "inside_boundary_pixels": 7914,
+            "pair_quality_inside_boundary": {
+              "eligible_fraction": 1.0,
+              "review_needed_fraction": 0.0,
+              "excluded_fraction": 0.0
+            },
+            "band_measurements": {
+              "B04": {
+                "row_shift_to_apply_px": 0.05,
+                "column_shift_to_apply_px": -0.01,
+                "magnitude_px": 0.051,
+                "coarse_peak_ratio": 7.5136,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.209888,
+                "moving_energy": 0.172655,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              },
+              "B8A": {
+                "row_shift_to_apply_px": -0.29,
+                "column_shift_to_apply_px": 0.07,
+                "magnitude_px": 0.2983,
+                "coarse_peak_ratio": 1.7937,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.195519,
+                "moving_energy": 0.327853,
+                "confident": false,
+                "reason": "PEAK_RATIO_BELOW_GATE"
+              },
+              "B12": {
+                "row_shift_to_apply_px": 0.11,
+                "column_shift_to_apply_px": -0.01,
+                "magnitude_px": 0.1105,
+                "coarse_peak_ratio": 6.1387,
+                "sample_resolution_px": 0.01,
+                "reference_energy": 0.280552,
+                "moving_energy": 0.325,
+                "confident": true,
+                "reason": "PEAK_RATIO_PASS"
+              }
+            },
+            "consensus": {
+              "row_shift_to_apply_px": 0.08,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0806,
+              "magnitude_m": 1.612,
+              "max_band_deviation_px": 0.03,
+              "confident_band_count": 2
+            },
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "label_effect": "none; registration evidence never assigns burned or background"
+          }
+        ]
+      }
+    }
+  ],
+  "decision": {
+    "machine": "ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS",
+    "visual_review": "ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS",
+    "visual_review_notes": "Rendered JSON, HTML, and original-resolution PNG reviewed against the registered provider bytes and the fully content-verified two-link metadata-manifest exception. All four provider archives remain single-linked. Both full MTBS boundaries are visible with no gross pair misalignment. McKay is 100% pair-eligible and all three windows pass. Tepee preserves 5.1341% SCL-2 excluded and 8.3441% SCL-7 review pixels; W-01 remains excluded for insufficient eligible coverage, W-02 remains review-needed for cross-band consensus, and W-03 passes. Accept source fitness with those exclusions binding; no label, dataset, split, baseline, model, or application claim.",
+    "next_boundary": "No label pixels, dataset, split, baseline, model, or application may be claimed from this source-fitness checkpoint."
+  },
+  "claims": {
+    "proven": [
+      "The four exact registered provider archives remain byte-identical to their acquisition registration.",
+      "The full frozen Tepee and McKay boundaries are readable at native Sentinel-2 pixels with exact SCL distributions and pair-local registration evidence."
+    ],
+    "not_proven": [
+      "Any SCL class, spectral signal, MTBS boundary, or registration window is a burn-scar label or severity truth.",
+      "A leakage-resistant dataset, benchmark split, baseline, model, deployed application, field validity, operational readiness, or official status exists."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
