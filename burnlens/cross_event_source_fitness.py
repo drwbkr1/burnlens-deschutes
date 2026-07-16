@@ -514,6 +514,10 @@ def build_report(
             "asset_hashes": registration.get("assets"),
         },
         "source_precedence": ROUTE_PRECEDENCE,
+        "attribution": (
+            "Contains modified Copernicus Sentinel-2 data (2017-2018), "
+            "accessed through the Copernicus Data Space Ecosystem."
+        ),
         "method": {
             "boundary": "Full frozen MTBS source geometry; crop covers it outward and counts pixel centers inside it; no shrink.",
             "native_pixels": "TCI 10 m is preview only. B04, B8A, B12, and SCL remain on their exact native EPSG:32610 20 m grids with no reprojection, resampling, or upsampling.",
@@ -588,6 +592,20 @@ def render_png(report: dict[str, Any], previews: list[dict[str, Any]], path: Pat
     draw.rounded_rectangle((55, 1270, 1745, 1385), radius=18, fill="#261f12", outline="#be8a36", width=2)
     draw.text((80, 1292), WARNING, fill="#ffd997", font=_font(18))
     draw.text((80, 1330), "No labels / dataset / split / baseline / model / application. Official sources govern.", fill="#ffd997", font=_font(18))
+    draw.text((80, 1362), report["attribution"], fill="#ffd997", font=_font(16))
+    acquisition_run = report["registered_source_lineage"]["acquisition_run_id"]
+    draw.text(
+        (60, 1400),
+        f"TRACE  commit {report['git_source_commit'][:12]}  /  BurnLens {report['software_version']}  /  evidence {report['run_id']}  /  acquisition {acquisition_run}",
+        fill="#b9d8cf",
+        font=_font(14),
+    )
+    draw.text(
+        (60, 1426),
+        f"dataset none  /  baseline none  /  model none  /  application none  /  label schema {report['label_schema_version']}",
+        fill="#b9d8cf",
+        font=_font(14),
+    )
     path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(path, format="PNG", optimize=False)
 
@@ -635,7 +653,7 @@ body{{margin:0;background:#07110f;color:#eef7f3;font:16px/1.55 system-ui,sans-se
 <h2>Decision</h2><div class="card"><p><strong>{escape(report['decision']['machine'])}</strong></p><p>Visual review: {escape(report['decision']['visual_review'])}</p><p>{escape(report['decision']['visual_review_notes'] or 'Pending rendered review.')}</p></div>
 <h2>What was measured</h2><div class="card"><ul><li>{escape(report['method']['boundary'])}</li><li>{escape(report['method']['native_pixels'])}</li><li>{escape(report['method']['quality'])}</li><li>{escape(report['method']['registration'])}</li><li>{escape(report['method']['registration_envelope'])}</li></ul></div>
 {''.join(event_cards)}
-<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>Trace: <code>{escape(report['git_source_commit'])}</code> · <code>{escape(report['software_version'])}</code> · <code>{escape(report['run_id'])}</code></p></div>
+<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>{escape(report['attribution'])}</p><p>Trace: source commit <code>{escape(report['git_source_commit'])}</code> · BurnLens <code>{escape(report['software_version'])}</code> · evidence run <code>{escape(report['run_id'])}</code> · acquisition run <code>{escape(str(report['registered_source_lineage']['acquisition_run_id']))}</code>.</p><p>Dataset: none · baseline: none · model: none · application: none · label schema: <code>{escape(report['label_schema_version'])}</code>.</p></div>
 </main></body></html>"""
     path.parent.mkdir(parents=True, exist_ok=True)
     _write_utf8_lf(path, html)

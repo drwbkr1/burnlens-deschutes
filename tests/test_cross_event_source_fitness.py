@@ -142,6 +142,9 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             "git_source_commit": "a" * 40,
             "software_version": "0.11.0",
             "run_id": "BL-TEST-CROSS-EVENT-SOURCE-FITNESS",
+            "label_schema_version": "burn-scar-label-protocol-v0.1.0",
+            "registered_source_lineage": {"acquisition_run_id": "BL-TEST-ACQUISITION"},
+            "attribution": "Contains modified synthetic fixture data.",
         }
         preview = [{
             "event_group_id": "synthetic-event",
@@ -163,6 +166,8 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             page = html.read_text(encoding="utf-8")
             self.assertIn("4 exact archives", page)
             self.assertIn("0 labels", page)
+            self.assertIn("acquisition run", page)
+            self.assertIn("Contains modified synthetic fixture data", page)
             self.assertNotIn(b"\r\n", html.read_bytes())
 
 
