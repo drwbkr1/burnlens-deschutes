@@ -21,6 +21,8 @@ from .label_review_handoff import (
     WORKBENCH_VERSION,
 )
 from .lock_label_review_response import (
+    LEGACY_LOCK_REPORT_VERSION,
+    LEGACY_SOFTWARE_VERSION,
     SOFTWARE_BROWSER_FIXTURE,
     build_response_lock,
     write_response_lock,
@@ -415,6 +417,8 @@ def run_browser_qa(
         git_source_commit=git_source_commit,
         evidence_origin=SOFTWARE_BROWSER_FIXTURE,
         task_issue=TASK_ISSUE,
+        report_version=LEGACY_LOCK_REPORT_VERSION,
+        software_version=LEGACY_SOFTWARE_VERSION,
     )
     write_response_lock(lock, lock_path)
     if (

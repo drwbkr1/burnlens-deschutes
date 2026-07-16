@@ -109,7 +109,7 @@ def _rewrite_archive(
 
 class LabelReviewHandoffTests(unittest.TestCase):
     def test_current_package_version_preserves_reviewer_handoff_contract(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.16.0")
+        self.assertEqual(burnlens.__version__, "0.17.0")
 
     def test_repeated_handoff_build_is_byte_identical_and_allowlisted(self) -> None:
         with TemporaryDirectory() as temporary:

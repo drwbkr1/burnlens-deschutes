@@ -18,6 +18,8 @@ from burnlens.label_review_response_lock_qa import (
     write_public_response_lock_outputs,
 )
 from burnlens.lock_label_review_response import (
+    LEGACY_LOCK_REPORT_VERSION,
+    LEGACY_SOFTWARE_VERSION,
     RETURNED_INDEPENDENT_RESPONSE,
     build_response_lock,
     write_response_lock,
@@ -80,6 +82,8 @@ def _private_pair(root: Path) -> tuple[Path, Path]:
         git_source_commit="2" * 40,
         evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
         task_issue=384,
+        report_version=LEGACY_LOCK_REPORT_VERSION,
+        software_version=LEGACY_SOFTWARE_VERSION,
     )
     receipt_path = root / "private-receipt.json"
     write_response_lock(receipt, receipt_path)
@@ -196,7 +200,7 @@ class LabelReviewResponseLockQaTests(unittest.TestCase):
                 )
 
     def test_current_version_and_verifier_independence_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.16.0")
+        self.assertEqual(burnlens.__version__, "0.17.0")
         source = (ROOT / "burnlens" / "label_review_response_lock_qa.py").read_text(
             encoding="utf-8"
         )
