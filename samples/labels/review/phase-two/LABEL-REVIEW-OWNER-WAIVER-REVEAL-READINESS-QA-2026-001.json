@@ -1,0 +1,102 @@
+{
+  "report_id": "LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-owner-waiver-reveal-readiness-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T22:16:24Z",
+  "run_id": "BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 407,
+  "parent_reconciliation_issue": 403,
+  "git_source_commit": "bc7542bcdeccadaf40d63b521d7fd5a7fc094c81",
+  "software_version": "0.19.0",
+  "authorization_binding": {
+    "bytes": 3643,
+    "sha256": "db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952",
+    "report_id": "OWNER-WAIVER-2026-001",
+    "report_version": "label-review-owner-waiver-reveal-authorization-v0.1.0",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "response_binding": {
+    "bytes": 16443,
+    "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+    "opaque_reviewer_id": "reviewer-01",
+    "unit_count": 56,
+    "filename_withheld": true,
+    "path_withheld": true,
+    "contents_withheld": true
+  },
+  "receipt_binding": {
+    "bytes": 2508,
+    "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "packet_binding": {
+    "bytes": 61599,
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "report_id": "LABEL-REVIEW-PACKET-2026-001"
+  },
+  "reveal_binding": {
+    "bytes": 9433,
+    "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af",
+    "report_id": "LABEL-REVIEW-PACKET-2026-001-REVEAL",
+    "contents_withheld": true
+  },
+  "checks": {
+    "exact_preserved_response": "pass",
+    "exact_first_response_receipt": "pass",
+    "receipt_response_binding": "pass",
+    "receipt_packet_binding": "pass",
+    "returned_response_not_fixture": "pass",
+    "exact_review_packet": "pass",
+    "exact_unopened_reveal": "pass",
+    "owner_waiver_declared": "pass",
+    "reduced_validation_acknowledged": "pass",
+    "ignored_untracked_authorization_storage": "pass",
+    "no_overwrite_authorization_promotion": "pass"
+  },
+  "owner_waiver_state": {
+    "explicit_owner_waiver_recorded": true,
+    "reviewer_two_requirement_waived": true,
+    "returned_independent_responses": 1,
+    "second_human_response_present": false,
+    "single_reviewer_reduced_validation_acknowledged": true,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false
+  },
+  "reveal_state": {
+    "operator_status_before_authorization": "withheld-unopened-after-lock",
+    "reveal_opened_by_authorization_run": false,
+    "reveal_opened_by_qa_run": false,
+    "reveal_authorized_for_later_private_reconciliation": true,
+    "authorized_reconciliation_issue": 403
+  },
+  "content_withholding": {
+    "response_labels_distributions_confidence_reasons_notes_and_timestamps": "withheld",
+    "reviewer_experience_attestations_and_free_text": "withheld",
+    "private_filenames_and_paths": "withheld",
+    "proposal_reveal_contents": "withheld"
+  },
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "authorization_decision": "PASS_OWNER_WAIVER_REVEAL_READINESS_SINGLE_REVIEWER_REDUCED_VALIDATION",
+  "decision": "PASS_OWNER_WAIVER_REVEAL_READINESS_CONTENT_WITHHELD",
+  "claims": {
+    "proven": [
+      "The exact preserved first response and exact private receipt still match their shipped bindings.",
+      "The exact packet and proposal-reveal artifact still match the immutable review inventory.",
+      "The owner explicitly waived reviewer two and acknowledged the permanently reduced single-reviewer validation route.",
+      "A later private deterministic reconciliation run under issue #403 may now open the exact reveal."
+    ],
+    "not_proven": [
+      "The waiver does not create a second reviewer, inter-rater validation, consensus, or adjudication.",
+      "Authorization does not accept any label, create a dataset or split, train a baseline or model, or establish accuracy.",
+      "Software does not verify reviewer identity, expertise, independence, field validity, official status, endorsement, emergency readiness, or operational fitness."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
