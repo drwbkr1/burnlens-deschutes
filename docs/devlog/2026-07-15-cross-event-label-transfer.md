@@ -10,4 +10,6 @@ The second implementation reopened all four multi-gigabyte Sentinel archives and
 
 The browser review also earned its keep. The first HTML used grammatically affirmative sentences under a boundary heading to describe what was not proven. Even though the JSON category was correct, a hurried reader could misread the page. The final report prefixes every such item with `Not proven` and preserves the null dataset/model/application trace in both the semantic page and rendered card.
 
+The fresh-clone gate found a second presentation-layer reliability defect before merge. The repository already forced deterministic evidence JSON/HTML to LF, but the rule did not cover the new nested cross-event directory. Windows therefore checked four correct blobs out as CRLF and broke byte-exact reconstruction. A narrow `.gitattributes` rule and regression test now make that contract explicit.
+
 The checkpoint therefore advances the portfolio narrative without skipping the hard part: BurnLens can transfer a transparent uncertainty-aware proposal across whole event groups, but it still cannot responsibly call those proposals a dataset. Independent label-fitness and adjudication evidence is the next meaningful gate.

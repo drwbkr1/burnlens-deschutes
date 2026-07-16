@@ -10,7 +10,7 @@
 | Ignored local MTBS package | Two exact public TIFFs / 84,238 bytes plus registration metadata; current two-link state fully disclosed and content-verified | registered; zero tracked paths below `downloads/` | 0 |
 | Proposal report and rasters | JSON/HTML/PNG, two five-state GeoTIFFs, two binary target GeoTIFFs | 9,760 candidate / 54,170 ignored; hashes in `MANIFEST-2026-013` | 0 |
 | Separate QA report | JSON/HTML/PNG | 63,930 pixels; zero state/target mismatch; 45 samples | 0 |
-| Repository tests | MTBS byte/grid/domain/link contract, registration precedence, five-state/ignore rules, fallback recovery, QA import independence, predecessor version gates | 136 pass | 0 |
+| Repository tests | MTBS byte/grid/domain/link contract, registration precedence, five-state/ignore rules, fallback recovery, QA import independence, predecessor version gates, nested LF checkout contract | 137 pass | 0 |
 | `burnlens_deschutes-0.12.0-py3-none-any.whl` | Candidate wheel and isolated import evidence; not committed | 215,693 bytes; SHA-256 `d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32`; import `0.12.0` | 0 |
 | `SOURCE-2026-013`, `TERMS-2026-008`, `PRECHECK-2026-013`, `LABEL_FITNESS-2026-007`, `SOURCE_PRECEDENCE-2026-006`, `USE_BOUNDARY-2026-012` | Source, rights, entry, label fitness, authority, and claims records | `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` | 0 |
 | `MANIFEST-2026-013.json` | Candidate provenance and exact ten-output inventory | Merge/tag lifecycle pending | 0 |

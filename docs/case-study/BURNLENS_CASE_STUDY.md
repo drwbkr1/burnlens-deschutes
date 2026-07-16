@@ -220,7 +220,7 @@ Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberat
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.11.0-cross-event-source-fitness-baseline` at merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; annotated tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61`; BurnLens `0.12.0` transfer candidate pending merge/tag
-- Latest candidate analytical checkpoint: issue #367; 136 tests, exact manifest/semantic/render gates, original-resolution review, live browser review, packaging, and isolated import pass
+- Latest candidate analytical checkpoint: issue #367; 137 tests, exact manifest/semantic/render/LF gates, original-resolution review, live browser review, packaging, and isolated import pass
 - Active next checkpoint: independent label-fitness/adjudication evidence and dataset-candidacy or deferral decision before any partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces

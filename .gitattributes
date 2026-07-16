@@ -14,6 +14,10 @@ samples/registration/phase-two/*.html text eol=lf
 samples/labels/phase-two/*.json text eol=lf
 samples/labels/phase-two/*.html text eol=lf
 
+# Cross-event label-transfer and QA evidence use the same LF contract.
+samples/labels/cross-event/phase-two/*.json text eol=lf
+samples/labels/cross-event/phase-two/*.html text eol=lf
+
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
 samples/cross-event/phase-two/*.html text eol=lf

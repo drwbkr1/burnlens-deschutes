@@ -98,7 +98,7 @@
     "tepee_transfer": "pass with preserved restrictions: 494 background, 92 burned, 10,942 unknown, 16,025 excluded, 16,322 review-needed",
     "mckay_transfer": "pass with explicit fallback limitation: 55 background, 9,119 burned, 7,483 unknown, 0 excluded, 3,398 review-needed",
     "separate_qa": "pass: separately invoked, no transfer-classifier import, all six sources reopened, 63,930 pixels, zero state/target mismatch, 45 deterministic samples",
-    "repository_tests": 136,
+    "repository_tests": 137,
     "compileall": "pass",
     "dependency_health": "pass: no broken requirements",
     "wheel_build_and_isolated_import": "pass: 215,693-byte wheel sha256 d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32; isolated import 0.12.0; three new entry points present",

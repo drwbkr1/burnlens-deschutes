@@ -28,6 +28,16 @@ class CrossEventLabelTransferTests(unittest.TestCase):
     def test_current_package_version_is_cross_event_label_transfer_version(self) -> None:
         self.assertEqual(burnlens.__version__, "0.12.0")
 
+    def test_cross_event_text_artifacts_have_checkout_stable_lf_contract(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        attributes = (root / ".gitattributes").read_text(encoding="utf-8").splitlines()
+        self.assertIn(
+            "samples/labels/cross-event/phase-two/*.json text eol=lf", attributes
+        )
+        self.assertIn(
+            "samples/labels/cross-event/phase-two/*.html text eol=lf", attributes
+        )
+
     def test_mtbs_contracts_and_url_are_exact_and_public(self) -> None:
         self.assertEqual(validate_contracts(), [])
         contract = MtbsReferenceContract(

@@ -13,7 +13,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Produce four traceable GeoTIFFs plus proposal JSON/HTML/PNG. Aggregate: 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, and 19,720 review-needed pixels.
 - Add a separately invoked QA path that does not import the transfer classifier, reopens all six exact source assets, and reproduces 63,930 state/target pixels with zero mismatch plus 45 deterministic audits.
 - Remediate live-browser claim grammar so every boundary item is explicitly `Not proven`; pass original-resolution and semantic-browser review plus four HTTP-200 raster links.
-- Raise BurnLens to `0.12.0`; pass 136 tests, compilation, dependency health, a 215,693-byte wheel / SHA-256 `d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32`, isolated import, and three new entry points.
+- Extend the deterministic LF checkout contract to nested cross-event JSON/HTML after fresh remote-head verification exposes Windows CRLF conversion; add a regression test before merge.
+- Raise BurnLens to `0.12.0`; pass 137 tests, compilation, dependency health, a 215,693-byte wheel / SHA-256 `d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32`, isolated import, and three new entry points.
 - Accept reproducible cross-event proposal evidence while deferring accepted labels, dataset, split, baseline, model, independent human validation, field validation, and operational claims.
 
 Issue #367; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; reviewed PR/merge/tag pending.
