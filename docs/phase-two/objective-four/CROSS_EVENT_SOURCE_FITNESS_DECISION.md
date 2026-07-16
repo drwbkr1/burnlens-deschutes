@@ -29,4 +29,10 @@ Accept the exact Tepee and McKay source pairs for the next bounded cross-event l
 
 The next checkpoint must test whether the established five-state burn-scar proposal can transfer across both events with transparent unknown/excluded/review coverage. Dataset and split construction remain deferred until cross-event proposal evidence and its separate QA pass.
 
+## Pre-tag trace remediation
+
+Issue #361 / PR #362 merged the analytical checkpoint at `6a6da910849daefa918ed56af6631b2ec44bc211`. Fresh merged-main semantic verification withheld the release tag after finding that the manifest named implemented schema `burn-scar-five-state-schema-v0.1.0` while the report's `label_schema_version` named design protocol `burn-scar-label-protocol-v0.1.0`. Issue #363 separates those identifiers, fails closed if the frozen feasibility schema drifts, and regenerates the real artifacts from source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c` as run `BL-2026-07-16-cross-event-source-fitness-r006`.
+
+The remediated run preserves every source, event, pixel, window, metric, decision, lineage field, and input hash from `r005`. JSON, HTML, and PNG now expose both governing label protocol and implemented five-state schema. The tag remains withheld until issue #363 passes PR and fresh merged-main gates.
+
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.

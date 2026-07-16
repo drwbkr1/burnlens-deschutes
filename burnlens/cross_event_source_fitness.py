@@ -44,6 +44,7 @@ from .cross_event_optical_contract import (
     TERMS_REVIEW_ID,
     validate_cross_event_contracts,
 )
+from .cross_event_feasibility import LABEL_SCHEMA_VERSION
 from .optical_pair_evidence import (
     LABEL_PROTOCOL_VERSION,
     SELECTED_BANDS,
@@ -93,6 +94,8 @@ def _load_feasibility(path: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]
         raise CrossEventSourceFitnessError("cross-event feasibility report is unreadable") from error
     if not isinstance(report, dict) or report.get("report_id") != FEASIBILITY_REPORT_ID:
         raise CrossEventSourceFitnessError("cross-event feasibility report identity mismatch")
+    if report.get("label_schema_version") != LABEL_SCHEMA_VERSION:
+        raise CrossEventSourceFitnessError("cross-event feasibility label schema mismatch")
     candidates = report.get("candidate_assessments")
     if not isinstance(candidates, list):
         raise CrossEventSourceFitnessError("cross-event candidate assessments are missing")
@@ -498,7 +501,8 @@ def build_report(
         "application_version": None,
         "target_version": TARGET_VERSION,
         "dataset_version": None,
-        "label_schema_version": LABEL_PROTOCOL_VERSION,
+        "label_protocol_version": LABEL_PROTOCOL_VERSION,
+        "label_schema_version": LABEL_SCHEMA_VERSION,
         "baseline_version": None,
         "model_version": None,
         "package_id": PACKAGE_ID,
@@ -621,7 +625,7 @@ def render_png(report: dict[str, Any], previews: list[dict[str, Any]], path: Pat
     )
     draw.text(
         (60, 1426),
-        f"dataset none  /  baseline none  /  model none  /  application none  /  label schema {report['label_schema_version']}",
+        f"dataset none / model none / label protocol {report['label_protocol_version']} / schema {report['label_schema_version']}",
         fill="#b9d8cf",
         font=_font(14),
     )
@@ -672,7 +676,7 @@ body{{margin:0;background:#07110f;color:#eef7f3;font:16px/1.55 system-ui,sans-se
 <h2>Decision</h2><div class="card"><p><strong>{escape(report['decision']['machine'])}</strong></p><p>Visual review: {escape(report['decision']['visual_review'])}</p><p>{escape(report['decision']['visual_review_notes'] or 'Pending rendered review.')}</p></div>
 <h2>What was measured</h2><div class="card"><ul><li>{escape(report['method']['boundary'])}</li><li>{escape(report['method']['native_pixels'])}</li><li>{escape(report['method']['quality'])}</li><li>{escape(report['method']['registration'])}</li><li>{escape(report['method']['registration_envelope'])}</li></ul></div>
 {''.join(event_cards)}
-<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>{escape(report['attribution'])}</p><p>Registration metadata manifest: <code>{escape(report['registered_source_lineage']['registration_manifest_name'])}</code> · link count {report['registered_source_lineage']['registration_manifest_link_count']}. The OneDrive alias exception applies only to this fully content-verified metadata manifest; all four provider archives remain single-linked.</p><p>Trace: source commit <code>{escape(report['git_source_commit'])}</code> · BurnLens <code>{escape(report['software_version'])}</code> · evidence run <code>{escape(report['run_id'])}</code> · acquisition run <code>{escape(str(report['registered_source_lineage']['acquisition_run_id']))}</code>.</p><p>Dataset: none · baseline: none · model: none · application: none · label schema: <code>{escape(report['label_schema_version'])}</code>.</p></div>
+<h2>Interpretation boundary</h2><div class="card"><p>{escape(report['decision']['next_boundary'])}</p><p>{escape(report['attribution'])}</p><p>Registration metadata manifest: <code>{escape(report['registered_source_lineage']['registration_manifest_name'])}</code> · link count {report['registered_source_lineage']['registration_manifest_link_count']}. The OneDrive alias exception applies only to this fully content-verified metadata manifest; all four provider archives remain single-linked.</p><p>Trace: source commit <code>{escape(report['git_source_commit'])}</code> · BurnLens <code>{escape(report['software_version'])}</code> · evidence run <code>{escape(report['run_id'])}</code> · acquisition run <code>{escape(str(report['registered_source_lineage']['acquisition_run_id']))}</code>.</p><p>Dataset: none · baseline: none · model: none · application: none · label protocol: <code>{escape(report['label_protocol_version'])}</code> · label schema: <code>{escape(report['label_schema_version'])}</code>.</p></div>
 </main></body></html>"""
     path.parent.mkdir(parents=True, exist_ok=True)
     _write_utf8_lf(path, html)

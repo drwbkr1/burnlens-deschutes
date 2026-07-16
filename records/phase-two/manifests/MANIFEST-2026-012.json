@@ -3,19 +3,20 @@
   "manifest_version": "0.12.0",
   "project": "BurnLens Deschutes",
   "repository": "drwbkr1/burnlens-deschutes",
-  "created_at_utc": "2026-07-16T01:50:11Z",
+  "created_at_utc": "2026-07-16T02:28:33Z",
   "task_issue": 361,
-  "branch": "codex/p2o4-t03-cross-event-source-fitness",
-  "git_base_commit": "2523207ad10ca88d822bd34d96bb482feded6072",
-  "generator_source_commit": "d28c0368c5b71b0c982d056d3db9409a1725f697",
-  "candidate_checkpoint_commit": "fe1136cad90bf85bd2ce5843a413a7b401196bf7",
+  "remediation_issue": 363,
+  "branch": "codex/p2o4-t03-label-trace-remediation",
+  "git_base_commit": "6a6da910849daefa918ed56af6631b2ec44bc211",
+  "generator_source_commit": "cf1d9101e2760bf7d779b6fae68e605bb8809c1c",
+  "candidate_checkpoint_commit": "621c74f4e6f2d691438736b38d3019a6bd453f50",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
   "pull_request": null,
   "version_tag": "v0.11.0-cross-event-source-fitness-baseline",
   "version_tag_object": null,
   "version_tag_state": "not created; candidate gates pending",
-  "status": "candidate source-fitness baseline; analytical and rendered gates pass; PR/merge/tag gates pending",
+  "status": "remediated candidate source-fitness baseline; analytical and rendered gates pass; issue 363 PR/merge/tag gates pending",
   "software_version": "0.11.0",
   "runtime": {
     "python": "3.12.13",
@@ -33,6 +34,7 @@
   "aoi_record": "AOI-2026-002",
   "aoi_version": "aoi-darlene3-model-v0.2.0",
   "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
   "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
   "cross_event_group_version": "burnlens-cross-event-groups-v0.1.0",
   "raw_package_version": "burnlens-cross-event-optical-package-v0.1.0",
@@ -43,7 +45,7 @@
   "application_version": null,
   "run_ids": [
     "BL-2026-07-16-cross-event-optical-intake-r005",
-    "BL-2026-07-16-cross-event-source-fitness-r005"
+    "BL-2026-07-16-cross-event-source-fitness-r006"
   ],
   "report_versions": ["cross-event-source-fitness-v0.1.0"],
   "selected_event_group_ids": ["event-mckay-1035-ne-2017", "event-tepee-1144-ne-2018"],
@@ -60,20 +62,20 @@
     {
       "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.json",
       "media_type": "application/json",
-      "bytes": 75267,
-      "sha256": "c5f33e66b475e8df3f3b53217beaf048bca3a2b4c7760566ee49b095b8ce4769"
+      "bytes": 75333,
+      "sha256": "c9aa90894150e081a6df26b8ee16c502bd532b67d7ecd493e038a366a480b34f"
     },
     {
       "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.html",
       "media_type": "text/html",
-      "bytes": 6935,
-      "sha256": "6bd2299f138ed42cc2f8ee0f20592b085095eb63c6d7ebdbd18fff2469ecf650"
+      "bytes": 7002,
+      "sha256": "1570aab3e4e63320f95cf253da94c5b7a962b97c4fda5c8cae7837ff89b8e034"
     },
     {
       "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.png",
       "media_type": "image/png",
-      "bytes": 921511,
-      "sha256": "02e7835bf2d2eff817e3c4a8f5bf3b4c8c41d4b65809667addcdf4a541a3aa97"
+      "bytes": 921270,
+      "sha256": "60f33e85f9bac5026caf231895d081bf942756462721d13ab818f383a7018c13"
     }
   ],
   "credentials_used": true,
@@ -90,10 +92,11 @@
     "tepee_registration": "pass with exclusions: one pass, one review-needed, one excluded; p95 0.0976 px",
     "mckay_boundary_quality": "pass: 100% eligible",
     "mckay_registration": "pass: 3/3 windows; p95 0.1008 px",
-    "repository_tests": 128,
+    "repository_tests": 129,
     "compileall": "pass",
     "dependency_health": "pass: no broken requirements",
-    "wheel_build_and_isolated_import": "pass: 183557-byte wheel sha256 6c39d511e6b7ac5786cad68016be3320239954e4c1c78a748b310106f126cf78; isolated import 0.11.0; four cross-event entry points present",
+    "wheel_build_and_isolated_import": "pass: 183761-byte wheel sha256 a969490d1c9f46c494804c0b1a2625c4afea4d2e7fc8f4e39791f0b9f0a4a302; isolated import 0.11.0; four cross-event entry points present",
+    "protocol_schema_trace_readback": "pass: protocol and implemented five-state schema explicit and consistent across JSON, HTML, PNG, manifest, and frozen feasibility input",
     "original_resolution_visual_review": "pass: 1800 by 1450",
     "rendered_browser_review": "pass: semantic structure, exact source/window rows, exception, warning, attribution, and trace visible",
     "dataset_or_partition_created": false,

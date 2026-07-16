@@ -123,7 +123,7 @@ A BurnLens version number means the artifact is operational, official, field-val
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
 | Current phase posture | Phase Two active; one-event proposal/QA is shipped and exact Tepee/McKay source fitness is a fully rendered candidate with exclusions; dataset deferred |
 | Current repository baseline | Latest shipped: `v0.10.0-cross-event-feasibility-baseline` at `5bfa1527410e98d8034b35ad68f6c50d5a1ec628` via issue #357 / PR #358 |
-| Active analytical candidate | BurnLens `0.11.0` through issue #361; four exact archives registered; McKay passes; Tepee exclusions bind; PR/merge/tag pending |
+| Active analytical candidate | BurnLens `0.11.0` through issue #361 / PR #362 / merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363 aligns explicit protocol/schema trace; remediation PR/merge/tag pending |
 | Baseline verification | Annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` remotely dereferences to PR #358 merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; 110 post-merge tests and byte-identical JSON/HTML/PNG reconstruction pass |
 | Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage; candidate outputs add cross-event native-pixel source fitness to bounded source/reference and one-event proposal/QA evidence. No accepted dataset, split, baseline, model, analytical inference result, application, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |

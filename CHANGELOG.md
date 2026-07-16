@@ -14,10 +14,11 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Inspect full MTBS boundaries on exact native 10 m TCI and 20 m B04/B8A/B12/SCL grids without reprojection, resampling, upsampling, mosaic, or boundary shrink.
 - Accept McKay at 100% pair-eligible quality and 3/3 registration windows. Accept Tepee only with 8.3441% review-needed, 5.1341% excluded, one excluded window, and one review-needed window binding.
 - Render traceable JSON, semantic HTML, and 1,800 by 1,450 PNG; pass original-resolution and live semantic-browser review.
-- Raise BurnLens to `0.11.0`; pass 128 tests, compilation, dependency health, a 183,557-byte wheel / isolated import, and four cross-event console entry points.
+- Correct a pre-tag trace mismatch found by fresh merged-main semantic readback: fail closed on frozen feasibility schema drift and expose both label protocol `burn-scar-label-protocol-v0.1.0` and implemented schema `burn-scar-five-state-schema-v0.1.0` across JSON, HTML, and PNG.
+- Raise BurnLens to `0.11.0`; pass 129 tests, compilation, dependency health, a 183,761-byte remediated candidate wheel / isolated import, and four cross-event console entry points.
 - Create no label, dataset, split, baseline, model, application, accuracy/generalization claim, independent human validation, or field claim.
 
-Issue #361; source `d28c0368c5b71b0c982d056d3db9409a1725f697`; candidate artifacts `fe1136cad90bf85bd2ce5843a413a7b401196bf7`; PR/merge/tag pending.
+Issue #361 / PR #362 / analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; trace-remediation issue #363; remediated source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; candidate artifacts `621c74f4e6f2d691438736b38d3019a6bd453f50`; remediation PR/merge/tag pending.
 
 ## v0.10.0-cross-event-feasibility-baseline - 2026-07-15
 

@@ -180,9 +180,9 @@ Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross
 - Latest cross-event source run: `RUN-2026-07-15-CROSS-EVENT-SOURCE-001`
 - Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Latest cross-event acquisition run: `BL-2026-07-16-cross-event-optical-intake-r005`
-- Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r005`
+- Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.11.0` is the candidate cross-event source-fitness baseline; generator/assessor source `d28c0368c5b71b0c982d056d3db9409a1725f697`
+- Tool: BurnLens `0.11.0` is the candidate cross-event source-fitness baseline; analytical merge `6a6da910849daefa918ed56af6631b2ec44bc211`; remediated generator/assessor source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -192,7 +192,7 @@ Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross
 - Label proposal: `darlene3-burn-scar-label-proposal-v0.1.0`; `LABEL-PROPOSAL-2026-001`; five states; 66.5856% candidate domain and 33.4144% ignored; hashes in `MANIFEST-2026-010`
 - Label QA: `separate-label-proposal-qa-v0.1.0`; `LABEL-QA-2026-001`; zero state/target mismatch across 270,000 pixels; 120/120 deterministic audit agreement; human inter-rater validation absent
 - Cross-event evidence: `CROSS-EVENT-SOURCE-2026-001` and `CROSS-EVENT-FITNESS-2026-001`; exact hashes in `MANIFEST-2026-011`; Tepee/McKay selected, Milli excluded; no imagery downloaded
-- Cross-event source fitness: `CROSS-EVENT-SOURCE-FITNESS-2026-001`; exact candidate hashes in `MANIFEST-2026-012`; McKay passes, Tepee exclusions bind; manifest metadata-link exception visible; zero provider bytes committed
+- Cross-event source fitness: `CROSS-EVENT-SOURCE-FITNESS-2026-001`; exact candidate hashes in `MANIFEST-2026-012`; McKay passes, Tepee exclusions bind; label protocol and implemented five-state schema are explicit; manifest metadata-link exception visible; zero provider bytes committed
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -201,7 +201,7 @@ Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.10.0-cross-event-feasibility-baseline` at analytical merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; annotated tag object `dbfda10ca50c39d8e8924096e740e71643e1f133`
 - Latest shipped analytical checkpoint: issue #357 / PR #358; 110 merged-main tests and byte-identical JSON/HTML/PNG reconstruction pass; lifecycle sync issue #359 is documentation-only
-- Active next checkpoint after candidate shipment: transfer the five-state proposal to exact Tepee/McKay pixels and run separate software QA before any partition work
+- Active release gate: issue #363 must merge the protocol/schema trace remediation and pass fresh merged-main/tag verification; after shipment, transfer the five-state proposal to exact Tepee/McKay pixels and run separate software QA before any partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 

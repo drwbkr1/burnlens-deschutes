@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
@@ -10,6 +11,7 @@ from PIL import Image
 import burnlens
 from burnlens.cross_event_source_fitness import (
     CrossEventSourceFitnessError,
+    _load_feasibility,
     _machine_decision,
     _validate_visual,
     measure_event_registration,
@@ -88,6 +90,19 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
                 "reviewed",
             )
 
+    def test_frozen_feasibility_schema_drift_fails_closed(self) -> None:
+        source = (
+            Path(__file__).resolve().parents[1]
+            / "samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.json"
+        )
+        report = json.loads(source.read_text(encoding="utf-8"))
+        report["label_schema_version"] = "burn-scar-label-protocol-v0.1.0"
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "feasibility.json"
+            path.write_text(json.dumps(report), encoding="utf-8")
+            with self.assertRaisesRegex(CrossEventSourceFitnessError, "label schema mismatch"):
+                _load_feasibility(path)
+
     def test_render_is_deterministic_semantic_and_lf_only(self) -> None:
         summary = {
             "window_count": 1,
@@ -142,7 +157,8 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             "git_source_commit": "a" * 40,
             "software_version": "0.11.0",
             "run_id": "BL-TEST-CROSS-EVENT-SOURCE-FITNESS",
-            "label_schema_version": "burn-scar-label-protocol-v0.1.0",
+            "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+            "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
             "registered_source_lineage": {
                 "acquisition_run_id": "BL-TEST-ACQUISITION",
                 "registration_manifest_name": ".burnlens-registration.json",
@@ -171,6 +187,8 @@ class CrossEventSourceFitnessTests(unittest.TestCase):
             self.assertIn("4 exact archives", page)
             self.assertIn("0 labels", page)
             self.assertIn("acquisition run", page)
+            self.assertIn("burn-scar-label-protocol-v0.1.0", page)
+            self.assertIn("burn-scar-five-state-schema-v0.1.0", page)
             self.assertIn("OneDrive alias exception", page)
             self.assertIn("Contains modified synthetic fixture data", page)
             self.assertNotIn(b"\r\n", html.read_bytes())

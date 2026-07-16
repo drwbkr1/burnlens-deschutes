@@ -10,6 +10,8 @@ McKay is the clean result: 100% pair-eligible boundary pixels and three passing 
 
 A final local check found another real reliability edge. OneDrive aliases the small registration metadata manifest even while the four provider archives remain single-linked. BurnLens now rejects multiply linked manifests by default and permits only this cross-event metadata exception after one-read SHA-256 plus complete registration and asset comparison. The exception appears in JSON, HTML, and PNG instead of disappearing into local setup notes.
 
+Fresh merged-main semantic readback then found a pre-tag trace mismatch: the manifest named implemented schema `burn-scar-five-state-schema-v0.1.0`, while the report's `label_schema_version` repeated the older design protocol. BurnLens withheld the tag, opened issue #363, added a frozen-input schema gate, and made protocol and schema separate public fields. Remediated source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c` generated run `BL-2026-07-16-cross-event-source-fitness-r006`. All event pixels, metrics, windows, decisions, lineage fields, and input hashes remain identical to `r005`; the original-resolution PNG and live HTML now expose both identifiers.
+
 Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only the next cross-event five-state proposal/QA experiment. It creates no dataset, split, baseline, model, application, accuracy, generalization, independent human validation, or field claim.
 
 > Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
