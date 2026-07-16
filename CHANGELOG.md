@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.20.0-single-reviewer-reconciliation - candidate - 2026-07-16
+## v0.20.0-single-reviewer-reconciliation - verified - 2026-07-16
 
 ### P2O4-T10B - Reconcile the exact blinded response without manufacturing consensus
 
@@ -12,9 +12,9 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Disclose the issue-#403 preflight sequence exception: a repository search displayed exact reveal HTML before the explicit authorization-verifier invocation. Exact verification passed immediately afterward and before private response access or unit comparison. Reviewer blindness and all locked bytes remained intact.
 - Publish aggregate-only JSON/HTML/PNG with reviewer free text, unit identities, private paths, and private filenames withheld. Inspect both the 1800-by-1280 evidence card and the complete installed-Chrome HTML render.
 - Use current primary MTBS and CEOS LPV sources to confirm that scene-quality masks, independent/reference evidence, uncertainty, and representative sampling remain binding. Candidate units are proposal-diagnostic evidence, not ground truth, validation, or an accuracy sample.
-- Pass 181 tests, compileall, dependency health, privacy, semantic, input-immutability, exact-binding, and rendered-output gates. Two fixed-epoch wheels are byte-identical at 341,228 bytes / SHA-256 `9645c01b1f0156f358bb020ea6f49eda852b337eb22d765780c0d173cad74faa`; isolated BurnLens `0.20.0` exposes 33 entry points and no private evidence. Dataset, split, baseline, and model remain absent; issue #411 owns reference-evidence remediation.
+- Pass 181 tests, compileall, dependency health, privacy, semantic, input-immutability, exact-binding, and rendered-output gates. Two initial fixed-epoch builds from the stale CRLF working tree were identical at 341,228 bytes, but the lifecycle fresh-checkout gate correctly supersedes them: two clean LF-contract builds are byte-identical at 340,283 bytes / SHA-256 `ad506e60ac7480c14382d4d5d0e53468ecb11a39801feae350a0ee397d068b74`. Isolated BurnLens `0.20.0` exposes 33 entry points and no private evidence. Dataset, split, baseline, and model remain absent; issue #411 owns reference-evidence remediation.
 
-Issue #403 / PR #412; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; reviewed candidate head `67216dc9952427a9c511eb871c12a87f94171bea`; merge/tag pending.
+Issue #403 / PR #412 shipped at merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; base `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; reviewed candidate head `67216dc9952427a9c511eb871c12a87f94171bea`; verified annotated tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`. A fresh clean checkout passes all 181 tests, compilation, dependency health, 58 tracked-JSON parses, 95 local-link checks, exact manifest outputs, and the authoritative 340,283-byte wheel / SHA-256 `ad506e60ac7480c14382d4d5d0e53468ecb11a39801feae350a0ee397d068b74`.
 
 ## v0.19.0-owner-waiver-reveal-readiness - verified - 2026-07-16
 

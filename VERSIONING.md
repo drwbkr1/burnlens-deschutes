@@ -123,10 +123,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; owner-waiver reveal readiness is shipped; reviewer two is waived; candidate single-reviewer reconciliation decides remediation and defers the dataset |
-| Current repository baseline | Latest shipped: `v0.19.0-owner-waiver-reveal-readiness` at `0ab2b948a4d74c770f6d23042a1d9725642eac42` via issue #407 / PR #408 |
-| Active analytical candidate | BurnLens `0.20.0` / issue #403: 6 burned candidate units, 0 background units, 50 ignored, no Tepee candidates; decision `REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER`. Issue #411 owns the next source/reference remediation. |
-| Baseline verification | Annotated tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec` remotely dereferences to merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; fresh remote-main 176 tests, three-output manifest, canonical wheel, JSON/privacy/link/Node, isolated install, and remote-tag gates pass |
+| Current phase posture | Phase Two active; reduced-validation single-reviewer reconciliation is shipped; reviewer two is waived; remediation is selected and the dataset is deferred |
+| Current repository baseline | Latest shipped: `v0.20.0-single-reviewer-reconciliation` at `4918024dfb83270dbbd83a5880c455cc3c01771c` via issue #403 / PR #412 |
+| Active analytical decision | BurnLens `0.20.0`: 6 burned candidate units, 0 background units, 50 ignored, no Tepee candidates; decision `REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER`. Issue #411 owns the next source/reference remediation. |
+| Baseline verification | Annotated tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b` remotely dereferences to merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; fresh merged-main 181 tests, three-output manifest, 58 JSON parses, 95 link checks, canonical wheel, isolated install, and remote-tag gates pass |
 | Data/model/run/map/application status | Exact provider packages, returned-review bytes, receipts, owner-waiver authorization, and unit-level reconciliation remain in ignored local storage. Run `BL-2026-07-16-single-reviewer-reconciliation-qa-r001` exposes aggregate-only candidate evidence. The reveal is open; the preflight sequence exception is disclosed. Shipped local application `label-review-handoff-workbench-v0.1.0` is not deployed. No second reviewer, inter-rater validation, consensus, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 

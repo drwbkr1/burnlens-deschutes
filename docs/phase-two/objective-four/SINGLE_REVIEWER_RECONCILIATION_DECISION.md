@@ -41,6 +41,9 @@ This is recorded as a disclosed sequence exception, not a passing pre-access gat
 
 - Issue: #403
 - Pull request: #412
+- Merge: `4918024dfb83270dbbd83a5880c455cc3c01771c`
+- Verified tag: `v0.20.0-single-reviewer-reconciliation`; object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`
+- Lifecycle synchronization issue: #413
 - Next remediation issue: #411
 - Base: `1c5cadcb6dca9664979ad87a3503f06aeea5fd0f`
 - Source: `fda69a60b0a5e350bfe10e7388571d7c1c103735`
