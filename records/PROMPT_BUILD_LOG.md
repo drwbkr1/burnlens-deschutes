@@ -165,7 +165,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T04-REM | `records/prompt-build-log/2026-07-16-p2o4-t04-rem.md` | issue #371 / PR #372; shipped at verified `v0.12.1-topology-stable-label-transfer` | Removes transient current link counts from public run identity while preserving fail-closed one/exact-two-link verification; analytical output unchanged. |
 | P2O4-T04-REM-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t04-rem-sync.md` | issue #373 / PR #374 | Synchronizes reviewed head, merge, fresh-main gates, canonical wheel, remote annotated tag, and resumed adjudication next checkpoint. |
 | P2O4-T05 | `records/prompt-build-log/2026-07-16-p2o4-t05.md` | issue #375 / PR #376; shipped at verified `v0.13.0-label-review-readiness` | Rebuilds all three proposals from exact sources and creates a 56-unit proposal-blinded review packet, separate reveal/templates, and independent integrity QA. Completed independent responses/adjudications remain zero; dataset deferred. |
-| P2O4-T05-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t05-sync.md` | issue #377; lifecycle synchronization in progress | Synchronizes reviewed head, merge, fresh-main gates, canonical source wheel, remote annotated tag, and actual independent-response next checkpoint without changing analytical outputs. |
+| P2O4-T05-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t05-sync.md` | issue #377 / PR #378; lifecycle synchronization in review | Synchronizes reviewed head, merge, fresh-main gates, canonical source wheel, remote annotated tag, and actual independent-response next checkpoint without changing analytical outputs. |
 
 ## Acceptance and remediation triggers
 

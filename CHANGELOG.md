@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Raise BurnLens to `0.13.0` and expose 21 package entry points, including packet generation and integrity QA.
 - Record zero completed independent responses and zero adjudications. Accept the review instrument only; create no accepted label set, dataset, split, baseline, model, accuracy estimate, application, field claim, official claim, or operational claim.
 
-Issue #375 / PR #376 shipped at merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; reviewed head `119b1e98f7928bb1c2f09d577bfa270d903766c7`; generator/verifier source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; verified tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; lifecycle sync issue #377.
+Issue #375 / PR #376 shipped at merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; reviewed head `119b1e98f7928bb1c2f09d577bfa270d903766c7`; generator/verifier source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; verified tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; lifecycle sync issue #377 / PR #378.
 
 ## v0.12.1-topology-stable-label-transfer - 2026-07-16
 

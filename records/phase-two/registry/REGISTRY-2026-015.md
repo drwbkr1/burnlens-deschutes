@@ -1,6 +1,6 @@
 # REGISTRY-2026-015 - Label-Review Readiness Evidence
 
-**Checkpoint:** Issue #375 / PR #376 / merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; reviewed head `119b1e98f7928bb1c2f09d577bfa270d903766c7`; source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; verified tag `v0.13.0-label-review-readiness`, object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; lifecycle sync issue #377 / PR pending
+**Checkpoint:** Issue #375 / PR #376 / merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; reviewed head `119b1e98f7928bb1c2f09d577bfa270d903766c7`; source `a11ae5123728d3823ba67d22d49250d4affb18f6`; candidate artifacts `f15cc0608e2093daf0ca339c17145d50933cc743`; verified tag `v0.13.0-label-review-readiness`, object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; lifecycle sync issue #377 / PR #378
 
 | Artifact | Class | Version/state | Committed provider bytes |
 |---|---|---|---:|
