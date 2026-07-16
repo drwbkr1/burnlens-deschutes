@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens owner-waiver reveal readiness</title><style>
+:root{--ink:#17332e;--teal:#007c71;--paper:#f5f1e8;--card:#fffdf8;--line:#d7cebe;--warn:#f15a2a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+header{background:#0e302a;color:white;padding:2.5rem max(5vw,1.25rem)}main{max-width:1120px;margin:auto;padding:2rem 1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.3rem;margin-bottom:1rem}
+.metric{font-size:2rem;color:var(--teal)}code{overflow-wrap:anywhere}.decision{color:var(--warn);font-weight:700}
+</style></head><body><header><p>BurnLens / Phase Two / Objective Four</p><h1>Owner-waiver reveal readiness</h1>
+<p>One exact independent response / reviewer two waived / content withheld / later reconciliation only</p></header><main>
+<div class="grid"><section><div class="metric">1</div><p>returned independent response</p></section>
+<section><div class="metric">0</div><p>second reviewers</p></section><section><div class="metric">0</div><p>reveal actions in this run</p></section>
+<section><div class="metric">0</div><p>accepted labels</p></section></div>
+<section><h2>Exact pre-reveal bindings</h2><p>Response SHA-256: <code>485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9</code></p>
+<p>Receipt SHA-256: <code>67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835</code></p>
+<p>Packet SHA-256: <code>77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c</code></p>
+<p>Reveal SHA-256: <code>27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af</code></p></section>
+<section><h2>Fail-closed checks</h2><ul><li><code>exact_preserved_response</code>: pass</li><li><code>exact_first_response_receipt</code>: pass</li><li><code>receipt_response_binding</code>: pass</li><li><code>receipt_packet_binding</code>: pass</li><li><code>returned_response_not_fixture</code>: pass</li><li><code>exact_review_packet</code>: pass</li><li><code>exact_unopened_reveal</code>: pass</li><li><code>owner_waiver_declared</code>: pass</li><li><code>reduced_validation_acknowledged</code>: pass</li><li><code>ignored_untracked_authorization_storage</code>: pass</li><li><code>no_overwrite_authorization_promotion</code>: pass</li></ul></section>
+<section><h2>What this proves</h2><ul><li>The exact preserved first response and exact private receipt still match their shipped bindings.</li><li>The exact packet and proposal-reveal artifact still match the immutable review inventory.</li><li>The owner explicitly waived reviewer two and acknowledged the permanently reduced single-reviewer validation route.</li><li>A later private deterministic reconciliation run under issue #403 may now open the exact reveal.</li></ul><h2>What remains absent</h2><ul><li>The waiver does not create a second reviewer, inter-rater validation, consensus, or adjudication.</li><li>Authorization does not accept any label, create a dataset or split, train a baseline or model, or establish accuracy.</li><li>Software does not verify reviewer identity, expertise, independence, field validity, official status, endorsement, emergency readiness, or operational fitness.</li></ul>
+<p class="decision">PASS_OWNER_WAIVER_REVEAL_READINESS_CONTENT_WITHHELD</p></section>
+<section><h2>Traceability</h2><p>Run <code>BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001</code><br>Git <code>bc7542bcdeccadaf40d63b521d7fd5a7fc094c81</code><br>
+Software 0.19.0 / issue #407 / reconciliation #403<br>
+Dataset / split / baseline / model: none / none / none / none</p></section>
+<section><strong>Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</strong></section></main></body></html>
