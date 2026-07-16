@@ -123,11 +123,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; owner-waiver reveal readiness is shipped; reviewer two is waived; private single-reviewer reconciliation is next; dataset deferred |
+| Current phase posture | Phase Two active; owner-waiver reveal readiness is shipped; reviewer two is waived; candidate single-reviewer reconciliation decides remediation and defers the dataset |
 | Current repository baseline | Latest shipped: `v0.19.0-owner-waiver-reveal-readiness` at `0ab2b948a4d74c770f6d23042a1d9725642eac42` via issue #407 / PR #408 |
-| Active analytical candidate | Issue #403: open the exact reveal only inside deterministic private single-reviewer reconciliation, retain weak/conflicting evidence as ignored, and decide dataset candidacy/remediation/baseline-only/stop. Inter-rater validation and adjudication do not exist. |
+| Active analytical candidate | BurnLens `0.20.0` / issue #403: 6 burned candidate units, 0 background units, 50 ignored, no Tepee candidates; decision `REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER`. Issue #411 owns the next source/reference remediation. |
 | Baseline verification | Annotated tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec` remotely dereferences to merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; fresh remote-main 176 tests, three-output manifest, canonical wheel, JSON/privacy/link/Node, isolated install, and remote-tag gates pass |
-| Data/model/run/map/application status | Exact provider packages, exact returned-review bytes, private receipts, fixture bytes, and the owner-waiver authorization remain in ignored local storage. Candidate run `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001` exposes content-withheld authorization evidence without opening the reveal or adding a second response. Shipped local application version `label-review-handoff-workbench-v0.1.0` is not deployed. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
+| Data/model/run/map/application status | Exact provider packages, returned-review bytes, receipts, owner-waiver authorization, and unit-level reconciliation remain in ignored local storage. Run `BL-2026-07-16-single-reviewer-reconciliation-qa-r001` exposes aggregate-only candidate evidence. The reveal is open; the preflight sequence exception is disclosed. Shipped local application `label-review-handoff-workbench-v0.1.0` is not deployed. No second reviewer, inter-rater validation, consensus, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff

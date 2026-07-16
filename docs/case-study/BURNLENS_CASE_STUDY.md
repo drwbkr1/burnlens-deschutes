@@ -234,7 +234,7 @@ The desktop 1440 by 1000 and mobile 390 by 844 views have no horizontal overflow
 
 The exported labels are deliberately balanced software data: 14 each burned, background, uncertain, and unusable. Its receipt says `software-browser-fixture`, qualifying-human false, and reveal prohibited. That distinction is more important than the green checks: one browser acceptance run proves the interface contract, not cross-browser conformance, reviewer qualification, label accuracy, or scientific validity.
 
-One actual returned response arrived after this run and is preserved and operator-locked under issue #384. Its exact bytes and notes remain private, it is not folded into the browser fixture evidence, and the reveal remains unopened. A second qualifying response and later adjudication are still required.
+One actual returned response arrived after this run and was preserved and operator-locked under issue #384. Its exact bytes and notes remain private and it is not folded into the browser fixture evidence. At that checkpoint the reveal remained unopened and the original protocol still required a second response. The later owner waiver superseded that gate without fabricating reviewer two; issue #403 subsequently opened and reconciled the reveal under reduced validation.
 
 ## Proving custody without publishing the first review
 
@@ -299,11 +299,13 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Latest dual-lock custody-readiness run: `BL-2026-07-16-label-review-dual-lock-readiness-qa-r001`
 - Latest atomic response-intake QA run: `BL-2026-07-16-label-review-response-atomic-intake-qa-r002`
 - Latest owner-waiver reveal-readiness QA run: `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001`
+- Latest single-reviewer reconciliation QA run: `BL-2026-07-16-single-reviewer-reconciliation-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
 - Latest tool: BurnLens `0.18.0`; issue #402 / PR #404; reviewed head `70a0d25042fdef09e2ecfdd118bc761b08eebfd5`; merge `62a8e8473613938990c40c37f91596470638f036`; source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; tag object `572c8cea4314d89717e3c4204078704e799a5fee`
 - Latest tool: BurnLens `0.19.0`; issue #407 / PR #408; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`
+- Candidate tool: BurnLens `0.20.0`; issue #403; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; private reconciliation SHA-256 `a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d`; PR/merge/tag pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
@@ -323,15 +325,16 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Dual-lock custody readiness: shipped `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-019`; legacy first pair plus current software fixture; returned-response origins 1; fixture origins 1; no reveal or adjudication
 - Atomic response-intake readiness: shipped `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-020`; fixture source/preserved bytes match; current v0.4.0 receipt; human responses added 0; reveal actions 0
 - Owner-waiver reveal readiness: shipped `LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-021`; one exact returned response; reviewer two waived and absent; reveal actions 0; issue-#403 reconciliation authorized
+- Single-reviewer reconciliation: candidate `LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001`; 56 units reconciled; 6 burned candidates, 0 background candidates, 50 ignored; Tepee 0 accepted; aggregate-only public evidence; decision remediation / dataset deferred
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.18.0-atomic-response-intake-readiness` at merge `62a8e8473613938990c40c37f91596470638f036`; annotated tag object `572c8cea4314d89717e3c4204078704e799a5fee`
-- Latest checkpoint: 171 tests, exact historical first-lock and dual-lock reconstruction, privacy/semantic/render review, 54 tracked JSON files, 122 links, exact three-output manifest, canonical 314,089-byte fixed-epoch packaging, isolated import with 29 entry points, fresh remote-main clone, and remote-tag verification pass
-- Active next checkpoint: issue #403 reconciles the one exact independent response conservatively without claiming inter-rater validation or adjudication
+- Latest shipped repository baseline: `v0.19.0-owner-waiver-reveal-readiness` at merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; annotated tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`
+- Candidate checkpoint: BurnLens `0.20.0`; 181 tests, exact input immutability, private atomic/no-overwrite reconciliation, aggregate privacy/semantic checks, evidence-card and installed-Chrome rendering, and exact three-output manifest pass; package, PR, fresh-main, and tag gates remain pending
+- Active next checkpoint: issue #411 remediates independently traceable burned/background reference evidence across all three events before any dataset or baseline
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
