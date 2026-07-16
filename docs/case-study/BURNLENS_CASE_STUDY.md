@@ -303,7 +303,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
 - Latest tool: BurnLens `0.18.0`; issue #402 / PR #404; reviewed head `70a0d25042fdef09e2ecfdd118bc761b08eebfd5`; merge `62a8e8473613938990c40c37f91596470638f036`; source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; tag object `572c8cea4314d89717e3c4204078704e799a5fee`
-- Current candidate tool: BurnLens `0.19.0`; issue #407; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; PR/merge/tag pending
+- Latest tool: BurnLens `0.19.0`; issue #407 / PR #408; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
@@ -322,7 +322,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - First returned-response lock: shipped `LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-018`; one private response and receipt ignored; public content withheld; two responses required before adjudication
 - Dual-lock custody readiness: shipped `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-019`; legacy first pair plus current software fixture; returned-response origins 1; fixture origins 1; no reveal or adjudication
 - Atomic response-intake readiness: shipped `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-020`; fixture source/preserved bytes match; current v0.4.0 receipt; human responses added 0; reveal actions 0
-- Owner-waiver reveal readiness: candidate `LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-021`; one exact returned response; reviewer two waived and absent; reveal actions 0; later issue-#403 reconciliation authorized
+- Owner-waiver reveal readiness: shipped `LABEL-REVIEW-OWNER-WAIVER-REVEAL-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-021`; one exact returned response; reviewer two waived and absent; reveal actions 0; issue-#403 reconciliation authorized
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -331,7 +331,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.18.0-atomic-response-intake-readiness` at merge `62a8e8473613938990c40c37f91596470638f036`; annotated tag object `572c8cea4314d89717e3c4204078704e799a5fee`
 - Latest checkpoint: 171 tests, exact historical first-lock and dual-lock reconstruction, privacy/semantic/render review, 54 tracked JSON files, 122 links, exact three-output manifest, canonical 314,089-byte fixed-epoch packaging, isolated import with 29 entry points, fresh remote-main clone, and remote-tag verification pass
-- Active next checkpoint: issue #407 ships owner-waiver reveal readiness; issue #403 then reconciles the one exact independent response conservatively without claiming inter-rater validation or adjudication
+- Active next checkpoint: issue #403 reconciles the one exact independent response conservatively without claiming inter-rater validation or adjudication
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

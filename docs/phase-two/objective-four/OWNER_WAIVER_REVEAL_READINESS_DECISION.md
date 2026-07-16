@@ -26,6 +26,11 @@ The authorization tool hashes these files and validates the receipt bindings wit
 - Base: `25b354b2e18c5e59857d6c8c153274c864eeea42`
 - Source: `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`
 - Public artifacts: `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`
+- Pull request: #408
+- Reviewed head: `bb89a7bd36b60379f4c7680ae28837dd51111911`
+- Squash merge: `0ab2b948a4d74c770f6d23042a1d9725642eac42`
+- Verified annotated tag: `v0.19.0-owner-waiver-reveal-readiness`
+- Tag object: `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`
 - BurnLens: `0.19.0`
 - Authorization version: `label-review-owner-waiver-reveal-authorization-v0.1.0`
 - Authorization run: `BL-2026-07-16-owner-waiver-reveal-authorization-r001`
@@ -37,6 +42,8 @@ The authorization tool hashes these files and validates the receipt bindings wit
 - Target: `target-burn-scar-v0.2.0`
 - Label schema: `burn-scar-five-state-schema-v0.1.0`
 - Dataset / split / baseline / model: none
+
+Fresh merged-main verification passed 176 tests, compileall, dependency health, Node syntax, all 56 tracked JSON documents, all 125 internal Markdown links, exact public-output inventory verification, and canonical byte-identical wheel reproduction.
 
 ## Next gate
 

@@ -123,10 +123,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; atomic response intake is shipped; owner-waiver reveal readiness is the current candidate; reviewer two is waived; response/reveal content withheld; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.18.0-atomic-response-intake-readiness` at `62a8e8473613938990c40c37f91596470638f036` via issue #402 / PR #404 |
-| Active analytical candidate | Issue #407: ship BurnLens `0.19.0` exact owner-waiver reveal readiness. Parent #403 then opens the exact reveal only inside deterministic private single-reviewer reconciliation. Inter-rater validation and adjudication will not exist under this route. |
-| Baseline verification | Annotated tag object `572c8cea4314d89717e3c4204078704e799a5fee` remotely dereferences to merge `62a8e8473613938990c40c37f91596470638f036`; fresh remote-main 171 tests, exact historical first-lock/dual-lock reconstruction, three-output manifest, canonical wheel, JSON/privacy/link/Node, isolated install, and remote-tag gates pass |
+| Current phase posture | Phase Two active; owner-waiver reveal readiness is shipped; reviewer two is waived; private single-reviewer reconciliation is next; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.19.0-owner-waiver-reveal-readiness` at `0ab2b948a4d74c770f6d23042a1d9725642eac42` via issue #407 / PR #408 |
+| Active analytical candidate | Issue #403: open the exact reveal only inside deterministic private single-reviewer reconciliation, retain weak/conflicting evidence as ignored, and decide dataset candidacy/remediation/baseline-only/stop. Inter-rater validation and adjudication do not exist. |
+| Baseline verification | Annotated tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec` remotely dereferences to merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; fresh remote-main 176 tests, three-output manifest, canonical wheel, JSON/privacy/link/Node, isolated install, and remote-tag gates pass |
 | Data/model/run/map/application status | Exact provider packages, exact returned-review bytes, private receipts, fixture bytes, and the owner-waiver authorization remain in ignored local storage. Candidate run `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001` exposes content-withheld authorization evidence without opening the reveal or adding a second response. Shipped local application version `label-review-handoff-workbench-v0.1.0` is not deployed. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
