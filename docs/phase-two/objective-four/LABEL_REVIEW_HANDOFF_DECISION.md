@@ -37,7 +37,9 @@ These sources informed the implementation. BurnLens does not claim formal access
 
 - Issue: #379
 - Branch: `codex/p2o4-t06-reviewer-handoff`
-- Pull request: pending
+- Pull request: #380
+- Reviewed head: `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`
+- Merge: `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`
 - Base: `12dc92e0c78433a8f306ab221bdfa890ca55331a`
 - Software: BurnLens `0.14.0`
 - Generator/verifier/lock source: `75102d79e6e184a1ecac941900fd74938cdaa972`
@@ -51,7 +53,7 @@ These sources informed the implementation. BurnLens does not claim formal access
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Dataset / split / baseline / model: none
 - Exact inventory: `MANIFEST-2026-016`
-- Candidate tag: `v0.14.0-offline-reviewer-handoff`; not yet created
+- Verified tag: `v0.14.0-offline-reviewer-handoff`; object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`
 
 ## Next gate
 

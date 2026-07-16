@@ -123,11 +123,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA and proposal-blinded review readiness are shipped; isolated offline reviewer handoff is the active candidate; dataset deferred |
-| Current repository baseline | Latest shipped: `v0.13.0-label-review-readiness` at `67dc6023859ba3ec9ce6bb375ae001ff962639c6` via issue #375 / PR #376 |
-| Active analytical candidate | BurnLens `0.14.0`; issue #379; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; isolated offline workbench, independent handoff QA, and response lock; PR/merge/tag pending |
-| Baseline verification | Annotated tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453` remotely dereferences to PR #376 merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; fresh merged-main tests, canonical source wheel, exact 18-output reconstruction, and remote-tag gates pass |
-| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage. The candidate adds local application version `label-review-handoff-workbench-v0.1.0` for isolated offline review, not a deployed public application. No independently accepted labels, dataset, split, baseline, model, analytical inference result, or deployment exists |
+| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, and isolated offline reviewer handoff are shipped; dataset deferred |
+| Current repository baseline | Latest shipped: `v0.14.0-offline-reviewer-handoff` at `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4` via issue #379 / PR #380 |
+| Active analytical candidate | None. The next evidence checkpoint is a qualifying independent completed response returned from the isolated archive and locked before reveal. |
+| Baseline verification | Annotated tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a` remotely dereferences to PR #380 merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; fresh merged-main tests, canonical source wheel, exact seven-output plus archive reconstruction, LF/raw/link, and remote-tag gates pass |
+| Data/model/run/map/application status | Exact provider packages remain in ignored local raw storage. Shipped local application version `label-review-handoff-workbench-v0.1.0` supports isolated offline review, not a deployed public application. No independently accepted labels, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
