@@ -185,9 +185,9 @@ def inspect_clip(path: Path, contract: MtbsReferenceContract) -> dict[str, Any]:
             observed_transform = tuple(float(value) for value in source.transform[:6])
             if any(abs(a - b) > 1e-6 for a, b in zip(observed_transform, expected_transform)):
                 raise MtbsReferenceError(f"MTBS clip transform mismatch: {contract.filename}")
-            # Rasterio 1.4.4's two-dimensional band read mutates ndarray.shape,
-            # which NumPy 2.5 deprecates.  A pre-sized three-dimensional output
-            # follows Rasterio's dataset-read path and avoids that library warning.
+            # Rasterio's two-dimensional band-read path currently mutates
+            # ndarray.shape, which NumPy 2.5 deprecates. A pre-sized
+            # three-dimensional output avoids that library warning.
             values = source.read(
                 out=np.empty((1, source.height, source.width), dtype=np.uint8)
             )[0]
