@@ -12,4 +12,6 @@ The browser review also earned its keep. The first HTML used grammatically affir
 
 The fresh-clone gate found a second presentation-layer reliability defect before merge. The repository already forced deterministic evidence JSON/HTML to LF, but the rule did not cover the new nested cross-event directory. Windows therefore checked four correct blobs out as CRLF and broke byte-exact reconstruction. A narrow `.gitattributes` rule and regression test now make that contract explicit.
 
+The package gate then found the same class of defect in a less visible place. The fresh wheel installed correctly, but seven new Python source entries differed from the earlier wheel only by LF versus CRLF and the archive retained build-time ZIP timestamps. BurnLens now pins package-source and build-metadata checkout bytes to LF and treats a fixed `SOURCE_DATE_EPOCH` as part of the authoritative wheel build contract.
+
 The checkpoint therefore advances the portfolio narrative without skipping the hard part: BurnLens can transfer a transparent uncertainty-aware proposal across whole event groups, but it still cannot responsibly call those proposals a dataset. Independent label-fitness and adjudication evidence is the next meaningful gate.

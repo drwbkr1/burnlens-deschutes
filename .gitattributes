@@ -1,3 +1,9 @@
+# Package source and build metadata must have checkout-stable bytes so a fixed
+# SOURCE_DATE_EPOCH can produce the same wheel from a fresh Windows clone.
+*.py text eol=lf
+pyproject.toml text eol=lf
+LICENSE text eol=lf
+
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf
 samples/target/phase-two/*.html text eol=lf
