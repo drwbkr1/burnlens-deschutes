@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; proposal QA passes and two exact event pairs pass source fitness with exclusions; dataset not created** | P2O4-T03 ships at verified `v0.11.0-cross-event-source-fitness-baseline`: four exact archives are registered, McKay passes, and Tepee exclusions bind. Cross-event labels, independent human review, a split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; cross-event proposal and separate QA pass; dataset not created** | P2O4-T04 / issue #367 is the verified BurnLens `0.12.0` candidate: all 63,930 Tepee/McKay state and target pixels reproduce with zero mismatch while Tepee exclusions bind. Independent human review, a split, baselines, and model-readiness remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -15,7 +15,7 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | `5bfa1527410e98d8034b35ad68f6c50d5a1ec628` via issue #357 / PR #358 and verified annotated `v0.10.0-cross-event-feasibility-baseline`; tag object `dbfda10ca50c39d8e8924096e740e71643e1f133` |
+| Latest repository evidence baseline | Shipped `v0.11.0-cross-event-source-fitness-baseline` at `01c3aa4abeb89e3f15771571276a25d33e44d390`; verified BurnLens `0.12.0` transfer candidate source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; merge/tag pending |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
 | Optical-pair protocol baseline | BurnLens `0.7.0`; issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; verified tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`; exact same-orbit Sentinel-2A pair; 2,254,805,631 local/ignored bytes; `burn-scar-label-protocol-v0.1.0` design only; label pixels, dataset, baseline, and model remain absent |
@@ -23,6 +23,7 @@
 | Label-proposal baseline | BurnLens `0.9.0`; issue #353 / PR #354; merge `55c70d076c97f5d2727bdd0d91f39be0f9bac1d3`; verified tag object `5a95b4d39710fc81a1193a83ad41a766cba61834`; source `814bb5402c04708f1515135683eac1304bf075c1`; `burn-scar-five-state-schema-v0.1.0`; five native-grid states; 33.4144% explicit ignore; separate all-pixel software QA and 120-sample audit pass; dataset and independent human validation absent |
 | Cross-event feasibility baseline | BurnLens `0.10.0`; issue #357 / PR #358; merge `5bfa1527410e98d8034b35ad68f6c50d5a1ec628`; tag object `dbfda10ca50c39d8e8924096e740e71643e1f133`; generator/assessor `ea3e164d09872825a0fadc64b9492e30c85c83c8`; Tepee and McKay selected, Milli tile-seam exclusion; whole groups frozen before acquisition; provider imagery, dataset, and split absent |
 | Cross-event source-fitness baseline | BurnLens `0.11.0`; issue #361 / PR #362 and trace-remediation issue #363 / PR #364; merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; verified tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61`; source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`; four exact archives / 4,551,170,756 ignored local bytes; McKay 100% eligible and 3/3 registration pass; Tepee 86.5217% eligible with visible quality/window exclusions |
+| Cross-event label-transfer candidate | BurnLens `0.12.0`; issue #367; source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; exact Tepee/McKay proposals; 9,760 candidate / 54,170 ignored; separate QA reproduces 63,930 pixels with zero mismatch; dataset and independent human validation absent |
 | Authenticated source baseline | BurnLens `0.4.0`; issue #329 / PR #330; generator source `9a7e614fbfbbcd4c5a6795417121cafb82ae5dcc`; annotated tag object `98228058b232bc0838eb976f982ef4775b711776`; 56 post-merge tests passing |
 | Objective baseline tag | `v0.0.8-execution-goal-baseline`, verified to resolve to `22a8d88435cb8d5b900a398b7482c3b7277d2ee6` |
 | Source-metadata baseline | `v0.1.0-source-metadata-baseline`, verified to resolve to `6abe87bba486e3fe49b6c06178b454335663cb73` via PR #310 |
@@ -33,10 +34,10 @@
 | Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007`, `ACCESS-2026-008`, and `ACCESS-2026-009` record successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
 | Application version | Not created |
 | AOI version | `aoi-darlene3-model-v0.2.0`, accepted and shipped final modeling AOI; 12 km by 9 km / 108 km2 in EPSG:32610; lower priority than official sources |
-| Source records | `SOURCE-2026-001` through `SOURCE-2026-012`; the newest record freezes and fulfills the four exact OData archive contracts; native bytes remain local/ignored |
+| Source records | `SOURCE-2026-001` through `SOURCE-2026-013`; the newest record freezes two exact public MTBS annual-reference clips; all native provider bytes remain local/ignored |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | BurnLens `0.11.0` is the latest shipped baseline with exact cross-event acquisition, registered-package verification, native-pixel quality, pair-local registration, explicit protocol/schema trace, and deterministic JSON/HTML/PNG rendering |
+| Evidence tooling | BurnLens `0.12.0` candidate adds exact MTBS registration, cross-event five-state/binary rasters, transparent fallback diagnostics, and separately invoked all-source/all-pixel QA |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -52,11 +53,13 @@
 | Cross-event report | `CROSS-EVENT-FITNESS-2026-001`; run `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`; decision `SELECT_CROSS_EVENT_ACQUISITION_CANDIDATES`; two groups selected, one tile-seam exclusion; zero provider imagery bytes; no partition |
 | Cross-event raw package | `burnlens-cross-event-optical-package-v0.1.0`; acquisition `BL-2026-07-16-cross-event-optical-intake-r005`; four exact archives / 4,551,170,756 ignored local bytes; zero raw bytes committed; all provider archives single-linked |
 | Cross-event source-fitness report | `CROSS-EVENT-SOURCE-FITNESS-2026-001`; run `BL-2026-07-16-cross-event-source-fitness-r006`; decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS`; McKay passes and Tepee exclusions bind; protocol/schema trace is explicit; exact shipped hashes in `MANIFEST-2026-012` |
+| Cross-event label-transfer report | `CROSS-EVENT-LABEL-TRANSFER-2026-001`; run `BL-2026-07-16-cross-event-label-transfer-r003`; 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, 19,720 review-needed; exact candidate hashes in `MANIFEST-2026-013` |
+| Cross-event transfer QA | `CROSS-EVENT-LABEL-TRANSFER-QA-2026-001`; run `BL-2026-07-16-cross-event-label-transfer-qa-r003`; 63,930 state/target pixels, zero mismatch, 45 deterministic samples; human inter-rater validation absent |
 | Dataset version | Not created |
-| Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable one-event proposal evidence; not accepted ground truth or a dataset |
+| Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Latest shipped source runs are acquisition `BL-2026-07-16-cross-event-optical-intake-r005` and source fitness `BL-2026-07-16-cross-event-source-fitness-r006`; no accepted dataset, split, baseline, model, or inference output |
+| Run IDs | Latest candidate runs are MTBS registration `BL-2026-07-16-mtbs-cross-event-reference-r003`, proposal `BL-2026-07-16-cross-event-label-transfer-r003`, and QA `BL-2026-07-16-cross-event-label-transfer-qa-r003`; no accepted dataset, split, baseline, model, or inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static evidence, and two derived native-grid proposal GeoTIFFs; no accepted dataset, model output, or BurnLens fire perimeter |
 | Repository-owned public application | Not created |
 | Public performance claim | None authorized or supported |
@@ -67,7 +70,7 @@ P2O4-T02 / issue #357 / PR #358 accepts metadata-feasible Tepee/McKay acquisitio
 
 ## Current checkpoint
 
-P2O4-T03 is shipped at verified `v0.11.0-cross-event-source-fitness-baseline`. The next bounded checkpoint is cross-event five-state proposal transfer plus separate software QA on the exact Tepee/McKay pixels, with all Tepee exclusions binding and no split creation.
+P2O4-T04 / issue #367 is the verified BurnLens `0.12.0` candidate. The next bounded checkpoint is independent label-fitness/adjudication evidence and a dataset-candidacy or deferral decision; no split creation is authorized yet.
 
 ## Boundaries carried forward
 
@@ -75,4 +78,4 @@ P2O4-T03 is shipped at verified `v0.11.0-cross-event-source-fitness-baseline`. T
 
 All BurnLens work and future public surfaces must originate from `drwbkr1/burnlens-deschutes`; the separate site repository is out of scope.
 
-No application or deployed public companion site exists in this repository yet. The repository README, living case study, and static semantic/visual evidence reports, including the proposal/QA and cross-event feasibility render, are the presentation surfaces for this checkpoint.
+No application or deployed public companion site exists in this repository yet. The repository README, living case study, and static semantic/visual evidence reports, including the cross-event proposal/QA, are the presentation surfaces for this checkpoint.

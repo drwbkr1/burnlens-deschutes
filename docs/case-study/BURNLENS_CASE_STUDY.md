@@ -168,6 +168,22 @@ The real storage environment also stays visible. OneDrive creates a second link 
 
 Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross-event five-state proposal and separate-QA experiment. It does not create labels, a dataset, a split, a baseline, a model, an accuracy claim, independent human validation, or field evidence.
 
+## Cross-event proposal transfer: differences stay visible
+
+Issue #367 applies the same five-state contract to Tepee and McKay using their four exact Sentinel archives and two exact public MTBS annual-reference clips. MTBS supports or complicates the proposal as analyst-interpreted remotely sensed evidence; it never becomes automatic truth.
+
+![BurnLens cross-event five-state transfer](../../samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-2026-001.png)
+
+The events do not collapse into a tidy common pattern. Tepee retains 16,025 excluded and 16,322 review-needed pixels, with only 586 candidates. McKay contains 9,174 candidates and zero excluded pixels because its source-fitness gate passed everywhere; BurnLens records the absent state instead of manufacturing one. Aggregate output preserves all five states: 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, and 19,720 review-needed.
+
+The inherited fixed near-zero stability rule finds no primary stable McKay pixels. The owner-authorized fallback admits only the lowest 15% normalized non-burn tail outside the expanded boundary with MTBS 0, caps the score at 6.0, and requires seven-of-nine coherence. It recovers 55 McKay background proposals. The report exposes threshold `5.842086` and calls it event-relative rather than calibrated accuracy.
+
+![BurnLens separate cross-event QA](../../samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-QA-2026-001.png)
+
+A separately invoked implementation that does not import the proposal classifier reopens all six source assets and independently reproduces all 63,930 state and target pixels. State and target mismatch are both zero, and 45 deterministic audits agree. Live-browser review also catches and fixes potentially misleading claim grammar before the final `r003` artifacts.
+
+Decision `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` is deliberately narrower than dataset acceptance. Software agreement proves reproducibility of the rules, not independent human label quality, field validity, universal calibration, or model readiness.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -181,8 +197,11 @@ Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross
 - Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Latest cross-event acquisition run: `BL-2026-07-16-cross-event-optical-intake-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
+- Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
+- Latest cross-event proposal run: `BL-2026-07-16-cross-event-label-transfer-r003`
+- Latest cross-event proposal-QA run: `BL-2026-07-16-cross-event-label-transfer-qa-r003`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
-- Tool: BurnLens `0.11.0` is the shipped cross-event source-fitness baseline; merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; generator/assessor source `cf1d9101e2760bf7d779b6fae68e605bb8809c1c`
+- Tool: BurnLens `0.12.0` is the verified cross-event transfer candidate; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; merge/tag pending
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
 - Target evidence: corrected `TARGET-DECISION-2026-002`; JSON `ac67f6c34a934d639c215ee98b181f1114b5624acafb85f65b1e2f3e804ce4d4`; HTML `0c1279e5e1047ff251dcd65f068d3d45bf2c6982e6a308972205e9d0a76879d4`; PNG `36f221aa6393ad07f14d4d7bb54b1f171ef0636ebb5640a11ab02ab9c5a9b5b0`
@@ -193,15 +212,16 @@ Decision `ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS` clears only a cross
 - Label QA: `separate-label-proposal-qa-v0.1.0`; `LABEL-QA-2026-001`; zero state/target mismatch across 270,000 pixels; 120/120 deterministic audit agreement; human inter-rater validation absent
 - Cross-event evidence: `CROSS-EVENT-SOURCE-2026-001` and `CROSS-EVENT-FITNESS-2026-001`; exact hashes in `MANIFEST-2026-011`; Tepee/McKay selected, Milli excluded; no imagery downloaded
 - Cross-event source fitness: `CROSS-EVENT-SOURCE-FITNESS-2026-001`; exact shipped hashes in `MANIFEST-2026-012`; McKay passes, Tepee exclusions bind; label protocol and implemented five-state schema are explicit; manifest metadata-link exception visible; zero provider bytes committed
+- Cross-event proposal/QA: `CROSS-EVENT-LABEL-TRANSFER-2026-001` and `CROSS-EVENT-LABEL-TRANSFER-QA-2026-001`; exact candidate hashes in `MANIFEST-2026-013`; zero mismatch across 63,930 pixels; human validation absent
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest shipped repository baseline: `v0.11.0-cross-event-source-fitness-baseline` at merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; annotated tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61`
-- Latest shipped analytical checkpoint: issue #361 / PR #362 plus trace-remediation issue #363 / PR #364; 129 merged-main tests, exact manifest/semantic/render gates, original-resolution review, live browser review, packaging, and remote tag verification pass
-- Active next checkpoint: transfer the five-state proposal to exact Tepee/McKay pixels and run separate software QA with Tepee exclusions binding before any partition work
+- Latest shipped repository baseline: `v0.11.0-cross-event-source-fitness-baseline` at merge `01c3aa4abeb89e3f15771571276a25d33e44d390`; annotated tag object `eca7ba5362518684f2a1e25d5abdbc1707e24a61`; BurnLens `0.12.0` transfer candidate pending merge/tag
+- Latest candidate analytical checkpoint: issue #367; 136 tests, exact manifest/semantic/render gates, original-resolution review, live browser review, packaging, and isolated import pass
+- Active next checkpoint: independent label-fitness/adjudication evidence and dataset-candidacy or deferral decision before any partition work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: not created; this repository case study, README, and static evidence reports are the current presentation surfaces
 

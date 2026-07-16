@@ -2,6 +2,22 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.12.0-cross-event-label-transfer-baseline - 2026-07-16 (candidate)
+
+### P2O4-T04 - Transfer five-state proposals across Tepee and McKay
+
+- Reproduce the shipped v0.11 source-fitness JSON/HTML/PNG byte for byte before selecting cross-event proposal transfer as the highest-leverage weakness.
+- Register two exact public MTBS annual thematic clips under `SOURCE-2026-013`, with event-year nearest-neighbor U8 byte/grid/value contracts and joint USGS/USDA Forest Service attribution; commit zero provider bytes.
+- Preserve Tepee SCL/window restrictions, frozen whole-event groups, five-state uncertainty, and source precedence; MTBS and SCL never independently create burn truth.
+- Add the owner-authorized binary-mask fallback as an explicit event-relative background stability screen: lowest 15% normalized non-burn tail, cap 6.0, seven-of-nine coherence, no boundary-absence inference.
+- Produce four traceable GeoTIFFs plus proposal JSON/HTML/PNG. Aggregate: 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, and 19,720 review-needed pixels.
+- Add a separately invoked QA path that does not import the transfer classifier, reopens all six exact source assets, and reproduces 63,930 state/target pixels with zero mismatch plus 45 deterministic audits.
+- Remediate live-browser claim grammar so every boundary item is explicitly `Not proven`; pass original-resolution and semantic-browser review plus four HTTP-200 raster links.
+- Raise BurnLens to `0.12.0`; pass 136 tests, compilation, dependency health, a 215,693-byte wheel / SHA-256 `d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32`, isolated import, and three new entry points.
+- Accept reproducible cross-event proposal evidence while deferring accepted labels, dataset, split, baseline, model, independent human validation, field validation, and operational claims.
+
+Issue #367; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; reviewed PR/merge/tag pending.
+
 ## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16
 
 ### P2O4-T03 - Acquire and inspect the exact cross-event pixels
