@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Raise BurnLens to `0.12.1`; pass 137 tests, dependency health, two byte-identical fresh-checkout fixed-epoch 215,461-byte wheels / SHA-256 `e6e45cfc69aebb17b9a6396d593508b297b8461deb69463edd1ba04cc4ad99d3`, isolated import, and all 19 entry points.
 - Change no classifier, threshold, source, target, label protocol, label schema, event group, output pixel, dataset, split, baseline, model, application, field claim, or operational claim.
 
-Issue #371 / draft PR #372; source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; candidate artifacts `567b9cd986a44c3a9b320f558ab7cd156d451fb4`; review, merge, fresh-main verification, and tag pending.
+Issue #371 / PR #372 shipped at merge `e00028509145b439d95eb302591e7cb19bd073fd`; reviewed head `345dd72363377aad3215d23a8120c42edbe85278`; source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; candidate artifacts `567b9cd986a44c3a9b320f558ab7cd156d451fb4`; verified tag object `8606c61f0e1668f2b057abca177144937eae1036`; lifecycle sync issue #373.
 
 ## v0.12.0-cross-event-label-transfer-baseline - 2026-07-16
 

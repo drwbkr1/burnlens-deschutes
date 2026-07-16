@@ -13,3 +13,5 @@ The strongest test used two real ignored copies of the same MTBS package. One ha
 The corrected evidence gets new `2026-002` and `r004` identities. The `2026-001` package is not rewritten. Its link-count trace remains useful history: it exposed the design mistake.
 
 Nothing about the analytical result improved. The same 9,760 candidate pixels and 54,170 ignored pixels remain, and separate QA still reports zero mismatch across 63,930 pixels. Independent human review is still absent. The next substantive question remains whether the three-event proposal is fit for adjudication and eventual dataset candidacy.
+
+PR #372 shipped the correction at merge `e00028509145b439d95eb302591e7cb19bd073fd`. A fresh merged-main clone reproduced every output and the canonical fixed-epoch wheel, and annotated tag object `8606c61f0e1668f2b057abca177144937eae1036` peels to that exact merge. The release is therefore complete without laundering the original topology-sensitive run out of history.
