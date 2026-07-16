@@ -63,6 +63,7 @@ from .mtbs_cross_event_reference import (
     PACKAGE_ID as MTBS_PACKAGE_ID,
     SOURCE_RECORD_ID as MTBS_SOURCE_RECORD_ID,
     TERMS_REVIEW_ID as MTBS_TERMS_REVIEW_ID,
+    public_verification_summary as summarize_mtbs_verification,
     verify_package as verify_mtbs_package,
 )
 from .optical_pair_evidence import (
@@ -76,15 +77,15 @@ from .optical_pair_evidence import (
 from .paired_intake import verify_registered_package
 
 
-SOFTWARE_VERSION = "0.12.0"
-REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-2026-001"
-REPORT_SCHEMA_VERSION = "0.1.0"
-REPORT_VERSION = "cross-event-five-state-label-transfer-evidence-v0.1.0"
+SOFTWARE_VERSION = "0.12.1"
+REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-2026-002"
+REPORT_SCHEMA_VERSION = "0.1.1"
+REPORT_VERSION = "cross-event-five-state-label-transfer-evidence-v0.1.1"
 TRANSFER_PROTOCOL_VERSION = "cross-event-five-state-transfer-v0.1.0"
 LABEL_PROPOSAL_VERSION = "deschutes-cross-event-label-proposal-v0.1.0"
 SOURCE_FITNESS_REPORT_ID = "CROSS-EVENT-SOURCE-FITNESS-2026-001"
 SOURCE_FITNESS_SHA256 = "c9aa90894150e081a6df26b8ee16c502bd532b67d7ecd493e038a366a480b34f"
-TASK_ISSUE = 367
+TASK_ISSUE = 371
 MTBS_SUPPORT_VALUES = frozenset({2, 3, 4})
 MTBS_AMBIGUOUS_VALUES = frozenset({1, 5})
 MTBS_NONPROCESSING_VALUE = 6
@@ -512,7 +513,7 @@ def build_report(
         summary = summarize_states(states)
         prefix = event_id.removeprefix("event-")
         state_output = _write_raster(
-            output_directory / f"CROSS-EVENT-LABEL-TRANSFER-2026-001-{prefix}-state.tif",
+            output_directory / f"{REPORT_ID}-{prefix}-state.tif",
             states,
             destination_transform,
             event_group_id=event_id,
@@ -521,7 +522,7 @@ def build_report(
             git_source_commit=git_source_commit,
         )
         target_output = _write_raster(
-            output_directory / f"CROSS-EVENT-LABEL-TRANSFER-2026-001-{prefix}-target.tif",
+            output_directory / f"{REPORT_ID}-{prefix}-target.tif",
             target,
             destination_transform,
             event_group_id=event_id,
@@ -635,8 +636,7 @@ def build_report(
                 "acquisition_run_id": mtbs_registration.get("run_id"),
                 "source": mtbs_registration.get("source"),
                 "registered_assets": mtbs_registration.get("assets"),
-                "verified_current_assets": mtbs_verification["assets"],
-                "registration_manifest_link_count": mtbs_verification["registration_manifest_link_count"],
+                "current_verification": summarize_mtbs_verification(mtbs_verification),
             },
             "feasibility_source_snapshot_sha256": feasibility["input_hashes"]["source_snapshot_sha256"],
             "predecessor_run_id": source_fitness["run_id"],

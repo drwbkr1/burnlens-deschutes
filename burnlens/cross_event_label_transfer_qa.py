@@ -35,13 +35,13 @@ from .optical_pair_evidence import LABEL_PROTOCOL_VERSION, TARGET_VERSION, WARNI
 from .paired_intake import verify_registered_package
 
 
-SOFTWARE_VERSION = "0.12.0"
-REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-QA-2026-001"
-REPORT_SCHEMA_VERSION = "0.1.0"
-REPORT_VERSION = "separate-cross-event-label-transfer-qa-v0.1.0"
+SOFTWARE_VERSION = "0.12.1"
+REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-QA-2026-002"
+REPORT_SCHEMA_VERSION = "0.1.1"
+REPORT_VERSION = "separate-cross-event-label-transfer-qa-v0.1.1"
 QA_PROTOCOL_VERSION = "separate-cross-event-five-state-qa-v0.1.0"
-PROPOSAL_REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-2026-001"
-PROPOSAL_REPORT_VERSION = "cross-event-five-state-label-transfer-evidence-v0.1.0"
+PROPOSAL_REPORT_ID = "CROSS-EVENT-LABEL-TRANSFER-2026-002"
+PROPOSAL_REPORT_VERSION = "cross-event-five-state-label-transfer-evidence-v0.1.1"
 TRANSFER_PROTOCOL_VERSION = "cross-event-five-state-transfer-v0.1.0"
 LABEL_SCHEMA_VERSION = "burn-scar-five-state-schema-v0.1.0"
 LABEL_PROPOSAL_VERSION = "deschutes-cross-event-label-proposal-v0.1.0"
@@ -51,7 +51,7 @@ SOURCE_FITNESS_REPORT_VERSION = "cross-event-source-fitness-v0.1.0"
 SOURCE_FITNESS_RUN_ID = "BL-2026-07-16-cross-event-source-fitness-r006"
 SOURCE_FITNESS_GIT_SOURCE_COMMIT = "cf1d9101e2760bf7d779b6fae68e605bb8809c1c"
 SOURCE_FITNESS_DECISION = "ACCEPT_CROSS_EVENT_SOURCE_FITNESS_WITH_EXCLUSIONS"
-TASK_ISSUE = 367
+TASK_ISSUE = 371
 IGNORE_VALUE = 255
 STATE_CODES = {"background-candidate": 0, "burned": 1, "unknown": 2, "excluded": 3, "review-needed": 4}
 STATE_NAMES = {value: key for key, value in STATE_CODES.items()}
