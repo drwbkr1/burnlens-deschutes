@@ -62,7 +62,7 @@ def _synthetic_contract() -> tuple[np.ndarray, np.ndarray, dict[str, np.ndarray]
 
 class LabelProposalTests(unittest.TestCase):
     def test_current_version_and_lf_checkout_contract_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.13.0")
+        self.assertEqual(burnlens.__version__, "0.14.0")
         root = Path(__file__).resolve().parents[1]
         attributes = (root / ".gitattributes").read_text(encoding="utf-8").splitlines()
         self.assertIn("samples/labels/phase-two/*.json text eol=lf", attributes)

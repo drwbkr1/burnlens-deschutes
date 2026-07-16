@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.13.0"
+version = "0.14.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.11"
 dependencies = [
@@ -37,6 +37,9 @@ burnlens-propose-cross-event-labels = "burnlens.propose_cross_event_labels:main"
 burnlens-verify-cross-event-label-transfer = "burnlens.verify_cross_event_label_transfer:main"
 burnlens-build-label-review-packet = "burnlens.build_label_review_packet:main"
 burnlens-run-label-review-packet-qa = "burnlens.run_label_review_packet_qa:main"
+burnlens-build-label-review-handoff = "burnlens.build_label_review_handoff:main"
+burnlens-verify-label-review-handoff = "burnlens.verify_label_review_handoff:main"
+burnlens-lock-label-review-response = "burnlens.lock_label_review_response:main"
 
 [tool.setuptools]
 packages = ["burnlens"]

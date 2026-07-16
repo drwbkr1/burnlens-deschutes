@@ -1,0 +1,175 @@
+{
+  "report_id": "LABEL-REVIEW-HANDOFF-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-handoff-integrity-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T17:05:00Z",
+  "run_id": "BL-2026-07-16-label-review-handoff-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 379,
+  "git_source_commit": "75102d79e6e184a1ecac941900fd74938cdaa972",
+  "software_version": "0.14.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "archive_binding": {
+    "filename": "LABEL-REVIEW-HANDOFF-2026-001.zip",
+    "bytes": 8652301,
+    "sha256": "12f4cbe3d7903b2c404d5dfafbc141c35afa74e51c5d0b9a1816c65f82b8d8cc",
+    "member_count": 12,
+    "payload_bytes": 8649457
+  },
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "decision": "READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+    "response_schema_version": "burnlens-label-review-response-v0.1.0",
+    "review_protocol_version": "proposal-blinded-label-review-readiness-v0.1.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "aoi_version": "aoi-darlene3-model-v0.2.0"
+  },
+  "checks": {
+    "archive_members": [
+      {
+        "path": "LABEL-REVIEW-HANDOFF-2026-001.json",
+        "bytes": 7384,
+        "sha256": "6a71459b5b4959fa2e79d59fba24ee58a9f1be02396caabf1eb9531925da8504",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-HANDOFF-2026-001.html",
+        "bytes": 228723,
+        "sha256": "b11694d8cdf83186035f7832b559757ed2ed6a1bd10cb9ace2c5d56b22184c1c",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-HANDOFF-2026-001-README.txt",
+        "bytes": 1158,
+        "sha256": "1ef5dafd10dfc50bb4e60ba042da0f020f82c2c0fbcaccdd948a7cea90ae2d51",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-RESPONSE-TEMPLATE.json",
+        "bytes": 11610,
+        "sha256": "8eb885be0f301cc1ef3eac8e718a12f96b624877267fd140b6b1a9eabc80627d",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+        "bytes": 1043346,
+        "sha256": "2dffb84b46dd7416b69824f8ef0a46935af347706dc645e14e666e11d55b3703",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+        "bytes": 1189574,
+        "sha256": "74d5046cefae73486db7dab230f6f6b225194a49385988310c705e79d468ca45",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+        "bytes": 1075788,
+        "sha256": "02b8198c473e478bba5786d4ed3b4850ae228dcbecb47ea85fe6dc24b1c05891",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+        "bytes": 944076,
+        "sha256": "e4cbb0c5560ee50c3e051ed4728fe451c29406c9d934a7313517134a514c7768",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+        "bytes": 1048672,
+        "sha256": "2245267e41b3c818fcd6b88d2e15633c5543ee2fe77ea1bb2d53ca890d209005",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+        "bytes": 1052619,
+        "sha256": "632bb4eb8982aa8f2f0040181a342ba8606a7e54ce5dfbfa6f36ec6556cd728c",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+        "bytes": 947497,
+        "sha256": "9ea953c1c55325534c3b2b3ef89012aa01108309b9d20d6bf69cb1432a31f043",
+        "stored": true,
+        "mode": "100644"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+        "bytes": 1099010,
+        "sha256": "e5f7a13269c761fba8e6b35427b10a432f1b18a703e48470b42fbe411203ba90",
+        "stored": true,
+        "mode": "100644"
+      }
+    ],
+    "manifest": {
+      "packet_sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+      "payload_member_count": 11,
+      "completed_independent_responses": 0,
+      "completed_adjudications": 0,
+      "downstream_versions": null
+    },
+    "response_template": {
+      "schema_version": "burnlens-label-review-response-v0.1.0",
+      "unit_count": 56,
+      "completed": false,
+      "proposal_value_fields": []
+    },
+    "workbench": {
+      "form_count": 1,
+      "unit_fieldsets": 56,
+      "blind_page_images": 8,
+      "labelled_required_controls": true,
+      "draft_save_load_controls": true,
+      "review_and_export_controls": true,
+      "network_navigation_or_script_dependencies": 0,
+      "connect_src_none": true,
+      "embedded_response_template_exact": true
+    },
+    "readme": {
+      "utf8_lf": true,
+      "warning_present": true,
+      "hash_lock_instruction_present": true,
+      "proposal_reveal_file_present": false
+    },
+    "blind_pages": {
+      "count": 8,
+      "png_decode": "pass",
+      "minimum_height": 2500,
+      "width": 1800
+    }
+  },
+  "synthetic_response_fixture_used": false,
+  "completed_independent_responses": 0,
+  "completed_adjudications": 0,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "PASS_HANDOFF_INTEGRITY_READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+  "decision_detail": "The deterministic archive contains only the allowlisted proposal-blinded handoff, the offline workbench is bound to the exact blank response schema, and no actual independent response or adjudication is present.",
+  "claims": {
+    "proven": [
+      "The ZIP member paths, order, modes, timestamps, storage method, byte lengths, and SHA-256 bindings pass.",
+      "The offline workbench has labelled native controls for all 56 units, no network dependency, and an exact embedded blank response contract.",
+      "The handoff contains no reveal file, proposal-bearing packet JSON, adjudication material, QA output, provider byte, or completed response."
+    ],
+    "not_proven": [
+      "Archive and interface integrity are not independent human review, reviewer identity verification, label fitness, adjudication, field validation, or accuracy.",
+      "No accepted label set, dataset, split, baseline, model, deployment, official status, or endorsement exists."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
