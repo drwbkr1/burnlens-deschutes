@@ -33,6 +33,7 @@ WARNING = (
 )
 PACKAGE_ID = "darlene3-s2-viirs-pair-v0.1.0"
 CONTRACT_VERSION = "paired-intake-contract-v0.4.0"
+DEFAULT_REGISTRATION_MANIFEST_NAME = ".burnlens-registration.json"
 REPORT_VERSION = "paired-intake-rehearsal-v0.2.0"
 REPORT_ID = "PAIR-INTAKE-REHEARSAL-2026-001"
 SOFTWARE_VERSION = "0.3.0"
@@ -367,10 +368,19 @@ def promote_quarantine(
     synthetic_fixture: bool,
     contract_validator: ContractValidator = validate_contract_set,
     contract_version: str = CONTRACT_VERSION,
+    registration_manifest_name: str = DEFAULT_REGISTRATION_MANIFEST_NAME,
 ) -> dict[str, Any]:
     """Atomically move one complete quarantine directory into raw storage."""
 
     items = list(contracts)
+    if (
+        not registration_manifest_name
+        or registration_manifest_name in {".", ".."}
+        or "/" in registration_manifest_name
+        or "\\" in registration_manifest_name
+        or registration_manifest_name in {item.expected_filename for item in items}
+    ):
+        raise ValueError("registration manifest name must be one distinct filename")
     evaluation = evaluate_quarantine(
         quarantine,
         items,
@@ -409,7 +419,7 @@ def promote_quarantine(
             for item in evaluation["observations"]
         ],
     }
-    registration_path = quarantine / ".burnlens-registration.json"
+    registration_path = quarantine / registration_manifest_name
     registration_path.write_text(
         json.dumps(registration, indent=2) + "\n", encoding="utf-8"
     )
@@ -427,6 +437,7 @@ def verify_registered_package(
     *,
     contract_validator: ContractValidator = validate_contract_set,
     contract_version: str = CONTRACT_VERSION,
+    registration_manifest_name: str = DEFAULT_REGISTRATION_MANIFEST_NAME,
 ) -> dict[str, Any]:
     """Re-validate a promoted package against its registration and current bytes."""
 
@@ -435,7 +446,16 @@ def verify_registered_package(
     destination_link = _is_link_like(destination)
     path_present = destination.exists() or destination_link
     valid_directory = path_present and destination.is_dir() and not destination_link
-    manifest_name = ".burnlens-registration.json"
+    manifest_name = registration_manifest_name
+    manifest_name_valid = bool(
+        manifest_name
+        and manifest_name not in {".", ".."}
+        and "/" not in manifest_name
+        and "\\" not in manifest_name
+        and manifest_name not in {item.expected_filename for item in items}
+    )
+    if not manifest_name_valid:
+        reasons.append("REGISTRATION_MANIFEST_NAME_INVALID")
     expected_entries = {item.expected_filename for item in items} | {manifest_name}
     observed_entries = sorted(entry.name for entry in destination.iterdir()) if valid_directory else []
 
@@ -458,8 +478,8 @@ def verify_registered_package(
         reasons.append("REGISTERED_ASSET_VALIDATION_FAILED")
 
     registration: dict[str, Any] | None = None
-    manifest_path = destination / manifest_name
-    if valid_directory and manifest_name in observed_entries:
+    manifest_path = destination / manifest_name if manifest_name_valid else destination
+    if valid_directory and manifest_name_valid and manifest_name in observed_entries:
         if _is_link_like(manifest_path) or not manifest_path.is_file():
             reasons.append("REGISTRATION_MANIFEST_NOT_REGULAR_FILE")
         elif manifest_path.stat().st_nlink != 1:
@@ -518,6 +538,7 @@ def verify_registered_package(
     accepted = not reasons and registration is not None
     return {
         "package_id": items[0].package_id if items else None,
+        "registration_manifest_name": manifest_name,
         "registered_package_present": path_present,
         "expected_entry_count": len(expected_entries),
         "observed_entry_count": len(observed_entries),

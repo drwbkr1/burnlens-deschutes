@@ -18,6 +18,7 @@ from burnlens.cross_event_optical_contract import (
     EXPECTED_METADATA,
     MAX_TRANSFER_ATTEMPTS,
     ROUTE_PRECEDENCE,
+    REGISTRATION_MANIFEST_NAME,
     TEMPORARY_PREFIX,
     TEMPORARY_SUFFIX,
     CdseCredentials,
@@ -128,6 +129,7 @@ class CrossEventOpticalContractTests(unittest.TestCase):
     def test_cross_event_working_files_use_onedrive_ignored_tmp_suffix(self) -> None:
         self.assertEqual(TEMPORARY_SUFFIX, ".tmp")
         self.assertEqual(TEMPORARY_PREFIX, "~$")
+        self.assertTrue(REGISTRATION_MANIFEST_NAME.startswith("~$"))
         with TemporaryDirectory() as directory:
             quarantine = Path(directory)
             accepted = quarantine / f"~${CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"

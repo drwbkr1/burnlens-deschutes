@@ -38,6 +38,7 @@ from .cross_event_optical_contract import (
     CONTRACT_VERSION,
     CROSS_EVENT_CONTRACTS,
     PACKAGE_ID,
+    REGISTRATION_MANIFEST_NAME,
     ROUTE_PRECEDENCE,
     SOFTWARE_VERSION,
     TERMS_REVIEW_ID,
@@ -440,6 +441,7 @@ def build_report(
         CROSS_EVENT_CONTRACTS,
         contract_validator=validate_cross_event_contracts,
         contract_version=CONTRACT_VERSION,
+        registration_manifest_name=REGISTRATION_MANIFEST_NAME,
     )
     if not verification["accepted_as_unchanged_registered_package"]:
         raise CrossEventSourceFitnessError("registered cross-event source package failed verification")
@@ -506,11 +508,14 @@ def build_report(
         "input_hashes": {
             "feasibility_report_sha256": _sha256_lf_text(feasibility_report_path),
             "feasibility_source_snapshot_sha256": feasibility["input_hashes"]["source_snapshot_sha256"],
-            "registration_manifest_sha256": sha256((package / ".burnlens-registration.json").read_bytes()).hexdigest(),
+            "registration_manifest_sha256": sha256(
+                (package / REGISTRATION_MANIFEST_NAME).read_bytes()
+            ).hexdigest(),
         },
         "registered_source_lineage": {
             "acquisition_run_id": registration.get("run_id"),
             "acquisition_generated_at_utc": registration.get("generated_at_utc"),
+            "registration_manifest_name": verification["registration_manifest_name"],
             "asset_hashes": registration.get("assets"),
         },
         "source_precedence": ROUTE_PRECEDENCE,
