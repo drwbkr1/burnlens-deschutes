@@ -260,6 +260,20 @@ The authoritative readiness run uses the actual ignored first response and recei
 
 That is the portfolio point of this checkpoint. BurnLens tests the failure-prone custody mechanism before a second person’s work arrives, but refuses to turn a software fixture into agreement evidence. Reveal, comparison, adjudication, and dataset work remain blocked until a second qualifying human response is locked.
 
+## Removing the manual response-intake seam
+
+The dual-lock verifier exposed one remaining reliability gap: after a completed file arrives, an operator still has to copy it into custody before creating the receipt. A wrong source, partial copy, overwrite, or source change during that interval would weaken every later comparison.
+
+BurnLens `0.18.0` turns that interval into one bounded transaction. It validates the inbound response, rejects duplicate hashes and reviewer slots, stages exact bytes in the destination directory, flushes and fsyncs them, checks the source again, validates the preserved copy, builds an identical receipt from source and copy, and promotes response plus receipt without overwrite. Partial promotion rolls back both outputs.
+
+![BurnLens atomic reviewer-response intake readiness](../../samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.png)
+
+The authoritative rehearsal uses the existing software fixture. Source and preserved bytes both equal 14,749, the v0.4.0 private receipt is independently hash-bound, and public evidence shows zero human responses added and zero reveal actions. All six historical first-lock and dual-lock artifacts still regenerate byte-for-byte.
+
+This is a reliability improvement, not a scientific result. The project still has one returned human response. Software does not prove who created a file, whether the reviewer is qualified, what happened before intake, or whether storage survived every possible hardware failure.
+
+The owner subsequently waived reviewer two. BurnLens records that as a reduced-validation route, not as evidence. Issue #393 is closed as superseded, and issue #403 now requires a separate owner-waiver/reveal-readiness gate plus conservative reconciliation of the single response against proposal and source evidence. No inter-rater agreement, consensus, or adjudication can be claimed.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -283,9 +297,11 @@ That is the portfolio point of this checkpoint. BurnLens tests the failure-prone
 - Latest live-browser handoff-QA run: `BL-2026-07-16-label-review-browser-qa-r001`
 - Latest returned-response public-lock run: `BL-2026-07-16-label-review-response-lock-qa-r001`
 - Latest dual-lock custody-readiness run: `BL-2026-07-16-label-review-dual-lock-readiness-qa-r001`
+- Latest atomic response-intake QA run: `BL-2026-07-16-label-review-response-atomic-intake-qa-r002`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
+- Current candidate tool: BurnLens `0.18.0`; issue #402; source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; PR/merge/tag pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
 - Active target: `target-burn-scar-v0.2.0`; active-fire path is complementary reference only
@@ -303,6 +319,7 @@ That is the portfolio point of this checkpoint. BurnLens tests the failure-prone
 - Live-browser handoff QA: shipped `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
 - First returned-response lock: shipped `LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-018`; one private response and receipt ignored; public content withheld; two responses required before adjudication
 - Dual-lock custody readiness: shipped `LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-019`; legacy first pair plus current software fixture; returned-response origins 1; fixture origins 1; no reveal or adjudication
+- Atomic response-intake readiness: candidate `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001`; exact three-output inventory in `MANIFEST-2026-020`; fixture source/preserved bytes match; current v0.4.0 receipt; human responses added 0; reveal actions 0
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -311,7 +328,7 @@ That is the portfolio point of this checkpoint. BurnLens tests the failure-prone
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.17.0-dual-lock-custody-readiness` at merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; annotated tag object `8fca2a51548690b710ad3903a19312e77c748420`
 - Latest checkpoint: 163 tests, exact historical first-lock and new dual-lock reconstruction, privacy/semantic/render review, 115 links, canonical 302,018-byte fixed-epoch packaging, isolated import with 27 entry points, fresh remote-main clone, and remote-tag verification pass
-- Active next scientific checkpoint: obtain and lock the required second qualifying human response without exposing the first response or opening the reveal, then compare and adjudicate before dataset-candidacy work
+- Active next scientific checkpoint: issue #403; publish owner-waiver/reveal readiness, then reconcile the one exact independent response conservatively without claiming inter-rater validation or adjudication
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

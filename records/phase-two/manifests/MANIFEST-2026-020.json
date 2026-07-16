@@ -1,0 +1,191 @@
+{
+  "manifest_id": "MANIFEST-2026-020",
+  "manifest_version": "0.20.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-16T21:26:00Z",
+  "task_issue": 402,
+  "parent_response_issue": 393,
+  "parent_response_issue_state": "closed as superseded by explicit owner waiver; not satisfied",
+  "replacement_reconciliation_issue": 403,
+  "branch": "codex/p2o4-t09b-atomic-response-intake",
+  "git_base_commit": "5b9e099913311c0ae8ec3040a700e3dc041435db",
+  "generator_source_commit": "c4c34dabcde375196dd423d13beb3dd97a32f5e1",
+  "candidate_artifacts_commit": "0e338060d9f70d6aa23916fbf8c1965c33209c72",
+  "reviewed_head_commit": null,
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.18.0-atomic-response-intake-readiness",
+  "version_tag_object": null,
+  "version_tag_state": "planned after verified merge",
+  "status": "candidate atomic response-intake readiness evidence; fixture only; one returned response; no reveal",
+  "software_version": "0.18.0",
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "h5py": "3.16.0",
+    "blake3": "1.0.9",
+    "setuptools": "82.0.1"
+  },
+  "source_records": [
+    "SOURCE-2026-007",
+    "SOURCE-2026-009",
+    "SOURCE-2026-010",
+    "SOURCE-2026-012",
+    "SOURCE-2026-013"
+  ],
+  "terms_records": [
+    "TERMS-2026-003",
+    "TERMS-2026-005",
+    "TERMS-2026-007",
+    "TERMS-2026-008"
+  ],
+  "precheck_record": "PRECHECK-2026-017",
+  "registry_record": "REGISTRY-2026-020",
+  "review_records": [
+    "LABEL_FITNESS-2026-013",
+    "SOURCE_PRECEDENCE-2026-006",
+    "USE_BOUNDARY-2026-016"
+  ],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "review_protocol_version": "proposal-blinded-label-review-readiness-v0.1.0",
+  "response_schema_version": "burnlens-label-review-response-v0.1.0",
+  "legacy_response_lock_versions": [
+    "label-review-response-integrity-lock-v0.2.0",
+    "label-review-response-integrity-lock-v0.3.0"
+  ],
+  "current_response_lock_version": "label-review-response-integrity-lock-v0.4.0",
+  "atomic_intake_version": "label-review-response-atomic-intake-v0.1.0",
+  "atomic_intake_qa_version": "label-review-response-atomic-intake-qa-v0.1.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "application_deployment": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_ids": [
+    "BL-2026-07-16-label-review-packet-r001",
+    "BL-2026-07-16-label-review-response-lock-r001",
+    "BL-2026-07-16-label-review-response-atomic-intake-fixture-r002",
+    "BL-2026-07-16-label-review-response-atomic-intake-qa-r002"
+  ],
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "review_unit_count": 56,
+    "blind_page_count": 8
+  },
+  "first_private_response_binding": {
+    "response_bytes": 16443,
+    "response_sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+    "opaque_reviewer_slot": "reviewer-01",
+    "receipt_bytes": 2508,
+    "receipt_sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+    "committed": false,
+    "content_withheld": true
+  },
+  "fixture_rehearsal_binding": {
+    "response_bytes": 14749,
+    "response_sha256": "aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+    "preserved_bytes": 14749,
+    "preserved_sha256": "aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+    "opaque_reviewer_slot": "browser-qa-fixture-not-human",
+    "receipt_bytes": 2547,
+    "receipt_sha256": "47be86c8a7d272ff4aaf3216673275fb9402920a10b307a534bb7bcd21bcb956",
+    "receipt_version": "label-review-response-integrity-lock-v0.4.0",
+    "receipt_software_version": "0.18.0",
+    "evidence_origin": "software-browser-fixture",
+    "retained_as_human_evidence": false,
+    "committed": false,
+    "content_withheld": true
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 4129,
+      "sha256": "10f79bad633762bb9a942b3cb29848236750337cd047debf8d8744e52a4020a4"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 3872,
+      "sha256": "54f6ee2234f53195e4ce573ed72c3321c7e0fbe0e223254a1606985cacb87f16"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 112538,
+      "sha256": "6d3c8592deadcd14ace5d2d02296331d32c1aab6edf566b8d8c2a553faf276fd"
+    }
+  ],
+  "primary_research": [
+    {
+      "url": "https://docs.python.org/3.12/library/tempfile.html",
+      "accessed_at": "2026-07-16",
+      "use": "same-directory secure temporary staging"
+    },
+    {
+      "url": "https://docs.python.org/3.12/library/os.html#os.link",
+      "accessed_at": "2026-07-16",
+      "use": "no-overwrite promotion"
+    },
+    {
+      "url": "https://docs.python.org/3.12/library/os.html#os.fsync",
+      "accessed_at": "2026-07-16",
+      "use": "flush-before-promotion durability request"
+    },
+    {
+      "url": "https://docs.python.org/3.12/library/shutil.html",
+      "accessed_at": "2026-07-16",
+      "use": "content-copy versus filesystem-metadata boundary"
+    }
+  ],
+  "credentials_used": false,
+  "new_paid_service_or_secret": false,
+  "provider_imagery_bytes_committed": 0,
+  "private_reviewer_response_bytes_committed": 0,
+  "private_receipt_bytes_committed": 0,
+  "software_fixture_bytes_committed": 0,
+  "credential_or_token_material_retained": false,
+  "operator_declared_returned_responses_preserved": 1,
+  "second_reviewer_requirement": "explicitly waived by repository owner on 2026-07-16",
+  "waiver_effect": "changes the planned validation route; does not add reviewer evidence, inter-rater validation, consensus, or adjudication",
+  "software_browser_fixtures_in_readiness_run": 1,
+  "minimum_responses_for_adjudication": 2,
+  "minimum_custody_count_met": false,
+  "completed_adjudications": 0,
+  "operator_declared_reveal_status": "withheld-unopened-after-lock",
+  "reveal_status_verified_by_software": false,
+  "reveal_authorized_by_this_run": false,
+  "quality_gates": {
+    "cycle_start_tool_run": "pass: exact handoff, Chrome response roundtrip, first lock, and mixed-version dual-lock paths pass; second human response absent",
+    "atomic_fixture_intake": "pass: exact source and preserved bytes match at 14749 / sha256 aeb408873811dc3ce326078adc617d207a9cba6b3ce94539c8a012802ae5acec",
+    "current_receipt": "pass: 2547 bytes / sha256 47be86c8a7d272ff4aaf3216673275fb9402920a10b307a534bb7bcd21bcb956 / v0.4.0 / BurnLens 0.18.0 / reveal bound to separate owner-waiver and reveal-readiness checkpoint",
+    "historical_output_regression": "pass: six v0.16.0/v0.17.0 public JSON/HTML/PNG outputs regenerate byte-for-byte",
+    "public_privacy_audit": "pass: no private path, private filename, first-response hash, label distribution, response timestamp, or reviewer text",
+    "semantic_html": "pass",
+    "original_resolution_visual_review": "pass: 1800x1280 evidence card inspected and readable",
+    "repository_tests": 171,
+    "compileall": "pass",
+    "dependency_health": "pass: no broken requirements",
+    "source_commit": "c4c34dabcde375196dd423d13beb3dd97a32f5e1",
+    "artifact_commit": "0e338060d9f70d6aa23916fbf8c1965c33209c72",
+    "candidate_pr_merge_tag": "pending",
+    "fresh_merged_main": "pending",
+    "second_human_response": "absent; owner waived requirement; no inter-rater validation",
+    "adjudication_ready": false,
+    "dataset_or_partition_created": false,
+    "raw_provider_bytes_committed": 0
+  },
+  "decision": "PASS_ATOMIC_RESPONSE_INTAKE_READINESS_FIXTURE_ONLY_NO_REVEAL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

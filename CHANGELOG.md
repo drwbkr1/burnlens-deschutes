@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.18.0-atomic-response-intake-readiness - candidate - 2026-07-16
+
+### P2O4-T09B - Preserve a future returned response without a manual custody seam
+
+- Add a production intake command that validates the inbound response, rejects duplicate evidence, stages exact bytes in the destination directory, flushes and fsyncs them, rechecks source stability, validates the preserved copy, writes a current receipt, and promotes both outputs without overwrite.
+- Roll back both outputs on partial promotion failure; reject linked custody paths, special or oversized source files, unignored or tracked destinations, existing outputs, wrong reviewer slots, duplicate hashes, and source drift.
+- Advance current receipts to `label-review-response-integrity-lock-v0.4.0` / BurnLens `0.18.0` while retaining v0.2.0 / 0.15.0 and v0.3.0 / 0.17.0 compatibility.
+- Require the current returned-response receipt to keep reveal prohibited until a separate public owner-waiver/reveal-readiness checkpoint authorizes reveal.
+- Publish `LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001` as JSON, semantic HTML, and a rendered 1800-by-1280 evidence card using only the existing non-human software fixture.
+- Pass 171 tests, compileall, dependency health, exact six-output historical regression, privacy, semantic, and original-resolution visual gates.
+- Preserve the scientific boundary: the project still has one returned human response; the owner waived reviewer two but did not create inter-rater validation, consensus, or adjudication. Reveal, comparison, accepted labels, dataset, split, baseline, model, accuracy, deployment, field, official, endorsed, emergency-ready, and operational claims remain absent.
+
+Issue #402; superseded parent issue #393; replacement issue #403; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; current source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; current public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; PR, merge, verified tag, and fresh-main gates pending.
+
 ## BL-GOV-002 - GitHub backlog truth reconciliation - 2026-07-16
 
 - Re-run the exact offline reviewer workbench in Chrome `150.0.7871.124`; all 56 units, draft roundtrip, completed export, desktop/mobile overflow, console/runtime, storage, request, and fixture-only gates pass.
@@ -26,7 +40,7 @@ Issue #400 / PR #401; branch `codex/bl-gov-002-backlog-truth`; checkpoint source
 - Pass 163 tests, compilation, dependency health, Node syntax, privacy, semantic, original-resolution rendering, exact historical first-lock and new dual-lock regeneration, and two byte-identical detached-source fixed-epoch 302,018-byte wheels / SHA-256 `cac65ceaf6ce75ef67d16d55379df9234a591563c94800791d972965281f80d2`; isolated install reports `0.17.0`, 27 entry points, and zero private/download entries.
 - Keep the scientific gate binding: the software fixture is not a second human response, minimum human custody is unmet, and no reveal, comparison, adjudication, accepted label, dataset, split, baseline, model, metric, deployment, field, official, endorsed, or operational claim is created.
 
-Issue #394 / PR #395 shipped at merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; parent second-response issue #393 remains open; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c`; verified tag object `8fca2a51548690b710ad3903a19312e77c748420`; lifecycle sync issue #396 / PR #397 merged at `aabd185e289f8b02bb42ac1b2b9133322df82549`; terminal wording closeout is issue #398 / PR #399.
+Issue #394 / PR #395 shipped at merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; parent second-response issue #393 remained open at that release checkpoint and was later closed as superseded by the explicit owner waiver and replacement issue #403; base `984c6c5c46df765abebb5383877ff89b42c2076d`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; reviewed candidate head `125fcc677cba114277b8a066709d753c54ba619c`; verified tag object `8fca2a51548690b710ad3903a19312e77c748420`; lifecycle sync issue #396 / PR #397 merged at `aabd185e289f8b02bb42ac1b2b9133322df82549`; terminal wording closeout is issue #398 / PR #399.
 
 ## v0.16.0-first-reviewer-response-lock - 2026-07-16
 
