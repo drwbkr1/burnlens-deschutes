@@ -18,7 +18,7 @@
   "reviewed_head_commit": "345dd72363377aad3215d23a8120c42edbe85278",
   "checkpoint_commit": "e00028509145b439d95eb302591e7cb19bd073fd",
   "pull_request": 372,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 374,
   "version_tag": "v0.12.1-topology-stable-label-transfer",
   "version_tag_object": "8606c61f0e1668f2b057abca177144937eae1036",
   "version_tag_state": "verified annotated tag; remote tag peels to checkpoint commit e00028509145b439d95eb302591e7cb19bd073fd",

@@ -163,7 +163,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T03-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t03-sync.md` | issue #365; verified v0.11 lifecycle synchronization | PRs #362/#364, both merges, merged-main gates, and remote annotated tag are synchronized; next checkpoint is cross-event proposal transfer plus separate QA. |
 | P2O4-T04 | `records/prompt-build-log/2026-07-15-p2o4-t04.md` | issue #367 / PR #368; shipped at verified `v0.12.0-cross-event-label-transfer-baseline` | Exact Tepee/McKay proposal transfer and separate 63,930-pixel QA; lifecycle sync issue #369. |
 | P2O4-T04-REM | `records/prompt-build-log/2026-07-16-p2o4-t04-rem.md` | issue #371 / PR #372; shipped at verified `v0.12.1-topology-stable-label-transfer` | Removes transient current link counts from public run identity while preserving fail-closed one/exact-two-link verification; analytical output unchanged. |
-| P2O4-T04-REM-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t04-rem-sync.md` | issue #373 / lifecycle PR pending | Synchronizes reviewed head, merge, fresh-main gates, canonical wheel, remote annotated tag, and resumed adjudication next checkpoint. |
+| P2O4-T04-REM-SYNC | `records/prompt-build-log/2026-07-16-p2o4-t04-rem-sync.md` | issue #373 / PR #374 | Synchronizes reviewed head, merge, fresh-main gates, canonical wheel, remote annotated tag, and resumed adjudication next checkpoint. |
 
 ## Acceptance and remediation triggers
 
