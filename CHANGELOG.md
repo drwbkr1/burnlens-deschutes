@@ -16,7 +16,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record the interactive browser runtime as unavailable and make no viewport, console, draft/load, or download interaction claim.
 - Preserve zero completed independent responses and adjudications. Create no accepted label set, dataset, split, baseline, model, accuracy estimate, deployment, field claim, official claim, or operational claim.
 
-Issue #379; source `75102d79e6e184a1ecac941900fd74938cdaa972`; candidate artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; PR, merge, verified tag, and lifecycle synchronization pending.
+Issue #379 / PR #380 shipped at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; candidate artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; verified tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`; lifecycle sync issue #381.
 
 ## v0.13.0-label-review-readiness - 2026-07-16
 
