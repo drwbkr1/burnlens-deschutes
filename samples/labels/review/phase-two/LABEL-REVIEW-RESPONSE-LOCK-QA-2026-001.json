@@ -1,0 +1,96 @@
+{
+  "report_id": "LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-response-public-lock-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T18:40:00Z",
+  "run_id": "BL-2026-07-16-label-review-response-lock-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 384,
+  "git_source_commit": "ec41129f9322022f28b8f788a2e08ae22145471b",
+  "software_version": "0.16.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "response_schema_version": "burnlens-label-review-response-v0.1.0"
+  },
+  "private_response_binding": {
+    "bytes": 16443,
+    "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+    "opaque_reviewer_slot": "reviewer-01",
+    "unit_count": 56,
+    "completed_contract": true,
+    "input_filename_retained": false,
+    "content_distribution_withheld": true,
+    "free_text_withheld": true
+  },
+  "private_receipt_binding": {
+    "report_id": "LABEL-REVIEW-RESPONSE-LOCK-2026-001",
+    "run_id": "BL-2026-07-16-label-review-response-lock-r001",
+    "git_source_commit": "6eec7b01f1d0b0c387267a92deba9ed9b470c24d",
+    "received_at_utc": "2026-07-16T18:01:32Z",
+    "bytes": 2508,
+    "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+    "decision": "PASS_RESPONSE_CONTRACT_AND_HASH_LOCK_DEFER_SCIENTIFIC_USE",
+    "evidence_origin": "returned-independent-response",
+    "input_filename_retained": false
+  },
+  "checks": {
+    "exact_response_bytes": "pass",
+    "exact_private_receipt_bytes": "pass",
+    "packet_binding": "pass",
+    "completed_response_contract": "pass",
+    "receipt_response_binding": "pass",
+    "response_completed_before_receipt": true,
+    "proposal_value_fields_absent": true,
+    "independence_and_blinding_attestations_present": true,
+    "public_content_withholding": "pass"
+  },
+  "content_withholding": {
+    "withheld_until_second_response_lock": [
+      "first-pass label distribution",
+      "evidence-sufficiency distribution",
+      "confidence distribution",
+      "reason-code distribution",
+      "free-text response notes",
+      "reviewer experience statement",
+      "response start and completion timestamps"
+    ],
+    "reason": "Protect the independence of a subsequent reviewer and avoid unnecessary disclosure before the required second response is preserved and locked."
+  },
+  "operator_declarations": {
+    "reveal_status": "withheld-unopened-after-lock",
+    "reveal_status_verified_by_software": false,
+    "response_origin": "returned-independent-response",
+    "response_origin_verified_by_software": false
+  },
+  "returned_response_count": 1,
+  "minimum_responses_for_adjudication": 2,
+  "adjudication_ready": false,
+  "adjudication_completed": false,
+  "scientific_label_fitness_established": false,
+  "human_identity_verified_by_software": false,
+  "reviewer_expertise_verified_by_software": false,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "PASS_FIRST_RETURNED_RESPONSE_CONTRACT_AND_HASH_LOCK_WITHHOLD_CONTENT_DEFER_DATASET",
+  "decision_detail": "One exact returned response and its pre-reveal operator receipt pass byte, packet, contract, binding, and chronology checks. Response distributions and free text remain withheld until the required second response is locked. Software does not verify the reviewer or establish scientific label fitness.",
+  "claims": {
+    "proven": [
+      "One exact 56-unit returned response passes the proposal-free completed-response contract.",
+      "The preserved private response and private receipt match their recorded byte counts and SHA-256 digests.",
+      "The receipt binds the exact response to the shipped packet and was recorded after response completion.",
+      "The public artifact excludes response distributions, free text, experience text, response timestamps, and private filenames."
+    ],
+    "not_proven": [
+      "Operator-declared origin and reveal status are not software verification of reviewer identity, expertise, independence, or file-access history.",
+      "One response is not adjudication readiness, label fitness, inter-rater agreement, field validation, or accuracy.",
+      "No accepted label set, dataset, split, baseline, model, deployment, official status, endorsement, or operational readiness exists."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
