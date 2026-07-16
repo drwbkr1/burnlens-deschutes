@@ -19,10 +19,10 @@
   "checkpoint_commit": "836eef75495dbc671bd74a8ad4112852bbf50ac6",
   "pull_request": 388,
   "lifecycle_sync_issue": 389,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 390,
   "version_tag": "v0.16.0-first-reviewer-response-lock",
   "version_tag_object": null,
-  "version_tag_state": "withheld pending issue #389 manifest-chronology remediation and final release verification",
+  "version_tag_state": "withheld pending PR #390 merge, corrected fresh-main verification, and annotated tag",
   "status": "PR #388 merged first returned-response hash-lock evidence; chronology remediation active; review content withheld; dataset deferred",
   "software_version": "0.16.0",
   "runtime": {

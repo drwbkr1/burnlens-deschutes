@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T07 / issue #383 / PR #385 is shipped at verified `v0.15.0-live-browser-reviewer-handoff`. P2O4-T08 / issue #384 / PR #388 merged BurnLens `0.16.0` public-lock evidence for one exact response preserved before reveal. Issue #389 corrects a manifest chronology defect and completes release gates before tag. Then obtain and lock the required second qualifying response before comparing or adjudicating disagreements. Keep all whole-event groups and ignore states binding; do not begin dataset-candidacy or partition work early.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T07 / issue #383 / PR #385 is shipped at verified `v0.15.0-live-browser-reviewer-handoff`. P2O4-T08 / issue #384 / PR #388 merged BurnLens `0.16.0` public-lock evidence for one exact response preserved before reveal. Issue #389 / PR #390 corrects a manifest chronology defect and completes release gates before tag. Then obtain and lock the required second qualifying response before comparing or adjudicating disagreements. Keep all whole-event groups and ignore states binding; do not begin dataset-candidacy or partition work early.
 
 ## Required reading order for long-running Codex work
 
