@@ -1,0 +1,858 @@
+{
+  "report_id": "CROSS-EVENT-LABEL-TRANSFER-2026-002",
+  "schema_version": "0.1.1",
+  "report_version": "cross-event-five-state-label-transfer-evidence-v0.1.1",
+  "generated_at_utc": "2026-07-16T05:32:00Z",
+  "run_id": "BL-2026-07-16-cross-event-label-transfer-r004",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 371,
+  "git_source_commit": "0c2b489f34915e352cefe72ca76dea488bc8a4db",
+  "software_version": "0.12.1",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_proposal_version": "deschutes-cross-event-label-proposal-v0.1.0",
+  "transfer_protocol_version": "cross-event-five-state-transfer-v0.1.0",
+  "baseline_version": null,
+  "model_version": null,
+  "input_hashes": {
+    "feasibility_report_sha256": "d320cee1e121c63a5ac8c5cd9f893fb63e6b8bc795b3671e62945850b1d02273",
+    "source_fitness_report_sha256": "c9aa90894150e081a6df26b8ee16c502bd532b67d7ecd493e038a366a480b34f",
+    "optical_registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+    "mtbs_registration_manifest_sha256": "499c6be3f60579ccd9beadfa69b0fa2b46cf3f3bedf65f8ada5065dfb989f35f"
+  },
+  "source_lineage": {
+    "optical": {
+      "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+      "contract_version": "cross-event-optical-intake-contract-v0.1.0",
+      "terms_review_id": "TERMS-2026-007",
+      "acquisition_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+      "assets": [
+        {
+          "role": "tepee-2018-pre",
+          "source_record_id": "SOURCE-2026-012",
+          "native_id": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+          "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip",
+          "bytes": 1129978013,
+          "sha256": "3d99aec012745da9231bec45c294a2914b5d6eb77a27dbbe4a720554ae0af609",
+          "md5": "d88c6f1bdc9e9108c64cb95eaa0da5c9",
+          "blake3": "5c1b3c25b7d2e3e22f1eb474054396a2fb87d0d1748ca7a50edbb9799d523f46"
+        },
+        {
+          "role": "tepee-2018-post",
+          "source_record_id": "SOURCE-2026-012",
+          "native_id": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+          "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip",
+          "bytes": 1144413287,
+          "sha256": "9ff4bf957bfdc8d282ee5799a73d607d12e8c0f0c8499f7ad2e52fada3854366",
+          "md5": "f65b6a470713ee0599df8d16f3ba6e92",
+          "blake3": "87602ae65a1821f0d50bab85fb6775cdcba9ee48a839a96a4d654f28f078829f"
+        },
+        {
+          "role": "mckay-2017-pre",
+          "source_record_id": "SOURCE-2026-012",
+          "native_id": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+          "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip",
+          "bytes": 1132353399,
+          "sha256": "32f5529cc254d74dffca4fc80774b0401dab96aa7dcdfd55d2b0440a7cefa8e7",
+          "md5": "1bd2d39175ac50d2982c806275a57063",
+          "blake3": "20fbb16b1611f9592cb437823f6834ffc8eea57f63866ac2515c7f4e86f020d2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "source_record_id": "SOURCE-2026-012",
+          "native_id": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+          "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip",
+          "bytes": 1144426057,
+          "sha256": "a735ecc6da284dbeb864210928dfc2997a9e2cbf50722b699a5fa6625d874555",
+          "md5": "cb4501abcb2af4b05d7f5b1c55fe6c48",
+          "blake3": "0a68c875b5303a823e44887617c77ea439c39b3e0517d4cc457bf7edf98aa8da"
+        }
+      ]
+    },
+    "mtbs": {
+      "package_id": "burnlens-mtbs-cross-event-reference-v0.1.0",
+      "contract_version": "mtbs-cross-event-reference-contract-v0.1.0",
+      "source_record_id": "SOURCE-2026-013",
+      "terms_review_id": "TERMS-2026-008",
+      "acquisition_run_id": "BL-2026-07-16-mtbs-cross-event-reference-r003",
+      "source": {
+        "organization": "Monitoring Trends in Burn Severity Program (USGS and USDA Forest Service)",
+        "image_service_url": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_MTBS_CONUS/ImageServer",
+        "service": {
+          "name": "Fire_Aviation/USFS_EDW_MTBS_CONUS",
+          "current_version": 12,
+          "service_item_id": "b84dc1dbb08149aca566adaaa78c1442",
+          "band_count": 1,
+          "pixel_type": "U8",
+          "pixel_size_x": 30,
+          "pixel_size_y": 30,
+          "min_values": [
+            1
+          ],
+          "max_values": [
+            6
+          ],
+          "default_resampling_method": "Nearest",
+          "copyright_text": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
+          "canonical_sha256": "3cf59ccfe434e395aa7705fcaa884354ba238e3db85d1c3015121b020d41ad3c"
+        },
+        "access_route": "public ArcGIS ImageServer exportImage; no credential or email queue",
+        "reference_role": "analyst-interpreted annual thematic severity; never automatic truth"
+      },
+      "registered_assets": [
+        {
+          "event_group_id": "event-tepee-1144-ne-2018",
+          "fire_id": "OR4383912111420180907",
+          "year": 2018,
+          "filename": "event-tepee-1144-ne-2018-mtbs-2018.tif",
+          "size_bytes": 50316,
+          "sha256": "7414409447cf2abe21ebc1060b3724e49937900b7fcc821207f7211babc51dfa",
+          "link_count": 1,
+          "link_gate": "pass: single linked",
+          "driver": "GTiff",
+          "crs": "EPSG:3857",
+          "dtype": "uint8",
+          "width": 328,
+          "height": 125,
+          "transform": [
+            30.0,
+            0.0,
+            -13483488.8586,
+            0.0,
+            -30.0,
+            5443138.999
+          ],
+          "bbox_3857": [
+            -13483488.8586,
+            5439388.999,
+            -13473648.8586,
+            5443138.999
+          ],
+          "pixel_size_m": 30.0,
+          "value_counts": {
+            "0": 21912,
+            "1": 2121,
+            "2": 10763,
+            "3": 5556,
+            "4": 636,
+            "5": 12
+          },
+          "request_url": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_MTBS_CONUS/ImageServer/exportImage?bbox=-13483488.8586%2C5439388.999%2C-13473648.8586%2C5443138.999&bboxSR=3857&size=328%2C125&imageSR=3857&format=tiff&pixelType=U8&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicAttribute%22%2C%22sortField%22%3A%22Year%22%2C%22sortValue%22%3A%222018%22%2C%22ascending%22%3Atrue%2C%22where%22%3A%22Year%3D2018%22%7D&f=image",
+          "single_link_restored_during_acquisition": true
+        },
+        {
+          "event_group_id": "event-mckay-1035-ne-2017",
+          "fire_id": "OR4375212142520170829",
+          "year": 2017,
+          "filename": "event-mckay-1035-ne-2017-mtbs-2017.tif",
+          "size_bytes": 33922,
+          "sha256": "7122729aa63018b934774fa4f47b034a15e44f7324487f813533202ad5cefb96",
+          "link_count": 1,
+          "link_gate": "pass: single linked",
+          "driver": "GTiff",
+          "crs": "EPSG:3857",
+          "dtype": "uint8",
+          "width": 179,
+          "height": 101,
+          "transform": [
+            30.0,
+            0.0,
+            -13517118.8586,
+            0.0,
+            -30.0,
+            5429488.999
+          ],
+          "bbox_3857": [
+            -13517118.8586,
+            5426458.999,
+            -13511748.8586,
+            5429488.999
+          ],
+          "pixel_size_m": 30.0,
+          "value_counts": {
+            "0": 7188,
+            "1": 178,
+            "2": 3631,
+            "3": 3391,
+            "4": 3691
+          },
+          "request_url": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_MTBS_CONUS/ImageServer/exportImage?bbox=-13517118.8586%2C5426458.999%2C-13511748.8586%2C5429488.999&bboxSR=3857&size=179%2C101&imageSR=3857&format=tiff&pixelType=U8&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicAttribute%22%2C%22sortField%22%3A%22Year%22%2C%22sortValue%22%3A%222017%22%2C%22ascending%22%3Atrue%2C%22where%22%3A%22Year%3D2017%22%7D&f=image",
+          "single_link_restored_during_acquisition": true
+        }
+      ],
+      "current_verification": {
+        "accepted_as_unchanged_registered_package": true,
+        "registration_manifest_sha256": "499c6be3f60579ccd9beadfa69b0fa2b46cf3f3bedf65f8ada5065dfb989f35f",
+        "link_policy": {
+          "version": "mtbs-registered-package-link-policy-v0.1.0",
+          "approved_current_link_counts": [
+            1,
+            2
+          ],
+          "result": "PASS_APPROVED_CONTENT_VERIFIED_TOPOLOGY",
+          "public_evidence_boundary": "Runtime link counts are fail-closed safety evidence, not scientific content, and are excluded from public run identity after the approved gate passes."
+        },
+        "exact_current_manifest_content_reverified": true,
+        "assets": [
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "fire_id": "OR4383912111420180907",
+            "year": 2018,
+            "filename": "event-tepee-1144-ne-2018-mtbs-2018.tif",
+            "size_bytes": 50316,
+            "sha256": "7414409447cf2abe21ebc1060b3724e49937900b7fcc821207f7211babc51dfa",
+            "driver": "GTiff",
+            "crs": "EPSG:3857",
+            "dtype": "uint8",
+            "width": 328,
+            "height": 125,
+            "transform": [
+              30.0,
+              0.0,
+              -13483488.8586,
+              0.0,
+              -30.0,
+              5443138.999
+            ],
+            "bbox_3857": [
+              -13483488.8586,
+              5439388.999,
+              -13473648.8586,
+              5443138.999
+            ],
+            "pixel_size_m": 30.0,
+            "value_counts": {
+              "0": 21912,
+              "1": 2121,
+              "2": 10763,
+              "3": 5556,
+              "4": 636,
+              "5": 12
+            },
+            "request_url": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_MTBS_CONUS/ImageServer/exportImage?bbox=-13483488.8586%2C5439388.999%2C-13473648.8586%2C5443138.999&bboxSR=3857&size=328%2C125&imageSR=3857&format=tiff&pixelType=U8&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicAttribute%22%2C%22sortField%22%3A%22Year%22%2C%22sortValue%22%3A%222018%22%2C%22ascending%22%3Atrue%2C%22where%22%3A%22Year%3D2018%22%7D&f=image",
+            "exact_current_content_reverified": true
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "fire_id": "OR4375212142520170829",
+            "year": 2017,
+            "filename": "event-mckay-1035-ne-2017-mtbs-2017.tif",
+            "size_bytes": 33922,
+            "sha256": "7122729aa63018b934774fa4f47b034a15e44f7324487f813533202ad5cefb96",
+            "driver": "GTiff",
+            "crs": "EPSG:3857",
+            "dtype": "uint8",
+            "width": 179,
+            "height": 101,
+            "transform": [
+              30.0,
+              0.0,
+              -13517118.8586,
+              0.0,
+              -30.0,
+              5429488.999
+            ],
+            "bbox_3857": [
+              -13517118.8586,
+              5426458.999,
+              -13511748.8586,
+              5429488.999
+            ],
+            "pixel_size_m": 30.0,
+            "value_counts": {
+              "0": 7188,
+              "1": 178,
+              "2": 3631,
+              "3": 3391,
+              "4": 3691
+            },
+            "request_url": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_MTBS_CONUS/ImageServer/exportImage?bbox=-13517118.8586%2C5426458.999%2C-13511748.8586%2C5429488.999&bboxSR=3857&size=179%2C101&imageSR=3857&format=tiff&pixelType=U8&interpolation=RSP_NearestNeighbor&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicAttribute%22%2C%22sortField%22%3A%22Year%22%2C%22sortValue%22%3A%222017%22%2C%22ascending%22%3Atrue%2C%22where%22%3A%22Year%3D2017%22%7D&f=image",
+            "exact_current_content_reverified": true
+          }
+        ]
+      }
+    },
+    "feasibility_source_snapshot_sha256": "2c78984d790046db73de68b25e2e0c87a062e2b63a5b957ed10f72382687f6ba",
+    "predecessor_run_id": "BL-2026-07-16-cross-event-source-fitness-r006",
+    "predecessor_git_source_commit": "cf1d9101e2760bf7d779b6fae68e605bb8809c1c"
+  },
+  "method": {
+    "thresholds": {
+      "burn_dnbr_min": 0.1,
+      "burn_ndvi_loss_min": 0.05,
+      "burn_swir_gain_min": 0.02,
+      "burn_nir_loss_min": 0.02,
+      "burn_supporting_signals_min": 2,
+      "burn_neighbor_support_min": 5,
+      "stable_abs_dnbr_max": 0.03,
+      "stable_abs_ndvi_change_max": 0.03,
+      "stable_abs_swir_change_max": 0.01,
+      "stable_abs_nir_change_max": 0.01,
+      "stable_neighbor_support_min": 7,
+      "stability_fallback_quantile": 0.15,
+      "stability_fallback_max_normalized_score": 6.0,
+      "boundary_review_px": 1,
+      "threshold_scope": "transfer hypothesis inherited from the exact Darlene 3 proposal; not universal calibration"
+    },
+    "spectral": "Native 20 m B04/B8A/B12 changes reuse the established Darlene 3 proposal-screen hypothesis.",
+    "quality": "Sentinel SCL and source-fitness registration states constrain eligibility; they never identify burn truth.",
+    "mtbs": "Nearest-neighbor annual thematic severity supports classes 2-4, reserves classes 1/5 for review, excludes class 6, and never creates a burned candidate without coherent spectral evidence inside the frozen boundary.",
+    "background": "Background candidates require affirmative stability outside the expanded event boundary and MTBS class 0. The fixed Darlene near-zero rule remains primary; the authorized binary-mask fallback admits only the lowest 15% normalized non-burn change tail, capped at score 6.0 and requiring 7-of-9 support. Boundary absence alone is insufficient.",
+    "uncertainty": "Cross-source conflict, ambiguous MTBS evidence, boundary transition, quality review, and burned transitions stay review-needed; unsupported usable pixels stay unknown."
+  },
+  "events": [
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_id": "OR4383912111420180907",
+      "fire_name": "TEPEE 1144 NE",
+      "ignition_date": "2018-09-07",
+      "geography_group_id": "geo-tepee-1144-ne-2018-mtbs-boundary",
+      "scene_group_id": "scene-or4383912111420180907-789704b12eb7",
+      "time_group_id": "time-2018-09-07",
+      "source_geometry_sha256": "97bd346487e5fc0a12e62c4625cc6badf9191c949691ab941ab802d14b5d509e",
+      "grid": {
+        "crs": "EPSG:32610",
+        "transform": [
+          20.0,
+          0.0,
+          650820.0,
+          0.0,
+          -20.0,
+          4857540.0
+        ],
+        "width": 351,
+        "height": 125,
+        "pixel_size_m": 20
+      },
+      "inputs": {
+        "pre": {
+          "role": "tepee-2018-pre",
+          "provider_id": "637dfcb9-6a28-487e-b6b3-9645ddc40dcc",
+          "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip"
+        },
+        "post": {
+          "role": "tepee-2018-post",
+          "provider_id": "84d6af81-f343-4410-a09e-711b553f2f11",
+          "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip"
+        },
+        "mtbs": {
+          "filename": "event-tepee-1144-ne-2018-mtbs-2018.tif",
+          "sha256": "7414409447cf2abe21ebc1060b3724e49937900b7fcc821207f7211babc51dfa",
+          "source_crs": "EPSG:3857",
+          "source_transform": [
+            30.0,
+            0.0,
+            -13483488.8586,
+            0.0,
+            -30.0,
+            5443138.999
+          ],
+          "source_width": 328,
+          "source_height": 125,
+          "year_filter": 2018,
+          "read_contract": "one bounded byte read; SHA-256 and raster analysis use the same in-memory bytes",
+          "destination_crs": "EPSG:32610",
+          "destination_transform": [
+            20.0,
+            0.0,
+            650820.0,
+            0.0,
+            -20.0,
+            4857540.0
+          ],
+          "destination_width": 351,
+          "destination_height": 125,
+          "resampling": "nearest-neighbor categorical",
+          "value_counts": {
+            "0": 21574,
+            "1": 2429,
+            "2": 12612,
+            "3": 6512,
+            "4": 737,
+            "5": 11
+          }
+        }
+      },
+      "source_fitness_binding": {
+        "registration_windows": [
+          {
+            "window_id": "W-01",
+            "state": "excluded",
+            "reason_code": "ELIGIBLE_FRACTION_BELOW_GATE",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 0,
+              "height": 125,
+              "width": 125
+            }
+          },
+          {
+            "window_id": "W-02",
+            "state": "review-needed",
+            "reason_code": "BAND_CONSENSUS_EXCEEDS_GATE",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 113,
+              "height": 125,
+              "width": 125
+            }
+          },
+          {
+            "window_id": "W-03",
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 226,
+              "height": 125,
+              "width": 125
+            }
+          }
+        ],
+        "pair_quality_summary": {
+          "pixel_count": 43875,
+          "states": [
+            {
+              "state": "eligible-comparison",
+              "code": 0,
+              "pixels": 40912,
+              "percent": 93.2467
+            },
+            {
+              "state": "review-needed",
+              "code": 1,
+              "pixels": 1821,
+              "percent": 4.1504
+            },
+            {
+              "state": "excluded",
+              "code": 2,
+              "pixels": 1142,
+              "percent": 2.6028
+            }
+          ]
+        },
+        "pair_quality_state_counts": {
+          "eligible-comparison": 40912,
+          "review-needed": 1821,
+          "excluded": 1142
+        },
+        "registration_state_counts": {
+          "pass": 14125,
+          "review-needed": 14125,
+          "excluded": 15625
+        }
+      },
+      "mtbs_destination_value_counts": {
+        "0": 21574,
+        "1": 2429,
+        "2": 12612,
+        "3": 6512,
+        "4": 737,
+        "5": 11
+      },
+      "method_mask_counts": {
+        "background_raw": 494,
+        "burn_coherent": 10428,
+        "burn_evidence": 11364,
+        "burned_boundary": 946,
+        "burned_raw": 532,
+        "excluded": 16025,
+        "mtbs_ambiguity_review": 560,
+        "mtbs_ambiguous": 2440,
+        "mtbs_support": 19861,
+        "quality_review": 14245,
+        "reference_boundary": 2415,
+        "reference_core": 20413,
+        "review": 17294,
+        "source_conflict": 63,
+        "stability_fallback_pool": 8206,
+        "stable_coherent": 507,
+        "stable_evidence": 1790,
+        "stable_fallback": 1231,
+        "stable_fallback_coherent": 445,
+        "stable_primary": 1636,
+        "stable_primary_coherent": 445,
+        "usable": 13605
+      },
+      "method_diagnostics": {
+        "stability_fallback_threshold_normalized": 1.287317
+      },
+      "summary": {
+        "pixel_count": 43875,
+        "states": [
+          {
+            "state": "background-candidate",
+            "code": 0,
+            "pixels": 494,
+            "percent": 1.1259,
+            "target_value": 0
+          },
+          {
+            "state": "burned",
+            "code": 1,
+            "pixels": 92,
+            "percent": 0.2097,
+            "target_value": 1
+          },
+          {
+            "state": "unknown",
+            "code": 2,
+            "pixels": 10942,
+            "percent": 24.939,
+            "target_value": null
+          },
+          {
+            "state": "excluded",
+            "code": 3,
+            "pixels": 16025,
+            "percent": 36.5242,
+            "target_value": null
+          },
+          {
+            "state": "review-needed",
+            "code": 4,
+            "pixels": 16322,
+            "percent": 37.2011,
+            "target_value": null
+          }
+        ],
+        "candidate_target_pixels": 586,
+        "candidate_target_percent": 1.3356,
+        "ignored_pixels": 43289,
+        "ignored_percent": 98.6644
+      },
+      "outputs": {
+        "state": {
+          "filename": "CROSS-EVENT-LABEL-TRANSFER-2026-002-tepee-1144-ne-2018-state.tif",
+          "kind": "five-state-companion-proposal",
+          "size_bytes": 3589,
+          "sha256": "882ea13490b768ff1f5402f504cca4193c89a4977a93b75fb92f3f374a2beeca",
+          "crs": "EPSG:32610",
+          "transform": [
+            20.0,
+            0.0,
+            650820.0,
+            0.0,
+            -20.0,
+            4857540.0
+          ],
+          "width": 351,
+          "height": 125,
+          "dtype": "uint8",
+          "nodata": null
+        },
+        "target": {
+          "filename": "CROSS-EVENT-LABEL-TRANSFER-2026-002-tepee-1144-ne-2018-target.tif",
+          "kind": "candidate-binary-target",
+          "size_bytes": 2517,
+          "sha256": "fe5e42de874323bad83a9f52d8adb03a54ef5ebddb419fafbf80a85321ee30ca",
+          "crs": "EPSG:32610",
+          "transform": [
+            20.0,
+            0.0,
+            650820.0,
+            0.0,
+            -20.0,
+            4857540.0
+          ],
+          "width": 351,
+          "height": 125,
+          "dtype": "uint8",
+          "nodata": 255
+        }
+      }
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_id": "OR4375212142520170829",
+      "fire_name": "MCKAY 1035 NE",
+      "ignition_date": "2017-08-29",
+      "geography_group_id": "geo-mckay-1035-ne-2017-mtbs-boundary",
+      "scene_group_id": "scene-or4375212142520170829-fe36a9c858bd",
+      "time_group_id": "time-2017-08-29",
+      "source_geometry_sha256": "9eeca5a4aecec315bfffec913d9445d749c7286fdc2a20fcfaceaf07e609a084",
+      "grid": {
+        "crs": "EPSG:32610",
+        "transform": [
+          20.0,
+          0.0,
+          626720.0,
+          0.0,
+          -20.0,
+          4847220.0
+        ],
+        "width": 191,
+        "height": 105,
+        "pixel_size_m": 20
+      },
+      "inputs": {
+        "pre": {
+          "role": "mckay-2017-pre",
+          "provider_id": "a50825f5-3169-42a7-ae55-2eea540e7330",
+          "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip"
+        },
+        "post": {
+          "role": "mckay-2017-post",
+          "provider_id": "53af4b67-470d-4421-8901-54064d9aab1d",
+          "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip"
+        },
+        "mtbs": {
+          "filename": "event-mckay-1035-ne-2017-mtbs-2017.tif",
+          "sha256": "7122729aa63018b934774fa4f47b034a15e44f7324487f813533202ad5cefb96",
+          "source_crs": "EPSG:3857",
+          "source_transform": [
+            30.0,
+            0.0,
+            -13517118.8586,
+            0.0,
+            -30.0,
+            5429488.999
+          ],
+          "source_width": 179,
+          "source_height": 101,
+          "year_filter": 2017,
+          "read_contract": "one bounded byte read; SHA-256 and raster analysis use the same in-memory bytes",
+          "destination_crs": "EPSG:32610",
+          "destination_transform": [
+            20.0,
+            0.0,
+            626720.0,
+            0.0,
+            -20.0,
+            4847220.0
+          ],
+          "destination_width": 191,
+          "destination_height": 105,
+          "resampling": "nearest-neighbor categorical",
+          "value_counts": {
+            "0": 7286,
+            "1": 196,
+            "2": 4266,
+            "3": 3952,
+            "4": 4355
+          }
+        }
+      },
+      "source_fitness_binding": {
+        "registration_windows": [
+          {
+            "window_id": "W-01",
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 0,
+              "height": 105,
+              "width": 105
+            }
+          },
+          {
+            "window_id": "W-02",
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 43,
+              "height": 105,
+              "width": 105
+            }
+          },
+          {
+            "window_id": "W-03",
+            "state": "pass",
+            "reason_code": "CONTENT_REGISTRATION_PASS",
+            "pixel_window": {
+              "row_offset": 0,
+              "column_offset": 86,
+              "height": 105,
+              "width": 105
+            }
+          }
+        ],
+        "pair_quality_summary": {
+          "pixel_count": 20055,
+          "states": [
+            {
+              "state": "eligible-comparison",
+              "code": 0,
+              "pixels": 20055,
+              "percent": 100.0
+            },
+            {
+              "state": "review-needed",
+              "code": 1,
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "state": "excluded",
+              "code": 2,
+              "pixels": 0,
+              "percent": 0.0
+            }
+          ]
+        },
+        "pair_quality_state_counts": {
+          "eligible-comparison": 20055,
+          "review-needed": 0,
+          "excluded": 0
+        },
+        "registration_state_counts": {
+          "pass": 20055,
+          "review-needed": 0,
+          "excluded": 0
+        }
+      },
+      "mtbs_destination_value_counts": {
+        "0": 7286,
+        "1": 196,
+        "2": 4266,
+        "3": 3952,
+        "4": 4355
+      },
+      "method_mask_counts": {
+        "background_raw": 55,
+        "burn_coherent": 10500,
+        "burn_evidence": 10636,
+        "burned_boundary": 2321,
+        "burned_raw": 10425,
+        "excluded": 0,
+        "mtbs_ambiguity_review": 69,
+        "mtbs_ambiguous": 196,
+        "mtbs_support": 12573,
+        "quality_review": 0,
+        "reference_boundary": 1338,
+        "reference_core": 11691,
+        "review": 3398,
+        "source_conflict": 319,
+        "stability_fallback_pool": 6999,
+        "stable_coherent": 55,
+        "stable_evidence": 1050,
+        "stable_fallback": 1050,
+        "stable_fallback_coherent": 55,
+        "stable_primary": 0,
+        "stable_primary_coherent": 0,
+        "usable": 20055
+      },
+      "method_diagnostics": {
+        "stability_fallback_threshold_normalized": 5.842086
+      },
+      "summary": {
+        "pixel_count": 20055,
+        "states": [
+          {
+            "state": "background-candidate",
+            "code": 0,
+            "pixels": 55,
+            "percent": 0.2742,
+            "target_value": 0
+          },
+          {
+            "state": "burned",
+            "code": 1,
+            "pixels": 9119,
+            "percent": 45.47,
+            "target_value": 1
+          },
+          {
+            "state": "unknown",
+            "code": 2,
+            "pixels": 7483,
+            "percent": 37.3124,
+            "target_value": null
+          },
+          {
+            "state": "excluded",
+            "code": 3,
+            "pixels": 0,
+            "percent": 0.0,
+            "target_value": null
+          },
+          {
+            "state": "review-needed",
+            "code": 4,
+            "pixels": 3398,
+            "percent": 16.9434,
+            "target_value": null
+          }
+        ],
+        "candidate_target_pixels": 9174,
+        "candidate_target_percent": 45.7442,
+        "ignored_pixels": 10881,
+        "ignored_percent": 54.2558
+      },
+      "outputs": {
+        "state": {
+          "filename": "CROSS-EVENT-LABEL-TRANSFER-2026-002-mckay-1035-ne-2017-state.tif",
+          "kind": "five-state-companion-proposal",
+          "size_bytes": 3111,
+          "sha256": "33f4aec6d807deab7bf81c911ba0a57e57e8a6153012236013f96409b216719f",
+          "crs": "EPSG:32610",
+          "transform": [
+            20.0,
+            0.0,
+            626720.0,
+            0.0,
+            -20.0,
+            4847220.0
+          ],
+          "width": 191,
+          "height": 105,
+          "dtype": "uint8",
+          "nodata": null
+        },
+        "target": {
+          "filename": "CROSS-EVENT-LABEL-TRANSFER-2026-002-mckay-1035-ne-2017-target.tif",
+          "kind": "candidate-binary-target",
+          "size_bytes": 2609,
+          "sha256": "f3563ebf55aa723f2799cab93b51ad160e5c9de496e779393d354191a84fa413",
+          "crs": "EPSG:32610",
+          "transform": [
+            20.0,
+            0.0,
+            626720.0,
+            0.0,
+            -20.0,
+            4847220.0
+          ],
+          "width": 191,
+          "height": 105,
+          "dtype": "uint8",
+          "nodata": 255
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "event_count": 2,
+    "state_counts": {
+      "background-candidate": 549,
+      "burned": 9211,
+      "unknown": 18425,
+      "excluded": 16025,
+      "review-needed": 19720
+    },
+    "all_five_states_represented": true,
+    "candidate_target_pixels": 9760,
+    "ignored_pixels": 54170
+  },
+  "decision": "PROPOSAL_READY_FOR_SEPARATE_QA",
+  "decision_detail": "Both frozen events contain burned and background candidate pixels while preserving aggregate five-state uncertainty and all Tepee source-fitness exclusions. Separate software QA and rendered review remain required before proposal-level acceptance.",
+  "claims": {
+    "proven": [
+      "The established five-state proposal hypothesis can be executed on both exact source-fit event pairs.",
+      "Every candidate and ignored pixel is traceable to exact Sentinel, MTBS, boundary, quality, registration, protocol, schema, version, commit, and run evidence."
+    ],
+    "not_proven": [
+      "The proposal is accepted ground truth, field validated, universally calibrated, independently human labeled, or suitable for operational decisions.",
+      "A dataset, split, baseline, trained model, accuracy result, deployed application, official status, or endorsement exists."
+    ]
+  },
+  "attribution": "Contains modified Copernicus Sentinel-2 data (2017-2018), accessed through CDSE. MTBS reference: Monitoring Trends in Burn Severity Program, USGS and USDA Forest Service. No endorsement implied.",
+  "source_precedence": "Official emergency and incident sources govern public-safety decisions. Exact registered source bytes govern this bounded experiment; MTBS remains analyst-interpreted reference evidence.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ast
 from hashlib import sha256
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
@@ -18,15 +19,17 @@ from burnlens.cross_event_label_transfer import (
 )
 from burnlens.mtbs_cross_event_reference import (
     MtbsReferenceContract,
+    MtbsReferenceError,
     export_url,
     inspect_clip,
+    public_verification_summary,
     validate_contracts,
 )
 
 
 class CrossEventLabelTransferTests(unittest.TestCase):
     def test_current_package_version_is_cross_event_label_transfer_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.12.0")
+        self.assertEqual(burnlens.__version__, "0.12.1")
 
     def test_cross_event_text_artifacts_have_checkout_stable_lf_contract(self) -> None:
         root = Path(__file__).resolve().parents[1]
@@ -94,6 +97,36 @@ class CrossEventLabelTransferTests(unittest.TestCase):
             result = inspect_clip(path, contract)
             self.assertEqual(result["value_counts"], {"0": 1, "2": 1, "3": 1, "4": 1})
             self.assertEqual(result["link_count"], 1)
+
+            one_link = public_verification_summary({
+                "accepted_as_unchanged_registered_package": True,
+                "registration_manifest_sha256": "a" * 64,
+                "registration_manifest_link_count": 1,
+                "assets": [result],
+            })
+            first_alias = path.with_name("fixture-first-alias.tif")
+            os.link(path, first_alias)
+            two_link_result = inspect_clip(path, contract)
+            self.assertEqual(two_link_result["link_count"], 2)
+            two_link = public_verification_summary({
+                "accepted_as_unchanged_registered_package": True,
+                "registration_manifest_sha256": "a" * 64,
+                "registration_manifest_link_count": 2,
+                "assets": [two_link_result],
+            })
+            self.assertEqual(one_link, two_link)
+            self.assertTrue(
+                all("link_count" not in asset and "link_gate" not in asset for asset in one_link["assets"])
+            )
+            self.assertEqual(
+                one_link["link_policy"]["result"],
+                "PASS_APPROVED_CONTENT_VERIFIED_TOPOLOGY",
+            )
+
+            second_alias = path.with_name("fixture-second-alias.tif")
+            os.link(path, second_alias)
+            with self.assertRaisesRegex(MtbsReferenceError, "link count is unsupported"):
+                inspect_clip(path, contract)
 
     def test_registration_window_precedence_preserves_tepee_exclusions(self) -> None:
         windows = [

@@ -24,9 +24,11 @@ from rasterio.io import MemoryFile
 from .provider_acquisition import USER_AGENT
 
 
-SOFTWARE_VERSION = "0.12.0"
+SOFTWARE_VERSION = "0.12.1"
 PACKAGE_ID = "burnlens-mtbs-cross-event-reference-v0.1.0"
 CONTRACT_VERSION = "mtbs-cross-event-reference-contract-v0.1.0"
+LINK_POLICY_VERSION = "mtbs-registered-package-link-policy-v0.1.0"
+APPROVED_LINK_COUNTS = frozenset({1, 2})
 SOURCE_RECORD_ID = "SOURCE-2026-013"
 TERMS_REVIEW_ID = "TERMS-2026-008"
 REGISTRATION_MANIFEST_NAME = ".burnlens-registration.json"
@@ -43,6 +45,16 @@ MAX_CLIP_BYTES = 10 * 1024 * 1024
 
 class MtbsReferenceError(RuntimeError):
     """A deterministic, secret-free MTBS reference failure."""
+
+
+def _link_gate(link_count: int, subject: str) -> str:
+    if link_count not in APPROVED_LINK_COUNTS:
+        raise MtbsReferenceError(f"MTBS {subject} link count is unsupported")
+    return (
+        "pass: single linked"
+        if link_count == 1
+        else "pass by exact two-link OneDrive exception: one bounded read, SHA-256, and in-memory inspection"
+    )
 
 
 @dataclass(frozen=True)
@@ -156,8 +168,7 @@ def inspect_clip(path: Path, contract: MtbsReferenceContract) -> dict[str, Any]:
     if not path.is_file():
         raise MtbsReferenceError(f"MTBS clip is missing: {contract.filename}")
     stat = path.stat()
-    if stat.st_nlink not in {1, 2}:
-        raise MtbsReferenceError(f"MTBS provider clip link count is unsupported: {contract.filename}")
+    link_gate = _link_gate(stat.st_nlink, f"provider clip: {contract.filename}")
     if stat.st_size != contract.expected_size_bytes:
         raise MtbsReferenceError(f"MTBS clip size mismatch: {contract.filename}")
     provider_bytes = path.read_bytes()
@@ -202,11 +213,7 @@ def inspect_clip(path: Path, contract: MtbsReferenceContract) -> dict[str, Any]:
         "size_bytes": stat.st_size,
         "sha256": digest,
         "link_count": stat.st_nlink,
-        "link_gate": (
-            "pass: single linked"
-            if stat.st_nlink == 1
-            else "pass by exact two-link OneDrive exception: one bounded read, SHA-256, and in-memory raster inspection"
-        ),
+        "link_gate": link_gate,
         "driver": "GTiff",
         "crs": "EPSG:3857",
         "dtype": "uint8",
@@ -367,6 +374,8 @@ def verify_package(destination: Path) -> dict[str, Any]:
         or manifest.get("terms_review_id") != TERMS_REVIEW_ID
     ):
         raise MtbsReferenceError("MTBS registration manifest identity mismatch")
+    manifest_link_count = manifest_path.stat().st_nlink
+    manifest_link_gate = _link_gate(manifest_link_count, "registration manifest")
     assets = [inspect_clip(destination / contract.filename, contract) for contract in CONTRACTS]
     declared = {item.get("event_group_id"): item for item in manifest.get("assets", []) if isinstance(item, dict)}
     if len(declared) != 2:
@@ -383,7 +392,52 @@ def verify_package(destination: Path) -> dict[str, Any]:
         "terms_review_id": TERMS_REVIEW_ID,
         "registration_manifest_name": REGISTRATION_MANIFEST_NAME,
         "registration_manifest_sha256": _sha256_file(manifest_path),
-        "registration_manifest_link_count": manifest_path.stat().st_nlink,
+        "registration_manifest_link_count": manifest_link_count,
+        "registration_manifest_link_gate": manifest_link_gate,
         "registration": manifest,
         "assets": assets,
+    }
+
+
+def public_verification_summary(verification: dict[str, Any]) -> dict[str, Any]:
+    """Return content-stable public evidence after the dynamic link gate passes.
+
+    Current link counts remain runtime safety evidence. They are deliberately
+    excluded from the public run payload because both approved topologies prove
+    the same registered content and OneDrive may switch between them without a
+    change to any source byte, raster grid, or raster value.
+    """
+    if verification.get("accepted_as_unchanged_registered_package") is not True:
+        raise MtbsReferenceError("MTBS package was not accepted before public summarization")
+    manifest_link_count = verification.get("registration_manifest_link_count")
+    _link_gate(manifest_link_count, "registration manifest")
+    assets = verification.get("assets")
+    if not isinstance(assets, list) or not assets:
+        raise MtbsReferenceError("MTBS public verification assets are incomplete")
+    stable_assets: list[dict[str, Any]] = []
+    for asset in assets:
+        if not isinstance(asset, dict):
+            raise MtbsReferenceError("MTBS public verification asset is invalid")
+        _link_gate(asset.get("link_count"), f"provider clip: {asset.get('filename', 'unknown')}")
+        stable = {
+            key: value
+            for key, value in asset.items()
+            if key not in {"link_count", "link_gate"}
+        }
+        stable["exact_current_content_reverified"] = True
+        stable_assets.append(stable)
+    return {
+        "accepted_as_unchanged_registered_package": True,
+        "registration_manifest_sha256": verification.get("registration_manifest_sha256"),
+        "link_policy": {
+            "version": LINK_POLICY_VERSION,
+            "approved_current_link_counts": sorted(APPROVED_LINK_COUNTS),
+            "result": "PASS_APPROVED_CONTENT_VERIFIED_TOPOLOGY",
+            "public_evidence_boundary": (
+                "Runtime link counts are fail-closed safety evidence, not scientific content, "
+                "and are excluded from public run identity after the approved gate passes."
+            ),
+        },
+        "exact_current_manifest_content_reverified": True,
+        "assets": stable_assets,
     }
