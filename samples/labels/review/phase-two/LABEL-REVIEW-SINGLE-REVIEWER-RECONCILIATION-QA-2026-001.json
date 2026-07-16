@@ -1,0 +1,171 @@
+{
+  "report_id": "LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "label-review-single-reviewer-reconciliation-qa-v0.1.0",
+  "generated_at_utc": "2026-07-16T22:59:01Z",
+  "run_id": "BL-2026-07-16-single-reviewer-reconciliation-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 403,
+  "git_source_commit": "fda69a60b0a5e350bfe10e7388571d7c1c103735",
+  "software_version": "0.20.0",
+  "private_reconciliation_binding": {
+    "bytes": 72628,
+    "sha256": "a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d",
+    "report_id": "LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-2026-001",
+    "report_version": "label-review-single-reviewer-reconciliation-v0.1.0",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "authorization_binding": {
+    "bytes": 3643,
+    "sha256": "db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952",
+    "report_id": "OWNER-WAIVER-2026-001",
+    "report_version": "label-review-owner-waiver-reveal-authorization-v0.1.0"
+  },
+  "response_binding": {
+    "bytes": 16443,
+    "sha256": "485e80f2563f8b723c16daa8b5e5a1172dd88e8f2a28a7dd8608c933fa64eed9",
+    "opaque_reviewer_id": "reviewer-01",
+    "unit_count": 56,
+    "filename_withheld": true,
+    "path_withheld": true,
+    "reviewer_free_text_withheld": true
+  },
+  "receipt_binding": {
+    "bytes": 2508,
+    "sha256": "67599f794a1310e9523cded095787c918ed47d88c439e240a0b41ea6e5eb9835",
+    "filename_withheld": true,
+    "path_withheld": true
+  },
+  "packet_binding": {
+    "bytes": 61599,
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c"
+  },
+  "reveal_binding": {
+    "bytes": 9433,
+    "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af",
+    "operator_status_before_run": "opened-during-issue-403-reconciliation-preflight",
+    "opened_by_this_run": true,
+    "first_access_context": "issue-403-reconciliation-preflight",
+    "first_access_recorded_at_utc": "2026-07-16T22:40:00Z",
+    "authorization_reverified_at_utc": "2026-07-16T22:40:40Z",
+    "authorization_reverified_before_first_reveal_content_access": false,
+    "authorization_reverified_before_private_response_content_access": true,
+    "authorization_reverified_before_unit_comparison": true,
+    "preflight_sequence_exception_acknowledged": true,
+    "sequence_exception_detail": "A repository search displayed exact reveal HTML during issue-403 preflight before the explicit authorization verifier invocation. The verifier passed immediately afterward and before private response content access or unit comparison. Reviewer blindness, response custody, and all exact source bytes were already locked.",
+    "content_republished": false
+  },
+  "owner_waiver_state": {
+    "returned_independent_responses": 1,
+    "second_human_response_present": false,
+    "reviewer_two_requirement_waived": true,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false
+  },
+  "rule": {
+    "version": "label-review-single-reviewer-reconciliation-v0.1.0",
+    "binary_proposal_to_review_label": {
+      "burned": "burned",
+      "background-candidate": "background"
+    },
+    "requires_evidence_sufficiency": "sufficient",
+    "weak_or_conflicting_reason_codes": [
+      "boundary-ambiguity",
+      "cloud-smoke-shadow",
+      "low-severity-ambiguity",
+      "non-fire-change-possible",
+      "other",
+      "registration-concern",
+      "source-context-conflict"
+    ],
+    "burn_directional_reason_codes": [
+      "persistent-darkening",
+      "vegetation-loss"
+    ],
+    "background_with_burn_directional_reason": "ignored-label-reason-semantic-conflict",
+    "burned_without_burn_directional_reason": "ignored-label-reason-semantic-conflict",
+    "uncertain_unusable_disagreement_nonbinary_and_noncandidate_proposals": "ignored"
+  },
+  "aggregate": {
+    "reviewed_units": 56,
+    "accepted_candidate_units": 6,
+    "ignored_units": 50,
+    "accepted_label_counts": {
+      "burned": 6
+    },
+    "disposition_reason_counts": {
+      "label-reason-semantic-conflict": 1,
+      "limited-or-insufficient-evidence": 4,
+      "proposal-not-binary-candidate": 32,
+      "reviewer-proposal-disagreement-or-nonbinary": 10,
+      "single-reviewer-supported-binary-match": 6,
+      "weak-or-conflicting-evidence-code": 3
+    },
+    "event_disposition_counts": {
+      "event-darlene3-or-2024": {
+        "accepted-candidate": 3,
+        "ignored": 17
+      },
+      "event-mckay-1035-ne-2017": {
+        "accepted-candidate": 3,
+        "ignored": 13
+      },
+      "event-tepee-1144-ne-2018": {
+        "accepted-candidate": 0,
+        "ignored": 20
+      }
+    }
+  },
+  "quality_gates": {
+    "exact_private_report_binding": "pass",
+    "all_units_have_unique_deterministic_dispositions": "pass",
+    "aggregate_recomputed_from_private_units": "pass",
+    "one_response_only_and_reviewer_two_absent": "pass",
+    "inter_rater_consensus_adjudication_claims": "absent",
+    "reviewer_free_text_private_paths_and_unit_details": "withheld",
+    "original_response_receipt_packet_and_reveal_modified": false,
+    "authorization_before_first_reveal_content_access": "fail-disclosed: reveal HTML appeared in issue-403 preflight repository search",
+    "authorization_before_private_response_access_and_unit_comparison": "pass"
+  },
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "decision": "REMEDIATE_LABEL_EVIDENCE_DEFER_DATASET_SINGLE_REVIEWER",
+  "decision_detail": "6 candidate burned units and 0 candidate background units survive the conservative single-reviewer rule. This is useful proposal-diagnostic evidence, not a balanced or representative dataset.",
+  "next_gate": "Remediate the reference-evidence route, prioritizing independently traceable burned and background evidence across every event; MTBS may support reference context but does not convert this bounded single-reviewer probe into validation or ground truth.",
+  "research_basis": [
+    {
+      "title": "MTBS Mapping Methods",
+      "url": "https://www.mtbs.gov/mapping-methods",
+      "use": "Current official methods confirm pre/post scene review, co-registration checks, masking of clouds and shadows, analyst interpretation, and acknowledged uncertainty."
+    },
+    {
+      "title": "CEOS LPV Burned Area Satellite Product Validation Protocol",
+      "url": "https://lpvs.gsfc.nasa.gov/PDF/BurnedAreaValidationProtocol.pdf",
+      "use": "The primary protocol separates burned, unburned, and unmapped areas and requires independent, representative reference evidence for accuracy claims."
+    },
+    {
+      "title": "CEOS LPV Fire Disturbance 2025",
+      "url": "https://lpvs.gsfc.nasa.gov/PDF/LPV_Plenary_2025/LPV_Fire_202505_v3.pdf",
+      "use": "The current fire-disturbance status notes unresolved sample-size and protocol questions and treats limited independent samples as insufficient without QA."
+    }
+  ],
+  "claims": {
+    "proven": [
+      "One exact blinded response was deterministically reconciled against the exact reveal.",
+      "Every reviewed unit has one private traceable accepted-candidate or ignored disposition.",
+      "Only aggregate evidence is public; reviewer free text and unit-level decisions remain withheld.",
+      "The result identifies a bounded proposal-remediation need without creating a dataset.",
+      "The preflight reveal-access sequence exception is disclosed rather than represented as a pass."
+    ],
+    "not_proven": [
+      "No second reviewer, inter-rater validation, consensus, or adjudication exists.",
+      "Accepted-candidate units are not ground truth, a representative validation sample, or an accuracy estimate.",
+      "No dataset, split, baseline, model, field validation, official status, endorsement, emergency readiness, or operational fitness exists."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
