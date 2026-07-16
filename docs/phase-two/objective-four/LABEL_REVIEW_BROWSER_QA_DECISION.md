@@ -36,6 +36,9 @@ These sources support the recorded mechanism. They do not expand the scientific 
 
 - Issue: #383
 - Branch: `codex/p2o4-t07-browser-acceptance`
+- Pull request: #385
+- Reviewed head: `1723f87d252bda7a67680a71108fc0a65b42c587`
+- Merge: `861716be16be3a0469d2268baed971be65684d48`
 - Base: `d8864e2c5b05061a49f87edc64adb95848400ac0`
 - Software: BurnLens `0.15.0`
 - Generator source: `74275a061fb4054a535cc8b660bebb0021999c54`
@@ -49,6 +52,8 @@ These sources support the recorded mechanism. They do not expand the scientific 
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Dataset / split / baseline / model: none
 - Exact inventory: `MANIFEST-2026-017`
+- Verified tag: `v0.15.0-live-browser-reviewer-handoff`; object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`
+- Lifecycle synchronization: issue #386
 
 ## Current project state and next gate
 

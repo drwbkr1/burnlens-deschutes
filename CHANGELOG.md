@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass 154 tests, compilation, Node syntax, dependency health, original-resolution review, and two byte-identical detached-source fixed-epoch 283,856-byte wheels / SHA-256 `950472207ac8f75208188584e2f8474f88a8a71e0f14fde864aa297b79076352`; isolated install reports `0.15.0`, 25 entry points, and the packaged controller.
 - Keep the browser-generated response explicitly non-human and reveal-prohibited. Create no accepted label set, dataset, split, baseline, model, accuracy estimate, deployment, field claim, official claim, or operational claim.
 
-Issue #383; branch `codex/p2o4-t07-browser-acceptance`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`. PR, merge, tag, and fresh-main lifecycle fields are pending candidate verification.
+Issue #383 / PR #385 shipped at merge `861716be16be3a0469d2268baed971be65684d48`; reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; verified tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`; lifecycle sync issue #386.
 
 ## v0.14.0-offline-reviewer-handoff - 2026-07-16
 
