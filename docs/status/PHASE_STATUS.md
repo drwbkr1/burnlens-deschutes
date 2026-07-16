@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; verified live-browser reviewer handoff shipped; first returned-response receipt active; dataset not created** | P2O4-T07 / issue #383 / PR #385 ships verified v0.15.0 current-Chrome software evidence. P2O4-T08 / issue #384 owns one operator-locked response; its public receipt, a second response, adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; verified live-browser reviewer handoff shipped; first returned-response lock candidate recorded; dataset not created** | P2O4-T07 / issue #383 / PR #385 ships verified v0.15.0 current-Chrome software evidence. P2O4-T08 / issue #384 has a `0.16.0` content-withheld public-lock candidate; PR/merge/tag gates, a second response, adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -16,7 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.15.0-live-browser-reviewer-handoff` at merge `861716be16be3a0469d2268baed971be65684d48`; tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9`; reviewed head `1723f87d252bda7a67680a71108fc0a65b42c587`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; browser run uses zero human responses |
-| Active evidence checkpoint | P2O4-T08 / issue #384; publish a sanitized receipt for the already preserved and operator-locked first returned response; keep exact bytes/notes private and reveal unopened |
+| Active evidence checkpoint | P2O4-T08 / issue #384 / BurnLens `0.16.0` candidate; exact response and receipt remain private/ignored; public JSON/HTML/PNG exposes only hashes, completeness, binding, chronology, withholding, and one-of-two state |
 | Previous repository evidence baseline | Shipped `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f` |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
@@ -81,7 +81,7 @@ P2O4-T07 / issue #383 / PR #385 ships `v0.15.0-live-browser-reviewer-handoff` at
 
 ## Current checkpoint
 
-P2O4-T08 / issue #384 is active. One actual response is preserved and operator-locked under ignored local storage. Publish only its sanitized receipt and bounded counts, do not expose notes or raw response bytes, keep the reveal unopened, obtain a second qualifying response, and do not create a split before review/adjudication gates pass.
+P2O4-T08 / issue #384 is active with source `ec41129f9322022f28b8f788a2e08ae22145471b`, public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`, 158 passing tests, and a reproducible 292,068-byte candidate wheel. One actual response and its private receipt are exact, ignored, and operator-locked. Complete PR/merge/tag/fresh-main verification, then obtain a second qualifying response. Keep the first response contents and reveal withheld; do not compare, adjudicate, or create a split before both response locks exist.
 
 ## Boundaries carried forward
 

@@ -123,11 +123,11 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, isolated offline reviewer handoff, and live-browser handoff QA are shipped; dataset deferred |
+| Current phase posture | Phase Two active; verified topology-stable three-event proposal/QA, proposal-blinded review readiness, isolated offline reviewer handoff, and live-browser handoff QA are shipped; first returned-response public-lock candidate exists; dataset deferred |
 | Current repository baseline | Latest shipped: `v0.15.0-live-browser-reviewer-handoff` at `861716be16be3a0469d2268baed971be65684d48` via issue #383 / PR #385 |
-| Active analytical candidate | P2O4-T08 / issue #384: publish a bounded public receipt for the first exact returned response already preserved and operator-locked. A second response remains required; reveal and adjudication remain deferred. |
+| Active analytical candidate | P2O4-T08 / issue #384 / PR #388 / BurnLens `0.16.0`: exact first response and private receipt preserved; bounded public hash-lock evidence generated. Merge, tag, and fresh-main gates remain; a second response is the next scientific gate. |
 | Baseline verification | Annotated tag object `69b32b076a7fca40ba5eceacb64aeac2a512e7b9` remotely dereferences to PR #385 merge `861716be16be3a0469d2268baed971be65684d48`; fresh remote-main tests, exact handoff reconstruction, fresh browser run, canonical source wheel, manifest/link/LF, and remote-tag gates pass |
-| Data/model/run/map/application status | Exact provider packages and exact returned-review bytes remain in ignored local storage. Shipped local application version `label-review-handoff-workbench-v0.1.0` supports isolated offline review, not a deployed public application. Browser-QA run `BL-2026-07-16-label-review-browser-qa-r001` uses zero human responses. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
+| Data/model/run/map/application status | Exact provider packages, exact returned-review bytes, and the private receipt remain in ignored local storage. Public run `BL-2026-07-16-label-review-response-lock-qa-r001` exposes only content-withheld cryptographic and completeness evidence. Shipped local application version `label-review-handoff-workbench-v0.1.0` is not deployed. No independently accepted labels, adjudication, dataset, split, baseline, model, analytical inference result, or deployment exists |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
