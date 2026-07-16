@@ -8,6 +8,8 @@ Can BurnLens transfer its established five-state burn-scar proposal from Darlene
 
 Issue #367 uses the four registered Sentinel-2 L2A archives accepted by `CROSS-EVENT-SOURCE-FITNESS-2026-001` and two exact public MTBS annual thematic clips registered under `SOURCE-2026-013`. The MTBS clips are analyst-interpreted remotely sensed reference evidence. They are not field truth, an operational perimeter, automatic labels, or endorsement.
 
+The exact experiment shipped through PR #368 at merge `9679e53783500c437de44fc0d033b64f0bacb0df`. Verified annotated tag object `83a0371b9c7e75163b2e4ef5c6368103347740b4` remotely peels to that merge as `v0.12.0-cross-event-label-transfer-baseline`.
+
 The proposal keeps `burn-scar-label-protocol-v0.1.0` as a transfer hypothesis and `burn-scar-five-state-schema-v0.1.0` as the implemented state contract. Burned candidates require coherent Sentinel spectral change inside the eroded event boundary plus MTBS support class 2-4. MTBS never independently creates a burned candidate. SCL, source-fitness registration, ambiguous MTBS values, boundary transitions, cross-source conflicts, and unsupported usable pixels remain review-needed, excluded, or unknown.
 
 The fixed Darlene near-zero stability rule produced no primary stable pixels for McKay. Under the owner's authorized burn-scar binary-mask fallback, BurnLens admits only the lowest 15% normalized non-burn change tail outside the expanded boundary with MTBS code 0, caps the normalized score at 6.0, and requires seven-of-nine spatial support. Tepee's event-relative threshold is `1.287317` with 445 coherent fallback pixels; McKay's is `5.842086` with 55. These are proposal diagnostics, not universal calibration or optimized accuracy thresholds.

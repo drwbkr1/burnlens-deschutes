@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.12.0-cross-event-label-transfer-baseline - 2026-07-16 (candidate)
+## v0.12.0-cross-event-label-transfer-baseline - 2026-07-16
 
 ### P2O4-T04 - Transfer five-state proposals across Tepee and McKay
 
@@ -18,7 +18,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Raise BurnLens to `0.12.0`; pass 137 tests, compilation, dependency health, two byte-identical fixed-epoch 214,749-byte wheels / SHA-256 `525038b78dbc199be9851dc1b4f5854b7bd49093047c8a761446616e921e865c`, isolated import, and three new entry points.
 - Accept reproducible cross-event proposal evidence while deferring accepted labels, dataset, split, baseline, model, independent human validation, field validation, and operational claims.
 
-Issue #367; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; reviewed PR/merge/tag pending.
+Issue #367 / PR #368 shipped at merge `9679e53783500c437de44fc0d033b64f0bacb0df`; reviewed head `3d49b6237cbb96356d5808723ddd5e74ecfb58c0`; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; verified tag object `83a0371b9c7e75163b2e4ef5c6368103347740b4`; lifecycle sync issue #369.
 
 ## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16
 

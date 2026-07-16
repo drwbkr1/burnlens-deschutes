@@ -1,6 +1,6 @@
 # REGISTRY-2026-013 - Cross-Event Five-State Transfer Artifacts
 
-**Candidate checkpoint:** Issue #367 / branch `codex/p2o4-t04-cross-event-label-transfer`; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; candidate artifacts `60bdc71df3e2b765e3a08076b05c082826a720c6`; target `v0.12.0-cross-event-label-transfer-baseline`
+**Checkpoint:** Issue #367 / PR #368 / merge `9679e53783500c437de44fc0d033b64f0bacb0df`; reviewed head `3d49b6237cbb96356d5808723ddd5e74ecfb58c0`; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; candidate artifacts `60bdc71df3e2b765e3a08076b05c082826a720c6`; verified tag `v0.12.0-cross-event-label-transfer-baseline`, object `83a0371b9c7e75163b2e4ef5c6368103347740b4`; lifecycle sync issue #369
 
 | Artifact | Class | Version/state | Committed provider bytes |
 |---|---|---|---:|
@@ -11,8 +11,8 @@
 | Proposal report and rasters | JSON/HTML/PNG, two five-state GeoTIFFs, two binary target GeoTIFFs | 9,760 candidate / 54,170 ignored; hashes in `MANIFEST-2026-013` | 0 |
 | Separate QA report | JSON/HTML/PNG | 63,930 pixels; zero state/target mismatch; 45 samples | 0 |
 | Repository tests | MTBS byte/grid/domain/link contract, registration precedence, five-state/ignore rules, fallback recovery, QA import independence, predecessor version gates, nested LF checkout contract | 137 pass | 0 |
-| `burnlens_deschutes-0.12.0-py3-none-any.whl` | Reproducible candidate wheel and isolated import evidence; not committed | source `cdbff3738c1dfacb99e5fb85aea588d8c70b5e8a`; `SOURCE_DATE_EPOCH=1784177429`; two byte-identical builds; 214,749 bytes; SHA-256 `525038b78dbc199be9851dc1b4f5854b7bd49093047c8a761446616e921e865c`; import `0.12.0` | 0 |
+| `burnlens_deschutes-0.12.0-py3-none-any.whl` | Reproducible release-wheel and isolated import evidence; not committed | source `cdbff3738c1dfacb99e5fb85aea588d8c70b5e8a`; `SOURCE_DATE_EPOCH=1784177429`; two byte-identical builds plus exact fresh merged-main rebuild; 214,749 bytes; SHA-256 `525038b78dbc199be9851dc1b4f5854b7bd49093047c8a761446616e921e865c`; import `0.12.0` | 0 |
 | `SOURCE-2026-013`, `TERMS-2026-008`, `PRECHECK-2026-013`, `LABEL_FITNESS-2026-007`, `SOURCE_PRECEDENCE-2026-006`, `USE_BOUNDARY-2026-012` | Source, rights, entry, label fitness, authority, and claims records | `ACCEPT_CROSS_EVENT_LABEL_TRANSFER_PROPOSAL_DEFER_DATASET` | 0 |
-| `MANIFEST-2026-013.json` | Candidate provenance and exact ten-output inventory | Merge/tag lifecycle pending | 0 |
+| `MANIFEST-2026-013.json` | Verified checkpoint provenance and exact ten-output inventory | Shipped; PR #368, merge, fresh merged-main, reproducible-wheel, and remote-tag gates pass; sync #369 | 0 |
 
 No credential, token, cookie, authorization header, signed delivery URL, protected-store detail, native Sentinel/MTBS provider raster, accepted dataset, split, baseline, model, application, deployment, accuracy claim, independent human validation, or field validation is committed or claimed.
