@@ -1,5 +1,6 @@
 # Package source and build metadata must have checkout-stable bytes so a fixed
 # SOURCE_DATE_EPOCH can produce the same wheel from a fresh Windows clone.
+.gitattributes text eol=lf
 *.py text eol=lf
 pyproject.toml text eol=lf
 LICENSE text eol=lf
@@ -23,6 +24,10 @@ samples/labels/phase-two/*.html text eol=lf
 # Cross-event label-transfer and QA evidence use the same LF contract.
 samples/labels/cross-event/phase-two/*.json text eol=lf
 samples/labels/cross-event/phase-two/*.html text eol=lf
+
+# Label-review packet and integrity QA evidence use the same LF contract.
+samples/labels/review/phase-two/*.json text eol=lf
+samples/labels/review/phase-two/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
