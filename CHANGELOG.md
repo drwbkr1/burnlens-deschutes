@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.19.0-owner-waiver-reveal-readiness - candidate - 2026-07-16
+## v0.19.0-owner-waiver-reveal-readiness - verified - 2026-07-16
 
 ### P2O4-T10A - Establish a separate owner-waiver reveal boundary
 
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record a 3,643-byte ignored authorization / SHA-256 `db917fdf287ffb156b574beb6ec3a891c1d55d9653b6dfc2e1f8e434f6bed952`; authorize only a later deterministic private issue-#403 reconciliation and perform zero reveal actions.
 - Pass 176 tests, compileall, dependency health, privacy, semantic, original-resolution visual, exact-binding, and two byte-identical fixed-epoch 326,372-byte wheel gates; isolated BurnLens `0.19.0` exposes 31 entry points and zero private/download/build entries.
 
-Issue #407; parent #403; base `25b354b2e18c5e59857d6c8c153274c864eeea42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; PR, merge, verified tag, and fresh-main gates pending.
+Issue #407 / PR #408; parent #403; base `25b354b2e18c5e59857d6c8c153274c864eeea42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`. Fresh remote-main tests, compilation, JSON, links, manifest, package, and remote-tag gates pass.
 
 ## v0.18.0-atomic-response-intake-readiness - verified - 2026-07-16
 
