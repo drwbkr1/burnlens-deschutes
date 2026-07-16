@@ -18,6 +18,7 @@ from burnlens.cross_event_optical_contract import (
     EXPECTED_METADATA,
     MAX_TRANSFER_ATTEMPTS,
     ROUTE_PRECEDENCE,
+    TEMPORARY_PREFIX,
     TEMPORARY_SUFFIX,
     CdseCredentials,
     _validate_working_entries,
@@ -126,9 +127,10 @@ class CrossEventOpticalContractTests(unittest.TestCase):
 
     def test_cross_event_working_files_use_onedrive_ignored_tmp_suffix(self) -> None:
         self.assertEqual(TEMPORARY_SUFFIX, ".tmp")
+        self.assertEqual(TEMPORARY_PREFIX, "~$")
         with TemporaryDirectory() as directory:
             quarantine = Path(directory)
-            accepted = quarantine / f"{CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"
+            accepted = quarantine / f"~${CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"
             accepted.write_bytes(b"")
             _validate_working_entries(quarantine)
             accepted.rename(quarantine / f"{CROSS_EVENT_CONTRACTS[0].expected_filename}.part")
@@ -170,6 +172,7 @@ class CrossEventOpticalContractTests(unittest.TestCase):
         self.assertEqual(token_request.call_count, 5)
         self.assertEqual(stream.call_count, 5)
         self.assertTrue(all(call.kwargs["part_suffix"] == ".tmp" for call in stream.call_args_list))
+        self.assertTrue(all(call.kwargs["part_prefix"] == "~$" for call in stream.call_args_list))
         self.assertEqual(result["downloads"][0]["attempt_count"], 2)
 
     def test_public_odata_metadata_drift_fails_closed(self) -> None:

@@ -39,6 +39,7 @@ CONTRACT_VERSION = "cross-event-optical-intake-contract-v0.1.0"
 SOURCE_RECORD_ID = "SOURCE-2026-012"
 TERMS_REVIEW_ID = "TERMS-2026-007"
 TEMPORARY_SUFFIX = ".tmp"
+TEMPORARY_PREFIX = "~$"
 MAX_TRANSFER_ATTEMPTS = 5
 RETRYABLE_TRANSFER_REASONS = {
     "DOWNLOAD_REQUEST_FAILED",
@@ -369,7 +370,7 @@ def _validate_working_entries(quarantine: Path) -> None:
     expected: set[str] = set()
     for contract in CROSS_EVENT_CONTRACTS:
         expected.add(contract.expected_filename)
-        expected.add(f"{contract.expected_filename}{TEMPORARY_SUFFIX}")
+        expected.add(f"{TEMPORARY_PREFIX}{contract.expected_filename}{TEMPORARY_SUFFIX}")
     unexpected = sorted(entry.name for entry in quarantine.iterdir() if entry.name not in expected)
     if unexpected:
         raise AcquisitionError("UNEXPECTED_ACQUISITION_WORKING_ENTRY", detail=",".join(unexpected))
@@ -425,6 +426,7 @@ def acquire_cross_event_package(
                     timeout_seconds=180,
                     progress=progress,
                     part_suffix=TEMPORARY_SUFFIX,
+                    part_prefix=TEMPORARY_PREFIX,
                 )
             except AcquisitionError as error:
                 if error.reason_code in RETRYABLE_TRANSFER_REASONS and attempt < MAX_TRANSFER_ATTEMPTS:
@@ -434,6 +436,7 @@ def acquire_cross_event_package(
                 token = None
             result["attempt_count"] = attempt
             result["temporary_suffix"] = TEMPORARY_SUFFIX
+            result["temporary_prefix"] = TEMPORARY_PREFIX
             downloads.append(result)
             break
 

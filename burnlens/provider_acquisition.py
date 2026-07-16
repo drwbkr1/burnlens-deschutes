@@ -352,12 +352,14 @@ def safe_endpoint(url: str) -> str:
     return f"https://{parts.hostname}{parts.path}"
 
 
-def _part_path(target: Path, suffix: str = ".part") -> Path:
+def _part_path(target: Path, suffix: str = ".part", prefix: str = "") -> Path:
     if not suffix.startswith(".") or suffix in {".", ".."} or any(
         separator in suffix for separator in ("/", "\\")
     ):
         raise AcquisitionError("PART_FILE_SUFFIX_INVALID")
-    return target.with_name(f"{target.name}{suffix}")
+    if prefix in {".", ".."} or any(separator in prefix for separator in ("/", "\\")):
+        raise AcquisitionError("PART_FILE_PREFIX_INVALID")
+    return target.with_name(f"{prefix}{target.name}{suffix}")
 
 
 def _validate_part_magic(path: Path, contract: AssetContract) -> None:
@@ -380,12 +382,13 @@ def stream_asset(
     timeout_seconds: float = 120,
     progress: Callable[[str, int, int], None] | None = None,
     part_suffix: str = ".part",
+    part_prefix: str = "",
 ) -> dict[str, Any]:
     if _is_link_like(quarantine):
         raise AcquisitionError("QUARANTINE_LINK_NOT_ALLOWED")
     quarantine.mkdir(parents=True, exist_ok=True)
     target = quarantine / contract.expected_filename
-    part = _part_path(target, part_suffix)
+    part = _part_path(target, part_suffix, part_prefix)
     if target.exists():
         observation = inspect_asset(quarantine, contract)
         if observation["accepted"]:
