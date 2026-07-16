@@ -31,3 +31,7 @@ No fifth product, event expansion, mosaic, boundary shrink, native archive commi
 - source commit `9693f0f5d1476740e06d4a69620072e70cd2002d` passes 118 tests, compilation, dependency health, focused live metadata refresh, diff, raw-exclusion, and secret-assignment checks.
 
 Decision: `PASS_EXACT_CROSS_EVENT_ACQUISITION_ENTRY_GATE`.
+
+## Gate fulfillment
+
+The allowed action completed under acquisition run `BL-2026-07-16-cross-event-optical-intake-r005` and source-fitness run `BL-2026-07-16-cross-event-source-fitness-r005`. All four exact archives are registered and reverified. McKay passes; Tepee is accepted only with its SCL and window exclusions binding. The prohibited label/dataset/split/baseline/model/application actions remain absent. The final candidate passes 128 tests, compilation, dependency health, candidate wheel/isolated import, original-resolution review, and live semantic-browser review.
