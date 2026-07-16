@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.11.0"
+version = "0.12.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.11"
 dependencies = [
@@ -32,6 +32,9 @@ burnlens-capture-cross-event-source = "burnlens.capture_cross_event_source:main"
 burnlens-assess-cross-event-feasibility = "burnlens.assess_cross_event_feasibility:main"
 burnlens-acquire-cross-event-optical = "burnlens.acquire_cross_event_optical:main"
 burnlens-inspect-cross-event-sources = "burnlens.inspect_cross_event_sources:main"
+burnlens-acquire-mtbs-cross-event-reference = "burnlens.acquire_mtbs_cross_event_reference:main"
+burnlens-propose-cross-event-labels = "burnlens.propose_cross_event_labels:main"
+burnlens-verify-cross-event-label-transfer = "burnlens.verify_cross_event_label_transfer:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
