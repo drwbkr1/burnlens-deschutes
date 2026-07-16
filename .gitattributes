@@ -2,6 +2,7 @@
 # SOURCE_DATE_EPOCH can produce the same wheel from a fresh Windows clone.
 .gitattributes text eol=lf
 *.py text eol=lf
+*.mjs text eol=lf
 pyproject.toml text eol=lf
 LICENSE text eol=lf
 

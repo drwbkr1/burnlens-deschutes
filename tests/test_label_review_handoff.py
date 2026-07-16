@@ -21,6 +21,8 @@ from burnlens.label_review_handoff import (
 )
 from burnlens.lock_label_review_response import (
     LabelReviewResponseLockError,
+    RETURNED_INDEPENDENT_RESPONSE,
+    SOFTWARE_BROWSER_FIXTURE,
     build_response_lock,
     write_response_lock,
 )
@@ -106,8 +108,8 @@ def _rewrite_archive(
 
 
 class LabelReviewHandoffTests(unittest.TestCase):
-    def test_current_package_version_is_reviewer_handoff_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.14.0")
+    def test_current_package_version_preserves_reviewer_handoff_contract(self) -> None:
+        self.assertEqual(burnlens.__version__, "0.15.0")
 
     def test_repeated_handoff_build_is_byte_identical_and_allowlisted(self) -> None:
         with TemporaryDirectory() as temporary:
@@ -246,6 +248,8 @@ class LabelReviewHandoffTests(unittest.TestCase):
                 received_at_utc="2026-07-16T17:21:00Z",
                 run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK",
                 git_source_commit=SOURCE_COMMIT,
+                evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                task_issue=379,
             )
             self.assertEqual(
                 report["decision"],
@@ -254,6 +258,8 @@ class LabelReviewHandoffTests(unittest.TestCase):
             self.assertEqual(report["response_binding"]["sha256"], _sha256_file(response_path))
             self.assertFalse(report["human_identity_verified_by_software"])
             self.assertFalse(report["scientific_label_fitness_established"])
+            self.assertEqual(report["evidence_origin"], RETURNED_INDEPENDENT_RESPONSE)
+            self.assertIsNone(report["qualifying_independent_human_response"])
             output = root / "lock.json"
             write_response_lock(report, output)
             with self.assertRaisesRegex(
@@ -281,6 +287,47 @@ class LabelReviewHandoffTests(unittest.TestCase):
                     received_at_utc="2026-07-16T17:22:00Z",
                     run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-TAMPER",
                     git_source_commit=SOURCE_COMMIT,
+                    evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                    task_issue=379,
+                )
+
+            fixture_path = root / "fixture-response.json"
+            fixture_path.write_text(
+                json.dumps(_completed_response(), indent=2) + "\n",
+                encoding="utf-8",
+                newline="\n",
+            )
+            fixture = build_response_lock(
+                packet_path=PACKET_PATH,
+                response_path=fixture_path,
+                receipt_id="LABEL-REVIEW-RESPONSE-LOCK-TEST-003",
+                received_at_utc="2026-07-16T17:23:00Z",
+                run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-FIXTURE",
+                git_source_commit=SOURCE_COMMIT,
+                evidence_origin=SOFTWARE_BROWSER_FIXTURE,
+                task_issue=383,
+            )
+            self.assertEqual(
+                fixture["decision"],
+                "PASS_SOFTWARE_FIXTURE_CONTRACT_AND_HASH_LOCK_NO_REVEAL",
+            )
+            self.assertTrue(fixture["software_browser_fixture"])
+            self.assertFalse(fixture["qualifying_independent_human_response"])
+            self.assertTrue(fixture["reveal_release"].startswith("prohibited:"))
+
+            with self.assertRaisesRegex(
+                LabelReviewResponseLockError,
+                "predates response completion",
+            ):
+                build_response_lock(
+                    packet_path=PACKET_PATH,
+                    response_path=fixture_path,
+                    receipt_id="LABEL-REVIEW-RESPONSE-LOCK-TEST-004",
+                    received_at_utc="2026-07-16T17:19:59Z",
+                    run_id="BL-TEST-LABEL-REVIEW-RESPONSE-LOCK-EARLY",
+                    git_source_commit=SOURCE_COMMIT,
+                    evidence_origin=RETURNED_INDEPENDENT_RESPONSE,
+                    task_issue=384,
                 )
 
     def test_builder_refuses_packet_hash_drift_and_output_overwrite(self) -> None:

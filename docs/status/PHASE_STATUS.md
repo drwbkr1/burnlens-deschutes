@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; verified isolated offline reviewer handoff shipped; dataset not created** | P2O4-T05 ships the 56-unit instrument at verified v0.13.0. P2O4-T06 / issue #379 / PR #380 ships the isolated offline workbench, independent handoff QA, and response lock at verified v0.14.0. Independent responses/adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; isolated handoff shipped; live-browser QA candidate recorded; dataset not created** | P2O4-T06 ships the v0.14.0 workbench and response lock. P2O4-T07 / issue #383 proves its exact current-Chrome software interaction path. One returned response is operator-locked under #384; a second response, adjudication, accepted labels, a split, baselines, and model-readiness remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -16,6 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; completed responses/adjudications zero |
+| Active repository evidence candidate | BurnLens `0.15.0`; issue #383; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`; exact Chrome interaction run uses zero human responses; PR/merge/tag/fresh-main pending |
 | Previous repository evidence baseline | Shipped `v0.13.0-label-review-readiness` at merge `67dc6023859ba3ec9ce6bb375ae001ff962639c6`; tag object `2f4db3e24e1a9bcb82ab56026b13e833004ef453`; 56 review units / 14 present strata / one structural absence; completed responses/adjudications zero |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
@@ -62,6 +63,9 @@
 | Offline reviewer handoff | Shipped `LABEL-REVIEW-HANDOFF-2026-001`; run `BL-2026-07-16-label-review-handoff-r001`; exact packet/template binding; one-root 12-member deterministic archive; offline 56-unit response workbench; reveal/proposal/adjudication/QA/provider/secrets/network excluded |
 | Offline handoff QA | Shipped `LABEL-REVIEW-HANDOFF-QA-2026-001`; run `BL-2026-07-16-label-review-handoff-qa-r001`; archive paths/order/modes/timestamps/hashes, workbench semantics, exact embedded response contract, and eight PNGs pass; completed independent responses/adjudications both zero |
 | Response locking | Shipped exact-packet response validator and SHA-256 receipt; bounded reviewer metadata, timezone-aware receipt time, overwrite refusal, and proposal-bearing response rejection; synthetic fixture only, not reviewer identity or human evidence |
+| Live-browser handoff QA | Candidate `LABEL-REVIEW-BROWSER-QA-2026-001`; run `BL-2026-07-16-label-review-browser-qa-r001`; exact extracted workbench passes invalid-state, actual draft download/load, 56-unit review/export, desktop/mobile overflow, console/runtime, resource, cookie/storage, and fixture-lock checks in Chrome `150.0.7871.124` |
+| Browser fixture boundary | One balanced 56-unit software fixture only; receipt is `software-browser-fixture`, qualifying-human false, and reveal-prohibited; independent human responses used in this QA: zero |
+| Returned reviewer response state | One exact returned response is preserved and operator-locked under issue #384; exact bytes and notes remain ignored/private; public receipt checkpoint pending; reveal unopened; second qualifying response required |
 | Dataset version | Not created |
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
@@ -77,7 +81,7 @@ P2O4-T06 / issue #379 / PR #380 ships `v0.14.0-offline-reviewer-handoff` at merg
 
 ## Current checkpoint
 
-P2O4-T06 / issue #379 / PR #380 is shipped at verified `v0.14.0-offline-reviewer-handoff`. It packages only the exact blind material into a deterministic offline workbench, independently verifies the handoff, and provides a fail-closed response-lock receipt before reveal. Completed independent responses and adjudications remain zero. The next bounded checkpoint is actual qualifying reviewer response evidence returned from the isolated archive and locked before reveal. No split creation is authorized yet.
+P2O4-T07 / issue #383 is the active BurnLens `0.15.0` candidate. It reconstructs the exact v0.14 handoff, drives the extracted workbench in recorded current Chrome, and records invalid-state, native draft download/load, completed response export, desktop/mobile, console/runtime/resource, cookie/storage, and software-fixture lock evidence. The run uses zero human responses and cannot authorize reveal. One actual response is separately preserved and operator-locked under issue #384; its sanitized public receipt is the next checkpoint. Keep the reveal unopened, obtain a second qualifying response, and do not create a split before review/adjudication gates pass.
 
 ## Boundaries carried forward
 
@@ -85,4 +89,4 @@ P2O4-T06 / issue #379 / PR #380 is shipped at verified `v0.14.0-offline-reviewer
 
 All BurnLens work and future public surfaces must originate from `drwbkr1/burnlens-deschutes`; the separate site repository is out of scope.
 
-No deployed public companion site exists in this repository. The shipped workbench is a local/offline repository-owned application surface, not a deployment or analytical inference product. The repository README, living case study, and static semantic/visual evidence reports remain the public presentation surfaces for this checkpoint.
+No deployed public companion site exists in this repository. The shipped workbench is a local/offline repository-owned application surface, not a deployment or analytical inference product. The repository README, living case study, browser screenshots, and static semantic/visual evidence reports remain the public presentation surfaces for this checkpoint.
