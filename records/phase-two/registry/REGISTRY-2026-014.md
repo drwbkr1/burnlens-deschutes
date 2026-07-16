@@ -1,6 +1,6 @@
 # REGISTRY-2026-014 - Topology-Stable Label-Transfer Evidence
 
-**Checkpoint candidate:** Issue #371 / draft PR #372; branch `codex/p2o4-t04-topology-repro-remediation`; generator/QA source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; candidate artifacts `567b9cd986a44c3a9b320f558ab7cd156d451fb4`; planned tag `v0.12.1-topology-stable-label-transfer`
+**Checkpoint:** Issue #371 / PR #372 / merge `e00028509145b439d95eb302591e7cb19bd073fd`; reviewed head `345dd72363377aad3215d23a8120c42edbe85278`; generator/QA source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; candidate artifacts `567b9cd986a44c3a9b320f558ab7cd156d451fb4`; verified tag `v0.12.1-topology-stable-label-transfer`, object `8606c61f0e1668f2b057abca177144937eae1036`; lifecycle sync issue #373 / PR #374
 
 | Artifact | Class | Version/state | Committed provider bytes |
 |---|---|---|---:|
@@ -12,6 +12,6 @@
 | Real topology replay | Ignored one-link and exact-two-link copies of the registered MTBS package | All ten outputs byte-identical; third-link test fails closed | 0 |
 | Repository tests | Dynamic link safety, public-identity stability, transfer, QA independence, and predecessor contracts | 137 pass | 0 |
 | `burnlens_deschutes-0.12.1-py3-none-any.whl` | Reproducible release-wheel evidence; not committed | source `0c2b489f34915e352cefe72ca76dea488bc8a4db`; fresh LF checkout; `SOURCE_DATE_EPOCH=1784179803`; two byte-identical builds; 215,461 bytes; SHA-256 `e6e45cfc69aebb17b9a6396d593508b297b8461deb69463edd1ba04cc4ad99d3`; isolated import `0.12.1` | 0 |
-| `MANIFEST-2026-014.json` | Exact corrected ten-output inventory and candidate release gates | Candidate review/merge/tag state explicit | 0 |
+| `MANIFEST-2026-014.json` | Exact corrected ten-output inventory and release gates | Shipped; PR #372, fresh merged-main, canonical-wheel, real-reconstruction, and remote-tag gates pass; sync #373 / PR #374 | 0 |
 
 No classifier, threshold, source, target, label protocol, label schema, event group, output pixel, dataset, split, baseline, model, application, accuracy claim, field claim, operational claim, official status, credential material, or provider byte changes in this remediation.
