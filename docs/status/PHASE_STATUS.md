@@ -87,7 +87,7 @@ P2O4-T09A ships verified `v0.17.0-dual-lock-custody-readiness` at merge `eb84aad
 
 Parent issue #393 is active for the second qualifying human response. Deliver only the exact isolated handoff, exact-lock the returned response under the current protocol, and keep the first response and reveal withheld. Do not compare, adjudicate, or create a split before the second human response is also locked.
 
-BL-GOV-002 / issue #400 is a repository-truth checkpoint, not a scientific advance. It reconciles obsolete Phase One GitHub backlog and marks the Phase One Objective Seven tracker/handoff as historical snapshots. It changes no tag, Release, software version, analytical output, custody byte, reveal state, or Phase Two gate.
+BL-GOV-002 / issue #400 / PR #401 is a repository-truth checkpoint, not a scientific advance. It has closed the obsolete Phase One GitHub backlog and marks the Phase One Objective Seven tracker/handoff as historical snapshots. It changes no tag, Release, software version, analytical output, custody byte, reveal state, or Phase Two gate.
 
 ## Boundaries carried forward
 

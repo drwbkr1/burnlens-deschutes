@@ -9,7 +9,8 @@
   "checkpoint_source_commit": "845125070d5e4c3c4132bae027a786e1cc25bc9c",
   "pull_request": 401,
   "captured_at_utc": "2026-07-16T20:39:43Z",
-  "status": "in_review_pre_reconciliation",
+  "reconciled_at_utc": "2026-07-16T20:49:29Z",
+  "status": "reconciled_pending_pr_merge",
   "cycle_runs": [
     {
       "run_id": "BL-2026-07-16-cycle-post-v017-browser-r001",
@@ -69,7 +70,58 @@
     "create_or_move_tag": false,
     "create_or_change_release": false
   },
-  "after_state": null,
+  "after_state": {
+    "closed_pull_request": {
+      "number": 307,
+      "state": "CLOSED",
+      "closed_at_utc": "2026-07-16T20:49:29Z",
+      "merged_at_utc": null,
+      "retained_branch": "p1o7t10prepb",
+      "retained_head": "4e536e034d9c4fe97b723e381ffef26166c295fd"
+    },
+    "closed_issues": [
+      {
+        "number": 91,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 194,
+        "state": "CLOSED",
+        "state_reason": "NOT_PLANNED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 246,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 292,
+        "state": "CLOSED",
+        "state_reason": "COMPLETED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      },
+      {
+        "number": 306,
+        "state": "CLOSED",
+        "state_reason": "NOT_PLANNED",
+        "closed_at_utc": "2026-07-16T20:49:28Z"
+      }
+    ],
+    "open_issues": [
+      393,
+      400
+    ],
+    "open_pull_requests": [
+      401
+    ],
+    "retained_active_scientific_issue": 393,
+    "tag_count": 21,
+    "github_release_count": 0
+  },
   "software_version": "0.17.0",
   "application_version": "label-review-handoff-workbench-v0.1.0",
   "application_deployment": null,
