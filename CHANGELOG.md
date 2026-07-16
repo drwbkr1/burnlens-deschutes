@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.18.0-atomic-response-intake-readiness - candidate - 2026-07-16
+## v0.18.0-atomic-response-intake-readiness - verified - 2026-07-16
 
 ### P2O4-T09B - Preserve a future returned response without a manual custody seam
 
@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass 171 tests, compileall, dependency health, Node syntax, 54 tracked JSON parses, 122 local links, exact six-output historical regression, privacy, semantic, original-resolution visual, and canonical-package gates. Two fresh-remote wheels and one detached `git archive` wheel from PR head `3d0f46c4160bd0e908bf2367288298cce1f97539` are byte-identical at 314,089 bytes / SHA-256 `857fb6686c83581ddbf6ae98370ac151d4b5c40642fb7bc775173a115a1670af`; isolated install reports BurnLens `0.18.0`, 29 entry points, and zero private/download/build entries. The stale CRLF main-workspace checkout is excluded from canonical package proof.
 - Preserve the scientific boundary: the project still has one returned human response; the owner waived reviewer two but did not create inter-rater validation, consensus, or adjudication. Reveal, comparison, accepted labels, dataset, split, baseline, model, accuracy, deployment, field, official, endorsed, emergency-ready, and operational claims remain absent.
 
-Issue #402; superseded parent issue #393; replacement issue #403; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; current source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; current public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; PR, merge, verified tag, and fresh-main gates pending.
+Issue #402 / PR #404; superseded parent issue #393; replacement issue #403; base `5b9e099913311c0ae8ec3040a700e3dc041435db`; source `c4c34dabcde375196dd423d13beb3dd97a32f5e1`; public artifacts `0e338060d9f70d6aa23916fbf8c1965c33209c72`; reviewed head `70a0d25042fdef09e2ecfdd118bc761b08eebfd5`; merge `62a8e8473613938990c40c37f91596470638f036`; tag object `572c8cea4314d89717e3c4204078704e799a5fee`. Fresh remote-main tests, compileall, dependency, Node, JSON, link, manifest-output, canonical-wheel, and remote-tag gates pass.
 
 ## BL-GOV-002 - GitHub backlog truth reconciliation - 2026-07-16
 
