@@ -520,7 +520,7 @@ def render_dual_lock_png(report: dict[str, Any], output_path: Path) -> None:
     )
     state = report["origin_classification"]
     metrics = [
-        (str(state["operator_declared_returned_responses"]), "returned-response origin"),
+        (str(state["operator_declared_returned_responses"]), "operator-declared return"),
         (str(state["software_browser_fixtures"]), "software fixture"),
         ("2", "distinct exact locks"),
         ("0", "completed adjudications"),
