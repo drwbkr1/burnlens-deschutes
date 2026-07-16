@@ -1,6 +1,6 @@
 # REGISTRY-2026-013 - Cross-Event Five-State Transfer Artifacts
 
-**Candidate checkpoint:** Issue #367 / branch `codex/p2o4-t04-cross-event-label-transfer`; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; target `v0.12.0-cross-event-label-transfer-baseline`
+**Candidate checkpoint:** Issue #367 / branch `codex/p2o4-t04-cross-event-label-transfer`; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; candidate artifacts `60bdc71df3e2b765e3a08076b05c082826a720c6`; target `v0.12.0-cross-event-label-transfer-baseline`
 
 | Artifact | Class | Version/state | Committed provider bytes |
 |---|---|---|---:|

@@ -8,7 +8,7 @@
   "branch": "codex/p2o4-t04-cross-event-label-transfer",
   "git_base_commit": "2bdec053022aa02b7fd322ece37013fd8a3a56bc",
   "generator_source_commit": "6d9bb2a34a32f775e4bf83249151e41c25998ee5",
-  "candidate_checkpoint_commit": null,
+  "candidate_checkpoint_commit": "60bdc71df3e2b765e3a08076b05c082826a720c6",
   "reviewed_head_commit": null,
   "checkpoint_commit": null,
   "pull_request": null,
