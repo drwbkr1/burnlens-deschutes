@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Remediate live-browser claim grammar so every boundary item is explicitly `Not proven`; pass original-resolution and semantic-browser review plus four HTTP-200 raster links.
 - Extend the deterministic LF checkout contract to nested cross-event JSON/HTML after fresh remote-head verification exposes Windows CRLF conversion; add a regression test before merge.
 - Extend the LF contract to Python package sources and build metadata after fresh-wheel inspection proves the only source-entry differences are checkout line endings; use a fixed `SOURCE_DATE_EPOCH` for the authoritative release wheel.
-- Raise BurnLens to `0.12.0`; pass 137 tests, compilation, dependency health, a 215,693-byte wheel / SHA-256 `d6cb38fc62105033b32afaffcc6b1e942e0ffb2b5294db5ed36aad0c05ec9b32`, isolated import, and three new entry points.
+- Raise BurnLens to `0.12.0`; pass 137 tests, compilation, dependency health, two byte-identical fixed-epoch 214,749-byte wheels / SHA-256 `525038b78dbc199be9851dc1b4f5854b7bd49093047c8a761446616e921e865c`, isolated import, and three new entry points.
 - Accept reproducible cross-event proposal evidence while deferring accepted labels, dataset, split, baseline, model, independent human validation, field validation, and operational claims.
 
 Issue #367; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; reviewed PR/merge/tag pending.
