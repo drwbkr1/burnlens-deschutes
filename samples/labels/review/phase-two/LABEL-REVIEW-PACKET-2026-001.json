@@ -1,0 +1,1657 @@
+{
+  "report_id": "LABEL-REVIEW-PACKET-2026-001",
+  "schema_version": "0.1.0",
+  "report_version": "proposal-blinded-label-review-readiness-evidence-v0.1.0",
+  "generated_at_utc": "2026-07-16T15:45:00Z",
+  "run_id": "BL-2026-07-16-label-review-packet-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 375,
+  "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+  "software_version": "0.13.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "split_version": null,
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "review_protocol_version": "proposal-blinded-label-review-readiness-v0.1.0",
+  "response_schema_version": "burnlens-label-review-response-v0.1.0",
+  "adjudication_protocol_version": "burnlens-label-adjudication-v0.1.0",
+  "baseline_version": null,
+  "model_version": null,
+  "selection": {
+    "seed_sha256": "9bae49d30c61161bf138603c774767c9526b1948b2444893f20ba513d47ec932",
+    "seed_inputs": {
+      "protocol": "proposal-blinded-label-review-readiness-v0.1.0",
+      "event_order": [
+        "event-darlene3-or-2024",
+        "event-tepee-1144-ne-2018",
+        "event-mckay-1035-ne-2017"
+      ],
+      "proposal_bindings": [
+        {
+          "event_group_id": "event-darlene3-or-2024",
+          "report_sha256": "e9b4199c0d49ffa235f4c8df4277d84b3df2b3c5a3f87d44dcc2ecd9a1d580d5",
+          "state_raster_sha256": "26c2bc308fdf0d33c8fc88432c1ae14ad1fb26a53063ad6e0a791990998fbe8e",
+          "target_raster_sha256": "075e5c84bcd1bcee894479ca103ac19c3434ca0f82b314bdd92d320baaa6f801"
+        },
+        {
+          "event_group_id": "event-tepee-1144-ne-2018",
+          "report_sha256": "850a78df58bc413cc5494144ce17cef581004ad2f7447d0313a79164b2222ed2",
+          "state_raster_sha256": "882ea13490b768ff1f5402f504cca4193c89a4977a93b75fb92f3f374a2beeca",
+          "target_raster_sha256": "fe5e42de874323bad83a9f52d8adb03a54ef5ebddb419fafbf80a85321ee30ca"
+        },
+        {
+          "event_group_id": "event-mckay-1035-ne-2017",
+          "report_sha256": "850a78df58bc413cc5494144ce17cef581004ad2f7447d0313a79164b2222ed2",
+          "state_raster_sha256": "33f4aec6d807deab7bf81c911ba0a57e57e8a6153012236013f96409b216719f",
+          "target_raster_sha256": "f3563ebf55aa723f2799cab93b51ad160e5c9de496e779393d354191a84fa413"
+        }
+      ]
+    },
+    "method": "Within every present event-by-proposal-state stratum, rank every pixel by SHA-256 of the immutable seed, event, state, row, and column; greedily select four with an 8-pixel preferred separation, relaxing to 4 then 0 only if required. Assign the first-pass presentation order with a second deterministic hash so state and event strata are not shown as contiguous blocks.",
+    "samples_per_present_state": 4,
+    "preferred_minimum_separation_px": 8,
+    "preferred_minimum_separation_m": 160,
+    "sampling_scope": "Bounded coverage probe for label-fitness review readiness. It is not a probability sample, accuracy estimate, representative validation study, or field reference."
+  },
+  "events": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "grid": {
+        "crs": "EPSG:32610",
+        "transform": [
+          20.0,
+          0.0,
+          620000.0,
+          0.0,
+          -20.0,
+          4840000.0
+        ],
+        "width": 600,
+        "height": 450,
+        "pixel_size_m": 20
+      },
+      "proposal": {
+        "report_id": "LABEL-PROPOSAL-2026-001",
+        "run_id": "BL-2026-07-15-label-proposal-r001",
+        "git_source_commit": "814bb5402c04708f1515135683eac1304bf075c1",
+        "label_proposal_version": "darlene3-burn-scar-label-proposal-v0.1.0",
+        "report_sha256": "e9b4199c0d49ffa235f4c8df4277d84b3df2b3c5a3f87d44dcc2ecd9a1d580d5",
+        "state_raster_sha256": "26c2bc308fdf0d33c8fc88432c1ae14ad1fb26a53063ad6e0a791990998fbe8e",
+        "target_raster_sha256": "075e5c84bcd1bcee894479ca103ac19c3434ca0f82b314bdd92d320baaa6f801",
+        "state_counts": {
+          "background-candidate": 161238,
+          "burned": 18543,
+          "unknown": 71897,
+          "excluded": 870,
+          "review-needed": 17452
+        }
+      },
+      "reference_context": {
+        "kind": "NIFC later incident-reference perimeter context",
+        "detail": "Binary later perimeter context on the 20 m proposal grid; not pixel-perfect truth.",
+        "role": "review context; never sufficient truth alone"
+      },
+      "source_trace": {
+        "optical_package_id": "darlene3-s2-optical-pair-v0.1.0",
+        "optical_registration_manifest_sha256": "b30bb6629e9f305f4ac9a02b4553ba28fd9f1e5138b78b9683d1595380c3f60d",
+        "aoi_version": "aoi-darlene3-model-v0.2.0",
+        "terms_review_ids": [
+          "TERMS-2026-004",
+          "TERMS-2026-003",
+          "TERMS-2026-005"
+        ]
+      }
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "grid": {
+        "crs": "EPSG:32610",
+        "transform": [
+          20.0,
+          0.0,
+          650820.0,
+          0.0,
+          -20.0,
+          4857540.0
+        ],
+        "width": 351,
+        "height": 125,
+        "pixel_size_m": 20
+      },
+      "proposal": {
+        "report_id": "CROSS-EVENT-LABEL-TRANSFER-2026-002",
+        "run_id": "BL-2026-07-16-cross-event-label-transfer-r004",
+        "git_source_commit": "0c2b489f34915e352cefe72ca76dea488bc8a4db",
+        "label_proposal_version": "deschutes-cross-event-label-proposal-v0.1.0",
+        "report_sha256": "850a78df58bc413cc5494144ce17cef581004ad2f7447d0313a79164b2222ed2",
+        "state_raster_sha256": "882ea13490b768ff1f5402f504cca4193c89a4977a93b75fb92f3f374a2beeca",
+        "target_raster_sha256": "fe5e42de874323bad83a9f52d8adb03a54ef5ebddb419fafbf80a85321ee30ca",
+        "state_counts": {
+          "background-candidate": 494,
+          "burned": 92,
+          "unknown": 10942,
+          "excluded": 16025,
+          "review-needed": 16322
+        }
+      },
+      "reference_context": {
+        "kind": "MTBS annual thematic burn-severity reference",
+        "detail": "Nearest-neighbor MTBS 0-6 context; analyst-interpreted and never automatic truth.",
+        "role": "review context; never sufficient truth alone"
+      },
+      "source_trace": {
+        "optical_package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "optical_registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "mtbs_package_id": "burnlens-mtbs-cross-event-reference-v0.1.0",
+        "mtbs_registration_manifest_sha256": "499c6be3f60579ccd9beadfa69b0fa2b46cf3f3bedf65f8ada5065dfb989f35f",
+        "terms_review_ids": [
+          "TERMS-2026-007",
+          "TERMS-2026-008"
+        ]
+      }
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "grid": {
+        "crs": "EPSG:32610",
+        "transform": [
+          20.0,
+          0.0,
+          626720.0,
+          0.0,
+          -20.0,
+          4847220.0
+        ],
+        "width": 191,
+        "height": 105,
+        "pixel_size_m": 20
+      },
+      "proposal": {
+        "report_id": "CROSS-EVENT-LABEL-TRANSFER-2026-002",
+        "run_id": "BL-2026-07-16-cross-event-label-transfer-r004",
+        "git_source_commit": "0c2b489f34915e352cefe72ca76dea488bc8a4db",
+        "label_proposal_version": "deschutes-cross-event-label-proposal-v0.1.0",
+        "report_sha256": "850a78df58bc413cc5494144ce17cef581004ad2f7447d0313a79164b2222ed2",
+        "state_raster_sha256": "33f4aec6d807deab7bf81c911ba0a57e57e8a6153012236013f96409b216719f",
+        "target_raster_sha256": "f3563ebf55aa723f2799cab93b51ad160e5c9de496e779393d354191a84fa413",
+        "state_counts": {
+          "background-candidate": 55,
+          "burned": 9119,
+          "unknown": 7483,
+          "excluded": 0,
+          "review-needed": 3398
+        }
+      },
+      "reference_context": {
+        "kind": "MTBS annual thematic burn-severity reference",
+        "detail": "Nearest-neighbor MTBS 0-6 context; analyst-interpreted and never automatic truth.",
+        "role": "review context; never sufficient truth alone"
+      },
+      "source_trace": {
+        "optical_package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "optical_registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "mtbs_package_id": "burnlens-mtbs-cross-event-reference-v0.1.0",
+        "mtbs_registration_manifest_sha256": "499c6be3f60579ccd9beadfa69b0fa2b46cf3f3bedf65f8ada5065dfb989f35f",
+        "terms_review_ids": [
+          "TERMS-2026-007",
+          "TERMS-2026-008"
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "proposal_state": "background-candidate",
+      "population_pixels": 161238,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 38,
+      "minimum_selected_separation_m": 760
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "proposal_state": "burned",
+      "population_pixels": 18543,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 31,
+      "minimum_selected_separation_m": 620
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "proposal_state": "unknown",
+      "population_pixels": 71897,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 238,
+      "minimum_selected_separation_m": 4760
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "proposal_state": "excluded",
+      "population_pixels": 870,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 14,
+      "minimum_selected_separation_m": 280
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "proposal_state": "review-needed",
+      "population_pixels": 17452,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 50,
+      "minimum_selected_separation_m": 1000
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "proposal_state": "background-candidate",
+      "population_pixels": 494,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 12,
+      "minimum_selected_separation_m": 240
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "proposal_state": "burned",
+      "population_pixels": 92,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 10,
+      "minimum_selected_separation_m": 200
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "proposal_state": "unknown",
+      "population_pixels": 10942,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 20,
+      "minimum_selected_separation_m": 400
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "proposal_state": "excluded",
+      "population_pixels": 16025,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 39,
+      "minimum_selected_separation_m": 780
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "proposal_state": "review-needed",
+      "population_pixels": 16322,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 25,
+      "minimum_selected_separation_m": 500
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "proposal_state": "background-candidate",
+      "population_pixels": 55,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 22,
+      "minimum_selected_separation_m": 440
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "proposal_state": "burned",
+      "population_pixels": 9119,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 29,
+      "minimum_selected_separation_m": 580
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "proposal_state": "unknown",
+      "population_pixels": 7483,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 30,
+      "minimum_selected_separation_m": 600
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "proposal_state": "excluded",
+      "population_pixels": 0,
+      "requested_units": 0,
+      "selected_units": 0,
+      "structural_absence": true,
+      "minimum_selected_separation_px": null,
+      "minimum_selected_separation_m": null
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "proposal_state": "review-needed",
+      "population_pixels": 3398,
+      "requested_units": 4,
+      "selected_units": 4,
+      "structural_absence": false,
+      "minimum_selected_separation_px": 22,
+      "minimum_selected_separation_m": 440
+    }
+  ],
+  "coverage_summary": {
+    "strata_total": 15,
+    "strata_present": 14,
+    "strata_structurally_absent": 1,
+    "structural_absences": [
+      {
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "proposal_state": "excluded"
+      }
+    ],
+    "selected_units": 56,
+    "requested_units_for_present_strata": 56
+  },
+  "units": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 99,
+      "column": 127,
+      "pixel_center_utm10n": [
+        622550.0,
+        4838010.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": 0.004716,
+      "reference_context_value": 0,
+      "selection_hash": "000034b262fe31638d3cc158a533b4dce741f11400e2cfa8d1da9ec98732033f",
+      "presentation_hash": "0b0ef120ef4a6d211ead476ef2064bafa611005293b71c4d989192bff8a8efa4",
+      "sample_id": "LRU-001",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 46,
+      "column": 128,
+      "pixel_center_utm10n": [
+        629290.0,
+        4846290.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.772424,
+      "reference_context_value": 4,
+      "selection_hash": "0011dba350be90cc3e3f7ff905d54d552898c1be8e77c15e81ed25518e9d8a16",
+      "presentation_hash": "0f70b22bf294142e0192d10e264901303cb7df5ced56950ab6f6a619ab1dcd0f",
+      "sample_id": "LRU-002",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 97,
+      "column": 188,
+      "pixel_center_utm10n": [
+        630490.0,
+        4845270.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.13006,
+      "reference_context_value": 0,
+      "selection_hash": "113ce1e7e132858b98087b17cb51ee8c68923cee65fcc78f158e42f225128f2c",
+      "presentation_hash": "11093d0565b0c53c3d3ed34de644f3fae4b398f460ae01328fdd9004a7ad8850",
+      "sample_id": "LRU-003",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 68,
+      "column": 165,
+      "pixel_center_utm10n": [
+        623310.0,
+        4838630.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.003746,
+      "reference_context_value": 0,
+      "selection_hash": "000298a777af1c126563b0b48d3a644d61293197e439940a73a3e32e800e796d",
+      "presentation_hash": "111cecb14b2f401479f851cac843afe4312f89e6281b1681d526fd52589ac40d",
+      "sample_id": "LRU-004",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 75,
+      "column": 189,
+      "pixel_center_utm10n": [
+        630510.0,
+        4845710.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.103595,
+      "reference_context_value": 0,
+      "selection_hash": "090e73e526b66bbb5c0e138d60dd5bc45e6f5a4a1eb226171956d9367b98c9b0",
+      "presentation_hash": "16864ecead20e06acb4d921afaaa5a6a27a01553039869dd35aea3db5311d49a",
+      "sample_id": "LRU-005",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 272,
+      "column": 290,
+      "pixel_center_utm10n": [
+        625810.0,
+        4834550.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.177713,
+      "reference_context_value": 1,
+      "selection_hash": "00029a403be61825801398bcbcb454528a184e481d17dec532d4c17920cda17f",
+      "presentation_hash": "1b367c4b22d44169fa42fbbbbf213c02ff2959c82742d7376e0c79e252e5172d",
+      "sample_id": "LRU-006",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 228,
+      "column": 257,
+      "pixel_center_utm10n": [
+        625150.0,
+        4835430.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.423273,
+      "reference_context_value": 1,
+      "selection_hash": "000676c315fc361f13686b1bb91f4a615c84b239c19f283fd9944e034ac82f80",
+      "presentation_hash": "1ca08f973daa044abff5aa68217650d6bd1d2a9ed5391094a00d0df3aaaf656d",
+      "sample_id": "LRU-007",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 18,
+      "column": 344,
+      "pixel_center_utm10n": [
+        657710.0,
+        4857170.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": 0.002003,
+      "reference_context_value": 0,
+      "selection_hash": "01c73e74787c5bdec721b34edb0c4d6d7f029d18afc5f2563ce63e2cf95e580a",
+      "presentation_hash": "1d97c14c9609a3dfd0145a15ebfe84a62308f7807bc94c72a8ffb2ab071a33a6",
+      "sample_id": "LRU-008",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 65,
+      "column": 59,
+      "pixel_center_utm10n": [
+        627910.0,
+        4845910.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.235751,
+      "reference_context_value": 2,
+      "selection_hash": "000832bb92737e7a67ac0ff4527de6ce4c6a9ec22e047777f71d027f16fee428",
+      "presentation_hash": "2017d8529905c6e3c887d3e46f75069c76981f03da4cb5e095276a45094190ff",
+      "sample_id": "LRU-009",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 8,
+      "column": 121,
+      "pixel_center_utm10n": [
+        629150.0,
+        4847050.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.099459,
+      "reference_context_value": 0,
+      "selection_hash": "0005c74f1dd29419ccab1eb336338d9efa69ce09cf960f07a3c53e4ebd32ca84",
+      "presentation_hash": "20f2347daf116e391cec97dfdb33f8b9f90ccb5a4dcfac1c7241e35170a09456",
+      "sample_id": "LRU-010",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 11,
+      "column": 144,
+      "pixel_center_utm10n": [
+        629610.0,
+        4846990.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.101502,
+      "reference_context_value": 0,
+      "selection_hash": "012508988cad50fc3cab39f0d1fba6f464849cfc462f14c22716bd824c842450",
+      "presentation_hash": "2225ff9d1f01328c048492c333494a30fb2a107e2eefa295c49d81ff901b2026",
+      "sample_id": "LRU-011",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 21,
+      "column": 45,
+      "pixel_center_utm10n": [
+        651730.0,
+        4857110.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": -0.019505,
+      "reference_context_value": 0,
+      "selection_hash": "000312e27478d0d333bcab59c103d0103f9c5a066e19b1c9e678c296ba893e1b",
+      "presentation_hash": "24a4793c5a3865a995d29eb867cae84eacabc9ee08db607d6e0128481a1f30f3",
+      "sample_id": "LRU-012",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 198,
+      "column": 171,
+      "pixel_center_utm10n": [
+        623430.0,
+        4836030.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.091216,
+      "reference_context_value": 1,
+      "selection_hash": "00026ba0f30dd778fd4dc1921589c31eaf682fea7c311ec74fc998bfbf36ba47",
+      "presentation_hash": "2fd0a187c6f65660f8e8f85a35a85fe4eeca69e180dbbcf0a9c4039867548a89",
+      "sample_id": "LRU-013",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 243,
+      "column": 361,
+      "pixel_center_utm10n": [
+        627230.0,
+        4835130.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.066079,
+      "reference_context_value": 0,
+      "selection_hash": "00074fa928681b992c12c073f5b5609e2fd7cdfcaeb1887a6a0599550a4f8a6a",
+      "presentation_hash": "346058237c622d9a38b5afba2027c3bea913d2fbbccbaa0327c945035770635d",
+      "sample_id": "LRU-014",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 139,
+      "column": 103,
+      "pixel_center_utm10n": [
+        622070.0,
+        4837210.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.020558,
+      "reference_context_value": 0,
+      "selection_hash": "0065ad12332ca73ae29b989f32969c9b699402d947c8b4f08be8e6f75c240b88",
+      "presentation_hash": "37a75ef38414dc9be2acb64467e308cb43c0b9a01ce8ae84995bb80802676d3b",
+      "sample_id": "LRU-015",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 36,
+      "column": 157,
+      "pixel_center_utm10n": [
+        653970.0,
+        4856810.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.098538,
+      "reference_context_value": 2,
+      "selection_hash": "0003e71983651e4ec15082be23cdc4816006161f3931a68f4372773d6ce1a236",
+      "presentation_hash": "3ce317f636429846a1d9011d8fe673dfc5d91e177f61d36311809d08bbe8ea41",
+      "sample_id": "LRU-016",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 96,
+      "column": 333,
+      "pixel_center_utm10n": [
+        657490.0,
+        4855610.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.006988,
+      "reference_context_value": 0,
+      "selection_hash": "0000ac133d85fc39b4cb3b26a13a86f5de07abe6e97d2f4e7d7add13a91cd2e4",
+      "presentation_hash": "4003495fbc15f51e35e4bcef3895bb184e7e0716d9de2b1c12a8ad959bbc1092",
+      "sample_id": "LRU-017",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 132,
+      "column": 566,
+      "pixel_center_utm10n": [
+        631330.0,
+        4837350.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.018094,
+      "reference_context_value": 0,
+      "selection_hash": "0000d5df5a6532c7a9e60c1a07893fb2bf531dc3fd394f1e83689f1cf95719e3",
+      "presentation_hash": "4344a4799a4f20c7bcbcdb77d5997e1023a38b5b6361536dfd21ece8d30047a9",
+      "sample_id": "LRU-018",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 16,
+      "column": 66,
+      "pixel_center_utm10n": [
+        621330.0,
+        4839670.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": 0.059129,
+      "reference_context_value": 0,
+      "selection_hash": "00011f75510e4f01f09db6ccf764f6d98f3706066d81aedb64a790ca8017416c",
+      "presentation_hash": "4a032cf543978983298a7c8454667e057858b59639814d0d4744f6ddd6472009",
+      "sample_id": "LRU-019",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 51,
+      "column": 97,
+      "pixel_center_utm10n": [
+        628670.0,
+        4846190.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.825376,
+      "reference_context_value": 4,
+      "selection_hash": "0015227ea9041b2bcaa2324e3ed60f984cf24304293a255cc57ce87131cf58a4",
+      "presentation_hash": "4bbef0e05ff22c5de40d1daef595a321edbe235c22ed5aa76369418167cb67fa",
+      "sample_id": "LRU-020",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 105,
+      "column": 113,
+      "pixel_center_utm10n": [
+        653090.0,
+        4855430.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.280087,
+      "reference_context_value": 3,
+      "selection_hash": "00031b1969dbd9a045e2be87be030154b7749f21169f1403f01264bc85fd4167",
+      "presentation_hash": "5131d6a0477b13d3a3cad28d6793933b5145b2c14a95e05af1610ddad5c99498",
+      "sample_id": "LRU-021",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 75,
+      "column": 138,
+      "pixel_center_utm10n": [
+        629490.0,
+        4845710.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.666815,
+      "reference_context_value": 4,
+      "selection_hash": "00148c78b8185d8caa9ddd0dae8a4746bf9dcdf241044f23cacae333c3b02470",
+      "presentation_hash": "565078fee15a44b96c76c6ff5e97abd2d6380e3d54a61e9e48f0fce43acd8ded",
+      "sample_id": "LRU-022",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 67,
+      "column": 322,
+      "pixel_center_utm10n": [
+        657270.0,
+        4856190.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.192056,
+      "reference_context_value": 2,
+      "selection_hash": "11636c3bc8cfeca02a0bfbbea92d216d2808858bc736dc5e89b72e54de07f2bf",
+      "presentation_hash": "581f63590dcb23da208e0044468c080754afd0a30271962e881db47795dcd5ce",
+      "sample_id": "LRU-023",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 276,
+      "column": 88,
+      "pixel_center_utm10n": [
+        621770.0,
+        4834470.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.025264,
+      "reference_context_value": 0,
+      "selection_hash": "0000b4d31525fd85ed148d5bc1b232281e4349f0547695d5ae544c7ddaeccf5e",
+      "presentation_hash": "5b3af7079cac9dbff978f7f782dbf66a7799fe33cb06372198532c8bebaab7cd",
+      "sample_id": "LRU-024",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 2,
+      "column": 176,
+      "pixel_center_utm10n": [
+        654350.0,
+        4857490.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.007494,
+      "reference_context_value": 0,
+      "selection_hash": "0004b6e87f163893b760a0383f0eb02aed270a36e1c4e78e11c1a353cb0fc2cc",
+      "presentation_hash": "693f78e3a80dacab6fe94ce4824b826845152eb87890c22a3f0a7805c5965333",
+      "sample_id": "LRU-025",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 116,
+      "column": 329,
+      "pixel_center_utm10n": [
+        657410.0,
+        4855210.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.005927,
+      "reference_context_value": 0,
+      "selection_hash": "002cb118b164bfeeb5d88d4835ba2a2413d0e53e1ad3ef9a2d409df5b34ce227",
+      "presentation_hash": "6ae7cfabee9f1957af6dff8f184371743ec2965714e04cc76f3997fc3eae9dde",
+      "sample_id": "LRU-026",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 59,
+      "column": 21,
+      "pixel_center_utm10n": [
+        627150.0,
+        4846030.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.213671,
+      "reference_context_value": 2,
+      "selection_hash": "001115d973e5ecb1a726916d4ad9ff30811ee354ddcaba551f0cf0cc86632f04",
+      "presentation_hash": "6f94ffabcb561ba3bc0a8df7d2d7f73eef288db1dfd967e4fdb25d21231ca0d0",
+      "sample_id": "LRU-027",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 61,
+      "column": 150,
+      "pixel_center_utm10n": [
+        653830.0,
+        4856310.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.501334,
+      "reference_context_value": 4,
+      "selection_hash": "000af42e3f95dd14757cc039d28af59667a11f5faa0eb41edb3aac60c7a2674b",
+      "presentation_hash": "7596357ea9f3823faaac52a721bd491ef5f365a59c0a7725f4b92080a999b188",
+      "sample_id": "LRU-028",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 29,
+      "column": 250,
+      "pixel_center_utm10n": [
+        655830.0,
+        4856950.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.134047,
+      "reference_context_value": 2,
+      "selection_hash": "0c20b70e0f126eee8d35ecf4e43ed341d0d6d0a2b1541fd7a17611b76cdc2f2a",
+      "presentation_hash": "7837f1c05ccff959075d9ca4e21bf094bf51c06ca7d26f7cf4fa1ce2df438804",
+      "sample_id": "LRU-029",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 296,
+      "column": 316,
+      "pixel_center_utm10n": [
+        626330.0,
+        4834070.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.13747,
+      "reference_context_value": 1,
+      "selection_hash": "00b556cec2447ea7f8f2c9de205382a220fd732a77dc0c320b7328758f8600f5",
+      "presentation_hash": "78b814a53d688f363593e69ad867ba84828b30d71de130b9758ec9ee2c65b2cf",
+      "sample_id": "LRU-030",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 28,
+      "column": 328,
+      "pixel_center_utm10n": [
+        657390.0,
+        4856970.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.005467,
+      "reference_context_value": 0,
+      "selection_hash": "07100b381739159683809ea4aa671d419ab36c4734dea7352d8329107b2e2c52",
+      "presentation_hash": "887f96559c84d1c19452df5e3f94e519949020a889cf13dd05c529231ce6131d",
+      "sample_id": "LRU-031",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 107,
+      "column": 31,
+      "pixel_center_utm10n": [
+        651450.0,
+        4855390.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.592158,
+      "reference_context_value": 4,
+      "selection_hash": "000146d0ef4665b9701893ee34476346fbe57c9a66bb9b80a810fdd9726b8a3b",
+      "presentation_hash": "8a70e7a34a899d5d876c7b877d0616e0c48cc06263d299af7fee2ebf756e8480",
+      "sample_id": "LRU-032",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 285,
+      "column": 159,
+      "pixel_center_utm10n": [
+        623190.0,
+        4834290.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.368091,
+      "reference_context_value": 1,
+      "selection_hash": "000594d96a30cc56ba82e50d846019a8b72cc427cd7ff112c8aae7d360f9e9dc",
+      "presentation_hash": "90af14d9124e08c050c71996bf90a5472705a45ad4286d542261a601be6e7d1a",
+      "sample_id": "LRU-033",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 36,
+      "column": 333,
+      "pixel_center_utm10n": [
+        626670.0,
+        4839270.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": 0.001287,
+      "reference_context_value": 0,
+      "selection_hash": "000118d22979c475da001bc028e2d21800724c7ffebb2f416bed665ae9a7c513",
+      "presentation_hash": "91d1a82d5988fbfec1164cbe78fbd70ca18de72560885d4a0acaf8710fc69d46",
+      "sample_id": "LRU-034",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 197,
+      "column": 283,
+      "pixel_center_utm10n": [
+        625670.0,
+        4836050.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.439153,
+      "reference_context_value": 1,
+      "selection_hash": "0002d2b40d99cc8ef3965ce145e0a53abd347681e7998dd4f849b977045c68a6",
+      "presentation_hash": "9a38ea1762e10a38b46b1e070114d30608148e1505fc654f41cb0e39fe443ca1",
+      "sample_id": "LRU-035",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 39,
+      "column": 251,
+      "pixel_center_utm10n": [
+        655850.0,
+        4856750.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.192036,
+      "reference_context_value": 2,
+      "selection_hash": "2a41529a4e692adb8ffbf12fc104527355c472b4bb0d68214c3675a5614b4b36",
+      "presentation_hash": "9c4b63e44623875ceb4e1f3b54fa4a382c7d5c76d21655a7eb715a9fbe351922",
+      "sample_id": "LRU-036",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 63,
+      "column": 253,
+      "pixel_center_utm10n": [
+        655890.0,
+        4856270.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.267839,
+      "reference_context_value": 3,
+      "selection_hash": "1a425177b84ac7e3e2b5e3d0d1b0d336108848b98e816042715723e24cc79f41",
+      "presentation_hash": "a12a4ab93c5d576607a763752ec633d79c2f976ae3371d5006bd35ef6ea67e88",
+      "sample_id": "LRU-037",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 24,
+      "column": 16,
+      "pixel_center_utm10n": [
+        627050.0,
+        4846730.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.01072,
+      "reference_context_value": 0,
+      "selection_hash": "0004c45bf7e41f3af6ea0bfd99f735b94286039b090b3faf4a7bf2e74c3f214d",
+      "presentation_hash": "a5a674ea7d3b744f623338b44c9490c9f68d47d028b846f2fdc7c9e9e3969b08",
+      "sample_id": "LRU-038",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 12,
+      "column": 40,
+      "pixel_center_utm10n": [
+        627530.0,
+        4846970.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": 6.2e-05,
+      "reference_context_value": 0,
+      "selection_hash": "055282cb1df1da3172311ce212f810477554e97a561d8b28593935f5d3d7775d",
+      "presentation_hash": "a6015bef0dc385bc871060a22c1b13c2b9e311dde50a89b7c1784384222345bb",
+      "sample_id": "LRU-039",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 219,
+      "column": 221,
+      "pixel_center_utm10n": [
+        624430.0,
+        4835610.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.117238,
+      "reference_context_value": 1,
+      "selection_hash": "000d76ccb5fcda10b4e57c3a1f24b704b16d8bc8e14ae9c755b0e57db68ae016",
+      "presentation_hash": "a779f9e659c613fcfd3ddb5ec79571ca1cbe815aea6b3abb2eb02706543a79f3",
+      "sample_id": "LRU-040",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 97,
+      "column": 112,
+      "pixel_center_utm10n": [
+        628970.0,
+        4845270.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.072893,
+      "reference_context_value": 2,
+      "selection_hash": "002c7c49e122960c3759a808e28646169515921eab5c736d71822a40a77126f0",
+      "presentation_hash": "ad475eb4c457381108b0792b087d79c084ece9b978a261205af507dcdc598441",
+      "sample_id": "LRU-041",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 86,
+      "column": 37,
+      "pixel_center_utm10n": [
+        627470.0,
+        4845490.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.116636,
+      "reference_context_value": 3,
+      "selection_hash": "001df5e31da2ac74548e35f6ce9676d0d05ef3f22a3eeed67144869df9859db9",
+      "presentation_hash": "af1cc5af93614a2d1b0567f575bda2cb186fb18a93781adcf606e4cd3e8bea5f",
+      "sample_id": "LRU-042",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 61,
+      "column": 255,
+      "pixel_center_utm10n": [
+        655930.0,
+        4856310.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.211729,
+      "reference_context_value": 3,
+      "selection_hash": "000455fe6b87f4dc30836d4c41ecb8860d0129e08b3197c1425330d16fd0c472",
+      "presentation_hash": "b08affdf44c27e75b873e873b70b6a68127590ee4c8faf83db7461c9710f4a52",
+      "sample_id": "LRU-043",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 9,
+      "column": 84,
+      "pixel_center_utm10n": [
+        652510.0,
+        4857350.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.159725,
+      "reference_context_value": 2,
+      "selection_hash": "000243ff34d2b83f3c229bea7af4c30df58e01193563871051a2d582260c657a",
+      "presentation_hash": "b5c2a53be0d5d0d6de6585fbfb236c9740a944c9f8f505b743849e5a142498c2",
+      "sample_id": "LRU-044",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 30,
+      "column": 347,
+      "pixel_center_utm10n": [
+        657770.0,
+        4856930.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": 0.00361,
+      "reference_context_value": 0,
+      "selection_hash": "0014e19dddf267aef0d22fe31a38b83ebbb21da42c1b0c434a8fb6313dc44414",
+      "presentation_hash": "b8e94e4d56d96d29470bc226d6b00b4dd5eb80b608e9552d42e24cf99a5813b9",
+      "sample_id": "LRU-045",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 296,
+      "column": 395,
+      "pixel_center_utm10n": [
+        627910.0,
+        4834070.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.396813,
+      "reference_context_value": 1,
+      "selection_hash": "000d59529887a90e28302a480336c0f3c0ac6d9139147793cdfc3c8a8cd21431",
+      "presentation_hash": "c929b947a1af3b017e3076856242e1438527b324e915f99f1aa4517d54f79d6c",
+      "sample_id": "LRU-046",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 45,
+      "column": 160,
+      "pixel_center_utm10n": [
+        629930.0,
+        4846310.0
+      ],
+      "proposal_state": "burned",
+      "proposal_state_code": 1,
+      "proposal_target_value": 1,
+      "dnbr_center": 0.754844,
+      "reference_context_value": 4,
+      "selection_hash": "0006a2e0fcdde1ede074f282f1e5a75a76b547c0893efb1486894517034e601d",
+      "presentation_hash": "ca671f255f937109f049451a27a4c51752bb900d9a392c17f8a8aaa9b423deff",
+      "sample_id": "LRU-047",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 309,
+      "column": 341,
+      "pixel_center_utm10n": [
+        626830.0,
+        4833810.0
+      ],
+      "proposal_state": "review-needed",
+      "proposal_state_code": 4,
+      "proposal_target_value": null,
+      "dnbr_center": 0.121057,
+      "reference_context_value": 1,
+      "selection_hash": "001092fe41fb89aec958402e849a81dd6e1cb381397339ee75cc789863d01b1a",
+      "presentation_hash": "ce590ac47630561dc1a3d527e0b5794a0fe6e24fea272b29443081aea848c170",
+      "sample_id": "LRU-048",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 85,
+      "column": 307,
+      "pixel_center_utm10n": [
+        656970.0,
+        4855830.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": 0.002645,
+      "reference_context_value": 0,
+      "selection_hash": "000014374fe83a8f9e4b33eb3aabe8218289c86d8ba7e91ebf951adf753a9658",
+      "presentation_hash": "d86a73a90e373e3585595c2a462cba89691d225ad1013de6d35cefd9d64e672c",
+      "sample_id": "LRU-049",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "blind_page_position": 7
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 1,
+      "column": 326,
+      "pixel_center_utm10n": [
+        657350.0,
+        4857510.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.006895,
+      "reference_context_value": 0,
+      "selection_hash": "04ad3bd2136b7d3e38090ebb4717ee2613a933ec619b656077f1eec9468633da",
+      "presentation_hash": "d97e493461908ba0b6173f6f03fa082f5d4e3bb2f373a677f701430b35c01f1b",
+      "sample_id": "LRU-050",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 1
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 181,
+      "column": 571,
+      "pixel_center_utm10n": [
+        631430.0,
+        4836370.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.031134,
+      "reference_context_value": 0,
+      "selection_hash": "0000c59f64d5dd531d82c9f412446d88c38ba02d314f289dc03c8332e61e19aa",
+      "presentation_hash": "e250048b39fb148ad2b072b758eac50b86c4b52d9fe4f227c6d89a6d327f7ef0",
+      "sample_id": "LRU-051",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 2
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 282,
+      "column": 330,
+      "pixel_center_utm10n": [
+        626610.0,
+        4834350.0
+      ],
+      "proposal_state": "excluded",
+      "proposal_state_code": 3,
+      "proposal_target_value": null,
+      "dnbr_center": 0.02487,
+      "reference_context_value": 1,
+      "selection_hash": "0116be775272719630e58447dfbdf0288c179ce2d940e030fd48eb5852ecc060",
+      "presentation_hash": "e586a6795d72630be58ab0985ac398c5338bd3ee7d369194e18fca0bb06cde53",
+      "sample_id": "LRU-052",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 3
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 19,
+      "column": 46,
+      "pixel_center_utm10n": [
+        627650.0,
+        4846830.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.066045,
+      "reference_context_value": 0,
+      "selection_hash": "00074bc5f8b02f4bb85a8ea811d72d3d2f37fe7f5b4971df4da0084bd2b06361",
+      "presentation_hash": "ee22e98125611f087a184c64f0478bd9a8d509e28aa14cc31bf8adb4e73b2477",
+      "sample_id": "LRU-053",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 4
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 6,
+      "column": 155,
+      "pixel_center_utm10n": [
+        629830.0,
+        4847090.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": -0.131418,
+      "reference_context_value": 0,
+      "selection_hash": "00075bf3cb84ee0e04fbcd2f65c5ecaa0062adf10d678b1f1d4d474608efa4ba",
+      "presentation_hash": "efb2e63181ce481cf8f10ae7b2a1027667132a5d9ab6db4a6e22c51fe9103bba",
+      "sample_id": "LRU-054",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 5
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 40,
+      "column": 266,
+      "pixel_center_utm10n": [
+        656150.0,
+        4856730.0
+      ],
+      "proposal_state": "unknown",
+      "proposal_state_code": 2,
+      "proposal_target_value": null,
+      "dnbr_center": 0.137441,
+      "reference_context_value": 2,
+      "selection_hash": "000a316254dad701af4cee7bc6bf3d3a1bcee45ddb36c52f70ad4a153dcb6579",
+      "presentation_hash": "f975e1f32c3d2d2fd7f176890d13151cd02c93c7e2e8e90e73ae22c704016388",
+      "sample_id": "LRU-055",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 6
+    },
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 409,
+      "column": 456,
+      "pixel_center_utm10n": [
+        629130.0,
+        4831810.0
+      ],
+      "proposal_state": "background-candidate",
+      "proposal_state_code": 0,
+      "proposal_target_value": 0,
+      "dnbr_center": -0.020203,
+      "reference_context_value": 0,
+      "selection_hash": "0001eed750feb7fb32a12f96f19f365321975d53f82ff38e9ed437df8d5054e5",
+      "presentation_hash": "facd10b0feb9c60e578a508a61313b7a4984697c469be3966ba181e14c66e69c",
+      "sample_id": "LRU-056",
+      "blind_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "blind_page_position": 7
+    }
+  ],
+  "review_workflow": {
+    "first_pass": "Review the blind pages and complete the response template without opening the reveal. The blind material contains exact pre/post imagery, continuous dNBR, and official-source context but no sample-specific BurnLens proposal state or binary target.",
+    "reveal": "After first-pass responses are locked and hashed, open the reveal page, compare against the proposal, and use the adjudication template only for disagreements or insufficient evidence.",
+    "independence": "A qualifying response must come from a reviewer who did not author the proposal, attests that the reveal was not seen before first pass, and uses an opaque reviewer identifier.",
+    "privacy": "No credentials, secrets, or unnecessary personal data belong in a response."
+  },
+  "predeclared_decision_rule": {
+    "current_decision": "READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+    "minimum_before_adjudication": [
+      "Two qualifying independent reviewers complete every selected unit.",
+      "First-pass response files are immutable and hashed before proposal reveal.",
+      "Every present candidate class in every event has completed evidence-sufficiency judgments."
+    ],
+    "minimum_before_dataset_candidacy": [
+      "Every reviewer disagreement is resolved by a qualifying independent adjudicator or the unit remains ignored.",
+      "Only units with sufficient or explicitly limited evidence and resolved binary agreement may support candidate labels.",
+      "Uncertain, unusable, insufficient, source-conflicted, or unresolved units remain unknown, excluded, or review-needed.",
+      "Any systematic event/class contradiction requires proposal-method revision and a new packet rather than threshold shopping.",
+      "This bounded packet alone cannot establish statistical accuracy or field validation."
+    ],
+    "automatic_deferral_conditions": [
+      "Fewer than two qualifying complete independent responses.",
+      "Proposal exposure before first-pass completion.",
+      "Missing response hashes, duplicate sample IDs, altered packet bindings, or out-of-domain values.",
+      "Any unresolved disagreement, insufficient evidence, or unsupported public claim."
+    ]
+  },
+  "research_basis": [
+    {
+      "title": "MTBS mapping methods",
+      "url": "https://www.mtbs.gov/mapping-methods",
+      "use": "MTBS documents analyst interpretation, multitemporal imagery, scene-quality limits, and uncertainty."
+    },
+    {
+      "title": "Stratification and sample allocation for reference burned area data",
+      "doi": "10.1016/j.rse.2017.06.041",
+      "url": "https://doi.org/10.1016/j.rse.2017.06.041",
+      "use": "Predeclared stratification improves the efficiency and objectivity of burned-area reference sampling."
+    },
+    {
+      "title": "Validation of the USGS Landsat Burned Area Essential Climate Variable",
+      "doi": "10.1016/j.rse.2017.06.025",
+      "url": "https://doi.org/10.1016/j.rse.2017.06.025",
+      "use": "Independent analyst references and explicit agreement rules can reduce reference error."
+    },
+    {
+      "title": "Reference Data Accuracy Impacts Burned Area Product Validation",
+      "doi": "10.3390/rs14174354",
+      "url": "https://doi.org/10.3390/rs14174354",
+      "use": "Interpreter experience and low-severity ambiguity materially affect burned-area reference data."
+    }
+  ],
+  "quality_gates": {
+    "registered_source_packages_reopened": true,
+    "committed_proposal_rasters_hash_reverified": true,
+    "proposal_pixels_recomputed_and_exactly_matched": true,
+    "all_present_event_state_strata_sampled": true,
+    "structural_absence_reported": true,
+    "proposal_blinded_first_pass_material_created": true,
+    "completed_independent_responses": 0,
+    "completed_adjudications": 0,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_claim_created": false,
+    "field_validation_claim_created": false
+  },
+  "decision": "READY_FOR_INDEPENDENT_REVIEW_DEFER_DATASET",
+  "decision_detail": "56 deterministic units cover every proposal state present across Darlene 3, Tepee, and McKay. The packet makes independent review executable, but no independent response or adjudication is supplied, so dataset candidacy remains deferred.",
+  "claims": {
+    "proven": [
+      "Exact registered source pixels and committed proposal rasters can be bound into a deterministic review packet.",
+      "Every proposal state present in each event is represented, and structural absences are explicit.",
+      "The first-pass material separates source context from the later proposal reveal."
+    ],
+    "not_proven": [
+      "No independent human review, inter-rater agreement, adjudication, accepted ground truth, or field validation has occurred.",
+      "The bounded sample is not a probability sample and supports no accuracy, generalization, or operational claim.",
+      "No dataset, split, baseline, model, application, deployment, official status, or endorsement exists."
+    ]
+  },
+  "attribution": "Contains modified Copernicus Sentinel-2 data (2017, 2018, 2024), accessed through CDSE. Includes NIFC incident-reference context and MTBS reference from USGS/USDA Forest Service. No endorsement implied.",
+  "source_precedence": "Official sources govern over BurnLens-derived evidence. NIFC, MTBS, Sentinel imagery, dNBR, and the BurnLens proposal each retain their documented roles and limitations.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "outputs": {
+    "files": [
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001.html",
+        "bytes": 7950,
+        "sha256": "a3fa935f36911ce21365c04071f03839508e75fa1b29c35285ac7d1b5239802b"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001.png",
+        "bytes": 416910,
+        "sha256": "129953da93f17d618d351c4b55a08516f19f2ec10054c3594e59b5db9ef91aed"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND.html",
+        "bytes": 2535,
+        "sha256": "5235fbaa9b1d290589445f7487ed36ec048cafb24c80d8884a1123c04109484f"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-REVEAL.html",
+        "bytes": 9433,
+        "sha256": "27bc0ccd0ab113f852ebc9ce80c537b8e6166c37d390785670fd7e0fedbb35af"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-RESPONSE-TEMPLATE.json",
+        "bytes": 11610,
+        "sha256": "8eb885be0f301cc1ef3eac8e718a12f96b624877267fd140b6b1a9eabc80627d"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-ADJUDICATION-TEMPLATE.json",
+        "bytes": 9074,
+        "sha256": "cafc67f26e43f847baea2a0f42a6af57478843297ac976cb08b2fbbff2fb9580"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+        "bytes": 1043346,
+        "sha256": "2dffb84b46dd7416b69824f8ef0a46935af347706dc645e14e666e11d55b3703"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+        "bytes": 1189574,
+        "sha256": "74d5046cefae73486db7dab230f6f6b225194a49385988310c705e79d468ca45"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+        "bytes": 1075788,
+        "sha256": "02b8198c473e478bba5786d4ed3b4850ae228dcbecb47ea85fe6dc24b1c05891"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+        "bytes": 944076,
+        "sha256": "e4cbb0c5560ee50c3e051ed4728fe451c29406c9d934a7313517134a514c7768"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+        "bytes": 1048672,
+        "sha256": "2245267e41b3c818fcd6b88d2e15633c5543ee2fe77ea1bb2d53ca890d209005"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+        "bytes": 1052619,
+        "sha256": "632bb4eb8982aa8f2f0040181a342ba8606a7e54ce5dfbfa6f36ec6556cd728c"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+        "bytes": 947497,
+        "sha256": "9ea953c1c55325534c3b2b3ef89012aa01108309b9d20d6bf69cb1432a31f043"
+      },
+      {
+        "path": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+        "bytes": 1099010,
+        "sha256": "e5f7a13269c761fba8e6b35427b10a432f1b18a703e48470b42fbe411203ba90"
+      }
+    ],
+    "blind_page_count": 8,
+    "response_template_contains_proposal_values": false,
+    "adjudication_template_contains_proposal_values": false
+  }
+}

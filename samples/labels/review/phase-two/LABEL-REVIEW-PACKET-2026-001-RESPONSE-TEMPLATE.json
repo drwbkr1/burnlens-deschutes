@@ -1,0 +1,498 @@
+{
+  "response_schema_version": "burnlens-label-review-response-v0.1.0",
+  "packet_id": "LABEL-REVIEW-PACKET-2026-001",
+  "packet_run_id": "BL-2026-07-16-label-review-packet-r001",
+  "reviewer": {
+    "reviewer_id": null,
+    "independent_from_proposal_author": null,
+    "burned_area_interpretation_experience": null,
+    "proposal_seen_before_first_pass": null,
+    "attestation": null
+  },
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "responses": [
+    {
+      "sample_id": "LRU-001",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-002",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-003",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-004",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-005",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-006",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-007",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-008",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-009",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-010",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-011",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-012",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-013",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-014",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-015",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-016",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-017",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-018",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-019",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-020",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-021",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-022",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-023",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-024",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-025",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-026",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-027",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-028",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-029",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-030",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-031",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-032",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-033",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-034",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-035",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-036",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-037",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-038",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-039",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-040",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-041",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-042",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-043",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-044",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-045",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-046",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-047",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-048",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-049",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-050",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-051",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-052",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-053",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-054",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-055",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-056",
+      "first_pass_label": null,
+      "evidence_sufficiency": null,
+      "confidence": null,
+      "reason_codes": [],
+      "notes": null
+    }
+  ],
+  "completed": false,
+  "instructions": {
+    "order": "Complete this first-pass response before opening the reveal page.",
+    "allowed_first_pass_labels": [
+      "burned",
+      "background",
+      "uncertain",
+      "unusable"
+    ],
+    "allowed_evidence_sufficiency": [
+      "sufficient",
+      "limited",
+      "insufficient"
+    ],
+    "allowed_confidence": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "allowed_reason_codes": [
+      "pre-post-change",
+      "persistent-darkening",
+      "vegetation-loss",
+      "source-context-support",
+      "source-context-conflict",
+      "cloud-smoke-shadow",
+      "registration-concern",
+      "boundary-ambiguity",
+      "low-severity-ambiguity",
+      "non-fire-change-possible",
+      "other"
+    ],
+    "privacy": "Use an opaque reviewer ID. Do not enter credentials, secrets, or unnecessary personal data."
+  }
+}
