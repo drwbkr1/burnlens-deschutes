@@ -352,8 +352,12 @@ def safe_endpoint(url: str) -> str:
     return f"https://{parts.hostname}{parts.path}"
 
 
-def _part_path(target: Path) -> Path:
-    return target.with_name(f"{target.name}.part")
+def _part_path(target: Path, suffix: str = ".part") -> Path:
+    if not suffix.startswith(".") or suffix in {".", ".."} or any(
+        separator in suffix for separator in ("/", "\\")
+    ):
+        raise AcquisitionError("PART_FILE_SUFFIX_INVALID")
+    return target.with_name(f"{target.name}{suffix}")
 
 
 def _validate_part_magic(path: Path, contract: AssetContract) -> None:
@@ -375,12 +379,13 @@ def stream_asset(
     headers: dict[str, str] | None = None,
     timeout_seconds: float = 120,
     progress: Callable[[str, int, int], None] | None = None,
+    part_suffix: str = ".part",
 ) -> dict[str, Any]:
     if _is_link_like(quarantine):
         raise AcquisitionError("QUARANTINE_LINK_NOT_ALLOWED")
     quarantine.mkdir(parents=True, exist_ok=True)
     target = quarantine / contract.expected_filename
-    part = _part_path(target)
+    part = _part_path(target, part_suffix)
     if target.exists():
         observation = inspect_asset(quarantine, contract)
         if observation["accepted"]:
@@ -453,6 +458,8 @@ def stream_asset(
             final_endpoint = safe_endpoint(response.geturl())
     except AcquisitionError:
         raise
+    except TimeoutError as error:
+        raise AcquisitionError("DOWNLOAD_STREAM_FAILED", role=contract.role, detail=type(error).__name__) from None
     except OSError as error:
         raise AcquisitionError("DOWNLOAD_WRITE_FAILED", role=contract.role, detail=type(error).__name__) from None
 

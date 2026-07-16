@@ -38,6 +38,13 @@ PACKAGE_ID = "burnlens-cross-event-optical-package-v0.1.0"
 CONTRACT_VERSION = "cross-event-optical-intake-contract-v0.1.0"
 SOURCE_RECORD_ID = "SOURCE-2026-012"
 TERMS_REVIEW_ID = "TERMS-2026-007"
+TEMPORARY_SUFFIX = ".tmp"
+MAX_TRANSFER_ATTEMPTS = 5
+RETRYABLE_TRANSFER_REASONS = {
+    "DOWNLOAD_REQUEST_FAILED",
+    "DOWNLOAD_STREAM_FAILED",
+    "DOWNLOAD_SIZE_MISMATCH",
+}
 
 
 def _contract(
@@ -362,7 +369,7 @@ def _validate_working_entries(quarantine: Path) -> None:
     expected: set[str] = set()
     for contract in CROSS_EVENT_CONTRACTS:
         expected.add(contract.expected_filename)
-        expected.add(f"{contract.expected_filename}.part")
+        expected.add(f"{contract.expected_filename}{TEMPORARY_SUFFIX}")
     unexpected = sorted(entry.name for entry in quarantine.iterdir() if entry.name not in expected)
     if unexpected:
         raise AcquisitionError("UNEXPECTED_ACQUISITION_WORKING_ENTRY", detail=",".join(unexpected))
@@ -407,20 +414,28 @@ def acquire_cross_event_package(
     _validate_working_entries(quarantine)
     downloads: list[dict[str, Any]] = []
     for contract in CROSS_EVENT_CONTRACTS:
-        token: str | None = request_cdse_access_token(credentials.username, credentials.password)
-        try:
-            downloads.append(
-                stream_asset(
+        for attempt in range(1, MAX_TRANSFER_ATTEMPTS + 1):
+            token: str | None = request_cdse_access_token(credentials.username, credentials.password)
+            try:
+                result = stream_asset(
                     contract,
                     quarantine,
                     opener=build_cdse_opener(),
                     headers={"Authorization": f"Bearer {token}"},
                     timeout_seconds=180,
                     progress=progress,
+                    part_suffix=TEMPORARY_SUFFIX,
                 )
-            )
-        finally:
-            token = None
+            except AcquisitionError as error:
+                if error.reason_code in RETRYABLE_TRANSFER_REASONS and attempt < MAX_TRANSFER_ATTEMPTS:
+                    continue
+                raise
+            finally:
+                token = None
+            result["attempt_count"] = attempt
+            result["temporary_suffix"] = TEMPORARY_SUFFIX
+            downloads.append(result)
+            break
 
     try:
         registration = promote_quarantine(

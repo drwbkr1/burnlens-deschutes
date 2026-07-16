@@ -16,8 +16,11 @@ from burnlens import acquire_cross_event_optical as acquire_cli
 from burnlens.cross_event_optical_contract import (
     CROSS_EVENT_CONTRACTS,
     EXPECTED_METADATA,
+    MAX_TRANSFER_ATTEMPTS,
     ROUTE_PRECEDENCE,
+    TEMPORARY_SUFFIX,
     CdseCredentials,
+    _validate_working_entries,
     acquire_cross_event_package,
     refresh_cross_event_metadata,
     validate_cross_event_contracts,
@@ -120,6 +123,54 @@ class CrossEventOpticalContractTests(unittest.TestCase):
         self.assertNotEqual(contract.expected_size_bytes, expected["stac_product_bytes"])
         self.assertIn("OData", ROUTE_PRECEDENCE["archive_authority"])
         self.assertIn("zipper", ROUTE_PRECEDENCE["stac_asset_role"])
+
+    def test_cross_event_working_files_use_onedrive_ignored_tmp_suffix(self) -> None:
+        self.assertEqual(TEMPORARY_SUFFIX, ".tmp")
+        with TemporaryDirectory() as directory:
+            quarantine = Path(directory)
+            accepted = quarantine / f"{CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"
+            accepted.write_bytes(b"")
+            _validate_working_entries(quarantine)
+            accepted.rename(quarantine / f"{CROSS_EVENT_CONTRACTS[0].expected_filename}.part")
+            with self.assertRaisesRegex(AcquisitionError, "UNEXPECTED_ACQUISITION_WORKING_ENTRY"):
+                _validate_working_entries(quarantine)
+
+    def test_retryable_early_eof_gets_bounded_fresh_token_attempt(self) -> None:
+        success = {"role": CROSS_EVENT_CONTRACTS[0].role, "status": "DOWNLOADED", "bytes": 1}
+        with TemporaryDirectory() as directory, patch(
+            "burnlens.cross_event_optical_contract.validate_cross_event_contracts", return_value=[]
+        ), patch(
+            "burnlens.cross_event_optical_contract.validate_cross_event_metadata", return_value=[]
+        ), patch(
+            "burnlens.cross_event_optical_contract.request_cdse_access_token", return_value="token"
+        ) as token_request, patch(
+            "burnlens.cross_event_optical_contract.stream_asset",
+            side_effect=[
+                AcquisitionError("DOWNLOAD_SIZE_MISMATCH", role=CROSS_EVENT_CONTRACTS[0].role),
+                success,
+                {**success, "role": CROSS_EVENT_CONTRACTS[1].role},
+                {**success, "role": CROSS_EVENT_CONTRACTS[2].role},
+                {**success, "role": CROSS_EVENT_CONTRACTS[3].role},
+            ],
+        ) as stream, patch(
+            "burnlens.cross_event_optical_contract.promote_quarantine", return_value={"run_id": "test"}
+        ), patch(
+            "burnlens.cross_event_optical_contract.verify_registered_package",
+            return_value={"accepted_as_unchanged_registered_package": True},
+        ):
+            result = acquire_cross_event_package(
+                credentials=CdseCredentials("user", "secret"),
+                quarantine=Path(directory) / "quarantine",
+                raw_parent=Path(directory) / "raw",
+                generated_at_utc="2026-07-16T00:30:00Z",
+                run_id="BL-TEST-CROSS-EVENT-RETRY",
+                metadata_snapshot={},
+            )
+        self.assertEqual(MAX_TRANSFER_ATTEMPTS, 5)
+        self.assertEqual(token_request.call_count, 5)
+        self.assertEqual(stream.call_count, 5)
+        self.assertTrue(all(call.kwargs["part_suffix"] == ".tmp" for call in stream.call_args_list))
+        self.assertEqual(result["downloads"][0]["attempt_count"], 2)
 
     def test_public_odata_metadata_drift_fails_closed(self) -> None:
         payloads = {item.provider_id: metadata_payload(item.role) for item in CROSS_EVENT_CONTRACTS}
