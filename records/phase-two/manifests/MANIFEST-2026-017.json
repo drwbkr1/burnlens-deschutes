@@ -1,0 +1,160 @@
+{
+  "manifest_id": "MANIFEST-2026-017",
+  "manifest_version": "0.17.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-16T18:20:00Z",
+  "task_issue": 383,
+  "branch": "codex/p2o4-t07-browser-acceptance",
+  "git_base_commit": "d8864e2c5b05061a49f87edc64adb95848400ac0",
+  "generator_source_commit": "74275a061fb4054a535cc8b660bebb0021999c54",
+  "release_wheel_source_commit": "74275a061fb4054a535cc8b660bebb0021999c54",
+  "release_wheel_source_date_epoch": 1784225027,
+  "release_wheel_bytes": 283856,
+  "release_wheel_sha256": "950472207ac8f75208188584e2f8474f88a8a71e0f14fde864aa297b79076352",
+  "candidate_artifacts_commit": "97ddbaf71372e119428868a37d214c3327523514",
+  "reviewed_head_commit": null,
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.15.0-live-browser-reviewer-handoff",
+  "version_tag_object": null,
+  "version_tag_state": "candidate; create only after merge and fresh merged-main verification",
+  "status": "candidate live-browser reviewer-handoff QA; no human response used; dataset deferred",
+  "software_version": "0.15.0",
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "pillow": "12.2.0",
+    "rasterio": "1.5.0",
+    "setuptools": "82.0.1",
+    "node": "v24.15.0",
+    "chrome": "150.0.7871.124",
+    "devtools_protocol": "1.3"
+  },
+  "source_records": [
+    "SOURCE-2026-007",
+    "SOURCE-2026-009",
+    "SOURCE-2026-010",
+    "SOURCE-2026-012",
+    "SOURCE-2026-013"
+  ],
+  "terms_records": [
+    "TERMS-2026-003",
+    "TERMS-2026-005",
+    "TERMS-2026-007",
+    "TERMS-2026-008"
+  ],
+  "precheck_record": "PRECHECK-2026-014",
+  "registry_record": "REGISTRY-2026-017",
+  "review_records": [
+    "LABEL_FITNESS-2026-010",
+    "SOURCE_PRECEDENCE-2026-006",
+    "USE_BOUNDARY-2026-013"
+  ],
+  "aoi_record": "AOI-2026-002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "review_protocol_version": "proposal-blinded-label-review-readiness-v0.1.0",
+  "response_schema_version": "burnlens-label-review-response-v0.1.0",
+  "handoff_report_version": "proposal-safe-offline-label-review-handoff-v0.1.0",
+  "handoff_qa_version": "label-review-handoff-integrity-qa-v0.1.0",
+  "browser_qa_version": "label-review-live-browser-qa-v0.1.0",
+  "application_version": "label-review-handoff-workbench-v0.1.0",
+  "application_deployment": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "run_ids": [
+    "BL-2026-07-16-label-review-packet-r001",
+    "BL-2026-07-16-label-review-handoff-r001",
+    "BL-2026-07-16-label-review-handoff-qa-r001",
+    "BL-2026-07-16-label-review-browser-qa-r001"
+  ],
+  "packet_binding": {
+    "report_id": "LABEL-REVIEW-PACKET-2026-001",
+    "run_id": "BL-2026-07-16-label-review-packet-r001",
+    "git_source_commit": "a11ae5123728d3823ba67d22d49250d4affb18f6",
+    "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+    "review_unit_count": 56,
+    "blind_page_count": 8
+  },
+  "archive_binding": {
+    "filename": "LABEL-REVIEW-HANDOFF-2026-001.zip",
+    "bytes": 8652301,
+    "sha256": "12f4cbe3d7903b2c404d5dfafbc141c35afa74e51c5d0b9a1816c65f82b8d8cc",
+    "member_count": 12,
+    "committed": false,
+    "exactly_reconstructed": true
+  },
+  "browser_runtime": {
+    "product": "Chrome/150.0.7871.124",
+    "browser_binary_sha256": "40ad3d87ea81270f36137e6f84fb36e9a2236aedd835696dd663ac1a27dd1b13",
+    "node_version": "v24.15.0",
+    "controller_transport": "short-lived HTTP/WebSocket DevTools control plane bound to 127.0.0.1 with an isolated browser profile"
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 6336,
+      "sha256": "2aab84996e09b481ed050e775f1d86dc75bb7429672b8b2cd0e75e6cd24e11e0"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 4556,
+      "sha256": "501d1ed26eda04c2a1a89306536b0c016f8f9caf91dfd4618b5c16c75672e483"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 355908,
+      "sha256": "a65eccb98f0eac55e34614916118d782aac4e9e918f864cf922e1bf27840e1e0"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-DESKTOP.png",
+      "media_type": "image/png",
+      "bytes": 66339,
+      "sha256": "a8cec47e8907ccbb862845d7a943c8a49f968cc795033a929a088a3f6a75e026"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-MOBILE.png",
+      "media_type": "image/png",
+      "bytes": 34568,
+      "sha256": "455332989d5493c5e6250d0c9d97b527339dfe4b99b4a62d68c7e41fb8cb02d6"
+    }
+  ],
+  "credentials_used": false,
+  "new_paid_service_or_secret": false,
+  "provider_imagery_bytes_committed": 0,
+  "credential_or_token_material_retained": false,
+  "independent_human_responses_used_in_this_qa": 0,
+  "software_browser_fixtures_executed": 1,
+  "completed_adjudications": 0,
+  "project_returned_response_state": "one exact returned response preserved and operator-locked under issue #384; separate public evidence pending; not used in this QA; reveal unopened",
+  "quality_gates": {
+    "cycle_start_tool_run": "pass: exact v0.14 handoff and archive reconstruction; interactive browser evidence identified as the highest user-visible gap",
+    "primary_source_refresh": "pass: official Chrome Headless, Chrome DevTools Protocol, and Node WebSocket sources checked on 2026-07-16",
+    "live_browser_roundtrip": "pass: 8 images, 56 fieldsets, incomplete blocking, actual draft download/load, exact restored values, completed review/export",
+    "software_fixture_isolation": "pass: fixture receipt cannot count as human evidence and prohibits reveal",
+    "responsive_viewports": "pass: desktop 1440x1000 and mobile 390x844; no horizontal overflow",
+    "browser_errors_and_resources": "pass: zero console errors, runtime exceptions, cookies, local storage, and external page-target resource schemes; loopback control plane disclosed",
+    "repository_tests": 154,
+    "compileall": "pass",
+    "node_syntax": "pass",
+    "dependency_health": "pass: no broken requirements",
+    "wheel_build_and_isolated_import": "pass: two fixed-epoch detached-source wheels byte-identical at 283856 bytes / sha256 950472207ac8f75208188584e2f8474f88a8a71e0f14fde864aa297b79076352; isolated import 0.15.0; 25 entry points; controller packaged",
+    "original_resolution_visual_review": "pass: desktop, mobile, and browser-QA summary inspected at original resolution",
+    "deployed_application_review": "not applicable: no deployed BurnLens application exists in this repository",
+    "independent_human_or_field_validation": "absent from this QA",
+    "dataset_or_partition_created": false,
+    "raw_provider_bytes_committed": 0,
+    "candidate_pr_merge_tag": "pending",
+    "fresh_merged_main": "pending"
+  },
+  "decision": "ACCEPT_LIVE_BROWSER_REVIEWER_HANDOFF_QA_DEFER_DATASET",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

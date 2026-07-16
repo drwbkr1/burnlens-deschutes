@@ -218,6 +218,24 @@ A separately implemented verifier checks the archive allowlist, paths, order, mo
 
 All seven public outputs and the local 12-member archive reproduce byte for byte. The synthetic complete-response test proves the software contract only. No independent human response or adjudication exists. The interactive browser runtime was unavailable, so the shipped checkpoint makes no viewport, console, draft/load, or download interaction claim.
 
+## Running the exact reviewer surface instead of inferring it works
+
+The missing browser sentence became the next checkpoint. Issue #383 reconstructs the exact 8,652,301-byte archive and launches its extracted `file://` workbench in installed Chrome `150.0.7871.124` with a temporary isolated profile.
+
+![BurnLens live-browser reviewer-handoff QA](../../samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001.png)
+
+The browser is driven through the same controls a reviewer uses. Empty review/export exposes 61 incomplete items and focuses the error surface. Seven completed units are downloaded as a real draft, the form is cleared, and the native file input restores the exact values and progress. All 56 units then complete and export under the pinned response schema.
+
+![BurnLens reviewer workbench desktop viewport](../../samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-DESKTOP.png)
+
+![BurnLens reviewer workbench mobile viewport](../../samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-MOBILE.png)
+
+The desktop 1440 by 1000 and mobile 390 by 844 views have no horizontal overflow. The inspected page target records no external resource request, console error, runtime exception, cookie, or local-storage entry. The loopback DevTools control plane is disclosed separately.
+
+The exported labels are deliberately balanced software data: 14 each burned, background, uncertain, and unusable. Its receipt says `software-browser-fixture`, qualifying-human false, and reveal prohibited. That distinction is more important than the green checks: one browser acceptance run proves the interface contract, not cross-browser conformance, reviewer qualification, label accuracy, or scientific validity.
+
+One actual returned response arrived after this run and is preserved and operator-locked under issue #384. Its exact bytes and notes remain private, it is not folded into the browser fixture evidence, and the reveal remains unopened. A second qualifying response and later adjudication are still required.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -238,6 +256,7 @@ All seven public outputs and the local 12-member archive reproduce byte for byte
 - Latest label-review packet-QA run: `BL-2026-07-16-label-review-packet-qa-r001`
 - Latest offline handoff run: `BL-2026-07-16-label-review-handoff-r001`
 - Latest offline handoff-QA run: `BL-2026-07-16-label-review-handoff-qa-r001`
+- Latest live-browser handoff-QA run: `BL-2026-07-16-label-review-browser-qa-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.14.0`; issue #379 / PR #380; merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; reviewed head `50dc6cc81de58b57ee04c2f6d6c3a1499af55a70`; source `75102d79e6e184a1ecac941900fd74938cdaa972`; artifacts `0400b894bcbf3938eb9b4666162512dd4263e45f`; tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`
 - Optical shipment: issue #343 / PR #344; merge `136d4d0919eba7144881c22163a149c89fee5a76`; annotated tag object `28d12fb5ef5c70054b8af5fd3c4847ba268000a1`
@@ -253,6 +272,7 @@ All seven public outputs and the local 12-member archive reproduce byte for byte
 - Cross-event proposal/QA: topology-stable `CROSS-EVENT-LABEL-TRANSFER-2026-002` and `CROSS-EVENT-LABEL-TRANSFER-QA-2026-002`; exact shipped hashes in `MANIFEST-2026-014`; zero mismatch across 63,930 pixels; human validation absent; `2026-001` preserved in `MANIFEST-2026-013`
 - Label-review readiness: `LABEL-REVIEW-PACKET-2026-001` and `LABEL-REVIEW-PACKET-QA-2026-001`; exact 18-output shipped inventory in `MANIFEST-2026-015`; 56 units / 14 present strata / one structural absence; completed independent responses and adjudications both zero
 - Offline reviewer handoff: `LABEL-REVIEW-HANDOFF-2026-001` and `LABEL-REVIEW-HANDOFF-QA-2026-001`; exact seven-output shipped inventory and local archive identity in `MANIFEST-2026-016`; application `label-review-handoff-workbench-v0.1.0`; completed independent responses and adjudications both zero
+- Live-browser handoff QA candidate: `LABEL-REVIEW-BROWSER-QA-2026-001`; exact five-output inventory in `MANIFEST-2026-017`; Chrome `150.0.7871.124`; source `74275a061fb4054a535cc8b660bebb0021999c54`; artifacts `97ddbaf71372e119428868a37d214c3327523514`; zero human responses used in the run
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -261,7 +281,8 @@ All seven public outputs and the local 12-member archive reproduce byte for byte
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest shipped repository baseline: `v0.14.0-offline-reviewer-handoff` at merge `49c2d2cff03612b9fb4e0644c4c1ee8852a312a4`; annotated tag object `b4f290fdcc8dad859bdecc7eea54866d0e1b727a`
 - Latest checkpoint: issue #379 / PR #380; 151 tests, exact seven-file plus archive reconstruction, original-resolution and served semantic review, byte-reproducible fixed-epoch source packaging, isolated import with 24 entry points, fresh merged-main, independent handoff QA, and remote-tag verification pass; no browser-interaction claim
-- Active next checkpoint: obtain qualifying independent responses from the isolated handoff, preserve pre-reveal hashes, adjudicate disagreements or keep units ignored, and make a dataset-candidacy/remediation decision before any partition work
+- Active candidate: issue #383; BurnLens `0.15.0`; 154 tests; exact live-browser invalid-state/draft/export/viewport/error/storage evidence; byte-reproducible fixed-epoch source packaging; isolated import with 25 entry points; PR/merge/tag/fresh-main pending
+- Active next checkpoint: issue #384; ship a sanitized public receipt for the first exact operator-locked returned response without exposing notes or opening the reveal, then obtain and lock the required second response before adjudication or dataset-candidacy work
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

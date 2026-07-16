@@ -2,6 +2,21 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.15.0-live-browser-reviewer-handoff - 2026-07-16
+
+### P2O4-T07 - Prove the exact reviewer workbench in a live browser
+
+- Reconstruct the exact v0.14 handoff archive and identify the explicitly unverified browser interaction path as the highest-leverage user-visible weakness.
+- Add a dependency-free Node controller that launches installed Chrome with an isolated profile and loopback-only DevTools endpoint, opens the extracted `file://` workbench, records actual downloads and browser observations, and captures desktop/mobile screenshots.
+- Add a fail-closed Python verifier and renderer for invalid-state behavior, all eight images and 56 fieldsets, draft download/load, exact progress/value restoration, completed response export, viewport overflow, page-target resource schemes, console/runtime/log errors, cookies, local storage, and fixture locking.
+- Harden returned-response receipts with explicit `returned-independent-response` versus `software-browser-fixture` origin, task-issue binding, completion/receipt chronology, distinct decisions, and a fixture reveal prohibition.
+- Record authoritative run `BL-2026-07-16-label-review-browser-qa-r001` in Chrome `150.0.7871.124`: 61 incomplete-review issues, seven-unit draft roundtrip, 56-unit completed export, 14 of each response label, no horizontal overflow at 1440 by 1000 or 390 by 844, and zero external page-target resource schemes, console errors, runtime exceptions, cookies, or local-storage entries.
+- Preserve the loopback DevTools control plane as disclosed controller transport rather than application traffic.
+- Pass 154 tests, compilation, Node syntax, dependency health, original-resolution review, and two byte-identical detached-source fixed-epoch 283,856-byte wheels / SHA-256 `950472207ac8f75208188584e2f8474f88a8a71e0f14fde864aa297b79076352`; isolated install reports `0.15.0`, 25 entry points, and the packaged controller.
+- Keep the browser-generated response explicitly non-human and reveal-prohibited. Create no accepted label set, dataset, split, baseline, model, accuracy estimate, deployment, field claim, official claim, or operational claim.
+
+Issue #383; branch `codex/p2o4-t07-browser-acceptance`; source `74275a061fb4054a535cc8b660bebb0021999c54`; browser artifacts `97ddbaf71372e119428868a37d214c3327523514`. PR, merge, tag, and fresh-main lifecycle fields are pending candidate verification.
+
 ## v0.14.0-offline-reviewer-handoff - 2026-07-16
 
 ### P2O4-T06 - Isolate reviewer delivery and lock returned responses
