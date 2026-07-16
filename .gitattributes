@@ -1,3 +1,9 @@
+# Package source and build metadata must have checkout-stable bytes so a fixed
+# SOURCE_DATE_EPOCH can produce the same wheel from a fresh Windows clone.
+*.py text eol=lf
+pyproject.toml text eol=lf
+LICENSE text eol=lf
+
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf
 samples/target/phase-two/*.html text eol=lf
@@ -13,6 +19,10 @@ samples/registration/phase-two/*.html text eol=lf
 # Label-proposal and QA evidence have explicit cross-platform serialization contracts.
 samples/labels/phase-two/*.json text eol=lf
 samples/labels/phase-two/*.html text eol=lf
+
+# Cross-event label-transfer and QA evidence use the same LF contract.
+samples/labels/cross-event/phase-two/*.json text eol=lf
+samples/labels/cross-event/phase-two/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf

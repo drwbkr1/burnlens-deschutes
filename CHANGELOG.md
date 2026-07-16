@@ -2,6 +2,24 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.12.0-cross-event-label-transfer-baseline - 2026-07-16 (candidate)
+
+### P2O4-T04 - Transfer five-state proposals across Tepee and McKay
+
+- Reproduce the shipped v0.11 source-fitness JSON/HTML/PNG byte for byte before selecting cross-event proposal transfer as the highest-leverage weakness.
+- Register two exact public MTBS annual thematic clips under `SOURCE-2026-013`, with event-year nearest-neighbor U8 byte/grid/value contracts and joint USGS/USDA Forest Service attribution; commit zero provider bytes.
+- Preserve Tepee SCL/window restrictions, frozen whole-event groups, five-state uncertainty, and source precedence; MTBS and SCL never independently create burn truth.
+- Add the owner-authorized binary-mask fallback as an explicit event-relative background stability screen: lowest 15% normalized non-burn tail, cap 6.0, seven-of-nine coherence, no boundary-absence inference.
+- Produce four traceable GeoTIFFs plus proposal JSON/HTML/PNG. Aggregate: 549 background, 9,211 burned, 18,425 unknown, 16,025 excluded, and 19,720 review-needed pixels.
+- Add a separately invoked QA path that does not import the transfer classifier, reopens all six exact source assets, and reproduces 63,930 state/target pixels with zero mismatch plus 45 deterministic audits.
+- Remediate live-browser claim grammar so every boundary item is explicitly `Not proven`; pass original-resolution and semantic-browser review plus four HTTP-200 raster links.
+- Extend the deterministic LF checkout contract to nested cross-event JSON/HTML after fresh remote-head verification exposes Windows CRLF conversion; add a regression test before merge.
+- Extend the LF contract to Python package sources and build metadata after fresh-wheel inspection proves the only source-entry differences are checkout line endings; use a fixed `SOURCE_DATE_EPOCH` for the authoritative release wheel.
+- Raise BurnLens to `0.12.0`; pass 137 tests, compilation, dependency health, two byte-identical fixed-epoch 214,749-byte wheels / SHA-256 `525038b78dbc199be9851dc1b4f5854b7bd49093047c8a761446616e921e865c`, isolated import, and three new entry points.
+- Accept reproducible cross-event proposal evidence while deferring accepted labels, dataset, split, baseline, model, independent human validation, field validation, and operational claims.
+
+Issue #367; generator/QA source `6d9bb2a34a32f775e4bf83249151e41c25998ee5`; proposal/QA runs `r003`; reviewed PR/merge/tag pending.
+
 ## v0.11.0-cross-event-source-fitness-baseline - 2026-07-16
 
 ### P2O4-T03 - Acquire and inspect the exact cross-event pixels
