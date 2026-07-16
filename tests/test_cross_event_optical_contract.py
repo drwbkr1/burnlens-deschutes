@@ -130,6 +130,7 @@ class CrossEventOpticalContractTests(unittest.TestCase):
         self.assertEqual(TEMPORARY_SUFFIX, ".tmp")
         self.assertEqual(TEMPORARY_PREFIX, "~$")
         self.assertTrue(REGISTRATION_MANIFEST_NAME.startswith("~$"))
+        self.assertTrue(REGISTRATION_MANIFEST_NAME.endswith(".tmp"))
         with TemporaryDirectory() as directory:
             quarantine = Path(directory)
             accepted = quarantine / f"~${CROSS_EVENT_CONTRACTS[0].expected_filename}.tmp"
