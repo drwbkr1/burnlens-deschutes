@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-17
 
-**Issue / branch / parent:** #425 / `codex/p2o4-t13-official-source-scout` / #416
+**Issue / PR / branch / parent:** #425 / #426 / `codex/p2o4-t13-official-source-scout` / #416
 
 The cycle started from the real 0.22.0 accepted-request output and the existing 56-unit review handoff. The visible bottlenecks were an asynchronous provider queue, no affirmative background candidates, limited event diversity, and a newly approved owner-confirmed review route that needs stronger disclosed evidence.
 

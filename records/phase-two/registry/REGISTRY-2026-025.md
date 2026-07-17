@@ -1,6 +1,6 @@
 # REGISTRY-2026-025 - Official Source Scout
 
-**Checkpoint:** Issue #425; branch `codex/p2o4-t13-official-source-scout`; parent #416; generator source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`
+**Checkpoint:** Issue #425 / PR #426; branch `codex/p2o4-t13-official-source-scout`; reviewed candidate `2924b2b675168e94e4d90d830a4e95b6c725f15c`; parent #416; generator source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|

@@ -16,7 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Verified `v0.22.0-current-bundle-request-evidence`; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; exact request accepted, delivery pending, four provider cautions binding |
-| Candidate evidence checkpoint | P2O4-T13 / issue #425; BurnLens `0.23.0`; source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`; run `BL-2026-07-17-official-source-scout-r004`; 7 source classes / 21 candidates / 0 labels; final PR/merge/tag verification pending |
+| Candidate evidence checkpoint | P2O4-T13 / issue #425 / PR #426; reviewed head `2924b2b675168e94e4d90d830a4e95b6c725f15c`; BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 7 source classes / 21 candidates / 0 labels; merge/tag verification pending |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoints | Issue #416 owns exact pending BAER/RAVG/MTBS delivery/fitness; issue #425 owns bounded official-source reconnaissance; the next review-surface issue must reopen all 56 units for owner yes/no/uncertain without inheriting historical exclusions |
 | Historical reconciliation baseline | Shipped `v0.20.0-single-reviewer-reconciliation` at merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`; immutable 6 burned / 0 background / 50 ignored evidence, not final exclusion under the owner-confirmed route |

@@ -1,6 +1,6 @@
 # PRECHECK-2026-021 - Official Source Scout
 
-**Issue:** #425
+**Issue / PR:** #425 / #426
 
 **Run:** `BL-2026-07-17-official-source-scout-r004`
 

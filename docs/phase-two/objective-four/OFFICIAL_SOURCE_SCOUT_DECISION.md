@@ -1,6 +1,6 @@
 # P2O4-T13 Official Source Scout Decision
 
-**Issue / branch / parent:** #425 / `codex/p2o4-t13-official-source-scout` / #416
+**Issue / PR / branch / parent:** #425 / #426 / `codex/p2o4-t13-official-source-scout` / #416
 
 **Run:** `BL-2026-07-17-official-source-scout-r004`
 
