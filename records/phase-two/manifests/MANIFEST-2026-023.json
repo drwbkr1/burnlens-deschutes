@@ -9,7 +9,7 @@
   "git_base_commit": "e55909f79c7adae2c7eecf9b14c89518b6b4c789",
   "generator_source_commit": "98a9895d203c778dad332db5bdc62b498aa2cd00",
   "candidate_artifacts_commit": "f5d4d528263bfc2cf93cb7f128bcb051732797b3",
-  "reviewed_candidate_head": null,
+  "reviewed_candidate_head": "cc58ba5dfd2a258fc9b8fb51009a60306fda2f14",
   "checkpoint_commit": null,
   "pull_request": null,
   "version_tag": "v0.21.0-current-reference-inventory",
