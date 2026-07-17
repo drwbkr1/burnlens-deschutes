@@ -38,3 +38,7 @@ These limitations are evidence, not footnotes. They govern which pixels can late
 - Inter-rater/consensus/adjudication claims: absent
 
 The next action under #416 is to preserve exact delivered bytes, inspect terms and structure, and render cross-program pixel fitness. No guessed delivery URL or substitute product is acceptable.
+
+## Verified release
+
+Issue #421 / PR #422 merged at `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`. Annotated tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7` remotely peels to that merge as `v0.22.0-current-bundle-request-evidence`. Fresh merged-main release gates pass. Lifecycle sync issue #423 changes no analytical, delivery, label, or model state.
