@@ -161,6 +161,63 @@ def _request_bytes(
     }
 
 
+def _classify_asset_probe(
+    *, final_url: str, content_type: str, payload_prefix: bytes
+) -> str:
+    final_host = urlsplit(final_url).netloc.lower()
+    lowered = payload_prefix.lower()
+    if final_host in {"ers.cr.usgs.gov", "ims.cr.usgs.gov"} or (
+        content_type == "text/html"
+        and (b"eros registration system" in lowered or b"<title>login" in lowered)
+    ):
+        return "AUTHENTICATION_REQUIRED"
+    if content_type in {"application/json", "application/geo+json"}:
+        return "PUBLIC_METADATA_ASSET_AVAILABLE"
+    return "UNEXPECTED_RESPONSE_DEFER"
+
+
+def _probe_public_asset_route(
+    url: str, *, timeout_seconds: int = 60
+) -> dict[str, Any]:
+    """Probe one small advertised metadata route without retaining its content."""
+
+    _safe_public_url(url)
+    request = Request(
+        url,
+        headers={
+            "Accept": "application/json",
+            "Range": "bytes=0-65535",
+            "User-Agent": USER_AGENT,
+        },
+    )
+    try:
+        with urlopen(request, timeout=timeout_seconds) as response:
+            payload = response.read(65537)
+            final_url = response.geturl()
+            content_type = response.headers.get_content_type()
+            status = int(response.status)
+    except (HTTPError, URLError, TimeoutError, OSError) as error:
+        raise OfficialSourceScoutError("Landsat metadata asset probe failed") from error
+    if len(payload) > 65536:
+        raise OfficialSourceScoutError("Landsat metadata asset probe exceeded its bound")
+    state = _classify_asset_probe(
+        final_url=final_url,
+        content_type=content_type,
+        payload_prefix=payload[:4096],
+    )
+    return {
+        "advertised_url": url,
+        "final_route": f"{urlsplit(final_url).scheme}://{urlsplit(final_url).netloc}{urlsplit(final_url).path}",
+        "http_status": status,
+        "content_type": content_type,
+        "sampled_bytes": len(payload),
+        "sample_sha256": sha256(payload).hexdigest(),
+        "access_state": state,
+        "credentials_sent": False,
+        "content_retained": False,
+    }
+
+
 def _json(payload: bytes, label: str) -> dict[str, Any]:
     try:
         value = json.loads(payload.decode("utf-8"))
@@ -529,6 +586,12 @@ def capture_live_source_scout(
         )
         candidate["landsat_burned_area"] = check
     new_candidates.sort(key=_candidate_sort_key)
+    top_landsat = new_candidates[0].get("landsat_burned_area") or {}
+    retained_items = top_landsat.get("retained_items") or []
+    if not retained_items:
+        raise OfficialSourceScoutError("top candidate lacks a Landsat metadata item")
+    metadata_url = retained_items[0]["assets"]["json"]["href"]
+    evidence["landsat_metadata_asset_probe"] = _probe_public_asset_route(metadata_url)
     for index, item in enumerate(new_candidates, start=1):
         item["rank"] = index
 
@@ -590,7 +653,8 @@ def capture_live_source_scout(
             "temporal_relationship": "acquisition-based burn probability and thresholded burn classification",
             "role": "independent algorithmic burned/background candidate reference",
             "label_truth_status": "not ground truth; QA, commission/omission, water/shadow, coverage, and optical checks required",
-            "terms_status": "no Landsat use restrictions; cite the dataset",
+            "terms_status": "no Landsat use restrictions; cite the dataset; advertised asset retrieval currently redirects to EROS authentication",
+            "access_state": evidence["landsat_metadata_asset_probe"]["access_state"],
             "access_route": LANDSAT_COLLECTIONS_URL,
         },
         {
@@ -760,7 +824,9 @@ def build_official_source_scout(source: dict[str, Any]) -> dict[str, Any]:
                 "It supplies 30 m acquisition-based burn probability and classification "
                 "across forest, shrub, and grass ecosystems through a live official route. "
                 "It can challenge both burned and background candidates without inheriting "
-                "the Sentinel single-tile constraint, but it remains algorithmic reference evidence."
+                "the Sentinel single-tile constraint, but it remains algorithmic reference evidence. "
+                "The public STAC metadata is live while the advertised asset probe redirects to "
+                "EROS authentication, so acquisition remains gated rather than assumed."
             ),
             "next_acquisition_rule": (
                 "Acquire only a small metadata-plus-COG-window proof for the highest-ranked "
@@ -957,4 +1023,3 @@ def write_official_source_scout(
     _write_utf8_lf(html_path, _html(report))
     png_path.parent.mkdir(parents=True, exist_ok=True)
     _png(report).save(png_path, format="PNG", optimize=False)
-

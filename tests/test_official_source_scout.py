@@ -11,6 +11,7 @@ from burnlens.official_source_scout import (
     DECISION,
     SOURCE_ID,
     OfficialSourceScoutError,
+    _classify_asset_probe,
     _score_candidate,
     build_official_source_scout,
     finalize_source_capture,
@@ -169,6 +170,24 @@ class OfficialSourceScoutTests(unittest.TestCase):
         self.assertEqual(strong_score["evidence_value"], 5)
         self.assertEqual(weak_score["owner_review_usefulness"], 1)
 
+    def test_asset_probe_classifies_eros_login_without_credentials(self) -> None:
+        self.assertEqual(
+            _classify_asset_probe(
+                final_url="https://ers.cr.usgs.gov/login?redirect=redacted",
+                content_type="text/html",
+                payload_prefix=b"<title>Login - EROS Registration System</title>",
+            ),
+            "AUTHENTICATION_REQUIRED",
+        )
+        self.assertEqual(
+            _classify_asset_probe(
+                final_url="https://landsatlook.usgs.gov/metadata.json",
+                content_type="application/json",
+                payload_prefix=b"{}",
+            ),
+            "PUBLIC_METADATA_ASSET_AVAILABLE",
+        )
+
     def test_capture_hash_and_pending_queue_boundary_fail_closed(self) -> None:
         source = source_capture()
         validate_source_capture(source)
@@ -246,4 +265,3 @@ class OfficialSourceScoutTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
