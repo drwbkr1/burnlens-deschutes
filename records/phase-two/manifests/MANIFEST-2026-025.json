@@ -10,7 +10,7 @@
   "branch": "codex/p2o4-t13-official-source-scout",
   "git_base_commit": "7724ded99cbf94b4a5b08b4406c20c921f6c01eb",
   "generator_source_commit": "216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af",
-  "candidate_artifacts_commit": null,
+  "candidate_artifacts_commit": "e7bdd7f14be8a96a38a5201f983836436f114690",
   "reviewed_candidate_head": null,
   "checkpoint_commit": null,
   "version_tag": null,
@@ -61,7 +61,7 @@
     "compileall": "pass",
     "dependency_health": "pass",
     "privacy_and_claims": "pass: 65 JSON documents parse; 119 changed-surface local links resolve; zero user-path, email, token, or secret findings in scout outputs; claim boundaries explicit",
-    "release_package": null,
+    "release_package": "pass: two clean-archive fixed-epoch wheels byte-identical at 371833 bytes / sha256 6a790d1923e70165ccf17c38a78f1b27e0000332dd5cf4b40b6869d2c78d614d; isolated BurnLens 0.23.0; 38 entry points; scout entry present; 79 wheel entries; zero forbidden entries",
     "fresh_merged_main": null,
     "remote_tag": null
   },

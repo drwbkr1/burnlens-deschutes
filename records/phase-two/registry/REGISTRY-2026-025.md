@@ -9,7 +9,8 @@
 | `OFFICIAL-SOURCE-SCOUT-2026-001` JSON/HTML/PNG | Source-class and candidate-fire evidence | 7 classes / 21 candidates / 0 labels | 0 |
 | `SOURCE-2026-016`, `TERMS-2026-011` | Current source identity, access, role, terms, and acquisition boundary | Metadata reconnaissance resolved; asset fitness gated | 0 |
 | `PRECHECK-2026-021`, `SOURCE_PRECEDENCE-2026-009`, `USE_BOUNDARY-2026-020` | Entry, role, owner-review, safety, and claim gates | Labels remain closed | 0 |
-| `MANIFEST-2026-025.json` | Exact output inventory and candidate gates | Final release fields pending PR/merge/tag verification | 0 |
+| Candidate package proof | Clean-archive fixed-epoch wheel and isolated install | 371,833 bytes / SHA-256 `6a790d1923e70165ccf17c38a78f1b27e0000332dd5cf4b40b6869d2c78d614d`; 0.23.0 / 38 entry points / 79 entries | 0 |
+| `MANIFEST-2026-025.json` | Exact output inventory and candidate gates | Candidate artifacts `e7bdd7f14be8a96a38a5201f983836436f114690`; final PR/merge/tag verification pending | 0 |
 
 The official Landsat metadata route is live; the advertised asset probe redirects to EROS authentication. No credentials were sent and no asset content was retained. The seven pending provider bundles were not requested again.
 

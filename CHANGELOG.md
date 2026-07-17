@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Fix a real 390 px render defect found during browser QA; the final document has no page overflow, while wide tables remain intentionally scrollable.
 - Promote zero labels and create no dataset, split, baseline, model, independent-review, field-validation, official, endorsed, enterprise, or operational claim.
 
-Issue #425; source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`; run `BL-2026-07-17-official-source-scout-r004`. Final PR, merge, package, tag, and fresh-main evidence remain pending.
+Issue #425; source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`; candidate artifacts `e7bdd7f14be8a96a38a5201f983836436f114690`; run `BL-2026-07-17-official-source-scout-r004`. Two clean-archive wheels are identical at 371,833 bytes / SHA-256 `6a790d1923e70165ccf17c38a78f1b27e0000332dd5cf4b40b6869d2c78d614d`; isolated 0.23.0 exposes 38 entry points and 79 wheel entries with zero forbidden files. Final PR, merge, tag, and fresh-main evidence remain pending.
 
 ## v0.22.0-current-bundle-request-evidence - verified - 2026-07-17
 
