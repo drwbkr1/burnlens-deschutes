@@ -2,7 +2,16 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.21.0-current-reference-inventory - candidate - 2026-07-17
+## v0.21.1-reference-inventory-checkout-stability - candidate - 2026-07-17
+
+### P2O4-T11-SYNC - Make current-reference evidence checkout-stable
+
+- Preserve `v0.21.0-current-reference-inventory` as an analytical tag whose release verification failed: a fresh Windows checkout converted the new JSON/HTML outputs to CRLF because their directory lacked an explicit LF contract.
+- Add explicit LF checkout rules for current-reference JSON/HTML evidence, bump repository tooling to BurnLens `0.21.1`, and bind the rule in the test suite.
+- Prove a clean checkout preserves all three authoritative output sizes and SHA-256 values exactly; analytical content, run ID, catalog decision, label state, and public output bytes remain unchanged.
+- Pass 188 tests, compilation, dependency health, two byte-identical 348,032-byte fixed-epoch wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 0.21.1 install, 34 entry points, 75 wheel entries, and zero forbidden entries.
+
+## v0.21.0-current-reference-inventory - analytical tag; release verification failed - 2026-07-17
 
 ### P2O4-T11 - Prove current reference availability before changing labels
 
@@ -12,6 +21,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record the official 2026 archive reprocessing/distribution change and preserve `SOURCE-2026-013` as historical proposal provenance that cannot govern new label promotion.
 - Publish `CROSS-EVENT-REFERENCE-INVENTORY-2026-001` JSON/HTML/PNG with exact response/normalized hashes, source/terms decisions, currentness boundary, and null dataset/split/baseline/model versions.
 - Add BurnLens `0.21.0`, one console entry point, and seven focused tests; all 188 repository tests, compilation, live capture, original-resolution evidence-card inspection, and installed-Chrome HTML rendering pass.
+- Merge PR #415 at `f96146aa0702d27eef4964cb61bd7a05d566d7c3` and create annotated tag object `0370bedfce1279da2d104c1ebfd3c1d143ce79ca`, which remotely peels to that merge.
+- Withhold verified-baseline status after fresh-checkout manifest reconstruction finds checkout-dependent CRLF bytes for the JSON and HTML outputs. Preserve the tag and failure as audit evidence; issue #417 owns the 0.21.1 remediation.
 - Promote zero labels. Reviewer two remains waived and absent; no inter-rater evidence, consensus, adjudication, product-pixel fitness, dataset, split, baseline, or model exists.
 
 ## v0.20.0-single-reviewer-reconciliation - verified - 2026-07-16

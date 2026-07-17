@@ -34,3 +34,7 @@ samples/labels/review/phase-two/*.txt text eol=lf
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
 samples/cross-event/phase-two/*.html text eol=lf
+
+# Current cross-program reference inventory evidence has the same LF contract.
+samples/reference/phase-two/*.json text eol=lf
+samples/reference/phase-two/*.html text eol=lf

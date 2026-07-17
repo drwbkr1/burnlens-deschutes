@@ -21,7 +21,7 @@ from PIL import Image, ImageDraw, ImageFont
 from .provider_acquisition import USER_AGENT
 
 
-SOFTWARE_VERSION = "0.21.0"
+SOFTWARE_VERSION = "0.21.1"
 REPORT_ID = "CROSS-EVENT-REFERENCE-INVENTORY-2026-001"
 REPORT_SCHEMA_VERSION = "0.1.0"
 REPORT_VERSION = "cross-event-current-reference-inventory-v0.1.0"
