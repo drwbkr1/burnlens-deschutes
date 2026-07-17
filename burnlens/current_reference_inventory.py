@@ -45,7 +45,7 @@ MAX_RESPONSE_BYTES = 2 * 1024 * 1024
 
 EVENTS = {
     "OR4364712147820240625": {
-        "event_group_id": "event-darlene3-2024",
+        "event_group_id": "event-darlene3-or-2024",
         "display_name": "Darlene 3",
     },
     "OR4375212142520170829": {

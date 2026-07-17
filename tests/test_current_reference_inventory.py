@@ -65,6 +65,14 @@ class CurrentReferenceInventoryTests(unittest.TestCase):
             sorted((item["event_id"], item["program"]) for item in EXPECTED_PRODUCTS),
         )
         self.assertTrue(any(item["nonstandard"] for item in products))
+        self.assertEqual(
+            next(
+                item["event_group_id"]
+                for item in products
+                if item["event_id"] == "OR4364712147820240625"
+            ),
+            "event-darlene3-or-2024",
+        )
 
     def test_catalog_drift_fails_closed(self) -> None:
         drifted = [dict(item) for item in EXPECTED_PRODUCTS]
