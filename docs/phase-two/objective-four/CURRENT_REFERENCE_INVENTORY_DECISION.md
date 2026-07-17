@@ -37,3 +37,7 @@ It does not download or inspect a product bundle, compare pixels, promote a labe
 ## Next gate
 
 Receive and preserve exact current bundles; inspect their attribution, notices, bytes, identity, CRS, grids, nodata, masks, and class domains; then compare current cross-program pixels with the optical evidence and reviewer dispositions. Publish a rendered fitness decision before changing any label.
+
+## Release status
+
+Issue #411 / PR #415 merged at `f96146aa0702d27eef4964cb61bd7a05d566d7c3`. Annotated tag object `0370bedfce1279da2d104c1ebfd3c1d143ce79ca` remotely peels to that merge, but final release verification found checkout-dependent JSON/HTML bytes because their directory lacked an explicit LF rule. The tag is analytical history, not a verified repository baseline. Issue #417 carries the BurnLens 0.21.1 checkout-stability patch; issue #416 owns the next scientific gate after remediation.
