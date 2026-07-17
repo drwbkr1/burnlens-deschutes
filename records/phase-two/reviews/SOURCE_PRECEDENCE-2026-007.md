@@ -17,4 +17,3 @@ Precedence for this remediation is:
 7. heuristic threshold behavior.
 
 Conflicts are preserved and explained. Cross-program disagreement increases uncertainty; it is never averaged into confidence. Official sources govern official incident facts, while BurnLens remains an experimental portfolio analysis.
-

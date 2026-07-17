@@ -18,4 +18,3 @@ The current official inventory materially improves the remediation path:
 The 2025-era `SOURCE-2026-013` clips remain reproducible historical inputs. Because the official archive was subsequently reprocessed and redistributed, they cannot govern a new promotion decision without fresh current-product comparison.
 
 No label changes until exact current bundle bytes, terms, structure, grids, masks, class domains, and cross-program pixel relationships pass a rendered fitness review.
-

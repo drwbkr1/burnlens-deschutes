@@ -17,4 +17,3 @@
 - Zero labels are promoted. Dataset, split, baseline, and model versions remain null.
 
 The next gate is exact bundle delivery, preservation, terms inspection, structural verification, and cross-program pixel fitness—not threshold tuning.
-

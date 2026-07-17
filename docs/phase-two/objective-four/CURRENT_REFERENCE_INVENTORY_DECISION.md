@@ -37,4 +37,3 @@ It does not download or inspect a product bundle, compare pixels, promote a labe
 ## Next gate
 
 Receive and preserve exact current bundles; inspect their attribution, notices, bytes, identity, CRS, grids, nodata, masks, and class domains; then compare current cross-program pixels with the optical evidence and reviewer dispositions. Publish a rendered fitness decision before changing any label.
-

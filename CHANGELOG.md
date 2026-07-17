@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.21.0-current-reference-inventory - candidate - 2026-07-17
+
+### P2O4-T11 - Prove current reference availability before changing labels
+
+- Re-run the exact cross-event proposal/QA and single-reviewer reconciliation paths without output drift, isolating the active weakness to reference fitness rather than software determinism.
+- Add a bounded public WFS capture for the three frozen event IDs and fail closed unless seven exact current BAER/RAVG/MTBS catalog identities pass.
+- Confirm cross-program availability for all three events: Darlene BAER/RAVG, McKay MTBS/RAVG, and Tepee BAER/MTBS/RAVG.
+- Record the official 2026 archive reprocessing/distribution change and preserve `SOURCE-2026-013` as historical proposal provenance that cannot govern new label promotion.
+- Publish `CROSS-EVENT-REFERENCE-INVENTORY-2026-001` JSON/HTML/PNG with exact response/normalized hashes, source/terms decisions, currentness boundary, and null dataset/split/baseline/model versions.
+- Add BurnLens `0.21.0`, one console entry point, and seven focused tests; all 188 repository tests, compilation, live capture, original-resolution evidence-card inspection, and installed-Chrome HTML rendering pass.
+- Promote zero labels. Reviewer two remains waived and absent; no inter-rater evidence, consensus, adjudication, product-pixel fitness, dataset, split, baseline, or model exists.
+
 ## v0.20.0-single-reviewer-reconciliation - verified - 2026-07-16
 
 ### P2O4-T10B - Reconcile the exact blinded response without manufacturing consensus
