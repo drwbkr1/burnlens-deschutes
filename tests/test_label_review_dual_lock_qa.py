@@ -399,7 +399,7 @@ class LabelReviewDualLockQaTests(unittest.TestCase):
                 )
 
     def test_current_versions_and_verifier_independence_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.21.0")
+        self.assertEqual(burnlens.__version__, "0.21.1")
         source = (ROOT / "burnlens" / "label_review_dual_lock_qa.py").read_text(
             encoding="utf-8"
         )

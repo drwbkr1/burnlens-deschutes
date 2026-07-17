@@ -46,7 +46,10 @@ def response_bytes(products: tuple[dict[str, object], ...] = EXPECTED_PRODUCTS) 
 
 class CurrentReferenceInventoryTests(unittest.TestCase):
     def test_version_and_request_are_exact(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.21.0")
+        self.assertEqual(burnlens.__version__, "0.21.1")
+        attributes = Path(".gitattributes").read_text(encoding="utf-8")
+        self.assertIn("samples/reference/phase-two/*.json text eol=lf", attributes)
+        self.assertIn("samples/reference/phase-two/*.html text eol=lf", attributes)
         url = inventory_request_url()
         self.assertIn("mtbs%3Afire_polygons", url)
         self.assertIn("propertyName=id%2Cmap_id%2Cmap_prog", url)
