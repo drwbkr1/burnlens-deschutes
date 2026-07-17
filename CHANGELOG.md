@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.23.0-official-source-scout - candidate - 2026-07-17
+## v0.23.0-official-source-scout - verified - 2026-07-17
 
 ### P2O4-T13 - Scout official evidence without duplicating pending delivery
 
@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Fix a real 390 px render defect found during browser QA; the final document has no page overflow, while wide tables remain intentionally scrollable.
 - Promote zero labels and create no dataset, split, baseline, model, independent-review, field-validation, official, endorsed, enterprise, or operational claim.
 
-Issue #425 / PR #426; reviewed candidate `2924b2b675168e94e4d90d830a4e95b6c725f15c`; source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`; candidate artifacts `e7bdd7f14be8a96a38a5201f983836436f114690`; run `BL-2026-07-17-official-source-scout-r004`. Two clean-archive wheels are identical at 371,833 bytes / SHA-256 `6a790d1923e70165ccf17c38a78f1b27e0000332dd5cf4b40b6869d2c78d614d`; isolated 0.23.0 exposes 38 entry points and 79 wheel entries with zero forbidden files. Merge, tag, and fresh-main evidence remain pending.
+Issue #425 / PR #426 merged at `9176b3dc34b4b1015c23f9f17de515759de1c943`; issue #427 / PR #428 removed one extra EOF blank line and established verified checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`. Annotated tag object `f27cff68f6701904730698be24f9f83d02fc7865` remotely peels to that checkpoint. Fresh main passes 202 tests, compilation, dependency health, exact four-output reconstruction, 65 JSON parses, 178 links, privacy, responsive browser rendering, and live-source revalidation after one fail-closed transient Census event. Two clean-main wheels are identical at 371,832 bytes / SHA-256 `ee77e87a6cff0d7285a0c4b74fd253cd06fab747c9b21f0862cd5c109c61479b`; isolated 0.23.0 exposes 38 entry points and 79 wheel entries with zero forbidden files.
 
 ## v0.22.0-current-bundle-request-evidence - verified - 2026-07-17
 
