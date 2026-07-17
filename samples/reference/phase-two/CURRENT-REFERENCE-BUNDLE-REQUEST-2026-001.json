@@ -1,0 +1,232 @@
+{
+  "report_id": "CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001",
+  "report_schema_version": "0.1.0",
+  "report_version": "current-reference-bundle-request-evidence-v0.1.0",
+  "request_contract_version": "current-reference-bundle-request-contract-v0.1.0",
+  "generated_at_utc": "2026-07-17T01:41:07Z",
+  "run_id": "BL-2026-07-17-current-reference-bundle-request-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 421,
+  "parent_issue": 416,
+  "git_source_commit": "725522bd31616a258fcf399fea2a4839165e2791",
+  "software_version": "0.22.0",
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null
+  },
+  "source": {
+    "source_record_id": "SOURCE-2026-015",
+    "terms_review_id": "TERMS-2026-010",
+    "metadata_endpoint": "https://edcintl.cr.usgs.gov/geoserver/wfs",
+    "metadata_request_url": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id%2Cmap_id%2Cmap_prog%2Cincid_name%2Cevent_id%2Cig_date%2Cburnbndac%2Cnonstandard%2Casmt_type%2Cpost_id%2Cpostfire_date%2Cmodel%2Ccomment&cql_filter=event_id+IN+%28%27OR4364712147820240625%27%2C%27OR4375212142520170829%27%2C%27OR4383912111420180907%27%29",
+    "metadata_response_bytes": 3537,
+    "metadata_response_sha256": "e0e18d33d39706c16eb6a5299b08eaee6dfaca43b1e6155ebf2ab4fad75efa99",
+    "queue_endpoint": "https://burnseverity.cr.usgs.gov/downloads/addQueue.php",
+    "queue_response_bytes": 16,
+    "queue_response_sha256": "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97",
+    "recipient": "WITHHELD_PRIVATE",
+    "retrieval_channel": "WITHHELD_PRIVATE_PENDING_DELIVERY"
+  },
+  "request": {
+    "accepted": true,
+    "projection": "UTM",
+    "standard_mapping_ids": [
+      10030231,
+      10030383,
+      10007931,
+      10004989,
+      10011986,
+      10008484
+    ],
+    "nonstandard_mapping_bundles": [
+      [
+        "baer/2018/OR4383912111420180907.zip",
+        0
+      ]
+    ],
+    "product_families": [
+      "Metadata",
+      "Pre-fire reflectance",
+      "Post-fire reflectance",
+      "Continuous severity (i.e dnbr)",
+      "Relative continuous severity (i.e rdnbr)",
+      "Burned area boundary",
+      "Non-processing mask",
+      "KMZ",
+      "PDF",
+      "6 - Class thematic severity",
+      "Soil burn severity",
+      "Continuous basal area loss",
+      "4 - Class basal area loss",
+      "7 - Class basal area loss",
+      "Continuous canopy cover loss",
+      "5 - Class canopy cover loss",
+      "Continuous composite burn index",
+      "4 - Class composite burn index"
+    ],
+    "product_family_count": 18,
+    "canonical_payload_sha256": "0877b94b5407224061a598915f609937c828b4004fb7bb5c66ae3c4d58f9dfa2",
+    "requested_catalog_product_count": 7
+  },
+  "assessment_metadata": {
+    "product_count": 7,
+    "caution_count": 4,
+    "products": [
+      {
+        "catalog_id": 850,
+        "map_id": 10007931,
+        "program": "MTBS",
+        "event_id": "OR4375212142520170829",
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "display_name": "McKay 1035 NE",
+        "assessment_type": "Extended",
+        "post_id": "804503020180710",
+        "postfire_date": "2018-07-10",
+        "model": null,
+        "provider_comment_present": false,
+        "provider_comment_sha256": null,
+        "caution": null
+      },
+      {
+        "catalog_id": 3238,
+        "map_id": 10008484,
+        "program": "RAVG",
+        "event_id": "OR4383912111420180907",
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE",
+        "assessment_type": "Initial",
+        "post_id": "804503020181014",
+        "postfire_date": "2018-10-14",
+        "model": "NATL",
+        "provider_comment_present": true,
+        "provider_comment_sha256": "58d7e419437f628f8c6d5788802c3f8a7a1aa9223d6ceb729e18ec3cc883db94",
+        "caution": {
+          "code": "TEPEE_RAVG_NON_FOREST_COVER",
+          "summary": "About the eastern half is non-forest cover, where the forest-calibrated RAVG model is not directly applicable.",
+          "effect": "RAVG cannot independently promote Tepee labels in affected cover."
+        }
+      },
+      {
+        "catalog_id": 10452,
+        "map_id": 10004989,
+        "program": "RAVG",
+        "event_id": "OR4375212142520170829",
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "display_name": "McKay 1035 NE",
+        "assessment_type": "Initial",
+        "post_id": "804503020170909",
+        "postfire_date": "2017-09-09",
+        "model": "NATL",
+        "provider_comment_present": true,
+        "provider_comment_sha256": "c83dbb39d016cdf6ad1a38fcefbf4478d6145fe2115aa27ba9a171783cbb3877",
+        "caution": {
+          "code": "MCKAY_RAVG_EARLY_POST_SCENE",
+          "summary": "The available post-fire scene is earlier than ideal for open canopy, so severity may be overestimated there.",
+          "effect": "RAVG severity requires optical and cross-program corroboration."
+        }
+      },
+      {
+        "catalog_id": 15933,
+        "map_id": 10030231,
+        "program": "BAER",
+        "event_id": "OR4364712147820240625",
+        "event_group_id": "event-darlene3-or-2024",
+        "display_name": "Darlene 3",
+        "assessment_type": "Emergency",
+        "post_id": "A10TFP20240702_20m",
+        "postfire_date": "2024-07-02",
+        "model": null,
+        "provider_comment_present": false,
+        "provider_comment_sha256": null,
+        "caution": null
+      },
+      {
+        "catalog_id": 23539,
+        "map_id": 10011986,
+        "program": "MTBS",
+        "event_id": "OR4383912111420180907",
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE",
+        "assessment_type": "Initial",
+        "post_id": "804503020181014",
+        "postfire_date": "2018-10-14",
+        "model": null,
+        "provider_comment_present": false,
+        "provider_comment_sha256": null,
+        "caution": null
+      },
+      {
+        "catalog_id": 30012,
+        "map_id": 10030383,
+        "program": "RAVG",
+        "event_id": "OR4364712147820240625",
+        "event_group_id": "event-darlene3-or-2024",
+        "display_name": "Darlene 3",
+        "assessment_type": "Initial",
+        "post_id": "904503020240718",
+        "postfire_date": "2024-07-18",
+        "model": "NATL",
+        "provider_comment_present": true,
+        "provider_comment_sha256": "3c9d9bdc7ea44edced1f6f8b7c14d135e180188142ccc3aa8e16d8e28e18be26",
+        "caution": {
+          "code": "DARLENE_RAVG_SPARSE_TREE_COVER",
+          "summary": "Sparse or absent pre-fire tree cover makes the forest-calibrated RAVG model less reliable where non-tree reflectance dominates.",
+          "effect": "RAVG cannot independently promote Darlene labels."
+        }
+      },
+      {
+        "catalog_id": 52523,
+        "map_id": 0,
+        "program": "BAER",
+        "event_id": "OR4383912111420180907",
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE",
+        "assessment_type": "Emergency",
+        "post_id": "",
+        "postfire_date": null,
+        "model": null,
+        "provider_comment_present": true,
+        "provider_comment_sha256": "038fbce18562a7d43b6014fc602857674ac1887612b4ffa65e81a25496f0f912",
+        "caution": {
+          "code": "TEPEE_BAER_NONSTANDARD_LEGACY",
+          "summary": "The BAER record is nonstandard, has no map ID, and carries a minimal legacy note.",
+          "effect": "Use only the explicit viewer-resolved bundle path; inspect contents before use."
+        }
+      }
+    ]
+  },
+  "delivery_state": {
+    "queue_accepted": true,
+    "delivery_pending": true,
+    "retrieval_message_received_by_this_run": false,
+    "bundle_archives_received": 0,
+    "bundle_bytes_received": 0,
+    "bundle_terms_inspected": false,
+    "bundle_structure_inspected": false,
+    "bundle_pixels_inspected": false
+  },
+  "label_state": {
+    "burned_candidates": 6,
+    "background_candidates": 0,
+    "ignored_units": 50,
+    "tepee_candidates": 0,
+    "labels_promoted_by_this_run": 0
+  },
+  "claim_boundaries": {
+    "request_acceptance_is_delivery": false,
+    "bundle_received_claimed": false,
+    "bundle_fitness_claimed": false,
+    "scientific_validation_claimed": false,
+    "field_validation_claimed": false,
+    "official_or_endorsed_status_claimed": false,
+    "dataset_created": false,
+    "model_trained": false
+  },
+  "decision": "AWAIT_EXACT_OFFICIAL_BUNDLE_DELIVERY_DEFER_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Request acceptance is not bundle delivery or scientific fitness. Not official wildfire information or emergency guidance. Official sources govern."
+}
