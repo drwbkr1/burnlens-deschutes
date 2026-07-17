@@ -1,0 +1,108 @@
+{
+  "manifest_id": "MANIFEST-2026-024",
+  "manifest_version": "0.24.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-17T01:41:07Z",
+  "task_issue": 421,
+  "parent_issue": 416,
+  "pull_request": 422,
+  "branch": "codex/p2o4-t12a-bundle-request-evidence",
+  "git_base_commit": "0c6327a89531ce4340eb6c1301bbe348096d4314",
+  "generator_source_commit": "725522bd31616a258fcf399fea2a4839165e2791",
+  "candidate_artifacts_commit": "921a271858d7de1469e2d53d96d37c46774c126e",
+  "status": "candidate accepted-request evidence; delivery and parent scientific issue remain open",
+  "software_version": "0.22.0",
+  "report_version": "current-reference-bundle-request-evidence-v0.1.0",
+  "request_contract_version": "current-reference-bundle-request-contract-v0.1.0",
+  "run_id": "BL-2026-07-17-current-reference-bundle-request-r001",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "source_records": [
+    "SOURCE-2026-014",
+    "SOURCE-2026-015"
+  ],
+  "terms_records": [
+    "TERMS-2026-009",
+    "TERMS-2026-010"
+  ],
+  "review_records": [
+    "PRECHECK-2026-020",
+    "SOURCE_PRECEDENCE-2026-008",
+    "USE_BOUNDARY-2026-019"
+  ],
+  "source_capture": {
+    "metadata_endpoint": "https://edcintl.cr.usgs.gov/geoserver/wfs",
+    "metadata_response_bytes": 3537,
+    "metadata_response_sha256": "e0e18d33d39706c16eb6a5299b08eaee6dfaca43b1e6155ebf2ab4fad75efa99",
+    "queue_endpoint": "https://burnseverity.cr.usgs.gov/downloads/addQueue.php",
+    "queue_response_bytes": 16,
+    "queue_response_sha256": "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97",
+    "canonical_request_payload_sha256": "0877b94b5407224061a598915f609937c828b4004fb7bb5c66ae3c4d58f9dfa2",
+    "catalog_product_count": 7,
+    "product_family_count": 18,
+    "provider_caution_count": 4,
+    "bundle_archives_received": 0,
+    "bundle_bytes_received": 0
+  },
+  "outputs": [
+    {
+      "path": "samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 8962,
+      "sha256": "badc312c6d4d7ecc408bfe3eefdebcdb2daf5331d7f0fd65c4cbecd8f2b4ca0f"
+    },
+    {
+      "path": "samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 3429,
+      "sha256": "59a6dbfc8277700136c1895bb1e2c2987a25c991e2712d57711054b83590253b"
+    },
+    {
+      "path": "samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 113841,
+      "sha256": "777dc58d6dffabf7e894130d14c2bacb3c36069773f515fb3b57c711822eee6d"
+    }
+  ],
+  "quality_gates": {
+    "cycle_start_live_inventory": "pass: seven exact current products; normalized hash 1ccd4c10eb0386c4080f05879d7e5eeee5af10afc645cb7826d0259f42c2216e",
+    "fresh_full_metadata_contract": "pass: seven exact property-only records and four provider cautions",
+    "request_acceptance": "pass: exact 16-byte official response reports success=true",
+    "drift_and_safety": "pass: identity, assessment, duplicate, geometry, size, and unsuccessful-queue cases fail closed",
+    "repository_tests": 195,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "semantic_html": "pass: one main, one h1, four h2, descriptive image alternative",
+    "local_assets": "pass: one of one image links resolve",
+    "privacy": "pass: no recipient, email address, retrieval link, secret, out-of-scope repository dependency, provider archive, or private response content",
+    "trace_and_claim_boundaries": "pass",
+    "evidence_card_visual_review": "pass: original 1800x1400 inspected",
+    "release_package": "pending",
+    "fresh_merged_main": "pending",
+    "remote_tag": "pending"
+  },
+  "claim_boundaries": {
+    "request_accepted": true,
+    "delivery_received": false,
+    "bundle_terms_inspected": false,
+    "bundle_structure_inspected": false,
+    "bundle_pixels_inspected": false,
+    "second_reviewer_present": false,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false,
+    "labels_promoted": 0,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "decision": "AWAIT_EXACT_OFFICIAL_BUNDLE_DELIVERY_DEFER_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Request acceptance is not bundle delivery or scientific fitness. Not official wildfire information or emergency guidance. Official sources govern."
+}
