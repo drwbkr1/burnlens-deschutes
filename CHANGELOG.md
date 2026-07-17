@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.22.0-current-bundle-request-evidence - candidate - 2026-07-17
+## v0.22.0-current-bundle-request-evidence - verified - 2026-07-17
 
 ### P2O4-T12A - Preserve the exact accepted request without claiming delivery
 
@@ -16,7 +16,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Produce two byte-identical 356,252-byte clean-archive fixed-epoch wheels / SHA-256 `fb913ad721e05f2d32018602051fc53c65b08d6d9fad98451b6ecf3d89df77a9`; isolated 0.22.0 exposes 35 entry points, 77 wheel entries, and zero forbidden entries.
 - Keep parent #416 open. Zero archives were received, zero labels move, and no dataset, split, baseline, or model exists.
 
-Issue #421 / PR #422; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`. Fresh merged-main and annotated-tag gates remain pending.
+Issue #421 / PR #422 shipped at merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; verified annotated tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`. Fresh merged main passes 195 tests, compilation, dependency health, exact three-output reconstruction, 62 JSON parses, 127 local links, live seven-product/four-caution metadata, and two byte-identical 356,252-byte canonical wheels / SHA-256 `166e683bd372372e6059493d3a7a63d19a32f130ac0679e1749100ead01463eb`; isolated 0.22.0 exposes 35 entry points and 77 wheel entries with zero forbidden entries. Lifecycle sync is issue #423. Parent #416 remains open.
 
 ## v0.21.1-reference-inventory-checkout-stability - verified - 2026-07-17
 

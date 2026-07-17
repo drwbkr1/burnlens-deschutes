@@ -11,7 +11,12 @@
   "git_base_commit": "0c6327a89531ce4340eb6c1301bbe348096d4314",
   "generator_source_commit": "725522bd31616a258fcf399fea2a4839165e2791",
   "candidate_artifacts_commit": "921a271858d7de1469e2d53d96d37c46774c126e",
-  "status": "candidate accepted-request evidence; delivery and parent scientific issue remain open",
+  "reviewed_candidate_head": "f27845f1853e04ec1c7b9b6ba5ca353048f65306",
+  "checkpoint_commit": "1bbd3c6385f9a1c543a851a1a278e0ac976a2d57",
+  "version_tag": "v0.22.0-current-bundle-request-evidence",
+  "version_tag_object": "0407f90c855e0e4b62b37c14ae69c5a85cadcaf7",
+  "lifecycle_sync_issue": 423,
+  "status": "shipped verified accepted-request evidence; delivery and parent scientific issue remain open",
   "software_version": "0.22.0",
   "report_version": "current-reference-bundle-request-evidence-v0.1.0",
   "request_contract_version": "current-reference-bundle-request-contract-v0.1.0",
@@ -84,8 +89,8 @@
     "trace_and_claim_boundaries": "pass",
     "evidence_card_visual_review": "pass: original 1800x1400 inspected",
     "release_package": "pass: two clean-archive fixed-epoch wheels byte-identical at 356252 bytes / sha256 fb913ad721e05f2d32018602051fc53c65b08d6d9fad98451b6ecf3d89df77a9; isolated BurnLens 0.22.0; 35 entry points; both current-reference entries present; 77 wheel entries; zero forbidden entries",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass: merge 1bbd3c6385f9a1c543a851a1a278e0ac976a2d57; exact three outputs; 195 tests; compileall; dependency health; 62 JSON files; 127 local links with zero missing; live seven-product/four-caution metadata; two fixed-epoch wheels 356252 bytes / sha256 166e683bd372372e6059493d3a7a63d19a32f130ac0679e1749100ead01463eb; isolated BurnLens 0.22.0; 35 entry points; 77 wheel entries; zero forbidden entries",
+    "remote_tag": "pass: annotated object 0407f90c855e0e4b62b37c14ae69c5a85cadcaf7 remotely peels to merge 1bbd3c6385f9a1c543a851a1a278e0ac976a2d57"
   },
   "claim_boundaries": {
     "request_accepted": true,
