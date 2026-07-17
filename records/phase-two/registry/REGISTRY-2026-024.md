@@ -9,8 +9,8 @@
 | `SOURCE-2026-015`, `TERMS-2026-010` | Exact current route, hashes, caution, and private-delivery boundary | Request accepted; delivery pending | 0 |
 | `PRECHECK-2026-020`, `SOURCE_PRECEDENCE-2026-008`, `USE_BOUNDARY-2026-019` | Entry, authority, scientific, privacy, and use gates | Labels remain closed | 0 |
 | Original 1800-by-1400 evidence-card review and semantic HTML/link audit | Real rendered and linked output | Complete and readable | 0 |
-| Tests, compilation, dependencies, and privacy | Candidate implementation and artifact gates | 195 tests pass | 0 |
-| `MANIFEST-2026-024.json` | Exact output inventory and candidate release gates | Delivery/package/merge/tag gates remain pending | 0 |
+| Tests, compilation, dependencies, packaging, isolated install, and privacy | Candidate implementation and artifact gates | 195 tests; identical 356,252-byte wheels; 0.22.0 / 35 entry points; 77 wheel entries | 0 |
+| `MANIFEST-2026-024.json` | Exact output inventory and candidate release gates | Delivery/merge/tag gates remain pending; package passes | 0 |
 
 The official queue accepted the exact bounded request. Recipient and retrieval details, the 16-byte response, raw metadata response, future retrieval message, and future archives remain ignored and private.
 

@@ -83,7 +83,7 @@
     "privacy": "pass: no recipient, email address, retrieval link, secret, out-of-scope repository dependency, provider archive, or private response content",
     "trace_and_claim_boundaries": "pass",
     "evidence_card_visual_review": "pass: original 1800x1400 inspected",
-    "release_package": "pending",
+    "release_package": "pass: two clean-archive fixed-epoch wheels byte-identical at 356252 bytes / sha256 fb913ad721e05f2d32018602051fc53c65b08d6d9fad98451b6ecf3d89df77a9; isolated BurnLens 0.22.0; 35 entry points; both current-reference entries present; 77 wheel entries; zero forbidden entries",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },

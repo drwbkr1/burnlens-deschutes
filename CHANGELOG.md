@@ -13,9 +13,10 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Make four provider cautions visible and binding: Darlene/Tepee RAVG applicability, McKay early-scene overestimation risk, and the nonstandard Tepee BAER record.
 - Publish `CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001` JSON/HTML/PNG from run `BL-2026-07-17-current-reference-bundle-request-r001`.
 - Pass 195 candidate tests, compilation, dependency health, fresh live metadata, semantic/link/privacy/trace gates, and original-resolution visual inspection.
+- Produce two byte-identical 356,252-byte clean-archive fixed-epoch wheels / SHA-256 `fb913ad721e05f2d32018602051fc53c65b08d6d9fad98451b6ecf3d89df77a9`; isolated 0.22.0 exposes 35 entry points, 77 wheel entries, and zero forbidden entries.
 - Keep parent #416 open. Zero archives were received, zero labels move, and no dataset, split, baseline, or model exists.
 
-Issue #421 / PR #422; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`. Release package, fresh merged-main, and annotated-tag gates remain pending.
+Issue #421 / PR #422; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`. Fresh merged-main and annotated-tag gates remain pending.
 
 ## v0.21.1-reference-inventory-checkout-stability - verified - 2026-07-17
 
