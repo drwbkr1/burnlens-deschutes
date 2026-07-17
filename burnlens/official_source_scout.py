@@ -833,6 +833,11 @@ def build_official_source_scout(source: dict[str, Any]) -> dict[str, Any]:
                 "candidate whose exact asset terms, full-boundary grid coverage, QA, and "
                 "temporal relationship pass. Do not duplicate the seven pending bundles."
             ),
+            "rendered_summary": (
+                "Test one small GW Fire Landsat BA metadata/COG window only after EROS "
+                "access is resolved. Verify full-boundary coverage, QA, terms, and "
+                "optical/cross-program agreement; treat the product as reference, never truth."
+            ),
         },
         "owner_review_consequence": {
             "workflow": "Codex proposes disclosed burned/background candidates; owner answers yes/no/uncertain.",
@@ -986,7 +991,9 @@ def _png(report: dict[str, Any]) -> Image.Image:
     for item in report["findings"]["top_candidates"]:
         draw.rounded_rectangle((90, y, 1710, y + 80), radius=10, fill="white", outline="#d3cabb")
         draw.text((110, y + 20), f"{item['rank']:02d}", font=_font(25, True), fill="#b94b21")
-        draw.text((175, y + 17), item["fire_name"][:42], font=_font(22, True), fill="#182522")
+        name = item["fire_name"]
+        display_name = name if len(name) <= 29 else f"{name[:26]}..."
+        draw.text((175, y + 17), display_name, font=_font(22, True), fill="#182522")
         draw.text((660, y + 20), str(item["year"]), font=_font(21), fill="#354842")
         draw.text((770, y + 20), "/".join(item["programs"]) or "MTBS", font=_font(19), fill="#075f59")
         draw.text((1090, y + 20), f"{item['minimum_current_event_distance_km']:.1f} km", font=_font(19), fill="#354842")
@@ -998,14 +1005,14 @@ def _png(report: dict[str, Any]) -> Image.Image:
     draw.text((120, 1292), "NEXT EVIDENCE MOVE", font=_font(22, True), fill="#075f59")
     _draw_wrapped(
         draw,
-        report["portfolio_recommendation"]["why"],
+        report["portfolio_recommendation"]["rendered_summary"],
         (120, 1332),
-        width=112,
-        font=_font(19),
+        width=118,
+        font=_font(18),
         fill="#263b36",
         spacing=6,
     )
-    draw.text((120, 1435), f"Run {report['run_id']}  /  dataset, split, baseline, model: none", font=_font(16), fill="#52635e")
+    draw.text((120, 1445), f"Run {report['run_id']}  /  dataset, split, baseline, model: none", font=_font(16), fill="#52635e")
     return image
 
 
