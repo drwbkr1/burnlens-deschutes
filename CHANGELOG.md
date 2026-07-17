@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.21.1-reference-inventory-checkout-stability - candidate - 2026-07-17
+## v0.21.1-reference-inventory-checkout-stability - verified - 2026-07-17
 
 ### P2O4-T11-SYNC - Make current-reference evidence checkout-stable
 
@@ -10,6 +10,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Add explicit LF checkout rules for current-reference JSON/HTML evidence, bump repository tooling to BurnLens `0.21.1`, and bind the rule in the test suite.
 - Prove a clean checkout preserves all three authoritative output sizes and SHA-256 values exactly; analytical content, run ID, catalog decision, label state, and public output bytes remain unchanged.
 - Pass 188 tests, compilation, dependency health, two byte-identical 348,032-byte fixed-epoch wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 0.21.1 install, 34 entry points, 75 wheel entries, and zero forbidden entries.
+- Merge PR #418 at `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; remotely verify annotated tag object `1b84f92cf4e7249e524fab095e233192698b7666`; and repeat exact-output, test, JSON/link, package, isolated-install, and privacy gates from fresh merged main.
 
 ## v0.21.0-current-reference-inventory - analytical tag; release verification failed - 2026-07-17
 
