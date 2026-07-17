@@ -39,6 +39,14 @@ Required warning for every future public-facing CV output:
 
 The target-path decision is resolved. Future checkpoints must not silently reactivate active-fire label construction. They must first prove a legally usable and visually defensible pre/post optical pair plus a burn-scar protocol that preserves burned, background-candidate, unknown, excluded, and review-needed states before creating any label array.
 
+## Current prototype-label governance
+
+The owner replaced independent/blinded multi-reviewer acceptance as the prospective prototype-label gate on 2026-07-17. Codex must deterministically propose disclosed, evidence-backed burned/background candidates and present the appropriate optical, quality, and official/reference evidence to the owner. The owner answers yes, no, or uncertain.
+
+An owner yes is necessary but not sufficient for an explicitly owner-approved prototype label. Exact provenance, reproducibility, source/terms, product fitness, quality, and event/geography/time leakage gates must also pass. No and uncertain remain excluded. The original 56 units must be reopened under this route; the prior single-response 6 burned / 0 background / 50 ignored reconciliation remains immutable historical evidence but is not a final exclusion decision.
+
+This route must never be described as independent ground truth, inter-rater agreement, consensus, field validation, official or endorsed status, or enterprise/operational readiness. It does not relax uncertainty, source precedence, licensing, provenance, use boundaries, or dataset/split/model gates.
+
 ## Verified starting checkpoint
 
 Execution resumes from the latest verified `main` baseline, `01df0632647224622b894511abaac5d48f2b6f6f`, not from ideation.

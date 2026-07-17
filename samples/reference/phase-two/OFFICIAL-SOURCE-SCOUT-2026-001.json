@@ -1,0 +1,3301 @@
+{
+  "report_id": "OFFICIAL-SOURCE-SCOUT-2026-001",
+  "report_schema_version": "0.1.0",
+  "report_version": "official-source-and-candidate-fire-scout-v0.1.0",
+  "scout_protocol_version": "official-source-scout-protocol-v0.1.0",
+  "generated_at_utc": "2026-07-17T16:33:05Z",
+  "run_id": "BL-2026-07-17-official-source-scout-r004",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 425,
+  "parent_bundle_issue": 416,
+  "git_source_commit": "216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af",
+  "software_version": "0.23.0",
+  "application_version": null,
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "dataset_version": null,
+  "split_version": null,
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "owner_review_protocol_version": "owner-confirmed-prototype-label-review-v0.1.0",
+  "baseline_version": null,
+  "model_version": null,
+  "source_record_id": "SOURCE-2026-016",
+  "terms_record_id": "TERMS-2026-011",
+  "source_precedence_review_id": "SOURCE_PRECEDENCE-2026-009",
+  "source_capture": {
+    "source_id": "OFFICIAL-SOURCE-SCOUT-SOURCE-2026-001",
+    "capture_sha256": "da214ed5af4551fcac027b32fb82e830418125dfcef09c168c5b629954c81c88",
+    "source_response_count": 12
+  },
+  "scoring_rule": {
+    "predeclared_dimensions": [
+      "evidence value",
+      "acquisition ease",
+      "event/geography/time diversity",
+      "Deschutes task fit",
+      "owner-review usefulness"
+    ],
+    "overall_formula": "3*evidence + 2*owner_review + diversity + task_fit + acquisition_ease",
+    "landsat_live_check_limit": 8,
+    "tie_break": "evidence, diversity, older ignition date, stable fire ID",
+    "important_boundary": "scores prioritize reconnaissance only and cannot promote a label"
+  },
+  "findings": {
+    "source_class_count": 7,
+    "deschutes_mtbs_fire_count": 23,
+    "new_candidate_count": 21,
+    "landsat_checked_candidate_count": 8,
+    "top_candidates": [
+      {
+        "fire_id": "OR4435412173920070830",
+        "fire_name": "GW FIRE",
+        "ignition_date": "2007-08-30",
+        "year": 2007,
+        "latitude": 44.35121553,
+        "longitude": -121.74707571,
+        "acres": 7663.0,
+        "occurrence_map_id": 10021504,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920070829",
+        "post_image_id": "504502920080815",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 48065,
+            "map_id": 0,
+            "program": "BAER",
+            "incident_name": "GW FIRE",
+            "boundary_acres": 13719,
+            "nonstandard": true
+          },
+          {
+            "catalog_id": 44135,
+            "map_id": 10021504,
+            "program": "MTBS",
+            "incident_name": "GW FIRE",
+            "boundary_acres": 7663,
+            "nonstandard": false
+          },
+          {
+            "catalog_id": 29006,
+            "map_id": 10033062,
+            "program": "RAVG",
+            "incident_name": "GW FIRE",
+            "boundary_acres": 7570,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS",
+          "RAVG"
+        ],
+        "minimum_current_event_distance_km": 71.716,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 5,
+          "acquisition_ease": 2,
+          "event_geography_time_diversity": 4,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 5,
+          "overall": 36
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4435412173920070830",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 64,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LE07_CU_003004_20080924_20210430_02_BA",
+              "datetime": "2008-09-24T18:39:16.858380Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 23.5145,
+              "fill_percent": 25.0219,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080924_20210430_02_BA/LE07_CU_003004_20080924_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080924_20210430_02_BA/LE07_CU_003004_20080924_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080924_20210430_02_BA/LE07_CU_003004_20080924_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20080916_20210430_02_BA",
+              "datetime": "2008-09-16T18:35:29.406082Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 2.2011,
+              "fill_percent": 6.1399,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080916_20210430_02_BA/LT05_CU_003004_20080916_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080916_20210430_02_BA/LT05_CU_003004_20080916_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080916_20210430_02_BA/LT05_CU_003004_20080916_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20080915_20210430_02_BA",
+              "datetime": "2008-09-15T18:45:32.990245Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.963,
+              "fill_percent": 59.6338,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080915_20210430_02_BA/LE07_CU_003004_20080915_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080915_20210430_02_BA/LE07_CU_003004_20080915_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080915_20210430_02_BA/LE07_CU_003004_20080915_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20080908_20210430_02_BA",
+              "datetime": "2008-09-08T18:39:25.976993Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0084,
+              "fill_percent": 25.35,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080908_20210430_02_BA/LE07_CU_003004_20080908_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080908_20210430_02_BA/LE07_CU_003004_20080908_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080908_20210430_02_BA/LE07_CU_003004_20080908_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20080907_20210430_02_BA",
+              "datetime": "2008-09-07T18:41:55.813538Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.0152,
+              "fill_percent": 46.7179,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080907_20210430_02_BA/LT05_CU_003004_20080907_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080907_20210430_02_BA/LT05_CU_003004_20080907_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080907_20210430_02_BA/LT05_CU_003004_20080907_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20080831_20210430_02_BA",
+              "datetime": "2008-08-31T18:35:56.696535Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 49.0146,
+              "fill_percent": 6.3614,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080831_20210430_02_BA/LT05_CU_003004_20080831_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080831_20210430_02_BA/LT05_CU_003004_20080831_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080831_20210430_02_BA/LT05_CU_003004_20080831_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20080830_20210430_02_BA",
+              "datetime": "2008-08-30T18:45:41.364647Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 37.9232,
+              "fill_percent": 59.0519,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080830_20210430_02_BA/LE07_CU_003004_20080830_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080830_20210430_02_BA/LE07_CU_003004_20080830_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080830_20210430_02_BA/LE07_CU_003004_20080830_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20080823_20210430_02_BA",
+              "datetime": "2008-08-23T18:39:33.836411Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0258,
+              "fill_percent": 25.795,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080823_20210430_02_BA/LE07_CU_003004_20080823_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080823_20210430_02_BA/LE07_CU_003004_20080823_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LE07_CU_003004_20080823_20210430_02_BA/LE07_CU_003004_20080823_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20080822_20210430_02_BA",
+              "datetime": "2008-08-22T18:42:21.928525Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.5365,
+              "fill_percent": 45.2768,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080822_20210430_02_BA/LT05_CU_003004_20080822_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080822_20210430_02_BA/LT05_CU_003004_20080822_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080822_20210430_02_BA/LT05_CU_003004_20080822_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20080815_20210430_02_BA",
+              "datetime": "2008-08-15T18:36:21.985544Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.0971,
+              "fill_percent": 6.9199,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080815_20210430_02_BA/LT05_CU_003004_20080815_20210430_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080815_20210430_02_BA/LT05_CU_003004_20080815_20210430_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2008/CU/003/004/LT05_CU_003004_20080815_20210430_02_BA/LT05_CU_003004_20080815_20210430_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.807076%2C44.291216%2C-121.687076%2C44.411216&datetime=2007-07-16T00%3A00%3A00Z%2F2008-10-03T23%3A59%3A59Z&limit=10",
+          "response_sha256": "860c83bce6e9cd1e1a458e233cf9ffeaabbc213d35e1dda3f32dfca157801b80"
+        },
+        "rank": 1
+      },
+      {
+        "fire_id": "OR4425712174320170811",
+        "fire_name": "MILLI 0843 CS",
+        "ignition_date": "2017-08-11",
+        "year": 2017,
+        "latitude": 44.25766522,
+        "longitude": -121.71111627,
+        "acres": 24065.0,
+        "occurrence_map_id": 10008215,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "804502920170723",
+        "post_image_id": "804502920180726",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 2033,
+            "map_id": 10004702,
+            "program": "BAER",
+            "incident_name": "MILLI 0843 CS",
+            "boundary_acres": 24216,
+            "nonstandard": false
+          },
+          {
+            "catalog_id": 11202,
+            "map_id": 10008215,
+            "program": "MTBS",
+            "incident_name": "MILLI 0843 CS",
+            "boundary_acres": 24065,
+            "nonstandard": false
+          },
+          {
+            "catalog_id": 1295,
+            "map_id": 10005445,
+            "program": "RAVG",
+            "incident_name": "MILLI 0843 CS",
+            "boundary_acres": 24299,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS",
+          "RAVG"
+        ],
+        "minimum_current_event_distance_km": 61.035,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": "Previously visible as Milli and excluded because no single Sentinel-2 tile covered the complete MTBS boundary. Landsat ARD uses a different fixed tiling system and is worth metadata-level reconsideration; full boundary coverage remains unproved.",
+        "scores": {
+          "evidence_value": 5,
+          "acquisition_ease": 3,
+          "event_geography_time_diversity": 2,
+          "deschutes_task_fit": 4,
+          "owner_review_usefulness": 5,
+          "overall": 34
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4425712174320170811",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 68,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LC08_CU_003004_20180912_20210503_02_BA",
+              "datetime": "2018-09-12T18:50:04.812029Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 64.9396,
+              "fill_percent": 11.2949,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180912_20210503_02_BA/LC08_CU_003004_20180912_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180912_20210503_02_BA/LC08_CU_003004_20180912_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180912_20210503_02_BA/LC08_CU_003004_20180912_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20180904_20210503_02_BA",
+              "datetime": "2018-09-04T18:48:36.963539Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.1127,
+              "fill_percent": 24.9942,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180904_20210503_02_BA/LE07_CU_003004_20180904_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180904_20210503_02_BA/LE07_CU_003004_20180904_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180904_20210503_02_BA/LE07_CU_003004_20180904_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20180903_20210503_02_BA",
+              "datetime": "2018-09-03T18:56:01.052181Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 0.5682,
+              "fill_percent": 41.5126,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180903_20210503_02_BA/LC08_CU_003004_20180903_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180903_20210503_02_BA/LC08_CU_003004_20180903_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180903_20210503_02_BA/LC08_CU_003004_20180903_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20180827_20210503_02_BA",
+              "datetime": "2018-08-27T18:49:59.690098Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 51.2929,
+              "fill_percent": 11.1785,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180827_20210503_02_BA/LC08_CU_003004_20180827_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180827_20210503_02_BA/LC08_CU_003004_20180827_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180827_20210503_02_BA/LC08_CU_003004_20180827_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20180819_20210503_02_BA",
+              "datetime": "2018-08-19T18:48:56.836942Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 2.2808,
+              "fill_percent": 25.0235,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180819_20210503_02_BA/LE07_CU_003004_20180819_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180819_20210503_02_BA/LE07_CU_003004_20180819_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180819_20210503_02_BA/LE07_CU_003004_20180819_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20180818_20210503_02_BA",
+              "datetime": "2018-08-18T18:55:54.570806Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 0.0382,
+              "fill_percent": 41.5177,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180818_20210503_02_BA/LC08_CU_003004_20180818_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180818_20210503_02_BA/LC08_CU_003004_20180818_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180818_20210503_02_BA/LC08_CU_003004_20180818_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20180811_20210503_02_BA",
+              "datetime": "2018-08-11T18:49:52.116744Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 19.67,
+              "fill_percent": 11.2429,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180811_20210503_02_BA/LC08_CU_003004_20180811_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180811_20210503_02_BA/LC08_CU_003004_20180811_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180811_20210503_02_BA/LC08_CU_003004_20180811_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20180810_20210503_02_BA",
+              "datetime": "2018-08-10T18:55:18.116805Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0217,
+              "fill_percent": 57.7857,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180810_20210503_02_BA/LE07_CU_003004_20180810_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180810_20210503_02_BA/LE07_CU_003004_20180810_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180810_20210503_02_BA/LE07_CU_003004_20180810_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20180803_20210503_02_BA",
+              "datetime": "2018-08-03T18:49:15.123097Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 9.1061,
+              "fill_percent": 25.107,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180803_20210503_02_BA/LE07_CU_003004_20180803_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180803_20210503_02_BA/LE07_CU_003004_20180803_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LE07_CU_003004_20180803_20210503_02_BA/LE07_CU_003004_20180803_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20180802_20210503_02_BA",
+              "datetime": "2018-08-02T18:55:45.767537Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 25.6452,
+              "fill_percent": 41.2335,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180802_20210503_02_BA/LC08_CU_003004_20180802_20210503_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180802_20210503_02_BA/LC08_CU_003004_20180802_20210503_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2018/CU/003/004/LC08_CU_003004_20180802_20210503_02_BA/LC08_CU_003004_20180802_20210503_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.771116%2C44.197665%2C-121.651116%2C44.317665&datetime=2017-06-27T00%3A00%3A00Z%2F2018-09-15T23%3A59%3A59Z&limit=10",
+          "response_sha256": "88d7a4c1a41d7325ed8d480d8d3776a35f154996c88d11a9e7f580a5e063c224"
+        },
+        "rank": 2
+      },
+      {
+        "fire_id": "OR4438412172820020723",
+        "fire_name": "CACHE MOUNTAIN",
+        "ignition_date": "2002-07-23",
+        "year": 2002,
+        "latitude": 44.38404384,
+        "longitude": -121.72835972,
+        "acres": 3943.0,
+        "occurrence_map_id": 12645,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920010524",
+        "post_image_id": "504502920030615",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 48012,
+            "map_id": 0,
+            "program": "BAER",
+            "incident_name": "CACHE MOUNTAIN",
+            "boundary_acres": 3945,
+            "nonstandard": true
+          },
+          {
+            "catalog_id": 14914,
+            "map_id": 12645,
+            "program": "MTBS",
+            "incident_name": "CACHE MOUNTAIN",
+            "boundary_acres": 3943,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS"
+        ],
+        "minimum_current_event_distance_km": 74.555,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 3,
+          "event_geography_time_diversity": 4,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 32
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4438412172820020723",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 61,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LE07_CU_003004_20030826_20210428_02_BA",
+              "datetime": "2003-08-26T18:38:50.658741Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 40.1966,
+              "fill_percent": 27.144,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030826_20210428_02_BA/LE07_CU_003004_20030826_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030826_20210428_02_BA/LE07_CU_003004_20030826_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030826_20210428_02_BA/LE07_CU_003004_20030826_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20030825_20210428_02_BA",
+              "datetime": "2003-08-25T18:33:48.743044Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 3.3448,
+              "fill_percent": 41.0226,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030825_20210428_02_BA/LT05_CU_003004_20030825_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030825_20210428_02_BA/LT05_CU_003004_20030825_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030825_20210428_02_BA/LT05_CU_003004_20030825_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20030818_20210428_02_BA",
+              "datetime": "2003-08-18T18:27:29.552579Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.0935,
+              "fill_percent": 10.1571,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030818_20210428_02_BA/LT05_CU_003004_20030818_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030818_20210428_02_BA/LT05_CU_003004_20030818_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030818_20210428_02_BA/LT05_CU_003004_20030818_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20030817_20210428_02_BA",
+              "datetime": "2003-08-17T18:45:03.387355Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0057,
+              "fill_percent": 60.4549,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030817_20210428_02_BA/LE07_CU_003004_20030817_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030817_20210428_02_BA/LE07_CU_003004_20030817_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030817_20210428_02_BA/LE07_CU_003004_20030817_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20030810_20210428_02_BA",
+              "datetime": "2003-08-10T18:38:52.108039Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 15.9252,
+              "fill_percent": 27.7252,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030810_20210428_02_BA/LE07_CU_003004_20030810_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030810_20210428_02_BA/LE07_CU_003004_20030810_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030810_20210428_02_BA/LE07_CU_003004_20030810_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20030809_20210428_02_BA",
+              "datetime": "2003-08-09T18:33:30.701566Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 29.1727,
+              "fill_percent": 40.5581,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030809_20210428_02_BA/LT05_CU_003004_20030809_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030809_20210428_02_BA/LT05_CU_003004_20030809_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030809_20210428_02_BA/LT05_CU_003004_20030809_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20030801_20210428_02_BA",
+              "datetime": "2003-08-01T18:45:04.699829Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 13.6243,
+              "fill_percent": 59.6991,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030801_20210428_02_BA/LE07_CU_003004_20030801_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030801_20210428_02_BA/LE07_CU_003004_20030801_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030801_20210428_02_BA/LE07_CU_003004_20030801_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20030725_20210428_02_BA",
+              "datetime": "2003-07-25T18:38:58.227726Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 6.5702,
+              "fill_percent": 27.422,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030725_20210428_02_BA/LE07_CU_003004_20030725_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030725_20210428_02_BA/LE07_CU_003004_20030725_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LE07_CU_003004_20030725_20210428_02_BA/LE07_CU_003004_20030725_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20030724_20210428_02_BA",
+              "datetime": "2003-07-24T18:33:13.259547Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 23.3448,
+              "fill_percent": 40.2726,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030724_20210428_02_BA/LT05_CU_003004_20030724_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030724_20210428_02_BA/LT05_CU_003004_20030724_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030724_20210428_02_BA/LT05_CU_003004_20030724_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20030717_20210428_02_BA",
+              "datetime": "2003-07-17T18:26:54.490050Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.241,
+              "fill_percent": 10.2081,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030717_20210428_02_BA/LT05_CU_003004_20030717_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030717_20210428_02_BA/LT05_CU_003004_20030717_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2003/CU/003/004/LT05_CU_003004_20030717_20210428_02_BA/LT05_CU_003004_20030717_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.788360%2C44.324044%2C-121.668360%2C44.444044&datetime=2002-06-08T00%3A00%3A00Z%2F2003-08-27T23%3A59%3A59Z&limit=10",
+          "response_sha256": "691790f6126975b11b6a1f6e3b86c770c6a9e1172cc162b8731104b4ca972d3f"
+        },
+        "rank": 3
+      },
+      {
+        "fire_id": "OR4437312178220030705",
+        "fire_name": "LINK",
+        "ignition_date": "2003-07-05",
+        "year": 2003,
+        "latitude": 44.380124,
+        "longitude": -121.77942232,
+        "acres": 3458.0,
+        "occurrence_map_id": 13109,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920010727",
+        "post_image_id": "504502920040820",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 21596,
+            "map_id": 0,
+            "program": "BAER",
+            "incident_name": "LINK",
+            "boundary_acres": 3460,
+            "nonstandard": true
+          },
+          {
+            "catalog_id": 36230,
+            "map_id": 13109,
+            "program": "MTBS",
+            "incident_name": "LINK",
+            "boundary_acres": 3458,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS"
+        ],
+        "minimum_current_event_distance_km": 75.685,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 3,
+          "event_geography_time_diversity": 4,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 32
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4437312178220030705",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 68,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LT05_CU_003004_20040804_20210428_02_BA",
+              "datetime": "2004-08-04T18:33:13.317519Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 14.1145,
+              "fill_percent": 11.8043,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040804_20210428_02_BA/LT05_CU_003004_20040804_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040804_20210428_02_BA/LT05_CU_003004_20040804_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040804_20210428_02_BA/LT05_CU_003004_20040804_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20040803_20210428_02_BA",
+              "datetime": "2004-08-03T18:45:26.802370Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 41.5,
+              "fill_percent": 59.076,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040803_20210428_02_BA/LE07_CU_003004_20040803_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040803_20210428_02_BA/LE07_CU_003004_20040803_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040803_20210428_02_BA/LE07_CU_003004_20040803_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20040727_20210428_02_BA",
+              "datetime": "2004-07-27T18:39:20.861691Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0724,
+              "fill_percent": 27.746,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040727_20210428_02_BA/LE07_CU_003004_20040727_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040727_20210428_02_BA/LE07_CU_003004_20040727_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040727_20210428_02_BA/LE07_CU_003004_20040727_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20040726_20210428_02_BA",
+              "datetime": "2004-07-26T18:39:14.121587Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.0346,
+              "fill_percent": 38.9027,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040726_20210428_02_BA/LT05_CU_003004_20040726_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040726_20210428_02_BA/LT05_CU_003004_20040726_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040726_20210428_02_BA/LT05_CU_003004_20040726_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20040719_20210428_02_BA",
+              "datetime": "2004-07-19T18:32:53.655044Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 74.7208,
+              "fill_percent": 10.8081,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040719_20210428_02_BA/LT05_CU_003004_20040719_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040719_20210428_02_BA/LT05_CU_003004_20040719_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040719_20210428_02_BA/LT05_CU_003004_20040719_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20040718_20210428_02_BA",
+              "datetime": "2004-07-18T18:45:36.031098Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 48.9972,
+              "fill_percent": 60.1586,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040718_20210428_02_BA/LE07_CU_003004_20040718_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040718_20210428_02_BA/LE07_CU_003004_20040718_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040718_20210428_02_BA/LE07_CU_003004_20040718_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20040711_20210428_02_BA",
+              "datetime": "2004-07-11T18:39:15.2382023Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.3023,
+              "fill_percent": 42.227,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040711_20210428_02_BA/LE07_CU_003004_20040711_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040711_20210428_02_BA/LE07_CU_003004_20040711_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040711_20210428_02_BA/LE07_CU_003004_20040711_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20040710_20210428_02_BA",
+              "datetime": "2004-07-10T18:38:50.187529Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 50.7567,
+              "fill_percent": 38.8709,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040710_20210428_02_BA/LT05_CU_003004_20040710_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040710_20210428_02_BA/LT05_CU_003004_20040710_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040710_20210428_02_BA/LT05_CU_003004_20040710_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20040703_20210428_02_BA",
+              "datetime": "2004-07-03T18:32:27.388057Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 54.4787,
+              "fill_percent": 10.8458,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040703_20210428_02_BA/LT05_CU_003004_20040703_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040703_20210428_02_BA/LT05_CU_003004_20040703_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LT05_CU_003004_20040703_20210428_02_BA/LT05_CU_003004_20040703_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20040702_20210428_02_BA",
+              "datetime": "2004-07-02T18:45:39.575250Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 7.9657,
+              "fill_percent": 60.1093,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040702_20210428_02_BA/LE07_CU_003004_20040702_20210428_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040702_20210428_02_BA/LE07_CU_003004_20040702_20210428_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2004/CU/003/004/LE07_CU_003004_20040702_20210428_02_BA/LE07_CU_003004_20040702_20210428_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.839422%2C44.320124%2C-121.719422%2C44.440124&datetime=2003-05-21T00%3A00%3A00Z%2F2004-08-08T23%3A59%3A59Z&limit=10",
+          "response_sha256": "11c97b91f869589eba0d6d5252f1a189191b72013fc1ee645ee8556eb90a5cb7"
+        },
+        "rank": 4
+      },
+      {
+        "fire_id": "OR4427112168020060723",
+        "fire_name": "CASCADE CREST COMPLEX (BLACK CRATER)",
+        "ignition_date": "2006-07-23",
+        "year": 2006,
+        "latitude": 44.27142828,
+        "longitude": -121.68026867,
+        "acres": 9488.0,
+        "occurrence_map_id": 15192,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920030717",
+        "post_image_id": "504502920070728",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 51873,
+            "map_id": 0,
+            "program": "BAER",
+            "incident_name": "CASCADE CREST COMPLEX (BLACK CRATER)",
+            "boundary_acres": 9491,
+            "nonstandard": true
+          },
+          {
+            "catalog_id": 25663,
+            "map_id": 15192,
+            "program": "MTBS",
+            "incident_name": "CASCADE CREST COMPLEX (BLACK CRATER)",
+            "boundary_acres": 9488,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS"
+        ],
+        "minimum_current_event_distance_km": 61.494,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 3,
+          "event_geography_time_diversity": 4,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 32
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4427112168020060723",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 47,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LE07_CU_003004_20070821_20210429_02_BA",
+              "datetime": "2007-08-21T18:40:27.583757Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 23.9934,
+              "fill_percent": 26.071,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070813_20210429_02_BA",
+              "datetime": "2007-08-13T18:43:50.456581Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.31,
+              "fill_percent": 9.7295,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070805_20210429_02_BA",
+              "datetime": "2007-08-05T18:40:33.853662Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 46.2547,
+              "fill_percent": 26.0028,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070804_20210429_02_BA",
+              "datetime": "2007-08-04T18:50:07.222019Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 7.1912,
+              "fill_percent": 41.1605,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070728_20210429_02_BA",
+              "datetime": "2007-07-28T18:44:00.829562Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 4.6393,
+              "fill_percent": 9.8057,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070712_20210429_02_BA",
+              "datetime": "2007-07-12T18:44:09.818560Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 11.8127,
+              "fill_percent": 9.6826,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070712_20210429_02_BA/LT05_CU_003004_20070712_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070712_20210429_02_BA/LT05_CU_003004_20070712_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070712_20210429_02_BA/LT05_CU_003004_20070712_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070704_20210429_02_BA",
+              "datetime": "2007-07-04T18:40:42.105688Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.2205,
+              "fill_percent": 26.0987,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070704_20210429_02_BA/LE07_CU_003004_20070704_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070704_20210429_02_BA/LE07_CU_003004_20070704_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070704_20210429_02_BA/LE07_CU_003004_20070704_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070626_20210429_02_BA",
+              "datetime": "2007-06-26T18:44:18.536525Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.3913,
+              "fill_percent": 9.2644,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070626_20210429_02_BA/LT05_CU_003004_20070626_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070626_20210429_02_BA/LT05_CU_003004_20070626_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070626_20210429_02_BA/LT05_CU_003004_20070626_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070618_20210429_02_BA",
+              "datetime": "2007-06-18T18:40:43.749157Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 3.7806,
+              "fill_percent": 26.3137,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070618_20210429_02_BA/LE07_CU_003004_20070618_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070618_20210429_02_BA/LE07_CU_003004_20070618_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070618_20210429_02_BA/LE07_CU_003004_20070618_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070610_20210429_02_BA",
+              "datetime": "2007-06-10T18:44:36.371557Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 63.7106,
+              "fill_percent": 7.5032,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070610_20210429_02_BA/LT05_CU_003004_20070610_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070610_20210429_02_BA/LT05_CU_003004_20070610_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070610_20210429_02_BA/LT05_CU_003004_20070610_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.740269%2C44.211428%2C-121.620269%2C44.331428&datetime=2006-06-08T00%3A00%3A00Z%2F2007-08-27T23%3A59%3A59Z&limit=10",
+          "response_sha256": "789c89fc4c94cea7e305203eafbd557c14e0da1cca230fd6888d4ee44fe671bb"
+        },
+        "rank": 5
+      },
+      {
+        "fire_id": "OR4431412180120060805",
+        "fire_name": "CASCADE CREST COMPLEX (LAKE GEORGE)",
+        "ignition_date": "2006-08-05",
+        "year": 2006,
+        "latitude": 44.31360141,
+        "longitude": -121.80318282,
+        "acres": 5855.0,
+        "occurrence_map_id": 15193,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920050823",
+        "post_image_id": "504502920070813",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 49191,
+            "map_id": 0,
+            "program": "BAER",
+            "incident_name": "CASCADE CREST COMPLEX (LAKE GEORGE)",
+            "boundary_acres": 6016,
+            "nonstandard": true
+          },
+          {
+            "catalog_id": 23156,
+            "map_id": 15193,
+            "program": "MTBS",
+            "incident_name": "CASCADE CREST COMPLEX (LAKE GEORGE)",
+            "boundary_acres": 5855,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS"
+        ],
+        "minimum_current_event_distance_km": 69.833,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 3,
+          "event_geography_time_diversity": 4,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 32
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4431412180120060805",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 80,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LE07_CU_003004_20070906_20210429_02_BA",
+              "datetime": "2007-09-06T18:40:19.964153Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 2.6308,
+              "fill_percent": 26.1558,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070906_20210429_02_BA/LE07_CU_003004_20070906_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070906_20210429_02_BA/LE07_CU_003004_20070906_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070906_20210429_02_BA/LE07_CU_003004_20070906_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070905_20210429_02_BA",
+              "datetime": "2007-09-05T18:49:47.724057Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 35.2984,
+              "fill_percent": 40.3728,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070905_20210429_02_BA/LT05_CU_003004_20070905_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070905_20210429_02_BA/LT05_CU_003004_20070905_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070905_20210429_02_BA/LT05_CU_003004_20070905_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070829_20210429_02_BA",
+              "datetime": "2007-08-29T18:43:39.197034Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.079,
+              "fill_percent": 9.811,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070829_20210429_02_BA/LT05_CU_003004_20070829_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070829_20210429_02_BA/LT05_CU_003004_20070829_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070829_20210429_02_BA/LT05_CU_003004_20070829_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070828_20210429_02_BA",
+              "datetime": "2007-08-28T18:46:35.270945Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0042,
+              "fill_percent": 58.412,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070828_20210429_02_BA/LE07_CU_003004_20070828_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070828_20210429_02_BA/LE07_CU_003004_20070828_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070828_20210429_02_BA/LE07_CU_003004_20070828_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070821_20210429_02_BA",
+              "datetime": "2007-08-21T18:40:27.583757Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 23.9934,
+              "fill_percent": 26.071,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070821_20210429_02_BA/LE07_CU_003004_20070821_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070813_20210429_02_BA",
+              "datetime": "2007-08-13T18:43:50.456581Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 0.31,
+              "fill_percent": 9.7295,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070813_20210429_02_BA/LT05_CU_003004_20070813_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070812_20210429_02_BA",
+              "datetime": "2007-08-12T18:46:42.108841Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 4.148,
+              "fill_percent": 58.6371,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070812_20210429_02_BA/LE07_CU_003004_20070812_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070812_20210429_02_BA/LE07_CU_003004_20070812_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070812_20210429_02_BA/LE07_CU_003004_20070812_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20070805_20210429_02_BA",
+              "datetime": "2007-08-05T18:40:33.853662Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 46.2547,
+              "fill_percent": 26.0028,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LE07_CU_003004_20070805_20210429_02_BA/LE07_CU_003004_20070805_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070804_20210429_02_BA",
+              "datetime": "2007-08-04T18:50:07.222019Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 7.1912,
+              "fill_percent": 41.1605,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070804_20210429_02_BA/LT05_CU_003004_20070804_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LT05_CU_003004_20070728_20210429_02_BA",
+              "datetime": "2007-07-28T18:44:00.829562Z",
+              "platform": "LANDSAT_5",
+              "cloud_cover_percent": 4.6393,
+              "fill_percent": 9.8057,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2007/CU/003/004/LT05_CU_003004_20070728_20210429_02_BA/LT05_CU_003004_20070728_20210429_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.863183%2C44.253601%2C-121.743183%2C44.373601&datetime=2006-06-21T00%3A00%3A00Z%2F2007-09-09T23%3A59%3A59Z&limit=10",
+          "response_sha256": "feca7ccac54db15b480096e9d02f3662afe41d8396dc91804299cf3ea9d8cad3"
+        },
+        "rank": 6
+      },
+      {
+        "fire_id": "OR4417812169920120909",
+        "fire_name": "POLE CREEK",
+        "ignition_date": "2012-09-09",
+        "year": 2012,
+        "latitude": 44.17840602,
+        "longitude": -121.67597477,
+        "acres": 26972.0,
+        "occurrence_map_id": 785,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "504502920110723",
+        "post_image_id": "804502920130728",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 4644,
+            "map_id": 106,
+            "program": "BAER",
+            "incident_name": "POLE CREEK",
+            "boundary_acres": 26924,
+            "nonstandard": false
+          },
+          {
+            "catalog_id": 7169,
+            "map_id": 785,
+            "program": "MTBS",
+            "incident_name": "POLE CREEK",
+            "boundary_acres": 26972,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "BAER",
+          "MTBS"
+        ],
+        "minimum_current_event_distance_km": 51.857,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 4,
+          "event_geography_time_diversity": 3,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 32
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4417812169920120909",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 29,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LC08_CU_003004_20130930_20210501_02_BA",
+              "datetime": "2013-09-30T18:52:20.782481Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 73.0725,
+              "fill_percent": 10.023,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130930_20210501_02_BA/LC08_CU_003004_20130930_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130930_20210501_02_BA/LC08_CU_003004_20130930_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130930_20210501_02_BA/LC08_CU_003004_20130930_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20130914_20210501_02_BA",
+              "datetime": "2013-09-14T18:52:26.837878Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 29.5447,
+              "fill_percent": 9.5978,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130914_20210501_02_BA/LC08_CU_003004_20130914_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130914_20210501_02_BA/LC08_CU_003004_20130914_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130914_20210501_02_BA/LC08_CU_003004_20130914_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20130906_20210501_02_BA",
+              "datetime": "2013-09-06T18:46:01.451270Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 68.3859,
+              "fill_percent": 27.8377,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130906_20210501_02_BA/LE07_CU_003004_20130906_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130906_20210501_02_BA/LE07_CU_003004_20130906_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130906_20210501_02_BA/LE07_CU_003004_20130906_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20130829_20210501_02_BA",
+              "datetime": "2013-08-29T18:52:30.836827Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 52.7233,
+              "fill_percent": 9.3565,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130829_20210501_02_BA/LC08_CU_003004_20130829_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130829_20210501_02_BA/LC08_CU_003004_20130829_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130829_20210501_02_BA/LC08_CU_003004_20130829_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20130828_20210501_02_BA",
+              "datetime": "2013-08-28T18:52:04.653104Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 18.4134,
+              "fill_percent": 54.0221,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130828_20210501_02_BA/LE07_CU_003004_20130828_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130828_20210501_02_BA/LE07_CU_003004_20130828_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130828_20210501_02_BA/LE07_CU_003004_20130828_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20130813_20210501_02_BA",
+              "datetime": "2013-08-13T18:52:28.257525Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 0.5259,
+              "fill_percent": 9.9457,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130813_20210501_02_BA/LC08_CU_003004_20130813_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130813_20210501_02_BA/LC08_CU_003004_20130813_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130813_20210501_02_BA/LC08_CU_003004_20130813_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20130812_20210501_02_BA",
+              "datetime": "2013-08-12T18:51:53.484266Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 36.1618,
+              "fill_percent": 53.9083,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130812_20210501_02_BA/LE07_CU_003004_20130812_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130812_20210501_02_BA/LE07_CU_003004_20130812_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130812_20210501_02_BA/LE07_CU_003004_20130812_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20130805_20210501_02_BA",
+              "datetime": "2013-08-05T18:45:43.308811Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.8479,
+              "fill_percent": 25.9259,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130805_20210501_02_BA/LE07_CU_003004_20130805_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130805_20210501_02_BA/LE07_CU_003004_20130805_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130805_20210501_02_BA/LE07_CU_003004_20130805_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20130728_20210501_02_BA",
+              "datetime": "2013-07-28T18:52:27.525057Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 0.0375,
+              "fill_percent": 10.1561,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130728_20210501_02_BA/LC08_CU_003004_20130728_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130728_20210501_02_BA/LC08_CU_003004_20130728_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LC08_CU_003004_20130728_20210501_02_BA/LC08_CU_003004_20130728_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20130720_20210501_02_BA",
+              "datetime": "2013-07-20T18:45:48.823165Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.0693,
+              "fill_percent": 26.3599,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130720_20210501_02_BA/LE07_CU_003004_20130720_20210501_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130720_20210501_02_BA/LE07_CU_003004_20130720_20210501_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2013/CU/003/004/LE07_CU_003004_20130720_20210501_02_BA/LE07_CU_003004_20130720_20210501_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.735975%2C44.118406%2C-121.615975%2C44.238406&datetime=2012-07-26T00%3A00%3A00Z%2F2013-10-14T23%3A59%3A59Z&limit=10",
+          "response_sha256": "f05972679c89587ca40599eac0099c8b374fcd1279787d45985c34b1f149bdc0"
+        },
+        "rank": 7
+      },
+      {
+        "fire_id": "OR4414212147220140607",
+        "fire_name": "TWO BULLS FIRE",
+        "ignition_date": "2014-06-07",
+        "year": 2014,
+        "latitude": 44.10168549,
+        "longitude": -121.45382368,
+        "acres": 7335.0,
+        "occurrence_map_id": 23254,
+        "occurrence_program": "MTBS",
+        "pre_image_id": "804502920130813",
+        "post_image_id": "804502920150819",
+        "fire_type": "Wildfire",
+        "assessment_type": "Extended",
+        "products": [
+          {
+            "catalog_id": 48699,
+            "map_id": 23254,
+            "program": "MTBS",
+            "incident_name": "TWO BULLS FIRE",
+            "boundary_acres": 7335,
+            "nonstandard": false
+          },
+          {
+            "catalog_id": 35002,
+            "map_id": 21208,
+            "program": "RAVG",
+            "incident_name": "TWO BULLS FIRE",
+            "boundary_acres": 6906,
+            "nonstandard": false
+          }
+        ],
+        "programs": [
+          "MTBS",
+          "RAVG"
+        ],
+        "minimum_current_event_distance_km": 38.638,
+        "already_in_pending_seven_bundle_request": false,
+        "known_context": null,
+        "scores": {
+          "evidence_value": 4,
+          "acquisition_ease": 4,
+          "event_geography_time_diversity": 2,
+          "deschutes_task_fit": 5,
+          "owner_review_usefulness": 4,
+          "overall": 31
+        },
+        "landsat_burned_area": {
+          "fire_id": "OR4414212147220140607",
+          "point_window_only_not_full_boundary_coverage": true,
+          "number_matched": 42,
+          "number_returned": 10,
+          "retained_items": [
+            {
+              "item_id": "LC08_CU_003004_20150702_20210502_02_BA",
+              "datetime": "2015-07-02T18:49:52.754020Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 0.2424,
+              "fill_percent": 10.5469,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150702_20210502_02_BA/LC08_CU_003004_20150702_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150702_20210502_02_BA/LC08_CU_003004_20150702_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150702_20210502_02_BA/LC08_CU_003004_20150702_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20150624_20210502_02_BA",
+              "datetime": "2015-06-24T18:50:04.126197Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 75.5863,
+              "fill_percent": 27.4228,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150624_20210502_02_BA/LE07_CU_003004_20150624_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150624_20210502_02_BA/LE07_CU_003004_20150624_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150624_20210502_02_BA/LE07_CU_003004_20150624_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20150616_20210502_02_BA",
+              "datetime": "2015-06-16T18:49:45.767058Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 8.274,
+              "fill_percent": 10.4963,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150616_20210502_02_BA/LC08_CU_003004_20150616_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150616_20210502_02_BA/LC08_CU_003004_20150616_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150616_20210502_02_BA/LC08_CU_003004_20150616_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20150608_20210502_02_BA",
+              "datetime": "2015-06-08T18:50:03.143060Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 0.3102,
+              "fill_percent": 26.8843,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150608_20210502_02_BA/LE07_CU_003004_20150608_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150608_20210502_02_BA/LE07_CU_003004_20150608_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150608_20210502_02_BA/LE07_CU_003004_20150608_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20150531_20210502_02_BA",
+              "datetime": "2015-05-31T18:49:34.675370Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 59.2828,
+              "fill_percent": 10.8401,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150531_20210502_02_BA/LC08_CU_003004_20150531_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150531_20210502_02_BA/LC08_CU_003004_20150531_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150531_20210502_02_BA/LC08_CU_003004_20150531_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20150507_20210502_02_BA",
+              "datetime": "2015-05-07T18:49:49.748273Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 23.9648,
+              "fill_percent": 27.197,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150507_20210502_02_BA/LE07_CU_003004_20150507_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150507_20210502_02_BA/LE07_CU_003004_20150507_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150507_20210502_02_BA/LE07_CU_003004_20150507_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20150429_20210502_02_BA",
+              "datetime": "2015-04-29T18:49:43.349623Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 41.3273,
+              "fill_percent": 8.1577,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150429_20210502_02_BA/LC08_CU_003004_20150429_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150429_20210502_02_BA/LC08_CU_003004_20150429_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150429_20210502_02_BA/LC08_CU_003004_20150429_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LE07_CU_003004_20150421_20210502_02_BA",
+              "datetime": "2015-04-21T18:49:41.356851Z",
+              "platform": "LANDSAT_7",
+              "cloud_cover_percent": 15.293,
+              "fill_percent": 27.5631,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150421_20210502_02_BA/LE07_CU_003004_20150421_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150421_20210502_02_BA/LE07_CU_003004_20150421_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LE07_CU_003004_20150421_20210502_02_BA/LE07_CU_003004_20150421_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20150413_20210502_02_BA",
+              "datetime": "2015-04-13T18:49:51.124830Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 52.1444,
+              "fill_percent": 8.635,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150413_20210502_02_BA/LC08_CU_003004_20150413_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150413_20210502_02_BA/LC08_CU_003004_20150413_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150413_20210502_02_BA/LC08_CU_003004_20150413_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            },
+            {
+              "item_id": "LC08_CU_003004_20150328_20210502_02_BA",
+              "datetime": "2015-03-28T18:49:56.455659Z",
+              "platform": "LANDSAT_8",
+              "cloud_cover_percent": 39.3378,
+              "fill_percent": 9.384,
+              "grid_region": "CU",
+              "grid_horizontal": "03",
+              "grid_vertical": "04",
+              "assets": {
+                "bc": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150328_20210502_02_BA/LC08_CU_003004_20150328_20210502_02_BC.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "bp": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150328_20210502_02_BA/LC08_CU_003004_20150328_20210502_02_BP.TIF",
+                  "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+                  "roles": [
+                    "data"
+                  ]
+                },
+                "json": {
+                  "href": "https://landsatlook.usgs.gov/level-3/collection02/BA/2015/CU/003/004/LC08_CU_003004_20150328_20210502_02_BA/LC08_CU_003004_20150328_20210502_02_BA.json",
+                  "type": "application/json",
+                  "roles": [
+                    "metadata"
+                  ]
+                }
+              }
+            }
+          ],
+          "request_url": "https://landsatlook.usgs.gov/stac-server/search?collections=landsat-c2l3-ba&bbox=-121.513824%2C44.041685%2C-121.393824%2C44.161685&datetime=2014-04-23T00%3A00%3A00Z%2F2015-07-12T23%3A59%3A59Z&limit=10",
+          "response_sha256": "67ff5bdc9cdb4759c6a71cd7c3ba47efeca1d066f6b2e342adf84a7cc7263647"
+        },
+        "rank": 8
+      }
+    ],
+    "source_classes": [
+      {
+        "source_class": "Burn Severity Portal BAER/RAVG/MTBS fire bundles",
+        "live_identity": "37 products across 23 current Deschutes MTBS events",
+        "resolution_or_scale": "typically 30 m raster plus vector/metadata products; inspect each bundle",
+        "temporal_relationship": "program-specific immediate, initial, or extended post-fire assessment",
+        "role": "cross-program reference and optical interpretation support",
+        "label_truth_status": "never automatic truth; analyst/model/product limitations remain binding",
+        "terms_status": "public catalog reconnaissance resolved; exact bundle notices govern redistribution",
+        "access_route": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id%2Cmap_id%2Cmap_prog%2Cincid_name%2Cevent_id%2Cig_date%2Cburnbndac%2Cnonstandard&cql_filter=event_id+IN+%28%27OR4366312134419900805%27%2C%27OR4370412137119980902%27%2C%27OR4375212142520170829%27%2C%27OR4378612116119880804%27%2C%27OR4379412174319940721%27%2C%27OR4383912111420180907%27%2C%27OR4385812115119960824%27%2C%27OR4392312127420030723%27%2C%27OR4393812114819960823%27%2C%27OR4394612121819920805%27%2C%27OR4395012085820070706%27%2C%27OR4403912136819900804%27%2C%27OR4414212147220140607%27%2C%27OR4417812169920120909%27%2C%27OR4418312154220100802%27%2C%27OR4419612151119900712%27%2C%27OR4425712174320170811%27%2C%27OR4427112168020060723%27%2C%27OR4431412180120060805%27%2C%27OR4433912148619920608%27%2C%27OR4435412173920070830%27%2C%27OR4437312178220030705%27%2C%27OR4438412172820020723%27%29"
+      },
+      {
+        "source_class": "USGS Landsat Collection 2 Level-3 Burned Area",
+        "live_identity": "Landsat Collection 2 Level-3 Burned Area (BA) Product",
+        "resolution_or_scale": "30 m; fixed U.S. ARD tiles; CONUS 1984-present",
+        "temporal_relationship": "acquisition-based burn probability and thresholded burn classification",
+        "role": "independent algorithmic burned/background candidate reference",
+        "label_truth_status": "not ground truth; QA, commission/omission, water/shadow, coverage, and optical checks required",
+        "terms_status": "no Landsat use restrictions; cite the dataset; advertised asset retrieval currently redirects to EROS authentication",
+        "access_state": "AUTHENTICATION_REQUIRED",
+        "access_route": "https://landsatlook.usgs.gov/stac-server/collections"
+      },
+      {
+        "source_class": "USGS Landsat Collection 2 Level-2 Surface Reflectance",
+        "live_identity": "Landsat Collection 2 Level-2 UTM Surface Reflectance (SR) Product",
+        "resolution_or_scale": "30 m surface reflectance plus QA bands",
+        "temporal_relationship": "select event-specific pre/post acquisitions",
+        "role": "optical corroboration, time-series comparison, and affirmative unchanged support",
+        "label_truth_status": "imagery and QA are evidence, not labels",
+        "terms_status": "no Landsat use restrictions; cite the dataset",
+        "access_route": "https://landsatlook.usgs.gov/stac-server/collections"
+      },
+      {
+        "source_class": "Copernicus Sentinel-2 L2A",
+        "live_identity": "Sentinel-2 Level-2A",
+        "resolution_or_scale": "10/20/60 m bands; BurnLens uses native grids",
+        "temporal_relationship": "event-specific same-orbit pre/post pairs",
+        "role": "primary high-resolution optical evidence for the preserved task",
+        "label_truth_status": "dNBR, SCL, and imagery do not independently create truth",
+        "terms_status": "free/open under the Sentinel legal notice with attribution",
+        "access_route": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a"
+      },
+      {
+        "source_class": "NIFC WFIGS Interagency Fire Perimeters",
+        "live_identity": "Perimeters",
+        "resolution_or_scale": "mixed-method vector incident geometry",
+        "temporal_relationship": "incident record updated over time",
+        "role": "incident identity, AOI, and perimeter context",
+        "label_truth_status": "dynamic reference; not a legal document or pixel-perfect burn boundary",
+        "terms_status": "public official service; source disclaimer and attribution remain binding",
+        "access_route": "https://services3.arcgis.com/T4QMspbfLg3qTGWY/ArcGIS/rest/services/WFIGS_Interagency_Perimeters/FeatureServer/0"
+      },
+      {
+        "source_class": "NASA MCD64A1 / VNP64A1 burned area",
+        "live_identity": "MODIS/Terra+Aqua Direct Broadcast Burned Area Monthly L3 Global 500m SIN Grid V061 / VIIRS/NPP Burned Area Monthly L4 Global 500m SIN Grid V002",
+        "resolution_or_scale": "500 m monthly global burned-area grids",
+        "temporal_relationship": "monthly burn-date detection from reflectance and active-fire inputs",
+        "role": "coarse temporal/context comparison only",
+        "label_truth_status": "rejected as 10-30 m label truth or boundary evidence",
+        "terms_status": "NASA-led data default CC0 unless marked; cite and do not imply endorsement",
+        "access_route": "https://cmr.earthdata.nasa.gov/search/collections.json"
+      },
+      {
+        "source_class": "USGS Annual NLCD Collection 1.2",
+        "live_identity": "Annual NLCD Collection 1.2, June 2026, DOI 10.5066/P94UXNTS",
+        "resolution_or_scale": "30 m annual land cover/change, CONUS 1985-present",
+        "temporal_relationship": "choose the pre-fire year or same-release comparison years",
+        "role": "land-cover context, stratification, and RAVG applicability screening",
+        "label_truth_status": "land cover is not fire evidence or affirmative background by itself",
+        "terms_status": "USGS data release is CC0 1.0; cite the dataset",
+        "access_route": "https://www.usgs.gov/data/annual-national-land-cover-database-nlcd-collection-1-products"
+      }
+    ]
+  },
+  "portfolio_recommendation": {
+    "first_source_to_test": "USGS Landsat Collection 2 Level-3 Burned Area",
+    "why": "It supplies 30 m acquisition-based burn probability and classification across forest, shrub, and grass ecosystems through a live official route. It can challenge both burned and background candidates without inheriting the Sentinel single-tile constraint, but it remains algorithmic reference evidence. The public STAC metadata is live while the advertised asset probe redirects to EROS authentication, so acquisition remains gated rather than assumed.",
+    "next_acquisition_rule": "Acquire only a small metadata-plus-COG-window proof for the highest-ranked candidate whose exact asset terms, full-boundary grid coverage, QA, and temporal relationship pass. Do not duplicate the seven pending bundles.",
+    "rendered_summary": "Test one small GW Fire Landsat BA metadata/COG window only after EROS access is resolved. Verify full-boundary coverage, QA, terms, and optical/cross-program agreement; treat the product as reference, never truth."
+  },
+  "owner_review_consequence": {
+    "workflow": "Codex proposes disclosed burned/background candidates; owner answers yes/no/uncertain.",
+    "use": "Show Landsat BA probability/classification only beside independent optical, quality, and program evidence. A yes can advance only after source, reproducibility, quality, and leakage gates.",
+    "not_claimed": [
+      "independent reviewer evidence",
+      "ground truth",
+      "inter-rater agreement",
+      "field validation",
+      "official or endorsed status",
+      "operational or enterprise readiness"
+    ]
+  },
+  "queue_boundary": {
+    "issue": 416,
+    "accepted_request_duplicated": false,
+    "delivered_bundle_substituted": false,
+    "state": "seven exact BAER/RAVG/MTBS bundles remain pending and separately governed"
+  },
+  "promotion_gates": [
+    "resolve exact product-level terms and notices before data retention or publication",
+    "verify exact item identity, full-boundary coverage, CRS, grid, nodata, QA, and temporal relationship",
+    "compare candidate pixels against optical evidence and applicable cross-program references",
+    "preserve whole-event/geography/time groups before any dataset split",
+    "obtain explicit owner yes; no and uncertain remain excluded",
+    "publish rendered source-fitness evidence before any prototype-label promotion"
+  ],
+  "claim_boundaries": {
+    "metadata_reconnaissance_only": true,
+    "large_products_acquired": false,
+    "provider_pixels_opened": false,
+    "original_56_units_changed": false,
+    "owner_responses_collected": false,
+    "labels_promoted": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_run": false,
+    "model_trained": false,
+    "scientific_or_field_validation_claimed": false
+  },
+  "decision": "PRIORITIZE_LANDSAT_BURNED_AREA_AND_CROSS_PROGRAM_FIRE_SCOUTS_DEFER_ACQUISITION_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

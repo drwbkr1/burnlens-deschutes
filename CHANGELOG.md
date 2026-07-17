@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.23.0-official-source-scout - candidate - 2026-07-17
+
+### P2O4-T13 - Scout official evidence without duplicating pending delivery
+
+- Add a fail-closed live official-source capture and deterministic candidate-fire rank across Burn Severity Portal, Landsat, Sentinel-2, NIFC, NASA burned area, and Annual NLCD routes.
+- Publish `OFFICIAL-SOURCE-SCOUT-SOURCE-2026-001` plus JSON/HTML/PNG report evidence for 7 source classes, 23 current Deschutes MTBS fires, and 21 additional candidates; rank GW Fire first for a later small acquisition/fitness proof.
+- Record that the public Landsat STAC route is live while the advertised asset redirects to EROS authentication; send no credentials and retain no asset content.
+- Preserve the pending seven-bundle request, original 56 units, and historical 6/0/50 reconciliation unchanged. Record the prospective owner-confirmed yes/no/uncertain route without manufacturing an owner response or label.
+- Fix a real 390 px render defect found during browser QA; the final document has no page overflow, while wide tables remain intentionally scrollable.
+- Promote zero labels and create no dataset, split, baseline, model, independent-review, field-validation, official, endorsed, enterprise, or operational claim.
+
+Issue #425; source `216c4a9e1a6f1ea5ab8065edb9b8884dfab2d4af`; run `BL-2026-07-17-official-source-scout-r004`. Final PR, merge, package, tag, and fresh-main evidence remain pending.
+
 ## v0.22.0-current-bundle-request-evidence - verified - 2026-07-17
 
 ### P2O4-T12A - Preserve the exact accepted request without claiming delivery

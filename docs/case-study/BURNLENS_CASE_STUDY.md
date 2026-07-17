@@ -272,7 +272,17 @@ The authoritative rehearsal uses the existing software fixture. Source and prese
 
 This is a reliability improvement, not a scientific result. The project still has one returned human response. Software does not prove who created a file, whether the reviewer is qualified, what happened before intake, or whether storage survived every possible hardware failure.
 
-The owner subsequently waived reviewer two. BurnLens records that as a reduced-validation route, not as evidence. Issue #393 is closed as superseded, and issue #403 now requires a separate owner-waiver/reveal-readiness gate plus conservative reconciliation of the single response against proposal and source evidence. No inter-rater agreement, consensus, or adjudication can be claimed.
+The owner subsequently waived reviewer two. BurnLens records the resulting single-response reconciliation as immutable historical evidence, not independent truth. Issue #393 is closed as superseded, and issue #403 preserves the 6 burned / 0 background / 50 ignored outcome plus its disclosed reveal sequence exception. No inter-rater agreement, consensus, or adjudication can be claimed.
+
+## Reopening prototype decisions with stronger disclosed evidence
+
+On 2026-07-17 the owner replaced the prospective independent/blinded acceptance route with an owner-confirmed prototype workflow. Codex will propose evidence-backed burned/background candidates, show the relevant optical/reference evidence, and collect yes/no/uncertain. A yes is necessary but not sufficient: reproducibility, source, quality, and event-level leakage gates must also pass. No and uncertain remain excluded. All original 56 units will be reopened rather than inheriting the historical exclusions.
+
+The first improvement under that route is evidence discovery, not relabeling. BurnLens `0.23.0` scouts seven current official source classes and ranks 21 additional Deschutes candidate fires while the exact seven-bundle request remains pending. GW Fire ranks first because it offers event/time/geography diversity, BAER/MTBS/RAVG coverage, and 64 live Landsat burned-area metadata matches.
+
+![BurnLens official source scout](../../samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.png)
+
+The Landsat STAC metadata route is live, but the advertised asset redirects to EROS authentication. BurnLens records that gate rather than treating metadata availability as acquired pixels. No credential, product byte, owner response, label, dataset, split, baseline, or model is created. This remains a portfolio demonstration of transparent evidence engineering—not ground truth, field validation, official status, endorsement, or operational readiness.
 
 ## Traceability snapshot
 
@@ -300,6 +310,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Latest atomic response-intake QA run: `BL-2026-07-16-label-review-response-atomic-intake-qa-r002`
 - Latest owner-waiver reveal-readiness QA run: `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001`
 - Latest single-reviewer reconciliation QA run: `BL-2026-07-16-single-reviewer-reconciliation-qa-r001`
+- Latest official-source scout run: `BL-2026-07-17-official-source-scout-r004`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -331,6 +342,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Single-reviewer reconciliation: shipped `LABEL-REVIEW-SINGLE-REVIEWER-RECONCILIATION-QA-2026-001`; 56 units reconciled; 6 burned candidates, 0 background candidates, 50 ignored; Tepee 0 accepted; aggregate-only public evidence; decision remediation / dataset deferred
 - Current reference inventory: verified checkout-stable `CROSS-EVENT-REFERENCE-INVENTORY-2026-001`; Darlene BAER/RAVG, McKay MTBS/RAVG, Tepee BAER/MTBS/RAVG; seven exact catalog identities; official late-2025 archive reprocessing boundary; zero labels promoted; exact bundle fitness pending; 0.21.0 failed-release history preserved
 - Current bundle request: verified `CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001`; six standard map IDs plus one explicit nonstandard Tepee BAER path; 18 product families; official queue acceptance; four binding provider cautions; zero archives received; recipient and retrieval details withheld
+- Official-source scout: candidate `OFFICIAL-SOURCE-SCOUT-2026-001`; 12 bounded official responses; 7 source classes; 23 current Deschutes MTBS fires; 21 additional candidates; GW Fire ranked first; Landsat asset access `AUTHENTICATION_REQUIRED`; zero labels
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -339,7 +351,7 @@ The owner subsequently waived reviewer two. BurnLens records that as a reduced-v
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest verified repository baseline: `v0.22.0-current-bundle-request-evidence` at merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416 remains open; the 0.21.0 analytical tag is preserved but failed final release verification
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
-- Active next gate: parent issue #416 receives and verifies exact current product bundles, resolves bundle-specific terms, and publishes cross-program pixel fitness before any label, dataset, or baseline; request acceptance under #421 does not close that gate
+- Active next gates: parent #416 receives and verifies exact current bundles without accepting substitutes; a separate owner-review-surface checkpoint reopens all 56 units with yes/no/uncertain. A later small Landsat proof requires authorized EROS access and exact product-level fitness. None alone authorizes a label, dataset, split, or baseline.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
