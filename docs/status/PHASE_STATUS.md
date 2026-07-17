@@ -16,7 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.20.0-single-reviewer-reconciliation` at merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; 6 burned candidates, 0 background candidates, 50 ignored; remediation selected and dataset deferred |
-| Active candidate | P2O4-T11 / issue #411; BurnLens `0.21.0`; source `8d58178cc0f43b801a6fbab422d69a509716327b`; evidence commit `e888e4dc6e772921c417768d6f4b05858af9af69`; seven exact current products across three events; zero labels promoted |
+| Active candidate | P2O4-T11 / issue #411; BurnLens `0.21.0`; source `98a9895d203c778dad332db5bdc62b498aa2cd00`; evidence commit `f5d4d528263bfc2cf93cb7f128bcb051732797b3`; seven exact current products across three events; zero labels promoted |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoint | Issue #411: remediate independently traceable burned/background reference evidence across Darlene 3, McKay, and Tepee before any dataset, split, baseline, or model |
 | Previous repository evidence baseline | Shipped `v0.19.0-owner-waiver-reveal-readiness` at merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a` |
@@ -74,7 +74,7 @@
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Latest current-reference run is `BL-2026-07-17-current-reference-inventory-r001`; latest shipped tag remains `v0.20.0-single-reviewer-reconciliation`; no accepted dataset, split, baseline, model, or inference output |
+| Run IDs | Latest current-reference run is `BL-2026-07-17-current-reference-inventory-r002`; latest shipped tag remains `v0.20.0-single-reviewer-reconciliation`; no accepted dataset, split, baseline, model, or inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static evidence, and two derived native-grid proposal GeoTIFFs; no accepted dataset, model output, or BurnLens fire perimeter |
 | Repository-owned public application | Shipped local/offline response workbench exists; no deployed public application or analytical inference application |
 | Public performance claim | None authorized or supported |

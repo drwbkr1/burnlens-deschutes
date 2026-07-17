@@ -2,7 +2,7 @@
 
 **Issue:** #411
 
-**Run:** `BL-2026-07-17-current-reference-inventory-r001`
+**Run:** `BL-2026-07-17-current-reference-inventory-r002`
 
 ## Result
 
