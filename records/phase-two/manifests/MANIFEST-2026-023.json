@@ -9,7 +9,7 @@
   "git_base_commit": "e55909f79c7adae2c7eecf9b14c89518b6b4c789",
   "generator_source_commit": "8d58178cc0f43b801a6fbab422d69a509716327b",
   "candidate_artifacts_commit": "e888e4dc6e772921c417768d6f4b05858af9af69",
-  "reviewed_candidate_head": null,
+  "reviewed_candidate_head": "2a550773001f2470354cdc20825090acec83efea",
   "checkpoint_commit": null,
   "pull_request": null,
   "version_tag": "v0.21.0-current-reference-inventory",
@@ -81,6 +81,8 @@
     "repository_tests": 188,
     "compileall": "pass",
     "dependency_health": "pass",
+    "tracked_and_candidate_json_parse": "pass: 60 files",
+    "local_markdown_links": "pass: 95 links",
     "evidence_card_visual_review": "pass: original 1800x1340 inspected after clipping correction",
     "installed_chrome_html_render": "pass: complete 1440x2600 render inspected",
     "deterministic_wheel": "pass: two clean-checkout fixed-epoch wheels byte-identical at 348031 bytes / sha256 da2585a2eb820b0706a763a29d05b7b859b9af62bc6c3e7a6414b22c7f8e60ec",
@@ -105,4 +107,3 @@
   "decision": "ACQUIRE_CURRENT_CROSS_PROGRAM_REFERENCE_BUNDLES_DEFER_LABELS_DATASET_MODEL",
   "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
 }
-

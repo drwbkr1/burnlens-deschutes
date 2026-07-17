@@ -1,6 +1,6 @@
 # REGISTRY-2026-023 - Current Cross-Program Reference Inventory
 
-**Checkpoint:** Issue #411; branch `codex/p2o4-t11-reference-evidence-remediation`; base `e55909f79c7adae2c7eecf9b14c89518b6b4c789`; source `8d58178cc0f43b801a6fbab422d69a509716327b`; evidence `e888e4dc6e772921c417768d6f4b05858af9af69`
+**Checkpoint:** Issue #411; branch `codex/p2o4-t11-reference-evidence-remediation`; base `e55909f79c7adae2c7eecf9b14c89518b6b4c789`; source `8d58178cc0f43b801a6fbab422d69a509716327b`; evidence `e888e4dc6e772921c417768d6f4b05858af9af69`; reviewed candidate head `2a550773001f2470354cdc20825090acec83efea`
 
 | Artifact | Class | Version/state | Committed provider/private bytes |
 |---|---|---|---:|
