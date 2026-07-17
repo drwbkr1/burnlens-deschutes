@@ -1,0 +1,109 @@
+{
+  "manifest_id": "MANIFEST-2026-023",
+  "manifest_version": "0.23.0",
+  "project": "BurnLens Deschutes",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-17T00:25:40Z",
+  "task_issue": 411,
+  "branch": "codex/p2o4-t11-reference-evidence-remediation",
+  "git_base_commit": "e55909f79c7adae2c7eecf9b14c89518b6b4c789",
+  "generator_source_commit": "98a9895d203c778dad332db5bdc62b498aa2cd00",
+  "candidate_artifacts_commit": "f5d4d528263bfc2cf93cb7f128bcb051732797b3",
+  "reviewed_candidate_head": "cc58ba5dfd2a258fc9b8fb51009a60306fda2f14",
+  "checkpoint_commit": null,
+  "pull_request": null,
+  "version_tag": "v0.21.0-current-reference-inventory",
+  "version_tag_state": "planned candidate",
+  "status": "candidate current catalog inventory; exact product fitness pending; labels and dataset deferred",
+  "software_version": "0.21.0",
+  "report_version": "cross-event-current-reference-inventory-v0.1.0",
+  "inventory_contract_version": "cross-event-current-reference-inventory-contract-v0.1.0",
+  "run_id": "BL-2026-07-17-current-reference-inventory-r002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "source_records": [
+    "SOURCE-2026-013",
+    "SOURCE-2026-014"
+  ],
+  "terms_records": [
+    "TERMS-2026-008",
+    "TERMS-2026-009"
+  ],
+  "review_records": [
+    "PRECHECK-2026-019",
+    "LABEL_FITNESS-2026-015",
+    "SOURCE_PRECEDENCE-2026-007",
+    "USE_BOUNDARY-2026-018"
+  ],
+  "source_capture": {
+    "endpoint": "https://edcintl.cr.usgs.gov/geoserver/wfs",
+    "raw_response_bytes": 2061,
+    "raw_response_sha256": "c56b059d37cfd230de57ba6ae3b62463618ad70e76594d3369a755d94e51f3ca",
+    "normalized_products_sha256": "1ccd4c10eb0386c4080f05879d7e5eeee5af10afc645cb7826d0259f42c2216e",
+    "event_count": 3,
+    "product_count": 7,
+    "program_counts": {
+      "BAER": 2,
+      "MTBS": 2,
+      "RAVG": 3
+    }
+  },
+  "outputs": [
+    {
+      "path": "samples/reference/phase-two/CROSS-EVENT-REFERENCE-INVENTORY-2026-001.json",
+      "media_type": "application/json",
+      "bytes": 7837,
+      "sha256": "db6b12eb9f4857a7a75abf48ec881465e61235d19033cf3dd758d0eba4eaeafd"
+    },
+    {
+      "path": "samples/reference/phase-two/CROSS-EVENT-REFERENCE-INVENTORY-2026-001.html",
+      "media_type": "text/html",
+      "bytes": 3923,
+      "sha256": "b3f7ddd58224495d2e74088c71b1279c43944d066cb751739e6f4a5ac50a41f1"
+    },
+    {
+      "path": "samples/reference/phase-two/CROSS-EVENT-REFERENCE-INVENTORY-2026-001.png",
+      "media_type": "image/png",
+      "bytes": 124336,
+      "sha256": "4190494db47170e1907f799be99c3bf48ed2ea43ce9461a22ed73cb63b932f94"
+    }
+  ],
+  "quality_gates": {
+    "cycle_start_exact_proposal_and_qa_rerun": "pass: all ten outputs byte-identical with fixed authoritative inputs and timestamps",
+    "cycle_start_exact_reconciliation_qa_rerun": "pass: all three outputs byte-identical with fixed authoritative inputs and timestamp",
+    "live_current_official_inventory": "pass: seven exact property-only records across three exact event IDs",
+    "catalog_drift_and_schema_gates": "pass: missing, changed, duplicate, geometric, unexpected-program/event, and type-drift cases fail closed",
+    "repository_tests": 188,
+    "compileall": "pass",
+    "dependency_health": "pass",
+    "tracked_and_candidate_json_parse": "pass: 60 files",
+    "local_markdown_links": "pass: 95 links",
+    "evidence_card_visual_review": "pass: original 1800x1340 inspected after clipping correction",
+    "installed_chrome_html_render": "pass: complete 1440x2600 render inspected",
+    "deterministic_wheel": "pass: two clean-checkout fixed-epoch wheels byte-identical at 348034 bytes / sha256 77cde136babd4d8a196023b9582dd972ae65ab253005c47e6ec57d116372ea92",
+    "isolated_install": "pass: BurnLens 0.21.0; 34 console entry points; current-reference entry present",
+    "wheel_privacy": "pass: 75 entries; zero download/build/private-response/authorization entries",
+    "candidate_pr_merge_tag": "pending",
+    "fresh_merged_main": "pending"
+  },
+  "claim_boundaries": {
+    "second_reviewer_present": false,
+    "inter_rater_validation_available": false,
+    "consensus_available": false,
+    "adjudication_available": false,
+    "current_product_bytes_accepted": false,
+    "current_product_pixels_inspected": false,
+    "labels_promoted": 0,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "decision": "ACQUIRE_CURRENT_CROSS_PROGRAM_REFERENCE_BUNDLES_DEFER_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

@@ -5,7 +5,7 @@
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
 | 1 — Scope and controls | Coherent promise, task, source posture, repository controls, traceability, and acceptance evidence | **Accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records the decision. #290 / PR #291 and `v0.0.8-execution-goal-baseline` establish the current control baseline. |
-| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; reconciliation chooses remediation; dataset not created** | P2O4-T10B / issue #403 retains 6 burned candidate units, 0 background units, and 50 ignored units. Issue #411 owns reference-evidence remediation; inter-rater validation, consensus, adjudication, an accepted dataset, split, baselines, and model-readiness remain open. |
+| 2 — Data foundation | Legally usable, versioned, leakage-resistant data/label/baseline package with model-readiness decision | **Active; current reference inventory passes; product fitness and dataset remain open** | P2O4-T10B retains 6 burned candidate units, 0 background units, and 50 ignored units. P2O4-T11 confirms seven exact current cross-program catalog records but promotes zero labels. Exact bundle fitness, inter-rater validation, consensus, adjudication, an accepted dataset, split, baselines, and model-readiness remain open. |
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Blocked** | The target decision is resolved; an accepted Phase Two label/dataset/baseline package and model-readiness decision are still missing. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Blocked** | Requires an accepted Phase Three model or Phase Two baseline-only route. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Blocked** | Requires an accepted Phase Four run package and interface. |
@@ -16,6 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Shipped `v0.20.0-single-reviewer-reconciliation` at merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; 6 burned candidates, 0 background candidates, 50 ignored; remediation selected and dataset deferred |
+| Active candidate | P2O4-T11 / issue #411; BurnLens `0.21.0`; source `98a9895d203c778dad332db5bdc62b498aa2cd00`; evidence commit `f5d4d528263bfc2cf93cb7f128bcb051732797b3`; seven exact current products across three events; zero labels promoted |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoint | Issue #411: remediate independently traceable burned/background reference evidence across Darlene 3, McKay, and Tepee before any dataset, split, baseline, or model |
 | Previous repository evidence baseline | Shipped `v0.19.0-owner-waiver-reveal-readiness` at merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a` |
@@ -38,10 +39,10 @@
 | Credential use | `ACCESS-2026-006` authorizes both providers; `ACCESS-2026-007`, `ACCESS-2026-008`, and `ACCESS-2026-009` record successful runtime-only use with no credential, token, cookie, signed URL, or credential-store detail retained |
 | Application version | Shipped local/offline `label-review-handoff-workbench-v0.1.0`; repository-owned HTML workbench; not deployed and not an analytical inference application |
 | AOI version | `aoi-darlene3-model-v0.2.0`, accepted and shipped final modeling AOI; 12 km by 9 km / 108 km2 in EPSG:32610; lower priority than official sources |
-| Source records | `SOURCE-2026-001` through `SOURCE-2026-013`; the newest record freezes two exact public MTBS annual-reference clips; all native provider bytes remain local/ignored |
+| Source records | `SOURCE-2026-001` through `SOURCE-2026-014`; the newest record freezes the exact current seven-product BAER/RAVG/MTBS catalog inventory and the 2026 archive-currentness decision; all native provider bytes remain local/ignored |
 | Metadata fixture | `METADATA-2026-001`, five Sentinel items and 124 NASA VIIRS granule records; no asset hrefs or source bytes |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`, SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7`; metadata only, zero provider bytes |
-| Evidence tooling | Shipped BurnLens `0.13.0` supplies the exact packet; `0.14.0` adds isolated handoff and response locking; `0.17.0` adds mixed-version custody verification; `0.18.0` adds atomic intake; `0.19.0` adds owner-waiver reveal authorization; and verified `0.20.0` adds atomic private reconciliation and aggregate-only public QA while preserving one-reviewer reduced-validation limits. |
+| Evidence tooling | Shipped BurnLens `0.13.0` supplies the exact packet; `0.14.0` adds isolated handoff and response locking; `0.17.0` adds mixed-version custody verification; `0.18.0` adds atomic intake; `0.19.0` adds owner-waiver reveal authorization; verified `0.20.0` adds private reconciliation and aggregate-only QA; and candidate `0.21.0` adds a fail-closed current cross-program reference inventory. |
 | Access-precheck report | `VIIRS-ACCESS-PRECHECK-2026-001`; JSON SHA-256 `107c08e00539257d7b86265d316060f35c019c821acc59f89dfc4b8875205f7f`; decision `BLOCKED_OWNER_CREDENTIAL` |
 | AOI evidence report | `AOI-FINAL-2026-001`; JSON SHA-256 `305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c`; decision `ACCEPT_FINAL_MODELING_AOI` |
 | Paired-intake rehearsal | `PAIR-INTAKE-REHEARSAL-2026-001`; run `BL-2026-07-14-paired-intake-rehearsal-r001`; JSON SHA-256 `94e311fd608f9c10e024138d9eff6abf0f70187a69c031264e91cb8d9d1af234`; historical pre-authorization decision `BLOCKED_OWNER_CREDENTIAL`; metadata observed 2026-07-14 with no live request; four synthetic transaction/integrity checks pass |
@@ -73,7 +74,7 @@
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Latest public reconciliation QA run is `BL-2026-07-16-single-reviewer-reconciliation-qa-r001`; latest shipped tag is `v0.20.0-single-reviewer-reconciliation`; no accepted dataset, split, baseline, model, or inference output |
+| Run IDs | Latest current-reference run is `BL-2026-07-17-current-reference-inventory-r002`; latest shipped tag remains `v0.20.0-single-reviewer-reconciliation`; no accepted dataset, split, baseline, model, or inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static evidence, and two derived native-grid proposal GeoTIFFs; no accepted dataset, model output, or BurnLens fire perimeter |
 | Repository-owned public application | Shipped local/offline response workbench exists; no deployed public application or analytical inference application |
 | Public performance claim | None authorized or supported |
@@ -85,6 +86,8 @@ P2O4-T10A ships verified BurnLens `0.19.0` through issue #407 / PR #408 at revie
 ## Current checkpoint
 
 P2O4-T10B / issue #403 / PR #412 ships verified BurnLens `0.20.0` at tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`, remotely peeled to merge `4918024dfb83270dbbd83a5880c455cc3c01771c`. Source `fda69a60b0a5e350bfe10e7388571d7c1c103735` and public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e` produce 6 burned candidate units, 0 background units, and 50 ignored units. The preflight reveal-access sequence exception is disclosed. The decision is remediation and dataset deferral; issue #411 is next. Do not create a split, baseline, or model before label-evidence and group-overlap gates pass.
+
+P2O4-T11 / issue #411 reruns the exact proposal/QA/reconciliation paths and finds no output drift. Candidate BurnLens `0.21.0` then captures seven exact current BAER/RAVG/MTBS catalog identities across Darlene, McKay, and Tepee. The official 2026 portal modernization makes `SOURCE-2026-013` historical proposal provenance rather than current promotion evidence. Catalog availability passes; product bytes and pixels remain uninspected; zero labels move. Exact current bundle acquisition and rendered fitness review are next.
 
 BL-GOV-002 / issue #400 / PR #401 is a repository-truth checkpoint, not a scientific advance. It has closed the obsolete Phase One GitHub backlog and marks the Phase One Objective Seven tracker/handoff as historical snapshots. It changes no tag, Release, software version, analytical output, custody byte, reveal state, or Phase Two gate.
 

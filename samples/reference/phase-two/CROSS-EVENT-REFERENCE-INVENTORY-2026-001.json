@@ -1,0 +1,198 @@
+{
+  "report_id": "CROSS-EVENT-REFERENCE-INVENTORY-2026-001",
+  "report_schema_version": "0.1.0",
+  "report_version": "cross-event-current-reference-inventory-v0.1.0",
+  "inventory_contract_version": "cross-event-current-reference-inventory-contract-v0.1.0",
+  "generated_at_utc": "2026-07-17T00:25:40Z",
+  "run_id": "BL-2026-07-17-current-reference-inventory-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 411,
+  "git_source_commit": "98a9895d203c778dad332db5bdc62b498aa2cd00",
+  "software_version": "0.21.0",
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null
+  },
+  "source": {
+    "source_record_id": "SOURCE-2026-014",
+    "terms_review_id": "TERMS-2026-009",
+    "organization": "Burned Area Emergency Response, Rapid Assessment of Vegetation Condition after Wildfire, and Monitoring Trends in Burn Severity; U.S. Geological Survey and USDA Forest Service",
+    "endpoint": "https://edcintl.cr.usgs.gov/geoserver/wfs",
+    "request_url": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id%2Cmap_id%2Cmap_prog%2Cincid_name%2Cevent_id%2Cig_date%2Cburnbndac%2Cnonstandard&cql_filter=event_id+IN+%28%27OR4364712147820240625%27%2C%27OR4375212142520170829%27%2C%27OR4383912111420180907%27%29",
+    "raw_response_bytes": 2061,
+    "raw_response_sha256": "c56b059d37cfd230de57ba6ae3b62463618ad70e76594d3369a755d94e51f3ca",
+    "normalized_products_sha256": "1ccd4c10eb0386c4080f05879d7e5eeee5af10afc645cb7826d0259f42c2216e",
+    "access_route": "current official Burn Severity Portal WFS; public; no credential"
+  },
+  "official_currentness_evidence": {
+    "release_announcement": "https://burnseverity.cr.usgs.gov/node/53",
+    "product_page": "https://burnseverity.cr.usgs.gov/products/mtbs",
+    "viewer": "https://burnseverity.cr.usgs.gov/viewer/",
+    "direct_download": "https://burnseverity.cr.usgs.gov/direct-download",
+    "accessed_utc_date": "2026-07-17",
+    "finding": "The official 2026 portal release says the archive was reprocessed in late 2025 with contemporary calibration and distribution changes. Current product identities must therefore govern new evidence acquisition."
+  },
+  "inventory": {
+    "event_count": 3,
+    "product_count": 7,
+    "program_counts": {
+      "BAER": 2,
+      "MTBS": 2,
+      "RAVG": 3
+    },
+    "all_events_have_cross_program_reference": true,
+    "events": [
+      {
+        "event_group_id": "event-darlene3-or-2024",
+        "display_name": "Darlene 3",
+        "event_id": "OR4364712147820240625",
+        "programs": [
+          "BAER",
+          "RAVG"
+        ],
+        "product_count": 2,
+        "has_cross_program_reference": true
+      },
+      {
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "display_name": "McKay 1035 NE",
+        "event_id": "OR4375212142520170829",
+        "programs": [
+          "MTBS",
+          "RAVG"
+        ],
+        "product_count": 2,
+        "has_cross_program_reference": true
+      },
+      {
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE",
+        "event_id": "OR4383912111420180907",
+        "programs": [
+          "BAER",
+          "MTBS",
+          "RAVG"
+        ],
+        "product_count": 3,
+        "has_cross_program_reference": true
+      }
+    ],
+    "products": [
+      {
+        "catalog_id": 15933,
+        "map_id": 10030231,
+        "program": "BAER",
+        "incident_name": "0289 NE DARLENE 3",
+        "event_id": "OR4364712147820240625",
+        "ignition_date": "2024-06-25",
+        "boundary_acres": 3911,
+        "nonstandard": false,
+        "event_group_id": "event-darlene3-or-2024",
+        "display_name": "Darlene 3"
+      },
+      {
+        "catalog_id": 30012,
+        "map_id": 10030383,
+        "program": "RAVG",
+        "incident_name": "0289 NE DARLENE 3",
+        "event_id": "OR4364712147820240625",
+        "ignition_date": "2024-06-25",
+        "boundary_acres": 3905,
+        "nonstandard": false,
+        "event_group_id": "event-darlene3-or-2024",
+        "display_name": "Darlene 3"
+      },
+      {
+        "catalog_id": 850,
+        "map_id": 10007931,
+        "program": "MTBS",
+        "incident_name": "MCKAY 1035 NE",
+        "event_id": "OR4375212142520170829",
+        "ignition_date": "2017-08-29",
+        "boundary_acres": 1221,
+        "nonstandard": false,
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "display_name": "McKay 1035 NE"
+      },
+      {
+        "catalog_id": 10452,
+        "map_id": 10004989,
+        "program": "RAVG",
+        "incident_name": "MCKAY 1035 NE",
+        "event_id": "OR4375212142520170829",
+        "ignition_date": "2017-08-29",
+        "boundary_acres": 1221,
+        "nonstandard": false,
+        "event_group_id": "event-mckay-1035-ne-2017",
+        "display_name": "McKay 1035 NE"
+      },
+      {
+        "catalog_id": 52523,
+        "map_id": 0,
+        "program": "BAER",
+        "incident_name": "TEPEE 1144 NE",
+        "event_id": "OR4383912111420180907",
+        "ignition_date": "2018-07-09",
+        "boundary_acres": 3897,
+        "nonstandard": true,
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE"
+      },
+      {
+        "catalog_id": 23539,
+        "map_id": 10011986,
+        "program": "MTBS",
+        "incident_name": "TEPEE 1144 NE",
+        "event_id": "OR4383912111420180907",
+        "ignition_date": "2018-09-07",
+        "boundary_acres": 2135,
+        "nonstandard": false,
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE"
+      },
+      {
+        "catalog_id": 3238,
+        "map_id": 10008484,
+        "program": "RAVG",
+        "incident_name": "TEPEE 1144 NE",
+        "event_id": "OR4383912111420180907",
+        "ignition_date": "2018-09-07",
+        "boundary_acres": 2029,
+        "nonstandard": false,
+        "event_group_id": "event-tepee-1144-ne-2018",
+        "display_name": "Tepee 1144 NE"
+      }
+    ]
+  },
+  "legacy_reference_boundary": {
+    "source_record_id": "SOURCE-2026-013",
+    "package_id": "burnlens-mtbs-cross-event-reference-v0.1.0",
+    "state": "FROZEN_REPRODUCIBLE_HISTORICAL_EVIDENCE_NOT_CURRENT_FOR_NEW_LABEL_PROMOTION",
+    "scope": "The two 2025-era annual ImageServer clips remain valid provenance for the already-published proposal. They are not silently replaced and do not establish current product fitness."
+  },
+  "promotion_gates": [
+    "receive and preserve exact current product-bundle bytes",
+    "resolve bundle-specific attribution, redistribution, and non-USGS content terms",
+    "inspect product identity, metadata, CRS, grid, nodata, class domain, and masks",
+    "compare current cross-program pixels with optical evidence and reviewer dispositions",
+    "publish a rendered scientific-fitness decision before promoting any label"
+  ],
+  "claim_boundaries": {
+    "inventory_only": true,
+    "product_bundles_downloaded_by_this_run": false,
+    "pixels_inspected_by_this_run": false,
+    "labels_promoted_by_this_run": false,
+    "dataset_created": false,
+    "model_trained": false,
+    "scientific_validation_claimed": false,
+    "field_validation_claimed": false,
+    "official_or_endorsed_status_claimed": false
+  },
+  "decision": "ACQUIRE_CURRENT_CROSS_PROGRAM_REFERENCE_BUNDLES_DEFER_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
