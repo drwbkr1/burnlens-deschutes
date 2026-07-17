@@ -2,6 +2,22 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.22.0-current-bundle-request-evidence - candidate - 2026-07-17
+
+### P2O4-T12A - Preserve the exact accepted request without claiming delivery
+
+- Re-run the live seven-product inventory and inspect the current official viewer workflow as the cycle-start user/evidence surface.
+- Freeze the exact six standard map IDs, one viewer-resolved nonstandard Tepee BAER path, UTM projection, and 18 applicable product families.
+- Preserve the official 16-byte accepted queue response only in ignored local storage; withhold recipient and retrieval details.
+- Add a bounded, property-only full-metadata capture that fails closed on identity/assessment drift, duplicates, geometry, oversized payloads, or unsuccessful queue state.
+- Make four provider cautions visible and binding: Darlene/Tepee RAVG applicability, McKay early-scene overestimation risk, and the nonstandard Tepee BAER record.
+- Publish `CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001` JSON/HTML/PNG from run `BL-2026-07-17-current-reference-bundle-request-r001`.
+- Pass 195 candidate tests, compilation, dependency health, fresh live metadata, semantic/link/privacy/trace gates, and original-resolution visual inspection.
+- Produce two byte-identical 356,252-byte clean-archive fixed-epoch wheels / SHA-256 `fb913ad721e05f2d32018602051fc53c65b08d6d9fad98451b6ecf3d89df77a9`; isolated 0.22.0 exposes 35 entry points, 77 wheel entries, and zero forbidden entries.
+- Keep parent #416 open. Zero archives were received, zero labels move, and no dataset, split, baseline, or model exists.
+
+Issue #421 / PR #422; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`. Fresh merged-main and annotated-tag gates remain pending.
+
 ## v0.21.1-reference-inventory-checkout-stability - verified - 2026-07-17
 
 ### P2O4-T11-SYNC - Make current-reference evidence checkout-stable
