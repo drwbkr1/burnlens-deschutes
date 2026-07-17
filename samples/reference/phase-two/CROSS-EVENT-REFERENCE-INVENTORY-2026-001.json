@@ -3,11 +3,11 @@
   "report_schema_version": "0.1.0",
   "report_version": "cross-event-current-reference-inventory-v0.1.0",
   "inventory_contract_version": "cross-event-current-reference-inventory-contract-v0.1.0",
-  "generated_at_utc": "2026-07-17T00:04:47Z",
-  "run_id": "BL-2026-07-17-current-reference-inventory-r001",
+  "generated_at_utc": "2026-07-17T00:25:40Z",
+  "run_id": "BL-2026-07-17-current-reference-inventory-r002",
   "repository": "drwbkr1/burnlens-deschutes",
   "task_issue": 411,
-  "git_source_commit": "8d58178cc0f43b801a6fbab422d69a509716327b",
+  "git_source_commit": "98a9895d203c778dad332db5bdc62b498aa2cd00",
   "software_version": "0.21.0",
   "provenance": {
     "aoi_version": "aoi-darlene3-model-v0.2.0",
@@ -25,8 +25,8 @@
     "endpoint": "https://edcintl.cr.usgs.gov/geoserver/wfs",
     "request_url": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id%2Cmap_id%2Cmap_prog%2Cincid_name%2Cevent_id%2Cig_date%2Cburnbndac%2Cnonstandard&cql_filter=event_id+IN+%28%27OR4364712147820240625%27%2C%27OR4375212142520170829%27%2C%27OR4383912111420180907%27%29",
     "raw_response_bytes": 2061,
-    "raw_response_sha256": "317618a76a8a584a4c1efa2756f2f5c0eb27557bdb71f5611981a5ea318a9f13",
-    "normalized_products_sha256": "69b4de1618e7f09e0beb8eb725cb9c1e748fbffd7680d600124762d7ad2d5ea4",
+    "raw_response_sha256": "c56b059d37cfd230de57ba6ae3b62463618ad70e76594d3369a755d94e51f3ca",
+    "normalized_products_sha256": "1ccd4c10eb0386c4080f05879d7e5eeee5af10afc645cb7826d0259f42c2216e",
     "access_route": "current official Burn Severity Portal WFS; public; no credential"
   },
   "official_currentness_evidence": {
@@ -48,7 +48,7 @@
     "all_events_have_cross_program_reference": true,
     "events": [
       {
-        "event_group_id": "event-darlene3-2024",
+        "event_group_id": "event-darlene3-or-2024",
         "display_name": "Darlene 3",
         "event_id": "OR4364712147820240625",
         "programs": [
@@ -92,7 +92,7 @@
         "ignition_date": "2024-06-25",
         "boundary_acres": 3911,
         "nonstandard": false,
-        "event_group_id": "event-darlene3-2024",
+        "event_group_id": "event-darlene3-or-2024",
         "display_name": "Darlene 3"
       },
       {
@@ -104,7 +104,7 @@
         "ignition_date": "2024-06-25",
         "boundary_acres": 3905,
         "nonstandard": false,
-        "event_group_id": "event-darlene3-2024",
+        "event_group_id": "event-darlene3-or-2024",
         "display_name": "Darlene 3"
       },
       {
