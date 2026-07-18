@@ -36,6 +36,8 @@ samples/labels/readiness/phase-two/*.json text eol=lf
 samples/labels/readiness/phase-two/*.html text eol=lf
 samples/labels/pilot/phase-two/*.json text eol=lf
 samples/labels/pilot/phase-two/*.html text eol=lf
+samples/labels/review/regions/phase-two/*.json text eol=lf
+samples/labels/review/regions/phase-two/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
