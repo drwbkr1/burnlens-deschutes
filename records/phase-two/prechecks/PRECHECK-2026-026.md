@@ -1,6 +1,6 @@
 # PRECHECK-2026-026 - Prototype Sufficiency Checkout Stability
 
-**Issue:** #446
+**Issue / PR:** #446 / #447
 
 **Trigger:** Fresh validation of analytical merge `dbc24c57442d0c2564ce7ae4e4da17a2c966b910` failed because a Windows checkout expanded the committed 3,770-byte readiness HTML to 3,780 bytes.
 

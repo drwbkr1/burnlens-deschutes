@@ -7,7 +7,7 @@
   "pull_request": 445,
   "analytical_checkpoint_commit": "dbc24c57442d0c2564ce7ae4e4da17a2c966b910",
   "remediation_issue": 446,
-  "remediation_pull_request": null,
+  "remediation_pull_request": 447,
   "branch": "codex/p2o5-t01-prototype-label-sufficiency",
   "git_base_commit": "44e417d11342c005b1bf9918e04e204852801f4c",
   "generator_source_commit": "89e69172163c97ea8f4c86e72867578065626f22",
