@@ -1,0 +1,10 @@
+# REGISTRY-2026-029 - Prototype Label Sufficiency
+
+**Checkpoint:** Issue #443; source `89e69172163c97ea8f4c86e72867578065626f22`
+
+| Artifact | Class | Version/state | Private/provider bytes committed |
+|---|---|---|---:|
+| Sufficiency assessor and CLI | Deterministic dataset/split readiness gate | BurnLens `0.27.0`; protocol v0.1.0 | 0 |
+| Exact private owner intake | Ignored input binding | 24 prototype labels; decisions withheld | 0 |
+| `PROTOTYPE-LABEL-SUFFICIENCY-2026-001` | Aggregate JSON/HTML/PNG | Run `BL-2026-07-18-prototype-label-sufficiency-r002`; remediation | 0 |
+| `PRECHECK-2026-025`, `DATASET_FITNESS-2026-001`, `USE_BOUNDARY-2026-024` | Entry, fitness, and use gates | Dataset/split/baseline/model blocked | 0 |

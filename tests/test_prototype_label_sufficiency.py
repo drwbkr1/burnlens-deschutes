@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 import unittest
@@ -13,6 +14,7 @@ SURFACE = ROOT / "samples" / "labels" / "review" / "phase-two" / "OWNER-REVIEW-S
 PRIVATE = ROOT / "downloads" / "phase-two" / "runs" / "BL-2026-07-18-prototype-label-sufficiency-cycle-r001" / "private.json"
 DARLENE = ROOT / "samples" / "labels" / "phase-two" / "LABEL-PROPOSAL-2026-001.json"
 CROSS_EVENT = ROOT / "samples" / "labels" / "cross-event" / "phase-two" / "CROSS-EVENT-LABEL-TRANSFER-2026-002.json"
+PUBLIC = ROOT / "samples" / "labels" / "readiness" / "phase-two" / "PROTOTYPE-LABEL-SUFFICIENCY-2026-001.json"
 
 
 @unittest.skipUnless(PRIVATE.exists(), "exact private owner intake is local and ignored")
@@ -56,6 +58,26 @@ class PrototypeLabelSufficiencyTests(unittest.TestCase):
         for forbidden in ("sample_id", "owner_decision", "lru-", "pixel_center_utm10n", "c:\\users"):
             self.assertNotIn(forbidden, serialized)
         self.assertFalse(any(self.report["boundaries"].values()))
+
+
+class TrackedPrototypeLabelSufficiencyTests(unittest.TestCase):
+    def test_public_report_is_bounded_and_content_safe(self) -> None:
+        report = json.loads(PUBLIC.read_text(encoding="utf-8"))
+        self.assertEqual(report["decision"], DECISION)
+        self.assertEqual(report["inventory"]["prototype_labels"], 24)
+        self.assertEqual(report["inventory"]["candidate_domain_pixels"], 189541)
+        self.assertFalse(any(report["boundaries"].values()))
+        serialized = PUBLIC.read_text(encoding="utf-8").lower()
+        for forbidden in ("sample_id", "owner_decision", "lru-", "pixel_center_utm10n", "c:\\users", "downloads"):
+            self.assertNotIn(forbidden, serialized)
+
+    def test_public_rendered_outputs_match_report(self) -> None:
+        report = json.loads(PUBLIC.read_text(encoding="utf-8"))
+        for output in report["outputs"]:
+            path = PUBLIC.parent / output["path"]
+            payload = path.read_bytes()
+            self.assertEqual(len(payload), output["bytes"])
+            self.assertEqual(hashlib.sha256(payload).hexdigest(), output["sha256"])
 
 
 if __name__ == "__main__":

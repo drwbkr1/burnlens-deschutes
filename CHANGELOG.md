@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.27.0-prototype-label-sufficiency - candidate - 2026-07-18
+
+### P2O5-T01 - Reject a premature dataset and split
+
+- Bind the exact 24 owner-approved prototype labels without publishing unit decisions or coordinates.
+- Measure 24 reviewed center pixels against 189,541 candidate-domain pixels: 0.012662% point coverage.
+- Show that all six nonempty event-level train/validation/test assignments contain exactly one event per role and no replication.
+- Expose event/reference-regime confounding and natural candidate burn shares from 10.3142% to 99.4005% despite the 50/50 audit sample.
+- Preserve the points as prototype audit evidence and future labeling seeds, not masks, patches, ground truth, prevalence, calibration, or independent evaluation.
+- Decide `REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL` and keep every analytical version absent.
+
+Generator source is `89e69172163c97ea8f4c86e72867578065626f22`; issue #443 owns the candidate.
+
 ## v0.26.0-owner-response-intake - verified - 2026-07-18
 
 ### P2O4-T15 - Convert the exact owner response into bounded prototype-label evidence

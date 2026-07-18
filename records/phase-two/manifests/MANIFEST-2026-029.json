@@ -1,0 +1,51 @@
+{
+  "manifest_id": "MANIFEST-2026-029",
+  "manifest_version": "0.29.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-18T05:00:00Z",
+  "task_issue": 443,
+  "pull_request": null,
+  "branch": "codex/p2o5-t01-prototype-label-sufficiency",
+  "git_base_commit": "44e417d11342c005b1bf9918e04e204852801f4c",
+  "generator_source_commit": "89e69172163c97ea8f4c86e72867578065626f22",
+  "candidate_artifacts_commit": null,
+  "checkpoint_commit": null,
+  "version_tag": "v0.27.0-prototype-label-sufficiency",
+  "status": "candidate remediation decision; dataset deferred",
+  "software_version": "0.27.0",
+  "report_version": "prototype-label-sufficiency-v0.1.0",
+  "protocol_version": "prototype-label-dataset-readiness-v0.1.0",
+  "run_id": "BL-2026-07-18-prototype-label-sufficiency-r002",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-labels-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "review_records": ["PRECHECK-2026-025", "DATASET_FITNESS-2026-001", "USE_BOUNDARY-2026-024"],
+  "outputs": [
+    {"path": "samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.html", "bytes": 3770, "sha256": "8cd43d9b292f2de27f0e62d86306d40ce4fe8daa638c09b4a6cc73208f7881e8"},
+    {"path": "samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.json", "bytes": 7634, "sha256": "58753a286d71d19bdda3b14fcf9c427ff78cb916190c2bfb2d95a913556a8a4e"},
+    {"path": "samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.png", "bytes": 121275, "sha256": "140cd475cb3e96d1915f3720646974e0aceddf132e33ffc8d9dd873726bfa7c8"}
+  ],
+  "quality_gates": {
+    "exact_lineage": "pass",
+    "exact_reconstruction": "pass: three outputs",
+    "rendered_evidence": "pass: original PNG and live HTML; zero console/runtime errors",
+    "repository_tests": "pass: 227 tracked tests",
+    "fresh_merged_main": "pending",
+    "release_package": "pending",
+    "remote_tag": "pending"
+  },
+  "decision": "REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL",
+  "claim_boundaries": {
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_claimed": false,
+    "ground_truth_or_field_validation_claimed": false
+  }
+}

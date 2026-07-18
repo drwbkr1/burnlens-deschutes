@@ -298,6 +298,12 @@ The shipped template was blank. The owner later completed all 56 questions and e
 
 The response contains 53 yes, 2 no, and 1 uncertain. Exactly 24 yes units also pass reproducibility, bounded source-direction, frozen binary-origin quality, and immutable event-group gates: 12 burned and 12 background, balanced as eight per event. Twenty-nine yes units remain quality-blocked; no and uncertain remain excluded. These are explicitly owner-approved prototype labels, not ground truth or a dataset. The Landsat route remains optional future evidence. No split, baseline, model, accuracy, field validation, official status, endorsement, or operational readiness follows.
 
+BurnLens `0.27.0` tests whether those points are enough. They cover only 0.012662% of the 189,541 candidate-domain pixels and are center pixels rather than masks. With three event groups, every nonempty train/validation/test assignment has one event per role; each event also has a distinct reference regime. The balanced proposal-stratified sample cannot support natural prevalence or independent evaluation.
+
+![BurnLens prototype-label sufficiency](../../samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.png)
+
+BurnLens therefore stops before dataset creation and requires contiguous reviewed regions, more event/source diversity, natural-distribution sampling, and independent evaluation evidence. The refusal to manufacture training readiness is part of the portfolio evidence.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
