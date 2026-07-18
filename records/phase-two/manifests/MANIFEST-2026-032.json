@@ -53,7 +53,7 @@
     "raster_contract": "pass: EPSG:32610, values 0/1/2, exact 136 core and 246 ring pixels, no-promotion tags",
     "response_state": "pass: blank template; zero owner region responses and zero region labels",
     "exact_reconstruction": "pass: all ten public files byte-identical across authoritative and frozen-metadata reconstruction runs",
-    "rendered_evidence": "pass: real semantic browser render, six local images, incomplete blocking, six-decision completion, attestation, hashed draft, and no external resources",
+    "rendered_evidence": "pass: desktop and 390x844 semantic browser renders; six of six local images loaded; no overflow, external resources, or console warnings/errors; native labeled controls/status region; incomplete blocking, six-decision completion, attestation, and hashed draft",
     "repository_tests": "pass: 246 tracked tests; compileall, 82 tracked JSON parses, and dependency health",
     "release_package": "pass: two fixed-epoch wheels byte-identical at 450783 bytes and sha256 69175042db3c6a9c1233d3d9ca503c03bf06716cf84a4f528f86cb9fd0d0b9a1; isolated 0.30.0 install, 44 console entry points, 96 wheel entries, zero forbidden entries, and dependency check pass",
     "fresh_merged_main": "pending merge",
