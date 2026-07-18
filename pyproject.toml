@@ -65,3 +65,6 @@ packages = ["burnlens"]
 
 [tool.setuptools.package-data]
 burnlens = ["*.mjs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

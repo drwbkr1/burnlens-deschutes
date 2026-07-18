@@ -2,6 +2,21 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.29.0-region-candidate-pilot - release candidate - 2026-07-18
+
+### P2O4-T17 - Execute the no-promotion contiguous-region pilot
+
+- Run the actual Darlene, McKay, and Tepee optical/reference pipeline from 24 exact approved center seeds.
+- Select one intact proposed burned and one intact proposed background component per event using frozen state, quality/registration eligibility, exact categorical reference context, and a fixed 0.05 dNBR bin.
+- Keep the one-hectare target as a ranking preference only; never clip or expand an intact component.
+- Add a one-native-pixel unknown ring and publish six full-grid EPSG:32610 candidate GeoTIFFs with explicit non-label tags.
+- Render actual pre/post optical, dNBR, official reference context, candidate cores, and unknown rings in private-safe JSON/HTML/PNG evidence.
+- Fix the mobile overflow found by real browser QA and constrain default pytest discovery to tracked tests.
+- Reconstruct all nine public outputs and the ignored private mapping byte for byte.
+- Keep owner region responses, region labels, dataset, split, baseline, and model at zero or absent.
+
+Generator source is `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts are `0e5306c6d94c54b47df40486a75e5bbd69bab62f`; issue #453 owns the release lifecycle. The tracked suite passes 241 tests, compilation, dependency health, exact private/public reconstruction, raster-contract inspection, privacy checks, and real desktop/mobile browser QA. Packaging, merged-main, tag, and lifecycle fields remain pending until the release gate completes.
+
 ## v0.28.0-label-region-remediation-plan - verified - 2026-07-18
 
 ### P2O4-T16 - Define region-first owner review and event-diversity gates

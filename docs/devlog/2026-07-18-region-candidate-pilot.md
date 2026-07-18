@@ -1,0 +1,9 @@
+# Devlog - No-Promotion Region-Candidate Pilot
+
+The region plan was still only a contract, so this cycle ran the actual Darlene, McKay, and Tepee optical/reference pipeline and asked whether intact review regions could be produced without manufacturing labels. Four ignored trial runs failed closed: one caught owner-surface identity drift, one exposed band-first optical rendering, one exposed the 10 m versus 20 m display-grid mismatch, and one rejected integer-only display alignment. The authoritative generator reprojects true-color display data onto the exact 20 m candidate grid before rendering.
+
+Run `BL-2026-07-18-region-candidate-pilot-r006` selects six intact candidates: three proposed burned and three proposed background, one of each per event. Core sizes range from 2 to 36 pixels; no core is radius-buffered, clipped to the one-hectare target, or allowed to touch the grid edge. The one-pixel unknown rings contain 246 pixels around 136 total core pixels. Full-grid GeoTIFFs preserve CRS, transform, nodata, class domain, generator, run, and source-commit tags.
+
+Real browser review found horizontal overflow at 390 px in the first successful analytical surface. The generator now constrains the page, wraps long trace strings, and keeps the wide table inside an intentional scroll container. Desktop and mobile renders then pass with one 1800 by 1960 evidence image, six rows, six local raster links, no external resources, and no console or runtime errors.
+
+All nine public outputs plus the ignored private seed mapping reconstruct byte for byte in a fresh run. The public report contains no private sample IDs, owner decisions, user paths, or private filenames. The tracked suite passes 241 tests; default pytest discovery is now constrained to `tests/` so ignored historical checkouts cannot contaminate routine validation. Region responses and region labels remain zero, and dataset, split, baseline, and model versions remain absent.
