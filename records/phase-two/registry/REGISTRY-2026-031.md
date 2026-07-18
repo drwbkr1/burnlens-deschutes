@@ -1,6 +1,6 @@
 # REGISTRY-2026-031 - No-Promotion Region-Candidate Pilot
 
-**Checkpoint:** Issue #453; PR #455; merge `3d3b0128f1f4e4b4aab8e14fc3fabc089fbd8f0a`; tag object `55adb8e376988cc3dc4d6bd662e2a5200b8fe1ed`; lifecycle #456; next #457; source `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts `0e5306c6d94c54b47df40486a75e5bbd69bab62f`
+**Checkpoint:** Issue #453; PR #455; merge `3d3b0128f1f4e4b4aab8e14fc3fabc089fbd8f0a`; tag object `55adb8e376988cc3dc4d6bd662e2a5200b8fe1ed`; lifecycle #456 / PR #458; next #457; source `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts `0e5306c6d94c54b47df40486a75e5bbd69bab62f`
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|

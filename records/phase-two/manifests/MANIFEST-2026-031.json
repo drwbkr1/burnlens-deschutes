@@ -13,7 +13,7 @@
   "version_tag": "v0.29.0-region-candidate-pilot",
   "version_tag_object": "55adb8e376988cc3dc4d6bd662e2a5200b8fe1ed",
   "lifecycle_sync_issue": 456,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 458,
   "next_checkpoint_issue": 457,
   "status": "shipped verified no-promotion region candidate pilot; owner region review and analytical versions absent",
   "software_version": "0.29.0",
