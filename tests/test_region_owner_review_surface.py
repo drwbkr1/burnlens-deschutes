@@ -72,6 +72,7 @@ class RegionOwnerReviewSurfaceTests(unittest.TestCase):
             self.assertEqual(html.count('data-candidate="RCP-'), 6)
             self.assertNotIn("http://", html)
             self.assertNotIn("https://", html)
+            self.assertIn("#save-draft,#load-response,#review-complete,#export-complete", html)
             controller = html.rsplit("<script>", 1)[1].split("</script>", 1)[0]
             script = Path(temporary) / "controller.js"
             script.write_text(controller, encoding="utf-8", newline="\n")
