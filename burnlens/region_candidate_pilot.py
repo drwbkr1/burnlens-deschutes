@@ -223,7 +223,7 @@ def select_candidates(
 def _approved_units(private: dict[str, Any], surface: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     if private.get("label_set_version") != LABEL_SET_VERSION:
         raise RegionCandidatePilotError("private label-set version changed")
-    if surface.get("surface_id") != "OWNER-REVIEW-SURFACE-2026-001":
+    if surface.get("report_id") != "OWNER-REVIEW-SURFACE-2026-001":
         raise RegionCandidatePilotError("owner surface identity changed")
     surface_units = {unit["sample_id"]: unit for unit in surface.get("units", [])}
     approved_private = [
