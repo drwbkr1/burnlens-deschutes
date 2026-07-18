@@ -288,6 +288,12 @@ Delivery then removed the metadata-only bottleneck. BurnLens `0.24.0` preserves 
 
 Current MTBS and RAVG agree affirmatively on all 9,119 McKay and 92 Tepee burned proposal pixels. They are jointly non-affirmative for all 55 McKay and 493 of 494 Tepee background candidates. Darlene has RAVG plus unthresholded BAER dNBR context but no categorical cross-program confirmation: the delivered BAER folder contains no classified raster. Legacy thresholded Tepee BARC remains private and excluded under its distribution restriction. These are strong review cues, not ground truth, field validation, owner decisions, or labels.
 
+BurnLens `0.25.0` turns that evidence into one repository-owned owner-review surface. All 56 original units are reopened as 35 burned and 21 background propositions; the historical 6/0/50 response is not imported. Each question shows the original pre/post optical chip, continuous dNBR, frozen source context, permitted current categorical/continuous reference evidence, the proposition basis, and any quality blocker. All 32 unknown, excluded, or review-needed origins remain blocked after a future yes.
+
+![BurnLens owner-confirmed review surface](../../samples/labels/review/phase-two/OWNER-REVIEW-SURFACE-2026-001.png)
+
+The shipped template is blank. Current Chrome exercises only an explicitly non-human software fixture: incomplete review fails visibly; 56 decisions export to hash-named bytes; draft reload restores them; completion locks all 168 radios; and a true 390 px viewport keeps all wide evidence inside local scrollers. That QA creates no owner decision or label. A returned owner yes would still need reproducibility, source, quality, and event-level leakage gates.
+
 The Landsat STAC metadata route is live, but the advertised asset redirects to EROS authentication. BurnLens records that gate rather than treating metadata availability as acquired pixels. No credential, product byte, owner response, label, dataset, split, baseline, or model is created. This remains a portfolio demonstration of transparent evidence engineering—not ground truth, field validation, official status, endorsement, or operational readiness.
 
 ## Traceability snapshot

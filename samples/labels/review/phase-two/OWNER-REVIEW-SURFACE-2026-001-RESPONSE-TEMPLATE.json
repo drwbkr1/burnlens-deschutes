@@ -1,0 +1,353 @@
+{
+  "response_schema_version": "burnlens-owner-review-response-v0.1.0",
+  "surface_id": "OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-17-owner-review-surface-r001",
+  "packet_id": "LABEL-REVIEW-PACKET-2026-001",
+  "packet_sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c",
+  "owner_review_protocol_version": "owner-confirmed-prototype-label-review-v0.1.0",
+  "owner": {
+    "owner_id": "project-owner",
+    "attestation": null
+  },
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "completed": false,
+  "responses": [
+    {
+      "sample_id": "LRU-001",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-002",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-003",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-004",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-005",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-006",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-007",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-008",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-009",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-010",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-011",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-012",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-013",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-014",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-015",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-016",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-017",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-018",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-019",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-020",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-021",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-022",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-023",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-024",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-025",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-026",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-027",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-028",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-029",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-030",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-031",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-032",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-033",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-034",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-035",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-036",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-037",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-038",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-039",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-040",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-041",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-042",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-043",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-044",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-045",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-046",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-047",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-048",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-049",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-050",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-051",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-052",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-053",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-054",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-055",
+      "candidate_label": "burned",
+      "decision": null,
+      "notes": null
+    },
+    {
+      "sample_id": "LRU-056",
+      "candidate_label": "background",
+      "decision": null,
+      "notes": null
+    }
+  ]
+}
