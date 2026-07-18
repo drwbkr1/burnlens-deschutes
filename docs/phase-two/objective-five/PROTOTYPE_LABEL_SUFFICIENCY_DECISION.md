@@ -1,6 +1,6 @@
 # Prototype Label Sufficiency Decision
 
-**Issue:** #443
+**Issue / PR:** #443 / #445
 
 **Run:** `BL-2026-07-18-prototype-label-sufficiency-r002`
 
