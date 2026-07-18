@@ -1,0 +1,353 @@
+{
+  "report_id": "REGION-OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "region-owner-review-surface-v0.1.0",
+  "response_schema_version": "burnlens-region-owner-review-response-v0.1.0",
+  "software_version": "0.30.0",
+  "generated_at_utc": "2026-07-18T16:27:38Z",
+  "run_id": "BL-2026-07-18-region-owner-review-surface-r005",
+  "git_source_commit": "7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6",
+  "input_bindings": {
+    "pilot_report": {
+      "report_id": "REGION-CANDIDATE-PILOT-2026-001",
+      "run_id": "BL-2026-07-18-region-candidate-pilot-r006",
+      "bytes": 12462,
+      "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+    },
+    "pilot_evidence_png": {
+      "bytes": 132386,
+      "sha256": "9c87f79bdaeb418aa83a5de71fdcce78760b9c60b2537bd1cbebe836c87044e8"
+    }
+  },
+  "source_records": [
+    "SOURCE-2026-007",
+    "SOURCE-2026-010",
+    "SOURCE-2026-018"
+  ],
+  "terms_records": [
+    "TERMS-2026-003",
+    "TERMS-2026-005",
+    "TERMS-2026-013"
+  ],
+  "review_records": [
+    "PRECHECK-2026-028",
+    "SOURCE-PRECEDENCE-2026-012",
+    "USE_BOUNDARY-2026-026"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "RCP-001",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "proposed_class": "background",
+      "core_pixels": 2,
+      "core_area_ha": 0.08,
+      "unknown_ring_pixels": 12,
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "reference_kind": "NIFC incident-reference context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-001.tif",
+      "candidate_raster_bytes": 2983,
+      "candidate_raster_sha256": "c4008f476e9514e3a87e9bcf809c3edbc2afe3eaea80f13c961b62ebac97b988",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 600,
+        "height": 450,
+        "transform": [
+          20.0,
+          0.0,
+          620000.0,
+          0.0,
+          -20.0,
+          4840000.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-001.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    },
+    {
+      "candidate_id": "RCP-002",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "proposed_class": "burned",
+      "core_pixels": 36,
+      "core_area_ha": 1.44,
+      "unknown_ring_pixels": 56,
+      "dnbr_interval": [
+        0.15,
+        0.2
+      ],
+      "reference_kind": "NIFC incident-reference context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-002.tif",
+      "candidate_raster_bytes": 3055,
+      "candidate_raster_sha256": "c28217e87e049c7072db3a60842e08a19b3d10ed138a116a529d6c8652af7acc",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 600,
+        "height": 450,
+        "transform": [
+          20.0,
+          0.0,
+          620000.0,
+          0.0,
+          -20.0,
+          4840000.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-002.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    },
+    {
+      "candidate_id": "RCP-003",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "proposed_class": "background",
+      "core_pixels": 7,
+      "core_area_ha": 0.28,
+      "unknown_ring_pixels": 18,
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "reference_kind": "MTBS thematic context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-003.tif",
+      "candidate_raster_bytes": 1525,
+      "candidate_raster_sha256": "348b1d58ba3604e84691fd5c5180bbbde358af4e016695c7dbb05cb23fb91b25",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 191,
+        "height": 105,
+        "transform": [
+          20.0,
+          0.0,
+          626720.0,
+          0.0,
+          -20.0,
+          4847220.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-003.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    },
+    {
+      "candidate_id": "RCP-004",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "proposed_class": "burned",
+      "core_pixels": 32,
+      "core_area_ha": 1.28,
+      "unknown_ring_pixels": 62,
+      "dnbr_interval": [
+        0.8,
+        0.85
+      ],
+      "reference_kind": "MTBS thematic context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-004.tif",
+      "candidate_raster_bytes": 1563,
+      "candidate_raster_sha256": "738328f93c8b6bb2635cc2d13da0b40155047f80547a3042d84bec663db11e1e",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 191,
+        "height": 105,
+        "transform": [
+          20.0,
+          0.0,
+          626720.0,
+          0.0,
+          -20.0,
+          4847220.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-004.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    },
+    {
+      "candidate_id": "RCP-005",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "proposed_class": "background",
+      "core_pixels": 33,
+      "core_area_ha": 1.32,
+      "unknown_ring_pixels": 57,
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "reference_kind": "MTBS thematic context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-005.tif",
+      "candidate_raster_bytes": 1707,
+      "candidate_raster_sha256": "0f99f0a262f26d0ffb3a7d121b907726ea2e137d043b7a3b64473b0eb79694be",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 351,
+        "height": 125,
+        "transform": [
+          20.0,
+          0.0,
+          650820.0,
+          0.0,
+          -20.0,
+          4857540.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-005.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    },
+    {
+      "candidate_id": "RCP-006",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "proposed_class": "burned",
+      "core_pixels": 26,
+      "core_area_ha": 1.04,
+      "unknown_ring_pixels": 41,
+      "dnbr_interval": [
+        0.15,
+        0.2
+      ],
+      "reference_kind": "MTBS thematic context",
+      "candidate_raster": "REGION-CANDIDATE-PILOT-2026-001-RCP-006.tif",
+      "candidate_raster_bytes": 1691,
+      "candidate_raster_sha256": "f8d3bc30747c48875fa0dcd6c4ed1099586aa557633d320794b65aeea216795c",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "width": 351,
+        "height": 125,
+        "transform": [
+          20.0,
+          0.0,
+          650820.0,
+          0.0,
+          -20.0,
+          4857540.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside candidate",
+          "1": "candidate core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-006.png",
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/quality/leakage gates"
+    }
+  ],
+  "decision_contract": {
+    "yes": "necessary but insufficient; later reproducibility, source, quality, terms, and event-level leakage gates remain mandatory",
+    "no": "excluded from region-label promotion",
+    "uncertain": "excluded with uncertainty preserved",
+    "prior_point_decisions_inherited": false
+  },
+  "summary": {
+    "candidate_count": 6,
+    "owner_region_responses": 0,
+    "owner_approved_region_labels": 0,
+    "dataset_count": 0,
+    "model_count": 0
+  },
+  "claim_boundaries": {
+    "owner_region_responses_collected": false,
+    "region_labels_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_inter_rater_field_official_or_operational_claimed": false
+  },
+  "warning": "Experimental BurnLens candidate review. Not a label, dataset, ground truth, official wildfire information, or emergency guidance. Official sources govern.",
+  "decision": "SURFACE_READY_FOR_OWNER_REGION_REVIEW_KEEP_RESPONSE_INTAKE_SEPARATE",
+  "next_gate": "Validate exact reconstruction and real browser interaction; collect an actual owner response only through a later controlled workflow.",
+  "outputs": [
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 18157,
+      "sha256": "8bc8ceea40cadf005eae6dd4eefa6f2e07f6ce5fbd7197bb562525baff7a9cda",
+      "media_type": "text/html"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 136913,
+      "sha256": "2940d7de18fd12c81c04fad18eb86b431fe399c4cacd454f107fe3029019f288",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 1587,
+      "sha256": "2edb093729111315120753b6ec0a91206e45d2333362dac9be1f16522e64a598",
+      "media_type": "application/json"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-001.png",
+      "bytes": 15666,
+      "sha256": "09588c616d214210124f1259ff943523a3bf70ed226521db31045108a698d89e",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-002.png",
+      "bytes": 18929,
+      "sha256": "4f49a3c11a04b8fddc54490d94da1b5ec77a5674846b2b6e25ebd7a2d9875a7d",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-003.png",
+      "bytes": 18018,
+      "sha256": "dcf472eefa7faff45f9cd0cee75542fb08b6ec6887b85b1df2cc47069be13a38",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-004.png",
+      "bytes": 20674,
+      "sha256": "12611869ddba70a7bff4a00f547d244328b714672d611fbdd6f8ff7b64b761f8",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-005.png",
+      "bytes": 17447,
+      "sha256": "ba7d485575c64b3bbf35889cf61366e51c070d3b709997a89e18b6857a154080",
+      "media_type": "image/png"
+    },
+    {
+      "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RCP-006.png",
+      "bytes": 17236,
+      "sha256": "74aaa4f2c1605d9e655bd5883fbc42c0960383fd811ddbab1ce1e29f2f9a14df",
+      "media_type": "image/png"
+    }
+  ]
+}

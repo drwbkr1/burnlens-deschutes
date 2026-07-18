@@ -1,0 +1,50 @@
+{
+  "response_schema_version": "burnlens-region-owner-review-response-v0.1.0",
+  "surface_id": "REGION-OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-18-region-owner-review-surface-r005",
+  "pilot_report_sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f",
+  "completed": false,
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "owner": {
+    "attestation": false
+  },
+  "responses": [
+    {
+      "candidate_id": "RCP-001",
+      "candidate_raster_sha256": "c4008f476e9514e3a87e9bcf809c3edbc2afe3eaea80f13c961b62ebac97b988",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "RCP-002",
+      "candidate_raster_sha256": "c28217e87e049c7072db3a60842e08a19b3d10ed138a116a529d6c8652af7acc",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "RCP-003",
+      "candidate_raster_sha256": "348b1d58ba3604e84691fd5c5180bbbde358af4e016695c7dbb05cb23fb91b25",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "RCP-004",
+      "candidate_raster_sha256": "738328f93c8b6bb2635cc2d13da0b40155047f80547a3042d84bec663db11e1e",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "RCP-005",
+      "candidate_raster_sha256": "0f99f0a262f26d0ffb3a7d121b907726ea2e137d043b7a3b64473b0eb79694be",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "RCP-006",
+      "candidate_raster_sha256": "f8d3bc30747c48875fa0dcd6c4ed1099586aa557633d320794b65aeea216795c",
+      "decision": null,
+      "notes": ""
+    }
+  ]
+}

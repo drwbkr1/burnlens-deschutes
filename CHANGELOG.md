@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.30.0-region-owner-review-surface - candidate - 2026-07-18
+
+### P2O4-T18 - Build the exact six-candidate owner review surface
+
+- Bind the exact v0.29 pilot report and all six candidate raster bytes without regenerating or changing a region.
+- Present actual pre/post optical, dNBR, official-reference, core, and unknown-ring evidence for one proposed burned and one proposed background candidate per event.
+- Accept only yes/no/uncertain, with hash-named draft/response export, bound-file reload, completion checks, and browser-session lock.
+- Keep yes necessary but insufficient and retain later reproducibility, source, terms, quality, uncertainty, and event-level leakage gates.
+- Reconstruct all ten public outputs byte for byte and validate the actual rendered surface and software-only interaction path.
+- Record zero owner region responses and zero region labels; create no dataset, split, baseline, model, metric, or readiness claim.
+
+Generator source is `7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6`; public artifacts are `f0412fd85092f00a5122b775c3e07891d2f156d7`; issue #457 and branch `codex/p2o4-t18-region-review-surface` own the candidate. Final review closes the completed-session file loader so a locked response cannot be replaced. The corrected candidate passes 246 tests, compilation, dependency health, 82 JSON parses, exact ten-file reconstruction, real rendered interaction, and two byte-identical 450,787-byte wheels / SHA-256 `760a4a94cc7befc449a7121e4e4ab54b9789c637d129d35c197321a376d54f1b`; isolated 0.30.0 exposes 44 commands and 96 clean entries. Merge, tag, fresh-main, lifecycle, and next-checkpoint facts remain pending.
+
 ## v0.29.0-region-candidate-pilot - verified - 2026-07-18
 
 ### P2O4-T17 - Execute the no-promotion contiguous-region pilot
