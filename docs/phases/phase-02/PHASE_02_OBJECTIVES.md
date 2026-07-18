@@ -16,11 +16,11 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active - six no-promotion region candidates locally verified; release and region review pending; dataset not created.**
+**Active - six no-promotion region candidates verified and shipped; exact region review and event diversity pending; dataset not created.**
 
 P2O1-T01 through P2O3-T01 establish metadata, route, terms, AOI, source transactions, source/observation evidence, the active burn-scar target, exact optical pairs, and verified registration. P2O4-T01 through P2O4-T14 ship proposal, cross-event, review/custody, historical single-response reconciliation, current catalog/request, source scout, exact bundle fitness, and the owner-confirmed surface. P2O4-T15 / issue #437 preserves the authoritative completed response and accepts 24 explicitly owner-approved prototype labels after all disclosed gates: 12 burned and 12 background, balanced across three event groups. Twenty-nine yes and three no/uncertain units remain excluded. The historical 6 burned / 0 background / 50 ignored counts are not inherited. No accepted dataset, split, baseline, model, or deployed analytical application exists.
 
-Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three has immutable preprocessing, proposal rasters, and 24 sparse prototype points. Objective Four now executes its contract on the three existing events: six intact candidate regions, actual rendered evidence, full-grid candidate rasters, and explicit unknown rings pass local gates without creating labels. A separately versioned owner-region review and additional comparable events remain. Objective Five's executable sufficiency gate stays closed because three unreplicated event groups and source-regime confounding still block dataset/split work. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
+Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three has immutable preprocessing, proposal rasters, and 24 sparse prototype points. Objective Four executes its contract on the three existing events: verified v0.29.0 ships six intact candidate regions, actual rendered evidence, full-grid candidate rasters, and explicit unknown rings without creating labels. Issue #457 owns a separately versioned owner-region review; additional comparable events remain necessary. Objective Five's executable sufficiency gate stays closed because three unreplicated event groups and source-regime confounding still block dataset/split work. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
 
 ## Phase purpose
 

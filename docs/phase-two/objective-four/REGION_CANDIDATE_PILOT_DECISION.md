@@ -6,6 +6,8 @@
 
 **Generator source / public artifacts:** `407981e1f98570bb8bd7695951d6cc5d67dab042` / `0e5306c6d94c54b47df40486a75e5bbd69bab62f`
 
+**Verified checkpoint / tag:** `3d3b0128f1f4e4b4aab8e14fc3fabc089fbd8f0a` / `v0.29.0-region-candidate-pilot` (annotated object `55adb8e376988cc3dc4d6bd662e2a5200b8fe1ed`)
+
 ## Decision
 
 `PILOT_REGION_CANDIDATES_REVIEWABLE_KEEP_PROMOTION_CLOSED`.
