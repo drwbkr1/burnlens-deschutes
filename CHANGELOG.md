@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.26.0-owner-response-intake - candidate - 2026-07-18
+## v0.26.0-owner-response-intake - verified - 2026-07-18
 
 ### P2O4-T15 - Convert the exact owner response into bounded prototype-label evidence
 
@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Rebuild the private reconciliation and all three public outputs byte for byte and validate the real rendered evidence.
 - Create no dataset, split, baseline, model, accuracy, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `26e380f98172759e73aac13d5a0f53994aac9d5a`; issue #437 owns the checkpoint. Release identity and fresh-main verification remain pending until the issue-backed candidate completes review.
+Generator source is `26e380f98172759e73aac13d5a0f53994aac9d5a`; issue #437 / PR #441 merged at `0f46ec5f1b4586f076a59beee163bbb8aee3b62a`. Fresh main passes 221 tests, compilation, and exact private-plus-three-public reconstruction. Two clean-checkout fixed-epoch wheels are byte-identical at 415,017 bytes / SHA-256 `507f81a532c5429030fb1322001d107bacf04ccd831d749991f25287f04279d9`; isolated install reports 0.26.0, 40 entry points, 88 entries, and zero forbidden files. Annotated tag object `fa199dd2e63ab3607b732d331c6ecdc898a227b4` remotely peels to the merge. Lifecycle sync is #442; issue #443 owns prototype-label sufficiency and split feasibility.
 
 ## v0.25.0-owner-confirmed-review-surface - verified - 2026-07-17
 

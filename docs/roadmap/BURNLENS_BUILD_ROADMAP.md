@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. P2O4-T12A preserves the accepted request; verified P2O4-T12 proves exact delivery and bounded product fitness; P2O4-T13 maps additional official evidence and events; verified P2O4-T14 supplies the 56-unit owner surface. Issue #437 now owns actual response intake; yes still requires reproducibility/source/quality/leakage gates, while no/uncertain remain excluded. Preserve whole-event groups and ignore states, strengthen both binary classes, and do not begin partition or baseline work early.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified P2O4-T15 / issue #437 / PR #441 accepts 24 owner-approved prototype labels after every disclosed gate while preserving all exclusions and private decisions. Issue #443 now owns coverage and leakage-resistant split feasibility. Preserve whole-event groups and ignore states, strengthen both binary classes, and do not create a dataset or baseline until that gate passes.
 
 ## Required reading order for long-running Codex work
 
