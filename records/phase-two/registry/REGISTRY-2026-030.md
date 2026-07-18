@@ -8,3 +8,4 @@
 | `LABEL-REGION-REMEDIATION-PLAN-2026-001` | Aggregate JSON/HTML/PNG | Run `BL-2026-07-18-label-region-remediation-plan-r003`; plan only | 0 |
 | `SOURCE-2026-018`, `TERMS-2026-013`, `SOURCE-PRECEDENCE-2026-011` | Primary-source, terms, and precedence controls | Refreshed 2026-07-18 | 0 |
 | `PRECHECK-2026-027`, `USE_BOUNDARY-2026-025` | Entry and use gates | Region labels/dataset/split/baseline/model blocked | 0 |
+| `burnlens_deschutes-0.28.0-py3-none-any.whl` | Reproducible release candidate | 429,705 bytes; SHA-256 `598420d786afba83fab92fdc6a01246023fcf93dc041f4261f89f0c97835e902`; isolated-install gate passed | 0 |

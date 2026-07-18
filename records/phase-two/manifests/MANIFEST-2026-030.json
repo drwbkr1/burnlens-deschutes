@@ -8,7 +8,7 @@
   "branch": "codex/p2o4-t16-label-region-plan",
   "git_base_commit": "9a9ffdd45e17b28ee5f79210b7a57c18af987e2e",
   "generator_source_commit": "4a5e88e916ce9e7961fabd49ef259eb59755baa4",
-  "candidate_artifacts_commit": null,
+  "candidate_artifacts_commit": "93e7f336cc7764b69e325f5eb20870232dcc1f5f",
   "checkpoint_commit": null,
   "version_tag": "v0.28.0-label-region-remediation-plan",
   "status": "candidate region-first and event-diversity plan; analytical versions absent",
@@ -39,7 +39,7 @@
     "exact_reconstruction": "pass: three outputs",
     "rendered_evidence": "pass: original PNG and live HTML; no unsupported glyphs, overflow, external resources, console, or runtime errors",
     "repository_tests": "pass: 233 tracked tests",
-    "release_package": "pending",
+    "release_package": "pass: two fixed-epoch wheels byte-identical at 429705 bytes and sha256 598420d786afba83fab92fdc6a01246023fcf93dc041f4261f89f0c97835e902; isolated 0.28.0 install, 42 console entry points, 92 wheel entries, zero forbidden entries, and dependency check pass",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
