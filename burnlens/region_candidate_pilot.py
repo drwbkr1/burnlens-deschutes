@@ -500,6 +500,12 @@ def _reference_image(values: np.ndarray, kind: str) -> Image.Image:
     return Image.fromarray(rgb.astype(np.uint8), mode="RGB")
 
 
+def _tci_image(values: np.ndarray) -> Image.Image:
+    if values.ndim != 3 or values.shape[0] != 3:
+        raise RegionCandidatePilotError("Sentinel TCI is not a three-band band-first array")
+    return Image.fromarray(np.moveaxis(values, 0, 2).astype(np.uint8), mode="RGB")
+
+
 def _panel(source: Image.Image, core: np.ndarray, ring: np.ndarray, box: list[int], candidate_class: str, size: tuple[int, int]) -> Image.Image:
     top, left, bottom, right = box
     padding = 5
@@ -534,8 +540,8 @@ def render_png(report: dict[str, Any], selected: list[dict[str, Any]], events: d
         draw.text((65, top + 18), f"{item['candidate_id']} / {event['fire_name']} / proposed {item['candidate_class']}", fill="#123f3a", font=_font(19))
         draw.text((65, top + 50), f"core {item['core_pixels']} px ({item['core_pixels'] * PIXEL_AREA_HA:.2f} ha) / ring {item['ring_pixels']} px / dNBR [{item['dnbr_interval'][0]:.2f}, {item['dnbr_interval'][1]:.2f})", fill="#42534d", font=_font(14))
         sources = (
-            Image.fromarray(event["pre_tci"].astype(np.uint8), mode="RGB"),
-            Image.fromarray(event["post_tci"].astype(np.uint8), mode="RGB"),
+            _tci_image(event["pre_tci"]),
+            _tci_image(event["post_tci"]),
             _dnbr_image(event["dnbr"]),
             _reference_image(event["reference"], event["reference_kind"]),
         )

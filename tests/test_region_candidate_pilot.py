@@ -11,6 +11,7 @@ from burnlens.region_candidate_pilot import (
     GENERATOR_VERSION,
     REPORT_ID,
     _candidate_from_seed,
+    _tci_image,
     select_candidates,
 )
 
@@ -53,6 +54,10 @@ class RegionCandidatePilotTests(unittest.TestCase):
         self.assertEqual(candidate["core_pixels"], 9)
         self.assertEqual(candidate["ring_pixels"], 16)
         self.assertFalse(candidate["touches_grid_edge"])
+
+    def test_band_first_tci_is_normalized_for_rendering(self) -> None:
+        image = _tci_image(np.zeros((3, 5, 7), dtype=np.uint8))
+        self.assertEqual(image.size, (7, 5))
 
     def test_selection_never_clips_to_target(self) -> None:
         events = {event_id: _event(event_id) for event_id in (
