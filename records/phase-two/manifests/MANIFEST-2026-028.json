@@ -15,6 +15,7 @@
   "version_tag": "v0.26.0-owner-response-intake",
   "version_tag_object": "fa199dd2e63ab3607b732d331c6ecdc898a227b4",
   "lifecycle_sync_issue": 442,
+  "lifecycle_sync_pull_request": 444,
   "next_checkpoint_issue": 443,
   "status": "shipped verified owner-response intake; 24 prototype labels; dataset deferred",
   "software_version": "0.26.0",
