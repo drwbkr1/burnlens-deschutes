@@ -1,6 +1,6 @@
 # REGISTRY-2026-029 - Prototype Label Sufficiency
 
-**Checkpoint:** Issue #443 / PR #445; source `89e69172163c97ea8f4c86e72867578065626f22`
+**Checkpoint:** Issue #443 / PR #445; remediation #446 / PR #447; release `bf98a47040be589dad07bcfd6767015ae2e6ee81`; source `89e69172163c97ea8f4c86e72867578065626f22`; next #449
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
 |---|---|---|---:|

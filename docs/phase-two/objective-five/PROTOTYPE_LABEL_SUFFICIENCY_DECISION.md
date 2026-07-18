@@ -6,6 +6,8 @@
 
 **Generator source:** `89e69172163c97ea8f4c86e72867578065626f22`
 
+**Verified release:** analytical merge `dbc24c57442d0c2564ce7ae4e4da17a2c966b910`; checkout-stable release merge `bf98a47040be589dad07bcfd6767015ae2e6ee81`; tag object `51f39bc68b725fb1b7cbd696f593fcd17316a8ca`; next issue #449
+
 ## Decision
 
 `REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL`.

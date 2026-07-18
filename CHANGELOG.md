@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.27.0-prototype-label-sufficiency - candidate - 2026-07-18
+## v0.27.0-prototype-label-sufficiency - verified - 2026-07-18
 
 ### P2O5-T01 - Reject a premature dataset and split
 
@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Decide `REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL` and keep every analytical version absent.
 - Fail the first fresh-main release gate when Windows rewrites the tracked readiness HTML from 3,770 to 3,780 bytes; issue #446 adds an explicit LF checkout contract without changing output content or scientific state.
 
-Generator source is `89e69172163c97ea8f4c86e72867578065626f22`; issue #443 / PR #445 owns the analytical merge, and remediation issue #446 owns checkout-stable release verification.
+Generator source is `89e69172163c97ea8f4c86e72867578065626f22`; issue #443 / PR #445 merged the analysis at `dbc24c57442d0c2564ce7ae4e4da17a2c966b910`. Issue #446 / PR #447 supplies the verified release checkpoint `bf98a47040be589dad07bcfd6767015ae2e6ee81`. Fresh main preserves the exact HTML bytes, passes 228 tests and exact three-output reconstruction, and produces two byte-identical 422,069-byte wheels / SHA-256 `741eb378433c8240809fb9de144b4db6884a2612a335e2d26be71e376bfe41da`. Annotated tag object `51f39bc68b725fb1b7cbd696f593fcd17316a8ca` remotely peels to the remediation merge. Lifecycle sync is #448; issue #449 owns the next bounded label-coverage plan.
 
 ## v0.26.0-owner-response-intake - verified - 2026-07-18
 
