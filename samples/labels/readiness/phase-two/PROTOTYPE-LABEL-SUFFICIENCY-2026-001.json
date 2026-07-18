@@ -1,0 +1,214 @@
+{
+  "report_id": "PROTOTYPE-LABEL-SUFFICIENCY-2026-001",
+  "report_version": "prototype-label-sufficiency-v0.1.0",
+  "protocol_version": "prototype-label-dataset-readiness-v0.1.0",
+  "generated_at_utc": "2026-07-18T04:50:00Z",
+  "run_id": "BL-2026-07-18-prototype-label-sufficiency-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 443,
+  "git_source_commit": "89e69172163c97ea8f4c86e72867578065626f22",
+  "software_version": "0.27.0",
+  "application_version": "0.27.0",
+  "bindings": {
+    "owner_surface": {
+      "path": "OWNER-REVIEW-SURFACE-2026-001.json",
+      "bytes": 108377,
+      "sha256": "403cc46181c851722a951f0976a88ea707971c159b34df03456432d6592e02be"
+    },
+    "private_owner_intake": {
+      "bytes": 49863,
+      "sha256": "81415a5a7b61cdc112be32b8b981ab57479058df261ef40476e3132c141bb985",
+      "committed": false,
+      "ignored": true
+    },
+    "darlene_proposal": {
+      "path": "LABEL-PROPOSAL-2026-001.json",
+      "bytes": 15371,
+      "sha256": "e9b4199c0d49ffa235f4c8df4277d84b3df2b3c5a3f87d44dcc2ecd9a1d580d5"
+    },
+    "cross_event_proposal": {
+      "path": "CROSS-EVENT-LABEL-TRANSFER-2026-002.json",
+      "bytes": 31228,
+      "sha256": "850a78df58bc413cc5494144ce17cef581004ad2f7447d0313a79164b2222ed2"
+    }
+  },
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "label_set_version": "owner-approved-prototype-labels-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null,
+    "source_precedence_id": "SOURCE-PRECEDENCE-2026-010",
+    "terms_review_id": "TERMS-2026-012"
+  },
+  "inventory": {
+    "prototype_labels": 24,
+    "prototype_class_counts": {
+      "background": 12,
+      "burned": 12
+    },
+    "event_groups": 3,
+    "labels_per_event": 8,
+    "labels_per_event_class": 4,
+    "candidate_domain_pixels": 189541,
+    "prototype_fraction_of_candidate_domain_percent": 0.012662,
+    "label_granularity": "reviewed center pixels only; no contiguous mask or accepted patch labels"
+  },
+  "events": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "prototype_label_counts": {
+        "background": 4,
+        "burned": 4
+      },
+      "candidate_domain_counts": {
+        "background": 161238,
+        "burned": 18543
+      },
+      "prototype_fraction_of_candidate_domain_percent": 0.00445,
+      "candidate_domain_burn_share_percent": 10.3142,
+      "prototype_burn_share_percent": 50.0,
+      "source_regime": "RAVG+BAER_DNBR_CONTEXT",
+      "geometry": {
+        "background": {
+          "minimum_pair_distance_m": 980.816,
+          "median_pair_distance_m": 8463.137,
+          "maximum_pair_distance_m": 9040.819,
+          "x_span_m": 8780.0,
+          "y_span_m": 6820.0
+        },
+        "burned": {
+          "minimum_pair_distance_m": 809.197,
+          "median_pair_distance_m": 1886.97,
+          "maximum_pair_distance_m": 3041.052,
+          "x_span_m": 2620.0,
+          "y_span_m": 1760.0
+        }
+      }
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "prototype_label_counts": {
+        "background": 4,
+        "burned": 4
+      },
+      "candidate_domain_counts": {
+        "background": 55,
+        "burned": 9119
+      },
+      "prototype_fraction_of_candidate_domain_percent": 0.087203,
+      "candidate_domain_burn_share_percent": 99.4005,
+      "prototype_burn_share_percent": 50.0,
+      "source_regime": "MTBS+RAVG",
+      "geometry": {
+        "background": {
+          "minimum_pair_distance_m": 440.454,
+          "median_pair_distance_m": 2006.071,
+          "maximum_pair_distance_m": 3413.444,
+          "x_span_m": 2980.0,
+          "y_span_m": 1720.0
+        },
+        "burned": {
+          "minimum_pair_distance_m": 613.514,
+          "median_pair_distance_m": 692.178,
+          "maximum_pair_distance_m": 1265.701,
+          "x_span_m": 1260.0,
+          "y_span_m": 600.0
+        }
+      }
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "prototype_label_counts": {
+        "background": 4,
+        "burned": 4
+      },
+      "candidate_domain_counts": {
+        "background": 494,
+        "burned": 92
+      },
+      "prototype_fraction_of_candidate_domain_percent": 1.365188,
+      "candidate_domain_burn_share_percent": 15.6997,
+      "prototype_burn_share_percent": 50.0,
+      "source_regime": "MTBS+RAVG+BAER_DNBR_CONTEXT",
+      "geometry": {
+        "background": {
+          "minimum_pair_distance_m": 247.386,
+          "median_pair_distance_m": 438.638,
+          "maximum_pair_distance_m": 716.101,
+          "x_span_m": 420.0,
+          "y_span_m": 580.0
+        },
+        "burned": {
+          "minimum_pair_distance_m": 200.998,
+          "median_pair_distance_m": 1032.479,
+          "maximum_pair_distance_m": 1628.251,
+          "x_span_m": 1440.0,
+          "y_span_m": 760.0
+        }
+      }
+    }
+  ],
+  "partition_feasibility": {
+    "nonempty_train_validation_test_assignments": 6,
+    "event_groups_per_role_in_every_assignment": {
+      "train": 1,
+      "validation": 1,
+      "test": 1
+    },
+    "replicated_event_evidence_per_role": false,
+    "source_regime_confounded_with_event": true,
+    "source_regime_count": 3
+  },
+  "selection_and_evaluation": {
+    "proposal_stratified_selection": true,
+    "owner_saw_optical_and_current_reference_evidence": true,
+    "independent_ground_truth": false,
+    "prevalence_or_calibration_inference_supported": false,
+    "per_pixel_segmentation_training_supported": false,
+    "per_pixel_segmentation_evaluation_supported": false,
+    "permitted_role": "prototype audit evidence and future labeling seed only"
+  },
+  "gate_results": {
+    "exact_lineage": "PASS_EXACT_24_LABEL_LINEAGE",
+    "spatial_dispersion": "PASS_DISTINCT_CENTERS_NOT_SUFFICIENCY",
+    "label_granularity": "BLOCK_SINGLE_PIXELS_NO_CONTIGUOUS_MASKS",
+    "coverage": "BLOCK_24_OF_189541_CANDIDATE_PIXELS",
+    "partition": "BLOCK_3_EVENTS_ONE_PER_ROLE_NO_REPLICATION",
+    "distribution": "BLOCK_BALANCED_AUDIT_SAMPLE_NOT_PREVALENCE",
+    "evaluation_independence": "BLOCK_PROPOSAL_STRATIFIED_DISCLOSED_EVIDENCE"
+  },
+  "minimum_remediation": [
+    "create reviewed contiguous burned/background/unknown regions rather than expanding point decisions",
+    "add event and source-regime diversity so train, validation, and test each have replicated independent groups",
+    "preserve natural prevalence and report a separate balanced audit sample",
+    "reserve evidence not used for proposal selection or owner presentation for independent evaluation",
+    "repeat overlap, duplication, leakage, terms, and uncertainty gates before dataset creation"
+  ],
+  "boundaries": {
+    "prototype_points_expanded_to_masks": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_claimed": false,
+    "ground_truth_or_field_validation_claimed": false
+  },
+  "decision": "REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Official sources govern.",
+  "outputs": [
+    {
+      "path": "PROTOTYPE-LABEL-SUFFICIENCY-2026-001.html",
+      "bytes": 3770,
+      "sha256": "8cd43d9b292f2de27f0e62d86306d40ce4fe8daa638c09b4a6cc73208f7881e8"
+    },
+    {
+      "path": "PROTOTYPE-LABEL-SUFFICIENCY-2026-001.png",
+      "bytes": 121275,
+      "sha256": "140cd475cb3e96d1915f3720646974e0aceddf132e33ffc8d9dd873726bfa7c8"
+    }
+  ]
+}

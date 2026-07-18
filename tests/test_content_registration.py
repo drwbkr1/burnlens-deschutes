@@ -37,7 +37,7 @@ class ContentRegistrationTests(unittest.TestCase):
         self.assertIn("samples/registration/phase-two/*.html text eol=lf", attributes)
 
     def test_current_import_version_preserves_historical_registration_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.26.0")
+        self.assertEqual(burnlens.__version__, "0.27.0")
         self.assertEqual(CONTENT_REGISTRATION_SOFTWARE_VERSION, "0.8.0")
 
     def test_localized_dft_recovers_subpixel_shift_to_apply(self) -> None:
