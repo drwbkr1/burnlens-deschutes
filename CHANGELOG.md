@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Publish deterministic JSON/HTML/PNG evidence from run `BL-2026-07-17-current-reference-bundle-fitness-r002`; fix the first 390 px overflow and verify actual desktop/mobile semantic rendering plus the original 1800x1580 evidence card.
 - Pass 207 repository tests and compilation. Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `5b84ed753e062266ac5260474b3bf60a9b00dfea`. Candidate lifecycle publication, fresh-main verification, and tag remain pending.
+Generator source is `5b84ed753e062266ac5260474b3bf60a9b00dfea`; candidate artifacts commit is `3c664a348d7c4d550aee62e62f391c47dff5a290`; PR #430 owns lifecycle publication. Fresh-main verification and tag remain pending.
 
 ## v0.23.0-official-source-scout - verified - 2026-07-17
 

@@ -1,6 +1,6 @@
 # REGISTRY-2026-026 - Current Reference Bundle Fitness
 
-**Checkpoint:** Issue #416 / branch `codex/p2o4-t12-bundle-fitness`
+**Checkpoint:** Issue #416 / PR #430 / branch `codex/p2o4-t12-bundle-fitness`
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|
