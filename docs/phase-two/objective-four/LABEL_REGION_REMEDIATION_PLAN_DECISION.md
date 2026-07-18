@@ -1,6 +1,6 @@
 # Label-Region Remediation Plan Decision
 
-**Issue / branch:** #449 / `codex/p2o4-t16-label-region-plan`
+**Issue / pull request / branch:** #449 / #451 / `codex/p2o4-t16-label-region-plan`
 
 **Run:** `BL-2026-07-18-label-region-remediation-plan-r003`
 
