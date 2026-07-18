@@ -16,11 +16,11 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active - 24 prototype points accepted; sufficiency gate requires label-coverage remediation; dataset not created.**
+**Active - 24 prototype points accepted; region-first and six-event remediation plan defined; dataset not created.**
 
 P2O1-T01 through P2O3-T01 establish metadata, route, terms, AOI, source transactions, source/observation evidence, the active burn-scar target, exact optical pairs, and verified registration. P2O4-T01 through P2O4-T14 ship proposal, cross-event, review/custody, historical single-response reconciliation, current catalog/request, source scout, exact bundle fitness, and the owner-confirmed surface. P2O4-T15 / issue #437 preserves the authoritative completed response and accepts 24 explicitly owner-approved prototype labels after all disclosed gates: 12 burned and 12 background, balanced across three event groups. Twenty-nine yes and three no/uncertain units remain excluded. The historical 6 burned / 0 background / 50 ignored counts are not inherited. No accepted dataset, split, baseline, model, or deployed analytical application exists.
 
-Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three has immutable preprocessing, proposal rasters, and 24 sparse prototype points. Objective Four completed bounded owner response. Objective Five now has an executable sufficiency gate: 0.012662% point coverage, single-pixel granularity, three unreplicated event groups, source-regime confounding, and proposal-stratified disclosed evidence block dataset/split work. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
+Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three has immutable preprocessing, proposal rasters, and 24 sparse prototype points. Objective Four now adds a candidate contiguous-region review contract and metadata-first event-diversity plan without creating labels. Objective Five's executable sufficiency gate remains closed: 0.012662% point coverage, single-pixel granularity, three unreplicated event groups, source-regime confounding, and proposal-stratified disclosed evidence block dataset/split work. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
 
 ## Phase purpose
 

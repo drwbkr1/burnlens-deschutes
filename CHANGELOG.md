@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.28.0-label-region-remediation-plan - candidate - 2026-07-18
+
+### P2O4-T16 - Define region-first owner review and event-diversity gates
+
+- Reject point buffering, arbitrary tiles, and unchecked proposal components as label expansion.
+- Define deterministic evidence-coherent native-grid regions with a one-pixel unknown ring and exact yes/no/uncertain owner review.
+- Require at least six immutable events, two per eventual role, both classes plus unknown boundaries per event, replicated source regimes, never-tuned transfer events, and no event majority.
+- Keep Milli tile-seam blocked; treat GW Fire, Two Bulls, and Cache Mountain as bounded reference/sensor-shift priorities rather than automatic Sentinel-pool events.
+- Refresh official MTBS/RAVG/BAER/Landsat/NLCD/Sentinel roles and terms without acquiring source pixels.
+- Render and exactly reconstruct aggregate JSON/HTML/PNG while keeping every analytical version absent.
+
+Generator source is `4a5e88e916ce9e7961fabd49ef259eb59755baa4`; issue #449 owns the candidate.
+
 ## v0.27.0-prototype-label-sufficiency - verified - 2026-07-18
 
 ### P2O5-T01 - Reject a premature dataset and split

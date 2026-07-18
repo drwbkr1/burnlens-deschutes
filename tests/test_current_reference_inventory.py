@@ -46,7 +46,7 @@ def response_bytes(products: tuple[dict[str, object], ...] = EXPECTED_PRODUCTS) 
 
 class CurrentReferenceInventoryTests(unittest.TestCase):
     def test_version_and_request_are_exact(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.27.0")
+        self.assertEqual(burnlens.__version__, "0.28.0")
         attributes = Path(".gitattributes").read_text(encoding="utf-8")
         self.assertIn("samples/reference/phase-two/*.json text eol=lf", attributes)
         self.assertIn("samples/reference/phase-two/*.html text eol=lf", attributes)
