@@ -1,7 +1,9 @@
 # Owner Response Intake Decision
 
-**Issue:** #437  
-**Run:** `BL-2026-07-18-owner-response-intake-r002`  
+**Issue:** #437
+
+**Run:** `BL-2026-07-18-owner-response-intake-r002`
+
 **Generator source:** `26e380f98172759e73aac13d5a0f53994aac9d5a`
 
 ## Decision
@@ -17,4 +19,3 @@ Twenty-nine additional yes decisions remain excluded because their frozen origin
 ## Boundaries
 
 This checkpoint creates no accepted dataset, partition, baseline, model, accuracy result, independent ground truth, inter-rater agreement, field validation, official or endorsed status, operational readiness, or enterprise-readiness claim. MTBS and RAVG remain bounded categorical reference evidence; BAER dNBR remains continuous context; restricted thresholded Tepee BARC remains unused. The next checkpoint must decide whether the 24 prototype labels are sufficient for a leakage-resistant dataset/baseline step or whether more coverage is required.
-

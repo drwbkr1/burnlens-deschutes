@@ -12,4 +12,3 @@
 | `PRECHECK-2026-024`, `LABEL_FITNESS-2026-017`, `USE_BOUNDARY-2026-023` | Custody, label-fitness, and use gates | Dataset/split/baseline/model deferred | 0 |
 
 The accepted label-set identifier is `owner-approved-prototype-labels-v0.1.0`, containing 12 burned and 12 background reviewed units across three immutable event groups. It is a sparse prototype label set, not an accepted dataset or ground truth. Twenty-nine owner-yes units remain quality-blocked and three no/uncertain units remain excluded.
-

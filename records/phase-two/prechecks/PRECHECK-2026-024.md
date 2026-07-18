@@ -12,4 +12,3 @@
 - The shipped 56-unit surface and all 12 referenced outputs reconstruct from the exact packet, bundle report, and official archives.
 - The response is complete and binds all 56 frozen unit identities exactly once: 53 yes, 2 no, 1 uncertain.
 - Response bytes, receipt bytes, notes, and unit decisions remain private, ignored, and uncommitted.
-

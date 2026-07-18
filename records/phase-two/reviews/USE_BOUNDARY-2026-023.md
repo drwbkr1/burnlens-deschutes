@@ -16,4 +16,3 @@
 - Treat owner confirmation, MTBS, RAVG, BAER, or BurnLens propositions as ground truth or field validation.
 - Use restricted thresholded Tepee BARC.
 - Create or claim an accepted dataset, split, baseline, model, accuracy, official status, endorsement, operational/emergency readiness, or enterprise readiness in this checkpoint.
-
