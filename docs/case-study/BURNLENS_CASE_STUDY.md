@@ -282,6 +282,12 @@ The first improvement under that route is evidence discovery, not relabeling. Bu
 
 ![BurnLens official source scout](../../samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.png)
 
+Delivery then removed the metadata-only bottleneck. BurnLens `0.24.0` preserves two exact USGS archives privately and opens all seven accepted BAER/RAVG/MTBS products through a fail-closed inspector. The public fitness report compares current categorical products with every frozen five-state proposal pixel while leaving those states unchanged.
+
+![BurnLens current official reference fitness](../../samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001.png)
+
+Current MTBS and RAVG agree affirmatively on all 9,119 McKay and 92 Tepee burned proposal pixels. They are jointly non-affirmative for all 55 McKay and 493 of 494 Tepee background candidates. Darlene has RAVG plus unthresholded BAER dNBR context but no categorical cross-program confirmation: the delivered BAER folder contains no classified raster. Legacy thresholded Tepee BARC remains private and excluded under its distribution restriction. These are strong review cues, not ground truth, field validation, owner decisions, or labels.
+
 The Landsat STAC metadata route is live, but the advertised asset redirects to EROS authentication. BurnLens records that gate rather than treating metadata availability as acquired pixels. No credential, product byte, owner response, label, dataset, split, baseline, or model is created. This remains a portfolio demonstration of transparent evidence engineering—not ground truth, field validation, official status, endorsement, or operational readiness.
 
 ## Traceability snapshot
@@ -311,6 +317,7 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Latest owner-waiver reveal-readiness QA run: `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001`
 - Latest single-reviewer reconciliation QA run: `BL-2026-07-16-single-reviewer-reconciliation-qa-r001`
 - Latest official-source scout run: `BL-2026-07-17-official-source-scout-r004`
+- Latest current-reference bundle-fitness run: `BL-2026-07-17-current-reference-bundle-fitness-r002`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -343,6 +350,7 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Current reference inventory: verified checkout-stable `CROSS-EVENT-REFERENCE-INVENTORY-2026-001`; Darlene BAER/RAVG, McKay MTBS/RAVG, Tepee BAER/MTBS/RAVG; seven exact catalog identities; official late-2025 archive reprocessing boundary; zero labels promoted; exact bundle fitness pending; 0.21.0 failed-release history preserved
 - Current bundle request: verified `CURRENT-REFERENCE-BUNDLE-REQUEST-2026-001`; six standard map IDs plus one explicit nonstandard Tepee BAER path; 18 product families; official queue acceptance; four binding provider cautions; zero archives received; recipient and retrieval details withheld
 - Official-source scout: verified `OFFICIAL-SOURCE-SCOUT-2026-001` / `v0.23.0-official-source-scout`; 12 bounded official responses; 7 source classes; 23 current Deschutes MTBS fires; 21 additional candidates; GW Fire ranked first; Landsat asset access `AUTHENTICATION_REQUIRED`; zero labels
+- Current reference bundle fitness: candidate `CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001`; two exact ignored archives / seven products; restricted thresholded Tepee BARC excluded; actual MTBS/RAVG/BAER comparisons; zero owner responses and labels
 - Transaction contract: `paired-intake-contract-v0.4.0`
 - Source package: `darlene3-s2-viirs-pair-v0.1.0`; raw bytes local/ignored, zero committed
 - Observation package: `darlene3-vj214img-observation-screen-v0.2.0`; 24 assets / 83,723,055 bytes local/ignored, zero committed
@@ -351,7 +359,7 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest verified repository baseline: `v0.23.0-official-source-scout` at checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`; tag object `f27cff68f6701904730698be24f9f83d02fc7865`; analytical PR #426 and remediation PR #428; parent #416 remains open
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
-- Active next gates: parent #416 receives and verifies exact current bundles without accepting substitutes; a separate owner-review-surface checkpoint reopens all 56 units with yes/no/uncertain. A later small Landsat proof requires authorized EROS access and exact product-level fitness. None alone authorizes a label, dataset, split, or baseline.
+- Active next gates: finish lifecycle verification for the #416 bundle-fitness candidate, then build the repository-owned owner-review surface that reopens all 56 units with yes/no/uncertain. A later small Landsat proof requires authorized EROS access and exact product-level fitness. None alone authorizes a label, dataset, split, or baseline.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

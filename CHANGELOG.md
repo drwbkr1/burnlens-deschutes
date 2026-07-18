@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.24.0-current-reference-bundle-fitness - candidate - 2026-07-17
+
+### P2O4-T12 - Turn exact delivery into bounded owner-review evidence
+
+- Preserve two exact USGS deliveries / 35,890,432 compressed bytes / 164 members only in ignored repository-local storage and bind their sizes, SHA-256 values, product identities, and safe archive structure.
+- Inspect all seven BAER/RAVG/MTBS product folders, metadata, CRS, grids, nodata, class domains, map sheets, and program-specific cautions.
+- Resolve product terms with a binding exclusion: legacy thresholded Tepee BARC4/BARC256 remains private and cannot enter public output or label promotion; separately public unthresholded dNBR is continuous context only.
+- Add BurnLens `0.24.0` and `burnlens-inspect-current-reference-bundles`, which fail closed on archive drift and compare current MTBS dNBR6/RAVG CBI4 with every frozen five-state proposal pixel without changing it.
+- Show that all 9,119 McKay and 92 Tepee burned proposal pixels are affirmative in both current MTBS and RAVG, while all 55 McKay and 493 of 494 Tepee background candidates are non-affirmative in both. Darlene retains RAVG plus unthresholded BAER dNBR context but lacks categorical cross-program confirmation.
+- Publish deterministic JSON/HTML/PNG evidence from run `BL-2026-07-17-current-reference-bundle-fitness-r002`; fix the first 390 px overflow and verify actual desktop/mobile semantic rendering plus the original 1800x1580 evidence card.
+- Pass 207 repository tests and compilation. Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
+
+Generator source is `5b84ed753e062266ac5260474b3bf60a9b00dfea`. Candidate lifecycle publication, fresh-main verification, and tag remain pending.
+
 ## v0.23.0-official-source-scout - verified - 2026-07-17
 
 ### P2O4-T13 - Scout official evidence without duplicating pending delivery
