@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Reconstruct all nine public outputs and the ignored private mapping byte for byte.
 - Keep owner region responses, region labels, dataset, split, baseline, and model at zero or absent.
 
-Generator source is `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts are `0e5306c6d94c54b47df40486a75e5bbd69bab62f`; issue #453 owns the release lifecycle. The tracked suite passes 241 tests, compilation, dependency health, exact private/public reconstruction, raster-contract inspection, privacy checks, and real desktop/mobile browser QA. Packaging, merged-main, tag, and lifecycle fields remain pending until the release gate completes.
+Generator source is `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts are `0e5306c6d94c54b47df40486a75e5bbd69bab62f`; issue #453 owns the release lifecycle. The tracked suite passes 241 tests, compilation, dependency health, exact private/public reconstruction, raster-contract inspection, privacy checks, and real desktop/mobile browser QA. Two clean-source wheels are byte-identical at 440,972 bytes / SHA-256 `d97e11058aaf18c8a146df3eb5392788061c5daa784620bd20ac1c09e8197d35`; isolated 0.29.0 exposes 43 commands and 94 clean entries. Merged-main, tag, and lifecycle fields remain pending.
 
 ## v0.28.0-label-region-remediation-plan - verified - 2026-07-18
 

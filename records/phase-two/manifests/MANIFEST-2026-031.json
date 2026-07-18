@@ -52,7 +52,7 @@
     "exact_reconstruction": "pass: nine public outputs plus ignored private mapping byte-identical",
     "rendered_evidence": "pass: desktop and 390 px semantic HTML, original 1800x1960 PNG, six local raster links, no external resources or console/runtime errors",
     "repository_tests": "pass: 241 tracked tests; compileall and dependency health",
-    "release_package": "pending",
+    "release_package": "pass: two clean-source fixed-epoch wheels byte-identical at 440972 bytes and sha256 d97e11058aaf18c8a146df3eb5392788061c5daa784620bd20ac1c09e8197d35; isolated 0.29.0 install, 43 console entry points, 94 wheel entries, zero forbidden entries, and dependency check pass",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
