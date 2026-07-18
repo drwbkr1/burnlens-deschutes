@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.28.0-label-region-remediation-plan - candidate - 2026-07-18
+## v0.28.0-label-region-remediation-plan - verified - 2026-07-18
 
 ### P2O4-T16 - Define region-first owner review and event-diversity gates
 
@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Refresh official MTBS/RAVG/BAER/Landsat/NLCD/Sentinel roles and terms without acquiring source pixels.
 - Render and exactly reconstruct aggregate JSON/HTML/PNG while keeping every analytical version absent.
 
-Generator source is `4a5e88e916ce9e7961fabd49ef259eb59755baa4`; issue #449 owns the candidate.
+Generator source is `4a5e88e916ce9e7961fabd49ef259eb59755baa4`; issue #449 / PR #451 merges the release checkpoint at `5ae35554c1b909e6ddf43e9aa54578948082603a`. Fresh main passes 233 tests with exact ignored owner-intake evidence restored, compilation, dependency health, exact three-output reconstruction, and two byte-identical 429,705-byte wheels / SHA-256 `598420d786afba83fab92fdc6a01246023fcf93dc041f4261f89f0c97835e902`. The isolated 0.28.0 install exposes 42 commands and 92 clean wheel entries. Annotated tag object `cd0eb91d8b0ef2124db485e80d7f22b937a01a40` remotely peels to the merge. Lifecycle issue #452 / PR #454 records the release; issue #453 owns the no-promotion pilot.
 
 ## v0.27.0-prototype-label-sufficiency - verified - 2026-07-18
 

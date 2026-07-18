@@ -376,9 +376,9 @@ The next plan is equally explicit about what not to do. A point does not become 
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest verified repository baseline: `v0.26.0-owner-response-intake` at checkpoint `0f46ec5f1b4586f076a59beee163bbb8aee3b62a`; tag object `fa199dd2e63ab3607b732d331c6ecdc898a227b4`; PR #441; lifecycle #442
+- Latest verified repository baseline: `v0.28.0-label-region-remediation-plan` at checkpoint `5ae35554c1b909e6ddf43e9aa54578948082603a`; tag object `cd0eb91d8b0ef2124db485e80d7f22b937a01a40`; PR #451; lifecycle #452
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
-- Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels are insufficient. Candidate P2O4-T16 defines contiguous-region review and six-event/source-regime gates; its next step is a rendered no-promotion region pilot, not training.
+- Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels are insufficient. Verified `v0.28.0-label-region-remediation-plan` defines contiguous-region review and six-event/source-regime gates; issue #453 owns a rendered no-promotion region pilot, not training.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
