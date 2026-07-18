@@ -196,7 +196,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O5-T01-REM | `records/prompt-build-log/2026-07-18-p2o5-t01-rem.md` | issue #446 / PR #447; checkout-stability remediation | Records the failed first fresh-main byte gate, pins readiness JSON/HTML to LF, and repeats detached-checkout test, package, and exact-output gates without changing scientific state. |
 | P2O5-T01-SYNC | `records/prompt-build-log/2026-07-18-p2o5-t01-sync.md` | issue #448 / PR #450; verified lifecycle synchronization | Records analytical/remediation merges, fresh-main gates, canonical wheel, remote annotated tag, and next checkpoint #449 without changing scientific or private state. |
 | P2O4-T16 | `records/prompt-build-log/2026-07-18-p2o4-t16.md` | issue #449 / PR #451; verified BurnLens 0.28.0 | Defines region-first owner review, explicit unknown rings, six-event/source-regime advancement gates, and metadata-first acquisition priorities without creating labels or analytical versions. |
-| P2O4-T16-SYNC | `records/prompt-build-log/2026-07-18-p2o4-t16-sync.md` | issue #452; verified lifecycle synchronization candidate | Records the merge, fresh-main tests and exact reconstruction, canonical wheel, isolated install, remote annotated tag, and next checkpoint #453 without changing scientific or private state. |
+| P2O4-T16-SYNC | `records/prompt-build-log/2026-07-18-p2o4-t16-sync.md` | issue #452 / PR #454; verified lifecycle synchronization candidate | Records the merge, fresh-main tests and exact reconstruction, canonical wheel, isolated install, remote annotated tag, and next checkpoint #453 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 

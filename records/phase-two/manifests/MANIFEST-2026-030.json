@@ -13,7 +13,7 @@
   "version_tag": "v0.28.0-label-region-remediation-plan",
   "version_tag_object": "cd0eb91d8b0ef2124db485e80d7f22b937a01a40",
   "lifecycle_sync_issue": 452,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 454,
   "next_checkpoint_issue": 453,
   "status": "shipped verified region-first and event-diversity plan; analytical versions absent",
   "software_version": "0.28.0",

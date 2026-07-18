@@ -1,6 +1,6 @@
 # REGISTRY-2026-030 - Label-Region Remediation Plan
 
-**Checkpoint:** Issue #449; PR #451; source `4a5e88e916ce9e7961fabd49ef259eb59755baa4`; merge `5ae35554c1b909e6ddf43e9aa54578948082603a`; tag object `cd0eb91d8b0ef2124db485e80d7f22b937a01a40`; lifecycle #452; next #453
+**Checkpoint:** Issue #449; PR #451; source `4a5e88e916ce9e7961fabd49ef259eb59755baa4`; merge `5ae35554c1b909e6ddf43e9aa54578948082603a`; tag object `cd0eb91d8b0ef2124db485e80d7f22b937a01a40`; lifecycle #452 / PR #454; next #453
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|
