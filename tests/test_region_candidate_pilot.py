@@ -5,12 +5,14 @@ from pathlib import Path
 import unittest
 
 import numpy as np
+from PIL import Image
 
 import burnlens
 from burnlens.region_candidate_pilot import (
     GENERATOR_VERSION,
     REPORT_ID,
     _candidate_from_seed,
+    _panel,
     _tci_image,
     select_candidates,
 )
@@ -58,6 +60,15 @@ class RegionCandidatePilotTests(unittest.TestCase):
     def test_band_first_tci_is_normalized_for_rendering(self) -> None:
         image = _tci_image(np.zeros((3, 5, 7), dtype=np.uint8))
         self.assertEqual(image.size, (7, 5))
+
+    def test_ten_meter_display_is_aligned_to_twenty_meter_candidate_grid(self) -> None:
+        core = np.zeros((5, 7), dtype=bool)
+        core[2, 3] = True
+        ring = np.zeros_like(core)
+        ring[1:4, 2:5] = True
+        ring[2, 3] = False
+        panel = _panel(Image.new("RGB", (14, 10)), core, ring, [2, 3, 3, 4], "burned", (70, 50))
+        self.assertEqual(panel.size, (70, 50))
 
     def test_selection_never_clips_to_target(self) -> None:
         events = {event_id: _event(event_id) for event_id in (

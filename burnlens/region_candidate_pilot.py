@@ -507,6 +507,11 @@ def _tci_image(values: np.ndarray) -> Image.Image:
 
 
 def _panel(source: Image.Image, core: np.ndarray, ring: np.ndarray, box: list[int], candidate_class: str, size: tuple[int, int]) -> Image.Image:
+    target_size = (core.shape[1], core.shape[0])
+    if source.size != target_size:
+        if source.width % target_size[0] or source.height % target_size[1]:
+            raise RegionCandidatePilotError("display source is not integer-aligned to the native candidate grid")
+        source = source.resize(target_size, Image.Resampling.BOX)
     top, left, bottom, right = box
     padding = 5
     top = max(0, top - padding)
