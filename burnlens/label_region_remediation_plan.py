@@ -250,14 +250,14 @@ def render_png(report: dict[str, Any], path: Path) -> None:
         y += 78
     draw.text((70, 900), "Before dataset fitness can reopen", fill="#123f3a", font=big)
     gates = [
-        "≥6 immutable event groups · ≥2 per eventual role",
+        ">=6 immutable event groups / >=2 per eventual role",
         "burned + background + unknown boundary in every event",
         "source regimes replicated across events and roles",
         "never-tuned transfer events reserved · no event majority",
     ]
     y = 970
     for line in gates:
-        draw.text((92, y), "• " + line, fill="#7f3524", font=body)
+        draw.text((92, y), "- " + line, fill="#7f3524", font=body)
         y += 55
     draw.text((70, 1215), "Decision: plan region review and event diversity; create no labels, dataset, split, baseline, or model.", fill="#7f3524", font=body)
     image.save(path, format="PNG", optimize=False)
