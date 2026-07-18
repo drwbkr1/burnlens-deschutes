@@ -2,11 +2,11 @@
   "report_id": "CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001",
   "report_version": "current-reference-bundle-fitness-v0.1.0",
   "protocol_version": "current-reference-bundle-fitness-protocol-v0.1.0",
-  "generated_at_utc": "2026-07-18T00:45:00Z",
-  "run_id": "BL-2026-07-17-current-reference-bundle-fitness-r002",
+  "generated_at_utc": "2026-07-18T01:35:00Z",
+  "run_id": "BL-2026-07-17-current-reference-bundle-fitness-r003",
   "repository": "drwbkr1/burnlens-deschutes",
   "task_issue": 416,
-  "git_source_commit": "5b84ed753e062266ac5260474b3bf60a9b00dfea",
+  "git_source_commit": "312ab6327b5e67232ef7c82885bc699977822223",
   "software_version": "0.24.0",
   "provenance": {
     "aoi_version": "aoi-darlene3-model-v0.2.0",
@@ -57,7 +57,7 @@
   "method": {
     "proposal_preservation": "Every frozen five-state proposal pixel remains unchanged.",
     "categorical_sampling": "Nearest-neighbor sampling onto each frozen 20 m proposal grid; source products remain 30 m and no resolution gain is claimed.",
-    "mtbs_affirmative": "dNBR6 classes 2-5; class 1 ambiguous; 0/6 outside, mask, or nonprocessing.",
+    "mtbs_affirmative": "dNBR6 classes 2-4; classes 1/5 ambiguous; 0/6 outside, mask, or nonprocessing.",
     "ravg_affirmative": "CBI4 classes 2-4; class 1 unchanged; 0/9 outside or unmappable.",
     "baer_continuous": "Unthresholded dNBR median, interquartile range, and positive-change share by proposal state; no burned threshold.",
     "owner_review_effect": "Evidence may be shown to the owner with optical context in a later yes/no/uncertain review surface. This run records zero owner responses."
@@ -330,11 +330,11 @@
             "affirmative_values": [
               2,
               3,
-              4,
-              5
+              4
             ],
             "ambiguous_or_unchanged_values": [
-              1
+              1,
+              5
             ],
             "outside_mask_or_nodata_values": [
               0,
@@ -674,11 +674,11 @@
             "affirmative_values": [
               2,
               3,
-              4,
-              5
+              4
             ],
             "ambiguous_or_unchanged_values": [
-              1
+              1,
+              5
             ],
             "outside_mask_or_nodata_values": [
               0,
@@ -730,13 +730,13 @@
             "excluded": {
               "proposal_pixels": 16025,
               "evidence_counts": {
-                "affirmative": 8126,
-                "ambiguous_or_unchanged": 953,
+                "affirmative": 8125,
+                "ambiguous_or_unchanged": 954,
                 "outside_mask_or_nodata": 6946
               },
               "evidence_percent": {
-                "affirmative": 50.7083,
-                "ambiguous_or_unchanged": 5.947,
+                "affirmative": 50.702,
+                "ambiguous_or_unchanged": 5.9532,
                 "outside_mask_or_nodata": 43.3448
               }
             },
@@ -990,15 +990,15 @@
             "proposal_pixels": 16025,
             "evidence_counts": {
               "both_affirmative": 8090,
-              "mtbs_only_affirmative": 36,
+              "mtbs_only_affirmative": 35,
               "ravg_only_affirmative": 434,
-              "neither_or_ambiguous_invalid": 7465
+              "neither_or_ambiguous_invalid": 7466
             },
             "evidence_percent": {
               "both_affirmative": 50.4836,
-              "mtbs_only_affirmative": 0.2246,
+              "mtbs_only_affirmative": 0.2184,
               "ravg_only_affirmative": 2.7083,
-              "neither_or_ambiguous_invalid": 46.5835
+              "neither_or_ambiguous_invalid": 46.5897
             }
           },
           "review-needed": {
@@ -1019,9 +1019,9 @@
         },
         "overall_counts": {
           "both_affirmative": 19478,
-          "mtbs_only_affirmative": 252,
+          "mtbs_only_affirmative": 251,
           "ravg_only_affirmative": 1019,
-          "neither_or_ambiguous_invalid": 23126
+          "neither_or_ambiguous_invalid": 23127
         }
       },
       "categorical_cross_program_confirmation_available": true

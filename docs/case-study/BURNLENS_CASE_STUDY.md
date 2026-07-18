@@ -317,7 +317,7 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Latest owner-waiver reveal-readiness QA run: `BL-2026-07-16-owner-waiver-reveal-readiness-qa-r001`
 - Latest single-reviewer reconciliation QA run: `BL-2026-07-16-single-reviewer-reconciliation-qa-r001`
 - Latest official-source scout run: `BL-2026-07-17-official-source-scout-r004`
-- Latest current-reference bundle-fitness run: `BL-2026-07-17-current-reference-bundle-fitness-r002`
+- Latest current-reference bundle-fitness run: `BL-2026-07-17-current-reference-bundle-fitness-r003`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`

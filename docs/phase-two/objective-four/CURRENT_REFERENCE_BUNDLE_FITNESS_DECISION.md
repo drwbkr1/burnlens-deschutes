@@ -2,7 +2,7 @@
 
 **Issue / PR / branch:** #416 / #430 / `codex/p2o4-t12-bundle-fitness`
 
-**Run:** `BL-2026-07-17-current-reference-bundle-fitness-r002`
+**Run:** `BL-2026-07-17-current-reference-bundle-fitness-r003`
 
 ## Decision
 

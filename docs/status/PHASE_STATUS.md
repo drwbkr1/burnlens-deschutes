@@ -74,7 +74,7 @@
 | Label-schema implementation | `burn-scar-five-state-schema-v0.1.0` implemented as reviewable Darlene/Tepee/McKay proposal evidence; not accepted ground truth or a dataset |
 | Baseline-method version | Not created |
 | Model version | Not created |
-| Run IDs | Current candidate is `BL-2026-07-17-current-reference-bundle-fitness-r002`; authoritative scout remains `BL-2026-07-17-official-source-scout-r004`; latest verified tag remains `v0.23.0-official-source-scout`; no accepted dataset, split, baseline, model, or inference output |
+| Run IDs | Current candidate is `BL-2026-07-17-current-reference-bundle-fitness-r003`; authoritative scout remains `BL-2026-07-17-official-source-scout-r004`; latest verified tag remains `v0.23.0-official-source-scout`; no accepted dataset, split, baseline, model, or inference output |
 | Raster/vector/map output | One official reference vector, one derived AOI vector, static evidence, and two derived native-grid proposal GeoTIFFs; no accepted dataset, model output, or BurnLens fire perimeter |
 | Repository-owned public application | Shipped local/offline response workbench exists; no deployed public application or analytical inference application |
 | Public performance claim | None authorized or supported |
