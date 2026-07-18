@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified P2O4-T15 / issue #437 / PR #441 accepts 24 owner-approved prototype labels after every disclosed gate while preserving all exclusions and private decisions. Issue #443 now owns coverage and leakage-resistant split feasibility. Preserve whole-event groups and ignore states, strengthen both binary classes, and do not create a dataset or baseline until that gate passes.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified P2O5-T01 proves the 24 owner-approved center pixels are sparse prototype audit evidence, not masks or an independent split foundation. Issue #449 now owns the smallest defensible contiguous-region and event/source-regime diversity plan. Preserve whole-event groups and ignore states, strengthen both binary classes, and do not create a dataset or baseline until the resulting evidence passes a new fitness gate.
 
 ## Required reading order for long-running Codex work
 

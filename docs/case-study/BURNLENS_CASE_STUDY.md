@@ -374,7 +374,7 @@ BurnLens therefore stops before dataset creation and requires contiguous reviewe
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
 - Latest verified repository baseline: `v0.26.0-owner-response-intake` at checkpoint `0f46ec5f1b4586f076a59beee163bbb8aee3b62a`; tag object `fa199dd2e63ab3607b732d331c6ecdc898a227b4`; PR #441; lifecycle #442
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
-- Active next gate: issue #443 assesses whether 24 sparse owner-approved prototype labels have enough coverage and independence for a leakage-resistant dataset/baseline role. A later Landsat proof remains optional; neither path authorizes training without its own gates.
+- Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels do not have the coverage, granularity, replicated events, distribution support, or independence needed for dataset/baseline use. Active issue #449 designs contiguous-region review and added event/source-regime diversity; neither that plan nor a later Landsat proof authorizes training without its own gates.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 
