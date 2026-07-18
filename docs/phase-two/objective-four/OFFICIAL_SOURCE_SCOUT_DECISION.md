@@ -32,3 +32,7 @@ This workflow does not support claims of independent ground truth, inter-rater a
 - Pending seven-bundle request: unchanged under #416
 
 The next evidence move is not a broad download. It is one exact small Landsat burned-area access/fitness proof or, if that access remains unavailable, the separate owner-review-surface checkpoint using already verified evidence.
+
+## Verified release
+
+PR #426 merged the analytical checkpoint at `9176b3dc34b4b1015c23f9f17de515759de1c943`. Issue #427 / PR #428 removed one extra EOF blank line found by merged-range review and established verified checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`. Annotated tag object `f27cff68f6701904730698be24f9f83d02fc7865` remotely peels to that checkpoint as `v0.23.0-official-source-scout`. The remediation changes no output or scientific state.
