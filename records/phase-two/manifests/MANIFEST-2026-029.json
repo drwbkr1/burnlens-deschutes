@@ -18,7 +18,7 @@
   "version_tag": "v0.27.0-prototype-label-sufficiency",
   "version_tag_object": "51f39bc68b725fb1b7cbd696f593fcd17316a8ca",
   "lifecycle_sync_issue": 448,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 450,
   "next_checkpoint_issue": 449,
   "status": "shipped verified prototype-label sufficiency decision; dataset deferred",
   "software_version": "0.27.0",

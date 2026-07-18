@@ -194,7 +194,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T15-SYNC | `records/prompt-build-log/2026-07-18-p2o4-t15-sync.md` | issue #442 / PR #444; verified lifecycle synchronization | Records the merge, fresh-main tests and exact reconstruction, canonical wheel, remote annotated tag, folded #440, and next checkpoint #443 without changing scientific or private state. |
 | P2O5-T01 | `records/prompt-build-log/2026-07-18-p2o5-t01.md` | issue #443 / PR #445; verified BurnLens 0.27.0 through #446 / PR #447 | Proves that 24 reviewed points lack contiguous masks, coverage, replicated event groups, distribution support, and independent evaluation needed for a dataset or split; requires remediation before baseline/model work. |
 | P2O5-T01-REM | `records/prompt-build-log/2026-07-18-p2o5-t01-rem.md` | issue #446 / PR #447; checkout-stability remediation | Records the failed first fresh-main byte gate, pins readiness JSON/HTML to LF, and repeats detached-checkout test, package, and exact-output gates without changing scientific state. |
-| P2O5-T01-SYNC | `records/prompt-build-log/2026-07-18-p2o5-t01-sync.md` | issue #448; verified lifecycle synchronization | Records analytical/remediation merges, fresh-main gates, canonical wheel, remote annotated tag, and next checkpoint #449 without changing scientific or private state. |
+| P2O5-T01-SYNC | `records/prompt-build-log/2026-07-18-p2o5-t01-sync.md` | issue #448 / PR #450; verified lifecycle synchronization | Records analytical/remediation merges, fresh-main gates, canonical wheel, remote annotated tag, and next checkpoint #449 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 
