@@ -314,7 +314,7 @@ class SingleReviewerReconciliationTests(unittest.TestCase):
             )
 
     def test_current_package_version_and_entry_points_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.23.0")
+        self.assertEqual(burnlens.__version__, "0.24.0")
         pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-run-single-reviewer-reconciliation =", pyproject)
         self.assertIn("burnlens-run-single-reviewer-reconciliation-qa =", pyproject)
