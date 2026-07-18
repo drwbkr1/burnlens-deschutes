@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.24.0-current-reference-bundle-fitness - candidate - 2026-07-17
+
+### P2O4-T12 - Turn exact delivery into bounded owner-review evidence
+
+- Preserve two exact USGS deliveries / 35,890,432 compressed bytes / 164 members only in ignored repository-local storage and bind their sizes, SHA-256 values, product identities, and safe archive structure.
+- Inspect all seven BAER/RAVG/MTBS product folders, metadata, CRS, grids, nodata, class domains, map sheets, and program-specific cautions.
+- Resolve product terms with a binding exclusion: legacy thresholded Tepee BARC4/BARC256 remains private and cannot enter public output or label promotion; separately public unthresholded dNBR is continuous context only.
+- Add BurnLens `0.24.0` and `burnlens-inspect-current-reference-bundles`, which fail closed on archive drift and compare current MTBS dNBR6/RAVG CBI4 with every frozen five-state proposal pixel without changing it.
+- Show that all 9,119 McKay and 92 Tepee burned proposal pixels are affirmative in both current MTBS and RAVG, while all 55 McKay and 493 of 494 Tepee background candidates are non-affirmative in both. Darlene retains RAVG plus unthresholded BAER dNBR context but lacks categorical cross-program confirmation.
+- Publish deterministic JSON/HTML/PNG evidence from corrected run `BL-2026-07-17-current-reference-bundle-fitness-r003`; fix the first 390 px overflow and verify actual desktop/mobile semantic rendering plus the original 1800x1580 evidence card.
+- Pass 207 repository tests and compilation. Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
+
+Generator source is `312ab6327b5e67232ef7c82885bc699977822223`; corrected candidate artifacts and reviewed head are `c8ee5d611d89945f2fdf14a845a252bcb0ad51e6`. Final review preserved the established MTBS semantic contract so increased-greenness class 5 remains ambiguous rather than affirmative; this changes one Tepee comparison pixel and no proposal state. Both working-tree and detached runs pass 207 tests; the detached checkout reconstructs all three outputs exactly. Two fixed-epoch wheels are identical at 383,225 bytes / SHA-256 `8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03`; isolated 0.24.0 has 37 entry points and 81 wheel entries with zero forbidden files. PR #430 owns publication; fresh-main verification and tag remain pending.
+
 ## v0.23.0-official-source-scout - verified - 2026-07-17
 
 ### P2O4-T13 - Scout official evidence without duplicating pending delivery

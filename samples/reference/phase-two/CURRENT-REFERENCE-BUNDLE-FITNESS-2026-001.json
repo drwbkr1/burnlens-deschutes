@@ -1,0 +1,1053 @@
+{
+  "report_id": "CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001",
+  "report_version": "current-reference-bundle-fitness-v0.1.0",
+  "protocol_version": "current-reference-bundle-fitness-protocol-v0.1.0",
+  "generated_at_utc": "2026-07-18T01:35:00Z",
+  "run_id": "BL-2026-07-17-current-reference-bundle-fitness-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 416,
+  "git_source_commit": "312ab6327b5e67232ef7c82885bc699977822223",
+  "software_version": "0.24.0",
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "owner_review_protocol": "owner-confirmed-prototype-label-review-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null
+  },
+  "source_controls": {
+    "source_record_id": "SOURCE-2026-017",
+    "terms_review_id": "TERMS-2026-012",
+    "source_precedence_id": "SOURCE_PRECEDENCE-2026-010",
+    "archive_count": 2,
+    "product_count": 7,
+    "archives": [
+      {
+        "filename": "usgs-delivery-20260717171845Z.zip",
+        "bytes": 8184622,
+        "sha256": "72775e8feb44d52a03923919a2080c2e3c268e1dd7ac37dd5e4f314e639256f8",
+        "member_count": 31,
+        "uncompressed_bytes": 10332983,
+        "crc_pass": true,
+        "safe_structure_pass": true
+      },
+      {
+        "filename": "usgs-delivery-20260717235821Z.zip",
+        "bytes": 27705810,
+        "sha256": "138d80b4ac2c7a438b128676e26f3f7b2cfe08c58518d4770692bc12f41ca22d",
+        "member_count": 133,
+        "uncompressed_bytes": 42932153,
+        "crc_pass": true,
+        "safe_structure_pass": true
+      }
+    ],
+    "recipient_and_retrieval_details_retained": false
+  },
+  "terms_and_semantic_boundaries": {
+    "mtbs": "Analyst-interpreted thematic burn-severity evidence; thresholds are subjective and not comprehensive field validation.",
+    "ravg": "Forest-calibrated vegetation-condition evidence; applicability is limited in mixed and non-forest settings and acquisition timing matters.",
+    "baer": "BARC is preliminary input to BAER assessment. Final soil burn severity, when available, is the preferred field-informed BAER product.",
+    "darlene_baer_delivery": "The delivered current BAER folder contains reflectance, dNBR, and RdNBR plus SBS metadata, but no classified BARC or SBS raster.",
+    "tepee_baer_restriction": "Thresholded legacy BARC4/BARC256 distribution is at BAER team-leader discretion. BurnLens excludes those pixels from public output and label promotion; only the separately public unthresholded dNBR is summarized as preliminary context.",
+    "resolved_for_this_checkpoint": true
+  },
+  "method": {
+    "proposal_preservation": "Every frozen five-state proposal pixel remains unchanged.",
+    "categorical_sampling": "Nearest-neighbor sampling onto each frozen 20 m proposal grid; source products remain 30 m and no resolution gain is claimed.",
+    "mtbs_affirmative": "dNBR6 classes 2-4; classes 1/5 ambiguous; 0/6 outside, mask, or nonprocessing.",
+    "ravg_affirmative": "CBI4 classes 2-4; class 1 unchanged; 0/9 outside or unmappable.",
+    "baer_continuous": "Unthresholded dNBR median, interquartile range, and positive-change share by proposal state; no burned threshold.",
+    "owner_review_effect": "Evidence may be shown to the owner with optical context in a later yes/no/uncertain review surface. This run records zero owner responses."
+  },
+  "events": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "event_id": "OR4364712147820240625",
+      "display_name": "Darlene 3",
+      "proposal": {
+        "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001-state.tif",
+        "sha256": "26c2bc308fdf0d33c8fc88432c1ae14ad1fb26a53063ad6e0a791990998fbe8e",
+        "crs": "EPSG:32610",
+        "width": 600,
+        "height": 450,
+        "resolution": [
+          20.0,
+          20.0
+        ],
+        "state_counts": {
+          "background-candidate": 161238,
+          "burned": 18543,
+          "unknown": 71897,
+          "excluded": 870,
+          "review-needed": 17452
+        }
+      },
+      "products": [
+        {
+          "program": "RAVG",
+          "role": "categorical_owner_review_evidence",
+          "member": "ravg/2024/ravg_or4364712147820240625_10030383/ravg_or4364712147820240625_10030383_20230724_20240718_rdnbr_cbi4.tif",
+          "member_sha256": "4e1a722b43df591ca47fb45bf7e189c1aa7031a178b38e6e2657d1f7220a7967",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              619470.0,
+              0.0,
+              -30.0,
+              4840710.0
+            ],
+            "width": 435,
+            "height": 342,
+            "dtype": "uint8",
+            "nodata": null,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "native_class_counts": {
+            "0": 131213,
+            "1": 464,
+            "2": 2584,
+            "3": 6161,
+            "4": 8348
+          },
+          "semantic_contract": {
+            "affirmative_values": [
+              2,
+              3,
+              4
+            ],
+            "ambiguous_or_unchanged_values": [
+              1
+            ],
+            "outside_mask_or_nodata_values": [
+              0,
+              9
+            ],
+            "nearest_neighbor_only": true,
+            "creates_label": false
+          },
+          "proposal_grid_comparison": {
+            "background-candidate": {
+              "proposal_pixels": 161238,
+              "evidence_counts": {
+                "affirmative": 11,
+                "ambiguous_or_unchanged": 2,
+                "outside_mask_or_nodata": 161225
+              },
+              "evidence_percent": {
+                "affirmative": 0.0068,
+                "ambiguous_or_unchanged": 0.0012,
+                "outside_mask_or_nodata": 99.9919
+              }
+            },
+            "burned": {
+              "proposal_pixels": 18543,
+              "evidence_counts": {
+                "affirmative": 18540,
+                "ambiguous_or_unchanged": 3,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 99.9838,
+                "ambiguous_or_unchanged": 0.0162,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "unknown": {
+              "proposal_pixels": 71897,
+              "evidence_counts": {
+                "affirmative": 4507,
+                "ambiguous_or_unchanged": 495,
+                "outside_mask_or_nodata": 66895
+              },
+              "evidence_percent": {
+                "affirmative": 6.2687,
+                "ambiguous_or_unchanged": 0.6885,
+                "outside_mask_or_nodata": 93.0428
+              }
+            },
+            "excluded": {
+              "proposal_pixels": 870,
+              "evidence_counts": {
+                "affirmative": 567,
+                "ambiguous_or_unchanged": 38,
+                "outside_mask_or_nodata": 265
+              },
+              "evidence_percent": {
+                "affirmative": 65.1724,
+                "ambiguous_or_unchanged": 4.3678,
+                "outside_mask_or_nodata": 30.4598
+              }
+            },
+            "review-needed": {
+              "proposal_pixels": 17452,
+              "evidence_counts": {
+                "affirmative": 14885,
+                "ambiguous_or_unchanged": 496,
+                "outside_mask_or_nodata": 2071
+              },
+              "evidence_percent": {
+                "affirmative": 85.2911,
+                "ambiguous_or_unchanged": 2.8421,
+                "outside_mask_or_nodata": 11.8668
+              }
+            }
+          }
+        },
+        {
+          "program": "BAER",
+          "role": "continuous_change_context_only",
+          "member": "baer/2024/baer_or4364712147820240625_10030231/baer_or4364712147820240625_10030231_20240625_20240702_dnbr.tif",
+          "member_sha256": "f72769aa7b171c8eda27764955eb53400532fac6027c18c758eca7e0322b0dbd",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              619500.0,
+              0.0,
+              -30.0,
+              4840710.0
+            ],
+            "width": 434,
+            "height": 341,
+            "dtype": "int16",
+            "nodata": -32768.0,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "state_statistics": {
+            "background-candidate": {
+              "valid_pixels": 161238,
+              "median": 3.0,
+              "q25": -7.0,
+              "q75": 13.0,
+              "positive_change_percent": 55.7871
+            },
+            "burned": {
+              "valid_pixels": 18543,
+              "median": 335.0,
+              "q25": 239.0,
+              "q75": 416.0,
+              "positive_change_percent": 99.9946
+            },
+            "unknown": {
+              "valid_pixels": 71897,
+              "median": 3.0,
+              "q25": -12.0,
+              "q75": 18.0,
+              "positive_change_percent": 53.9202
+            },
+            "excluded": {
+              "valid_pixels": 870,
+              "median": 67.0,
+              "q25": -13.0,
+              "q75": 201.0,
+              "positive_change_percent": 72.6437
+            },
+            "review-needed": {
+              "valid_pixels": 17452,
+              "median": 136.0,
+              "q25": 90.0,
+              "q75": 185.0,
+              "positive_change_percent": 94.9118
+            }
+          },
+          "semantic_contract": {
+            "nearest_neighbor_sampling": true,
+            "positive_dnbr_is_change_evidence_not_a_burned_threshold": true,
+            "creates_label": false
+          }
+        }
+      ],
+      "cross_program_categorical_agreement": null,
+      "categorical_cross_program_confirmation_available": false
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "event_id": "OR4375212142520170829",
+      "display_name": "McKay 1035 NE",
+      "proposal": {
+        "path": "samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-2026-002-mckay-1035-ne-2017-state.tif",
+        "sha256": "33f4aec6d807deab7bf81c911ba0a57e57e8a6153012236013f96409b216719f",
+        "crs": "EPSG:32610",
+        "width": 191,
+        "height": 105,
+        "resolution": [
+          20.0,
+          20.0
+        ],
+        "state_counts": {
+          "background-candidate": 55,
+          "burned": 9119,
+          "unknown": 7483,
+          "excluded": 0,
+          "review-needed": 3398
+        }
+      },
+      "products": [
+        {
+          "program": "MTBS",
+          "role": "categorical_owner_review_evidence",
+          "member": "mtbs/2017/mtbs_or4375212142520170829_10007931/mtbs_or4375212142520170829_10007931_20170707_20180710_dnbr6.tif",
+          "member_sha256": "427c08ff6ccdcb66c89bc5e2cf16b8959bc73318ae839c65c3f9764ba8593d9a",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              623700.0,
+              0.0,
+              -30.0,
+              4850220.0
+            ],
+            "width": 328,
+            "height": 271,
+            "dtype": "uint8",
+            "nodata": 0.0,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "native_class_counts": {
+            "0": 83400,
+            "1": 22,
+            "2": 1754,
+            "3": 1817,
+            "4": 1895
+          },
+          "semantic_contract": {
+            "affirmative_values": [
+              2,
+              3,
+              4
+            ],
+            "ambiguous_or_unchanged_values": [
+              1,
+              5
+            ],
+            "outside_mask_or_nodata_values": [
+              0,
+              6
+            ],
+            "nearest_neighbor_only": true,
+            "creates_label": false
+          },
+          "proposal_grid_comparison": {
+            "background-candidate": {
+              "proposal_pixels": 55,
+              "evidence_counts": {
+                "affirmative": 0,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 55
+              },
+              "evidence_percent": {
+                "affirmative": 0.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 100.0
+              }
+            },
+            "burned": {
+              "proposal_pixels": 9119,
+              "evidence_counts": {
+                "affirmative": 9119,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 100.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "unknown": {
+              "proposal_pixels": 7483,
+              "evidence_counts": {
+                "affirmative": 523,
+                "ambiguous_or_unchanged": 10,
+                "outside_mask_or_nodata": 6950
+              },
+              "evidence_percent": {
+                "affirmative": 6.9892,
+                "ambiguous_or_unchanged": 0.1336,
+                "outside_mask_or_nodata": 92.8772
+              }
+            },
+            "excluded": {
+              "proposal_pixels": 0,
+              "evidence_counts": {
+                "affirmative": 0,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 0.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "review-needed": {
+              "proposal_pixels": 3398,
+              "evidence_counts": {
+                "affirmative": 2663,
+                "ambiguous_or_unchanged": 42,
+                "outside_mask_or_nodata": 693
+              },
+              "evidence_percent": {
+                "affirmative": 78.3696,
+                "ambiguous_or_unchanged": 1.236,
+                "outside_mask_or_nodata": 20.3943
+              }
+            }
+          }
+        },
+        {
+          "program": "RAVG",
+          "role": "categorical_owner_review_evidence",
+          "member": "ravg/2017/ravg_or4375212142520170829_10004989/ravg_or4375212142520170829_10004989_20170808_20170909_rdnbr_cbi4.tif",
+          "member_sha256": "f77d5a64933565ed9e98846c36eb89878260328821cd6ccb8f96bac6e951acd9",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              623700.0,
+              0.0,
+              -30.0,
+              4850220.0
+            ],
+            "width": 328,
+            "height": 271,
+            "dtype": "uint8",
+            "nodata": null,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "native_class_counts": {
+            "0": 83400,
+            "1": 15,
+            "2": 758,
+            "3": 1446,
+            "4": 3269
+          },
+          "semantic_contract": {
+            "affirmative_values": [
+              2,
+              3,
+              4
+            ],
+            "ambiguous_or_unchanged_values": [
+              1
+            ],
+            "outside_mask_or_nodata_values": [
+              0,
+              9
+            ],
+            "nearest_neighbor_only": true,
+            "creates_label": false
+          },
+          "proposal_grid_comparison": {
+            "background-candidate": {
+              "proposal_pixels": 55,
+              "evidence_counts": {
+                "affirmative": 0,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 55
+              },
+              "evidence_percent": {
+                "affirmative": 0.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 100.0
+              }
+            },
+            "burned": {
+              "proposal_pixels": 9119,
+              "evidence_counts": {
+                "affirmative": 9119,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 100.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "unknown": {
+              "proposal_pixels": 7483,
+              "evidence_counts": {
+                "affirmative": 529,
+                "ambiguous_or_unchanged": 4,
+                "outside_mask_or_nodata": 6950
+              },
+              "evidence_percent": {
+                "affirmative": 7.0694,
+                "ambiguous_or_unchanged": 0.0535,
+                "outside_mask_or_nodata": 92.8772
+              }
+            },
+            "excluded": {
+              "proposal_pixels": 0,
+              "evidence_counts": {
+                "affirmative": 0,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 0.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "review-needed": {
+              "proposal_pixels": 3398,
+              "evidence_counts": {
+                "affirmative": 2679,
+                "ambiguous_or_unchanged": 26,
+                "outside_mask_or_nodata": 693
+              },
+              "evidence_percent": {
+                "affirmative": 78.8405,
+                "ambiguous_or_unchanged": 0.7652,
+                "outside_mask_or_nodata": 20.3943
+              }
+            }
+          }
+        }
+      ],
+      "cross_program_categorical_agreement": {
+        "method": "MTBS dNBR6 and RAVG CBI4 sampled independently to the frozen proposal grid with nearest neighbor; no resolution gain is claimed.",
+        "proposal_state_comparison": {
+          "background-candidate": {
+            "proposal_pixels": 55,
+            "evidence_counts": {
+              "both_affirmative": 0,
+              "mtbs_only_affirmative": 0,
+              "ravg_only_affirmative": 0,
+              "neither_or_ambiguous_invalid": 55
+            },
+            "evidence_percent": {
+              "both_affirmative": 0.0,
+              "mtbs_only_affirmative": 0.0,
+              "ravg_only_affirmative": 0.0,
+              "neither_or_ambiguous_invalid": 100.0
+            }
+          },
+          "burned": {
+            "proposal_pixels": 9119,
+            "evidence_counts": {
+              "both_affirmative": 9119,
+              "mtbs_only_affirmative": 0,
+              "ravg_only_affirmative": 0,
+              "neither_or_ambiguous_invalid": 0
+            },
+            "evidence_percent": {
+              "both_affirmative": 100.0,
+              "mtbs_only_affirmative": 0.0,
+              "ravg_only_affirmative": 0.0,
+              "neither_or_ambiguous_invalid": 0.0
+            }
+          },
+          "unknown": {
+            "proposal_pixels": 7483,
+            "evidence_counts": {
+              "both_affirmative": 520,
+              "mtbs_only_affirmative": 3,
+              "ravg_only_affirmative": 9,
+              "neither_or_ambiguous_invalid": 6951
+            },
+            "evidence_percent": {
+              "both_affirmative": 6.9491,
+              "mtbs_only_affirmative": 0.0401,
+              "ravg_only_affirmative": 0.1203,
+              "neither_or_ambiguous_invalid": 92.8906
+            }
+          },
+          "excluded": {
+            "proposal_pixels": 0,
+            "evidence_counts": {
+              "both_affirmative": 0,
+              "mtbs_only_affirmative": 0,
+              "ravg_only_affirmative": 0,
+              "neither_or_ambiguous_invalid": 0
+            },
+            "evidence_percent": {
+              "both_affirmative": 0.0,
+              "mtbs_only_affirmative": 0.0,
+              "ravg_only_affirmative": 0.0,
+              "neither_or_ambiguous_invalid": 0.0
+            }
+          },
+          "review-needed": {
+            "proposal_pixels": 3398,
+            "evidence_counts": {
+              "both_affirmative": 2648,
+              "mtbs_only_affirmative": 15,
+              "ravg_only_affirmative": 31,
+              "neither_or_ambiguous_invalid": 704
+            },
+            "evidence_percent": {
+              "both_affirmative": 77.9282,
+              "mtbs_only_affirmative": 0.4414,
+              "ravg_only_affirmative": 0.9123,
+              "neither_or_ambiguous_invalid": 20.7181
+            }
+          }
+        },
+        "overall_counts": {
+          "both_affirmative": 12287,
+          "mtbs_only_affirmative": 18,
+          "ravg_only_affirmative": 40,
+          "neither_or_ambiguous_invalid": 7710
+        }
+      },
+      "categorical_cross_program_confirmation_available": true
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "event_id": "OR4383912111420180907",
+      "display_name": "Tepee 1144 NE",
+      "proposal": {
+        "path": "samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-2026-002-tepee-1144-ne-2018-state.tif",
+        "sha256": "882ea13490b768ff1f5402f504cca4193c89a4977a93b75fb92f3f374a2beeca",
+        "crs": "EPSG:32610",
+        "width": 351,
+        "height": 125,
+        "resolution": [
+          20.0,
+          20.0
+        ],
+        "state_counts": {
+          "background-candidate": 494,
+          "burned": 92,
+          "unknown": 10942,
+          "excluded": 16025,
+          "review-needed": 16322
+        }
+      },
+      "products": [
+        {
+          "program": "MTBS",
+          "role": "categorical_owner_review_evidence",
+          "member": "mtbs/2018/mtbs_or4383912111420180907_10011986/mtbs_or4383912111420180907_10011986_20180811_20181014_dnbr6.tif",
+          "member_sha256": "7f3b9cb194b3d52b3e3bc660b6a2f105e6a2ea7489ba4fe525aa66d831a9a5a4",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              647790.0,
+              0.0,
+              -30.0,
+              4860540.0
+            ],
+            "width": 435,
+            "height": 284,
+            "dtype": "uint8",
+            "nodata": 0.0,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "native_class_counts": {
+            "0": 113942,
+            "1": 820,
+            "2": 5601,
+            "3": 2845,
+            "4": 331,
+            "5": 1
+          },
+          "semantic_contract": {
+            "affirmative_values": [
+              2,
+              3,
+              4
+            ],
+            "ambiguous_or_unchanged_values": [
+              1,
+              5
+            ],
+            "outside_mask_or_nodata_values": [
+              0,
+              6
+            ],
+            "nearest_neighbor_only": true,
+            "creates_label": false
+          },
+          "proposal_grid_comparison": {
+            "background-candidate": {
+              "proposal_pixels": 494,
+              "evidence_counts": {
+                "affirmative": 0,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 494
+              },
+              "evidence_percent": {
+                "affirmative": 0.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 100.0
+              }
+            },
+            "burned": {
+              "proposal_pixels": 92,
+              "evidence_counts": {
+                "affirmative": 92,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 100.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "unknown": {
+              "proposal_pixels": 10942,
+              "evidence_counts": {
+                "affirmative": 3087,
+                "ambiguous_or_unchanged": 128,
+                "outside_mask_or_nodata": 7727
+              },
+              "evidence_percent": {
+                "affirmative": 28.2124,
+                "ambiguous_or_unchanged": 1.1698,
+                "outside_mask_or_nodata": 70.6178
+              }
+            },
+            "excluded": {
+              "proposal_pixels": 16025,
+              "evidence_counts": {
+                "affirmative": 8125,
+                "ambiguous_or_unchanged": 954,
+                "outside_mask_or_nodata": 6946
+              },
+              "evidence_percent": {
+                "affirmative": 50.702,
+                "ambiguous_or_unchanged": 5.9532,
+                "outside_mask_or_nodata": 43.3448
+              }
+            },
+            "review-needed": {
+              "proposal_pixels": 16322,
+              "evidence_counts": {
+                "affirmative": 8425,
+                "ambiguous_or_unchanged": 786,
+                "outside_mask_or_nodata": 7111
+              },
+              "evidence_percent": {
+                "affirmative": 51.6174,
+                "ambiguous_or_unchanged": 4.8156,
+                "outside_mask_or_nodata": 43.567
+              }
+            }
+          }
+        },
+        {
+          "program": "RAVG",
+          "role": "categorical_owner_review_evidence",
+          "member": "ravg/2018/ravg_or4383912111420180907_10008484/ravg_or4383912111420180907_10008484_20170909_20181014_rdnbr_cbi4.tif",
+          "member_sha256": "686d5c7e3d4fa8a3ff177c6e3c4ec42a8365cd0bce338a5c996e24a789a8869c",
+          "profile": {
+            "crs": "EPSG:32610",
+            "transform": [
+              30.0,
+              0.0,
+              647820.0,
+              0.0,
+              -30.0,
+              4860510.0
+            ],
+            "width": 433,
+            "height": 282,
+            "dtype": "uint8",
+            "nodata": null,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "native_class_counts": {
+            "0": 112984,
+            "1": 9,
+            "2": 239,
+            "3": 1166,
+            "4": 7708
+          },
+          "semantic_contract": {
+            "affirmative_values": [
+              2,
+              3,
+              4
+            ],
+            "ambiguous_or_unchanged_values": [
+              1
+            ],
+            "outside_mask_or_nodata_values": [
+              0,
+              9
+            ],
+            "nearest_neighbor_only": true,
+            "creates_label": false
+          },
+          "proposal_grid_comparison": {
+            "background-candidate": {
+              "proposal_pixels": 494,
+              "evidence_counts": {
+                "affirmative": 1,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 493
+              },
+              "evidence_percent": {
+                "affirmative": 0.2024,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 99.7976
+              }
+            },
+            "burned": {
+              "proposal_pixels": 92,
+              "evidence_counts": {
+                "affirmative": 92,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 0
+              },
+              "evidence_percent": {
+                "affirmative": 100.0,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 0.0
+              }
+            },
+            "unknown": {
+              "proposal_pixels": 10942,
+              "evidence_counts": {
+                "affirmative": 3195,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 7747
+              },
+              "evidence_percent": {
+                "affirmative": 29.1994,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 70.8006
+              }
+            },
+            "excluded": {
+              "proposal_pixels": 16025,
+              "evidence_counts": {
+                "affirmative": 8524,
+                "ambiguous_or_unchanged": 18,
+                "outside_mask_or_nodata": 7483
+              },
+              "evidence_percent": {
+                "affirmative": 53.1919,
+                "ambiguous_or_unchanged": 0.1123,
+                "outside_mask_or_nodata": 46.6958
+              }
+            },
+            "review-needed": {
+              "proposal_pixels": 16322,
+              "evidence_counts": {
+                "affirmative": 8685,
+                "ambiguous_or_unchanged": 0,
+                "outside_mask_or_nodata": 7637
+              },
+              "evidence_percent": {
+                "affirmative": 53.2104,
+                "ambiguous_or_unchanged": 0.0,
+                "outside_mask_or_nodata": 46.7896
+              }
+            }
+          }
+        },
+        {
+          "program": "BAER",
+          "role": "continuous_change_context_only",
+          "member": "baer/2018/or4383912111420180907/or4383912111420180907_20180905_20181007_dnbr_utm.tif",
+          "member_sha256": "52befbd2781f761670a6b32d8dfb9cd59cddf1db82c98eafd0981352009ff64a",
+          "profile": {
+            "crs": "EPSG:26910",
+            "transform": [
+              30.0,
+              0.0,
+              646678.6128514305,
+              0.0,
+              -30.0,
+              4862498.987304022
+            ],
+            "width": 496,
+            "height": 406,
+            "dtype": "int16",
+            "nodata": 32767.0,
+            "resolution": [
+              30.0,
+              30.0
+            ]
+          },
+          "state_statistics": {
+            "background-candidate": {
+              "valid_pixels": 494,
+              "median": -29.0,
+              "q25": -36.0,
+              "q75": -23.0,
+              "positive_change_percent": 0.4049
+            },
+            "burned": {
+              "valid_pixels": 92,
+              "median": 158.5,
+              "q25": 136.25,
+              "q75": 195.25,
+              "positive_change_percent": 100.0
+            },
+            "unknown": {
+              "valid_pixels": 10942,
+              "median": -24.0,
+              "q25": -33.0,
+              "q75": 47.0,
+              "positive_change_percent": 29.9488
+            },
+            "excluded": {
+              "valid_pixels": 16025,
+              "median": 54.0,
+              "q25": -61.0,
+              "q75": 212.0,
+              "positive_change_percent": 54.8144
+            },
+            "review-needed": {
+              "valid_pixels": 16322,
+              "median": 44.0,
+              "q25": -47.0,
+              "q75": 153.0,
+              "positive_change_percent": 53.7495
+            }
+          },
+          "semantic_contract": {
+            "nearest_neighbor_sampling": true,
+            "positive_dnbr_is_change_evidence_not_a_burned_threshold": true,
+            "creates_label": false
+          }
+        }
+      ],
+      "cross_program_categorical_agreement": {
+        "method": "MTBS dNBR6 and RAVG CBI4 sampled independently to the frozen proposal grid with nearest neighbor; no resolution gain is claimed.",
+        "proposal_state_comparison": {
+          "background-candidate": {
+            "proposal_pixels": 494,
+            "evidence_counts": {
+              "both_affirmative": 0,
+              "mtbs_only_affirmative": 0,
+              "ravg_only_affirmative": 1,
+              "neither_or_ambiguous_invalid": 493
+            },
+            "evidence_percent": {
+              "both_affirmative": 0.0,
+              "mtbs_only_affirmative": 0.0,
+              "ravg_only_affirmative": 0.2024,
+              "neither_or_ambiguous_invalid": 99.7976
+            }
+          },
+          "burned": {
+            "proposal_pixels": 92,
+            "evidence_counts": {
+              "both_affirmative": 92,
+              "mtbs_only_affirmative": 0,
+              "ravg_only_affirmative": 0,
+              "neither_or_ambiguous_invalid": 0
+            },
+            "evidence_percent": {
+              "both_affirmative": 100.0,
+              "mtbs_only_affirmative": 0.0,
+              "ravg_only_affirmative": 0.0,
+              "neither_or_ambiguous_invalid": 0.0
+            }
+          },
+          "unknown": {
+            "proposal_pixels": 10942,
+            "evidence_counts": {
+              "both_affirmative": 3012,
+              "mtbs_only_affirmative": 75,
+              "ravg_only_affirmative": 183,
+              "neither_or_ambiguous_invalid": 7672
+            },
+            "evidence_percent": {
+              "both_affirmative": 27.527,
+              "mtbs_only_affirmative": 0.6854,
+              "ravg_only_affirmative": 1.6725,
+              "neither_or_ambiguous_invalid": 70.1152
+            }
+          },
+          "excluded": {
+            "proposal_pixels": 16025,
+            "evidence_counts": {
+              "both_affirmative": 8090,
+              "mtbs_only_affirmative": 35,
+              "ravg_only_affirmative": 434,
+              "neither_or_ambiguous_invalid": 7466
+            },
+            "evidence_percent": {
+              "both_affirmative": 50.4836,
+              "mtbs_only_affirmative": 0.2184,
+              "ravg_only_affirmative": 2.7083,
+              "neither_or_ambiguous_invalid": 46.5897
+            }
+          },
+          "review-needed": {
+            "proposal_pixels": 16322,
+            "evidence_counts": {
+              "both_affirmative": 8284,
+              "mtbs_only_affirmative": 141,
+              "ravg_only_affirmative": 401,
+              "neither_or_ambiguous_invalid": 7496
+            },
+            "evidence_percent": {
+              "both_affirmative": 50.7536,
+              "mtbs_only_affirmative": 0.8639,
+              "ravg_only_affirmative": 2.4568,
+              "neither_or_ambiguous_invalid": 45.9257
+            }
+          }
+        },
+        "overall_counts": {
+          "both_affirmative": 19478,
+          "mtbs_only_affirmative": 251,
+          "ravg_only_affirmative": 1019,
+          "neither_or_ambiguous_invalid": 23127
+        }
+      },
+      "categorical_cross_program_confirmation_available": true
+    }
+  ],
+  "historical_review_context": {
+    "units": 56,
+    "burned": 6,
+    "background": 0,
+    "ignored": 50,
+    "status": "immutable historical single-reviewer evidence; not a final exclusion decision under the owner-confirmed route",
+    "spatial_join_performed": false
+  },
+  "claim_boundaries": {
+    "labels_promoted": false,
+    "owner_responses_recorded": 0,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_claimed": false,
+    "inter_rater_agreement_claimed": false,
+    "field_validation_claimed": false,
+    "official_operational_or_endorsed_status_claimed": false
+  },
+  "decision": "ACCEPT_CURRENT_BUNDLES_AS_BOUNDED_OWNER_REVIEW_EVIDENCE_DEFER_LABELS_DATASET_MODEL",
+  "next_checkpoint": "Build the owner yes/no/uncertain review surface for all original 56 units, pairing each candidate with optical and permitted current-reference evidence. Keep no/uncertain excluded and gate every yes before prototype-label acceptance.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
