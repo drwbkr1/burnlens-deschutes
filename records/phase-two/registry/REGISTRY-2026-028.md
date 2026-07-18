@@ -1,6 +1,6 @@
 # REGISTRY-2026-028 - Owner Response Intake
 
-**Checkpoint:** Issue #437; branch `codex/p2o4-t15-owner-response-intake`; source `26e380f98172759e73aac13d5a0f53994aac9d5a`
+**Checkpoint:** Issue #437 / PR #441; branch `codex/p2o4-t15-owner-response-intake`; source `26e380f98172759e73aac13d5a0f53994aac9d5a`
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
 |---|---|---|---:|

@@ -1,6 +1,6 @@
 # Owner Response Intake Decision
 
-**Issue:** #437
+**Issue / PR:** #437 / #441
 
 **Run:** `BL-2026-07-18-owner-response-intake-r002`
 
