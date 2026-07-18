@@ -16,6 +16,7 @@ from burnlens.region_candidate_pilot import (
     _candidate_from_seed,
     _panel,
     _tci_image,
+    render_html,
     select_candidates,
 )
 
@@ -100,6 +101,22 @@ class RegionCandidatePilotTests(unittest.TestCase):
         self.assertEqual(len(selected), 6)
         self.assertTrue(all(item["core_pixels"] == 16 for item in selected))
         self.assertTrue(all(item["ring_pixels"] == 20 for item in selected))
+
+    def test_rendered_surface_contains_mobile_overflow_guards(self) -> None:
+        html = render_html({
+            "candidates": [],
+            "limitations": [],
+            "warning": "warning",
+            "method": {"growth": "frozen"},
+            "generator_version": GENERATOR_VERSION,
+            "run_id": "BL-test",
+            "git_source_commit": "a" * 40,
+            "decision": "KEEP_PROMOTION_CLOSED",
+            "next_gate": "validate",
+        })
+        self.assertIn("*{box-sizing:border-box}", html)
+        self.assertIn(".table{width:100%;max-width:100%;overflow-x:auto}", html)
+        self.assertIn("word-break:break-word", html)
 
 
 @unittest.skipUnless(PUBLIC.exists(), "tracked pilot report not published yet")
