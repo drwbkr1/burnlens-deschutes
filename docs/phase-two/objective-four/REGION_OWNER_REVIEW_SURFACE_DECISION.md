@@ -6,6 +6,8 @@
 
 **Generator source / public artifacts:** `7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6` / `f0412fd85092f00a5122b775c3e07891d2f156d7`
 
+**Verified checkpoint / tag:** `674e9edb04a4016ef71cad805be52f4459670d6a` / `v0.30.0-region-owner-review-surface` (annotated object `dc0b27e47a71353d8e1e7c8691dbf6b9c2a7598f`)
+
 ## Decision
 
 `SURFACE_READY_FOR_OWNER_REGION_REVIEW_KEEP_RESPONSE_INTAKE_SEPARATE`.
@@ -18,4 +20,4 @@ The authoritative output and a second reconstruction match across all ten files.
 
 No owner response is collected, no region label is created, and dataset, split, baseline, and model versions remain absent. Nothing here establishes independent ground truth, inter-rater agreement, field validation, official or endorsed status, operational readiness, emergency readiness, or accuracy.
 
-The candidate gate passes 246 tests, exact ten-file reconstruction, real rendering, compilation, dependency health, and reproducible packaging. The isolated 0.30.0 wheel exposes 44 commands and 96 clean entries. Merge, tag, and fresh-main verification remain separate release gates.
+Fresh merged main passes 246 tests, exact ten-file reconstruction, real rendering, compilation, dependency health, 82 JSON parses, and canonical packaging. The isolated 0.30.0 wheel exposes 44 commands and 96 clean entries. Issue #461 owns the separate exact owner-response intake gate.

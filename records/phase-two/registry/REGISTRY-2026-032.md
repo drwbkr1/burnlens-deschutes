@@ -1,6 +1,6 @@
 # REGISTRY-2026-032 - Six-Candidate Owner Region Review Surface
 
-**Candidate checkpoint:** Issue #457; branch `codex/p2o4-t18-region-review-surface`; generator `7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6`; public artifacts `f0412fd85092f00a5122b775c3e07891d2f156d7`
+**Checkpoint:** Issue #457; PR #459; merge `674e9edb04a4016ef71cad805be52f4459670d6a`; tag object `dc0b27e47a71353d8e1e7c8691dbf6b9c2a7598f`; lifecycle #460 / PR #462; next #461; generator `7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6`; public artifacts `f0412fd85092f00a5122b775c3e07891d2f156d7`
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|
