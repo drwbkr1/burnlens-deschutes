@@ -6,6 +6,8 @@
 
 **Generator source:** `4a5e88e916ce9e7961fabd49ef259eb59755baa4`
 
+**Verified checkpoint / tag:** `5ae35554c1b909e6ddf43e9aa54578948082603a` / `v0.28.0-label-region-remediation-plan` (annotated object `cd0eb91d8b0ef2124db485e80d7f22b937a01a40`)
+
 ## Decision
 
 `ADOPT_REGION_FIRST_OWNER_REVIEW_REQUIRE_EVENT_DIVERSITY_BEFORE_DATASET`.

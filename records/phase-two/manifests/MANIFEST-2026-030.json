@@ -9,9 +9,13 @@
   "git_base_commit": "9a9ffdd45e17b28ee5f79210b7a57c18af987e2e",
   "generator_source_commit": "4a5e88e916ce9e7961fabd49ef259eb59755baa4",
   "candidate_artifacts_commit": "93e7f336cc7764b69e325f5eb20870232dcc1f5f",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "5ae35554c1b909e6ddf43e9aa54578948082603a",
   "version_tag": "v0.28.0-label-region-remediation-plan",
-  "status": "candidate region-first and event-diversity plan; analytical versions absent",
+  "version_tag_object": "cd0eb91d8b0ef2124db485e80d7f22b937a01a40",
+  "lifecycle_sync_issue": 452,
+  "lifecycle_sync_pull_request": null,
+  "next_checkpoint_issue": 453,
+  "status": "shipped verified region-first and event-diversity plan; analytical versions absent",
   "software_version": "0.28.0",
   "report_version": "label-region-remediation-plan-v0.1.0",
   "protocol_version": "owner-confirmed-contiguous-region-review-v0.1.0",
@@ -40,8 +44,8 @@
     "rendered_evidence": "pass: original PNG and live HTML; no unsupported glyphs, overflow, external resources, console, or runtime errors",
     "repository_tests": "pass: 233 tracked tests",
     "release_package": "pass: two fixed-epoch wheels byte-identical at 429705 bytes and sha256 598420d786afba83fab92fdc6a01246023fcf93dc041f4261f89f0c97835e902; isolated 0.28.0 install, 42 console entry points, 92 wheel entries, zero forbidden entries, and dependency check pass",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass at checkpoint 5ae35554c1b909e6ddf43e9aa54578948082603a: exact ignored owner-intake bytes restored; 233 tests; compileall; dependency health; exact three-output reconstruction",
+    "remote_tag": "pass: annotated object cd0eb91d8b0ef2124db485e80d7f22b937a01a40 remotely peels to checkpoint 5ae35554c1b909e6ddf43e9aa54578948082603a"
   },
   "decision": "ADOPT_REGION_FIRST_OWNER_REVIEW_REQUIRE_EVENT_DIVERSITY_BEFORE_DATASET",
   "claim_boundaries": {
