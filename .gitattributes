@@ -34,6 +34,8 @@ samples/labels/review/phase-two/*.txt text eol=lf
 # Prototype-label readiness evidence has an exact cross-platform byte contract.
 samples/labels/readiness/phase-two/*.json text eol=lf
 samples/labels/readiness/phase-two/*.html text eol=lf
+samples/labels/pilot/phase-two/*.json text eol=lf
+samples/labels/pilot/phase-two/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
