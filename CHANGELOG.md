@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Publish deterministic JSON/HTML/PNG evidence from run `BL-2026-07-17-current-reference-bundle-fitness-r002`; fix the first 390 px overflow and verify actual desktop/mobile semantic rendering plus the original 1800x1580 evidence card.
 - Pass 207 repository tests and compilation. Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `5b84ed753e062266ac5260474b3bf60a9b00dfea`; candidate artifacts commit is `3c664a348d7c4d550aee62e62f391c47dff5a290`; PR #430 owns lifecycle publication. Fresh-main verification and tag remain pending.
+Generator source is `5b84ed753e062266ac5260474b3bf60a9b00dfea`; candidate artifacts commit is `3c664a348d7c4d550aee62e62f391c47dff5a290`; reviewed candidate head is `246340a42be44e842353e601bf9b16618df64c42`. Detached reconstruction passes all 207 tests and all three exact outputs. Two fixed-epoch wheels are identical at 383,199 bytes / SHA-256 `127a7262ac7d5845cec3f353d4a74ca05b5c6c184ebddf578b2fbc1a34b80888`; isolated 0.24.0 has 37 entry points and 81 wheel entries with zero forbidden files. PR #430 owns publication; fresh-main verification and tag remain pending.
 
 ## v0.23.0-official-source-scout - verified - 2026-07-17
 

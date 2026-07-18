@@ -10,7 +10,7 @@
   "git_base_commit": "c114dc8a7341e14a41461d259a34f5efbad96c55",
   "generator_source_commit": "5b84ed753e062266ac5260474b3bf60a9b00dfea",
   "candidate_artifacts_commit": "3c664a348d7c4d550aee62e62f391c47dff5a290",
-  "reviewed_candidate_head": null,
+  "reviewed_candidate_head": "246340a42be44e842353e601bf9b16618df64c42",
   "checkpoint_commit": null,
   "version_tag": null,
   "version_tag_object": null,
@@ -50,7 +50,7 @@
     "compileall": "pass",
     "responsive_html": "pass: desktop and 390 px; wide table locally scrollable; zero document overflow; zero browser errors",
     "evidence_card_visual_review": "pass: original 1800x1580 inspected",
-    "release_package": "pending candidate lifecycle verification",
+    "release_package": "pass: two fixed-epoch wheels byte-identical at 383199 bytes / sha256 127a7262ac7d5845cec3f353d4a74ca05b5c6c184ebddf578b2fbc1a34b80888; isolated BurnLens 0.24.0; 37 entry points; new entry present; 81 wheel entries; zero forbidden files",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
