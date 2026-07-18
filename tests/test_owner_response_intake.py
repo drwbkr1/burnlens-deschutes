@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -22,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SURFACE_PATH = ROOT / "samples" / "labels" / "review" / "phase-two" / "OWNER-REVIEW-SURFACE-2026-001.json"
 TEMPLATE_PATH = ROOT / "samples" / "labels" / "review" / "phase-two" / "OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json"
 CONFIRMATION_PATH = ROOT / "records" / "phase-two" / "authorizations" / "OWNER-CONFIRMATION-2026-002.json"
+PUBLIC_REPORT_PATH = ROOT / "samples" / "labels" / "review" / "phase-two" / "OWNER-RESPONSE-INTAKE-2026-001.json"
 
 
 class OwnerResponseIntakeTests(unittest.TestCase):
@@ -93,6 +95,31 @@ class OwnerResponseIntakeTests(unittest.TestCase):
             self.assertTrue(binding["ignored"])
             with self.assertRaisesRegex(OwnerResponseIntakeError, "refusing to overwrite"):
                 write_private_no_overwrite(ROOT, path, report)
+
+    def test_tracked_public_report_is_content_safe_and_bounded(self) -> None:
+        report = json.loads(PUBLIC_REPORT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(report["decision_counts"], EXPECTED_DECISIONS)
+        self.assertEqual(report["outcome"]["owner_approved_prototype_labels"], 24)
+        self.assertEqual(report["outcome"]["prototype_label_class_counts"], {"background": 12, "burned": 12})
+        self.assertEqual(set(report["outcome"]["prototype_label_event_counts"].values()), {8})
+        self.assertEqual(
+            report["decision"],
+            "ACCEPT_24_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL",
+        )
+        self.assertFalse(any(report["boundaries"][key] for key in ("dataset_created", "split_created", "baseline_created", "model_created")))
+        self.assertFalse(any(report["privacy"].values()))
+        serialized = PUBLIC_REPORT_PATH.read_text(encoding="utf-8").lower()
+        for forbidden in ("c:\\users", "downloads", "de25c0bd", "lru-", "sample_id"):
+            self.assertNotIn(forbidden, serialized)
+
+    def test_tracked_public_outputs_match_report_hashes(self) -> None:
+        report = json.loads(PUBLIC_REPORT_PATH.read_text(encoding="utf-8"))
+        output_root = PUBLIC_REPORT_PATH.parent
+        for output in report["outputs"]:
+            path = output_root / output["path"]
+            payload = path.read_bytes()
+            self.assertEqual(len(payload), output["bytes"])
+            self.assertEqual(hashlib.sha256(payload).hexdigest(), output["sha256"])
 
 
 if __name__ == "__main__":

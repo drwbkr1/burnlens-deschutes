@@ -292,9 +292,11 @@ BurnLens `0.25.0` turns that evidence into one repository-owned owner-review sur
 
 ![BurnLens owner-confirmed review surface](../../samples/labels/review/phase-two/OWNER-REVIEW-SURFACE-2026-001.png)
 
-The shipped template is blank. Current Chrome exercises only an explicitly non-human software fixture: incomplete review fails visibly; 56 decisions export to hash-named bytes; draft reload restores them; completion locks all 168 radios; and a true 390 px viewport keeps all wide evidence inside local scrollers. That QA creates no owner decision or label. A returned owner yes would still need reproducibility, source, quality, and event-level leakage gates.
+The shipped template was blank. The owner later completed all 56 questions and explicitly identified one exact export as authoritative. BurnLens `0.26.0` preserves those bytes privately, excludes older exports, reconstructs every proposition, and applies the disclosed promotion gates without publishing notes or unit decisions.
 
-The Landsat STAC metadata route is live, but the advertised asset redirects to EROS authentication. BurnLens records that gate rather than treating metadata availability as acquired pixels. No credential, product byte, owner response, label, dataset, split, baseline, or model is created. This remains a portfolio demonstration of transparent evidence engineering—not ground truth, field validation, official status, endorsement, or operational readiness.
+![BurnLens owner response intake](../../samples/labels/review/phase-two/OWNER-RESPONSE-INTAKE-2026-001.png)
+
+The response contains 53 yes, 2 no, and 1 uncertain. Exactly 24 yes units also pass reproducibility, bounded source-direction, frozen binary-origin quality, and immutable event-group gates: 12 burned and 12 background, balanced as eight per event. Twenty-nine yes units remain quality-blocked; no and uncertain remain excluded. These are explicitly owner-approved prototype labels, not ground truth or a dataset. The Landsat route remains optional future evidence. No split, baseline, model, accuracy, field validation, official status, endorsement, or operational readiness follows.
 
 ## Traceability snapshot
 
@@ -308,6 +310,7 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Latest cross-event source run: `RUN-2026-07-15-CROSS-EVENT-SOURCE-001`
 - Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Latest cross-event acquisition run: `BL-2026-07-16-cross-event-optical-intake-r005`
+- Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
 - Latest cross-event proposal run: `BL-2026-07-16-cross-event-label-transfer-r004`
