@@ -61,6 +61,11 @@ class PrototypeLabelSufficiencyTests(unittest.TestCase):
 
 
 class TrackedPrototypeLabelSufficiencyTests(unittest.TestCase):
+    def test_readiness_outputs_have_checkout_stable_text_bytes(self) -> None:
+        attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8")
+        self.assertIn("samples/labels/readiness/phase-two/*.json text eol=lf", attributes)
+        self.assertIn("samples/labels/readiness/phase-two/*.html text eol=lf", attributes)
+
     def test_public_report_is_bounded_and_content_safe(self) -> None:
         report = json.loads(PUBLIC.read_text(encoding="utf-8"))
         self.assertEqual(report["decision"], DECISION)

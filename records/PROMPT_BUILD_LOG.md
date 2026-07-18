@@ -193,6 +193,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T15 | `records/prompt-build-log/2026-07-18-p2o4-t15.md` | issue #437 / PR #441; verified BurnLens 0.26.0 | Preserves the one owner-confirmed authoritative response, reconciles all 56 units through disclosed promotion gates, accepts 24 owner-approved prototype labels, and keeps private decisions unpublished. Dataset, split, baseline, and model remain deferred. |
 | P2O4-T15-SYNC | `records/prompt-build-log/2026-07-18-p2o4-t15-sync.md` | issue #442 / PR #444; verified lifecycle synchronization | Records the merge, fresh-main tests and exact reconstruction, canonical wheel, remote annotated tag, folded #440, and next checkpoint #443 without changing scientific or private state. |
 | P2O5-T01 | `records/prompt-build-log/2026-07-18-p2o5-t01.md` | issue #443; BurnLens 0.27.0 candidate | Proves that 24 reviewed points lack contiguous masks, coverage, replicated event groups, distribution support, and independent evaluation needed for a dataset or split; requires remediation before baseline/model work. |
+| P2O5-T01-REM | `records/prompt-build-log/2026-07-18-p2o5-t01-rem.md` | issue #446 / PR #447; checkout-stability remediation | Records the failed first fresh-main byte gate, pins readiness JSON/HTML to LF, and repeats detached-checkout test, package, and exact-output gates without changing scientific state. |
 
 ## Acceptance and remediation triggers
 
