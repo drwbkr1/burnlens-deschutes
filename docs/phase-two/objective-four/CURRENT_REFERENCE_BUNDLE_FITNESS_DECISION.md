@@ -26,3 +26,7 @@ MTBS is analyst interpreted; RAVG is forest calibrated and timing sensitive. Nei
 Build a repository-owned owner yes/no/uncertain review surface that reopens all original 56 units. Each unit must show appropriate frozen optical evidence and permitted current reference evidence. A yes is necessary but not sufficient: prototype-label acceptance still requires reproducibility, source, quality, and event-level leakage gates. No/uncertain remain excluded.
 
 This checkpoint records zero owner responses, promotes zero labels, and creates no dataset, split, baseline, model, field-validation, independent-review, inter-rater, official, endorsed, operational, emergency-ready, or enterprise claim.
+
+## Verified release
+
+PR #430 merged at `a91103a01787e3d8de09522527be13efbc7c1828`. Fresh main passes 207 tests, exact three-output reconstruction, compilation, dependency health, and canonical 383,225-byte packaging / SHA-256 `8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03`. Annotated tag object `b6578ca80ff3d3418335f0ae76cc12f6b4183fca` remotely peels to the merge as `v0.24.0-current-reference-bundle-fitness`. Issue #432 owns the next owner-review checkpoint.
