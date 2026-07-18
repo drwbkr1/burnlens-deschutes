@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass exact 12-output reconstruction and real 1440/390 px Chrome workflow gates with 112 loaded evidence images, local evidence scrolling, zero document overflow, and zero runtime/external-request failures.
 - Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, accuracy, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 and draft PR #434 own the candidate review and release gates.
+Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 / PR #434 merged the analytical checkpoint at `042189d77f75a230d7c71ebe045688756e7a8cd7`. Fresh-main verification found that the recorded 404,158-byte candidate wheel carried CRLF working-tree bytes. Issue #435 supersedes it with two clean-merge byte-identical 403,220-byte wheels / SHA-256 `5086d7a6df9d0b0b231f1faa812fafac05dd6d7359bf6eaa46fcf8f89e20d757`; analytical outputs and claim boundaries are unchanged. Tagging remains pending remediation merge and final fresh-main verification.
 
 ## v0.24.0-current-reference-bundle-fitness - verified - 2026-07-17
 
