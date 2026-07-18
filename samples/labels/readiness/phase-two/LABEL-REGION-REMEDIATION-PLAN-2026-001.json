@@ -1,0 +1,221 @@
+{
+  "report_id": "LABEL-REGION-REMEDIATION-PLAN-2026-001",
+  "report_version": "label-region-remediation-plan-v0.1.0",
+  "protocol_version": "owner-confirmed-contiguous-region-review-v0.1.0",
+  "generated_at_utc": "2026-07-18T05:40:00Z",
+  "run_id": "BL-2026-07-18-label-region-remediation-plan-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 449,
+  "git_source_commit": "4a5e88e916ce9e7961fabd49ef259eb59755baa4",
+  "software_version": "0.28.0",
+  "application_version": "0.28.0",
+  "bindings": {
+    "sufficiency": {
+      "path": "PROTOTYPE-LABEL-SUFFICIENCY-2026-001.json",
+      "bytes": 7634,
+      "sha256": "58753a286d71d19bdda3b14fcf9c427ff78cb916190c2bfb2d95a913556a8a4e"
+    },
+    "official_source_scout": {
+      "path": "OFFICIAL-SOURCE-SCOUT-2026-001.json",
+      "bytes": 150299,
+      "sha256": "1aee7a51a8d46d1c019657df6e777a05ea24ea49d385422cd8272db79683b65e"
+    },
+    "official_source_capture": {
+      "path": "OFFICIAL-SOURCE-SCOUT-SOURCE-2026-001.json",
+      "bytes": 280316,
+      "sha256": "411bbd75d7b670182a3b39adba41b1259a5fc52719103901fbacf0f6aaa4f275"
+    },
+    "current_bundle_fitness": {
+      "path": "CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001.json",
+      "bytes": 35736,
+      "sha256": "2d94aba62d735efede902aa9bbdc82ccabc987026acc118ff67c45d686a23eed"
+    }
+  },
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "input_label_set_version": "owner-approved-prototype-labels-v0.1.0",
+    "planned_region_protocol_version": "owner-confirmed-contiguous-region-review-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null,
+    "source_record_id": "SOURCE-2026-018",
+    "terms_record_id": "TERMS-2026-013",
+    "source_precedence_id": "SOURCE-PRECEDENCE-2026-011"
+  },
+  "trigger": {
+    "prototype_points": 24,
+    "candidate_domain_pixels": 189541,
+    "point_coverage_percent": 0.012662,
+    "current_event_groups": 3,
+    "current_reference_regimes": 3,
+    "highest_leverage_weakness": "reviewed center pixels do not define contiguous unknown-aware masks, and three events cannot replicate train/validation/test evidence"
+  },
+  "review_unit_contract": {
+    "unit": "one contiguous evidence-coherent region on an event's frozen native optical grid",
+    "not_a_unit": [
+      "a center pixel expanded by radius",
+      "an arbitrary square tile",
+      "an entire connected proposal component without boundary review"
+    ],
+    "candidate_generator": [
+      "start only from an owner-approved prototype center with exact lineage",
+      "grow only through same-class frozen proposal pixels that pass pair-quality and registration gates",
+      "stop at proposal-state changes, invalid quality, reference disagreement, spectral discontinuity, or an existing region",
+      "split oversized coherent components only on deterministic optical/reference boundaries, never on a tiling grid",
+      "emit a one-native-pixel unknown ring around every proposed core and preserve all upstream unknown, excluded, and review-needed pixels"
+    ],
+    "owner_surface": "show pre/post optical evidence, quality state, permitted reference evidence, core outline, unknown ring, scale, and source limitations",
+    "owner_decisions": {
+      "yes": "may become an owner-approved prototype region only after all region/source/quality/leakage gates pass",
+      "no": "exclude the proposed region and do not infer the opposite class",
+      "uncertain": "retain the region and its boundary as unknown"
+    },
+    "partial_acceptance": "not permitted in v0.1.0; revise the deterministic candidate and present a new version instead"
+  },
+  "source_roles": [
+    {
+      "source": "Sentinel-2 L2A pre/post",
+      "role": "primary native-grid optical evidence",
+      "label_status": "not truth"
+    },
+    {
+      "source": "MTBS",
+      "role": "analyst-interpreted boundary/severity context",
+      "label_status": "not automatic truth"
+    },
+    {
+      "source": "RAVG",
+      "role": "forest-calibrated vegetation-condition context with masks",
+      "label_status": "limited outside forest; not automatic truth"
+    },
+    {
+      "source": "BAER",
+      "role": "public unthresholded dNBR context",
+      "label_status": "preliminary; restricted thresholded BARC excluded"
+    },
+    {
+      "source": "Landsat C2 L3 Burned Area",
+      "role": "30 m algorithmic challenge/reference and sensor-shift evidence",
+      "label_status": "not truth; QA and optical corroboration required"
+    },
+    {
+      "source": "Annual NLCD",
+      "role": "pre-fire land-cover stratification and applicability context",
+      "label_status": "never burned/background evidence by itself"
+    }
+  ],
+  "event_plan": {
+    "minimum_event_groups_before_split_fitness": 6,
+    "additional_event_groups_required": 3,
+    "minimum_groups_per_eventual_role": 2,
+    "requirements": [
+      "every event must contribute separately reviewed burned, background, and unknown-boundary evidence",
+      "whole event/geography/time groups must be frozen before acquisition and may enter only one eventual role",
+      "the region generator must be frozen before reviewing at least two never-tuned transfer events",
+      "no source program or exact evidence regime may occur in only one eventual split role",
+      "no single event may provide a majority of accepted region pixels"
+    ],
+    "ranked_reconnaissance": [
+      {
+        "priority": 1,
+        "fire": "MILLI 0843 CS",
+        "fire_id": "OR4425712174320170811",
+        "year": 2017,
+        "role": "Sentinel-era continuity candidate",
+        "gate": "existing tile-seam exclusion must be solved by one deterministic multi-tile contract before acquisition"
+      },
+      {
+        "priority": 2,
+        "fire": "GW FIRE",
+        "fire_id": "OR4435412173920070830",
+        "year": 2007,
+        "role": "highest cross-program and temporal challenge evidence",
+        "gate": "Landsat-only sensor shift; never mix into a Sentinel-native pool without a separately justified contract"
+      },
+      {
+        "priority": 3,
+        "fire": "TWO BULLS FIRE",
+        "fire_id": "OR4414212147220140607",
+        "year": 2014,
+        "role": "MTBS+RAVG regime replication candidate",
+        "gate": "pre-Sentinel Landsat-only sensor shift"
+      },
+      {
+        "priority": 4,
+        "fire": "CACHE MOUNTAIN",
+        "fire_id": "OR4438412172820020723",
+        "year": 2002,
+        "role": "BAER+MTBS reference diversity",
+        "gate": "older Landsat-only event; reference/challenge role first"
+      }
+    ],
+    "next_acquisition_rule": "perform metadata-only Central Oregon Sentinel-era scouting first; acquire no event until at least three comparable candidates can satisfy one shared optical and region protocol"
+  },
+  "advancement_gates": [
+    {
+      "gate": "region reproducibility",
+      "requirement": "exact source bytes, generator/version, grid, seed, parameters, core mask, unknown ring, and run hash reproduce"
+    },
+    {
+      "gate": "owner confirmation",
+      "requirement": "every accepted region has an exact yes response to the rendered region version; no/uncertain remain excluded"
+    },
+    {
+      "gate": "class and uncertainty",
+      "requirement": "every event has accepted burned/background regions and explicit unknown boundaries; no class is inferred from absence"
+    },
+    {
+      "gate": "event diversity",
+      "requirement": "at least six immutable event groups and at least two groups per eventual train/validation/test role"
+    },
+    {
+      "gate": "regime leakage",
+      "requirement": "source programs/regimes are replicated across events and not unique to one eventual role"
+    },
+    {
+      "gate": "dominance",
+      "requirement": "no single event supplies more than 50% of accepted region pixels; natural prevalence is reported separately from review sampling"
+    },
+    {
+      "gate": "evaluation honesty",
+      "requirement": "owner-confirmed regions remain prototype evidence, not independent ground truth; reserve never-tuned events and name agreement metrics honestly"
+    },
+    {
+      "gate": "terms and publication",
+      "requirement": "exact notices pass; restricted BARC and provider bytes remain private; public derivatives are explicitly permitted"
+    }
+  ],
+  "phase_two_consequence": {
+    "current_decision": "PLAN_ONLY_AND_DEFER_ACQUISITION_LABEL_REGIONS_DATASET_SPLIT_BASELINE_MODEL",
+    "next_checkpoint": "implement and render a small deterministic region-candidate pilot on existing events, without promoting labels",
+    "dataset_fitness_reopens_only_after": "region pilot, owner review, additional-event acquisition, and every advancement gate"
+  },
+  "boundaries": {
+    "point_labels_expanded": false,
+    "region_labels_created": false,
+    "new_source_pixels_acquired": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_or_ground_truth_claimed": false,
+    "field_official_operational_or_endorsed_claimed": false
+  },
+  "decision": "ADOPT_REGION_FIRST_OWNER_REVIEW_REQUIRE_EVENT_DIVERSITY_BEFORE_DATASET",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Official sources govern.",
+  "outputs": [
+    {
+      "path": "LABEL-REGION-REMEDIATION-PLAN-2026-001.html",
+      "bytes": 5601,
+      "sha256": "4a65281cadd477460146acf35d6436dea4bb30279f2635df235b89b30a63c81e"
+    },
+    {
+      "path": "LABEL-REGION-REMEDIATION-PLAN-2026-001.png",
+      "bytes": 112564,
+      "sha256": "9bab9f19568eb8f88958cc8f610ddac5710776852f1662a99081cae08fcbc3bc"
+    }
+  ]
+}

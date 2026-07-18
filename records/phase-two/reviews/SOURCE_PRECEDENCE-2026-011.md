@@ -1,0 +1,3 @@
+# SOURCE-PRECEDENCE-2026-011 - Label-Region Planning
+
+Official incident identity and current product metadata govern. Exact optical products and their quality masks govern what BurnLens can observe. MTBS, RAVG, BAER, Landsat Burned Area, and NLCD may constrain or contextualize a region only in their documented roles; none automatically creates a burned/background label. The deterministic BurnLens proposal remains lower-precedence derived evidence. Owner yes/no/uncertain applies only to the exact rendered region candidate and cannot override invalid quality, unresolved terms, restricted source use, or an explicit unknown/excluded state.

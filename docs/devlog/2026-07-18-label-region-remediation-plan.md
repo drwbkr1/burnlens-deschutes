@@ -1,0 +1,7 @@
+# Devlog - Label-Region Remediation Plan
+
+The verified sufficiency tool made the next weakness visible: 24 approved center pixels cannot define segmentation masks, and three event groups cannot replicate evidence across train, validation, and test. BurnLens `0.28.0` turns that failure into a bounded implementation contract instead of manufacturing area by buffering or tiling the points.
+
+The region-first contract preserves the frozen proposal, native optical grid, quality exclusions, explicit unknown state, owner yes/no/uncertain workflow, source precedence, and exact lineage. It requires a one-pixel unknown ring, rejects partial acceptance, and freezes a revised candidate version when a region needs correction. Dataset fitness remains blocked until at least six whole-event groups, source-regime replication, never-tuned transfer events, class coverage, dominance, terms, and publication gates pass.
+
+Fresh primary-source review confirms why the sources remain evidence rather than truth: MTBS classes depend on analyst interpretation; RAVG is forest-calibrated and masks unmappable pixels; BAER BARC is preliminary; Landsat Burned Area is an algorithmic 30 m probability/classification product; and Annual NLCD is land-cover context. The original evidence plate exposed unsupported raster-font glyphs, so run `r003` replaces them with ASCII-safe text. JSON, HTML, and PNG then reconstruct byte for byte; the original PNG and live HTML pass rendered/runtime inspection.
