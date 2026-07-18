@@ -15,6 +15,7 @@
   "version_tag": "v0.24.0-current-reference-bundle-fitness",
   "version_tag_object": "b6578ca80ff3d3418335f0ae76cc12f6b4183fca",
   "lifecycle_sync_issue": 431,
+  "lifecycle_sync_pull_request": 433,
   "next_checkpoint_issue": 432,
   "status": "shipped verified current-reference bundle fitness; owner review, labels, dataset, split, baseline, and model remain absent",
   "software_version": "0.24.0",
