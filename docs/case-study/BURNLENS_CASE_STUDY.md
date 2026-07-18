@@ -308,6 +308,14 @@ BurnLens therefore stops before dataset creation and requires contiguous reviewe
 
 The next plan is equally explicit about what not to do. A point does not become a mask through buffering or tiling. BurnLens proposes deterministic evidence-coherent native-grid regions, surrounds every core with an unknown ring, and asks the owner to review the exact rendered version. Dataset fitness remains closed until at least six whole-event groups replicate classes and evidence regimes, including never-tuned transfer events. Older Landsat-era fires remain sensor-shift challenges unless a separate comparable-sensor contract passes.
 
+BurnLens `0.29.0` then executes that plan on the actual Darlene, McKay, and Tepee packages. It selects one intact proposed burned and one intact proposed background component per event, keeps the one-hectare target as a ranking preference rather than a clipping rule, and publishes six exact cores with one-native-pixel unknown rings. The 136 core pixels and 246 ring pixels are candidate evidence, not labels.
+
+![BurnLens six-candidate region pilot](../../samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.png)
+
+Verified BurnLens `0.30.0` makes those exact immutable bytes owner-reviewable. Each yes/no/uncertain question binds the candidate raster hash and shows pre/post optical evidence, dNBR, permitted official reference context, core, and ring. Draft/export bytes are hash-named; a completed export locks every response control, including the file loader. The shipped checkpoint deliberately contains zero owner responses and promotes zero regions. Issue #461 keeps returned-response preservation, validation, and any later promotion decision separate.
+
+![BurnLens owner region review surface](../../samples/labels/review/regions/phase-two/REGION-OWNER-REVIEW-SURFACE-2026-001.png)
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -321,6 +329,8 @@ The next plan is equally explicit about what not to do. A point does not become 
 - Latest cross-event feasibility run: `RUN-2026-07-15-CROSS-EVENT-FITNESS-001`
 - Latest cross-event acquisition run: `BL-2026-07-16-cross-event-optical-intake-r005`
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
+- Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
+- Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
 - Latest cross-event proposal run: `BL-2026-07-16-cross-event-label-transfer-r004`
@@ -344,6 +354,7 @@ The next plan is equally explicit about what not to do. A point does not become 
 - Latest tool: BurnLens `0.19.0`; issue #407 / PR #408; reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911`; merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`; source `bc7542bcdeccadaf40d63b521d7fd5a7fc094c81`; public artifacts `d6ecbf2eaf7a159f45d45dd7f4e4815ab6b6363a`; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec`
 - Latest tool: BurnLens `0.20.0`; issue #403 / PR #412; merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; source `fda69a60b0a5e350bfe10e7388571d7c1c103735`; public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e`; private reconciliation SHA-256 `a04dd629551a2163e5e7a31f61c3aa95d4fdba136563f3a42940a2e9d1e9249d`; verified tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`
 - Current analytical tool: BurnLens `0.21.0`; issue #411 / PR #415; merge `f96146aa0702d27eef4964cb61bd7a05d566d7c3`; source `98a9895d203c778dad332db5bdc62b498aa2cd00`; public evidence `f5d4d528263bfc2cf93cb7f128bcb051732797b3`; run `BL-2026-07-17-current-reference-inventory-r002`; analytical tag object `0370bedfce1279da2d104c1ebfd3c1d143ce79ca`; release verification failed on checkout-dependent JSON/HTML bytes
+- Latest verified tool: BurnLens `0.30.0`; issue #457 / PR #459; merge `674e9edb04a4016ef71cad805be52f4459670d6a`; generator `7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6`; public artifacts `f0412fd85092f00a5122b775c3e07891d2f156d7`; run `BL-2026-07-18-region-owner-review-surface-r005`; tag object `dc0b27e47a71353d8e1e7c8691dbf6b9c2a7598f`; zero owner region responses or labels
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Current request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; exact request accepted, delivery pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state
