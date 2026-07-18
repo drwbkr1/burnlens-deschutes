@@ -13,7 +13,7 @@
   "version_tag": "v0.30.0-region-owner-review-surface",
   "version_tag_object": "dc0b27e47a71353d8e1e7c8691dbf6b9c2a7598f",
   "lifecycle_sync_issue": 460,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 462,
   "next_checkpoint_issue": 461,
   "status": "shipped verified exact owner region review surface; response intake and promotion absent",
   "software_version": "0.30.0",
