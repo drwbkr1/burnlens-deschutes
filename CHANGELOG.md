@@ -2,6 +2,21 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.25.0-owner-confirmed-review-surface - candidate - 2026-07-17
+
+### P2O4-T14 - Reopen all 56 units without manufacturing labels
+
+- Add a repository-owned disclosed review surface that binds the exact historical packet and verified current seven-product evidence before rendering.
+- Reopen all 56 original units as 35 burned and 21 background propositions without reading or inheriting the historical 6/0/50 dispositions.
+- Preserve every frozen state and keep all 32 nonbinary-origin units quality-blocked even after a future owner yes.
+- Pair each question with frozen Sentinel-2/source evidence and permitted current MTBS/RAVG/BAER context; keep restricted thresholded Tepee BARC absent.
+- Accept only yes/no/uncertain, export hash-named exact bytes, reload drafts/responses, lock completed browser state, and no-overwrite preserve returned bytes.
+- Mark automated browser responses as non-human fixtures that cannot count as owner evidence.
+- Pass exact 12-output reconstruction and real 1440/390 px Chrome workflow gates with 112 loaded evidence images, local evidence scrolling, zero document overflow, and zero runtime/external-request failures.
+- Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, accuracy, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
+
+Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 and draft PR #434 own the candidate review and release gates.
+
 ## v0.24.0-current-reference-bundle-fitness - verified - 2026-07-17
 
 ### P2O4-T12 - Turn exact delivery into bounded owner-review evidence

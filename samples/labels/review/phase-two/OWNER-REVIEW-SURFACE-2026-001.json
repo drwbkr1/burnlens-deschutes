@@ -1,0 +1,2656 @@
+{
+  "report_id": "OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "owner-confirmed-prototype-review-surface-v0.1.0",
+  "protocol_version": "owner-confirmed-prototype-label-review-v0.1.0",
+  "response_schema_version": "burnlens-owner-review-response-v0.1.0",
+  "generated_at_utc": "2026-07-18T03:10:00Z",
+  "run_id": "BL-2026-07-17-owner-review-surface-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 432,
+  "git_source_commit": "d820d87eb9b463fb22010fdb626423d4975ef054",
+  "software_version": "0.25.0",
+  "application_version": "0.25.0",
+  "source_bindings": {
+    "historical_packet": {
+      "report_id": "LABEL-REVIEW-PACKET-2026-001",
+      "run_id": "BL-2026-07-16-label-review-packet-r001",
+      "sha256": "77067063a769645af13886b6c87cc236a10e06199d091743908d63556e07637c"
+    },
+    "current_bundle_fitness": {
+      "report_id": "CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001",
+      "run_id": "BL-2026-07-17-current-reference-bundle-fitness-r003",
+      "sha256": "2d94aba62d735efede902aa9bbdc82ccabc987026acc118ff67c45d686a23eed"
+    },
+    "source_precedence_id": "SOURCE_PRECEDENCE-2026-010",
+    "terms_review_id": "TERMS-2026-012"
+  },
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null
+  },
+  "candidate_rule": {
+    "order": [
+      "preserve frozen burned/background candidate direction",
+      "for frozen nonbinary states, prefer any permitted current categorical affirmative burn evidence",
+      "otherwise use the sign of frozen Sentinel continuous dNBR only as a weak disclosed direction fallback"
+    ],
+    "nonbinary_origin_remains_quality_blocked": true,
+    "positive_dnbr_is_not_a_burned_threshold": true,
+    "creates_label": false
+  },
+  "review_contract": {
+    "allowed_decisions": [
+      "yes",
+      "no",
+      "uncertain"
+    ],
+    "yes": "necessary but insufficient; later reproducibility, source, quality, and event-level leakage gates remain mandatory",
+    "no": "excluded from prototype-label promotion",
+    "uncertain": "excluded from prototype-label promotion with uncertainty preserved",
+    "historical_response_inherited": false,
+    "owner_responses_recorded": 0
+  },
+  "units": [
+    {
+      "sample_id": "LRU-001",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 99,
+      "column": 127,
+      "pixel_center_utm10n": [
+        622550.0,
+        4838010.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": 0.004716,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "000034b262fe31638d3cc158a533b4dce741f11400e2cfa8d1da9ec98732033f",
+      "presentation_hash": "0b0ef120ef4a6d211ead476ef2064bafa611005293b71c4d989192bff8a8efa4",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 17.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-002",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 46,
+      "column": 128,
+      "pixel_center_utm10n": [
+        629290.0,
+        4846290.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.772424,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "0011dba350be90cc3e3f7ff905d54d552898c1be8e77c15e81ed25518e9d8a16",
+      "presentation_hash": "0f70b22bf294142e0192d10e264901303cb7df5ced56950ab6f6a619ab1dcd0f",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-003",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 97,
+      "column": 188,
+      "pixel_center_utm10n": [
+        630490.0,
+        4845270.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.13006,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "113ce1e7e132858b98087b17cb51ee8c68923cee65fcc78f158e42f225128f2c",
+      "presentation_hash": "11093d0565b0c53c3d3ed34de644f3fae4b398f460ae01328fdd9004a7ad8850",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-004",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 68,
+      "column": 165,
+      "pixel_center_utm10n": [
+        623310.0,
+        4838630.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.003746,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "000298a777af1c126563b0b48d3a644d61293197e439940a73a3e32e800e796d",
+      "presentation_hash": "111cecb14b2f401479f851cac843afe4312f89e6281b1681d526fd52589ac40d",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 4.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-005",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 75,
+      "column": 189,
+      "pixel_center_utm10n": [
+        630510.0,
+        4845710.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.103595,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "090e73e526b66bbb5c0e138d60dd5bc45e6f5a4a1eb226171956d9367b98c9b0",
+      "presentation_hash": "16864ecead20e06acb4d921afaaa5a6a27a01553039869dd35aea3db5311d49a",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-006",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 272,
+      "column": 290,
+      "pixel_center_utm10n": [
+        625810.0,
+        4834550.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.177713,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "00029a403be61825801398bcbcb454528a184e481d17dec532d4c17920cda17f",
+      "presentation_hash": "1b367c4b22d44169fa42fbbbbf213c02ff2959c82742d7376e0c79e252e5172d",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 167.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-007",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 228,
+      "column": 257,
+      "pixel_center_utm10n": [
+        625150.0,
+        4835430.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.423273,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "000676c315fc361f13686b1bb91f4a615c84b239c19f283fd9944e034ac82f80",
+      "presentation_hash": "1ca08f973daa044abff5aa68217650d6bd1d2a9ed5391094a00d0df3aaaf656d",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 384.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-01.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-008",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 18,
+      "column": 344,
+      "pixel_center_utm10n": [
+        657710.0,
+        4857170.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": 0.002003,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "01c73e74787c5bdec721b34edb0c4d6d7f029d18afc5f2563ce63e2cf95e580a",
+      "presentation_hash": "1d97c14c9609a3dfd0145a15ebfe84a62308f7807bc94c72a8ffb2ab071a33a6",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -13.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-009",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 65,
+      "column": 59,
+      "pixel_center_utm10n": [
+        627910.0,
+        4845910.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.235751,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "000832bb92737e7a67ac0ff4527de6ce4c6a9ec22e047777f71d027f16fee428",
+      "presentation_hash": "2017d8529905c6e3c887d3e46f75069c76981f03da4cb5e095276a45094190ff",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-010",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 8,
+      "column": 121,
+      "pixel_center_utm10n": [
+        629150.0,
+        4847050.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.099459,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0005c74f1dd29419ccab1eb336338d9efa69ce09cf960f07a3c53e4ebd32ca84",
+      "presentation_hash": "20f2347daf116e391cec97dfdb33f8b9f90ccb5a4dcfac1c7241e35170a09456",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-011",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 11,
+      "column": 144,
+      "pixel_center_utm10n": [
+        629610.0,
+        4846990.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.101502,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "012508988cad50fc3cab39f0d1fba6f464849cfc462f14c22716bd824c842450",
+      "presentation_hash": "2225ff9d1f01328c048492c333494a30fb2a107e2eefa295c49d81ff901b2026",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-012",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 21,
+      "column": 45,
+      "pixel_center_utm10n": [
+        651730.0,
+        4857110.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.019505,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "000312e27478d0d333bcab59c103d0103f9c5a066e19b1c9e678c296ba893e1b",
+      "presentation_hash": "24a4793c5a3865a995d29eb867cae84eacabc9ee08db607d6e0128481a1f30f3",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -81.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-013",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 198,
+      "column": 171,
+      "pixel_center_utm10n": [
+        623430.0,
+        4836030.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.091216,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "00026ba0f30dd778fd4dc1921589c31eaf682fea7c311ec74fc998bfbf36ba47",
+      "presentation_hash": "2fd0a187c6f65660f8e8f85a35a85fe4eeca69e180dbbcf0a9c4039867548a89",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 80.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-014",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 243,
+      "column": 361,
+      "pixel_center_utm10n": [
+        627230.0,
+        4835130.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.066079,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "00074fa928681b992c12c073f5b5609e2fd7cdfcaeb1887a6a0599550a4f8a6a",
+      "presentation_hash": "346058237c622d9a38b5afba2027c3bea913d2fbbccbaa0327c945035770635d",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 131.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-02.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-015",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 139,
+      "column": 103,
+      "pixel_center_utm10n": [
+        622070.0,
+        4837210.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.020558,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0065ad12332ca73ae29b989f32969c9b699402d947c8b4f08be8e6f75c240b88",
+      "presentation_hash": "37a75ef38414dc9be2acb64467e308cb43c0b9a01ce8ae84995bb80802676d3b",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -74.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-016",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 36,
+      "column": 157,
+      "pixel_center_utm10n": [
+        653970.0,
+        4856810.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.098538,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "0003e71983651e4ec15082be23cdc4816006161f3931a68f4372773d6ce1a236",
+      "presentation_hash": "3ce317f636429846a1d9011d8fe673dfc5d91e177f61d36311809d08bbe8ea41",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 36.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-017",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 96,
+      "column": 333,
+      "pixel_center_utm10n": [
+        657490.0,
+        4855610.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.006988,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0000ac133d85fc39b4cb3b26a13a86f5de07abe6e97d2f4e7d7add13a91cd2e4",
+      "presentation_hash": "4003495fbc15f51e35e4bcef3895bb184e7e0716d9de2b1c12a8ad959bbc1092",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -31.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-018",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 132,
+      "column": 566,
+      "pixel_center_utm10n": [
+        631330.0,
+        4837350.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.018094,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0000d5df5a6532c7a9e60c1a07893fb2bf531dc3fd394f1e83689f1cf95719e3",
+      "presentation_hash": "4344a4799a4f20c7bcbcdb77d5997e1023a38b5b6361536dfd21ece8d30047a9",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -29.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-019",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 16,
+      "column": 66,
+      "pixel_center_utm10n": [
+        621330.0,
+        4839670.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.059129,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "00011f75510e4f01f09db6ccf764f6d98f3706066d81aedb64a790ca8017416c",
+      "presentation_hash": "4a032cf543978983298a7c8454667e057858b59639814d0d4744f6ddd6472009",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -16.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-020",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 51,
+      "column": 97,
+      "pixel_center_utm10n": [
+        628670.0,
+        4846190.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.825376,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "0015227ea9041b2bcaa2324e3ed60f984cf24304293a255cc57ce87131cf58a4",
+      "presentation_hash": "4bbef0e05ff22c5de40d1daef595a321edbe235c22ed5aa76369418167cb67fa",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-021",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 105,
+      "column": 113,
+      "pixel_center_utm10n": [
+        653090.0,
+        4855430.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.280087,
+      "frozen_reference_context_value": 3,
+      "selection_hash": "00031b1969dbd9a045e2be87be030154b7749f21169f1403f01264bc85fd4167",
+      "presentation_hash": "5131d6a0477b13d3a3cad28d6793933b5145b2c14a95e05af1610ddad5c99498",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 164.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-03.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-022",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 75,
+      "column": 138,
+      "pixel_center_utm10n": [
+        629490.0,
+        4845710.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.666815,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "00148c78b8185d8caa9ddd0dae8a4746bf9dcdf241044f23cacae333c3b02470",
+      "presentation_hash": "565078fee15a44b96c76c6ff5e97abd2d6380e3d54a61e9e48f0fce43acd8ded",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-023",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 67,
+      "column": 322,
+      "pixel_center_utm10n": [
+        657270.0,
+        4856190.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.192056,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "11636c3bc8cfeca02a0bfbbea92d216d2808858bc736dc5e89b72e54de07f2bf",
+      "presentation_hash": "581f63590dcb23da208e0044468c080754afd0a30271962e881db47795dcd5ce",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 162.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-024",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 276,
+      "column": 88,
+      "pixel_center_utm10n": [
+        621770.0,
+        4834470.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.025264,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0000b4d31525fd85ed148d5bc1b232281e4349f0547695d5ae544c7ddaeccf5e",
+      "presentation_hash": "5b3af7079cac9dbff978f7f782dbf66a7799fe33cb06372198532c8bebaab7cd",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -33.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-025",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 2,
+      "column": 176,
+      "pixel_center_utm10n": [
+        654350.0,
+        4857490.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.007494,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0004b6e87f163893b760a0383f0eb02aed270a36e1c4e78e11c1a353cb0fc2cc",
+      "presentation_hash": "693f78e3a80dacab6fe94ce4824b826845152eb87890c22a3f0a7805c5965333",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -57.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-026",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 116,
+      "column": 329,
+      "pixel_center_utm10n": [
+        657410.0,
+        4855210.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.005927,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "002cb118b164bfeeb5d88d4835ba2a2413d0e53e1ad3ef9a2d409df5b34ce227",
+      "presentation_hash": "6ae7cfabee9f1957af6dff8f184371743ec2965714e04cc76f3997fc3eae9dde",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -31.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-027",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 59,
+      "column": 21,
+      "pixel_center_utm10n": [
+        627150.0,
+        4846030.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.213671,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "001115d973e5ecb1a726916d4ad9ff30811ee354ddcaba551f0cf0cc86632f04",
+      "presentation_hash": "6f94ffabcb561ba3bc0a8df7d2d7f73eef288db1dfd967e4fdb25d21231ca0d0",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-028",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 61,
+      "column": 150,
+      "pixel_center_utm10n": [
+        653830.0,
+        4856310.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.501334,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "000af42e3f95dd14757cc039d28af59667a11f5faa0eb41edb3aac60c7a2674b",
+      "presentation_hash": "7596357ea9f3823faaac52a721bd491ef5f365a59c0a7725f4b92080a999b188",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 390.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-04.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-029",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 29,
+      "column": 250,
+      "pixel_center_utm10n": [
+        655830.0,
+        4856950.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.134047,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "0c20b70e0f126eee8d35ecf4e43ed341d0d6d0a2b1541fd7a17611b76cdc2f2a",
+      "presentation_hash": "7837f1c05ccff959075d9ca4e21bf094bf51c06ca7d26f7cf4fa1ce2df438804",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 133.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-030",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 296,
+      "column": 316,
+      "pixel_center_utm10n": [
+        626330.0,
+        4834070.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.13747,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "00b556cec2447ea7f8f2c9de205382a220fd732a77dc0c320b7328758f8600f5",
+      "presentation_hash": "78b814a53d688f363593e69ad867ba84828b30d71de130b9758ec9ee2c65b2cf",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 140.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-031",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 28,
+      "column": 328,
+      "pixel_center_utm10n": [
+        657390.0,
+        4856970.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.005467,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "07100b381739159683809ea4aa671d419ab36c4734dea7352d8329107b2e2c52",
+      "presentation_hash": "887f96559c84d1c19452df5e3f94e519949020a889cf13dd05c529231ce6131d",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -19.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-032",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 107,
+      "column": 31,
+      "pixel_center_utm10n": [
+        651450.0,
+        4855390.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.592158,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "000146d0ef4665b9701893ee34476346fbe57c9a66bb9b80a810fdd9726b8a3b",
+      "presentation_hash": "8a70e7a34a899d5d876c7b877d0616e0c48cc06263d299af7fee2ebf756e8480",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 283.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-033",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 285,
+      "column": 159,
+      "pixel_center_utm10n": [
+        623190.0,
+        4834290.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.368091,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "000594d96a30cc56ba82e50d846019a8b72cc427cd7ff112c8aae7d360f9e9dc",
+      "presentation_hash": "90af14d9124e08c050c71996bf90a5472705a45ad4286d542261a601be6e7d1a",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 335.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-034",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 36,
+      "column": 333,
+      "pixel_center_utm10n": [
+        626670.0,
+        4839270.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.001287,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "000118d22979c475da001bc028e2d21800724c7ffebb2f416bed665ae9a7c513",
+      "presentation_hash": "91d1a82d5988fbfec1164cbe78fbd70ca18de72560885d4a0acaf8710fc69d46",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -13.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-035",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 197,
+      "column": 283,
+      "pixel_center_utm10n": [
+        625670.0,
+        4836050.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.439153,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "0002d2b40d99cc8ef3965ce145e0a53abd347681e7998dd4f849b977045c68a6",
+      "presentation_hash": "9a38ea1762e10a38b46b1e070114d30608148e1505fc654f41cb0e39fe443ca1",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 443.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-05.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-036",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 39,
+      "column": 251,
+      "pixel_center_utm10n": [
+        655850.0,
+        4856750.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.192036,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "2a41529a4e692adb8ffbf12fc104527355c472b4bb0d68214c3675a5614b4b36",
+      "presentation_hash": "9c4b63e44623875ceb4e1f3b54fa4a382c7d5c76d21655a7eb715a9fbe351922",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 166.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-037",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 63,
+      "column": 253,
+      "pixel_center_utm10n": [
+        655890.0,
+        4856270.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.267839,
+      "frozen_reference_context_value": 3,
+      "selection_hash": "1a425177b84ac7e3e2b5e3d0d1b0d336108848b98e816042715723e24cc79f41",
+      "presentation_hash": "a12a4ab93c5d576607a763752ec633d79c2f976ae3371d5006bd35ef6ea67e88",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 238.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-038",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 24,
+      "column": 16,
+      "pixel_center_utm10n": [
+        627050.0,
+        4846730.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.01072,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0004c45bf7e41f3af6ea0bfd99f735b94286039b090b3faf4a7bf2e74c3f214d",
+      "presentation_hash": "a5a674ea7d3b744f623338b44c9490c9f68d47d028b846f2fdc7c9e9e3969b08",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-039",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 12,
+      "column": 40,
+      "pixel_center_utm10n": [
+        627530.0,
+        4846970.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": 6.2e-05,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "055282cb1df1da3172311ce212f810477554e97a561d8b28593935f5d3d7775d",
+      "presentation_hash": "a6015bef0dc385bc871060a22c1b13c2b9e311dde50a89b7c1784384222345bb",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-040",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 219,
+      "column": 221,
+      "pixel_center_utm10n": [
+        624430.0,
+        4835610.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.117238,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "000d76ccb5fcda10b4e57c3a1f24b704b16d8bc8e14ae9c755b0e57db68ae016",
+      "presentation_hash": "a779f9e659c613fcfd3ddb5ec79571ca1cbe815aea6b3abb2eb02706543a79f3",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 116.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-041",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 97,
+      "column": 112,
+      "pixel_center_utm10n": [
+        628970.0,
+        4845270.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.072893,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "002c7c49e122960c3759a808e28646169515921eab5c736d71822a40a77126f0",
+      "presentation_hash": "ad475eb4c457381108b0792b087d79c084ece9b978a261205af507dcdc598441",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-042",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 86,
+      "column": 37,
+      "pixel_center_utm10n": [
+        627470.0,
+        4845490.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.116636,
+      "frozen_reference_context_value": 3,
+      "selection_hash": "001df5e31da2ac74548e35f6ce9676d0d05ef3f22a3eeed67144869df9859db9",
+      "presentation_hash": "af1cc5af93614a2d1b0567f575bda2cb186fb18a93781adcf606e4cd3e8bea5f",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-06.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-043",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 61,
+      "column": 255,
+      "pixel_center_utm10n": [
+        655930.0,
+        4856310.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.211729,
+      "frozen_reference_context_value": 3,
+      "selection_hash": "000455fe6b87f4dc30836d4c41ecb8860d0129e08b3197c1425330d16fd0c472",
+      "presentation_hash": "b08affdf44c27e75b873e873b70b6a68127590ee4c8faf83db7461c9710f4a52",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 204.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-044",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 9,
+      "column": 84,
+      "pixel_center_utm10n": [
+        652510.0,
+        4857350.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.159725,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "000243ff34d2b83f3c229bea7af4c30df58e01193563871051a2d582260c657a",
+      "presentation_hash": "b5c2a53be0d5d0d6de6585fbfb236c9740a944c9f8f505b743849e5a142498c2",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 199.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-045",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 30,
+      "column": 347,
+      "pixel_center_utm10n": [
+        657770.0,
+        4856930.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": 0.00361,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0014e19dddf267aef0d22fe31a38b83ebbb21da42c1b0c434a8fb6313dc44414",
+      "presentation_hash": "b8e94e4d56d96d29470bc226d6b00b4dd5eb80b608e9552d42e24cf99a5813b9",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -32.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-046",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 296,
+      "column": 395,
+      "pixel_center_utm10n": [
+        627910.0,
+        4834070.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.396813,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "000d59529887a90e28302a480336c0f3c0ac6d9139147793cdfc3c8a8cd21431",
+      "presentation_hash": "c929b947a1af3b017e3076856242e1438527b324e915f99f1aa4517d54f79d6c",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 3,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 349.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-047",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 45,
+      "column": 160,
+      "pixel_center_utm10n": [
+        629930.0,
+        4846310.0
+      ],
+      "frozen_proposal_state": "burned",
+      "frozen_proposal_target": 1,
+      "frozen_dnbr_center": 0.754844,
+      "frozen_reference_context_value": 4,
+      "selection_hash": "0006a2e0fcdde1ede074f282f1e5a75a76b547c0893efb1486894517034e601d",
+      "presentation_hash": "ca671f255f937109f049451a27a4c51752bb900d9a392c17f8a8aaa9b423deff",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-048",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 309,
+      "column": 341,
+      "pixel_center_utm10n": [
+        626830.0,
+        4833810.0
+      ],
+      "frozen_proposal_state": "review-needed",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.121057,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "001092fe41fb89aec958402e849a81dd6e1cb381397339ee75cc789863d01b1a",
+      "presentation_hash": "ce590ac47630561dc1a3d527e0b5794a0fe6e24fea272b29443081aea848c170",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 116.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "review-needed"
+    },
+    {
+      "sample_id": "LRU-049",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 85,
+      "column": 307,
+      "pixel_center_utm10n": [
+        656970.0,
+        4855830.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.002645,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "000014374fe83a8f9e4b33eb3aabe8218289c86d8ba7e91ebf951adf753a9658",
+      "presentation_hash": "d86a73a90e373e3585595c2a462cba89691d225ad1013de6d35cefd9d64e672c",
+      "candidate_label": "burned",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -26.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-07.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-050",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 1,
+      "column": 326,
+      "pixel_center_utm10n": [
+        657350.0,
+        4857510.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.006895,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "04ad3bd2136b7d3e38090ebb4717ee2613a933ec619b656077f1eec9468633da",
+      "presentation_hash": "d97e493461908ba0b6173f6f03fa082f5d4e3bb2f373a677f701430b35c01f1b",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -34.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 1,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 1,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    },
+    {
+      "sample_id": "LRU-051",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 181,
+      "column": 571,
+      "pixel_center_utm10n": [
+        631430.0,
+        4836370.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.031134,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0000c59f64d5dd531d82c9f412446d88c38ba02d314f289dc03c8332e61e19aa",
+      "presentation_hash": "e250048b39fb148ad2b072b758eac50b86c4b52d9fe4f227c6d89a6d327f7ef0",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -14.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 2,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 2,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-052",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 282,
+      "column": 330,
+      "pixel_center_utm10n": [
+        626610.0,
+        4834350.0
+      ],
+      "frozen_proposal_state": "excluded",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.02487,
+      "frozen_reference_context_value": 1,
+      "selection_hash": "0116be775272719630e58447dfbdf0288c179ce2d940e030fd48eb5852ecc060",
+      "presentation_hash": "e586a6795d72630be58ab0985ac398c5338bd3ee7d369194e18fca0bb06cde53",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 33.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 3,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 3,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "excluded"
+    },
+    {
+      "sample_id": "LRU-053",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 19,
+      "column": 46,
+      "pixel_center_utm10n": [
+        627650.0,
+        4846830.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.066045,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "00074bc5f8b02f4bb85a8ea811d72d3d2f37fe7f5b4971df4da0084bd2b06361",
+      "presentation_hash": "ee22e98125611f087a184c64f0478bd9a8d509e28aa14cc31bf8adb4e73b2477",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 4,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 4,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-054",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "MCKAY 1035 NE",
+      "row": 6,
+      "column": 155,
+      "pixel_center_utm10n": [
+        629830.0,
+        4847090.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": -0.131418,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "00075bf3cb84ee0e04fbcd2f65c5ecaa0062adf10d678b1f1d4d474608efa4ba",
+      "presentation_hash": "efb2e63181ce481cf8f10ae7b2a1027667132a5d9ab6db4a6e22c51fe9103bba",
+      "candidate_label": "background",
+      "candidate_basis": "frozen Sentinel dNBR sign fallback",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": null,
+            "semantic": "unavailable",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": null
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 5,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 5,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-055",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "TEPEE 1144 NE",
+      "row": 40,
+      "column": 266,
+      "pixel_center_utm10n": [
+        656150.0,
+        4856730.0
+      ],
+      "frozen_proposal_state": "unknown",
+      "frozen_proposal_target": null,
+      "frozen_dnbr_center": 0.137441,
+      "frozen_reference_context_value": 2,
+      "selection_hash": "000a316254dad701af4cee7bc6bf3d3a1bcee45ddb36c52f70ad4a153dcb6579",
+      "presentation_hash": "f975e1f32c3d2d2fd7f176890d13151cd02c93c7e2e8e90e73ae22c704016388",
+      "candidate_label": "burned",
+      "candidate_basis": "current categorical direction (MTBS + RAVG)",
+      "evidence_grade": "quality-blocked",
+      "question": "Does the disclosed evidence support this unit as a burned prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "MTBS",
+            "value": 2,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          },
+          {
+            "program": "RAVG",
+            "value": 4,
+            "semantic": "affirmative burn evidence",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": 93.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 6,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 6,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": "unknown"
+    },
+    {
+      "sample_id": "LRU-056",
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "row": 409,
+      "column": 456,
+      "pixel_center_utm10n": [
+        629130.0,
+        4831810.0
+      ],
+      "frozen_proposal_state": "background-candidate",
+      "frozen_proposal_target": 0,
+      "frozen_dnbr_center": -0.020203,
+      "frozen_reference_context_value": 0,
+      "selection_hash": "0001eed750feb7fb32a12f96f19f365321975d53f82ff38e9ed437df8d5054e5",
+      "presentation_hash": "facd10b0feb9c60e578a508a61313b7a4984697c469be3966ba181e14c66e69c",
+      "candidate_label": "background",
+      "candidate_basis": "frozen binary proposal",
+      "evidence_grade": "bounded",
+      "question": "Does the disclosed evidence support this unit as a background prototype candidate?",
+      "current_reference_evidence": {
+        "categorical": [
+          {
+            "program": "RAVG",
+            "value": 0,
+            "semantic": "outside mask or no-data",
+            "sampling": "nearest neighbor from 30 m source to frozen 20 m proposal grid; no resolution gain"
+          }
+        ],
+        "baer_dnbr": {
+          "value": -2.0,
+          "semantic": "continuous change context only; positive change is not a burned threshold",
+          "thresholded_barc_used": false
+        }
+      },
+      "frozen_evidence_page": "LABEL-REVIEW-PACKET-2026-001-BLIND-08.png",
+      "frozen_evidence_position": 7,
+      "current_evidence_page": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "current_evidence_position": 7,
+      "promotion_status": "blocked pending owner response and later reproducibility/source/quality/leakage gates",
+      "quality_blocker": null
+    }
+  ],
+  "summary": {
+    "unit_count": 56,
+    "candidate_counts": {
+      "background": 21,
+      "burned": 35
+    },
+    "frozen_state_counts": {
+      "background-candidate": 12,
+      "burned": 12,
+      "excluded": 8,
+      "review-needed": 12,
+      "unknown": 12
+    },
+    "quality_blocked_units": 32,
+    "owner_yes": 0,
+    "owner_no": 0,
+    "owner_uncertain": 0,
+    "labels_promoted": 0
+  },
+  "boundaries": {
+    "restricted_thresholded_tepee_barc": "excluded from all public pixels and candidate decisions",
+    "darlene_categorical_cross_program_confirmation": false,
+    "ravg": "forest-calibrated and timing-sensitive",
+    "mtbs": "analyst interpreted; increased-greenness class 5 remains ambiguous",
+    "not_claimed": [
+      "independent ground truth",
+      "inter-rater agreement or consensus",
+      "field validation",
+      "official or endorsed status",
+      "operational, emergency-ready, or enterprise readiness",
+      "accepted label set, dataset, split, baseline, model, or accuracy"
+    ]
+  },
+  "decision": "READY_FOR_OWNER_YES_NO_UNCERTAIN_REVIEW_DEFER_LABELS_DATASET_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "outputs": [
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 111367,
+      "sha256": "55d552e4276584dc0f714bfb6941798e03e7e8ef1f7e6fbd99bfae06c4241586"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 78059,
+      "sha256": "5ce16cd4cfb52d3e5ba0bc5d72ea03640d3449e0833af81c94fb47ecf568093f"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 7505,
+      "sha256": "33ab1eb2e7368f4bad0b77dc1dba13cc994c0d4ddec6f8ca3df9c0540f90457e"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+      "bytes": 222573,
+      "sha256": "4bccfa53ce7b2c3d65a6bae665f034f537e1b44a57365db651f109907088f960"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+      "bytes": 228463,
+      "sha256": "5e8537dd1ecc82cf97bae76991ece1c1fb072edef21848c3f3dffabfc240c803"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+      "bytes": 225753,
+      "sha256": "8b1f0ddaea1f733c35d252383ece33ad97f0b339d08174b6ab0575cd9642930b"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+      "bytes": 222250,
+      "sha256": "f8377f1948878b026f2012f351878010d4e6b0fefef34af836428b4054a8eb49"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+      "bytes": 220888,
+      "sha256": "46f2c5369ae5349b1352edcb094b95eb5bb2b11274836a1367aa37fe9ae2a06b"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+      "bytes": 219058,
+      "sha256": "9425f86d5737367017635c01ce43d963ea0af566aabaeb5d0ef4f73ae05bbd21"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+      "bytes": 223123,
+      "sha256": "f43991221a228dc8753431c10c4c7ca7019d395ad2820cca0248650f5567e716"
+    },
+    {
+      "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+      "bytes": 233242,
+      "sha256": "e7f265491d75c1a834bdd7073ac05319e35cf933d615d00ee9e4cdb14a0b99f1"
+    }
+  ]
+}
