@@ -3,9 +3,9 @@
   "report_version": "region-owner-review-surface-v0.1.0",
   "response_schema_version": "burnlens-region-owner-review-response-v0.1.0",
   "software_version": "0.30.0",
-  "generated_at_utc": "2026-07-18T16:01:45Z",
-  "run_id": "BL-2026-07-18-region-owner-review-surface-r002",
-  "git_source_commit": "757b5485874f7745742880e67fd448010646ea10",
+  "generated_at_utc": "2026-07-18T16:27:38Z",
+  "run_id": "BL-2026-07-18-region-owner-review-surface-r005",
+  "git_source_commit": "7fedd84c4ac9c732f698cf3b40b07e70bfe01cc6",
   "input_bindings": {
     "pilot_report": {
       "report_id": "REGION-CANDIDATE-PILOT-2026-001",
@@ -297,8 +297,8 @@
   "outputs": [
     {
       "path": "REGION-OWNER-REVIEW-SURFACE-2026-001.html",
-      "bytes": 18142,
-      "sha256": "159af8021b9a2f1644b39ea9300f9f03d8f8979865a7d270e5efa1dc44903483",
+      "bytes": 18157,
+      "sha256": "8bc8ceea40cadf005eae6dd4eefa6f2e07f6ce5fbd7197bb562525baff7a9cda",
       "media_type": "text/html"
     },
     {
@@ -310,7 +310,7 @@
     {
       "path": "REGION-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
       "bytes": 1587,
-      "sha256": "563a303dc92cfe4e2a19aca1197f97a559c2916f1a6b7397a24e9ad3313a76db",
+      "sha256": "2edb093729111315120753b6ec0a91206e45d2333362dac9be1f16522e64a598",
       "media_type": "application/json"
     },
     {
