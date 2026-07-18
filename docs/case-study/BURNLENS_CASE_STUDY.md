@@ -357,9 +357,9 @@ The Landsat STAC metadata route is live, but the advertised asset redirects to E
 - Observation contract/protocol: `observation-screen-contract-v0.2.0`; `weak-reference-label-feasibility-v0.1.0`
 - Credential records: `ACCESS-2026-006` authorization and `ACCESS-2026-007` / `ACCESS-2026-008` secret-safe exercises
 - Observation generator source: `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`
-- Latest verified repository baseline: `v0.23.0-official-source-scout` at checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`; tag object `f27cff68f6701904730698be24f9f83d02fc7865`; analytical PR #426 and remediation PR #428; parent #416 remains open
+- Latest verified repository baseline: `v0.24.0-current-reference-bundle-fitness` at merge `a91103a01787e3d8de09522527be13efbc7c1828`; tag object `b6578ca80ff3d3418335f0ae76cc12f6b4183fca`; PR #430; lifecycle #431
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
-- Active next gates: finish lifecycle verification for the #416 bundle-fitness candidate, then build the repository-owned owner-review surface that reopens all 56 units with yes/no/uncertain. A later small Landsat proof requires authorized EROS access and exact product-level fitness. None alone authorizes a label, dataset, split, or baseline.
+- Active next gates: issue #432 builds the repository-owned owner-review surface that reopens all 56 units with yes/no/uncertain. A later small Landsat proof requires authorized EROS access and exact product-level fitness. None alone authorizes a label, dataset, split, or baseline.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
 - Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
 

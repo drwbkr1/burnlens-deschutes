@@ -11,10 +11,12 @@
   "generator_source_commit": "312ab6327b5e67232ef7c82885bc699977822223",
   "candidate_artifacts_commit": "c8ee5d611d89945f2fdf14a845a252bcb0ad51e6",
   "reviewed_candidate_head": "c8ee5d611d89945f2fdf14a845a252bcb0ad51e6",
-  "checkpoint_commit": null,
-  "version_tag": null,
-  "version_tag_object": null,
-  "status": "candidate current-reference bundle fitness; labels, dataset, split, baseline, and model remain absent",
+  "checkpoint_commit": "a91103a01787e3d8de09522527be13efbc7c1828",
+  "version_tag": "v0.24.0-current-reference-bundle-fitness",
+  "version_tag_object": "b6578ca80ff3d3418335f0ae76cc12f6b4183fca",
+  "lifecycle_sync_issue": 431,
+  "next_checkpoint_issue": 432,
+  "status": "shipped verified current-reference bundle fitness; owner review, labels, dataset, split, baseline, and model remain absent",
   "software_version": "0.24.0",
   "report_version": "current-reference-bundle-fitness-v0.1.0",
   "protocol_version": "current-reference-bundle-fitness-protocol-v0.1.0",
@@ -51,8 +53,8 @@
     "responsive_html": "pass: desktop and 390 px; wide table locally scrollable; zero document overflow; zero browser errors",
     "evidence_card_visual_review": "pass: original 1800x1580 inspected",
     "release_package": "pass: two fixed-epoch wheels byte-identical at 383225 bytes / sha256 8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03; isolated BurnLens 0.24.0; 37 entry points; new entry present; 81 wheel entries; zero forbidden files",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass: merge a91103a01787e3d8de09522527be13efbc7c1828; 207 tests; compileall; dependency health; exact three-output reconstruction from two delivered archives; canonical 383225-byte wheel / sha256 8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03",
+    "remote_tag": "pass: annotated object b6578ca80ff3d3418335f0ae76cc12f6b4183fca remotely peels to merge a91103a01787e3d8de09522527be13efbc7c1828"
   },
   "claim_boundaries": {
     "owner_responses_collected": 0,
