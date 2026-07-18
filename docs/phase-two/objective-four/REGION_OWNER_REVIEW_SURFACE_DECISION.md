@@ -17,3 +17,5 @@ The offline surface accepts only yes, no, or uncertain; supports hash-named draf
 The authoritative output and a second reconstruction match across all ten files. Real browser inspection verifies semantic rendering, six local evidence images, incomplete-state blocking, the six-decision path, owner attestation, and hashed draft generation. The in-app harness does not support native file upload, so bound reload remains covered by the deterministic controller and response-template tests rather than represented as owner evidence.
 
 No owner response is collected, no region label is created, and dataset, split, baseline, and model versions remain absent. Nothing here establishes independent ground truth, inter-rater agreement, field validation, official or endorsed status, operational readiness, emergency readiness, or accuracy.
+
+The candidate gate passes 246 tests, exact ten-file reconstruction, real rendering, compilation, dependency health, and reproducible packaging. The isolated 0.30.0 wheel exposes 44 commands and 96 clean entries. Merge, tag, and fresh-main verification remain separate release gates.

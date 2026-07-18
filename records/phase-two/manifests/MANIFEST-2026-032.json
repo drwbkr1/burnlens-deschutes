@@ -54,8 +54,8 @@
     "response_state": "pass: blank template; zero owner region responses and zero region labels",
     "exact_reconstruction": "pass: all ten public files byte-identical across authoritative and frozen-metadata reconstruction runs",
     "rendered_evidence": "pass: real semantic browser render, six local images, incomplete blocking, six-decision completion, attestation, hashed draft, and no external resources",
-    "repository_tests": "pass: 246 tracked tests expected after manifest publication; compileall and dependency health",
-    "release_package": "pending candidate release gate",
+    "repository_tests": "pass: 246 tracked tests; compileall, 82 tracked JSON parses, and dependency health",
+    "release_package": "pass: two fixed-epoch wheels byte-identical at 450783 bytes and sha256 69175042db3c6a9c1233d3d9ca503c03bf06716cf84a4f528f86cb9fd0d0b9a1; isolated 0.30.0 install, 44 console entry points, 96 wheel entries, zero forbidden entries, and dependency check pass",
     "fresh_merged_main": "pending merge",
     "remote_tag": "pending merge and tag"
   },

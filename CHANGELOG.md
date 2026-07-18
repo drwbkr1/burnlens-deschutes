@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Reconstruct all ten public outputs byte for byte and validate the actual rendered surface and software-only interaction path.
 - Record zero owner region responses and zero region labels; create no dataset, split, baseline, model, metric, or readiness claim.
 
-Generator source is `757b5485874f7745742880e67fd448010646ea10`; public artifacts are `392d1ceeb8a0018f27a1ab69bb8e546e68e686c5`; issue #457 and branch `codex/p2o4-t18-region-review-surface` own the candidate. Merge, packaging, tag, fresh-main, lifecycle, and next-checkpoint facts remain pending.
+Generator source is `757b5485874f7745742880e67fd448010646ea10`; public artifacts are `392d1ceeb8a0018f27a1ab69bb8e546e68e686c5`; issue #457 and branch `codex/p2o4-t18-region-review-surface` own the candidate. The candidate passes 246 tests, compilation, dependency health, 82 JSON parses, exact ten-file reconstruction, real rendered interaction, and two byte-identical 450,783-byte wheels / SHA-256 `69175042db3c6a9c1233d3d9ca503c03bf06716cf84a4f528f86cb9fd0d0b9a1`; isolated 0.30.0 exposes 44 commands and 96 clean entries. Merge, tag, fresh-main, lifecycle, and next-checkpoint facts remain pending.
 
 ## v0.29.0-region-candidate-pilot - verified - 2026-07-18
 
