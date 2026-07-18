@@ -18,6 +18,7 @@
   "version_tag": "v0.23.0-official-source-scout",
   "version_tag_object": "f27cff68f6701904730698be24f9f83d02fc7865",
   "lifecycle_sync_issue": 427,
+  "lifecycle_sync_pull_request": 429,
   "status": "shipped verified official-source reconnaissance; delivery, acquisition fitness, owner review, and dataset remain open",
   "software_version": "0.23.0",
   "report_version": "official-source-and-candidate-fire-scout-v0.1.0",

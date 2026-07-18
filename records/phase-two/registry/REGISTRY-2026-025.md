@@ -1,6 +1,6 @@
 # REGISTRY-2026-025 - Official Source Scout
 
-**Checkpoint:** Issue #425 / PR #426; analytical merge `9176b3dc34b4b1015c23f9f17de515759de1c943`; remediation issue #427 / PR #428; verified checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`; tag object `f27cff68f6701904730698be24f9f83d02fc7865`; parent #416
+**Checkpoint:** Issue #425 / PR #426; analytical merge `9176b3dc34b4b1015c23f9f17de515759de1c943`; remediation issue #427 / PR #428; verified checkpoint `9b51f2afa6cd411cdeb12073dea1ad0fe12fd627`; tag object `f27cff68f6701904730698be24f9f83d02fc7865`; lifecycle PR #429; parent #416
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|
