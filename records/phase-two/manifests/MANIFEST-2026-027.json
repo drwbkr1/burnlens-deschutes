@@ -15,7 +15,7 @@
   "version_tag": "v0.25.0-owner-confirmed-review-surface",
   "version_tag_object": "ffd55b282b3110d74addd4c39689c9149fcc4197",
   "lifecycle_sync_issue": 438,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 439,
   "next_checkpoint_issue": 437,
   "status": "shipped verified owner-confirmed review surface; zero owner responses and zero promoted labels",
   "software_version": "0.25.0",
