@@ -583,6 +583,8 @@ def build_report(
             "fire_name": candidate["fire_name"],
             "pre_tci": pre["TCI"],
             "post_tci": post["TCI"],
+            "pre_tci_transform": rasterio.Affine(*pre_scene["rasters"]["TCI"]["crop_transform"]),
+            "post_tci_transform": rasterio.Affine(*post_scene["rasters"]["TCI"]["crop_transform"]),
             "dnbr": evidence["dnbr"],
             "reference_mask": pre["MASK20"],
             "pair_quality": pair_quality,

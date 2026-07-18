@@ -6,11 +6,13 @@ import unittest
 
 import numpy as np
 from PIL import Image
+import rasterio
 
 import burnlens
 from burnlens.region_candidate_pilot import (
     GENERATOR_VERSION,
     REPORT_ID,
+    _align_tci_to_grid,
     _candidate_from_seed,
     _panel,
     _tci_image,
@@ -61,13 +63,23 @@ class RegionCandidatePilotTests(unittest.TestCase):
         image = _tci_image(np.zeros((3, 5, 7), dtype=np.uint8))
         self.assertEqual(image.size, (7, 5))
 
-    def test_ten_meter_display_is_aligned_to_twenty_meter_candidate_grid(self) -> None:
+    def test_ten_meter_display_is_geospatially_aligned_to_twenty_meter_candidate_grid(self) -> None:
+        source = np.zeros((3, 10, 14), dtype=np.uint8)
+        source[:, 2:8, 4:12] = 100
+        aligned = _align_tci_to_grid(
+            source,
+            rasterio.Affine(10, 0, 0, 0, -10, 100),
+            rasterio.Affine(20, 0, 0, 0, -20, 100),
+            (5, 7),
+            "EPSG:32610",
+        )
+        self.assertEqual(aligned.shape, (3, 5, 7))
         core = np.zeros((5, 7), dtype=bool)
         core[2, 3] = True
         ring = np.zeros_like(core)
         ring[1:4, 2:5] = True
         ring[2, 3] = False
-        panel = _panel(Image.new("RGB", (14, 10)), core, ring, [2, 3, 3, 4], "burned", (70, 50))
+        panel = _panel(_tci_image(aligned), core, ring, [2, 3, 3, 4], "burned", (70, 50))
         self.assertEqual(panel.size, (70, 50))
 
     def test_selection_never_clips_to_target(self) -> None:

@@ -19,6 +19,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import rasterio
 from rasterio.transform import Affine
+from rasterio.warp import Resampling, reproject
 
 from .cross_event_label_transfer import build_report as build_cross_event_report
 from .label_proposal import STATE_CODES, STATE_NAMES, build_proposal, dilate_mask
@@ -267,12 +268,17 @@ def load_actual_event_arrays(repository_root: Path, scratch_directory: Path, gen
         run_id=f"{run_id}-cross-rebuild",
         git_source_commit=git_source_commit,
     )
+    darlene_tci_transform = Affine(
+        darlene_transform.a / 2, 0.0, darlene_transform.c,
+        0.0, darlene_transform.e / 2, darlene_transform.f,
+    )
+    darlene_shape = darlene["states"].shape
     events: dict[str, dict[str, Any]] = {
         "event-darlene3-or-2024": {
             "event_group_id": "event-darlene3-or-2024",
             "fire_name": "Darlene 3",
-            "pre_tci": darlene["pre_tci"],
-            "post_tci": darlene["post_tci"],
+            "pre_tci": _align_tci_to_grid(darlene["pre_tci"], darlene_tci_transform, darlene_transform, darlene_shape, "EPSG:32610"),
+            "post_tci": _align_tci_to_grid(darlene["post_tci"], darlene_tci_transform, darlene_transform, darlene_shape, "EPSG:32610"),
             "states": darlene["states"],
             "dnbr": darlene["dnbr"],
             "reference": darlene["reference_mask"].astype(np.uint8),
@@ -290,8 +296,8 @@ def load_actual_event_arrays(repository_root: Path, scratch_directory: Path, gen
         events[event_id] = {
             "event_group_id": event_id,
             "fire_name": visual["fire_name"],
-            "pre_tci": visual["pre_tci"],
-            "post_tci": visual["post_tci"],
+            "pre_tci": _align_tci_to_grid(visual["pre_tci"], visual["pre_tci_transform"], Affine(*event_report["grid"]["transform"]), visual["states"].shape, event_report["grid"]["crs"]),
+            "post_tci": _align_tci_to_grid(visual["post_tci"], visual["post_tci_transform"], Affine(*event_report["grid"]["transform"]), visual["states"].shape, event_report["grid"]["crs"]),
             "states": visual["states"],
             "dnbr": visual["dnbr"],
             "reference": visual["mtbs"].astype(np.uint8),
@@ -506,12 +512,33 @@ def _tci_image(values: np.ndarray) -> Image.Image:
     return Image.fromarray(np.moveaxis(values, 0, 2).astype(np.uint8), mode="RGB")
 
 
+def _align_tci_to_grid(
+    values: np.ndarray,
+    source_transform: Affine,
+    destination_transform: Affine,
+    destination_shape: tuple[int, int],
+    crs: str,
+) -> np.ndarray:
+    if values.ndim != 3 or values.shape[0] != 3:
+        raise RegionCandidatePilotError("Sentinel TCI is not a three-band band-first array")
+    destination = np.zeros((3, *destination_shape), dtype=np.uint8)
+    for band in range(3):
+        reproject(
+            source=values[band],
+            destination=destination[band],
+            src_transform=source_transform,
+            src_crs=crs,
+            dst_transform=destination_transform,
+            dst_crs=crs,
+            resampling=Resampling.bilinear,
+        )
+    return destination
+
+
 def _panel(source: Image.Image, core: np.ndarray, ring: np.ndarray, box: list[int], candidate_class: str, size: tuple[int, int]) -> Image.Image:
     target_size = (core.shape[1], core.shape[0])
     if source.size != target_size:
-        if source.width % target_size[0] or source.height % target_size[1]:
-            raise RegionCandidatePilotError("display source is not integer-aligned to the native candidate grid")
-        source = source.resize(target_size, Image.Resampling.BOX)
+        raise RegionCandidatePilotError("display evidence is not aligned to the native candidate grid")
     top, left, bottom, right = box
     padding = 5
     top = max(0, top - padding)
