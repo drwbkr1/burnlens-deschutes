@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.25.0-owner-confirmed-review-surface - candidate - 2026-07-17
+## v0.25.0-owner-confirmed-review-surface - verified - 2026-07-17
 
 ### P2O4-T14 - Reopen all 56 units without manufacturing labels
 
@@ -15,7 +15,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass exact 12-output reconstruction and real 1440/390 px Chrome workflow gates with 112 loaded evidence images, local evidence scrolling, zero document overflow, and zero runtime/external-request failures.
 - Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, accuracy, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 / PR #434 merged the analytical checkpoint at `042189d77f75a230d7c71ebe045688756e7a8cd7`. Fresh-main verification found that the recorded 404,158-byte candidate wheel carried CRLF working-tree bytes. Issue #435 supersedes it with two clean-merge byte-identical 403,220-byte wheels / SHA-256 `5086d7a6df9d0b0b231f1faa812fafac05dd6d7359bf6eaa46fcf8f89e20d757`; analytical outputs and claim boundaries are unchanged. Tagging remains pending remediation merge and final fresh-main verification.
+Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 / PR #434 merged the analytical checkpoint at `042189d77f75a230d7c71ebe045688756e7a8cd7`. Fresh-main verification found that the recorded 404,158-byte candidate wheel carried CRLF working-tree bytes. Issue #435 / PR #436 superseded it at remediation merge `bd85f586c529f803f89db33cc291c13d21fe2b57` with two clean-merge byte-identical 403,220-byte wheels / SHA-256 `5086d7a6df9d0b0b231f1faa812fafac05dd6d7359bf6eaa46fcf8f89e20d757`; analytical outputs and claim boundaries are unchanged. A clean checkout of that merge passes all 214 tests, exact 12-output reconstruction, canonical packaging, and isolated-install gates. Annotated tag object `ffd55b282b3110d74addd4c39689c9149fcc4197` remotely peels to the remediation merge. Issue #437 owns actual owner-response intake.
 
 ## v0.24.0-current-reference-bundle-fitness - verified - 2026-07-17
 
@@ -29,7 +29,7 @@ Generator source is `d820d87eb9b463fb22010fdb626423d4975ef054`; issue #432 / PR 
 - Publish deterministic JSON/HTML/PNG evidence from corrected run `BL-2026-07-17-current-reference-bundle-fitness-r003`; fix the first 390 px overflow and verify actual desktop/mobile semantic rendering plus the original 1800x1580 evidence card.
 - Pass 207 repository tests and compilation. Record zero owner responses, promote zero labels, and create no dataset, split, baseline, model, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
 
-Generator source is `312ab6327b5e67232ef7c82885bc699977822223`; corrected candidate artifacts and reviewed head are `c8ee5d611d89945f2fdf14a845a252bcb0ad51e6`. Final review preserved the established MTBS semantic contract so increased-greenness class 5 remains ambiguous rather than affirmative; this changes one Tepee comparison pixel and no proposal state. PR #430 merged at `a91103a01787e3d8de09522527be13efbc7c1828`. Fresh main repeats 207 tests, compilation, dependency health, exact three-output reconstruction, and the canonical 383,225-byte wheel / SHA-256 `8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03`. Annotated tag object `b6578ca80ff3d3418335f0ae76cc12f6b4183fca` remotely peels to the merge. Issue #432 owns the next 56-unit owner-review surface.
+Generator source is `312ab6327b5e67232ef7c82885bc699977822223`; corrected candidate artifacts and reviewed head are `c8ee5d611d89945f2fdf14a845a252bcb0ad51e6`. Final review preserved the established MTBS semantic contract so increased-greenness class 5 remains ambiguous rather than affirmative; this changes one Tepee comparison pixel and no proposal state. PR #430 merged at `a91103a01787e3d8de09522527be13efbc7c1828`. Fresh main repeats 207 tests, compilation, dependency health, exact three-output reconstruction, and the canonical 383,225-byte wheel / SHA-256 `8e32a8a0494ae5c261f4ebb442b21c348c8ef3bb218be8fdf438471ad9b0bc03`. Annotated tag object `b6578ca80ff3d3418335f0ae76cc12f6b4183fca` remotely peels to the merge. Issue #432 subsequently delivered the 56-unit owner-review surface in v0.25.0.
 
 ## v0.23.0-official-source-scout - verified - 2026-07-17
 
