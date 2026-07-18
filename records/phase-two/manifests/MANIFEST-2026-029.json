@@ -8,7 +8,7 @@
   "branch": "codex/p2o5-t01-prototype-label-sufficiency",
   "git_base_commit": "44e417d11342c005b1bf9918e04e204852801f4c",
   "generator_source_commit": "89e69172163c97ea8f4c86e72867578065626f22",
-  "candidate_artifacts_commit": null,
+  "candidate_artifacts_commit": "42736c83ea69ffdcb8453ce1a2c2cf3433483e46",
   "checkpoint_commit": null,
   "version_tag": "v0.27.0-prototype-label-sufficiency",
   "status": "candidate remediation decision; dataset deferred",
@@ -36,7 +36,7 @@
     "rendered_evidence": "pass: original PNG and live HTML; zero console/runtime errors",
     "repository_tests": "pass: 227 tracked tests",
     "fresh_merged_main": "pending",
-    "release_package": "pending",
+    "release_package": "pass: two clean-checkout fixed-epoch wheels byte-identical at 422069 bytes / sha256 741eb378433c8240809fb9de144b4db6884a2612a335e2d26be71e376bfe41da; isolated 0.27.0 / 41 entry points / 90 wheel entries / zero forbidden files / dependency health pass",
     "remote_tag": "pending"
   },
   "decision": "REMEDIATE_LABEL_COVERAGE_BEFORE_DATASET_SPLIT_BASELINE_MODEL",
