@@ -1,6 +1,6 @@
 # Region-Candidate Pilot Decision
 
-**Issue / branch:** #453 / `codex/p2o4-t17-region-pilot`
+**Issue / pull request / branch:** #453 / #455 / `codex/p2o4-t17-region-pilot`
 
 **Run:** `BL-2026-07-18-region-candidate-pilot-r006`
 

@@ -1,6 +1,6 @@
 # REGISTRY-2026-031 - No-Promotion Region-Candidate Pilot
 
-**Checkpoint:** Issue #453; branch `codex/p2o4-t17-region-pilot`; source `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts `0e5306c6d94c54b47df40486a75e5bbd69bab62f`
+**Checkpoint:** Issue #453; PR #455; branch `codex/p2o4-t17-region-pilot`; source `407981e1f98570bb8bd7695951d6cc5d67dab042`; public artifacts `0e5306c6d94c54b47df40486a75e5bbd69bab62f`
 
 | Artifact | Class | Version/state | Provider/private bytes committed |
 |---|---|---|---:|
