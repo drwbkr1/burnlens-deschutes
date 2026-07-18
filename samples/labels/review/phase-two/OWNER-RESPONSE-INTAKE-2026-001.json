@@ -1,0 +1,172 @@
+{
+  "report_id": "OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "owner-response-intake-v0.1.0",
+  "protocol_version": "owner-confirmed-prototype-promotion-gates-v0.1.0",
+  "generated_at_utc": "2026-07-18T04:13:30.696Z",
+  "run_id": "BL-2026-07-18-owner-response-intake-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 437,
+  "git_source_commit": "26e380f98172759e73aac13d5a0f53994aac9d5a",
+  "software_version": "0.26.0",
+  "application_version": "0.26.0",
+  "owner_confirmation_id": "OWNER-CONFIRMATION-2026-002",
+  "bindings": {
+    "response": {
+      "bytes": 7608,
+      "sha256": "fd8ad8280ea066306da95936dca37ad02a3ee597bdba00203ce34d720ba877b8"
+    },
+    "receipt": {
+      "bytes": 1366,
+      "sha256": "09533b0a261c01d5403f9728db45c29086fa4606ee655d45010e099ba1741ed9"
+    },
+    "surface": {
+      "bytes": 108377,
+      "sha256": "403cc46181c851722a951f0976a88ea707971c159b34df03456432d6592e02be"
+    },
+    "private_reconciliation": {
+      "bytes": 49863,
+      "sha256": "81415a5a7b61cdc112be32b8b981ab57479058df261ef40476e3132c141bb985",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "reconstruction": {
+    "surface_bytes": 108377,
+    "surface_sha256": "403cc46181c851722a951f0976a88ea707971c159b34df03456432d6592e02be",
+    "verified_output_count": 12,
+    "verified_outputs": [
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001.html",
+        "bytes": 111367,
+        "sha256": "55d552e4276584dc0f714bfb6941798e03e7e8ef1f7e6fbd99bfae06c4241586"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001.png",
+        "bytes": 78059,
+        "sha256": "5ce16cd4cfb52d3e5ba0bc5d72ea03640d3449e0833af81c94fb47ecf568093f"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+        "bytes": 7505,
+        "sha256": "33ab1eb2e7368f4bad0b77dc1dba13cc994c0d4ddec6f8ca3df9c0540f90457e"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-01.png",
+        "bytes": 222573,
+        "sha256": "4bccfa53ce7b2c3d65a6bae665f034f537e1b44a57365db651f109907088f960"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-02.png",
+        "bytes": 228463,
+        "sha256": "5e8537dd1ecc82cf97bae76991ece1c1fb072edef21848c3f3dffabfc240c803"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-03.png",
+        "bytes": 225753,
+        "sha256": "8b1f0ddaea1f733c35d252383ece33ad97f0b339d08174b6ab0575cd9642930b"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-04.png",
+        "bytes": 222250,
+        "sha256": "f8377f1948878b026f2012f351878010d4e6b0fefef34af836428b4054a8eb49"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-05.png",
+        "bytes": 220888,
+        "sha256": "46f2c5369ae5349b1352edcb094b95eb5bb2b11274836a1367aa37fe9ae2a06b"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-06.png",
+        "bytes": 219058,
+        "sha256": "9425f86d5737367017635c01ce43d963ea0af566aabaeb5d0ef4f73ae05bbd21"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-07.png",
+        "bytes": 223123,
+        "sha256": "f43991221a228dc8753431c10c4c7ca7019d395ad2820cca0248650f5567e716"
+      },
+      {
+        "path": "OWNER-REVIEW-SURFACE-2026-001-CURRENT-08.png",
+        "bytes": 233242,
+        "sha256": "e7f265491d75c1a834bdd7073ac05319e35cf933d615d00ee9e4cdb14a0b99f1"
+      }
+    ]
+  },
+  "provenance": {
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null,
+    "source_precedence_id": "SOURCE-PRECEDENCE-2026-010",
+    "terms_review_id": "TERMS-2026-012"
+  },
+  "label_set_version": "owner-approved-prototype-labels-v0.1.0",
+  "decision_counts": {
+    "yes": 53,
+    "no": 2,
+    "uncertain": 1
+  },
+  "gate_results": {
+    "reproducibility": "PASS_EXACT_SOURCE_BOUND_RECONSTRUCTION",
+    "source": "PASS_24_DIRECTIONALLY_CONSISTENT_BOUNDED_SOURCE_ROLES",
+    "quality": "PASS_24_FROZEN_BINARY_ORIGINS_BLOCK_32_NONBINARY_ORIGINS",
+    "event_leakage": "PASS_3_IMMUTABLE_EVENT_GROUPS_NO_PARTITION",
+    "owner_response": "PASS_EXACT_COMPLETED_OWNER_RESPONSE"
+  },
+  "outcome": {
+    "owner_approved_prototype_labels": 24,
+    "yes_quality_blocked": 29,
+    "no_or_uncertain_excluded": 3,
+    "prototype_label_class_counts": {
+      "background": 12,
+      "burned": 12
+    },
+    "prototype_label_event_counts": {
+      "event-darlene3-or-2024": 8,
+      "event-mckay-1035-ne-2017": 8,
+      "event-tepee-1144-ne-2018": 8
+    },
+    "source_direction_counts": {
+      "background_without_affirmative_current_reference": 12,
+      "burned_with_affirmative_current_reference": 12
+    }
+  },
+  "privacy": {
+    "response_bytes_committed": false,
+    "receipt_bytes_committed": false,
+    "private_unit_reconciliation_committed": false,
+    "owner_notes_published": false,
+    "unit_decisions_published": false,
+    "older_export_used": false
+  },
+  "boundaries": {
+    "historical_6_0_50_inherited": false,
+    "restricted_thresholded_tepee_barc_used": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "not_claimed": [
+      "independent ground truth or inter-rater agreement",
+      "field validation, official status, endorsement, or operational readiness",
+      "dataset readiness, model readiness, accuracy, or enterprise readiness"
+    ]
+  },
+  "decision": "ACCEPT_24_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Official sources govern.",
+  "outputs": [
+    {
+      "path": "OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3438,
+      "sha256": "f6b9780b4a7a29632d1b33a1151568c8fefc0b7e4de4d584cb284b71f8fec08c"
+    },
+    {
+      "path": "OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 82525,
+      "sha256": "1091a6b5460fdc5dfaa46d78cb0e7e58475eef447cb360387159f4b9394e6a9c"
+    }
+  ]
+}

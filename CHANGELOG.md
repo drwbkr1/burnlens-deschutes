@@ -2,6 +2,21 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.26.0-owner-response-intake - candidate - 2026-07-18
+
+### P2O4-T15 - Convert the exact owner response into bounded prototype-label evidence
+
+- Preserve the authoritative 7,608-byte completed response and 1,366-byte receipt without overwrite in ignored repository-local storage; bind only their hashes and sizes publicly.
+- Reconstruct every original unit and all 12 owner-surface outputs from the exact packet, seven-product report, and official archives.
+- Reconcile 53 yes, 2 no, and 1 uncertain through reproducibility, bounded source-direction, frozen-origin quality, and immutable event-group gates.
+- Accept 24 explicitly owner-approved prototype labels: 12 burned and 12 background, with eight in each of three event groups.
+- Keep 29 nonbinary-origin yes decisions quality-blocked and all no/uncertain decisions excluded.
+- Publish only aggregate JSON/HTML/PNG; keep response bytes, receipt bytes, notes, unit decisions, and private reconciliation uncommitted.
+- Rebuild the private reconciliation and all three public outputs byte for byte and validate the real rendered evidence.
+- Create no dataset, split, baseline, model, accuracy, independent-ground-truth, inter-rater, field-validation, official, endorsed, operational, emergency-ready, or enterprise claim.
+
+Generator source is `26e380f98172759e73aac13d5a0f53994aac9d5a`; issue #437 owns the checkpoint. Release identity and fresh-main verification remain pending until the issue-backed candidate completes review.
+
 ## v0.25.0-owner-confirmed-review-surface - verified - 2026-07-17
 
 ### P2O4-T14 - Reopen all 56 units without manufacturing labels

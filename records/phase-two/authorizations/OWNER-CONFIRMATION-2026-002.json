@@ -1,0 +1,39 @@
+{
+  "confirmation_id": "OWNER-CONFIRMATION-2026-002",
+  "confirmation_version": "owner-confirmed-response-authority-v0.1.0",
+  "confirmed_at_utc": null,
+  "confirmation_time_recorded": false,
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 437,
+  "surface_id": "OWNER-REVIEW-SURFACE-2026-001",
+  "authoritative_response": {
+    "bytes": 7608,
+    "sha256": "fd8ad8280ea066306da95936dca37ad02a3ee597bdba00203ce34d720ba877b8",
+    "completed": true,
+    "response_count": 56,
+    "decision_counts": {
+      "yes": 53,
+      "no": 2,
+      "uncertain": 1
+    },
+    "review_completed_at_utc": "2026-07-18T03:42:38.054Z"
+  },
+  "older_export_excluded": true,
+  "older_export_content_or_hash_published": false,
+  "controlled_intake_authorized": true,
+  "development_resumed": true,
+  "response_bytes_committed": false,
+  "receipt_bytes_committed": false,
+  "notes_published": false,
+  "unit_decisions_published": false,
+  "boundaries": {
+    "yes_is_necessary_but_insufficient": true,
+    "no_and_uncertain_remain_excluded": true,
+    "historical_response_inherited": false,
+    "restricted_thresholded_tepee_barc_used": false,
+    "independent_ground_truth_claimed": false,
+    "inter_rater_agreement_claimed": false,
+    "field_validation_claimed": false,
+    "official_operational_or_endorsed_status_claimed": false
+  }
+}

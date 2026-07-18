@@ -21,7 +21,7 @@ from burnlens.current_reference_bundle_fitness import (
 
 class CurrentReferenceBundleFitnessTests(unittest.TestCase):
     def test_version_and_entrypoint_are_current(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.25.0")
+        self.assertEqual(burnlens.__version__, "0.26.0")
         pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-inspect-current-reference-bundles", pyproject)
 
