@@ -1,0 +1,1457 @@
+{
+  "report_id": "GREEN-RIDGE-SOURCE-FITNESS-2026-001",
+  "report_version": "green-ridge-source-fitness-v0.1.0",
+  "protocol_version": "green-ridge-native-source-fitness-v0.1.0",
+  "generated_at_utc": "2026-07-19T22:34:16Z",
+  "run_id": "BL-2026-07-19-green-ridge-source-fitness-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 472,
+  "git_source_commit": "4e95c66f164cb78e8ffdd45049db3051e55e0f18",
+  "software_version": "0.33.0",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "event": {
+    "event_group_id": "event-green-ridge-0684-cs-2020",
+    "fire_id": "OR4446712160520200817",
+    "fire_name": "GREEN RIDGE 0684 CS",
+    "ignition_date": "2020-08-17",
+    "boundary_geometry_sha256": "73c444f472855f4e107d5da16bd58967738c322cf7cea5b24fc82e9430d1389d",
+    "program_identities": [
+      {
+        "catalog_id": 34629,
+        "map_id": 10015623,
+        "program": "BAER",
+        "incident_name": "GREEN RIDGE 0684 CS",
+        "boundary_acres": 4362,
+        "nonstandard": false
+      },
+      {
+        "catalog_id": 14230,
+        "map_id": 10021333,
+        "program": "MTBS",
+        "incident_name": "GREEN RIDGE 0684 CS",
+        "boundary_acres": 4362,
+        "nonstandard": false
+      },
+      {
+        "catalog_id": 25564,
+        "map_id": 10016049,
+        "program": "RAVG",
+        "incident_name": "GREEN RIDGE 0684 CS",
+        "boundary_acres": 4334,
+        "nonstandard": false
+      }
+    ],
+    "reference_pixel_status": "NOT_ACQUIRED_OR_OPENED_IN_THIS_RUN"
+  },
+  "package": {
+    "package_id": "green-ridge-s2-optical-pair-v0.1.0",
+    "contract_version": "green-ridge-optical-intake-contract-v0.1.0",
+    "source_record_id": "SOURCE-2026-020",
+    "terms_review_id": "TERMS-2026-016",
+    "acquisition_run_id": "BL-2026-07-19-green-ridge-optical-intake-r001",
+    "registration_manifest_sha256": "09a0f3772fb3567632a2417c6d64b472b5a32b6a8b50eea4141dec7726dbb281",
+    "provider_archive_link_gate": "pass: both provider archives have one filesystem link",
+    "asset_hashes": [
+      {
+        "role": "green-ridge-2020-pre",
+        "source_record_id": "SOURCE-2026-020",
+        "native_id": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+        "filename": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE.zip",
+        "bytes": 1190832495,
+        "sha256": "4d8abc07dedeab2e029d279c812f0302c304042af2415c95f1b4e066aede7a3f",
+        "md5": "42e951ef3b0bbdefc652a9c3009b7b81",
+        "blake3": "e1dacd034aa05af169af627a664142750d9220297b7cb8d5c7b67b4122cb2794"
+      },
+      {
+        "role": "green-ridge-2020-post",
+        "source_record_id": "SOURCE-2026-020",
+        "native_id": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE",
+        "filename": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE.zip",
+        "bytes": 1197623643,
+        "sha256": "31fe8628271d18ce1aa74dd672b14ab2c681184fbd12d0f8f9d1f7dc91e8fdc5",
+        "md5": "c4621bad458e78bc660fe9cbbda37fda",
+        "blake3": "4ec71a9af55cb84a1eec8c174a96fa5689841aa8771bf86f6c655ac9e7046be9"
+      }
+    ],
+    "verification_reason_codes": [
+      "REGISTERED_PACKAGE_VERIFIED"
+    ]
+  },
+  "input_hashes": {
+    "additional_event_plan_sha256": "65fd567e234cbb521ead6b7071cab9914c672df169e3987af0c3ddfc66ccf622",
+    "additional_event_source_snapshot_sha256": "3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241"
+  },
+  "source_precedence": {
+    "identity_authority": "Frozen STAC item ID plus CDSE product UUID and SAFE name must agree.",
+    "archive_authority": "Current CDSE OData size and checksums govern acquired archive bytes.",
+    "stac_asset_role": "The STAC Product asset is discovery provenance, not the OData byte contract."
+  },
+  "products": [
+    {
+      "role": "green-ridge-2020-pre",
+      "source_record_id": "SOURCE-2026-020",
+      "provider_id": "13b49b0d-390d-4a1b-90a6-c06fc5feac75",
+      "native_id": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+      "filename": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE.zip",
+      "product_metadata": {
+        "product_metadata_member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/MTD_MSIL2A.xml",
+        "tile_metadata_member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/MTD_TL.xml",
+        "product_uri": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+        "processing_baseline": "05.00",
+        "product_start_utc": "2020-08-10T18:59:19.024Z",
+        "generation_utc": "2023-05-09T05:05:50.000000Z",
+        "tile_id": "S2B_OPER_MSI_L2A_TL_S2RP_20230509T050550_A017914_T10TFQ_N05.00",
+        "sensing_time_utc": "2020-08-10T19:12:09.844505Z",
+        "horizontal_crs": "EPSG:32610",
+        "boa_quantification_value": 10000.0,
+        "boa_offsets": {
+          "B04": -1000.0,
+          "B8A": -1000.0,
+          "B12": -1000.0
+        },
+        "nodata_dn": 0,
+        "saturated_dn": 65535
+      },
+      "rasters": {
+        "TCI": {
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R10m/T10TFQ_20200810T185919_TCI_10m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 10,
+          "source_width": 10980,
+          "source_height": 10980,
+          "source_count": 3,
+          "source_dtype": [
+            "uint8",
+            "uint8",
+            "uint8"
+          ],
+          "source_transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            10.0,
+            0.0,
+            610030.0,
+            0.0,
+            -10.0,
+            4926290.0
+          ],
+          "crop_window": {
+            "column_offset": 1003,
+            "row_offset": 7375,
+            "width": 855,
+            "height": 435
+          },
+          "crop_bounds_utm10n": [
+            610030.0,
+            4921940.0,
+            618580.0,
+            4926290.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 176431,
+          "observed_inside_min": 6,
+          "observed_inside_max": 160
+        },
+        "B04": {
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B04_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 1080,
+          "observed_inside_max": 2500
+        },
+        "B8A": {
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B8A_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 2006,
+          "observed_inside_max": 4504
+        },
+        "B12": {
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B12_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 1294,
+          "observed_inside_max": 3412
+        },
+        "SCL": {
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_SCL_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 2,
+          "observed_inside_max": 7
+        }
+      },
+      "scl_summary_inside_full_boundary": {
+        "pixel_count": 44110,
+        "classes": [
+          {
+            "value": 0,
+            "name": "No data",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 1,
+            "name": "Saturated or defective",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 2,
+            "name": "Cast or topographic shadow",
+            "pixels": 4,
+            "percent": 0.0091
+          },
+          {
+            "value": 3,
+            "name": "Cloud shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 4,
+            "name": "Vegetation",
+            "pixels": 43713,
+            "percent": 99.1
+          },
+          {
+            "value": 5,
+            "name": "Bare soil",
+            "pixels": 392,
+            "percent": 0.8887
+          },
+          {
+            "value": 6,
+            "name": "Water",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 7,
+            "name": "Unclassified",
+            "pixels": 1,
+            "percent": 0.0023
+          },
+          {
+            "value": 8,
+            "name": "Cloud medium probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 9,
+            "name": "Cloud high probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 10,
+            "name": "Thin cirrus",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 11,
+            "name": "Snow or ice",
+            "pixels": 0,
+            "percent": 0.0
+          }
+        ],
+        "excluded_pixels": 4,
+        "excluded_percent": 0.0091,
+        "review_needed_pixels": 1,
+        "review_needed_percent": 0.0023,
+        "eligible_land_pixels": 44105,
+        "eligible_land_percent": 99.9887
+      },
+      "boundary_mask": {
+        "geometry_sha256": "73c444f472855f4e107d5da16bd58967738c322cf7cea5b24fc82e9430d1389d",
+        "inside_20m_pixel_centers": 44110,
+        "inside_10m_pixel_centers": 176431
+      }
+    },
+    {
+      "role": "green-ridge-2020-post",
+      "source_record_id": "SOURCE-2026-020",
+      "provider_id": "bfb174db-0438-45c8-b59d-feb76f58c029",
+      "native_id": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE",
+      "filename": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE.zip",
+      "product_metadata": {
+        "product_metadata_member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/MTD_MSIL2A.xml",
+        "tile_metadata_member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/MTD_TL.xml",
+        "product_uri": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE",
+        "processing_baseline": "05.00",
+        "product_start_utc": "2020-09-29T19:01:09.024Z",
+        "generation_utc": "2023-04-27T01:05:43.000000Z",
+        "tile_id": "S2B_OPER_MSI_L2A_TL_S2RP_20230427T010543_A018629_T10TFQ_N05.00",
+        "sensing_time_utc": "2020-09-29T19:12:09.525181Z",
+        "horizontal_crs": "EPSG:32610",
+        "boa_quantification_value": 10000.0,
+        "boa_offsets": {
+          "B04": -1000.0,
+          "B8A": -1000.0,
+          "B12": -1000.0
+        },
+        "nodata_dn": 0,
+        "saturated_dn": 65535
+      },
+      "rasters": {
+        "TCI": {
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R10m/T10TFQ_20200929T190109_TCI_10m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 10,
+          "source_width": 10980,
+          "source_height": 10980,
+          "source_count": 3,
+          "source_dtype": [
+            "uint8",
+            "uint8",
+            "uint8"
+          ],
+          "source_transform": [
+            10.0,
+            0.0,
+            600000.0,
+            0.0,
+            -10.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            10.0,
+            0.0,
+            610030.0,
+            0.0,
+            -10.0,
+            4926290.0
+          ],
+          "crop_window": {
+            "column_offset": 1003,
+            "row_offset": 7375,
+            "width": 855,
+            "height": 435
+          },
+          "crop_bounds_utm10n": [
+            610030.0,
+            4921940.0,
+            618580.0,
+            4926290.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 176431,
+          "observed_inside_min": 7,
+          "observed_inside_max": 148
+        },
+        "B04": {
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B04_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 1100,
+          "observed_inside_max": 2401
+        },
+        "B8A": {
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B8A_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 1315,
+          "observed_inside_max": 3515
+        },
+        "B12": {
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B12_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 1207,
+          "observed_inside_max": 3089
+        },
+        "SCL": {
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_SCL_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            610020.0,
+            0.0,
+            -20.0,
+            4926300.0
+          ],
+          "crop_window": {
+            "column_offset": 501,
+            "row_offset": 3687,
+            "width": 428,
+            "height": 218
+          },
+          "crop_bounds_utm10n": [
+            610020.0,
+            4921940.0,
+            618580.0,
+            4926300.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 44110,
+          "observed_inside_min": 4,
+          "observed_inside_max": 5
+        }
+      },
+      "scl_summary_inside_full_boundary": {
+        "pixel_count": 44110,
+        "classes": [
+          {
+            "value": 0,
+            "name": "No data",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 1,
+            "name": "Saturated or defective",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 2,
+            "name": "Cast or topographic shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 3,
+            "name": "Cloud shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 4,
+            "name": "Vegetation",
+            "pixels": 11231,
+            "percent": 25.4613
+          },
+          {
+            "value": 5,
+            "name": "Bare soil",
+            "pixels": 32879,
+            "percent": 74.5387
+          },
+          {
+            "value": 6,
+            "name": "Water",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 7,
+            "name": "Unclassified",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 8,
+            "name": "Cloud medium probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 9,
+            "name": "Cloud high probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 10,
+            "name": "Thin cirrus",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 11,
+            "name": "Snow or ice",
+            "pixels": 0,
+            "percent": 0.0
+          }
+        ],
+        "excluded_pixels": 0,
+        "excluded_percent": 0.0,
+        "review_needed_pixels": 0,
+        "review_needed_percent": 0.0,
+        "eligible_land_pixels": 44110,
+        "eligible_land_percent": 100.0
+      },
+      "boundary_mask": {
+        "geometry_sha256": "73c444f472855f4e107d5da16bd58967738c322cf7cea5b24fc82e9430d1389d",
+        "inside_20m_pixel_centers": 44110,
+        "inside_10m_pixel_centers": 176431
+      }
+    }
+  ],
+  "pair_quality_inside_full_boundary": {
+    "pixel_count_inside_full_boundary": 44110,
+    "states": [
+      {
+        "state": "eligible-comparison",
+        "code": 0,
+        "pixels": 44105,
+        "percent": 99.9887
+      },
+      {
+        "state": "review-needed",
+        "code": 1,
+        "pixels": 1,
+        "percent": 0.0023
+      },
+      {
+        "state": "excluded",
+        "code": 2,
+        "pixels": 4,
+        "percent": 0.0091
+      }
+    ]
+  },
+  "registration": {
+    "summary": {
+      "window_count": 9,
+      "state_counts": {
+        "pass": 9,
+        "review-needed": 0,
+        "excluded": 0,
+        "fail-registration": 0
+      },
+      "p50_px": 0.0825,
+      "p95_px": 0.1091,
+      "max_px": 0.1204,
+      "max_m": 2.408,
+      "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+    },
+    "windows": [
+      {
+        "window_id": "W-01",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          610020.0,
+          4923740.0,
+          612580.0,
+          4926300.0
+        ],
+        "inside_boundary_pixels": 10313,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.999612,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.000388
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.09,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0906,
+            "coarse_peak_ratio": 12.9921,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.258632,
+            "moving_energy": 0.256872,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.03,
+            "magnitude_px": 0.05,
+            "coarse_peak_ratio": 5.5485,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.415345,
+            "moving_energy": 0.432353,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.14,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.1404,
+            "coarse_peak_ratio": 11.2664,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.394718,
+            "moving_energy": 0.407159,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.09,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0906,
+          "magnitude_m": 1.811,
+          "max_band_deviation_px": 0.0539,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-02",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 150,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          613020.0,
+          4923740.0,
+          615580.0,
+          4926300.0
+        ],
+        "inside_boundary_pixels": 12331,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.07,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.07,
+            "coarse_peak_ratio": 10.0465,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.261562,
+            "moving_energy": 0.233713,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.05,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.05,
+            "coarse_peak_ratio": 2.6666,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.346853,
+            "moving_energy": 0.387234,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0412,
+            "coarse_peak_ratio": 9.9367,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.399171,
+            "moving_energy": 0.395723,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.05,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.05,
+          "magnitude_m": 1.0,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-03",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 300,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          616020.0,
+          4923740.0,
+          618580.0,
+          4926300.0
+        ],
+        "inside_boundary_pixels": 4072,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0447,
+            "coarse_peak_ratio": 17.5717,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.216088,
+            "moving_energy": 0.203067,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": -0.04,
+            "magnitude_px": 0.0447,
+            "coarse_peak_ratio": 5.9978,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.206106,
+            "moving_energy": 0.341969,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0825,
+            "coarse_peak_ratio": 18.4722,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.322504,
+            "moving_energy": 0.299116,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.04,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0447,
+          "magnitude_m": 0.894,
+          "max_band_deviation_px": 0.04,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-04",
+        "pixel_window": {
+          "row_offset": 45,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          610020.0,
+          4922840.0,
+          612580.0,
+          4925400.0
+        ],
+        "inside_boundary_pixels": 13286,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.03,
+            "magnitude_px": 0.0671,
+            "coarse_peak_ratio": 6.1422,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.185902,
+            "moving_energy": 0.210859,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.05,
+            "magnitude_px": 0.064,
+            "coarse_peak_ratio": 2.2043,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.424008,
+            "moving_energy": 0.414279,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.13,
+            "column_shift_to_apply_px": 0.01,
+            "magnitude_px": 0.1304,
+            "coarse_peak_ratio": 3.9853,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.303181,
+            "moving_energy": 0.348663,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.06,
+          "column_shift_to_apply_px": -0.03,
+          "magnitude_px": 0.0671,
+          "magnitude_m": 1.342,
+          "max_band_deviation_px": 0.0806,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-05",
+        "pixel_window": {
+          "row_offset": 45,
+          "column_offset": 150,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          613020.0,
+          4922840.0,
+          615580.0,
+          4925400.0
+        ],
+        "inside_boundary_pixels": 15266,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.999934,
+          "review_needed_fraction": 6.6e-05,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.12,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.1204,
+            "coarse_peak_ratio": 9.7813,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.240015,
+            "moving_energy": 0.236198,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.23,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.2302,
+            "coarse_peak_ratio": 2.6167,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.371738,
+            "moving_energy": 0.401324,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0608,
+            "coarse_peak_ratio": 12.1263,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.369965,
+            "moving_energy": 0.404154,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.12,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.1204,
+          "magnitude_m": 2.408,
+          "max_band_deviation_px": 0.11,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-06",
+        "pixel_window": {
+          "row_offset": 45,
+          "column_offset": 300,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          616020.0,
+          4922840.0,
+          618580.0,
+          4925400.0
+        ],
+        "inside_boundary_pixels": 4119,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.09,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0922,
+            "coarse_peak_ratio": 13.4253,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.202325,
+            "moving_energy": 0.214011,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.01,
+            "column_shift_to_apply_px": -0.05,
+            "magnitude_px": 0.051,
+            "coarse_peak_ratio": 6.334,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.197942,
+            "moving_energy": 0.344421,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.12,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.1217,
+            "coarse_peak_ratio": 14.9868,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.298006,
+            "moving_energy": 0.316914,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.09,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0922,
+          "magnitude_m": 1.844,
+          "max_band_deviation_px": 0.0854,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-07",
+        "pixel_window": {
+          "row_offset": 90,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          610020.0,
+          4921940.0,
+          612580.0,
+          4924500.0
+        ],
+        "inside_boundary_pixels": 10740,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0632,
+            "coarse_peak_ratio": 8.501,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.241363,
+            "moving_energy": 0.255964,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0825,
+            "coarse_peak_ratio": 4.5274,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.409058,
+            "moving_energy": 0.43254,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.03,
+            "magnitude_px": 0.0854,
+            "coarse_peak_ratio": 9.1428,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.369574,
+            "moving_energy": 0.385557,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.08,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0825,
+          "magnitude_m": 1.649,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-08",
+        "pixel_window": {
+          "row_offset": 90,
+          "column_offset": 150,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          613020.0,
+          4921940.0,
+          615580.0,
+          4924500.0
+        ],
+        "inside_boundary_pixels": 11152,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.99991,
+          "review_needed_fraction": 9e-05,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.07,
+            "column_shift_to_apply_px": -0.06,
+            "magnitude_px": 0.0922,
+            "coarse_peak_ratio": 4.769,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.1708,
+            "moving_energy": 0.189502,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.17,
+            "column_shift_to_apply_px": 0.14,
+            "magnitude_px": 0.2202,
+            "coarse_peak_ratio": 1.5316,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.248848,
+            "moving_energy": 0.388303,
+            "confident": false,
+            "reason": "PEAK_RATIO_BELOW_GATE"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.1,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.1,
+            "coarse_peak_ratio": 5.357,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.264111,
+            "moving_energy": 0.299311,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.085,
+          "column_shift_to_apply_px": -0.03,
+          "magnitude_px": 0.0901,
+          "magnitude_m": 1.803,
+          "max_band_deviation_px": 0.0335,
+          "confident_band_count": 2
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-09",
+        "pixel_window": {
+          "row_offset": 90,
+          "column_offset": 300,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          616020.0,
+          4921940.0,
+          618580.0,
+          4924500.0
+        ],
+        "inside_boundary_pixels": 1734,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.08,
+            "coarse_peak_ratio": 16.6589,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.182338,
+            "moving_energy": 0.196455,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": 0.01,
+            "magnitude_px": 0.0608,
+            "coarse_peak_ratio": 10.422,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.256391,
+            "moving_energy": 0.378924,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.11,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.1118,
+            "coarse_peak_ratio": 19.4416,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.27069,
+            "moving_energy": 0.267231,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.08,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.08,
+          "magnitude_m": 1.6,
+          "max_band_deviation_px": 0.0361,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      }
+    ]
+  },
+  "spectral_change": {
+    "valid_pair_pixels": 44105,
+    "excluded_from_spectral_summary": 5,
+    "dnbr_percentiles": {
+      "p01": -0.037554,
+      "p10": 0.054814,
+      "p25": 0.128633,
+      "p50": 0.280602,
+      "p75": 0.537544,
+      "p90": 0.730738,
+      "p99": 0.923446
+    },
+    "dnbr_min": -0.187692,
+    "dnbr_max": 1.080485,
+    "positive_change_pixels": 42765,
+    "positive_change_percent": 96.9618,
+    "interpretation": "Continuous dNBR distribution is optical change evidence only; no threshold, severity class, burned label, or background label is assigned."
+  },
+  "fitness_decision": {
+    "optical_source": "PASS_EXACT_GREEN_RIDGE_OPTICAL_SOURCE_FITNESS",
+    "burned_candidate_route": "PENDING_OFFICIAL_REFERENCE_PIXELS_AND_OWNER_REVIEW",
+    "background_candidate_route": "BLOCKED_PENDING_AFFIRMATIVE_BACKGROUND_EVIDENCE_AND_OWNER_REVIEW",
+    "unknown_route": "REQUIRED_AND_FEASIBLE_FROM_QUALITY_BOUNDARIES_AND_SOURCE_DISAGREEMENT",
+    "event_status": "ACCEPT_OPTICAL_SOURCE_DEFER_REFERENCE_AND_CANDIDATES"
+  },
+  "claims": {
+    "proven": [
+      "Both exact registered archives remain byte-identical to provider and registration contracts.",
+      "The full Green Ridge MTBS boundary is readable on aligned native 20 m B04/B8A/B12/SCL grids.",
+      "Actual pair quality and nine deterministic registration windows pass the optical source gate."
+    ],
+    "not_proven": [
+      "No BAER, MTBS, or RAVG reference pixel has been acquired or opened for Green Ridge in this run.",
+      "No SCL class, dNBR value, boundary inclusion, or apparent change is label truth.",
+      "No owner-confirmed region, dataset, split, baseline, model, accuracy, field validation, official status, endorsement, or operational readiness exists."
+    ]
+  },
+  "attribution": "Contains modified Copernicus Sentinel data 2020, accessed through CDSE.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
