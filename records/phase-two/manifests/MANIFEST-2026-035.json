@@ -14,7 +14,7 @@
   "version_tag": "v0.33.0-green-ridge-source-fitness",
   "version_tag_object": "331d727403075e5dc46b17bbac4f46d9ff8669f7",
   "lifecycle_sync_issue": 476,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 478,
   "next_checkpoint_issue": 477,
   "status": "verified release: Green Ridge optical source passes; reference and labels deferred",
   "software_version": "0.33.0",
