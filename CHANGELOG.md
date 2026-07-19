@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.32.0-additional-event-groups - release candidate - 2026-07-19
+## v0.32.0-additional-event-groups - verified - 2026-07-19
 
 ### P2O4-T20 - Freeze three additional comparable event groups
 
@@ -16,6 +16,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 Generator source commit `1d80ef5788ded4eb0f736120fb9023cc1919ea41` produces source run `BL-2026-07-19-additional-event-groups-r001` and rendered run `BL-2026-07-19-additional-event-groups-r002`. The normalized source snapshot SHA-256 is `3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241`. The focused tests pass 3/3; the full source-worktree suite passes 257 tests with one existing NumPy deprecation warning; compilation, diff checks, deterministic rendering, and original-resolution PNG inspection pass.
 
 PR #469 merges at `7eb007afe5ba96f97cdba278038c09f3123b0e5c`. Fresh remote `main` reconstructs all three outputs exactly and passes 253 tests with four expected local-custody skips. It rejects the stale-worktree 477,273-byte wheel: some package sources in the long-lived Windows checkout still had CRLF bytes from before the repository's existing LF attributes. Issue #470 remediates release metadata only and binds the candidate to two matching fresh-main wheels at 476,330 bytes / SHA-256 `ce16b3134a12a20fab21ebd7b71cb8f0c108719d4351e93ac2266b27f2c5f46c`. The tag remains withheld until post-remediation fresh-main verification.
+
+Remediation PR #471 establishes verified checkpoint `25fa2b5ecef05e7a5fba87cd3c634ffb3951be90`. A new clone of that remote-main commit again reconstructs all three outputs exactly, passes 253 tests with four expected local-custody skips, compilation, tracked JSON, canonical packaging, and isolated-install inspection. Annotated tag object `d97aadd4aef60b55ce8c4200fed4eaf58f28dc73` remotely peels to the checkpoint. Lifecycle issue #473 records the release; issue #472 owns one-event Green Ridge acquisition and fitness.
 
 ## v0.31.0-region-owner-response-intake - verified - 2026-07-19
 
