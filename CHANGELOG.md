@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.34.0-green-ridge-reference-fitness - release candidate - 2026-07-19
+
+### P2O4-T22 - Acquire and gate exact Green Ridge official reference pixels
+
+- Preserve the exact 20,969,722-byte USGS delivery in ignored no-overwrite custody and bind its SHA-256, 53 members, safe structure, and three exact map identities.
+- Inspect 20 native EPSG:32610 GeoTIFFs, three program-specific boundary packages, FGDC/ISO metadata, nodata, grids, masks, and categorical domains.
+- Resolve MTBS/RAVG acknowledgement terms and confirm that restricted classified BAER BARC/SBS rasters are absent.
+- Reverify the 2,388,456,138-byte Sentinel package and compare MTBS/RAVG categories on its verified 20 m grid using nearest neighbor only.
+- Measure 41,642 pixels with both-program affirmative burned-candidate evidence and 43,533 with either program affirmative evidence.
+- Keep background candidates blocked because unchanged/low-effect program classes are not affirmative background truth; create zero candidates, labels, dataset, split, baseline, or model.
+
+Generator source `6c8582178fe8fa4ff48f48df2742d195618ae655` produces run `BL-2026-07-19-green-ridge-reference-fitness-r001`. JSON/HTML/PNG render actual optical and reference evidence with private delivery details withheld. Final PR, merge, fresh-main reconstruction, package, and tag evidence remain release gates.
+
 ## v0.33.0-green-ridge-source-fitness - verified - 2026-07-19
 
 ### P2O4-T21 - Acquire and gate one exact new event
