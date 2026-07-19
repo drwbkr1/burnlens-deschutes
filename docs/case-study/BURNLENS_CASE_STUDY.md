@@ -322,6 +322,8 @@ BurnLens `0.31.0` then preserves the exact completed export before interpretatio
 
 That is meaningful label evidence, but it is still not a dataset. Three event groups remain below the required six, so BurnLens continues to defer splits, baselines, models, metrics, and readiness claims.
 
+The first merged-main reconstruction caught checkout-dependent Markdown record hashes and withheld the release. A provenance-only remediation preserves each historical EOL identity explicitly; a separate fresh remote-main clone then reconstructs all three aggregate outputs exactly. Verified `v0.31.0-region-owner-response-intake` therefore ships the evidence without concealing the failed first release gate.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`

@@ -199,6 +199,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T16-SYNC | `records/prompt-build-log/2026-07-18-p2o4-t16-sync.md` | issue #452 / PR #454; verified lifecycle synchronization candidate | Records the merge, fresh-main tests and exact reconstruction, canonical wheel, isolated install, remote annotated tag, and next checkpoint #453 without changing scientific or private state. |
 | P2O4-T19 | `records/prompt-build-log/2026-07-19-p2o4-t19.md` | issue #461 / PR #463; BurnLens 0.31.0 release candidate | Preserves the exact completed region response, accepts six owner-approved prototype regions after all gates pass, and keeps dataset/split/baseline/model work blocked at three event groups. |
 | P2O4-T19-REM | `records/prompt-build-log/2026-07-19-p2o4-t19-rem.md` | issue #464 / PR #465; checkout-stability remediation | Records the fresh-main JSON byte failure and adds explicit per-record EOL contracts without changing scientific state. |
+| P2O4-T19-SYNC | `records/prompt-build-log/2026-07-19-p2o4-t19-sync.md` | issue #467 / PR #468; verified v0.31 lifecycle synchronization | Records analytical/remediation merges, failed and corrected release gates, fresh-main verification, remote annotated tag, and next issue #466 without changing scientific state. |
 
 ## Acceptance and remediation triggers
 

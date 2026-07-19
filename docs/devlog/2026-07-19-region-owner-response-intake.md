@@ -9,3 +9,5 @@ The aggregate JSON/HTML/PNG disclose the outcome without publishing unit decisio
 The checkpoint still refuses dataset creation: three event groups are only half of the six-event minimum, so split, baseline, model, metric, and readiness versions remain absent.
 
 Post-merge verification at `8da0b3fee142eaad98a6e8e941a2fff2a555f28d` withheld the release tag. HTML and PNG reproduce exactly, but Markdown evidence line endings changed raw-byte bindings and therefore the JSON/private-reconciliation hashes. Issue #464 adds explicit per-record EOL contracts: older source/terms identities remain CRLF while new gate records remain LF. The defect is provenance-only; owner decisions, rasters, labels, counts, and boundaries are unchanged.
+
+PR #465 merges the fix at `70dca180d851fadc9ae3b7a897bdf55cf698b3c3`. Fresh remote-main reconstruction matches JSON/HTML/PNG 3 of 3, 254 tests pass, and the 462,622-byte canonical wheel remains unchanged. Annotated tag object `3ead929db9129da8da836373a177f2e5ba87c89b` peels to that merge. Issue #466 begins metadata-first selection of three additional comparable event groups.
