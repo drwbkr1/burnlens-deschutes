@@ -316,6 +316,12 @@ Verified BurnLens `0.30.0` makes those exact immutable bytes owner-reviewable. E
 
 ![BurnLens owner region review surface](../../samples/labels/review/regions/phase-two/REGION-OWNER-REVIEW-SURFACE-2026-001.png)
 
+BurnLens `0.31.0` then preserves the exact completed export before interpretation and reruns every promotion gate against the real candidate rasters. All six owner yes decisions pass as explicitly owner-approved prototype regions: three burned, three background, and 136 accepted core pixels across Darlene, McKay, and Tepee. All 246 ring pixels remain unknown and excluded. The public report is aggregate-only; unit decisions, notes, private paths, and seed identities remain private.
+
+![BurnLens owner region response intake](../../samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.png)
+
+That is meaningful label evidence, but it is still not a dataset. Three event groups remain below the required six, so BurnLens continues to defer splits, baselines, models, metrics, and readiness claims.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -330,6 +336,7 @@ Verified BurnLens `0.30.0` makes those exact immutable bytes owner-reviewable. E
 - Latest cross-event acquisition run: `BL-2026-07-16-cross-event-optical-intake-r005`
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
+- Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
