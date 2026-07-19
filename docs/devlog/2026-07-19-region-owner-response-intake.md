@@ -7,3 +7,5 @@ The new fail-closed path binds the response to the shipped surface, pilot report
 The aggregate JSON/HTML/PNG disclose the outcome without publishing unit decisions, notes, private paths, or seed identities. The canonical PNG was visually inspected at original resolution; the static HTML is semantic and self-contained. Agent navigation to local `file://` output was blocked by browser security policy and was not bypassed.
 
 The checkpoint still refuses dataset creation: three event groups are only half of the six-event minimum, so split, baseline, model, metric, and readiness versions remain absent.
+
+Post-merge verification at `8da0b3fee142eaad98a6e8e941a2fff2a555f28d` withheld the release tag. HTML and PNG reproduce exactly, but Markdown evidence line endings changed raw-byte bindings and therefore the JSON/private-reconciliation hashes. Issue #464 adds explicit per-record EOL contracts: older source/terms identities remain CRLF while new gate records remain LF. The defect is provenance-only; owner decisions, rasters, labels, counts, and boundaries are unchanged.

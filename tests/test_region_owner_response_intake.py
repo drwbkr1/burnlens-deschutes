@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -71,6 +72,30 @@ class RegionOwnerResponseIntakeTests(unittest.TestCase):
         self.assertIn("burnlens-intake-region-owner-response =", pyproject)
         self.assertIn("burnlens-build-region-owner-response-intake =", pyproject)
         self.assertEqual(LABEL_SET_VERSION, "owner-approved-prototype-region-labels-v0.1.0")
+
+    def test_hashed_records_have_exact_checkout_contracts(self) -> None:
+        expected = {
+            "records/phase-two/sources/SOURCE-2026-007.md": "crlf",
+            "records/phase-two/sources/SOURCE-2026-010.md": "crlf",
+            "records/phase-two/sources/SOURCE-2026-018.md": "crlf",
+            "records/phase-two/terms/TERMS-2026-003.md": "crlf",
+            "records/phase-two/terms/TERMS-2026-005.md": "crlf",
+            "records/phase-two/terms/TERMS-2026-013.md": "crlf",
+            "records/phase-two/terms/TERMS-2026-014.md": "lf",
+            "records/phase-two/prechecks/PRECHECK-2026-030.md": "lf",
+            "records/phase-two/reviews/LABEL_FITNESS-2026-018.md": "lf",
+            "records/phase-two/reviews/SOURCE_PRECEDENCE-2026-014.md": "lf",
+            "records/phase-two/reviews/USE_BOUNDARY-2026-028.md": "lf",
+        }
+        for path, eol in expected.items():
+            result = subprocess.run(
+                ["git", "check-attr", "eol", "--", path],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn(f": eol: {eol}", result.stdout)
 
     def test_exact_completed_response_contract(self) -> None:
         result = validate_response(self.surface, self._response())
