@@ -5,6 +5,8 @@
   "created_at_utc": "2026-07-19T18:00:00Z",
   "task_issue": 461,
   "pull_request": 463,
+  "remediation_issue": 464,
+  "remediation_pull_request": 465,
   "branch": "codex/p2o4-t19-region-response-intake",
   "git_base_commit": "fec6dcd8a7aa9ce91f6613b8bf4d081289932b2e",
   "generator_source_commit": "1d6966880278264154977ef4287b2db2e0a24026",
