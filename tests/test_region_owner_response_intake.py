@@ -24,6 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SURFACE_PATH = ROOT / "samples/labels/review/regions/phase-two/REGION-OWNER-REVIEW-SURFACE-2026-001.json"
 TEMPLATE_PATH = ROOT / "samples/labels/review/regions/phase-two/REGION-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json"
 PILOT_PATH = ROOT / "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.json"
+PUBLIC_DIRECTORY = ROOT / "samples/labels/review/regions/phase-two/intake"
+PUBLIC_REPORT_PATH = PUBLIC_DIRECTORY / "REGION-OWNER-RESPONSE-INTAKE-2026-001.json"
 
 
 class RegionOwnerResponseIntakeTests(unittest.TestCase):
@@ -151,6 +153,34 @@ class RegionOwnerResponseIntakeTests(unittest.TestCase):
                 self.assertNotIn(forbidden, serialized)
             with self.assertRaisesRegex(RegionOwnerResponseIntakeError, "refusing to overwrite"):
                 write_private_no_overwrite(ROOT, private_path, private)
+
+    def test_tracked_public_report_is_exact_aggregate_only_evidence(self) -> None:
+        report_bytes = PUBLIC_REPORT_PATH.read_bytes()
+        report = json.loads(report_bytes)
+        self.assertEqual(hashlib.sha256(report_bytes).hexdigest(), "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf")
+        self.assertEqual(report["input_bindings"]["response"], {
+            "bytes": 1635,
+            "sha256": "f5b97af85579412b66e2bb773684b02230b9cf216cdb4c70313c9636b634c1e6",
+        })
+        self.assertEqual(report["decision_counts"], {"yes": 6, "no": 0, "uncertain": 0})
+        self.assertEqual(report["outcome"]["owner_approved_region_labels"], 6)
+        self.assertEqual(report["outcome"]["prototype_label_class_counts"], {"background": 3, "burned": 3})
+        self.assertEqual(report["outcome"]["accepted_core_pixels"], 136)
+        self.assertEqual(report["outcome"]["excluded_unknown_ring_pixels"], 246)
+        self.assertEqual(report["outcome"]["event_group_count"], 3)
+        self.assertFalse(report["outcome"]["dataset_fitness_reopened"])
+        self.assertIsNone(report["dataset_version"])
+        self.assertIsNone(report["split_version"])
+        self.assertIsNone(report["baseline_version"])
+        self.assertIsNone(report["model_version"])
+        for output in report["outputs"]:
+            output_path = PUBLIC_DIRECTORY / output["path"]
+            output_bytes = output_path.read_bytes()
+            self.assertEqual(len(output_bytes), output["bytes"])
+            self.assertEqual(hashlib.sha256(output_bytes).hexdigest(), output["sha256"])
+        serialized = report_bytes.decode("utf-8").lower()
+        for forbidden in ("candidate_id", "owner_decision", "note_present", "note_sha256", "c:\\users", "downloads", "lru-"):
+            self.assertNotIn(forbidden, serialized)
 
 
 if __name__ == "__main__":
