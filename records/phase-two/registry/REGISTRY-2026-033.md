@@ -1,6 +1,6 @@
 # REGISTRY-2026-033 - Exact Owner Region Response Intake
 
-**Checkpoint:** Issue #461 / PR #463; remediation #464 / PR #465; checkpoint `70dca180d851fadc9ae3b7a897bdf55cf698b3c3`; tag object `3ead929db9129da8da836373a177f2e5ba87c89b`; lifecycle #467; next #466; source `1d6966880278264154977ef4287b2db2e0a24026`; public artifacts `d8a13facd78c12e70dadbe9e9a397122cce46883`
+**Checkpoint:** Issue #461 / PR #463; remediation #464 / PR #465; checkpoint `70dca180d851fadc9ae3b7a897bdf55cf698b3c3`; tag object `3ead929db9129da8da836373a177f2e5ba87c89b`; lifecycle #467 / PR #468; next #466; source `1d6966880278264154977ef4287b2db2e0a24026`; public artifacts `d8a13facd78c12e70dadbe9e9a397122cce46883`
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
 |---|---|---|---:|

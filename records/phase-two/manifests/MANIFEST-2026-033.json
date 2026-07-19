@@ -15,6 +15,7 @@
   "version_tag": "v0.31.0-region-owner-response-intake",
   "version_tag_object": "3ead929db9129da8da836373a177f2e5ba87c89b",
   "lifecycle_sync_issue": 467,
+  "lifecycle_sync_pull_request": 468,
   "next_checkpoint_issue": 466,
   "status": "shipped verified exact owner region response intake; dataset deferred",
   "software_version": "0.31.0",
