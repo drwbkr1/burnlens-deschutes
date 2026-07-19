@@ -64,6 +64,7 @@ burnlens-intake-region-owner-response = "burnlens.intake_region_owner_response:m
 burnlens-build-region-owner-response-intake = "burnlens.build_region_owner_response_intake:main"
 burnlens-capture-additional-event-group-source = "burnlens.capture_additional_event_group_source:main"
 burnlens-build-additional-event-group-plan = "burnlens.build_additional_event_group_plan:main"
+burnlens-acquire-green-ridge-optical = "burnlens.acquire_green_ridge_optical:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
