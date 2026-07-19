@@ -59,7 +59,16 @@
     "median_dnbr": 0.280602,
     "reference_pixel_status": "not acquired or opened"
   },
-  "release_package": null,
+  "release_package": {
+    "filename": "burnlens_deschutes-0.33.0-py3-none-any.whl",
+    "source_commit": "4c153fbb058f1b4c23f0b4b4aeb310f4c32500ed",
+    "source_date_epoch": 1784501636,
+    "bytes": 489828,
+    "sha256": "e11f2f073b7fb03f07fe95d4b48304b57bf78ac431a6bb942c8ab8b40d113a00",
+    "entries": 106,
+    "console_commands": 50,
+    "isolated_install": "pass"
+  },
   "quality_gates": {
     "custody_and_structure": "pass: exact provider/local hashes, SAFE roots, manifests, member counts, CRCs, and no unexpected entries",
     "native_pixels": "pass: full boundary readable on aligned native EPSG:32610 B04/B8A/B12/SCL grids",
@@ -69,8 +78,9 @@
     "privacy": "pass: no local user path, download path, secret, token, authorization, email, recipient, or burnlens-site reference",
     "official_reference_pixels": "blocked: BAER, MTBS, and RAVG identities known; zero Green Ridge reference pixels opened",
     "label_dataset_model": "blocked: no burned/background/unknown owner-approved candidates, dataset, split, baseline, or model",
-    "repository_tests": "pass: 267 tests; compileall; 89 tracked and candidate JSON documents parse",
-    "release_package": "pending",
+    "repository_tests": "pass: custody worktree 267 tests; clean remote head 262 tests and five expected custody skips; compileall; 89 tracked and candidate JSON documents parse",
+    "release_package": "pass: two fixed-epoch clean-source wheels are byte-identical; 106 clean entries; 50 commands; isolated install and dependency check pass",
+    "fresh_remote_head": "pass: exact real-custody reconstruction through clean source; direct custody junction correctly rejected as not freshly registered",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },

@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render actual pre/post and continuous dNBR evidence without thresholding it into severity or labels.
 - Keep BAER/MTBS/RAVG pixels, both candidate classes, owner review, labels, dataset, split, baseline, and model deferred.
 
-Contract commit `e4b146cc85fa20b26a30348b339fbecff7c1f141`, generator `4e95c66f164cb78e8ffdd45049db3051e55e0f18`, and public artifacts `e2b25f2ef25503ac2f7c11d232c59344c61a809f` produce acquisition run `BL-2026-07-19-green-ridge-optical-intake-r001` and evidence run `BL-2026-07-19-green-ridge-source-fitness-r001`. Exact reconstruction, original-resolution render, semantic HTML, and privacy gates pass. Final tests, packaging, PR/merge, fresh-main reconstruction, tag, and lifecycle verification remain release gates.
+Contract commit `e4b146cc85fa20b26a30348b339fbecff7c1f141`, generator `4e95c66f164cb78e8ffdd45049db3051e55e0f18`, and public artifacts `e2b25f2ef25503ac2f7c11d232c59344c61a809f` produce acquisition run `BL-2026-07-19-green-ridge-optical-intake-r001` and evidence run `BL-2026-07-19-green-ridge-source-fitness-r001`. Exact reconstruction, original-resolution render, semantic HTML, privacy, tests, and canonical 489,828-byte package gates pass. PR/merge, fresh-main reconstruction, tag, and lifecycle verification remain release gates.
 
 ## v0.32.0-additional-event-groups - verified - 2026-07-19
 
