@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.33.0-green-ridge-source-fitness - release candidate - 2026-07-19
+## v0.33.0-green-ridge-source-fitness - verified - 2026-07-19
 
 ### P2O4-T21 - Acquire and gate one exact new event
 
@@ -13,7 +13,9 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render actual pre/post and continuous dNBR evidence without thresholding it into severity or labels.
 - Keep BAER/MTBS/RAVG pixels, both candidate classes, owner review, labels, dataset, split, baseline, and model deferred.
 
-Contract commit `e4b146cc85fa20b26a30348b339fbecff7c1f141`, generator `4e95c66f164cb78e8ffdd45049db3051e55e0f18`, and public artifacts `e2b25f2ef25503ac2f7c11d232c59344c61a809f` produce acquisition run `BL-2026-07-19-green-ridge-optical-intake-r001` and evidence run `BL-2026-07-19-green-ridge-source-fitness-r001`. Exact reconstruction, original-resolution render, semantic HTML, privacy, tests, and canonical 489,828-byte package gates pass. PR/merge, fresh-main reconstruction, tag, and lifecycle verification remain release gates.
+Contract commit `e4b146cc85fa20b26a30348b339fbecff7c1f141`, generator `4e95c66f164cb78e8ffdd45049db3051e55e0f18`, and public artifacts `e2b25f2ef25503ac2f7c11d232c59344c61a809f` produce acquisition run `BL-2026-07-19-green-ridge-optical-intake-r001` and evidence run `BL-2026-07-19-green-ridge-source-fitness-r001`. Exact reconstruction, original-resolution render, semantic HTML, privacy, tests, and canonical 489,828-byte package gates pass.
+
+PR #475 squash-merges the reviewed head at checkpoint `4145b483fe52e5542b03f6651d373b8e72aaf5bd`. Fresh merged main passes 262 tests with five expected custody skips, compilation, 89 tracked JSON parses, exact three-output reconstruction through the unchanged ignored custody package, and two canonical wheels. Annotated tag object `331d727403075e5dc46b17bbac4f46d9ff8669f7` remotely peels to the checkpoint. Lifecycle issue #476 / PR #478 records the release; issue #477 owns exact official reference-pixel fitness.
 
 ## v0.32.0-additional-event-groups - verified - 2026-07-19
 
