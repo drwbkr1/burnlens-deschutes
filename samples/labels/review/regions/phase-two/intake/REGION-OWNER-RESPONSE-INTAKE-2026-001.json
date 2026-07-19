@@ -1,0 +1,187 @@
+{
+  "report_id": "REGION-OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "region-owner-response-intake-v0.1.0",
+  "generated_at_utc": "2026-07-19T17:58:12.552Z",
+  "run_id": "BL-2026-07-19-region-owner-response-intake-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 461,
+  "git_source_commit": "1d6966880278264154977ef4287b2db2e0a24026",
+  "software_version": "0.31.0",
+  "aoi_version": "multi-event-native-grids-v0.1.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "pilot": {
+      "report_id": "REGION-CANDIDATE-PILOT-2026-001",
+      "run_id": "BL-2026-07-18-region-candidate-pilot-r006",
+      "bytes": 12462,
+      "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+    },
+    "surface": {
+      "report_id": "REGION-OWNER-REVIEW-SURFACE-2026-001",
+      "run_id": "BL-2026-07-18-region-owner-review-surface-r005",
+      "bytes": 11585,
+      "sha256": "f88e725eeee9e1b2bf4274eb2fc04f307018ef096fec9cf577479d1398e8c27d"
+    },
+    "response": {
+      "bytes": 1635,
+      "sha256": "f5b97af85579412b66e2bb773684b02230b9cf216cdb4c70313c9636b634c1e6"
+    },
+    "receipt": {
+      "bytes": 2319,
+      "sha256": "e44a2fc551ff59d404ea928e2edf95318633c3851cbee7b980c87ff183cb49d5"
+    },
+    "private_reconciliation": {
+      "bytes": 11199,
+      "sha256": "6bb2aeeeb4cb10acaa7ee12859d7644e2851c3c93083b5b110cd279adfe02305",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "record_bindings": [
+    {
+      "record_id": "SOURCE-2026-007",
+      "bytes": 3186,
+      "sha256": "18ec272d75b8fb9bf846e9348963f45d50d816de95c3aec3d33cef81b48245f8"
+    },
+    {
+      "record_id": "SOURCE-2026-010",
+      "bytes": 2789,
+      "sha256": "e4909114296086681e4933da39dd3320c4511bd31176de7bf4e6574623ad3ece"
+    },
+    {
+      "record_id": "SOURCE-2026-018",
+      "bytes": 2372,
+      "sha256": "d48640f1f7c7e6163f41b27685a26a7644ff0e5a897952c4f61f5c01e550556b"
+    },
+    {
+      "record_id": "TERMS-2026-003",
+      "bytes": 2621,
+      "sha256": "5277fad7ca9c899d1520408eeba3cde158f7704362d28e97e6e3032ca2d1e178"
+    },
+    {
+      "record_id": "TERMS-2026-005",
+      "bytes": 2949,
+      "sha256": "ecd8795783f8d162554af4101ba4090fffba6e36e7828bb344fa35877e842ae1"
+    },
+    {
+      "record_id": "TERMS-2026-013",
+      "bytes": 930,
+      "sha256": "91d15105e058bb32b105e831c525a0334ff02eeecf31c04474da87615618df58"
+    },
+    {
+      "record_id": "TERMS-2026-014",
+      "bytes": 2289,
+      "sha256": "08a5242df179fd63470ccbccfa918c63a8c345a4e08266f4236df5dc582ca88f"
+    },
+    {
+      "record_id": "PRECHECK-2026-030",
+      "bytes": 1825,
+      "sha256": "6c45e7520ba3c509ba6ac6af05c90ebf87ae744bead1a40c8b4b0af3fa8e3ac1"
+    },
+    {
+      "record_id": "LABEL-FITNESS-2026-018",
+      "bytes": 1357,
+      "sha256": "77e91c17a7eb9c4e5a7452868b80645ce60973b1359a4ae3bd84d408158d669b"
+    },
+    {
+      "record_id": "SOURCE-PRECEDENCE-2026-014",
+      "bytes": 904,
+      "sha256": "3f84d162a3ee3b7b63744bef4226ea14d51823da96dce606f0fe6ef4fc93bc76"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-028",
+      "bytes": 1160,
+      "sha256": "b1c66ee10a1131d7dd487cbb0242ffc9d5ed979cb30979ad17434ac1fd1054c0"
+    }
+  ],
+  "source_records": [
+    "SOURCE-2026-007",
+    "SOURCE-2026-010",
+    "SOURCE-2026-018"
+  ],
+  "terms_records": [
+    "TERMS-2026-003",
+    "TERMS-2026-005",
+    "TERMS-2026-013",
+    "TERMS-2026-014"
+  ],
+  "review_records": [
+    "PRECHECK-2026-030",
+    "LABEL-FITNESS-2026-018",
+    "SOURCE-PRECEDENCE-2026-014",
+    "USE-BOUNDARY-2026-028"
+  ],
+  "decision_counts": {
+    "yes": 6,
+    "no": 0,
+    "uncertain": 0
+  },
+  "outcome": {
+    "owner_approved_region_labels": 6,
+    "prototype_label_class_counts": {
+      "background": 3,
+      "burned": 3
+    },
+    "prototype_label_event_counts": {
+      "event-darlene3-or-2024": 2,
+      "event-mckay-1035-ne-2017": 2,
+      "event-tepee-1144-ne-2018": 2
+    },
+    "accepted_core_pixels": 136,
+    "accepted_core_area_ha": 5.44,
+    "excluded_unknown_ring_pixels": 246,
+    "event_group_count": 3,
+    "minimum_event_group_count": 6,
+    "dataset_fitness_reopened": false
+  },
+  "promotion_gates": {
+    "exact_response_and_custody": true,
+    "candidate_reproducibility": true,
+    "source_and_terms": true,
+    "quality_and_registration": true,
+    "unknown_ring_excluded": true,
+    "event_level_leakage_control": true
+  },
+  "privacy": {
+    "notes_public": false,
+    "unit_decisions_public": false,
+    "private_paths_public": false,
+    "private_seed_identity_public": false
+  },
+  "boundaries": {
+    "owner_review_is_independent_ground_truth": false,
+    "unknown_ring_is_background": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_or_operational_claim_created": false
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2017, 2018, and 2024.",
+    "NIFC WFIGS and MTBS evidence remains contextual and is not pixel-perfect truth."
+  ],
+  "warning": "Experimental BurnLens owner-approved prototype region labels. Not ground truth, official wildfire information, emergency guidance, or a dataset. Official sources govern.",
+  "decision": "ACCEPT_OWNER_APPROVED_PROTOTYPE_REGION_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL",
+  "next_gate": "Acquire and gate at least three additional comparable whole-event groups before dataset fitness, split, or baseline work can reopen.",
+  "outputs": [
+    {
+      "path": "REGION-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3029,
+      "sha256": "daaa2501cdaeaf2d8306365ede0abee7c926224e7e5aa12fa0ba4e997e4f35a9",
+      "media_type": "text/html"
+    },
+    {
+      "path": "REGION-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 77860,
+      "sha256": "3c8bafffddf907eb232475d40552a18e8ef048cae51f8ff6c88d72301daf76ec",
+      "media_type": "image/png"
+    }
+  ]
+}

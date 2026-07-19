@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.31.0-region-owner-response-intake - candidate - 2026-07-19
+
+### P2O4-T19 - Preserve, gate, and reconcile the exact owner region response
+
+- Preserve the exact 1,635-byte completed owner export without overwrite in ignored repository-local custody.
+- Bind all six answers to the shipped surface, pilot report, candidate order, raster hashes, and exact source/terms/review records.
+- Reopen every GeoTIFF and verify native grids, CRS, nodata, class domain, connected cores, one-pixel unknown rings, quality/registration, and event identity.
+- Accept six owner-approved prototype regions: three burned and three background, 136 core pixels / 5.44 hectares across three events.
+- Keep 246 ring pixels unknown and exclude unit decisions, notes, private paths, and seed identities from public outputs.
+- Defer dataset, split, baseline, model, metric, and readiness work because three event groups remain below the required six.
+
+Source commit `1d6966880278264154977ef4287b2db2e0a24026` and public artifact commit `d8a13facd78c12e70dadbe9e9a397122cce46883` produce run `BL-2026-07-19-region-owner-response-intake-r001`. The exact response SHA-256 is `f5b97af85579412b66e2bb773684b02230b9cf216cdb4c70313c9636b634c1e6`. The candidate passes 253 full repository tests, seven focused post-publication tests, compilation, dependency health, exact aggregate hashes, privacy review, and original-resolution visual inspection. Two fixed-epoch wheels are byte-identical at 462,622 bytes / SHA-256 `79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834`; an isolated install reports 0.31.0, 46 commands, 99 wheel entries, and zero forbidden entries. Local `file://` browser navigation was policy-blocked and not bypassed.
+
 ## v0.30.0-region-owner-review-surface - verified - 2026-07-18
 
 ### P2O4-T18 - Build the exact six-candidate owner review surface

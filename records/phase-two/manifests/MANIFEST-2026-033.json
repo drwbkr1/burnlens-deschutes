@@ -1,0 +1,46 @@
+{
+  "manifest_id": "MANIFEST-2026-033",
+  "manifest_version": "0.33.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-19T18:00:00Z",
+  "task_issue": 461,
+  "pull_request": 463,
+  "branch": "codex/p2o4-t19-region-response-intake",
+  "git_base_commit": "fec6dcd8a7aa9ce91f6613b8bf4d081289932b2e",
+  "generator_source_commit": "1d6966880278264154977ef4287b2db2e0a24026",
+  "candidate_artifacts_commit": "d8a13facd78c12e70dadbe9e9a397122cce46883",
+  "checkpoint_commit": null,
+  "version_tag": "v0.31.0-region-owner-response-intake",
+  "next_checkpoint_issue": null,
+  "status": "release candidate; six owner-approved prototype regions; dataset deferred",
+  "software_version": "0.31.0",
+  "run_id": "BL-2026-07-19-region-owner-response-intake-r001",
+  "aoi_version": "multi-event-native-grids-v0.1.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "response": {"bytes": 1635, "sha256": "f5b97af85579412b66e2bb773684b02230b9cf216cdb4c70313c9636b634c1e6"},
+    "receipt": {"bytes": 2319, "sha256": "e44a2fc551ff59d404ea928e2edf95318633c3851cbee7b980c87ff183cb49d5"},
+    "private_reconciliation": {"bytes": 11199, "sha256": "6bb2aeeeb4cb10acaa7ee12859d7644e2851c3c93083b5b110cd279adfe02305", "committed": false}
+  },
+  "outputs": [
+    {"path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.json", "bytes": 6149, "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"},
+    {"path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.html", "bytes": 3029, "sha256": "daaa2501cdaeaf2d8306365ede0abee7c926224e7e5aa12fa0ba4e997e4f35a9"},
+    {"path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.png", "bytes": 77860, "sha256": "3c8bafffddf907eb232475d40552a18e8ef048cae51f8ff6c88d72301daf76ec"}
+  ],
+  "quality_gates": {
+    "exact_custody": "pass: exact export and receipt preserved without overwrite in ignored storage",
+    "promotion": "pass: six response, raster, source/terms, quality, uncertainty, and event gates",
+    "privacy": "pass: public outputs contain aggregate bindings only",
+    "render": "pass: canonical PNG visually inspected at original resolution; HTML semantic/self-contained; file URL browser navigation policy-blocked and not bypassed",
+    "repository_tests": "pass: 253 full repository tests; 7 focused post-publication tests; compileall and dependency health",
+    "release_package": "pass: two fixed-epoch 462622-byte wheels match sha256 79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834; isolated 0.31.0 install; 46 commands; 99 entries; zero forbidden entries",
+    "dataset_gate": "blocked: three event groups remain below required six"
+  },
+  "decision": "ACCEPT_OWNER_APPROVED_PROTOTYPE_REGION_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"
+}
