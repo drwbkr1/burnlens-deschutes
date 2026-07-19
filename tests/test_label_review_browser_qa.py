@@ -179,7 +179,7 @@ def _observation(
 
 class LabelReviewBrowserQaTests(unittest.TestCase):
     def test_current_package_version_and_packaged_controller(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.33.0")
+        self.assertEqual(burnlens.__version__, "0.34.0")
         controller = ROOT / "burnlens" / "label_review_browser_controller.mjs"
         self.assertTrue(controller.is_file())
         text = controller.read_text(encoding="utf-8")

@@ -91,7 +91,7 @@ def _walk_keys(value):
 
 class LabelReviewPacketTests(unittest.TestCase):
     def test_current_package_version_is_label_review_readiness_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.33.0")
+        self.assertEqual(burnlens.__version__, "0.34.0")
 
     def test_deterministic_stratified_selection_reports_structural_absence(self) -> None:
         first_units, first_coverage = select_sample_units(
