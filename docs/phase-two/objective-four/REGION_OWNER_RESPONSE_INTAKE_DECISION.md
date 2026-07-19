@@ -1,6 +1,6 @@
 # Region Owner Response Intake Decision
 
-**Issue / branch:** #461 / `codex/p2o4-t19-region-response-intake`
+**Issue / PR / branch:** #461 / #463 / `codex/p2o4-t19-region-response-intake`
 
 **Run:** `BL-2026-07-19-region-owner-response-intake-r001`
 

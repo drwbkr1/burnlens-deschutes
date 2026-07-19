@@ -1,6 +1,6 @@
 # REGISTRY-2026-033 - Exact Owner Region Response Intake
 
-**Checkpoint:** Issue #461; branch `codex/p2o4-t19-region-response-intake`; source `1d6966880278264154977ef4287b2db2e0a24026`; public artifacts `d8a13facd78c12e70dadbe9e9a397122cce46883`
+**Checkpoint:** Issue #461; PR #463; branch `codex/p2o4-t19-region-response-intake`; source `1d6966880278264154977ef4287b2db2e0a24026`; public artifacts `d8a13facd78c12e70dadbe9e9a397122cce46883`
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
 |---|---|---|---:|
