@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.32.0-additional-event-groups - release candidate - 2026-07-19
+
+### P2O4-T20 - Freeze three additional comparable event groups
+
+- Reconstruct the current four-output official-source scout exactly and identify its Landsat-era bias relative to the six-event Sentinel gate.
+- Capture current MTBS, Burn Severity Portal, and CDSE STAC metadata for five bounded Central Oregon candidates.
+- Freeze Green Ridge 2020, Grandview 2021, and Petes Lake 2023 under exact event/scene/geography/time contracts.
+- Reach six immutable event identities across six event years, with BAER in four events, MTBS in six, and RAVG in five.
+- Freeze six exact Sentinel products totaling 6,740,290,293 catalogued bytes / 6.277 GiB while downloading zero provider bytes.
+- Keep source/pixel fitness, both classes, unknown boundaries, owner review, dataset, split, baseline, model, metrics, and readiness closed.
+
+Generator source commit `1d80ef5788ded4eb0f736120fb9023cc1919ea41` produces source run `BL-2026-07-19-additional-event-groups-r001` and rendered run `BL-2026-07-19-additional-event-groups-r002`. The normalized source snapshot SHA-256 is `3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241`. The focused tests pass 3/3; the full suite passes 257 tests with one existing NumPy deprecation warning; compilation, diff checks, deterministic rendering, and original-resolution PNG inspection pass. PR/merge, fresh-checkout reconstruction, packaging, tag, and lifecycle verification remain release gates.
+
 ## v0.31.0-region-owner-response-intake - verified - 2026-07-19
 
 ### P2O4-T19 - Preserve, gate, and reconcile the exact owner region response
