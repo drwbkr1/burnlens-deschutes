@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.31.0-region-owner-response-intake - release withheld pending #464 - 2026-07-19
+## v0.31.0-region-owner-response-intake - verified - 2026-07-19
 
 ### P2O4-T19 - Preserve, gate, and reconcile the exact owner region response
 
@@ -16,6 +16,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 Source commit `1d6966880278264154977ef4287b2db2e0a24026` and public artifact commit `d8a13facd78c12e70dadbe9e9a397122cce46883` produce run `BL-2026-07-19-region-owner-response-intake-r001`. The exact response SHA-256 is `f5b97af85579412b66e2bb773684b02230b9cf216cdb4c70313c9636b634c1e6`. The candidate passes 253 full repository tests, seven focused post-publication tests, compilation, dependency health, exact aggregate hashes, privacy review, and original-resolution visual inspection. Two fixed-epoch wheels are byte-identical at 462,622 bytes / SHA-256 `79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834`; an isolated install reports 0.31.0, 46 commands, 99 wheel entries, and zero forbidden entries. Local `file://` browser navigation was policy-blocked and not bypassed.
 
 PR #463 merges at `8da0b3fee142eaad98a6e8e941a2fff2a555f28d`. Fresh-main reconstruction reproduces HTML and PNG exactly but correctly withholds the tag because Markdown record line endings change raw-byte bindings and the aggregate JSON hash. Issue #464 / PR #465 adds explicit per-record EOL contracts that preserve older CRLF identities and newer LF identities; no response, raster, label, scientific result, or claim changes.
+
+Remediation merges at verified checkpoint `70dca180d851fadc9ae3b7a897bdf55cf698b3c3`. A separate fresh remote-main clone restores only the exact ignored custody pair and reconstructs JSON, HTML, and PNG 3 of 3 byte for byte. Fresh main passes 254 tests, compilation, dependency health, tracked JSON parsing, and the canonical wheel identity. Annotated tag object `3ead929db9129da8da836373a177f2e5ba87c89b` remotely peels to the remediation merge. Lifecycle issue #467 records the release; issue #466 owns additional-event selection.
 
 ## v0.30.0-region-owner-review-surface - verified - 2026-07-18
 
