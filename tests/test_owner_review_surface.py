@@ -34,7 +34,7 @@ class OwnerReviewSurfaceTests(unittest.TestCase):
         cls.template = json.loads(TEMPLATE_PATH.read_text(encoding="utf-8"))
 
     def test_version_and_entry_points(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.30.0")
+        self.assertEqual(burnlens.__version__, "0.31.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn('burnlens-build-owner-review-surface =', pyproject)
         self.assertIn('burnlens-lock-owner-review-response =', pyproject)
