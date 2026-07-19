@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.33.0-green-ridge-source-fitness - release candidate - 2026-07-19
+
+### P2O4-T21 - Acquire and gate one exact new event
+
+- Acquire the two frozen Green Ridge Sentinel products through the protected CDSE boundary and preserve 2,388,456,138 exact provider bytes in ignored custody.
+- Verify provider MD5/BLAKE3, local SHA-256, two 95-member SAFE roots, manifests, CRCs, and atomic registration.
+- Open the full event at native 20 m and measure 44,110 boundary pixels with 99.9887% pair eligibility.
+- Pass all nine content-registration windows at p95 0.1091 pixel / maximum 2.408 m.
+- Render actual pre/post and continuous dNBR evidence without thresholding it into severity or labels.
+- Keep BAER/MTBS/RAVG pixels, both candidate classes, owner review, labels, dataset, split, baseline, and model deferred.
+
+Contract commit `e4b146cc85fa20b26a30348b339fbecff7c1f141`, generator `4e95c66f164cb78e8ffdd45049db3051e55e0f18`, and public artifacts `e2b25f2ef25503ac2f7c11d232c59344c61a809f` produce acquisition run `BL-2026-07-19-green-ridge-optical-intake-r001` and evidence run `BL-2026-07-19-green-ridge-source-fitness-r001`. Exact reconstruction, original-resolution render, semantic HTML, and privacy gates pass. Final tests, packaging, PR/merge, fresh-main reconstruction, tag, and lifecycle verification remain release gates.
+
 ## v0.32.0-additional-event-groups - verified - 2026-07-19
 
 ### P2O4-T20 - Freeze three additional comparable event groups
