@@ -9,10 +9,10 @@
   "git_base_commit": "fec6dcd8a7aa9ce91f6613b8bf4d081289932b2e",
   "generator_source_commit": "1d6966880278264154977ef4287b2db2e0a24026",
   "candidate_artifacts_commit": "d8a13facd78c12e70dadbe9e9a397122cce46883",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "8da0b3fee142eaad98a6e8e941a2fff2a555f28d",
   "version_tag": "v0.31.0-region-owner-response-intake",
   "next_checkpoint_issue": null,
-  "status": "release candidate; six owner-approved prototype regions; dataset deferred",
+  "status": "release withheld for checkout-stability remediation #464; scientific result unchanged",
   "software_version": "0.31.0",
   "run_id": "BL-2026-07-19-region-owner-response-intake-r001",
   "aoi_version": "multi-event-native-grids-v0.1.0",
@@ -40,6 +40,7 @@
     "render": "pass: canonical PNG visually inspected at original resolution; HTML semantic/self-contained; file URL browser navigation policy-blocked and not bypassed",
     "repository_tests": "pass: 253 full repository tests; 7 focused post-publication tests; compileall and dependency health",
     "release_package": "pass: two fixed-epoch 462622-byte wheels match sha256 79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834; isolated 0.31.0 install; 46 commands; 99 entries; zero forbidden entries",
+    "first_fresh_main_reconstruction": "fail at 8da0b3fee142eaad98a6e8e941a2fff2a555f28d: HTML and PNG exact; JSON record/private hash bindings drift under Windows CRLF checkout; tag withheld; remediation #464",
     "dataset_gate": "blocked: three event groups remain below required six"
   },
   "decision": "ACCEPT_OWNER_APPROVED_PROTOTYPE_REGION_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"

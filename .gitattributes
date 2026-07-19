@@ -6,6 +6,11 @@
 pyproject.toml text eol=lf
 LICENSE text eol=lf
 
+# Source, terms, and gate records are hashed as evidence and require stable bytes.
+records/phase-two/prechecks/*.md text eol=lf
+records/phase-two/reviews/*.md text eol=lf
+records/phase-two/terms/*.md text eol=lf
+
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf
 samples/target/phase-two/*.html text eol=lf
