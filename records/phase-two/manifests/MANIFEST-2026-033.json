@@ -39,6 +39,7 @@
     "privacy": "pass: public outputs contain aggregate bindings only",
     "render": "pass: canonical PNG visually inspected at original resolution; HTML semantic/self-contained; file URL browser navigation policy-blocked and not bypassed",
     "repository_tests": "pass: 253 full repository tests; 7 focused post-publication tests; compileall and dependency health",
+    "release_package": "pass: two fixed-epoch 462622-byte wheels match sha256 79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834; isolated 0.31.0 install; 46 commands; 99 entries; zero forbidden entries",
     "dataset_gate": "blocked: three event groups remain below required six"
   },
   "decision": "ACCEPT_OWNER_APPROVED_PROTOTYPE_REGION_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"
