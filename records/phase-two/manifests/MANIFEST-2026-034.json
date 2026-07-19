@@ -16,7 +16,7 @@
   "version_tag": "v0.32.0-additional-event-groups",
   "version_tag_object": "d97aadd4aef60b55ce8c4200fed4eaf58f28dc73",
   "lifecycle_sync_issue": 473,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 474,
   "next_checkpoint_issue": 472,
   "status": "shipped verified: three additional event groups frozen; acquisition and dataset deferred",
   "software_version": "0.32.0",
