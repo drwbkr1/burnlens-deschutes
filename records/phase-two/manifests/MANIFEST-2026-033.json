@@ -41,6 +41,7 @@
     "repository_tests": "pass: 253 full repository tests; 7 focused post-publication tests; compileall and dependency health",
     "release_package": "pass: two fixed-epoch 462622-byte wheels match sha256 79c871b5b363d2300e2755ec48608145fdb0d0f872c3d079eccffec61895a834; isolated 0.31.0 install; 46 commands; 99 entries; zero forbidden entries",
     "first_fresh_main_reconstruction": "fail at 8da0b3fee142eaad98a6e8e941a2fff2a555f28d: HTML and PNG exact; JSON record/private hash bindings drift under Windows CRLF checkout; tag withheld; remediation #464",
+    "remediation_branch_reconstruction": "pass: fresh remote branch clone with exact ignored custody pair reconstructs JSON, HTML, and PNG 3 of 3; 254 tests; package identity unchanged",
     "dataset_gate": "blocked: three event groups remain below required six"
   },
   "decision": "ACCEPT_OWNER_APPROVED_PROTOTYPE_REGION_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"
