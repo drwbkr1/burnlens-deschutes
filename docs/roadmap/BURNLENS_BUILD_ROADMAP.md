@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified `v0.31.0-region-owner-response-intake` accepts six prototype regions only after all gates pass. Issue #466 / PR #469 freezes three additional comparable event identities with repeated source regimes; issue #470 must finish release-metadata verification before tagging. Then acquire and gate one new event at a time. Do not create a dataset or baseline until exact acquisition, pixel/source fitness, class/unknown, and owner-review gates pass.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified `v0.31.0-region-owner-response-intake` accepts six prototype regions only after all gates pass. Verified `v0.32.0-additional-event-groups` freezes three additional comparable event identities with repeated source regimes. Issue #472 acquires and gates Green Ridge as one exact event. Do not create a dataset or baseline until exact acquisition, pixel/source fitness, class/unknown, and owner-review gates pass.
 
 ## Required reading order for long-running Codex work
 
