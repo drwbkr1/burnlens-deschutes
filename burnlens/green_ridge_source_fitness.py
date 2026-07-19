@@ -251,7 +251,8 @@ def _preview_tci(values: np.ndarray, mask: np.ndarray, size: tuple[int, int]) ->
 
 
 def _preview_dnbr(values: np.ndarray, valid: np.ndarray, size: tuple[int, int]) -> Image.Image:
-    scaled = np.clip((values + 0.3) / 1.2, 0, 1)
+    safe_values = np.where(valid, values, -0.3)
+    scaled = np.clip((safe_values + 0.3) / 1.2, 0, 1)
     red = (255 * scaled).astype(np.uint8)
     blue = (255 * (1 - scaled)).astype(np.uint8)
     green = (180 * (1 - np.abs(scaled - 0.5) * 2)).astype(np.uint8)
