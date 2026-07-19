@@ -348,4 +348,3 @@ def acquire_request_receipt(
         if temporary.exists():
             shutil.rmtree(temporary)
         raise
-

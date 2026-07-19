@@ -21,4 +21,3 @@ The official 2026 first-quarter release notice says the refreshed portal can int
 - recipient supplied only through a process environment variable and never written to the receipt;
 - exact metadata/queue response bytes and a private-safe receipt atomically preserved under ignored repository storage;
 - no overwrite, substitution, label, dataset, split, baseline, or model action.
-
