@@ -1,0 +1,92 @@
+{
+  "manifest_id": "MANIFEST-2026-034",
+  "manifest_version": "0.34.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-19T21:45:00Z",
+  "task_issue": 466,
+  "pull_request": null,
+  "branch": "codex/p2o4-t20-additional-event-groups",
+  "git_base_commit": "761b3d936f3ea5c258a11f3ff4d1fbf3116a4529",
+  "generator_source_commit": "1d80ef5788ded4eb0f736120fb9023cc1919ea41",
+  "candidate_artifacts_commit": "428dbb946b62d06c3877196cc4bdc31e957eb3f8",
+  "checkpoint_commit": null,
+  "version_tag": "v0.32.0-additional-event-groups",
+  "version_tag_object": null,
+  "lifecycle_sync_issue": null,
+  "lifecycle_sync_pull_request": null,
+  "next_checkpoint_issue": null,
+  "status": "release candidate: three additional event groups frozen; acquisition and dataset deferred",
+  "software_version": "0.32.0",
+  "source_run_id": "BL-2026-07-19-additional-event-groups-r001",
+  "report_run_id": "BL-2026-07-19-additional-event-groups-r002",
+  "aoi_version": "multi-event-native-grids-v0.1.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.1.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "official_source_snapshot": {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-SOURCE-2026-001.json",
+      "bytes": 1213352,
+      "sha256": "3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241"
+    }
+  },
+  "outputs": [
+    {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.json",
+      "bytes": 877722,
+      "sha256": "65fd567e234cbb521ead6b7071cab9914c672df169e3987af0c3ddfc66ccf622"
+    },
+    {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.html",
+      "bytes": 10932,
+      "sha256": "23ba6fdf3053adbc81f326c42aad873353e310d5a03074f14b8e3d87ad47b6bc"
+    },
+    {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.png",
+      "bytes": 109133,
+      "sha256": "9760ee2526c8b903cab2a3bc6a51a6413d51bb1c56b9d892a21b518db965181f"
+    }
+  ],
+  "event_group_plan": {
+    "selected": [
+      {"name": "Green Ridge 0684 CS", "year": 2020, "event_id": "OR4446712160520200817"},
+      {"name": "Grandview 0558 OD", "year": 2021, "event_id": "OR4446612140020210711"},
+      {"name": "Petes Lake", "year": 2023, "event_id": "OR4396912190120230825"}
+    ],
+    "resulting_event_groups": 6,
+    "distinct_event_years": [2017, 2018, 2020, 2021, 2023, 2024],
+    "program_event_counts": {"BAER": 4, "MTBS": 6, "RAVG": 5},
+    "selected_boundary_overlap": false,
+    "sentinel_products": 6,
+    "catalogued_bytes": 6740290293,
+    "provider_bytes_downloaded": 0
+  },
+  "release_package": {
+    "filename": "burnlens_deschutes-0.32.0-py3-none-any.whl",
+    "bytes": 477273,
+    "sha256": "efa7423e451d11bd8a0ff9b1a122fd07f2b222a01765e33d5cc4412a7ece717d",
+    "fixed_epoch_builds_identical": 2,
+    "installed_version": "0.32.0",
+    "console_commands": 48,
+    "wheel_entries": 102,
+    "forbidden_entries": 0,
+    "dependency_health": "pass"
+  },
+  "quality_gates": {
+    "official_source_capture": "pass: current MTBS, Burn Severity Portal, and CDSE metadata captured with source identities, terms, and limitations",
+    "selection": "pass: deterministic three-event selection extends the pool to six distinct event years and repeated official reference regimes",
+    "exact_reconstruction": "pass: JSON, HTML, and PNG reconstruct byte-for-byte from the frozen source snapshot",
+    "render": "pass: canonical 1800 by 1250 PNG visually inspected at original resolution; complete, legible, and unclipped",
+    "privacy": "pass: public outputs contain no local paths, private owner decisions, credentials, tokens, recipient data, or private retrieval URLs",
+    "repository_tests": "pass: 257 full repository tests; 3 focused tests; compileall, tracked JSON, dependency health, and diff checks",
+    "release_package": "pass: two fixed-epoch 477273-byte wheels match sha256 efa7423e451d11bd8a0ff9b1a122fd07f2b222a01765e33d5cc4412a7ece717d; isolated 0.32.0 install; 48 commands; 102 entries; zero forbidden entries",
+    "fresh_merged_main": "pending",
+    "remote_tag": "pending",
+    "dataset_gate": "blocked: zero selected-event provider pixels acquired; source, both-class, unknown-boundary, registration, owner-review, and leakage-resistant split gates remain unproved"
+  },
+  "decision": "ACCEPT_ADDITIONAL_EVENT_GROUP_PLAN_DEFER_ACQUISITION_DATASET_SPLIT_BASELINE_MODEL"
+}
