@@ -1,6 +1,6 @@
 # REGISTRY-2026-042 - Grandview Region Proposal Candidate
 
-**Issue / branch:** #508 / `codex/p2o4-t30-grandview-region-proposal`
+**Issue / PR / branch:** #508 / #512 / `codex/p2o4-t30-grandview-region-proposal`
 
 **Generator:** `78bb79eb04d76cff4ed183274de881557b176413`
 
