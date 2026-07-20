@@ -77,6 +77,7 @@ burnlens-inspect-green-ridge-references = "burnlens.inspect_green_ridge_referenc
 burnlens-acquire-green-ridge-background-optical = "burnlens.acquire_green_ridge_background_optical:main"
 burnlens-inspect-green-ridge-background-evidence = "burnlens.inspect_green_ridge_background_evidence:main"
 burnlens-acquire-grandview-background-optical = "burnlens.acquire_grandview_background_optical:main"
+burnlens-inspect-grandview-background-evidence = "burnlens.inspect_grandview_background_evidence:main"
 burnlens-build-green-ridge-region-proposal = "burnlens.build_green_ridge_region_proposal:main"
 burnlens-build-green-ridge-owner-review-surface = "burnlens.build_green_ridge_owner_review_surface:main"
 burnlens-intake-green-ridge-owner-response = "burnlens.intake_green_ridge_owner_response:main"
