@@ -32,6 +32,8 @@ from .grandview_optical_contract import (
 )
 from .grandview_reference_fitness import (
     _find,
+    _inspect_raster,
+    _sample,
     build_report as build_reference_report,
 )
 from .grandview_source_fitness import _load_candidate, _preview_tci
@@ -151,6 +153,9 @@ def _reference_context(
             ).astype(bool)
             members[program] = member
             vector_bytes[program] = len(data)
+        mtbs_member = _find(archive, "_20210702_20210718_dnbr6.tif")
+        _, mtbs_runtime = _inspect_raster(archive, mtbs_member)
+        mtbs_dnbr6 = _sample(mtbs_runtime, shape, transform, continuous=False)
     masks = _reference_route_masks(
         footprints["baer"], footprints["mtbs"], footprints["ravg"]
     )
@@ -176,7 +181,7 @@ def _reference_context(
             "cannot establish background truth without independent optical stability and owner review."
         ),
     }
-    return report, {**footprints, **masks}
+    return report, {**footprints, **masks, "mtbs_dnbr6": mtbs_dnbr6}
 
 
 def _registration_exclusion_mask(
@@ -462,6 +467,10 @@ def build_report(
         "valid": stability["valid"],
         "coherent": stability["coherent"],
         "route": route,
+        "dnbr": stability["dnbr"],
+        "pre_post_dnbr": stability["pre_post_dnbr"],
+        "mtbs_dnbr6": reference["mtbs_dnbr6"],
+        "grid_transform": transform,
         "source_boundary": reference["source_boundary"],
         "boundary_buffer": reference["boundary_buffer"],
     }
