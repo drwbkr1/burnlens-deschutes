@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import struct
 from typing import Any
 from zipfile import ZipFile
 
 import numpy as np
 from PIL import Image, ImageDraw
 import rasterio
+from rasterio.features import rasterize
 
 from .content_registration import _summary as registration_summary
 from .cross_event_source_fitness import _read_product, measure_event_registration
@@ -29,9 +31,7 @@ from .grandview_optical_contract import (
     validate_grandview_contracts,
 )
 from .grandview_reference_fitness import (
-    PRODUCTS,
     _find,
-    _inspect_raster,
     build_report as build_reference_report,
 )
 from .grandview_source_fitness import _load_candidate, _preview_tci
@@ -46,7 +46,6 @@ from .green_ridge_background_evidence import (
     _registration_manifest,
     _spectral_stability,
 )
-from .green_ridge_reference_fitness import _sample
 from .label_proposal import dilate_mask
 from .optical_pair_evidence import WARNING, _font, _write_utf8_lf
 from .paired_intake import verify_registered_package
@@ -70,15 +69,16 @@ class GrandviewBackgroundEvidenceError(RuntimeError):
 
 
 def _reference_route_masks(
-    baer_dnbr: np.ndarray, mtbs: np.ndarray, ravg: np.ndarray
+    baer_footprint: np.ndarray,
+    mtbs_footprint: np.ndarray,
+    ravg_footprint: np.ndarray,
 ) -> dict[str, np.ndarray]:
-    if baer_dnbr.shape != mtbs.shape or mtbs.shape != ravg.shape:
+    if baer_footprint.shape != mtbs_footprint.shape or mtbs_footprint.shape != ravg_footprint.shape:
         raise GrandviewBackgroundEvidenceError("reference context grids differ")
-    baer_footprint = np.isfinite(baer_dnbr)
-    mtbs_footprint = np.isin(mtbs, (1, 2, 3, 4, 5, 6))
-    ravg_footprint = np.isin(ravg, (1, 2, 3, 4, 9))
+    if any(item.dtype != np.bool_ for item in (baer_footprint, mtbs_footprint, ravg_footprint)):
+        raise GrandviewBackgroundEvidenceError("reference footprints must be boolean")
     source_footprint = baer_footprint | mtbs_footprint | ravg_footprint
-    outside_all = (~baer_footprint) & (mtbs == 0) & (ravg == 0)
+    outside_all = ~source_footprint
     boundary_buffer = dilate_mask(source_footprint, REFERENCE_BOUNDARY_BUFFER_PX)
     return {
         "baer_footprint": baer_footprint,
@@ -90,26 +90,77 @@ def _reference_route_masks(
     }
 
 
+def _polygon_geometry(data: bytes) -> dict[str, Any]:
+    if len(data) < 100 or struct.unpack(">i", data[:4])[0] != 9994:
+        raise GrandviewBackgroundEvidenceError("invalid boundary shapefile header")
+    position = 100
+    polygons: list[list[list[tuple[float, float]]]] = []
+    while position < len(data):
+        if position + 8 > len(data):
+            raise GrandviewBackgroundEvidenceError("truncated boundary record header")
+        length = struct.unpack(">i", data[position + 4:position + 8])[0] * 2
+        record = data[position + 8:position + 8 + length]
+        if len(record) != length or len(record) < 44:
+            raise GrandviewBackgroundEvidenceError("truncated boundary record")
+        shape_type = struct.unpack("<i", record[:4])[0]
+        if shape_type != 5:
+            raise GrandviewBackgroundEvidenceError("boundary record is not a polygon")
+        part_count, point_count = struct.unpack("<2i", record[36:44])
+        if part_count != 1 or point_count < 4:
+            raise GrandviewBackgroundEvidenceError("boundary polygon topology drifted")
+        point_offset = 44 + 4 * part_count
+        expected_bytes = point_offset + 16 * point_count
+        if len(record) < expected_bytes:
+            raise GrandviewBackgroundEvidenceError("boundary point array is truncated")
+        ring = [
+            struct.unpack("<2d", record[point_offset + index * 16:point_offset + (index + 1) * 16])
+            for index in range(point_count)
+        ]
+        if ring[0] != ring[-1]:
+            raise GrandviewBackgroundEvidenceError("boundary polygon ring is not closed")
+        polygons.append([ring])
+        position += 8 + length
+    if len(polygons) != 1:
+        raise GrandviewBackgroundEvidenceError("boundary shapefile record count drifted")
+    return {"type": "Polygon", "coordinates": polygons[0]}
+
+
 def _reference_context(
     archive_path: Path, shape: tuple[int, int], transform: rasterio.Affine
 ) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
-    sampled: dict[str, np.ndarray] = {}
+    footprints: dict[str, np.ndarray] = {}
     members: dict[str, str] = {}
+    vector_bytes: dict[str, int] = {}
     with ZipFile(archive_path) as archive:
-        for key in ("baer_dnbr", "mtbs_dnbr6", "ravg_cbi4"):
-            member = _find(archive, PRODUCTS[key][1])
-            _, runtime = _inspect_raster(archive, member)
-            sampled[key] = _sample(runtime, shape, transform, continuous=key == "baer_dnbr")
-            members[key] = member
+        suffixes = {
+            "baer": "_20210711_20210718_burn_area.shp",
+            "mtbs": "_20210702_20210718_burn_area.shp",
+            "ravg": "_20200810_20210815_burn_area.shp",
+        }
+        for program, suffix in suffixes.items():
+            member = _find(archive, suffix)
+            data = archive.read(member)
+            geometry = _polygon_geometry(data)
+            footprints[program] = rasterize(
+                [(geometry, 1)],
+                out_shape=shape,
+                transform=transform,
+                fill=0,
+                all_touched=False,
+                dtype="uint8",
+            ).astype(bool)
+            members[program] = member
+            vector_bytes[program] = len(data)
     masks = _reference_route_masks(
-        sampled["baer_dnbr"], sampled["mtbs_dnbr6"], sampled["ravg_cbi4"]
+        footprints["baer"], footprints["mtbs"], footprints["ravg"]
     )
     report = {
         "members": members,
-        "sampling": "nearest neighbor from native 30 m to the 20 m context grid; no resolution gain",
-        "baer_raster_footprint_pixels": int(masks["baer_footprint"].sum()),
-        "mtbs_raster_footprint_pixels": int(masks["mtbs_footprint"].sum()),
-        "ravg_raster_footprint_pixels": int(masks["ravg_footprint"].sum()),
+        "vector_bytes": vector_bytes,
+        "rasterization": "pixel center inside each exact delivered EPSG:32610 burn-area polygon on the native 20 m context grid",
+        "baer_vector_footprint_pixels": int(masks["baer_footprint"].sum()),
+        "mtbs_vector_footprint_pixels": int(masks["mtbs_footprint"].sum()),
+        "ravg_vector_footprint_pixels": int(masks["ravg_footprint"].sum()),
         "outside_all_program_footprints_pixels": int(masks["outside_all"].sum()),
         "boundary_buffer_pixels": REFERENCE_BOUNDARY_BUFFER_PX,
         "boundary_buffer_m": REFERENCE_BOUNDARY_BUFFER_PX * PIXEL_SIZE_M,
@@ -117,15 +168,15 @@ def _reference_context(
             "60 m equals two native 30 m reference cells and retains source-grid and mixed-boundary uncertainty."
         ),
         "ravg_role": (
-            "Only encoded perimeter presence is used for conservative exclusion. RAVG modeled class meaning is "
+            "Only exact delivered perimeter geometry is used for conservative exclusion. RAVG modeled class meaning is "
             "not affirmative evidence because the exact delivery warns of sparse to no pre-fire tree cover."
         ),
         "use_boundary": (
-            "Program-footprint exclusion is context only. Encoded zero, nodata, or outside-footprint status "
+            "Program-footprint exclusion is context only. Outside-footprint status "
             "cannot establish background truth without independent optical stability and owner review."
         ),
     }
-    return report, {**sampled, **masks}
+    return report, {**footprints, **masks}
 
 
 def _registration_exclusion_mask(
@@ -254,6 +305,23 @@ def build_report(
     )
     original_manifest = _registration_manifest(original_package)
     extended_manifest = _registration_manifest(extended_package)
+    checkpoint = (
+        "ACCEPT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
+        if decision == "OPEN_BACKGROUND_EVIDENCE_ROUTE_FOR_SEPARATE_CANDIDATE_PROPOSAL"
+        else "REJECT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
+    )
+    proven_claims = [
+        "The exact extended archive and original optical/reference custody pass deterministic verification.",
+        "The near-anniversary pre/extended pair is accepted by the established registration protocol with every non-pass window spatially excluded.",
+    ]
+    if decision == "OPEN_BACKGROUND_EVIDENCE_ROUTE_FOR_SEPARATE_CANDIDATE_PROPOSAL":
+        proven_claims.append(
+            "A reproducible multi-signal background-candidate evidence route exists outside all three official program footprints."
+        )
+    else:
+        proven_claims.append(
+            "The conjunctive route produced no one-hectare component and therefore remains closed."
+        )
     report = {
         "report_id": REPORT_ID,
         "report_version": REPORT_VERSION,
@@ -358,7 +426,7 @@ def build_report(
         "fitness_decision": {
             "background_evidence_route": decision,
             "next_gate": "SEPARATE_DETERMINISTIC_REGION_PROPOSAL_THEN_OWNER_YES_NO_UNCERTAIN_REVIEW",
-            "checkpoint": "ACCEPT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL",
+            "checkpoint": checkpoint,
         },
         "source_research": {
             "accessed_at_utc": "2026-07-20T22:00:00Z",
@@ -371,11 +439,7 @@ def build_report(
             ],
         },
         "claims": {
-            "proven": [
-                "The exact extended archive and original optical/reference custody pass deterministic verification.",
-                "The near-anniversary pre/extended pair is accepted by the established registration protocol with every non-pass window spatially excluded.",
-                "A reproducible multi-signal background-candidate evidence route exists outside all three official program footprints.",
-            ],
+            "proven": proven_claims,
             "not_proven": [
                 "The route is not ground truth, field validation, an official unburned map, a candidate region, or a label.",
                 "RAVG modeled classes are not affirmative evidence for this sparse/non-tree event.",
@@ -408,7 +472,12 @@ def render_png(report: dict[str, Any], previews: dict[str, np.ndarray], path: Pa
     canvas = Image.new("RGB", (1800, 1260), "#07110f")
     draw = ImageDraw.Draw(canvas)
     draw.text((60, 38), "BURNLENS  /  GRANDVIEW BACKGROUND EVIDENCE", fill="#b9d8cf", font=_font(21))
-    draw.text((60, 76), "A background evidence route opens; no candidate or label does.", fill="#eef7f3", font=_font(30))
+    headline = (
+        "A background evidence route opens; no candidate or label does."
+        if report["fitness_decision"]["background_evidence_route"].startswith("OPEN_")
+        else "The current background evidence route remains closed."
+    )
+    draw.text((60, 76), headline, fill="#eef7f3", font=_font(30))
     draw.text((60, 126), report["fitness_decision"]["checkpoint"], fill="#ffca73", font=_font(17))
     panels = [
         ("PRE 2021-06-03", _preview_tci(previews["pre_tci"], previews["pre_mask"], (520, 315))),
@@ -450,9 +519,14 @@ def render_html(report: dict[str, Any], png_name: str, path: Path) -> None:
         f"<tr><td>{item['role']}</td><td><code>{item['native_id']}</code></td><td>{item['sensing_time_utc']}</td><td>{item['processing_baseline']}</td></tr>"
         for item in report["products"]
     )
+    headline = (
+        "A background evidence route opens; no candidate or label does."
+        if report["fitness_decision"]["background_evidence_route"].startswith("OPEN_")
+        else "The current background evidence route remains closed."
+    )
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grandview background evidence</title><style>
 body{{margin:0;background:#07110f;color:#eef7f3;font:16px/1.55 system-ui,sans-serif}}main{{max-width:1200px;margin:auto;padding:32px}}h1{{font-size:clamp(2rem,5vw,4rem);line-height:1.02}}.card{{background:#0e1d1a;border:1px solid #315b50;border-radius:16px;padding:20px;margin:18px 0}}.warn{{background:#261f12;border-color:#be8a36;color:#ffd997}}img{{width:100%;height:auto;border-radius:16px}}table{{width:100%;border-collapse:collapse}}th,td{{text-align:left;padding:10px;border-bottom:1px solid #315b50;vertical-align:top}}code{{overflow-wrap:anywhere}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}}.metric strong{{display:block;font-size:2rem;color:#78e0bd}}
-</style></head><body><main><p>BURNLENS / PHASE TWO / ISSUE #503</p><h1>A background evidence route opens; no candidate or label does.</h1><div class="card warn">{report['warning']}</div><img src="{png_name}" width="1800" height="1260" alt="Actual Grandview pre, post, extended, official-footprint, stability, and route evidence"><div class="grid"><div class="card metric"><strong>{route['eligible_pixels']:,}</strong>eligible evidence pixels</div><div class="card metric"><strong>{route['eligible_area_hectares']:,.2f} ha</strong>eligible evidence area</div><div class="card metric"><strong>{route['components_at_least_one_hectare']}</strong>components at least one hectare</div><div class="card metric"><strong>0</strong>candidate regions or labels</div></div><h2>Exact optical products</h2><div class="card"><table><thead><tr><th>Role</th><th>Product</th><th>Sensing time</th><th>Baseline</th></tr></thead><tbody>{products}</tbody></table><p>The 05.00/05.10 processing difference is disclosed. Product-metadata BOA scaling and offsets plus actual content registration govern comparison.</p></div><h2>Conjunctive evidence rule</h2><div class="card"><p>{route['rule']}</p><p>Outside-footprint status, encoded zero, nodata, SCL, or apparent stability is insufficient alone. The threshold set transfers unchanged; no threshold was searched against this result.</p><p>{report['reference_context']['ravg_role']}</p></div><h2>Gate result</h2><div class="card"><p><strong>{report['fitness_decision']['background_evidence_route']}</strong></p><p>The next gate is a separate deterministic region proposal followed by owner yes/no/uncertain review. This report creates neither.</p></div><div class="card warn"><p>{report['attribution']}</p><p>No ground truth, field validation, official unburned map, owner response, dataset, split, baseline, model, accuracy, endorsement, or operational readiness exists.</p></div><p>Trace: commit <code>{report['git_source_commit']}</code> · BurnLens <code>{SOFTWARE_VERSION}</code> · run <code>{report['run_id']}</code> · label schema <code>{LABEL_SCHEMA_VERSION}</code> · dataset/model none.</p></main></body></html>"""
+</style></head><body><main><p>BURNLENS / PHASE TWO / ISSUE #503</p><h1>{headline}</h1><div class="card warn">{report['warning']}</div><img src="{png_name}" width="1800" height="1260" alt="Actual Grandview pre, post, extended, official-footprint, stability, and route evidence"><div class="grid"><div class="card metric"><strong>{route['eligible_pixels']:,}</strong>eligible evidence pixels</div><div class="card metric"><strong>{route['eligible_area_hectares']:,.2f} ha</strong>eligible evidence area</div><div class="card metric"><strong>{route['components_at_least_one_hectare']}</strong>components at least one hectare</div><div class="card metric"><strong>0</strong>candidate regions or labels</div></div><h2>Exact optical products</h2><div class="card"><table><thead><tr><th>Role</th><th>Product</th><th>Sensing time</th><th>Baseline</th></tr></thead><tbody>{products}</tbody></table><p>The 05.00/05.10 processing difference is disclosed. Product-metadata BOA scaling and offsets plus actual content registration govern comparison.</p></div><h2>Conjunctive evidence rule</h2><div class="card"><p>{route['rule']}</p><p>Outside-footprint status, nodata, SCL, or apparent stability is insufficient alone. The threshold set transfers unchanged; no threshold was searched against this result.</p><p>{report['reference_context']['ravg_role']}</p></div><h2>Gate result</h2><div class="card"><p><strong>{report['fitness_decision']['background_evidence_route']}</strong></p><p>A separate deterministic region proposal followed by owner yes/no/uncertain review is permitted only if this route opens. This report creates neither.</p></div><div class="card warn"><p>{report['attribution']}</p><p>No ground truth, field validation, official unburned map, owner response, dataset, split, baseline, model, accuracy, endorsement, or operational readiness exists.</p></div><p>Trace: commit <code>{report['git_source_commit']}</code> · BurnLens <code>{SOFTWARE_VERSION}</code> · run <code>{report['run_id']}</code> · label schema <code>{LABEL_SCHEMA_VERSION}</code> · dataset/model none.</p></main></body></html>"""
     _write_utf8_lf(path, html)
 
 
