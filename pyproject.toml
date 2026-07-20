@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.38.0"
+version = "0.39.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.11"
 dependencies = [
@@ -65,6 +65,8 @@ burnlens-build-region-owner-response-intake = "burnlens.build_region_owner_respo
 burnlens-capture-additional-event-group-source = "burnlens.capture_additional_event_group_source:main"
 burnlens-build-additional-event-group-plan = "burnlens.build_additional_event_group_plan:main"
 burnlens-acquire-green-ridge-optical = "burnlens.acquire_green_ridge_optical:main"
+burnlens-acquire-grandview-optical = "burnlens.acquire_grandview_optical:main"
+burnlens-inspect-grandview-sources = "burnlens.inspect_grandview_sources:main"
 burnlens-inspect-green-ridge-sources = "burnlens.inspect_green_ridge_sources:main"
 burnlens-request-green-ridge-reference = "burnlens.request_green_ridge_reference:main"
 burnlens-preflight-green-ridge-reference-delivery = "burnlens.preflight_green_ridge_reference_delivery:main"

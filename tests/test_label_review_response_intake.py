@@ -334,7 +334,7 @@ class LabelReviewResponseIntakeTests(unittest.TestCase):
                 )
 
     def test_current_versions_and_entry_points_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.38.0")
+        self.assertEqual(burnlens.__version__, "0.39.0")
         self.assertEqual(SOFTWARE_VERSION, "0.18.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn(
