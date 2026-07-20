@@ -9,7 +9,7 @@
   "git_base_commit": "f1f1326dff848825d6f3bbc38841f410c6d00d73",
   "generator_source_commit": "9f28f822c114788a1a9bb09a52fab22616be0376",
   "candidate_artifacts_commit": "73f831e50de94d5927f814569d46788d076d05ff",
-  "candidate_head_commit": null,
+  "candidate_head_commit": "6c62ca4285178f741ef0cc55f640d60fcc5db295",
   "checkpoint_commit": null,
   "version_tag": "v0.40.0-grandview-reference-fitness",
   "version_tag_object": null,
@@ -61,7 +61,7 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.40.0-py3-none-any.whl",
-    "source_commit": "9f28f822c114788a1a9bb09a52fab22616be0376",
+    "source_commit": "6c62ca4285178f741ef0cc55f640d60fcc5db295",
     "source_date_epoch": 1784578110,
     "bytes": 582467,
     "sha256": "b5e50359784fa748477cd9ff1c21e66083f0adce3682aea5e81c6163b930e269",
@@ -80,7 +80,7 @@
     "label_dataset_model": "blocked: no candidate, owner response, label, dataset, split, baseline, or model",
     "repository_tests": "pass in custody worktree: 316 tests; compileall; 104 tracked JSON documents including this manifest parse after commit",
     "release_package": "pass: two fixed-epoch wheels are byte-identical; 133 entries; 64 commands; exact dependencies, help paths, and pip check pass",
-    "fresh_remote_head": "pending",
+    "fresh_remote_head": "pass at 6c62ca4285178f741ef0cc55f640d60fcc5db295: empty ignored custody; 303 passed and 13 expected custody skips; compileall; 104 JSON parses; exact 3-of-3 reconstruction through unchanged original custody; two canonical wheels match",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
