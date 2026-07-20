@@ -10,11 +10,13 @@
   "request_contract_commit": "903b91e",
   "generator_source_commit": "7d6172ddc23efe445460c83886cbfc5b7c88eae3",
   "candidate_artifacts_commit": "b5d5ffec84ac7142e5057e87f1156600d61af476",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "085cb61d0f1add3f5261582acdd746e298c86ba6",
   "version_tag": "v0.34.0-green-ridge-reference-fitness",
-  "version_tag_object": null,
-  "next_checkpoint_issue": null,
-  "status": "release candidate: exact Green Ridge reference pixels pass; background evidence remains blocked",
+  "version_tag_object": "0faed9a847756651ba8d62b7baf475ea72c4229f",
+  "lifecycle_sync_issue": 481,
+  "lifecycle_sync_pull_request": 482,
+  "next_checkpoint_issue": 480,
+  "status": "verified: exact Green Ridge reference pixels pass; background evidence remains blocked",
   "software_version": "0.34.0",
   "reference_request_run_id": "BL-2026-07-19-green-ridge-reference-request-r001",
   "evidence_run_id": "BL-2026-07-19-green-ridge-reference-fitness-r001",
@@ -68,11 +70,12 @@
     "exact_reconstruction": "pass: JSON, HTML, and PNG reproduce byte for byte",
     "render": "pass: 1800 by 1260 PNG inspected at original resolution; semantic HTML emitted",
     "privacy": "pass: no recipient, private retrieval route, mailbox detail, local user path, secret, or credential",
-    "repository_tests": "pass: 276 tests; compileall; 90 JSON documents parse",
+    "repository_tests": "pass on fresh merged main: 276 tests; compileall; 91 JSON documents parse",
     "release_package": "pass: two fixed-epoch wheels byte-identical; isolated install and dependency check pass",
     "background_candidate": "blocked: no affirmative background truth",
     "label_dataset_model": "blocked: zero candidates, owner decisions, labels, dataset, split, baseline, or model",
-    "pull_request_merge_tag": "PR #479 open; merge and tag pending"
+    "pull_request_merge_tag": "pass: PR #479 merged at 085cb61d0f1add3f5261582acdd746e298c86ba6; annotated tag object 0faed9a847756651ba8d62b7baf475ea72c4229f remotely peels to the checkpoint",
+    "fresh_merged_main": "pass: exact three-output reconstruction, 276 tests, compileall, 91 JSON documents, and canonical package identity"
   },
   "decision": "ACCEPT_REFERENCE_PIXELS_AS_BOUNDED_EVIDENCE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
 }
