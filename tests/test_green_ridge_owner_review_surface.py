@@ -45,6 +45,7 @@ class GreenRidgeOwnerReviewSurfaceTests(unittest.TestCase):
         self.assertEqual({item["proposed_class"] for item in self.report["candidates"]}, {"burned", "background"})
         self.assertTrue(all(item["owner_decision"] is None for item in self.report["candidates"]))
         self.assertFalse(any(self.report["claim_boundaries"].values()))
+        self.assertTrue(self.report["response_custody_contract"]["no_overwrite"])
 
     def test_blank_template_binds_both_rasters(self) -> None:
         template = _response_template(self.report)
@@ -65,6 +66,8 @@ class GreenRidgeOwnerReviewSurfaceTests(unittest.TestCase):
             self.assertEqual(html.count('value="uncertain"'), 2)
             self.assertEqual(html.count('data-candidate="GRP-'), 2)
             self.assertIn("pre-fire, post-fire, extended optical, dNBR, MTBS, and RAVG", html)
+            self.assertIn("Do not overwrite, rename, or edit it", html)
+            self.assertIn("querySelectorAll('input[type=radio]').forEach(input=>input.checked=false)", html)
             self.assertNotIn("http://", html)
             self.assertNotIn("https://", html)
             controller = html.rsplit("<script>", 1)[1].split("</script>", 1)[0]
