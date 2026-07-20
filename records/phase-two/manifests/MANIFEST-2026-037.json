@@ -55,6 +55,16 @@
     "candidate_regions_created": 0,
     "labels_created": 0
   },
+  "release_package": {
+    "filename": "burnlens_deschutes-0.35.0-py3-none-any.whl",
+    "source_commit": "ffaa9b269491ae2acd7027340cbe58f49e66db5b",
+    "source_date_epoch": 1784509552,
+    "bytes": 524065,
+    "sha256": "dce64a85aa758cbd6b01720c84b710077f6e52b8737352ef1b7be905ee0d9dea",
+    "entries": 116,
+    "console_commands": 55,
+    "isolated_install": "pass"
+  },
   "quality_gates": {
     "contract_and_terms": "pass: exact current CDSE identity, checksums, free/open Sentinel role, attribution, quotas, and source limits",
     "acquisition": "pass: exact ignored registered archive; no secret or provider byte committed",
@@ -64,7 +74,8 @@
     "exact_reconstruction": "pass: JSON, HTML, and PNG reproduce byte for byte",
     "repository_tests": "pass in candidate worktree: 284 tests; compileall; 93 JSON documents parse",
     "label_dataset_model": "blocked: zero candidates, owner decisions, labels, dataset, split, baseline, or model",
-    "repository_release": "pending pull request, fresh-main, package, and remote-tag gates"
+    "release_package": "pass: two fixed-epoch wheels byte-identical; isolated install and dependency check pass",
+    "repository_release": "pending pull request, fresh-main, and remote-tag gates"
   },
   "decision": "ACCEPT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
 }
