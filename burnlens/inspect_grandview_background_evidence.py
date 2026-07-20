@@ -11,6 +11,7 @@ from .grandview_background_evidence import (
     build_report,
     write_outputs,
 )
+from .optical_pair_evidence import OpticalPairEvidenceError
 
 
 def parse_args() -> argparse.Namespace:
@@ -42,7 +43,13 @@ def main() -> int:
             print(f"{name}={path}")
         print(report["fitness_decision"]["checkpoint"])
         return 0
-    except (GrandviewBackgroundEvidenceError, OSError, ValueError, KeyError) as error:
+    except (
+        GrandviewBackgroundEvidenceError,
+        OpticalPairEvidenceError,
+        OSError,
+        ValueError,
+        KeyError,
+    ) as error:
         print(f"GRANDVIEW_BACKGROUND_EVIDENCE_FAILED: {error}", file=sys.stderr)
         return 2
 

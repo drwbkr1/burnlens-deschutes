@@ -168,7 +168,12 @@ def build_report(
     context_geometry, context_bounds = _context_geometry(candidate["boundary_geometry"])
     pre_scene, pre = _read_product(original_package, GRANDVIEW_CONTRACTS[0], context_geometry)
     post_scene, post = _read_product(original_package, GRANDVIEW_CONTRACTS[1], context_geometry)
-    extended_scene, extended = _read_product(extended_package, EXTENDED_CONTRACT, context_geometry)
+    extended_scene, extended = _read_product(
+        extended_package,
+        EXTENDED_CONTRACT,
+        context_geometry,
+        expected_processing_baseline="05.10",
+    )
     crop_transforms = {
         tuple(item["rasters"]["B04"]["crop_transform"])
         for item in (pre_scene, post_scene, extended_scene)
