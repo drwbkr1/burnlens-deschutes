@@ -13,7 +13,7 @@
   "version_tag": "v0.37.0-green-ridge-owner-review-surface",
   "version_tag_object": null,
   "next_checkpoint_issue": 491,
-  "status": "unshipped candidate: browser interaction gate pending; response and promotion closed",
+  "status": "release candidate: owner-operated completion/export passed; response custody and promotion closed",
   "software_version": "0.37.0",
   "run_id": "BL-2026-07-20-green-ridge-owner-review-surface-r001",
   "event_group_id": "event-green-ridge-0684-cs-2020",
@@ -52,13 +52,13 @@
     "proposal_binding": "pass: all five v0.36 outputs rebuild and match exact bytes",
     "candidate_rasters": "pass: EPSG:32610, 20 m, 0/1/2 domain, exact core/ring counts, no-label tags",
     "evidence": "pass: ten original-resolution pre/post/extended/dNBR/reference panels inspected",
-    "response_contract": "pass in deterministic tests and Node syntax; actual browser export/reload/lock pending",
+    "response_contract": "pass: deterministic tests and Node syntax plus one owner-operated completed, attested, hash-named two-record export with exact surface/run/schema binding; decision values unopened",
     "exact_reconstruction": "pass: all six surface outputs reproduce byte for byte",
     "repository_tests": "pass in candidate worktree: 291 tests; compileall; 98 tracked JSON documents including this manifest",
     "release_package": "pass: stale working-tree wheel rejected; two independent fresh-checkout fixed-epoch wheels byte-identical; dependency-complete isolated install and CLI help pass",
-    "real_browser": "BLOCKED: agent file URL navigation rejected by browser security policy; owner-opened desktop/mobile interaction required",
+    "real_browser": "pass for material owner workflow: owner operated the rendered local page and produced a structurally valid completed export; agent file URL automation remains prohibited and mobile automation is deferred as nonessential to this owner-only offline surface",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
-    "repository_release": "blocked: draft PR #492 remains open pending real browser, fresh-main, package, and remote-tag gates"
+    "repository_release": "pending: PR #492 merge, fresh-main reconstruction/package verification, and remote annotated tag"
   },
-  "decision": "SURFACE_CANDIDATE_BUILT_KEEP_RELEASE_RESPONSE_AND_PROMOTION_CLOSED"
+  "decision": "SURFACE_READY_FOR_RELEASE_KEEP_RESPONSE_CUSTODY_AND_PROMOTION_CLOSED"
 }
