@@ -214,6 +214,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T25-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t25-sync.md` | issue #493 / PR #494; verified v0.37 lifecycle synchronization | Records PR #492, merge, exact six-output reconstruction, fresh-main gates, canonical package, remote annotated tag, and next issue #491 without changing scientific or private state. |
 | P2O4-T26 | `records/prompt-build-log/2026-07-20-p2o4-t26.md` | issue #491 / PR #496; verified BurnLens 0.38.0; next #495 | Operator-locks the exact Green Ridge response before reveal, accepts one burned and one background core only after all gates pass, versions eight balanced prototype regions across four events, and keeps dataset/split/baseline/model work blocked. |
 | P2O4-T26-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t26-sync.md` | issue #497 / PR #498; verified v0.38 lifecycle synchronization | Records PR #496, merge, exact reconstruction, fresh-main gates, canonical package, remote annotated tag, and next issue #495 without changing scientific or private state. |
+| P2O4-T27 | `records/prompt-build-log/2026-07-20-p2o4-t27.md` | issue #495; BurnLens 0.39.0 in progress | Reproduces the current event plan, verifies the exact live Grandview CDSE pair and terms, and adds a fail-closed secret-safe acquisition contract before any provider byte or source-pixel decision. |
 
 ## Acceptance and remediation triggers
 
