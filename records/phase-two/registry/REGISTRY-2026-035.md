@@ -1,9 +1,13 @@
 # REGISTRY-2026-035 - Green Ridge Background Evidence Candidate
 
-**Issue / branch:** #480 / `codex/p2o4-t23-green-ridge-background-evidence`  
-**Contract:** `678e93c29a07f070f4fb5e289fddbdfa852c9ccb`  
-**Generator:** `92f407f37a32a020c1a47bb1931015b3607c2d89`  
-**Artifacts:** `7ca04102640a108e440054c2693aa6bdc20a02b0`  
+**Issue / branch:** #480 / `codex/p2o4-t23-green-ridge-background-evidence`
+
+**Contract:** `678e93c29a07f070f4fb5e289fddbdfa852c9ccb`
+
+**Generator:** `92f407f37a32a020c1a47bb1931015b3607c2d89`
+
+**Artifacts:** `7ca04102640a108e440054c2693aa6bdc20a02b0`
+
 **Run:** `BL-2026-07-20-green-ridge-background-evidence-r001`
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
