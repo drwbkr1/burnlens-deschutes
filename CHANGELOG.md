@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.34.0-green-ridge-reference-fitness - release candidate - 2026-07-19
+## v0.34.0-green-ridge-reference-fitness - verified - 2026-07-19
 
 ### P2O4-T22 - Acquire and gate exact Green Ridge official reference pixels
 
@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Measure 41,642 pixels with both-program affirmative burned-candidate evidence and 43,533 with either program affirmative evidence.
 - Keep background candidates blocked because unchanged/low-effect program classes are not affirmative background truth; create zero candidates, labels, dataset, split, baseline, or model.
 
-Generator source `7d6172ddc23efe445460c83886cbfc5b7c88eae3` produces run `BL-2026-07-19-green-ridge-reference-fitness-r001`. JSON/HTML/PNG render actual optical and reference evidence with private delivery details withheld. Final PR, merge, fresh-main reconstruction, package, and tag evidence remain release gates.
+Generator source `7d6172ddc23efe445460c83886cbfc5b7c88eae3` produces run `BL-2026-07-19-green-ridge-reference-fitness-r001`. JSON/HTML/PNG render actual optical and reference evidence with private delivery details withheld. PR #479 squash-merges the reviewed head at checkpoint `085cb61d0f1add3f5261582acdd746e298c86ba6`. Fresh merged main passes 276 tests, compilation, 91 tracked JSON parses, exact three-output reconstruction, and canonical 509,305-byte packaging. Annotated tag object `0faed9a847756651ba8d62b7baf475ea72c4229f` remotely peels to the checkpoint. Lifecycle issue #481 records the release; issue #480 owns affirmative Green Ridge background evidence.
 
 ## v0.33.0-green-ridge-source-fitness - verified - 2026-07-19
 
