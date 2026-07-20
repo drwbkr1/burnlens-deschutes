@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.35.0-green-ridge-background-evidence - release candidate - 2026-07-20
+
+### P2O4-T23 - Establish affirmative Green Ridge background evidence
+
+- Begin from verified v0.34 and reproduce the zero-background-evidence blocker before changing the route.
+- Freeze and acquire one exact 1,193,992,663-byte near-anniversary Sentinel-2B L2A scene under current CDSE identity, checksum, terms, attribution, and quota boundaries; provider bytes remain ignored.
+- Pass nine of nine fixed content-registration windows, with 0.02-pixel median and 0.03-pixel maximum residual.
+- Transfer the established four-signal stability thresholds unchanged and combine them with three-scene validity, neighborhood support, MTBS/RAVG encoded class 0, and a 60 m source-boundary uncertainty exclusion.
+- Open a route containing 26,126 pixels / 1,045.04 ha and 128 components at least one hectare, while creating zero candidates, owner responses, or labels.
+
+Generator source `92f407f37a32a020c1a47bb1931015b3607c2d89` produces run `BL-2026-07-20-green-ridge-background-evidence-r001`. Issue #483 owns the separate deterministic Green Ridge region proposal. Dataset, split, baseline, model, accuracy, ground-truth, field-validation, official, endorsed, and operational claims remain absent.
+
 ## v0.34.0-green-ridge-reference-fitness - verified - 2026-07-19
 
 ### P2O4-T22 - Acquire and gate exact Green Ridge official reference pixels

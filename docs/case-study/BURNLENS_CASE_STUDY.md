@@ -334,6 +334,18 @@ That is meaningful label evidence, but it is still not a dataset. Three event gr
 
 The first merged-main reconstruction caught checkout-dependent Markdown record hashes and withheld the release. A provenance-only remediation preserves each historical EOL identity explicitly; a separate fresh remote-main clone then reconstructs all three aggregate outputs exactly. Verified `v0.31.0-region-owner-response-intake` therefore ships the evidence without concealing the failed first release gate.
 
+## Opening the Green Ridge background route
+
+The next three checkpoints move one additional event from metadata to evidence without pretending that official program classes are ground truth. BurnLens 0.33.0 acquires the exact Green Ridge Sentinel pair and passes native quality and registration. BurnLens 0.34.0 preserves the exact BAER/MTBS/RAVG delivery and finds 41,642 optical-grid pixels where MTBS and RAVG both provide affirmative burned-candidate evidence. Neither checkpoint can affirm a background region.
+
+BurnLens 0.35.0 starts by rerunning that blocked workflow. The existing two-scene stability route produces only two isolated outside-footprint pixels, so it is rejected before acquisition. Current CDSE metadata then freezes one exact 2021 near-anniversary Sentinel-2B scene with the same platform, tile, orbit, and processing baseline as the 2020 pre-fire scene. Its 1,193,992,663 provider bytes remain ignored; exact local and provider hashes bind custody.
+
+![BurnLens Green Ridge background evidence](../../samples/cross-event/phase-two/GREEN-RIDGE-BACKGROUND-EVIDENCE-2026-001.png)
+
+All nine fixed registration windows pass. BurnLens transfers the already established four-signal optical-stability thresholds without tuning, requires coherent neighborhood support, requires both MTBS and RAVG encoded class 0, and excludes 60 m around either source footprint. The conjunction retains 26,126 20 m pixels / 1,045.04 ha and 128 components of at least one hectare.
+
+This is a route for proposing review regions, not an official unburned map. Encoded class 0, outside-footprint position, SCL, low change, or apparent stability is insufficient alone. The checkpoint creates zero candidates and zero labels. Issue #483 keeps deterministic region selection and later owner yes/no/uncertain review separate.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -368,6 +380,8 @@ The first merged-main reconstruction caught checkout-dependent Markdown record h
 - Latest current-reference bundle-fitness run: `BL-2026-07-17-current-reference-bundle-fitness-r003`
 - Latest Green Ridge source-fitness run: `BL-2026-07-19-green-ridge-source-fitness-r001`
 - Latest Green Ridge reference-fitness run: `BL-2026-07-19-green-ridge-reference-fitness-r001`
+- Latest Green Ridge background-optical acquisition run: `BL-2026-07-20-green-ridge-background-optical-intake-r001`
+- Latest Green Ridge background-evidence run: `BL-2026-07-20-green-ridge-background-evidence-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -377,6 +391,7 @@ The first merged-main reconstruction caught checkout-dependent Markdown record h
 - Current analytical tool: BurnLens `0.21.0`; issue #411 / PR #415; merge `f96146aa0702d27eef4964cb61bd7a05d566d7c3`; source `98a9895d203c778dad332db5bdc62b498aa2cd00`; public evidence `f5d4d528263bfc2cf93cb7f128bcb051732797b3`; run `BL-2026-07-17-current-reference-inventory-r002`; analytical tag object `0370bedfce1279da2d104c1ebfd3c1d143ce79ca`; release verification failed on checkout-dependent JSON/HTML bytes
 - Latest verified tool: BurnLens `0.34.0`; issue #477 / PR #479; checkpoint `085cb61d0f1add3f5261582acdd746e298c86ba6`; run `BL-2026-07-19-green-ridge-reference-fitness-r001`; tag object `0faed9a847756651ba8d62b7baf475ea72c4229f`; exact Green Ridge optical/reference evidence; dataset absent
 - Current verified release: `v0.34.0-green-ridge-reference-fitness`; checkpoint `085cb61d0f1add3f5261582acdd746e298c86ba6`; tag object `0faed9a847756651ba8d62b7baf475ea72c4229f`; 20,969,722 exact reference bytes; 20 native rasters; 41,642 optical-grid pixels affirmative in both MTBS and RAVG; zero affirmative background truth, candidates, or labels; issue #480 owns background evidence
+- Current release candidate: BurnLens `0.35.0`; issue #480; contract `678e93c29a07f070f4fb5e289fddbdfa852c9ccb`; generator `92f407f37a32a020c1a47bb1931015b3607c2d89`; artifacts `7ca04102640a108e440054c2693aa6bdc20a02b0`; 26,126 eligible background-route pixels; zero candidates/labels; next #483
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Current request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; exact request accepted, delivery pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state
