@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.39.0-grandview-source-fitness - release candidate - 2026-07-20
+## v0.39.0-grandview-source-fitness - verified - 2026-07-20
 
 ### P2O4-T27 - Establish Grandview native optical source fitness
 
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render pre/post imagery, continuous dNBR, quality, registration, traceability, and the no-label use boundary.
 - Defer all BAER/MTBS/RAVG pixels, candidates, owner responses, labels, dataset, split, baseline, and model decisions to separately gated work.
 
-Contract `a4596661fd2794d67ba3dbd16f6dcf0457bb07b4` and generator `527caeb0c83fb70bdd0af37d11a1215914ca0be9` create acquisition run `BL-2026-07-20-grandview-optical-intake-r001` and evidence run `BL-2026-07-20-grandview-source-fitness-r001`. The report measures 62,588 boundary pixels, 97.5794% pair eligibility, 1.0337% review-needed, 1.3868% excluded, 0.1158-pixel p95 registration residual, and 61,073 continuous-dNBR pixels without thresholding them. Exact reconstruction, original-resolution render inspection, 308 tests, 101 JSON parses, and two byte-identical 564,981-byte wheels / SHA-256 `c4f3365de40e702c31a77f93a4821bf741b7e77c4766be71795509f1fa8c27de` pass. The isolated 0.39.0 install has 61 commands, 127 clean entries, and no broken requirement. Issue #499 owns exact official reference-pixel fitness; fresh-main and tag verification are still pending.
+Contract `a4596661fd2794d67ba3dbd16f6dcf0457bb07b4` and generator `527caeb0c83fb70bdd0af37d11a1215914ca0be9` create acquisition run `BL-2026-07-20-grandview-optical-intake-r001` and evidence run `BL-2026-07-20-grandview-source-fitness-r001`. The report measures 62,588 boundary pixels, 97.5794% pair eligibility, 1.0337% review-needed, 1.3868% excluded, 0.1158-pixel p95 registration residual, and 61,073 continuous-dNBR pixels without thresholding them. PR #500 merges at checkpoint `c89282da086bed98c009e440689eb06c864fb267`. Fresh main passes exact 3-of-3 reconstruction, 308 tests with 12 expected custody skips, 102 JSON parses, compilation, and the canonical 564,981-byte wheel / SHA-256 `c4f3365de40e702c31a77f93a4821bf741b7e77c4766be71795509f1fa8c27de`. The isolated 0.39.0 install has 61 commands, 127 clean entries, and no broken requirement. Annotated tag object `faacd1a33c9f486daba54d94ec7962694742fbd2` remotely peels to the checkpoint. Issue #499 owns exact official reference-pixel fitness.
 
 ## v0.38.0-green-ridge-owner-response-intake - verified - 2026-07-20
 

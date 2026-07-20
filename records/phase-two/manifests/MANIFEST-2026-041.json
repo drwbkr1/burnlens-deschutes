@@ -11,11 +11,13 @@
   "generator_source_commit": "527caeb0c83fb70bdd0af37d11a1215914ca0be9",
   "candidate_artifacts_commit": "75805a49173d9b98603f3912359e2019c46ca415",
   "candidate_head_commit": "e65134db21ce861a7b5426460e07b7f3d50bea6d",
-  "checkpoint_commit": null,
-  "version_tag": null,
-  "version_tag_object": null,
+  "checkpoint_commit": "c89282da086bed98c009e440689eb06c864fb267",
+  "version_tag": "v0.39.0-grandview-source-fitness",
+  "version_tag_object": "faacd1a33c9f486daba54d94ec7962694742fbd2",
+  "lifecycle_sync_issue": 501,
+  "lifecycle_sync_pull_request": null,
   "next_checkpoint_issue": 499,
-  "status": "release candidate: Grandview optical source passes; reference pixels and labels deferred",
+  "status": "verified release: Grandview optical source passes; reference pixels and labels deferred",
   "software_version": "0.39.0",
   "acquisition_run_id": "BL-2026-07-20-grandview-optical-intake-r001",
   "evidence_run_id": "BL-2026-07-20-grandview-source-fitness-r001",
@@ -80,8 +82,8 @@
     "repository_tests": "pass in custody worktree: 308 tests; compileall; 101 tracked JSON documents parse",
     "release_package": "pass: two independent clean-branch fixed-epoch wheels are byte-identical; 127 entries; 61 commands; dependency-complete isolated install and pip check pass",
     "fresh_remote_head": "pass: remote branch clone with empty ignored downloads boundary; 308 tests with 12 expected custody skips, compileall, and exact 3-of-3 reconstruction through unchanged original custody",
-    "fresh_merged_main": "pending merge",
-    "remote_tag": "pending merge and fresh-main verification"
+    "fresh_merged_main": "pass: checkpoint c89282da086bed98c009e440689eb06c864fb267; 308 tests with 12 expected custody skips, compileall, 102 tracked JSON parses, exact 3-of-3 reconstruction, and canonical package identity",
+    "remote_tag": "pass: annotated object faacd1a33c9f486daba54d94ec7962694742fbd2 remotely peels to checkpoint c89282da086bed98c009e440689eb06c864fb267"
   },
   "decision": "ACCEPT_EXACT_GRANDVIEW_OPTICAL_SOURCE_DEFER_REFERENCE_PIXELS_CANDIDATES_LABELS_DATASET_MODEL"
 }
