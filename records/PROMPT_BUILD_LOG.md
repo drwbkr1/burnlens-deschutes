@@ -209,7 +209,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T23 | `records/prompt-build-log/2026-07-20-p2o4-t23.md` | issue #480 / PR #484; verified BurnLens 0.35.0; next #483 | Acquires one exact near-anniversary Sentinel scene, passes registration, and opens a conjunctive Green Ridge background-evidence route while creating zero candidates, owner responses, labels, dataset, split, baseline, or model. |
 | P2O4-T23-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t23-sync.md` | issue #485 / PR #486; verified v0.35 lifecycle synchronization | Records PR #484, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #483 without changing scientific or private state. |
 | P2O4-T24 | `records/prompt-build-log/2026-07-20-p2o4-t24.md` | issue #483 / PR #488; verified BurnLens 0.36.0; next #487 | Publishes two intact Green Ridge proposal cores and explicit unknown rings with zero owner responses, labels, dataset, split, baseline, or model. |
-| P2O4-T24-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t24-sync.md` | issue #489; verified v0.36 lifecycle synchronization | Records PR #488, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #487 without changing scientific or private state. |
+| P2O4-T24-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t24-sync.md` | issue #489 / PR #490; verified v0.36 lifecycle synchronization | Records PR #488, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #487 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 

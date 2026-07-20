@@ -13,7 +13,7 @@
   "version_tag": "v0.36.0-green-ridge-region-proposal",
   "version_tag_object": "bc0110afa0c4ccf6e3314d394d544cfde16aaae9",
   "lifecycle_sync_issue": 489,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 490,
   "next_checkpoint_issue": 487,
   "status": "verified: two Green Ridge regions proposed; owner review and promotion closed",
   "software_version": "0.36.0",
