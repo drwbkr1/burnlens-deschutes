@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.41.0-grandview-background-evidence - candidate - 2026-07-20
+
+### P2O4-T29 - Establish affirmative Grandview background evidence
+
+- Rerun verified v0.40.0 first and preserve its affirmative-background blocker.
+- Freeze and acquire one exact 950,987,607-byte Sentinel-2B near-anniversary scene under current CDSE identity, checksums, terms, attribution, and ignored no-overwrite custody.
+- Apply metadata-derived BOA scaling across the disclosed 05.00/05.10 processing-baseline difference.
+- Accept 7/9 registration windows with two review-needed windows spatially excluded; p95 residual is 0.0944 pixel and no window fails.
+- Transfer the established four-signal stability thresholds unchanged, exclude the exact delivered BAER/MTBS/RAVG vector footprints plus 60 m, and open 67,782 pixels / 2,711.28 ha across 181 components at least one hectare.
+- Create zero candidates, owner responses, labels, dataset, split, baseline, or model; RAVG modeled classes remain unusable as affirmative evidence.
+
+Generator `08e04b71836ffbcb8d59761c53586ece6f85687f` creates run `BL-2026-07-20-grandview-background-evidence-r001`. Public JSON/HTML/PNG are 29,336 / 4,248 / 497,800 bytes with SHA-256 `814b687c4258b62b143e7c1016687de15f08d48958a2bd8e348bf222ba851186`, `39a8ec9bd5026719c3a2a000db2eeddd09bd9d643502b8fe1192710737814852`, and `11048d7d8a4f9815ea14ac32cd46edb93ec451ef7d5aad88c3a5e375f246fe1a`. The custody worktree passes 325 tests; a fresh remote-head checkout passes 312 tests with 13 expected custody skips and exact reconstruction. Two fixed-epoch 597,078-byte wheels are byte-identical at SHA-256 `90f8c3843e64af8218e44843a25d87ca23cd33ee690d9e89a1e8c50c70240696`; dependency-complete isolated import and dependency health pass. Fresh merged-main and remote-tag verification remain pending.
+
 ## v0.40.0-grandview-reference-fitness - verified - 2026-07-20
 
 ### P2O4-T28 - Gate exact Grandview official reference pixels

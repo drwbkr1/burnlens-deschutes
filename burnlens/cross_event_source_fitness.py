@@ -192,7 +192,13 @@ def _read_member(
     return values, inside, metadata
 
 
-def _read_product(package: Path, contract: Any, geometry_wgs84: dict[str, Any]) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
+def _read_product(
+    package: Path,
+    contract: Any,
+    geometry_wgs84: dict[str, Any],
+    *,
+    expected_processing_baseline: str = "05.00",
+) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
     archive_path = package / contract.expected_filename
     geometry_utm = transform_geom("EPSG:4326", "EPSG:32610", geometry_wgs84, precision=9)
     with zipfile.ZipFile(archive_path) as archive:
@@ -201,7 +207,7 @@ def _read_product(package: Path, contract: Any, geometry_wgs84: dict[str, Any]) 
             archive,
             names,
             contract.native_id,
-            expected_processing_baseline="05.00",
+            expected_processing_baseline=expected_processing_baseline,
         )
     members = {
         "TCI": _exact_member(names, "_TCI_10m.jp2"),

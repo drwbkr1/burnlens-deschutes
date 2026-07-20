@@ -142,12 +142,14 @@ def source_capture() -> dict[str, object]:
 
 class OfficialSourceScoutTests(unittest.TestCase):
     def test_current_version_and_cli_are_registered(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.40.0")
+        self.assertEqual(burnlens.__version__, "0.41.0")
         pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
-        self.assertIn('version = "0.40.0"', pyproject)
+        self.assertIn('version = "0.41.0"', pyproject)
         self.assertIn("burnlens-capture-official-source-scout", pyproject)
         self.assertIn("burnlens-acquire-green-ridge-background-optical", pyproject)
         self.assertIn("burnlens-inspect-green-ridge-background-evidence", pyproject)
+        self.assertIn("burnlens-acquire-grandview-background-optical", pyproject)
+        self.assertIn("burnlens-inspect-grandview-background-evidence", pyproject)
         self.assertIn("burnlens-build-green-ridge-region-proposal", pyproject)
 
     def test_scoring_rewards_cross_program_landsat_and_diversity(self) -> None:
