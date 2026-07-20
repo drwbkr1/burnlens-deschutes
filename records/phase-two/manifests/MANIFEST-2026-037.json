@@ -4,17 +4,19 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "created_at_utc": "2026-07-20T01:05:00Z",
   "task_issue": 480,
-  "pull_request": null,
+  "pull_request": 484,
   "branch": "codex/p2o4-t23-green-ridge-background-evidence",
   "git_base_commit": "fc26bd35fffdd4c8392810ae78fd7ee2f0b88138",
   "acquisition_contract_commit": "678e93c29a07f070f4fb5e289fddbdfa852c9ccb",
   "generator_source_commit": "92f407f37a32a020c1a47bb1931015b3607c2d89",
   "candidate_artifacts_commit": "7ca04102640a108e440054c2693aa6bdc20a02b0",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "b57bcbe5665dcb09a7e716e2e1de4147be4741e4",
   "version_tag": "v0.35.0-green-ridge-background-evidence",
-  "version_tag_object": null,
+  "version_tag_object": "d901ea55d683a103bf6f00b8fac55434b65518b4",
+  "lifecycle_sync_issue": 485,
+  "lifecycle_sync_pull_request": null,
   "next_checkpoint_issue": 483,
-  "status": "candidate: affirmative Green Ridge background route passes; candidates remain deferred",
+  "status": "verified: affirmative Green Ridge background route passes; candidates remain deferred",
   "software_version": "0.35.0",
   "acquisition_run_id": "BL-2026-07-20-green-ridge-background-optical-intake-r001",
   "evidence_run_id": "BL-2026-07-20-green-ridge-background-evidence-r001",
@@ -57,7 +59,7 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.35.0-py3-none-any.whl",
-    "source_commit": "ffaa9b269491ae2acd7027340cbe58f49e66db5b",
+    "source_commit": "b57bcbe5665dcb09a7e716e2e1de4147be4741e4",
     "source_date_epoch": 1784509552,
     "bytes": 524065,
     "sha256": "dce64a85aa758cbd6b01720c84b710077f6e52b8737352ef1b7be905ee0d9dea",
@@ -75,7 +77,8 @@
     "repository_tests": "pass in candidate worktree: 284 tests; compileall; 93 JSON documents parse",
     "label_dataset_model": "blocked: zero candidates, owner decisions, labels, dataset, split, baseline, or model",
     "release_package": "pass: two fixed-epoch wheels byte-identical; isolated install and dependency check pass",
-    "repository_release": "pending pull request, fresh-main, and remote-tag gates"
+    "pull_request_merge_tag": "pass: PR #484 merged at b57bcbe5665dcb09a7e716e2e1de4147be4741e4; annotated tag object d901ea55d683a103bf6f00b8fac55434b65518b4 remotely peels to the checkpoint",
+    "fresh_merged_main": "pass: exact three-output reconstruction, 284 tests, compileall, 93 JSON documents, and canonical package identity"
   },
   "decision": "ACCEPT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
 }
