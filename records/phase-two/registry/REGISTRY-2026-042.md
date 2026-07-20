@@ -12,3 +12,4 @@
 | `GVP-002` raster | Unreviewed proposed background | 25 core / 52 unknown-ring pixels; SHA-256 `2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91` |
 | Aggregate JSON/HTML/PNG | Public no-promotion evidence | 2 candidates; 0 owner responses; 0 labels |
 | Provider inputs | Existing ignored custody | 0 provider bytes committed |
+| Checkout remediation | Tag withheld / issue #513 | Analytical merge `0905711e3f1dc2e281ff830ff3b9d94ed2c50f66` exposed CRLF JSON drift; fresh remediation `d3b11e78e03492f8348b980f7304864ded85b06a` restores all five original hashes |
