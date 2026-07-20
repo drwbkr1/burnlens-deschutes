@@ -352,6 +352,16 @@ BurnLens 0.36.0 then applies the already established region-candidate contract t
 
 The two exact EPSG:32610 rasters contain 50 proposed core pixels and 87 unknown-ring pixels. They remain unreviewed. Issue #487 owns a blank yes/no/uncertain surface; response intake and any prototype-label decision remain separate.
 
+## Accepting Green Ridge without calling it ground truth
+
+BurnLens 0.37.0 binds both exact cores to a self-contained owner surface with pre-fire, post-fire, extended optical, dNBR, and MTBS/RAVG evidence. The owner completes both questions and exports one hash-named file. BurnLens 0.38.0 preserves those exact bytes and a receipt in ignored no-overwrite custody before opening either answer.
+
+Both answers are yes, but neither becomes a label by vote alone. The intake reopens the exact proposal report and rasters, verifies native grids and connected cores, proves all 87 ring pixels remain unknown, binds the resolved source and terms records, and re-runs quality, registration, reproducibility, and event-identity gates. Both 25-pixel cores pass.
+
+![BurnLens Green Ridge owner response intake](../../samples/labels/review/green-ridge/phase-two/intake/GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.png)
+
+The cumulative prototype set is now balanced at four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded ring pixels across four events. That is materially stronger label evidence, but still not a dataset. Grandview and Petes Lake must pass equivalent event-level gates before splits or baselines can begin.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -389,6 +399,7 @@ The two exact EPSG:32610 rasters contain 50 proposed core pixels and 87 unknown-
 - Latest Green Ridge background-optical acquisition run: `BL-2026-07-20-green-ridge-background-optical-intake-r001`
 - Latest Green Ridge background-evidence run: `BL-2026-07-20-green-ridge-background-evidence-r001`
 - Latest Green Ridge region-proposal run: `BL-2026-07-20-green-ridge-region-proposal-r001`
+- Latest Green Ridge owner-response intake run: `BL-2026-07-20-green-ridge-owner-response-intake-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`

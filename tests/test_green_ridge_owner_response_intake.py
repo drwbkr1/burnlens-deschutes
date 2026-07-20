@@ -25,6 +25,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SURFACE = ROOT / "samples/labels/review/green-ridge/phase-two/GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001.json"
 TEMPLATE = ROOT / "samples/labels/review/green-ridge/phase-two/GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json"
 PROPOSAL = ROOT / "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.json"
+PUBLIC_DIRECTORY = ROOT / "samples/labels/review/green-ridge/phase-two/intake"
+PUBLIC_REPORT = PUBLIC_DIRECTORY / "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.json"
 
 
 class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
@@ -183,6 +185,37 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
                 self.assertNotIn(forbidden, serialized)
             with self.assertRaisesRegex(GreenRidgeOwnerResponseIntakeError, "refusing to overwrite"):
                 write_private_no_overwrite(ROOT, private_path, private)
+
+    @unittest.skipUnless(PUBLIC_REPORT.exists(), "tracked Green Ridge owner intake not published yet")
+    def test_tracked_public_report_is_exact_aggregate_only_evidence(self) -> None:
+        report_bytes = PUBLIC_REPORT.read_bytes()
+        report = json.loads(report_bytes)
+        self.assertEqual(hashlib.sha256(report_bytes).hexdigest(), "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3")
+        self.assertEqual(report["input_bindings"]["response"], {
+            "bytes": 893,
+            "sha256": "f0dc9a1311928185cb76c27152c7fb7bb39b11a952deba1bb5c66355c7090df9",
+        })
+        self.assertEqual(report["decision_counts"], {"yes": 2, "no": 0, "uncertain": 0})
+        self.assertEqual(report["outcome"]["green_ridge_owner_approved_region_labels"], 2)
+        self.assertEqual(report["outcome"]["green_ridge_class_counts"], {"background": 1, "burned": 1})
+        self.assertEqual(report["outcome"]["cumulative_owner_approved_region_labels"], 8)
+        self.assertEqual(report["outcome"]["cumulative_prototype_label_class_counts"], {"background": 4, "burned": 4})
+        self.assertEqual(report["outcome"]["cumulative_accepted_core_pixels"], 186)
+        self.assertEqual(report["outcome"]["cumulative_excluded_unknown_ring_pixels"], 333)
+        self.assertEqual(report["outcome"]["event_group_count"], 4)
+        self.assertFalse(report["outcome"]["dataset_fitness_reopened"])
+        self.assertIsNone(report["dataset_version"])
+        self.assertIsNone(report["split_version"])
+        self.assertIsNone(report["baseline_version"])
+        self.assertIsNone(report["model_version"])
+        for output in report["outputs"]:
+            output_path = PUBLIC_DIRECTORY / output["path"]
+            output_bytes = output_path.read_bytes()
+            self.assertEqual(len(output_bytes), output["bytes"])
+            self.assertEqual(hashlib.sha256(output_bytes).hexdigest(), output["sha256"])
+        serialized = report_bytes.decode("utf-8").lower()
+        for forbidden in ("candidate_id", "owner_decision", "note_present", "note_sha256", "c:\\users", "downloads"):
+            self.assertNotIn(forbidden, serialized)
 
 
 if __name__ == "__main__":
