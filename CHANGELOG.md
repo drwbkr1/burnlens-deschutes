@@ -13,7 +13,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Measure 41,642 pixels with both-program affirmative burned-candidate evidence and 43,533 with either program affirmative evidence.
 - Keep background candidates blocked because unchanged/low-effect program classes are not affirmative background truth; create zero candidates, labels, dataset, split, baseline, or model.
 
-Generator source `6c8582178fe8fa4ff48f48df2742d195618ae655` produces run `BL-2026-07-19-green-ridge-reference-fitness-r001`. JSON/HTML/PNG render actual optical and reference evidence with private delivery details withheld. Final PR, merge, fresh-main reconstruction, package, and tag evidence remain release gates.
+Generator source `7d6172ddc23efe445460c83886cbfc5b7c88eae3` produces run `BL-2026-07-19-green-ridge-reference-fitness-r001`. JSON/HTML/PNG render actual optical and reference evidence with private delivery details withheld. Final PR, merge, fresh-main reconstruction, package, and tag evidence remain release gates.
 
 ## v0.33.0-green-ridge-source-fitness - verified - 2026-07-19
 

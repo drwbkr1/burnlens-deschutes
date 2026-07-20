@@ -8,7 +8,7 @@
   "branch": "codex/p2o4-t22-green-ridge-reference-fitness",
   "git_base_commit": "363f1bd5ebe9e8c998ccfc5f6dd24908c727349f",
   "request_contract_commit": "903b91e",
-  "generator_source_commit": "6c8582178fe8fa4ff48f48df2742d195618ae655",
+  "generator_source_commit": "7d6172ddc23efe445460c83886cbfc5b7c88eae3",
   "candidate_artifacts_commit": "157f9eeb4f6a6833eaceb4f1e0b070970bf3cb50",
   "checkpoint_commit": null,
   "version_tag": "v0.34.0-green-ridge-reference-fitness",
@@ -37,9 +37,9 @@
     "recipient_or_retrieval_details_committed": false
   },
   "outputs": [
-    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.json", "bytes": 46430, "sha256": "20de13045bad5b0a2f4df8e300a40a75862605cd77a28b8543b1c27877951db0"},
-    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.html", "bytes": 4787, "sha256": "596124e056c7abf1f34b85561e76dc4c8d3493a3a344a38218ee35d2b6d4e187"},
-    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.png", "bytes": 645911, "sha256": "f94352f627fe23e8fdb4109ad6513508cf15b194fd4fc7c1372ccf4e6e1273e8"}
+    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.json", "bytes": 58334, "sha256": "104e7fffa4792bd022c0f5b0b2264c04ac170ff849812492632d13b356db6995"},
+    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.html", "bytes": 4787, "sha256": "86e8a0da6869963024e8682100fb19777b83cad8351e20f9f1b545b35d2ae736"},
+    {"path": "samples/cross-event/phase-two/GREEN-RIDGE-REFERENCE-FITNESS-2026-001.png", "bytes": 645577, "sha256": "49d0819baac160f11c3d3b08c00b39a08be262aa16bcf60ad4414485c52d6f52"}
   ],
   "measured_evidence": {
     "native_reference_rasters": 20,
@@ -52,10 +52,10 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.34.0-py3-none-any.whl",
-    "source_commit": "157f9eeb4f6a6833eaceb4f1e0b070970bf3cb50",
-    "source_date_epoch": 1784505407,
-    "bytes": 508863,
-    "sha256": "aaa05f089275b6077ec119ef068930b594982fdb1054dc86b3cb06619d23fe66",
+    "source_commit": "7d6172ddc23efe445460c83886cbfc5b7c88eae3",
+    "source_date_epoch": 1784505890,
+    "bytes": 509305,
+    "sha256": "cae4343506e3105d834e4391eb60cd28ef9a8321b6e0b4aaec9db6ad84dff4c1",
     "entries": 112,
     "console_commands": 53,
     "isolated_install": "pass"

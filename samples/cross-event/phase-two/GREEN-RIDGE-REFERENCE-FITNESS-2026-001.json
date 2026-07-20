@@ -6,7 +6,7 @@
   "run_id": "BL-2026-07-19-green-ridge-reference-fitness-r001",
   "repository": "drwbkr1/burnlens-deschutes",
   "task_issue": 477,
-  "git_source_commit": "6c8582178fe8fa4ff48f48df2742d195618ae655",
+  "git_source_commit": "7d6172ddc23efe445460c83886cbfc5b7c88eae3",
   "software_version": "0.34.0",
   "application_version": null,
   "event": {
@@ -68,7 +68,14 @@
       "access_constraints": "Thresholded, preliminary severity estimates (BARC4 and BARC256) are only delivered to BAER teams. Further distribution is at the discretion of the BAER team leader. Pre-imagery, post-imagery, and unthresholded data may be publicly available on https://burnseverity.cr.usgs.gov/products/baer or https://burnseverity.cr.usgs.gov/baer/baer-imagery-support-data-download. Access to pre-imagery and post-imagery may be limited when sensors other than Landsat or other government remote sensing assets are used due to product licensing restrictions.",
       "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources and limitations as preliminary/draft data.",
       "credit": "U.S. Forest Service (physical address): 125 South State Street, Suite 7105: Salt Lake City, UT, USA, 84138",
-      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. This product is produced from geospatial information prepared by the U.S. Forest Service GTAC. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. The U.S. Forest Service GTAC make no expressed or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The U.S. Forest Service GTAC reserves the right to correct, update, modify, or replace this geospatial information without notification."
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. This product is produced from geospatial information prepared by the U.S. Forest Service GTAC. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. The U.S. Forest Service GTAC make no expressed or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The U.S. Forest Service GTAC reserves the right to correct, update, modify, or replace this geospatial information without notification.",
+      "iso_metadata": {
+        "member": "baer/2020/baer_or4446712160520200817_10015623/baer_or4446712160520200817_10015623_20200731_20200901_iso_metadata.xml",
+        "bytes": 31098,
+        "sha256": "70f5c63eaa5a74083ab7062930386e5c6ccc12a2b2a821deac968f9c8f677ea7",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
     },
     {
       "program": "MTBS",
@@ -80,7 +87,14 @@
       "access_constraints": "None",
       "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
       "credit": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
-      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty."
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_metadata": {
+        "member": "mtbs/2020/mtbs_or4446712160520200817_10021333/mtbs_or4446712160520200817_10021333_20200715_20210718_iso_metadata.xml",
+        "bytes": 53162,
+        "sha256": "d594d432389e01e54daec74cc4f843d74b7f1620152df13899d8648c6ee758c3",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
     },
     {
       "program": "RAVG",
@@ -92,7 +106,14 @@
       "access_constraints": "None",
       "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
       "credit": "USDA Forest Service; ESA (Contains modified Copernicus Sentinel data 2020)",
-      "distribution_liability": "This product is produced from geospatial information prepared by the U.S. Geological Survey EROS and USDA Forest Service. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. Neither the USDA Forest Service, GTAC, the U.S. Geological Survey nor EROS make any express or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The USDA Forest Service and the U.S. Geological Survey reserve the right to correct, update, modify, or replace this geospatial information without notification. Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty."
+      "distribution_liability": "This product is produced from geospatial information prepared by the U.S. Geological Survey EROS and USDA Forest Service. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. Neither the USDA Forest Service, GTAC, the U.S. Geological Survey nor EROS make any express or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The USDA Forest Service and the U.S. Geological Survey reserve the right to correct, update, modify, or replace this geospatial information without notification. Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_metadata": {
+        "member": "ravg/2020/ravg_or4446712160520200817_10016049/ravg_or4446712160520200817_10016049_20190925_20200929_iso_metadata.xml",
+        "bytes": 46784,
+        "sha256": "6054dd9963556b4c3a98eb4045b33ce7806c3b100656144ad45b37d4868bc307",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
     }
   ],
   "boundary_vectors": [
@@ -225,6 +246,51 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 710.0,
+          "valid_max": 1535.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 502.0,
+          "valid_max": 1664.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 308.0,
+          "valid_max": 2260.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 611.0,
+          "valid_max": 4235.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 293.0,
+          "valid_max": 3801.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 164.0,
+          "valid_max": 2790.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 710.0,
@@ -267,6 +333,51 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 720.0,
+          "valid_max": 1824.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 488.0,
+          "valid_max": 1599.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 301.0,
+          "valid_max": 2063.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 548.0,
+          "valid_max": 4134.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 312.0,
+          "valid_max": 3406.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 147.0,
+          "valid_max": 2504.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 720.0,
@@ -309,6 +420,16 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": -388.0,
+          "valid_max": 958.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -388.0,
@@ -351,6 +472,16 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": -752.0,
+          "valid_max": 1137.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -752.0,
@@ -393,6 +524,51 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 693.0,
+          "valid_max": 1511.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 485.0,
+          "valid_max": 1541.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 306.0,
+          "valid_max": 1979.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 579.0,
+          "valid_max": 4612.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 238.0,
+          "valid_max": 3355.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 135.0,
+          "valid_max": 2517.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 693.0,
@@ -435,6 +611,51 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 702.0,
+          "valid_max": 1543.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 479.0,
+          "valid_max": 1714.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 303.0,
+          "valid_max": 1985.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 473.0,
+          "valid_max": 4552.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 286.0,
+          "valid_max": 4001.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": 169.0,
+          "valid_max": 2672.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 702.0,
@@ -477,6 +698,16 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": -349.0,
+          "valid_max": 868.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -349.0,
@@ -519,6 +750,16 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": -673.0,
+          "valid_max": 1029.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -673.0,
@@ -561,6 +802,16 @@
       ],
       "valid_pixels": 19616,
       "nodata_pixels": 149373,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 19616,
+          "nodata_pixels": 149373,
+          "valid_min": 1.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149373,
         "1": 274,
@@ -601,6 +852,51 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 641.0,
+          "valid_max": 1431.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 434.0,
+          "valid_max": 1602.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 252.0,
+          "valid_max": 2206.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 360.0,
+          "valid_max": 4217.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 265.0,
+          "valid_max": 3072.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 113.0,
+          "valid_max": 2291.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 641.0,
@@ -643,6 +939,51 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 671.0,
+          "valid_max": 1305.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 459.0,
+          "valid_max": 1415.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 275.0,
+          "valid_max": 1942.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 291.0,
+          "valid_max": 3805.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 239.0,
+          "valid_max": 3170.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 76.0,
+          "valid_max": 2395.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 671.0,
@@ -685,6 +1026,16 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": -228.0,
+          "valid_max": 990.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -228.0,
@@ -727,6 +1078,16 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": -806.0,
+          "valid_max": 1178.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -806.0,
@@ -769,6 +1130,16 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 0.0,
+          "valid_max": 100.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 0.0,
@@ -811,6 +1182,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 3033,
@@ -851,6 +1232,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 7.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 3033,
@@ -894,6 +1285,16 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": 0.0,
+          "valid_max": 100.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": 0.0,
@@ -936,6 +1337,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 5.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 2827,
@@ -977,6 +1388,16 @@
       ],
       "valid_pixels": 167325,
       "nodata_pixels": 1664,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 167325,
+          "nodata_pixels": 1664,
+          "valid_min": -0.0014834495959803462,
+          "valid_max": 3.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -0.0015,
@@ -1019,6 +1440,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 553,
@@ -1063,6 +1494,16 @@
       ],
       "valid_pixels": 168156,
       "nodata_pixels": 833,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168156,
+          "nodata_pixels": 833,
+          "valid_min": -388.0,
+          "valid_max": 958.0
+        }
+      ],
       "native_value_domain": null,
       "valid_quantiles": {
         "min": -388.0,
@@ -1107,6 +1548,16 @@
       ],
       "valid_pixels": 19616,
       "nodata_pixels": 149373,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 19616,
+          "nodata_pixels": 149373,
+          "valid_min": 1.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149373,
         "1": 274,
@@ -1149,6 +1600,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 3033,
@@ -1191,6 +1652,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 5.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 2827,
@@ -1234,6 +1705,16 @@
       ],
       "valid_pixels": 168989,
       "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 168989,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
       "native_value_domain": {
         "0": 149499,
         "1": 553,
