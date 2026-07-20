@@ -1,4 +1,4 @@
-# REGISTRY-2026-040 - Grandview Official Reference Fitness Candidate
+# REGISTRY-2026-040 - Verified Grandview Official Reference Fitness
 
 **Issue / branch:** #499 / `codex/p2o4-t28-grandview-reference-fitness`
 
@@ -9,7 +9,7 @@
 | Artifact | State | Exact result |
 |---|---|---|
 | Official reference archive | Ignored exact custody | 22,076,790 bytes; SHA-256 `ea30fe613931d9b90c1405a653ac01fe6bfaa7ee80f3ed02480422271ff874bf`; 53 safe members |
-| Native reference products | Release candidate | 20 EPSG:32610 / 30 m rasters; 3 boundary packages; FGDC/ISO terms pass |
+| Native reference products | Verified | 20 EPSG:32610 / 30 m rasters; 3 boundary packages; FGDC/ISO terms pass |
 | MTBS evidence | Passed | 61,795 / 62,588 optical-boundary pixels covered; 58,438 classes 2-4; 56,943 plus valid optical pair |
 | RAVG evidence | Limited context | Exact sparse/no-tree warning enforced; cannot independently qualify a candidate |
 | BAER evidence | Preliminary context | Reflectance and unthresholded dNBR/RdNBR only; restricted BARC/SBS absent |

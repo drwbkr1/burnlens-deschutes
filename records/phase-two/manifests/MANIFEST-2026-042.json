@@ -10,13 +10,13 @@
   "generator_source_commit": "9f28f822c114788a1a9bb09a52fab22616be0376",
   "candidate_artifacts_commit": "73f831e50de94d5927f814569d46788d076d05ff",
   "candidate_head_commit": "6c62ca4285178f741ef0cc55f640d60fcc5db295",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "cdbe49883fb5330c9e7af036a847841b714dafae",
   "version_tag": "v0.40.0-grandview-reference-fitness",
-  "version_tag_object": null,
-  "lifecycle_sync_issue": null,
-  "lifecycle_sync_pull_request": null,
+  "version_tag_object": "48c1c9677b9b41a734be2dcdc4a9691caf4e6688",
+  "lifecycle_sync_issue": 505,
+  "lifecycle_sync_pull_request": 506,
   "next_checkpoint_issue": 503,
-  "status": "release candidate: exact Grandview reference fitness passes; candidates and labels deferred",
+  "status": "verified release: exact Grandview reference fitness passes; candidates and labels deferred",
   "software_version": "0.40.0",
   "request_run_id": "BL-2026-07-20-grandview-reference-request-r001",
   "delivery_run_id": "BL-2026-07-20-grandview-reference-delivery-r001",
@@ -81,8 +81,8 @@
     "repository_tests": "pass in custody worktree: 316 tests; compileall; 104 tracked JSON documents including this manifest parse after commit",
     "release_package": "pass: two fixed-epoch wheels are byte-identical; 133 entries; 64 commands; exact dependencies, help paths, and pip check pass",
     "fresh_remote_head": "pass at 6c62ca4285178f741ef0cc55f640d60fcc5db295: empty ignored custody; 303 passed and 13 expected custody skips; compileall; 104 JSON parses; exact 3-of-3 reconstruction through unchanged original custody; two canonical wheels match",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass at cdbe49883fb5330c9e7af036a847841b714dafae: 303 passed and 13 expected custody skips; compileall; 104 JSON parses; exact reconstruction; canonical wheel identity",
+    "remote_tag": "pass: annotated object 48c1c9677b9b41a734be2dcdc4a9691caf4e6688 remotely peels to checkpoint cdbe49883fb5330c9e7af036a847841b714dafae"
   },
   "decision": "ACCEPT_MTBS_AS_BOUNDED_EVIDENCE_RAVG_AS_LIMITED_CONTEXT_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
 }
