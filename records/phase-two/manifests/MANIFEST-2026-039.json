@@ -9,11 +9,13 @@
   "git_base_commit": "d9485d2acf9c4c3e04e0192c328d4f90587be1d9",
   "generator_source_commit": "994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10",
   "candidate_artifacts_commit": "6da33ff846a55fc60e27c1f39d4d7a0488bbff81",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "16504c810d60dcaba74297db077e481b682228e7",
   "version_tag": "v0.37.0-green-ridge-owner-review-surface",
-  "version_tag_object": null,
+  "version_tag_object": "f6976b709c902957273d57308b5acaef371d027c",
+  "lifecycle_sync_issue": 493,
+  "lifecycle_sync_pull_request": 494,
   "next_checkpoint_issue": 491,
-  "status": "release candidate: owner-operated completion/export passed; response custody and promotion closed",
+  "status": "verified: Green Ridge owner review surface shipped; response custody and promotion closed",
   "software_version": "0.37.0",
   "run_id": "BL-2026-07-20-green-ridge-owner-review-surface-r001",
   "event_group_id": "event-green-ridge-0684-cs-2020",
@@ -40,7 +42,7 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.37.0-py3-none-any.whl",
-    "source_commit": "98439a8208c42f24112e6ab661c7b6964afc8a41",
+    "source_commit": "16504c810d60dcaba74297db077e481b682228e7",
     "source_date_epoch": 1784513100,
     "bytes": 540356,
     "sha256": "6d3137454f521221668986ec26c65b03d74e68fbab8db2ff3caf7c5a60c8a917",
@@ -54,11 +56,11 @@
     "evidence": "pass: ten original-resolution pre/post/extended/dNBR/reference panels inspected",
     "response_contract": "pass: deterministic tests and Node syntax plus one owner-operated completed, attested, hash-named two-record export with exact surface/run/schema binding; decision values unopened",
     "exact_reconstruction": "pass: all six surface outputs reproduce byte for byte",
-    "repository_tests": "pass in candidate worktree: 291 tests; compileall; 98 tracked JSON documents including this manifest",
+    "repository_tests": "pass on fresh merged main: 291 tests with 11 expected ignored-custody skips; compileall; 98 tracked JSON documents including this manifest",
     "release_package": "pass: stale working-tree wheel rejected; two independent fresh-checkout fixed-epoch wheels byte-identical; dependency-complete isolated install and CLI help pass",
     "real_browser": "pass for material owner workflow: owner operated the rendered local page and produced a structurally valid completed export; agent file URL automation remains prohibited and mobile automation is deferred as nonessential to this owner-only offline surface",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
-    "repository_release": "pending: PR #492 merge, fresh-main reconstruction/package verification, and remote annotated tag"
+    "repository_release": "pass: PR #492 merged at 16504c810d60dcaba74297db077e481b682228e7; exact six-output merged-main reconstruction; fresh clone tests, JSON, compile, and canonical package pass; annotated tag object f6976b709c902957273d57308b5acaef371d027c remotely peels to the checkpoint"
   },
   "decision": "SURFACE_READY_FOR_RELEASE_KEEP_RESPONSE_CUSTODY_AND_PROMOTION_CLOSED"
 }

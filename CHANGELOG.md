@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.37.0-green-ridge-owner-review-surface - release candidate - 2026-07-20
+## v0.37.0-green-ridge-owner-review-surface - verified - 2026-07-20
 
 ### P2O4-T25 - Bind Green Ridge proposals to blank owner review
 
@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Provide blank yes/no/uncertain capture, hash-named export, strict reload, completion attestation, browser-session lock, and explicit no-overwrite custody language.
 - Preserve zero owner responses, labels, dataset, split, baseline, model, metric, or accuracy result.
 
-Generator `994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10` produces run `BL-2026-07-20-green-ridge-owner-review-surface-r001`; artifacts commit at `6da33ff846a55fc60e27c1f39d4d7a0488bbff81`. PR #492 remains open pending merge and fresh-main/tag gates. Six outputs reconstruct byte for byte; original-resolution evidence inspection, 291 tests, 98 JSON parses including the candidate manifest, and compilation pass. A stale working-tree wheel is rejected; two clean fresh-checkout wheels are identical at 540,356 bytes / SHA-256 `6d3137454f521221668986ec26c65b03d74e68fbab8db2ff3caf7c5a60c8a917` and pass dependency-complete isolated installation. The owner operated the rendered local page and produced one completed, attested, hash-named two-record export; BurnLens independently confirms its surface/run/schema bindings while leaving decision values unopened for issue #491 custody. Agent browser automation cannot inspect local `file://` pages, and mobile automation is deferred as nonessential to this owner-operated offline review checkpoint. No response byte or decision is committed or promoted here.
+Generator `994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10` produces run `BL-2026-07-20-green-ridge-owner-review-surface-r001`; artifacts commit at `6da33ff846a55fc60e27c1f39d4d7a0488bbff81`. PR #492 merges at checkpoint `16504c810d60dcaba74297db077e481b682228e7`. Six outputs reconstruct byte for byte; a fresh clone passes 291 tests with 11 expected custody skips, 98 JSON parses, compilation, and the canonical 540,356-byte wheel / SHA-256 `6d3137454f521221668986ec26c65b03d74e68fbab8db2ff3caf7c5a60c8a917`. Annotated tag object `f6976b709c902957273d57308b5acaef371d027c` remotely peels to the checkpoint. The owner operated the rendered local page and produced one completed, attested, hash-named two-record export; BurnLens confirms its surface/run/schema bindings while leaving decision values unopened for issue #491 custody. Agent browser automation cannot inspect local `file://` pages, and mobile automation is deferred as nonessential to this owner-operated offline review checkpoint. No response byte or decision is committed or promoted here.
 
 ## v0.36.0-green-ridge-region-proposal - verified - 2026-07-20
 

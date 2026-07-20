@@ -12,7 +12,7 @@
 |---|---|---|
 | `GRP-001` review question | Blank proposed burned | 25 core / 50 unknown-ring pixels; raster SHA-256 `6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f` |
 | `GRP-002` review question | Blank proposed background | 25 core / 37 unknown-ring pixels; raster SHA-256 `0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8` |
-| Surface JSON/HTML/PNG/template/pages | Release candidate | 6 outputs; 0 tracked responses; 0 labels; exact reconstruction passes |
+| Surface JSON/HTML/PNG/template/pages | Verified release | 6 outputs; 0 tracked responses; 0 labels; exact merged-main reconstruction and remote tag pass |
 | Rendered owner workflow | Pass | Owner-operated local page produced one completed, attested, hash-named two-record export; structure and surface/run/schema binding pass; decisions unopened pending #491 custody |
 | Agent/mobile automation | Deferred, nonblocking | Browser policy rejects local `file://` inspection; mobile automation is not material to the offline owner-only workflow |
 | Provider inputs | Existing ignored custody | 0 provider bytes committed |
