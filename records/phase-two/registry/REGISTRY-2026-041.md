@@ -1,4 +1,4 @@
-# REGISTRY-2026-041 - Grandview Background Evidence Candidate
+# REGISTRY-2026-041 - Verified Grandview Background Evidence
 
 **Issue / branch:** #503 / `codex/p2o4-t29-grandview-background-evidence`
 
@@ -17,3 +17,4 @@
 | Candidate/owner/label state | Deferred | Zero candidate regions, owner decisions, or labels |
 | Dataset/split/baseline/model | Blocked | Existing eight prototype regions across four events remain unchanged |
 | Provider inputs | Ignored custody | Zero provider bytes or credential material committed |
+| Verified release | Repository checkpoint | PR #507; merge `07c35346ad1369c2fe1e2a4570996c23ba56dac4`; tag object `61288c1c641d1f119aee83eae5931e79f3b0c621`; next #508 |
