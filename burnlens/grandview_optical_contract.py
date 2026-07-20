@@ -25,7 +25,7 @@ from .provider_acquisition import (
 )
 
 
-SOFTWARE_VERSION = "0.39.0"
+SOFTWARE_VERSION = "0.40.0"
 PACKAGE_ID = "grandview-s2-optical-pair-v0.1.0"
 CONTRACT_VERSION = "grandview-optical-intake-contract-v0.1.0"
 SOURCE_RECORD_ID = "SOURCE-2026-024"

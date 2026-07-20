@@ -179,6 +179,7 @@ def build_report(
         "post_mask": post["MASK10"],
         "dnbr": dnbr,
         "dnbr_valid": spectral_valid,
+        "boundary_mask20": pre["MASK20"],
     }
     return report, previews
 
