@@ -1,0 +1,113 @@
+{
+  "report_id": "GRANDVIEW-REGION-PROPOSAL-2026-001",
+  "report_version": "grandview-no-promotion-region-proposal-v0.1.0",
+  "generator_version": "grandview-region-generator-v0.1.0",
+  "generated_at_utc": "2026-07-20T22:40:00Z",
+  "run_id": "BL-2026-07-20-grandview-region-proposal-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 508,
+  "git_source_commit": "78bb79eb04d76cff4ed183274de881557b176413",
+  "software_version": "0.42.0",
+  "event_group_id": "event-grandview-0558-od-2021",
+  "event_id": "OR4446612140020210711",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "input_label_set_version": "owner-approved-prototype-region-labels-v0.2.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "source_report": {
+    "report_id": "GRANDVIEW-BACKGROUND-EVIDENCE-2026-001",
+    "run_id": "BL-2026-07-20-grandview-region-proposal-r001-source-reverification",
+    "checkpoint": "ACCEPT_AFFIRMATIVE_BACKGROUND_ROUTE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
+  },
+  "method": {
+    "unit": "one intact 8-connected 20 m component",
+    "partition": "fixed 0.05 dNBR bin from the established region-candidate protocol",
+    "target_pixels": 25,
+    "selection": "minimum absolute distance to 25 pixels, then SHA-256 of class, bin, and ordered native-grid coordinates",
+    "burned_route": "MTBS dNBR6 classes 2-4 on the verified context grid and finite pre/post dNBR; RAVG classes are not used",
+    "background_route": "Three-scene clear/numeric evidence; transferred four-signal near-anniversary stability; at least 7 of 9 stable neighbors; outside BAER, MTBS, and RAVG rasterized footprints; outside the 60 m source-boundary uncertainty buffer. No single signal is sufficient.",
+    "unknown_ring": "one native 20 m pixel around the intact core; never promoted by this checkpoint"
+  },
+  "summary": {
+    "candidate_count": 2,
+    "class_counts": {
+      "burned": 1,
+      "background": 1
+    },
+    "core_pixels": 50,
+    "unknown_ring_pixels": 98,
+    "owner_responses": 0,
+    "labels_created": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "GVP-001",
+      "candidate_class": "burned",
+      "review_state": "unreviewed-no-promotion",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 46,
+      "bbox_rows_columns": [
+        225,
+        323,
+        236,
+        337
+      ],
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "dnbr_observed": {
+        "min": 0.015383,
+        "max": 0.04985,
+        "mean": 0.0346
+      },
+      "eligible_component_count": 6127,
+      "evaluated_component_count": 10953,
+      "selection_tie_sha256": "00f5b58d0effed4bdfe48437aa83dd27d6c4cae9a911bdd8debc9bf8f1dc1df3",
+      "candidate_raster": "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-001.tif",
+      "owner_decision": null
+    },
+    {
+      "candidate_id": "GVP-002",
+      "candidate_class": "background",
+      "review_state": "unreviewed-no-promotion",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 52,
+      "bbox_rows_columns": [
+        623,
+        367,
+        636,
+        376
+      ],
+      "dnbr_interval": [
+        -0.05,
+        0.0
+      ],
+      "dnbr_observed": {
+        "min": -0.015806,
+        "max": -0.00034,
+        "mean": -0.007407
+      },
+      "eligible_component_count": 3648,
+      "evaluated_component_count": 6488,
+      "selection_tie_sha256": "11339a568e441f455d377037fadc0fe816b9429e1387e488bb791f42d318aad6",
+      "candidate_raster": "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-002.tif",
+      "owner_decision": null
+    }
+  ],
+  "decision": "PROPOSE_TWO_GRANDVIEW_REGIONS_KEEP_OWNER_REVIEW_AND_PROMOTION_CLOSED",
+  "next_gate": "Build a separately versioned blank owner yes/no/uncertain review surface bound to these exact raster bytes.",
+  "limitations": [
+    "The fixed dNBR partition is an evidence-coherence rule, not a universal burn or severity threshold.",
+    "MTBS classes 2-4 and the multi-signal background route are candidate evidence, not independent ground truth.",
+    "RAVG modeled classes are excluded from affirmative candidate logic under the delivered sparse/non-tree warning.",
+    "Only one burned and one background proposal are created for one event; owner review remains absent."
+  ],
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
