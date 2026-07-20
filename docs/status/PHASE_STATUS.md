@@ -1,6 +1,6 @@
 # BurnLens Phase Status
 
-## Status as of 2026-07-19
+## Status as of 2026-07-20
 
 | Phase | Proof outcome | Status | Evidence and next gate |
 |---|---|---|---|
@@ -16,6 +16,7 @@
 | Evidence class | Current state |
 |---|---|
 | Latest repository evidence baseline | Verified `v0.40.0-grandview-reference-fitness`; checkpoint `cdbe49883fb5330c9e7af036a847841b714dafae`; tag object `48c1c9677b9b41a734be2dcdc4a9691caf4e6688`; issue #499 / PR #504; lifecycle #505 / PR #506; next #503 |
+| Active release candidate | BurnLens 0.41.0 / issue #503 opens a 67,782-pixel affirmative Grandview background-evidence route from exact optical custody, delivered vector footprints, unchanged stability thresholds, and registration exclusions. Zero candidates or labels; release verification pending. |
 | Official-source scout evidence | BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 12 bounded official responses / 7 source classes / 21 candidates / 0 labels; GW Fire ranked first; Landsat asset state `AUTHENTICATION_REQUIRED` |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoints | Verified v0.38 accepts eight balanced prototype regions across four events. Verified v0.39 passes Grandview optical fitness. The v0.40 candidate gates 20 exact official rasters: MTBS covers 61,795 / 62,588 boundary pixels with 58,438 classes 2-4; RAVG is context-limited by its exact sparse/non-tree warning; candidates, labels, dataset, split, baseline, and model remain deferred. Historical 6/0/50 exclusions are not inherited. |
@@ -128,6 +129,8 @@ P2O4-T26 / issue #491 / PR #496 ships verified BurnLens 0.38.0 at checkpoint `17
 P2O4-T27 / issue #495 / PR #500 ships verified BurnLens 0.39.0 at checkpoint `c89282da086bed98c009e440689eb06c864fb267`. Acquisition run `BL-2026-07-20-grandview-optical-intake-r001` registers the exact 1,923,481,794-byte Sentinel pair only in ignored custody. Evidence run `BL-2026-07-20-grandview-source-fitness-r001` opens 62,588 native 20 m boundary pixels, preserves 647 review-needed and 868 excluded pixels, and passes all nine registration windows with 0.1158-pixel p95 residual. Fresh main repeats exact reconstruction, 308 tests with 12 expected custody skips, 102 JSON parses, compilation, and canonical packaging; tag object `faacd1a33c9f486daba54d94ec7962694742fbd2` remotely peels to the checkpoint. The rendered report treats 61,073 dNBR pixels only as continuous change evidence. BAER/MTBS/RAVG pixels were not opened; issue #499 owns that separate gate. The existing eight prototype regions across four events remain unchanged, and no dataset, split, baseline, or model advances.
 
 P2O4-T28 / issue #499 / PR #504 ships verified BurnLens 0.40.0 at checkpoint `cdbe49883fb5330c9e7af036a847841b714dafae`. One exact 22,076,790-byte / 53-member USGS delivery passes terms, structure, identity, native-grid, nodata, class-domain, boundary, optical re-verification, reconstruction, render, privacy, test, and packaging gates. MTBS covers 98.7330% of the optical boundary and supplies 58,438 class 2-4 evidence pixels; 56,943 also have valid optical comparison. RAVG is context-only under its exact sparse/non-tree warning, BAER remains preliminary unthresholded context, and 793 reference-uncovered pixels remain unresolved. Fresh merged main passes 303 tests with 13 expected custody skips, 104 JSON parses, exact reconstruction, canonical packaging, and tag verification. Issue #503 owns affirmative Grandview background evidence. The eight balanced prototype regions across four events remain unchanged; no dataset, split, baseline, or model advances.
+
+P2O4-T29 / issue #503 is the BurnLens 0.41.0 candidate. The exact 950,987,607-byte extended scene is registered only in ignored custody. Its 05.10 baseline is compared with the 05.00 pre scene only after metadata-derived BOA scaling and registration; seven windows pass, two review-needed windows are excluded, none fail, and p95 residual is 0.0944 pixel. Exact delivered BAER/MTBS/RAVG vectors plus a 60 m buffer exclude every program footprint; RAVG modeled values remain disallowed. The unchanged four-signal screen leaves 67,782 route-evidence pixels / 2,711.28 ha and 181 components at least one hectare. No candidate, owner response, label, dataset, split, baseline, or model advances; full release verification is pending.
 
 BL-GOV-002 / issue #400 / PR #401 is a repository-truth checkpoint, not a scientific advance. It has closed the obsolete Phase One GitHub backlog and marks the Phase One Objective Seven tracker/handoff as historical snapshots. It changes no tag, Release, software version, analytical output, custody byte, reveal state, or Phase Two gate.
 

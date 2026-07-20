@@ -378,6 +378,16 @@ P2O4-T28 retrieves the exact 22,076,790-byte official delivery and deterministic
 
 The more important portfolio decision is what BurnLens refuses to infer. Grandview's delivered RAVG record warns that much of the event has sparse to no pre-fire tree cover, outside the model's strongest domain. Even though the RAVG maps appear to agree broadly with MTBS, the public report marks them as limited context and does not treat that visual agreement as independent truth. BAER remains preliminary continuous change, 793 optical-boundary pixels remain outside MTBS grid coverage, and no program supplies affirmative background truth. Issue #503 therefore targets background evidence before a balanced owner-review proposal.
 
+### Grandview background evidence: geometry and stability must agree
+
+BurnLens freezes one same-platform, same-tile, same-orbit Sentinel-2B scene from 2022-06-28, 25 days after the pre-fire anniversary. The exact 950,987,607-byte archive stays in ignored custody. Its reprocessed 05.10 baseline differs from the original 05.00 pair, so the pipeline applies each product's own BOA scale and offsets and then runs real content registration. Seven windows pass and two are spatially excluded; none fail and p95 residual is 0.0944 pixel.
+
+The first implementation correctly rejected itself: BAER's continuous raster was finite across its rectangle and could not stand in for an incident perimeter. The corrected route parses and rasterizes the exact delivered BAER, MTBS, and RAVG boundary vectors, buffers their union by 60 m, transfers the established four-signal stability thresholds without tuning, and retains only three-scene-valid coherent pixels outside every footprint and registration exclusion.
+
+![Grandview affirmative background evidence](../../samples/cross-event/phase-two/GRANDVIEW-BACKGROUND-EVIDENCE-2026-001.png)
+
+The result contains 67,782 evidence pixels / 2,711.28 ha and 181 components at least one hectare. That opens a separate deterministic proposal gate; it does not create a candidate, owner response, label, official unburned map, dataset, split, baseline, model, or accuracy claim. RAVG modeled classes remain excluded from affirmative use.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -418,6 +428,8 @@ The more important portfolio decision is what BurnLens refuses to infer. Grandvi
 - Latest Green Ridge owner-response intake run: `BL-2026-07-20-green-ridge-owner-response-intake-r001`
 - Latest Grandview optical acquisition run: `BL-2026-07-20-grandview-optical-intake-r001`
 - Latest Grandview source-fitness run: `BL-2026-07-20-grandview-source-fitness-r001`
+- Latest Grandview background-optical acquisition run: `BL-2026-07-20-grandview-background-optical-intake-r001`
+- Latest Grandview background-evidence run: `BL-2026-07-20-grandview-background-evidence-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
