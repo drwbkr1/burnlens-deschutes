@@ -109,13 +109,18 @@ def _metadata_text(root: ET.Element, tag: str) -> str:
 
 
 def _inspect_metadata(archive: ZipFile, program: str) -> dict[str, Any]:
-    member = _find(archive, f"/{program.casefold()}_or4446712160520200817_{MAP_IDS[program]}" + ({
+    stem = f"/{program.casefold()}_or4446712160520200817_{MAP_IDS[program]}" + ({
         "BAER": "_20200731_20200901_metadata.xml",
         "MTBS": "_20200715_20210718_metadata.xml",
         "RAVG": "_20190925_20200929_metadata.xml",
-    }[program]))
+    }[program])
+    member = _find(archive, stem)
     data = archive.read(member)
     root = ET.fromstring(data)
+    iso_member = _find(archive, stem.replace("_metadata.xml", "_iso_metadata.xml"))
+    iso_data = archive.read(iso_member)
+    iso_root = ET.fromstring(iso_data)
+    iso_text = " ".join(" ".join(iso_root.itertext()).split())
     result = {
         "program": program,
         "member": member,
@@ -127,6 +132,16 @@ def _inspect_metadata(archive: ZipFile, program: str) -> dict[str, Any]:
         "use_constraints": _metadata_text(root, "useconst"),
         "credit": _metadata_text(root, "datacred"),
         "distribution_liability": _metadata_text(root, "distliab"),
+        "iso_metadata": {
+            "member": iso_member,
+            "bytes": len(iso_data),
+            "sha256": _digest(iso_data),
+            "xml_root": iso_root.tag.split("}")[-1],
+            "access_and_use_language_present": (
+                "reasonable and proper acknowledgement" in iso_text
+                and (program != "BAER" or "BARC4 and BARC256" in iso_text)
+            ),
+        },
     }
     if program == "BAER":
         required = "Thresholded, preliminary severity estimates (BARC4 and BARC256) are only delivered to BAER teams."
@@ -136,6 +151,8 @@ def _inspect_metadata(archive: ZipFile, program: str) -> dict[str, Any]:
         raise GreenRidgeReferenceFitnessError(f"{program} access constraint drifted")
     if "reasonable and proper acknowledgement" not in result["use_constraints"]:
         raise GreenRidgeReferenceFitnessError(f"{program} acknowledgement requirement drifted")
+    if not result["iso_metadata"]["access_and_use_language_present"]:
+        raise GreenRidgeReferenceFitnessError(f"{program} ISO constraint language drifted")
     return result
 
 
@@ -143,7 +160,8 @@ def _inspect_raster(archive: ZipFile, member: str) -> tuple[dict[str, Any], dict
     data = archive.read(member)
     try:
         with MemoryFile(data) as memory, memory.open() as source:
-            array = source.read(1)
+            stack = source.read()
+            array = stack[0]
             nodata = source.nodata
             valid = np.isfinite(array)
             if nodata is not None:
@@ -151,6 +169,19 @@ def _inspect_raster(archive: ZipFile, member: str) -> tuple[dict[str, Any], dict
             observed = array[valid]
             values, counts = np.unique(observed, return_counts=True)
             encoded_values, encoded_counts = np.unique(array[np.isfinite(array)], return_counts=True)
+            band_summaries = []
+            for band_index, band in enumerate(stack, start=1):
+                band_valid = np.isfinite(band)
+                if nodata is not None:
+                    band_valid &= band != nodata
+                band_values = band[band_valid]
+                band_summaries.append({
+                    "band": band_index,
+                    "valid_pixels": int(band_values.size),
+                    "nodata_pixels": int(band.size - band_values.size),
+                    "valid_min": float(band_values.min()) if band_values.size else None,
+                    "valid_max": float(band_values.max()) if band_values.size else None,
+                })
             profile = {
                 "member": member,
                 "bytes": len(data),
@@ -167,6 +198,8 @@ def _inspect_raster(archive: ZipFile, member: str) -> tuple[dict[str, Any], dict
                 "bounds": list(source.bounds),
                 "valid_pixels": int(observed.size),
                 "nodata_pixels": int(array.size - observed.size),
+                "all_bands_read": True,
+                "band_summaries": band_summaries,
                 "native_value_domain": (
                     {str(int(value)): int(count) for value, count in zip(encoded_values, encoded_counts, strict=True)}
                     if len(encoded_values) <= 32 else None
@@ -212,14 +245,21 @@ def _shapefile_record_count(data: bytes) -> int:
         raise GreenRidgeReferenceFitnessError("invalid shapefile header")
     position = 100
     count = 0
+    shape_types: set[int] = set()
     while position < len(data):
         if position + 8 > len(data):
             raise GreenRidgeReferenceFitnessError("truncated shapefile record header")
         length = struct.unpack(">i", data[position + 4:position + 8])[0] * 2
+        record = data[position + 8:position + 8 + length]
+        if len(record) < 4:
+            raise GreenRidgeReferenceFitnessError("truncated shapefile record")
+        shape_types.add(struct.unpack("<i", record[:4])[0])
         position += 8 + length
         count += 1
     if position != len(data):
         raise GreenRidgeReferenceFitnessError("invalid shapefile record length")
+    if struct.unpack("<i", data[32:36])[0] != 5 or shape_types - {0, 5}:
+        raise GreenRidgeReferenceFitnessError("burn-area shapefile is not polygon geometry")
     return count
 
 

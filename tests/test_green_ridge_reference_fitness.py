@@ -60,6 +60,8 @@ class GreenRidgeReferenceFitnessTests(unittest.TestCase):
         )
         self.assertEqual(report["archive"]["sha256"], ARCHIVE_SHA256)
         self.assertEqual(len(report["native_rasters"]), 20)
+        self.assertTrue(all(item["all_bands_read"] for item in report["native_rasters"]))
+        self.assertTrue(all(item["iso_metadata"]["access_and_use_language_present"] for item in report["metadata"]))
         self.assertEqual(report["evidence_comparison"]["both_programs_affirmative_pixels"], 41_642)
         self.assertEqual(report["evidence_comparison"]["either_program_affirmative_pixels"], 43_533)
         self.assertTrue(report["boundary_relationship"]["baer_mtbs_geometry_bytes_identical"])
