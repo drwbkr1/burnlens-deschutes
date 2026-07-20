@@ -9,7 +9,7 @@
   "git_base_commit": "c08c861cb73c5ca8ebfa711f240426b413fe48f6",
   "generator_source_commit": "08e04b71836ffbcb8d59761c53586ece6f85687f",
   "candidate_artifacts_commit": "adc043ee3c713fcd33cc26600e54aeb7ffdf3ae7",
-  "candidate_head_commit": "3b8db9620a82155b8a722b536f5e3f4cbd74b964",
+  "candidate_head_commit": "8af5980db2b01e6fa0e75a438c0f00d7d8ec7eaf",
   "checkpoint_commit": null,
   "version_tag": "v0.41.0-grandview-background-evidence",
   "version_tag_object": null,
@@ -91,7 +91,7 @@
     "label_dataset_model": "blocked: no candidate, owner response, label, dataset, split, baseline, or model",
     "repository_tests": "pass in custody worktree: 325 tests; compileall; 106 tracked JSON documents including this manifest parse after commit",
     "release_package": "pass: two fixed-epoch wheels are byte-identical; 137 entries; 66 commands; exact dependency-complete isolated import, help paths, and pip check pass",
-    "fresh_remote_head": "pass at 3b8db9620a82155b8a722b536f5e3f4cbd74b964: empty ignored custody; 312 passed and 13 expected custody skips; compileall; 106 JSON parses; exact 3-of-3 reconstruction through unchanged original custody; two canonical wheels match",
+    "fresh_remote_head": "pass at 8af5980db2b01e6fa0e75a438c0f00d7d8ec7eaf: empty ignored custody; 312 passed and 13 expected custody skips; compileall; 106 JSON parses; exact 3-of-3 reconstruction through unchanged original custody; two canonical wheels match",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
