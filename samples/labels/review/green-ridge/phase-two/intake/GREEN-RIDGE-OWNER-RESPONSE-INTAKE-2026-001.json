@@ -1,0 +1,245 @@
+{
+  "report_id": "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "green-ridge-owner-response-intake-v0.1.0",
+  "generated_at_utc": "2026-07-20T17:20:07.969Z",
+  "run_id": "BL-2026-07-20-green-ridge-owner-response-intake-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 491,
+  "git_source_commit": "78368833a73401e098af21bf999ab6674d2e8f9f",
+  "software_version": "0.38.0",
+  "aoi_version": "multi-event-native-grids-v0.2.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.2.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "prior_label_intake": {
+      "report_id": "REGION-OWNER-RESPONSE-INTAKE-2026-001",
+      "run_id": "BL-2026-07-19-region-owner-response-intake-r001",
+      "bytes": 6149,
+      "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"
+    },
+    "proposal": {
+      "report_id": "GREEN-RIDGE-REGION-PROPOSAL-2026-001",
+      "run_id": "BL-2026-07-20-green-ridge-region-proposal-r001",
+      "bytes": 4327,
+      "sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281"
+    },
+    "surface": {
+      "report_id": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001",
+      "run_id": "BL-2026-07-20-green-ridge-owner-review-surface-r001",
+      "bytes": 8895,
+      "sha256": "d965658a54398642cc5c8d29a6a19d750e6345c46951e023bb81e8e9359a40eb"
+    },
+    "response": {
+      "bytes": 893,
+      "sha256": "f0dc9a1311928185cb76c27152c7fb7bb39b11a952deba1bb5c66355c7090df9"
+    },
+    "receipt": {
+      "bytes": 1736,
+      "sha256": "79c90120e3ca1048f99873f7bcbecda250c49794fe3e1666f59d9296612290bd"
+    },
+    "private_reconciliation": {
+      "bytes": 8296,
+      "sha256": "3ac026a3bfd333514b5d1b56d939b262b2bff3ab262f7e989efe1d5f2e14f393",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "record_bindings": [
+    {
+      "record_id": "SOURCE-2026-020",
+      "bytes": 2216,
+      "sha256": "17b470f68c511ebdbb984f0c543d0246d71f5bb17b01afe0ef817e6ae512c878"
+    },
+    {
+      "record_id": "SOURCE-2026-021",
+      "bytes": 1567,
+      "sha256": "ac521f27e52131ad4e07c48c055995cf24630aa3f9514498d31eb8927bd55ed2"
+    },
+    {
+      "record_id": "SOURCE-2026-022",
+      "bytes": 2627,
+      "sha256": "b7cea1b8a9c1d05a87cb8de896de8740cf7267593e5e45308aa157039bf1e1de"
+    },
+    {
+      "record_id": "SOURCE-2026-023",
+      "bytes": 2260,
+      "sha256": "ecfd575da685021fbf1e7944823e934ac849ca30cca4c9bd9a406c76addb90d8"
+    },
+    {
+      "record_id": "TERMS-2026-016",
+      "bytes": 1557,
+      "sha256": "6425cf9c8a29f3828a6e9b5136cd3ff788d9923328c45c5ef46efd7d8331723e"
+    },
+    {
+      "record_id": "TERMS-2026-017",
+      "bytes": 1453,
+      "sha256": "d99840421504fd4e6e44ab3181666910c4cfc84ede7aa66f2f267732ecbdfe03"
+    },
+    {
+      "record_id": "TERMS-2026-018",
+      "bytes": 1946,
+      "sha256": "bcf52afb0a3b2867b14064b05bad6a4571dae405d97de2bdf54e7d3f7160f809"
+    },
+    {
+      "record_id": "TERMS-2026-019",
+      "bytes": 1747,
+      "sha256": "dd081eb7d14a42632f5fc70dfafadd08434de01c6722e49d008954648e4d8b21"
+    },
+    {
+      "record_id": "PRECHECK-2026-036",
+      "bytes": 993,
+      "sha256": "affa474844d047332433d3454e1e5e01298e8d74cf0add3b3d44ec91539c2276"
+    },
+    {
+      "record_id": "LABEL-FITNESS-2026-023",
+      "bytes": 758,
+      "sha256": "2d5b59de156e88125d4e23102b57c2a35df541262268ba65078188f32ba0d7f1"
+    },
+    {
+      "record_id": "LABEL-FITNESS-2026-024",
+      "bytes": 1025,
+      "sha256": "bf76eb1dd3cd901d845cbef5bbe33e1e9d6ed996c4bb8fe49c86483137d566c6"
+    },
+    {
+      "record_id": "SOURCE-PRECEDENCE-2026-015",
+      "bytes": 744,
+      "sha256": "7ea923ec060e53dc0148f71451546d9e6041cd79c50bfc7f54db72ee91b64049"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-033",
+      "bytes": 848,
+      "sha256": "39c3fead22ff37b6d6367f972811bb0f391f732355f025a5872ba692cd57d460"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-034",
+      "bytes": 904,
+      "sha256": "d4fa904ba28d18f7916d96a6673a5d372a3a945d80eae5916d8fc1d03a5396f4"
+    },
+    {
+      "record_id": "MANIFEST-2026-035",
+      "bytes": 5952,
+      "sha256": "a3f321418bb97594d1c21330f2eb1566571ae29f6e20a2885b2906a50d5d899a"
+    },
+    {
+      "record_id": "MANIFEST-2026-036",
+      "bytes": 4905,
+      "sha256": "d6177b4e1d6502103e8a40cadced24822dda247cdaa7fc96a4d6d5d9b6c397c9"
+    },
+    {
+      "record_id": "MANIFEST-2026-037",
+      "bytes": 4971,
+      "sha256": "4fb1d90ef0c5c61af1872fa478591c2eceef02ed5b6bacbcd64114425918e2ad"
+    },
+    {
+      "record_id": "MANIFEST-2026-038",
+      "bytes": 4158,
+      "sha256": "ba1e8141bb167624181bdee0679d983214f85f49f92b34357e454641205dad7a"
+    },
+    {
+      "record_id": "MANIFEST-2026-039",
+      "bytes": 4870,
+      "sha256": "54b7685cae2e008de7872f643de4fdd82266fa3ae20e931bd1b94fc3976688b2"
+    }
+  ],
+  "source_records": [
+    "SOURCE-2026-020",
+    "SOURCE-2026-021",
+    "SOURCE-2026-022",
+    "SOURCE-2026-023"
+  ],
+  "terms_records": [
+    "TERMS-2026-016",
+    "TERMS-2026-017",
+    "TERMS-2026-018",
+    "TERMS-2026-019"
+  ],
+  "review_records": [
+    "PRECHECK-2026-036",
+    "LABEL-FITNESS-2026-023",
+    "LABEL-FITNESS-2026-024",
+    "SOURCE-PRECEDENCE-2026-015",
+    "USE-BOUNDARY-2026-033",
+    "USE-BOUNDARY-2026-034"
+  ],
+  "manifest_records": [
+    "MANIFEST-2026-035",
+    "MANIFEST-2026-036",
+    "MANIFEST-2026-037",
+    "MANIFEST-2026-038",
+    "MANIFEST-2026-039"
+  ],
+  "decision_counts": {
+    "yes": 2,
+    "no": 0,
+    "uncertain": 0
+  },
+  "outcome": {
+    "green_ridge_owner_approved_region_labels": 2,
+    "green_ridge_class_counts": {
+      "background": 1,
+      "burned": 1
+    },
+    "green_ridge_accepted_core_pixels": 50,
+    "green_ridge_excluded_unknown_ring_pixels": 87,
+    "cumulative_owner_approved_region_labels": 8,
+    "cumulative_prototype_label_class_counts": {
+      "background": 4,
+      "burned": 4
+    },
+    "cumulative_accepted_core_pixels": 186,
+    "cumulative_accepted_core_area_ha": 7.44,
+    "cumulative_excluded_unknown_ring_pixels": 333,
+    "event_group_count": 4,
+    "minimum_event_group_count": 6,
+    "dataset_fitness_reopened": false
+  },
+  "promotion_gates": {
+    "exact_response_and_custody": true,
+    "candidate_reproducibility": true,
+    "source_and_terms": true,
+    "quality_and_registration": true,
+    "unknown_ring_excluded": true,
+    "event_level_leakage_control": true
+  },
+  "privacy": {
+    "notes_public": false,
+    "unit_decisions_public": false,
+    "private_paths_public": false
+  },
+  "boundaries": {
+    "owner_review_is_independent_ground_truth": false,
+    "unknown_ring_is_background": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_or_operational_claim_created": false
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2020-2021, accessed through CDSE.",
+    "MTBS evidence: Monitoring Trends in Burn Severity Project, U.S. Geological Survey and USDA Forest Service.",
+    "RAVG evidence: USDA Forest Service and ESA; program-specific timing, vegetation, and model limitations apply."
+  ],
+  "warning": "Experimental BurnLens owner-approved prototype region labels. Not ground truth, official wildfire information, emergency guidance, or a dataset. Official sources govern.",
+  "decision": "ACCEPT_GREEN_RIDGE_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL",
+  "next_gate": "Acquire, review, and gate at least two additional comparable whole-event groups before dataset fitness, split, or baseline work can reopen.",
+  "outputs": [
+    {
+      "path": "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 2977,
+      "sha256": "9e3b00fe142da4219d52114cf24dafce4219dc2b5edd7a852856f14abb2a5d93",
+      "media_type": "text/html"
+    },
+    {
+      "path": "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 76847,
+      "sha256": "44c7e6037732674692210566319aa0444911b86623632a58ad1818825566c52e",
+      "media_type": "image/png"
+    }
+  ]
+}
