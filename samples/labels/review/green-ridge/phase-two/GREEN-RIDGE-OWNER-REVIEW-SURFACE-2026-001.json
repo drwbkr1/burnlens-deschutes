@@ -1,0 +1,226 @@
+{
+  "report_id": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "green-ridge-owner-review-surface-v0.1.0",
+  "response_schema_version": "burnlens-green-ridge-owner-review-response-v0.1.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 487,
+  "software_version": "0.37.0",
+  "generated_at_utc": "2026-07-20T02:05:00Z",
+  "run_id": "BL-2026-07-20-green-ridge-owner-review-surface-r001",
+  "git_source_commit": "994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10",
+  "event_group_id": "event-green-ridge-0684-cs-2020",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "GREEN-RIDGE-REGION-PROPOSAL-2026-001.json": {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.json",
+      "bytes": 4327,
+      "sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281"
+    },
+    "GREEN-RIDGE-REGION-PROPOSAL-2026-001.html": {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.html",
+      "bytes": 2081,
+      "sha256": "102751c749babe2853b8c2c44c61668c4b3a19922a22771c15bd5db8217a7e63"
+    },
+    "GREEN-RIDGE-REGION-PROPOSAL-2026-001.png": {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.png",
+      "bytes": 67467,
+      "sha256": "cc5fbe18515e1c149ec6bd507a90fc5485b018d092ff9d075e7d43353dea57f1"
+    },
+    "GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-001.tif": {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-001.tif",
+      "bytes": 3504,
+      "sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f"
+    },
+    "GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-002.tif": {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-002.tif",
+      "bytes": 3496,
+      "sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8"
+    }
+  },
+  "source_records": [
+    "MANIFEST-2026-035",
+    "MANIFEST-2026-036",
+    "MANIFEST-2026-037"
+  ],
+  "proposal_records": [
+    "REGISTRY-2026-036",
+    "LABEL_FITNESS-2026-023",
+    "USE_BOUNDARY-2026-033",
+    "MANIFEST-2026-038"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "GRP-001",
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "event_id": "OR4446712160520200817",
+      "fire_name": "Green Ridge 0684 CS",
+      "proposed_class": "burned",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 50,
+      "dnbr_interval": [
+        0.1,
+        0.15
+      ],
+      "dnbr_observed": {
+        "min": 0.102834,
+        "max": 0.14774,
+        "mean": 0.121948
+      },
+      "selection_tie_sha256": "195cc6fd318db58c029c9da6e88bd242caef8b13dea51f00cb18c003ddc9ab9a",
+      "candidate_raster": "GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-001.tif",
+      "candidate_raster_bytes": 3504,
+      "candidate_raster_sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "shape": [
+          518,
+          728
+        ],
+        "transform": [
+          20.0,
+          0.0,
+          607020.0,
+          0.0,
+          -20.0,
+          4929300.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside",
+          "1": "unreviewed core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-GRP-001.png",
+      "proposition_basis": "MTBS dNBR6 classes 2-4 and RAVG CBI4 classes 2-4 agree; pre/post dNBR is finite",
+      "limitations": [
+        "The fixed dNBR partition is an evidence-coherence rule, not a universal burn or severity threshold.",
+        "MTBS/RAVG agreement and the multi-signal background route are candidate evidence, not independent ground truth."
+      ],
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/terms/quality/uncertainty/leakage gates"
+    },
+    {
+      "candidate_id": "GRP-002",
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "event_id": "OR4446712160520200817",
+      "fire_name": "Green Ridge 0684 CS",
+      "proposed_class": "background",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 37,
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "dnbr_observed": {
+        "min": 0.001194,
+        "max": 0.020242,
+        "mean": 0.008552
+      },
+      "selection_tie_sha256": "0d084da3fb0a37e2f696744f2f46de43ae75f2fc90e113e2db236107410318da",
+      "candidate_raster": "GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-002.tif",
+      "candidate_raster_bytes": 3496,
+      "candidate_raster_sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "shape": [
+          518,
+          728
+        ],
+        "transform": [
+          20.0,
+          0.0,
+          607020.0,
+          0.0,
+          -20.0,
+          4929300.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside",
+          "1": "unreviewed core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-GRP-002.png",
+      "proposition_basis": "Three-scene clear/numeric evidence; transferred four-signal near-anniversary stability; at least 7 of 9 stable neighbors; MTBS and RAVG encoded class 0 agreement; outside the 60 m source-boundary uncertainty buffer. No single signal is sufficient.",
+      "limitations": [
+        "The fixed dNBR partition is an evidence-coherence rule, not a universal burn or severity threshold.",
+        "MTBS/RAVG agreement and the multi-signal background route are candidate evidence, not independent ground truth."
+      ],
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/terms/quality/uncertainty/leakage gates"
+    }
+  ],
+  "decision_contract": {
+    "yes": "necessary but insufficient; later exact intake and reproducibility, source, terms, quality, uncertainty, and event-level leakage gates remain mandatory",
+    "no": "excluded from prototype-label promotion",
+    "uncertain": "excluded with uncertainty preserved"
+  },
+  "response_custody_contract": {
+    "filename": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-<first-16-sha256>.json",
+    "content_identity": "SHA-256 of the exact UTF-8 LF-terminated response bytes",
+    "no_overwrite": true,
+    "rename_or_edit_after_export": false,
+    "authoritative_intake": "later separately versioned checkpoint only"
+  },
+  "summary": {
+    "candidate_count": 2,
+    "owner_responses": 0,
+    "labels_created": 0,
+    "dataset_count": 0,
+    "model_count": 0
+  },
+  "claim_boundaries": {
+    "owner_responses_collected": false,
+    "labels_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_inter_rater_field_official_or_operational_claimed": false
+  },
+  "warning": "Experimental BurnLens candidate review. Not a label, dataset, ground truth, official wildfire information, or emergency guidance. Official sources govern.",
+  "decision": "SURFACE_READY_FOR_GREEN_RIDGE_OWNER_REVIEW_KEEP_RESPONSE_INTAKE_SEPARATE",
+  "next_gate": "Preserve and intake one exact completed owner export in a separately versioned checkpoint before any label decision.",
+  "outputs": [
+    {
+      "path": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 14538,
+      "sha256": "1d974e3ba23e88a13e44ba3d54630ecd4ada3c01547e55a947fba87b11841102",
+      "media_type": "text/html"
+    },
+    {
+      "path": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 91540,
+      "sha256": "73ee12f6490707d33f2c5c49979c326a139f102d611af62b7180ea0954f8457e",
+      "media_type": "image/png"
+    },
+    {
+      "path": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 849,
+      "sha256": "4cac7fd46f9b2ffab055c5cf79da9c9bb194c95437a8a16fab59443042ff44b9",
+      "media_type": "application/json"
+    },
+    {
+      "path": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-GRP-001.png",
+      "bytes": 33678,
+      "sha256": "fac983e2b6a0fd62c77d85d2ca0846f53ac1804f6e250195f92ba357f4e2dae8",
+      "media_type": "image/png"
+    },
+    {
+      "path": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001-GRP-002.png",
+      "bytes": 32071,
+      "sha256": "5eca0b23d74c0b746d2afdc4810d1a81d7ddc490c05ee47d89d3012e2f49cb34",
+      "media_type": "image/png"
+    }
+  ]
+}

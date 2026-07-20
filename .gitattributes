@@ -55,6 +55,8 @@ samples/labels/review/regions/phase-two/*.json text eol=lf
 samples/labels/review/regions/phase-two/*.html text eol=lf
 samples/labels/review/regions/phase-two/intake/*.json text eol=lf
 samples/labels/review/regions/phase-two/intake/*.html text eol=lf
+samples/labels/review/green-ridge/phase-two/*.json text eol=lf
+samples/labels/review/green-ridge/phase-two/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf

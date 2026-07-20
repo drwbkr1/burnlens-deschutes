@@ -182,7 +182,7 @@ Task-level and checkpoint-level changes may be made through ordinary issue-backe
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified `v0.31.0-region-owner-response-intake` accepts six prototype regions only after all gates pass. Verified v0.32 through v0.35 freeze additional events and pass Green Ridge optical/reference/background-route fitness. Verified `v0.36.0-green-ridge-region-proposal` / issue #483 / PR #488 proposes one exact Green Ridge region per class without promotion. Issue #487 must build the bound blank owner review surface. Do not create a dataset or baseline until class/unknown and owner-review gates pass.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified `v0.31.0-region-owner-response-intake` accepts six prototype regions only after all gates pass. Verified v0.32 through v0.36 freeze additional events and pass Green Ridge optical/reference/background/proposal gates. P2O4-T25 / issue #487 has built the bound blank Green Ridge owner-review candidate; exact reconstruction, packaging, and the actual owner-operated completion/export path pass. Agent mobile automation is deferred because it is not material to this offline owner-only workflow. Issue #491 owns exact response custody, reconciliation, and any gated promotion. Do not create a dataset or baseline until class/unknown and owner-review gates pass.
 
 ## Required reading order for long-running Codex work
 
