@@ -388,6 +388,14 @@ The first implementation correctly rejected itself: BAER's continuous raster was
 
 The result contains 67,782 evidence pixels / 2,711.28 ha and 181 components at least one hectare. Fresh merged main repeats 312 tests with 13 expected custody skips, 106 JSON parses, exact output reconstruction, canonical packaging, and remote tag verification. That opens issue #508 as a separate deterministic proposal gate; it does not create a candidate, owner response, label, official unburned map, dataset, split, baseline, model, or accuracy claim. RAVG modeled classes remain excluded from affirmative use.
 
+### Grandview region proposal: deterministic review units, not labels
+
+BurnLens reruns the complete v0.41 route and transfers the already established fixed 0.05 dNBR partition, intact eight-connected component, 25-pixel target, coordinate-hash tie-break, and one-pixel unknown-ring rules without tuning. The burned route requires MTBS classes 2-4 and finite pre/post dNBR. The background route retains all three-scene stability, vector-footprint, 60 m boundary, and registration exclusions. RAVG modeled classes are deliberately absent from affirmative candidate logic.
+
+![Grandview region proposal](../../samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.png)
+
+The result is one 25-pixel proposed burned core and one 25-pixel proposed background core, each 1.0 ha, with 46 and 52 unknown-ring pixels. The rendered evidence makes the relatively low pre/post dNBR of the MTBS-backed burned proposal visible rather than silently strengthening the claim. Both regions remain unreviewed. This checkpoint creates no owner response, label, truth claim, dataset, split, baseline, model, metric, field validation, official status, endorsement, or operational readiness.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`

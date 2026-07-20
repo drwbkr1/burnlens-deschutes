@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.42.0-grandview-region-proposal - candidate - 2026-07-20
+
+### P2O4-T30 - Propose bounded Grandview regions
+
+- Rerun verified v0.41.0 first and reproduce its five route outputs without drift.
+- Transfer the established fixed 0.05 dNBR partition, intact eight-connected component, 25-pixel target, hash tie-break, and one-pixel unknown-ring rules without threshold tuning.
+- Use MTBS classes 2-4 plus finite pre/post dNBR for the burned route; keep RAVG modeled classes out of affirmative logic under the delivered sparse/non-tree warning.
+- Retain the verified three-scene stability, exact vector-footprint, 60 m source-boundary, and registration exclusions for the background route.
+- Publish one 25-pixel proposed burned core and one 25-pixel proposed background core with 98 total unknown-ring pixels; create zero owner responses, labels, dataset, split, baseline, or model.
+
+Generator `78bb79eb04d76cff4ed183274de881557b176413` creates run `BL-2026-07-20-grandview-region-proposal-r001`. Public JSON/HTML/PNG and two EPSG:32610 rasters are exact and render actual optical, dNBR, MTBS/background-route, core, and unknown-ring evidence. The custody worktree passes all 326 tests in two complete bounded shards; fresh remote head passes 312 tests with 14 expected custody skips, 108 JSON parses, and exact five-output reconstruction. Two fixed-epoch 602,463-byte wheels are byte-identical at SHA-256 `15e15173b345df7caae4b12bb03975df9e0646345bd890bc9fdd0ec62ef192d2`; isolated import and dependency health pass. Fresh merged-main and remote-tag verification remain pending; issue #511 owns the separately versioned blank owner surface.
+
 ## v0.41.0-grandview-background-evidence - verified - 2026-07-20
 
 ### P2O4-T29 - Establish affirmative Grandview background evidence
