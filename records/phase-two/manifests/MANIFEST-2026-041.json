@@ -79,7 +79,7 @@
     "label_dataset_model": "blocked: no Grandview candidate, owner response, label, dataset, split, baseline, or model",
     "repository_tests": "pass in custody worktree: 308 tests; compileall; 101 tracked JSON documents parse",
     "release_package": "pass: two independent clean-branch fixed-epoch wheels are byte-identical; 127 entries; 61 commands; dependency-complete isolated install and pip check pass",
-    "fresh_remote_head": "pending final candidate commit and review",
+    "fresh_remote_head": "pass: remote branch clone with empty ignored downloads boundary; 308 tests with 12 expected custody skips, compileall, and exact 3-of-3 reconstruction through unchanged original custody",
     "fresh_merged_main": "pending merge",
     "remote_tag": "pending merge and fresh-main verification"
   },
