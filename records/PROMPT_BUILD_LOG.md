@@ -219,7 +219,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T28 | `records/prompt-build-log/2026-07-20-p2o4-t28.md` | issue #499 / PR #504; verified BurnLens 0.40.0; next #503 | Preserves the exact Grandview delivery, gates 20 native rasters, opens an MTBS-backed owner-review route, enforces RAVG's sparse-cover limit, and keeps background evidence plus every candidate/label/data/model decision deferred. |
 | P2O4-T28-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t28-sync.md` | issue #505 / PR #506; verified v0.40 lifecycle synchronization | Records PR #504, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #503 without changing scientific or private state. |
 | P2O4-T29 | `records/prompt-build-log/2026-07-20-p2o4-t29.md` | issue #503 / PR #507; verified BurnLens 0.41.0; next #508 | Acquires one exact near-anniversary Grandview scene, enforces baseline-aware reflectance and registration exclusions, uses exact delivered program vectors, and opens a background-evidence route with zero candidates, owner responses, labels, dataset, split, baseline, or model. |
-| P2O4-T29-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t29-sync.md` | issue #509; verified v0.41 lifecycle synchronization | Records PR #507, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #508 without changing scientific or private state. |
+| P2O4-T29-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t29-sync.md` | issue #509 / PR #510; verified v0.41 lifecycle synchronization | Records PR #507, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #508 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 

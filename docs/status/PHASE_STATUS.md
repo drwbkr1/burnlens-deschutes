@@ -15,7 +15,7 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | Verified `v0.41.0-grandview-background-evidence`; checkpoint `07c35346ad1369c2fe1e2a4570996c23ba56dac4`; tag object `61288c1c641d1f119aee83eae5931e79f3b0c621`; issue #503 / PR #507; lifecycle #509; next #508 |
+| Latest repository evidence baseline | Verified `v0.41.0-grandview-background-evidence`; checkpoint `07c35346ad1369c2fe1e2a4570996c23ba56dac4`; tag object `61288c1c641d1f119aee83eae5931e79f3b0c621`; issue #503 / PR #507; lifecycle #509 / PR #510; next #508 |
 | Active release candidate | None. Issue #508 owns a separate deterministic Grandview region proposal from the verified route; it may create unreviewed candidates and unknown rings, not owner responses or labels. |
 | Official-source scout evidence | BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 12 bounded official responses / 7 source classes / 21 candidates / 0 labels; GW Fire ranked first; Landsat asset state `AUTHENTICATION_REQUIRED` |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |

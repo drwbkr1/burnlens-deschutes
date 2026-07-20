@@ -14,7 +14,7 @@
   "version_tag": "v0.41.0-grandview-background-evidence",
   "version_tag_object": "61288c1c641d1f119aee83eae5931e79f3b0c621",
   "lifecycle_sync_issue": 509,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 510,
   "next_checkpoint_issue": 508,
   "status": "verified release: affirmative Grandview background evidence route passes; candidates and labels deferred",
   "software_version": "0.41.0",
