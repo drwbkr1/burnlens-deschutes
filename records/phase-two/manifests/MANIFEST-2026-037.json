@@ -14,7 +14,7 @@
   "version_tag": "v0.35.0-green-ridge-background-evidence",
   "version_tag_object": "d901ea55d683a103bf6f00b8fac55434b65518b4",
   "lifecycle_sync_issue": 485,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 486,
   "next_checkpoint_issue": 483,
   "status": "verified: affirmative Green Ridge background route passes; candidates remain deferred",
   "software_version": "0.35.0",
