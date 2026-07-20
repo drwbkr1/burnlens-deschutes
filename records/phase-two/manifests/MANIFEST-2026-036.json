@@ -9,7 +9,7 @@
   "git_base_commit": "363f1bd5ebe9e8c998ccfc5f6dd24908c727349f",
   "request_contract_commit": "903b91e",
   "generator_source_commit": "7d6172ddc23efe445460c83886cbfc5b7c88eae3",
-  "candidate_artifacts_commit": "157f9eeb4f6a6833eaceb4f1e0b070970bf3cb50",
+  "candidate_artifacts_commit": "b5d5ffec84ac7142e5057e87f1156600d61af476",
   "checkpoint_commit": null,
   "version_tag": "v0.34.0-green-ridge-reference-fitness",
   "version_tag_object": null,

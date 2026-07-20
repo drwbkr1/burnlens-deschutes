@@ -2,7 +2,7 @@
 
 **Issue / branch:** #477 / `codex/p2o4-t22-green-ridge-reference-fitness`  
 **Generator:** `7d6172ddc23efe445460c83886cbfc5b7c88eae3`  
-**Artifacts:** `157f9eeb4f6a6833eaceb4f1e0b070970bf3cb50`  
+**Artifacts:** `b5d5ffec84ac7142e5057e87f1156600d61af476`  
 **Run:** `BL-2026-07-19-green-ridge-reference-fitness-r001`
 
 | Artifact | Class | Version/state | Private/provider bytes committed |
