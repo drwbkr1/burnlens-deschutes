@@ -216,6 +216,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T26-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t26-sync.md` | issue #497 / PR #498; verified v0.38 lifecycle synchronization | Records PR #496, merge, exact reconstruction, fresh-main gates, canonical package, remote annotated tag, and next issue #495 without changing scientific or private state. |
 | P2O4-T27 | `records/prompt-build-log/2026-07-20-p2o4-t27.md` | issue #495 / PR #500; verified BurnLens 0.39.0; next #499 | Reproduces the current event plan, acquires and registers the exact Grandview pair, passes native-pixel quality and registration, renders continuous change without labels, and defers official reference pixels plus every candidate/data/model decision. |
 | P2O4-T27-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t27-sync.md` | issue #501 / PR #502; verified v0.39 lifecycle synchronization | Records PR #500, merge, exact reconstruction, fresh-main gates, canonical package, remote annotated tag, and next issue #499 without changing scientific or private state. |
+| P2O4-T28 | `records/prompt-build-log/2026-07-20-p2o4-t28.md` | issue #499; Grandview official reference fitness in progress | Reproduces v0.39, freezes the current exact BAER/MTBS/RAVG request including the sparse-cover RAVG warning, and requires fresh metadata plus one no-retry queue submission before any delivered pixel is opened. |
 
 ## Acceptance and remediation triggers
 
