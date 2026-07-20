@@ -2,6 +2,17 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.37.0-green-ridge-owner-review-surface - unshipped candidate - 2026-07-20
+
+### P2O4-T25 - Bind Green Ridge proposals to blank owner review
+
+- Rebuild and bind all five verified v0.36 proposal outputs before rendering.
+- Present pre-fire, post-fire, 2021 extended optical, dNBR, and MTBS/RAVG agreement for each exact core and excluded unknown ring.
+- Provide blank yes/no/uncertain capture, hash-named export, strict reload, completion attestation, browser-session lock, and explicit no-overwrite custody language.
+- Preserve zero owner responses, labels, dataset, split, baseline, model, metric, or accuracy result.
+
+Generator `994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10` produces run `BL-2026-07-20-green-ridge-owner-review-surface-r001`; artifacts commit at `6da33ff846a55fc60e27c1f39d4d7a0488bbff81`. Six outputs reconstruct byte for byte; original-resolution evidence inspection, 291 tests, 97 JSON parses, compilation, and two identical 541,301-byte wheels pass. The in-app browser security policy blocks agent navigation to the local `file://` page, so real desktop/mobile interaction and export/reload/lock observation remain pending and the release is not shipped. Issue #491 owns later response intake only after this gate passes.
+
 ## v0.36.0-green-ridge-region-proposal - verified - 2026-07-20
 
 ### P2O4-T24 - Propose bounded Green Ridge regions
