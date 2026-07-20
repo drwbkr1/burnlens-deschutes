@@ -4,7 +4,7 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "created_at_utc": "2026-07-19T23:55:00Z",
   "task_issue": 477,
-  "pull_request": null,
+  "pull_request": 479,
   "branch": "codex/p2o4-t22-green-ridge-reference-fitness",
   "git_base_commit": "363f1bd5ebe9e8c998ccfc5f6dd24908c727349f",
   "request_contract_commit": "903b91e",
@@ -72,7 +72,7 @@
     "release_package": "pass: two fixed-epoch wheels byte-identical; isolated install and dependency check pass",
     "background_candidate": "blocked: no affirmative background truth",
     "label_dataset_model": "blocked: zero candidates, owner decisions, labels, dataset, split, baseline, or model",
-    "pull_request_merge_tag": "pending"
+    "pull_request_merge_tag": "PR #479 open; merge and tag pending"
   },
   "decision": "ACCEPT_REFERENCE_PIXELS_AS_BOUNDED_EVIDENCE_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
 }
