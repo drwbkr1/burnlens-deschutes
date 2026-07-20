@@ -362,6 +362,16 @@ Both answers are yes, but neither becomes a label by vote alone. The intake reop
 
 The cumulative prototype set is now balanced at four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded ring pixels across four events. That is materially stronger label evidence, but still not a dataset. Grandview and Petes Lake must pass equivalent event-level gates before splits or baselines can begin.
 
+## Grandview crosses the optical evidence gate
+
+The next cycle reran the shipped event planner and confirmed Grandview was still the highest-leverage missing event. BurnLens refreshed the two frozen CDSE identities and current Sentinel terms before downloading anything, then preserved the exact 1,923,481,794-byte Sentinel-2B pair only in ignored repository-local custody. Both archives pass provider checksums, local SHA-256, safe-root, manifest, and full CRC gates.
+
+![Grandview native source-fitness evidence](../../samples/cross-event/phase-two/GRANDVIEW-SOURCE-FITNESS-2026-001.png)
+
+The actual full event boundary contains 62,588 native 20 m pixels. Pair quality is 97.5794% eligible, 1.0337% review-needed, and 1.3868% excluded. All nine fixed registration windows pass, with 0.1158-pixel p95 residual. The visible continuous dNBR distribution is useful change evidence, but it is deliberately not thresholded into severity or a label.
+
+This checkpoint sharpens rather than relaxes the next gate. Grandview BAER, MTBS, and RAVG identities are known, but none of their pixels were opened in this run. Burned and affirmative-background candidates therefore remain unavailable, and the existing eight-region/four-event prototype set does not change. Issue #499 owns exact reference-pixel fitness before any Grandview proposal or owner review.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -400,6 +410,8 @@ The cumulative prototype set is now balanced at four burned and four background 
 - Latest Green Ridge background-evidence run: `BL-2026-07-20-green-ridge-background-evidence-r001`
 - Latest Green Ridge region-proposal run: `BL-2026-07-20-green-ridge-region-proposal-r001`
 - Latest Green Ridge owner-response intake run: `BL-2026-07-20-green-ridge-owner-response-intake-r001`
+- Latest Grandview optical acquisition run: `BL-2026-07-20-grandview-optical-intake-r001`
+- Latest Grandview source-fitness run: `BL-2026-07-20-grandview-source-fitness-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -411,7 +423,8 @@ The cumulative prototype set is now balanced at four burned and four background 
 - Latest verified tool: BurnLens `0.35.0`; issue #480 / PR #484; checkpoint `b57bcbe5665dcb09a7e716e2e1de4147be4741e4`; contract `678e93c29a07f070f4fb5e289fddbdfa852c9ccb`; generator `92f407f37a32a020c1a47bb1931015b3607c2d89`; artifacts `7ca04102640a108e440054c2693aa6bdc20a02b0`; tag object `d901ea55d683a103bf6f00b8fac55434b65518b4`; 26,126 eligible background-route pixels; zero candidates/labels; next #483
 - Prior verified release: `v0.35.0-green-ridge-background-evidence`; checkpoint `b57bcbe5665dcb09a7e716e2e1de4147be4741e4`; tag object `d901ea55d683a103bf6f00b8fac55434b65518b4`; one exact 1,193,992,663-byte extended scene; nine registration windows; 26,126 eligible background-route pixels
 - Prior verified release: `v0.36.0-green-ridge-region-proposal`; issue #483 / PR #488; checkpoint `71c3ffedeb2bb54bbeca8e97686c8e37e710e354`; generator `690137f1530a00ca79b8f5831f700541809b2a2b`; artifacts `1858a7a945957fd0cc3d123b325529f9931806c3`; tag object `bc0110afa0c4ccf6e3314d394d544cfde16aaae9`; two 25-pixel unreviewed cores / 87 unknown-ring pixels; zero owner responses/labels; next #487
-- Current verified release: `v0.38.0-green-ridge-owner-response-intake`; issue #491 / PR #496; checkpoint `17bd3652fbb07c096f478224a4d5c173729954c2`; tag object `16f364aac604958d812fb2567dd9cd8b5ea13d6c`; run `BL-2026-07-20-green-ridge-owner-response-intake-r001`; two accepted 25-pixel cores / 87 excluded ring pixels / eight balanced prototype regions across four events; exact 3-of-3 reconstruction, 299 fresh-main tests, canonical packaging, dependency health, and remote tag verification pass; Grandview remains #495
+- Current verified release: `v0.38.0-green-ridge-owner-response-intake`; issue #491 / PR #496; checkpoint `17bd3652fbb07c096f478224a4d5c173729954c2`; tag object `16f364aac604958d812fb2567dd9cd8b5ea13d6c`; run `BL-2026-07-20-green-ridge-owner-response-intake-r001`; two accepted 25-pixel cores / 87 excluded ring pixels / eight balanced prototype regions across four events; exact 3-of-3 reconstruction, 299 fresh-main tests, canonical packaging, dependency health, and remote tag verification pass
+- Current release candidate: BurnLens `0.39.0`; issue #495; contract `a4596661fd2794d67ba3dbd16f6dcf0457bb07b4`; generator `527caeb0c83fb70bdd0af37d11a1215914ca0be9`; exact 1,923,481,794-byte Grandview pair; 62,588 native pixels; 9/9 registration windows; no new candidate or label; next #499
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Current request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; exact request accepted, delivery pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state

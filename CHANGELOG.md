@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.39.0-grandview-source-fitness - release candidate - 2026-07-20
+
+### P2O4-T27 - Establish Grandview native optical source fitness
+
+- Reproduce the verified additional-event plan and retain Grandview as the highest-leverage missing event.
+- Freeze current official CDSE identity, checksums, terms, and attribution before acquiring the exact 1,923,481,794-byte Sentinel-2B pair into ignored custody.
+- Open the actual full-boundary native pixels, preserve SCL-derived uncertainty, and pass 9/9 deterministic content-registration windows.
+- Render pre/post imagery, continuous dNBR, quality, registration, traceability, and the no-label use boundary.
+- Defer all BAER/MTBS/RAVG pixels, candidates, owner responses, labels, dataset, split, baseline, and model decisions to separately gated work.
+
+Contract `a4596661fd2794d67ba3dbd16f6dcf0457bb07b4` and generator `527caeb0c83fb70bdd0af37d11a1215914ca0be9` create acquisition run `BL-2026-07-20-grandview-optical-intake-r001` and evidence run `BL-2026-07-20-grandview-source-fitness-r001`. The report measures 62,588 boundary pixels, 97.5794% pair eligibility, 1.0337% review-needed, 1.3868% excluded, 0.1158-pixel p95 registration residual, and 61,073 continuous-dNBR pixels without thresholding them. Exact reconstruction and original-resolution render inspection pass. Issue #499 owns exact official reference-pixel fitness; release verification is still pending.
+
 ## v0.38.0-green-ridge-owner-response-intake - verified - 2026-07-20
 
 ### P2O4-T26 - Lock and reconcile the Green Ridge owner response
