@@ -4,7 +4,7 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "created_at_utc": "2026-07-20T02:12:00Z",
   "task_issue": 487,
-  "pull_request": null,
+  "pull_request": 492,
   "branch": "codex/p2o4-t25-green-ridge-owner-review-surface",
   "git_base_commit": "d9485d2acf9c4c3e04e0192c328d4f90587be1d9",
   "generator_source_commit": "994f0b186d0cd3fce6cdc0146f6d7ddb0b675e10",
@@ -54,11 +54,11 @@
     "evidence": "pass: ten original-resolution pre/post/extended/dNBR/reference panels inspected",
     "response_contract": "pass in deterministic tests and Node syntax; actual browser export/reload/lock pending",
     "exact_reconstruction": "pass: all six surface outputs reproduce byte for byte",
-    "repository_tests": "pass in candidate worktree: 291 tests; compileall; 97 tracked JSON documents before this manifest",
+    "repository_tests": "pass in candidate worktree: 291 tests; compileall; 98 tracked JSON documents including this manifest",
     "release_package": "pass: two fixed-epoch wheels byte-identical; dependency-complete isolated install and CLI help pass",
     "real_browser": "BLOCKED: agent file URL navigation rejected by browser security policy; owner-opened desktop/mobile interaction required",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
-    "repository_release": "blocked pending real browser, pull request, fresh-main, package, and remote-tag gates"
+    "repository_release": "blocked: draft PR #492 remains open pending real browser, fresh-main, package, and remote-tag gates"
   },
   "decision": "SURFACE_CANDIDATE_BUILT_KEEP_RELEASE_RESPONSE_AND_PROMOTION_CLOSED"
 }

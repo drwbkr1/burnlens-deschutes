@@ -210,7 +210,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T23-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t23-sync.md` | issue #485 / PR #486; verified v0.35 lifecycle synchronization | Records PR #484, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #483 without changing scientific or private state. |
 | P2O4-T24 | `records/prompt-build-log/2026-07-20-p2o4-t24.md` | issue #483 / PR #488; verified BurnLens 0.36.0; next #487 | Publishes two intact Green Ridge proposal cores and explicit unknown rings with zero owner responses, labels, dataset, split, baseline, or model. |
 | P2O4-T24-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t24-sync.md` | issue #489 / PR #490; verified v0.36 lifecycle synchronization | Records PR #488, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #487 without changing scientific or private state. |
-| P2O4-T25 | `records/prompt-build-log/2026-07-20-p2o4-t25.md` | issue #487; unshipped BurnLens 0.37.0 candidate; next #491 | Binds both exact Green Ridge proposals to a blank owner review surface. Exact reconstruction, static evidence, tests, and packaging pass; real desktop/mobile export/reload/lock observation remains blocking. |
+| P2O4-T25 | `records/prompt-build-log/2026-07-20-p2o4-t25.md` | issue #487 / draft PR #492; unshipped BurnLens 0.37.0 candidate; next #491 | Binds both exact Green Ridge proposals to a blank owner review surface. Exact reconstruction, static evidence, tests, and packaging pass; real desktop/mobile export/reload/lock observation remains blocking. |
 
 ## Acceptance and remediation triggers
 
