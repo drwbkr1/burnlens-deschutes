@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.36.0-green-ridge-region-proposal - release candidate - 2026-07-20
+## v0.36.0-green-ridge-region-proposal - verified - 2026-07-20
 
 ### P2O4-T24 - Propose bounded Green Ridge regions
 
@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Publish one 25-pixel proposed burned core and one 25-pixel proposed background core plus 87 unknown-ring pixels as exact EPSG:32610 rasters.
 - Reconstruct JSON, HTML, PNG, and both rasters byte for byte while creating zero owner responses or labels.
 
-Generator `690137f1530a00ca79b8f5831f700541809b2a2b` produces run `BL-2026-07-20-green-ridge-region-proposal-r001`. Issue #487 owns the blank owner yes/no/uncertain surface. Dataset, split, baseline, model, metric, accuracy, ground-truth, field, official, endorsed, and operational claims remain absent.
+Generator `690137f1530a00ca79b8f5831f700541809b2a2b` produces run `BL-2026-07-20-green-ridge-region-proposal-r001`. PR #488 merges at checkpoint `71c3ffedeb2bb54bbeca8e97686c8e37e710e354`. Fresh main passes 287 tests, 95 JSON parses, exact 5-of-5 reconstruction, and canonical 531,038-byte packaging. Tag object `bc0110afa0c4ccf6e3314d394d544cfde16aaae9` remotely peels to the checkpoint. Lifecycle #489 records the release; issue #487 owns the blank owner yes/no/uncertain surface. Dataset, split, baseline, model, metric, accuracy, ground-truth, field, official, endorsed, and operational claims remain absent.
 
 ## v0.35.0-green-ridge-background-evidence - verified - 2026-07-20
 
