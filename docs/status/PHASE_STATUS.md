@@ -15,7 +15,7 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | Verified `v0.39.0-grandview-source-fitness`; checkpoint `c89282da086bed98c009e440689eb06c864fb267`; tag object `faacd1a33c9f486daba54d94ec7962694742fbd2`; issue #495 / PR #500; lifecycle #501; next #499 |
+| Latest repository evidence baseline | Verified `v0.39.0-grandview-source-fitness`; checkpoint `c89282da086bed98c009e440689eb06c864fb267`; tag object `faacd1a33c9f486daba54d94ec7962694742fbd2`; issue #495 / PR #500; lifecycle #501 / PR #502; next #499 |
 | Official-source scout evidence | BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 12 bounded official responses / 7 source classes / 21 candidates / 0 labels; GW Fire ranked first; Landsat asset state `AUTHENTICATION_REQUIRED` |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoints | Verified v0.38 accepts eight balanced prototype regions across four events. Verified v0.39 passes exact Grandview Sentinel custody, 62,588 native pixels, 97.5794% pair eligibility, and 9/9 registration windows while deferring official reference pixels, candidates, labels, dataset, split, baseline, and model; historical 6/0/50 exclusions are not inherited. |

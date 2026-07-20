@@ -15,7 +15,7 @@
   "version_tag": "v0.39.0-grandview-source-fitness",
   "version_tag_object": "faacd1a33c9f486daba54d94ec7962694742fbd2",
   "lifecycle_sync_issue": 501,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 502,
   "next_checkpoint_issue": 499,
   "status": "verified release: Grandview optical source passes; reference pixels and labels deferred",
   "software_version": "0.39.0",
