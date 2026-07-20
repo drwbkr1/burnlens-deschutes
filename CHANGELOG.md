@@ -2,6 +2,17 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.36.0-green-ridge-region-proposal - release candidate - 2026-07-20
+
+### P2O4-T24 - Propose bounded Green Ridge regions
+
+- Rerun the exact v0.35 source pipeline before selection.
+- Apply the established fixed 0.05 dNBR coherence partition, intact eight-connected components, 25-pixel ranking target, hash tie-break, and one-pixel unknown rings without tuning or clipping.
+- Publish one 25-pixel proposed burned core and one 25-pixel proposed background core plus 87 unknown-ring pixels as exact EPSG:32610 rasters.
+- Reconstruct JSON, HTML, PNG, and both rasters byte for byte while creating zero owner responses or labels.
+
+Generator `690137f1530a00ca79b8f5831f700541809b2a2b` produces run `BL-2026-07-20-green-ridge-region-proposal-r001`. Issue #487 owns the blank owner yes/no/uncertain surface. Dataset, split, baseline, model, metric, accuracy, ground-truth, field, official, endorsed, and operational claims remain absent.
+
 ## v0.35.0-green-ridge-background-evidence - verified - 2026-07-20
 
 ### P2O4-T23 - Establish affirmative Green Ridge background evidence

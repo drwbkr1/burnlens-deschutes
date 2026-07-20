@@ -1,0 +1,53 @@
+{
+  "manifest_id": "MANIFEST-2026-038",
+  "manifest_version": "0.38.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-20T01:30:00Z",
+  "task_issue": 483,
+  "pull_request": null,
+  "branch": "codex/p2o4-t24-green-ridge-region-proposal",
+  "git_base_commit": "a382d4a6b9ca26fa9e3930be4d29f52ffc8d3898",
+  "generator_source_commit": "690137f1530a00ca79b8f5831f700541809b2a2b",
+  "candidate_artifacts_commit": "1858a7a945957fd0cc3d123b325529f9931806c3",
+  "checkpoint_commit": null,
+  "version_tag": "v0.36.0-green-ridge-region-proposal",
+  "version_tag_object": null,
+  "next_checkpoint_issue": 487,
+  "status": "candidate: two Green Ridge regions proposed; owner review and promotion closed",
+  "software_version": "0.36.0",
+  "run_id": "BL-2026-07-20-green-ridge-region-proposal-r001",
+  "event_group_id": "event-green-ridge-0684-cs-2020",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "outputs": [
+    {"path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.json", "bytes": 4327, "sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281"},
+    {"path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.html", "bytes": 2081, "sha256": "102751c749babe2853b8c2c44c61668c4b3a19922a22771c15bd5db8217a7e63"},
+    {"path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.png", "bytes": 67467, "sha256": "cc5fbe18515e1c149ec6bd507a90fc5485b018d092ff9d075e7d43353dea57f1"},
+    {"path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-001.tif", "bytes": 3504, "sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f"},
+    {"path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-002.tif", "bytes": 3496, "sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8"}
+  ],
+  "measured_evidence": {
+    "candidate_count": 2,
+    "burned_core_pixels": 25,
+    "background_core_pixels": 25,
+    "unknown_ring_pixels": 87,
+    "owner_responses": 0,
+    "labels_created": 0
+  },
+  "quality_gates": {
+    "source_reverification": "pass: exact v0.35 optical/reference pipeline rerun",
+    "selection": "pass: intact 8-connected fixed-bin components; deterministic target-distance and hash tie-break",
+    "rasters": "pass: two EPSG:32610 20 m rasters; domains 0/1/2 with nodata 255 and zero label tags",
+    "render": "pass: original-resolution PNG inspected; semantic HTML emitted",
+    "exact_reconstruction": "pass: JSON, HTML, PNG, and both rasters reproduce byte for byte",
+    "repository_tests": "pass in candidate worktree: 287 tests; compileall; 94 JSON documents parse",
+    "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
+    "repository_release": "pending pull request, fresh-main, package, and remote-tag gates"
+  },
+  "decision": "PROPOSE_TWO_GREEN_RIDGE_REGIONS_KEEP_OWNER_REVIEW_AND_PROMOTION_CLOSED"
+}
