@@ -9,7 +9,7 @@
   "git_base_commit": "e69663d042df51d05cf74f8eef11b7416b49b9e0",
   "generator_source_commit": "78bb79eb04d76cff4ed183274de881557b176413",
   "candidate_artifacts_commit": "f0fc97327c92f7c22949388bac0ab1e60281602c",
-  "candidate_head_commit": null,
+  "candidate_head_commit": "f29ccb7a24f08eee7abf2937661ea1070236a10d",
   "checkpoint_commit": null,
   "version_tag": "v0.42.0-grandview-region-proposal",
   "version_tag_object": null,
@@ -50,13 +50,13 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.42.0-py3-none-any.whl",
-    "source_commit": null,
-    "source_date_epoch": null,
-    "bytes": null,
-    "sha256": null,
-    "entries": null,
-    "console_commands": null,
-    "isolated_install": "pending"
+    "source_commit": "f29ccb7a24f08eee7abf2937661ea1070236a10d",
+    "source_date_epoch": 1784590790,
+    "bytes": 602463,
+    "sha256": "15e15173b345df7caae4b12bb03975df9e0646345bd890bc9fdd0ec62ef192d2",
+    "entries": 139,
+    "console_commands": 67,
+    "isolated_install": "pass: dependency-complete environment imports 0.42.0 from site-packages; new command help and pip check pass"
   },
   "quality_gates": {
     "source_reverification": "pass: verified v0.41 route rerun; prior JSON, HTML, and PNG remain byte exact after context-grid MTBS exposure",
@@ -67,8 +67,8 @@
     "privacy": "pass: no private path, credential, token, recipient, retrieval route, or provider byte committed",
     "repository_tests": "pass in two complete bounded shards: 144 plus 182 equals 326 tests; compileall; 108 JSON documents including this manifest parse",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
-    "release_package": "pending",
-    "fresh_remote_head": "pending",
+    "release_package": "pass: two fixed-epoch wheels are byte-identical; 602,463 bytes; 139 clean entries; 67 commands; isolated import and dependency health pass",
+    "fresh_remote_head": "pass at f29ccb7a24f08eee7abf2937661ea1070236a10d: 312 passed and 14 expected custody skips; compileall; 108 JSON parses; exact five-output reconstruction through unchanged custody; canonical wheels match",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
