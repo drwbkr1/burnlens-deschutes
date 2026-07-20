@@ -233,6 +233,7 @@ def build_report(
         "post_tci": post["TCI"],
         "pre_mask": pre["MASK10"],
         "post_mask": post["MASK10"],
+        "boundary_mask20": pre["MASK20"],
         "dnbr": dnbr,
         "dnbr_valid": spectral_valid,
     }

@@ -23,7 +23,7 @@ class LabelRegionRemediationPlanTests(unittest.TestCase):
         cls.report = build_report(SUFFICIENCY, SCOUT, SOURCE, BUNDLE, "2026-07-18T05:30:00Z", "BL-TEST-REGION-PLAN", "a" * 40)
 
     def test_version_decision_and_no_analytical_versions(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.33.0")
+        self.assertEqual(burnlens.__version__, "0.34.0")
         self.assertEqual(self.report["decision"], DECISION)
         self.assertFalse(any(self.report["boundaries"].values()))
 
