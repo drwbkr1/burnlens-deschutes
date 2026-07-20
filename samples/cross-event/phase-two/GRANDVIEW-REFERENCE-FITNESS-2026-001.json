@@ -1,0 +1,1964 @@
+{
+  "report_id": "GRANDVIEW-REFERENCE-FITNESS-2026-001",
+  "report_version": "grandview-reference-fitness-v0.1.0",
+  "protocol_version": "grandview-reference-fitness-protocol-v0.1.0",
+  "generated_at_utc": "2026-07-20T20:08:49Z",
+  "run_id": "BL-2026-07-20-grandview-reference-fitness-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 499,
+  "git_source_commit": "9f28f822c114788a1a9bb09a52fab22616be0376",
+  "software_version": "0.40.0",
+  "application_version": null,
+  "event": {
+    "event_group_id": "event-grandview-0558-od-2021",
+    "event_id": "OR4446612140020210711",
+    "fire_name": "GRANDVIEW 0558 OD",
+    "map_ids": {
+      "BAER": 10019092,
+      "MTBS": 10023989,
+      "RAVG": 10019464
+    }
+  },
+  "trace": {
+    "source_record_id": "SOURCE-2026-026",
+    "terms_review_id": "TERMS-2026-022",
+    "access_record_id": "ACCESS-2026-016",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null,
+    "optical_acquisition_run_id": "BL-2026-07-20-grandview-optical-intake-r001",
+    "reference_request_run_id": "BL-2026-07-20-grandview-reference-request-r001",
+    "reference_delivery_run_id": "BL-2026-07-20-grandview-reference-delivery-r001"
+  },
+  "archive": {
+    "filename": "grandview-reference-delivery-r001.zip",
+    "bytes": 22076790,
+    "sha256": "ea30fe613931d9b90c1405a653ac01fe6bfaa7ee80f3ed02480422271ff874bf",
+    "member_count": 53,
+    "uncompressed_bytes": 30559125,
+    "expansion_ratio": 1.3842,
+    "map_ids_in_member_names": [
+      10019092,
+      10019464,
+      10023989
+    ],
+    "notice_candidates": [
+      "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_iso_metadata.xml",
+      "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_metadata.xml",
+      "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_iso_metadata.xml",
+      "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_metadata.xml",
+      "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_iso_metadata.xml",
+      "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_metadata.xml"
+    ],
+    "crc_pass": true,
+    "safe_structure_pass": true,
+    "exact_contract_pass": true,
+    "restricted_baer_classified_members": [],
+    "private_delivery_route_retained": false
+  },
+  "metadata": [
+    {
+      "program": "BAER",
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_metadata.xml",
+      "bytes": 25728,
+      "sha256": "bdf17b907798941b8b0871f2d2e5b98828dfe8ece45ef695744d240fe54d7e8c",
+      "abstract": "These data products are preliminary burn severity assessments derived from Sentinel-2A data. The pre-fire and post-fire subsets included were used to create a differenced Normalized Burn Ratio (dNBR) image. The dNBR image attempts to portray the variation of burn severity within a fire. The severity ratings are influenced by the effects to the canopy. The severity rating is based upon a composite of the severity to the understory (grass, shrub layers), midstory trees and overstory trees. Because there is often a strong correlation between canopy consumption and soil effects, this algorithm works in many cases for BAER teams whose objective is a soil burn severity assessment. It is not, however, appropriate in all ecosystems or fires. It is expected that BAER teams will adjust the thresholds to match field observations to produce a soil burn severity.",
+      "purpose": "These data were created by the gtac to support Burned Area Emergency Response (BAER) teams.",
+      "access_constraints": "Thresholded, preliminary severity estimates (BARC4 and BARC256) are only delivered to BAER teams. Further distribution is at the discretion of the BAER team leader. Pre-imagery, post-imagery, and unthresholded data may be publicly available on https://burnseverity.cr.usgs.gov/products/baer or https://burnseverity.cr.usgs.gov/baer/baer-imagery-support-data-download. Access to pre-imagery and post-imagery may be limited when sensors other than Landsat or other government remote sensing assets are used due to product licensing restrictions.",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources and limitations as preliminary/draft data.",
+      "credit": "U.S. Forest Service (physical address): 125 South State Street, Suite 7105: Salt Lake City, UT, USA, 84138",
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. This product is produced from geospatial information prepared by the U.S. Forest Service GTAC. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. The U.S. Forest Service GTAC make no expressed or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The U.S. Forest Service GTAC reserves the right to correct, update, modify, or replace this geospatial information without notification.",
+      "iso_metadata": {
+        "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_iso_metadata.xml",
+        "bytes": 31089,
+        "sha256": "f3b9d6b7034aa11f74df86bfc0ebb9b219f85eec043c4b7ab26e37df20421437",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
+    },
+    {
+      "program": "MTBS",
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_metadata.xml",
+      "bytes": 37967,
+      "sha256": "01bf01aa559c04677a982f7d8b6b67f935c31cbfb3c45cd4e9194e6c32feef60",
+      "abstract": "The Monitoring Trends in Burn Severity (MTBS) Program assesses the frequency, extent, and magnitude (size and severity) of all large wildland fires (wildfires and prescribed fires) in the conterminous United States (CONUS), Alaska, Hawaii, and Puerto Rico for the period 1984 and beyond. All fires reported as greater than 1,000 acres in the western U.S. and greater than 500 acres in the eastern U.S. are mapped across all ownerships. MTBS produces a series of geospatial and tabular data for analysis at a range of spatial, temporal, and thematic scales and are intended to meet a variety of information needs that require consistent data about fire effects through space and time. This map layer is a thematic raster image of an individual MTBS burn severity fire, occurring during calendar year 2021. Fires omitted from this mapped inventory are those where suitable satellite imagery was not available, or fires were not discernable from available imagery.",
+      "purpose": "The data generated by MTBS will be used to identify national trends in burn severity, providing information necessary to monitor the effectiveness of the National Fire Plan and Healthy Forests Restoration Act. MTBS is sponsored by the Wildland Fire Leadership Council (WFLC), a multi-agency oversight group responsible for implementing and coordinating the National Fire Plan and Federal Wildland Fire Management Policies. The MTBS project objective is to provide consistent, 30-meter spatial resolution burn severity data and burned area delineations that will serve four primary user groups including: 1. National policies and policy makers such as the National Fire Plan and WFLC which require information about long-term trends in burn severity and recent burn severity impacts within vegetation types, fuel models, condition classes, and land management activities. 2. Field management units that benefit from mid to broad scale GIS-ready maps and data for pre- and post-fire assessment and monitoring. Field units that require finer scale burn severity data will also benefit from increased efficiency, reduced costs, and data consistency by starting with MTBS data. 3. Existing databases from other comparably scaled programs, such as Fire Regime and Condition Class (FRCC) within LANDFIRE, that will benefit from MTBS data for validation and updating of geospatial datasets. 4. Academic and government agency research entities interested in fire severity data over significant geographic and temporal extents.",
+      "access_constraints": "None",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
+      "credit": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_metadata": {
+        "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_iso_metadata.xml",
+        "bytes": 53158,
+        "sha256": "915e83a37b2f93412cc589972befd9ad2b4ca696a24ce4628182dc52663b211f",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
+    },
+    {
+      "program": "RAVG",
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_metadata.xml",
+      "bytes": 36005,
+      "sha256": "0d41d0b680ccd0ce7ccca0c4a760bb24861f840cb4b0df4aebed3251aa57cf50",
+      "abstract": "The RAVG (Rapid Assessment of Vegetation Condition after Wildfire) program provides assessments of vegetation conditions following large fires on forested lands. Fire effects are represented by three metrics: percent change in live basal area (BA), percent change in canopy cover (CC), and the standardized Composite Burn Index (CBI). These data are derived from moderate resolution multi-spectral imagery (e.g., from the Landsat 8/9 Operational Land Imager or Sentinel-2 Multispectral Instrument). Various indices, such as the Relative Differenced Normalized Burn Ratio (RdNBR), which correlate with the variation of burn severity within a fire, are calculated from a pair of images (pre- and postfire), judiciously selected to capture fire effects. The three severity metrics are in turn calculated from the index using models developed from and calibrated with field data.",
+      "purpose": "RAVG data are generated for wildland fires on forested National Forest System (NFS) lands by the USDA Forest Service Geospatial Technology and Applications Center (GTAC) to support Washington Office Forest Management staff; Regional, Forest, and District silviculturists; and other Forest Service personnel and programs involved in reforestation, restoration, or related efforts. In addition, GTAC and the U.S. Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center support other Federal and State land management agencies on a by-request basis within then-current resource constraints.",
+      "access_constraints": "None",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
+      "credit": "USDA Forest Service; ESA (Contains modified Copernicus Sentinel data 2021)",
+      "distribution_liability": "This product is produced from geospatial information prepared by the U.S. Geological Survey EROS and USDA Forest Service. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. Neither the USDA Forest Service, GTAC, the U.S. Geological Survey nor EROS make any express or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The USDA Forest Service and the U.S. Geological Survey reserve the right to correct, update, modify, or replace this geospatial information without notification. Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_metadata": {
+        "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_iso_metadata.xml",
+        "bytes": 47091,
+        "sha256": "20ac15bb2ea47966b00e3b3ef30e1cd2d9ff756bf5416f1a91a3e083eca600c2",
+        "xml_root": "MD_Metadata",
+        "access_and_use_language_present": true
+      }
+    }
+  ],
+  "boundary_vectors": [
+    {
+      "program": "BAER",
+      "parts": {
+        "shp": {
+          "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_burn_area.shp",
+          "bytes": 138556,
+          "sha256": "7ef381bf361cf6807163347d3c5a9b00adc6e475467279b8f0ea8a879e200597",
+          "bbox": [
+            622630.250324899,
+            4916398.713745013,
+            628499.989569377,
+            4925383.711748917
+          ],
+          "record_count": 1
+        },
+        "shx": {
+          "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_burn_area.shx",
+          "bytes": 108,
+          "sha256": "a42bb22530b7ae9bce3151f2ad0d54a9f09bc05a5c9750388dfbda0ccd967dc2"
+        },
+        "dbf": {
+          "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_burn_area.dbf",
+          "bytes": 3397,
+          "sha256": "21e0387de856be0b6ce31850d5eae6155570b8c0c2ed5e91e718dd52119b51c6"
+        },
+        "prj": {
+          "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_burn_area.prj",
+          "bytes": 403,
+          "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+        }
+      },
+      "attributes": {
+        "EVENT_ID": "OR4446612140020210711",
+        "IRWINID": "189FFB90-D15E-4140-94D6-5F500E2091F2",
+        "INCID_NAME": "GRANDVIEW 0558 OD",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10019092",
+        "MAP_PROG": "BAER",
+        "ASMNT_TYPE": "Emergency",
+        "BURNBNDAC": "6557",
+        "BURNBNDLAT": "44.466",
+        "BURNBNDLON": "-121.4",
+        "IG_DATE": "20210711",
+        "PRE_ID": "A10TFQ20210711_20m",
+        "POST_ID": "A10TFQ20210718_20m",
+        "PERIM_ID": "",
+        "DNBR_OFFST": "-24",
+        "DNBR_STDDV": "14",
+        "NODATA_T": "0",
+        "INCGREEN_T": "0",
+        "LOW_T": "61",
+        "MOD_T": "107",
+        "HIGH_T": "999",
+        "COMMENT": ""
+      }
+    },
+    {
+      "program": "MTBS",
+      "parts": {
+        "shp": {
+          "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_burn_area.shp",
+          "bytes": 41660,
+          "sha256": "0afe939db7af930d13c8f6edbcf46e43dce49370c213add97c0f07a1c0f46d6b",
+          "bbox": [
+            622617.459890374,
+            4916448.006178128,
+            628439.19336082,
+            4925406.241913994
+          ],
+          "record_count": 1
+        },
+        "shx": {
+          "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_burn_area.shx",
+          "bytes": 108,
+          "sha256": "c5b7a58d93f083df7c660d695b3e6bd0b90c0a7b4e9b85a0832864eb95705f84"
+        },
+        "dbf": {
+          "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_burn_area.dbf",
+          "bytes": 3397,
+          "sha256": "3b93cdd01eaced1a68624e33bb88f5beaec50dcd806471d89f3b1348b4b750bd"
+        },
+        "prj": {
+          "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_burn_area.prj",
+          "bytes": 403,
+          "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+        }
+      },
+      "attributes": {
+        "EVENT_ID": "OR4446612140020210711",
+        "IRWINID": "189FFB90-D15E-4140-94D6-5F500E2091F2",
+        "INCID_NAME": "GRANDVIEW 0558 OD",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10023989",
+        "MAP_PROG": "MTBS",
+        "ASMNT_TYPE": "Initial",
+        "BURNBNDAC": "6187",
+        "BURNBNDLAT": "44.466",
+        "BURNBNDLON": "-121.4",
+        "IG_DATE": "20210711",
+        "PRE_ID": "804502920210702",
+        "POST_ID": "804502920210718",
+        "PERIM_ID": "",
+        "DNBR_OFFST": "-17",
+        "DNBR_STDDV": "10",
+        "NODATA_T": "-970",
+        "INCGREEN_T": "-150",
+        "LOW_T": "15",
+        "MOD_T": "420",
+        "HIGH_T": "9999",
+        "COMMENT": ""
+      }
+    },
+    {
+      "program": "RAVG",
+      "parts": {
+        "shp": {
+          "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_burn_area.shp",
+          "bytes": 134076,
+          "sha256": "0b04720f9181c44055933cb7f2415a7dd3c89e371c446e7f5308c8409f23efee",
+          "bbox": [
+            622639.693781505,
+            4916398.713745013,
+            628499.989569377,
+            4925383.711748917
+          ],
+          "record_count": 1
+        },
+        "shx": {
+          "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_burn_area.shx",
+          "bytes": 108,
+          "sha256": "503ac1a12d0d35bd21c02edab1594f0ab9e80aaf3782821f08a92bee6b15ef92"
+        },
+        "dbf": {
+          "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_burn_area.dbf",
+          "bytes": 3397,
+          "sha256": "4d6cc9ddac7b0d9288f4d62460a63c362aa4a503400ba2859948a36ae00430f9"
+        },
+        "prj": {
+          "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_burn_area.prj",
+          "bytes": 403,
+          "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+        }
+      },
+      "attributes": {
+        "EVENT_ID": "OR4446612140020210711",
+        "IRWINID": "189FFB90-D15E-4140-94D6-5F500E2091F2",
+        "INCID_NAME": "GRANDVIEW 0558 OD",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10019464",
+        "MAP_PROG": "RAVG",
+        "ASMNT_TYPE": "Initial",
+        "BURNBNDAC": "5989",
+        "BURNBNDLAT": "44.466",
+        "BURNBNDLON": "-121.4",
+        "IG_DATE": "20210711",
+        "PRE_ID": "B10TFQ20200810_30m",
+        "POST_ID": "B10TFQ20210815_30m",
+        "PERIM_ID": "",
+        "DNBR_OFFST": "1",
+        "DNBR_STDDV": "22",
+        "NODATA_T": "",
+        "INCGREEN_T": "",
+        "LOW_T": "",
+        "MOD_T": "",
+        "HIGH_T": "",
+        "COMMENT": "Much of this burned area has very sparse to no pre-fire tree cover. RAVG models, which are calibrated for forest cover, are not directly applicable to other cover types. In areas with very sparse tree cover, the modeled values are less reliable since the"
+      }
+    }
+  ],
+  "native_rasters": [
+    {
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_s2a_refl.tif",
+      "bytes": 2388934,
+      "sha256": "a21edf57b5bd8d742b774350cdaaa0445a311d5127833b29480ba1d385dba01d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 502,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "bounds": [
+        619620.0,
+        4913340.0,
+        631500.0,
+        4928400.0
+      ],
+      "valid_pixels": 180148,
+      "nodata_pixels": 18644,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 658.0,
+          "valid_max": 2247.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 449.0,
+          "valid_max": 2402.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 292.0,
+          "valid_max": 2641.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 176.0,
+          "valid_max": 5151.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 197.0,
+          "valid_max": 4121.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 153.0,
+          "valid_max": 3213.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 658.0,
+        "p01": 814.0,
+        "p10": 888.0,
+        "p50": 1053.0,
+        "p90": 1194.0,
+        "p99": 1280.53,
+        "max": 2247.0
+      }
+    },
+    {
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210718_s2a_refl.tif",
+      "bytes": 2388934,
+      "sha256": "3df9df03bf6897b4439aeee52d6650248ce552a5932f99f2ae82f003bf2c0fb1",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 502,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "bounds": [
+        619620.0,
+        4913340.0,
+        631500.0,
+        4928400.0
+      ],
+      "valid_pixels": 180148,
+      "nodata_pixels": 18644,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 180148,
+          "nodata_pixels": 18644,
+          "valid_min": 739.0,
+          "valid_max": 2325.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 179719,
+          "nodata_pixels": 19073,
+          "valid_min": 509.0,
+          "valid_max": 2097.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 179363,
+          "nodata_pixels": 19429,
+          "valid_min": 325.0,
+          "valid_max": 2496.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 178647,
+          "nodata_pixels": 20145,
+          "valid_min": 153.0,
+          "valid_max": 5794.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 174646,
+          "nodata_pixels": 24146,
+          "valid_min": 199.0,
+          "valid_max": 4144.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 174243,
+          "nodata_pixels": 24549,
+          "valid_min": 144.0,
+          "valid_max": 3119.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 739.0,
+        "p01": 924.0,
+        "p10": 999.0,
+        "p50": 1176.0,
+        "p90": 1331.0,
+        "p99": 1414.0,
+        "max": 2325.0
+      }
+    },
+    {
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_dnbr.tif",
+      "bytes": 398269,
+      "sha256": "2bdc4ec9a46758cbb5f81cd41534d4b4aa429c066577bd9374f1ecee42446d67",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "bounds": [
+        619620.0,
+        4913340.0,
+        631500.0,
+        4928400.0
+      ],
+      "valid_pixels": 178647,
+      "nodata_pixels": 20145,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 178647,
+          "nodata_pixels": 20145,
+          "valid_min": -1019.0,
+          "valid_max": 641.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -1019.0,
+        "p01": -765.0,
+        "p10": -46.0,
+        "p50": -21.0,
+        "p90": 112.0,
+        "p99": 287.0,
+        "max": 641.0
+      }
+    },
+    {
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_rdnbr.tif",
+      "bytes": 398269,
+      "sha256": "dac38d660665aeebf6f43e080ce8a41985ab2324e092dc83499ba5ae3b431803",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "bounds": [
+        619620.0,
+        4913340.0,
+        631500.0,
+        4928400.0
+      ],
+      "valid_pixels": 178647,
+      "nodata_pixels": 20145,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 178647,
+          "nodata_pixels": 20145,
+          "valid_min": -21779.0,
+          "valid_max": 10435.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -21779.0,
+        "p01": -1549.54,
+        "p10": -116.0,
+        "p50": 16.0,
+        "p90": 623.0,
+        "p99": 2569.0,
+        "max": 10435.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_s2b_refl.tif",
+      "bytes": 2394958,
+      "sha256": "28f8c968e2621cd302f3b642dc3321526d912bd6e0d83c703eabff4e5f745803",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 643.0,
+          "valid_max": 2140.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 477.0,
+          "valid_max": 2002.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 300.0,
+          "valid_max": 2535.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 155.0,
+          "valid_max": 5994.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 191.0,
+          "valid_max": 3981.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 116.0,
+          "valid_max": 2801.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 643.0,
+        "p01": 743.0,
+        "p10": 835.0,
+        "p50": 1001.0,
+        "p90": 1147.0,
+        "p99": 1222.0,
+        "max": 2140.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20210815_s2b_refl.tif",
+      "bytes": 2394958,
+      "sha256": "dff8201283c8d3c75d49c0c6ba885bdf5d28655da73c776eb4419f7051574c4b",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 1030.0,
+          "valid_max": 1771.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 835.0,
+          "valid_max": 1624.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 600.0,
+          "valid_max": 1913.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 560.0,
+          "valid_max": 5335.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 238.0,
+          "valid_max": 3751.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 136.0,
+          "valid_max": 3011.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 1030.0,
+        "p01": 1090.0,
+        "p10": 1149.0,
+        "p50": 1282.0,
+        "p90": 1393.0,
+        "p99": 1440.0,
+        "max": 1771.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_dnbr.tif",
+      "bytes": 399273,
+      "sha256": "c7b1d2da19d8214f9a22eb5e0544168ef709a262d22f976d784eacb8aca2fee5",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": -556.0,
+          "valid_max": 646.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -556.0,
+        "p01": -67.0,
+        "p10": -35.0,
+        "p50": -6.0,
+        "p90": 116.0,
+        "p99": 302.0,
+        "max": 646.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr.tif",
+      "bytes": 399273,
+      "sha256": "cc4e8704f182709fafeb8f01179a1a7f89867224bbefde8d23cb773ec18b9840",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": -11668.0,
+          "valid_max": 9202.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -11668.0,
+        "p01": -758.0,
+        "p10": -219.0,
+        "p50": -23.0,
+        "p90": 483.0,
+        "p99": 1811.0,
+        "max": 9202.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_ba.tif",
+      "bytes": 798161,
+      "sha256": "be8fd6e26956e53c88e9660dd14361742bc756b0dc609dde15cd3179c1f9a140",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 0.0,
+          "valid_max": 100.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 37.3515,
+        "p99": 100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_ba4.tif",
+      "bytes": 208504,
+      "sha256": "c1d26d391649703471f1de9b26ae0db0359ecbc88805fe223aa6ffaa83aa3b73",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 1522,
+        "2": 4533,
+        "3": 6068,
+        "4": 14808
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_ba7.tif",
+      "bytes": 208504,
+      "sha256": "3ee9e4fe5205a7b56f6d2c546db8daf2ca9962f8d4a8bed06e1576dfa2ba71b5",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 7.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 1522,
+        "2": 2254,
+        "3": 2279,
+        "4": 3134,
+        "5": 2934,
+        "6": 2066,
+        "7": 12742
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cc.tif",
+      "bytes": 798161,
+      "sha256": "aefe1e3cf55a1a55262543995b69559cc313174c21793ae7defe3771346abee3",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": 0.0,
+          "valid_max": 100.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 38.1251,
+        "p99": 100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cc5.tif",
+      "bytes": 208504,
+      "sha256": "0699dfe78f07c46528a80f01a30459f5118a9c000ef0264f0afcc6ab0e5dd228",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 5.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 1472,
+        "2": 4481,
+        "3": 3169,
+        "4": 2958,
+        "5": 14851
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cbi.tif",
+      "bytes": 798161,
+      "sha256": "399553497b36b848a07558126515712fa4122462d9c04f93a45415cb38bd4c4b",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 1794,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 1794,
+          "valid_min": -0.0014834495959803462,
+          "valid_max": 3.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -0.0015,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 1.6179,
+        "p99": 3.0,
+        "max": 3.0
+      }
+    },
+    {
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cbi4.tif",
+      "bytes": 208504,
+      "sha256": "15c7adc0530fb18364943c96d749ca7a5b9ca8519b9fa56d675c02ecb067defa",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 712,
+        "2": 3744,
+        "3": 9522,
+        "4": 12953
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_l8_refl.tif",
+      "bytes": 2384176,
+      "sha256": "13edae1f00d3b580fb73bf132f2eb1c6eb6efbe473f3fd640fe4f54acd786906",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 896,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 715.0,
+          "valid_max": 1840.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 429.0,
+          "valid_max": 1902.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 247.0,
+          "valid_max": 2290.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 105.0,
+          "valid_max": 5875.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 31.0,
+          "valid_max": 4276.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 59.0,
+          "valid_max": 2945.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 715.0,
+        "p01": 822.0,
+        "p10": 912.0,
+        "p50": 1074.0,
+        "p90": 1214.0,
+        "p99": 1288.0,
+        "max": 1840.0
+      }
+    },
+    {
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210718_l8_refl.tif",
+      "bytes": 2384176,
+      "sha256": "8360fdd5d591774d9aa57564c0d87436f1b7bc0b9bb231185bef9bd67c0a1a2c",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 896,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 736.0,
+          "valid_max": 1824.0
+        },
+        {
+          "band": 2,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 439.0,
+          "valid_max": 1872.0
+        },
+        {
+          "band": 3,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 263.0,
+          "valid_max": 2191.0
+        },
+        {
+          "band": 4,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 118.0,
+          "valid_max": 5870.0
+        },
+        {
+          "band": 5,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 37.0,
+          "valid_max": 3970.0
+        },
+        {
+          "band": 6,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": 46.0,
+          "valid_max": 3011.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 736.0,
+        "p01": 826.0,
+        "p10": 919.0,
+        "p50": 1081.0,
+        "p90": 1237.0,
+        "p99": 1317.0,
+        "max": 1824.0
+      }
+    },
+    {
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_dnbr.tif",
+      "bytes": 397477,
+      "sha256": "8181a2d3744225b20f33aa93fb8cdf7d3500646d7d8eee5b3271225fd1610899",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 896,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": -565.0,
+          "valid_max": 695.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -565.0,
+        "p01": -70.0,
+        "p10": -31.0,
+        "p50": -16.0,
+        "p90": 115.0,
+        "p99": 307.0,
+        "max": 695.0
+      }
+    },
+    {
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_rdnbr.tif",
+      "bytes": 397477,
+      "sha256": "f556a7ef39727f53ee59ad4a63a33cf7ce18db874e2b137116f9d0911f73d30b",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 197500,
+      "nodata_pixels": 896,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 197500,
+          "nodata_pixels": 896,
+          "valid_min": -6482.0,
+          "valid_max": 10878.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -6482.0,
+        "p01": -284.0,
+        "p10": -54.0,
+        "p50": 2.0,
+        "p90": 564.0,
+        "p99": 2419.01,
+        "max": 10878.0
+      }
+    },
+    {
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_dnbr6.tif",
+      "bytes": 207996,
+      "sha256": "f49e73b7532d3d1f5c9d8f5e9de79c97d3a69baf4db1c00d761429441921d6a4",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 27819,
+      "nodata_pixels": 170577,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 27819,
+          "nodata_pixels": 170577,
+          "valid_min": 1.0,
+          "valid_max": 5.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 170577,
+        "1": 1721,
+        "2": 25728,
+        "3": 329,
+        "5": 41
+      },
+      "valid_quantiles": null
+    }
+  ],
+  "selected_evidence_products": {
+    "baer_dnbr": {
+      "program": "BAER",
+      "role": "preliminary_continuous_change_context_only",
+      "member": "baer/2021/baer_or4446612140020210711_10019092/baer_or4446612140020210711_10019092_20210711_20210718_dnbr.tif",
+      "bytes": 398269,
+      "sha256": "2bdc4ec9a46758cbb5f81cd41534d4b4aa429c066577bd9374f1ecee42446d67",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "bounds": [
+        619620.0,
+        4913340.0,
+        631500.0,
+        4928400.0
+      ],
+      "valid_pixels": 178647,
+      "nodata_pixels": 20145,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 178647,
+          "nodata_pixels": 20145,
+          "valid_min": -1019.0,
+          "valid_max": 641.0
+        }
+      ],
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -1019.0,
+        "p01": -765.0,
+        "p10": -46.0,
+        "p50": -21.0,
+        "p90": 112.0,
+        "p99": 287.0,
+        "max": 641.0
+      }
+    },
+    "mtbs_dnbr6": {
+      "program": "MTBS",
+      "role": "categorical_owner_review_evidence",
+      "member": "mtbs/2021/mtbs_or4446612140020210711_10023989/mtbs_or4446612140020210711_10023989_20210702_20210718_dnbr6.tif",
+      "bytes": 207996,
+      "sha256": "f49e73b7532d3d1f5c9d8f5e9de79c97d3a69baf4db1c00d761429441921d6a4",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 396,
+      "height": 501,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619560.0,
+        4913400.0,
+        631440.0,
+        4928430.0
+      ],
+      "valid_pixels": 27819,
+      "nodata_pixels": 170577,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 27819,
+          "nodata_pixels": 170577,
+          "valid_min": 1.0,
+          "valid_max": 5.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 170577,
+        "1": 1721,
+        "2": 25728,
+        "3": 329,
+        "5": 41
+      },
+      "valid_quantiles": null
+    },
+    "ravg_ba4": {
+      "program": "RAVG",
+      "role": "sparse_cover_model_limited_context_only",
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_ba4.tif",
+      "bytes": 208504,
+      "sha256": "c1d26d391649703471f1de9b26ae0db0359ecbc88805fe223aa6ffaa83aa3b73",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 1522,
+        "2": 4533,
+        "3": 6068,
+        "4": 14808
+      },
+      "valid_quantiles": null
+    },
+    "ravg_cc5": {
+      "program": "RAVG",
+      "role": "sparse_cover_model_limited_context_only",
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cc5.tif",
+      "bytes": 208504,
+      "sha256": "0699dfe78f07c46528a80f01a30459f5118a9c000ef0264f0afcc6ab0e5dd228",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 5.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 1472,
+        "2": 4481,
+        "3": 3169,
+        "4": 2958,
+        "5": 14851
+      },
+      "valid_quantiles": null
+    },
+    "ravg_cbi4": {
+      "program": "RAVG",
+      "role": "sparse_cover_model_limited_context_only",
+      "member": "ravg/2021/ravg_or4446612140020210711_10019464/ravg_or4446612140020210711_10019464_20200810_20210815_rdnbr_cbi4.tif",
+      "bytes": 208504,
+      "sha256": "15c7adc0530fb18364943c96d749ca7a5b9ca8519b9fa56d675c02ecb067defa",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 397,
+      "height": 502,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "bounds": [
+        619620.0,
+        4913370.0,
+        631530.0,
+        4928430.0
+      ],
+      "valid_pixels": 199294,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "band_summaries": [
+        {
+          "band": 1,
+          "valid_pixels": 199294,
+          "nodata_pixels": 0,
+          "valid_min": 0.0,
+          "valid_max": 4.0
+        }
+      ],
+      "native_value_domain": {
+        "0": 172363,
+        "1": 712,
+        "2": 3744,
+        "3": 9522,
+        "4": 12953
+      },
+      "valid_quantiles": null
+    }
+  },
+  "grid_relationship": {
+    "crs": "EPSG:32610",
+    "resolution_m": 30,
+    "distinct_native_transforms": 3,
+    "selected_transforms": {
+      "baer_dnbr": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928400.0
+      ],
+      "mtbs_dnbr6": [
+        30.0,
+        0.0,
+        619560.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "ravg_ba4": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "ravg_cc5": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ],
+      "ravg_cbi4": [
+        30.0,
+        0.0,
+        619620.0,
+        0.0,
+        -30.0,
+        4928430.0
+      ]
+    },
+    "all_native_pixels_sampled_without_interpolation": true
+  },
+  "boundary_relationship": {
+    "all_programs_same_bbox_and_crs": false,
+    "geometry_hashes": {
+      "BAER": "7ef381bf361cf6807163347d3c5a9b00adc6e475467279b8f0ea8a879e200597",
+      "MTBS": "0afe939db7af930d13c8f6edbcf46e43dce49370c213add97c0f07a1c0f46d6b",
+      "RAVG": "0b04720f9181c44055933cb7f2415a7dd3c89e371c446e7f5308c8409f23efee"
+    },
+    "attribute_tables_program_specific": true
+  },
+  "optical_reverification": {
+    "source_report_id": "GRANDVIEW-SOURCE-FITNESS-2026-001",
+    "source_package_id": "grandview-s2-optical-pair-v0.1.0",
+    "boundary_pixels": 62588,
+    "registration_summary": {
+      "window_count": 9,
+      "state_counts": {
+        "pass": 9,
+        "review-needed": 0,
+        "excluded": 0,
+        "fail-registration": 0
+      },
+      "p50_px": 0.0141,
+      "p95_px": 0.1158,
+      "max_px": 0.153,
+      "max_m": 3.06,
+      "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+    }
+  },
+  "evidence_comparison": {
+    "optical_boundary_pixels": 62588,
+    "optical_pair_valid_pixels": 61073,
+    "mtbs_dnbr6_on_optical_boundary": {
+      "1": 3287,
+      "2": 57687,
+      "3": 751,
+      "5": 70,
+      "255": 793
+    },
+    "ravg_cbi4_on_optical_boundary": {
+      "0": 2130,
+      "1": 1502,
+      "2": 8429,
+      "3": 21524,
+      "4": 29003
+    },
+    "ravg_ba4_on_optical_boundary": {
+      "0": 2130,
+      "1": 3294,
+      "2": 10264,
+      "3": 13620,
+      "4": 33280
+    },
+    "ravg_cc5_on_optical_boundary": {
+      "0": 2130,
+      "1": 3192,
+      "2": 10149,
+      "3": 7046,
+      "4": 6696,
+      "5": 33375
+    },
+    "mtbs_affirmative_pixels": 58438,
+    "mtbs_reference_covered_pixels": 61795,
+    "mtbs_reference_uncovered_pixels": 793,
+    "mtbs_reference_coverage_percent": 98.733,
+    "mtbs_affirmative_percent_of_covered": 94.5675,
+    "mtbs_affirmative_and_optical_valid_pixels": 56943,
+    "mtbs_increased_greenness_pixels": 70,
+    "mtbs_affirmative_with_ravg_modeled_effect_pixels": 57106,
+    "ravg_modeled_effect_pixels_context_only": 58956,
+    "categorical_sampling": "nearest neighbor from native 30 m onto the verified 20 m optical grid; no resolution gain claimed",
+    "mtbs_class_semantics": {
+      "0": "background_or_nodata",
+      "1": "unburned_to_low_or_rapid_recovery",
+      "2": "low_severity",
+      "3": "moderate_severity",
+      "4": "high_severity",
+      "5": "increased_greenness",
+      "6": "nonprocessing_mask"
+    },
+    "ravg_cbi_class_semantics": {
+      "0": "outside_perimeter",
+      "1": "unchanged_not_proof_of_unburned",
+      "2": "low_modeled_effect",
+      "3": "moderate_modeled_effect",
+      "4": "high_modeled_effect",
+      "9": "unmappable"
+    },
+    "ravg_fitness_limit": "The delivered RAVG record warns that much of this event has sparse to no pre-fire tree cover. RAVG pixels are context only and do not independently qualify any candidate.",
+    "background_finding": "No product supplies affirmative background truth. MTBS class 1 and RAVG class 1 can include burned, low-effect, recovered, or model-limited areas; outside-perimeter class 0 is nodata, not verified background."
+  },
+  "terms_and_roles": {
+    "resolved_for_this_checkpoint": true,
+    "baer": "Only reflectance and unthresholded continuous dNBR/RdNBR are present. They are preliminary change context, not a class or label. Restricted BARC4/BARC256/SBS pixels are absent.",
+    "mtbs": "Analyst-interpreted thematic severity evidence with acknowledgement required; classes 2-4 may support candidate proposal but are not independent ground truth or field validation.",
+    "ravg": "Forest-calibrated modeled vegetation-effect context only. The exact sparse/non-tree warning prevents RAVG from independently supporting a candidate for this event.",
+    "attribution": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service); USDA Forest Service; ESA (Contains modified Copernicus Sentinel data 2021); Contains modified Copernicus Sentinel data 2021, accessed through CDSE."
+  },
+  "fitness_decision": {
+    "reference_pixels": "PASS_EXACT_GRANDVIEW_REFERENCE_SOURCE_FITNESS_WITH_RAVG_LIMIT",
+    "burned_candidate_route": "OPEN_FOR_SEPARATE_MTBS_BACKED_PROPOSAL_AND_OWNER_REVIEW",
+    "background_candidate_route": "BLOCKED_PENDING_AFFIRMATIVE_BACKGROUND_EVIDENCE",
+    "checkpoint": "ACCEPT_MTBS_AS_BOUNDED_EVIDENCE_RAVG_AS_LIMITED_CONTEXT_DEFER_CANDIDATES_LABELS_DATASET_MODEL"
+  },
+  "claims": {
+    "proven": [
+      "The exact delivered archive, metadata, native grids, nodata, class domains, and boundary components passed deterministic inspection.",
+      "MTBS dNBR6 provides traceable categorical burned-candidate evidence after nearest-neighbor comparison on the verified optical grid.",
+      "The BAER delivery contains no restricted classified BARC or SBS raster, and the exact RAVG sparse-cover caution is enforced."
+    ],
+    "not_proven": [
+      "RAVG is not independent affirmative evidence for this sparse/non-tree event, and no program supplies affirmative background truth.",
+      "No candidate, owner decision, label, dataset, split, baseline, model, metric, official status, endorsement, or operational readiness is created."
+    ]
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
