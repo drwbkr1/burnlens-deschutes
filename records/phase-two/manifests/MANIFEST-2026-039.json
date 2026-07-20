@@ -40,10 +40,10 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.37.0-py3-none-any.whl",
-    "source_commit": "6da33ff846a55fc60e27c1f39d4d7a0488bbff81",
+    "source_commit": "98439a8208c42f24112e6ab661c7b6964afc8a41",
     "source_date_epoch": 1784513100,
-    "bytes": 541301,
-    "sha256": "6770a4d296ed728726ba696094285d661cceda409e7e8fe3892c988e23b87bce",
+    "bytes": 540356,
+    "sha256": "6d3137454f521221668986ec26c65b03d74e68fbab8db2ff3caf7c5a60c8a917",
     "entries": 120,
     "console_commands": 57,
     "dependency_complete_isolated_install": "pass"
@@ -55,7 +55,7 @@
     "response_contract": "pass in deterministic tests and Node syntax; actual browser export/reload/lock pending",
     "exact_reconstruction": "pass: all six surface outputs reproduce byte for byte",
     "repository_tests": "pass in candidate worktree: 291 tests; compileall; 98 tracked JSON documents including this manifest",
-    "release_package": "pass: two fixed-epoch wheels byte-identical; dependency-complete isolated install and CLI help pass",
+    "release_package": "pass: stale working-tree wheel rejected; two independent fresh-checkout fixed-epoch wheels byte-identical; dependency-complete isolated install and CLI help pass",
     "real_browser": "BLOCKED: agent file URL navigation rejected by browser security policy; owner-opened desktop/mobile interaction required",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
     "repository_release": "blocked: draft PR #492 remains open pending real browser, fresh-main, package, and remote-tag gates"
