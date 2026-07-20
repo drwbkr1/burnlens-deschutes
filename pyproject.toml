@@ -70,6 +70,7 @@ burnlens-request-green-ridge-reference = "burnlens.request_green_ridge_reference
 burnlens-preflight-green-ridge-reference-delivery = "burnlens.preflight_green_ridge_reference_delivery:main"
 burnlens-inspect-green-ridge-references = "burnlens.inspect_green_ridge_references:main"
 burnlens-acquire-green-ridge-background-optical = "burnlens.acquire_green_ridge_background_optical:main"
+burnlens-inspect-green-ridge-background-evidence = "burnlens.inspect_green_ridge_background_evidence:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
