@@ -22,3 +22,7 @@ The current WFS capture binds all fields for BAER `10019092`, RAVG `10019464`, a
 - preserve metadata, queue response, and recipient-withheld receipt atomically under ignored no-overwrite storage;
 - treat request acceptance as pending delivery, not pixel fitness;
 - create no candidate, owner response, label, dataset, split, baseline, model, metric, or readiness claim.
+
+## Exercised result
+
+Fresh request-time WFS normalization passed after the earlier transient timeout. Run `BL-2026-07-20-grandview-reference-request-r001` submitted exactly one POST and received `{"success":true}`. The recipient variable was cleared, the 4,626-byte receipt withholds it, and the metadata, queue, and receipt files are ignored and no-overwrite. Delivery remains `PENDING_EMAIL_DELIVERY`; zero archive byte or reference pixel has advanced.
