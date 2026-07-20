@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.38.0-green-ridge-owner-response-intake - release candidate - 2026-07-20
+## v0.38.0-green-ridge-owner-response-intake - verified - 2026-07-20
 
 ### P2O4-T26 - Lock and reconcile the Green Ridge owner response
 
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Publish only privacy-safe aggregates and bindings; keep notes, unit decisions, paths, filenames, and private reconciliation uncommitted.
 - Preserve no dataset, split, baseline, model, metric, accuracy, independent-ground-truth, field, official, endorsed, operational, or emergency-ready claim.
 
-Source `78368833a73401e098af21bf999ab6674d2e8f9f` creates run `BL-2026-07-20-green-ridge-owner-response-intake-r001`. The 893-byte response, 1,736-byte receipt, and 8,296-byte private reconciliation are exact-hash bound in ignored custody. Public JSON/HTML/PNG are 8,210 / 2,977 / 76,847 bytes. The response contains 2 yes / 0 no / 0 uncertain; both labels pass, yielding a cumulative four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded ring pixels across four events. Focused tests, compilation, privacy checks, original-resolution rendering, corrected clean-clone reconstruction, and two byte-identical 552,457-byte wheels / SHA-256 `ea80b167b29064fb6f53dd5971acf4289cf1e7e2616c9a6abe8d62616b70e29e` pass. The isolated 0.38.0 install has 59 commands, 123 clean entries, and no broken requirements. PR merge, fresh-main, and tag gates remain before release; issue #495 owns Grandview source fitness.
+Source `78368833a73401e098af21bf999ab6674d2e8f9f` creates run `BL-2026-07-20-green-ridge-owner-response-intake-r001`. The 893-byte response, 1,736-byte receipt, and 8,296-byte private reconciliation are exact-hash bound in ignored custody. Public JSON/HTML/PNG are 8,210 / 2,977 / 76,847 bytes. The response contains 2 yes / 0 no / 0 uncertain; both labels pass, yielding a cumulative four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded ring pixels across four events. Focused tests, compilation, privacy checks, original-resolution rendering, corrected clean-clone reconstruction, and two byte-identical 552,457-byte wheels / SHA-256 `ea80b167b29064fb6f53dd5971acf4289cf1e7e2616c9a6abe8d62616b70e29e` pass. The isolated 0.38.0 install has 59 commands, 123 clean entries, and no broken requirements. PR #496 merges at checkpoint `17bd3652fbb07c096f478224a4d5c173729954c2`; fresh merged main repeats exact 3-of-3 reconstruction, 299 tests with 11 expected custody skips, compilation, 100 JSON parses, and canonical packaging. Annotated tag object `16f364aac604958d812fb2567dd9cd8b5ea13d6c` remotely peels to the checkpoint. Issue #495 owns Grandview source fitness.
 
 ## v0.37.0-green-ridge-owner-review-surface - verified - 2026-07-20
 
