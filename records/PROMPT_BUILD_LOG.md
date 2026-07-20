@@ -205,7 +205,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T21 | `records/prompt-build-log/2026-07-19-p2o4-t21.md` | issue #472 / PR #475; verified `v0.33.0-green-ridge-source-fitness` | Acquires the exact Green Ridge optical pair, passes real native-pixel quality and registration, renders continuous change without labels, and defers official reference pixels, candidates, dataset, split, baseline, and model. |
 | P2O4-T21-SYNC | `records/prompt-build-log/2026-07-19-p2o4-t21-sync.md` | issue #476 / PR #478; verified v0.33 lifecycle synchronization | Records PR/merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #477 without changing scientific state. |
 | P2O4-T22 | `records/prompt-build-log/2026-07-19-p2o4-t22.md` | issue #477 / PR #479; verified `v0.34.0-green-ridge-reference-fitness` | Preserves and gates the exact Green Ridge BAER/MTBS/RAVG delivery, verifies 20 native rasters, measures 41,642 both-program affirmative pixels, and keeps background evidence plus every candidate/label/data/model decision blocked. |
-| P2O4-T22-SYNC | `records/prompt-build-log/2026-07-19-p2o4-t22-sync.md` | issue #481; verified v0.34 lifecycle synchronization | Records PR/merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #480 without changing scientific or private state. |
+| P2O4-T22-SYNC | `records/prompt-build-log/2026-07-19-p2o4-t22-sync.md` | issue #481 / PR #482; verified v0.34 lifecycle synchronization | Records PR/merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #480 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 

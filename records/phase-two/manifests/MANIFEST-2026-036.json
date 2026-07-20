@@ -14,6 +14,7 @@
   "version_tag": "v0.34.0-green-ridge-reference-fitness",
   "version_tag_object": "0faed9a847756651ba8d62b7baf475ea72c4229f",
   "lifecycle_sync_issue": 481,
+  "lifecycle_sync_pull_request": 482,
   "next_checkpoint_issue": 480,
   "status": "verified: exact Green Ridge reference pixels pass; background evidence remains blocked",
   "software_version": "0.34.0",
