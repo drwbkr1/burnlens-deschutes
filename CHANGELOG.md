@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.40.0-grandview-reference-fitness - release candidate - 2026-07-20
+## v0.40.0-grandview-reference-fitness - verified - 2026-07-20
 
 ### P2O4-T28 - Gate exact Grandview official reference pixels
 
@@ -13,6 +13,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render actual optical/reference evidence and keep background truth, candidates, owner responses, labels, dataset, split, baseline, and model deferred.
 
 Generator `9f28f822c114788a1a9bb09a52fab22616be0376` creates run `BL-2026-07-20-grandview-reference-fitness-r001`. Public JSON/HTML/PNG are 62,400 / 5,230 / 403,923 bytes with SHA-256 `dab52a0ae9b9adcc2cf7b85234ed98ca0674dfb690af8a8ec103b0f0a61ef0a5`, `277ee7faf20c2ee9eaff0bd56c80786151e0d1c84e4a68c5ea3ad8c07edba264`, and `6c977331741f73624fa45356e1f41b14167d59074e08526d53e1840b3ac0ebbd`. Exact 3-of-3 reconstruction, original-resolution render inspection, 316 tests, compilation, privacy scans, two byte-identical fresh-head 582,467-byte wheels / SHA-256 `b5e50359784fa748477cd9ff1c21e66083f0adce3682aea5e81c6163b930e269`, 133 clean wheel entries, 64 commands, dependency versions, help paths, and `pip check` pass. Issue #503 owns affirmative Grandview background evidence.
+
+PR #504 squash-merges at checkpoint `cdbe49883fb5330c9e7af036a847841b714dafae`. Fresh merged main repeats 303 tests with 13 expected custody skips, compilation, 104 JSON parses, exact 3-of-3 reconstruction through unchanged ignored custody, and canonical wheel identity. Annotated tag object `48c1c9677b9b41a734be2dcdc4a9691caf4e6688` remotely peels to the checkpoint.
 
 ## v0.39.0-grandview-source-fitness - verified - 2026-07-20
 
