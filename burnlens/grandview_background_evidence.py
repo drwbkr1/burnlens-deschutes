@@ -181,7 +181,23 @@ def build_report(
     shapes = {item["B04"].shape for item in (pre, post, extended)}
     if len(crop_transforms) != 1 or len(shapes) != 1:
         raise GrandviewBackgroundEvidenceError("three-scene context grids differ")
-    registration_windows, _ = measure_event_registration(pre_scene, pre, extended_scene, extended)
+    registration_pre_scene, registration_pre = _read_product(
+        original_package,
+        GRANDVIEW_CONTRACTS[0],
+        candidate["boundary_geometry"],
+    )
+    registration_extended_scene, registration_extended = _read_product(
+        extended_package,
+        EXTENDED_CONTRACT,
+        candidate["boundary_geometry"],
+        expected_processing_baseline="05.10",
+    )
+    registration_windows, _ = measure_event_registration(
+        registration_pre_scene,
+        registration_pre,
+        registration_extended_scene,
+        registration_extended,
+    )
     registration = registration_summary(registration_windows)
     if registration["machine_decision"] != "PASS_LOCAL_CONTENT_REGISTRATION_GATE":
         raise GrandviewBackgroundEvidenceError("extended scene content registration failed")
@@ -279,7 +295,11 @@ def build_report(
             }
             for item in (pre_scene, post_scene, extended_scene)
         ],
-        "extended_registration": {"summary": registration, "windows": registration_windows},
+        "extended_registration": {
+            "scope": "complete frozen Grandview event boundary; 3 km context nodata is retained separately",
+            "summary": registration,
+            "windows": registration_windows,
+        },
         "optical_stability": stability_report,
         "reference_context": reference_context,
         "route_evidence": {
