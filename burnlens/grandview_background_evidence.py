@@ -128,6 +128,29 @@ def _reference_context(
     return report, {**sampled, **masks}
 
 
+def _registration_exclusion_mask(
+    windows: list[dict[str, Any]], shape: tuple[int, int], transform: rasterio.Affine
+) -> np.ndarray:
+    mask = np.zeros(shape, dtype=bool)
+    for window in windows:
+        if window.get("state") == "pass":
+            continue
+        bounds = window.get("bounds_utm10n")
+        if not isinstance(bounds, list) or len(bounds) != 4:
+            raise GrandviewBackgroundEvidenceError("registration exclusion bounds missing")
+        west, south, east, north = (float(value) for value in bounds)
+        top, left = rasterio.transform.rowcol(transform, west, north, op=round)
+        bottom, right = rasterio.transform.rowcol(transform, east, south, op=round)
+        top = max(0, min(shape[0], int(top)))
+        bottom = max(0, min(shape[0], int(bottom)))
+        left = max(0, min(shape[1], int(left)))
+        right = max(0, min(shape[1], int(right)))
+        if bottom <= top or right <= left:
+            raise GrandviewBackgroundEvidenceError("registration exclusion falls outside context grid")
+        mask[top:bottom, left:right] = True
+    return mask
+
+
 def build_report(
     *,
     original_package: Path,
@@ -199,7 +222,10 @@ def build_report(
         registration_extended,
     )
     registration = registration_summary(registration_windows)
-    if registration["machine_decision"] != "PASS_LOCAL_CONTENT_REGISTRATION_GATE":
+    if registration["machine_decision"] not in {
+        "PASS_LOCAL_CONTENT_REGISTRATION_GATE",
+        "ACCEPT_REGISTRATION_WITH_SPATIAL_EXCLUSIONS",
+    }:
         raise GrandviewBackgroundEvidenceError("extended scene content registration failed")
     stability_report, stability = _spectral_stability(
         pre_scene, pre, post_scene, post, extended_scene, extended
@@ -211,8 +237,14 @@ def build_report(
     )
     shape = pre["B04"].shape
     transform = rasterio.Affine(*pre_scene["rasters"]["B04"]["crop_transform"])
+    registration_exclusion = _registration_exclusion_mask(
+        registration_windows, shape, transform
+    )
     reference_context, reference = _reference_context(reference_archive, shape, transform)
-    route = stability["coherent"] & reference["outside_all"] & ~reference["boundary_buffer"]
+    route_before_registration_exclusion = (
+        stability["coherent"] & reference["outside_all"] & ~reference["boundary_buffer"]
+    )
+    route = route_before_registration_exclusion & ~registration_exclusion
     sizes = _component_sizes(route)
     one_hectare_components = [size for size in sizes if size >= ONE_HECTARE_PIXELS]
     decision = (
@@ -299,6 +331,11 @@ def build_report(
             "scope": "complete frozen Grandview event boundary; 3 km context nodata is retained separately",
             "summary": registration,
             "windows": registration_windows,
+            "spatial_exclusion_pixels_on_context_grid": int(registration_exclusion.sum()),
+            "eligible_route_pixels_removed": int(
+                (route_before_registration_exclusion & registration_exclusion).sum()
+            ),
+            "rule": "Every non-pass registration window is excluded from route evidence.",
         },
         "optical_stability": stability_report,
         "reference_context": reference_context,
@@ -336,7 +373,7 @@ def build_report(
         "claims": {
             "proven": [
                 "The exact extended archive and original optical/reference custody pass deterministic verification.",
-                "The near-anniversary pre/extended pair passes actual content registration despite the disclosed baseline change.",
+                "The near-anniversary pre/extended pair is accepted by the established registration protocol with every non-pass window spatially excluded.",
                 "A reproducible multi-signal background-candidate evidence route exists outside all three official program footprints.",
             ],
             "not_proven": [
