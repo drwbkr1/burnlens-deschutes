@@ -13,7 +13,7 @@
   "version_tag": "v0.38.0-green-ridge-owner-response-intake",
   "version_tag_object": "16f364aac604958d812fb2567dd9cd8b5ea13d6c",
   "lifecycle_sync_issue": 497,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 498,
   "next_checkpoint_issue": 495,
   "status": "verified: two Green Ridge prototype labels accepted; dataset remains blocked at four events",
   "software_version": "0.38.0",
