@@ -55,7 +55,7 @@
     "privacy": "pass: public outputs omit notes, unit decisions, paths, filenames, and private reconciliation",
     "render": "pass: original-resolution public PNG inspected; static HTML is responsive, local, and self-contained",
     "repository_tests": "pass in candidate worktree: 299 tests; compileall; candidate public and manifest JSON parse",
-    "exact_reconstruction": "pending clean-checkout and fresh-main reconstruction",
+    "exact_reconstruction": "remediation pending: first clean branch clone rebuilds all three outputs but tracked JSON checks out as CRLF; explicit nested LF contract added and second clean clone required",
     "release_package": "pending canonical fixed-epoch package and isolated install",
     "dataset_split_baseline_model": "blocked: four accepted event groups remain below the required six; no dataset, split, baseline, or model",
     "repository_release": "pending PR merge, fresh-main gates, and remote annotated tag"

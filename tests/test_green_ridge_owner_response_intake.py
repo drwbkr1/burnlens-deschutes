@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -70,6 +71,15 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-intake-green-ridge-owner-response", pyproject)
         self.assertIn("burnlens-build-green-ridge-owner-response-intake", pyproject)
+        for extension in ("json", "html"):
+            result = subprocess.run(
+                ["git", "check-attr", "eol", "--", f"samples/labels/review/green-ridge/phase-two/intake/example.{extension}"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn(": eol: lf", result.stdout)
 
     def test_completed_response_contract(self) -> None:
         result = validate_response(self.surface, self._response(("yes", "uncertain")))
