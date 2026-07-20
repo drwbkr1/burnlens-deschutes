@@ -4,11 +4,11 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "created_at_utc": "2026-07-20T17:20:07.969Z",
   "task_issue": 491,
-  "pull_request": null,
+  "pull_request": 496,
   "branch": "codex/p2o4-t26-green-ridge-owner-response-intake",
   "git_base_commit": "63f0723e893b1a176acdbdf5ddd016ea9f6022d8",
   "intake_source_commit": "78368833a73401e098af21bf999ab6674d2e8f9f",
-  "candidate_artifacts_commit": null,
+  "candidate_artifacts_commit": "aa836e4d781c7793f988a4fb8e54e01933c671fd",
   "checkpoint_commit": null,
   "version_tag": "v0.38.0-green-ridge-owner-response-intake",
   "version_tag_object": null,
@@ -47,6 +47,16 @@
     "event_group_count": 4,
     "minimum_event_group_count": 6
   },
+  "release_package": {
+    "filename": "burnlens_deschutes-0.38.0-py3-none-any.whl",
+    "source_commit": "cff4ead7356b0fffd64d53559df4f65fec3749c2",
+    "source_date_epoch": 1784569487,
+    "bytes": 552457,
+    "sha256": "ea80b167b29064fb6f53dd5971acf4289cf1e7e2616c9a6abe8d62616b70e29e",
+    "entries": 123,
+    "console_commands": 59,
+    "dependency_complete_isolated_install": "pass"
+  },
   "quality_gates": {
     "response_custody": "pass: exact hash-named completed export and receipt preserved without overwrite before reveal",
     "proposal_and_rasters": "pass: exact proposal report and two EPSG:32610 rasters; intact 8-connected cores; exact one-pixel rings; 0/1/2 domain",
@@ -55,8 +65,8 @@
     "privacy": "pass: public outputs omit notes, unit decisions, paths, filenames, and private reconciliation",
     "render": "pass: original-resolution public PNG inspected; static HTML is responsive, local, and self-contained",
     "repository_tests": "pass in candidate worktree: 299 tests; compileall; candidate public and manifest JSON parse",
-    "exact_reconstruction": "remediation pending: first clean branch clone rebuilds all three outputs but tracked JSON checks out as CRLF; explicit nested LF contract added and second clean clone required",
-    "release_package": "pending canonical fixed-epoch package and isolated install",
+    "exact_reconstruction": "pass after checkout remediation: first clean branch clone rebuilt all three outputs but rejected the CRLF tracked JSON; explicit nested LF rules make the corrected clean clone reproduce JSON, HTML, and PNG 3 of 3",
+    "release_package": "pass: two independent corrected clean-branch fixed-epoch wheels are byte-identical; 123 clean entries; 59 commands; dependency-complete isolated install, pip check, and both new CLI help gates pass",
     "dataset_split_baseline_model": "blocked: four accepted event groups remain below the required six; no dataset, split, baseline, or model",
     "repository_release": "pending PR merge, fresh-main gates, and remote annotated tag"
   },
