@@ -14,7 +14,7 @@
   "version_tag": "v0.40.0-grandview-reference-fitness",
   "version_tag_object": "48c1c9677b9b41a734be2dcdc4a9691caf4e6688",
   "lifecycle_sync_issue": 505,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 506,
   "next_checkpoint_issue": 503,
   "status": "verified release: exact Grandview reference fitness passes; candidates and labels deferred",
   "software_version": "0.40.0",

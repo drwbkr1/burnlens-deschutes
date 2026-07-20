@@ -15,7 +15,7 @@
 
 | Evidence class | Current state |
 |---|---|
-| Latest repository evidence baseline | Verified `v0.40.0-grandview-reference-fitness`; checkpoint `cdbe49883fb5330c9e7af036a847841b714dafae`; tag object `48c1c9677b9b41a734be2dcdc4a9691caf4e6688`; issue #499 / PR #504; lifecycle #505; next #503 |
+| Latest repository evidence baseline | Verified `v0.40.0-grandview-reference-fitness`; checkpoint `cdbe49883fb5330c9e7af036a847841b714dafae`; tag object `48c1c9677b9b41a734be2dcdc4a9691caf4e6688`; issue #499 / PR #504; lifecycle #505 / PR #506; next #503 |
 | Official-source scout evidence | BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 12 bounded official responses / 7 source classes / 21 candidates / 0 labels; GW Fire ranked first; Landsat asset state `AUTHENTICATION_REQUIRED` |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
 | Active evidence checkpoints | Verified v0.38 accepts eight balanced prototype regions across four events. Verified v0.39 passes Grandview optical fitness. The v0.40 candidate gates 20 exact official rasters: MTBS covers 61,795 / 62,588 boundary pixels with 58,438 classes 2-4; RAVG is context-limited by its exact sparse/non-tree warning; candidates, labels, dataset, split, baseline, and model remain deferred. Historical 6/0/50 exclusions are not inherited. |
