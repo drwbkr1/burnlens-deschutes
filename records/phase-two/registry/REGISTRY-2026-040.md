@@ -17,4 +17,4 @@
 | Background route | Blocked | No affirmative background truth; issue #503 owns the next evidence gate |
 | Dataset/split/baseline/model | Blocked | Existing eight prototype regions across four events remain unchanged |
 | Provider inputs | Ignored custody | 0 provider bytes or private routes committed |
-| Reproducible wheel | Passed | 583,421 bytes; SHA-256 `e8d1baed066d7438f2a214a8e2b56bca77ce6721035291e9cfc92d65b2b77dee`; 133 entries; 64 commands |
+| Reproducible wheel | Passed | Fresh-head 582,467 bytes; SHA-256 `b5e50359784fa748477cd9ff1c21e66083f0adce3682aea5e81c6163b930e269`; 133 entries; 64 commands |

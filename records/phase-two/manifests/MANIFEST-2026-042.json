@@ -63,8 +63,8 @@
     "filename": "burnlens_deschutes-0.40.0-py3-none-any.whl",
     "source_commit": "9f28f822c114788a1a9bb09a52fab22616be0376",
     "source_date_epoch": 1784578110,
-    "bytes": 583421,
-    "sha256": "e8d1baed066d7438f2a214a8e2b56bca77ce6721035291e9cfc92d65b2b77dee",
+    "bytes": 582467,
+    "sha256": "b5e50359784fa748477cd9ff1c21e66083f0adce3682aea5e81c6163b930e269",
     "entries": 133,
     "console_commands": 64,
     "dependency_complete_target_install": "pass"

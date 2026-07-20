@@ -35,6 +35,8 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.surface = json.loads(SURFACE.read_text(encoding="utf-8"))
         cls.template = json.loads(TEMPLATE.read_text(encoding="utf-8"))
+        cls.private_test_parent = ROOT / "build" / "test-green-ridge-owner-response-intake"
+        cls.private_test_parent.mkdir(parents=True, exist_ok=True)
 
     def _response(self, decisions: tuple[str, str] = ("yes", "yes")) -> dict:
         value = json.loads(json.dumps(self.template))
@@ -99,7 +101,7 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
                 validate_response(self.surface, response)
 
     def test_preservation_rejects_overwrite_and_wrong_filename(self) -> None:
-        with tempfile.TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with tempfile.TemporaryDirectory(dir=self.private_test_parent) as temporary:
             root = Path(temporary)
             exact, receipt = self._preserved(root, self._response())
             self.assertEqual(exact.read_bytes(), self._bytes(self._response()))
@@ -131,7 +133,7 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
                 )
 
     def test_yes_and_exclusions_preserve_unknowns_and_cumulative_state(self) -> None:
-        with tempfile.TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with tempfile.TemporaryDirectory(dir=self.private_test_parent) as temporary:
             root = Path(temporary)
             exact, receipt = self._preserved(root, self._response(("yes", "uncertain")))
             private = build_private_reconciliation(
@@ -153,7 +155,7 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
             self.assertFalse(private["outcome"]["dataset_fitness_reopened"])
 
     def test_no_new_yes_retains_prior_label_set(self) -> None:
-        with tempfile.TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with tempfile.TemporaryDirectory(dir=self.private_test_parent) as temporary:
             root = Path(temporary)
             exact, receipt = self._preserved(root, self._response(("no", "uncertain")))
             private = build_private_reconciliation(
@@ -171,7 +173,7 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
             self.assertEqual(private["outcome"]["event_group_count"], 3)
 
     def test_private_and_public_writers_preserve_privacy(self) -> None:
-        with tempfile.TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with tempfile.TemporaryDirectory(dir=self.private_test_parent) as temporary:
             root = Path(temporary)
             exact, receipt = self._preserved(root, self._response())
             private = build_private_reconciliation(
