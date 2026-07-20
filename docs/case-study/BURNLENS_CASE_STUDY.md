@@ -346,6 +346,12 @@ All nine fixed registration windows pass. BurnLens transfers the already establi
 
 This is a route for proposing review regions, not an official unburned map. Encoded class 0, outside-footprint position, SCL, low change, or apparent stability is insufficient alone. The checkpoint creates zero candidates and zero labels. Issue #483 keeps deterministic region selection and later owner yes/no/uncertain review separate.
 
+BurnLens 0.36.0 then applies the already established region-candidate contract to that frozen evidence. It selects one intact 25-pixel burned component and one intact 25-pixel background component without clipping or threshold retuning. A deterministic SHA-256 tie-break resolves equally sized components, and every core receives a one-native-pixel unknown ring.
+
+![BurnLens Green Ridge region proposal](../../samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.png)
+
+The two exact EPSG:32610 rasters contain 50 proposed core pixels and 87 unknown-ring pixels. They remain unreviewed. Issue #487 owns a blank yes/no/uncertain surface; response intake and any prototype-label decision remain separate.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -382,6 +388,7 @@ This is a route for proposing review regions, not an official unburned map. Enco
 - Latest Green Ridge reference-fitness run: `BL-2026-07-19-green-ridge-reference-fitness-r001`
 - Latest Green Ridge background-optical acquisition run: `BL-2026-07-20-green-ridge-background-optical-intake-r001`
 - Latest Green Ridge background-evidence run: `BL-2026-07-20-green-ridge-background-evidence-r001`
+- Latest Green Ridge region-proposal run: `BL-2026-07-20-green-ridge-region-proposal-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -392,6 +399,7 @@ This is a route for proposing review regions, not an official unburned map. Enco
 - Prior verified tool: BurnLens `0.34.0`; issue #477 / PR #479; checkpoint `085cb61d0f1add3f5261582acdd746e298c86ba6`; run `BL-2026-07-19-green-ridge-reference-fitness-r001`; tag object `0faed9a847756651ba8d62b7baf475ea72c4229f`; exact Green Ridge optical/reference evidence; dataset absent
 - Latest verified tool: BurnLens `0.35.0`; issue #480 / PR #484; checkpoint `b57bcbe5665dcb09a7e716e2e1de4147be4741e4`; contract `678e93c29a07f070f4fb5e289fddbdfa852c9ccb`; generator `92f407f37a32a020c1a47bb1931015b3607c2d89`; artifacts `7ca04102640a108e440054c2693aa6bdc20a02b0`; tag object `d901ea55d683a103bf6f00b8fac55434b65518b4`; 26,126 eligible background-route pixels; zero candidates/labels; next #483
 - Current verified release: `v0.35.0-green-ridge-background-evidence`; checkpoint `b57bcbe5665dcb09a7e716e2e1de4147be4741e4`; tag object `d901ea55d683a103bf6f00b8fac55434b65518b4`; one exact 1,193,992,663-byte extended scene; nine registration windows; 26,126 eligible background-route pixels; zero candidates or labels; issue #483 owns region proposal
+- Current release candidate: BurnLens `0.36.0`; issue #483; generator `690137f1530a00ca79b8f5831f700541809b2a2b`; artifacts `1858a7a945957fd0cc3d123b325529f9931806c3`; two 25-pixel unreviewed cores / 87 unknown-ring pixels; zero owner responses/labels; next #487
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Current request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; exact request accepted, delivery pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state

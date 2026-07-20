@@ -119,8 +119,10 @@ def _spectral_stability(
     pre_red, pre_red_valid = _reflectance(pre_scene, pre, "B04")
     ext_red, ext_red_valid = _reflectance(extended_scene, extended, "B04")
     pre_nir, pre_nir_valid = _reflectance(pre_scene, pre, "B8A")
+    post_nir, post_nir_valid = _reflectance(post_scene, post, "B8A")
     ext_nir, ext_nir_valid = _reflectance(extended_scene, extended, "B8A")
     pre_swir, pre_swir_valid = _reflectance(pre_scene, pre, "B12")
+    post_swir, post_swir_valid = _reflectance(post_scene, post, "B12")
     ext_swir, ext_swir_valid = _reflectance(extended_scene, extended, "B12")
     valid = (
         (original_quality == 0)
@@ -160,6 +162,22 @@ def _spectral_stability(
         & (np.abs(nir_loss) <= STABLE_ABS_NIR_CHANGE_MAX)
     )
     coherent = stable & (neighbor_support(stable) >= STABLE_NEIGHBOR_SUPPORT_MIN)
+    burn_denominator_pre = pre_nir + pre_swir
+    burn_denominator_post = post_nir + post_swir
+    burn_valid = (
+        (original_quality == 0)
+        & pre_nir_valid
+        & post_nir_valid
+        & pre_swir_valid
+        & post_swir_valid
+        & (np.abs(burn_denominator_pre) > 1e-9)
+        & (np.abs(burn_denominator_post) > 1e-9)
+    )
+    pre_post_dnbr = np.full(valid.shape, np.nan, dtype=np.float32)
+    pre_post_dnbr[burn_valid] = (
+        (pre_nir[burn_valid] - pre_swir[burn_valid]) / burn_denominator_pre[burn_valid]
+        - (post_nir[burn_valid] - post_swir[burn_valid]) / burn_denominator_post[burn_valid]
+    )
     report = {
         "context_pixels": int(valid.size),
         "original_pair_eligible_pixels": int((original_quality == 0).sum()),
@@ -185,6 +203,7 @@ def _spectral_stability(
         "stable": stable,
         "coherent": coherent,
         "dnbr": dnbr,
+        "pre_post_dnbr": pre_post_dnbr,
         "original_quality": original_quality,
         "extended_quality": extended_quality,
     }
@@ -484,11 +503,15 @@ def build_report(
         "post_mask": post["MASK10"],
         "extended_mask": extended["MASK10"],
         "dnbr": stability["dnbr"],
+        "pre_post_dnbr": stability["pre_post_dnbr"],
         "valid": stability["valid"],
         "coherent": stability["coherent"],
         "route": route,
         "source_boundary": reference["source_boundary"],
         "boundary_buffer": reference["boundary_buffer"],
+        "mtbs_dnbr6": reference["mtbs_dnbr6"],
+        "ravg_cbi4": reference["ravg_cbi4"],
+        "grid_transform": transform,
     }
     return report, previews
 
