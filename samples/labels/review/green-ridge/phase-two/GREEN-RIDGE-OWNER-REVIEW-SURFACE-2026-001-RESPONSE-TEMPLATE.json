@@ -1,0 +1,26 @@
+{
+  "response_schema_version": "burnlens-green-ridge-owner-review-response-v0.1.0",
+  "surface_id": "GREEN-RIDGE-OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-20-green-ridge-owner-review-surface-r001",
+  "proposal_report_sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281",
+  "completed": false,
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "owner": {
+    "attestation": false
+  },
+  "responses": [
+    {
+      "candidate_id": "GRP-001",
+      "candidate_raster_sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "GRP-002",
+      "candidate_raster_sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8",
+      "decision": null,
+      "notes": ""
+    }
+  ]
+}
