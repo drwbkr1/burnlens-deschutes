@@ -1,0 +1,267 @@
+{
+  "report_id": "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "grandview-owner-response-intake-v0.1.0",
+  "generated_at_utc": "2026-07-21T02:52:34Z",
+  "run_id": "BL-2026-07-21-grandview-owner-response-intake-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 517,
+  "git_source_commit": "33e5b02bebf335c5026688a3d2a33ae2d48b8991",
+  "software_version": "0.44.0",
+  "aoi_version": "multi-event-native-grids-v0.3.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "prior_label_intake": {
+      "report_id": "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001",
+      "run_id": "BL-2026-07-20-green-ridge-owner-response-intake-r001",
+      "bytes": 8210,
+      "sha256": "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3"
+    },
+    "proposal": {
+      "report_id": "GRANDVIEW-REGION-PROPOSAL-2026-001",
+      "run_id": "BL-2026-07-20-grandview-region-proposal-r001",
+      "bytes": 4620,
+      "sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba"
+    },
+    "surface": {
+      "report_id": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001",
+      "run_id": "BL-2026-07-21-grandview-owner-review-surface-r001",
+      "bytes": 9071,
+      "sha256": "7576ab36e97d026f9f706e67c75e3482b718818a3697e704a17ce7dc4c54369c"
+    },
+    "response": {
+      "bytes": 887,
+      "sha256": "41fe9b3fa731a57d65def5d6952ef029a982ed26bcf62b9bf9cfa5d267018585"
+    },
+    "receipt": {
+      "bytes": 1835,
+      "sha256": "0b2fa3360c5c54f39a5b2623ee0cf8acd0ab13ca76b2ef2ecd704c2a699dfa6a"
+    },
+    "private_reconciliation": {
+      "bytes": 8893,
+      "sha256": "0a7c1322ff8e9c5983a4baeb6d2cf7d03bd45f77b4926f5d93909c4fb4c74d05",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "record_bindings": [
+    {
+      "record_id": "SOURCE-2026-024",
+      "bytes": 2100,
+      "sha256": "86ce20dc8ea15daad91161501506b107c659a10cfaf960d0b1ddb2d4f9fd3fba"
+    },
+    {
+      "record_id": "SOURCE-2026-026",
+      "bytes": 2279,
+      "sha256": "d2d877eec285d2e655e715ecb5d52fcf68bffc365d440292dff13e7690f00eac"
+    },
+    {
+      "record_id": "SOURCE-2026-027",
+      "bytes": 1896,
+      "sha256": "d31d8271211b47124a9f2b7c106a0202ab81a171a18f95be7bcac6bfa994313f"
+    },
+    {
+      "record_id": "TERMS-2026-020",
+      "bytes": 1537,
+      "sha256": "f68a57dd75189fe4656d6157103c3916c9895cbb997810afa9fec40d316b3a21"
+    },
+    {
+      "record_id": "TERMS-2026-022",
+      "bytes": 1633,
+      "sha256": "2b3b8dc5dff3ad5c3cb1c092af3395e00fc37c2762e0117e89ae2d57b77b6038"
+    },
+    {
+      "record_id": "TERMS-2026-023",
+      "bytes": 1438,
+      "sha256": "2c23b4318c56bcc5c7d449a301b18b6850e1bfeb1694f8868047f2694caf3c3e"
+    },
+    {
+      "record_id": "PRECHECK-2026-038",
+      "bytes": 1605,
+      "sha256": "a1c55147833504f51d2fad60b29cb7b1f2ecbb22882364674d3feddb0d416ee7"
+    },
+    {
+      "record_id": "PRECHECK-2026-040",
+      "bytes": 1572,
+      "sha256": "9de3407a9a8083e339fa13e7fcdc135a0ae21ebc09e7090453aa73a3546f12d2"
+    },
+    {
+      "record_id": "PRECHECK-2026-041",
+      "bytes": 1962,
+      "sha256": "3465ab5959c39deb52466efef64e6746bba09dd085260e020862f94050906986"
+    },
+    {
+      "record_id": "PRECHECK-2026-042",
+      "bytes": 1789,
+      "sha256": "e591ee8a0f03a63928dc92f14dba2d42d11171705fc8c8056ab8b63d937c0ed1"
+    },
+    {
+      "record_id": "LABEL-FITNESS-2026-026",
+      "bytes": 1165,
+      "sha256": "ce2e4fde4266a4a950ebca6ab87cca9bab13c0788c85c76e53594c84d2876731"
+    },
+    {
+      "record_id": "LABEL-FITNESS-2026-027",
+      "bytes": 1248,
+      "sha256": "e23f12ef40476dab9155fc9cd67eaf36fd03b7e8c2f57f4e2bf9c983367f5f95"
+    },
+    {
+      "record_id": "SOURCE-PRECEDENCE-2026-017",
+      "bytes": 1482,
+      "sha256": "28819bcc62f8d9363727fdd4c1040d1c689505f0a3b86fc1737a28d2dc316f20"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-036",
+      "bytes": 1046,
+      "sha256": "ea2ba063336d9d3d1e4a62520584b01202d13b0451e6a6ad4d8873d3eed77a88"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-037",
+      "bytes": 897,
+      "sha256": "fe3f6775dc89b58b070be09db2d5844a1579f242d2b7a67d0a3e9e9ebc033854"
+    },
+    {
+      "record_id": "USE-BOUNDARY-2026-038",
+      "bytes": 1512,
+      "sha256": "885a2a27481c34dcfa8ae3cfa2eb0425bb2caa68d9911a01e2e88e1205f49891"
+    },
+    {
+      "record_id": "MANIFEST-2026-040",
+      "bytes": 5411,
+      "sha256": "25ef2d7d217726fde894517081dfe85a6c43040070ce4dd540740ccf9200b192"
+    },
+    {
+      "record_id": "MANIFEST-2026-041",
+      "bytes": 5999,
+      "sha256": "f9d72cd9463e83399b4edb9a2ae0878bcf301e78e3efff9f147447892ca64eda"
+    },
+    {
+      "record_id": "MANIFEST-2026-042",
+      "bytes": 5555,
+      "sha256": "ee77d7035c3422b2bdb7884c0652a06bb01b2426c56b7b49ed61d7e630b029b8"
+    },
+    {
+      "record_id": "MANIFEST-2026-043",
+      "bytes": 6494,
+      "sha256": "22432f3f2fa69d0ce98efa54163bb24f8ed7a13c7c227196ce2267f6aa641020"
+    },
+    {
+      "record_id": "MANIFEST-2026-044",
+      "bytes": 6244,
+      "sha256": "65459c6d7df48827c7f7966bfb5c51a92ee00cfc306f6b867680a4937faa83ac"
+    },
+    {
+      "record_id": "MANIFEST-2026-045",
+      "bytes": 6094,
+      "sha256": "79872c5682e88a2784d52f8ccc59cef2ea8dafacdd3c57222d584fd5d36fe27e"
+    }
+  ],
+  "source_records": [
+    "SOURCE-2026-024",
+    "SOURCE-2026-026",
+    "SOURCE-2026-027"
+  ],
+  "terms_records": [
+    "TERMS-2026-020",
+    "TERMS-2026-022",
+    "TERMS-2026-023"
+  ],
+  "review_records": [
+    "PRECHECK-2026-038",
+    "PRECHECK-2026-040",
+    "PRECHECK-2026-041",
+    "PRECHECK-2026-042",
+    "LABEL-FITNESS-2026-026",
+    "LABEL-FITNESS-2026-027",
+    "SOURCE-PRECEDENCE-2026-017",
+    "USE-BOUNDARY-2026-036",
+    "USE-BOUNDARY-2026-037",
+    "USE-BOUNDARY-2026-038"
+  ],
+  "manifest_records": [
+    "MANIFEST-2026-040",
+    "MANIFEST-2026-041",
+    "MANIFEST-2026-042",
+    "MANIFEST-2026-043",
+    "MANIFEST-2026-044",
+    "MANIFEST-2026-045"
+  ],
+  "decision_counts": {
+    "yes": 2,
+    "no": 0,
+    "uncertain": 0
+  },
+  "outcome": {
+    "grandview_owner_approved_region_labels": 2,
+    "grandview_class_counts": {
+      "background": 1,
+      "burned": 1
+    },
+    "grandview_accepted_core_pixels": 50,
+    "grandview_reviewed_unknown_ring_pixels": 98,
+    "grandview_excluded_unknown_ring_pixels": 98,
+    "grandview_event_complete": true,
+    "cumulative_owner_approved_region_labels": 10,
+    "cumulative_prototype_label_class_counts": {
+      "background": 5,
+      "burned": 5
+    },
+    "cumulative_accepted_core_pixels": 236,
+    "cumulative_accepted_core_area_ha": 9.44,
+    "cumulative_excluded_unknown_ring_pixels": 431,
+    "event_group_count": 5,
+    "minimum_event_group_count": 6,
+    "minimum_event_group_gate_passed": false,
+    "dataset_fitness_reopened": false
+  },
+  "promotion_gates": {
+    "exact_response_and_custody": true,
+    "candidate_reproducibility": true,
+    "source_and_terms": true,
+    "quality_and_registration": true,
+    "unknown_ring_excluded": true,
+    "event_level_leakage_control": true
+  },
+  "privacy": {
+    "notes_public": false,
+    "unit_decisions_public": false,
+    "private_paths_public": false
+  },
+  "boundaries": {
+    "owner_review_is_independent_ground_truth": false,
+    "unknown_ring_is_background": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_or_operational_claim_created": false
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2021-2022, accessed through CDSE.",
+    "MTBS evidence: Monitoring Trends in Burn Severity Project, U.S. Geological Survey and USDA Forest Service.",
+    "BAER evidence: Burned Area Emergency Response program; delivered unthresholded continuous-change evidence is preliminary/draft context only.",
+    "RAVG evidence: USDA Forest Service and ESA; program-specific timing, vegetation, and model limitations apply. Grandview use is context-only under the delivered sparse/no-tree warning."
+  ],
+  "warning": "Experimental BurnLens owner-approved prototype region labels. Not ground truth, official wildfire information, emergency guidance, or a dataset. Official sources govern.",
+  "decision": "ACCEPT_GRANDVIEW_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL",
+  "next_gate": "Acquire, review, and gate Petes Lake as the sixth comparable whole-event group before dataset fitness, split, or baseline work can reopen.",
+  "outputs": [
+    {
+      "path": "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 4034,
+      "sha256": "744c1489021e1967a91756c6042c233694294e4eec6acde398cc8ac826658545",
+      "media_type": "text/html"
+    },
+    {
+      "path": "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 89738,
+      "sha256": "ad39379668cc8a8baed49ccc24e25828c4bed1d7dcb915c101112d53b64145e2",
+      "media_type": "image/png"
+    }
+  ]
+}

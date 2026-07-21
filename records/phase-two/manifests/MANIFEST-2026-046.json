@@ -1,0 +1,149 @@
+{
+  "manifest_id": "MANIFEST-2026-046",
+  "manifest_version": "0.46.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-21T02:52:34Z",
+  "task_issue": 517,
+  "pull_request": null,
+  "branch": "codex/p2o4-t32-grandview-owner-response-intake",
+  "git_base_commit": "3fc83130dab6e994265f0d3d8a55a356acc474b5",
+  "response_lock_source_commit": "6a75065fb1e339d7c26208329ee080129de58803",
+  "intake_source_commit": "33e5b02bebf335c5026688a3d2a33ae2d48b8991",
+  "candidate_artifacts_commit": "822f13a3d1a845d63e4d2f13dee62627d9a2b240",
+  "checkpoint_commit": null,
+  "version_tag": "v0.44.0-grandview-owner-response-intake",
+  "version_tag_object": null,
+  "lifecycle_sync_issue": null,
+  "lifecycle_sync_pull_request": null,
+  "next_checkpoint_issue": 521,
+  "status": "release candidate: two Grandview prototype labels and owner-confirmed local HTML render pass; repository release gates remain",
+  "software_version": "0.44.0",
+  "run_id": "BL-2026-07-21-grandview-owner-response-intake-r002",
+  "event_group_id": "event-grandview-0558-od-2021",
+  "aoi_version": "multi-event-native-grids-v0.3.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "private_custody": {
+    "response": {
+      "bytes": 887,
+      "sha256": "41fe9b3fa731a57d65def5d6952ef029a982ed26bcf62b9bf9cfa5d267018585",
+      "committed": false,
+      "ignored": true
+    },
+    "receipt": {
+      "bytes": 1835,
+      "sha256": "0b2fa3360c5c54f39a5b2623ee0cf8acd0ab13ca76b2ef2ecd704c2a699dfa6a",
+      "committed": false,
+      "ignored": true
+    },
+    "private_reconciliation": {
+      "bytes": 8893,
+      "sha256": "0a7c1322ff8e9c5983a4baeb6d2cf7d03bd45f77b4926f5d93909c4fb4c74d05",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "input_bindings": {
+    "prior_label_intake": {
+      "report_id": "GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001",
+      "bytes": 8210,
+      "sha256": "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3"
+    },
+    "proposal": {
+      "report_id": "GRANDVIEW-REGION-PROPOSAL-2026-001",
+      "bytes": 4620,
+      "sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba"
+    },
+    "surface": {
+      "report_id": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001",
+      "bytes": 9071,
+      "sha256": "7576ab36e97d026f9f706e67c75e3482b718818a3697e704a17ce7dc4c54369c"
+    }
+  },
+  "rejected_audit_run": {
+    "run_id": "BL-2026-07-21-grandview-owner-response-intake-r001",
+    "source_commit": "e4dfc1f9d57fb1e0426382eacd67545ea7967852",
+    "private_reconciliation_bytes": 8759,
+    "private_reconciliation_sha256": "0dd76a3aa30edd1492fdb92ab28c10a03b3855aa453b62633ae1f4913bf6805d",
+    "accepted": false,
+    "public_state_created": false,
+    "label_state_created": false,
+    "reason": "non-owner gates were unconditional, ring semantics were conflated, and event completion did not require both classes"
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json",
+      "bytes": 9112,
+      "sha256": "2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5"
+    },
+    {
+      "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 4034,
+      "sha256": "744c1489021e1967a91756c6042c233694294e4eec6acde398cc8ac826658545"
+    },
+    {
+      "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 89738,
+      "sha256": "ad39379668cc8a8baed49ccc24e25828c4bed1d7dcb915c101112d53b64145e2"
+    }
+  ],
+  "measured_evidence": {
+    "decision_counts": {
+      "yes": 2,
+      "no": 0,
+      "uncertain": 0
+    },
+    "grandview_labels": {
+      "burned": 1,
+      "background": 1
+    },
+    "grandview_core_pixels": 50,
+    "grandview_core_area_ha": 2.0,
+    "grandview_unknown_ring_pixels_excluded": 98,
+    "cumulative_labels": {
+      "burned": 5,
+      "background": 5
+    },
+    "cumulative_core_pixels": 236,
+    "cumulative_core_area_ha": 9.44,
+    "cumulative_unknown_ring_pixels_excluded": 431,
+    "event_group_count": 5,
+    "minimum_event_group_count": 6,
+    "minimum_event_group_gate_passed": false,
+    "dataset_fitness_reopened": false
+  },
+  "release_package": {
+    "source_head_commit": "4449f476b31d321d29db64632bc211be813a01e3",
+    "source_date_epoch": 1784604671,
+    "filename": "burnlens_deschutes-0.44.0-py3-none-any.whl",
+    "bytes": 630232,
+    "sha256": "3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1",
+    "fresh_clone_builds": 2,
+    "wheel_entries": 145,
+    "console_commands": 70,
+    "isolated_install_version": "0.44.0",
+    "committed": false
+  },
+  "quality_gates": {
+    "response_custody": "pass: exact production response and pre-reveal receipt bytes are pinned; paths are repository-local, ignored, and no-overwrite",
+    "proposal_and_rasters": "pass: exact proposal and two EPSG:32610 rasters; 8-connected cores; exact one-pixel rings; 0/1/2 domain",
+    "source_and_terms": "pass: 22 exact source, terms, review, and prior-manifest byte bindings plus explicit gate text",
+    "promotion": "pass: two owner yes decisions plus all non-owner gate families; both classes complete the Grandview event",
+    "privacy": "pass: public outputs omit response/receipt bytes, notes, unit decisions, private paths, and private filenames",
+    "render": "pass: original-resolution PNG is clean and self-tracing; owner confirmed the canonical local HTML rendered correctly, recorded 2026-07-21T04:00:44Z; automated local file navigation remained policy-blocked and was not bypassed",
+    "repository_tests": "pass: 15 focused lock/intake tests and 345 full repository tests; compilation and dependency health pass",
+    "documentation_and_json": "pass: 113 tracked JSON documents parse and 194 local Markdown-link occurrences resolve with zero missing",
+    "exact_reconstruction": "pass: fresh remote head 4449f476b31d321d29db64632bc211be813a01e3 recreates the 8,893-byte private reconciliation and all three public outputs exactly from only the locked response and receipt",
+    "fresh_remote_head": "pass: 328 tests with 17 expected custody skips, compilation, dependency health, 113 JSON parses, 194 local links, required LF checkout, and clean ignored-output status",
+    "no_custody_checkout": "pass after test-only remediation af6233a6cfb68cf3a5ef9c5b93f3c8ea25ca5214: a clone with no pre-existing downloads directory runs 328 tests with 17 expected custody skips and reproduces the canonical wheel exactly; precursor 0f8650ffce60bd4dfc496dc16709b8304ed5ac54 exposed and withheld the fixture-parent assumption",
+    "release_package": "pass: two byte-identical 630,232-byte fresh-clone wheels; SHA-256 3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1; 145 clean entries; 70 commands; isolated 0.44.0 import and both new CLI helps",
+    "dataset_split_baseline_model": "blocked: five complete event groups remain below six and the full sufficiency evaluator remains authoritative",
+    "repository_release": "pending PR, merge, fresh-main verification, annotated tag, and lifecycle synchronization"
+  },
+  "decision": "ACCEPT_GRANDVIEW_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"
+}
