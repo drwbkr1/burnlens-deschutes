@@ -132,4 +132,16 @@ The exact replacement yields 33,365 eligible pixels / 97.8360% of the 34,103-pix
 
 The original-resolution 1,800 x 1,240 preview and final PNGs show clear, aligned pre/post panels, coherent post-fire browning, and no visible cloud, smoke/haze, snow, clipping, or misleading display artifact. The final decision is `PASS_EXACT_PETES_LAKE_REPLACEMENT_OPTICAL_SOURCE_FITNESS_WITH_SPATIAL_EXCLUSIONS`. Exact output replay reproduces the 60,069-byte JSON and 588,891-byte PNG byte-for-byte.
 
-U04 official-reference delivery inspection is now the next dependency. The pass does not create or accept a reference pixel, candidate, owner decision, label, sixth complete event, dataset, split, baseline, model, release, field-validation, official, endorsed, operational, or emergency-ready claim.
+U04 official-reference delivery inspection became the next dependency. The U03 pass did not create or accept a reference pixel, candidate, owner decision, label, sixth complete event, dataset, split, baseline, model, release, field-validation, official, endorsed, operational, or emergency-ready claim.
+
+## 2026-07-21 - U04 exact MTBS native contract
+
+BurnLens submitted exactly one Petes Lake MTBS request after a pushed code-only preflight. The Portal accepted one map ID and ten MTBS-native products; eight BAER/RAVG-only menu products remained explicitly excluded. The official completion message arrived minutes later. It was read without mailbox mutation, and its private USGS route, recipient, and message identity never entered tracked evidence.
+
+One bounded GET produced a 5,963,437-byte ZIP with SHA-256 `f17db688309c72eb84460f67476c116525ae3727bddfd406a8616f1fe0fad6da`. No redirect or retry occurred. Safe structure, event/map/program identity, member limits, expansion, and CRC passed before no-replace promotion into ignored single-link custody.
+
+The next code checkpoint enforced a strict 20-member Petes-only roster and opened the exact FGDC and ISO notices before any native raster or vector. Access `None`, acknowledgement, MTBS credit, no-warranty and revision language, and the wetland warning all pass. No conflicting archive-specific or unresolved third-party term was found.
+
+The delivered burn boundary and mask are one-polygon EPSG:32610 vectors. Five rasters share one exact 434 x 374, 30 m grid without reprojection or resampling. Reflectance, dNBR, RdNBR, dNBR6, DBF thresholds, class domain, PDF, and exact 188-member KMZ all pass. Class 0 remains outside/nodata, class 1 remains ambiguous, classes 2-4 remain bounded reference evidence, and class 6 remains excluded. WFS raw threshold fields are not silently rewritten into the delivered DBF semantics.
+
+The production report is 32,991 bytes with SHA-256 `b489bd30b467ab38f7320c9b313f904e0bbe9a33e2bed8b346230b9f48a6053c`; its ignored replay is byte-identical. The full repository passes 480 tests plus 50 subtests with 20 existing NumPy warnings. U04 passes with zero accepted reference pixels. U05 now owns wetland measurement, optical-grid coverage, temporal support, source precedence, and any bounded reference-fitness decision.
