@@ -43,6 +43,11 @@ TARGET_VERSION = "target-burn-scar-v0.2.0"
 TASK_ISSUE = 517
 MINIMUM_EVENT_GROUPS = 6
 EXPECTED_SURFACE_SHA256 = "7576ab36e97d026f9f706e67c75e3482b718818a3697e704a17ce7dc4c54369c"
+EXPECTED_RESPONSE_BYTES = 887
+EXPECTED_RESPONSE_SHA256 = "41fe9b3fa731a57d65def5d6952ef029a982ed26bcf62b9bf9cfa5d267018585"
+EXPECTED_RECEIPT_BYTES = 1_835
+EXPECTED_RECEIPT_SHA256 = "0b2fa3360c5c54f39a5b2623ee0cf8acd0ab13ca76b2ef2ecd704c2a699dfa6a"
+EXPECTED_EVENT_GROUP_ID = "event-grandview-0558-od-2021"
 PRIOR_INTAKE_SHA256 = "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3"
 SOURCE_RECORDS = (
     "SOURCE-2026-024",
@@ -67,6 +72,40 @@ REVIEW_RECORDS = (
     "USE-BOUNDARY-2026-038",
 )
 MANIFEST_RECORDS = tuple(f"MANIFEST-2026-{value:03d}" for value in range(40, 46))
+EXPECTED_RECORD_BINDINGS = {
+    "SOURCE-2026-024": (2_100, "86ce20dc8ea15daad91161501506b107c659a10cfaf960d0b1ddb2d4f9fd3fba"),
+    "SOURCE-2026-026": (2_279, "d2d877eec285d2e655e715ecb5d52fcf68bffc365d440292dff13e7690f00eac"),
+    "SOURCE-2026-027": (1_896, "d31d8271211b47124a9f2b7c106a0202ab81a171a18f95be7bcac6bfa994313f"),
+    "TERMS-2026-020": (1_537, "f68a57dd75189fe4656d6157103c3916c9895cbb997810afa9fec40d316b3a21"),
+    "TERMS-2026-022": (1_633, "2b3b8dc5dff3ad5c3cb1c092af3395e00fc37c2762e0117e89ae2d57b77b6038"),
+    "TERMS-2026-023": (1_438, "2c23b4318c56bcc5c7d449a301b18b6850e1bfeb1694f8868047f2694caf3c3e"),
+    "PRECHECK-2026-038": (1_605, "a1c55147833504f51d2fad60b29cb7b1f2ecbb22882364674d3feddb0d416ee7"),
+    "PRECHECK-2026-040": (1_572, "9de3407a9a8083e339fa13e7fcdc135a0ae21ebc09e7090453aa73a3546f12d2"),
+    "PRECHECK-2026-041": (1_962, "3465ab5959c39deb52466efef64e6746bba09dd085260e020862f94050906986"),
+    "PRECHECK-2026-042": (1_789, "e591ee8a0f03a63928dc92f14dba2d42d11171705fc8c8056ab8b63d937c0ed1"),
+    "LABEL-FITNESS-2026-026": (1_165, "ce2e4fde4266a4a950ebca6ab87cca9bab13c0788c85c76e53594c84d2876731"),
+    "LABEL-FITNESS-2026-027": (1_248, "e23f12ef40476dab9155fc9cd67eaf36fd03b7e8c2f57f4e2bf9c983367f5f95"),
+    "SOURCE-PRECEDENCE-2026-017": (1_482, "28819bcc62f8d9363727fdd4c1040d1c689505f0a3b86fc1737a28d2dc316f20"),
+    "USE-BOUNDARY-2026-036": (1_046, "ea2ba063336d9d3d1e4a62520584b01202d13b0451e6a6ad4d8873d3eed77a88"),
+    "USE-BOUNDARY-2026-037": (897, "fe3f6775dc89b58b070be09db2d5844a1579f242d2b7a67d0a3e9e9ebc033854"),
+    "USE-BOUNDARY-2026-038": (1_512, "885a2a27481c34dcfa8ae3cfa2eb0425bb2caa68d9911a01e2e88e1205f49891"),
+    "MANIFEST-2026-040": (5_411, "25ef2d7d217726fde894517081dfe85a6c43040070ce4dd540740ccf9200b192"),
+    "MANIFEST-2026-041": (5_999, "f9d72cd9463e83399b4edb9a2ae0878bcf301e78e3efff9f147447892ca64eda"),
+    "MANIFEST-2026-042": (5_555, "ee77d7035c3422b2bdb7884c0652a06bb01b2426c56b7b49ed61d7e630b029b8"),
+    "MANIFEST-2026-043": (6_494, "22432f3f2fa69d0ce98efa54163bb24f8ed7a13c7c227196ce2267f6aa641020"),
+    "MANIFEST-2026-044": (6_244, "65459c6d7df48827c7f7966bfb5c51a92ee00cfc306f6b867680a4937faa83ac"),
+    "MANIFEST-2026-045": (6_094, "79872c5682e88a2784d52f8ccc59cef2ea8dafacdd3c57222d584fd5d36fe27e"),
+}
+REQUIRED_RECORD_TEXT = {
+    "SOURCE-2026-026": ("never automatic label truth", "cannot independently qualify"),
+    "PRECHECK-2026-040": ("PASS_EXACT_DELIVERY_TERMS_AND_NATIVE_SOURCE_FITNESS",),
+    "PRECHECK-2026-041": ("RAVG modeled classes remain disallowed as affirmative evidence",),
+    "PRECHECK-2026-042": ("PASS_EXACT_GRANDVIEW_OWNER_RESPONSE_LOCK",),
+    "LABEL-FITNESS-2026-026": ("fit to present for owner yes/no/uncertain review", "Yes is necessary but insufficient"),
+    "LABEL-FITNESS-2026-027": ("ACCEPT_TWO_GRANDVIEW_OWNER_APPROVED_PROTOTYPE_LABELS",),
+    "SOURCE-PRECEDENCE-2026-017": ("Official sources govern every output", "Every one-pixel unknown ring"),
+    "USE-BOUNDARY-2026-038": ("Publishing response bytes, receipt bytes", "Not ground truth"),
+}
 WARNING = (
     "Experimental BurnLens owner-approved prototype region labels. Not ground truth, "
     "official wildfire information, emergency guidance, or a dataset. Official sources govern."
@@ -199,7 +238,10 @@ def validate_response(surface: dict[str, Any], response: dict[str, Any]) -> dict
 
 
 def _assert_ignored(repository_root: Path, path: Path) -> None:
-    relative = path.relative_to(repository_root)
+    try:
+        relative = path.relative_to(repository_root)
+    except ValueError as error:
+        raise GrandviewOwnerResponseIntakeError("private input or output is outside the repository") from error
     result = subprocess.run(
         ["git", "-C", str(repository_root), "check-ignore", "--quiet", "--no-index", "--", str(relative)],
         check=False,
@@ -259,7 +301,13 @@ def _record_bindings(repository_root: Path) -> list[dict[str, Any]]:
             _assert("access constraints are `None`" in text and "thresholded preliminary" in text, "delivered reference terms changed")
         if record_id == "TERMS-2026-023":
             _assert("Terms and attribution are resolved" in text and "No warranty" in text, "extended optical terms are unresolved")
-        values.append({"record_id": record_id, **_binding(path)})
+        for required in REQUIRED_RECORD_TEXT.get(record_id, ()):
+            _assert(required in text, f"required gate text changed: {record_id}")
+        binding = _binding(path)
+        expected_bytes, expected_sha256 = EXPECTED_RECORD_BINDINGS[record_id]
+        _assert(binding["bytes"] == expected_bytes, f"record size changed: {record_id}")
+        _assert(binding["sha256"] == expected_sha256, f"record hash changed: {record_id}")
+        values.append({"record_id": record_id, **binding})
     return values
 
 
@@ -383,8 +431,14 @@ def build_private_reconciliation(
     _assert(len(git_source_commit) == 40, "git source commit must be a full SHA")
     _timestamp(generated_at_utc, "generated time")
     surface, surface_bytes = _validate_surface(surface_path)
+    _assert_ignored(repository_root, response_path)
+    _assert_ignored(repository_root, receipt_path)
     response_bytes = response_path.read_bytes()
+    _assert(len(response_bytes) == EXPECTED_RESPONSE_BYTES, "production response size changed")
+    _assert(_sha256_bytes(response_bytes) == EXPECTED_RESPONSE_SHA256, "production response hash changed")
     receipt_bytes = receipt_path.read_bytes()
+    _assert(len(receipt_bytes) == EXPECTED_RECEIPT_BYTES, "production receipt size changed")
+    _assert(_sha256_bytes(receipt_bytes) == EXPECTED_RECEIPT_SHA256, "production receipt hash changed")
     receipt = _json(receipt_bytes, receipt_path.name)
     _validate_receipt(receipt, response_bytes, surface_bytes)
     response = _json(response_bytes, response_path.name)
@@ -396,6 +450,8 @@ def build_private_reconciliation(
     _assert(proposal.get("report_id") == PROPOSAL_ID, "proposal identity changed")
     _assert(proposal.get("summary", {}).get("labels_created") == 0, "proposal already contains labels")
     prior, prior_bytes = _load_prior_intake(repository_root)
+    record_bindings = _record_bindings(repository_root)
+    exact_record_gate = len(record_bindings) == len(EXPECTED_RECORD_BINDINGS)
     proposal_candidates = {item["candidate_id"]: item for item in proposal.get("candidates", [])}
     _assert(len(proposal_candidates) == 2, "proposal candidate count changed")
 
@@ -403,7 +459,9 @@ def build_private_reconciliation(
     added_class_counts: Counter[str] = Counter()
     accepted_core_pixels = 0
     excluded_ring_pixels = 0
+    reviewed_ring_pixels = 0
     for candidate, response_item in zip(surface["candidates"], response["responses"], strict=True):
+        _assert(candidate.get("event_group_id") == EXPECTED_EVENT_GROUP_ID, "Grandview event identity changed")
         proposal_candidate = proposal_candidates.get(candidate["candidate_id"])
         _assert(proposal_candidate is not None, "candidate absent from proposal")
         _assert(proposal_candidate["candidate_class"] == candidate["proposed_class"], "proposal/surface class mismatch")
@@ -411,17 +469,18 @@ def build_private_reconciliation(
         raster_gate = _verify_candidate_raster(raster_path, candidate)
         gates = {
             "owner_response": response_item["decision"] == "yes",
-            "reproducibility": True,
-            "source_and_terms": True,
-            "quality_and_registration": True,
-            "uncertainty_ring_excluded": True,
-            "event_level_leakage_control": True,
+            "reproducibility": raster_gate["core_connected_8"] and raster_gate["sha256"] == candidate["candidate_raster_sha256"],
+            "source_and_terms": exact_record_gate,
+            "quality_and_registration": raster_gate["crs"] == "EPSG:32610" and raster_gate["class_domain"] == [0, 1, 2],
+            "uncertainty_ring_excluded": raster_gate["ring_exactly_one_pixel"],
+            "event_level_leakage_control": candidate["event_group_id"] == EXPECTED_EVENT_GROUP_ID,
         }
         accepted = all(gates.values())
         if accepted:
             added_class_counts[candidate["proposed_class"]] += 1
             accepted_core_pixels += raster_gate["core_pixels"]
-        excluded_ring_pixels += raster_gate["unknown_ring_pixels"]
+            excluded_ring_pixels += raster_gate["unknown_ring_pixels"]
+        reviewed_ring_pixels += raster_gate["unknown_ring_pixels"]
         units.append(
             {
                 "candidate_id": candidate["candidate_id"],
@@ -440,14 +499,15 @@ def build_private_reconciliation(
         )
 
     added_labels = sum(added_class_counts.values())
-    _assert(excluded_ring_pixels == 98, "Grandview unknown-ring aggregate changed")
+    _assert(reviewed_ring_pixels == 98, "Grandview reviewed unknown-ring aggregate changed")
     prior_outcome = prior["outcome"]
     cumulative_classes = Counter(prior_outcome["cumulative_prototype_label_class_counts"])
     cumulative_classes.update(added_class_counts)
     cumulative_labels = prior_outcome["cumulative_owner_approved_region_labels"] + added_labels
     cumulative_core_pixels = prior_outcome["cumulative_accepted_core_pixels"] + accepted_core_pixels
     cumulative_ring_pixels = prior_outcome["cumulative_excluded_unknown_ring_pixels"] + excluded_ring_pixels
-    cumulative_event_count = prior_outcome["event_group_count"] + (1 if added_labels else 0)
+    grandview_event_complete = added_class_counts["burned"] == 1 and added_class_counts["background"] == 1
+    cumulative_event_count = prior_outcome["event_group_count"] + (1 if grandview_event_complete else 0)
     label_set_version = LABEL_SET_VERSION if added_labels else PRIOR_LABEL_SET_VERSION
     return {
         "report_id": f"{REPORT_ID}-PRIVATE",
@@ -473,13 +533,15 @@ def build_private_reconciliation(
             "response": {"bytes": len(response_bytes), "sha256": _sha256_bytes(response_bytes)},
             "receipt": {"bytes": len(receipt_bytes), "sha256": _sha256_bytes(receipt_bytes)},
         },
-        "record_bindings": _record_bindings(repository_root),
+        "record_bindings": record_bindings,
         "decision_counts": validation["decision_counts"],
         "outcome": {
             "grandview_owner_approved_region_labels": added_labels,
             "grandview_class_counts": dict(sorted(added_class_counts.items())),
             "grandview_accepted_core_pixels": accepted_core_pixels,
+            "grandview_reviewed_unknown_ring_pixels": reviewed_ring_pixels,
             "grandview_excluded_unknown_ring_pixels": excluded_ring_pixels,
+            "grandview_event_complete": grandview_event_complete,
             "cumulative_owner_approved_region_labels": cumulative_labels,
             "cumulative_prototype_label_class_counts": dict(sorted(cumulative_classes.items())),
             "cumulative_accepted_core_pixels": cumulative_core_pixels,
@@ -487,7 +549,8 @@ def build_private_reconciliation(
             "cumulative_excluded_unknown_ring_pixels": cumulative_ring_pixels,
             "event_group_count": cumulative_event_count,
             "minimum_event_group_count": MINIMUM_EVENT_GROUPS,
-            "dataset_fitness_reopened": cumulative_event_count >= MINIMUM_EVENT_GROUPS,
+            "minimum_event_group_gate_passed": cumulative_event_count >= MINIMUM_EVENT_GROUPS,
+            "dataset_fitness_reopened": False,
         },
         "units": units,
         "boundaries": {
@@ -551,11 +614,16 @@ def public_report(private: dict[str, Any], private_binding: dict[str, Any]) -> d
         "attribution": [
             "Contains modified Copernicus Sentinel data 2021-2022, accessed through CDSE.",
             "MTBS evidence: Monitoring Trends in Burn Severity Project, U.S. Geological Survey and USDA Forest Service.",
-            "RAVG evidence is context-only for Grandview under the delivered sparse/non-tree warning; it does not qualify either label.",
+            "BAER evidence: Burned Area Emergency Response program; delivered unthresholded continuous-change evidence is preliminary/draft context only.",
+            "RAVG evidence: USDA Forest Service and ESA; program-specific timing, vegetation, and model limitations apply. Grandview use is context-only under the delivered sparse/no-tree warning.",
         ],
         "warning": WARNING,
         "decision": private["decision"],
-        "next_gate": "Acquire, review, and gate Petes Lake as the sixth comparable whole-event group before dataset fitness, split, or baseline work can reopen.",
+        "next_gate": (
+            "Acquire, review, and gate Petes Lake as the sixth comparable whole-event group before dataset fitness, split, or baseline work can reopen."
+            if private["outcome"]["grandview_event_complete"]
+            else "Grandview remains incomplete; do not advance to the sixth-event gate until both classes and explicit unknown boundaries pass."
+        ),
     }
 
 
@@ -570,7 +638,7 @@ def _font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
 
 def _render_png(report: dict[str, Any], path: Path) -> None:
     outcome = report["outcome"]
-    image = Image.new("RGB", (1600, 1100), "#f4f0e8")
+    image = Image.new("RGB", (1600, 1180), "#f4f0e8")
     draw = ImageDraw.Draw(image)
     draw.rectangle((0, 0, 1600, 220), fill="#132a26")
     draw.text((70, 42), "BurnLens Grandview owner response", fill="white", font=_font(42))
@@ -599,20 +667,36 @@ def _render_png(report: dict[str, Any], path: Path) -> None:
     draw.rounded_rectangle((70, 900, 1530, 1030), radius=14, fill="#fff8dd", outline="#d87618")
     draw.text((95, 930), "Decision", fill="#8a521c", font=_font(20))
     draw.text((95, 975), report["decision"], fill="#132a26", font=_font(19))
+    draw.text(
+        (70, 1065),
+        f"Trace: BurnLens {report['software_version']} | label set {report['label_set_version']} | schema {report['label_schema_version']} | dataset/model none",
+        fill="#263932",
+        font=_font(15),
+    )
+    draw.text(
+        (70, 1105),
+        f"Run: {report['run_id']} | source: {report['git_source_commit']}",
+        fill="#263932",
+        font=_font(15),
+    )
     image.save(path, format="PNG", optimize=False)
 
 
 def _render_html(report: dict[str, Any]) -> str:
     counts = report["decision_counts"]
     outcome = report["outcome"]
+    attribution = "".join(f"<li>{escape(value)}</li>" for value in report["attribution"])
+    source_records = ", ".join(report["source_records"])
+    terms_records = ", ".join(report["terms_records"])
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BurnLens Grandview owner response intake</title><style>
-*{{box-sizing:border-box}}body{{margin:0;background:#f4f0e8;color:#17251f;font:16px/1.55 system-ui,sans-serif;overflow-wrap:anywhere}}header{{background:#132a26;color:white;padding:2.4rem max(5vw,1rem)}}header p{{max-width:900px;color:#c6ddd6}}main{{max-width:1120px;margin:auto;padding:1.2rem}}.warning,.card{{background:#fffdf8;border:1px solid #d7cec1;border-radius:14px;padding:1.1rem;margin:1rem 0}}.warning{{border-left:7px solid #d87618;font-weight:650}}.metrics{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}}.metric{{background:white;border:1px solid #d7cec1;border-radius:12px;padding:1rem}}.metric strong{{display:block;color:#006b64;font-size:2rem}}img{{display:block;width:100%;height:auto;border:1px solid #d7cec1}}code{{word-break:break-word}}@media(max-width:700px){{.metrics{{grid-template-columns:1fr 1fr}}header{{padding:1.4rem 1rem}}main{{padding:.65rem}}}}
+*{{box-sizing:border-box}}body{{margin:0;background:#f4f0e8;color:#17251f;font:16px/1.55 system-ui,sans-serif;overflow-wrap:anywhere}}header{{background:#132a26;color:white;padding:2.4rem max(5vw,1rem)}}header p{{max-width:900px;color:#c6ddd6}}main{{max-width:1120px;margin:auto;padding:1.2rem}}.warning,.card{{background:#fffdf8;border:1px solid #d7cec1;border-radius:14px;padding:1.1rem;margin:1rem 0}}.warning{{border-left:7px solid #d87618;font-weight:650}}.metrics{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}}.metric{{background:white;border:1px solid #d7cec1;border-radius:12px;padding:1rem}}.metric strong{{display:block;color:#006b64;font-size:2rem}}img{{display:block;width:100%;height:auto;border:1px solid #d7cec1}}code{{word-break:break-word}}li+li{{margin-top:.45rem}}@media(max-width:700px){{.metrics{{grid-template-columns:1fr 1fr}}header{{padding:1.4rem 1rem}}main{{padding:.65rem}}}}
 </style></head><body><header><p>BURNLENS / PHASE TWO / ISSUE #517</p><h1>Grandview owner response intake</h1><p>Exact private custody, deterministic gate evaluation, and content-safe public aggregates.</p></header><main>
 <p class="warning">{escape(report['warning'])}</p><section class="metrics"><div class="metric"><strong>{sum(counts.values())}</strong>Grandview responses</div><div class="metric"><strong>{outcome['grandview_owner_approved_region_labels']}</strong>new prototype labels</div><div class="metric"><strong>{outcome['cumulative_owner_approved_region_labels']}</strong>cumulative labels</div><div class="metric"><strong>{outcome['event_group_count']}</strong>accepted event groups</div></section>
 <section class="card"><h2>Aggregate result</h2><p>Owner decisions: {counts['yes']} yes / {counts['no']} no / {counts['uncertain']} uncertain. Grandview adds {outcome['grandview_class_counts'].get('burned',0)} burned and {outcome['grandview_class_counts'].get('background',0)} background prototype labels.</p><p>Every admitted core passes exact-byte reconstruction, source and terms, native-grid quality, explicit uncertainty-ring exclusion, and event-identity gates. Notes and unit decisions remain private.</p></section>
 <img src="{REPORT_ID}.png" alt="BurnLens Grandview owner response intake gate summary">
-<section class="card"><h2>Why the dataset remains blocked</h2><p>Only {outcome['event_group_count']} event groups are represented; the frozen minimum is {outcome['minimum_event_group_count']}. No split exists, and no unknown-ring or outside pixel becomes background.</p></section>
-<section class="card"><h2>Decision</h2><p><strong>{escape(report['decision'])}</strong></p><p>Label set <code>{escape(report['label_set_version'])}</code> &middot; schema <code>{escape(report['label_schema_version'])}</code> &middot; run <code>{escape(report['run_id'])}</code> &middot; source <code>{escape(report['git_source_commit'])}</code>. Dataset, split, baseline, and model remain absent.</p></section>
+<section class="card"><h2>Sources, roles, and attribution</h2><ul>{attribution}</ul><p>Bound source records: <code>{escape(source_records)}</code>. Bound terms records: <code>{escape(terms_records)}</code>.</p></section>
+<section class="card"><h2>Why the dataset remains blocked</h2><p>Only {outcome['event_group_count']} event groups are represented; the frozen count minimum is {outcome['minimum_event_group_count']}. That count is necessary, not sufficient: class/unknown completeness, regime replication, never-tuned transfer events, and dominance checks still require the separate sufficiency evaluator. No split exists, and no unknown-ring or outside pixel becomes background.</p></section>
+<section class="card"><h2>Decision</h2><p><strong>{escape(report['decision'])}</strong></p><p>BurnLens <code>{escape(report['software_version'])}</code> &middot; label set <code>{escape(report['label_set_version'])}</code> &middot; schema <code>{escape(report['label_schema_version'])}</code> &middot; run <code>{escape(report['run_id'])}</code> &middot; source <code>{escape(report['git_source_commit'])}</code>. Dataset, split, baseline, and model remain absent.</p></section>
 </main></body></html>'''
 
 

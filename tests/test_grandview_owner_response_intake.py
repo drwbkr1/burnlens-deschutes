@@ -7,8 +7,10 @@ import shutil
 import subprocess
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 import burnlens
+import burnlens.grandview_owner_response_intake as intake_module
 from burnlens.grandview_owner_response_intake import (
     LABEL_SET_VERSION,
     PRIOR_LABEL_SET_VERSION,
@@ -29,6 +31,15 @@ TEMPLATE = ROOT / "samples/labels/review/grandview/phase-two/GRANDVIEW-OWNER-REV
 PROPOSAL = ROOT / "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.json"
 PUBLIC_DIRECTORY = ROOT / "samples/labels/review/grandview/phase-two/intake"
 PUBLIC_REPORT = PUBLIC_DIRECTORY / "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json"
+
+
+def _tracked(path: Path) -> bool:
+    return path.exists() and subprocess.run(
+        ["git", "ls-files", "--error-unmatch", "--", str(path.relative_to(ROOT))],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+    ).returncode == 0
 
 
 class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
@@ -70,16 +81,23 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
 
     def _reconcile(self, root: Path, decisions: tuple[str, str] = ("yes", "yes"), proposal: Path = PROPOSAL) -> dict:
         exact, receipt = self._preserved(root, self._response(decisions))
-        return build_private_reconciliation(
-            repository_root=ROOT,
-            proposal_path=proposal,
-            surface_path=SURFACE,
-            response_path=exact,
-            receipt_path=receipt,
-            generated_at_utc="2026-07-21T02:11:00Z",
-            run_id="BL-TEST-GRANDVIEW-OWNER-INTAKE",
-            git_source_commit="b" * 40,
-        )
+        with patch.multiple(
+            intake_module,
+            EXPECTED_RESPONSE_BYTES=exact.stat().st_size,
+            EXPECTED_RESPONSE_SHA256=hashlib.sha256(exact.read_bytes()).hexdigest(),
+            EXPECTED_RECEIPT_BYTES=receipt.stat().st_size,
+            EXPECTED_RECEIPT_SHA256=hashlib.sha256(receipt.read_bytes()).hexdigest(),
+        ):
+            return build_private_reconciliation(
+                repository_root=ROOT,
+                proposal_path=proposal,
+                surface_path=SURFACE,
+                response_path=exact,
+                receipt_path=receipt,
+                generated_at_utc="2026-07-21T02:11:00Z",
+                run_id="BL-TEST-GRANDVIEW-OWNER-INTAKE",
+                git_source_commit="b" * 40,
+            )
 
     def test_version_and_entry_point(self) -> None:
         self.assertEqual(burnlens.__version__, "0.44.0")
@@ -99,6 +117,18 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
         result = validate_response(self.surface, self._response(("yes", "uncertain")))
         self.assertEqual(result["decision_counts"], {"yes": 1, "no": 0, "uncertain": 1})
         self.assertEqual(len(result["candidate_bindings"]), 2)
+
+    def test_production_custody_constants_are_exact(self) -> None:
+        self.assertEqual(intake_module.EXPECTED_RESPONSE_BYTES, 887)
+        self.assertEqual(
+            intake_module.EXPECTED_RESPONSE_SHA256,
+            "41fe9b3fa731a57d65def5d6952ef029a982ed26bcf62b9bf9cfa5d267018585",
+        )
+        self.assertEqual(intake_module.EXPECTED_RECEIPT_BYTES, 1_835)
+        self.assertEqual(
+            intake_module.EXPECTED_RECEIPT_SHA256,
+            "0b2fa3360c5c54f39a5b2623ee0cf8acd0ab13ca76b2ef2ecd704c2a699dfa6a",
+        )
 
     def test_partial_reordered_duplicate_and_altered_input_fail(self) -> None:
         for mutate, pattern in (
@@ -130,12 +160,14 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
         self.assertEqual(private["outcome"]["grandview_class_counts"], {"background": 1, "burned": 1})
         self.assertEqual(private["outcome"]["grandview_accepted_core_pixels"], 50)
         self.assertEqual(private["outcome"]["grandview_excluded_unknown_ring_pixels"], 98)
+        self.assertTrue(private["outcome"]["grandview_event_complete"])
         self.assertEqual(private["outcome"]["cumulative_owner_approved_region_labels"], 10)
         self.assertEqual(private["outcome"]["cumulative_prototype_label_class_counts"], {"background": 5, "burned": 5})
         self.assertEqual(private["outcome"]["cumulative_accepted_core_pixels"], 236)
         self.assertEqual(private["outcome"]["cumulative_accepted_core_area_ha"], 9.44)
         self.assertEqual(private["outcome"]["cumulative_excluded_unknown_ring_pixels"], 431)
         self.assertEqual(private["outcome"]["event_group_count"], 5)
+        self.assertFalse(private["outcome"]["minimum_event_group_gate_passed"])
         self.assertFalse(private["outcome"]["dataset_fitness_reopened"])
         for name in ("dataset_version", "split_version", "baseline_version", "model_version"):
             self.assertIsNone(private[name])
@@ -145,10 +177,22 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
             private = self._reconcile(Path(temporary), ("no", "uncertain"))
         self.assertEqual(private["label_set_version"], PRIOR_LABEL_SET_VERSION)
         self.assertEqual(private["outcome"]["grandview_owner_approved_region_labels"], 0)
+        self.assertEqual(private["outcome"]["grandview_excluded_unknown_ring_pixels"], 0)
+        self.assertEqual(private["outcome"]["grandview_reviewed_unknown_ring_pixels"], 98)
+        self.assertFalse(private["outcome"]["grandview_event_complete"])
         self.assertEqual(private["outcome"]["cumulative_owner_approved_region_labels"], 8)
-        self.assertEqual(private["outcome"]["cumulative_excluded_unknown_ring_pixels"], 431)
+        self.assertEqual(private["outcome"]["cumulative_excluded_unknown_ring_pixels"], 333)
         self.assertEqual(private["outcome"]["event_group_count"], 4)
         self.assertFalse(private["outcome"]["dataset_fitness_reopened"])
+
+    def test_one_yes_does_not_complete_the_event(self) -> None:
+        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+            private = self._reconcile(Path(temporary), ("yes", "uncertain"))
+        self.assertEqual(private["outcome"]["grandview_owner_approved_region_labels"], 1)
+        self.assertFalse(private["outcome"]["grandview_event_complete"])
+        self.assertEqual(private["outcome"]["event_group_count"], 4)
+        self.assertEqual(private["outcome"]["cumulative_accepted_core_pixels"], 211)
+        self.assertEqual(private["outcome"]["cumulative_excluded_unknown_ring_pixels"], 379)
 
     def test_raster_tamper_fails_closed(self) -> None:
         with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
@@ -178,7 +222,16 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
                 value_json = json.loads(receipt.read_text(encoding="utf-8"))
                 value_json[field] = value
                 receipt.write_text(json.dumps(value_json, indent=2) + "\n", encoding="utf-8", newline="\n")
-                with self.assertRaisesRegex(GrandviewOwnerResponseIntakeError, pattern):
+                with (
+                    patch.multiple(
+                        intake_module,
+                        EXPECTED_RESPONSE_BYTES=exact.stat().st_size,
+                        EXPECTED_RESPONSE_SHA256=hashlib.sha256(exact.read_bytes()).hexdigest(),
+                        EXPECTED_RECEIPT_BYTES=receipt.stat().st_size,
+                        EXPECTED_RECEIPT_SHA256=hashlib.sha256(receipt.read_bytes()).hexdigest(),
+                    ),
+                    self.assertRaisesRegex(GrandviewOwnerResponseIntakeError, pattern),
+                ):
                     build_private_reconciliation(
                         repository_root=ROOT,
                         proposal_path=PROPOSAL,
@@ -205,13 +258,17 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
                 self.assertNotIn(forbidden, serialized)
             html = (public_directory / f"{REPORT_ID}.html").read_text(encoding="utf-8")
             self.assertIn("&middot;", html)
+            self.assertIn("Sources, roles, and attribution", html)
+            self.assertIn("Burned Area Emergency Response", html)
+            self.assertIn("USDA Forest Service and ESA", html)
+            self.assertIn("count is necessary, not sufficient", html)
             self.assertNotIn("Ã", html)
             self.assertNotIn("Â", html)
             self.assertNotIn("�", html)
             with self.assertRaisesRegex(GrandviewOwnerResponseIntakeError, "refusing to overwrite"):
                 write_private_no_overwrite(ROOT, private_path, private)
 
-    @unittest.skipUnless(PUBLIC_REPORT.exists(), "tracked Grandview owner intake not published yet")
+    @unittest.skipUnless(_tracked(PUBLIC_REPORT), "tracked Grandview owner intake not published yet")
     def test_tracked_public_report_is_aggregate_only_evidence(self) -> None:
         report_bytes = PUBLIC_REPORT.read_bytes()
         report = json.loads(report_bytes)
@@ -225,6 +282,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
         self.assertEqual(report["outcome"]["cumulative_accepted_core_pixels"], 236)
         self.assertEqual(report["outcome"]["cumulative_excluded_unknown_ring_pixels"], 431)
         self.assertEqual(report["outcome"]["event_group_count"], 5)
+        self.assertFalse(report["outcome"]["minimum_event_group_gate_passed"])
         self.assertFalse(report["outcome"]["dataset_fitness_reopened"])
         self.assertIsNone(report["dataset_version"])
         self.assertIsNone(report["split_version"])
