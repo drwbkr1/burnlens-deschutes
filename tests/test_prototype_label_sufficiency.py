@@ -33,7 +33,7 @@ class PrototypeLabelSufficiencyTests(unittest.TestCase):
         )
 
     def test_version_and_decision(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.43.0")
+        self.assertEqual(burnlens.__version__, "0.44.0")
         self.assertEqual(self.report["decision"], DECISION)
 
     def test_inventory_blocks_dataset_expansion(self) -> None:
