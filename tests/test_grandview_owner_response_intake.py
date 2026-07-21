@@ -33,6 +33,12 @@ PUBLIC_DIRECTORY = ROOT / "samples/labels/review/grandview/phase-two/intake"
 PUBLIC_REPORT = PUBLIC_DIRECTORY / "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json"
 
 
+def _ignored_temporary_directory():
+    downloads = ROOT / "downloads"
+    downloads.mkdir(parents=True, exist_ok=True)
+    return TemporaryDirectory(dir=downloads)
+
+
 def _tracked(path: Path) -> bool:
     return path.exists() and subprocess.run(
         ["git", "ls-files", "--error-unmatch", "--", str(path.relative_to(ROOT))],
@@ -152,7 +158,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
                 validate_response(self.surface, response)
 
     def test_two_yes_advance_only_prototype_labels(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             private = self._reconcile(Path(temporary))
         self.assertEqual(private["label_set_version"], LABEL_SET_VERSION)
         self.assertEqual(private["decision_counts"], {"yes": 2, "no": 0, "uncertain": 0})
@@ -173,7 +179,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
             self.assertIsNone(private[name])
 
     def test_no_or_uncertain_retains_prior_label_set(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             private = self._reconcile(Path(temporary), ("no", "uncertain"))
         self.assertEqual(private["label_set_version"], PRIOR_LABEL_SET_VERSION)
         self.assertEqual(private["outcome"]["grandview_owner_approved_region_labels"], 0)
@@ -186,7 +192,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
         self.assertFalse(private["outcome"]["dataset_fitness_reopened"])
 
     def test_one_yes_does_not_complete_the_event(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             private = self._reconcile(Path(temporary), ("yes", "uncertain"))
         self.assertEqual(private["outcome"]["grandview_owner_approved_region_labels"], 1)
         self.assertFalse(private["outcome"]["grandview_event_complete"])
@@ -195,7 +201,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
         self.assertEqual(private["outcome"]["cumulative_excluded_unknown_ring_pixels"], 379)
 
     def test_raster_tamper_fails_closed(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             root = Path(temporary)
             proposal = root / PROPOSAL.name
             shutil.copyfile(PROPOSAL, proposal)
@@ -216,7 +222,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
             ("origin_declared_by_operator", False, "origin declaration"),
             ("owner_yes_is_sufficient_without_other_gates", True, "promotion gates"),
         ):
-            with self.subTest(field=field), TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+            with self.subTest(field=field), _ignored_temporary_directory() as temporary:
                 root = Path(temporary)
                 exact, receipt = self._preserved(root, self._response())
                 value_json = json.loads(receipt.read_text(encoding="utf-8"))
@@ -244,7 +250,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
                     )
 
     def test_private_and_public_writers_preserve_privacy(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             root = Path(temporary)
             private = self._reconcile(root / "response")
             private_path = root / "private.json"

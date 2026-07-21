@@ -16,6 +16,12 @@ ROOT = Path(__file__).resolve().parents[1]
 SURFACE = ROOT / "samples/labels/review/grandview/phase-two/GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.json"
 
 
+def _ignored_temporary_directory():
+    downloads = ROOT / "downloads"
+    downloads.mkdir(parents=True, exist_ok=True)
+    return TemporaryDirectory(dir=downloads)
+
+
 class GrandviewOwnerResponseLockTests(unittest.TestCase):
     def _response(self) -> dict:
         return {
@@ -51,7 +57,7 @@ class GrandviewOwnerResponseLockTests(unittest.TestCase):
         return path
 
     def test_preserves_exact_bytes_and_pre_reveal_receipt(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             root = Path(temporary)
             source = self._source(root)
             exact, receipt_path, receipt = preserve_response_without_reveal(
@@ -71,7 +77,7 @@ class GrandviewOwnerResponseLockTests(unittest.TestCase):
             self.assertNotIn("decision_counts", receipt["response_binding"])
 
     def test_rejects_hash_filename_drift(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             root = Path(temporary)
             source = self._source(root)
             wrong = source.with_name("GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-0000000000000000.json")
@@ -92,7 +98,7 @@ class GrandviewOwnerResponseLockTests(unittest.TestCase):
             (lambda value: value["owner"].update(attestation=False), "attestation"),
             (lambda value: value["responses"][1].update(candidate_id="GVP-X"), "identity"),
         ):
-            with self.subTest(message=message), TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+            with self.subTest(message=message), _ignored_temporary_directory() as temporary:
                 root = Path(temporary)
                 response = self._response()
                 mutation(response)
@@ -109,7 +115,7 @@ class GrandviewOwnerResponseLockTests(unittest.TestCase):
                     )
 
     def test_refuses_overwrite(self) -> None:
-        with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
+        with _ignored_temporary_directory() as temporary:
             root = Path(temporary)
             source = self._source(root)
             arguments = dict(
