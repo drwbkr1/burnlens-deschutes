@@ -152,8 +152,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass `
 
 This creates an ignored `.venv` from `uv.lock` and runs an offline raster,
 vector, CRS, GeoPackage, and Rioxarray smoke check. Codex worktrees can select
-the checked-in **BurnLens geospatial research** local environment to run the
-same setup automatically. The setup never copies credentials or raw data.
+the checked-in **BurnLens geospatial research (Windows)** local environment to
+run the same setup automatically. The setup never copies credentials or raw data.
 
 ## Run the current evidence tools
 
