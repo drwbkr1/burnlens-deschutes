@@ -140,6 +140,7 @@
     "documentation_and_json": "pass: 113 tracked JSON documents parse and 194 local Markdown-link occurrences resolve with zero missing",
     "exact_reconstruction": "pass: fresh remote head 4449f476b31d321d29db64632bc211be813a01e3 recreates the 8,893-byte private reconciliation and all three public outputs exactly from only the locked response and receipt",
     "fresh_remote_head": "pass: 328 tests with 17 expected custody skips, compilation, dependency health, 113 JSON parses, 194 local links, required LF checkout, and clean ignored-output status",
+    "no_custody_checkout": "pass after test-only remediation af6233a6cfb68cf3a5ef9c5b93f3c8ea25ca5214: a clone with no pre-existing downloads directory runs 328 tests with 17 expected custody skips and reproduces the canonical wheel exactly; precursor 0f8650ffce60bd4dfc496dc16709b8304ed5ac54 exposed and withheld the fixture-parent assumption",
     "release_package": "pass: two byte-identical 630,232-byte fresh-clone wheels; SHA-256 3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1; 145 clean entries; 70 commands; isolated 0.44.0 import and both new CLI helps",
     "dataset_split_baseline_model": "blocked: five complete event groups remain below six and the full sufficiency evaluator remains authoritative",
     "repository_release": "pending PR, merge, fresh-main verification, annotated tag, and lifecycle synchronization"
