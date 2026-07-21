@@ -31,6 +31,7 @@ records/phase-two/prechecks/PRECHECK-2026-041.md text eol=crlf
 records/phase-two/prechecks/PRECHECK-2026-042.md text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-048.md text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-049.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-050.md text eol=lf
 records/phase-two/reviews/LABEL_FITNESS-2026-026.md text eol=crlf
 records/phase-two/reviews/LABEL_FITNESS-2026-027.md text eol=lf
 records/phase-two/reviews/SOURCE_PRECEDENCE-2026-017.md text eol=lf
@@ -47,6 +48,7 @@ records/phase-two/manifests/MANIFEST-2026-046.json text eol=lf
 scripts/invoke_petes_lake_replacement_post_intake.ps1 text eol=lf
 records/phase-two/registry/REGISTRY-2026-050.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-051.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-052.md text eol=lf
 docs/phase-two/objective-four/PETES_LAKE_REPLACEMENT_OPTICAL_CONTRACT_DECISION.md text eol=lf
 docs/phase-two/objective-four/PETES_LAKE_REPLACEMENT_OPTICAL_CUSTODY_DECISION.md text eol=lf
 
