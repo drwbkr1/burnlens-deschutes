@@ -40,6 +40,7 @@ records/phase-two/manifests/MANIFEST-2026-042.json text eol=crlf
 records/phase-two/manifests/MANIFEST-2026-043.json text eol=crlf
 records/phase-two/manifests/MANIFEST-2026-044.json text eol=crlf
 records/phase-two/manifests/MANIFEST-2026-045.json text eol=crlf
+records/phase-two/manifests/MANIFEST-2026-046.json text eol=lf
 
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf

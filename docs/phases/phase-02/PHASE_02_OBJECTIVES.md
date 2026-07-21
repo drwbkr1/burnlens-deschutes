@@ -16,11 +16,11 @@ Build a complete, traceable data foundation for one bounded Deschutes County exp
 
 ## Current status
 
-**Active - six no-promotion region candidates verified and shipped; exact region review and event diversity pending; dataset not created.**
+**Active - ten owner-approved prototype regions across five complete events are the current release-candidate evidence; Petes Lake and dataset sufficiency remain pending; dataset not created.**
 
-P2O1-T01 through P2O3-T01 establish metadata, route, terms, AOI, source transactions, source/observation evidence, the active burn-scar target, exact optical pairs, and verified registration. P2O4-T01 through P2O4-T14 ship proposal, cross-event, review/custody, historical single-response reconciliation, current catalog/request, source scout, exact bundle fitness, and the owner-confirmed surface. P2O4-T15 / issue #437 preserves the authoritative completed response and accepts 24 explicitly owner-approved prototype labels after all disclosed gates: 12 burned and 12 background, balanced across three event groups. Twenty-nine yes and three no/uncertain units remain excluded. The historical 6 burned / 0 background / 50 ignored counts are not inherited. No accepted dataset, split, baseline, model, or deployed analytical application exists.
+P2O1-T01 through P2O3-T01 establish metadata, route, terms, AOI, source transactions, source/observation evidence, the active burn-scar target, exact optical pairs, and verified registration. The historical point-review path preserves 24 explicitly owner-approved prototype points as audit evidence; its prior 6 burned / 0 background / 50 ignored result is not inherited. Verified P2O4-T19 through P2O4-T31 establish eight balanced contiguous prototype regions across Darlene, McKay, Tepee, and Green Ridge plus the complete pre-response Grandview evidence path. P2O4-T32 / issue #517 is the BurnLens 0.44 release candidate: the exact Grandview response is locked before reveal and both 25-pixel cores pass every promotion gate, producing ten balanced prototype regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Manual local HTML rendering and final release verification remain pending. No accepted dataset, split, baseline, model, or deployed analytical application exists.
 
-Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three has immutable preprocessing, proposal rasters, and 24 sparse prototype points. Objective Four executes its contract on the three existing events: verified v0.29.0 ships six intact candidate regions, actual rendered evidence, full-grid candidate rasters, and explicit unknown rings without creating labels. Issue #457 owns a separately versioned owner-region review; additional comparable events remain necessary. Objective Five's executable sufficiency gate stays closed because three unreplicated event groups and source-regime confounding still block dataset/split work. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
+Current objective posture: Objectives One and Two retain the accepted controlled source stack. Objective Three preserves immutable preprocessing and proposal rasters. Objective Four has executed the region-first, explicit-unknown, owner yes/no/uncertain, exact-response-custody, and aggregate-only publication contract across five complete events, with the v0.44 Grandview checkpoint still release-pending. Issue #521 owns Petes Lake as the sixth event. Objective Five's executable sufficiency gate stays closed until that event passes and the separate class/unknown completeness, source-regime replication, never-tuned transfer, event-dominance, leakage, baseline, and split checks succeed. Objective Six remains open. This ordering is evidence-responsive, not checklist completion.
 
 ## Phase purpose
 
@@ -91,9 +91,9 @@ Phase Two must produce:
 
 **Purpose:** Create labels that are traceable, explicit about uncertainty, and defensible for a portfolio-scale experiment.
 
-**Required result:** Versioned label schema; candidate weak/reference-derived labels; internal visual review; explicit temporal and spatial matching; confidence and disagreement handling; exclusions for ambiguous evidence.
+**Required result:** Versioned label schema; deterministic native-grid burned/background cores; explicit unknown rings; traceable weak/reference evidence; owner yes/no/uncertain review; exact private response custody; aggregate-only public reporting; explicit temporal and spatial matching; confidence and disagreement handling; exclusions for ambiguous evidence.
 
-**Acceptance gate:** Labels are reviewable and support active-fire segmentation or the approved fallback. Unreviewed point buffers alone are insufficient.
+**Acceptance gate:** Owner yes is necessary but insufficient. Each exact region must pass response custody, reproducibility, source/terms, quality/registration, uncertainty exclusion, and event-level leakage gates. Both binary classes and explicit unknown boundaries must pass in at least six complete whole-event groups before Objective Five can reopen; unreviewed point buffers or event count alone are insufficient.
 
 ### Objective Five — Create independent splits, baselines, and dataset QA
 

@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.44.0-grandview-owner-response-intake - release candidate - 2026-07-21
+
+### P2O4-T32 - Lock and reconcile the Grandview owner response
+
+BurnLens 0.44.0 preserves the exact 887-byte owner export with SHA-256 `41fe9b3fa731a57d65def5d6952ef029a982ed26bcf62b9bf9cfa5d267018585` and the exact 1,835-byte pre-reveal receipt with SHA-256 `0b2fa3360c5c54f39a5b2623ee0cf8acd0ab13ca76b2ef2ecd704c2a699dfa6a` in ignored repository-local no-overwrite custody. Decision and note values remain unread until that lock passes. The private r002 reconciliation is 8,893 bytes with SHA-256 `0a7c1322ff8e9c5983a4baeb6d2cf7d03bd45f77b4926f5d93909c4fb4c74d05` and remains ignored.
+
+The aggregate response is two yes / zero no / zero uncertain. Owner yes alone is insufficient: both exact 25-pixel cores also pass proposal/raster identity, native CRS/grid/nodata/domain, eight-connectivity, exact unknown rings, 22 pinned source/terms/review/manifest records, quality/registration, uncertainty exclusion, and event identity. One burned and one background region join `owner-approved-prototype-region-labels-v0.3.0`; all 98 Grandview ring pixels remain unknown and excluded. The cumulative set is balanced at five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded ring pixels across five complete events.
+
+Source `33e5b02bebf335c5026688a3d2a33ae2d48b8991` creates run `BL-2026-07-21-grandview-owner-response-intake-r002`. Public aggregate-only outputs are JSON 9,112 bytes / SHA-256 `2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5`, HTML 4,034 bytes / SHA-256 `744c1489021e1967a91756c6042c233694294e4eec6acde398cc8ac826658545`, and PNG 89,738 bytes / SHA-256 `ad39379668cc8a8baed49ccc24e25828c4bed1d7dcb915c101112d53b64145e2`. BAER remains preliminary context; MTBS remains analyst-interpreted evidence; RAVG remains context-only under the exact sparse/non-tree warning.
+
+The original-resolution PNG, focused tests, production reconciliation, output hashes, and public privacy scan pass. Automated local `file://` HTML navigation is browser-policy-blocked; manual owner rendering plus the full suite, clean-checkout reconstruction, package, PR, merged-main, and tag gates remain pending. Issue #521 owns Petes Lake as the sixth complete event. Six events are necessary but do not by themselves authorize a dataset, split, baseline, or model.
+
 ## v0.43.0-grandview-owner-review-surface - verified - 2026-07-21
 
 ### P2O4-T31 - Present exact Grandview regions for owner confirmation

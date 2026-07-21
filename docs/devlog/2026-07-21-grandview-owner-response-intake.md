@@ -1,0 +1,13 @@
+# Devlog - Grandview Owner Response Intake
+
+The owner returned one exact hash-named 887-byte Grandview response. BurnLens first validated only the envelope: surface/run/schema/proposal/raster bindings, two records, completion chronology, and attestation. Source commit `6a75065fb1e339d7c26208329ee080129de58803` then copied those exact bytes into ignored repository-local custody without overwrite and wrote a 1,835-byte receipt that explicitly records that decision and note values were unread.
+
+Only after that transaction passed did BurnLens reveal the two allowed values. Both were yes. The final r002 intake source `33e5b02bebf335c5026688a3d2a33ae2d48b8991` pins the exact response and receipt hashes, rejects non-repository or non-ignored custody, pins 22 exact source/terms/review/manifest records, and derives rather than assumes the raster, uncertainty, source, quality, and event gates. Synthetic tests cover alternate decisions without weakening the production binding.
+
+Both exact 25-pixel cores pass. One burned and one background region add 50 core pixels / 2.00 ha while all 98 one-pixel ring pixels remain unknown and excluded. The cumulative v0.3 prototype set is balanced at five/five regions, 236 core pixels / 9.44 ha, and 431 excluded ring pixels across five complete events.
+
+The first private/public reconciliation run exposed release-hardening gaps before any file was committed: production custody was not pinned directly; non-owner gate families were unconditional booleans; rejected-candidate and accepted-label ring semantics were conflated; event completion could increment with only one admitted class; the full sufficiency gate could be misread as event count alone; and public attribution/trace was incomplete. BurnLens preserves the 8,759-byte rejected r001 reconciliation (SHA-256 `0dd76a3aa30edd1492fdb92ab28c10a03b3855aa453b62633ae1f4913bf6805d`, source `e4dfc1f9d57fb1e0426382eacd67545ea7967852`) only in ignored audit custody, creates no public or label state from it, fixes the generator, and creates r002 without overwriting it. The r002 JSON/HTML/PNG exposes aggregate-only evidence, BAER/MTBS/RAVG roles, required attribution, and self-contained run/version/source trace.
+
+The original-resolution 1600 x 1180 PNG is clean and legible. Automated in-app browser navigation to the local HTML is blocked by the browser security policy; no workaround is attempted. The exact canonical HTML remains a manual owner-render gate before merge.
+
+Issue #521 owns Petes Lake as the sixth event. Even if that event passes, dataset, split, baseline, and model work remain closed until the separate sufficiency evaluator proves the full class, uncertainty, regime, transfer, and dominance contract.
