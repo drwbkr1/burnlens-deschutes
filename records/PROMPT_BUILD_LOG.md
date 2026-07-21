@@ -221,6 +221,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T29 | `records/prompt-build-log/2026-07-20-p2o4-t29.md` | issue #503 / PR #507; verified BurnLens 0.41.0; next #508 | Acquires one exact near-anniversary Grandview scene, enforces baseline-aware reflectance and registration exclusions, uses exact delivered program vectors, and opens a background-evidence route with zero candidates, owner responses, labels, dataset, split, baseline, or model. |
 | P2O4-T29-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t29-sync.md` | issue #509 / PR #510; verified v0.41 lifecycle synchronization | Records PR #507, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #508 without changing scientific or private state. |
 | P2O4-T30 | `records/prompt-build-log/2026-07-20-p2o4-t30.md` | issue #508 / PR #512; BurnLens 0.42.0 release candidate; next #511 | Reuses the intact fixed-bin selector to publish one unreviewed Grandview core per class plus explicit unknown rings, while excluding RAVG from affirmative logic and creating zero responses or labels. |
+| P2O4-T30A | `records/prompt-build-log/2026-07-20-p2o4-t30a.md` | issue #513 / PR #514; checkout-stability remediation; tag withheld | Adds only the missing Grandview proposal LF contract after fresh merged main exposes CRLF JSON drift; restores exact five-output reconstruction without scientific change. |
 
 ## Acceptance and remediation triggers
 
