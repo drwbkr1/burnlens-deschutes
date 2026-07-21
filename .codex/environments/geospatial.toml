@@ -1,0 +1,15 @@
+version = 1
+name = "BurnLens geospatial research (Windows)"
+
+[setup]
+script = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup_worktree.ps1 -Profile geo-research"
+
+[[actions]]
+name = "Verify geospatial environment"
+icon = "run"
+command = ".\\.venv\\Scripts\\python.exe scripts\\verify_environment.py --profile geo-research"
+
+[[actions]]
+name = "Run BurnLens tests"
+icon = "run"
+command = ".\\.venv\\Scripts\\python.exe -m pytest -q"

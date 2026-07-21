@@ -134,8 +134,26 @@ Every future public output and claim must trace to its Git commit, application v
 - [Changelog](CHANGELOG.md)
 - [Agent instructions](AGENTS.md)
 - [Prompt-to-repository SOP](docs/workflows/PROMPT_TO_REPO_SOP.md)
+- [Reproducible geospatial environment](docs/workflows/GEOSPATIAL_ENVIRONMENT.md)
 
 Historical Objective Seven trackers, handoffs, audits, and release notes remain the evidence trail for the Phase One planning-only decision. Their obsolete sequencing and permission limits do not override the execution goal.
+
+## Reproducible local environment
+
+The canonical runtime stays lean. Development adds the pinned test runner, and
+source-scouting work can opt into a locked geospatial profile without changing
+the scientific or source-approval gates:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass `
+  -File scripts/setup_worktree.ps1 `
+  -Profile geo-research
+```
+
+This creates an ignored `.venv` from `uv.lock` and runs an offline raster,
+vector, CRS, GeoPackage, and Rioxarray smoke check. Codex worktrees can select
+the checked-in **BurnLens geospatial research** local environment to run the
+same setup automatically. The setup never copies credentials or raw data.
 
 ## Run the current evidence tools
 
