@@ -169,7 +169,7 @@ def report() -> dict:
 
 class CrossEventFeasibilityTests(unittest.TestCase):
     def test_package_version(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.42.0")
+        self.assertEqual(burnlens.__version__, "0.43.0")
 
     def test_selects_two_groups_and_excludes_uncovered_event(self) -> None:
         value = report()
