@@ -73,6 +73,45 @@ Blank is not `uncertain`. An incomplete session is a draft and cannot be finaliz
 
 The surface must not provide approve-all, bulk-fill, preselected answers, confidence-ranked ordering, prior decisions, preferred outcomes, or running yes/no/uncertain totals. It may show only completion progress.
 
+## Localhost transport
+
+P2O4-T33-U09B adds `burnlens-serve-review-surface` as the review transport for
+generated surfaces. It does not change the manifest, candidate ordering,
+response schema, decision semantics, exact export, or pre-reveal custody
+contract.
+
+The command requires one exact HTML file and its sibling output report. Before
+opening a listener, it verifies the HTML and every referenced local resource
+against exact byte-count and SHA-256 bindings, including an explicitly
+hash-bound predecessor report when a current surface reuses earlier evidence.
+It then preloads only the selected page and referenced resources as one
+immutable session snapshot. Other report outputs, reveal pages, templates,
+responses, receipts, repository metadata, raw custody, and directory listings
+are not routes.
+
+The selected HTML is the sole document route. Referenced resources must be
+sibling static assets with safe, unambiguous names; secondary HTML, JSON/text
+data, nested paths, duplicate HTML attributes, navigation/meta-refresh paths,
+and sensitive reveal, response, receipt, intake, template, raw, private,
+adjudication, or quarantine names fail before bind even when a report lists and
+hashes them. A U09 production adapter must therefore emit sibling evidence
+asset names when using the more general U09A manifest writer.
+
+The listener binds directly and only to `127.0.0.1`. Port `0` uses one atomic
+operating-system allocation; an occupied explicit port fails instead of
+scanning or incrementing. A random per-session capability prefix is part of the
+printed machine-readable URL. The server accepts only `GET` and `HEAD`, exposes
+no CORS or upload endpoint, stores no response, suppresses request-path logs,
+and serves fixed content types with no-cache, no-sniff, same-origin, and
+no-external-connection browser policy headers. Ctrl+C ends the session and
+releases the listener.
+
+Localhost is transport within the existing offline owner-review model, not
+public hosting or deployment. The browser still creates the exact hash-named
+response as a local download; U10 remains the only route for locking and
+interpreting returned bytes. A transport failure blocks the browser handoff
+but cannot alter a source, proposal, owner decision, label, or scientific gate.
+
 ## Draft, finalization, and response schema
 
 Hash-named drafts may contain unanswered candidates and may be reloaded only when every surface, manifest, roster, event, and candidate binding matches. Loading never converts a blank answer to `uncertain`.

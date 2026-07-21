@@ -216,6 +216,30 @@ python -m burnlens.lock_grandview_owner_response --help
 python -m burnlens.build_grandview_owner_response_intake --help
 ```
 
+### Serve one owner-review surface on localhost
+
+Use the repository command instead of a directory-wide `python -m http.server`
+or a `file://` URL. The command verifies the selected HTML and every referenced
+asset against its bound output report, preloads one immutable byte snapshot,
+and exposes only that allowlist on IPv4 loopback. Port `0` asks Windows to
+select an unused port atomically.
+
+```powershell
+burnlens-serve-review-surface `
+  --page .\samples\labels\review\grandview\phase-two\GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.html `
+  --port 0
+```
+
+Only sibling static assets are eligible; a secondary HTML document, JSON data,
+sensitive reveal/response/template path, nested path, external URL, or unbound
+resource fails before the port opens. The command prints
+`REVIEW_SURFACE_URL=http://127.0.0.1:<port>/<session>/...`
+only after the listener is ready. Open that exact URL or pass it to browser
+automation, keep the terminal running during review, and press Ctrl+C to stop.
+`--open-browser` is available for an owner-operated default-browser session.
+The server accepts only `GET` and `HEAD`; response JSON remains a browser
+download and is never uploaded to, stored by, or interpreted by the server.
+
 The committed rehearsal predates `ACCESS-2026-006` and intentionally exits with status `2`: its `BLOCKED_OWNER_CREDENTIAL` decision is a historical run state. The later acquisition and inspection runs supersede that access state without rewriting the historical output.
 
 The committed [normalized precheck](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.json), [semantic report](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.html), and [visual evidence card](samples/access/phase-two/VIIRS-ACCESS-PRECHECK-2026-001.png) record the earlier unauthenticated delivery result. They do not contain provider pixels or rejected login-response bodies. The later [owner authorization](records/phase-two/access/ACCESS-2026-006.md) clears the approval stop without claiming that authentication or source delivery has been exercised.
