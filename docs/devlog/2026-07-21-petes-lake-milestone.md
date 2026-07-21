@@ -50,7 +50,7 @@ The isolated owner-review utility work is verified on ordered commits `530ce51a0
 
 U03 continues uninterrupted. Do not integrate the handoff until the next clean repository point before production U09; preserve the active branch's newer U02/U03 facts during conflicts. Production U09 remains dependency-blocked on U08 plus the integrated U09A/U09B contracts.
 
-The owner separately coordinated isolated U09C geospatial-environment work in sibling worktree `C:\Projects\Active\burnlens-u09c-geo-env` on `codex/p2o4-t33-u09c-geospatial-environment`, based on U09B head `ab3efb7`. Its authorized scope is environment profiles, frozen dependencies, Codex worktree setup, offline smoke checks, tests, and documentation only. It must not touch this active checkout, provider custody, scientific artifacts, candidate decisions, or milestone gates. U03 remains uninterrupted; record and evaluate only the later exact integration handoff.
+The separately coordinated U09C geospatial-environment work is now verified on ordered commits `0323307486e5b0493e2f4c60d743c98cf4d18023` and `92ab22b97cfdf0d246b80b1dac7ff11a45741253`. Its handoff reports a locked CPython 3.12.10 environment, 66-distribution lock, fail-closed setup/mutex checks, offline geospatial smoke coverage, 414 passed, 17 skipped, 16 warnings, 50 subtests, four focused passes, and a byte-identical representative render. It made zero provider, scientific, data, label, model, or release advancement. U03 remains uninterrupted; integrate the commits in order only after the current selection evidence is cleanly committed, pushed, and issue-recorded, preserve newer U02/U03 facts, and recreate `.venv` from the lock rather than copying the side-worktree environment.
 
 ## 2026-07-21 - U03 first preview retained
 
@@ -63,3 +63,13 @@ Committed preview r002 reproduces every scientific metric with a narrowed JSON/P
 U03 r001 disposition is `remediate`. The planned post scene is rejected, U04 is not authorized, and all later units remain blocked. The next bounded work is current metadata-only research for a same-event, same-source-regime replacement post scene, followed by an exact contract revision before any provider request. Existing archives and every preview/final artifact remain immutable.
 
 Evidence commit `24d3affa4160f049bf6c11ddc8fbe13f8f078c70` is pushed and issue #521 comment 5038371241 records the exact outputs, gates, disposition, verification, and next boundary.
+
+## 2026-07-21 - U03 replacement-post metadata selection
+
+A bounded current search preserves the failed planned-pair evidence and holds the source regime fixed: Sentinel-2 L2A, Sentinel-2A, MGRS-10TEP, relative orbit 13, processing baseline 05.10, and full frozen-boundary coverage. Six current STAC items match. Official regional incident updates support a conservative first eligible post-status date of September 23, so the otherwise clear August 30, September 9, and September 19 scenes are excluded before acquisition. September 29 and October 9 exceed the unchanged 20 percent catalogue-cloud gate.
+
+The October 19 product is the only survivor. Current OData binds UUID `31fa8699-175b-4fd7-91c3-dd727a1576f5`, exact SAFE identity, 1,195,226,823 bytes, online state, MD5 `4cf05a073b4c67f5e92e052ed1eb32bc`, BLAKE3 `1b28f566aee5619ea9a48c8dd042f209194a40989ba4b54cfe4e14904a0ad878`, platform, tile, orbit, baseline, and product type. STAC reports 0.10 percent cloud and 0.564076 percent snow tile-wide. The cloud representations reconcile, but the nonzero snow value remains an explicit local SCL/SNW and real-render risk; no snow threshold is invented.
+
+Run `BL-2026-07-21-petes-lake-replacement-post-selection-r001` is public metadata only: no credential and zero provider product/archive bytes. Its 10,127-byte report has SHA-256 `7fa82a61fa70d47364db29493700beedd60c9114a4b3a6d8ddbafdf77aecfc8c` and reconstructs byte-identically from source commit `cfa5d1923feb413859c3aa20ebc40df3e0ee2ee6`. The decision authorizes exact contract revision only. It is not acquisition, source acceptance, or an official fire-end claim.
+
+Before any provider transaction, BurnLens must commit, push, and record an exact singleton replacement contract and pass a clean live metadata/terms/custody preflight. The original post archive and U03 r001 failure remain immutable. U04 and every downstream candidate, owner-response, label, dataset, split, baseline, and model gate remain blocked.

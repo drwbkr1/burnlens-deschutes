@@ -1,0 +1,216 @@
+{
+  "report_id": "PETES-LAKE-SOURCE-REMEDIATION-2026-001",
+  "report_version": "petes-lake-source-remediation-v0.1.0",
+  "generated_at_utc": "2026-07-21T19:57:43Z",
+  "run_id": "BL-2026-07-21-petes-lake-replacement-post-selection-r001",
+  "unit_id": "P2O4-T33-U03",
+  "task_issue": 521,
+  "repository": "drwbkr1/burnlens-deschutes",
+  "git_source_commit": "cfa5d1923feb413859c3aa20ebc40df3e0ee2ee6",
+  "event_group_id": "event-petes-lake-2023",
+  "event_id": "OR4396912190120230825",
+  "source_record_id": "SOURCE-2026-030",
+  "terms_review_id": "TERMS-2026-024",
+  "input_hashes": {
+    "failed_u03_report_sha256": "ac9befd021d71ff779ec56ddefc894f4e39b92e64e65c2c4afb815663d1ad443",
+    "additional_event_plan_sha256": "65fd567e234cbb521ead6b7071cab9914c672df169e3987af0c3ddfc66ccf622"
+  },
+  "search_contract": {
+    "collection": "sentinel-2-l2a",
+    "date_range_utc": [
+      "2023-08-26T00:00:00Z",
+      "2023-10-28T23:59:59Z"
+    ],
+    "full_boundary_coverage_required": true,
+    "platform": "sentinel-2a",
+    "grid_code": "MGRS-10TEP",
+    "relative_orbit": 13,
+    "processing_version": "05.10",
+    "earliest_post_status_date": "2023-09-23",
+    "catalogue_cloud_max_percent": 20.0,
+    "catalogue_snow_threshold": null,
+    "local_quality_requirement": "Delivered native SCL/CLD/SNW and actual render must independently pass; catalogue metadata never establishes local fitness."
+  },
+  "source_observation": {
+    "stac_collection": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a",
+    "stac_page_count": 1,
+    "stac_returned_item_count": 12,
+    "full_boundary_coverage_item_count": 12,
+    "same_regime_candidate_count": 6,
+    "odata_collection": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products",
+    "credentials_used": false,
+    "provider_product_or_archive_bytes": 0
+  },
+  "incident_timing_evidence": {
+    "sources": [
+      {
+        "title": "Petes Lake Fire Update, September 18",
+        "publisher": "Central Oregon Fire Information",
+        "url": "https://centraloregonfire.org/2023/09/18/13036/",
+        "supported_fact": "The official regional update says the fire grew to 3,009 acres on September 17 and could continue growing on September 18."
+      },
+      {
+        "title": "Lookout, Bedrock, Petes Lake, Horse Creek, and Pothole Fires",
+        "publisher": "Central Oregon Fire Information",
+        "url": "https://centraloregonfire.org/2023/09/22/lookout-bedrock-petes-lake-horse-creek-and-pothole-fires-2/",
+        "supported_fact": "The September 22 update reports Petes Lake at 50 percent completed with low fire activity and continued monitoring."
+      }
+    ],
+    "decision_boundary": "Reject scenes before 2023-09-23 because official September 18 and 22 updates show material activity and incomplete incident work. This is a conservative scene-selection boundary, not a containment or fire-end claim."
+  },
+  "candidates": [
+    {
+      "id": "S2A_MSIL2A_20230830T185921_N0510_R013_T10TEP_20241023T063829",
+      "datetime": "2023-08-30T18:59:21.024000Z",
+      "days_after_ignition": 5,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 9.96,
+      "catalogue_snow_percent": 0.081708,
+      "product_bytes": 1196040019,
+      "stac_checksum": "d50110c7be2e0e29d57ca4edaa3d1f6fa4521a",
+      "product_filename": "S2A_MSIL2A_20230830T185921_N0510_R013_T10TEP_20241023T063829.SAFE.zip",
+      "disposition": "reject-before-acquisition",
+      "reason_codes": [
+        "INCIDENT_TIMING_PRECEDES_CONSERVATIVE_POST_STATUS_BOUNDARY"
+      ]
+    },
+    {
+      "id": "S2A_MSIL2A_20230909T185941_N0510_R013_T10TEP_20241104T170811",
+      "datetime": "2023-09-09T18:59:41.024000Z",
+      "days_after_ignition": 15,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 0.35,
+      "catalogue_snow_percent": 0.028301,
+      "product_bytes": 1184958611,
+      "stac_checksum": "d50110f30f2abf334b0d317c1b75214f59b4c9",
+      "product_filename": "S2A_MSIL2A_20230909T185941_N0510_R013_T10TEP_20241104T170811.SAFE.zip",
+      "disposition": "reject-before-acquisition",
+      "reason_codes": [
+        "INCIDENT_TIMING_PRECEDES_CONSERVATIVE_POST_STATUS_BOUNDARY"
+      ]
+    },
+    {
+      "id": "S2A_MSIL2A_20230919T190051_N0510_R013_T10TEP_20241105T130020",
+      "datetime": "2023-09-19T19:00:51.024000Z",
+      "days_after_ignition": 25,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 0.24,
+      "catalogue_snow_percent": 0.021692,
+      "product_bytes": 1184089035,
+      "stac_checksum": "d50110bd68565d07237163331d5d1f9e8e2f08",
+      "product_filename": "S2A_MSIL2A_20230919T190051_N0510_R013_T10TEP_20241105T130020.SAFE.zip",
+      "disposition": "reject-before-acquisition",
+      "reason_codes": [
+        "INCIDENT_TIMING_PRECEDES_CONSERVATIVE_POST_STATUS_BOUNDARY"
+      ]
+    },
+    {
+      "id": "S2A_MSIL2A_20230929T190201_N0510_R013_T10TEP_20241031T230941",
+      "datetime": "2023-09-29T19:02:01.024000Z",
+      "days_after_ignition": 35,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 99.97,
+      "catalogue_snow_percent": 0.000348,
+      "product_bytes": 749369584,
+      "stac_checksum": "d5011019ea04e411e361b1fda6a7ec8bde9d81",
+      "product_filename": "S2A_MSIL2A_20230929T190201_N0510_R013_T10TEP_20241031T230941.SAFE.zip",
+      "disposition": "reject-before-acquisition",
+      "reason_codes": [
+        "CATALOGUE_CLOUD_EXCEEDS_20_PERCENT"
+      ]
+    },
+    {
+      "id": "S2A_MSIL2A_20231009T190301_N0510_R013_T10TEP_20241020T100944",
+      "datetime": "2023-10-09T19:03:01.024000Z",
+      "days_after_ignition": 45,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 99.32,
+      "catalogue_snow_percent": 3.6e-05,
+      "product_bytes": 810041593,
+      "stac_checksum": "d501102a926e8c6a2a950fa40fffe7358f1db2",
+      "product_filename": "S2A_MSIL2A_20231009T190301_N0510_R013_T10TEP_20241020T100944.SAFE.zip",
+      "disposition": "reject-before-acquisition",
+      "reason_codes": [
+        "CATALOGUE_CLOUD_EXCEEDS_20_PERCENT"
+      ]
+    },
+    {
+      "id": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526",
+      "datetime": "2023-10-19T19:04:11.024000Z",
+      "days_after_ignition": 55,
+      "platform": "sentinel-2a",
+      "grid_code": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_version": "05.10",
+      "catalogue_cloud_percent": 0.1,
+      "catalogue_snow_percent": 0.564076,
+      "product_bytes": 1195226823,
+      "stac_checksum": "d501104cf05a073b4c67f5e92e052ed1eb32bc",
+      "product_filename": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE.zip",
+      "disposition": "selected-for-contract-revision-only",
+      "reason_codes": [
+        "ONLY_SAME_REGIME_CANDIDATE_AFTER_STATUS_BOUNDARY_BELOW_CLOUD_GATE"
+      ]
+    }
+  ],
+  "selected_contract": {
+    "provider_id": "31fa8699-175b-4fd7-91c3-dd727a1576f5",
+    "native_id": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526",
+    "expected_filename": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE.zip",
+    "package_id": "petes-lake-s2-optical-post-remediation-v0.2.0",
+    "role": "optical-post-remediation",
+    "size_bytes": 1195226823,
+    "online": true,
+    "acquisition_utc": "2023-10-19T19:04:11.024000Z",
+    "publication_utc": "2025-04-25T03:03:39.050779Z",
+    "provider_md5": "4cf05a073b4c67f5e92e052ed1eb32bc",
+    "provider_blake3": "1b28f566aee5619ea9a48c8dd042f209194a40989ba4b54cfe4e14904a0ad878",
+    "platform_serial_identifier": "A",
+    "tile_id": "10TEP",
+    "relative_orbit_number": 13,
+    "processor_version": "05.10",
+    "product_type": "S2MSI2A",
+    "odata_cloud_cover_percent": 0.098782,
+    "stac_cloud_cover_percent": 0.1,
+    "stac_snow_cover_percent": 0.564076,
+    "s3_identity_verified_without_retaining_path": true
+  },
+  "decision": "SELECT_REPLACEMENT_POST_AUTHORIZE_CONTRACT_REVISION_ONLY",
+  "disposition": "pass-for-contract-revision-only",
+  "next_dependency": "P2O4-T33-U03_REPLACEMENT_CONTRACT_AND_PREFLIGHT",
+  "limitations": [
+    "The selected product is not acquired or locally inspected in this run.",
+    "Tile-wide cloud and snow metadata do not prove boundary-local quality.",
+    "The October 19 product still carries nonzero catalogue snow and may fail native SCL/SNW or render gates.",
+    "Incident evidence supports excluding earlier scenes but does not establish an official fire-end date for October 19.",
+    "Selection authorizes no provider transaction until the exact contract is committed, pushed, and recorded on issue #521."
+  ],
+  "claims": {
+    "proven": [
+      "Six same-platform, same-tile, same-orbit, PB05.10 post candidates cover the full frozen boundary in current STAC metadata.",
+      "Only the October 19 product is after the conservative incident-status boundary and below the established 20 percent catalogue-cloud gate.",
+      "Current OData identifies the selected product as online with exact UUID, size, MD5, BLAKE3, acquisition time, tile, orbit, baseline, and product type."
+    ],
+    "not_proven": [
+      "No replacement provider archive, local pixel, source-fitness pass, reference, candidate, owner response, label, dataset, split, baseline, or model exists.",
+      "No official containment, fire-end, field-validation, endorsement, emergency-ready, or operational status is claimed."
+    ]
+  },
+  "attribution": "Contains modified Copernicus Sentinel data 2023, accessed through CDSE.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
