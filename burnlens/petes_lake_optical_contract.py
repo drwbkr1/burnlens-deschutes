@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from hashlib import sha256
 import json
 import os
@@ -47,9 +48,39 @@ TERMS_REVIEW_ID = "TERMS-2026-024"
 PAIR_ID = "petes-lake-s2-optical-pair-v0.1.0"
 PRE_PACKAGE_ID = "petes-lake-s2-optical-pre-v0.1.0"
 POST_PACKAGE_ID = "petes-lake-s2-optical-post-v0.1.0"
-CONTRACT_VERSION = "petes-lake-optical-intake-contract-v0.1.0"
+CONTRACT_VERSION = "petes-lake-optical-intake-contract-v0.2.0"
 REPORT_ID = "PETES-LAKE-OPTICAL-CUSTODY-2026-001"
 REPORT_SCHEMA_VERSION = "0.1.0"
+METADATA_RECONCILIATION_ID = (
+    "PETES-LAKE-OPTICAL-METADATA-RECONCILIATION-2026-001"
+)
+METADATA_RECONCILIATION_SCHEMA_VERSION = "0.1.0"
+METADATA_RECONCILIATION_RUN_ID = (
+    "BL-2026-07-21-petes-lake-optical-metadata-reconciliation-r001"
+)
+METADATA_RECONCILIATION_PATH = Path(
+    "samples/cross-event/phase-two/petes-lake/"
+    f"{METADATA_RECONCILIATION_ID}.json"
+)
+CLOUD_METADATA_RECONCILIATION_VERSION = (
+    "petes-lake-cloud-metadata-reconciliation-v0.1.0"
+)
+CLOUD_COMPARISON_DECIMALS = 2
+CLOUD_COMPARISON_QUANTUM = Decimal("0.01")
+U01_LIVE_SOURCE_PATH = Path(
+    "downloads/phase-two/runs/P2O4-T33-U01/"
+    "ADDITIONAL-EVENT-GROUP-SOURCE-LIVE-r003.json"
+)
+U01_LIVE_SOURCE_BYTES = 1_213_547
+U01_LIVE_SOURCE_SHA256 = (
+    "1d99d32f6610e64eed5a310d58c9ee730e6f9be691b6f7eb2ed00044018b559c"
+)
+ODATA_DOCUMENTATION_URL = (
+    "https://documentation.dataspace.copernicus.eu/APIs/OData.html"
+)
+STAC_DOCUMENTATION_URL = (
+    "https://documentation.dataspace.copernicus.eu/APIs/STAC.html"
+)
 REPOSITORY = "drwbkr1/burnlens-deschutes"
 BRANCH = "codex/p2o4-t33-petes-lake-milestone"
 GIT_BASE_COMMIT = "0d41942dc6c3c307a9a146a2d38fb816e038bb42"
@@ -69,11 +100,6 @@ WARNING = (
 TEMPORARY_SUFFIX = ".tmp"
 TEMPORARY_PREFIX = "~$"
 MAX_TRANSFER_ATTEMPTS = 5
-RETRYABLE_TRANSFER_REASONS = {
-    "DOWNLOAD_REQUEST_FAILED",
-    "DOWNLOAD_STREAM_FAILED",
-    "DOWNLOAD_SIZE_MISMATCH",
-}
 
 
 def _contract(
@@ -135,7 +161,8 @@ EXPECTED_METADATA = {
         "relative_orbit_number": 13,
         "processor_version": "05.10",
         "product_type": "S2MSI2A",
-        "cloud_cover_percent": 0.0,
+        "odata_cloud_cover_percent": 0.000358,
+        "frozen_stac_cloud_cover_percent": 0.0,
         "catalogue_snow_percent": 0.226708,
     },
     POST_CONTRACT.role: {
@@ -145,7 +172,8 @@ EXPECTED_METADATA = {
         "relative_orbit_number": 13,
         "processor_version": "05.10",
         "product_type": "S2MSI2A",
-        "cloud_cover_percent": 0.01,
+        "odata_cloud_cover_percent": 0.008789,
+        "frozen_stac_cloud_cover_percent": 0.01,
         "catalogue_snow_percent": 9.841206,
     },
 }
@@ -158,6 +186,11 @@ ROUTE_PRECEDENCE = {
     ),
     "archive_authority": (
         "Current CDSE OData content length plus MD5 and BLAKE3 govern each acquired archive."
+    ),
+    "cloud_metadata_reconciliation": (
+        "Exact current OData cloudCover and the frozen U01 STAC eo:cloud_cover are "
+        "retained separately. A deterministic two-decimal comparison must agree; "
+        "neither catalogue field establishes local pixel fitness."
     ),
     "transaction_order": (
         "The pre archive is one singleton transaction and must pass promotion plus "
@@ -237,6 +270,25 @@ def _metadata_url(contract: AssetContract) -> str:
     )
 
 
+def normalize_cloud_cover_for_comparison(value: Any) -> float | None:
+    """Normalize one finite percentage for the frozen two-decimal STAC comparison.
+
+    The exact OData value remains authoritative as the raw live observation.
+    This comparison value only reconciles OData precision with the frozen U01
+    STAC representation; it is never a local cloud or pixel-fitness claim.
+    """
+
+    if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)):
+        return None
+    try:
+        decimal_value = Decimal(str(value))
+    except InvalidOperation:
+        return None
+    if not decimal_value.is_finite() or not Decimal("0") <= decimal_value <= Decimal("100"):
+        return None
+    return float(decimal_value.quantize(CLOUD_COMPARISON_QUANTUM, rounding=ROUND_HALF_UP))
+
+
 def _normalize_metadata(payload: dict[str, Any], *, role: str) -> dict[str, Any]:
     checksums = {
         str(item.get("Algorithm", "")).upper(): str(item.get("Value", "")).lower()
@@ -249,6 +301,7 @@ def _normalize_metadata(payload: dict[str, Any], *, role: str) -> dict[str, Any]
         if isinstance(item, dict) and item.get("Name") is not None
     }
     content_date = payload.get("ContentDate") or {}
+    raw_cloud_cover = attributes.get("cloudCover")
     return {
         "role": role,
         "event_id": EVENT_ID,
@@ -266,7 +319,17 @@ def _normalize_metadata(payload: dict[str, Any], *, role: str) -> dict[str, Any]
         "relative_orbit_number": attributes.get("relativeOrbitNumber"),
         "processor_version": attributes.get("processorVersion"),
         "product_type": attributes.get("productType"),
-        "cloud_cover_percent": attributes.get("cloudCover"),
+        "cloud_cover_percent": raw_cloud_cover,
+        "cloud_cover_source": "current CDSE OData Attributes cloudCover",
+        "cloud_cover_comparison_2dp": normalize_cloud_cover_for_comparison(
+            raw_cloud_cover
+        ),
+        "frozen_stac_cloud_cover_percent": EXPECTED_METADATA[role][
+            "frozen_stac_cloud_cover_percent"
+        ],
+        "cloud_metadata_reconciliation_version": (
+            CLOUD_METADATA_RECONCILIATION_VERSION
+        ),
         "catalogue_snow_percent": EXPECTED_METADATA[role]["catalogue_snow_percent"],
         "catalogue_snow_source": "frozen current CDSE STAC identity from P2O4-T33-U01",
     }
@@ -318,7 +381,16 @@ def validate_petes_lake_metadata(
             "ORBIT": expected["relative_orbit_number"],
             "BASELINE": expected["processor_version"],
             "PRODUCT_TYPE": expected["product_type"],
-            "CLOUD_COVER": expected["cloud_cover_percent"],
+            "CLOUD_COVER_ODATA_RAW": expected["odata_cloud_cover_percent"],
+            "CLOUD_COVER_COMPARISON_2DP": expected[
+                "frozen_stac_cloud_cover_percent"
+            ],
+            "CLOUD_COVER_FROZEN_STAC": expected[
+                "frozen_stac_cloud_cover_percent"
+            ],
+            "CLOUD_RECONCILIATION_VERSION": (
+                CLOUD_METADATA_RECONCILIATION_VERSION
+            ),
             "CATALOGUE_SNOW": expected["catalogue_snow_percent"],
         }
         fields = {
@@ -333,7 +405,16 @@ def validate_petes_lake_metadata(
             "ORBIT": record.get("relative_orbit_number"),
             "BASELINE": record.get("processor_version"),
             "PRODUCT_TYPE": record.get("product_type"),
-            "CLOUD_COVER": record.get("cloud_cover_percent"),
+            "CLOUD_COVER_ODATA_RAW": record.get("cloud_cover_percent"),
+            "CLOUD_COVER_COMPARISON_2DP": record.get(
+                "cloud_cover_comparison_2dp"
+            ),
+            "CLOUD_COVER_FROZEN_STAC": record.get(
+                "frozen_stac_cloud_cover_percent"
+            ),
+            "CLOUD_RECONCILIATION_VERSION": record.get(
+                "cloud_metadata_reconciliation_version"
+            ),
             "CATALOGUE_SNOW": record.get("catalogue_snow_percent"),
         }
         for code, expected_value in comparisons.items():
@@ -510,6 +591,10 @@ class PetesLakeOpticalRun:
         )
 
     @property
+    def metadata_reconciliation_report(self) -> Path:
+        return self.repository_root / METADATA_RECONCILIATION_PATH
+
+    @property
     def entry_gate(self) -> Path:
         return self.repository_root / ENTRY_GATE_PATH
 
@@ -580,6 +665,148 @@ def _sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _u01_live_source_binding(run: PetesLakeOpticalRun) -> dict[str, Any]:
+    path = run.repository_root / U01_LIVE_SOURCE_PATH
+    if (
+        not path.is_file()
+        or path.stat().st_size != U01_LIVE_SOURCE_BYTES
+        or _sha256_file(path) != U01_LIVE_SOURCE_SHA256
+    ):
+        raise AcquisitionError("PETES_LAKE_U01_LIVE_SOURCE_BINDING_MISMATCH")
+    return {
+        "path": U01_LIVE_SOURCE_PATH.as_posix(),
+        "bytes": U01_LIVE_SOURCE_BYTES,
+        "sha256": U01_LIVE_SOURCE_SHA256,
+        "role": "frozen U01 STAC discovery representation",
+    }
+
+
+def build_petes_lake_metadata_reconciliation_report(
+    *,
+    run: PetesLakeOpticalRun,
+    trace: PetesLakeTrace,
+    snapshot: dict[str, Any],
+) -> dict[str, Any]:
+    reasons = validate_petes_lake_metadata(snapshot)
+    if reasons:
+        raise AcquisitionError(
+            "PETES_LAKE_METADATA_RECONCILIATION_REJECTED",
+            detail=",".join(reasons),
+        )
+    snapshot_sha256 = sha256(_canonical_json_bytes(snapshot)).hexdigest()
+    records = []
+    for record in snapshot["records"]:
+        expected = EXPECTED_METADATA[record["role"]]
+        records.append(
+            {
+                "role": record["role"],
+                "provider_id": record["provider_id"],
+                "native_id": record["native_id"],
+                "size_bytes": record["size_bytes"],
+                "online": record["online"],
+                "provider_checksums": record["provider_checksums"],
+                "current_odata_cloud_cover_percent": record[
+                    "cloud_cover_percent"
+                ],
+                "frozen_u01_stac_cloud_cover_percent": expected[
+                    "frozen_stac_cloud_cover_percent"
+                ],
+                "comparison_normalized_2dp": record[
+                    "cloud_cover_comparison_2dp"
+                ],
+                "exact_odata_value_gate": "pass",
+                "two_decimal_cross_endpoint_comparison_gate": "pass",
+                "local_pixel_quality_gate": "not executed; P2O4-T33-U03",
+            }
+        )
+    return {
+        "report_id": METADATA_RECONCILIATION_ID,
+        "report_schema_version": METADATA_RECONCILIATION_SCHEMA_VERSION,
+        "unit_id": UNIT_ID,
+        "run_id": METADATA_RECONCILIATION_RUN_ID,
+        "generated_at_utc": run.generated_at_utc,
+        "event_id": EVENT_ID,
+        "event_group_id": EVENT_GROUP_ID,
+        "pair_id": PAIR_ID,
+        "contract_version": CONTRACT_VERSION,
+        "cloud_metadata_reconciliation_version": (
+            CLOUD_METADATA_RECONCILIATION_VERSION
+        ),
+        "trace": trace.as_dict(),
+        "u01_live_source_binding": _u01_live_source_binding(run),
+        "official_primary_source_research": {
+            "accessed_at_utc": run.generated_at_utc,
+            "odata_documentation": ODATA_DOCUMENTATION_URL,
+            "stac_documentation": STAC_DOCUMENTATION_URL,
+            "observed_semantics": [
+                "CDSE documents Sentinel-2 cloudCover as an OData DoubleAttribute.",
+                "CDSE documents STAC as complementary to, not a replacement for, OData.",
+                "Both catalogue cloud fields are discovery context; local U03 quality evidence governs pixel use.",
+            ],
+        },
+        "metadata_snapshot_sha256": snapshot_sha256,
+        "metadata_snapshot": snapshot,
+        "records": records,
+        "normalization_contract": {
+            "input": "exact current CDSE OData Attributes cloudCover",
+            "comparison_decimals": CLOUD_COMPARISON_DECIMALS,
+            "rounding": "decimal ROUND_HALF_UP",
+            "comparison_target": "frozen P2O4-T33-U01 STAC eo:cloud_cover",
+            "raw_value_preserved": True,
+            "quality_claim": "none; local SCL/SNW/cloud/shadow/smoke and rendered pixels remain U03 gates",
+        },
+        "gate_results": {
+            "exact_uuid_safe_size_online_md5_blake3": "pass",
+            "exact_current_odata_cloud_values": "pass",
+            "frozen_u01_stac_values_retained": "pass",
+            "two_decimal_cross_endpoint_comparison": "pass",
+            "source_precedence": "pass",
+            "terms": TERMS_REVIEW_ID,
+            "provider_product_or_archive_bytes_requested": False,
+            "credentials_exercised": False,
+            "u02_custody": "not executed",
+            "u03_pixel_fitness": "not executed",
+        },
+        "disposition": "pass",
+        "decision": (
+            "PASS_PETES_LAKE_CLOUD_METADATA_RECONCILIATION_"
+            "AUTHORIZE_U02_PREFLIGHT_ONLY"
+        ),
+        "next_dependency": (
+            "Commit, push, and record this remediation before the exact U02 pre archive transaction."
+        ),
+        "warning": WARNING,
+    }
+
+
+def run_petes_lake_metadata_reconciliation(
+    *,
+    run: PetesLakeOpticalRun,
+    trace: PetesLakeTrace,
+    urlopen_fn: Callable[..., Any] = urlopen,
+) -> dict[str, Any]:
+    if run.mode != "full" or run.revision != INITIAL_REVISION:
+        raise AcquisitionError("METADATA_RECONCILIATION_REQUIRES_FULL_R001")
+    if _path_present(run.metadata_reconciliation_report):
+        raise AcquisitionError("METADATA_RECONCILIATION_REPORT_EXISTS")
+    snapshot = refresh_petes_lake_metadata(
+        observed_at_utc=run.generated_at_utc,
+        urlopen_fn=urlopen_fn,
+    )
+    report = build_petes_lake_metadata_reconciliation_report(
+        run=run,
+        trace=trace,
+        snapshot=snapshot,
+    )
+    _write_tracked_json_no_overwrite(
+        run,
+        run.metadata_reconciliation_report,
+        report,
+        expected_path=run.metadata_reconciliation_report,
+    )
+    return report
 
 
 def verify_petes_lake_repository_preflight(
@@ -695,39 +922,92 @@ def assert_no_overwrite_targets(run: PetesLakeOpticalRun) -> None:
         raise AcquisitionError("NO_OVERWRITE_TARGET_EXISTS", detail=",".join(present))
 
 
-def _write_tracked_report_no_overwrite(
-    run: PetesLakeOpticalRun, path: Path, payload: dict[str, Any]
+def _write_tracked_json_no_overwrite(
+    run: PetesLakeOpticalRun,
+    path: Path,
+    payload: dict[str, Any],
+    *,
+    expected_path: Path,
 ) -> None:
-    """Create the tracked aggregate report once, separately from private state."""
+    """Create one exact repository report without following or replacing a path."""
 
-    if path != run.tracked_report:
+    if path != expected_path:
         raise AcquisitionError("TRACKED_REPORT_PATH_MISMATCH")
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
+        relative = path.relative_to(run.repository_root).as_posix()
         path.parent.resolve().relative_to(run.repository_root)
     except ValueError:
         raise AcquisitionError("TRACKED_REPORT_OUTSIDE_REPOSITORY") from None
+    is_junction = getattr(path.parent, "is_junction", None)
+    if path.parent.is_symlink() or bool(is_junction and is_junction()):
+        raise AcquisitionError("TRACKED_REPORT_PARENT_LINK_NOT_ALLOWED")
+    if (run.repository_root / ".git").exists():
+        if _git(
+            run.repository_root,
+            "check-ignore",
+            "--quiet",
+            "--no-index",
+            "--",
+            relative,
+        ).returncode != 1:
+            raise AcquisitionError("TRACKED_REPORT_IGNORED")
+        if _git(
+            run.repository_root,
+            "ls-files",
+            "--error-unmatch",
+            "--",
+            relative,
+        ).returncode != 1:
+            raise AcquisitionError("TRACKED_REPORT_ALREADY_TRACKED")
     if _path_present(path):
         raise AcquisitionError("NO_OVERWRITE_STATE_EXISTS", detail=path.name)
     data = (json.dumps(payload, indent=2) + "\n").encode("utf-8")
-    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_BINARY", 0)
+    flags = os.O_RDWR | os.O_CREAT | os.O_EXCL | getattr(os, "O_BINARY", 0)
     try:
         descriptor = os.open(path, flags, 0o600)
     except FileExistsError:
         raise AcquisitionError("NO_OVERWRITE_STATE_EXISTS", detail=path.name) from None
     try:
-        with os.fdopen(descriptor, "wb") as handle:
-            handle.write(data)
+        opened = os.fstat(descriptor)
+        with os.fdopen(descriptor, "w+b") as handle:
+            if handle.write(data) != len(data):
+                raise AcquisitionError("TRACKED_REPORT_SHORT_WRITE")
             handle.flush()
             os.fsync(handle.fileno())
+            handle.seek(0)
+            if handle.read() != data:
+                raise AcquisitionError("TRACKED_REPORT_READBACK_MISMATCH")
         observed = path.lstat()
         if not path.is_file() or path.is_symlink() or observed.st_nlink != 1:
             raise AcquisitionError("TRACKED_REPORT_NOT_SINGLE_REGULAR_FILE")
-        if path.read_bytes() != data:
-            raise AcquisitionError("TRACKED_REPORT_READBACK_MISMATCH")
+        if not os.path.samestat(opened, observed):
+            raise AcquisitionError("TRACKED_REPORT_PATH_IDENTITY_MISMATCH")
     except BaseException:
-        path.unlink(missing_ok=True)
+        try:
+            os.close(descriptor)
+        except OSError:
+            pass
+        try:
+            observed = path.lstat()
+            if "opened" in locals() and os.path.samestat(opened, observed):
+                path.unlink()
+        except OSError:
+            pass
         raise
+
+
+def _write_tracked_report_no_overwrite(
+    run: PetesLakeOpticalRun, path: Path, payload: dict[str, Any]
+) -> None:
+    """Create the tracked aggregate report once, separately from private state."""
+
+    _write_tracked_json_no_overwrite(
+        run,
+        path,
+        payload,
+        expected_path=run.tracked_report,
+    )
 
 
 def _write_private_run_state(

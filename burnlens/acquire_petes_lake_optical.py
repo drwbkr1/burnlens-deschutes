@@ -11,6 +11,7 @@ from .petes_lake_optical_contract import (
     PetesLakeOpticalRun,
     acquire_petes_lake_optical_pair,
     finalize_petes_lake_aggregate_only,
+    run_petes_lake_metadata_reconciliation,
     resume_petes_lake_post_only,
     validate_u03_prerequisite,
     verify_petes_lake_repository_preflight,
@@ -43,6 +44,14 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Credential-free validation of completed full r001 outputs",
     )
+    gate.add_argument(
+        "--metadata-reconciliation-only",
+        action="store_true",
+        help=(
+            "Fetch public OData metadata, reconcile exact raw cloud values with "
+            "the frozen U01 STAC precision, and write the fixed no-overwrite report"
+        ),
+    )
     return parser.parse_args()
 
 
@@ -66,6 +75,9 @@ def main() -> int:
         # credential is read from the environment.
         verify_only = bool(getattr(args, "verify_only", False))
         preflight_only = bool(getattr(args, "preflight_only", False))
+        metadata_reconciliation_only = bool(
+            getattr(args, "metadata_reconciliation_only", False)
+        )
         if verify_only and (run.mode != "full" or run.revision != "r001"):
             raise AcquisitionError("VERIFY_ONLY_REQUIRES_FULL_R001")
         trace = verify_petes_lake_repository_preflight(
@@ -74,6 +86,13 @@ def main() -> int:
         )
         if preflight_only:
             print("PASS_PETES_LAKE_U02_PREFLIGHT_NO_CREDENTIALS")
+            return 0
+        if metadata_reconciliation_only:
+            result = run_petes_lake_metadata_reconciliation(
+                run=run,
+                trace=trace,
+            )
+            print(result["decision"])
             return 0
         if verify_only:
             reasons = validate_u03_prerequisite(run)

@@ -11,9 +11,13 @@ from unittest.mock import patch
 from urllib.request import Request
 
 from burnlens import acquire_petes_lake_optical as acquire_cli
+from burnlens import petes_lake_optical_contract as petes_contract
 from burnlens.petes_lake_optical_contract import (
     CONTRACT_VERSION,
+    CLOUD_METADATA_RECONCILIATION_VERSION,
     EXPECTED_METADATA,
+    METADATA_RECONCILIATION_ID,
+    METADATA_RECONCILIATION_RUN_ID,
     PAIR_ID,
     PETES_LAKE_CONTRACTS,
     POST_CONTRACT,
@@ -26,8 +30,10 @@ from burnlens.petes_lake_optical_contract import (
     _write_success_outputs,
     acquire_petes_lake_optical_pair,
     assert_no_overwrite_targets,
+    build_petes_lake_metadata_reconciliation_report,
     finalize_petes_lake_aggregate_only,
     refresh_petes_lake_metadata,
+    run_petes_lake_metadata_reconciliation,
     resume_petes_lake_post_only,
     validate_petes_lake_contracts,
     validate_petes_lake_metadata,
@@ -75,7 +81,10 @@ def metadata_payload(contract=PRE_CONTRACT) -> dict:
             {"Name": "relativeOrbitNumber", "Value": expected["relative_orbit_number"]},
             {"Name": "processorVersion", "Value": expected["processor_version"]},
             {"Name": "productType", "Value": expected["product_type"]},
-            {"Name": "cloudCover", "Value": expected["cloud_cover_percent"]},
+            {
+                "Name": "cloudCover",
+                "Value": expected["odata_cloud_cover_percent"],
+            },
         ],
     }
 
@@ -176,6 +185,7 @@ def synthetic_transaction(run, contract, run_id: str, observed_at_utc: str) -> d
 
 class PetesLakeOpticalContractTests(unittest.TestCase):
     def test_exact_pair_is_ordered_and_uses_two_singleton_packages(self) -> None:
+        self.assertEqual(CONTRACT_VERSION, "petes-lake-optical-intake-contract-v0.2.0")
         self.assertEqual(validate_petes_lake_contracts(PETES_LAKE_CONTRACTS), [])
         self.assertEqual([item.role for item in PETES_LAKE_CONTRACTS], [
             "petes-lake-2023-pre",
@@ -206,7 +216,40 @@ class PetesLakeOpticalContractTests(unittest.TestCase):
             [PRE_CONTRACT.role, POST_CONTRACT.role],
         )
         self.assertEqual(snapshot["records"][1]["catalogue_snow_percent"], 9.841206)
+        self.assertEqual(snapshot["records"][0]["cloud_cover_percent"], 0.000358)
+        self.assertEqual(snapshot["records"][1]["cloud_cover_percent"], 0.008789)
+        self.assertEqual(snapshot["records"][0]["cloud_cover_comparison_2dp"], 0.0)
+        self.assertEqual(snapshot["records"][1]["cloud_cover_comparison_2dp"], 0.01)
+        self.assertEqual(
+            snapshot["records"][1]["frozen_stac_cloud_cover_percent"], 0.01
+        )
+        self.assertEqual(
+            snapshot["records"][1]["cloud_metadata_reconciliation_version"],
+            CLOUD_METADATA_RECONCILIATION_VERSION,
+        )
         self.assertNotIn("stable_route", json.dumps(snapshot))
+
+    def test_cloud_metadata_reconciliation_keeps_raw_and_normalized_gates_exact(self) -> None:
+        snapshot = exact_metadata_snapshot()
+        snapshot["records"][0]["cloud_cover_percent"] = 0.000359
+        self.assertIn(
+            f"{PRE_CONTRACT.role}:CLOUD_COVER_ODATA_RAW",
+            validate_petes_lake_metadata(snapshot),
+        )
+
+        snapshot = exact_metadata_snapshot()
+        snapshot["records"][1]["cloud_cover_comparison_2dp"] = 0.0
+        self.assertIn(
+            f"{POST_CONTRACT.role}:CLOUD_COVER_COMPARISON_2DP",
+            validate_petes_lake_metadata(snapshot),
+        )
+
+        snapshot = exact_metadata_snapshot()
+        snapshot["records"][1]["cloud_cover_percent"] = 101.0
+        snapshot["records"][1]["cloud_cover_comparison_2dp"] = None
+        reasons = validate_petes_lake_metadata(snapshot)
+        self.assertIn(f"{POST_CONTRACT.role}:CLOUD_COVER_ODATA_RAW", reasons)
+        self.assertIn(f"{POST_CONTRACT.role}:CLOUD_COVER_COMPARISON_2DP", reasons)
 
     def test_metadata_checksum_and_role_order_drift_fail_closed(self) -> None:
         snapshot = exact_metadata_snapshot()
@@ -215,6 +258,91 @@ class PetesLakeOpticalContractTests(unittest.TestCase):
         snapshot = exact_metadata_snapshot()
         snapshot["records"].reverse()
         self.assertIn("METADATA_ORDERED_ROLE_SET_MISMATCH", validate_petes_lake_metadata(snapshot))
+
+    def test_metadata_reconciliation_report_binds_exact_cross_endpoint_values(self) -> None:
+        with TemporaryDirectory() as directory:
+            run = PetesLakeOpticalRun.create(
+                repository_root=Path(directory),
+                generated_at_utc="2026-07-21T18:30:00Z",
+                revision="r001",
+            )
+            with patch.object(
+                petes_contract,
+                "_u01_live_source_binding",
+                return_value={
+                    "path": "downloads/phase-two/runs/P2O4-T33-U01/source.json",
+                    "bytes": 1,
+                    "sha256": "a" * 64,
+                    "role": "synthetic",
+                },
+            ):
+                report = build_petes_lake_metadata_reconciliation_report(
+                    run=run,
+                    trace=synthetic_trace(),
+                    snapshot=exact_metadata_snapshot(),
+                )
+            self.assertEqual(report["report_id"], METADATA_RECONCILIATION_ID)
+            self.assertEqual(report["run_id"], METADATA_RECONCILIATION_RUN_ID)
+            self.assertEqual(
+                [item["current_odata_cloud_cover_percent"] for item in report["records"]],
+                [0.000358, 0.008789],
+            )
+            self.assertEqual(
+                [item["frozen_u01_stac_cloud_cover_percent"] for item in report["records"]],
+                [0.0, 0.01],
+            )
+            self.assertEqual(
+                [item["comparison_normalized_2dp"] for item in report["records"]],
+                [0.0, 0.01],
+            )
+            self.assertFalse(
+                report["gate_results"]["provider_product_or_archive_bytes_requested"]
+            )
+
+    def test_metadata_reconciliation_run_is_no_overwrite_and_credential_free(self) -> None:
+        with TemporaryDirectory() as directory:
+            run = PetesLakeOpticalRun.create(
+                repository_root=Path(directory),
+                generated_at_utc="2026-07-21T18:30:00Z",
+                revision="r001",
+            )
+            writes = []
+            with patch.object(
+                petes_contract,
+                "_u01_live_source_binding",
+                return_value={"path": "synthetic", "bytes": 1, "sha256": "a" * 64},
+            ), patch.object(
+                petes_contract,
+                "_write_tracked_json_no_overwrite",
+                side_effect=lambda *args, **kwargs: writes.append((args, kwargs)),
+            ):
+                report = run_petes_lake_metadata_reconciliation(
+                    run=run,
+                    trace=synthetic_trace(),
+                    urlopen_fn=lambda request, timeout: FakeResponse(
+                        metadata_payload(
+                            next(
+                                item
+                                for item in PETES_LAKE_CONTRACTS
+                                if item.provider_id in request.full_url
+                            )
+                        )
+                    ),
+                )
+            self.assertEqual(report["disposition"], "pass")
+            self.assertEqual(len(writes), 1)
+            self.assertEqual(writes[0][0][1], run.metadata_reconciliation_report)
+
+            run.metadata_reconciliation_report.parent.mkdir(parents=True, exist_ok=True)
+            run.metadata_reconciliation_report.write_text("retained", encoding="utf-8")
+            with self.assertRaisesRegex(
+                AcquisitionError, "METADATA_RECONCILIATION_REPORT_EXISTS"
+            ):
+                run_petes_lake_metadata_reconciliation(
+                    run=run,
+                    trace=synthetic_trace(),
+                    urlopen_fn=lambda request, timeout: FakeResponse({}),
+                )
 
     def test_run_contract_derives_exact_bound_r001_paths_and_ids(self) -> None:
         with TemporaryDirectory() as directory:
@@ -754,6 +882,41 @@ class PetesLakeOpticalContractTests(unittest.TestCase):
                 return_value={"decision": "SYNTHETIC_AGGREGATE_PASS"},
             ):
                 self.assertEqual(acquire_cli.main(), 0)
+
+    def test_cli_metadata_reconciliation_is_credential_free(self) -> None:
+        with TemporaryDirectory() as directory:
+            args = SimpleNamespace(
+                repository_root=Path(directory),
+                generated_at_utc="2026-07-21T18:30:00Z",
+                revision="r001",
+                mode="full",
+                preflight_only=False,
+                verify_only=False,
+                metadata_reconciliation_only=True,
+            )
+            events = []
+            with patch.object(acquire_cli, "parse_args", return_value=args), patch.object(
+                acquire_cli,
+                "verify_petes_lake_repository_preflight",
+                side_effect=lambda *args, **kwargs: events.append("preflight")
+                or synthetic_trace(),
+            ), patch.object(
+                acquire_cli.CdseCredentials,
+                "from_environment",
+                side_effect=AssertionError("credentials must not be loaded"),
+            ), patch.object(
+                acquire_cli,
+                "run_petes_lake_metadata_reconciliation",
+                side_effect=lambda **kwargs: events.append("metadata")
+                or {
+                    "decision": (
+                        "PASS_PETES_LAKE_CLOUD_METADATA_RECONCILIATION_"
+                        "AUTHORIZE_U02_PREFLIGHT_ONLY"
+                    )
+                },
+            ):
+                self.assertEqual(acquire_cli.main(), 0)
+            self.assertEqual(events, ["preflight", "metadata"])
 
     def test_production_wrapper_hard_binds_r001_and_clears_credentials(self) -> None:
         repository_root = Path(__file__).resolve().parents[1]
