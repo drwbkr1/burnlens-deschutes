@@ -12,7 +12,7 @@
   "candidate_head_commit": "d3b11e78e03492f8348b980f7304864ded85b06a",
   "analytical_merge_commit": "0905711e3f1dc2e281ff830ff3b9d94ed2c50f66",
   "checkout_remediation_issue": 513,
-  "checkout_remediation_pull_request": null,
+  "checkout_remediation_pull_request": 514,
   "checkpoint_commit": null,
   "version_tag": "v0.42.0-grandview-region-proposal",
   "version_tag_object": null,

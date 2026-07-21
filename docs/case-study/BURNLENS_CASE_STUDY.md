@@ -396,7 +396,7 @@ BurnLens reruns the complete v0.41 route and transfers the already established f
 
 The result is one 25-pixel proposed burned core and one 25-pixel proposed background core, each 1.0 ha, with 46 and 52 unknown-ring pixels. The rendered evidence makes the relatively low pre/post dNBR of the MTBS-backed burned proposal visible rather than silently strengthening the claim. Both regions remain unreviewed. This checkpoint creates no owner response, label, truth claim, dataset, split, baseline, model, metric, field validation, official status, endorsement, or operational readiness.
 
-Release verification then catches a checkout-only JSON defect: the analytical merge converts the new JSON's LF bytes to CRLF because its directory lacks an explicit attribute rule. BurnLens withholds the tag, adds the missing LF contract in issue #513, and proves in a fresh clone that all five original output hashes reconstruct exactly. The remediation changes no evidence, candidate coordinate, raster, or claim.
+Release verification then catches a checkout-only JSON defect: the analytical merge converts the new JSON's LF bytes to CRLF because its directory lacks an explicit attribute rule. BurnLens withholds the tag, adds the missing LF contract in issue #513 / PR #514, and proves in a fresh clone that all five original output hashes reconstruct exactly. The remediation changes no evidence, candidate coordinate, raster, or claim.
 
 ## Traceability snapshot
 
