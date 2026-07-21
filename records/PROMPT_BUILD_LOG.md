@@ -222,7 +222,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T29-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t29-sync.md` | issue #509 / PR #510; verified v0.41 lifecycle synchronization | Records PR #507, merge, fresh-main reconstruction, canonical package, remote annotated tag, and next issue #508 without changing scientific or private state. |
 | P2O4-T30 | `records/prompt-build-log/2026-07-20-p2o4-t30.md` | issue #508 / PR #512; analytical Grandview proposal; next #511 | Reuses the intact fixed-bin selector to publish one unreviewed Grandview core per class plus explicit unknown rings, while excluding RAVG from affirmative logic and creating zero responses or labels. |
 | P2O4-T30A | `records/prompt-build-log/2026-07-20-p2o4-t30a.md` | issue #513 / PR #514; verified checkout-stability remediation | Adds only the missing Grandview proposal LF contract after fresh analytical main exposes CRLF JSON drift; verified main restores exact outputs without scientific change. |
-| P2O4-T30-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t30-sync.md` | issue #515; verified v0.42 lifecycle synchronization | Records analytical failure, remediation merge, fresh-main gates, canonical package, remote annotated tag, and next issue #511 without changing scientific or private state. |
+| P2O4-T30-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t30-sync.md` | issue #515 / PR #516; verified v0.42 lifecycle synchronization | Records analytical failure, remediation merge, fresh-main gates, canonical package, remote annotated tag, and next issue #511 without changing scientific or private state. |
 
 ## Acceptance and remediation triggers
 

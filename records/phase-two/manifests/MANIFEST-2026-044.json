@@ -18,7 +18,7 @@
   "version_tag": "v0.42.0-grandview-region-proposal",
   "version_tag_object": "388c81677b3c49d2312779f8fc98ad3dc7b9048c",
   "lifecycle_sync_issue": 515,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 516,
   "next_checkpoint_issue": 511,
   "status": "verified release after checkout remediation: two Grandview regions proposed; owner review and promotion closed",
   "software_version": "0.42.0",
