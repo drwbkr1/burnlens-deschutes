@@ -9,7 +9,9 @@ Do not record secrets, credentials, tokens, cookies, private URLs, private chain
 | Field | Value |
 |---|---|
 | Date | `YYYY-MM-DD` |
-| Task ID and title | `P#O#-T## — title` |
+| Task ID and title | `P#O#-T## — title | BL-GOV-### — title | issue-authorized exception ID — title` |
+| Checkpoint class | milestone / exception |
+| Milestone outcome / exit condition or exception trigger |  |
 | Task issue / parent issue | `# / #` |
 | Branch / base | `branch / main` |
 | Dependencies | issues, PRs, commits, artifacts, or `None` |
@@ -58,7 +60,7 @@ Actual files changed:
 ```
 
 - Scope expansion: `none / requested`
-- Human authorization evidence: `[evidence / not applicable]`
+- Issue-revision or owner-authorization evidence, when required: `[evidence / not applicable]`
 - Overlapping-branch or dependency caveat: `[none / explanation]`
 
 ## Research
@@ -78,6 +80,14 @@ No-research rationale:
 | Decision | Rationale | Evidence |
 |---|---|---|
 |  |  |  |
+
+## Evidence-unit ledger
+
+| Unit ID | Purpose | Inputs and hashes | Outputs and hashes | Gates | Disposition | Retained failure or limitation | Next dependency |
+|---|---|---|---|---|---|---|---|
+|  |  |  |  |  | pass / remediate / exclude / defer / stop |  |  |
+
+Every registered evidence unit must remain visible, including failed, superseded, excluded, and deferred units. A governance-only milestone may use one policy-amendment unit when no analytical or custody unit exists.
 
 ## Verification
 
@@ -119,10 +129,10 @@ Unsupported claims:
 | Author self-audit | completed by / date / known findings |
 | Executable checks | named methods and actual results |
 | AI-assisted review | tool, target, findings, fixes, unresolved findings, or not used |
-| Human review | reviewer or evidence owner, date, outcome, evidence, blocking findings |
-| Merge authorization | authorized by, evidence, final head, method, task-only close keyword, parent protection |
+| Required owner decision | candidate yes/no/uncertain or stop-condition direction, evidence, outcome, or not applicable |
+| Merge authority | controlling goal or explicit owner direction, evidence, final head, method, task-only close keyword, parent protection |
 
-Author self-audit and AI review are supplemental evidence. Neither satisfies the human-review gate or authorizes merge or scope expansion.
+Author self-audit and AI review are supplemental evidence. Neither is independent approval, supplies a required owner decision, authorizes work outside the issue, or waives an evidence gate. Routine merge authority comes from the controlling goal after blocking findings and required owner decisions are resolved.
 
 ## Review-driven revisions
 
@@ -163,5 +173,5 @@ Author self-audit and AI review are supplemental evidence. Neither satisfies the
 - [ ] Research and decisions are recorded, or a no-research rationale is present.
 - [ ] Named checks, exact methods, actual results, limitations, and non-applicability reasons are recorded.
 - [ ] Boundaries, claims, sensitive material, and controlled-work status are recorded.
-- [ ] Author, AI, human review, and merge authorization remain distinct.
+- [ ] Author self-audit, executable checks, AI review, required owner decisions, and merge authority remain distinct.
 - [ ] PR linkage, parent protection, synchronization, handoff, and `Do not carry forward` are complete.

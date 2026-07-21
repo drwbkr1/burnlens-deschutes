@@ -1,6 +1,6 @@
 name: BurnLens task
 
-description: Create one bounded BurnLens task contract for issue-first, prompt-assisted repository work.
+description: Create one BurnLens milestone or exception checkpoint contract for issue-first, prompt-assisted repository work.
 
 title: "P#O#-T## "
 
@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this form for one reviewable BurnLens repository task.
+        Use this form for one reviewable BurnLens milestone or exception checkpoint. Related evidence units may accumulate inside a milestone under `docs/governance/CHECKPOINT_POLICY.md`.
 
         Start from `docs/workflows/PROMPT_TO_REPO_SOP.md`, instantiate the canonical capsule in `templates/CODEX_TASK_PACKET.md`, and keep work inside the allowed-file contract.
 
@@ -18,8 +18,8 @@ body:
     id: task_id
     attributes:
       label: Task ID
-      description: Use the generic project pattern shown in the issue title.
-      placeholder: P#O#-T##
+      description: Retain the existing task identifier pattern; use the checkpoint-class field to distinguish milestone and exception work.
+      placeholder: P#O#-T## or BL-GOV-###
     validations:
       required: true
 
@@ -38,6 +38,50 @@ body:
       label: Task purpose
       description: State the bounded result this task must produce and why it is needed.
       placeholder: Describe the task outcome in one to three sentences.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: checkpoint_class
+    attributes:
+      label: Checkpoint class
+      description: Evidence units register inside a milestone and do not normally open separate issues. Choose exception only for a valid policy trigger.
+      options:
+        - "Milestone checkpoint"
+        - "Exception checkpoint"
+    validations:
+      required: true
+
+  - type: textarea
+    id: milestone_exit
+    attributes:
+      label: Milestone outcome and exit condition
+      description: State the coherent project-truth change and the observable condition for ship, remediation, fallback, deferral, or stop.
+      placeholder: |
+        Outcome: ...
+        Entry condition: ...
+        Exit condition: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_units
+    attributes:
+      label: Evidence-unit roster and retention rule
+      description: List initial unit IDs or the registration rule. Require immutable identities, hashes where bytes exist, gates, dispositions, and preservation of failed or superseded units.
+      placeholder: |
+        - UNIT-001: purpose and required gates
+        - Later units may be registered only when ...
+        - Failed, superseded, excluded, and deferred units remain in ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: exception_trigger
+    attributes:
+      label: Exception trigger or non-applicability
+      description: For an exception, name the licensing, security, custody, rollback, stop-condition, or urgent-correctness trigger. For a milestone, enter "Not applicable".
+      placeholder: Not applicable
     validations:
       required: true
 
@@ -94,7 +138,7 @@ body:
     id: allowed_files
     attributes:
       label: Allowed file changes
-      description: List every path that may be created, edited, moved, or deleted. Scope expansion requires human approval before another path changes.
+      description: List exact files or authorized path families. Register in-outcome units before editing; a materially different outcome or high-risk scope requires an issue revision or separate checkpoint.
       placeholder: |
         path/to/allowed-file-1
         path/to/allowed-file-2
@@ -210,20 +254,20 @@ body:
   - type: checkboxes
     id: review_gate
     attributes:
-      label: Review separation and human gate
+      label: Review separation and owner-decision gate
       options:
-        - label: Author self-audit and author checkboxes will be treated as assertions, not independent approval.
+        - label: Author self-audit and author checkboxes will be treated as assertions, not independent approval or an owner decision.
           required: true
-        - label: AI-assisted review, when used, will be labeled supplemental and will not authorize merge or scope expansion.
+        - label: AI-assisted review, when used, will be labeled supplemental and will not fabricate owner evidence or authorize work outside this issue.
           required: true
-        - label: A human will inspect the issue, capsule, complete diff, research, checks, acceptance criteria, boundaries, close keyword, and handoff before merge.
+        - label: Required owner yes/no/uncertain evidence or stop-condition direction will be recorded when applicable; routine merge uses the controlling goal's standing authority.
           required: true
 
   - type: textarea
     id: acceptance
     attributes:
       label: Acceptance criteria
-      description: Define observable conditions that must be satisfied before human approval and merge authorization.
+      description: Define observable unit, milestone, boundary, and verification conditions that must be satisfied before merge.
       placeholder: |
         - [ ] Only allowed files changed.
         - [ ] Required research and verification are recorded.
@@ -236,7 +280,7 @@ body:
     attributes:
       label: Handoff target
       description: State the next task, review, closeout, or synchronization action and the context it must use.
-      placeholder: Proceed to P#O#-T## only after review, merge, and any required status synchronization.
+      placeholder: Proceed to the next registered milestone or evidence unit only after this exit condition and merge are verified.
     validations:
       required: true
 
@@ -254,9 +298,9 @@ body:
     attributes:
       label: Parent-issue and scope protection
       options:
-        - label: The ordinary task pull request will close only the task issue and will not close the parent issue.
+        - label: The milestone or exception pull request will close only this checkpoint issue and will not close the parent issue.
           required: true
         - label: This issue does not configure or claim GitHub settings enforcement, required checks, CI, branch protection, rulesets, or approvals.
           required: true
-        - label: Any required scope expansion will stop before an unauthorized file changes and will require human approval.
+        - label: A materially different outcome, phase result, use boundary, or high-risk source/data scope will stop before an unauthorized change and require an issue revision or separate checkpoint.
           required: true

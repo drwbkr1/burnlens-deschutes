@@ -2,6 +2,19 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## BL-GOV-003 - milestone checkpoint policy - 2026-07-21
+
+### Distinguish evidence units from shipped checkpoints
+
+- Add `checkpoint-policy-v0.1.0` with evidence-unit, milestone, and exception checkpoint classes.
+- Preserve independent immutable IDs, hashes, source/terms/custody/quality/uncertainty/leakage/owner/privacy/render/reproducibility gates, dispositions, and failed evidence for every unit.
+- Allow related units to accumulate in one milestone issue and branch without independent software versions, PRs, tags, deployments, or lifecycle-sync PRs.
+- Reserve independent exception shipping for licensing, security, custody, rollback, stop-condition, or urgent-correctness risk.
+- Designate issue #521 for post-merge revision into the first six-event evidence milestone, followed prospectively by dataset fitness, a conditional dataset-and-split milestone, and a conditional baseline milestone.
+- Align active repository instructions, SOP, contributor guidance, issue/PR/task templates, versioning, roadmap, status, prompt logging, and case-study truth while preserving historical records unchanged.
+
+Issue #525 is governance-only. BurnLens software remains 0.44.0. No tag, GitHub Release, deployment, analytical output, custody byte, owner decision, prototype label, dataset, split, baseline, model, scientific gate, or use boundary changes.
+
 ## v0.44.0-grandview-owner-response-intake - verified - 2026-07-21
 
 ### P2O4-T32 - Lock and reconcile the Grandview owner response
@@ -14,7 +27,7 @@ Source `33e5b02bebf335c5026688a3d2a33ae2d48b8991` creates run `BL-2026-07-21-gra
 
 The original-resolution PNG, 15 focused tests, 345-test custody worktree, production reconciliation, output hashes, public privacy scan, compilation, dependency health, 113 tracked JSON parses, and 194 local links pass. Fresh pushed head `4449f476b31d321d29db64632bc211be813a01e3` recreates the exact 8,893-byte private reconciliation and all three public outputs from only the locked response and receipt, then passes 328 tests with 17 expected custody skips. Two independent fixed-epoch fresh-clone builds produce byte-identical 630,232-byte wheels with SHA-256 `3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1`, 145 clean entries, and 70 commands. An isolated dependency-complete install imports BurnLens 0.44.0 from `site-packages`, passes dependency health, and starts both new CLIs. A separate no-custody clone then exposes a test-fixture assumption that the ignored `downloads/` parent already exists; that precursor gate is withheld. Test-only remediation `af6233a6cfb68cf3a5ef9c5b93f3c8ea25ca5214` creates the ignored parent on demand, passes the same 328/17 suite from a clone where it was initially absent, and reproduces the canonical wheel exactly. Automated local `file://` HTML navigation remains browser-policy-blocked and is not bypassed; the owner opens the exact canonical page and confirms it renders correctly, recorded `2026-07-21T04:00:44Z`.
 
-PR #522 reviewed head `7325418bb0c6cfd0e0a10a2237dd54b8e6c8f5b5` squash-merges at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. A new remote-main clone recreates the exact private reconciliation and all three public outputs from only the response and receipt, passes 328 tests with 17 expected custody skips, compilation, dependency health, 113 JSON parses, 194 local links, required LF checkout, and a clean ignored-output status, then rebuilds the exact canonical wheel and passes the isolated install again. Annotated tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to the checkpoint. Lifecycle issue #523 / PR #524 records the release. Issue #521 remains recorded as the sixth-event checkpoint, but the owner-directed sequencing pause requires BurnLens to stop after v0.44 synchronization and await the separate governance-only checkpoint. Six events are necessary but do not by themselves authorize a dataset, split, baseline, or model.
+PR #522 reviewed head `7325418bb0c6cfd0e0a10a2237dd54b8e6c8f5b5` squash-merges at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. A new remote-main clone recreates the exact private reconciliation and all three public outputs from only the response and receipt, passes 328 tests with 17 expected custody skips, compilation, dependency health, 113 JSON parses, 194 local links, required LF checkout, and a clean ignored-output status, then rebuilds the exact canonical wheel and passes the isolated install again. Annotated tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to the checkpoint. Lifecycle issue #523 / PR #524 records the release. At that checkpoint, issue #521 remained recorded as the sixth-event task and the owner-directed sequence stopped after v0.44 synchronization pending BL-GOV-003. Six events are necessary but do not by themselves authorize a dataset, split, baseline, or model.
 
 ## v0.43.0-grandview-owner-review-surface - verified - 2026-07-21
 

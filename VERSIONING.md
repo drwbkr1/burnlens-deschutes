@@ -10,6 +10,8 @@ The detailed taxonomy and increment rules live in:
 docs/phase-one/objective-five/VERSION_TAXONOMY.md
 ```
 
+Checkpoint cadence and the distinction between evidence-unit identifiers and shipped versions live in `docs/governance/CHECKPOINT_POLICY.md`.
+
 This protocol is expanded during Phase One / Objective Five because BurnLens is moving from a lightweight versioning placeholder to a Phase Two-ready traceability rule set.
 
 ## Boundary statement
@@ -69,6 +71,14 @@ Traceability is necessary but not sufficient for public release. Release control
 | Run ID | `BL-YYYY-MM-DD-deschutes-aoiXX-mXXX-dXXX` | Unique run identifier | Use unique immutable run IDs, not SemVer. Never reuse a run ID. |
 | Report version | `run-report-v0.1.0` | Report template/package version | Use SemVer-inspired report versions tied to report structure, logic, warnings, and claim gates. |
 
+## Checkpoint cadence
+
+- Every evidence unit receives the immutable record and run identifiers required to reconstruct it, including hashes and failed-run identities where applicable.
+- Evidence-unit completion alone does not increment BurnLens software, create a repository tag, publish a GitHub Release, deploy an application, or require a lifecycle-sync PR.
+- Milestone and exception checkpoints apply only the artifact versions changed by their coherent result. A data milestone may version data without changing software; a governance milestone may use a governance identifier without a software bump or tag.
+- Tags, GitHub Releases, and deployments remain milestone or exception actions that require their applicable release gates. They are not progress markers.
+- A post-merge sync is created only when active repository truth is materially stale after merge and cannot be captured accurately in the checkpoint closeout.
+
 ## Increment rule summary
 
 | Component | Increment or creation rule |
@@ -123,13 +133,13 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two active; current cross-program catalog availability passes; reviewer two is waived; exact product fitness is pending and the dataset is deferred |
-| Current repository baseline | Latest verified: `v0.21.1-reference-inventory-checkout-stability` at merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; `v0.21.0-current-reference-inventory` is preserved as an analytical tag with failed release verification |
-| Active analytical decision | Seven exact current cross-program catalog records pass across all three events, but product fitness is pending. Six burned candidate units, 0 background units, 50 ignored, and no Tepee candidates remain unchanged. Decision: `ACQUIRE_CURRENT_CROSS_PROGRAM_REFERENCE_BUNDLES_DEFER_LABELS_DATASET_MODEL`. |
-| Baseline verification | 0.21.0 passed analytical, test, live-inventory, packaging, and remote-tag checks but failed exact fresh-checkout reconstruction because JSON/HTML line endings were checkout-dependent. Verified 0.21.1 adds explicit LF rules; exact fresh-main hashes, 188 tests, compilation, dependency health, deterministic 348,032-byte wheel, isolated install, privacy, PR, merge, tag, and remote-peel gates pass. |
-| Data/model/run/map/application status | Exact provider packages, returned-review bytes, receipts, owner-waiver authorization, and unit-level reconciliation remain in ignored local storage. Run `BL-2026-07-17-current-reference-inventory-r002` exposes current catalog availability only. The reveal is open; the preflight sequence exception is disclosed. Shipped local application `label-review-handoff-workbench-v0.1.0` is not deployed. No second reviewer, inter-rater validation, consensus, adjudication, accepted current product pixels, dataset, split, baseline, model, analytical inference result, or deployment exists |
+| Current phase posture | Phase Two active under `checkpoint-policy-v0.1.0`; verified v0.44 establishes ten balanced prototype regions across five complete events; issue #521 is designated for the first six-event Petes Lake milestone; dataset fitness remains a separate gate |
+| Current repository baseline | Latest verified analytical tag: `v0.44.0-grandview-owner-response-intake` at merge `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`; tag object `e4f834cd3c55d44895766695a40746fa224df9bd`; lifecycle PR #524 merges at `7c2bc14ac4b7e088cced93284a92e1a9e52b317a` |
+| Active analytical decision | `owner-approved-prototype-region-labels-v0.3.0` contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. It is prototype evidence, not ground truth or a dataset. |
+| Baseline verification | Verified v0.44 locks the exact Grandview response before reveal, reconstructs the private reconciliation and three public outputs from fresh main, passes 328 tests with 17 expected custody skips, reproduces the canonical 630,232-byte wheel, passes isolated installation, and verifies the remote annotated tag. |
+| Data/model/run/map/application status | Exact provider packages, response bytes, receipts, and unit-level reconciliation remain in ignored local storage. Run `BL-2026-07-21-grandview-owner-response-intake-r002` advances only prototype-region evidence. No accepted dataset, split, baseline, model, analytical inference result, deployment, independent review, inter-rater validation, consensus, field validation, official status, or operational readiness exists. |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 
 ## Handoff
 
-Every shipped checkpoint must update `docs/status/VERSION_HISTORY.md` with the exact identifier, commit, evidence meaning, and explicit non-implications. Tags and releases are governed by the execution goal, issue-backed quality gates, and the existing release-control evidence—not by stale historical sequencing restrictions.
+Every shipped milestone or exception checkpoint must update `docs/status/VERSION_HISTORY.md` when version or governance truth changes, with the exact identifier, commit or PR state available at that stage, evidence meaning, and explicit non-implications. Evidence units retain immutable IDs and hashes in their milestone ledger without automatic repository versioning. Tags and releases are governed by the execution goal, checkpoint policy, issue-backed quality gates, and existing release-control evidence—not by stale historical sequencing restrictions.

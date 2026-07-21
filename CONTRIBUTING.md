@@ -12,6 +12,8 @@ This guide documents repository policy. It does not promise that outside contrib
 
 Use this guide as a concise human entry point. The following files remain authoritative for their specific roles:
 
+- `docs/governance/BURNLENS_EXECUTION_GOAL.md` — controlling execution authority and stop conditions.
+- `docs/governance/CHECKPOINT_POLICY.md` — evidence-unit, milestone, exception, batching, and shipping cadence.
 - `docs/workflows/PROMPT_TO_REPO_SOP.md` — full prompt-to-repository workflow and context tiers.
 - `AGENTS.md` — repository-level instructions for prompt-assisted agents.
 - `templates/CODEX_TASK_PACKET.md` — canonical executable task capsule.
@@ -19,20 +21,20 @@ Use this guide as a concise human entry point. The following files remain author
 - `records/PROMPT_BUILD_LOG.md` — canonical prompt/build-log protocol and index.
 - `templates/PROMPT_LOG_ENTRY.md` — canonical detailed prompt/build-log entry template.
 - `PROMPT_LOG.md` — non-canonical prompt-log navigation.
-- `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` — branch, pull-request, review, merge, and post-merge baseline.
-- `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md` — current Objective Six task and dependency state.
-- `docs/phase-one/objective-six/OBJECTIVE_SIX_ARTIFACT_CONTRACTS.md` — task artifact contracts.
-- `docs/phase-one/objective-six/PROMPT_BUILT_DEVELOPMENT_PROTOCOL.md` — how the workflow components operate together.
+- `docs/phase-one/objective-four/BRANCH_AND_PR_WORKFLOW.md` and `docs/phase-one/objective-six/` — historical workflow evidence and optional inspection aids; they do not override the execution goal, checkpoint policy, or current live milestone issue.
 
 Do not use this file to create a second task packet, prompt-log schema, context-tier table, pull-request checklist, review checklist, or independent workflow.
 
-## Start from an authorized issue
+## Start from an authorized checkpoint issue
 
-Meaningful repository work begins with a GitHub task issue or an explicitly approved bundled-task issue.
+Milestone and exception work begins with a GitHub checkpoint issue. Related evidence units may accumulate inside one milestone issue and branch under `docs/governance/CHECKPOINT_POLICY.md`; they do not require separate issues or PRs merely to record progress.
 
 Before changing files, confirm that the issue identifies:
 
 - the task and parent issue;
+- the checkpoint class, milestone outcome, and exit condition;
+- the evidence-unit roster or registration rule;
+- failure-retention rules or the exception trigger;
 - dependencies;
 - branch and base;
 - primary and supporting artifacts;
@@ -44,13 +46,13 @@ Before changing files, confirm that the issue identifies:
 - intended pull-request close keyword;
 - handoff target.
 
-The issue authorizes work; it does not prove that the work is complete.
+The issue authorizes the checkpoint outcome; it does not prove that an evidence unit or milestone is complete.
 
 Use `templates/CODEX_TASK_PACKET.md` to turn the issue into the compact operating capsule. A task capsule may narrow the issue but may not broaden it.
 
-## Use a task branch
+## Use a checkpoint branch
 
-Create one compact task branch from current `main` unless the issue explicitly authorizes another base. Use the project pattern, such as:
+Create one compact milestone or exception branch from current `main` unless the issue explicitly authorizes another base. Evidence units remain on that branch until the milestone ships. Use the project pattern, such as:
 
 ```text
 p1o6t05b
@@ -60,7 +62,7 @@ p2o1t01b
 
 Do not make meaningful or prompt-assisted changes directly to `main`.
 
-Keep changes inside the issue's allowed file list. If another path becomes necessary, stop before editing it. Explain why the existing contract is insufficient, then revise the issue and capsule or create a separate task with human approval.
+Keep changes inside the issue's allowed path families. Register each unit before editing and preserve its immutable identifiers, hashes, gates, disposition, and failures. If work changes the authorized outcome, phase result, use boundary, or high-risk source/data scope, stop before editing and revise the issue or create a separate checkpoint.
 
 ## Load only the required context
 
@@ -110,9 +112,9 @@ When a check does not apply, give a task-specific reason. Documentation-only wor
 
 Do not invent or require CI jobs, status checks, or other automated gates that do not exist.
 
-## Open a task-scoped pull request
+## Open a checkpoint-scoped pull request
 
-Every meaningful task reaches `main` through a pull request.
+Every milestone or exception reaches `main` through a pull request. Evidence units may remain on the authorized milestone branch until its exit condition is met.
 
 The pull request should:
 
@@ -120,6 +122,8 @@ The pull request should:
 - use the task title pattern;
 - summarize the changed files and material decisions;
 - report research and verification;
+- enumerate every evidence unit and its pass, remediate, exclude, defer, or stop disposition;
+- retain failed and superseded units instead of presenting only favorable evidence;
 - list checks not run and explain why;
 - preserve boundary and source-precedence status;
 - identify dependencies and the next task;
@@ -127,41 +131,23 @@ The pull request should:
 
 Do not use a closing keyword for an objective parent issue in an ordinary task pull request.
 
-## Human review is mandatory
+## Review and owner decisions
 
-AI-assisted review is supplemental. It may inspect a diff, flag omissions or defects, suggest focused checks, and confirm whether findings appear addressed. It cannot approve a merge, authorize scope expansion, or satisfy the human-review requirement.
+Author self-audit, executable checks, AI-assisted review, owner evidence decisions, and merge decisions are distinct.
 
-Before merge, a human must inspect:
+AI-assisted review may inspect a diff, flag omissions or defects, suggest focused checks, and confirm whether findings appear addressed. It cannot be described as independent approval, fabricate an owner decision, authorize work outside the issue, or waive evidence gates.
 
-1. the task issue and capsule;
+The owner must act when the exact workflow requires yes/no/uncertain candidate review or when an execution-goal stop condition is reached. Routine issue, branch, implementation, PR, merge, tag, reversible deployment, and checkpoint-selection decisions do not require separate owner approval under the controlling goal.
+
+Before merge, verify:
+
+1. the checkpoint issue, class, capsule, and complete unit ledger;
 2. the changed-file list and diff;
 3. research evidence where applicable;
-4. checks, methods, and actual results;
-5. checks not run and reasons;
-6. acceptance criteria;
-7. boundaries and source precedence;
-8. the task-only close keyword and handoff.
-
-The recorded human outcome must be one of:
-
-```text
-Approve
-Request changes
-Defer or reject
-```
-
-### Solo-maintainer review evidence
-
-GitHub provides `Comment`, `Approve`, and `Request changes` review states, but pull-request authors cannot formally approve their own pull requests.
-
-For the current solo-maintainer workflow, Drew records human review through either:
-
-- an explicit pull-request comment naming the human outcome; or
-- a completed pull-request checklist that names the outcome and states that the diff and verification evidence were reviewed.
-
-This is BurnLens policy evidence. It is not a GitHub approval review and does not claim platform enforcement.
-
-When another eligible human reviewer is available, request their review and use GitHub's formal review state where possible. This guide does not imply that another reviewer currently exists.
+4. checks, methods, actual results, and retained failures;
+5. acceptance and milestone exit criteria;
+6. boundaries, source precedence, and required owner decisions;
+7. the checkpoint-only close keyword and handoff.
 
 ## Documented policy versus GitHub enforcement
 
@@ -181,7 +167,7 @@ Stop before proceeding when:
 - current tooling or external claims cannot be verified;
 - checks cannot be reported honestly;
 - canonical controls conflict;
-- AI review is being substituted for human approval;
+- AI review is being represented as independent approval or an owner decision;
 - the task would broaden into unauthorized data, model, public-output, settings, tag, Release, or other blocked work.
 
 Revise the task contract or create a separate issue before continuing.
@@ -194,14 +180,14 @@ A task issue or contribution guide does not authorize imagery, AOIs, labels, mas
 
 ## Post-merge handoff
 
-After an authorized merge:
+After a milestone or exception merge:
 
 - confirm the task issue closed as intended;
 - update the parent issue with the task, pull request, artifacts, status, and next task;
-- synchronize README, tracker, or prompt-log records only when their truth changed;
+- synchronize README, tracker, or prompt-log records only when their truth is materially stale and the milestone closeout cannot state it accurately;
 - avoid rewriting completed objective records.
 
-Use `README.md` and `docs/phase-one/objective-six/OBJECTIVE_SIX_TRACKER.md` to identify the current Objective Six task and dependency state. Do not rely on historical task-specific handoff sentences after later tasks have merged.
+Use `README.md`, the roadmap, phase status, and the live GitHub milestone issue to identify current work and dependencies. Do not use the historical Objective Six tracker or task-specific handoffs as current authority after later checkpoints have merged.
 
 ## GitHub research basis
 
