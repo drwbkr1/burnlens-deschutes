@@ -1144,6 +1144,35 @@ def _validate_trace(trace: Any, repository_root: Path | None = None) -> list[str
     return reasons
 
 
+def _validate_trace_progression(
+    recorded: Any,
+    current: Any,
+    repository_root: Path,
+) -> list[str]:
+    """Allow a custody trace to be verified from a clean descendant commit."""
+
+    if not isinstance(recorded, dict) or not isinstance(current, dict):
+        return ["REPLACEMENT_TRACE_PROGRESSION_MISSING"]
+    reasons: list[str] = []
+    ignored = {"git_source_commit", "remote_branch_commit"}
+    for name in sorted((set(recorded) | set(current)) - ignored):
+        if recorded.get(name) != current.get(name):
+            reasons.append(f"REPLACEMENT_TRACE_PROGRESSION_{name.upper()}_MISMATCH")
+    recorded_source = recorded.get("git_source_commit")
+    current_source = current.get("git_source_commit")
+    if not isinstance(recorded_source, str) or not isinstance(current_source, str):
+        reasons.append("REPLACEMENT_TRACE_PROGRESSION_COMMIT_INVALID")
+    elif _git(
+        repository_root,
+        "merge-base",
+        "--is-ancestor",
+        recorded_source,
+        current_source,
+    ).returncode != 0:
+        reasons.append("REPLACEMENT_TRACE_SOURCE_NOT_ANCESTOR_OF_CURRENT_HEAD")
+    return reasons
+
+
 def _semantic_core(
     run: ReplacementOpticalRun,
     preflight: ReplacementPreflight,
@@ -1494,8 +1523,13 @@ def verify_replacement_custody(
         reasons.append("PETES_LAKE_REPLACEMENT_SEMANTIC_HASH_MISMATCH")
     reasons.extend(_validate_semantic_core(private_core))
     reasons.extend(_validate_trace(private_core.get("trace"), run.repository_root))
-    if private_core.get("trace") != preflight.trace.as_dict():
-        reasons.append("PETES_LAKE_REPLACEMENT_CURRENT_TRACE_MISMATCH")
+    reasons.extend(
+        _validate_trace_progression(
+            private_core.get("trace"),
+            preflight.trace.as_dict(),
+            run.repository_root,
+        )
+    )
     if _without_observed_at(private_core.get("metadata_snapshot") or {}) != _without_observed_at(
         preflight.metadata_snapshot
     ):

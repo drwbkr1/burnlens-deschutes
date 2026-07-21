@@ -489,6 +489,10 @@ class PetesLakeReplacementContractTests(unittest.TestCase):
                 replacement,
                 "_validate_trace",
                 return_value=[],
+            ), patch.object(
+                replacement,
+                "_git",
+                return_value=SimpleNamespace(returncode=0, stdout=""),
             ):
                 self.assertEqual(verify_replacement_custody(run=run, preflight=refreshed), [])
                 report = json.loads(run.tracked_report.read_text(encoding="utf-8"))
@@ -496,6 +500,81 @@ class PetesLakeReplacementContractTests(unittest.TestCase):
                 run.tracked_report.write_text(json.dumps(report) + "\n", encoding="utf-8")
                 reasons = verify_replacement_custody(run=run, preflight=refreshed)
                 self.assertTrue(reasons)
+
+    def test_verify_only_accepts_remote_equal_descendant_evidence_head(self) -> None:
+        with TemporaryDirectory() as directory:
+            run = ReplacementOpticalRun.create(
+                repository_root=Path(directory),
+                generated_at_utc="2026-07-21T21:00:02Z",
+                revision="r001",
+                mode="acquire",
+            )
+            recorded = synthetic_preflight("a" * 40)
+            verification = fake_verification(run.transaction_run_id)
+            transaction = replacement._transaction_state(
+                run,
+                recorded,
+                download={"status": "SYNTHETIC_TEST_DOUBLE"},
+                registration=verification["registration"],
+                verification=verification,
+                credentials_exercised=True,
+            )
+            with patch.object(
+                replacement,
+                "_fresh_verify_replacement",
+                return_value=verification,
+            ), patch.object(
+                replacement,
+                "_validate_original_pre",
+                return_value=recorded.original_pre_verification,
+            ), patch.object(
+                replacement,
+                "_write_private",
+                side_effect=local_private_writer,
+            ):
+                replacement._write_success_outputs(run, recorded, transaction)
+
+            current = ReplacementPreflight(
+                trace=synthetic_trace("b" * 40),
+                metadata_snapshot=dict(
+                    recorded.metadata_snapshot,
+                    observed_at_utc="2026-07-21T22:00:01Z",
+                ),
+                terms_snapshot=dict(
+                    recorded.terms_snapshot,
+                    observed_at_utc="2026-07-21T22:00:00Z",
+                ),
+                original_pre_verification=recorded.original_pre_verification,
+            )
+            git_pass = SimpleNamespace(returncode=0, stdout="")
+            with patch.object(
+                replacement,
+                "_fresh_verify_replacement",
+                return_value=verification,
+            ), patch.object(
+                replacement,
+                "_validate_trace",
+                return_value=[],
+            ), patch.object(replacement, "_git", return_value=git_pass):
+                self.assertEqual(
+                    verify_replacement_custody(run=run, preflight=current),
+                    [],
+                )
+
+            git_fail = SimpleNamespace(returncode=1, stdout="")
+            with patch.object(
+                replacement,
+                "_fresh_verify_replacement",
+                return_value=verification,
+            ), patch.object(
+                replacement,
+                "_validate_trace",
+                return_value=[],
+            ), patch.object(replacement, "_git", return_value=git_fail):
+                self.assertIn(
+                    "REPLACEMENT_TRACE_SOURCE_NOT_ANCESTOR_OF_CURRENT_HEAD",
+                    verify_replacement_custody(run=run, preflight=current),
+                )
 
     def test_cli_preflight_precedes_credentials_and_flags_are_credential_free(self) -> None:
         with TemporaryDirectory() as directory:
