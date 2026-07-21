@@ -13,3 +13,11 @@ Two cautions shape the rest of the milestone. The post scene reports 9.841206 pe
 U01 passes only the entry gate. U02 is authorized to acquire the exact pair sequentially into ignored no-overwrite custody. No Petes Lake pixel, candidate, response, label, dataset, split, baseline, or model exists yet.
 
 The owner also clarified the later interaction contract without interrupting U01-U08. U09 will be one Petes Lake batch containing only the exact burned and affirmative-background candidates. Decisions, notes, hashes, identities, and non-owner gates stay candidate-specific; there is no approve-all, prefill, missing-answer inference, or cross-milestone batch. U10 must lock the exact final export before reveal and treat multiple distinct valid finals as ambiguous until the owner explicitly designates one.
+
+## 2026-07-21 - U02 code-only migration checkpoint
+
+Before either provider archive was requested, BurnLens implemented and synthetically verified the exact U02 transaction boundary. The pre and post products remain separate singleton packages; pre must pass current metadata, download, checksum, SAFE/ZIP, registration, atomic no-replace promotion, private-state, and fresh reopen verification before post metadata or credentials may be exercised. Retry is bounded to transport, early EOF, HTTP 408, and 5xx failures with a fresh token; authentication, authorization, missing-object, quota, other 4xx, checksum, archive, path, and custody failures stop. Private state must remain ignored, untracked, single-link, no-overwrite, and exact-readback verified.
+
+The code also retains revisioned full, post-only, and aggregate-only remediation routes so a later failure never requires deleting or reacquiring an already verified package. A tracked report cannot authorize U03 by itself: the credential-free verifier must freshly reopen both packages and match exact private/tracked aggregate bytes, hashes, trace, ancestry, and entry-gate bindings.
+
+The owner then paused active custody for checkout migration. No CDSE product/archive request or download occurred. The code-only checkpoint is pushed for recovery, and this OneDrive checkout must remain frozen until the owner explicitly resumes after migration. U02, U03, every later unit, and every dataset/model gate remain unadvanced.
