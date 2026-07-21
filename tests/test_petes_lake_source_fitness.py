@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 
@@ -15,6 +16,7 @@ from burnlens.petes_lake_source_fitness import (
     _write_bytes_no_overwrite,
     build_report,
     summarize_probability,
+    write_outputs,
 )
 
 
@@ -75,6 +77,15 @@ class PetesLakeSourceFitnessTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), b"exact\n")
             with self.assertRaisesRegex(PetesLakeSourceFitnessError, "already exists"):
                 _write_bytes_no_overwrite(path, b"changed\n")
+
+    def test_production_output_roster_excludes_unverified_html(self) -> None:
+        with TemporaryDirectory() as directory, patch(
+            "burnlens.petes_lake_source_fitness._render_png_bytes",
+            return_value=b"png-bytes",
+        ):
+            output = write_outputs({"report_id": "fixture"}, {}, Path(directory))
+            self.assertEqual(set(output), {"json", "png"})
+            self.assertFalse(any(Path(directory).glob("*.html")))
 
     @unittest.skipUnless(
         PRE.is_dir() and POST.is_dir() and CUSTODY.is_file(),

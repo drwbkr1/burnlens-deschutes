@@ -27,7 +27,7 @@ CUSTODY_REPORT_PATH = Path(
     "samples/cross-event/phase-two/petes-lake/PETES-LAKE-OPTICAL-CUSTODY-2026-001.json"
 )
 PREVIEW_DIRECTORY = Path(
-    "downloads/phase-two/runs/P2O4-T33-U03/petes-lake-source-fitness-preview-r001"
+    "downloads/phase-two/runs/P2O4-T33-U03/petes-lake-source-fitness-preview-r002"
 )
 FINAL_DIRECTORY = Path("samples/cross-event/phase-two/petes-lake")
 
@@ -89,7 +89,7 @@ def main() -> int:
                 raise PetesLakeSourceFitnessError("preview cannot contain a visual decision")
             decision = VISUAL_PENDING
             notes = ""
-            run_id = "BL-2026-07-21-petes-lake-source-fitness-preview-r001"
+            run_id = "BL-2026-07-21-petes-lake-source-fitness-preview-r002"
             directory = root / PREVIEW_DIRECTORY
         else:
             if args.visual_review_decision is None:

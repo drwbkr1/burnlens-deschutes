@@ -622,20 +622,16 @@ def write_outputs(
     report: dict[str, Any], previews: dict[str, np.ndarray], directory: Path
 ) -> dict[str, dict[str, Any]]:
     json_path = directory / f"{REPORT_ID}.json"
-    html_path = directory / f"{REPORT_ID}.html"
     png_path = directory / f"{REPORT_ID}.png"
-    paths = {"json": json_path, "html": html_path, "png": png_path}
+    paths = {"json": json_path, "png": png_path}
     present = [path.name for path in paths.values() if path.exists() or path.is_symlink()]
     if present:
         raise PetesLakeSourceFitnessError("output already exists: " + ",".join(present))
     payloads = {
         "json": (json.dumps(report, indent=2, ensure_ascii=False) + "\n").encode("utf-8"),
-        "html": (_render_html(report, png_path.name).replace("\r\n", "\n") + "\n").encode(
-            "utf-8"
-        ),
         "png": _render_png_bytes(report, previews),
     }
-    for name in ("json", "png", "html"):
+    for name in ("json", "png"):
         _write_bytes_no_overwrite(paths[name], payloads[name])
     return {
         name: {

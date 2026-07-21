@@ -51,3 +51,9 @@ The isolated owner-review utility work is verified on ordered commits `530ce51a0
 U03 continues uninterrupted. Do not integrate the handoff until the next clean repository point before production U09; preserve the active branch's newer U02/U03 facts during conflicts. Production U09 remains dependency-blocked on U08 plus the integrated U09A/U09B contracts.
 
 The owner separately coordinated isolated U09C geospatial-environment work in sibling worktree `C:\Projects\Active\burnlens-u09c-geo-env` on `codex/p2o4-t33-u09c-geospatial-environment`, based on U09B head `ab3efb7`. Its authorized scope is environment profiles, frozen dependencies, Codex worktree setup, offline smoke checks, tests, and documentation only. It must not touch this active checkout, provider custody, scientific artifacts, candidate decisions, or milestone gates. U03 remains uninterrupted; record and evaluate only the later exact integration handoff.
+
+## 2026-07-21 - U03 first preview retained
+
+Committed source-fitness code generated ignored preview run `BL-2026-07-21-petes-lake-source-fitness-preview-r001` without changing either provider archive. The 1,800 x 1,240 PNG renders the clear pre scene, visibly snow-dominated post scene, sparse valid continuous dNBR footprint, 21.8133% pair-eligible SCL quality, 100% post snow-probability p95, zero of eight passing registration windows, warning, and exact trace without clipping. The machine gate rejects the planned post scene and keeps U04 blocked.
+
+Direct local-file navigation to the companion HTML was blocked by the in-app browser's security policy and was not bypassed. That exact ignored preview remains immutable as a superseded attempt. Tracked U03 evidence is therefore narrowed to the exact JSON, the visually inspected PNG, and a human-readable decision record; no unverified HTML is eligible for the tracked output roster. Preview r002 must be generated from committed code before the final r001 disposition.
