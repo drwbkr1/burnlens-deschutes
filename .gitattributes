@@ -113,3 +113,11 @@ samples/reference/phase-two/*.html text eol=lf
 burnlens/petes_lake_replacement_source_fitness.py text eol=lf
 burnlens/inspect_petes_lake_replacement_source_fitness.py text eol=lf
 tests/test_petes_lake_replacement_source_fitness.py text eol=lf
+
+# Petes Lake exact MTBS request and identity-first delivery preflight contracts.
+burnlens/petes_lake_reference_request.py text eol=lf
+burnlens/request_petes_lake_reference.py text eol=lf
+burnlens/petes_lake_reference_delivery.py text eol=lf
+burnlens/preflight_petes_lake_reference_delivery.py text eol=lf
+tests/test_petes_lake_reference_request.py text eol=lf
+tests/test_petes_lake_reference_delivery.py text eol=lf
