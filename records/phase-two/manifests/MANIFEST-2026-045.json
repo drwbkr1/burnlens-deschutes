@@ -48,10 +48,10 @@
   },
   "release_package": {
     "filename": "burnlens_deschutes-0.43.0-py3-none-any.whl",
-    "source_commit": "dbedb98c847b28c59d3997ee364b0d35c317e3c4",
+    "source_commit": "831cf749322b39609f9630fab1cb06a17b64ccb6",
     "source_date_epoch": 1784596752,
-    "bytes": 613569,
-    "sha256": "dc96dd1d3805b6d58ed8e3f2a615e22bcc93e885fb06326de758a39d7b3675f5",
+    "bytes": 612664,
+    "sha256": "7c8d10d8f0f1619abe4beaec8dcb46e7bc4fd1521025a82134fee2a9c6fbe90e",
     "entries": 141,
     "console_commands": 68,
     "isolated_install": "pass: BurnLens 0.43.0 imports from site-packages; Grandview surface CLI help and pip check pass"
@@ -65,9 +65,10 @@
     "controller": "pass: Node syntax; semantic controls and local links; zero external links",
     "exact_reconstruction": "pass: all six surface outputs reproduced byte for byte; long wrapper timed out after atomic outputs were complete, then independent readback verified 6 of 6 hashes",
     "repository_tests": "pass: 330 tests in two complete bounded shards (139 plus 191); compileall; 111 JSON documents including this manifest parse",
-    "release_package": "pass: two fixed-epoch 613,569-byte wheels are byte-identical at SHA-256 dc96dd1d3805b6d58ed8e3f2a615e22bcc93e885fb06326de758a39d7b3675f5; 141 entries; 68 commands; zero forbidden entries; isolated install and dependency health pass",
+    "release_package": "pass: fresh remote head builds two fixed-epoch 612,664-byte wheels that are byte-identical at SHA-256 7c8d10d8f0f1619abe4beaec8dcb46e7bc4fd1521025a82134fee2a9c6fbe90e; 141 entries; 68 commands; zero forbidden entries; isolated install and dependency health pass; earlier 613,569-byte working-tree package rejected for CRLF source contamination",
     "real_browser": "agent local file URL automation policy-blocked and not bypassed; original-resolution PNG, semantic HTML, controller, links, and outputs validated independently",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
+    "fresh_remote_head": "pass at 831cf749322b39609f9630fab1cb06a17b64ccb6: 313 tests with 17 expected custody skips; compileall; 111 JSON parses; zero surface JSON/HTML CRLF; all six artifact hashes exact; canonical clean package and isolated install pass",
     "fresh_merged_main": "pending",
     "remote_tag": "pending"
   },
