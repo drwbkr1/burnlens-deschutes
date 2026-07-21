@@ -61,3 +61,5 @@ Direct local-file navigation to the companion HTML was blocked by the in-app bro
 Committed preview r002 reproduces every scientific metric with a narrowed JSON/PNG roster. Final run `BL-2026-07-21-petes-lake-source-fitness-r001` retains 34,103 native 20 m boundary pixels, pre SCL eligibility 99.0030%, post SCL snow/ice 78.0782%, pair eligibility 21.8133%, and zero of eight passing registration windows. Its 1,800 x 1,240 PNG passes original-resolution inspection and honestly renders the snow-dominated failure; continuous dNBR remains limited to 7,439 valid pixels and is never a label.
 
 U03 r001 disposition is `remediate`. The planned post scene is rejected, U04 is not authorized, and all later units remain blocked. The next bounded work is current metadata-only research for a same-event, same-source-regime replacement post scene, followed by an exact contract revision before any provider request. Existing archives and every preview/final artifact remain immutable.
+
+Evidence commit `24d3affa4160f049bf6c11ddc8fbe13f8f078c70` is pushed and issue #521 comment 5038371241 records the exact outputs, gates, disposition, verification, and next boundary.
