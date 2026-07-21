@@ -121,7 +121,14 @@ def main() -> int:
                     trace=trace,
                     progress=_progress,
                 )
-        print(result["decision"])
+        decision = result.get("decision")
+        if decision is None:
+            semantic = result.get("semantic_record")
+            if isinstance(semantic, dict):
+                decision = semantic.get("decision")
+        if not isinstance(decision, str) or not decision:
+            raise AcquisitionError("PETES_LAKE_RESULT_DECISION_MISSING")
+        print(decision)
         return 0
     except (AcquisitionError, OSError, ValueError) as error:
         if isinstance(error, AcquisitionError):

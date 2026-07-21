@@ -826,7 +826,7 @@ class PetesLakeOpticalContractTests(unittest.TestCase):
                 acquire_cli,
                 "acquire_petes_lake_optical_pair",
                 side_effect=lambda **kwargs: events.append("acquire")
-                or {"decision": "SYNTHETIC_PASS"},
+                or {"semantic_record": {"decision": "SYNTHETIC_PASS"}},
             ):
                 self.assertEqual(acquire_cli.main(), 0)
             self.assertEqual(events, ["preflight", "credentials", "acquire"])
