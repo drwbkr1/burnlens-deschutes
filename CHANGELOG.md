@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.43.0-grandview-owner-review-surface - candidate - 2026-07-21
+
+### P2O4-T31 - Present exact Grandview regions for owner confirmation
+
+- Bind the surface to the exact v0.42 proposal JSON, both proposal rasters, proposal schema, run, and region identities; do not recalculate or relabel either core.
+- Render pre/post/extended optical evidence, relevant dNBR and MTBS evidence, unknown rings, and the low-positive-dNBR caveat for the proposed burned core.
+- Keep RAVG modeled classes explicitly context-only under the delivered sparse/non-tree warning and absent from affirmative evidence.
+- Offer only yes, no, or uncertain with notes, owner attestation, stale-choice clearing, a completed-state lock, and hash-named draft/response export.
+- Publish a blank two-candidate surface, response template, overview, and two per-candidate evidence pages while creating zero owner responses, labels, dataset, split, baseline, or model.
+
+Generator source `91ba39ceb4b6d8444255d734eb7a6cc393f933af` creates run `BL-2026-07-21-grandview-owner-review-surface-r001`; artifact commit `33c7c871dcdb2546cf3fd8fe97e01e109cee8026` publishes the six exact tracked outputs. The blank response template remains unattested with null decisions. Focused tests, controller syntax, semantic counts, original-resolution rendering, exact six-output readback, LF checkout contracts, and public/privacy boundaries pass. Issue #517 owns later exact response intake and remains blocked until this surface is verified and the owner supplies a completed export.
+
+Candidate head `dbedb98c847b28c59d3997ee364b0d35c317e3c4` passes all 330 tests in two complete bounded shards, compilation, 111 JSON parses, controller syntax, and all six exact artifact checks. Fresh PR head `831cf749322b39609f9630fab1cb06a17b64ccb6` passes 313 tests with 17 expected custody skips, compilation, 111 JSON parses, zero surface JSON/HTML CRLF, and all six tracked hashes. It rejects the earlier 613,569-byte working-tree wheel because 32 longstanding Python files entered that package with CRLF checkout bytes. Two fresh-head fixed-epoch 612,664-byte wheels are byte-identical at SHA-256 `7c8d10d8f0f1619abe4beaec8dcb46e7bc4fd1521025a82134fee2a9c6fbe90e`; the clean wheel contains 141 entries and 68 commands. An isolated dependency-complete install imports BurnLens 0.43.0 from `site-packages`, starts the new CLI, and reports no broken requirements. Merged-main and remote-tag gates remain pending.
+
 ## v0.42.0-grandview-region-proposal - verified - 2026-07-20
 
 ### P2O4-T30 - Propose bounded Grandview regions

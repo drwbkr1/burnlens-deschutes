@@ -1,0 +1,26 @@
+{
+  "response_schema_version": "burnlens-grandview-owner-review-response-v0.1.0",
+  "surface_id": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-21-grandview-owner-review-surface-r001",
+  "proposal_report_sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba",
+  "completed": false,
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "owner": {
+    "attestation": false
+  },
+  "responses": [
+    {
+      "candidate_id": "GVP-001",
+      "candidate_raster_sha256": "453adb2edafaf72569a60d98f93d923fe02352c9b0454930c8902b9b2b828933",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "GVP-002",
+      "candidate_raster_sha256": "2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91",
+      "decision": null,
+      "notes": ""
+    }
+  ]
+}

@@ -398,6 +398,14 @@ The result is one 25-pixel proposed burned core and one 25-pixel proposed backgr
 
 Release verification then catches a checkout-only JSON defect: the analytical merge converts the new JSON's LF bytes to CRLF because its directory lacks an explicit attribute rule. BurnLens withholds the tag, adds the missing LF contract in issue #513 / PR #514, and proves in a fresh clone that all five original output hashes reconstruct exactly. The remediation changes no evidence, candidate coordinate, raster, or claim.
 
+### Grandview owner review: evidence first, decision second
+
+The next bounded checkpoint does not turn either proposal into a label. It binds the exact v0.42 proposal JSON, both native-grid proposal rasters, schema, run, and region identities into a blank offline owner-review surface. Each candidate page places the proposed class beside the relevant optical and reference evidence, preserves the explicit unknown ring, and makes the proposed burned core's relatively low positive dNBR visible. RAVG is labeled as context only under the delivered sparse/non-tree warning and is absent from affirmative evidence.
+
+![Grandview owner-review overview](../../samples/labels/review/grandview/phase-two/GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.png)
+
+The surface accepts only yes, no, or uncertain, clears stale choices when evidence changes, validates the exact surface/proposal/raster binding, requires owner attestation for completion, locks the completed state, and exports hash-named drafts or responses. The tracked response template remains blank and unattested. This candidate therefore improves the real decision experience while preserving the separation between review presentation and later controlled response intake. It creates zero owner responses, labels, truth claims, dataset, split, baseline, model, field-validation claim, or operational claim.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -440,6 +448,8 @@ Release verification then catches a checkout-only JSON defect: the analytical me
 - Latest Grandview source-fitness run: `BL-2026-07-20-grandview-source-fitness-r001`
 - Latest Grandview background-optical acquisition run: `BL-2026-07-20-grandview-background-optical-intake-r001`
 - Latest Grandview background-evidence run: `BL-2026-07-20-grandview-background-evidence-r001`
+- Latest Grandview region-proposal run: `BL-2026-07-20-grandview-region-proposal-r001`
+- Active Grandview owner-review-surface run: `BL-2026-07-21-grandview-owner-review-surface-r001`
 - Acquisition run: `BL-2026-07-14-authenticated-intake-r001`
 - Tool: BurnLens `0.16.0`; issue #384 / PR #388; analytical merge `836eef75495dbc671bd74a8ad4112852bbf50ac6`; issue #389 / PR #390; corrected checkpoint `27fcd3eadb1473bb603b4275f986bf62022c10bf`; source `ec41129f9322022f28b8f788a2e08ae22145471b`; public artifacts `9fbd97fcb66fd76172fff949580f469fc43b3f40`; tag object `da94fc97efc07b07d9520022fdbff42a85e8ba00`
 - Latest tool: BurnLens `0.17.0`; issue #394 / PR #395; merge `eb84aad222a07b89f03a892c2cc0df9540b20d25`; response-lock source `397a28cf9c4385050a516a2892085fcd89cbcaae`; verifier source `ac410ed74a6f5abc13dc8191bac5fa4935e211a5`; public artifacts `1fb920eb1476f470ac9f9216e89a70201e643fab`; tag object `8fca2a51548690b710ad3903a19312e77c748420`
@@ -453,6 +463,7 @@ Release verification then catches a checkout-only JSON defect: the analytical me
 - Prior verified release: `v0.36.0-green-ridge-region-proposal`; issue #483 / PR #488; checkpoint `71c3ffedeb2bb54bbeca8e97686c8e37e710e354`; generator `690137f1530a00ca79b8f5831f700541809b2a2b`; artifacts `1858a7a945957fd0cc3d123b325529f9931806c3`; tag object `bc0110afa0c4ccf6e3314d394d544cfde16aaae9`; two 25-pixel unreviewed cores / 87 unknown-ring pixels; zero owner responses/labels; next #487
 - Prior verified release: `v0.38.0-green-ridge-owner-response-intake`; issue #491 / PR #496; checkpoint `17bd3652fbb07c096f478224a4d5c173729954c2`; tag object `16f364aac604958d812fb2567dd9cd8b5ea13d6c`; run `BL-2026-07-20-green-ridge-owner-response-intake-r001`; two accepted 25-pixel cores / 87 excluded ring pixels / eight balanced prototype regions across four events
 - Current verified release: `v0.42.0-grandview-region-proposal`; issue #508 / PR #512; remediation #513 / PR #514; checkpoint `6124f76de04b5e503a9da7655a293a023480b39c`; tag object `388c81677b3c49d2312779f8fc98ad3dc7b9048c`; generator `78bb79eb04d76cff4ed183274de881557b176413`; one unreviewed 25-pixel core per class and 98 unknown-ring pixels; fresh-main exact reconstruction, tests, rendering, privacy, packaging, isolated install, and tag verification pass; zero owner responses or labels; next #511
+- Active release candidate: BurnLens `0.43.0`; issue #511; generator `91ba39ceb4b6d8444255d734eb7a6cc393f933af`; artifacts `33c7c871dcdb2546cf3fd8fe97e01e109cee8026`; run `BL-2026-07-21-grandview-owner-review-surface-r001`; blank two-candidate yes/no/uncertain surface; zero owner responses or labels; response intake remains separate under blocked issue #517
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Current request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; exact request accepted, delivery pending
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state

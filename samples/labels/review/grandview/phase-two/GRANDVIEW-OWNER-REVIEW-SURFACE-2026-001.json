@@ -1,0 +1,227 @@
+{
+  "report_id": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "grandview-owner-review-surface-v0.1.0",
+  "response_schema_version": "burnlens-grandview-owner-review-response-v0.1.0",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 511,
+  "software_version": "0.43.0",
+  "generated_at_utc": "2026-07-21T00:45:00Z",
+  "run_id": "BL-2026-07-21-grandview-owner-review-surface-r001",
+  "git_source_commit": "91ba39ceb4b6d8444255d734eb7a6cc393f933af",
+  "event_group_id": "event-grandview-0558-od-2021",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "GRANDVIEW-REGION-PROPOSAL-2026-001.json": {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.json",
+      "bytes": 4620,
+      "sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba"
+    },
+    "GRANDVIEW-REGION-PROPOSAL-2026-001.html": {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.html",
+      "bytes": 2067,
+      "sha256": "cb4192b8dec17027ea28a0d745ebd80ff474a805b4e82c5661c14394baf0d4ac"
+    },
+    "GRANDVIEW-REGION-PROPOSAL-2026-001.png": {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.png",
+      "bytes": 71701,
+      "sha256": "797dbacbaae24d43f9ed829ae0b9d64d417f3f812dc8a23ce2196ca0e6f73265"
+    },
+    "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-001.tif": {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-001.tif",
+      "bytes": 3958,
+      "sha256": "453adb2edafaf72569a60d98f93d923fe02352c9b0454930c8902b9b2b828933"
+    },
+    "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-002.tif": {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-002.tif",
+      "bytes": 3976,
+      "sha256": "2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91"
+    }
+  },
+  "source_records": [
+    "MANIFEST-2026-041",
+    "MANIFEST-2026-042",
+    "MANIFEST-2026-043"
+  ],
+  "proposal_records": [
+    "REGISTRY-2026-042",
+    "USE_BOUNDARY-2026-036",
+    "MANIFEST-2026-044"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "GVP-001",
+      "event_group_id": "event-grandview-0558-od-2021",
+      "event_id": "OR4446612140020210711",
+      "fire_name": "Grandview 0558 OD",
+      "proposed_class": "burned",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 46,
+      "dnbr_interval": [
+        0.0,
+        0.05
+      ],
+      "dnbr_observed": {
+        "min": 0.015383,
+        "max": 0.04985,
+        "mean": 0.0346
+      },
+      "selection_tie_sha256": "00f5b58d0effed4bdfe48437aa83dd27d6c4cae9a911bdd8debc9bf8f1dc1df3",
+      "candidate_raster": "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-001.tif",
+      "candidate_raster_bytes": 3958,
+      "candidate_raster_sha256": "453adb2edafaf72569a60d98f93d923fe02352c9b0454930c8902b9b2b828933",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "shape": [
+          749,
+          592
+        ],
+        "transform": [
+          20.0,
+          0.0,
+          619600.0,
+          0.0,
+          -20.0,
+          4928420.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside",
+          "1": "unreviewed core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-GVP-001.png",
+      "proposition_basis": "MTBS dNBR6 classes 2-4 on the verified context grid and finite pre/post dNBR; RAVG classes are not used",
+      "limitations": [
+        "The fixed dNBR partition is an evidence-coherence rule, not a universal burn or severity threshold.",
+        "MTBS classes 2-4 and the multi-signal background route are candidate evidence, not independent ground truth.",
+        "RAVG modeled classes are excluded from affirmative candidate logic under the delivered sparse/non-tree warning."
+      ],
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/terms/quality/uncertainty/leakage gates"
+    },
+    {
+      "candidate_id": "GVP-002",
+      "event_group_id": "event-grandview-0558-od-2021",
+      "event_id": "OR4446612140020210711",
+      "fire_name": "Grandview 0558 OD",
+      "proposed_class": "background",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 52,
+      "dnbr_interval": [
+        -0.05,
+        0.0
+      ],
+      "dnbr_observed": {
+        "min": -0.015806,
+        "max": -0.00034,
+        "mean": -0.007407
+      },
+      "selection_tie_sha256": "11339a568e441f455d377037fadc0fe816b9429e1387e488bb791f42d318aad6",
+      "candidate_raster": "GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-002.tif",
+      "candidate_raster_bytes": 3976,
+      "candidate_raster_sha256": "2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91",
+      "raster_contract": {
+        "crs": "EPSG:32610",
+        "shape": [
+          749,
+          592
+        ],
+        "transform": [
+          20.0,
+          0.0,
+          619600.0,
+          0.0,
+          -20.0,
+          4928420.0
+        ],
+        "nodata": 255.0,
+        "class_domain": {
+          "0": "outside",
+          "1": "unreviewed core",
+          "2": "unknown ring"
+        }
+      },
+      "evidence_image": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-GVP-002.png",
+      "proposition_basis": "Three-scene clear/numeric evidence; transferred four-signal near-anniversary stability; at least 7 of 9 stable neighbors; outside BAER, MTBS, and RAVG rasterized footprints; outside the 60 m source-boundary uncertainty buffer. No single signal is sufficient.",
+      "limitations": [
+        "The fixed dNBR partition is an evidence-coherence rule, not a universal burn or severity threshold.",
+        "MTBS classes 2-4 and the multi-signal background route are candidate evidence, not independent ground truth.",
+        "RAVG modeled classes are excluded from affirmative candidate logic under the delivered sparse/non-tree warning."
+      ],
+      "owner_decision": null,
+      "promotion_status": "blocked pending exact owner response and later reproducibility/source/terms/quality/uncertainty/leakage gates"
+    }
+  ],
+  "decision_contract": {
+    "yes": "necessary but insufficient; later exact intake and reproducibility, source, terms, quality, uncertainty, and event-level leakage gates remain mandatory",
+    "no": "excluded from prototype-label promotion",
+    "uncertain": "excluded with uncertainty preserved"
+  },
+  "response_custody_contract": {
+    "filename": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-<first-16-sha256>.json",
+    "content_identity": "SHA-256 of the exact UTF-8 LF-terminated response bytes",
+    "no_overwrite": true,
+    "rename_or_edit_after_export": false,
+    "authoritative_intake": "later separately versioned checkpoint only"
+  },
+  "summary": {
+    "candidate_count": 2,
+    "owner_responses": 0,
+    "labels_created": 0,
+    "dataset_count": 0,
+    "model_count": 0
+  },
+  "claim_boundaries": {
+    "owner_responses_collected": false,
+    "labels_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_inter_rater_field_official_or_operational_claimed": false
+  },
+  "warning": "Experimental BurnLens candidate review. Not a label, dataset, ground truth, official wildfire information, or emergency guidance. Official sources govern.",
+  "decision": "SURFACE_READY_FOR_GRANDVIEW_OWNER_REVIEW_KEEP_RESPONSE_INTAKE_SEPARATE",
+  "next_gate": "Preserve and intake one exact completed owner export in a separately versioned checkpoint before any label decision.",
+  "outputs": [
+    {
+      "path": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 15000,
+      "sha256": "c1e46734f75108ada295a473da5fcdccac929fd1c48c4746928f5bbcbb2eff58",
+      "media_type": "text/html"
+    },
+    {
+      "path": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 92523,
+      "sha256": "84e642d42f728468148830326194b9648eadcf10d16b852dc22a53f4cf23ca34",
+      "media_type": "image/png"
+    },
+    {
+      "path": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 843,
+      "sha256": "2a7589ab989052c921bbfa57c8c52b09f81ca7b6c2c3ea0de432b26347ceb2bd",
+      "media_type": "application/json"
+    },
+    {
+      "path": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-GVP-001.png",
+      "bytes": 34090,
+      "sha256": "3b23ded9d03d7aa85d4eab4008082ef6fcb8e8438fc181e20ef743bd9bf8cca8",
+      "media_type": "image/png"
+    },
+    {
+      "path": "GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001-GVP-002.png",
+      "bytes": 33342,
+      "sha256": "8389d74e66e48ba997e3e35e30fd0b411c7d7b296489bbe785c7a0939a41bffd",
+      "media_type": "image/png"
+    }
+  ]
+}

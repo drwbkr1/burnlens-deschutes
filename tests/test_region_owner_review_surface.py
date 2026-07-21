@@ -32,7 +32,7 @@ class RegionOwnerReviewSurfaceTests(unittest.TestCase):
         )
 
     def test_version_identity_and_no_promotion_state(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.42.0")
+        self.assertEqual(burnlens.__version__, "0.43.0")
         self.assertEqual(self.report["report_id"], SURFACE_ID)
         self.assertEqual(self.report["summary"]["candidate_count"], 6)
         self.assertEqual(self.report["summary"]["owner_region_responses"], 0)
