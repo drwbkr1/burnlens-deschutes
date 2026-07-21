@@ -1,6 +1,6 @@
 # REGISTRY-2026-044 - Verified Grandview Owner Response Intake
 
-**Issue / PR / lifecycle:** #517 / #522 / #523
+**Analytical issue / PR; lifecycle issue / PR:** #517 / #522; #523 / #524
 
 **Lock source:** `6a75065fb1e339d7c26208329ee080129de58803`
 
@@ -37,4 +37,4 @@ The automated in-app browser cannot navigate local `file://` URLs under its secu
 
 The rejected r001 run is retained because it exposed substantive gate defects before publication: non-owner gate families were represented as unconditional booleans, accepted-label and rejected-candidate ring semantics were conflated, and event completion could increment when only one class was admitted. The hardened r002 route derives every non-owner gate from exact inputs, counts only accepted-label rings, and requires both burned and background labels before an event is complete.
 
-Lifecycle issue #523 synchronizes this verified state without changing any response, reconciliation, public output, label, dataset gate, or policy. Per the owner-directed sequencing stop, BurnLens does not begin Petes Lake issue #521 or any later checkpoint after this synchronization.
+Lifecycle issue #523 / PR #524 synchronizes this verified state without changing any response, reconciliation, public output, label, dataset gate, or policy. Per the owner-directed sequencing stop, BurnLens does not begin Petes Lake issue #521 or any later checkpoint after this synchronization.

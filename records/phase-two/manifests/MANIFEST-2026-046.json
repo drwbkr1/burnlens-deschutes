@@ -14,7 +14,7 @@
   "version_tag": "v0.44.0-grandview-owner-response-intake",
   "version_tag_object": "e4f834cd3c55d44895766695a40746fa224df9bd",
   "lifecycle_sync_issue": 523,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 524,
   "next_checkpoint_issue": 521,
   "status": "verified release: two Grandview prototype labels pass exact custody, evidence, render, merged-main, package, and remote-tag gates; execution pauses before issue #521",
   "software_version": "0.44.0",
@@ -146,7 +146,7 @@
     "release_package": "pass: two byte-identical 630,232-byte fresh-clone wheels; SHA-256 3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1; 145 clean entries; 70 commands; isolated 0.44.0 import and both new CLI helps",
     "dataset_split_baseline_model": "blocked: five complete event groups remain below six and the full sufficiency evaluator remains authoritative",
     "remote_tag": "pass: annotated tag object e4f834cd3c55d44895766695a40746fa224df9bd remotely peels to 5e1d5a05dbb09e8ac42be5928b2d042a0737336e",
-    "repository_release": "pass through PR #522, merge 5e1d5a05dbb09e8ac42be5928b2d042a0737336e, exact fresh-main verification, and remote annotated tag; lifecycle synchronization is bounded by issue #523"
+    "repository_release": "pass through PR #522, merge 5e1d5a05dbb09e8ac42be5928b2d042a0737336e, exact fresh-main verification, and remote annotated tag; lifecycle synchronization is issue #523 / PR #524"
   },
   "decision": "ACCEPT_GRANDVIEW_OWNER_APPROVED_PROTOTYPE_LABELS_DEFER_DATASET_SPLIT_BASELINE_MODEL"
 }
