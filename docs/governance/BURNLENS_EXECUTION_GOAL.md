@@ -16,6 +16,14 @@ All BurnLens work must occur in `drwbkr1/burnlens-deschutes`.
 
 The separate `burnlens-site` repository must never be read, changed, published, used, or introduced as a dependency. BurnLens's analytical system, application, public website, case study, documentation, deployment configuration, and release evidence must live in and ship from `drwbkr1/burnlens-deschutes`.
 
+## Checkpoint policy
+
+Execution follows `docs/governance/CHECKPOINT_POLICY.md`, currently `checkpoint-policy-v0.1.0`.
+
+BurnLens distinguishes atomic **evidence units** from shipped **milestone checkpoints** and risk-driven **exception checkpoints**. Each acquisition, inspection, proposal, owner response, reconciliation, or QA unit retains independent immutable identity, hashes, gates, disposition, and failure evidence. Related units may accumulate within one issue-backed milestone branch. Full repository release and lifecycle work occurs when a coherent milestone changes accepted project truth, public evidence, release readiness, an artifact version, or a fallback/stop decision, or when a valid exception must ship immediately.
+
+Batching changes cadence only. It never weakens source, terms, custody, quality, uncertainty, leakage, privacy, owner, rendered-output, reproducibility, source-precedence, or stop-condition gates.
+
 ## Preserved project spine
 
 The following decisions are fixed unless the owner explicitly approves a change:
@@ -94,20 +102,30 @@ Codex may reorder, split, merge, replace, or defer checkpoints when evidence sup
 
 ## Operating cycle
 
-Every cycle begins by running the current tool, repository-owned public surface, and relevant pipeline path on verified inputs. If none exists, confirm that fact and build the smallest end-to-end vertical slice permitted by resolved gates.
+Every checkpoint begins by classifying the coherent outcome as milestone or exception. A valid exception is contained before nonessential execution. Then run the current tool, repository-owned public surface, and relevant pipeline path on verified inputs when the checkpoint changes analytical, runtime, or public-output risk. For governance, documentation, or template-only work, record why those paths are not applicable and inspect the actual affected surface instead.
 
-Then Codex must:
+For each evidence unit, Codex must:
 
-1. identify the highest-leverage user-visible or evidence-visible weakness;
-2. implement one bounded, meaningful improvement;
-3. validate the real rendered application and actual pipeline outputs, not only tests or code;
-4. compare the result with the applicable requirements, reference outputs, phase objective, and portfolio narrative;
-5. decide whether to accept, remediate, narrow, fall back, stop, or ship the checkpoint;
-6. update the roadmap, phase status, changelog, version history, prompt/build log, and human-readable devlog;
-7. version, commit, push, open and merge the PR, deploy when applicable, and verify the shipped result;
-8. select and begin the next checkpoint without routine approval.
+1. identify the highest-leverage unresolved weakness inside the milestone outcome;
+2. confirm the unit's entry conditions, allowed paths, sources, terms, and required gates;
+3. implement or execute one bounded acquisition, inspection, proposal, response, reconciliation, or QA unit at a time where custody or dependency order matters;
+4. assign immutable identifiers, record exact hashes and checks, and preserve failures or exclusions;
+5. validate the actual output and rendered evidence appropriate to that unit;
+6. decide whether the unit passes, requires remediation, is excluded, is deferred, or triggers fallback or stop;
+7. update the milestone ledger and push a recoverable branch state when appropriate;
+8. continue to the next registered unit without creating an independent release merely to record progress.
 
-Only one bounded improvement is implemented at a time. Depth, reliability, reproducibility, transparency, and portfolio clarity take priority over parallel systems or checklist completion.
+When the milestone exit condition is met, or a valid exception is triggered, Codex must:
+
+1. review the complete unit ledger, including every failure and superseded run;
+2. compare the coherent result with applicable requirements, reference outputs, the phase objective, and the portfolio narrative;
+3. validate the actual affected outputs and rendered surfaces, not only tests or source text; this includes the real application and pipeline outputs whenever the changed risk reaches them;
+4. decide whether to accept, remediate, narrow, fall back, defer, stop, or ship;
+5. update the roadmap, phase status, changelog, version history, prompt/build log, devlog, website, and case study where their truth materially changes;
+6. apply only the versions, tags, Releases, deployments, and post-merge synchronization required by the changed artifact and risk;
+7. commit, push, open and merge the PR, verify the shipped result, and select the next milestone without routine approval.
+
+Depth, reliability, reproducibility, transparency, recovery, and portfolio clarity take priority over checkpoint count or visible activity.
 
 ## Research and evidence policy
 
@@ -151,7 +169,8 @@ Within the preserved project spine and phase outcomes, Codex may:
 - create versions, commits, tags, releases, and rollback records;
 - push branches, open and update PRs, merge its own work after quality gates pass, and verify `main`;
 - deploy previews and production checkpoints from this repository when access exists and the result is reversible and verifiable;
-- update the repository-owned website and case study after every shipped checkpoint;
+- accumulate related evidence units inside a declared milestone while preserving each unit's immutable records and failures;
+- update the repository-owned website and case study after milestone or exception shipments when their truth materially changes;
 - accept, remediate, narrow, fall back, roll back, or stop a checkpoint based on evidence;
 - continue choosing and shipping the next checkpoint without routine approval.
 

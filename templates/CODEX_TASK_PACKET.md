@@ -11,10 +11,11 @@ A task packet is not a replacement for the issue, branch, pull request, artifact
 Before using this packet, use:
 
 ```text
+docs/governance/CHECKPOINT_POLICY.md
 docs/workflows/PROMPT_TO_REPO_SOP.md
 ```
 
-The SOP is the full reference. This packet is the short executable task capsule.
+The checkpoint policy controls cadence, the SOP is the full workflow reference, and this packet is the short executable checkpoint capsule.
 
 ## Chat terminology
 
@@ -31,17 +32,19 @@ A new chat is a context-management option, not a GitHub workflow unit. Do not ap
 
 ## Packet use rule
 
-Each GitHub task should still have its own issue, branch, artifact contract, PR, and handoff unless the user explicitly approves bundling.
+Each milestone or exception checkpoint has one issue, branch, artifact contract, PR, and handoff. Related evidence units may accumulate inside that milestone without separate PRs when each unit retains independent immutable identity, hashes, gates, disposition, and failure evidence.
 
 Every packet must answer:
 
 1. What is the task?
-2. What files may be changed?
-3. What artifacts govern the task?
-4. Which context tier applies?
-5. What work is forbidden by reference to governing artifacts?
-6. What must be verified before PR?
-7. What should be handed off next?
+2. What checkpoint class and milestone exit condition apply?
+3. What evidence units are registered, and how are failures retained?
+4. What files may be changed?
+5. What artifacts govern the task?
+6. Which context tier applies?
+7. What work is forbidden by reference to governing artifacts?
+8. What must be verified before PR?
+9. What should be handed off next?
 
 ## Context-tier quickstart
 
@@ -65,7 +68,14 @@ Copy everything below this line into a Codex or ChatGPT task prompt and fill in 
 - Project: BurnLens Deschutes
 - Repository: drwbkr1/burnlens-deschutes
 - Phase / objective: [Phase and objective]
-- Task ID: [Task ID]
+- Task ID: [P#O#-T## | BL-GOV-### | issue-authorized exception ID]
+- Checkpoint class: [milestone | exception]
+- Milestone outcome: [coherent result that changes project truth]
+- Entry condition: [verified dependency]
+- Exit condition: [observable ship/remediate/fallback/stop condition]
+- Evidence-unit roster or registration rule: [unit IDs or rule]
+- Failure-retention rule: [how failed/superseded/excluded/deferred units remain visible]
+- Exception trigger: [not applicable | licensing/security/custody/rollback/stop/urgent correctness]
 - Task issue: [#]
 - Parent issue: [#]
 - Branch to use or create: [branch-name]
@@ -94,6 +104,8 @@ Copy everything below this line into a Codex or ChatGPT task prompt and fill in 
 - `AGENTS.md`
 - `README.md`
 - `VERSIONING.md`
+- `docs/governance/BURNLENS_EXECUTION_GOAL.md`
+- `docs/governance/CHECKPOINT_POLICY.md`
 - `docs/objective-one/TECHNICAL_DESCRIPTION.md`
 - `docs/objective-one/USE_BOUNDARIES.md`
 - `docs/objective-one/SOURCE_PRECEDENCE.md`
@@ -126,6 +138,12 @@ Reason Tier 2 is needed, if used: [reason]
 ## Task objective
 
 [Describe the specific result to produce. Keep the task scoped to the issue and artifact set.]
+
+## Evidence-unit ledger
+
+| Unit ID | Purpose | Inputs and hashes | Outputs and hashes | Gates | Disposition | Retained failure or limitation | Next dependency |
+|---|---|---|---|---|---|---|---|
+| [ID] | [bounded question] | [records/hashes] | [records/hashes] | [results] | [pass/remediate/exclude/defer/stop] | [retained evidence] | [next unit/exit] |
 
 ## Allowed file changes
 
@@ -182,19 +200,23 @@ Before opening a PR, confirm:
 - [ ] Source precedence is preserved.
 - [ ] Unsupported claims are avoided.
 - [ ] Acceptance criteria are satisfied.
+- [ ] Every registered evidence unit has immutable identity, hashes where bytes exist, gate results, disposition, and retained failures.
+- [ ] The milestone exit condition or exception trigger is satisfied.
 - [ ] Handoff note is included.
 - [ ] No tests are claimed unless actually run.
 - [ ] Tag/release status is explicit when relevant.
 
 ## PR requirements
 
-Open a pull request with:
+Open one milestone or exception pull request with:
 
 - Title: [task title]
 - Base: `main`
 - Head: [branch]
 - Summary: [one-sentence summary]
 - Close keyword: `Closes #[task issue only]`
+
+Include the complete evidence-unit ledger and the milestone exit condition. Do not create separate PRs merely to publish intermediate evidence units.
 
 Do not close the parent issue unless this is the approved final closeout task.
 
@@ -209,7 +231,7 @@ After work is complete, report:
 - PR number;
 - merge commit if merged;
 - anything not completed;
-- next task or chat handoff note.
+- next milestone or chat handoff note.
 ```
 
 ## Connector-friction note

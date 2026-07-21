@@ -11,10 +11,11 @@ Authority order:
 1. applicable law, platform safety requirements, spending limits, account ownership, and access controls outside the project;
 2. the owner's latest explicit instruction;
 3. `docs/governance/BURNLENS_EXECUTION_GOAL.md`;
-4. the active issue and branch contract;
-5. `docs/roadmap/BURNLENS_BUILD_ROADMAP.md` and the active phase objective;
-6. current top-level controls and workflow documents;
-7. archival trackers, handoffs, logs, issues, PR bodies, and prior prompts.
+4. `docs/governance/CHECKPOINT_POLICY.md`;
+5. the active issue and branch contract;
+6. `docs/roadmap/BURNLENS_BUILD_ROADMAP.md` and the active phase objective;
+7. current top-level controls and workflow documents;
+8. archival trackers, handoffs, logs, issues, PR bodies, and prior prompts.
 
 When an active control conflicts with the goal, follow the goal and update the active control in the same bounded checkpoint when practical.
 
@@ -60,7 +61,7 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O4-T01 through P2O4-T19 ship verified proposal, source, review, custody, remediation, exact owner-review, and owner-response evidence through `v0.31.0-region-owner-response-intake`. Historical 6/0/50 exclusions are not inherited. Verified P2O4-T21 through P2O4-T26 complete the Green Ridge event path and establish `owner-approved-prototype-region-labels-v0.2.0`: four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded unknown-ring pixels across four events. Verified P2O4-T27 through P2O4-T31 complete Grandview optical, official-reference, background, proposal, and blank-review evidence through `v0.43.0-grandview-owner-review-surface`. P2O4-T32 / issue #517 / PR #522 ships verified BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`: the exact 887-byte export is operator-locked before reveal, and two yes decisions plus both 25-pixel cores pass response custody, reproducibility, source/terms, quality/registration, unknown-ring exclusion, and event-level leakage gates. Verified owner-approved prototype evidence `owner-approved-prototype-region-labels-v0.3.0` contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Owner-confirmed local HTML rendering, exact fresh-main reconstruction, canonical packaging, isolated installation, and remote annotated-tag verification pass; tag object `e4f834cd3c55d44895766695a40746fa224df9bd` peels to the checkpoint. Lifecycle issue #523 / PR #524 records synchronization. Issue #521 still records Petes Lake as the sixth bounded event under the existing policy, but execution stops before it while the separate governance-only checkpoint is pending; event count alone cannot authorize a dataset. Dataset, split, baseline, model, deployed analytical application, and independent scientific fitness remain absent. Never claim reviewer two, inter-rater agreement, consensus, field validation, official status, endorsement, or operational readiness.
+P2O4-T01 through P2O4-T19 ship verified proposal, source, review, custody, remediation, exact owner-review, and owner-response evidence through `v0.31.0-region-owner-response-intake`. Historical 6/0/50 exclusions are not inherited. Verified P2O4-T21 through P2O4-T26 complete the Green Ridge event path and establish `owner-approved-prototype-region-labels-v0.2.0`: four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded unknown-ring pixels across four events. Verified P2O4-T27 through P2O4-T31 complete Grandview optical, official-reference, background, proposal, and blank-review evidence through `v0.43.0-grandview-owner-review-surface`. P2O4-T32 / issue #517 / PR #522 ships verified BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`: the exact 887-byte export is operator-locked before reveal, and two yes decisions plus both 25-pixel cores pass response custody, reproducibility, source/terms, quality/registration, unknown-ring exclusion, and event-level leakage gates. Verified owner-approved prototype evidence `owner-approved-prototype-region-labels-v0.3.0` contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Owner-confirmed local HTML rendering, exact fresh-main reconstruction, canonical packaging, isolated installation, and remote annotated-tag verification pass; tag object `e4f834cd3c55d44895766695a40746fa224df9bd` peels to the checkpoint. Lifecycle issue #523 / PR #524 records synchronization. BL-GOV-003 / issue #525 activates `checkpoint-policy-v0.1.0` and designates issue #521 for revision into the first six-event milestone contract containing the complete Petes Lake evidence chain. Event count alone cannot authorize a dataset. Dataset, split, baseline, model, deployed analytical application, and independent scientific fitness remain absent. Never claim reviewer two, inter-rater agreement, consensus, field validation, official status, endorsement, or operational readiness.
 
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
 - The repository has executable access-validation and AOI-evidence paths. `v0.3.0-intake-transaction-baseline` ships a fail-closed, exact three-asset transaction with temporary synthetic rehearsal and atomic all-or-none raw promotion.
@@ -92,23 +93,28 @@ Codex may reorder, split, merge, replace, or defer checkpoints when evidence sup
 
 ## Cycle protocol
 
-Every cycle must:
+Follow `docs/governance/CHECKPOINT_POLICY.md`.
 
-1. run the current tool, repository-owned public surface, and relevant pipeline path on verified inputs;
-2. if no runnable path exists, confirm that fact and build the smallest end-to-end vertical slice allowed by resolved gates;
-3. identify the highest-leverage user-visible or evidence-visible weakness;
-4. create or update one issue-backed, branch-scoped checkpoint with allowed files, non-goals, research needs, and quality gates;
-5. perform fresh primary-source research when current technical, data, tooling, safety, licensing, or public-facing claims require validation;
-6. implement one bounded, meaningful improvement;
-7. validate actual rendered behavior and real pipeline outputs, not only tests or code;
-8. compare the result with requirements, reference outputs, the active phase objective, and the portfolio narrative;
-9. update roadmap, phase status, changelog, version history, prompt/build log, and human-readable devlog;
-10. review the diff, version, commit, push, open and merge the PR, deploy when applicable, and verify the shipped checkpoint;
-11. choose the next checkpoint without routine approval.
+For each milestone or exception checkpoint:
+
+1. identify the highest-leverage coherent outcome and classify the work as milestone or exception; contain a valid exception before nonessential execution;
+2. run the current tool, repository-owned public surface, and relevant pipeline path on verified inputs when the checkpoint changes analytical, runtime, or public-output risk; otherwise record the scope-specific non-applicability and inspect the actual affected governance, documentation, or template surface;
+3. create or update one issue-backed branch contract with an evidence-unit roster, entry/exit conditions, allowed paths, non-goals, research needs, failure-retention rules, and quality gates;
+4. perform fresh primary-source research when current technical, data, tooling, safety, licensing, or public-facing claims require validation;
+5. execute the next bounded evidence unit, one event or custody transaction at a time where dependency order matters;
+6. preserve the unit's immutable identifiers, hashes, checks, disposition, and failed or superseded evidence;
+7. validate the actual output and rendered evidence appropriate to the unit, then update the milestone ledger;
+8. continue related units without an independent release until the milestone exit condition or an exception trigger is reached;
+9. review the complete ledger and coherent result against requirements, reference outputs, the phase objective, and the portfolio narrative;
+10. update roadmap, status, changelog, version history, prompt/build log, devlog, website, and case study only where milestone or exception truth materially changes;
+11. review the complete diff, apply only required versions/tags/deployments/sync, commit, push, open and merge the PR, and verify the shipped result;
+12. choose the next milestone without routine approval.
 
 ## Issue, branch, and release discipline
 
-Meaningful work remains issue-backed, branch-scoped, versioned, and reviewable. Each issue must name the intended outcome, allowed files, non-goals, research needs, quality gates, and public-claim impact.
+Milestone and exception work remains issue-backed, branch-scoped, and reviewable. Each issue must name the checkpoint class, intended outcome, unit roster or registration rule, entry and exit conditions, allowed paths, non-goals, research needs, failure-retention rules, quality gates, and public-claim impact.
+
+Evidence units may accumulate inside the authorized milestone issue and branch. Each unit remains independently traceable and reviewable, but it does not require its own issue, PR, repository version, tag, deployment, or lifecycle synchronization unless it triggers a valid exception. Software and artifact versions change only when the corresponding artifact changes.
 
 Codex has standing authority to create and revise issues, branches, versions, commits, PRs, tags, releases, deployments, and rollback records; merge its own work after quality gates pass; close superseded or completed work; and continue to the next checkpoint. Historical requirements for separate human review, exact merge authorization, tag authorization, or routine phase activation no longer apply.
 
@@ -126,7 +132,7 @@ No public map, screenshot, report, model output, application view, run artifact,
 
 ## Required records
 
-Maintain these active records as part of every shipped checkpoint:
+Maintain these active records as part of every shipped milestone or exception checkpoint when their truth changes:
 
 - `docs/roadmap/BURNLENS_BUILD_ROADMAP.md`;
 - `docs/status/PHASE_STATUS.md`;
@@ -156,4 +162,6 @@ Do not stop for routine task ordering, issue creation, branch creation, implemen
 
 Name every check, method, and result. Documentation-only checkpoints still require link, status, authority, boundary, claims, scope, and rendered-document review. Technical checkpoints require the applicable unit/integration checks plus real input-to-output and rendered-interface inspection.
 
-Each checkpoint handoff states what shipped; issue, branch, PR, merge, version, deployment, and run identity; files and artifacts changed; checks and failures; claims permitted and prohibited; carried risks; and the next selected checkpoint.
+Each evidence-unit handoff records its unit/run identity, inputs and outputs, hashes, gates, disposition, retained failures, and next dependency in the milestone ledger.
+
+Each milestone or exception handoff states what shipped; checkpoint class; complete unit ledger; issue, branch, PR, merge, applicable version/tag/deployment identity; files and artifacts changed; checks and failures; claims permitted and prohibited; carried risks; and the next selected milestone.

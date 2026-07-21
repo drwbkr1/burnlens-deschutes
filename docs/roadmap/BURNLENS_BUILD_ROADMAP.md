@@ -14,6 +14,7 @@ This roadmap is a **versioned planning hypothesis**, not a rigid checklist. `doc
 - The phase objective documents expand those outcomes without changing their meaning.
 - GitHub issues, branches, allowed-file contracts, and pull requests bound actual work.
 - The execution goal overrides stale roadmap, issue, handoff, prompt, and repository-control language.
+- `docs/governance/CHECKPOINT_POLICY.md` controls evidence-unit, milestone, exception, and release cadence.
 - A later phase becomes active when its predecessor evidence and issue-backed gate are satisfied; routine activation does not require separate owner approval.
 
 Codex may reorder, split, merge, defer, or replace tasks and checkpoints when verified evidence supports a better route. Codex must document the rationale and preserve the phase objective, project promise, use boundaries, source precedence, and traceability requirements.
@@ -72,7 +73,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 | Phase | Name | Canonical objective summary | Current status | Primary dependency | Detailed objectives |
 |---|---|---|---|---|---|
 | 1 | Scope, technical contracts, repository controls, and acceptance gate | Establish the documented project identity, bounded CV task, source-feasibility posture, repository operating system, version/provenance/claims controls, and prompt-built workflow, then make an evidence-backed Phase One acceptance decision before implementation begins. | **accepted and versioned for Phase Two planning; no analytical release** | P1O7-T08 / PR #294 records `APPROVE — PHASE TWO PLANNING ONLY`; #290 / PR #291 shipped the controlling goal and roadmap at `v0.0.8-execution-goal-baseline`. | [Phase One objectives](../phases/phase-01/PHASE_01_OBJECTIVES.md) |
-| 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **active - incomplete; execution paused after verified v0.44** | Verified Green Ridge plus verified P2O4-T32 Grandview intake establish five complete prototype-label events. The owner directed BurnLens to stop after v0.44 synchronization and not begin Petes Lake issue #521 while a separate governance-only checkpoint remains pending. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
+| 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **active - incomplete; six-event evidence milestone next** | Verified Green Ridge plus verified P2O4-T32 Grandview intake establish five complete prototype-label events. BL-GOV-003 activates milestone batching and designates issue #521 for revision into the complete Petes Lake milestone. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **proposed — blocked** | Accepted Phase Two dataset package, locked split, baseline evidence, and target decision. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **proposed — blocked** | Accepted Phase Three model package or approved Phase Two baseline-only path. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
 | 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **proposed — blocked** | Accepted Phase Four integrated run package and interface candidate. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
@@ -94,7 +95,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 
 **Current status:** P2O1-T02 through P2O3-T01 ship exact route/access, AOI, source/reference, target, optical-pair, and registration evidence. Twenty-four original owner-approved prototype points remain immutable audit evidence. Verified P2O4-T19 through P2O4-T31 establish eight balanced prototype regions across Darlene, McKay, Tepee, and Green Ridge plus the complete pre-response Grandview path. Verified P2O4-T32 locks the exact Grandview response before reveal and admits one burned and one background core after every gate, yielding `owner-approved-prototype-region-labels-v0.3.0`: ten balanced regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Restricted thresholded Tepee BARC remains private and unused. No accepted dataset, split, baseline, model, or deployed analytical application exists.
 
-**Gate outcome:** Green Ridge and Grandview have passed their complete optical/reference/background/proposal/review/intake paths. Verified v0.44 includes owner-confirmed local HTML rendering, exact fresh-main reconstruction, canonical packaging, isolated installation, and remote-tag verification. Petes Lake remains the recorded sixth-event issue #521, but execution is paused before it under the owner-directed sequencing stop. When execution later resumes through the authorized route, passing Petes Lake's source, class, uncertainty, owner, and leakage gates would still not itself authorize a dataset: Objective Five's separate class/unknown completeness, source-regime replication, never-tuned transfer, dominance, leakage, baseline, and split gates remain authoritative.
+**Gate outcome:** Green Ridge and Grandview have passed their complete optical/reference/background/proposal/review/intake paths. Verified v0.44 includes owner-confirmed local HTML rendering, exact fresh-main reconstruction, canonical packaging, isolated installation, and remote-tag verification. Under `checkpoint-policy-v0.1.0`, issue #521 is designated to group the complete Petes Lake source, terms, custody, optical/reference/background, proposal, owner-response, quality, uncertainty, and leakage evidence as one six-event milestone while retaining each unit independently. Passing that milestone still does not authorize a dataset: Objective Five's separate class/unknown completeness, source-regime replication, never-tuned transfer, dominance, leakage, baseline, and split gates remain authoritative.
 
 ## Phase Three — model evidence
 
@@ -178,21 +179,31 @@ A roadmap revision must identify:
 6. the boundaries preserved;
 7. whether an owner stop condition is triggered.
 
-Task-level and checkpoint-level changes may be made through ordinary issue-backed work. Objective-level changes require explicit owner approval and updates to both this roadmap and the affected phase objective document in the same pull request.
+Evidence-unit, milestone, exception, and other checkpoint-level changes may be made through issue-backed work under `docs/governance/CHECKPOINT_POLICY.md`. Objective-level changes require explicit owner approval and updates to both this roadmap and the affected phase objective document in the same pull request.
 
 ## Current next checkpoint
 
-The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified v0.31 through v0.44 establish ten balanced prototype regions across five events and complete the Green Ridge and Grandview paths. P2O4-T32 locks and reconciles the exact Grandview response, and its manual HTML, fresh-main, package, isolated-install, and remote-tag gates pass. Issue #521 records Petes Lake as the sixth complete event, but the owner-directed stop prevents beginning it until the separate governance-only checkpoint is handled. Do not create a dataset, split, or baseline merely when the sixth event arrives: first repeat equivalent source, class, uncertainty, owner, and leakage gates, then run the separate Phase Two sufficiency evaluator.
+The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8d88435cb8d5b900a398b7482c3b7277d2ee6`, amended operationally by BL-GOV-003 and `checkpoint-policy-v0.1.0`. P2O4-T10B is immutable historical reconciliation, not the current acceptance route. Verified v0.31 through v0.44 establish ten balanced prototype regions across five events and complete the Green Ridge and Grandview paths.
+
+The next prospective sequence is:
+
+1. **Six-event evidence milestone — issue #521:** complete the Petes Lake source, terms, custody, optical/reference/background, proposal, owner-response, quality, uncertainty, and leakage chain. Each unit retains independent immutable records and failures.
+2. **Dataset-fitness milestone:** rerun the full sufficiency evaluator across all accepted evidence and decide pass, remediation, fallback, deferral, or stop.
+3. **Dataset-and-split milestone, conditional:** create a versioned dataset and leakage-resistant split only if fitness passes every class, unknown, regime, transfer, dominance, and separation gate.
+4. **Baseline milestone, conditional:** establish the strongest justified non-model baseline only from the accepted locked dataset and split.
+
+Do not create a dataset, split, or baseline merely when the sixth event arrives.
 
 ## Required reading order for long-running Codex work
 
 1. `docs/governance/BURNLENS_EXECUTION_GOAL.md`
-2. `AGENTS.md`
-3. `docs/status/PHASE_STATUS.md`
-4. this roadmap
-5. the active phase objective document
-6. the active issue and branch contract
-7. only the workflow and archival evidence relevant to the next bounded checkpoint
+2. `docs/governance/CHECKPOINT_POLICY.md`
+3. `AGENTS.md`
+4. `docs/status/PHASE_STATUS.md`
+5. this roadmap
+6. the active phase objective document
+7. the active issue and branch contract
+8. only the workflow and archival evidence relevant to the next milestone or evidence unit
 
 ## Consistency rule
 
