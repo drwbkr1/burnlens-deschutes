@@ -9,7 +9,7 @@
   "git_base_commit": "3fc83130dab6e994265f0d3d8a55a356acc474b5",
   "response_lock_source_commit": "6a75065fb1e339d7c26208329ee080129de58803",
   "intake_source_commit": "33e5b02bebf335c5026688a3d2a33ae2d48b8991",
-  "candidate_artifacts_commit": null,
+  "candidate_artifacts_commit": "822f13a3d1a845d63e4d2f13dee62627d9a2b240",
   "checkpoint_commit": null,
   "version_tag": "v0.44.0-grandview-owner-response-intake",
   "version_tag_object": null,

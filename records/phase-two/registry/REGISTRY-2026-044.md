@@ -6,6 +6,8 @@
 
 **Intake source:** `33e5b02bebf335c5026688a3d2a33ae2d48b8991`
 
+**Candidate artifacts:** `822f13a3d1a845d63e4d2f13dee62627d9a2b240`
+
 **Run:** `BL-2026-07-21-grandview-owner-response-intake-r002`
 
 | Artifact | State | Exact result |
