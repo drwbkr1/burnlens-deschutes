@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,28 @@ REPORT_PATH = (
 
 def load_report() -> dict:
     return json.loads(REPORT_PATH.read_text(encoding="utf-8"))
+
+
+def test_entry_gate_has_checkout_stable_lf_bytes() -> None:
+    payload = REPORT_PATH.read_bytes()
+    assert len(payload) == 18_270
+    assert b"\r\n" not in payload
+
+    result = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(ROOT),
+            "check-attr",
+            "eol",
+            "--",
+            REPORT_PATH.relative_to(ROOT).as_posix(),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert result.stdout.strip().endswith("eol: lf")
 
 
 def test_entry_gate_binds_exact_event_and_optical_pair() -> None:
