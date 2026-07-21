@@ -109,6 +109,7 @@ burnlens-capture-petes-lake-replacement-post = "burnlens.capture_petes_lake_repl
 burnlens-acquire-petes-lake-replacement-post = "burnlens.acquire_petes_lake_replacement_post:main"
 burnlens-request-petes-lake-reference = "burnlens.request_petes_lake_reference:main"
 burnlens-preflight-petes-lake-reference-delivery = "burnlens.preflight_petes_lake_reference_delivery:main"
+burnlens-capture-petes-lake-reference-delivery = "burnlens.capture_petes_lake_reference_delivery:main"
 burnlens-serve-review-surface = "burnlens.serve_review_surface:main"
 
 [tool.setuptools]

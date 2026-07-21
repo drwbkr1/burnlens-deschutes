@@ -121,3 +121,6 @@ burnlens/petes_lake_reference_delivery.py text eol=lf
 burnlens/preflight_petes_lake_reference_delivery.py text eol=lf
 tests/test_petes_lake_reference_request.py text eol=lf
 tests/test_petes_lake_reference_delivery.py text eol=lf
+burnlens/petes_lake_reference_custody.py text eol=lf
+burnlens/capture_petes_lake_reference_delivery.py text eol=lf
+tests/test_petes_lake_reference_custody.py text eol=lf
