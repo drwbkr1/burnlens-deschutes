@@ -117,7 +117,18 @@
     "minimum_event_group_gate_passed": false,
     "dataset_fitness_reopened": false
   },
-  "release_package": null,
+  "release_package": {
+    "source_head_commit": "4449f476b31d321d29db64632bc211be813a01e3",
+    "source_date_epoch": 1784604671,
+    "filename": "burnlens_deschutes-0.44.0-py3-none-any.whl",
+    "bytes": 630232,
+    "sha256": "3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1",
+    "fresh_clone_builds": 2,
+    "wheel_entries": 145,
+    "console_commands": 70,
+    "isolated_install_version": "0.44.0",
+    "committed": false
+  },
   "quality_gates": {
     "response_custody": "pass: exact production response and pre-reveal receipt bytes are pinned; paths are repository-local, ignored, and no-overwrite",
     "proposal_and_rasters": "pass: exact proposal and two EPSG:32610 rasters; 8-connected cores; exact one-pixel rings; 0/1/2 domain",
@@ -127,8 +138,9 @@
     "render": "partial: original-resolution PNG is clean and self-tracing; automated local file HTML navigation is policy-blocked; owner manual render pending",
     "repository_tests": "pass: 15 focused lock/intake tests and 345 full repository tests; compilation and dependency health pass",
     "documentation_and_json": "pass: 113 tracked JSON documents parse and 194 local Markdown-link occurrences resolve with zero missing",
-    "exact_reconstruction": "pending clean-checkout reconstruction",
-    "release_package": "pending canonical clean-checkout package and isolated-install gates",
+    "exact_reconstruction": "pass: fresh remote head 4449f476b31d321d29db64632bc211be813a01e3 recreates the 8,893-byte private reconciliation and all three public outputs exactly from only the locked response and receipt",
+    "fresh_remote_head": "pass: 328 tests with 17 expected custody skips, compilation, dependency health, 113 JSON parses, 194 local links, required LF checkout, and clean ignored-output status",
+    "release_package": "pass: two byte-identical 630,232-byte fresh-clone wheels; SHA-256 3a890e24f44d703f389fdb3840990cd7a728bc45b8c245794979a83c59a313f1; 145 clean entries; 70 commands; isolated 0.44.0 import and both new CLI helps",
     "dataset_split_baseline_model": "blocked: five complete event groups remain below six and the full sufficiency evaluator remains authoritative",
     "repository_release": "pending PR, merge, fresh-main verification, annotated tag, and lifecycle synchronization"
   },
