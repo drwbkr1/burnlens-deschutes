@@ -1,0 +1,338 @@
+{
+  "report_id": "PETES-LAKE-ENTRY-GATE-2026-001",
+  "report_schema_version": "0.1.0",
+  "schema_name": "petes-lake-entry-gate-schema",
+  "report_version": "petes-lake-entry-gate-v0.1.0",
+  "serialization": "UTF-8 JSON with LF canonical line endings",
+  "unit_id": "P2O4-T33-U01",
+  "generated_at_utc": "2026-07-21T15:57:24Z",
+  "run_id": "BL-2026-07-21-petes-lake-entry-gate-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 521,
+  "branch": "codex/p2o4-t33-petes-lake-milestone",
+  "git_base_commit": "0d41942dc6c3c307a9a146a2d38fb816e038bb42",
+  "git_source_commit": "43635eb20183f49864397f8b74db4f49eb7a3b7e",
+  "checkpoint_policy": "checkpoint-policy-v0.1.0",
+  "software_version": "0.44.0",
+  "application_version": null,
+  "prior_accepted_aoi_version": "multi-event-native-grids-v0.3.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "prior_accepted_label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "petes_lake_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "cycle_start": {
+    "frozen_source": {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-SOURCE-2026-001.json",
+      "bytes": 1213352,
+      "sha256": "3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241"
+    },
+    "frozen_plan_reconstruction": {
+      "run_id": "BL-2026-07-19-additional-event-groups-r002",
+      "command": ".\\.venv\\Scripts\\python.exe -m burnlens.build_additional_event_group_plan --source-json samples\\cross-event\\phase-two\\ADDITIONAL-EVENT-GROUP-SOURCE-2026-001.json --output-directory downloads\\runtime-baseline\\P2O4-T33-CYCLE-START-20260721-001\\planner --generated-at-utc 2026-07-19T21:20:54Z --run-id BL-2026-07-19-additional-event-groups-r002 --git-source-commit 1d80ef5788ded4eb0f736120fb9023cc1919ea41",
+      "outputs": [
+        {
+          "path": "downloads/runtime-baseline/P2O4-T33-CYCLE-START-20260721-001/planner/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.json",
+          "bytes": 877722,
+          "sha256": "65fd567e234cbb521ead6b7071cab9914c672df169e3987af0c3ddfc66ccf622"
+        },
+        {
+          "path": "downloads/runtime-baseline/P2O4-T33-CYCLE-START-20260721-001/planner/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.html",
+          "bytes": 10932,
+          "sha256": "23ba6fdf3053adbc81f326c42aad873353e310d5a03074f14b8e3d87ad47b6bc"
+        },
+        {
+          "path": "downloads/runtime-baseline/P2O4-T33-CYCLE-START-20260721-001/planner/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.png",
+          "bytes": 109133,
+          "sha256": "9760ee2526c8b903cab2a3bc6a51a6413d51bb1c56b9d892a21b518db965181f"
+        }
+      ],
+      "exact_outputs_reconstructed": 3,
+      "render_inspection": "pass at original 1800 x 1250 resolution; hierarchy, event cards, blocked gates, trace footer, and warning are legible"
+    },
+    "focused_tests": {
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest -q -p no:cacheprovider tests\\test_additional_event_group_plan.py tests\\test_grandview_owner_response_intake.py",
+      "passed": 14,
+      "warnings": "8 existing NumPy deprecation warnings"
+    },
+    "historical_v044_reconstruction_limitation": "The exact ignored Grandview response remains present, but the exact pre-reveal receipt is absent from current ignored custody; no private decision value was opened. This does not block Petes Lake metadata verification."
+  },
+  "live_capture": {
+    "run_id": "BL-2026-07-21-petes-lake-live-source-gate-r003",
+    "accessed_at_utc": "2026-07-21T15:47:12.035Z",
+    "path": "downloads/phase-two/runs/P2O4-T33-U01/ADDITIONAL-EVENT-GROUP-SOURCE-LIVE-r003.json",
+    "bytes": 1213547,
+    "sha256": "1d99d32f6610e64eed5a310d58c9ee730e6f9be691b6f7eb2ed00044018b559c",
+    "tracked": false,
+    "ignored": true,
+    "provider_product_archive_bytes_downloaded": 0,
+    "plan_run_id": "BL-2026-07-21-petes-lake-live-plan-gate-r003",
+    "plan_outputs": [
+      {
+        "path": "downloads/phase-two/runs/P2O4-T33-U01/live-plan-r003/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.json",
+        "bytes": 877732,
+        "sha256": "0e0deed4a54ae0dc2ae8def2596b200d1aa2891f0822b8e2a3c3fca3ec292f9e"
+      },
+      {
+        "path": "downloads/phase-two/runs/P2O4-T33-U01/live-plan-r003/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.html",
+        "bytes": 10936,
+        "sha256": "f271312a3bee0bcdcc204a40a1b6fdd11140f9c15696f39d079bdf80d21110be"
+      },
+      {
+        "path": "downloads/phase-two/runs/P2O4-T33-U01/live-plan-r003/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.png",
+        "bytes": 109173,
+        "sha256": "b7f9dc420c70d3d064dd51f5880b1d2f43ce34745301f7c7fba353ad5c3780c8"
+      }
+    ],
+    "render_inspection": "pass at original 1800 x 1250 resolution; the real current render clearly preserves six frozen event identities and blocks pixels, both classes, uncertainty, owner review, dataset, split, baseline, and model",
+    "planner_trace_limitation": "The reused frozen planner intentionally still self-reports historical task issue 466, branch codex/p2o4-t20-additional-event-groups, software 0.32.0, AOI aoi-darlene3-model-v0.2.0, and region-label null. Its current commit/run/hash bindings make it discovery evidence, not the canonical P2O4-T33 trace artifact."
+  },
+  "retained_prior_runs": [
+    {
+      "run_id": "BL-2026-07-21-petes-lake-entry-gate-r001",
+      "disposition": "remediate",
+      "reason": "Useful pre-capsule rehearsal; durable task capsule was not yet committed, so it cannot satisfy the U01 prerequisite chronology.",
+      "provider_product_archive_bytes_downloaded": 0
+    },
+    {
+      "run_id": "BL-2026-07-21-petes-lake-live-source-gate-r002",
+      "disposition": "remediate",
+      "reason": "Post-capsule metadata capture failed closed with SOURCE_REQUEST_FAILED at the official CDSE STAC search endpoint; no output file was created and a new immutable r003 was used after a direct official HTTP 200 probe.",
+      "provider_product_archive_bytes_downloaded": 0
+    }
+  ],
+  "u02_custody_destinations": {
+    "pre_quarantine": "downloads/phase-two/quarantine/P2O4-T33-U02/petes-lake-optical-pre-r001",
+    "post_quarantine": "downloads/phase-two/quarantine/P2O4-T33-U02/petes-lake-optical-post-r001",
+    "pre_raw_package": "downloads/phase-two/raw/petes-lake-s2-optical-pre-v0.1.0",
+    "post_raw_package": "downloads/phase-two/raw/petes-lake-s2-optical-post-v0.1.0",
+    "pre_run_state": "downloads/phase-two/runs/P2O4-T33-U02/BL-2026-07-21-petes-lake-optical-pre-r001.json",
+    "post_run_state": "downloads/phase-two/runs/P2O4-T33-U02/BL-2026-07-21-petes-lake-optical-post-r001.json",
+    "aggregate_run_state": "downloads/phase-two/runs/P2O4-T33-U02/BL-2026-07-21-petes-lake-optical-intake-r001.json",
+    "tracked_aggregate_report": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-OPTICAL-CUSTODY-2026-001.json",
+    "checked_before_u01_r003": "all ignored destinations absent, ignored by the repository, and untracked; tracked aggregate report reserved but not created",
+    "no_overwrite_rule": "Each singleton transaction must fail if any destination exists. Pre must pass full promotion and post-verification before post may be requested."
+  },
+  "event": {
+    "event_id": "OR4396912190120230825",
+    "event_name": "PETES LAKE",
+    "event_group_id": "event-petes-lake-2023",
+    "geography_group_id": "geo-mtbs-or4396912190120230825",
+    "time_group_id": "time-2023-07-21--2023-10-29",
+    "ignition_date": "2023-08-25",
+    "fire_type": "Wildfire",
+    "acres": 3372.0,
+    "latitude": 43.96696877,
+    "longitude": -121.91250576,
+    "assessment_type": "Extended",
+    "map_id": 10031414,
+    "map_program": "MTBS",
+    "pre_image_id": "904502920230801",
+    "post_image_id": "804502920240811",
+    "official_comment": "Fire severity could be misrepresented in wetland areas.",
+    "portal_catalog_id_frozen": 50884,
+    "portal_catalog_id_current": 50890,
+    "portal_identity_drift_disposition": "ACCEPT_CURRENT_CATALOG_ROW_FOR_ACQUISITION; the current lookup returned 50890 rather than frozen 50884 while event ID, map ID, program, standard status, name, ignition date, and acreage remain identical",
+    "portal_nonstandard": false
+  },
+  "optical_products": [
+    {
+      "role": "petes-lake-2023-pre",
+      "stac_item_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205",
+      "safe_name": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+      "provider_uuid": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+      "size_bytes": 1185284273,
+      "provider_md5": "c41d10e4e895839132c0ad4ee47100e1",
+      "provider_blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b",
+      "stac_multihash": "d50110c41d10e4e895839132c0ad4ee47100e1",
+      "online": true,
+      "acquisition_utc": "2023-07-21T18:59:21.024000Z",
+      "platform": "sentinel-2a",
+      "tile": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_baseline": "05.10",
+      "product_type": "S2MSI2A",
+      "catalogue_cloud_percent": 0.0,
+      "catalogue_snow_percent": 0.226708,
+      "download_route": "https://download.dataspace.copernicus.eu/odata/v1/Products(bf275eb0-7e50-4d4d-a01b-fbaaa18e5142)/$value"
+    },
+    {
+      "role": "petes-lake-2023-post",
+      "stac_item_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945",
+      "safe_name": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+      "provider_uuid": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+      "size_bytes": 1243068088,
+      "provider_md5": "bf9383d434448998f5025494d0a43320",
+      "provider_blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105",
+      "stac_multihash": "d50110bf9383d434448998f5025494d0a43320",
+      "online": true,
+      "acquisition_utc": "2023-10-29T19:05:11.024000Z",
+      "platform": "sentinel-2a",
+      "tile": "MGRS-10TEP",
+      "relative_orbit": 13,
+      "processing_baseline": "05.10",
+      "product_type": "S2MSI2A",
+      "catalogue_cloud_percent": 0.01,
+      "catalogue_snow_percent": 9.841206,
+      "download_route": "https://download.dataspace.copernicus.eu/odata/v1/Products(80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6)/$value"
+    }
+  ],
+  "official_reference_delivery": {
+    "viewer_entry": "https://burnseverity.cr.usgs.gov/viewer/",
+    "viewer_javascript": "https://burnseverity.cr.usgs.gov/viewer/main.72b0025be5cf1f239178.js",
+    "viewer_javascript_checked_at_utc": "2026-07-21T15:54:54.5946297Z",
+    "viewer_javascript_bytes": 405895,
+    "viewer_javascript_sha256": "15c84c7f7a3007d9226a37df59156fb96ea3dccfcc7ad223fd67d360f07cd46d",
+    "queue_endpoint": "https://burnseverity.cr.usgs.gov/downloads/addQueue.php",
+    "request_submitted": false,
+    "projection_to_request": "native UTM",
+    "applicable_mtbs_product_families": [
+      "Metadata",
+      "Pre-fire reflectance",
+      "Post-fire reflectance",
+      "Continuous severity (i.e dnbr)",
+      "Relative continuous severity (i.e rdnbr)",
+      "Burned area boundary",
+      "Non-processing mask",
+      "KMZ",
+      "PDF",
+      "6 - Class thematic severity"
+    ],
+    "cross_program_product_families_excluded_from_mtbs_expectation": [
+      "Soil burn severity",
+      "Continuous basal area loss",
+      "4 - Class basal area loss",
+      "7 - Class basal area loss",
+      "Continuous canopy cover loss",
+      "5 - Class canopy cover loss",
+      "Continuous composite burn index",
+      "4 - Class composite burn index"
+    ],
+    "delivery_gate": "U04 must preserve the exact delivery and notices, then verify archive identity, terms, structure, CRS, grids, nodata, masks, class domains, and every native product before pixel use."
+  },
+  "access": {
+    "run_id": "BL-2026-07-21-petes-lake-cdse-access-precheck-r003",
+    "token_only_authentication": "pass",
+    "credential_source": "existing owner-authorized machine-local DPAPI-protected credential",
+    "credential_or_token_retained": false,
+    "provider_product_archive_bytes_requested": 0,
+    "paid_service_or_new_secret_added": false
+  },
+  "terms": {
+    "status": "RESOLVED_FOR_TWO_EXACT_SENTINEL_ARCHIVES, LOCAL_ANALYSIS, BOUNDED_DERIVED_EVIDENCE, AND EXACT_MTBS_REQUEST; ARCHIVE-SPECIFIC NOTICES REMAIN U04 GATES",
+    "sentinel": "Copernicus Sentinel access and use remain free, full, and open under the Sentinel Data Legal Notice. Modified public evidence must state: Contains modified Copernicus Sentinel data 2023.",
+    "mtbs": "Current official MTBS metadata states Access Constraints: None and no use restrictions except reasonable and proper acknowledgement of information sources. USGS/USDA provide no warranty and may revise the products.",
+    "checked_at_utc": "2026-07-21T15:54:54.5946297Z",
+    "source_asset_bindings": [
+      {
+        "role": "Burn Severity Viewer JavaScript",
+        "bytes": 405895,
+        "sha256": "15c84c7f7a3007d9226a37df59156fb96ea3dccfcc7ad223fd67d360f07cd46d"
+      },
+      {
+        "role": "MTBS burn-area boundary metadata",
+        "bytes": 23634,
+        "sha256": "e56b96c0366a4da515f18664c1fcfad838616f5ba67c68c92f7a492d3ac412c1"
+      },
+      {
+        "role": "MTBS fire-occurrence metadata",
+        "bytes": 21884,
+        "sha256": "807638cf7b91d9847e0a87d178d7c77a4e59b35808c9930df4d683eff14e8b88"
+      },
+      {
+        "role": "CDSE Terms and Conditions",
+        "bytes": 77530,
+        "sha256": "e17c490e30a0544880e0ead78dcc4f749409d8ca4de67f003b2823203f864948"
+      },
+      {
+        "role": "Sentinel Data Legal Notice",
+        "bytes": 115881,
+        "sha256": "fa2955ff48a1d82e77fc7296d63681670ecdb9d2811a0505ae60d0683b62fa64"
+      }
+    ],
+    "native_provider_archives_committed_or_redistributed": false,
+    "primary_sources": [
+      "https://dataspace.copernicus.eu/terms-and-conditions",
+      "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "https://documentation.dataspace.copernicus.eu/APIs/OData.html",
+      "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+      "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_FIRE_OCCURRENCE_PT.xml",
+      "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+    ]
+  },
+  "record_bindings": {
+    "source_records": [
+      "SOURCE-2026-028",
+      "SOURCE-2026-029"
+    ],
+    "terms_records": [
+      "TERMS-2026-024",
+      "TERMS-2026-025"
+    ],
+    "access_record": "ACCESS-2026-018",
+    "precheck_record": "PRECHECK-2026-043",
+    "source_precedence_record": "SOURCE_PRECEDENCE-2026-018",
+    "use_boundary_record": "USE_BOUNDARY-2026-039",
+    "registry_record": "REGISTRY-2026-045",
+    "milestone_prompt_build_log": "records/prompt-build-log/2026-07-21-p2o4-t33.md"
+  },
+  "owner_review_batch_contract": {
+    "status": "registered for P2O4-T33-U09A, U09, and U10; not executed by U01",
+    "production_event_group": "event-petes-lake-2023",
+    "production_candidate_classes": [
+      "burned",
+      "affirmative-background"
+    ],
+    "production_surface_scope": "one Petes Lake batch containing only the exact U08 burned and affirmative-background candidates",
+    "batched_scope": "session and response envelope only",
+    "candidate_specific_requirements": [
+      "neutral candidate ID",
+      "event group",
+      "proposed class",
+      "evidence binding hash",
+      "raster binding hash",
+      "proposal binding hash",
+      "yes/no/uncertain decision",
+      "notes",
+      "all non-owner gate results"
+    ],
+    "prohibited": [
+      "approve-all",
+      "prefilled answers",
+      "confidence or prior-decision display",
+      "missing-as-uncertain inference",
+      "cross-milestone candidates"
+    ],
+    "custody_and_intake": "Require hash-named resumable drafts, one answer per candidate, one batch attestation, final review summary, exact hash-named no-overwrite final export, locked browser state, exact-byte lock before reveal, roster and binding revalidation, explicit owner designation when distinct valid finals are ambiguous, recomputation of every non-owner gate, and both-classes/no-partial promotion.",
+    "sequencing": "U09A may integrate a shared manifest-driven utility before U09 but cannot interrupt U01-U08 or create a separate release."
+  },
+  "mandatory_downstream_cautions": [
+    "The post product's 9.841206 percent snow value is tile-wide catalogue metadata; U03 must inspect local SCL, SNW, and rendered pixels.",
+    "The optical post scene is roughly two months after ignition, while the official MTBS extended assessment uses following-growing-season imagery; the products are complementary, not temporally equivalent.",
+    "The exact MTBS record says fire severity could be misrepresented in wetland areas; U05 and U08 must measure and exclude affected uncertainty from any core or ring.",
+    "MTBS categorical severity is analyst interpreted, revisable reference evidence, not automatic pixel-perfect truth, an incident perimeter, or field validation.",
+    "The current official delivery must govern over an unverified legacy copy; U04 must not substitute an older archive."
+  ],
+  "gate_results": {
+    "current_event_identity": "pass",
+    "current_optical_identity_and_availability": "pass",
+    "exact_uuid_safe_size_and_provider_checksums": "pass",
+    "official_reference_identity_and_delivery_route": "pass",
+    "source_terms_and_retention": "pass",
+    "local_analysis_and_bounded_derived_evidence": "pass",
+    "authenticated_access_without_secret_exposure": "pass",
+    "ignored_no_overwrite_custody_destination": "pass",
+    "source_precedence_and_use_boundaries": "pass",
+    "snow_and_wetland_uncertainty_carry_forward": "pass",
+    "provider_archive_or_pixel_fitness": "not executed; U02-U05",
+    "owner_review": "not executed; U09A, U09, and U10",
+    "dataset_split_baseline_model": "not created"
+  },
+  "disposition": "pass",
+  "decision": "PASS_PETES_LAKE_ENTRY_GATE_AUTHORIZE_SEQUENTIAL_U02_OPTICAL_CUSTODY_ONLY",
+  "next_dependency": "P2O4-T33-U02",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
