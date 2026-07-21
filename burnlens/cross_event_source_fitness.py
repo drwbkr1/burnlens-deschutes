@@ -198,6 +198,7 @@ def _read_product(
     geometry_wgs84: dict[str, Any],
     *,
     expected_processing_baseline: str = "05.00",
+    include_quality_probabilities: bool = False,
 ) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
     archive_path = package / contract.expected_filename
     geometry_utm = transform_geom("EPSG:4326", "EPSG:32610", geometry_wgs84, precision=9)
@@ -216,26 +217,35 @@ def _read_product(
         "B12": _exact_member(names, "_B12_20m.jp2"),
         "SCL": _exact_member(names, "_SCL_20m.jp2"),
     }
+    if include_quality_probabilities:
+        members.update(
+            {
+                "CLD": _exact_member(names, "MSK_CLDPRB_20m.jp2"),
+                "SNW": _exact_member(names, "MSK_SNWPRB_20m.jp2"),
+            }
+        )
     arrays: dict[str, np.ndarray] = {}
     masks: dict[str, np.ndarray] = {}
     rasters: dict[str, Any] = {}
-    for name in ("TCI", *SELECTED_BANDS, "SCL"):
+    quality_names = ("CLD", "SNW") if include_quality_probabilities else ()
+    for name in ("TCI", *SELECTED_BANDS, "SCL", *quality_names):
         values, mask, metadata = _read_member(
             archive_path,
             members[name],
             geometry_utm,
             resolution=10 if name == "TCI" else 20,
             count=3 if name == "TCI" else 1,
-            dtype="uint8" if name in {"TCI", "SCL"} else "uint16",
+            dtype="uint8" if name in {"TCI", "SCL", *quality_names} else "uint16",
         )
         arrays[name] = values if name == "TCI" else values[0]
         masks[name] = mask
         rasters[name] = metadata
-    twenty_shapes = {arrays[name].shape for name in (*SELECTED_BANDS, "SCL")}
-    twenty_transforms = {tuple(rasters[name]["crop_transform"]) for name in (*SELECTED_BANDS, "SCL")}
+    twenty_names = (*SELECTED_BANDS, "SCL", *quality_names)
+    twenty_shapes = {arrays[name].shape for name in twenty_names}
+    twenty_transforms = {tuple(rasters[name]["crop_transform"]) for name in twenty_names}
     if len(twenty_shapes) != 1 or len(twenty_transforms) != 1:
         raise CrossEventSourceFitnessError("native 20 m product grids are not aligned")
-    if any(not np.array_equal(masks["SCL"], masks[name]) for name in SELECTED_BANDS):
+    if any(not np.array_equal(masks["SCL"], masks[name]) for name in (*SELECTED_BANDS, *quality_names)):
         raise CrossEventSourceFitnessError("native 20 m boundary masks are not aligned")
     return {
         "role": contract.role,
