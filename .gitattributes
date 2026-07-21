@@ -108,3 +108,8 @@ samples/cross-event/phase-two/*/*.html text eol=lf
 # Current cross-program reference inventory evidence has the same LF contract.
 samples/reference/phase-two/*.json text eol=lf
 samples/reference/phase-two/*.html text eol=lf
+
+# Petes Lake replacement source-fitness implementation and tests have exact LF contracts.
+burnlens/petes_lake_replacement_source_fitness.py text eol=lf
+burnlens/inspect_petes_lake_replacement_source_fitness.py text eol=lf
+tests/test_petes_lake_replacement_source_fitness.py text eol=lf

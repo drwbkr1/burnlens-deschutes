@@ -474,9 +474,15 @@ def _render_png_bytes(report: dict[str, Any], previews: dict[str, np.ndarray]) -
         fill="#eef7f3",
         font=_font(19),
     )
-    panels = (
-        ("PRE 2023-07-21", "pre_tci", "pre_mask"),
-        ("POST 2023-10-29", "post_tci", "post_mask"),
+    panels = tuple(
+        (
+            f"{label} {report['products'][index]['product_metadata']['sensing_time_utc'][:10]}",
+            image_key,
+            mask_key,
+        )
+        for index, (label, image_key, mask_key) in enumerate(
+            (("PRE", "pre_tci", "pre_mask"), ("POST", "post_tci", "post_mask"))
+        )
     )
     for index, (label, image_key, mask_key) in enumerate(panels):
         x = 65 + index * 570
