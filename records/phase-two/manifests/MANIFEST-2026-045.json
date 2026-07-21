@@ -10,13 +10,13 @@
   "generator_source_commit": "91ba39ceb4b6d8444255d734eb7a6cc393f933af",
   "candidate_artifacts_commit": "33c7c871dcdb2546cf3fd8fe97e01e109cee8026",
   "candidate_head_commit": "dbedb98c847b28c59d3997ee364b0d35c317e3c4",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "aeea6f5cc488ae975badbdf654d0164570db77c4",
   "version_tag": "v0.43.0-grandview-owner-review-surface",
-  "version_tag_object": null,
-  "lifecycle_sync_issue": null,
-  "lifecycle_sync_pull_request": null,
+  "version_tag_object": "d679521edcc1d5b1bfd3e8022036cae06a9f1978",
+  "lifecycle_sync_issue": 519,
+  "lifecycle_sync_pull_request": 520,
   "next_checkpoint_issue": 517,
-  "status": "release candidate: Grandview owner review surface built; response intake and promotion closed",
+  "status": "verified release: Grandview owner review surface built; response intake and promotion closed",
   "software_version": "0.43.0",
   "run_id": "BL-2026-07-21-grandview-owner-review-surface-r001",
   "event_group_id": "event-grandview-0558-od-2021",
@@ -69,8 +69,8 @@
     "real_browser": "agent local file URL automation policy-blocked and not bypassed; original-resolution PNG, semantic HTML, controller, links, and outputs validated independently",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
     "fresh_remote_head": "pass at 831cf749322b39609f9630fab1cb06a17b64ccb6: 313 tests with 17 expected custody skips; compileall; 111 JSON parses; zero surface JSON/HTML CRLF; all six artifact hashes exact; canonical clean package and isolated install pass",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass at aeea6f5cc488ae975badbdf654d0164570db77c4: 313 tests with 17 expected custody skips; compileall; 111 JSON parses; zero surface JSON/HTML CRLF; all six artifact hashes exact; two canonical wheels exact",
+    "remote_tag": "pass: annotated tag object d679521edcc1d5b1bfd3e8022036cae06a9f1978 remotely peels to aeea6f5cc488ae975badbdf654d0164570db77c4"
   },
   "decision": "SURFACE_READY_FOR_GRANDVIEW_OWNER_REVIEW_KEEP_RESPONSE_INTAKE_SEPARATE"
 }
