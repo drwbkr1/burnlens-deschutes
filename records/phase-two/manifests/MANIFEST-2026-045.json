@@ -14,7 +14,7 @@
   "version_tag": "v0.43.0-grandview-owner-review-surface",
   "version_tag_object": "d679521edcc1d5b1bfd3e8022036cae06a9f1978",
   "lifecycle_sync_issue": 519,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 520,
   "next_checkpoint_issue": 517,
   "status": "verified release: Grandview owner review surface built; response intake and promotion closed",
   "software_version": "0.43.0",

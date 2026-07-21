@@ -224,7 +224,7 @@ Update entries when authorization, branch, research, files, checks, PR, review, 
 | P2O4-T30A | `records/prompt-build-log/2026-07-20-p2o4-t30a.md` | issue #513 / PR #514; verified checkout-stability remediation | Adds only the missing Grandview proposal LF contract after fresh analytical main exposes CRLF JSON drift; verified main restores exact outputs without scientific change. |
 | P2O4-T30-SYNC | `records/prompt-build-log/2026-07-20-p2o4-t30-sync.md` | issue #515 / PR #516; verified v0.42 lifecycle synchronization | Records analytical failure, remediation merge, fresh-main gates, canonical package, remote annotated tag, and next issue #511 without changing scientific or private state. |
 | P2O4-T31 | `records/prompt-build-log/2026-07-21-p2o4-t31.md` | issue #511; BurnLens 0.43.0 candidate; next #517 | Binds the exact Grandview proposal and rasters into a blank offline yes/no/uncertain surface, renders evidence roles and unknown rings, and creates zero owner responses, labels, dataset, split, baseline, or model. |
-| P2O4-T31-SYNC | `records/prompt-build-log/2026-07-21-p2o4-t31-sync.md` | issue #519; verified v0.43 lifecycle synchronization | Records PR #518, clean-clone package correction, merge checkpoint, fresh-main gates, remote annotated tag, and blocked next issue #517 without inspecting a completed response. |
+| P2O4-T31-SYNC | `records/prompt-build-log/2026-07-21-p2o4-t31-sync.md` | issue #519 / PR #520; verified v0.43 lifecycle synchronization | Records PR #518, clean-clone package correction, merge checkpoint, fresh-main gates, remote annotated tag, and blocked next issue #517 without inspecting a completed response. |
 
 ## Acceptance and remediation triggers
 
