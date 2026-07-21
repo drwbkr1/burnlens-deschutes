@@ -1,6 +1,6 @@
 # Grandview Owner Review Surface Candidate Decision
 
-**Issue / branch:** #511 / `codex/p2o4-t31-grandview-owner-review-surface`
+**Issue / PR / branch:** #511 / #518 / `codex/p2o4-t31-grandview-owner-review-surface`
 
 **Run:** `BL-2026-07-21-grandview-owner-review-surface-r001`
 

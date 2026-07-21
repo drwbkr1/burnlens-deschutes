@@ -1,6 +1,6 @@
 # REGISTRY-2026-043 - Grandview Owner Review Surface Candidate
 
-**Issue / branch:** #511 / `codex/p2o4-t31-grandview-owner-review-surface`
+**Issue / PR / branch:** #511 / #518 / `codex/p2o4-t31-grandview-owner-review-surface`
 
 **Generator / artifacts:** `91ba39ceb4b6d8444255d734eb7a6cc393f933af` / `33c7c871dcdb2546cf3fd8fe97e01e109cee8026`
 
