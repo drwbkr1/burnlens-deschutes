@@ -83,6 +83,7 @@ burnlens-build-grandview-region-proposal = "burnlens.build_grandview_region_prop
 burnlens-build-green-ridge-owner-review-surface = "burnlens.build_green_ridge_owner_review_surface:main"
 burnlens-build-grandview-owner-review-surface = "burnlens.build_grandview_owner_review_surface:main"
 burnlens-lock-grandview-owner-response = "burnlens.lock_grandview_owner_response:main"
+burnlens-build-grandview-owner-response-intake = "burnlens.build_grandview_owner_response_intake:main"
 burnlens-intake-green-ridge-owner-response = "burnlens.intake_green_ridge_owner_response:main"
 burnlens-build-green-ridge-owner-response-intake = "burnlens.build_green_ridge_owner_response_intake:main"
 

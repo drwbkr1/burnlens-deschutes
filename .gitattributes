@@ -18,6 +18,10 @@ records/phase-two/prechecks/PRECHECK-2026-030.md text eol=lf
 records/phase-two/reviews/LABEL_FITNESS-2026-018.md text eol=lf
 records/phase-two/reviews/SOURCE_PRECEDENCE-2026-014.md text eol=lf
 records/phase-two/reviews/USE_BOUNDARY-2026-028.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-042.md text eol=lf
+records/phase-two/reviews/LABEL_FITNESS-2026-027.md text eol=lf
+records/phase-two/reviews/SOURCE_PRECEDENCE-2026-017.md text eol=lf
+records/phase-two/reviews/USE_BOUNDARY-2026-038.md text eol=lf
 
 # Target-decision evidence has an explicit cross-platform serialization contract.
 samples/target/phase-two/*.json text eol=lf
@@ -63,6 +67,8 @@ samples/labels/review/green-ridge/phase-two/intake/*.json text eol=lf
 samples/labels/review/green-ridge/phase-two/intake/*.html text eol=lf
 samples/labels/review/grandview/phase-two/*.json text eol=lf
 samples/labels/review/grandview/phase-two/*.html text eol=lf
+samples/labels/review/grandview/phase-two/intake/*.json text eol=lf
+samples/labels/review/grandview/phase-two/intake/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
