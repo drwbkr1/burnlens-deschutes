@@ -14,13 +14,13 @@
   "checkout_remediation_source_commit": "d3b11e78e03492f8348b980f7304864ded85b06a",
   "checkout_remediation_issue": 513,
   "checkout_remediation_pull_request": 514,
-  "checkpoint_commit": null,
+  "checkpoint_commit": "6124f76de04b5e503a9da7655a293a023480b39c",
   "version_tag": "v0.42.0-grandview-region-proposal",
-  "version_tag_object": null,
-  "lifecycle_sync_issue": null,
+  "version_tag_object": "388c81677b3c49d2312779f8fc98ad3dc7b9048c",
+  "lifecycle_sync_issue": 515,
   "lifecycle_sync_pull_request": null,
   "next_checkpoint_issue": 511,
-  "status": "release candidate after checkout remediation: two Grandview regions proposed; owner review and promotion closed",
+  "status": "verified release after checkout remediation: two Grandview regions proposed; owner review and promotion closed",
   "software_version": "0.42.0",
   "run_id": "BL-2026-07-20-grandview-region-proposal-r001",
   "event_group_id": "event-grandview-0558-od-2021",
@@ -60,7 +60,8 @@
     "sha256": "15e15173b345df7caae4b12bb03975df9e0646345bd890bc9fdd0ec62ef192d2",
     "entries": 139,
     "console_commands": 67,
-    "isolated_install": "pass: dependency-complete environment imports 0.42.0 from site-packages; new command help and pip check pass"
+    "verified_main_commit": "6124f76de04b5e503a9da7655a293a023480b39c",
+    "isolated_install": "pass: dependency-complete environment imports 0.42.0 from site-packages; 67 commands including the Grandview proposal command; pinned dependencies, command help, and pip check pass"
   },
   "quality_gates": {
     "source_reverification": "pass: verified v0.41 route rerun; prior JSON, HTML, and PNG remain byte exact after context-grid MTBS exposure",
@@ -71,11 +72,11 @@
     "privacy": "pass: no private path, credential, token, recipient, retrieval route, or provider byte committed",
     "repository_tests": "pass in two complete bounded shards: 144 plus 182 equals 326 tests; compileall; 108 JSON documents including this manifest parse",
     "label_dataset_model": "blocked: zero owner responses, labels, dataset, split, baseline, or model",
-    "release_package": "pass at reviewed PR head 18f1b89c360a2e35e36e03514ed37522527fb19f: two fixed-epoch wheels are byte-identical; 602,463 bytes; sha256 1271c046a290d65c3614ff8fb5a76ab3bcff85e6cc5fddba11296554f0b240c7; 139 clean entries; 67 commands; isolated import and dependency health pass; finalized README metadata alone accounts for the hash difference from the earlier source wheel",
+    "release_package": "pass at reviewed PR head 18f1b89c360a2e35e36e03514ed37522527fb19f and fresh verified main: two wheels under recorded SOURCE_DATE_EPOCH 1784590790 are byte-identical; 602,463 bytes; sha256 15e15173b345df7caae4b12bb03975df9e0646345bd890bc9fdd0ec62ef192d2; 139 clean entries; 67 commands; isolated import and dependency health pass",
     "fresh_remote_head": "pass at 18f1b89c360a2e35e36e03514ed37522527fb19f: 312 passed and 14 expected custody skips; compileall; 108 JSON parses; exact five-output reconstruction through unchanged custody; two canonical wheels match",
     "analytical_merge_checkout": "failed closed at 0905711e3f1dc2e281ff830ff3b9d94ed2c50f66: JSON checked out as 4,733 CRLF bytes instead of the original 4,620 LF bytes; all other outputs and gates passed; tag withheld",
-    "fresh_merged_main": "pending",
-    "remote_tag": "pending"
+    "fresh_merged_main": "pass at 6124f76de04b5e503a9da7655a293a023480b39c: new remote main clone; 312 tests with 14 expected custody skips; compileall; 108 JSON parses; zero JSON/HTML CRLF sequences; all five artifact hashes exact; two canonical fixed-epoch wheels exact; isolated dependency-complete install passes",
+    "remote_tag": "pass: annotated object 388c81677b3c49d2312779f8fc98ad3dc7b9048c remotely peels to checkpoint 6124f76de04b5e503a9da7655a293a023480b39c"
   },
   "decision": "PROPOSE_TWO_GRANDVIEW_REGIONS_KEEP_OWNER_REVIEW_AND_PROMOTION_CLOSED"
 }

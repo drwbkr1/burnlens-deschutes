@@ -1,6 +1,6 @@
 # REGISTRY-2026-042 - Grandview Region Proposal Candidate
 
-**Issue / PR / branch:** #508 / #512 / `codex/p2o4-t30-grandview-region-proposal`
+**Checkpoint:** issue #508 / PR #512; checkout remediation #513 / PR #514; verified merge `6124f76de04b5e503a9da7655a293a023480b39c`; tag object `388c81677b3c49d2312779f8fc98ad3dc7b9048c`; lifecycle #515; next #511
 
 **Generator:** `78bb79eb04d76cff4ed183274de881557b176413`
 
@@ -12,4 +12,5 @@
 | `GVP-002` raster | Unreviewed proposed background | 25 core / 52 unknown-ring pixels; SHA-256 `2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91` |
 | Aggregate JSON/HTML/PNG | Public no-promotion evidence | 2 candidates; 0 owner responses; 0 labels |
 | Provider inputs | Existing ignored custody | 0 provider bytes committed |
-| Checkout remediation | Tag withheld / issue #513 / PR #514 | Analytical merge `0905711e3f1dc2e281ff830ff3b9d94ed2c50f66` exposed CRLF JSON drift; source `d3b11e78e03492f8348b980f7304864ded85b06a` and reviewed PR head `18f1b89c360a2e35e36e03514ed37522527fb19f` restore all five original hashes; reviewed-head wheel is 602,463 bytes / SHA-256 `1271c046a290d65c3614ff8fb5a76ab3bcff85e6cc5fddba11296554f0b240c7` |
+| Checkout remediation | Issue #513 / PR #514 / checkpoint `6124f76de04b5e503a9da7655a293a023480b39c` | Analytical merge `0905711e3f1dc2e281ff830ff3b9d94ed2c50f66` exposed CRLF JSON drift; verified main restores all five hashes and the canonical 602,463-byte wheel / SHA-256 `15e15173b345df7caae4b12bb03975df9e0646345bd890bc9fdd0ec62ef192d2` |
+| Verified tag | `v0.42.0-grandview-region-proposal` | Annotated object `388c81677b3c49d2312779f8fc98ad3dc7b9048c` remotely peels to `6124f76de04b5e503a9da7655a293a023480b39c`; issue #511 remains next |
