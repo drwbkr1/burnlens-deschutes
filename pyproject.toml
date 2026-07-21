@@ -87,6 +87,7 @@ burnlens-build-grandview-owner-response-intake = "burnlens.build_grandview_owner
 burnlens-intake-green-ridge-owner-response = "burnlens.intake_green_ridge_owner_response:main"
 burnlens-build-green-ridge-owner-response-intake = "burnlens.build_green_ridge_owner_response_intake:main"
 burnlens-inspect-petes-lake-sources = "burnlens.inspect_petes_lake_source_fitness:main"
+burnlens-capture-petes-lake-replacement-post = "burnlens.capture_petes_lake_replacement_post:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
