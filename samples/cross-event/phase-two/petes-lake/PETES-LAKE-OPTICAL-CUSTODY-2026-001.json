@@ -1,0 +1,441 @@
+{
+  "report_id": "PETES-LAKE-OPTICAL-CUSTODY-2026-001",
+  "report_schema_version": "0.1.0",
+  "semantic_sha256": "a9218a830d729af8712b525acf5365f6ed1d355407947606f1491c538f30f748",
+  "semantic_record": {
+    "unit_id": "P2O4-T33-U02",
+    "generated_at_utc": "2026-07-21T18:40:41Z",
+    "run_id": "BL-2026-07-21-petes-lake-optical-intake-r001",
+    "software_version": "0.44.0",
+    "event_id": "OR4396912190120230825",
+    "event_group_id": "event-petes-lake-2023",
+    "pair_id": "petes-lake-s2-optical-pair-v0.1.0",
+    "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+    "source_record_id": "SOURCE-2026-028",
+    "terms_review_id": "TERMS-2026-024",
+    "trace": {
+      "repository": "drwbkr1/burnlens-deschutes",
+      "git_source_commit": "31eedcddff0a712001181fd282f18f0e41ed5412",
+      "branch": "codex/p2o4-t33-petes-lake-milestone",
+      "task_issue": 521,
+      "git_base_commit": "0d41942dc6c3c307a9a146a2d38fb816e038bb42",
+      "u01_entry_commit": "f59b874d92a0e86d0121759d1c40fbe8ba5c2edc",
+      "entry_gate_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-ENTRY-GATE-2026-001.json",
+      "entry_gate_bytes": 18270,
+      "entry_gate_sha256": "ac5d7498f847e0df973c58445188b422d919dc5c195e832e518ba5dbf11d6bec"
+    },
+    "contracts": [
+      {
+        "role": "petes-lake-2023-pre",
+        "provider": "Copernicus Data Space Ecosystem",
+        "source_record_id": "SOURCE-2026-028",
+        "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+        "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+        "expected_filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+        "expected_size_bytes": 1185284273,
+        "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+        "provider_md5": "c41d10e4e895839132c0ad4ee47100e1",
+        "provider_blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b",
+        "expected_zip_root": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE"
+      },
+      {
+        "role": "petes-lake-2023-post",
+        "provider": "Copernicus Data Space Ecosystem",
+        "source_record_id": "SOURCE-2026-028",
+        "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+        "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+        "expected_filename": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE.zip",
+        "expected_size_bytes": 1243068088,
+        "package_id": "petes-lake-s2-optical-post-v0.1.0",
+        "provider_md5": "bf9383d434448998f5025494d0a43320",
+        "provider_blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105",
+        "expected_zip_root": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE"
+      }
+    ],
+    "transaction_order": [
+      "petes-lake-2023-pre",
+      "petes-lake-2023-post"
+    ],
+    "transactions": [
+      {
+        "unit_id": "P2O4-T33-U02",
+        "generated_at_utc": "2026-07-21T18:40:41Z",
+        "event_id": "OR4396912190120230825",
+        "event_group_id": "event-petes-lake-2023",
+        "pair_id": "petes-lake-s2-optical-pair-v0.1.0",
+        "run_id": "BL-2026-07-21-petes-lake-optical-pre-r001",
+        "role": "petes-lake-2023-pre",
+        "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+        "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+        "trace": {
+          "repository": "drwbkr1/burnlens-deschutes",
+          "git_source_commit": "31eedcddff0a712001181fd282f18f0e41ed5412",
+          "branch": "codex/p2o4-t33-petes-lake-milestone",
+          "task_issue": 521,
+          "git_base_commit": "0d41942dc6c3c307a9a146a2d38fb816e038bb42",
+          "u01_entry_commit": "f59b874d92a0e86d0121759d1c40fbe8ba5c2edc",
+          "entry_gate_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-ENTRY-GATE-2026-001.json",
+          "entry_gate_bytes": 18270,
+          "entry_gate_sha256": "ac5d7498f847e0df973c58445188b422d919dc5c195e832e518ba5dbf11d6bec"
+        },
+        "metadata_snapshot": {
+          "observed_at_utc": "2026-07-21T18:40:43.953482Z",
+          "source_record_id": "SOURCE-2026-028",
+          "terms_review_id": "TERMS-2026-024",
+          "live_refresh_performed": true,
+          "route_precedence": {
+            "identity_authority": "Frozen STAC item, CDSE UUID, SAFE name, sensing time, tile, orbit, and processing baseline must agree.",
+            "archive_authority": "Current CDSE OData content length plus MD5 and BLAKE3 govern each acquired archive.",
+            "cloud_metadata_reconciliation": "Exact current OData cloudCover and the frozen U01 STAC eo:cloud_cover are retained separately. A deterministic two-decimal comparison must agree; neither catalogue field establishes local pixel fitness.",
+            "transaction_order": "The pre archive is one singleton transaction and must pass promotion plus post-promotion verification before the post archive may be requested.",
+            "quality_boundary": "Tile-wide cloud and snow metadata are discovery context only; U03 must inspect local SCL, snow, cloud, shadow, smoke, pixels, and registration."
+          },
+          "records": [
+            {
+              "role": "petes-lake-2023-pre",
+              "event_id": "OR4396912190120230825",
+              "event_group_id": "event-petes-lake-2023",
+              "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+              "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+              "size_bytes": 1185284273,
+              "online": true,
+              "acquisition_utc": "2023-07-21T18:59:21.024000Z",
+              "publication_utc": "2025-03-11T14:39:00.079327Z",
+              "s3_path": "/eodata/Sentinel-2/MSI/L2A_N0500/2023/07/21/S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+              "provider_checksums": {
+                "MD5": "c41d10e4e895839132c0ad4ee47100e1",
+                "BLAKE3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+              },
+              "platform_serial_identifier": "A",
+              "tile_id": "10TEP",
+              "relative_orbit_number": 13,
+              "processor_version": "05.10",
+              "product_type": "S2MSI2A",
+              "cloud_cover_percent": 0.000358,
+              "cloud_cover_source": "current CDSE OData Attributes cloudCover",
+              "cloud_cover_comparison_2dp": 0.0,
+              "frozen_stac_cloud_cover_percent": 0.0,
+              "cloud_metadata_reconciliation_version": "petes-lake-cloud-metadata-reconciliation-v0.1.0",
+              "catalogue_snow_percent": 0.226708,
+              "catalogue_snow_source": "frozen current CDSE STAC identity from P2O4-T33-U01"
+            }
+          ]
+        },
+        "contract": {
+          "role": "petes-lake-2023-pre",
+          "provider": "Copernicus Data Space Ecosystem",
+          "source_record_id": "SOURCE-2026-028",
+          "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+          "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+          "expected_filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+          "expected_size_bytes": 1185284273,
+          "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+          "provider_md5": "c41d10e4e895839132c0ad4ee47100e1",
+          "provider_blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b",
+          "expected_zip_root": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE"
+        },
+        "quarantine_path": "downloads/phase-two/quarantine/P2O4-T33-U02/petes-lake-optical-pre-r001",
+        "destination_path": "downloads/phase-two/raw/petes-lake-s2-optical-pre-v0.1.0",
+        "decision": "REGISTERED_EXACT_PETES_LAKE_SINGLETON",
+        "credentials_exercised": true,
+        "download": {
+          "role": "petes-lake-2023-pre",
+          "status": "DOWNLOADED",
+          "bytes": 1185284273,
+          "resumed_from_bytes": 0,
+          "safe_final_endpoint": "https://download.dataspace.copernicus.eu/odata/v1/Products(bf275eb0-7e50-4d4d-a01b-fbaaa18e5142)/$value",
+          "attempt_count": 1
+        },
+        "registration": {
+          "registration_schema_version": "0.2.0",
+          "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+          "contract_sha256": "fcf0e45cbf9d999b542ffa43df1df0aaa1dd33e02d76b6063baf94eaa023e692",
+          "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+          "generated_at_utc": "2026-07-21T18:40:41Z",
+          "run_id": "BL-2026-07-21-petes-lake-optical-pre-r001",
+          "synthetic_fixture": false,
+          "asset_count": 1,
+          "assets": [
+            {
+              "role": "petes-lake-2023-pre",
+              "source_record_id": "SOURCE-2026-028",
+              "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+              "filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+              "bytes": 1185284273,
+              "sha256": "c5b6ededc5a264fcc617f2712093b847351c5b8ed78f2ea9ce0ebc3a33e1bc34",
+              "md5": "c41d10e4e895839132c0ad4ee47100e1",
+              "blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+            }
+          ]
+        },
+        "verification": {
+          "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+          "registration_manifest_name": ".burnlens-registration.json",
+          "registration_manifest_link_count": 1,
+          "registration_manifest_sha256": "260b0d3ae7c5415c110851874b09a43bf2e2b3c83e0539a764d8c0bd94077f32",
+          "multilink_registration_manifest_allowed": true,
+          "registered_package_present": true,
+          "expected_entry_count": 2,
+          "observed_entry_count": 2,
+          "unexpected_entries": [],
+          "missing_entries": [],
+          "registration": {
+            "registration_schema_version": "0.2.0",
+            "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+            "contract_sha256": "fcf0e45cbf9d999b542ffa43df1df0aaa1dd33e02d76b6063baf94eaa023e692",
+            "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+            "generated_at_utc": "2026-07-21T18:40:41Z",
+            "run_id": "BL-2026-07-21-petes-lake-optical-pre-r001",
+            "synthetic_fixture": false,
+            "asset_count": 1,
+            "assets": [
+              {
+                "role": "petes-lake-2023-pre",
+                "source_record_id": "SOURCE-2026-028",
+                "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+                "filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+                "bytes": 1185284273,
+                "sha256": "c5b6ededc5a264fcc617f2712093b847351c5b8ed78f2ea9ce0ebc3a33e1bc34",
+                "md5": "c41d10e4e895839132c0ad4ee47100e1",
+                "blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+              }
+            ]
+          },
+          "observations": [
+            {
+              "role": "petes-lake-2023-pre",
+              "source_record_id": "SOURCE-2026-028",
+              "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+              "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+              "expected_filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+              "expected_size_bytes": 1185284273,
+              "container": "zip-safe",
+              "observed_bytes": 1185284273,
+              "observed_magic_hex": "504b030414000808",
+              "container_details": {
+                "member_count": 95,
+                "uncompressed_bytes": 1185249287,
+                "expected_root": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+                "manifest_present": true,
+                "crc_test_passed": true
+              },
+              "provider_checksum_available": true,
+              "accepted": true,
+              "local_hashes": {
+                "sha256": "c5b6ededc5a264fcc617f2712093b847351c5b8ed78f2ea9ce0ebc3a33e1bc34",
+                "md5": "c41d10e4e895839132c0ad4ee47100e1",
+                "blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+              },
+              "reason_codes": [
+                "EXACT_ASSET_ACCEPTED"
+              ]
+            }
+          ],
+          "accepted_as_unchanged_registered_package": true,
+          "reason_codes": [
+            "REGISTERED_PACKAGE_VERIFIED"
+          ]
+        },
+        "disposition": "pass",
+        "next_dependency": "petes-lake-2023-post"
+      },
+      {
+        "unit_id": "P2O4-T33-U02",
+        "generated_at_utc": "2026-07-21T18:40:41Z",
+        "event_id": "OR4396912190120230825",
+        "event_group_id": "event-petes-lake-2023",
+        "pair_id": "petes-lake-s2-optical-pair-v0.1.0",
+        "run_id": "BL-2026-07-21-petes-lake-optical-post-r001",
+        "role": "petes-lake-2023-post",
+        "package_id": "petes-lake-s2-optical-post-v0.1.0",
+        "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+        "trace": {
+          "repository": "drwbkr1/burnlens-deschutes",
+          "git_source_commit": "31eedcddff0a712001181fd282f18f0e41ed5412",
+          "branch": "codex/p2o4-t33-petes-lake-milestone",
+          "task_issue": 521,
+          "git_base_commit": "0d41942dc6c3c307a9a146a2d38fb816e038bb42",
+          "u01_entry_commit": "f59b874d92a0e86d0121759d1c40fbe8ba5c2edc",
+          "entry_gate_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-ENTRY-GATE-2026-001.json",
+          "entry_gate_bytes": 18270,
+          "entry_gate_sha256": "ac5d7498f847e0df973c58445188b422d919dc5c195e832e518ba5dbf11d6bec"
+        },
+        "metadata_snapshot": {
+          "observed_at_utc": "2026-07-21T18:43:18.731216Z",
+          "source_record_id": "SOURCE-2026-028",
+          "terms_review_id": "TERMS-2026-024",
+          "live_refresh_performed": true,
+          "route_precedence": {
+            "identity_authority": "Frozen STAC item, CDSE UUID, SAFE name, sensing time, tile, orbit, and processing baseline must agree.",
+            "archive_authority": "Current CDSE OData content length plus MD5 and BLAKE3 govern each acquired archive.",
+            "cloud_metadata_reconciliation": "Exact current OData cloudCover and the frozen U01 STAC eo:cloud_cover are retained separately. A deterministic two-decimal comparison must agree; neither catalogue field establishes local pixel fitness.",
+            "transaction_order": "The pre archive is one singleton transaction and must pass promotion plus post-promotion verification before the post archive may be requested.",
+            "quality_boundary": "Tile-wide cloud and snow metadata are discovery context only; U03 must inspect local SCL, snow, cloud, shadow, smoke, pixels, and registration."
+          },
+          "records": [
+            {
+              "role": "petes-lake-2023-post",
+              "event_id": "OR4396912190120230825",
+              "event_group_id": "event-petes-lake-2023",
+              "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+              "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+              "size_bytes": 1243068088,
+              "online": true,
+              "acquisition_utc": "2023-10-29T19:05:11.024000Z",
+              "publication_utc": "2025-04-26T01:36:23.665011Z",
+              "s3_path": "/eodata/Sentinel-2/MSI/L2A_N0500/2023/10/29/S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+              "provider_checksums": {
+                "MD5": "bf9383d434448998f5025494d0a43320",
+                "BLAKE3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+              },
+              "platform_serial_identifier": "A",
+              "tile_id": "10TEP",
+              "relative_orbit_number": 13,
+              "processor_version": "05.10",
+              "product_type": "S2MSI2A",
+              "cloud_cover_percent": 0.008789,
+              "cloud_cover_source": "current CDSE OData Attributes cloudCover",
+              "cloud_cover_comparison_2dp": 0.01,
+              "frozen_stac_cloud_cover_percent": 0.01,
+              "cloud_metadata_reconciliation_version": "petes-lake-cloud-metadata-reconciliation-v0.1.0",
+              "catalogue_snow_percent": 9.841206,
+              "catalogue_snow_source": "frozen current CDSE STAC identity from P2O4-T33-U01"
+            }
+          ]
+        },
+        "contract": {
+          "role": "petes-lake-2023-post",
+          "provider": "Copernicus Data Space Ecosystem",
+          "source_record_id": "SOURCE-2026-028",
+          "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+          "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+          "expected_filename": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE.zip",
+          "expected_size_bytes": 1243068088,
+          "package_id": "petes-lake-s2-optical-post-v0.1.0",
+          "provider_md5": "bf9383d434448998f5025494d0a43320",
+          "provider_blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105",
+          "expected_zip_root": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE"
+        },
+        "quarantine_path": "downloads/phase-two/quarantine/P2O4-T33-U02/petes-lake-optical-post-r001",
+        "destination_path": "downloads/phase-two/raw/petes-lake-s2-optical-post-v0.1.0",
+        "decision": "REGISTERED_EXACT_PETES_LAKE_SINGLETON",
+        "credentials_exercised": true,
+        "download": {
+          "role": "petes-lake-2023-post",
+          "status": "DOWNLOADED",
+          "bytes": 1243068088,
+          "resumed_from_bytes": 0,
+          "safe_final_endpoint": "https://download.dataspace.copernicus.eu/odata/v1/Products(80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6)/$value",
+          "attempt_count": 1
+        },
+        "registration": {
+          "registration_schema_version": "0.2.0",
+          "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+          "contract_sha256": "64124a35c48eedf8f5b70c7934259022f50d3f58d1a82c2bf362eb33000cd60e",
+          "package_id": "petes-lake-s2-optical-post-v0.1.0",
+          "generated_at_utc": "2026-07-21T18:40:41Z",
+          "run_id": "BL-2026-07-21-petes-lake-optical-post-r001",
+          "synthetic_fixture": false,
+          "asset_count": 1,
+          "assets": [
+            {
+              "role": "petes-lake-2023-post",
+              "source_record_id": "SOURCE-2026-028",
+              "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+              "filename": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE.zip",
+              "bytes": 1243068088,
+              "sha256": "636a3cafe66c16cb20c9fd490a7ad448c939e3476d9ac0a404576638c2cd3a25",
+              "md5": "bf9383d434448998f5025494d0a43320",
+              "blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+            }
+          ]
+        },
+        "verification": {
+          "package_id": "petes-lake-s2-optical-post-v0.1.0",
+          "registration_manifest_name": ".burnlens-registration.json",
+          "registration_manifest_link_count": 1,
+          "registration_manifest_sha256": "c1321b878fae9495d7eb8810a43c0b4b5254053373b91459fa8f42951c3173d7",
+          "multilink_registration_manifest_allowed": true,
+          "registered_package_present": true,
+          "expected_entry_count": 2,
+          "observed_entry_count": 2,
+          "unexpected_entries": [],
+          "missing_entries": [],
+          "registration": {
+            "registration_schema_version": "0.2.0",
+            "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+            "contract_sha256": "64124a35c48eedf8f5b70c7934259022f50d3f58d1a82c2bf362eb33000cd60e",
+            "package_id": "petes-lake-s2-optical-post-v0.1.0",
+            "generated_at_utc": "2026-07-21T18:40:41Z",
+            "run_id": "BL-2026-07-21-petes-lake-optical-post-r001",
+            "synthetic_fixture": false,
+            "asset_count": 1,
+            "assets": [
+              {
+                "role": "petes-lake-2023-post",
+                "source_record_id": "SOURCE-2026-028",
+                "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+                "filename": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE.zip",
+                "bytes": 1243068088,
+                "sha256": "636a3cafe66c16cb20c9fd490a7ad448c939e3476d9ac0a404576638c2cd3a25",
+                "md5": "bf9383d434448998f5025494d0a43320",
+                "blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+              }
+            ]
+          },
+          "observations": [
+            {
+              "role": "petes-lake-2023-post",
+              "source_record_id": "SOURCE-2026-028",
+              "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+              "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+              "expected_filename": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE.zip",
+              "expected_size_bytes": 1243068088,
+              "container": "zip-safe",
+              "observed_bytes": 1243068088,
+              "observed_magic_hex": "504b030414000808",
+              "container_details": {
+                "member_count": 95,
+                "uncompressed_bytes": 1243033102,
+                "expected_root": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+                "manifest_present": true,
+                "crc_test_passed": true
+              },
+              "provider_checksum_available": true,
+              "accepted": true,
+              "local_hashes": {
+                "sha256": "636a3cafe66c16cb20c9fd490a7ad448c939e3476d9ac0a404576638c2cd3a25",
+                "md5": "bf9383d434448998f5025494d0a43320",
+                "blake3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+              },
+              "reason_codes": [
+                "EXACT_ASSET_ACCEPTED"
+              ]
+            }
+          ],
+          "accepted_as_unchanged_registered_package": true,
+          "reason_codes": [
+            "REGISTERED_PACKAGE_VERIFIED"
+          ]
+        },
+        "disposition": "pass",
+        "next_dependency": "P2O4-T33-U03"
+      }
+    ],
+    "gate_results": {
+      "exact_ordered_contracts": "pass",
+      "separate_live_metadata_refreshes": "pass",
+      "pre_singleton_promotion_reopen_and_post_verification": "pass",
+      "post_request_after_pre_verification_and_state": "pass",
+      "post_singleton_promotion_reopen_and_post_verification": "pass",
+      "local_sha256_md5_blake3": "pass",
+      "no_overwrite_final_paths_and_run_ids": "pass",
+      "archive_pixel_fitness": "not executed; P2O4-T33-U03"
+    },
+    "disposition": "pass",
+    "decision": "PASS_PETES_LAKE_OPTICAL_CUSTODY_AUTHORIZE_U03_ONLY",
+    "u03_authorized": true,
+    "next_dependency": "P2O4-T33-U03",
+    "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+  }
+}

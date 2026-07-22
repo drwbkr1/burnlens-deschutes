@@ -1,0 +1,991 @@
+{
+  "report_id": "PETES-LAKE-REFERENCE-NATIVE-CONTRACT-2026-001",
+  "report_version": "petes-lake-reference-native-contract-v0.1.0",
+  "protocol_version": "petes-lake-reference-native-contract-protocol-v0.1.0",
+  "unit_id": "P2O4-T33-U04",
+  "generated_at_utc": "2026-07-21T23:30:19.425Z",
+  "run_id": "BL-2026-07-21-petes-lake-reference-native-contract-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 521,
+  "git_source_commit": "20d6991cbc079f87db6a789717ebd01595c0b05c",
+  "software_version": "0.44.0",
+  "application_version": null,
+  "event": {
+    "event_id": "OR4396912190120230825",
+    "event_name": "PETES LAKE",
+    "event_group_id": "event-petes-lake-2023",
+    "geography_group_id": "geo-mtbs-or4396912190120230825",
+    "map_id": 10031414,
+    "map_program": "MTBS"
+  },
+  "trace": {
+    "request_run_id": "BL-2026-07-21-petes-lake-reference-request-r001",
+    "request_receipt_bytes": 4775,
+    "request_receipt_sha256": "8f29336c5c9f79a0ceb90b65f97f9434b71bbad8087b6dda36abf188a92aa595",
+    "custody_run_id": "BL-2026-07-21-petes-lake-reference-delivery-r001",
+    "custody_state_bytes": 3841,
+    "custody_state_sha256": "5a65cada71c845395001a109e8a93129abd4baa8691697176f6e6be3e93007b5",
+    "source_record_id": "SOURCE-2026-029",
+    "terms_review_id": "TERMS-2026-025",
+    "upstream_optical_run_id": "BL-2026-07-21-petes-lake-replacement-source-fitness-r002",
+    "upstream_optical_report_sha256": "1aa88c0021c610e492d2645e3f2c49a4afe96d9d907e2ee4481948a4c58f2ebd",
+    "aoi_version": "multi-event-native-grids-v0.3.0",
+    "target_version": "target-burn-scar-v0.2.0",
+    "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "prior_label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+    "petes_lake_label_set_version": null,
+    "dataset_version": null,
+    "split_version": null,
+    "baseline_version": null,
+    "model_version": null
+  },
+  "native_contract": {
+    "archive": {
+      "filename": "petes-lake-mtbs-reference-delivery-001.zip",
+      "provider_filename_retained": false,
+      "bytes": 5963437,
+      "sha256": "f17db688309c72eb84460f67476c116525ae3727bddfd406a8616f1fe0fad6da",
+      "member_count": 20,
+      "uncompressed_bytes": 7676106,
+      "expansion_ratio": 1.2872,
+      "map_ids_in_member_names": [
+        10031414
+      ],
+      "notice_candidates": [
+        "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_iso_metadata.xml",
+        "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_metadata.xml"
+      ],
+      "crc_pass": true,
+      "safe_structure_pass": true,
+      "exact_contract_pass": true,
+      "single_link": true,
+      "private_delivery_route_retained": false
+    },
+    "root": "mtbs/2023/mtbs_or4396912190120230825_10031414/",
+    "directory_members": [
+      "mtbs/",
+      "mtbs/2023/",
+      "mtbs/2023/mtbs_or4396912190120230825_10031414/"
+    ],
+    "member_manifest": [
+      {
+        "role": "directory",
+        "member": "mtbs/",
+        "is_directory": true,
+        "bytes": 0,
+        "compressed_bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "role": "directory",
+        "member": "mtbs/2023/",
+        "is_directory": true,
+        "bytes": 0,
+        "compressed_bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "role": "directory",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/",
+        "is_directory": true,
+        "bytes": 0,
+        "compressed_bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "role": "kmz",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811.kmz",
+        "is_directory": false,
+        "bytes": 1184347,
+        "compressed_bytes": 995311,
+        "crc32": "7f78b703",
+        "sha256": "205b5f118e902b3433f1d978c27af537e988924bd14734c53e032f0107c04167"
+      },
+      {
+        "role": "pdf",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811.pdf",
+        "is_directory": false,
+        "bytes": 1660322,
+        "compressed_bytes": 1609321,
+        "crc32": "1e788f9f",
+        "sha256": "f2ed80ccb4f11646b4d7c478b7bf4f154ea111dcc30a6417e28e79e39e6aef59"
+      },
+      {
+        "role": "burn_area_dbf",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.dbf",
+        "is_directory": false,
+        "bytes": 3397,
+        "compressed_bytes": 508,
+        "crc32": "d7b900be",
+        "sha256": "008a67da6944239b88b7b0ccc4cebd1258164fb05f7e30f5f165350d9f9f604a"
+      },
+      {
+        "role": "burn_area_prj",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.prj",
+        "is_directory": false,
+        "bytes": 403,
+        "compressed_bytes": 259,
+        "crc32": "80ee1084",
+        "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+      },
+      {
+        "role": "burn_area_shp",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.shp",
+        "is_directory": false,
+        "bytes": 11740,
+        "compressed_bytes": 9010,
+        "crc32": "d970434f",
+        "sha256": "ccfa5e92d8d006c9fad1ade22472389934964ce40d081d30032dbe292d97213a"
+      },
+      {
+        "role": "burn_area_shx",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.shx",
+        "is_directory": false,
+        "bytes": 108,
+        "compressed_bytes": 59,
+        "crc32": "2d21afba",
+        "sha256": "7d067c890a2ea6b4efad53c1d04cb3e29633e62b9aa5ac747d1c95c1bce0ab39"
+      },
+      {
+        "role": "dnbr",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_dnbr.tif",
+        "is_directory": false,
+        "bytes": 325263,
+        "compressed_bytes": 188646,
+        "crc32": "631ea8c9",
+        "sha256": "f44141de807f9ec9f705c24562ca1141fc610836ed8326ba70276dd17c4c558b"
+      },
+      {
+        "role": "dnbr6",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_dnbr6.tif",
+        "is_directory": false,
+        "bytes": 166098,
+        "compressed_bytes": 5119,
+        "crc32": "5a3b68cf",
+        "sha256": "b1fe3c64aada627579e623ca31eb262b907724c0be79691c99acb1c6bac77555"
+      },
+      {
+        "role": "iso_metadata",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_iso_metadata.xml",
+        "is_directory": false,
+        "bytes": 53205,
+        "compressed_bytes": 11712,
+        "crc32": "060d4a4e",
+        "sha256": "eff0822a866dc23c7755fd67f5eefeafe6d637df12bc33b2faab2f3dc7604c4e"
+      },
+      {
+        "role": "mask_area_dbf",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.dbf",
+        "is_directory": false,
+        "bytes": 935,
+        "compressed_bytes": 161,
+        "crc32": "3d1272a3",
+        "sha256": "c9bfa4d318ca21f46271c1cd8f1810cd47282d2d53e1848c284f078ff7d50eae"
+      },
+      {
+        "role": "mask_area_prj",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.prj",
+        "is_directory": false,
+        "bytes": 403,
+        "compressed_bytes": 259,
+        "crc32": "80ee1084",
+        "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+      },
+      {
+        "role": "mask_area_shp",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.shp",
+        "is_directory": false,
+        "bytes": 5588,
+        "compressed_bytes": 3907,
+        "crc32": "db3d786b",
+        "sha256": "f359a0ce6e9f48deedbce060f96e7b18f7be484eab441a053f9234ab6d38c569"
+      },
+      {
+        "role": "mask_area_shx",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.shx",
+        "is_directory": false,
+        "bytes": 108,
+        "compressed_bytes": 58,
+        "crc32": "c6efd8cd",
+        "sha256": "4c5be6f18bf5e51c443bc687a188837e8a594064ff0c0a127bd9c5d20ff8b5ef"
+      },
+      {
+        "role": "fgdc_metadata",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_metadata.xml",
+        "is_directory": false,
+        "bytes": 38018,
+        "compressed_bytes": 10677,
+        "crc32": "9208584e",
+        "sha256": "b7d1832aef2a3a95b3c3fda01563daf04a98c8611586c9bf0d6ad3a170678411"
+      },
+      {
+        "role": "rdnbr",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_rdnbr.tif",
+        "is_directory": false,
+        "bytes": 325263,
+        "compressed_bytes": 197753,
+        "crc32": "2aedbf2d",
+        "sha256": "93c91da3ad02a3f18ce567ceb0ea5bd6ba672f07786482305b3c1d586f4ec6ec"
+      },
+      {
+        "role": "pre_reflectance",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_l9_refl.tif",
+        "is_directory": false,
+        "bytes": 1950454,
+        "compressed_bytes": 1461938,
+        "crc32": "92e70865",
+        "sha256": "bff652ae4ccab66de9ee844a8a586f35e22133df49727f924bf6eee2c0787dd2"
+      },
+      {
+        "role": "post_reflectance",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20240811_l8_refl.tif",
+        "is_directory": false,
+        "bytes": 1950454,
+        "compressed_bytes": 1463339,
+        "crc32": "2809e4f7",
+        "sha256": "ba7e0e6c895c091218d9db483c093667f04503846ab483aaa7f0fe2f9e3e0887"
+      }
+    ],
+    "member_manifest_sha256": "25e60214418dc3fcb1c619ee6f57b7512448b955a67e499710fa39f3e32388b0",
+    "notice_and_terms_gate": {
+      "gate": "PASS_EXACT_DELIVERED_NOTICES_BEFORE_NATIVE_PIXEL_OPEN",
+      "notice_candidates": [
+        {
+          "role": "fgdc_metadata",
+          "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_metadata.xml",
+          "bytes": 38018,
+          "sha256": "b7d1832aef2a3a95b3c3fda01563daf04a98c8611586c9bf0d6ad3a170678411",
+          "xml_root": "metadata"
+        },
+        {
+          "role": "iso_metadata",
+          "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_iso_metadata.xml",
+          "bytes": 53205,
+          "sha256": "eff0822a866dc23c7755fd67f5eefeafe6d637df12bc33b2faab2f3dc7604c4e",
+          "xml_root": "MD_Metadata"
+        }
+      ],
+      "access_constraints": "None",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
+      "credit": "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "wetland_warning": "Fire severity could be misrepresented in wetland areas.",
+      "revision_without_notice_warning_present": true,
+      "archive_specific_conflict_found": false,
+      "unresolved_third_party_term_found": false,
+      "intended_local_analysis_and_bounded_derived_evidence_permitted": true
+    },
+    "notice_gate_completed_before_raster_open": true,
+    "boundary_and_mask_vectors": {
+      "burn_area": {
+        "parts": {
+          "shp": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.shp",
+            "bytes": 11740,
+            "sha256": "ccfa5e92d8d006c9fad1ade22472389934964ce40d081d30032dbe292d97213a",
+            "shape_type": 5,
+            "record_count": 1,
+            "bbox": [
+              584575.744345442,
+              4866352.71030994,
+              591529.92557144,
+              4871510.032060576
+            ]
+          },
+          "shx": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.shx",
+            "bytes": 108,
+            "sha256": "7d067c890a2ea6b4efad53c1d04cb3e29633e62b9aa5ac747d1c95c1bce0ab39"
+          },
+          "dbf": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.dbf",
+            "bytes": 3397,
+            "sha256": "008a67da6944239b88b7b0ccc4cebd1258164fb05f7e30f5f165350d9f9f604a",
+            "record_count": 1
+          },
+          "prj": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_burn_area.prj",
+            "bytes": 403,
+            "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f",
+            "crs": "EPSG:32610"
+          }
+        },
+        "attributes": {
+          "EVENT_ID": "OR4396912190120230825",
+          "IRWINID": "B4361260-2C9A-40BB-BEA8-D92B96122CB1",
+          "INCID_NAME": "PETES LAKE",
+          "INCID_TYPE": "Wildfire",
+          "MAP_ID": "10031414",
+          "MAP_PROG": "MTBS",
+          "ASMNT_TYPE": "Extended",
+          "BURNBNDAC": "3372",
+          "BURNBNDLAT": "43.968",
+          "BURNBNDLON": "-121.91",
+          "IG_DATE": "20230825",
+          "PRE_ID": "904502920230801",
+          "POST_ID": "804502920240811",
+          "PERIM_ID": "",
+          "DNBR_OFFST": "14",
+          "DNBR_STDDV": "16",
+          "NODATA_T": "-970",
+          "INCGREEN_T": "-150",
+          "LOW_T": "70",
+          "MOD_T": "330",
+          "HIGH_T": "570",
+          "COMMENT": "Fire severity could be misrepresented in wetland areas."
+        }
+      },
+      "mask_area": {
+        "parts": {
+          "shp": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.shp",
+            "bytes": 5588,
+            "sha256": "f359a0ce6e9f48deedbce060f96e7b18f7be484eab441a053f9234ab6d38c569",
+            "shape_type": 5,
+            "record_count": 1,
+            "bbox": [
+              584626.94496665,
+              4866700.778895079,
+              589858.055213389,
+              4871120.171460168
+            ]
+          },
+          "shx": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.shx",
+            "bytes": 108,
+            "sha256": "4c5be6f18bf5e51c443bc687a188837e8a594064ff0c0a127bd9c5d20ff8b5ef"
+          },
+          "dbf": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.dbf",
+            "bytes": 935,
+            "sha256": "c9bfa4d318ca21f46271c1cd8f1810cd47282d2d53e1848c284f078ff7d50eae",
+            "record_count": 1
+          },
+          "prj": {
+            "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_mask_area.prj",
+            "bytes": 403,
+            "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f",
+            "crs": "EPSG:32610"
+          }
+        },
+        "attributes": {
+          "EVENT_ID": "OR4396912190120230825",
+          "IRWINID": "B4361260-2C9A-40BB-BEA8-D92B96122CB1",
+          "INCID_NAME": "PETES LAKE",
+          "MAP_ID": "10031414"
+        }
+      },
+      "threshold_reconciliation": {
+        "wfs_raw_fields": {
+          "mod_t": 570,
+          "high_t": 330
+        },
+        "delivered_dbf_semantic_fields": {
+          "MOD_T": 330,
+          "HIGH_T": 570
+        },
+        "silent_normalization": false,
+        "disposition": "PRESERVE_DISTINCT_RAW_SOURCE_FIELDS_AND_USE_DELIVERED_DBF_NAMES_ONLY"
+      }
+    },
+    "media": {
+      "pdf": {
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811.pdf",
+        "bytes": 1660322,
+        "sha256": "f2ed80ccb4f11646b4d7c478b7bf4f154ea111dcc30a6417e28e79e39e6aef59",
+        "magic": "%PDF-"
+      },
+      "kmz": {
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811.kmz",
+        "bytes": 1184347,
+        "sha256": "205b5f118e902b3433f1d978c27af537e988924bd14734c53e032f0107c04167",
+        "member_count": 188,
+        "uncompressed_bytes": 1181609,
+        "event_kml": "OR4396912190120230825.kml",
+        "suffixes": [
+          ".kml",
+          ".png"
+        ],
+        "safe_structure": true,
+        "crc_pass": true
+      }
+    },
+    "native_rasters": [
+      {
+        "role": "pre_reflectance",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_l9_refl.tif",
+        "bytes": 1950454,
+        "sha256": "bff652ae4ccab66de9ee844a8a586f35e22133df49727f924bf6eee2c0787dd2",
+        "driver": "GTiff",
+        "width": 434,
+        "height": 374,
+        "band_count": 6,
+        "dtypes": [
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16"
+        ],
+        "crs": "EPSG:32610",
+        "resolution_m": [
+          30.0,
+          30.0
+        ],
+        "transform": [
+          30.0,
+          0.0,
+          581520.0,
+          0.0,
+          -30.0,
+          4874520.0
+        ],
+        "bounds": [
+          581520.0,
+          4863300.0,
+          594540.0,
+          4874520.0
+        ],
+        "nodata_values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mask_flags": [
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ]
+        ],
+        "all_bands_read": true,
+        "band_summaries": [
+          {
+            "band": 1,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 696.0,
+            "valid_max": 1300.0,
+            "encoded_unique_count": 458,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 696.0,
+              "p01": 735.0,
+              "p10": 757.0,
+              "p50": 785.0,
+              "p90": 826.0,
+              "p99": 903.0,
+              "max": 1300.0
+            }
+          },
+          {
+            "band": 2,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 424.0,
+            "valid_max": 1184.0,
+            "encoded_unique_count": 642,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 424.0,
+              "p01": 525.0,
+              "p10": 573.0,
+              "p50": 616.0,
+              "p90": 679.0,
+              "p99": 782.0,
+              "max": 1184.0
+            }
+          },
+          {
+            "band": 3,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 231.0,
+            "valid_max": 1266.0,
+            "encoded_unique_count": 863,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 231.0,
+              "p01": 321.0,
+              "p10": 365.0,
+              "p50": 418.0,
+              "p90": 526.0,
+              "p99": 694.0,
+              "max": 1266.0
+            }
+          },
+          {
+            "band": 4,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 30.0,
+            "valid_max": 5099.0,
+            "encoded_unique_count": 3352,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 30.0,
+              "p01": 237.0,
+              "p10": 1612.0,
+              "p50": 1879.0,
+              "p90": 2244.0,
+              "p99": 2822.0,
+              "max": 5099.0
+            }
+          },
+          {
+            "band": 5,
+            "valid_pixels": 161508,
+            "nodata_pixels": 808,
+            "valid_min": 11.0,
+            "valid_max": 3423.0,
+            "encoded_unique_count": 2679,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 11.0,
+              "p01": 86.0,
+              "p10": 610.0,
+              "p50": 820.0,
+              "p90": 1297.0,
+              "p99": 1881.0,
+              "max": 3423.0
+            }
+          },
+          {
+            "band": 6,
+            "valid_pixels": 161507,
+            "nodata_pixels": 809,
+            "valid_min": 9.0,
+            "valid_max": 2619.0,
+            "encoded_unique_count": 1842,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 9.0,
+              "p01": 56.0,
+              "p10": 248.0,
+              "p50": 394.0,
+              "p90": 722.0,
+              "p99": 1150.0,
+              "max": 2619.0
+            }
+          }
+        ]
+      },
+      {
+        "role": "post_reflectance",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20240811_l8_refl.tif",
+        "bytes": 1950454,
+        "sha256": "ba7e0e6c895c091218d9db483c093667f04503846ab483aaa7f0fe2f9e3e0887",
+        "driver": "GTiff",
+        "width": 434,
+        "height": 374,
+        "band_count": 6,
+        "dtypes": [
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16",
+          "uint16"
+        ],
+        "crs": "EPSG:32610",
+        "resolution_m": [
+          30.0,
+          30.0
+        ],
+        "transform": [
+          30.0,
+          0.0,
+          581520.0,
+          0.0,
+          -30.0,
+          4874520.0
+        ],
+        "bounds": [
+          581520.0,
+          4863300.0,
+          594540.0,
+          4874520.0
+        ],
+        "nodata_values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mask_flags": [
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ],
+          [
+            "nodata"
+          ]
+        ],
+        "all_bands_read": true,
+        "band_summaries": [
+          {
+            "band": 1,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 657.0,
+            "valid_max": 1298.0,
+            "encoded_unique_count": 480,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 657.0,
+              "p01": 688.0,
+              "p10": 706.0,
+              "p50": 735.0,
+              "p90": 797.0,
+              "p99": 909.0,
+              "max": 1298.0
+            }
+          },
+          {
+            "band": 2,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 370.0,
+            "valid_max": 1204.0,
+            "encoded_unique_count": 673,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 370.0,
+              "p01": 465.0,
+              "p10": 515.0,
+              "p50": 561.0,
+              "p90": 638.0,
+              "p99": 756.0,
+              "max": 1204.0
+            }
+          },
+          {
+            "band": 3,
+            "valid_pixels": 161509,
+            "nodata_pixels": 807,
+            "valid_min": 189.0,
+            "valid_max": 1259.0,
+            "encoded_unique_count": 878,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 189.0,
+              "p01": 269.0,
+              "p10": 318.0,
+              "p50": 371.0,
+              "p90": 542.0,
+              "p99": 752.0,
+              "max": 1259.0
+            }
+          },
+          {
+            "band": 4,
+            "valid_pixels": 161508,
+            "nodata_pixels": 808,
+            "valid_min": 19.0,
+            "valid_max": 4775.0,
+            "encoded_unique_count": 3238,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 19.0,
+              "p01": 157.0,
+              "p10": 1357.0,
+              "p50": 1727.0,
+              "p90": 2050.0,
+              "p99": 2591.0,
+              "max": 4775.0
+            }
+          },
+          {
+            "band": 5,
+            "valid_pixels": 161503,
+            "nodata_pixels": 813,
+            "valid_min": 1.0,
+            "valid_max": 3386.0,
+            "encoded_unique_count": 2737,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 1.0,
+              "p01": 59.0,
+              "p10": 564.0,
+              "p50": 773.0,
+              "p90": 1401.0,
+              "p99": 2002.0,
+              "max": 3386.0
+            }
+          },
+          {
+            "band": 6,
+            "valid_pixels": 161505,
+            "nodata_pixels": 811,
+            "valid_min": 1.0,
+            "valid_max": 2538.0,
+            "encoded_unique_count": 1997,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": 1.0,
+              "p01": 38.0,
+              "p10": 227.0,
+              "p50": 367.0,
+              "p90": 828.0,
+              "p99": 1613.96,
+              "max": 2538.0
+            }
+          }
+        ]
+      },
+      {
+        "role": "dnbr",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_dnbr.tif",
+        "bytes": 325263,
+        "sha256": "f44141de807f9ec9f705c24562ca1141fc610836ed8326ba70276dd17c4c558b",
+        "driver": "GTiff",
+        "width": 434,
+        "height": 374,
+        "band_count": 1,
+        "dtypes": [
+          "int16"
+        ],
+        "crs": "EPSG:32610",
+        "resolution_m": [
+          30.0,
+          30.0
+        ],
+        "transform": [
+          30.0,
+          0.0,
+          581520.0,
+          0.0,
+          -30.0,
+          4874520.0
+        ],
+        "bounds": [
+          581520.0,
+          4863300.0,
+          594540.0,
+          4874520.0
+        ],
+        "nodata_values": [
+          -32768.0
+        ],
+        "mask_flags": [
+          [
+            "nodata"
+          ]
+        ],
+        "all_bands_read": true,
+        "band_summaries": [
+          {
+            "band": 1,
+            "valid_pixels": 161508,
+            "nodata_pixels": 808,
+            "valid_min": -482.0,
+            "valid_max": 1173.0,
+            "encoded_unique_count": 1374,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": -482.0,
+              "p01": -64.0,
+              "p10": -32.0,
+              "p50": -3.0,
+              "p90": 57.0,
+              "p99": 817.0,
+              "max": 1173.0
+            }
+          }
+        ]
+      },
+      {
+        "role": "rdnbr",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_rdnbr.tif",
+        "bytes": 325263,
+        "sha256": "93c91da3ad02a3f18ce567ceb0ea5bd6ba672f07786482305b3c1d586f4ec6ec",
+        "driver": "GTiff",
+        "width": 434,
+        "height": 374,
+        "band_count": 1,
+        "dtypes": [
+          "int16"
+        ],
+        "crs": "EPSG:32610",
+        "resolution_m": [
+          30.0,
+          30.0
+        ],
+        "transform": [
+          30.0,
+          0.0,
+          581520.0,
+          0.0,
+          -30.0,
+          4874520.0
+        ],
+        "bounds": [
+          581520.0,
+          4863300.0,
+          594540.0,
+          4874520.0
+        ],
+        "nodata_values": [
+          -32768.0
+        ],
+        "mask_flags": [
+          [
+            "nodata"
+          ]
+        ],
+        "all_bands_read": true,
+        "band_summaries": [
+          {
+            "band": 1,
+            "valid_pixels": 161508,
+            "nodata_pixels": 808,
+            "valid_min": -2196.0,
+            "valid_max": 1323.0,
+            "encoded_unique_count": 1661,
+            "native_value_domain": null,
+            "valid_quantiles": {
+              "min": -2196.0,
+              "p01": -117.0,
+              "p10": -62.0,
+              "p50": -21.0,
+              "p90": 57.0,
+              "p99": 1061.0,
+              "max": 1323.0
+            }
+          }
+        ]
+      },
+      {
+        "role": "dnbr6",
+        "member": "mtbs/2023/mtbs_or4396912190120230825_10031414/mtbs_or4396912190120230825_10031414_20230801_20240811_dnbr6.tif",
+        "bytes": 166098,
+        "sha256": "b1fe3c64aada627579e623ca31eb262b907724c0be79691c99acb1c6bac77555",
+        "driver": "GTiff",
+        "width": 434,
+        "height": 374,
+        "band_count": 1,
+        "dtypes": [
+          "uint8"
+        ],
+        "crs": "EPSG:32610",
+        "resolution_m": [
+          30.0,
+          30.0
+        ],
+        "transform": [
+          30.0,
+          0.0,
+          581520.0,
+          0.0,
+          -30.0,
+          4874520.0
+        ],
+        "bounds": [
+          581520.0,
+          4863300.0,
+          594540.0,
+          4874520.0
+        ],
+        "nodata_values": [
+          0.0
+        ],
+        "mask_flags": [
+          [
+            "nodata"
+          ]
+        ],
+        "all_bands_read": true,
+        "band_summaries": [
+          {
+            "band": 1,
+            "valid_pixels": 15160,
+            "nodata_pixels": 147156,
+            "valid_min": 1.0,
+            "valid_max": 6.0,
+            "encoded_unique_count": 6,
+            "native_value_domain": {
+              "0": 147156,
+              "1": 1524,
+              "2": 3191,
+              "3": 4371,
+              "4": 5873,
+              "6": 201
+            },
+            "valid_quantiles": null
+          }
+        ]
+      }
+    ],
+    "native_grid_groups": 1,
+    "raster_resampling": "none",
+    "raster_reprojection": "none",
+    "class_semantics": {
+      "0": "outside_or_nodata_not_background_truth",
+      "1": "unburned_to_low_or_rapid_recovery_ambiguous_not_background_truth",
+      "2": "low_severity_reference_evidence",
+      "3": "moderate_severity_reference_evidence",
+      "4": "high_severity_reference_evidence",
+      "5": "increased_greenness_reference_evidence",
+      "6": "nonprocessing_mask_excluded"
+    },
+    "semantic_boundaries": {
+      "continuous_dnbr_is_change_context_not_a_label_threshold": true,
+      "continuous_rdnbr_is_change_context_not_a_label_threshold": true,
+      "class_zero_is_not_affirmative_background": true,
+      "class_one_is_ambiguous_not_affirmative_background": true,
+      "classes_two_through_four_are_bounded_reference_evidence_not_label_truth": true,
+      "class_six_and_mask_vector_are_excluded_nonprocessing_evidence": true,
+      "accepted_reference_pixels": 0
+    }
+  },
+  "decision": {
+    "code": "PASS_EXACT_PETES_LAKE_MTBS_NATIVE_REFERENCE_CONTRACT_FOR_U05",
+    "disposition": "pass",
+    "reference_role": "bounded_analyst_interpreted_revisable_official_reference_evidence",
+    "wetland_warning_status": "UNRESOLVED_MEASUREMENT_REQUIRED_IN_U05",
+    "accepted_reference_pixels": 0,
+    "next_dependency": "P2O4-T33-U05_OFFICIAL_REFERENCE_FITNESS_AND_SOURCE_PRECEDENCE"
+  },
+  "claim_boundaries": {
+    "official_or_operational_status": false,
+    "field_validation_or_endorsement": false,
+    "pixel_perfect_ground_truth": false,
+    "candidate_or_owner_response_created": false,
+    "prototype_label_created": false,
+    "dataset_split_baseline_model_created": false
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.45.0-petes-lake-material-defer - release candidate - 2026-07-22
+
+### P2O4-T33 - Preserve the complete Petes Lake milestone and stop honestly
+
+- Execute U01-U04 as one controlled evidence chain: exact live entry, 2.43 GB primary optical custody, an immutable snow-dominated planned-post failure, a same-regime replacement with explicit spatial exclusions, and one exact 5,963,437-byte MTBS native contract with zero accepted reference pixels.
+- Retain three disjoint NWI attempts without overwrite or partial scientific promotion. R001 preserves a fixed local qualified-field validator failure. R002 preserves seven promoted assets plus an unknown-cause provider-open failure. Final r003 preserves the same seven assets, then records only HTTP status 500 at its sole Data Source pre-count attempt; four assets remain unexecuted.
+- Select the material decision `defer`. No r004, U05 scientific-fitness run, production U06-U10, Petes candidate, owner surface, response, label, or sixth accepted event exists.
+- Add exact Petes optical/reference/NWI custody and inspection paths, manifest-bound owner-review batching and pre-reveal lock, constrained localhost review delivery, and a Python 3.12.10 locked geospatial environment.
+- Advance software to 0.45.0 for those material packaged capabilities while preserving the immutable Petes run outputs and their original 0.44.0 generation identity.
+- Retain initial candidate `9f44099922485b9c26b4cadcc029a67423434877` because clean-checkout U04 replay exposes a descendant-trace defect. Correction `fcbaa4c1044672352227f6a3047d998967d1d114` changes trace enforcement only; the exact U04 evidence, zero-reference-pixel boundary, and material-defer disposition do not change.
+- Keep `owner-approved-prototype-region-labels-v0.3.0` unchanged at five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Create no dataset, split, baseline, model, metric, deployment, field-validation, official, endorsed, operational, or emergency-ready claim.
+
+Issue #521; terminal r003 record checkpoint `52310531ad0b8e6d07800fc752f7bf65b5fdea9a`; candidate tag `v0.45.0-petes-lake-material-defer`. The 798,433-byte wheel / SHA-256 `8e3f28e1...` is superseded precursor evidence from failed candidate `9f440999...`. Clean package checkpoint `9b5d84a...` passes dual fresh-clone builds at 800,916 bytes / SHA-256 `4e0bd99f...`, locked isolated install, command checks, and installed exact-output replay. Reviewed-head equivalence, PR, true merge, fresh-main, and tag verification remain pending at this candidate stage. This is still the unreleased 0.45.0 candidate, not a 0.45.1 release. No GitHub Release object or deployment is planned.
+
 ## BL-GOV-003 - milestone checkpoint policy - 2026-07-21
 
 ### Distinguish evidence units from shipped checkpoints

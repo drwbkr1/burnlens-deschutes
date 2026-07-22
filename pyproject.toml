@@ -4,15 +4,32 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.44.0"
+version = "0.45.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
   "blake3==1.0.9",
   "h5py==3.16.0",
   "numpy==2.5.1",
-  "Pillow==12.2.0",
+  "Pillow==12.3.0",
   "rasterio==1.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==9.0.3",
+]
+geo-research = [
+  "boto3==1.43.52",
+  "geopandas==1.1.4",
+  "pyogrio==0.13.0",
+  "pyproj==3.7.2",
+  "pystac-client==0.9.0",
+  "rioxarray==0.22.0",
+  "shapely==2.1.2",
+  "xarray==2026.7.0",
 ]
 
 [project.scripts]
@@ -86,6 +103,17 @@ burnlens-lock-grandview-owner-response = "burnlens.lock_grandview_owner_response
 burnlens-build-grandview-owner-response-intake = "burnlens.build_grandview_owner_response_intake:main"
 burnlens-intake-green-ridge-owner-response = "burnlens.intake_green_ridge_owner_response:main"
 burnlens-build-green-ridge-owner-response-intake = "burnlens.build_green_ridge_owner_response_intake:main"
+burnlens-inspect-petes-lake-sources = "burnlens.inspect_petes_lake_source_fitness:main"
+burnlens-inspect-petes-lake-replacement-sources = "burnlens.inspect_petes_lake_replacement_source_fitness:main"
+burnlens-capture-petes-lake-replacement-post = "burnlens.capture_petes_lake_replacement_post:main"
+burnlens-acquire-petes-lake-replacement-post = "burnlens.acquire_petes_lake_replacement_post:main"
+burnlens-request-petes-lake-reference = "burnlens.request_petes_lake_reference:main"
+burnlens-preflight-petes-lake-reference-delivery = "burnlens.preflight_petes_lake_reference_delivery:main"
+burnlens-capture-petes-lake-reference-delivery = "burnlens.capture_petes_lake_reference_delivery:main"
+burnlens-inspect-petes-lake-reference-native-contract = "burnlens.inspect_petes_lake_reference_native_contract:main"
+burnlens-capture-petes-lake-wetland-custody = "burnlens.capture_petes_lake_wetland_custody:main"
+burnlens-inspect-petes-lake-reference-fitness = "burnlens.inspect_petes_lake_reference_fitness:main"
+burnlens-serve-review-surface = "burnlens.serve_review_surface:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
@@ -95,3 +123,6 @@ burnlens = ["*.mjs"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.uv]
+required-version = ">=0.10.7,<0.11"

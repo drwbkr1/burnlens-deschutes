@@ -1,0 +1,1763 @@
+{
+  "report_id": "PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001",
+  "report_version": "petes-lake-replacement-source-fitness-v0.1.0",
+  "protocol_version": "petes-lake-native-source-fitness-v0.2.0",
+  "generated_at_utc": "2026-07-21T21:49:10.2092124Z",
+  "run_id": "BL-2026-07-21-petes-lake-replacement-source-fitness-r002",
+  "unit_id": "P2O4-T33-U03_REPLACEMENT_SOURCE_FITNESS_R002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 521,
+  "git_source_commit": "d42022b5bfd1eb58f487666745e1d8f1c33db45c",
+  "software_version": "0.44.0",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "event": {
+    "event_group_id": "event-petes-lake-2023",
+    "fire_id": "OR4396912190120230825",
+    "fire_name": "PETES LAKE",
+    "ignition_date": "2023-08-25",
+    "boundary_geometry_sha256": "7165802079bf31654618124f05ff1346c43677883667939e79ddcf23106faa25",
+    "program_identities": [
+      {
+        "catalog_id": 50884,
+        "map_id": 10031414,
+        "program": "MTBS",
+        "incident_name": "PETES LAKE",
+        "boundary_acres": 3372,
+        "nonstandard": false
+      }
+    ],
+    "reference_pixel_status": "NOT_ACQUIRED_OR_OPENED_IN_THIS_RUN"
+  },
+  "custody": {
+    "contract_version": "petes-lake-optical-post-remediation-contract-v0.1.0",
+    "source_record_id": "SOURCE-2026-030",
+    "terms_review_id": "TERMS-2026-026",
+    "aggregate_run_id": "BL-2026-07-21-petes-lake-optical-remediation-intake-r001",
+    "report_id": "PETES-LAKE-OPTICAL-REMEDIATION-CUSTODY-2026-001",
+    "report_bytes": 22246,
+    "report_sha256": "e23d601959d09fb54fc6409f5a073df4f1a3a3a8a0d040e04a9b46c2594537b1",
+    "semantic_sha256": "78c888b4a3b954c4038a3454773b1cd7c922bc5f71957524e803ee6534d71f75",
+    "acquisition_trace_commit": "9cd81518c8fd859a950eab263e82dc9c9e406c59",
+    "original_pre_verification": {
+      "package_id": "petes-lake-s2-optical-pre-v0.1.0",
+      "role": "petes-lake-2023-pre",
+      "destination_path": "downloads/phase-two/raw/petes-lake-s2-optical-pre-v0.1.0",
+      "registration_run_id": "BL-2026-07-21-petes-lake-optical-pre-r001",
+      "registration_manifest_sha256": "260b0d3ae7c5415c110851874b09a43bf2e2b3c83e0539a764d8c0bd94077f32",
+      "registration_manifest_link_count": 1,
+      "asset": {
+        "role": "petes-lake-2023-pre",
+        "source_record_id": "SOURCE-2026-028",
+        "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+        "filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+        "bytes": 1185284273,
+        "sha256": "c5b6ededc5a264fcc617f2712093b847351c5b8ed78f2ea9ce0ebc3a33e1bc34",
+        "md5": "c41d10e4e895839132c0ad4ee47100e1",
+        "blake3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+      },
+      "fresh_verification_decision": "pass",
+      "provider_archive_request_performed": false
+    },
+    "replacement_post_verification": {
+      "package_id": "petes-lake-s2-optical-post-remediation-v0.2.0",
+      "registration_manifest_name": ".burnlens-registration.json",
+      "registration_manifest_link_count": 1,
+      "registration_manifest_sha256": "65c9ca00af753d6151275c2ed7088da03fc1da5b5a5d49dbf2dd18f4f6bab93c",
+      "multilink_registration_manifest_allowed": false,
+      "registered_package_present": true,
+      "expected_entry_count": 2,
+      "observed_entry_count": 2,
+      "unexpected_entries": [],
+      "missing_entries": [],
+      "registration": {
+        "registration_schema_version": "0.2.0",
+        "contract_version": "petes-lake-optical-post-remediation-contract-v0.1.0",
+        "contract_sha256": "d271b16da7581eed3b0f2efdc9d8cf9433673ac86d38929951774a191daefee3",
+        "package_id": "petes-lake-s2-optical-post-remediation-v0.2.0",
+        "generated_at_utc": "2026-07-21T21:05:57.352596Z",
+        "run_id": "BL-2026-07-21-petes-lake-optical-post-remediation-r001",
+        "synthetic_fixture": false,
+        "asset_count": 1,
+        "assets": [
+          {
+            "role": "optical-post-remediation",
+            "source_record_id": "SOURCE-2026-030",
+            "native_id": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE",
+            "filename": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE.zip",
+            "bytes": 1195226823,
+            "sha256": "8bf6ffac0d46d17b6f3716250aed9dff49b9f89b62a310c296a5d36f41a0e1d9",
+            "md5": "4cf05a073b4c67f5e92e052ed1eb32bc",
+            "blake3": "1b28f566aee5619ea9a48c8dd042f209194a40989ba4b54cfe4e14904a0ad878"
+          }
+        ]
+      },
+      "observations": [
+        {
+          "role": "optical-post-remediation",
+          "source_record_id": "SOURCE-2026-030",
+          "provider_id": "31fa8699-175b-4fd7-91c3-dd727a1576f5",
+          "native_id": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE",
+          "expected_filename": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE.zip",
+          "expected_size_bytes": 1195226823,
+          "container": "zip-safe",
+          "observed_bytes": 1195226823,
+          "observed_magic_hex": "504b030414000808",
+          "container_details": {
+            "member_count": 95,
+            "uncompressed_bytes": 1195191837,
+            "expected_root": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE",
+            "manifest_present": true,
+            "crc_test_passed": true
+          },
+          "provider_checksum_available": true,
+          "accepted": true,
+          "local_hashes": {
+            "sha256": "8bf6ffac0d46d17b6f3716250aed9dff49b9f89b62a310c296a5d36f41a0e1d9",
+            "md5": "4cf05a073b4c67f5e92e052ed1eb32bc",
+            "blake3": "1b28f566aee5619ea9a48c8dd042f209194a40989ba4b54cfe4e14904a0ad878"
+          },
+          "reason_codes": [
+            "EXACT_ASSET_ACCEPTED"
+          ]
+        }
+      ],
+      "accepted_as_unchanged_registered_package": true,
+      "reason_codes": [
+        "REGISTERED_PACKAGE_VERIFIED"
+      ]
+    }
+  },
+  "input_hashes": {
+    "additional_event_plan_sha256": "65fd567e234cbb521ead6b7071cab9914c672df169e3987af0c3ddfc66ccf622",
+    "additional_event_source_snapshot_sha256": "3d6ca59b8071461aa925a3b270300deea1f53c8bd46aedeaec10ddd5301fc241",
+    "failed_source_fitness_report_sha256": "ac9befd021d71ff779ec56ddefc894f4e39b92e64e65c2c4afb815663d1ad443",
+    "replacement_selection_report_sha256": "7fa82a61fa70d47364db29493700beedd60c9114a4b3a6d8ddbafdf77aecfc8c",
+    "replacement_custody_report_sha256": "e23d601959d09fb54fc6409f5a073df4f1a3a3a8a0d040e04a9b46c2594537b1",
+    "replacement_custody_semantic_sha256": "78c888b4a3b954c4038a3454773b1cd7c922bc5f71957524e803ee6534d71f75"
+  },
+  "prior_evidence": {
+    "failed_report_id": "PETES-LAKE-SOURCE-FITNESS-2026-001",
+    "failed_run_id": "BL-2026-07-21-petes-lake-source-fitness-r001",
+    "failed_decision": "FAIL_EXACT_PETES_LAKE_OPTICAL_SOURCE_FITNESS_REMEDIATE_POST_SCENE",
+    "selection_report_id": "PETES-LAKE-SOURCE-REMEDIATION-2026-001",
+    "selection_run_id": "BL-2026-07-21-petes-lake-replacement-post-selection-r001",
+    "selection_decision": "SELECT_REPLACEMENT_POST_AUTHORIZE_CONTRACT_REVISION_ONLY",
+    "disposition": "immutable historical evidence; not overwritten or hidden"
+  },
+  "source_precedence": {
+    "identity_authority": "Frozen STAC item, CDSE UUID, SAFE name, sensing time, tile, orbit, and processing baseline must agree.",
+    "archive_authority": "Current CDSE OData content length plus MD5 and BLAKE3 govern each acquired archive.",
+    "cloud_metadata_reconciliation": "Exact current OData cloudCover and the frozen U01 STAC eo:cloud_cover are retained separately. A deterministic two-decimal comparison must agree; neither catalogue field establishes local pixel fitness.",
+    "transaction_order": "The pre archive is one singleton transaction and must pass promotion plus post-promotion verification before the post archive may be requested.",
+    "quality_boundary": "Tile-wide cloud and snow metadata are discovery context only; U03 must inspect local SCL, snow, cloud, shadow, smoke, pixels, and registration."
+  },
+  "official_probability_semantics": {
+    "source": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S2L2A.html",
+    "checked_at_utc": "2026-07-21T21:49:10.2092124Z",
+    "snow": "Sen2Cor snow probability; native 20 m UINT8 percent in the 0-100 range.",
+    "cloud": "Sen2Cor cloud probability; native 20 m UINT8 percent in the 0-100 range.",
+    "role": "quality and uncertainty evidence only; never label truth"
+  },
+  "method": {
+    "boundary": "Full frozen MTBS boundary; crop covers it outward and counts pixel centers inside it without shrinking the geometry.",
+    "native_pixels": "TCI 10 m is preview only. B04, B8A, B12, SCL, CLD, and SNW remain on exact native EPSG:32610 grids with no reprojection, resampling, or upsampling.",
+    "quality": "SCL governs categorical pair quality. Native CLD/SNW values are summarized without a classification threshold and assign no label.",
+    "registration": "Independent B04/B8A/B12 reflectance gradients in deterministic event-scaled windows; the established untuned content-registration gate is reused.",
+    "visual": "The exact rendered pre, replacement post, and continuous dNBR panels must be inspected for cloud, smoke or haze, shadow, snow, clipping, and misleading display artifacts.",
+    "threshold_policy": "All source-fitness gates are inherited unchanged from r001; no threshold or gate is tuned to rescue the replacement scene."
+  },
+  "products": [
+    {
+      "role": "petes-lake-2023-pre",
+      "source_record_id": "SOURCE-2026-028",
+      "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+      "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+      "filename": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE.zip",
+      "product_metadata": {
+        "product_metadata_member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/MTD_MSIL2A.xml",
+        "tile_metadata_member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/MTD_TL.xml",
+        "product_uri": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+        "processing_baseline": "05.10",
+        "product_start_utc": "2023-07-21T18:59:21.024Z",
+        "generation_utc": "2024-09-11T10:32:05.000000Z",
+        "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20240911T103205_A042195_T10TEP_N05.10",
+        "sensing_time_utc": "2023-07-21T19:12:28.824459Z",
+        "horizontal_crs": "EPSG:32610",
+        "boa_quantification_value": 10000.0,
+        "boa_offsets": {
+          "B04": -1000.0,
+          "B8A": -1000.0,
+          "B12": -1000.0
+        },
+        "nodata_dn": 0,
+        "saturated_dn": 65535
+      },
+      "rasters": {
+        "TCI": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/IMG_DATA/R10m/T10TEP_20230721T185921_TCI_10m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 10,
+          "source_width": 10980,
+          "source_height": 10980,
+          "source_count": 3,
+          "source_dtype": [
+            "uint8",
+            "uint8",
+            "uint8"
+          ],
+          "source_transform": [
+            10.0,
+            0.0,
+            499980.0,
+            0.0,
+            -10.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            10.0,
+            0.0,
+            584570.0,
+            0.0,
+            -10.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 8459,
+            "row_offset": 2850,
+            "width": 696,
+            "height": 517
+          },
+          "crop_bounds_utm10n": [
+            584570.0,
+            4866350.0,
+            591530.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 136390,
+          "observed_inside_min": 0,
+          "observed_inside_max": 127
+        },
+        "B04": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/IMG_DATA/R20m/T10TEP_20230721T185921_B04_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 987,
+          "observed_inside_max": 2149
+        },
+        "B8A": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/IMG_DATA/R20m/T10TEP_20230721T185921_B8A_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 892,
+          "observed_inside_max": 7059
+        },
+        "B12": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/IMG_DATA/R20m/T10TEP_20230721T185921_B12_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 1039,
+          "observed_inside_max": 3344
+        },
+        "SCL": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/IMG_DATA/R20m/T10TEP_20230721T185921_SCL_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 2,
+          "observed_inside_max": 7
+        },
+        "CLD": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/QI_DATA/MSK_CLDPRB_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 0,
+          "observed_inside_max": 0
+        },
+        "SNW": {
+          "member": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE/GRANULE/L2A_T10TEP_A042195_20230721T190933/QI_DATA/MSK_SNWPRB_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 0,
+          "observed_inside_max": 0
+        }
+      },
+      "scl_summary_inside_full_boundary": {
+        "pixel_count": 34103,
+        "classes": [
+          {
+            "value": 0,
+            "name": "No data",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 1,
+            "name": "Saturated or defective",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 2,
+            "name": "Cast or topographic shadow",
+            "pixels": 142,
+            "percent": 0.4164
+          },
+          {
+            "value": 3,
+            "name": "Cloud shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 4,
+            "name": "Vegetation",
+            "pixels": 33482,
+            "percent": 98.179
+          },
+          {
+            "value": 5,
+            "name": "Bare soil",
+            "pixels": 281,
+            "percent": 0.824
+          },
+          {
+            "value": 6,
+            "name": "Water",
+            "pixels": 55,
+            "percent": 0.1613
+          },
+          {
+            "value": 7,
+            "name": "Unclassified",
+            "pixels": 143,
+            "percent": 0.4193
+          },
+          {
+            "value": 8,
+            "name": "Cloud medium probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 9,
+            "name": "Cloud high probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 10,
+            "name": "Thin cirrus",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 11,
+            "name": "Snow or ice",
+            "pixels": 0,
+            "percent": 0.0
+          }
+        ],
+        "excluded_pixels": 197,
+        "excluded_percent": 0.5777,
+        "review_needed_pixels": 143,
+        "review_needed_percent": 0.4193,
+        "eligible_land_pixels": 33763,
+        "eligible_land_percent": 99.003
+      },
+      "boundary_mask": {
+        "geometry_sha256": "7165802079bf31654618124f05ff1346c43677883667939e79ddcf23106faa25",
+        "inside_20m_pixel_centers": 34103,
+        "inside_10m_pixel_centers": 136390
+      },
+      "quality_probabilities_inside_full_boundary": {
+        "cloud": {
+          "pixel_count": 34103,
+          "range_contract_percent": [
+            0,
+            100
+          ],
+          "minimum_percent": 0,
+          "maximum_percent": 0,
+          "mean_percent": 0.0,
+          "nonzero_pixels": 0,
+          "nonzero_percent": 0.0,
+          "percentiles": {
+            "p00": 0.0,
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "p100": 0.0
+          },
+          "threshold_applied": false,
+          "interpretation": "Native Sen2Cor probability context only; SCL, rendered pixels, and the full uncertainty contract govern use. This summary assigns no class or label."
+        },
+        "snow": {
+          "pixel_count": 34103,
+          "range_contract_percent": [
+            0,
+            100
+          ],
+          "minimum_percent": 0,
+          "maximum_percent": 0,
+          "mean_percent": 0.0,
+          "nonzero_pixels": 0,
+          "nonzero_percent": 0.0,
+          "percentiles": {
+            "p00": 0.0,
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "p100": 0.0
+          },
+          "threshold_applied": false,
+          "interpretation": "Native Sen2Cor probability context only; SCL, rendered pixels, and the full uncertainty contract govern use. This summary assigns no class or label."
+        }
+      }
+    },
+    {
+      "role": "optical-post-remediation",
+      "source_record_id": "SOURCE-2026-030",
+      "provider_id": "31fa8699-175b-4fd7-91c3-dd727a1576f5",
+      "native_id": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE",
+      "filename": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE.zip",
+      "product_metadata": {
+        "product_metadata_member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/MTD_MSIL2A.xml",
+        "tile_metadata_member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/MTD_TL.xml",
+        "product_uri": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE",
+        "processing_baseline": "05.10",
+        "product_start_utc": "2023-10-19T19:04:11.024Z",
+        "generation_utc": "2024-11-07T02:45:26.000000Z",
+        "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20241107T024526_A043482_T10TEP_N05.10",
+        "sensing_time_utc": "2023-10-19T19:12:24.432471Z",
+        "horizontal_crs": "EPSG:32610",
+        "boa_quantification_value": 10000.0,
+        "boa_offsets": {
+          "B04": -1000.0,
+          "B8A": -1000.0,
+          "B12": -1000.0
+        },
+        "nodata_dn": 0,
+        "saturated_dn": 65535
+      },
+      "rasters": {
+        "TCI": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/IMG_DATA/R10m/T10TEP_20231019T190411_TCI_10m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 10,
+          "source_width": 10980,
+          "source_height": 10980,
+          "source_count": 3,
+          "source_dtype": [
+            "uint8",
+            "uint8",
+            "uint8"
+          ],
+          "source_transform": [
+            10.0,
+            0.0,
+            499980.0,
+            0.0,
+            -10.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            10.0,
+            0.0,
+            584570.0,
+            0.0,
+            -10.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 8459,
+            "row_offset": 2850,
+            "width": 696,
+            "height": 517
+          },
+          "crop_bounds_utm10n": [
+            584570.0,
+            4866350.0,
+            591530.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 136390,
+          "observed_inside_min": 0,
+          "observed_inside_max": 109
+        },
+        "B04": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/IMG_DATA/R20m/T10TEP_20231019T190411_B04_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 976,
+          "observed_inside_max": 1850
+        },
+        "B8A": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/IMG_DATA/R20m/T10TEP_20231019T190411_B8A_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 963,
+          "observed_inside_max": 3764
+        },
+        "B12": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/IMG_DATA/R20m/T10TEP_20231019T190411_B12_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint16"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 1028,
+          "observed_inside_max": 2951
+        },
+        "SCL": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/IMG_DATA/R20m/T10TEP_20231019T190411_SCL_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 4,
+          "observed_inside_max": 6
+        },
+        "CLD": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/QI_DATA/MSK_CLDPRB_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 0,
+          "observed_inside_max": 0
+        },
+        "SNW": {
+          "member": "S2A_MSIL2A_20231019T190411_N0510_R013_T10TEP_20241107T024526.SAFE/GRANULE/L2A_T10TEP_A043482_20231019T190412/QI_DATA/MSK_SNWPRB_20m.jp2",
+          "driver": "JP2OpenJPEG",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_width": 5490,
+          "source_height": 5490,
+          "source_count": 1,
+          "source_dtype": [
+            "uint8"
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "crop_transform": [
+            20.0,
+            0.0,
+            584560.0,
+            0.0,
+            -20.0,
+            4871520.0
+          ],
+          "crop_window": {
+            "column_offset": 4229,
+            "row_offset": 1425,
+            "width": 349,
+            "height": 259
+          },
+          "crop_bounds_utm10n": [
+            584560.0,
+            4866340.0,
+            591540.0,
+            4871520.0
+          ],
+          "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+          "inside_boundary_pixels": 34103,
+          "observed_inside_min": 0,
+          "observed_inside_max": 0
+        }
+      },
+      "scl_summary_inside_full_boundary": {
+        "pixel_count": 34103,
+        "classes": [
+          {
+            "value": 0,
+            "name": "No data",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 1,
+            "name": "Saturated or defective",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 2,
+            "name": "Cast or topographic shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 3,
+            "name": "Cloud shadow",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 4,
+            "name": "Vegetation",
+            "pixels": 13216,
+            "percent": 38.7532
+          },
+          {
+            "value": 5,
+            "name": "Bare soil",
+            "pixels": 20399,
+            "percent": 59.8159
+          },
+          {
+            "value": 6,
+            "name": "Water",
+            "pixels": 488,
+            "percent": 1.431
+          },
+          {
+            "value": 7,
+            "name": "Unclassified",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 8,
+            "name": "Cloud medium probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 9,
+            "name": "Cloud high probability",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 10,
+            "name": "Thin cirrus",
+            "pixels": 0,
+            "percent": 0.0
+          },
+          {
+            "value": 11,
+            "name": "Snow or ice",
+            "pixels": 0,
+            "percent": 0.0
+          }
+        ],
+        "excluded_pixels": 488,
+        "excluded_percent": 1.431,
+        "review_needed_pixels": 0,
+        "review_needed_percent": 0.0,
+        "eligible_land_pixels": 33615,
+        "eligible_land_percent": 98.569
+      },
+      "boundary_mask": {
+        "geometry_sha256": "7165802079bf31654618124f05ff1346c43677883667939e79ddcf23106faa25",
+        "inside_20m_pixel_centers": 34103,
+        "inside_10m_pixel_centers": 136390
+      },
+      "quality_probabilities_inside_full_boundary": {
+        "cloud": {
+          "pixel_count": 34103,
+          "range_contract_percent": [
+            0,
+            100
+          ],
+          "minimum_percent": 0,
+          "maximum_percent": 0,
+          "mean_percent": 0.0,
+          "nonzero_pixels": 0,
+          "nonzero_percent": 0.0,
+          "percentiles": {
+            "p00": 0.0,
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "p100": 0.0
+          },
+          "threshold_applied": false,
+          "interpretation": "Native Sen2Cor probability context only; SCL, rendered pixels, and the full uncertainty contract govern use. This summary assigns no class or label."
+        },
+        "snow": {
+          "pixel_count": 34103,
+          "range_contract_percent": [
+            0,
+            100
+          ],
+          "minimum_percent": 0,
+          "maximum_percent": 0,
+          "mean_percent": 0.0,
+          "nonzero_pixels": 0,
+          "nonzero_percent": 0.0,
+          "percentiles": {
+            "p00": 0.0,
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "p100": 0.0
+          },
+          "threshold_applied": false,
+          "interpretation": "Native Sen2Cor probability context only; SCL, rendered pixels, and the full uncertainty contract govern use. This summary assigns no class or label."
+        }
+      }
+    }
+  ],
+  "metadata_time_reconciliation": {
+    "catalogue_product_acquisition_utc": "2023-10-19T19:04:11.024000Z",
+    "delivered_tile_sensing_time_utc": "2023-10-19T19:12:24.432471Z",
+    "same_utc_date": true,
+    "interpretation": "The catalogue product start and delivered tile sensing time are distinct metadata fields. Both are retained; neither is rewritten or treated as drift."
+  },
+  "temporal_fitness": {
+    "ignition_date": "2023-08-25",
+    "pre_sensing_date": "2023-07-21",
+    "post_sensing_date": "2023-10-19",
+    "pre_days_before_ignition": 35,
+    "post_days_after_ignition": 55,
+    "chronological_order": "PASS_PRE_BEFORE_IGNITION_BEFORE_POST",
+    "fitness_boundary": "Chronology passes, but timing alone cannot overcome local snow, SCL, registration, render, or official-reference gates."
+  },
+  "pair_quality_inside_full_boundary": {
+    "pixel_count_inside_full_boundary": 34103,
+    "states": [
+      {
+        "state": "eligible-comparison",
+        "code": 0,
+        "pixels": 33365,
+        "percent": 97.836
+      },
+      {
+        "state": "review-needed",
+        "code": 1,
+        "pixels": 134,
+        "percent": 0.3929
+      },
+      {
+        "state": "excluded",
+        "code": 2,
+        "pixels": 604,
+        "percent": 1.7711
+      }
+    ]
+  },
+  "registration": {
+    "summary": {
+      "window_count": 8,
+      "state_counts": {
+        "pass": 5,
+        "review-needed": 3,
+        "excluded": 0,
+        "fail-registration": 0
+      },
+      "p50_px": 0.1995,
+      "p95_px": 0.3732,
+      "max_px": 0.3785,
+      "max_m": 7.57,
+      "machine_decision": "ACCEPT_REGISTRATION_WITH_SPATIAL_EXCLUSIONS"
+    },
+    "windows": [
+      {
+        "window_id": "W-01",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          584560.0,
+          4868960.0,
+          587120.0,
+          4871520.0
+        ],
+        "inside_boundary_pixels": 12003,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.978589,
+          "review_needed_fraction": 0.001916,
+          "excluded_fraction": 0.019495
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.06,
+            "column_shift_to_apply_px": 0.07,
+            "magnitude_px": 0.0922,
+            "coarse_peak_ratio": 3.9113,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.177383,
+            "moving_energy": 0.198999,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.04,
+            "column_shift_to_apply_px": 0.03,
+            "magnitude_px": 0.05,
+            "coarse_peak_ratio": 3.2682,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.424737,
+            "moving_energy": 0.456262,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.09,
+            "column_shift_to_apply_px": 0.2,
+            "magnitude_px": 0.2193,
+            "coarse_peak_ratio": 5.167,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.301664,
+            "moving_energy": 0.326664,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.06,
+          "column_shift_to_apply_px": 0.07,
+          "magnitude_px": 0.0922,
+          "magnitude_m": 1.844,
+          "max_band_deviation_px": 0.1334,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-02",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 110,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          586760.0,
+          4868960.0,
+          589320.0,
+          4871520.0
+        ],
+        "inside_boundary_pixels": 5319,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.98872,
+          "review_needed_fraction": 0.003572,
+          "excluded_fraction": 0.007708
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.23,
+            "column_shift_to_apply_px": 0.06,
+            "magnitude_px": 0.2377,
+            "coarse_peak_ratio": 8.8355,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.265949,
+            "moving_energy": 0.213294,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.05,
+            "column_shift_to_apply_px": 0.02,
+            "magnitude_px": 0.0539,
+            "coarse_peak_ratio": 6.8209,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.496866,
+            "moving_energy": 0.57801,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.37,
+            "column_shift_to_apply_px": 0.09,
+            "magnitude_px": 0.3808,
+            "coarse_peak_ratio": 6.9871,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.479241,
+            "moving_energy": 0.375887,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.23,
+          "column_shift_to_apply_px": 0.06,
+          "magnitude_px": 0.2377,
+          "magnitude_m": 4.754,
+          "max_band_deviation_px": 0.1844,
+          "confident_band_count": 3
+        },
+        "state": "review-needed",
+        "reason_code": "BAND_CONSENSUS_EXCEEDS_GATE",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-03",
+        "pixel_window": {
+          "row_offset": 65,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          584560.0,
+          4867660.0,
+          587120.0,
+          4870220.0
+        ],
+        "inside_boundary_pixels": 11571,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.9739,
+          "review_needed_fraction": 0.001469,
+          "excluded_fraction": 0.024631
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.05,
+            "column_shift_to_apply_px": 0.1,
+            "magnitude_px": 0.1118,
+            "coarse_peak_ratio": 4.011,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.143264,
+            "moving_energy": 0.157916,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.03,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 3.2309,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.580171,
+            "moving_energy": 0.550734,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.12,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.12,
+            "coarse_peak_ratio": 4.436,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.264742,
+            "moving_energy": 0.271187,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.03,
+          "column_shift_to_apply_px": 0.0,
+          "magnitude_px": 0.03,
+          "magnitude_m": 0.6,
+          "max_band_deviation_px": 0.15,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-04",
+        "pixel_window": {
+          "row_offset": 65,
+          "column_offset": 110,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          586760.0,
+          4867660.0,
+          589320.0,
+          4870220.0
+        ],
+        "inside_boundary_pixels": 8928,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.976703,
+          "review_needed_fraction": 0.004816,
+          "excluded_fraction": 0.018481
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.17,
+            "column_shift_to_apply_px": 0.13,
+            "magnitude_px": 0.214,
+            "coarse_peak_ratio": 7.0618,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.254809,
+            "moving_energy": 0.229429,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.73,
+            "column_shift_to_apply_px": 0.04,
+            "magnitude_px": 0.7311,
+            "coarse_peak_ratio": 4.1386,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.679145,
+            "moving_energy": 0.543241,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.33,
+            "column_shift_to_apply_px": 0.12,
+            "magnitude_px": 0.3511,
+            "coarse_peak_ratio": 7.0033,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.455044,
+            "moving_energy": 0.400881,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.33,
+          "column_shift_to_apply_px": 0.12,
+          "magnitude_px": 0.3511,
+          "magnitude_m": 7.023,
+          "max_band_deviation_px": 0.4079,
+          "confident_band_count": 3
+        },
+        "state": "review-needed",
+        "reason_code": "BAND_CONSENSUS_EXCEEDS_GATE",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-05",
+        "pixel_window": {
+          "row_offset": 65,
+          "column_offset": 221,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          588980.0,
+          4867660.0,
+          591540.0,
+          4870220.0
+        ],
+        "inside_boundary_pixels": 332,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.930723,
+          "review_needed_fraction": 0.039157,
+          "excluded_fraction": 0.03012
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.24,
+            "column_shift_to_apply_px": 0.03,
+            "magnitude_px": 0.2419,
+            "coarse_peak_ratio": 10.0699,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.212231,
+            "moving_energy": 0.160884,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.36,
+            "column_shift_to_apply_px": 0.06,
+            "magnitude_px": 0.365,
+            "coarse_peak_ratio": 6.7675,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.670342,
+            "moving_energy": 0.47939,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.36,
+            "column_shift_to_apply_px": 0.05,
+            "magnitude_px": 0.3635,
+            "coarse_peak_ratio": 9.1108,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.37869,
+            "moving_energy": 0.25368,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.36,
+          "column_shift_to_apply_px": 0.05,
+          "magnitude_px": 0.3635,
+          "magnitude_m": 7.269,
+          "max_band_deviation_px": 0.1217,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-06",
+        "pixel_window": {
+          "row_offset": 131,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          584560.0,
+          4866340.0,
+          587120.0,
+          4868900.0
+        ],
+        "inside_boundary_pixels": 5112,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.987285,
+          "review_needed_fraction": 0.000587,
+          "excluded_fraction": 0.012128
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.11,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.1105,
+            "coarse_peak_ratio": 3.8295,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.141566,
+            "moving_energy": 0.177968,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.13,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.13,
+            "coarse_peak_ratio": 5.2134,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 1.125053,
+            "moving_energy": 0.790821,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.1,
+            "column_shift_to_apply_px": -0.06,
+            "magnitude_px": 0.1166,
+            "coarse_peak_ratio": 5.8221,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.347166,
+            "moving_energy": 0.318746,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.11,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.1105,
+          "magnitude_m": 2.209,
+          "max_band_deviation_px": 0.051,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-07",
+        "pixel_window": {
+          "row_offset": 131,
+          "column_offset": 110,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          586760.0,
+          4866340.0,
+          589320.0,
+          4868900.0
+        ],
+        "inside_boundary_pixels": 11118,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.978593,
+          "review_needed_fraction": 0.004047,
+          "excluded_fraction": 0.017359
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.27,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.2702,
+            "coarse_peak_ratio": 4.3339,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.242884,
+            "moving_energy": 0.205125,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.64,
+            "column_shift_to_apply_px": 0.12,
+            "magnitude_px": 0.6512,
+            "coarse_peak_ratio": 3.2362,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.749701,
+            "moving_energy": 0.524574,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.37,
+            "column_shift_to_apply_px": 0.08,
+            "magnitude_px": 0.3785,
+            "coarse_peak_ratio": 5.1776,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.43618,
+            "moving_energy": 0.35948,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.37,
+          "column_shift_to_apply_px": 0.08,
+          "magnitude_px": 0.3785,
+          "magnitude_m": 7.571,
+          "max_band_deviation_px": 0.2729,
+          "confident_band_count": 3
+        },
+        "state": "review-needed",
+        "reason_code": "BAND_CONSENSUS_EXCEEDS_GATE",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-08",
+        "pixel_window": {
+          "row_offset": 131,
+          "column_offset": 221,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          588980.0,
+          4866340.0,
+          591540.0,
+          4868900.0
+        ],
+        "inside_boundary_pixels": 4814,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.970087,
+          "review_needed_fraction": 0.01101,
+          "excluded_fraction": 0.018903
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": -0.09,
+            "column_shift_to_apply_px": -0.04,
+            "magnitude_px": 0.0985,
+            "coarse_peak_ratio": 5.6383,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.242836,
+            "moving_energy": 0.201132,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.22,
+            "column_shift_to_apply_px": 0.02,
+            "magnitude_px": 0.2209,
+            "coarse_peak_ratio": 6.7883,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.556428,
+            "moving_energy": 0.464464,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": -0.16,
+            "column_shift_to_apply_px": 0.02,
+            "magnitude_px": 0.1612,
+            "coarse_peak_ratio": 8.1012,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.434914,
+            "moving_energy": 0.314974,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": -0.16,
+          "column_shift_to_apply_px": 0.02,
+          "magnitude_px": 0.1612,
+          "magnitude_m": 3.225,
+          "max_band_deviation_px": 0.0922,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      }
+    ]
+  },
+  "spectral_change": {
+    "valid_pair_pixels": 33365,
+    "excluded_from_spectral_summary": 738,
+    "dnbr_percentiles": {
+      "p01": -0.196616,
+      "p10": -0.059638,
+      "p25": 0.052167,
+      "p50": 0.262982,
+      "p75": 0.499272,
+      "p90": 0.820925,
+      "p99": 1.221161
+    },
+    "dnbr_min": -32.58844,
+    "dnbr_max": 1.487714,
+    "positive_change_pixels": 27338,
+    "positive_change_percent": 81.9362,
+    "interpretation": "Continuous dNBR distribution is optical change evidence only; no threshold, severity class, burned label, or background label is assigned."
+  },
+  "visual_review": {
+    "decision": "PASS_ACTUAL_PETES_LAKE_RENDER_REVIEW",
+    "notes": "Original-resolution 1800x1240 review shows clear, coherently aligned pre/post boundary imagery with no visible cloud, smoke or haze, snow, clipping, or misleading display artifact. Post-fire browning is spatially coherent; dark invalid or excluded dNBR pixels remain context only and are not labels.",
+    "reviewer_role": "AI-assisted author self-audit; not independent review"
+  },
+  "fitness_decision": {
+    "machine_source_gate": "ACCEPT_EXACT_PETES_LAKE_REPLACEMENT_OPTICAL_SOURCE_FITNESS_WITH_SPATIAL_EXCLUSIONS",
+    "optical_source": "PASS_EXACT_PETES_LAKE_REPLACEMENT_OPTICAL_SOURCE_FITNESS_WITH_SPATIAL_EXCLUSIONS",
+    "blocking_factors": [],
+    "burned_candidate_route": "BLOCKED_PENDING_U04_U05_OFFICIAL_REFERENCE_EVIDENCE",
+    "background_candidate_route": "BLOCKED_PENDING_U06_U07_AFFIRMATIVE_BACKGROUND_EVIDENCE",
+    "unknown_route": "REQUIRED_FROM_QUALITY_REFERENCE_WETLAND_AND_SOURCE_UNCERTAINTY",
+    "event_status": "ACCEPT_REPLACEMENT_OPTICAL_SOURCE_WITH_EXCLUSIONS_DEFER_REFERENCE_AND_CANDIDATES",
+    "u04_authorized": true,
+    "next_dependency": "P2O4-T33-U04"
+  },
+  "claims": {
+    "proven": [
+      "The original pre and exact replacement post provider archives remain byte-identical to their separately bound custody evidence.",
+      "The full Petes Lake MTBS boundary is readable on aligned native 20 m B04/B8A/B12/SCL/CLD/SNW grids.",
+      "Actual pair quality, continuous spectral change, and deterministic registration windows are measured without assigning labels."
+    ],
+    "not_proven": [
+      "No MTBS reference pixel has been delivered, opened, or accepted in this run.",
+      "No SCL class, probability value, dNBR value, boundary inclusion, or apparent change is label truth.",
+      "No Petes Lake candidate, owner decision, label, dataset, split, baseline, model, accuracy, field validation, official status, endorsement, or operational readiness exists."
+    ]
+  },
+  "attribution": "Contains modified Copernicus Sentinel data 2023, accessed through CDSE.",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

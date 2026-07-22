@@ -1,0 +1,171 @@
+{
+  "report_id": "PETES-LAKE-OPTICAL-METADATA-RECONCILIATION-2026-001",
+  "report_schema_version": "0.1.0",
+  "unit_id": "P2O4-T33-U02",
+  "run_id": "BL-2026-07-21-petes-lake-optical-metadata-reconciliation-r001",
+  "generated_at_utc": "2026-07-21T18:30:01Z",
+  "event_id": "OR4396912190120230825",
+  "event_group_id": "event-petes-lake-2023",
+  "pair_id": "petes-lake-s2-optical-pair-v0.1.0",
+  "contract_version": "petes-lake-optical-intake-contract-v0.2.0",
+  "cloud_metadata_reconciliation_version": "petes-lake-cloud-metadata-reconciliation-v0.1.0",
+  "trace": {
+    "repository": "drwbkr1/burnlens-deschutes",
+    "git_source_commit": "c4987ce53a7606d828caf2db134a28f160bc867d",
+    "branch": "codex/p2o4-t33-petes-lake-milestone",
+    "task_issue": 521,
+    "git_base_commit": "0d41942dc6c3c307a9a146a2d38fb816e038bb42",
+    "u01_entry_commit": "f59b874d92a0e86d0121759d1c40fbe8ba5c2edc",
+    "entry_gate_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-ENTRY-GATE-2026-001.json",
+    "entry_gate_bytes": 18270,
+    "entry_gate_sha256": "ac5d7498f847e0df973c58445188b422d919dc5c195e832e518ba5dbf11d6bec"
+  },
+  "u01_live_source_binding": {
+    "path": "downloads/phase-two/runs/P2O4-T33-U01/ADDITIONAL-EVENT-GROUP-SOURCE-LIVE-r003.json",
+    "bytes": 1213547,
+    "sha256": "1d99d32f6610e64eed5a310d58c9ee730e6f9be691b6f7eb2ed00044018b559c",
+    "role": "frozen U01 STAC discovery representation"
+  },
+  "official_primary_source_research": {
+    "accessed_at_utc": "2026-07-21T18:30:01Z",
+    "odata_documentation": "https://documentation.dataspace.copernicus.eu/APIs/OData.html",
+    "stac_documentation": "https://documentation.dataspace.copernicus.eu/APIs/STAC.html",
+    "observed_semantics": [
+      "CDSE documents Sentinel-2 cloudCover as an OData DoubleAttribute.",
+      "CDSE documents STAC as complementary to, not a replacement for, OData.",
+      "Both catalogue cloud fields are discovery context; local U03 quality evidence governs pixel use."
+    ]
+  },
+  "metadata_snapshot_sha256": "248fbfbea4e82a6f93360fdb6cde987b31898278dc4c6faaa4f288dbfcc92847",
+  "metadata_snapshot": {
+    "observed_at_utc": "2026-07-21T18:30:01Z",
+    "source_record_id": "SOURCE-2026-028",
+    "terms_review_id": "TERMS-2026-024",
+    "live_refresh_performed": true,
+    "route_precedence": {
+      "identity_authority": "Frozen STAC item, CDSE UUID, SAFE name, sensing time, tile, orbit, and processing baseline must agree.",
+      "archive_authority": "Current CDSE OData content length plus MD5 and BLAKE3 govern each acquired archive.",
+      "cloud_metadata_reconciliation": "Exact current OData cloudCover and the frozen U01 STAC eo:cloud_cover are retained separately. A deterministic two-decimal comparison must agree; neither catalogue field establishes local pixel fitness.",
+      "transaction_order": "The pre archive is one singleton transaction and must pass promotion plus post-promotion verification before the post archive may be requested.",
+      "quality_boundary": "Tile-wide cloud and snow metadata are discovery context only; U03 must inspect local SCL, snow, cloud, shadow, smoke, pixels, and registration."
+    },
+    "records": [
+      {
+        "role": "petes-lake-2023-pre",
+        "event_id": "OR4396912190120230825",
+        "event_group_id": "event-petes-lake-2023",
+        "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+        "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+        "size_bytes": 1185284273,
+        "online": true,
+        "acquisition_utc": "2023-07-21T18:59:21.024000Z",
+        "publication_utc": "2025-03-11T14:39:00.079327Z",
+        "s3_path": "/eodata/Sentinel-2/MSI/L2A_N0500/2023/07/21/S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+        "provider_checksums": {
+          "MD5": "c41d10e4e895839132c0ad4ee47100e1",
+          "BLAKE3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+        },
+        "platform_serial_identifier": "A",
+        "tile_id": "10TEP",
+        "relative_orbit_number": 13,
+        "processor_version": "05.10",
+        "product_type": "S2MSI2A",
+        "cloud_cover_percent": 0.000358,
+        "cloud_cover_source": "current CDSE OData Attributes cloudCover",
+        "cloud_cover_comparison_2dp": 0.0,
+        "frozen_stac_cloud_cover_percent": 0.0,
+        "cloud_metadata_reconciliation_version": "petes-lake-cloud-metadata-reconciliation-v0.1.0",
+        "catalogue_snow_percent": 0.226708,
+        "catalogue_snow_source": "frozen current CDSE STAC identity from P2O4-T33-U01"
+      },
+      {
+        "role": "petes-lake-2023-post",
+        "event_id": "OR4396912190120230825",
+        "event_group_id": "event-petes-lake-2023",
+        "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+        "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+        "size_bytes": 1243068088,
+        "online": true,
+        "acquisition_utc": "2023-10-29T19:05:11.024000Z",
+        "publication_utc": "2025-04-26T01:36:23.665011Z",
+        "s3_path": "/eodata/Sentinel-2/MSI/L2A_N0500/2023/10/29/S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+        "provider_checksums": {
+          "MD5": "bf9383d434448998f5025494d0a43320",
+          "BLAKE3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+        },
+        "platform_serial_identifier": "A",
+        "tile_id": "10TEP",
+        "relative_orbit_number": 13,
+        "processor_version": "05.10",
+        "product_type": "S2MSI2A",
+        "cloud_cover_percent": 0.008789,
+        "cloud_cover_source": "current CDSE OData Attributes cloudCover",
+        "cloud_cover_comparison_2dp": 0.01,
+        "frozen_stac_cloud_cover_percent": 0.01,
+        "cloud_metadata_reconciliation_version": "petes-lake-cloud-metadata-reconciliation-v0.1.0",
+        "catalogue_snow_percent": 9.841206,
+        "catalogue_snow_source": "frozen current CDSE STAC identity from P2O4-T33-U01"
+      }
+    ]
+  },
+  "records": [
+    {
+      "role": "petes-lake-2023-pre",
+      "provider_id": "bf275eb0-7e50-4d4d-a01b-fbaaa18e5142",
+      "native_id": "S2A_MSIL2A_20230721T185921_N0510_R013_T10TEP_20240911T103205.SAFE",
+      "size_bytes": 1185284273,
+      "online": true,
+      "provider_checksums": {
+        "MD5": "c41d10e4e895839132c0ad4ee47100e1",
+        "BLAKE3": "49d13b491c1e4a979d65dc870daf2d72f940bfc910abb19c00e1a485992ed17b"
+      },
+      "current_odata_cloud_cover_percent": 0.000358,
+      "frozen_u01_stac_cloud_cover_percent": 0.0,
+      "comparison_normalized_2dp": 0.0,
+      "exact_odata_value_gate": "pass",
+      "two_decimal_cross_endpoint_comparison_gate": "pass",
+      "local_pixel_quality_gate": "not executed; P2O4-T33-U03"
+    },
+    {
+      "role": "petes-lake-2023-post",
+      "provider_id": "80363c3a-8c04-4ed3-8e2a-d1f35e7a62c6",
+      "native_id": "S2A_MSIL2A_20231029T190511_N0510_R013_T10TEP_20241106T074945.SAFE",
+      "size_bytes": 1243068088,
+      "online": true,
+      "provider_checksums": {
+        "MD5": "bf9383d434448998f5025494d0a43320",
+        "BLAKE3": "9814e80893321d86b9aec796651aaf811d8e31df6ed98413519bbeab1141d105"
+      },
+      "current_odata_cloud_cover_percent": 0.008789,
+      "frozen_u01_stac_cloud_cover_percent": 0.01,
+      "comparison_normalized_2dp": 0.01,
+      "exact_odata_value_gate": "pass",
+      "two_decimal_cross_endpoint_comparison_gate": "pass",
+      "local_pixel_quality_gate": "not executed; P2O4-T33-U03"
+    }
+  ],
+  "normalization_contract": {
+    "input": "exact current CDSE OData Attributes cloudCover",
+    "comparison_decimals": 2,
+    "rounding": "decimal ROUND_HALF_UP",
+    "comparison_target": "frozen P2O4-T33-U01 STAC eo:cloud_cover",
+    "raw_value_preserved": true,
+    "quality_claim": "none; local SCL/SNW/cloud/shadow/smoke and rendered pixels remain U03 gates"
+  },
+  "gate_results": {
+    "exact_uuid_safe_size_online_md5_blake3": "pass",
+    "exact_current_odata_cloud_values": "pass",
+    "frozen_u01_stac_values_retained": "pass",
+    "two_decimal_cross_endpoint_comparison": "pass",
+    "source_precedence": "pass",
+    "terms": "TERMS-2026-024",
+    "provider_product_or_archive_bytes_requested": false,
+    "credentials_exercised": false,
+    "u02_custody": "not executed",
+    "u03_pixel_fitness": "not executed"
+  },
+  "disposition": "pass",
+  "decision": "PASS_PETES_LAKE_CLOUD_METADATA_RECONCILIATION_AUTHORIZE_U02_PREFLIGHT_ONLY",
+  "next_dependency": "Commit, push, and record this remediation before the exact U02 pre archive transaction.",
+  "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

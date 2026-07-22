@@ -8,11 +8,13 @@ The latest verified release is `v0.44.0-grandview-owner-response-intake`. It loc
 
 Issue #517 / PR #522 ships BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. Fresh merged main reconstructs the exact private reconciliation and all three public outputs from only the locked response and receipt, passes 328 tests with 17 expected custody skips, reproduces the canonical 630,232-byte wheel, and passes an isolated dependency-complete install. Lifecycle issue #523 / PR #524 records the release.
 
-The [aggregate intake report](samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.html) withholds unit decisions and notes; its original-resolution PNG and owner-confirmed canonical local HTML render both pass. Annotated tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to the verified checkpoint. BL-GOV-003 / issue #525 adopts [`checkpoint-policy-v0.1.0`](docs/governance/CHECKPOINT_POLICY.md): atomic evidence units keep independent hashes, gates, dispositions, and failures while coherent milestone and exception checkpoints control PR and release cadence. Issue #521 is designated as the first six-event milestone containing the complete Petes Lake evidence chain, pending its contract revision after BL-GOV-003 merges. Dataset, split, baseline, and model work remains blocked.
+The [aggregate intake report](samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.html) withholds unit decisions and notes; its original-resolution PNG and owner-confirmed canonical local HTML render both pass. Annotated tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to the verified v0.44 checkpoint. BL-GOV-003 / issue #525 adopts [`checkpoint-policy-v0.1.0`](docs/governance/CHECKPOINT_POLICY.md). Issue #521 now reaches its [Petes Lake material-defer decision](docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md): U01/U02 pass; [planned U03](samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png) visibly fails on snow; the exact 19 October replacement passes [native-pixel source fitness](samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.png) with explicit spatial exclusions; and U04 passes the [terms-first MTBS native contract](samples/cross-event/phase-two/petes-lake/PETES-LAKE-REFERENCE-NATIVE-CONTRACT-2026-001.json) while accepting zero reference pixels. U05 r001-r003 remain immutable. Final r003 promotes seven ordered NWI assets, then its only Data Source pre-count request observes HTTP 500 at `PROVIDER_OPEN`; four assets remain unexecuted. R003 is terminal, no r004 is authorized, and no partial package may satisfy U05. Production U06-U10 remain unexecuted/deferred, so Petes Lake does not become event six. BurnLens 0.45.0 is the milestone release candidate because the branch adds material packaged custody, source-fitness, review-batching, localhost, and geospatial-environment capabilities; historical Petes runs remain pinned to the exact 0.44.0 source state that generated them. The accepted label set, dataset, split, baseline, and model do not advance.
+
+U11R1 retains `9f440999...` as failed candidate evidence because its installed U04 replay stopped before output; correction `fcbaa4c...` repairs descendant trace enforcement without changing the 32,991-byte U04 evidence or material-defer decision, then passes canonical exact U03/U04 replay and full regression. Clean package checkpoint `9b5d84a...` passes two fresh-clone deterministic builds, locked isolated install, command checks, and installed replay. Reviewed-head equivalence, PR, true merge, fresh-main, and annotated-tag verification remain pending. The latest verified release therefore remains v0.44.0.
 
 - Phase One's documentation and repository-control evidence is complete enough for **Phase Two planning only**, as approved in P1O7-T08 / PR #294 on 2026-07-13.
-- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; the latest verified repository tag is `v0.44.0-grandview-owner-response-intake`. Tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. Annotated `v0.21.0-current-reference-inventory` remains preserved as failed-release audit evidence.
-- BL-GOV-002 / issue #400 reconciles obsolete Phase One GitHub backlog against current repository truth. Historical issues, PR bodies, and control artifacts remain audit evidence; they do not represent active work or narrow the controlling execution goal. BL-GOV-003 / issue #525 activates the [checkpoint policy](docs/governance/CHECKPOINT_POLICY.md) without changing software or scientific state. The [single-reviewer path decision](docs/phase-two/objective-four/SINGLE_REVIEWER_PATH_DECISION.md) and its 6/0/50 result remain historical evidence. Issue #521 is designated to own the complete Petes Lake chain as the first milestone; reaching six events still cannot bypass dataset fitness.
+- The controlling goal remains versioned at `v0.0.8-execution-goal-baseline`; the latest verified repository tag remains `v0.44.0-grandview-owner-response-intake` until the v0.45 milestone candidate merges and its new annotated tag is verified. Tag object `e4f834cd3c55d44895766695a40746fa224df9bd` remotely peels to checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. Annotated `v0.21.0-current-reference-inventory` remains preserved as failed-release audit evidence.
+- BL-GOV-002 / issue #400 reconciles obsolete Phase One GitHub backlog against current repository truth. Historical issues, PR bodies, and control artifacts remain audit evidence; they do not represent active work or narrow the controlling execution goal. BL-GOV-003 / issue #525 activates the [checkpoint policy](docs/governance/CHECKPOINT_POLICY.md) without changing software or scientific state. The [single-reviewer path decision](docs/phase-two/objective-four/SINGLE_REVIEWER_PATH_DECISION.md) and its 6/0/50 result remain historical evidence. Issue #521 owns the Petes Lake milestone material-defer exit. Final r003 is immutable at seven promoted / one failed / four unexecuted assets, U05 scientific fitness is blocked, production U06-U10 are deferred, and reaching six events remains an unmet prerequisite that could not by itself bypass dataset fitness.
 - P2O4-T14 / issue #432 / PR #434, with packaging remediation #435 / PR #436, ships `OWNER-REVIEW-SURFACE-2026-001`: 56 disclosed propositions, 112 paired evidence views, a blank yes/no/uncertain response template, hash-named exports, draft reload, browser lock, and exact no-overwrite custody. [Open the review surface](samples/labels/review/phase-two/OWNER-REVIEW-SURFACE-2026-001.html) or [read the decision](docs/phase-two/objective-four/OWNER_CONFIRMED_REVIEW_SURFACE_DECISION.md).
 - P2O4-T15 / issue #437 / PR #441 ships exact authoritative-response intake and aggregate gate evidence at verified `v0.26.0-owner-response-intake`. [Open the response-intake report](samples/labels/review/phase-two/OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/OWNER_RESPONSE_INTAKE_DECISION.md). Private bytes, notes, and unit decisions remain ignored and unpublished.
 - P2O5-T01 / issue #443 ships verified `v0.27.0-prototype-label-sufficiency` without creating a dataset or split. [Open the sufficiency report](samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.html) or [read the decision](docs/phase-two/objective-five/PROTOTYPE_LABEL_SUFFICIENCY_DECISION.md). P2O4-T16 implements its required plan.
@@ -33,6 +35,7 @@ The [aggregate intake report](samples/labels/review/grandview/phase-two/intake/G
 - P2O4-T30 / issue #508 / PR #512, remediated by issue #513 / PR #514, ships verified BurnLens 0.42.0 at checkpoint `6124f76de04b5e503a9da7655a293a023480b39c`. [Open the Grandview region proposal](samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.html) or [read the decision](docs/phase-two/objective-four/GRANDVIEW_REGION_PROPOSAL_DECISION.md). Two exact unreviewed 25-pixel cores and 98 unknown-ring pixels are published with zero owner responses or promotion; lifecycle #515 / PR #516 records the release and issue #511 owns the blank review surface.
 - P2O4-T31 / issue #511 / PR #518 ships verified BurnLens 0.43.0 at checkpoint `aeea6f5cc488ae975badbdf654d0164570db77c4`. [Open the blank Grandview owner-review surface](samples/labels/review/grandview/phase-two/GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.html) or [read the decision](docs/phase-two/objective-four/GRANDVIEW_OWNER_REVIEW_SURFACE_DECISION.md). It binds the exact v0.42 proposal, renders optical/reference/context evidence for both regions, accepts only yes/no/uncertain, and records zero responses or labels. Issue #519 / PR #520 records the lifecycle; at that checkpoint issue #517 owned the still-unreceived export, which the separate verified T32 checkpoint below later locks and evaluates.
 - P2O4-T32 / issue #517 / PR #522 ships verified BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`. [Open the aggregate Grandview intake report](samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/GRANDVIEW_OWNER_RESPONSE_INTAKE_DECISION.md). It pins the exact response/receipt plus 22 evidence records, accepts one region per class, and moves the cumulative prototype set to five complete events. Lifecycle issue #523 / PR #524 records the verified release; at that checkpoint, execution stopped before issue #521 pending BL-GOV-003.
+- P2O4-T33 / issue #521 is the BurnLens 0.45.0 material-defer milestone candidate. It preserves the complete Petes optical/reference/NWI failure chain, contains bounded custody/review/environment capabilities, and stops before candidate generation when final r003 cannot complete source-project custody. [Read the material-defer decision](docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md). Petes Lake is not event six; the five-event prototype label set is unchanged and no dataset, split, baseline, or model exists.
 - P2O2-T02 / issue #325 / PR #326 is shipped at `v0.3.0-intake-transaction-baseline`: an exact three-asset intake contract rejects partial or tampered packages and permits raw registration only through one all-or-none atomic promotion. Its proof uses temporary synthetic fixtures; it does not use or validate provider data.
 - P2O2-T03 / issue #329 / PR #330 is shipped at `v0.4.0-authenticated-source-baseline`. The exact three-file, 1,169,997,942-byte package passed authenticated delivery, contract validation, atomic registration, independent re-verification, and real-array inspection.
 - P2O2-T04 inventories and inspects all 23 bounded NOAA-21 active-fire candidates, registers one exact selected companion, and renders `OBSERVATION-GEOMETRY-2026-001`. The selected day observation improves qualified median view zenith from about 69 to 31 degrees with zero residual-bowtie exclusions, while still deferring labels and a dataset.
@@ -100,7 +103,7 @@ The [six-phase roadmap](docs/roadmap/BURNLENS_BUILD_ROADMAP.md) is a revisable p
 | Phase | Outcome BurnLens must prove | Current status |
 |---|---|---|
 | 1 | The promise, task, source posture, controls, traceability, and acceptance evidence are coherent enough to govern implementation. | Planning baseline accepted and versioned for Phase Two planning; no analytical release. |
-| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; six whole-event identities and repeated source regimes are frozen at metadata level. Only Darlene, McKay, and Tepee have accepted prototype regions. The three new events still require exact acquisition, source/pixel fitness, both classes, unknown boundaries, and owner review. No accepted dataset, split, baseline, or model-readiness decision exists. |
+| 2 | One legally usable, versioned, leakage-resistant data/label/baseline foundation can support a defensible model-or-stop decision. | Active; ten balanced prototype regions span Darlene, McKay, Tepee, Green Ridge, and Grandview. Petes Lake passes replacement optical source fitness and the exact MTBS native contract, but final NWI r003 stops at seven promoted / one HTTP-500 provider-open failure / four unexecuted assets. R003 is terminal, no r004 is authorized, U05 scientific fitness does not pass, and production U06-U10 are deferred. Petes Lake is not event six. No accepted dataset, split, baseline, or model-readiness decision exists. |
 | 3 | One bounded model either adds reproducible value beyond the strongest baseline or is rejected honestly. | Blocked by Phase Two evidence. |
 | 4 | The accepted model or baseline can become a valid, reproducible, georeferenced run and evidence interface. | Blocked by Phase Three/baseline decision. |
 | 5 | The integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible. | Blocked by Phase Four. |
@@ -134,8 +137,26 @@ Every future public output and claim must trace to its Git commit, application v
 - [Changelog](CHANGELOG.md)
 - [Agent instructions](AGENTS.md)
 - [Prompt-to-repository SOP](docs/workflows/PROMPT_TO_REPO_SOP.md)
+- [Reproducible geospatial environment](docs/workflows/GEOSPATIAL_ENVIRONMENT.md)
 
 Historical Objective Seven trackers, handoffs, audits, and release notes remain the evidence trail for the Phase One planning-only decision. Their obsolete sequencing and permission limits do not override the execution goal.
+
+## Reproducible local environment
+
+The canonical runtime stays lean. Development adds the pinned test runner, and
+source-scouting work can opt into a locked geospatial profile without changing
+the scientific or source-approval gates:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass `
+  -File scripts/setup_worktree.ps1 `
+  -Profile geo-research
+```
+
+This creates an ignored `.venv` from `uv.lock` and runs an offline raster,
+vector, CRS, GeoPackage, and Rioxarray smoke check. Codex worktrees can select
+the checked-in **BurnLens geospatial research (Windows)** local environment to
+run the same setup automatically. The setup never copies credentials or raw data.
 
 ## Run the current evidence tools
 
@@ -215,6 +236,30 @@ python -m burnlens.inspect_current_reference_bundles --help
 python -m burnlens.lock_grandview_owner_response --help
 python -m burnlens.build_grandview_owner_response_intake --help
 ```
+
+### Serve one owner-review surface on localhost
+
+Use the repository command instead of a directory-wide `python -m http.server`
+or a `file://` URL. The command verifies the selected HTML and every referenced
+asset against its bound output report, preloads one immutable byte snapshot,
+and exposes only that allowlist on IPv4 loopback. Port `0` asks Windows to
+select an unused port atomically.
+
+```powershell
+burnlens-serve-review-surface `
+  --page .\samples\labels\review\grandview\phase-two\GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.html `
+  --port 0
+```
+
+Only sibling static assets are eligible; a secondary HTML document, JSON data,
+sensitive reveal/response/template path, nested path, external URL, or unbound
+resource fails before the port opens. The command prints
+`REVIEW_SURFACE_URL=http://127.0.0.1:<port>/<session>/...`
+only after the listener is ready. Open that exact URL or pass it to browser
+automation, keep the terminal running during review, and press Ctrl+C to stop.
+`--open-browser` is available for an owner-operated default-browser session.
+The server accepts only `GET` and `HEAD`; response JSON remains a browser
+download and is never uploaded to, stored by, or interpreted by the server.
 
 The committed rehearsal predates `ACCESS-2026-006` and intentionally exits with status `2`: its `BLOCKED_OWNER_CREDENTIAL` decision is a historical run state. The later acquisition and inspection runs supersede that access state without rewriting the historical output.
 
