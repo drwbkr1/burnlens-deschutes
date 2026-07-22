@@ -8,7 +8,7 @@
 
 **Decision:** `SELECT_REPLACEMENT_POST_AUTHORIZE_CONTRACT_REVISION_ONLY`
 
-**Disposition / next dependency:** `pass-for-contract-revision-only` / commit, push, and record the exact replacement contract and clean preflight before any provider transaction
+**Disposition / next dependency:** `pass` / pass scope is metadata selection for contract revision only; commit, push, and record the exact replacement contract and clean preflight before any provider transaction
 
 ## Public tracked evidence
 
@@ -44,7 +44,7 @@ The production CLI entry point is `burnlens-capture-petes-lake-replacement-post`
 
 ## Gate results
 
-- Current public STAC roster, full-boundary coverage, exact source regime, deterministic ranking, official incident-timing boundary, catalogue-cloud, OData identity, online state, size, checksum, sensing, publication, platform, tile, orbit, baseline, type, two-decimal cloud reconciliation, S3-suffix privacy, no-overwrite, source, terms, warning, and trace gates: pass for contract revision only.
+- Current public STAC roster, full-boundary coverage, exact source regime, deterministic ranking, official incident-timing boundary, catalogue-cloud, OData identity, online state, size, checksum, sensing, publication, platform, tile, orbit, baseline, type, two-decimal cloud reconciliation, S3-suffix privacy, no-overwrite, source, terms, warning, and trace gates: pass. This pass authorizes contract revision only.
 - Exact reconstruction with the original timestamp and source commit: 10,127 bytes and SHA-256 `7fa82a61fa70d47364db29493700beedd60c9114a4b3a6d8ddbafdf77aecfc8c`, byte-identical to the tracked report.
 - Credentials used: false. Provider product/archive bytes: zero. No raw, quarantine, registration, transaction-state, or custody target was created.
 - No catalogue-snow threshold is introduced. The selected product must independently pass delivered native SCL/CLD/SNW, local usable-fraction, registration, paired-quality, continuous-change, actual-render, and no-label gates.

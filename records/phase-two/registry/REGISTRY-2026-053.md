@@ -8,7 +8,7 @@
 
 **Decision:** `PASS_EXACT_PETES_LAKE_REPLACEMENT_OPTICAL_SOURCE_FITNESS_WITH_SPATIAL_EXCLUSIONS`
 
-**Disposition / next dependency:** `pass-with-spatial-exclusions` / `P2O4-T33-U04`
+**Disposition / next dependency:** `pass` / `P2O4-T33-U04`; exact spatial exclusions retained
 
 ## Public tracked evidence
 
@@ -16,7 +16,7 @@
 |---|---:|---|---|
 | `samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.json` | 60,069 | `1aa88c0021c610e492d2645e3f2c49a4afe96d9d907e2ee4481948a4c58f2ebd` | exact machine, custody, prior-evidence, and visual disposition; U04 authorized |
 | `samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.png` | 588,891 | `fd5b9ae54e1b9c3e0d495e337387d874ae911bd0f586e835b4184312d486d931` | exact 1,800 x 1,240 actual render; original-resolution inspection pass |
-| `docs/phase-two/objective-four/PETES_LAKE_REPLACEMENT_SOURCE_FITNESS_DECISION.md` | 3,341 | `1a939282ad4f43c68e9e1e0383b525e8547be5a884cc4896d7ee14884c016506` | bounded human-readable pass-with-exclusions decision |
+| `docs/phase-two/objective-four/PETES_LAKE_REPLACEMENT_SOURCE_FITNESS_DECISION.md` | 3,341 | `1a939282ad4f43c68e9e1e0383b525e8547be5a884cc4896d7ee14884c016506` | bounded human-readable pass decision with exclusions |
 | `records/phase-two/prechecks/PRECHECK-2026-051.md` | 2,821 | `b028738a0dbb5e7f75fbb98edf6b64c2349f0792abaf39547b29fb11fa5d3c80` | exact gate and reproduction summary |
 | `records/phase-two/reviews/SOURCE_FITNESS-2026-008.md` | 2,689 | `0c6905ad040ba2d80b7779c0b87da333d69f3723c2c3d7f26dbbf9ba7f0d88fa` | source-fitness review |
 
@@ -61,10 +61,10 @@ Both archives remain ignored, untracked, no-overwrite, single-link, and byte-ide
 - Timestamp reconciliation: catalogue product start `2023-10-19T19:04:11.024000Z`; delivered tile sensing `2023-10-19T19:12:24.432471Z`; distinct fields retained on the same UTC date.
 - Pair quality: 33,365 eligible / 97.8360%; 134 review-needed / 0.3929%; 604 excluded / 1.7711%.
 - Replacement local quality: zero SCL cloud, cloud shadow, cirrus, snow/ice, nodata, or saturation; native CLD/SNW minimum, maximum, mean, and every percentile are zero.
-- Registration: eight windows; five pass; three review-needed; zero excluded; zero fail-registration; p50 0.1995 pixel; p95 0.3732; maximum 0.3785 pixel / 7.57 m. Established untuned event gate returns pass with spatial exclusions.
+- Registration: eight windows; five pass; three review-needed; zero excluded; zero fail-registration; p50 0.1995 pixel; p95 0.3732; maximum 0.3785 pixel / 7.57 m. Established untuned event gate returns pass; exact spatial exclusions remain.
 - Continuous dNBR: 33,365 valid pixels retained without threshold, severity, burned, background, or unknown semantics.
 - Actual render: preview and final 1,800 x 1,240 PNGs pass original-resolution author audit for alignment, cloud, smoke/haze, shadow, snow, clipping, invalid/excluded display, warning, trace, and no-label boundaries.
 - Reproduction: final JSON and PNG reconstruct byte-identically from the exact source commit and ignored custody.
 - Verification: nine focused tests pass; full repository passes 460 tests plus 50 subtests with 20 existing NumPy deprecation warnings; all 66 installed packages are compatible; lock, compilation, and diff hygiene pass.
 
-U03 replacement disposition is `pass-with-spatial-exclusions`. U04 is authorized to inspect the exact official reference delivery, but this unit creates no reference, candidate, owner response, prototype label, sixth complete event, dataset, split, baseline, model, metric, release, field-validation, official, endorsed, operational, or emergency-ready claim.
+U03 replacement disposition is `pass`. This pass retains the exact 134 review-needed and 604 excluded boundary pixels plus three review-needed registration windows. U04 is authorized to inspect the exact official reference delivery, but this unit creates no reference, candidate, owner response, prototype label, sixth complete event, dataset, split, baseline, model, metric, release, field-validation, official, endorsed, operational, or emergency-ready claim.
