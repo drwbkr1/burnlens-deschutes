@@ -55,6 +55,7 @@ from .petes_lake_wetland_custody import (
     SOURCE_TYPE_RENDERER_VALUES,
     TERMS_REFERENCE as NWI_TERMS_REFERENCE,
     USER_CAUTION_REFERENCE,
+    UNIT_ID as NWI_CUSTODY_UNIT_ID,
     WEB_SERVICE_REFERENCE,
     _normalize_attributes,
     _validate_layer_metadata,
@@ -368,6 +369,7 @@ def _load_nwi(
             )
     contract_data = contract_path.read_bytes()
     custody = {
+        "unit_id": NWI_CUSTODY_UNIT_ID,
         "run_id": NWI_RUN_ID,
         "branch": contract["extensions"]["branch"],
         "git_source_commit": contract["extensions"]["git_source_commit"],
@@ -482,6 +484,8 @@ def _full_pixel_source_coverage(geometries: Iterable[Any]) -> np.ndarray:
 def _validate_nwi_report_binding(
     custody: dict[str, Any], *, git_source_commit: str, generated_at_utc: str
 ) -> None:
+    if custody.get("unit_id") != NWI_CUSTODY_UNIT_ID:
+        raise PetesLakeReferenceFitnessError("NWI custody unit binding changed")
     if custody.get("branch") != BRANCH:
         raise PetesLakeReferenceFitnessError("NWI custody branch binding changed")
     if custody.get("git_source_commit") != git_source_commit:

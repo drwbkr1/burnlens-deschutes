@@ -3,25 +3,34 @@ from __future__ import annotations
 from contextlib import ExitStack, contextmanager, nullcontext
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
+from io import BytesIO
 import json
 import os
 from pathlib import Path
+import socket
+import ssl
 import subprocess
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
+from urllib.error import HTTPError, URLError
 
 from burnlens.petes_lake_wetland_custody import (
     CONTRACT_PATH,
     CUSTODY_ROOT,
     DISPATCH_ROOT,
+    INTAKE_ID,
     METADATA_IDENTITIES,
     OFFICIAL_TERMS_PAGES,
     PACKAGE_DIRECTORY,
     PLAN_PATH,
     QUERY_BOUNDS_UTM10N,
+    R001_EVIDENCE,
+    R002_EVIDENCE,
+    RUN_ID,
     STAGING_ROOT,
     TERMS_REFRESH_PATH,
+    UNIT_ID,
     WETLAND_FIELDS,
     WETLAND_FIELD_TYPES,
     PetesLakeWetlandCustodyError,
@@ -30,12 +39,14 @@ from burnlens.petes_lake_wetland_custody import (
     _dispatch_receipt_relative_path,
     _normalized_html_text,
     _preflight_initialize,
+    _provider_open_diagnostic,
     _run_asset_id,
     _transaction_mutex,
     _validate_count,
     _validate_feature_collection,
     _validate_layer_metadata,
     _verify_retained_r001_evidence,
+    _verify_retained_r002_evidence,
     asset_definitions,
     authorize_contract,
     fetch_asset,
@@ -163,6 +174,7 @@ def _state_machine_patches(identity: dict[str, object]):
         for symbol in (
             "_preflight_initialize",
             "_verify_retained_r001_evidence",
+            "_verify_retained_r002_evidence",
             "_verify_mutation_context",
             "_verify_tracked_gate_records",
             "_assert_ignored_untracked",
@@ -317,6 +329,49 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
         self.assertIn("returnTrueCurves=true", body)
         self.assertNotIn("token", (url + body).casefold())
 
+    def test_r003_identity_and_paths_are_wholly_disjoint(self) -> None:
+        self.assertEqual(UNIT_ID, "P2O4-T33-U05R2")
+        self.assertEqual(INTAKE_ID, "petes-lake-nwi-context-2026-003")
+        self.assertEqual(RUN_ID, "BL-2026-07-22-petes-lake-nwi-context-r003")
+        for path in (
+            CONTRACT_PATH,
+            PLAN_PATH,
+            TERMS_REFRESH_PATH,
+            STAGING_ROOT,
+            PACKAGE_DIRECTORY,
+        ):
+            self.assertIn("r003", path.as_posix())
+            self.assertNotIn("r001", path.as_posix())
+            self.assertNotIn("r002", path.as_posix())
+        self.assertIn("P2O4-T33-U05R2", DISPATCH_ROOT.as_posix())
+        self.assertNotIn("P2O4-T33-U05R1", DISPATCH_ROOT.as_posix())
+        definitions = asset_definitions()
+        expected_roles = (
+            "wetlands-layer-metadata",
+            "wetlands-pre-count",
+            "wetlands-pre-ids",
+            "wetlands-features",
+            "wetlands-post-count",
+            "wetlands-post-ids",
+            "source-layer-metadata",
+            "source-pre-count",
+            "source-pre-ids",
+            "source-features",
+            "source-post-count",
+            "source-post-ids",
+        )
+        self.assertEqual(
+            [item["asset_id"] for item in definitions],
+            [f"petes-lake-nwi-r003-{role}" for role in expected_roles],
+        )
+        self.assertEqual(
+            [item["logical_role"] for item in definitions], list(expected_roles)
+        )
+        self.assertEqual(len(R001_EVIDENCE), 5)
+        self.assertEqual(len(R002_EVIDENCE), 19)
+        self.assertEqual(len({item["role"] for item in R002_EVIDENCE}), 19)
+        self.assertEqual(len({item["path"] for item in R002_EVIDENCE}), 19)
+
     def test_layer_metadata_requires_exact_polygon_field_types(self) -> None:
         payload = _metadata()
         result = _validate_layer_metadata(payload, layer="wetlands")
@@ -355,31 +410,48 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
         result = _validate_layer_metadata(payload, layer="wetlands")
         self.assertEqual(result["required_field_types"]["Wetlands.OBJECTID"], "esriFieldTypeOID")
 
-    def test_every_r002_load_rechecks_retained_r001_failure_binding(self) -> None:
-        with TemporaryDirectory() as directory:
-            root = Path(directory)
-            (root / ".git").mkdir()
-            (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
-            data = json.dumps(_metadata()).encode("utf-8")
-            identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
-            with _state_machine_patches(identity), patch(
-                "burnlens.petes_lake_wetland_custody._verify_retained_r001_evidence"
-            ) as verify_prior:
-                initialize_contract(
-                    root,
-                    created_at_utc="2026-07-21T23:00:00Z",
-                    git_source_commit="a" * 40,
-                )
-                self.assertEqual(verify_prior.call_count, 1)
-                load_contract(root)
-                self.assertEqual(verify_prior.call_count, 2)
-                verify_prior.side_effect = PetesLakeWetlandCustodyError(
-                    "synthetic retained r001 mutation"
-                )
-                with self.assertRaisesRegex(
-                    PetesLakeWetlandCustodyError, "retained r001 mutation"
-                ):
+    @unittest.skipUnless(
+        (
+            ROOT
+            / "downloads/phase-two/runs/P2O4-T33-U05R1/"
+            "petes-lake-nwi-context-r002-intake.json"
+        ).is_file(),
+        "exact retained r002 custody is intentionally unavailable in fresh clones",
+    )
+    def test_exact_retained_r002_terminal_evidence_passes_binding(self) -> None:
+        _verify_retained_r002_evidence(ROOT)
+
+    def test_every_r003_load_rechecks_both_retained_failure_bindings(self) -> None:
+        for target in ("r001", "r002"):
+            with self.subTest(target=target), TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / ".git").mkdir()
+                (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
+                data = json.dumps(_metadata()).encode("utf-8")
+                identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
+                with _state_machine_patches(identity), patch(
+                    "burnlens.petes_lake_wetland_custody._verify_retained_r001_evidence"
+                ) as verify_r001, patch(
+                    "burnlens.petes_lake_wetland_custody._verify_retained_r002_evidence"
+                ) as verify_r002:
+                    initialize_contract(
+                        root,
+                        created_at_utc="2026-07-21T23:00:00Z",
+                        git_source_commit="a" * 40,
+                    )
+                    self.assertEqual(verify_r001.call_count, 1)
+                    self.assertEqual(verify_r002.call_count, 1)
                     load_contract(root)
+                    self.assertEqual(verify_r001.call_count, 2)
+                    self.assertEqual(verify_r002.call_count, 2)
+                    target_mock = verify_r001 if target == "r001" else verify_r002
+                    target_mock.side_effect = PetesLakeWetlandCustodyError(
+                        f"synthetic retained {target} mutation"
+                    )
+                    with self.assertRaisesRegex(
+                        PetesLakeWetlandCustodyError, f"retained {target} mutation"
+                    ):
+                        load_contract(root)
 
     def test_feature_geometry_is_finite_closed_exact_2d_and_clockwise(self) -> None:
         self.assertEqual(_validate_count({"count": 2}), 2)
@@ -698,6 +770,216 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                     ):
                         load_contract(root)
 
+    def test_provider_open_failures_are_bounded_private_and_never_retried(self) -> None:
+        cases = (
+            ("http-503", {"category": "http", "http_status": 503}),
+            ("http-302", {"category": "http", "http_status": 302}),
+            ("timeout", {"category": "timeout", "http_status": None}),
+            ("dns", {"category": "dns", "http_status": None}),
+            ("tls", {"category": "tls", "http_status": None}),
+            ("connection", {"category": "connection", "http_status": None}),
+            ("unknown", {"category": "unknown-open", "http_status": None}),
+        )
+        for kind, expected in cases:
+            with self.subTest(kind=kind), TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / ".git").mkdir()
+                (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
+                data = json.dumps(_metadata()).encode("utf-8")
+                identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
+                secret = f"BURNLENS_PRIVATE_SENTINEL_{kind.upper().replace('-', '_')}"
+                body: BytesIO | None = None
+                if kind.startswith("http-"):
+                    body = BytesIO((secret + "_BODY").encode("utf-8"))
+                    failure: BaseException = HTTPError(
+                        f"https://example.invalid/{secret}_TOKEN",
+                        int(kind.split("-")[1]),
+                        secret + "_MESSAGE",
+                        {"X-Private": secret + "_HEADER"},
+                        body,
+                    )
+                elif kind == "timeout":
+                    failure = TimeoutError(secret)
+                elif kind == "dns":
+                    failure = URLError(socket.gaierror(-2, secret))
+                elif kind == "tls":
+                    failure = URLError(ssl.SSLError(secret))
+                elif kind == "connection":
+                    failure = URLError(ConnectionResetError(secret))
+                else:
+                    failure = RuntimeError(secret)
+                calls = {"provider": 0, "retry": 0}
+
+                def provider(*_args: object, **_kwargs: object) -> _Response:
+                    calls["provider"] += 1
+                    raise failure
+
+                with _state_machine_patches(identity):
+                    _initialize(root, identity)
+                    asset_id = _id("wetlands-layer-metadata")
+                    start_asset(
+                        root,
+                        asset_id=asset_id,
+                        started_at_utc="2026-07-21T23:01:00Z",
+                    )
+                    with self.assertRaisesRegex(
+                        PetesLakeWetlandCustodyError, "without retry"
+                    ) as caught:
+                        fetch_asset(
+                            root,
+                            asset_id=asset_id,
+                            request_dispatched_at_utc="2026-07-21T23:02:00Z",
+                            urlopen_fn=provider,
+                            now_fn=lambda: "2026-07-21T23:03:00Z",
+                        )
+                    self.assertTrue(caught.exception.__suppress_context__)
+                    self.assertIsNone(caught.exception.__cause__)
+                    self.assertEqual(calls["provider"], 1)
+                    _path, contract = load_contract(root)
+                    failed = contract["assets"][0]
+                    self.assertEqual(failed["state"], "failed")
+                    self.assertEqual(failed["failure"]["stage"], "PROVIDER_OPEN")
+                    self.assertEqual(
+                        failed["failure"]["provider_open_diagnostic"], expected
+                    )
+                    self.assertEqual(
+                        failed["failure"]["retained_staging"],
+                        {
+                            "status": "exact",
+                            "size_bytes": 0,
+                            "sha256": sha256(b"").hexdigest(),
+                        },
+                    )
+                    serialized = (root / CONTRACT_PATH).read_text(encoding="utf-8")
+                    self.assertNotIn(secret, serialized)
+                    self.assertNotIn(secret, str(caught.exception))
+                    if body is not None:
+                        self.assertEqual(body.tell(), 0)
+
+                    def forbidden(*_args: object, **_kwargs: object) -> _Response:
+                        calls["retry"] += 1
+                        raise AssertionError("terminal provider-open failure retried")
+
+                    with self.assertRaises(PetesLakeWetlandCustodyError):
+                        fetch_asset(
+                            root,
+                            asset_id=asset_id,
+                            request_dispatched_at_utc="2026-07-21T23:04:00Z",
+                            urlopen_fn=forbidden,
+                        )
+                    self.assertEqual(calls, {"provider": 1, "retry": 0})
+
+    def test_provider_open_classifier_never_stringifies_unknown_errors(self) -> None:
+        class ExplosiveStringError(OSError):
+            def __str__(self) -> str:
+                raise AssertionError("classifier stringified a provider error")
+
+        self.assertEqual(
+            _provider_open_diagnostic(ExplosiveStringError()),
+            {"category": "unknown-open", "http_status": None},
+        )
+
+    def test_provider_open_diagnostic_schema_tampering_fails_closed(self) -> None:
+        cases = (
+            ("missing", None),
+            ("extra", {"category": "timeout", "http_status": None, "message": "private"}),
+            ("unknown-category", {"category": "other", "http_status": None}),
+            ("bool-status", {"category": "http", "http_status": True}),
+            ("string-status", {"category": "http", "http_status": "503"}),
+            ("low-status", {"category": "http", "http_status": 99}),
+            ("high-status", {"category": "http", "http_status": 600}),
+            ("non-http-status", {"category": "timeout", "http_status": 503}),
+        )
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / ".git").mkdir()
+            (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
+            data = json.dumps(_metadata()).encode("utf-8")
+            identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
+            with _state_machine_patches(identity):
+                _initialize(root, identity)
+                asset_id = _id("wetlands-layer-metadata")
+                start_asset(
+                    root,
+                    asset_id=asset_id,
+                    started_at_utc="2026-07-21T23:01:00Z",
+                )
+                with self.assertRaises(PetesLakeWetlandCustodyError):
+                    fetch_asset(
+                        root,
+                        asset_id=asset_id,
+                        request_dispatched_at_utc="2026-07-21T23:02:00Z",
+                        urlopen_fn=lambda *_args, **_kwargs: (_ for _ in ()).throw(
+                            TimeoutError("private")
+                        ),
+                        now_fn=lambda: "2026-07-21T23:03:00Z",
+                    )
+                contract_path = root / CONTRACT_PATH
+                original = json.loads(contract_path.read_bytes())
+                for name, diagnostic in cases:
+                    with self.subTest(name=name):
+                        changed = json.loads(json.dumps(original))
+                        failure = changed["assets"][0]["failure"]
+                        if diagnostic is None:
+                            failure.pop("provider_open_diagnostic")
+                        else:
+                            failure["provider_open_diagnostic"] = diagnostic
+                        contract_path.write_bytes(
+                            (json.dumps(changed, indent=2) + "\n").encode("utf-8")
+                        )
+                        with self.assertRaises(PetesLakeWetlandCustodyError):
+                            load_contract(root)
+                changed = json.loads(json.dumps(original))
+                changed["assets"][0]["failure"]["stage"] = "RESPONSE_HEADERS"
+                contract_path.write_bytes(
+                    (json.dumps(changed, indent=2) + "\n").encode("utf-8")
+                )
+                with self.assertRaises(PetesLakeWetlandCustodyError):
+                    load_contract(root)
+
+    def test_failed_retained_staging_is_rehashed_on_every_load(self) -> None:
+        for mode in ("mutate", "delete"):
+            with self.subTest(mode=mode), TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / ".git").mkdir()
+                (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
+                data = json.dumps(_metadata()).encode("utf-8")
+                identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
+                with _state_machine_patches(identity):
+                    _initialize(root, identity)
+                    asset_id = _id("wetlands-layer-metadata")
+                    start_asset(
+                        root,
+                        asset_id=asset_id,
+                        started_at_utc="2026-07-21T23:01:00Z",
+                    )
+                    calls = {"provider": 0}
+
+                    def provider(*_args: object, **_kwargs: object) -> _Response:
+                        calls["provider"] += 1
+                        raise TimeoutError("private")
+
+                    with self.assertRaises(PetesLakeWetlandCustodyError):
+                        fetch_asset(
+                            root,
+                            asset_id=asset_id,
+                            request_dispatched_at_utc="2026-07-21T23:02:00Z",
+                            urlopen_fn=provider,
+                            now_fn=lambda: "2026-07-21T23:03:00Z",
+                        )
+                    self.assertEqual(calls["provider"], 1)
+                    retained = root / STAGING_ROOT / "wetlands-layer-metadata.json.partial"
+                    self.assertEqual(retained.read_bytes(), b"")
+                    if mode == "mutate":
+                        retained.write_bytes(b"changed after terminal failure")
+                    else:
+                        retained.unlink()
+                    with self.assertRaisesRegex(
+                        PetesLakeWetlandCustodyError,
+                        "failed retained staging identity changed",
+                    ):
+                        load_contract(root)
+
     def test_wrong_media_type_is_terminal_and_never_retried(self) -> None:
         with TemporaryDirectory() as directory:
             root = Path(directory)
@@ -724,6 +1006,15 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                         ),
                         now_fn=lambda: "2026-07-21T23:03:00Z",
                     )
+                _path, failed_contract = load_contract(root)
+                self.assertEqual(
+                    failed_contract["assets"][0]["failure"]["stage"],
+                    "RESPONSE_HEADERS",
+                )
+                self.assertNotIn(
+                    "provider_open_diagnostic",
+                    failed_contract["assets"][0]["failure"],
+                )
                 calls = {"count": 0}
 
                 def forbidden(*_args: object, **_kwargs: object) -> _Response:
@@ -780,6 +1071,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                 failed = contract["assets"][0]
                 self.assertEqual(failed["state"], "failed")
                 self.assertEqual(failed["failure"]["stage"], "RESPONSE_BODY")
+                self.assertNotIn("provider_open_diagnostic", failed["failure"])
                 retained = failed["failure"]["retained_staging"]
                 self.assertEqual(retained["status"], "exact")
                 self.assertEqual(retained["size_bytes"], len(partial))
@@ -817,6 +1109,15 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                         now_fn=lambda: "2026-07-21T23:03:00Z",
                     )
                 self.assertEqual(calls, {"initial": 1, "follow": 0})
+                _path, failed_contract = load_contract(root)
+                self.assertEqual(
+                    failed_contract["assets"][0]["failure"]["stage"],
+                    "RESPONSE_HEADERS",
+                )
+                self.assertNotIn(
+                    "provider_open_diagnostic",
+                    failed_contract["assets"][0]["failure"],
+                )
 
                 def forbidden(*_args: object, **_kwargs: object) -> _Response:
                     calls["follow"] += 1

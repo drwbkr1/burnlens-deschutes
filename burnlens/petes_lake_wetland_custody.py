@@ -20,9 +20,12 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
+import socket
+import ssl
 import stat
 import subprocess
 from typing import Any, Callable
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
@@ -30,11 +33,15 @@ from .provider_acquisition import AcquisitionError, USER_AGENT, write_private_st
 
 
 CONTROLLING_UNIT_ID = "P2O4-T33-U05"
-UNIT_ID = "P2O4-T33-U05R1"
-INTAKE_ID = "petes-lake-nwi-context-2026-002"
-RUN_ID = "BL-2026-07-22-petes-lake-nwi-context-r002"
+R001_UNIT_ID = CONTROLLING_UNIT_ID
 R001_RUN_ID = "BL-2026-07-21-petes-lake-nwi-context-r001"
-ASSET_ID_PREFIX = "petes-lake-nwi-r002"
+R002_UNIT_ID = "P2O4-T33-U05R1"
+R002_RUN_ID = "BL-2026-07-22-petes-lake-nwi-context-r002"
+R002_SOURCE_COMMIT = "87a852c750fe7527bd018c32f630c8447e61fc47"
+UNIT_ID = "P2O4-T33-U05R2"
+INTAKE_ID = "petes-lake-nwi-context-2026-003"
+RUN_ID = "BL-2026-07-22-petes-lake-nwi-context-r003"
+ASSET_ID_PREFIX = "petes-lake-nwi-r003"
 BRANCH = "codex/p2o4-t33-petes-lake-milestone"
 CONTRACT_VERSION = "1.0"
 SERVICE_HOST = "fwspublicservices.wim.usgs.gov"
@@ -52,9 +59,10 @@ WEB_SERVICE_REFERENCE = (
 DATA_DOWNLOAD_REFERENCE = (
     "https://www.fws.gov/program/national-wetlands-inventory/data-download"
 )
-AUTHORIZATION_REFERENCE = "PRECHECK-2026-054"
+AUTHORIZATION_REFERENCE = "PRECHECK-2026-055"
 SOURCE_RECORD_REFERENCE = "SOURCE-2026-032"
 TERMS_RECORD_REFERENCE = "TERMS-2026-028"
+TERMINAL_RECORD_REFERENCE = "REGISTRY-2026-056"
 TRACKED_GATE_RECORDS = (
     {
         "record_id": SOURCE_RECORD_REFERENCE,
@@ -72,10 +80,17 @@ TRACKED_GATE_RECORDS = (
     },
     {
         "record_id": AUTHORIZATION_REFERENCE,
-        "path": Path("records/phase-two/prechecks/PRECHECK-2026-054.md"),
-        "bytes": 5_798,
-        "sha256": "d17bf88b9915a8508f6e18b11955042f3bbe74608c17060f453ab92fa37d2ebe",
-        "required_decision": "PASS_LOCAL_VALIDATOR_REMEDIATION_FOR_NEW_EXACT_R002_INTAKE_ONLY",
+        "path": Path("records/phase-two/prechecks/PRECHECK-2026-055.md"),
+        "bytes": 5_463,
+        "sha256": "d37b113344242fdffd8b26061110ec6295d5c73d8790839c18c8748ebf592b5b",
+        "required_decision": "AUTHORIZE_OFFLINE_OBSERVABILITY_REMEDIATION_AND_ONE_FINAL_DISJOINT_R003_INTAKE",
+    },
+    {
+        "record_id": TERMINAL_RECORD_REFERENCE,
+        "path": Path("records/phase-two/registry/REGISTRY-2026-056.md"),
+        "bytes": 5_999,
+        "sha256": "251aca22791ffeec2582d7698d151348a2d92ad23ecb10e103f66c6b4cc3afbf",
+        "required_decision": "R002 is immutable and terminal",
     },
 )
 GRID_BOUNDS_UTM10N = (584_560, 4_866_340, 591_540, 4_871_520)
@@ -95,27 +110,27 @@ ALLOWED_JSON_MEDIA_TYPES = {"application/json", "text/plain"}
 ALLOWED_HTML_MEDIA_TYPES = {"text/html"}
 _REPARSE_ATTRIBUTE = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
 CONTRACT_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05R1/"
-    "petes-lake-nwi-context-r002-intake.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R2/"
+    "petes-lake-nwi-context-r003-intake.json"
 )
 STAGING_ROOT = Path(
-    "downloads/phase-two/quarantine/P2O4-T33-U05R1/"
-    "petes-lake-nwi-context-r002"
+    "downloads/phase-two/quarantine/P2O4-T33-U05R2/"
+    "petes-lake-nwi-context-r003"
 )
 CUSTODY_ROOT = Path("downloads/phase-two/raw")
-PACKAGE_DIRECTORY = Path("petes-lake-nwi-context-v0.1.0-r002")
+PACKAGE_DIRECTORY = Path("petes-lake-nwi-context-v0.1.0-r003")
 MUTEX_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05R1/"
-    ".petes-lake-nwi-context-r002.lock"
+    "downloads/phase-two/runs/P2O4-T33-U05R2/"
+    ".petes-lake-nwi-context-r003.lock"
 )
 PLAN_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05R1/"
-    "petes-lake-nwi-context-r002-plan.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R2/"
+    "petes-lake-nwi-context-r003-plan.json"
 )
-DISPATCH_ROOT = Path("downloads/phase-two/runs/P2O4-T33-U05R1/dispatch")
+DISPATCH_ROOT = Path("downloads/phase-two/runs/P2O4-T33-U05R2/dispatch")
 TERMS_REFRESH_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05R1/"
-    "petes-lake-nwi-context-r002-terms-refresh.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R2/"
+    "petes-lake-nwi-context-r003-terms-refresh.json"
 )
 R001_EVIDENCE = (
     {
@@ -162,6 +177,179 @@ R001_EVIDENCE = (
         ),
         "bytes": 21_276,
         "sha256": "975c06d4c44ecedf23d1d5930ac1316913234ed0fd5b3a76fc365d07db466459",
+    },
+)
+R002_EVIDENCE = (
+    {
+        "role": "terminal_contract",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/"
+            "petes-lake-nwi-context-r002-intake.json"
+        ),
+        "bytes": 79_265,
+        "sha256": "37cd244ecba3e19db978505fb1dbecfc08ac68752a2e41352fbdad5f9ad6479a",
+    },
+    {
+        "role": "immutable_plan",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/"
+            "petes-lake-nwi-context-r002-plan.json"
+        ),
+        "bytes": 20_684,
+        "sha256": "ea1a23462f7395a2d8c5bf64e672d557c3aa6120106bdd78c038a84683c98a62",
+    },
+    {
+        "role": "live_terms_receipt",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/"
+            "petes-lake-nwi-context-r002-terms-refresh.json"
+        ),
+        "bytes": 5_354,
+        "sha256": "1cdbad419ccc9804cbbbeb1aa45466cb1fb882ae855ed3759cc91ced7ed48fbc",
+    },
+    {
+        "role": "wetlands_layer_metadata_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-layer-metadata-attempt-001.json"
+        ),
+        "bytes": 862,
+        "sha256": "c55e1c9f3d0fca9d04783558c4ca1afcc4a693b0f569da2576793d1814b2dffa",
+    },
+    {
+        "role": "wetlands_pre_count_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-pre-count-attempt-001.json"
+        ),
+        "bytes": 908,
+        "sha256": "9c7ffd000c9b9c3d9ab3fadeaaa2df56646031c04139155f8059b59f8d1edcb3",
+    },
+    {
+        "role": "wetlands_pre_ids_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-pre-ids-attempt-001.json"
+        ),
+        "bytes": 902,
+        "sha256": "a23d95354a53df4eb7cb174071f0596516cb6694f8d9406ae5ddc183de32d79e",
+    },
+    {
+        "role": "wetlands_features_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-features-attempt-001.json"
+        ),
+        "bytes": 905,
+        "sha256": "d286a7459a0e23f208b53df4e6ba21124d6f449d130bbd03b63a3eff75a072ad",
+    },
+    {
+        "role": "wetlands_post_count_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-post-count-attempt-001.json"
+        ),
+        "bytes": 911,
+        "sha256": "a7f7a0af621b9429053d32d5a7713fd8be99f31864b0c7a45206e447e6f73f57",
+    },
+    {
+        "role": "wetlands_post_ids_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-wetlands-post-ids-attempt-001.json"
+        ),
+        "bytes": 905,
+        "sha256": "d8d2702e5d04f2a35004a43c754e2af9bc4b4908e54126e8ccbdc59de1336f17",
+    },
+    {
+        "role": "source_layer_metadata_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-source-layer-metadata-attempt-001.json"
+        ),
+        "bytes": 859,
+        "sha256": "e3823948901a61a0e0448a5225136d66b077ef14a289db42e3c2e2d756b1e51f",
+    },
+    {
+        "role": "source_pre_count_dispatch",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05R1/dispatch/"
+            "petes-lake-nwi-r002-source-pre-count-attempt-001.json"
+        ),
+        "bytes": 905,
+        "sha256": "5a841bdb72f597d2a470eb88f6eb5425f8d580767a1e76ec936df9aefe9d2058",
+    },
+    {
+        "role": "wetlands_layer_metadata_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-layer-metadata.json"
+        ),
+        "bytes": 21_276,
+        "sha256": "975c06d4c44ecedf23d1d5930ac1316913234ed0fd5b3a76fc365d07db466459",
+    },
+    {
+        "role": "wetlands_pre_count_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-pre-count.json"
+        ),
+        "bytes": 13,
+        "sha256": "0aa3cb3ca1de6d4591eed691291545c02dfba8db948d9ec844d73e380d6c5b26",
+    },
+    {
+        "role": "wetlands_pre_ids_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-pre-ids.json"
+        ),
+        "bytes": 5_662,
+        "sha256": "68741e7dafb1177ee471c5f21be33074aab98a7c157fea349f86fcfe343c20f3",
+    },
+    {
+        "role": "wetlands_features_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-features.json"
+        ),
+        "bytes": 4_689_626,
+        "sha256": "10d7a283c666d0cd6916b1058cf380a049f2651fe47f84ef5b7c035e35316ef1",
+    },
+    {
+        "role": "wetlands_post_count_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-post-count.json"
+        ),
+        "bytes": 13,
+        "sha256": "0aa3cb3ca1de6d4591eed691291545c02dfba8db948d9ec844d73e380d6c5b26",
+    },
+    {
+        "role": "wetlands_post_ids_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "wetlands-post-ids.json"
+        ),
+        "bytes": 5_662,
+        "sha256": "68741e7dafb1177ee471c5f21be33074aab98a7c157fea349f86fcfe343c20f3",
+    },
+    {
+        "role": "source_layer_metadata_payload",
+        "path": Path(
+            "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0-r002/"
+            "source-layer-metadata.json"
+        ),
+        "bytes": 11_229,
+        "sha256": "de5dcacb9531a380ef4c29167031f928e48add79e0410020928e316d5f98cf12",
+    },
+    {
+        "role": "source_pre_count_retained_partial",
+        "path": Path(
+            "downloads/phase-two/quarantine/P2O4-T33-U05R1/"
+            "petes-lake-nwi-context-r002/source-pre-count.json.partial"
+        ),
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     },
 )
 
@@ -365,6 +553,28 @@ def _monotonic_timestamp(now_fn: Callable[[], str], after: datetime) -> tuple[st
 
 def _open_no_redirect(request: Request, *, timeout: int) -> Any:
     return build_opener(_NoRedirectHandler()).open(request, timeout=timeout)
+
+
+def _provider_open_diagnostic(error: BaseException) -> dict[str, Any]:
+    """Return a bounded diagnostic without serializing provider exception material."""
+
+    if isinstance(error, HTTPError):
+        status = error.code
+        if isinstance(status, int) and not isinstance(status, bool) and 100 <= status <= 599:
+            return {"category": "http", "http_status": status}
+        return {"category": "unknown-open", "http_status": None}
+    candidate: object = error.reason if isinstance(error, URLError) else error
+    if isinstance(candidate, TimeoutError):
+        category = "timeout"
+    elif isinstance(candidate, socket.gaierror):
+        category = "dns"
+    elif isinstance(candidate, ssl.SSLError):
+        category = "tls"
+    elif isinstance(candidate, ConnectionError):
+        category = "connection"
+    else:
+        category = "unknown-open"
+    return {"category": category, "http_status": None}
 
 
 def _normalized_html_text(data: bytes) -> str:
@@ -681,7 +891,7 @@ def _verify_retained_r001_evidence(root: Path) -> None:
     extensions = prior.get("extensions", {})
     assets = prior.get("assets", [])
     if (
-        extensions.get("unit_id") != CONTROLLING_UNIT_ID
+        extensions.get("unit_id") != R001_UNIT_ID
         or extensions.get("run_id") != R001_RUN_ID
         or not isinstance(assets, list)
         or len(assets) != 12
@@ -696,6 +906,104 @@ def _verify_retained_r001_evidence(root: Path) -> None:
         raise PetesLakeWetlandCustodyError(
             "retained r001 terminal failure semantics changed"
         )
+
+
+def _verify_retained_r002_evidence(root: Path) -> None:
+    observed: dict[str, Path] = {}
+    for evidence in R002_EVIDENCE:
+        path = _project_path(root, evidence["path"])
+        _assert_ignored_untracked(root, path)
+        if (
+            not path.is_file()
+            or path.is_symlink()
+            or path.stat().st_nlink != 1
+            or path.stat().st_size != evidence["bytes"]
+            or _file_digest(path) != evidence["sha256"]
+        ):
+            raise PetesLakeWetlandCustodyError(
+                f"retained r002 remediation evidence changed: {evidence['role']}"
+            )
+        observed[evidence["role"]] = path
+    try:
+        prior = json.loads(
+            observed["terminal_contract"].read_bytes(),
+            object_pairs_hook=_reject_duplicate_keys,
+        )
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise PetesLakeWetlandCustodyError(
+            "retained r002 terminal contract is not valid JSON"
+        ) from error
+    extensions = prior.get("extensions", {})
+    assets = prior.get("assets", [])
+    expected_ids = [
+        f"petes-lake-nwi-r002-{role}"
+        for role in (
+            "wetlands-layer-metadata",
+            "wetlands-pre-count",
+            "wetlands-pre-ids",
+            "wetlands-features",
+            "wetlands-post-count",
+            "wetlands-post-ids",
+            "source-layer-metadata",
+            "source-pre-count",
+            "source-pre-ids",
+            "source-features",
+            "source-post-count",
+            "source-post-ids",
+        )
+    ]
+    if (
+        prior.get("intake_id") != "petes-lake-nwi-context-2026-002"
+        or extensions.get("unit_id") != R002_UNIT_ID
+        or extensions.get("run_id") != R002_RUN_ID
+        or extensions.get("git_source_commit") != R002_SOURCE_COMMIT
+        or extensions.get("state") is not None
+        or extensions.get("terms_refresh", {}).get("state") != "passed"
+        or not isinstance(assets, list)
+        or len(assets) != 12
+        or [item.get("asset_id") for item in assets] != expected_ids
+        or any(item.get("state") != "promoted" for item in assets[:7])
+        or any(
+            len(item.get("attempts", [])) != 1
+            or item["attempts"][0].get("outcome") != "succeeded"
+            for item in assets[:7]
+        )
+        or assets[7].get("state") != "failed"
+        or len(assets[7].get("attempts", [])) != 1
+        or assets[7]["attempts"][0].get("outcome") != "failed"
+        or assets[7].get("failure", {}).get("code")
+        != "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY"
+        or assets[7].get("failure", {}).get("stage") != "PROVIDER_OPEN"
+        or assets[7].get("failure", {}).get("retained_staging")
+        != {
+            "status": "exact",
+            "size_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        }
+        or any(item.get("state") != "authorized" for item in assets[8:])
+        or any(item.get("attempts") for item in assets[8:])
+    ):
+        raise PetesLakeWetlandCustodyError(
+            "retained r002 terminal failure semantics changed"
+        )
+    definitions = asset_definitions()
+    for asset, definition in zip(assets, definitions, strict=True):
+        prior_static = asset.get("extensions", {})
+        source = asset.get("source", {})
+        if (
+            source.get("uri") != definition["uri"]
+            or prior_static.get("logical_role") != definition["logical_role"]
+            or prior_static.get("http_method") != definition["method"]
+            or prior_static.get("request_body_sha256") != definition["body_sha256"]
+            or prior_static.get("provider_geometry_crs")
+            != ("EPSG:3857" if definition["format"] == "features" else None)
+            or PurePosixPath(asset.get("destination_relative_path", "")).name
+            != definition["filename"]
+            or asset.get("staging_relative_path") != definition["filename"] + ".partial"
+        ):
+            raise PetesLakeWetlandCustodyError(
+                f"r003 provider request drifted from retained r002: {definition['logical_role']}"
+            )
 
 
 def _verify_mutation_context(root: Path, contract: dict[str, Any]) -> None:
@@ -1017,9 +1325,26 @@ def _contract_extensions(git_source_commit: str) -> dict[str, Any]:
             for item in TRACKED_GATE_RECORDS
         ],
         "no_automatic_retry": True,
+        "same_source_attempt_policy": "r003 is final; no r004 without explicit owner amendment",
         "analysis_or_label_semantics": "none; custody only",
         "remediation_of": {
-            "unit_id": CONTROLLING_UNIT_ID,
+            "unit_id": R002_UNIT_ID,
+            "run_id": R002_RUN_ID,
+            "disposition": "remediate",
+            "failure_code": "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY",
+            "failure_stage": "PROVIDER_OPEN",
+            "evidence": [
+                {
+                    "role": item["role"],
+                    "path": item["path"].as_posix(),
+                    "bytes": item["bytes"],
+                    "sha256": item["sha256"],
+                }
+                for item in R002_EVIDENCE
+            ],
+        },
+        "earlier_remediation_evidence": {
+            "unit_id": R001_UNIT_ID,
             "run_id": R001_RUN_ID,
             "disposition": "remediate",
             "failure_code": "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY",
@@ -1227,6 +1552,39 @@ def _validate_dispatch_receipts(root: Path, contract: dict[str, Any]) -> None:
             raise PetesLakeWetlandCustodyError("dispatch receipt roster contains extra or missing files")
 
 
+def _validate_provider_open_diagnostic(value: Any) -> None:
+    if not isinstance(value, dict) or set(value) != {"category", "http_status"}:
+        raise PetesLakeWetlandCustodyError(
+            "provider-open diagnostic schema is not privacy-safe"
+        )
+    category = value.get("category")
+    status = value.get("http_status")
+    if category not in {
+        "http",
+        "timeout",
+        "dns",
+        "tls",
+        "connection",
+        "unknown-open",
+    }:
+        raise PetesLakeWetlandCustodyError(
+            "provider-open diagnostic category is not controlled"
+        )
+    if category == "http":
+        if (
+            not isinstance(status, int)
+            or isinstance(status, bool)
+            or not 100 <= status <= 599
+        ):
+            raise PetesLakeWetlandCustodyError(
+                "provider-open HTTP status is not a bounded integer"
+            )
+    elif status is not None:
+        raise PetesLakeWetlandCustodyError(
+            "non-HTTP provider-open diagnostic carries an HTTP status"
+        )
+
+
 def _validate_asset_contract(
     asset: Any,
     definition: dict[str, Any],
@@ -1361,16 +1719,21 @@ def _validate_asset_contract(
             raise PetesLakeWetlandCustodyError("staging attempt carries completed identities")
     elif state == "failed":
         failure = asset.get("failure")
+        failure_stage = failure.get("stage") if isinstance(failure, dict) else None
+        expected_failure_keys = {"code", "stage", "retained_staging", "next_action"}
+        if failure_stage == "PROVIDER_OPEN":
+            expected_failure_keys.add("provider_open_diagnostic")
         if (
             outcome != "failed"
             or completed_at is None
             or not isinstance(failure, dict)
-            or set(failure)
-            != {"code", "stage", "retained_staging", "next_action"}
+            or set(failure) != expected_failure_keys
             or failure.get("code") != "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY"
             or any(value is not None for value in observed.values())
         ):
             raise PetesLakeWetlandCustodyError("failed attempt state is inconsistent")
+        if failure_stage == "PROVIDER_OPEN":
+            _validate_provider_open_diagnostic(failure.get("provider_open_diagnostic"))
         retained = failure.get("retained_staging")
         if (
             failure.get("stage")
@@ -1733,8 +2096,9 @@ def initialize_contract(
     _utc(created_at_utc)
     if not re.fullmatch(r"[0-9a-f]{40}", git_source_commit):
         raise PetesLakeWetlandCustodyError("git source commit must be an exact lowercase SHA-1")
-    _preflight_initialize(root, git_source_commit)
     _verify_retained_r001_evidence(root)
+    _verify_retained_r002_evidence(root)
+    _preflight_initialize(root, git_source_commit)
     _verify_tracked_gate_records(root)
     contract_path = _project_path(root, CONTRACT_PATH)
     plan_path = _project_path(root, PLAN_PATH)
@@ -1802,6 +2166,7 @@ def initialize_contract(
 def load_contract(repository_root: Path) -> tuple[Path, dict[str, Any]]:
     root = _validate_root(repository_root)
     _verify_retained_r001_evidence(root)
+    _verify_retained_r002_evidence(root)
     path = _project_path(root, CONTRACT_PATH)
     if not path.is_file() or path.is_symlink() or path.stat().st_nlink != 1:
         raise PetesLakeWetlandCustodyError("intake contract is absent or unsafe")
@@ -1815,6 +2180,7 @@ def load_contract(repository_root: Path) -> tuple[Path, dict[str, Any]]:
     _validate_plan_receipt(root, contract)
     _validate_terms_refresh_receipt(root, contract)
     _validate_dispatch_receipts(root, contract)
+    _verify_failed_staging_evidence(root, contract)
     return path, contract
 
 
@@ -2484,6 +2850,21 @@ def _retained_staging_identity(staging: Path) -> dict[str, Any]:
         }
 
 
+def _verify_failed_staging_evidence(root: Path, contract: dict[str, Any]) -> None:
+    for asset in contract["assets"]:
+        if asset.get("state") != "failed":
+            continue
+        staging = _project_path(
+            root, STAGING_ROOT / PurePosixPath(asset["staging_relative_path"])
+        )
+        _assert_ignored_untracked(root, staging)
+        expected = asset["failure"]["retained_staging"]
+        if _retained_staging_identity(staging) != expected:
+            raise PetesLakeWetlandCustodyError(
+                f"failed retained staging identity changed: {asset['asset_id']}"
+            )
+
+
 @_serialized_mutation
 def fetch_asset(
     repository_root: Path,
@@ -2696,13 +3077,15 @@ def fetch_asset(
             "retained_staging": _retained_staging_identity(staging),
             "next_action": "retain and disposition this exact failed attempt before any new asset identity",
         }
+        if failure_stage == "PROVIDER_OPEN":
+            asset["failure"]["provider_open_diagnostic"] = _provider_open_diagnostic(error)
         try:
             _write_contract(path, contract)
         except Exception:
             pass
         raise PetesLakeWetlandCustodyError(
             f"NWI transfer failed without retry: {asset_id}"
-        ) from error
+        ) from None
     finally:
         if handle is not None:
             handle.close()

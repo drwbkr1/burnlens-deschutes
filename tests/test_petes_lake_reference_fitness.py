@@ -213,6 +213,7 @@ class PetesLakeReferenceFitnessTests(unittest.TestCase):
     def test_nwi_custody_binding_requires_same_commit_and_forward_time(self) -> None:
         commit = "a" * 40
         custody = {
+            "unit_id": reference_fitness.NWI_CUSTODY_UNIT_ID,
             "branch": reference_fitness.BRANCH,
             "git_source_commit": commit,
             "completed_at_utc": "2026-07-22T01:00:00Z",
@@ -222,6 +223,12 @@ class PetesLakeReferenceFitnessTests(unittest.TestCase):
             git_source_commit=commit,
             generated_at_utc="2026-07-22T01:00:01Z",
         )
+        with self.assertRaisesRegex(RuntimeError, "unit binding"):
+            _validate_nwi_report_binding(
+                dict(custody, unit_id="P2O4-T33-U05R1"),
+                git_source_commit=commit,
+                generated_at_utc="2026-07-22T01:00:01Z",
+            )
         with self.assertRaisesRegex(RuntimeError, "source commit"):
             _validate_nwi_report_binding(
                 custody,
