@@ -381,6 +381,9 @@ def build_report(
         "post_tci": post["TCI"],
         "pre_mask": pre["MASK10"],
         "post_mask": post["MASK10"],
+        "boundary_mask20": pre["MASK20"],
+        "pre_scl20": pre["SCL"],
+        "post_scl20": post["SCL"],
         "dnbr": dnbr,
         "dnbr_valid": spectral_valid,
     }

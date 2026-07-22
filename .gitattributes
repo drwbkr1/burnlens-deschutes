@@ -127,3 +127,8 @@ tests/test_petes_lake_reference_custody.py text eol=lf
 burnlens/petes_lake_reference_native_contract.py text eol=lf
 burnlens/inspect_petes_lake_reference_native_contract.py text eol=lf
 tests/test_petes_lake_reference_native_contract.py text eol=lf
+
+# Petes Lake NWI source-gate records have checkout-stable byte bindings.
+records/phase-two/sources/SOURCE-2026-032.md text eol=lf
+records/phase-two/terms/TERMS-2026-028.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-053.md text eol=lf
