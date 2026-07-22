@@ -13,6 +13,7 @@ import rasterio
 from shapely.geometry import box
 
 import burnlens.petes_lake_reference_fitness as reference_fitness
+from burnlens.petes_lake_wetland_custody import PACKAGE_DIRECTORY
 
 from burnlens.petes_lake_reference_fitness import (
     NWI_CONTRACT_PATH,
@@ -35,7 +36,7 @@ from burnlens.petes_lake_reference_fitness import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NWI_PACKAGE = ROOT / "downloads/phase-two/raw/petes-lake-nwi-context-v0.1.0"
+NWI_PACKAGE = ROOT / "downloads/phase-two/raw" / PACKAGE_DIRECTORY
 
 
 class PetesLakeReferenceFitnessTests(unittest.TestCase):

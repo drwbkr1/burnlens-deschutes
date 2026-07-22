@@ -29,9 +29,12 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 from .provider_acquisition import AcquisitionError, USER_AGENT, write_private_state
 
 
-UNIT_ID = "P2O4-T33-U05"
-INTAKE_ID = "petes-lake-nwi-context-2026-001"
-RUN_ID = "BL-2026-07-21-petes-lake-nwi-context-r001"
+CONTROLLING_UNIT_ID = "P2O4-T33-U05"
+UNIT_ID = "P2O4-T33-U05R1"
+INTAKE_ID = "petes-lake-nwi-context-2026-002"
+RUN_ID = "BL-2026-07-22-petes-lake-nwi-context-r002"
+R001_RUN_ID = "BL-2026-07-21-petes-lake-nwi-context-r001"
+ASSET_ID_PREFIX = "petes-lake-nwi-r002"
 BRANCH = "codex/p2o4-t33-petes-lake-milestone"
 CONTRACT_VERSION = "1.0"
 SERVICE_HOST = "fwspublicservices.wim.usgs.gov"
@@ -49,7 +52,7 @@ WEB_SERVICE_REFERENCE = (
 DATA_DOWNLOAD_REFERENCE = (
     "https://www.fws.gov/program/national-wetlands-inventory/data-download"
 )
-AUTHORIZATION_REFERENCE = "PRECHECK-2026-053"
+AUTHORIZATION_REFERENCE = "PRECHECK-2026-054"
 SOURCE_RECORD_REFERENCE = "SOURCE-2026-032"
 TERMS_RECORD_REFERENCE = "TERMS-2026-028"
 TRACKED_GATE_RECORDS = (
@@ -69,10 +72,10 @@ TRACKED_GATE_RECORDS = (
     },
     {
         "record_id": AUTHORIZATION_REFERENCE,
-        "path": Path("records/phase-two/prechecks/PRECHECK-2026-053.md"),
-        "bytes": 6_566,
-        "sha256": "86a8d67bea2aedd22aa519237ec21a92d2e0ca36bc4cc616b70fdd8b18367b38",
-        "required_decision": "PASS_EXACT_PETES_LAKE_NWI_BOUNDED_CONTEXT_INTAKE_ONLY",
+        "path": Path("records/phase-two/prechecks/PRECHECK-2026-054.md"),
+        "bytes": 5_798,
+        "sha256": "d17bf88b9915a8508f6e18b11955042f3bbe74608c17060f453ab92fa37d2ebe",
+        "required_decision": "PASS_LOCAL_VALIDATOR_REMEDIATION_FOR_NEW_EXACT_R002_INTAKE_ONLY",
     },
 )
 GRID_BOUNDS_UTM10N = (584_560, 4_866_340, 591_540, 4_871_520)
@@ -92,27 +95,74 @@ ALLOWED_JSON_MEDIA_TYPES = {"application/json", "text/plain"}
 ALLOWED_HTML_MEDIA_TYPES = {"text/html"}
 _REPARSE_ATTRIBUTE = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
 CONTRACT_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05/"
-    "petes-lake-nwi-context-r001-intake.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R1/"
+    "petes-lake-nwi-context-r002-intake.json"
 )
 STAGING_ROOT = Path(
-    "downloads/phase-two/quarantine/P2O4-T33-U05/"
-    "petes-lake-nwi-context-r001"
+    "downloads/phase-two/quarantine/P2O4-T33-U05R1/"
+    "petes-lake-nwi-context-r002"
 )
 CUSTODY_ROOT = Path("downloads/phase-two/raw")
-PACKAGE_DIRECTORY = Path("petes-lake-nwi-context-v0.1.0")
+PACKAGE_DIRECTORY = Path("petes-lake-nwi-context-v0.1.0-r002")
 MUTEX_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05/"
-    ".petes-lake-nwi-context-r001.lock"
+    "downloads/phase-two/runs/P2O4-T33-U05R1/"
+    ".petes-lake-nwi-context-r002.lock"
 )
 PLAN_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05/"
-    "petes-lake-nwi-context-r001-plan.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R1/"
+    "petes-lake-nwi-context-r002-plan.json"
 )
-DISPATCH_ROOT = Path("downloads/phase-two/runs/P2O4-T33-U05/dispatch")
+DISPATCH_ROOT = Path("downloads/phase-two/runs/P2O4-T33-U05R1/dispatch")
 TERMS_REFRESH_PATH = Path(
-    "downloads/phase-two/runs/P2O4-T33-U05/"
-    "petes-lake-nwi-context-r001-terms-refresh.json"
+    "downloads/phase-two/runs/P2O4-T33-U05R1/"
+    "petes-lake-nwi-context-r002-terms-refresh.json"
+)
+R001_EVIDENCE = (
+    {
+        "role": "terminal_contract",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05/"
+            "petes-lake-nwi-context-r001-intake.json"
+        ),
+        "bytes": 24_434,
+        "sha256": "a809241052aa8a8ce7705bf2cf9553b3113c10981791dd3dd4a0c0a9c1df2b7b",
+    },
+    {
+        "role": "immutable_plan",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05/"
+            "petes-lake-nwi-context-r001-plan.json"
+        ),
+        "bytes": 18_137,
+        "sha256": "e11428002a64052c8e66e7de0967eca00c61b5f12229b9aac42fefec7dd44685",
+    },
+    {
+        "role": "live_terms_receipt",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05/"
+            "petes-lake-nwi-context-r001-terms-refresh.json"
+        ),
+        "bytes": 5_352,
+        "sha256": "dc8bcd0a39556395e90be28dab48c7d25edec182a50c3a7e4be0ed3d307eabcb",
+    },
+    {
+        "role": "dispatch_receipt",
+        "path": Path(
+            "downloads/phase-two/runs/P2O4-T33-U05/dispatch/"
+            "wetlands-layer-metadata-attempt-001.json"
+        ),
+        "bytes": 820,
+        "sha256": "8a13dabf62e119500782e5333047c710cc0fed2eded0c8fb025e85b0484288b2",
+    },
+    {
+        "role": "retained_response",
+        "path": Path(
+            "downloads/phase-two/quarantine/P2O4-T33-U05/"
+            "petes-lake-nwi-context-r001/wetlands-layer-metadata.json.partial"
+        ),
+        "bytes": 21_276,
+        "sha256": "975c06d4c44ecedf23d1d5930ac1316913234ed0fd5b3a76fc365d07db466459",
+    },
 )
 
 WETLAND_FIELDS = (
@@ -603,6 +653,51 @@ def _preflight_initialize(root: Path, git_source_commit: str) -> None:
         )
 
 
+def _verify_retained_r001_evidence(root: Path) -> None:
+    observed: dict[str, Path] = {}
+    for evidence in R001_EVIDENCE:
+        path = _project_path(root, evidence["path"])
+        _assert_ignored_untracked(root, path)
+        if (
+            not path.is_file()
+            or path.is_symlink()
+            or path.stat().st_nlink != 1
+            or path.stat().st_size != evidence["bytes"]
+            or _file_digest(path) != evidence["sha256"]
+        ):
+            raise PetesLakeWetlandCustodyError(
+                f"retained r001 remediation evidence changed: {evidence['role']}"
+            )
+        observed[evidence["role"]] = path
+    try:
+        prior = json.loads(
+            observed["terminal_contract"].read_bytes(),
+            object_pairs_hook=_reject_duplicate_keys,
+        )
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise PetesLakeWetlandCustodyError(
+            "retained r001 terminal contract is not valid JSON"
+        ) from error
+    extensions = prior.get("extensions", {})
+    assets = prior.get("assets", [])
+    if (
+        extensions.get("unit_id") != CONTROLLING_UNIT_ID
+        or extensions.get("run_id") != R001_RUN_ID
+        or not isinstance(assets, list)
+        or len(assets) != 12
+        or assets[0].get("asset_id") != "wetlands-layer-metadata"
+        or assets[0].get("state") != "failed"
+        or assets[0].get("failure", {}).get("code")
+        != "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY"
+        or assets[0].get("failure", {}).get("stage") != "RESPONSE_STRUCTURE"
+        or any(item.get("state") != "authorized" for item in assets[1:])
+        or any(item.get("attempts") for item in assets[1:])
+    ):
+        raise PetesLakeWetlandCustodyError(
+            "retained r001 terminal failure semantics changed"
+        )
+
+
 def _verify_mutation_context(root: Path, contract: dict[str, Any]) -> None:
     context = _git_context(root)
     extensions = contract.get("extensions", {})
@@ -792,7 +887,8 @@ def _post_definition(
     )
     body = urlencode(parameters).encode("ascii")
     return {
-        "asset_id": asset_id,
+        "asset_id": _run_asset_id(asset_id),
+        "logical_role": asset_id,
         "filename": filename,
         "uri": f"{layer_url}/query",
         "method": "POST",
@@ -803,10 +899,15 @@ def _post_definition(
     }
 
 
+def _run_asset_id(logical_role: str) -> str:
+    return f"{ASSET_ID_PREFIX}-{logical_role}"
+
+
 def asset_definitions() -> tuple[dict[str, Any], ...]:
     return (
         {
-            "asset_id": "wetlands-layer-metadata",
+            "asset_id": _run_asset_id("wetlands-layer-metadata"),
+            "logical_role": "wetlands-layer-metadata",
             "filename": "wetlands-layer-metadata.json",
             "uri": f"{WETLAND_LAYER}?f=pjson",
             "method": "GET",
@@ -821,7 +922,8 @@ def asset_definitions() -> tuple[dict[str, Any], ...]:
         _post_definition(asset_id="wetlands-post-count", filename="wetlands-post-count.json", layer="wetlands", layer_url=WETLAND_LAYER, operation="count"),
         _post_definition(asset_id="wetlands-post-ids", filename="wetlands-post-ids.json", layer="wetlands", layer_url=WETLAND_LAYER, operation="ids"),
         {
-            "asset_id": "source-layer-metadata",
+            "asset_id": _run_asset_id("source-layer-metadata"),
+            "logical_role": "source-layer-metadata",
             "filename": "source-layer-metadata.json",
             "uri": f"{SOURCE_LAYER}?f=pjson",
             "method": "GET",
@@ -873,6 +975,7 @@ def _contract_asset(definition: dict[str, Any]) -> dict[str, Any]:
         "failure": None,
         "superseded_by": None,
         "extensions": {
+            "logical_role": definition["logical_role"],
             "http_method": definition["method"],
             "request_body_sha256": definition["body_sha256"],
             "request_body_media_type": (
@@ -915,6 +1018,22 @@ def _contract_extensions(git_source_commit: str) -> dict[str, Any]:
         ],
         "no_automatic_retry": True,
         "analysis_or_label_semantics": "none; custody only",
+        "remediation_of": {
+            "unit_id": CONTROLLING_UNIT_ID,
+            "run_id": R001_RUN_ID,
+            "disposition": "remediate",
+            "failure_code": "NWI_TRANSFER_OR_STRUCTURE_FAILURE_NO_RETRY",
+            "failure_stage": "RESPONSE_STRUCTURE",
+            "evidence": [
+                {
+                    "role": item["role"],
+                    "path": item["path"].as_posix(),
+                    "bytes": item["bytes"],
+                    "sha256": item["sha256"],
+                }
+                for item in R001_EVIDENCE
+            ],
+        },
     }
 
 
@@ -1615,6 +1734,7 @@ def initialize_contract(
     if not re.fullmatch(r"[0-9a-f]{40}", git_source_commit):
         raise PetesLakeWetlandCustodyError("git source commit must be an exact lowercase SHA-1")
     _preflight_initialize(root, git_source_commit)
+    _verify_retained_r001_evidence(root)
     _verify_tracked_gate_records(root)
     contract_path = _project_path(root, CONTRACT_PATH)
     plan_path = _project_path(root, PLAN_PATH)
@@ -1681,6 +1801,7 @@ def initialize_contract(
 
 def load_contract(repository_root: Path) -> tuple[Path, dict[str, Any]]:
     root = _validate_root(repository_root)
+    _verify_retained_r001_evidence(root)
     path = _project_path(root, CONTRACT_PATH)
     if not path.is_file() or path.is_symlink() or path.stat().st_nlink != 1:
         raise PetesLakeWetlandCustodyError("intake contract is absent or unsafe")
@@ -2006,9 +2127,13 @@ def start_asset(
     )
     definition = asset_definitions()[index]
     if definition["format"] == "features":
-        metadata_asset = _asset(contract, f"{definition['layer']}-layer-metadata")
-        count_asset = _asset(contract, f"{definition['layer']}-pre-count")
-        ids_asset = _asset(contract, f"{definition['layer']}-pre-ids")
+        metadata_asset = _asset(
+            contract, _run_asset_id(f"{definition['layer']}-layer-metadata")
+        )
+        count_asset = _asset(
+            contract, _run_asset_id(f"{definition['layer']}-pre-count")
+        )
+        ids_asset = _asset(contract, _run_asset_id(f"{definition['layer']}-pre-ids"))
         metadata = _validate_layer_metadata(
             _read_json(_destination_path(root, metadata_asset)),
             layer=definition["layer"],
@@ -2072,16 +2197,31 @@ def _read_json(path: Path) -> Any:
 
 def _validate_layer_metadata(payload: Any, *, layer: str) -> dict[str, Any]:
     expected_name = "Wetlands" if layer == "wetlands" else "Source Type"
-    expected_types = WETLAND_FIELD_TYPES if layer == "wetlands" else SOURCE_FIELD_TYPES
+    expected_types = (
+        {
+            field_name: WETLAND_FIELD_TYPES[field_name.split(".", 1)[1]]
+            for field_name in WETLAND_FIELDS
+        }
+        if layer == "wetlands"
+        else dict(SOURCE_FIELD_TYPES)
+    )
     if not isinstance(payload, dict) or payload.get("name") != expected_name:
         raise PetesLakeWetlandCustodyError("NWI layer metadata identity mismatch")
     if payload.get("type") != "Feature Layer" or payload.get("geometryType") != "esriGeometryPolygon":
         raise PetesLakeWetlandCustodyError("NWI layer type or geometry changed")
-    fields = {
-        item.get("name", "").split(".")[-1]: item
-        for item in payload.get("fields", [])
-        if isinstance(item, dict)
-    }
+    raw_fields = payload.get("fields")
+    if not isinstance(raw_fields, list):
+        raise PetesLakeWetlandCustodyError("NWI layer field contract changed")
+    fields: dict[str, dict[str, Any]] = {}
+    for item in raw_fields:
+        if not isinstance(item, dict) or not isinstance(item.get("name"), str):
+            raise PetesLakeWetlandCustodyError("NWI layer field contract changed")
+        field_name = item["name"]
+        if not field_name or field_name in fields:
+            raise PetesLakeWetlandCustodyError(
+                "NWI layer exact field name is empty or duplicated"
+            )
+        fields[field_name] = item
     if not set(expected_types).issubset(fields):
         raise PetesLakeWetlandCustodyError("NWI layer field contract changed")
     for field_name, field_type in expected_types.items():
@@ -2599,8 +2739,12 @@ def verify_asset(repository_root: Path, *, asset_id: str) -> dict[str, Any]:
         _validate_ids(payload, layer=definition["layer"])
     else:
         feature_summary = _validate_feature_collection(payload, layer=definition["layer"])
-        count_asset = _asset(contract, f"{definition['layer']}-pre-count")
-        ids_asset = _asset(contract, f"{definition['layer']}-pre-ids")
+        count_asset = _asset(
+            contract, _run_asset_id(f"{definition['layer']}-pre-count")
+        )
+        ids_asset = _asset(
+            contract, _run_asset_id(f"{definition['layer']}-pre-ids")
+        )
         if count_asset.get("state") not in {"verified", "promoted"}:
             raise PetesLakeWetlandCustodyError("pre-count asset must be verified before features")
         if ids_asset.get("state") not in {"verified", "promoted"}:
@@ -2611,7 +2755,9 @@ def verify_asset(repository_root: Path, *, asset_id: str) -> dict[str, Any]:
         expected_ids = _validate_ids(
             _read_json(ids_path), layer=definition["layer"]
         )["object_ids"]
-        metadata_asset = _asset(contract, f"{definition['layer']}-layer-metadata")
+        metadata_asset = _asset(
+            contract, _run_asset_id(f"{definition['layer']}-layer-metadata")
+        )
         if metadata_asset.get("state") not in {"verified", "promoted"}:
             raise PetesLakeWetlandCustodyError("layer metadata must be verified before features")
         metadata_path = _available_asset_path(root, metadata_asset)
@@ -2729,18 +2875,18 @@ def _compute_bounded_consistency(
             return _read_json(_destination_path(root, _asset(contract, asset_id)))
 
         metadata = _validate_layer_metadata(
-            payload(f"{layer}-layer-metadata"), layer=layer
+            payload(_run_asset_id(f"{layer}-layer-metadata")), layer=layer
         )
-        pre_count = _validate_count(payload(f"{layer}-pre-count"))
-        post_count = _validate_count(payload(f"{layer}-post-count"))
+        pre_count = _validate_count(payload(_run_asset_id(f"{layer}-pre-count")))
+        post_count = _validate_count(payload(_run_asset_id(f"{layer}-post-count")))
         pre_ids = _validate_ids(
-            payload(f"{layer}-pre-ids"), layer=layer
+            payload(_run_asset_id(f"{layer}-pre-ids")), layer=layer
         )["object_ids"]
         post_ids = _validate_ids(
-            payload(f"{layer}-post-ids"), layer=layer
+            payload(_run_asset_id(f"{layer}-post-ids")), layer=layer
         )["object_ids"]
         features = _validate_feature_collection(
-            payload(f"{layer}-features"), layer=layer
+            payload(_run_asset_id(f"{layer}-features")), layer=layer
         )
         if not (
             pre_count

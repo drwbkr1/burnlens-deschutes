@@ -30,10 +30,12 @@ from burnlens.petes_lake_wetland_custody import (
     _dispatch_receipt_relative_path,
     _normalized_html_text,
     _preflight_initialize,
+    _run_asset_id,
     _transaction_mutex,
     _validate_count,
     _validate_feature_collection,
     _validate_layer_metadata,
+    _verify_retained_r001_evidence,
     asset_definitions,
     authorize_contract,
     fetch_asset,
@@ -43,6 +45,9 @@ from burnlens.petes_lake_wetland_custody import (
     start_asset,
     verify_asset,
 )
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class _Response:
@@ -93,6 +98,18 @@ def _metadata() -> dict[str, object]:
                 "domain": None,
             }
             for name in WETLAND_FIELDS
+        ]
+        + [
+            {
+                "name": "NWI_Wetland_Codes.OBJECTID",
+                "type": "esriFieldTypeInteger",
+                "domain": None,
+            },
+            {
+                "name": "NWI_Wetland_Codes.ATTRIBUTE",
+                "type": "esriFieldTypeString",
+                "domain": None,
+            },
         ],
     }
 
@@ -145,6 +162,7 @@ def _state_machine_patches(identity: dict[str, object]):
         )
         for symbol in (
             "_preflight_initialize",
+            "_verify_retained_r001_evidence",
             "_verify_mutation_context",
             "_verify_tracked_gate_records",
             "_assert_ignored_untracked",
@@ -159,6 +177,10 @@ def _state_machine_patches(identity: dict[str, object]):
             )
         )
         yield
+
+
+def _id(logical_role: str) -> str:
+    return _run_asset_id(logical_role)
 
 
 def _initialize(root: Path, identity: dict[str, object]) -> None:
@@ -285,9 +307,9 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
 
     def test_query_is_exact_public_https_and_includes_context_halo(self) -> None:
         definitions = {item["asset_id"]: item for item in asset_definitions()}
-        url = definitions["wetlands-features"]["uri"]
+        url = definitions[_id("wetlands-features")]["uri"]
         self.assertTrue(url.startswith("https://fwspublicservices.wim.usgs.gov/"))
-        body = definitions["wetlands-features"]["body"].decode("ascii")
+        body = definitions[_id("wetlands-features")]["body"].decode("ascii")
         for value in QUERY_BOUNDS_UTM10N:
             self.assertIn(str(value), body)
         self.assertIn("outSR=3857", body)
@@ -299,6 +321,8 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
         payload = _metadata()
         result = _validate_layer_metadata(payload, layer="wetlands")
         self.assertEqual(result["max_record_count"], 1000)
+        self.assertIn("Wetlands.OBJECTID", result["field_names"])
+        self.assertIn("NWI_Wetland_Codes.OBJECTID", result["field_names"])
         changed = dict(payload, geometryType="esriGeometryPoint")
         with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "geometry"):
             _validate_layer_metadata(changed, layer="wetlands")
@@ -306,6 +330,56 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
         wrong_type["fields"][0]["type"] = "esriFieldTypeString"
         with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "field type"):
             _validate_layer_metadata(wrong_type, layer="wetlands")
+        duplicate_exact = json.loads(json.dumps(payload))
+        duplicate_exact["fields"].append(dict(duplicate_exact["fields"][0]))
+        with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "duplicated"):
+            _validate_layer_metadata(duplicate_exact, layer="wetlands")
+
+    @unittest.skipUnless(
+        (
+            ROOT
+            / "downloads/phase-two/quarantine/P2O4-T33-U05/"
+            "petes-lake-nwi-context-r001/wetlands-layer-metadata.json.partial"
+        ).is_file(),
+        "exact retained r001 custody is intentionally unavailable in fresh clones",
+    )
+    def test_exact_retained_r001_bytes_pass_remediated_metadata_validation(self) -> None:
+        _verify_retained_r001_evidence(ROOT)
+        payload = json.loads(
+            (
+                ROOT
+                / "downloads/phase-two/quarantine/P2O4-T33-U05/"
+                "petes-lake-nwi-context-r001/wetlands-layer-metadata.json.partial"
+            ).read_bytes()
+        )
+        result = _validate_layer_metadata(payload, layer="wetlands")
+        self.assertEqual(result["required_field_types"]["Wetlands.OBJECTID"], "esriFieldTypeOID")
+
+    def test_every_r002_load_rechecks_retained_r001_failure_binding(self) -> None:
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / ".git").mkdir()
+            (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
+            data = json.dumps(_metadata()).encode("utf-8")
+            identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
+            with _state_machine_patches(identity), patch(
+                "burnlens.petes_lake_wetland_custody._verify_retained_r001_evidence"
+            ) as verify_prior:
+                initialize_contract(
+                    root,
+                    created_at_utc="2026-07-21T23:00:00Z",
+                    git_source_commit="a" * 40,
+                )
+                self.assertEqual(verify_prior.call_count, 1)
+                load_contract(root)
+                self.assertEqual(verify_prior.call_count, 2)
+                verify_prior.side_effect = PetesLakeWetlandCustodyError(
+                    "synthetic retained r001 mutation"
+                )
+                with self.assertRaisesRegex(
+                    PetesLakeWetlandCustodyError, "retained r001 mutation"
+                ):
+                    load_contract(root)
 
     def test_feature_geometry_is_finite_closed_exact_2d_and_clockwise(self) -> None:
         self.assertEqual(_validate_count({"count": 2}), 2)
@@ -349,7 +423,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
             identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                asset_id = "wetlands-layer-metadata"
+                asset_id = _id("wetlands-layer-metadata")
                 start_asset(
                     root,
                     asset_id=asset_id,
@@ -401,7 +475,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
             identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                asset_id = "wetlands-layer-metadata"
+                asset_id = _id("wetlands-layer-metadata")
                 start_asset(
                     root,
                     asset_id=asset_id,
@@ -444,7 +518,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
             identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                first = "wetlands-layer-metadata"
+                first = _id("wetlands-layer-metadata")
                 start_asset(root, asset_id=first, started_at_utc="2026-07-21T23:01:00Z")
                 uri = asset_definitions()[0]["uri"]
                 fetch_asset(
@@ -456,7 +530,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                 )
                 verify_asset(root, asset_id=first)
                 promoted = promote_asset(root, asset_id=first)
-                second = "wetlands-pre-count"
+                second = _id("wetlands-pre-count")
                 start_asset(root, asset_id=second, started_at_utc="2026-07-21T23:04:00Z")
                 destination = root / CUSTODY_ROOT / promoted["destination_relative_path"]
                 destination.write_bytes(b"tampered prior response")
@@ -490,7 +564,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                 identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
                 with _state_machine_patches(identity):
                     _initialize(root, identity)
-                    asset_id = "wetlands-layer-metadata"
+                    asset_id = _id("wetlands-layer-metadata")
                     if mode == "extra-raw":
                         package = root / CUSTODY_ROOT / PACKAGE_DIRECTORY
                         package.mkdir(parents=True)
@@ -540,13 +614,13 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                 with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "prerequisites"):
                     start_asset(
                         root,
-                        asset_id="wetlands-pre-count",
+                        asset_id=_id("wetlands-pre-count"),
                         started_at_utc="2026-07-21T23:01:00Z",
                     )
                 with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "timestamp"):
                     start_asset(
                         root,
-                        asset_id="wetlands-layer-metadata",
+                        asset_id=_id("wetlands-layer-metadata"),
                         started_at_utc="2026-07-21T23:00:00Z",
                     )
 
@@ -601,7 +675,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                         with self.assertRaisesRegex(PetesLakeWetlandCustodyError, "identity"):
                             load_contract(root)
                         continue
-                    asset_id = "wetlands-layer-metadata"
+                    asset_id = _id("wetlands-layer-metadata")
                     start_asset(
                         root,
                         asset_id=asset_id,
@@ -633,7 +707,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
             identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                asset_id = "wetlands-layer-metadata"
+                asset_id = _id("wetlands-layer-metadata")
                 start_asset(
                     root,
                     asset_id=asset_id,
@@ -687,7 +761,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
 
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                asset_id = "wetlands-layer-metadata"
+                asset_id = _id("wetlands-layer-metadata")
                 start_asset(
                     root,
                     asset_id=asset_id,
@@ -721,7 +795,7 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
             identity = {"bytes": len(data), "sha256": sha256(data).hexdigest()}
             with _state_machine_patches(identity):
                 _initialize(root, identity)
-                asset_id = "wetlands-layer-metadata"
+                asset_id = _id("wetlands-layer-metadata")
                 start_asset(
                     root,
                     asset_id=asset_id,

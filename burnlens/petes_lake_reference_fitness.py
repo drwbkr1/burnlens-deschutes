@@ -318,10 +318,14 @@ def _load_nwi(
 ]:
     contract = validate_finalized_contract(root)
     contract_path = root / NWI_CONTRACT_PATH
-    asset_by_id = {item["asset_id"]: item for item in contract["assets"]}
+    asset_by_role = {
+        item["extensions"]["logical_role"]: item for item in contract["assets"]
+    }
+    if len(asset_by_role) != len(contract["assets"]):
+        raise PetesLakeReferenceFitnessError("NWI logical asset-role roster changed")
     payloads: dict[str, Any] = {}
     identities: dict[str, Any] = {}
-    for asset_id, asset in asset_by_id.items():
+    for logical_role, asset in asset_by_role.items():
         path = root / NWI_CUSTODY_ROOT / PurePosixPath(asset["destination_relative_path"])
         expected = asset["observed"]
         if (
@@ -331,9 +335,11 @@ def _load_nwi(
             or path.stat().st_size != expected["promoted_size_bytes"]
             or _digest(path.read_bytes()) != expected["promoted_sha256"]
         ):
-            raise PetesLakeReferenceFitnessError(f"NWI promoted identity changed: {asset_id}")
-        payloads[asset_id] = json.loads(path.read_bytes())
-        identities[asset_id] = {
+            raise PetesLakeReferenceFitnessError(
+                f"NWI promoted identity changed: {logical_role}"
+            )
+        payloads[logical_role] = json.loads(path.read_bytes())
+        identities[logical_role] = {
             "filename": path.name,
             "bytes": path.stat().st_size,
             "sha256": expected["promoted_sha256"],
