@@ -51,6 +51,19 @@ class EnvironmentProfileTests(unittest.TestCase):
             self.assertNotIn("*", requirement)
             self.assertNotIn(";", requirement)
 
+    def test_lock_file_has_checkout_stable_lf_bytes(self) -> None:
+        attributes = subprocess.run(
+            ["git", "check-attr", "text", "eol", "--", "uv.lock"],
+            cwd=ROOT,
+            capture_output=True,
+            check=True,
+            text=True,
+        )
+        self.assertEqual(
+            attributes.stdout.splitlines(),
+            ["uv.lock: text: set", "uv.lock: eol: lf"],
+        )
+
     def test_codex_environment_selects_locked_geo_profile(self) -> None:
         with (ROOT / ".codex" / "environments" / "geospatial.toml").open(
             "rb"
