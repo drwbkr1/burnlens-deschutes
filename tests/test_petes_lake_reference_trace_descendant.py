@@ -7,6 +7,7 @@ import unittest
 
 from burnlens import petes_lake_reference_native_contract as native_contract
 from burnlens.petes_lake_reference_native_contract import (
+    EXCEPTION_BRANCH,
     MILESTONE_BRANCH,
     NATIVE_CLI_PATH,
     NATIVE_MODULE_PATH,
@@ -110,7 +111,14 @@ class PetesLakeReferenceDescendantTraceTests(unittest.TestCase):
         if synchronize:
             self._synchronize_remote()
 
-    def test_allows_bounded_shared_file_additions_on_milestone_and_main(self) -> None:
+    def test_allows_only_registered_milestone_exception_and_main_branches(self) -> None:
+        self.assertEqual(
+            native_contract.SUPPORTED_REPLAY_BRANCHES,
+            (MILESTONE_BRANCH, EXCEPTION_BRANCH, "main"),
+        )
+        validate_repository_trace(self.root, self.source)
+        _run(self.root, "switch", "-c", EXCEPTION_BRANCH)
+        self._synchronize_remote()
         validate_repository_trace(self.root, self.source)
         _run(self.root, "switch", "-c", "main")
         self._synchronize_remote()
