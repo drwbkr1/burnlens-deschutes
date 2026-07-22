@@ -69,7 +69,7 @@ class GreenRidgeOwnerResponseIntakeTests(unittest.TestCase):
         return exact, receipt
 
     def test_version_and_entry_points(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.44.0")
+        self.assertEqual(burnlens.__version__, "0.45.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-intake-green-ridge-owner-response", pyproject)
         self.assertIn("burnlens-build-green-ridge-owner-response-intake", pyproject)
