@@ -7,6 +7,8 @@ import importlib
 import importlib.metadata
 import json
 import platform
+import shutil
+import subprocess
 import sys
 import tempfile
 import tomllib
@@ -78,6 +80,57 @@ def _verify_versions(profile: str) -> dict[str, str]:
         versions[distribution] = actual
     versions["burnlens-deschutes"] = expected_project
     return dict(sorted(versions.items(), key=lambda item: item[0].lower()))
+
+
+def _verify_console_entry_points() -> dict[str, Any]:
+    expected = _load_project()["project"]["scripts"]
+    distribution = importlib.metadata.distribution("burnlens-deschutes")
+    candidates = [
+        entry_point
+        for entry_point in distribution.entry_points
+        if entry_point.group == "console_scripts"
+    ]
+    installed = {entry_point.name: entry_point for entry_point in candidates}
+    if len(installed) != len(candidates):
+        raise RuntimeError("Installed BurnLens console entry points contain duplicates")
+    if set(installed) != set(expected):
+        missing = sorted(set(expected) - set(installed))
+        unexpected = sorted(set(installed) - set(expected))
+        raise RuntimeError(
+            "Installed BurnLens console entry-point roster mismatch: "
+            f"missing={missing}, unexpected={unexpected}"
+        )
+    script_directory = str(Path(sys.executable).resolve().parent)
+    help_checked: list[str] = []
+    for name in sorted(expected):
+        entry_point = installed[name]
+        if entry_point.value != expected[name]:
+            raise RuntimeError(
+                f"Installed BurnLens console entry-point target mismatch for {name}: "
+                f"expected {expected[name]}, found {entry_point.value}"
+            )
+        loaded = entry_point.load()
+        if not callable(loaded):
+            raise RuntimeError(f"Installed BurnLens console entry point is not callable: {name}")
+        executable = shutil.which(name, path=script_directory)
+        if executable is None:
+            raise RuntimeError(f"Installed BurnLens console entry-point launcher is missing: {name}")
+        help_result = subprocess.run(
+            [executable, "--help"],
+            cwd=ROOT,
+            capture_output=True,
+            check=False,
+            text=True,
+            timeout=30,
+        )
+        if help_result.returncode != 0:
+            raise RuntimeError(
+                f"Installed BurnLens console entry-point help failed for {name}: "
+                f"exit={help_result.returncode}"
+            )
+        help_checked.append(name)
+    names = sorted(installed)
+    return {"count": len(names), "help_count": len(help_checked), "names": names}
 
 
 def _verify_runtime_functions() -> dict[str, Any]:
@@ -257,7 +310,10 @@ def _verify_geo_functions() -> dict[str, Any]:
 def verify(profile: str) -> dict[str, Any]:
     _verify_python_pin()
     versions = _verify_versions(profile)
-    checks: dict[str, Any] = {"runtime": _verify_runtime_functions()}
+    checks: dict[str, Any] = {
+        "console_entry_points": _verify_console_entry_points(),
+        "runtime": _verify_runtime_functions(),
+    }
     if profile == "geo-research":
         checks["geo_research"] = _verify_geo_functions()
     return {

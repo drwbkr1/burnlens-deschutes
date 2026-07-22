@@ -31,9 +31,14 @@ custody, uncertainty, leakage, and human-review gates continue to apply.
 
 | Profile | Contents | Intended use |
 |---|---|---|
-| `runtime` | BurnLens plus its five canonical runtime dependencies | Running shipped evidence commands with the smallest dependency surface |
-| `dev` | `runtime` plus the pinned test runner | Repository implementation and regression testing |
-| `geo-research` | `dev` plus GeoPandas, Pyogrio, PyProj, Shapely, PySTAC Client, Xarray, Rioxarray, and Boto3 | Official-source scouting and local geospatial inspection before controlled intake |
+| `runtime` | BurnLens plus its five canonical runtime dependencies | Loading every shipped command and running commands that do not require optional geospatial analysis |
+| `dev` | `runtime` plus the pinned test runner | Repository implementation and the core regression suite; geospatial-only tests skip explicitly |
+| `geo-research` | `dev` plus GeoPandas, Pyogrio, PyProj, Shapely, PySTAC Client, Xarray, Rioxarray, and Boto3 | The complete regression suite, official-source scouting, and local geospatial inspection before controlled intake |
+
+Every published command must import under `runtime` and show its argument help.
+A command that performs optional vector or CRS analysis must fail closed with an
+explicit `geo-research` profile requirement when those libraries are absent;
+it must not fail during command loading or help display.
 
 The geospatial profile deliberately omits notebooks, distributed computation,
 database servers, desktop GIS, cloud credentials, and provider-specific secret
@@ -69,41 +74,44 @@ The script:
    racing over one `.venv`;
 5. refuses a stale lock and synchronizes `.venv` from the checked-in lock
    without changing tracked files;
-6. runs dependency integrity and matching offline functional verification; and
-7. fails nonzero if Python, the BurnLens package version, a direct dependency,
-   a raster operation, or a
-   geospatial operation is wrong.
+6. runs dependency integrity and matching offline functional verification;
+7. loads the exact installed console-entry-point roster; and
+8. fails nonzero if Python, the BurnLens package version, a direct dependency,
+   a shipped command, a raster operation, or an applicable geospatial
+   operation is wrong.
 
 It never searches for, copies, prints, or imports credentials. Provider access
 remains in the existing secret-safe acquisition wrappers.
 
 ## Manual commands
 
-Prepare the lean development profile:
+Prepare the lean development profile and run the core regression suite:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass `
   -File scripts/setup_worktree.ps1 `
   -Profile dev
-```
-
-Rerun the geospatial check without changing the environment:
-
-```powershell
-.\.venv\Scripts\python.exe scripts\verify_environment.py `
-  --profile geo-research
-```
-
-The check is network-free. It verifies exact direct package versions, an
-in-memory GeoTIFF, HDF5 and image primitives, UTM-to-WGS84 transformation, a
-GeoPackage round trip, a disk GeoTIFF opened through Rioxarray, and offline
-STAC/AWS client construction. Temporary files are removed at exit.
-
-Run repository tests:
-
-```powershell
 .\.venv\Scripts\python.exe -m pytest -q
 ```
+
+Prepare the geospatial profile, rerun its check, and run the complete regression
+suite:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass `
+  -File scripts/setup_worktree.ps1 `
+  -Profile geo-research
+.\.venv\Scripts\python.exe scripts\verify_environment.py `
+  --profile geo-research
+.\.venv\Scripts\python.exe -m pytest -q
+```
+
+The checks are network-free. Every profile verifies the exact installed
+console-entry-point roster, direct package versions, an in-memory GeoTIFF,
+HDF5, and image primitives. The geospatial profile additionally verifies a
+UTM-to-WGS84 transformation, a GeoPackage round trip, a disk GeoTIFF opened
+through Rioxarray, and offline STAC/AWS client construction. Temporary files
+are removed at exit.
 
 ## Updating the environment
 

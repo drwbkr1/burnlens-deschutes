@@ -4,12 +4,15 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime
+import importlib
+import importlib.util
 import json
 from pathlib import Path
 import subprocess
 import sys
+from typing import Any, Callable
 
-from .petes_lake_reference_fitness import (
+from .petes_lake_reference_fitness_contract import (
     BRANCH,
     FINAL_DIRECTORY,
     PREVIEW_DIRECTORY,
@@ -22,9 +25,10 @@ from .petes_lake_reference_fitness import (
     VISUAL_PASS_NOTE,
     VISUAL_PENDING,
     PetesLakeReferenceFitnessError,
-    build_report,
-    write_outputs,
 )
+
+
+GEO_RESEARCH_MODULES = ("geopandas", "pyogrio", "pyproj", "shapely")
 
 
 def _git(root: Path, *args: str) -> subprocess.CompletedProcess[str]:
@@ -71,18 +75,44 @@ def _timestamp(value: str) -> str:
     return value
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repository-root", type=Path, required=True)
     parser.add_argument("--generated-at-utc", type=_timestamp, required=True)
     parser.add_argument("--mode", choices=("preview", "final"), required=True)
     parser.add_argument("--visual-review-decision", choices=(VISUAL_PASS, VISUAL_FAIL))
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> int:
-    args = parse_args()
+def _load_implementation() -> tuple[Callable[..., Any], Callable[..., Any]]:
+    missing = [
+        module
+        for module in GEO_RESEARCH_MODULES
+        if importlib.util.find_spec(module) is None
+    ]
+    if missing:
+        raise PetesLakeReferenceFitnessError(
+            "geo-research profile required; missing optional modules: "
+            f"{', '.join(missing)}; run scripts/setup_worktree.ps1 "
+            "-Profile geo-research"
+        )
     try:
+        implementation = importlib.import_module(
+            ".petes_lake_reference_fitness", package=__package__
+        )
+    except ImportError as error:
+        raise PetesLakeReferenceFitnessError(
+            "geo-research profile incomplete or unusable; reinstall with "
+            "scripts/setup_worktree.ps1 -Profile geo-research"
+        ) from error
+
+    return implementation.build_report, implementation.write_outputs
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    try:
+        build_report, write_outputs = _load_implementation()
         root = args.repository_root.resolve()
         commit = _preflight(root)
         if args.mode == "preview":

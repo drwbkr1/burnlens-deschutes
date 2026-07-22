@@ -1,12 +1,26 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
+import importlib.util
 import json
 import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
+
+
+GEO_RESEARCH_MODULES = ("geopandas", "pyogrio", "pyproj", "shapely")
+MISSING_GEO_RESEARCH_MODULES = [
+    module
+    for module in GEO_RESEARCH_MODULES
+    if importlib.util.find_spec(module) is None
+]
+if MISSING_GEO_RESEARCH_MODULES:
+    raise unittest.SkipTest(
+        "geo-research optional dependencies are not installed: "
+        + ", ".join(MISSING_GEO_RESEARCH_MODULES)
+    )
 
 import numpy as np
 import rasterio

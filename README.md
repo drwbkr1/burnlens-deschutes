@@ -143,9 +143,12 @@ Historical Objective Seven trackers, handoffs, audits, and release notes remain 
 
 ## Reproducible local environment
 
-The canonical runtime stays lean. Development adds the pinned test runner, and
-source-scouting work can opt into a locked geospatial profile without changing
-the scientific or source-approval gates:
+The canonical runtime stays lean and verifies that every published command can
+load. Commands that need optional vector or CRS analysis fail closed with an
+explicit profile requirement instead of failing during import or help display.
+Development adds the pinned test runner for the core suite; the locked
+geospatial profile runs the complete suite and source-scouting tools without
+changing the scientific or source-approval gates:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass `
