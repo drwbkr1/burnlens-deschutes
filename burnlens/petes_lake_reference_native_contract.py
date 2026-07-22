@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ast
 from hashlib import sha256
 from io import BytesIO
 import json
@@ -10,6 +11,7 @@ from pathlib import Path, PurePosixPath
 import re
 import struct
 import subprocess
+import tomllib
 from typing import Any
 import xml.etree.ElementTree as ET
 from uuid import uuid4
@@ -51,13 +53,21 @@ EXPECTED_RASTER_TRANSFORM = [30.0, 0.0, 581_520.0, 0.0, -30.0, 4_874_520.0]
 EXPECTED_RASTER_BOUNDS = [581_520.0, 4_863_300.0, 594_540.0, 4_874_520.0]
 EXPECTED_KMZ_MEMBERS = 188
 EXPECTED_KMZ_UNCOMPRESSED_BYTES = 1_181_609
-TRACE_PATHS = (
-    ".gitattributes",
-    "pyproject.toml",
-    "burnlens/inspect_petes_lake_reference_native_contract.py",
-    "burnlens/petes_lake_reference_native_contract.py",
-    "tests/test_petes_lake_reference_native_contract.py",
+NATIVE_MODULE_PATH = "burnlens/petes_lake_reference_native_contract.py"
+NATIVE_CLI_PATH = "burnlens/inspect_petes_lake_reference_native_contract.py"
+NATIVE_TEST_PATH = "tests/test_petes_lake_reference_native_contract.py"
+IMMUTABLE_TRACE_PATHS = (
+    NATIVE_CLI_PATH,
+    NATIVE_TEST_PATH,
 )
+TRACE_ATTRIBUTE_PATHS = (
+    NATIVE_MODULE_PATH,
+    NATIVE_CLI_PATH,
+    NATIVE_TEST_PATH,
+)
+TRACE_SCRIPT_NAME = "burnlens-inspect-petes-lake-reference-native-contract"
+TRACE_SCRIPT_TARGET = "burnlens.inspect_petes_lake_reference_native_contract:main"
+SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, "main")
 
 EXPECTED_MEMBERS = {
     "burn_area_shp": ROOT + f"{PAIR}_burn_area.shp",
@@ -111,12 +121,219 @@ def validate_trace_inputs(*, generated_at_utc: str, run_id: str, git_source_comm
 
 
 def _git(repository_root: Path, *arguments: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+    environment = os.environ.copy()
+    environment["GIT_ATTR_NOSYSTEM"] = "1"
+    environment["GIT_TERMINAL_PROMPT"] = "0"
     return subprocess.run(
         ["git", "-C", str(repository_root), *arguments],
         check=check,
         capture_output=True,
         text=True,
+        env=environment,
+        timeout=30,
     )
+
+
+def _git_bytes(
+    repository_root: Path,
+    *arguments: str,
+    check: bool = True,
+) -> subprocess.CompletedProcess[bytes]:
+    environment = os.environ.copy()
+    environment["GIT_ATTR_NOSYSTEM"] = "1"
+    environment["GIT_TERMINAL_PROMPT"] = "0"
+    return subprocess.run(
+        ["git", "-C", str(repository_root), *arguments],
+        check=check,
+        capture_output=True,
+        text=False,
+        env=environment,
+        timeout=30,
+    )
+
+
+def _scientific_source_fingerprint(source: str, label: str) -> str:
+    """Hash every native-contract AST node except the bounded trace machinery."""
+
+    try:
+        tree = ast.parse(source)
+    except SyntaxError as error:
+        raise PetesLakeReferenceNativeContractError(
+            f"{label} native-contract source could not be parsed"
+        ) from error
+    exact_trace_imports = {
+        ast.dump(ast.parse(statement).body[0], include_attributes=False)
+        for statement in ("import ast", "import tomllib")
+    }
+    exact_trace_assignments = {
+        node.targets[0].id: ast.dump(node, include_attributes=False)
+        for statement in (
+            '''TRACE_PATHS = (
+    ".gitattributes",
+    "pyproject.toml",
+    "burnlens/inspect_petes_lake_reference_native_contract.py",
+    "burnlens/petes_lake_reference_native_contract.py",
+    "tests/test_petes_lake_reference_native_contract.py",
+)''',
+            'NATIVE_MODULE_PATH = "burnlens/petes_lake_reference_native_contract.py"',
+            'NATIVE_CLI_PATH = "burnlens/inspect_petes_lake_reference_native_contract.py"',
+            'NATIVE_TEST_PATH = "tests/test_petes_lake_reference_native_contract.py"',
+            '''IMMUTABLE_TRACE_PATHS = (
+    NATIVE_CLI_PATH,
+    NATIVE_TEST_PATH,
+)''',
+            '''TRACE_ATTRIBUTE_PATHS = (
+    NATIVE_MODULE_PATH,
+    NATIVE_CLI_PATH,
+    NATIVE_TEST_PATH,
+)''',
+            'TRACE_SCRIPT_NAME = "burnlens-inspect-petes-lake-reference-native-contract"',
+            'TRACE_SCRIPT_TARGET = "burnlens.inspect_petes_lake_reference_native_contract:main"',
+            'SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, "main")',
+        )
+        for node in [ast.parse(statement).body[0]]
+        if isinstance(node, ast.Assign)
+        and len(node.targets) == 1
+        and isinstance(node.targets[0], ast.Name)
+    }
+    trace_functions = {
+        "_git",
+        "_git_bytes",
+        "_scientific_source_fingerprint",
+        "_project_script_target",
+        "_attribute_map",
+        "_validate_checkout_attributes",
+        "validate_repository_trace",
+    }
+    trace_function_counts: dict[str, int] = {}
+    for node in tree.body:
+        if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            continue
+        if node.name not in trace_functions:
+            continue
+        trace_function_counts[node.name] = trace_function_counts.get(node.name, 0) + 1
+        defaults = list(node.args.defaults) + [
+            default for default in node.args.kw_defaults if default is not None
+        ]
+        if node.decorator_list or any(
+            not isinstance(default, ast.Constant) for default in defaults
+        ):
+            raise PetesLakeReferenceNativeContractError(
+                f"{label} trace-function definition is unsafe"
+            )
+    historical_trace_functions = {"_git": 1, "validate_repository_trace": 1}
+    current_trace_functions = {name: 1 for name in trace_functions}
+    if trace_function_counts not in (
+        historical_trace_functions,
+        current_trace_functions,
+    ):
+        raise PetesLakeReferenceNativeContractError(
+            f"{label} trace-function roster drifted"
+        )
+    retained: list[ast.stmt] = []
+    for node in tree.body:
+        node_dump = ast.dump(node, include_attributes=False)
+        if isinstance(node, ast.Import) and node_dump in exact_trace_imports:
+            continue
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name in trace_functions:
+            continue
+        if (
+            isinstance(node, ast.Assign)
+            and len(node.targets) == 1
+            and isinstance(node.targets[0], ast.Name)
+            and exact_trace_assignments.get(node.targets[0].id) == node_dump
+        ):
+            continue
+        retained.append(node)
+    normalized = ast.dump(
+        ast.Module(body=retained, type_ignores=[]),
+        annotate_fields=True,
+        include_attributes=False,
+    ).encode("utf-8")
+    return sha256(normalized).hexdigest()
+
+
+def _project_script_target(source: str, label: str) -> str:
+    try:
+        document = tomllib.loads(source)
+        target = document["project"]["scripts"][TRACE_SCRIPT_NAME]
+    except (KeyError, TypeError, tomllib.TOMLDecodeError) as error:
+        raise PetesLakeReferenceNativeContractError(
+            f"{label} U04 console mapping is missing or invalid"
+        ) from error
+    if target != TRACE_SCRIPT_TARGET:
+        raise PetesLakeReferenceNativeContractError(
+            f"{label} U04 console mapping drifted"
+        )
+    return target
+
+
+def _attribute_map(output: str, label: str) -> dict[tuple[str, str], str]:
+    values: dict[tuple[str, str], str] = {}
+    for line in output.splitlines():
+        fields = line.split(": ", 2)
+        if len(fields) != 3:
+            raise PetesLakeReferenceNativeContractError(
+                f"{label} U04 checkout attributes could not be parsed"
+            )
+        path, attribute, value = fields
+        key = (path, attribute)
+        if key in values:
+            raise PetesLakeReferenceNativeContractError(
+                f"{label} U04 checkout attributes contain duplicates"
+            )
+        values[key] = value
+    expected = {
+        (path, attribute)
+        for path in TRACE_ATTRIBUTE_PATHS
+        for attribute in ("text", "eol")
+    }
+    if set(values) != expected:
+        raise PetesLakeReferenceNativeContractError(
+            f"{label} U04 checkout attributes are incomplete"
+        )
+    return values
+
+
+def _validate_checkout_attributes(
+    repository_root: Path,
+    git_source_commit: str,
+    current_head: str,
+) -> None:
+    try:
+        historical = _git(
+            repository_root,
+            "-c",
+            f"core.attributesFile={os.devnull}",
+            "check-attr",
+            f"--source={git_source_commit}",
+            "text",
+            "eol",
+            "--",
+            *TRACE_ATTRIBUTE_PATHS,
+        )
+        current = _git(
+            repository_root,
+            "-c",
+            f"core.attributesFile={os.devnull}",
+            "check-attr",
+            f"--source={current_head}",
+            "text",
+            "eol",
+            "--",
+            *TRACE_ATTRIBUTE_PATHS,
+        )
+    except (OSError, UnicodeError, subprocess.SubprocessError) as error:
+        raise PetesLakeReferenceNativeContractError(
+            "U04 checkout attributes could not be verified"
+        ) from error
+    for label, result in (("historical", historical), ("current", current)):
+        values = _attribute_map(result.stdout, label)
+        for path in TRACE_ATTRIBUTE_PATHS:
+            if values.get((path, "text")) != "set" or values.get((path, "eol")) != "lf":
+                raise PetesLakeReferenceNativeContractError(
+                    f"{label} U04 checkout attributes drifted"
+                )
 
 
 def validate_repository_trace(repository_root: Path, git_source_commit: str) -> None:
@@ -124,7 +341,41 @@ def validate_repository_trace(repository_root: Path, git_source_commit: str) -> 
         top = _git(repository_root, "rev-parse", "--show-toplevel").stdout.strip()
         branch = _git(repository_root, "branch", "--show-current").stdout.strip()
         head = _git(repository_root, "rev-parse", "HEAD").stdout.strip()
-        remote = _git(repository_root, "rev-parse", f"origin/{MILESTONE_BRANCH}").stdout.strip()
+        status = _git(
+            repository_root,
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=all",
+        ).stdout.strip()
+        if branch not in SUPPORTED_REPLAY_BRANCHES:
+            raise PetesLakeReferenceNativeContractError(
+                "native-contract replay branch identity drifted"
+            )
+        remote = _git(
+            repository_root,
+            "-c",
+            "credential.interactive=never",
+            "ls-remote",
+            "--heads",
+            "origin",
+            branch,
+        ).stdout.split()
+        info_attributes_value = _git(
+            repository_root,
+            "rev-parse",
+            "--git-path",
+            "info/attributes",
+        ).stdout.strip()
+        info_attributes = Path(info_attributes_value)
+        if not info_attributes.is_absolute():
+            info_attributes = repository_root / info_attributes
+        if info_attributes.is_file() and any(
+            line.strip() and not line.lstrip().startswith("#")
+            for line in info_attributes.read_text(encoding="utf-8").splitlines()
+        ):
+            raise PetesLakeReferenceNativeContractError(
+                "repository-local attribute overrides are not permitted"
+            )
         _git(repository_root, "cat-file", "-e", f"{git_source_commit}^{{commit}}")
         ancestor = _git(
             repository_root,
@@ -140,24 +391,134 @@ def validate_repository_trace(repository_root: Path, git_source_commit: str) -> 
             "--quiet",
             git_source_commit,
             "--",
-            *TRACE_PATHS,
+            *IMMUTABLE_TRACE_PATHS,
             check=False,
         )
-    except (OSError, subprocess.CalledProcessError) as error:
+        historical_module = _git(
+            repository_root,
+            "show",
+            f"{git_source_commit}:{NATIVE_MODULE_PATH}",
+        ).stdout
+        historical_cli = _git_bytes(
+            repository_root,
+            "show",
+            f"{git_source_commit}:{NATIVE_CLI_PATH}",
+        ).stdout
+        historical_test = _git_bytes(
+            repository_root,
+            "show",
+            f"{git_source_commit}:{NATIVE_TEST_PATH}",
+        ).stdout
+        historical_pyproject = _git(
+            repository_root,
+            "show",
+            f"{git_source_commit}:pyproject.toml",
+        ).stdout
+        head_module = _git_bytes(
+            repository_root,
+            "show",
+            f"{head}:{NATIVE_MODULE_PATH}",
+        ).stdout
+        head_pyproject = _git_bytes(
+            repository_root,
+            "show",
+            f"{head}:pyproject.toml",
+        ).stdout
+        current_module_path = repository_root / NATIVE_MODULE_PATH
+        current_cli_path = repository_root / NATIVE_CLI_PATH
+        current_test_path = repository_root / NATIVE_TEST_PATH
+        current_module_bytes = current_module_path.read_bytes()
+        current_cli = current_cli_path.read_bytes()
+        current_test = current_test_path.read_bytes()
+        current_pyproject_bytes = (repository_root / "pyproject.toml").read_bytes()
+        current_module = head_module.decode("utf-8")
+        current_pyproject = head_pyproject.decode("utf-8")
+    except (OSError, UnicodeError, subprocess.SubprocessError) as error:
         raise PetesLakeReferenceNativeContractError(
             "repository trace could not be verified"
         ) from error
     if Path(top).resolve() != repository_root.resolve():
         raise PetesLakeReferenceNativeContractError("repository root identity drifted")
-    if branch != MILESTONE_BRANCH:
-        raise PetesLakeReferenceNativeContractError("milestone branch identity drifted")
-    if head != remote:
-        raise PetesLakeReferenceNativeContractError("milestone branch is not remote-equal")
+    if status:
+        raise PetesLakeReferenceNativeContractError("repository worktree is not clean")
+    if remote != [head, f"refs/heads/{branch}"]:
+        raise PetesLakeReferenceNativeContractError("replay branch is not remote-equal")
     if ancestor.returncode != 0:
         raise PetesLakeReferenceNativeContractError("git source commit is not an ancestor of HEAD")
     if source_diff.returncode != 0:
         raise PetesLakeReferenceNativeContractError(
             "native-contract source bytes differ from the trace commit"
+        )
+    if current_cli != historical_cli:
+        raise PetesLakeReferenceNativeContractError(
+            "native-contract CLI checkout bytes differ from the trace commit"
+        )
+    if current_test != historical_test:
+        raise PetesLakeReferenceNativeContractError(
+            "native-contract test checkout bytes differ from the trace commit"
+        )
+    if current_module_bytes != head_module:
+        raise PetesLakeReferenceNativeContractError(
+            "native-contract module checkout bytes differ from HEAD"
+        )
+    if current_pyproject_bytes != head_pyproject:
+        raise PetesLakeReferenceNativeContractError(
+            "pyproject checkout bytes differ from HEAD"
+        )
+    try:
+        executing_module = Path(__file__).read_bytes()
+        executing_cli = Path(__file__).with_name(Path(NATIVE_CLI_PATH).name).read_bytes()
+    except OSError as error:
+        raise PetesLakeReferenceNativeContractError(
+            "executing native-contract package could not be verified"
+        ) from error
+    if executing_module != current_module_bytes:
+        raise PetesLakeReferenceNativeContractError(
+            "executing native-contract module differs from repository source"
+        )
+    if executing_cli != historical_cli:
+        raise PetesLakeReferenceNativeContractError(
+            "executing native-contract CLI differs from the trace commit"
+        )
+    if _scientific_source_fingerprint(
+        historical_module, "historical"
+    ) != _scientific_source_fingerprint(current_module, "current"):
+        raise PetesLakeReferenceNativeContractError(
+            "native-contract scientific source drifted"
+        )
+    _project_script_target(historical_pyproject, "historical")
+    _project_script_target(current_pyproject, "current")
+    _validate_checkout_attributes(repository_root, git_source_commit, head)
+    try:
+        final_head = _git(repository_root, "rev-parse", "HEAD").stdout.strip()
+        final_branch = _git(repository_root, "branch", "--show-current").stdout.strip()
+        final_status = _git(
+            repository_root,
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=all",
+        ).stdout.strip()
+        final_remote = _git(
+            repository_root,
+            "-c",
+            "credential.interactive=never",
+            "ls-remote",
+            "--heads",
+            "origin",
+            branch,
+        ).stdout.split()
+    except (OSError, subprocess.SubprocessError) as error:
+        raise PetesLakeReferenceNativeContractError(
+            "repository trace could not be reverified"
+        ) from error
+    if (
+        final_head != head
+        or final_branch != branch
+        or final_status
+        or final_remote != [head, f"refs/heads/{branch}"]
+    ):
+        raise PetesLakeReferenceNativeContractError(
+            "repository trace state changed during verification"
         )
 
 
