@@ -37,14 +37,20 @@ U11 may not:
 
 A separate future issue may register an official fallback under fresh source, terms, custody, integrity, scientific-fitness, privacy, and failure-retention gates. That future route receives new identities and cannot seed itself from r001-r003.
 
+## Retained U11R1 release-candidate failure and remediation
+
+Run `BL-2026-07-22-petes-lake-u04-descendant-trace-remediation-r001` retains the first clean-checkout release failure. Candidate `9f44099922485b9c26b4cadcc029a67423434877` produced two independent, byte-identical 798,433-byte wheels at SHA-256 `8e3f28e1ad49ea0f7d3eb9663e70fd981052c8cbccd01055ff43e4314adfbb79`; isolated installation and both U03 replays passed. U04 stopped before output with exact error `native-contract source bytes differ from the trace commit`.
+
+The defect was in descendant trace enforcement: source `20d6991cbc079f87db6a789717ebd01595c0b05c` compared the whole shared `.gitattributes` and `pyproject.toml` files, so later valid LF rules, version metadata, and console-command additions made an otherwise unchanged U04 computation unreplayable. It was not U04 output, custody, reference-pixel, or scientific drift. Correction checkpoint `fcbaa4c1044672352227f6a3047d998967d1d114` binds the invariant U04 computation while fail-closing on source ancestry, live remote equality, hidden checkout drift, CLI/test/mapping drift, LF overrides, unsafe trace changes, dirty state, and time-of-check/time-of-use changes. Issue comments `5049902001`, `5049932401`, and `5050031734` retain the failure, clarified contract, and merge-topology requirement. No provider, custody, label, dataset, split, baseline, or model state changed.
+
 ## Exit gate
 
 U11 closeout completes only when:
 
 1. every unit and retained failure has an exact disposition;
 2. r001-r003 revalidate from local files and no r004/provider process exists;
-3. actual U03 renders, U03 replay, U04 native-contract replay, safe preparatory U09 software QA, package, and full repository checks pass;
+3. actual U03 renders, U03 replay, corrected U04 native-contract replay, safe preparatory U09 software QA, package, and full repository checks pass from the final clean candidate and fresh merged main;
 4. non-existent U05 scientific, U06-U10 production, candidate, response, label, dataset, split, baseline, and model outputs are explicitly recorded as unexecuted or absent;
 5. active truth says Petes Lake remains deferred and the accepted state remains ten balanced regions across five complete events;
 6. public claims retain source precedence and the experimental, non-official, non-operational boundary;
-7. the milestone is shipped and verified from `drwbkr1/burnlens-deschutes` only.
+7. the milestone is shipped and verified from `drwbkr1/burnlens-deschutes` only through a true merge commit that preserves `20d6991cbc079f87db6a789717ebd01595c0b05c` as an ancestor and the exact reviewed head as a merge parent; squash and rebase merge are invalid for this milestone.
