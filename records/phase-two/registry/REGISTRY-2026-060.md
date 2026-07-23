@@ -1,4 +1,4 @@
-# REGISTRY-2026-060 - BL-EXC-001 corrected 0.45.0 runtime-contract candidate
+# REGISTRY-2026-060 - BL-EXC-001 verified 0.45.0 runtime-contract release
 
 **Exception unit / issue / branch:** `BL-EXC-001-U03` / #528 / `codex/bl-exc-001-v045-runtime-contract`
 
@@ -8,13 +8,13 @@
 
 **Exception base / package-sensitive code / tree:** `7d5c07e6b337b6b801b9d41565deedd9d2180b00` / `4bf76eaf1f123d72c9fee11db9035724c3351eac` / `90768cb44b3e3596b38d705b215c9129a42c844a`
 
-**Pushed corrected package checkpoint / tree / PR:** `4bf76eaf1f123d72c9fee11db9035724c3351eac` / `90768cb44b3e3596b38d705b215c9129a42c844a` / #529; this record-only reconciliation remains package-excluded and must be checked at the exact reviewed head before merge
+**Corrected package code / tree / reviewed head / PR / true merge:** `4bf76eaf1f123d72c9fee11db9035724c3351eac` / `90768cb44b3e3596b38d705b215c9129a42c844a` / `9cc07d1767c9912b18c459794dc541417b2b13d2` / #529 / `d65c24f59ce0c854ba230aa977eaf718d881d952`
 
-**Disposition / release state:** U01 `remediate`; U02 `pass`; U03 `pass`; U04 `pending`; BurnLens `0.45.0` remains an untagged candidate and `v0.45.0-petes-lake-material-defer` remains withheld
+**Disposition / release state:** U01 `remediate`; U02 `pass`; U03 `pass`; U04 `pass`; BurnLens `0.45.0` is verified by annotated tag `v0.45.0-petes-lake-material-defer` / object `0b466402cdc36b0eacfff97d29dd16fe2a88868a`, which remotely peels to the true exception merge
 
 ## Scope and predecessor
 
-REGISTRY-2026-059 remains the immutable P2O4-T33 material-defer candidate ledger. It correctly preserves the scientific decision, all U01-U11 milestone evidence, the failed 798,433-byte precursor wheel, and the then-current 800,916-byte pre-exception wheel. This record supersedes only its pending-PR and current-package statements after PR #527 merged and the urgent runtime-contract exception began. It does not rewrite REGISTRY-2026-059 or change any Petes source, terms, custody, raster, render, accepted reference pixel, owner decision, prototype label, accepted event, dataset, split, baseline, or model fact.
+REGISTRY-2026-059 remains the immutable P2O4-T33 material-defer candidate ledger. It correctly preserves the scientific decision, all U01-U11 milestone evidence, the failed 798,433-byte precursor wheel, and the then-current 800,916-byte pre-exception wheel. This record supersedes only its pending-PR, current-package, and release-state statements after PR #527 merged, the urgent runtime-contract exception ran, and PR #529 plus the annotated tag verified. It does not rewrite REGISTRY-2026-059 or change any Petes source, terms, custody, raster, render, accepted reference pixel, owner decision, prototype label, accepted event, dataset, split, baseline, or model fact.
 
 ## Exception evidence-unit ledger
 
@@ -22,8 +22,8 @@ REGISTRY-2026-059 remains the immutable P2O4-T33 material-defer candidate ledger
 |---|---|---|---|---|
 | `BL-EXC-001-U01` / `BL-2026-07-22-v045-runtime-dependency-contract-r001` | Independently install and probe the merged P2O4-T33 wheel from merge `7d5c07e6...`; 800,916 bytes / SHA-256 `4e0bd99fec24d693b29be78c7dc943aedeaebaac3c37f1cf48442d507fa2eaa6` | Dependency integrity passes, but only 80 of 81 entry points load and clean `dev` cannot collect the documented suite | `remediate` | Immutable merged-main failure; U02 must preserve the lean optional-geo design while making the package contract true |
 | `BL-EXC-001-U02` / `BL-2026-07-22-v045-runtime-contract-remediation-r001` | Exception registration/capsule checkpoint `882d6d3349bb023f699cba04e839959ecf6ea0e2`; route amendment; pushed code `c4387c932ab89ab5857299293ceb469e28f126e4` | All 81 commands load, are callable, and show help; real geo-only execution fails bounded before repository preflight without GeoPandas, Pyogrio, PyProj, and Shapely; 21 focused tests pass with one expected conditional skip; all 33 U05 scientific function ASTs and moved contract values remain exact | `pass` | Proceed through fresh dev, geo-research, custody-enabled, replay, and deterministic-package verification |
-| `BL-EXC-001-U03` / `BL-2026-07-22-v045-runtime-contract-verification-r001` | Package-sensitive code `4bf76eaf1f123d72c9fee11db9035724c3351eac`; tree `90768cb44b3e3596b38d705b215c9129a42c844a`; immutable U03/U04 inputs and prior wheels | Fresh dev, geo-research, canonical-custody, bounded absent/unusable-geo failure, exact replay, 81-command, lock-byte, deterministic-wheel, metadata, RECORD, privacy, and forbidden-path gates pass | `pass` | Retains the five failed or superseded U03 attempts below; U04 must review exact PR #529 head, merge, repeat fresh-main gates, and verify the remote annotated tag before release |
-| `BL-EXC-001-U04` | Exact reviewed PR #529 head and this record | Exception PR, fresh merged-main runtime/dev/geo/custody/replay/package gates, exact annotated-tag peel, and bounded lifecycle handoff | `pending` | No tag, GitHub Release, deployment, provider, scientific, label, data, or model action is authorized by U03 |
+| `BL-EXC-001-U03` / `BL-2026-07-22-v045-runtime-contract-verification-r001` | Package-sensitive code `4bf76eaf1f123d72c9fee11db9035724c3351eac`; tree `90768cb44b3e3596b38d705b215c9129a42c844a`; immutable U03/U04 inputs and prior wheels | Fresh dev, geo-research, canonical-custody, bounded absent/unusable-geo failure, exact replay, 81-command, lock-byte, deterministic-wheel, metadata, RECORD, privacy, and forbidden-path gates pass | `pass` | Retains the five failed or superseded U03 attempts below; U04 subsequently passes against the exact reviewed head, true merge, repeated fresh-main gates, and remote annotated-tag peel |
+| `BL-EXC-001-U04` | Reviewed PR #529 head `9cc07d1767c9912b18c459794dc541417b2b13d2`; true merge `d65c24f59ce0c854ba230aa977eaf718d881d952`; merge tree `d654fb3f26d7fae87667e2f9d29c6d20b6f405d4` | Exception PR, fresh merged-main runtime/dev/geo/custody/replay/package gates, annotated-tag object `0b466402cdc36b0eacfff97d29dd16fe2a88868a` and exact remote peel, bounded lifecycle handoff | `pass` | Issue #530 owns the lifecycle synchronization; no GitHub Release, deployment, provider, custody, scientific, label, data, or model action accompanied the release |
 
 ## Retained failed U03 attempts
 
@@ -67,6 +67,20 @@ The replay proves unchanged computation and packaging, not a Petes U05 scientifi
 
 From the clean, remote-equal corrected package checkpoint, the actual U04 command independently reconstructs the exact 32,991-byte / `b489bd30...` JSON in ignored no-overwrite storage and again reports zero accepted reference pixels. No provider call or custody mutation occurs.
 
+## Terminal release verification
+
+Fresh `origin/main` at `d65c24f59ce0c854ba230aa977eaf718d881d952` passes the release gates against the real package and actual pipeline outputs:
+
+- the lean runtime has 13 exact distributions, loads and probes all 81 installed commands, and bounds a real missing optional-geospatial execution with the documented profile instruction and exit 2;
+- fresh locked `dev` has 18 distributions, all eight geo modules absent, and passes 499 tests, 25 disclosed skips, 16 warnings, and 81 subtests;
+- fresh locked `geo-research` has 66 distributions and passes 515 tests, 23 expected custody skips, 16 warnings, and 81 subtests; the focused Petes set passes 43 tests with four expected skips and seven subtests;
+- the canonical custody-enabled environment passes 537 tests, one expected skip, 20 retained warnings, and 81 subtests;
+- two fresh no-hardlink builds reproduce the 801,906-byte wheel at SHA-256 `8e17c18a53b7770b6de00b9668d02efa9b07945329672ed29883798442d906ea`; its 170 unique entries comprise 164 package files and six dist-info files, with a 170-row RECORD, 81 unchanged command mappings, correct 0.45.0 metadata, and zero forbidden entries;
+- `uv.lock` remains exactly 207,817 bytes / SHA-256 `24071eb7b57ba57cc2728635427dc57643d7d96ac8fa58a4030052abad8dcbba`, with zero carriage returns and its LF contract intact;
+- the actual U04 command reproduces the ignored no-overwrite 32,991-byte JSON at SHA-256 `b489bd30b467ab38f7320c9b313f904e0bbe9a33e2bed8b346230b9f48a6053c` and accepts zero reference pixels.
+
+P2O4-T33-U11 retains disposition `defer`, advances execution to `complete`, and advances release to `verified`. Petes Lake does not become event six. BL-EXC-001-U04 is `pass`.
+
 ## Release boundary
 
-PR #527 and true merge `7d5c07e6b337b6b801b9d41565deedd9d2180b00` are completed historical milestone facts. Exception PR #529 exists and is unmerged; its exact reviewed head, merge, fresh-main verification, and remote tag peel do not yet exist. The latest verified release remains v0.44. No local or remote `v0.45.0-petes-lake-material-defer` tag, GitHub Release object, or deployment exists. README and changelog candidate truth identify the current exception hold; lifecycle, status, roadmap, case-study, version-history, VERSIONING, and manifest updates must wait for exact U04 identities.
+PR #527 and true merge `7d5c07e6b337b6b801b9d41565deedd9d2180b00` remain completed historical milestone facts. PR #529 reviewed head `9cc07d1767c9912b18c459794dc541417b2b13d2` merges through exact two-parent commit `d65c24f59ce0c854ba230aa977eaf718d881d952`, tree `d654fb3f26d7fae87667e2f9d29c6d20b6f405d4`. Annotated tag `v0.45.0-petes-lake-material-defer` / object `0b466402cdc36b0eacfff97d29dd16fe2a88868a` exists locally and remotely and peels exactly to that merge. BurnLens 0.45.0 is the latest verified release. No GitHub Release object, deployment, provider transaction, custody mutation, scientific computation, Petes candidate, owner response, label, dataset, split, baseline, or model action accompanies it; issue #530 owns the bounded lifecycle synchronization.

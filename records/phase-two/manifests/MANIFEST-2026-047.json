@@ -1,0 +1,162 @@
+{
+  "manifest_id": "MANIFEST-2026-047",
+  "manifest_version": "0.47.0",
+  "manifest_role": "verified-release-lifecycle-reconciliation",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-23T02:37:16Z",
+  "lifecycle_sync_issue": 530,
+  "lifecycle_sync_pull_request": 531,
+  "lifecycle_sync_branch": "codex/bl-exc-001-v045-lifecycle-sync",
+  "git_base_commit": "d65c24f59ce0c854ba230aa977eaf718d881d952",
+  "checkpoint_parents": [
+    "7d5c07e6b337b6b801b9d41565deedd9d2180b00",
+    "9cc07d1767c9912b18c459794dc541417b2b13d2"
+  ],
+  "next_checkpoint_issue": null,
+  "milestone": {
+    "id": "P2O4-T33",
+    "issue": 521,
+    "pull_request": 527,
+    "reviewed_head": "925b660119c230d292063be5de1064fdd007e83a",
+    "true_merge": "7d5c07e6b337b6b801b9d41565deedd9d2180b00",
+    "u11_disposition": "defer",
+    "u11_execution_status": "complete",
+    "release_state": "verified"
+  },
+  "exception": {
+    "id": "BL-EXC-001",
+    "issue": 528,
+    "pull_request": 529,
+    "reviewed_head": "9cc07d1767c9912b18c459794dc541417b2b13d2",
+    "true_merge": "d65c24f59ce0c854ba230aa977eaf718d881d952",
+    "merge_tree": "d654fb3f26d7fae87667e2f9d29c6d20b6f405d4",
+    "package_sensitive_code": "4bf76eaf1f123d72c9fee11db9035724c3351eac",
+    "package_sensitive_tree": "90768cb44b3e3596b38d705b215c9129a42c844a",
+    "u04_disposition": "pass"
+  },
+  "checkpoint_commit": "d65c24f59ce0c854ba230aa977eaf718d881d952",
+  "version_tag": "v0.45.0-petes-lake-material-defer",
+  "version_tag_object": "0b466402cdc36b0eacfff97d29dd16fe2a88868a",
+  "status": "verified release: BurnLens 0.45.0 ships a reproducible Petes Lake material-defer outcome; Petes is not event six and the next checkpoint is an unassigned metadata-first official fallback or alternate-event gate",
+  "software_version": "0.45.0",
+  "run_id": "BL-2026-07-22-v045-lifecycle-sync-r001",
+  "milestone_run_id": "BL-2026-07-22-petes-lake-milestone-closeout-r001",
+  "exception_run_id": "BL-2026-07-22-v045-runtime-contract-verification-r001",
+  "event_group_id": "event-petes-lake-2023",
+  "aoi_version": "multi-event-native-grids-v0.3.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "label_set_changed": false,
+  "input_label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "private_custody_snapshot": {
+    "measured_at_utc": "2026-07-23T02:37:16Z",
+    "file_count": 168,
+    "total_bytes": 16999841856,
+    "zero_byte_files": 2,
+    "committed_files": 0,
+    "ignored": true,
+    "mutated_by_lifecycle_sync": false,
+    "publication_scope": "aggregate only; no private filenames, paths, provider routes, recipient identities, credentials, tokens, or per-file hashes"
+  },
+  "outputs": [
+    {
+      "path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+      "bytes": 6050,
+      "sha256": "6e0cb457261cc0ef48b86b15e8b21a83ec21c4b880990d83b0c79834a26c31e7"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.json",
+      "bytes": 56285,
+      "sha256": "ac9befd021d71ff779ec56ddefc894f4e39b92e64e65c2c4afb815663d1ad443"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+      "bytes": 626846,
+      "sha256": "4ed3870e37bf68db24805540f00614c5050c064b621ca3fc5e3c0ef244bf0d42"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.json",
+      "bytes": 60069,
+      "sha256": "1aa88c0021c610e492d2645e3f2c49a4afe96d9d907e2ee4481948a4c58f2ebd"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.png",
+      "bytes": 588891,
+      "sha256": "fd5b9ae54e1b9c3e0d495e337387d874ae911bd0f586e835b4184312d486d931"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-REFERENCE-NATIVE-CONTRACT-2026-001.json",
+      "bytes": 32991,
+      "sha256": "b489bd30b467ab38f7320c9b313f904e0bbe9a33e2bed8b346230b9f48a6053c"
+    }
+  ],
+  "measured_evidence": {
+    "accepted_event_groups": 5,
+    "accepted_labels": {
+      "burned": 5,
+      "background": 5
+    },
+    "accepted_core_pixels": 236,
+    "accepted_core_area_ha": 9.44,
+    "excluded_unknown_ring_pixels": 431,
+    "petes_reference_pixels_accepted": 0,
+    "petes_candidate_units_created": 0,
+    "petes_owner_responses": 0,
+    "petes_labels_created": 0,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "release_package": {
+    "source_reviewed_head": "9cc07d1767c9912b18c459794dc541417b2b13d2",
+    "fresh_merged_main_commit": "d65c24f59ce0c854ba230aa977eaf718d881d952",
+    "filename": "burnlens_deschutes-0.45.0-py3-none-any.whl",
+    "bytes": 801906,
+    "sha256": "8e17c18a53b7770b6de00b9668d02efa9b07945329672ed29883798442d906ea",
+    "fresh_clone_builds": 2,
+    "wheel_entries": 170,
+    "package_files": 164,
+    "dist_info_files": 6,
+    "record_rows": 170,
+    "console_commands": 81,
+    "isolated_install_version": "0.45.0",
+    "forbidden_entries": 0,
+    "committed": false,
+    "lockfile": {
+      "bytes": 207817,
+      "sha256": "24071eb7b57ba57cc2728635427dc57643d7d96ac8fa58a4030052abad8dcbba",
+      "carriage_returns": 0,
+      "eol": "lf"
+    }
+  },
+  "quality_gates": {
+    "reviewed_merge_topology": "pass: PR #529 reviewed head 9cc07d1767c9912b18c459794dc541417b2b13d2 is the second parent of true merge d65c24f59ce0c854ba230aa977eaf718d881d952; merge tree d654fb3f26d7fae87667e2f9d29c6d20b6f405d4",
+    "runtime_profile": "pass: 13 exact distributions; 81 of 81 commands load and show help; missing optional geo execution exits 2 with bounded guidance",
+    "dev_profile": "pass: 18 distributions; 499 passed, 25 expected skips, 16 warnings, 81 subtests",
+    "geo_research_profile": "pass: 66 distributions; 515 passed, 23 expected custody skips, 16 warnings, 81 subtests; focused Petes 43 passed, 4 expected skips, 7 subtests",
+    "canonical_custody_profile": "pass: 537 passed, 1 expected skip, 20 retained warnings, 81 subtests; no provider or custody mutation",
+    "actual_pipeline_replay": "pass: ignored no-overwrite U04 output is 32,991 bytes at SHA-256 b489bd30b467ab38f7320c9b313f904e0bbe9a33e2bed8b346230b9f48a6053c with zero accepted reference pixels",
+    "release_package": "pass: two byte-identical 801,906-byte fresh-clone wheels at SHA-256 8e17c18a53b7770b6de00b9668d02efa9b07945329672ed29883798442d906ea; 170 entries and RECORD rows; 81 commands; 0.45.0 metadata; zero forbidden entries",
+    "documentation_and_json": "pass on fresh merged main: 121 tracked JSON documents parse; 708 tracked Markdown documents and 214 local links scan with zero missing targets; diff, LF, and privacy gates pass",
+    "lifecycle_reconciliation_static": "pass before PR: 122 JSON documents parse; 709 Markdown documents and 214 local links scan with zero missing targets; 17 changed paths remain inside docs/records/root-control scope; runtime, package, test, provider, custody, and scientific inputs are unchanged",
+    "remote_tag": "pass: annotated tag object 0b466402cdc36b0eacfff97d29dd16fe2a88868a remotely peels to d65c24f59ce0c854ba230aa977eaf718d881d952",
+    "repository_release": "pass through P2O4-T33 PR #527, BL-EXC-001 PR #529, exact fresh-main verification, and the remote annotated tag; lifecycle reconciliation is issue #530 / PR #531 and the next-checkpoint issue remains intentionally null",
+    "label_dataset_model": "blocked: Petes creates no candidate, owner response, accepted label, sixth event, dataset, split, baseline, or model",
+    "public_claims": "pass: no ground-truth, independent-review, inter-rater, field-validation, official, endorsed, emergency-ready, or operational-readiness claim",
+    "deployment": "not performed: no GitHub Release object or deployment"
+  },
+  "next_checkpoint": {
+    "class": "bounded metadata-first official fallback or alternate-event gate",
+    "candidate": "McKenzie HUC8 17090004 or a better official alternate event",
+    "required_before_acquisition": "fresh primary-source identity, current terms and licensing, evidentiary role, access route, acquisition cost, scientific fitness, custody, uncertainty, leakage, privacy, and failure-retention gates",
+    "provider_bytes_authorized": false
+  },
+  "decision": "VERIFY_BURNLENS_0_45_MATERIAL_DEFER_RELEASE_KEEP_PETES_EXCLUDED_AND_NEXT_CHECKPOINT_UNASSIGNED"
+}
