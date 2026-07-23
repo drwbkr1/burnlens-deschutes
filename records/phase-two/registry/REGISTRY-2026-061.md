@@ -4,7 +4,7 @@
 
 **Run:** `BL-2026-07-23-official-fallback-closeout-r001`
 
-**Base / U04 confirmed checkpoint:** `ad298f244b0261a77ef0d6ff442da5a45738a7d9` / `d652e590f8f4aa378abe3a085726233c0242927f`
+**Base / U04 confirmed checkpoint / closeout-record checkpoint:** `ad298f244b0261a77ef0d6ff442da5a45738a7d9` / `d652e590f8f4aa378abe3a085726233c0242927f` / `1d515d86ae11ea0a9d48a9dc6f89c8f3439e9c4d`
 
 **Decision / disposition:** `DEFER_BOTH_OFFICIAL_FALLBACK_CANDIDATES_SELECT_NEITHER_NO_PROVIDER_BYTES_AUTHORIZED` / `defer`
 
@@ -57,4 +57,3 @@ The accepted chain remains `multi-event-native-grids-v0.3.0` / `target-burn-scar
 The dataset, split, baseline, and model versions remain null. Phase Two Objective Four remains blocked on a sixth complete event. This milestone creates no ground truth, independent review, inter-rater agreement, field validation, official status, endorsement, emergency readiness, operational readiness, GitHub Release, or deployment.
 
 Future reconsideration requires fresh primary-source identity, availability, access, terms, rights, provenance, integrity planning, scientific fitness, privacy, uncertainty, leakage, cost, and custody evidence under a new issue-scoped contract. No prior partial or deferred result may silently authorize acquisition.
-

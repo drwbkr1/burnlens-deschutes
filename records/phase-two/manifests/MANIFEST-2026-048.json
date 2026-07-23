@@ -10,6 +10,7 @@
   "branch": "codex/p2o4-t34-official-fallback-source-gate",
   "git_base_commit": "ad298f244b0261a77ef0d6ff442da5a45738a7d9",
   "u04_confirmed_commit": "d652e590f8f4aa378abe3a085726233c0242927f",
+  "closeout_records_commit": "1d515d86ae11ea0a9d48a9dc6f89c8f3439e9c4d",
   "checkpoint_commit": null,
   "version_tag": "v0.46.0-official-fallback-source-gate-defer",
   "version_tag_object": null,
@@ -137,4 +138,3 @@
     "provider_bytes_authorized": false
   }
 }
-

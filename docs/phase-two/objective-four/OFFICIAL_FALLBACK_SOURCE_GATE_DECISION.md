@@ -32,4 +32,3 @@ BurnLens 0.46.0 versions the deterministic official-fallback source-gate tooling
 ## Public boundary
 
 Experimental BurnLens CV/GEOINT evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
-
