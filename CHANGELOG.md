@@ -2,7 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.46.0-official-fallback-source-gate-defer - candidate - 2026-07-23
+## Unreleased - P2O4-T35 Windigo deadline gate
+
+- Record August 6, 2026 as the controlling portfolio-submission deadline.
+- Select only Windigo 2022 for one final sixth-event attempt through July 27 at 6:00 PM America/Indianapolis.
+- Pass U01 with current official event and three-program identities, valid provider-generated boundary topology, one exact same-platform/tile/orbit/baseline Sentinel pair, current terms, ignored no-overwrite custody, and one combined Portal-request contract.
+- Authorize zero provider archive bytes or queue requests before the recoverable U01 checkpoint.
+- Select technical-case-study-only as the automatic or terminal fallback. Do not authorize baseline-first without an accepted dataset and split.
+- Preserve five accepted events and null dataset, split, baseline, and model state.
+
+Issue #534; run `BL-2026-07-23-windigo-entry-gate-r001`; U01 passes and U02 becomes eligible only after the exact entry checkpoint is committed and pushed.
+
+## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 
 ### P2O4-T34 - Compare two official fallback routes and select neither
 
@@ -14,7 +25,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Reconstruct the exact report quartet byte-for-byte; pass original-resolution PNG inspection and owner-confirmed desktop/narrow HTML rendering.
 - Preserve the accepted v0.3 prototype evidence at ten balanced regions, 236 core pixels / 9.44 ha, 431 excluded unknown-ring pixels, and five complete events. Create no dataset, split, baseline, model, GitHub Release, or deployment.
 
-Issue #532; U01 and U04 pass; U02, U03, and milestone U05 defer. `provider_bytes_authorized` is false. One milestone PR, fresh-main package/output verification, and a remote annotated-tag peel remain release gates.
+Issue #532; PR #533; U01 and U04 pass; U02, U03, and milestone U05 defer. `provider_bytes_authorized` is false. Reviewed head `2e9436e5...` merges through `0e58459e...`; fresh-main package/output gates pass; annotated tag object `ec2aad7a...` remotely peels exactly to the merge.
 
 ## v0.45.0-petes-lake-material-defer - verified - 2026-07-22
 
