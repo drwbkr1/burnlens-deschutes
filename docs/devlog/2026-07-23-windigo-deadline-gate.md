@@ -20,4 +20,6 @@ The Sentinel pair passes local quality on 10,601 of 10,778 boundary pixels and a
 
 No delivered class proves background. U04 must separately establish affirmative optical stability outside the official burn footprints, then propose exactly one burned and one background region with unknown rings. This source-fitness pass creates no candidate, owner response, label, dataset, split, baseline, model, accuracy, field-validation, official, endorsed, or operational claim.
 
-Three failed render/trace attempts remain retained. The final JSON, HTML, and PNG replay byte for byte. The 1800 by 1260 PNG, 1440-pixel desktop page, and 390 by 844 page pass visual review; the narrow tables scroll inside their cards without overflowing the document.
+Five failed or superseded render/trace attempts remain retained. R004 preserved every scientific value but named the prior v0.2.0 cumulative label set, so it is superseded. The first correction, ignored r005, supplied a non-existent expanded commit and failed trace binding before promotion.
+
+Corrected r006 binds exact source commit `a88b539f50262683c88ec75286ec2d60892d25fd` and current label set v0.3.0. Its JSON, HTML, and PNG replay byte for byte. The r006 1800 by 1260 PNG passes original-resolution review. Its HTML differs from the already desktop/mobile browser-validated r004 layout only in image filename, exact commit, and run ID; the in-app browser refused a new local-file navigation under its URL security policy. No bypass was attempted.
