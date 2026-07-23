@@ -12,4 +12,4 @@ Current Sentinel terms permit exact local acquisition and attributed modified ev
 
 U02 now preserves and registers the exact Sentinel pair: 2,373,112,076 provider bytes with provider MD5/BLAKE3 and independent local SHA-256 verification. Two interrupted transport attempts remain immutable. The corrected public report exposes both instead of hiding the earlier pre interruption.
 
-Optical custody does not make Windigo event six. The next and only source action is one combined BAER/RAVG/MTBS request. Delivered notices and native reference pixels must still pass before source fitness, candidates, owner review, or any label decision.
+Optical custody does not make Windigo event six. The one combined BAER/RAVG/MTBS request is now accepted and pending email delivery. The public receipt withholds the recipient and binds every private custody file. Delivered notices and native reference pixels must still pass before source fitness, candidates, owner review, or any label decision.

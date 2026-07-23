@@ -10,7 +10,7 @@
 
 U02 acquired only the U01-frozen Sentinel-2 L2A pair. It used runtime-only CDSE credentials, sequential singleton transactions, ignored quarantine and raw custody, no-overwrite promotion, exact current OData identity, provider and local hashes, safe ZIP/root/member/CRC checks, registration manifests, and post-promotion rehash.
 
-This pass authorizes only the already contracted single combined BAER/RAVG/MTBS Portal request. It does not authorize delivered reference pixels, candidates, labels, a dataset, a split, a baseline, a model, or a Phase Two completion claim. Exact delivered notices, identities, archive safety, CRS, grids, nodata, class domains, masks, terms, and program limitations must still pass.
+This pass authorized only the already contracted single combined BAER/RAVG/MTBS Portal request. That one request is now accepted and pending delivery. It does not authorize delivered reference pixels, candidates, labels, a dataset, a split, a baseline, a model, or a Phase Two completion claim. Exact delivered notices, identities, archive safety, CRS, grids, nodata, class domains, masks, terms, and program limitations must still pass.
 
 ## Exact custody
 
@@ -50,4 +50,8 @@ The first generated public report omitted the retained pre interruption. Its exa
 
 ## Disposition and next dependency
 
-U02 optical custody passes. The only eligible next action is one combined official Portal request for BAER `10022395`, RAVG `10022960`, and MTBS `10029547`, followed by exact delivered-byte and notice inspection. U03 remains blocked until that delivery passes its source, terms, custody, identity, integrity, and native-pixel fitness gates.
+U02 passes. One combined official Portal request for BAER `10022395`, RAVG `10022960`, and MTBS `10029547` was accepted exactly once with all 18 mapping-product families. Private receipt `BL-2026-07-23-windigo-reference-request-r001` is 4,046 bytes / SHA-256 `78bec99f6484b33591503d23f2db6dc141752f37f89741e7ff760c5658988d37`; the 16-byte queue response is SHA-256 `c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97`. Recipient data is withheld and absent from custody.
+
+Public report `WINDIGO-REFERENCE-REQUEST-2026-001` is 3,455 bytes / SHA-256 `fa79550ae1c04e31b3fde77ac69d775563e62662406de13dff1d781dbad2c213`. It binds request source commit `3bd0062abfb90ec6b0bbb542c2c2413e69ceab56`, reconciliation commit `cf94517d031b7c6579a7cbcb9a9f149ec15c36dd`, all five private file hashes, the exact payload, queue acceptance, and zero delivered provider bytes.
+
+U03 is waiting for the exact delivery. It may advance only after source, terms, custody, identity, integrity, archive, and native-pixel fitness gates pass. No duplicate request is authorized.
