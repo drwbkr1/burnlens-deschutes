@@ -187,7 +187,7 @@ The controlling execution goal remains `v0.0.8-execution-goal-baseline` at `22a8
 
 August 6, 2026 is the controlling portfolio-submission deadline. The current critical path is:
 
-1. **Final bounded sixth-event attempt:** P2O4-T35 / issue #534 may execute only Windigo 2022. Its cutoff is July 27, 2026 at 6:00 PM America/Indianapolis. U01-U04 pass the exact Sentinel pair, one combined BAER/RAVG/MTBS delivery, actual source fitness, and exactly one separately evidenced proposal per class. U05 is now the exact two-card owner review; proposals are not labels.
+1. **Final bounded sixth-event attempt:** P2O4-T35 / issue #534 may execute only Windigo 2022. Its cutoff is July 27, 2026 at 6:00 PM America/Indianapolis. U01-U04 pass the exact source, custody, fitness, and two-class proposal chain. U05 has handed one blank exact two-card surface to the owner and now stops for both explicit decisions.
 2. **Deadline decision:** accept Windigo only if its full two-class, source, terms, custody, quality, uncertainty, leakage, owner, render, and reproducibility chain passes. Otherwise formally activate the technical-case-study-only fallback. Baseline-first is not authorized without an accepted dataset and split.
 3. **Reviewer-visible integration:** lock one repository-owned local/offline evidence interface and reviewer journey. Integrate real outputs, honest failure states, limitations, and source precedence rather than adding parallel systems.
 4. **Case study and reviewer guide:** make the promise, strongest verified result, stop decision, technical depth, reproduction path, and limitations legible quickly.

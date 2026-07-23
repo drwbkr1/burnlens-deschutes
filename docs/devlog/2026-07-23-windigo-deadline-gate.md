@@ -29,3 +29,9 @@ U04 turns the source findings into exactly two review proposals without promotin
 The burned proposal combines the frozen optical burn route with BAER SBS 2-4 and MTBS dNBR6 2-4. The background proposal uses the frozen stability route outside a 60 m conservative source-domain buffer. RAVG remains context and exclusion only.
 
 Both proposals use 25-pixel cores and 51-pixel unknown rings. Their JSON, HTML, PNG, and rasters reproduce byte for byte. The actual production PNG passes original-resolution inspection. No owner response, label, event acceptance, dataset, split, baseline, model, or performance claim exists.
+
+U05 packages those exact proposals into one blank two-card review. R001 fails safely because its nested evidence paths violate the hardened loopback sibling-resource rule. R002 changes only those paths and adds exact server-preflight coverage.
+
+The corrected surface reproduces all six files. It passes the in-app desktop workflow and a 390 by 844 Chromium workflow without page overflow. A marked software fixture verifies final summary, hash-named export, completed-envelope validation, and session lock, then is deleted.
+
+The real surface is reset to zero decisions and stays open on a manifest-bound localhost route. BurnLens stops for the owner before response lock, reveal, reconciliation, labels, event acceptance, or U06.

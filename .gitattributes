@@ -104,6 +104,9 @@ samples/labels/review/grandview/phase-two/*.json text eol=lf
 samples/labels/review/grandview/phase-two/*.html text eol=lf
 samples/labels/review/grandview/phase-two/intake/*.json text eol=lf
 samples/labels/review/grandview/phase-two/intake/*.html text eol=lf
+samples/labels/review/windigo/phase-two/*.json text eol=lf
+samples/labels/review/windigo/phase-two/*.html text eol=lf
+samples/labels/review/windigo/phase-two/*.png -text
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf

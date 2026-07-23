@@ -10,10 +10,12 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Pass U02/U03 with exact optical/reference custody, actual delivered source fitness, valid MTBS topology, and explicit unrepaired BAER/RAVG vector exclusions.
 - Pass U04 with one deterministic burned proposal and one separately evidenced affirmative-background proposal, each with a 25-pixel core and 51-pixel unknown ring.
 - Reproduce the U04 JSON, HTML, PNG, and both candidate rasters byte for byte; create zero owner decisions or labels.
+- Hand off one exact blank U05 owner-review batch containing only `WDP-001` and `WDP-002`.
+- Pass manifest-bound localhost, desktop, 390-pixel, blank-state, per-candidate, summary, export, lock, replay, and software-fixture cleanup checks.
 - Select technical-case-study-only as the automatic or terminal fallback. Do not authorize baseline-first without an accepted dataset and split.
 - Preserve five accepted events and null dataset, split, baseline, and model state.
 
-Issue #534; latest run `BL-2026-07-23-windigo-region-proposal-r001`; U01-U04 pass and only the exact two-card owner review becomes eligible.
+Issue #534; latest run `BL-2026-07-23-windigo-owner-review-surface-r002`; U01-U04 pass and U05 awaits the exact owner export with zero decisions or labels.
 
 ## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 

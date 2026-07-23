@@ -1,0 +1,322 @@
+{
+  "report_id": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "owner-review-batch-surface-v0.1.0",
+  "response_schema_version": "burnlens-owner-review-batch-response-v0.1.0",
+  "review_protocol_version": "owner-confirmed-prototype-label-review-v0.2.0",
+  "surface_revision": 1,
+  "generated_at_utc": "2026-07-23T22:17:29.602Z",
+  "run_id": "BL-2026-07-23-windigo-owner-review-surface-r002",
+  "milestone_id": "P2O4-T35",
+  "task_issue": 534,
+  "git_source_commit": "b393886c3ceb0d6d07604c728715febb699070fc",
+  "software_version": "0.46.0",
+  "ordered_manifest_sha256": "58efe73c109f4f9197952bfb9a11103223e3d34f9cd006b686fc124fa2ce1728",
+  "batch_manifest": {
+    "manifest_schema_version": "burnlens-owner-review-batch-manifest-v0.1.0",
+    "surface_id": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001",
+    "surface_revision": 1,
+    "surface_run_id": "BL-2026-07-23-windigo-owner-review-surface-r002",
+    "milestone_id": "P2O4-T35",
+    "task_issue": 534,
+    "generated_at_utc": "2026-07-23T22:17:29.602Z",
+    "git_source_commit": "b393886c3ceb0d6d07604c728715febb699070fc",
+    "title": "Windigo exact two-card owner review",
+    "review_groups": [
+      {
+        "event_group_id": "windigo-2022-OR4336312205020220730",
+        "event_label": "Windigo 2022",
+        "context": "Review both disclosed proposals independently. One is proposed burned and one background; neither is a label before exact response lock and non-owner reconciliation.",
+        "candidate_ids": [
+          "WDP-001",
+          "WDP-002"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "WDP-001",
+        "event_group_id": "windigo-2022-OR4336312205020220730",
+        "proposed_class": "burned",
+        "question": "Should this exact region become an owner-approved prototype burned label?",
+        "proposition_basis": "Usable optical burn evidence, the frozen multi-signal coherence rule, BAER SBS classes 2-4, and MTBS dNBR6 classes 2-4 all agree.",
+        "limitations": [
+          "This is disclosed prototype evidence, not ground truth or independent validation.",
+          "A yes is necessary but insufficient; every non-owner gate must still pass.",
+          "BAER is preliminary field-informed evidence; BurnLens is not field validated."
+        ],
+        "facts": [
+          {
+            "label": "Event",
+            "value": "Windigo 2022 / OR4336312205020220730"
+          },
+          {
+            "label": "Core",
+            "value": "25 native 20 m pixels"
+          },
+          {
+            "label": "Unknown ring",
+            "value": "51 excluded pixels"
+          },
+          {
+            "label": "Selection",
+            "value": "fixed dNBR interval [0.25, 0.3]; tie d7abdf6507745e7867b0cb45f2fbf0a2e45d5ddb19a53b5259d0bab8bcc58d10"
+          }
+        ],
+        "proposal_binding": {
+          "record_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+          "bytes": 29995,
+          "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+        },
+        "candidate_raster_binding": {
+          "path": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-001.tif",
+          "bytes": 2852,
+          "sha256": "0106fe4bf81ee9614a090a38541bb78be9cf033ae6b94c9fe9f3594a62fc0e2a"
+        },
+        "evidence_images": [
+          {
+            "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-001.png",
+            "bytes": 25006,
+            "sha256": "dc8df7796e94aca454c98f5b36ff923214cd2d06144102261eaab568d5eba7da",
+            "alt": "Exact WDP-001 proposed burned evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+          }
+        ],
+        "candidate_binding_sha256": "31cd729bfa466f50145af60de680aa7fc42aadf6cb33d3ce523d6a6fbbd0296d"
+      },
+      {
+        "candidate_id": "WDP-002",
+        "event_group_id": "windigo-2022-OR4336312205020220730",
+        "proposed_class": "background",
+        "question": "Should this exact region become an owner-approved prototype background label?",
+        "proposition_basis": "Usable optical stability passes the frozen multi-signal coherence rule outside the 60 m conservative source-domain buffer.",
+        "limitations": [
+          "This is disclosed prototype evidence, not ground truth or independent validation.",
+          "A yes is necessary but insufficient; every non-owner gate must still pass.",
+          "The background proposal shows stability in this exact fire-window pair; it does not prove the land was never burned."
+        ],
+        "facts": [
+          {
+            "label": "Event",
+            "value": "Windigo 2022 / OR4336312205020220730"
+          },
+          {
+            "label": "Core",
+            "value": "25 native 20 m pixels"
+          },
+          {
+            "label": "Unknown ring",
+            "value": "51 excluded pixels"
+          },
+          {
+            "label": "Selection",
+            "value": "fixed dNBR interval [-0.05, 0.0]; tie bc1cc0038adf136723a67977a4b0f916fa0ab46ba508b37b92f7564282922db1"
+          }
+        ],
+        "proposal_binding": {
+          "record_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+          "bytes": 29995,
+          "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+        },
+        "candidate_raster_binding": {
+          "path": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-002.tif",
+          "bytes": 2864,
+          "sha256": "ada6b1e772a9039b5e73ed15ac184229a3df7bed7b55c402ac78e972aec6950e"
+        },
+        "evidence_images": [
+          {
+            "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-002.png",
+            "bytes": 25418,
+            "sha256": "1069390aec07a9fa16157e1667d501a3d08ce491c5bb9e260caed3935a4b0e97",
+            "alt": "Exact WDP-002 proposed background evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+          }
+        ],
+        "candidate_binding_sha256": "ec56acd1c1812f4ec8b3eda872adf86205e5fe87626c185203f6360872881ec2"
+      }
+    ],
+    "batch_size_exception": "single-event-pair",
+    "supersedes_surface_id": null
+  },
+  "review_groups": [
+    {
+      "event_group_id": "windigo-2022-OR4336312205020220730",
+      "event_label": "Windigo 2022",
+      "context": "Review both disclosed proposals independently. One is proposed burned and one background; neither is a label before exact response lock and non-owner reconciliation.",
+      "candidate_ids": [
+        "WDP-001",
+        "WDP-002"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "WDP-001",
+      "event_group_id": "windigo-2022-OR4336312205020220730",
+      "proposed_class": "burned",
+      "question": "Should this exact region become an owner-approved prototype burned label?",
+      "proposition_basis": "Usable optical burn evidence, the frozen multi-signal coherence rule, BAER SBS classes 2-4, and MTBS dNBR6 classes 2-4 all agree.",
+      "limitations": [
+        "This is disclosed prototype evidence, not ground truth or independent validation.",
+        "A yes is necessary but insufficient; every non-owner gate must still pass.",
+        "BAER is preliminary field-informed evidence; BurnLens is not field validated."
+      ],
+      "facts": [
+        {
+          "label": "Event",
+          "value": "Windigo 2022 / OR4336312205020220730"
+        },
+        {
+          "label": "Core",
+          "value": "25 native 20 m pixels"
+        },
+        {
+          "label": "Unknown ring",
+          "value": "51 excluded pixels"
+        },
+        {
+          "label": "Selection",
+          "value": "fixed dNBR interval [0.25, 0.3]; tie d7abdf6507745e7867b0cb45f2fbf0a2e45d5ddb19a53b5259d0bab8bcc58d10"
+        }
+      ],
+      "proposal_binding": {
+        "record_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+        "bytes": 29995,
+        "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+      },
+      "candidate_raster_binding": {
+        "path": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-001.tif",
+        "bytes": 2852,
+        "sha256": "0106fe4bf81ee9614a090a38541bb78be9cf033ae6b94c9fe9f3594a62fc0e2a"
+      },
+      "evidence_images": [
+        {
+          "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-001.png",
+          "bytes": 25006,
+          "sha256": "dc8df7796e94aca454c98f5b36ff923214cd2d06144102261eaab568d5eba7da",
+          "alt": "Exact WDP-001 proposed burned evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+        }
+      ],
+      "candidate_binding_sha256": "31cd729bfa466f50145af60de680aa7fc42aadf6cb33d3ce523d6a6fbbd0296d"
+    },
+    {
+      "candidate_id": "WDP-002",
+      "event_group_id": "windigo-2022-OR4336312205020220730",
+      "proposed_class": "background",
+      "question": "Should this exact region become an owner-approved prototype background label?",
+      "proposition_basis": "Usable optical stability passes the frozen multi-signal coherence rule outside the 60 m conservative source-domain buffer.",
+      "limitations": [
+        "This is disclosed prototype evidence, not ground truth or independent validation.",
+        "A yes is necessary but insufficient; every non-owner gate must still pass.",
+        "The background proposal shows stability in this exact fire-window pair; it does not prove the land was never burned."
+      ],
+      "facts": [
+        {
+          "label": "Event",
+          "value": "Windigo 2022 / OR4336312205020220730"
+        },
+        {
+          "label": "Core",
+          "value": "25 native 20 m pixels"
+        },
+        {
+          "label": "Unknown ring",
+          "value": "51 excluded pixels"
+        },
+        {
+          "label": "Selection",
+          "value": "fixed dNBR interval [-0.05, 0.0]; tie bc1cc0038adf136723a67977a4b0f916fa0ab46ba508b37b92f7564282922db1"
+        }
+      ],
+      "proposal_binding": {
+        "record_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+        "bytes": 29995,
+        "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+      },
+      "candidate_raster_binding": {
+        "path": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-002.tif",
+        "bytes": 2864,
+        "sha256": "ada6b1e772a9039b5e73ed15ac184229a3df7bed7b55c402ac78e972aec6950e"
+      },
+      "evidence_images": [
+        {
+          "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-002.png",
+          "bytes": 25418,
+          "sha256": "1069390aec07a9fa16157e1667d501a3d08ce491c5bb9e260caed3935a4b0e97",
+          "alt": "Exact WDP-002 proposed background evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+        }
+      ],
+      "candidate_binding_sha256": "ec56acd1c1812f4ec8b3eda872adf86205e5fe87626c185203f6360872881ec2"
+    }
+  ],
+  "batch_policy": {
+    "default_minimum_candidates": 4,
+    "default_maximum_candidates": 6,
+    "hard_maximum_candidates": 8,
+    "single_event_pair_exception": "single-event-pair",
+    "bulk_approval_allowed": false,
+    "prefilled_decisions_allowed": false,
+    "missing_decision_means_uncertain": false
+  },
+  "decision_contract": {
+    "yes": "owner supports the disclosed proposed class; every non-owner gate remains mandatory",
+    "no": "owner rejects this proposal; no opposite class is inferred",
+    "uncertain": "evidence is insufficient or conflicting; the candidate remains excluded",
+    "prior_decisions_inherited": false
+  },
+  "response_custody_contract": {
+    "hash_named_drafts": true,
+    "all_candidates_required_for_completion": true,
+    "one_batch_attestation_required": true,
+    "final_review_summary_required": true,
+    "hash_named_exact_response": true,
+    "browser_session_locks_after_finalization": true,
+    "distinct_completed_exports_require_owner_designation": true
+  },
+  "summary": {
+    "candidate_count": 2,
+    "event_group_count": 1,
+    "owner_responses": 0,
+    "labels_created": 0
+  },
+  "claim_boundaries": {
+    "owner_response_collected": false,
+    "label_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_inter_rater_field_official_or_operational_claimed": false
+  },
+  "warning": "Experimental BurnLens candidate review. Not ground truth, a dataset, official wildfire information, or emergency guidance. Official sources govern.",
+  "decision": "BATCH_SURFACE_CONTRACT_READY_KEEP_OWNER_RESPONSE_AND_PROMOTION_SEPARATE",
+  "outputs": [
+    {
+      "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 18625,
+      "sha256": "f46a24dd0b81d225a5b640cc61aa66cc0084308ba8e27dcb74b955f1f186d04b",
+      "media_type": "text/html"
+    },
+    {
+      "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-BATCH-MANIFEST.json",
+      "bytes": 5553,
+      "sha256": "5d6ef3909c8a27cc184fe897b08fc592753071f0fb322a6d22834fa29f4723cd",
+      "media_type": "application/json"
+    },
+    {
+      "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 1017,
+      "sha256": "ce881ef9915c60a2a1ffb5cee2a7eacb2e2d8c3546c0aa6254e92f3800712749",
+      "media_type": "application/json"
+    },
+    {
+      "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-001.png",
+      "bytes": 25006,
+      "sha256": "dc8df7796e94aca454c98f5b36ff923214cd2d06144102261eaab568d5eba7da",
+      "media_type": "image/png"
+    },
+    {
+      "path": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-WDP-002.png",
+      "bytes": 25418,
+      "sha256": "1069390aec07a9fa16157e1667d501a3d08ce491c5bb9e260caed3935a4b0e97",
+      "media_type": "image/png"
+    }
+  ]
+}
