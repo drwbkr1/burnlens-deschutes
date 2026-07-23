@@ -167,7 +167,7 @@ class WindigoOpticalContractTests(unittest.TestCase):
                 with self.assertRaisesRegex(AcquisitionError, "TEST_PRE_FAILURE"):
                     acquire_windigo_optical_pair(
                         run=run,
-                        trace=type("Trace", (), {"as_dict": lambda self: {}})(),
+                        trace=WindigoTrace(git_source_commit="a" * 40),
                         credentials=type("Credentials", (), {"username": "x", "password": "y"})(),
                         metadata_snapshot=snapshot,
                     )
@@ -227,8 +227,23 @@ class WindigoOpticalContractTests(unittest.TestCase):
             )
             run.pre_quarantine.mkdir(parents=True)
             part = run.pre_quarantine / f"{PRE_CONTRACT.expected_filename}.part"
-            part.write_bytes(b"PK\x03\x04" + b"x" * 12)
-            self.assertEqual(_resumable_pre_bytes(run), 16)
+            with patch(
+                "burnlens.windigo_optical_contract.PRE_PARTIAL_R001_BYTES",
+                16,
+            ), patch(
+                "burnlens.windigo_optical_contract.PRE_PARTIAL_R001_SHA256",
+                "4a9ff68488c5d15970acb43e746af17ca5adfd3ed4e79a518d6d86e7f00904f8",
+            ), patch(
+                "burnlens.windigo_optical_contract.PRE_FAILURE_R001_BYTES",
+                2,
+            ), patch(
+                "burnlens.windigo_optical_contract.PRE_FAILURE_R001_SHA256",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            ):
+                part.write_bytes(b"PK\x03\x04" + b"x" * 12)
+                run.pre_failure_state.parent.mkdir(parents=True, exist_ok=True)
+                run.pre_failure_state.write_bytes(b"{}")
+                self.assertEqual(_resumable_pre_bytes(run), 16)
             (run.pre_quarantine / "unexpected").write_bytes(b"x")
             with self.assertRaisesRegex(AcquisitionError, "RESUME_ROSTER"):
                 _resumable_pre_bytes(run)

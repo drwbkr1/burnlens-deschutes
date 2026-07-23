@@ -30,7 +30,12 @@ def parse_args() -> argparse.Namespace:
 
 def _progress(role: str, observed: int, expected: int) -> None:
     percent = 100 * observed / expected if expected else 0
-    print(f"{role}: {observed:,}/{expected:,} bytes ({percent:.1f}%)", flush=True)
+    try:
+        print(f"{role}: {observed:,}/{expected:,} bytes ({percent:.1f}%)", flush=True)
+    except (BrokenPipeError, OSError):
+        # A detached or closed display channel must not be misclassified as an
+        # archive write failure or interrupt exact-byte custody.
+        return
 
 
 def main() -> int:

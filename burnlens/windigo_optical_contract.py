@@ -45,6 +45,14 @@ U01_ENTRY_COMMIT = "9fba1c7a2b860fedf0cac70e355cffaa6a7dc5d8"
 PRODUCTION_RUN_DATE = "2026-07-23"
 REVISION = "r001"
 MAX_TRANSFER_ATTEMPTS = 5
+PRE_FAILURE_R001_BYTES = 2_798
+PRE_FAILURE_R001_SHA256 = (
+    "e02fce0508a763b7603f72e50bdf3c25c721fa2f15c8e3a26a6598d3a11b7af6"
+)
+PRE_PARTIAL_R001_BYTES = 134_217_728
+PRE_PARTIAL_R001_SHA256 = (
+    "5fac4900d65591f3c44c6ee3dec3939a27b0759e22656e0a7c2d5bac38c54c75"
+)
 
 U01_BINDINGS = {
     "records/phase-two/prechecks/PRECHECK-2026-059.md": (
@@ -329,6 +337,10 @@ class WindigoOpticalRun:
 
     @property
     def pre_state(self) -> Path:
+        return self.state_parent / f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r002.json"
+
+    @property
+    def pre_failure_state(self) -> Path:
         return self.state_parent / f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001.json"
 
     @property
@@ -359,7 +371,19 @@ class WindigoTrace:
             "git_source_commit": self.git_source_commit,
             "resumable_pre_bytes": self.resumable_pre_bytes,
             "prior_local_interruption": (
-                "LOCAL_FOREGROUND_TOOL_TIMEOUT_RETAINED_EXACT_PARTIAL"
+                "LOCAL_PROGRESS_PIPE_CLOSED_RETAINED_EXACT_PARTIAL"
+                if self.resumable_pre_bytes
+                else None
+            ),
+            "retained_pre_failure": (
+                {
+                    "run_id": f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001",
+                    "bytes": PRE_FAILURE_R001_BYTES,
+                    "sha256": PRE_FAILURE_R001_SHA256,
+                    "partial_bytes": PRE_PARTIAL_R001_BYTES,
+                    "partial_sha256": PRE_PARTIAL_R001_SHA256,
+                    "disposition": "failed-immutable-superseded-by-r002-resume",
+                }
                 if self.resumable_pre_bytes
                 else None
             ),
@@ -412,8 +436,17 @@ def _resumable_pre_bytes(run: WindigoOpticalRun) -> int:
     observed = part.lstat()
     if observed.st_nlink != 1:
         raise AcquisitionError("WINDIGO_PRE_RESUME_MULTILINK")
-    if not 0 < observed.st_size < PRE_CONTRACT.expected_size_bytes:
+    if observed.st_size != PRE_PARTIAL_R001_BYTES:
         raise AcquisitionError("WINDIGO_PRE_RESUME_SIZE_INVALID")
+    if _sha256_file(part) != PRE_PARTIAL_R001_SHA256:
+        raise AcquisitionError("WINDIGO_PRE_RESUME_HASH_MISMATCH")
+    failure = run.pre_failure_state
+    if (
+        not failure.is_file()
+        or failure.stat().st_size != PRE_FAILURE_R001_BYTES
+        or _sha256_file(failure) != PRE_FAILURE_R001_SHA256
+    ):
+        raise AcquisitionError("WINDIGO_PRE_FAILURE_BINDING_MISMATCH")
     return observed.st_size
 
 
@@ -453,11 +486,13 @@ def verify_windigo_repository_preflight(
         path = root / relative
         if not path.is_file() or path.stat().st_size != size or _sha256_file(path) != digest:
             raise AcquisitionError("WINDIGO_U01_BINDING_MISMATCH", detail=relative)
+    resumable_pre_bytes = _resumable_pre_bytes(run)
     private_paths = (
         run.pre_quarantine,
         run.post_quarantine,
         run.pre_destination,
         run.post_destination,
+        run.pre_failure_state,
         run.pre_state,
         run.post_state,
         run.aggregate_state,
@@ -474,7 +509,6 @@ def verify_windigo_repository_preflight(
     if _git(root, "ls-files", "--error-unmatch", "--", report_relative).returncode != 1:
         raise AcquisitionError("WINDIGO_TRACKED_REPORT_ALREADY_TRACKED")
     targets = (*private_paths, run.tracked_report)
-    resumable_pre_bytes = 0
     if existing_success_outputs:
         if not all(path.is_file() for path in (run.pre_state, run.post_state, run.aggregate_state, run.tracked_report)):
             raise AcquisitionError("WINDIGO_SUCCESS_OUTPUTS_MISSING")
@@ -484,7 +518,10 @@ def verify_windigo_repository_preflight(
             path.relative_to(root).as_posix()
             for path in targets
             if _path_present(path)
-            and not (path == run.pre_quarantine and resumable_pre_bytes)
+            and not (
+                resumable_pre_bytes
+                and path in {run.pre_quarantine, run.pre_failure_state}
+            )
         ]
         if present:
             raise AcquisitionError("WINDIGO_NO_OVERWRITE_TARGET_EXISTS", detail=",".join(present))
@@ -533,7 +570,7 @@ def _acquire_singleton(
             {
                 "attempt_id": f"{run_id}-a000",
                 "outcome": "interrupted",
-                "reason_code": "LOCAL_FOREGROUND_TOOL_TIMEOUT",
+                "reason_code": "LOCAL_PROGRESS_PIPE_CLOSED",
                 "classification": "RETRYABLE_LOCAL_ORCHESTRATION",
                 "retained_partial_bytes": trace.resumable_pre_bytes,
             }
@@ -689,7 +726,11 @@ def acquire_windigo_optical_pair(
         quarantine=run.pre_quarantine,
         destination=run.pre_destination,
         state_path=run.pre_state,
-        run_id=f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001",
+        run_id=(
+            f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r002"
+            if trace.resumable_pre_bytes
+            else f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001"
+        ),
         progress=progress,
     )
     # The post request is unreachable unless the promoted pre package has just
@@ -758,6 +799,11 @@ def acquire_windigo_optical_pair(
             "reference_delivery": "not requested",
             "candidate_label_dataset_split_baseline_model": "not created",
         },
+        "retained_failures": (
+            [trace.as_dict()["retained_pre_failure"]]
+            if trace.resumable_pre_bytes
+            else []
+        ),
         "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT",
         "warning": WARNING,
     }
@@ -796,4 +842,10 @@ def verify_windigo_completed(run: WindigoOpticalRun) -> list[str]:
             reasons.append("TRACKED_REPORT_DECISION")
         if report.get("expected_combined_bytes") != 2_373_112_076:
             reasons.append("TRACKED_REPORT_BYTES")
+    if run.pre_failure_state.is_file():
+        if (
+            run.pre_failure_state.stat().st_size != PRE_FAILURE_R001_BYTES
+            or _sha256_file(run.pre_failure_state) != PRE_FAILURE_R001_SHA256
+        ):
+            reasons.append("PRE_FAILURE_R001_BINDING")
     return reasons
