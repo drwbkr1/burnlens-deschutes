@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.45.0-petes-lake-material-defer - release candidate - 2026-07-22
+## v0.45.0-petes-lake-material-defer - verified - 2026-07-22
 
 ### P2O4-T33 - Preserve the complete Petes Lake milestone and stop honestly
 
@@ -14,7 +14,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain initial candidate `9f44099922485b9c26b4cadcc029a67423434877` because clean-checkout U04 replay exposes a descendant-trace defect. Correction `fcbaa4c1044672352227f6a3047d998967d1d114` changes trace enforcement only; the exact U04 evidence, zero-reference-pixel boundary, and material-defer disposition do not change.
 - Keep `owner-approved-prototype-region-labels-v0.3.0` unchanged at five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. Create no dataset, split, baseline, model, metric, deployment, field-validation, official, endorsed, operational, or emergency-ready claim.
 
-Issue #521; PR #527; reviewed head `925b660...`; true merge `7d5c07e...`; terminal r003 record checkpoint `52310531ad0b8e6d07800fc752f7bf65b5fdea9a`; candidate tag `v0.45.0-petes-lake-material-defer`. The 798,433-byte wheel / SHA-256 `8e3f28e1...` remains superseded precursor evidence from failed candidate `9f440999...`. The later 800,916-byte / `4e0bd99f...` milestone wheel passes its candidate-stage package checks but fails the post-merge BL-EXC-001 runtime contract and is not releasable. This remains the unreleased 0.45.0 candidate, not a 0.45.1 release; the exception subsection below controls the current package and release hold. No GitHub Release object or deployment is planned.
+Issue #521; PR #527; reviewed head `925b660...`; true merge `7d5c07e...`; terminal r003 record checkpoint `52310531ad0b8e6d07800fc752f7bf65b5fdea9a`. The 798,433-byte wheel / SHA-256 `8e3f28e1...` remains superseded precursor evidence from failed candidate `9f440999...`. The later 800,916-byte / `4e0bd99f...` milestone wheel passes its candidate-stage package checks but fails the post-merge BL-EXC-001 runtime contract and is not releasable. BL-EXC-001 / issue #528 / PR #529 supplies the verified package correction at merge `d65c24f59ce0c854ba230aa977eaf718d881d952`; this remains version 0.45.0 because no prior 0.45 tag shipped. Annotated tag object `0b466402cdc36b0eacfff97d29dd16fe2a88868a` remotely peels exactly to that merge. No GitHub Release object or deployment exists.
 
 ### BL-EXC-001 - Correct the untagged runtime contract before release
 
@@ -25,7 +25,7 @@ Issue #521; PR #527; reviewed head `925b660...`; true merge `7d5c07e...`; termin
 - Pass U03 at package-sensitive code `4bf76ea...`: fresh dev 499/25, fresh geo 515/23, canonical custody-enabled 537/1, all with 81 subtests; exact U03/U04 products remain unchanged; fresh `uv.lock` is checkout-stable.
 - Produce the corrected 801,906-byte wheel / SHA-256 `8e17c18a...` with 170 exact entries, 81 unchanged commands, and complete RECORD coverage from two separate fresh no-hardlink clones at pushed package-code checkpoint `4bf76ea...`.
 
-The 800,916-byte milestone wheel is superseded package evidence, not the release candidate. BL-EXC-001 U04, its PR/merge, fresh-main repetition, and annotated-tag peel remain pending. BurnLens 0.45.0 remains unreleased; v0.44 is still the latest verified release. No GitHub Release object, deployment, provider transaction, custody mutation, scientific change, candidate, owner response, label, dataset, split, baseline, model, field-validation, official, endorsed, operational, or emergency-ready claim exists.
+The 800,916-byte milestone wheel and 801,911-byte pre-review wheel remain superseded package evidence. BL-EXC-001 U04 passes through exact reviewed head `9cc07d1...`, PR #529, verified merge `d65c24f...`, fresh-main runtime/dev/geo/custody/replay/package repetition, and the exact annotated-tag peel. The canonical release wheel is 801,906 bytes / SHA-256 `8e17c18a53b7770b6de00b9668d02efa9b07945329672ed29883798442d906ea`, with 170 entries and all 81 commands. U11 retains disposition `defer` while execution is `complete` and release is `verified`. No GitHub Release object, deployment, provider transaction, custody mutation, scientific change, candidate, owner response, label, dataset, split, baseline, model, field-validation, official, endorsed, operational, or emergency-ready claim exists.
 
 ## BL-GOV-003 - milestone checkpoint policy - 2026-07-21
 
