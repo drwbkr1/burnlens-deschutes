@@ -15,6 +15,7 @@ from burnlens.windigo_optical_contract import (
     WindigoOpticalRun,
     WindigoTrace,
     _acquire_singleton,
+    _resumable_pre_bytes,
     acquire_windigo_optical_pair,
     refresh_windigo_metadata,
     validate_windigo_contracts,
@@ -217,6 +218,20 @@ class WindigoOpticalContractTests(unittest.TestCase):
             self.assertEqual([item["outcome"] for item in state["attempts"]], ["failed", "failed", "succeeded"])
             self.assertEqual(state["download"]["attempt_count"], 3)
             writer.assert_called_once()
+
+    def test_only_exact_single_link_pre_partial_is_resumable(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            run = WindigoOpticalRun.create(
+                repository_root=Path(temporary),
+                generated_at_utc="2026-07-23T18:00:00Z",
+            )
+            run.pre_quarantine.mkdir(parents=True)
+            part = run.pre_quarantine / f"{PRE_CONTRACT.expected_filename}.part"
+            part.write_bytes(b"PK\x03\x04" + b"x" * 12)
+            self.assertEqual(_resumable_pre_bytes(run), 16)
+            (run.pre_quarantine / "unexpected").write_bytes(b"x")
+            with self.assertRaisesRegex(AcquisitionError, "RESUME_ROSTER"):
+                _resumable_pre_bytes(run)
 
 
 if __name__ == "__main__":

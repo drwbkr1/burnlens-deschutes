@@ -347,6 +347,7 @@ class WindigoOpticalRun:
 @dataclass(frozen=True)
 class WindigoTrace:
     git_source_commit: str
+    resumable_pre_bytes: int = 0
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -356,6 +357,12 @@ class WindigoTrace:
             "git_base_commit": GIT_BASE_COMMIT,
             "u01_entry_commit": U01_ENTRY_COMMIT,
             "git_source_commit": self.git_source_commit,
+            "resumable_pre_bytes": self.resumable_pre_bytes,
+            "prior_local_interruption": (
+                "LOCAL_FOREGROUND_TOOL_TIMEOUT_RETAINED_EXACT_PARTIAL"
+                if self.resumable_pre_bytes
+                else None
+            ),
             "u01_bindings": {
                 path: {"bytes": size, "sha256": digest}
                 for path, (size, digest) in U01_BINDINGS.items()
@@ -383,6 +390,31 @@ def _sha256_file(path: Path) -> str:
 def _path_present(path: Path) -> bool:
     is_junction = getattr(path, "is_junction", None)
     return path.exists() or path.is_symlink() or bool(is_junction and is_junction())
+
+
+def _resumable_pre_bytes(run: WindigoOpticalRun) -> int:
+    """Accept only the exact interrupted pre partial and no other entry."""
+
+    quarantine = run.pre_quarantine
+    if not _path_present(quarantine):
+        return 0
+    is_junction = getattr(quarantine, "is_junction", None)
+    if (
+        quarantine.is_symlink()
+        or bool(is_junction and is_junction())
+        or not quarantine.is_dir()
+    ):
+        raise AcquisitionError("WINDIGO_PRE_RESUME_QUARANTINE_INVALID")
+    part = quarantine / f"{PRE_CONTRACT.expected_filename}.part"
+    entries = list(quarantine.iterdir())
+    if entries != [part] or not part.is_file() or part.is_symlink():
+        raise AcquisitionError("WINDIGO_PRE_RESUME_ROSTER_MISMATCH")
+    observed = part.lstat()
+    if observed.st_nlink != 1:
+        raise AcquisitionError("WINDIGO_PRE_RESUME_MULTILINK")
+    if not 0 < observed.st_size < PRE_CONTRACT.expected_size_bytes:
+        raise AcquisitionError("WINDIGO_PRE_RESUME_SIZE_INVALID")
+    return observed.st_size
 
 
 def verify_windigo_repository_preflight(
@@ -442,14 +474,24 @@ def verify_windigo_repository_preflight(
     if _git(root, "ls-files", "--error-unmatch", "--", report_relative).returncode != 1:
         raise AcquisitionError("WINDIGO_TRACKED_REPORT_ALREADY_TRACKED")
     targets = (*private_paths, run.tracked_report)
+    resumable_pre_bytes = 0
     if existing_success_outputs:
         if not all(path.is_file() for path in (run.pre_state, run.post_state, run.aggregate_state, run.tracked_report)):
             raise AcquisitionError("WINDIGO_SUCCESS_OUTPUTS_MISSING")
     else:
-        present = [path.relative_to(root).as_posix() for path in targets if _path_present(path)]
+        resumable_pre_bytes = _resumable_pre_bytes(run)
+        present = [
+            path.relative_to(root).as_posix()
+            for path in targets
+            if _path_present(path)
+            and not (path == run.pre_quarantine and resumable_pre_bytes)
+        ]
         if present:
             raise AcquisitionError("WINDIGO_NO_OVERWRITE_TARGET_EXISTS", detail=",".join(present))
-    return WindigoTrace(git_source_commit=head.stdout.strip())
+    return WindigoTrace(
+        git_source_commit=head.stdout.strip(),
+        resumable_pre_bytes=resumable_pre_bytes,
+    )
 
 
 def _write_tracked_report(run: WindigoOpticalRun, payload: dict[str, Any]) -> None:
@@ -486,6 +528,16 @@ def _acquire_singleton(
 ) -> dict[str, Any]:
     validator = _singleton_validator(contract)
     attempts: list[dict[str, Any]] = []
+    if contract == PRE_CONTRACT and trace.resumable_pre_bytes:
+        attempts.append(
+            {
+                "attempt_id": f"{run_id}-a000",
+                "outcome": "interrupted",
+                "reason_code": "LOCAL_FOREGROUND_TOOL_TIMEOUT",
+                "classification": "RETRYABLE_LOCAL_ORCHESTRATION",
+                "retained_partial_bytes": trace.resumable_pre_bytes,
+            }
+        )
     try:
         for attempt in range(1, MAX_TRANSFER_ATTEMPTS + 1):
             try:
