@@ -44,7 +44,8 @@ GIT_BASE_COMMIT = "0e58459ea45f509eca537223d872fd6992efb291"
 U01_ENTRY_COMMIT = "9fba1c7a2b860fedf0cac70e355cffaa6a7dc5d8"
 PRODUCTION_RUN_DATE = "2026-07-23"
 REVISION = "r001"
-MAX_TRANSFER_ATTEMPTS = 5
+MAX_TRANSFER_ATTEMPTS = 2
+TRANSFER_TIMEOUT_SECONDS = 600
 PRE_FAILURE_R001_BYTES = 2_798
 PRE_FAILURE_R001_SHA256 = (
     "e02fce0508a763b7603f72e50bdf3c25c721fa2f15c8e3a26a6598d3a11b7af6"
@@ -52,6 +53,18 @@ PRE_FAILURE_R001_SHA256 = (
 PRE_PARTIAL_R001_BYTES = 134_217_728
 PRE_PARTIAL_R001_SHA256 = (
     "5fac4900d65591f3c44c6ee3dec3939a27b0759e22656e0a7c2d5bac38c54c75"
+)
+PRE_SUCCESS_R002_BYTES = 7_825
+PRE_SUCCESS_R002_SHA256 = (
+    "b852693651fc64ae77f66e2532eeeedccf1ce281025b4c53839aed9f30fbda67"
+)
+POST_FAILURE_R001_BYTES = 4_243
+POST_FAILURE_R001_SHA256 = (
+    "55cb89d8b03d8d254f9446c07dde01e33f1307e6c1e104ae2b8cd44ad34aadde"
+)
+POST_PARTIAL_R001_BYTES = 102_760_448
+POST_PARTIAL_R001_SHA256 = (
+    "3c057925cfc5323887a56d0e87487b7f95de1c1d7fb28029920b9f58e936ad77"
 )
 
 U01_BINDINGS = {
@@ -321,6 +334,10 @@ class WindigoOpticalRun:
 
     @property
     def post_quarantine(self) -> Path:
+        return self.repository_root / "downloads/phase-two/quarantine/P2O4-T35-U02/windigo-optical-post-r002"
+
+    @property
+    def post_failure_quarantine(self) -> Path:
         return self.repository_root / "downloads/phase-two/quarantine/P2O4-T35-U02/windigo-optical-post-r001"
 
     @property
@@ -345,6 +362,10 @@ class WindigoOpticalRun:
 
     @property
     def post_state(self) -> Path:
+        return self.state_parent / f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-post-r002.json"
+
+    @property
+    def post_failure_state(self) -> Path:
         return self.state_parent / f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-post-r001.json"
 
     @property
@@ -360,6 +381,8 @@ class WindigoOpticalRun:
 class WindigoTrace:
     git_source_commit: str
     resumable_pre_bytes: int = 0
+    verified_pre_success: bool = False
+    retained_post_partial_bytes: int = 0
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -370,6 +393,8 @@ class WindigoTrace:
             "u01_entry_commit": U01_ENTRY_COMMIT,
             "git_source_commit": self.git_source_commit,
             "resumable_pre_bytes": self.resumable_pre_bytes,
+            "verified_pre_success": self.verified_pre_success,
+            "retained_post_partial_bytes": self.retained_post_partial_bytes,
             "prior_local_interruption": (
                 "LOCAL_PROGRESS_PIPE_CLOSED_RETAINED_EXACT_PARTIAL"
                 if self.resumable_pre_bytes
@@ -385,6 +410,18 @@ class WindigoTrace:
                     "disposition": "failed-immutable-superseded-by-r002-resume",
                 }
                 if self.resumable_pre_bytes
+                else None
+            ),
+            "retained_post_failure": (
+                {
+                    "run_id": f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-post-r001",
+                    "state_bytes": POST_FAILURE_R001_BYTES,
+                    "state_sha256": POST_FAILURE_R001_SHA256,
+                    "partial_bytes": POST_PARTIAL_R001_BYTES,
+                    "partial_sha256": POST_PARTIAL_R001_SHA256,
+                    "disposition": "failed-immutable-superseded-by-distinct-r002",
+                }
+                if self.retained_post_partial_bytes
                 else None
             ),
             "u01_bindings": {
@@ -450,6 +487,56 @@ def _resumable_pre_bytes(run: WindigoOpticalRun) -> int:
     return observed.st_size
 
 
+def _retained_post_failure_bytes(run: WindigoOpticalRun) -> int:
+    """Verify the exact immutable r001 failure state and its retained partial."""
+
+    quarantine = run.post_failure_quarantine
+    part = quarantine / f"{POST_CONTRACT.expected_filename}.part"
+    if not quarantine.is_dir() or quarantine.is_symlink():
+        raise AcquisitionError("WINDIGO_POST_FAILURE_QUARANTINE_INVALID")
+    entries = list(quarantine.iterdir())
+    if entries != [part] or not part.is_file() or part.is_symlink():
+        raise AcquisitionError("WINDIGO_POST_FAILURE_ROSTER_MISMATCH")
+    observed = part.lstat()
+    if observed.st_nlink != 1:
+        raise AcquisitionError("WINDIGO_POST_FAILURE_MULTILINK")
+    if (
+        observed.st_size != POST_PARTIAL_R001_BYTES
+        or _sha256_file(part) != POST_PARTIAL_R001_SHA256
+    ):
+        raise AcquisitionError("WINDIGO_POST_FAILURE_PARTIAL_BINDING_MISMATCH")
+    failure = run.post_failure_state
+    if (
+        not failure.is_file()
+        or failure.stat().st_size != POST_FAILURE_R001_BYTES
+        or _sha256_file(failure) != POST_FAILURE_R001_SHA256
+    ):
+        raise AcquisitionError("WINDIGO_POST_FAILURE_STATE_BINDING_MISMATCH")
+    return observed.st_size
+
+
+def _verified_pre_success(run: WindigoOpticalRun) -> bool:
+    if not run.pre_destination.is_dir() or not run.pre_state.is_file():
+        return False
+    if (
+        run.pre_state.stat().st_size != PRE_SUCCESS_R002_BYTES
+        or _sha256_file(run.pre_state) != PRE_SUCCESS_R002_SHA256
+    ):
+        raise AcquisitionError("WINDIGO_PRE_SUCCESS_STATE_BINDING_MISMATCH")
+    verification = verify_registered_package(
+        run.pre_destination,
+        (PRE_CONTRACT,),
+        contract_validator=_singleton_validator(PRE_CONTRACT),
+        contract_version=CONTRACT_VERSION,
+    )
+    if not verification["accepted_as_unchanged_registered_package"]:
+        raise AcquisitionError("WINDIGO_PRE_SUCCESS_PACKAGE_BINDING_MISMATCH")
+    state = json.loads(run.pre_state.read_text(encoding="utf-8"))
+    if state.get("decision") != "REGISTERED_EXACT_WINDIGO_OPTICAL_SINGLETON":
+        raise AcquisitionError("WINDIGO_PRE_SUCCESS_DECISION_MISMATCH")
+    return True
+
+
 def verify_windigo_repository_preflight(
     run: WindigoOpticalRun,
     *,
@@ -486,7 +573,9 @@ def verify_windigo_repository_preflight(
         path = root / relative
         if not path.is_file() or path.stat().st_size != size or _sha256_file(path) != digest:
             raise AcquisitionError("WINDIGO_U01_BINDING_MISMATCH", detail=relative)
-    resumable_pre_bytes = _resumable_pre_bytes(run)
+    verified_pre_success = _verified_pre_success(run)
+    resumable_pre_bytes = 0 if verified_pre_success else _resumable_pre_bytes(run)
+    retained_post_partial_bytes = _retained_post_failure_bytes(run)
     private_paths = (
         run.pre_quarantine,
         run.post_quarantine,
@@ -494,6 +583,8 @@ def verify_windigo_repository_preflight(
         run.post_destination,
         run.pre_failure_state,
         run.pre_state,
+        run.post_failure_quarantine,
+        run.post_failure_state,
         run.post_state,
         run.aggregate_state,
     )
@@ -513,7 +604,7 @@ def verify_windigo_repository_preflight(
         if not all(path.is_file() for path in (run.pre_state, run.post_state, run.aggregate_state, run.tracked_report)):
             raise AcquisitionError("WINDIGO_SUCCESS_OUTPUTS_MISSING")
     else:
-        resumable_pre_bytes = _resumable_pre_bytes(run)
+        resumable_pre_bytes = 0 if verified_pre_success else _resumable_pre_bytes(run)
         present = [
             path.relative_to(root).as_posix()
             for path in targets
@@ -521,6 +612,10 @@ def verify_windigo_repository_preflight(
             and not (
                 resumable_pre_bytes
                 and path in {run.pre_quarantine, run.pre_failure_state}
+                or verified_pre_success
+                and path in {run.pre_destination, run.pre_state, run.pre_failure_state}
+                or retained_post_partial_bytes
+                and path in {run.post_failure_quarantine, run.post_failure_state}
             )
         ]
         if present:
@@ -528,6 +623,8 @@ def verify_windigo_repository_preflight(
     return WindigoTrace(
         git_source_commit=head.stdout.strip(),
         resumable_pre_bytes=resumable_pre_bytes,
+        verified_pre_success=verified_pre_success,
+        retained_post_partial_bytes=retained_post_partial_bytes,
     )
 
 
@@ -584,7 +681,7 @@ def _acquire_singleton(
                     username=credentials.username,
                     password=credentials.password,
                     max_attempts=1,
-                    timeout_seconds=180,
+                    timeout_seconds=TRANSFER_TIMEOUT_SECONDS,
                     progress=progress,
                 )
             except AcquisitionError as error:
@@ -717,22 +814,25 @@ def acquire_windigo_optical_pair(
     reasons = validate_windigo_metadata(metadata_snapshot)
     if reasons:
         raise AcquisitionError("WINDIGO_METADATA_REJECTED", detail=",".join(reasons))
-    pre = _acquire_singleton(
-        run=run,
-        trace=trace,
-        credentials=credentials,
-        contract=PRE_CONTRACT,
-        metadata_record=metadata_snapshot["records"][0],
-        quarantine=run.pre_quarantine,
-        destination=run.pre_destination,
-        state_path=run.pre_state,
-        run_id=(
-            f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r002"
-            if trace.resumable_pre_bytes
-            else f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001"
-        ),
-        progress=progress,
-    )
+    if trace.verified_pre_success:
+        pre = json.loads(run.pre_state.read_text(encoding="utf-8"))
+    else:
+        pre = _acquire_singleton(
+            run=run,
+            trace=trace,
+            credentials=credentials,
+            contract=PRE_CONTRACT,
+            metadata_record=metadata_snapshot["records"][0],
+            quarantine=run.pre_quarantine,
+            destination=run.pre_destination,
+            state_path=run.pre_state,
+            run_id=(
+                f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r002"
+                if trace.resumable_pre_bytes
+                else f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-pre-r001"
+            ),
+            progress=progress,
+        )
     # The post request is unreachable unless the promoted pre package has just
     # passed a complete rehash and registration verification.
     pre_verify = verify_registered_package(
@@ -752,7 +852,7 @@ def acquire_windigo_optical_pair(
         quarantine=run.post_quarantine,
         destination=run.post_destination,
         state_path=run.post_state,
-        run_id=f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-post-r001",
+        run_id=f"BL-{PRODUCTION_RUN_DATE}-windigo-optical-post-r002",
         progress=progress,
     )
     aggregate = {
@@ -799,11 +899,14 @@ def acquire_windigo_optical_pair(
             "reference_delivery": "not requested",
             "candidate_label_dataset_split_baseline_model": "not created",
         },
-        "retained_failures": (
-            [trace.as_dict()["retained_pre_failure"]]
-            if trace.resumable_pre_bytes
-            else []
-        ),
+        "retained_failures": [
+            item
+            for item in (
+                trace.as_dict()["retained_pre_failure"],
+                trace.as_dict()["retained_post_failure"],
+            )
+            if item is not None
+        ],
         "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT",
         "warning": WARNING,
     }
@@ -848,4 +951,9 @@ def verify_windigo_completed(run: WindigoOpticalRun) -> list[str]:
             or _sha256_file(run.pre_failure_state) != PRE_FAILURE_R001_SHA256
         ):
             reasons.append("PRE_FAILURE_R001_BINDING")
+    if run.post_failure_state.is_file():
+        try:
+            _retained_post_failure_bytes(run)
+        except AcquisitionError:
+            reasons.append("POST_FAILURE_R001_BINDING")
     return reasons

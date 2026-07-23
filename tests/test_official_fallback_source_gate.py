@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from hashlib import sha256
 import json
 from pathlib import Path
-import shutil
+import subprocess
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
@@ -28,16 +29,43 @@ ROOT = Path(__file__).resolve().parents[1]
 GENERATED = "2026-07-23T04:30:00Z"
 RUN_ID = "BL-2026-07-23-official-fallback-comparison-r001"
 COMMIT = "a" * 40
+T34_MERGE_COMMIT = "0e58459ea45f509eca537223d872fd6992efb291"
 
 
 class OfficialFallbackSourceGateTests(unittest.TestCase):
+    def _materialize_frozen_inputs(self, root: Path) -> None:
+        for spec in FROZEN_INPUTS.values():
+            relative = str(spec["path"])
+            result = subprocess.run(
+                ["git", "-C", str(ROOT), "show", f"{T34_MERGE_COMMIT}:{relative}"],
+                check=False,
+                capture_output=True,
+            )
+            self.assertEqual(result.returncode, 0, relative)
+            payload = result.stdout
+            expected_bytes = int(spec["bytes"])
+            expected_sha256 = str(spec["sha256"])
+            if len(payload) != expected_bytes or sha256(payload).hexdigest() != expected_sha256:
+                # The frozen T34 bindings captured the Windows checkout bytes.
+                # Reproduce Git's LF-to-CRLF worktree conversion without reading
+                # later-mutated live files.
+                payload = payload.replace(b"\n", b"\r\n")
+            self.assertEqual(len(payload), expected_bytes, relative)
+            self.assertEqual(sha256(payload).hexdigest(), expected_sha256, relative)
+            destination = root / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(payload)
+
     def _source(self) -> dict:
-        return build_source(
-            repository_root=ROOT,
-            generated_at_utc=GENERATED,
-            run_id=RUN_ID,
-            git_source_commit=COMMIT,
-        )
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            self._materialize_frozen_inputs(root)
+            return build_source(
+                repository_root=root,
+                generated_at_utc=GENERATED,
+                run_id=RUN_ID,
+                git_source_commit=COMMIT,
+            )
 
     def test_source_selects_neither_and_preserves_boundaries(self) -> None:
         source = self._source()
@@ -76,11 +104,7 @@ class OfficialFallbackSourceGateTests(unittest.TestCase):
         for role in ("milli_terms", "verified_lifecycle_manifest"):
             with self.subTest(role=role), TemporaryDirectory() as directory:
                 root = Path(directory)
-                for spec in FROZEN_INPUTS.values():
-                    source = ROOT / str(spec["path"])
-                    destination = root / str(spec["path"])
-                    destination.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(source, destination)
+                self._materialize_frozen_inputs(root)
                 tampered = root / str(FROZEN_INPUTS[role]["path"])
                 tampered.write_bytes(tampered.read_bytes() + b"\nUNREVIEWED_DRIFT\n")
                 with self.assertRaisesRegex(OfficialFallbackGateError, f"INPUT_BYTES_DRIFT:{role}"):
@@ -107,15 +131,17 @@ class OfficialFallbackSourceGateTests(unittest.TestCase):
             "burnlens.official_fallback_source_gate._validate_repository_trace"
         ):
             root = Path(directory)
+            frozen = root / "frozen"
+            self._materialize_frozen_inputs(frozen)
             first = run_report(
-                repository_root=ROOT,
+                repository_root=frozen,
                 output_directory=root / "first",
                 generated_at_utc=GENERATED,
                 run_id=RUN_ID,
                 git_source_commit=COMMIT,
             )
             second = run_report(
-                repository_root=ROOT,
+                repository_root=frozen,
                 output_directory=root / "second",
                 generated_at_utc=GENERATED,
                 run_id=RUN_ID,

@@ -15,6 +15,7 @@ from burnlens.windigo_optical_contract import (
     WindigoOpticalRun,
     WindigoTrace,
     _acquire_singleton,
+    _retained_post_failure_bytes,
     _resumable_pre_bytes,
     acquire_windigo_optical_pair,
     refresh_windigo_metadata,
@@ -108,6 +109,7 @@ class WindigoOpticalContractTests(unittest.TestCase):
                 generated_at_utc="2026-07-23T18:00:00Z",
             )
             self.assertNotEqual(run.pre_quarantine, run.post_quarantine)
+            self.assertNotEqual(run.post_failure_quarantine, run.post_quarantine)
             self.assertNotEqual(run.pre_destination, run.post_destination)
             self.assertIn("P2O4-T35-U02", run.aggregate_state.as_posix())
             self.assertEqual(run.tracked_report.name, f"{REPORT_ID}.json")
@@ -182,7 +184,6 @@ class WindigoOpticalContractTests(unittest.TestCase):
             run.pre_state.parent.mkdir(parents=True)
             results = [
                 AcquisitionError("DOWNLOAD_EARLY_EOF", role=PRE_CONTRACT.role),
-                AcquisitionError("DOWNLOAD_REQUEST_FAILED", role=PRE_CONTRACT.role),
                 {"status": "DOWNLOADED", "bytes": PRE_CONTRACT.expected_size_bytes},
             ]
             verification = {
@@ -215,8 +216,8 @@ class WindigoOpticalContractTests(unittest.TestCase):
                     run_id="BL-2026-07-23-windigo-optical-pre-r001",
                     progress=None,
                 )
-            self.assertEqual([item["outcome"] for item in state["attempts"]], ["failed", "failed", "succeeded"])
-            self.assertEqual(state["download"]["attempt_count"], 3)
+            self.assertEqual([item["outcome"] for item in state["attempts"]], ["failed", "succeeded"])
+            self.assertEqual(state["download"]["attempt_count"], 2)
             writer.assert_called_once()
 
     def test_only_exact_single_link_pre_partial_is_resumable(self):
@@ -247,6 +248,35 @@ class WindigoOpticalContractTests(unittest.TestCase):
             (run.pre_quarantine / "unexpected").write_bytes(b"x")
             with self.assertRaisesRegex(AcquisitionError, "RESUME_ROSTER"):
                 _resumable_pre_bytes(run)
+
+    def test_only_exact_post_failure_state_and_partial_are_retained(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            run = WindigoOpticalRun.create(
+                repository_root=Path(temporary),
+                generated_at_utc="2026-07-23T18:00:00Z",
+            )
+            run.post_failure_quarantine.mkdir(parents=True)
+            part = run.post_failure_quarantine / f"{POST_CONTRACT.expected_filename}.part"
+            with patch(
+                "burnlens.windigo_optical_contract.POST_PARTIAL_R001_BYTES",
+                8,
+            ), patch(
+                "burnlens.windigo_optical_contract.POST_PARTIAL_R001_SHA256",
+                "36024029036bc411ef5c80f62d284e3b80b93686ab8552be0411326ba6c351cd",
+            ), patch(
+                "burnlens.windigo_optical_contract.POST_FAILURE_R001_BYTES",
+                2,
+            ), patch(
+                "burnlens.windigo_optical_contract.POST_FAILURE_R001_SHA256",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            ):
+                part.write_bytes(b"PK\x03\x04data")
+                run.post_failure_state.parent.mkdir(parents=True, exist_ok=True)
+                run.post_failure_state.write_bytes(b"{}")
+                self.assertEqual(_retained_post_failure_bytes(run), 8)
+            part.write_bytes(b"changed!")
+            with self.assertRaisesRegex(AcquisitionError, "PARTIAL_BINDING"):
+                _retained_post_failure_bytes(run)
 
 
 if __name__ == "__main__":
