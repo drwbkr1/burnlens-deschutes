@@ -4,6 +4,7 @@ from contextlib import ExitStack, contextmanager, nullcontext
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 from io import BytesIO
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -176,6 +177,7 @@ def _state_machine_patches(identity: dict[str, object]):
             "_verify_retained_r001_evidence",
             "_verify_retained_r002_evidence",
             "_verify_mutation_context",
+            "_verify_locked_geometry_runtime",
             "_verify_tracked_gate_records",
             "_assert_ignored_untracked",
         ):
@@ -453,6 +455,10 @@ class PetesLakeWetlandCustodyTests(unittest.TestCase):
                     ):
                         load_contract(root)
 
+    @unittest.skipUnless(
+        importlib.util.find_spec("shapely") is not None,
+        "geo-research Shapely dependency is not installed",
+    )
     def test_feature_geometry_is_finite_closed_exact_2d_and_clockwise(self) -> None:
         self.assertEqual(_validate_count({"count": 2}), 2)
         with self.assertRaises(PetesLakeWetlandCustodyError):

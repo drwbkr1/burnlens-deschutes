@@ -51,6 +51,19 @@ class EnvironmentProfileTests(unittest.TestCase):
             self.assertNotIn("*", requirement)
             self.assertNotIn(";", requirement)
 
+    def test_lock_file_has_checkout_stable_lf_bytes(self) -> None:
+        attributes = subprocess.run(
+            ["git", "check-attr", "text", "eol", "--", "uv.lock"],
+            cwd=ROOT,
+            capture_output=True,
+            check=True,
+            text=True,
+        )
+        self.assertEqual(
+            attributes.stdout.splitlines(),
+            ["uv.lock: text: set", "uv.lock: eol: lf"],
+        )
+
     def test_codex_environment_selects_locked_geo_profile(self) -> None:
         with (ROOT / ".codex" / "environments" / "geospatial.toml").open(
             "rb"
@@ -103,6 +116,11 @@ class EnvironmentProfileTests(unittest.TestCase):
         self.assertEqual(payload["status"], "PASS")
         self.assertEqual(payload["profile"], "runtime")
         self.assertEqual(payload["checks"]["runtime"]["raster_sum"], 120)
+        self.assertEqual(payload["checks"]["console_entry_points"]["count"], 81)
+        self.assertEqual(payload["checks"]["console_entry_points"]["help_count"], 81)
+        self.assertEqual(
+            len(payload["checks"]["console_entry_points"]["names"]), 81
+        )
 
     @unittest.skipUnless(
         all(importlib.util.find_spec(module) is not None for module in GEO_MODULES),

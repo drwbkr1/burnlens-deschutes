@@ -4,6 +4,7 @@
 *.py text eol=lf
 *.mjs text eol=lf
 pyproject.toml text eol=lf
+uv.lock text eol=lf
 LICENSE text eol=lf
 
 # Region-intake record bindings preserve their authoritative historical bytes.
@@ -142,5 +143,6 @@ records/phase-two/registry/REGISTRY-2026-058.md text eol=lf
 # Petes Lake U11 closeout evidence has checkout-stable byte bindings.
 records/phase-two/prechecks/PRECHECK-2026-056.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-059.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-060.md text eol=lf
 records/phase-two/sources/SOURCE-2026-033.md text eol=lf
 docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md text eol=lf

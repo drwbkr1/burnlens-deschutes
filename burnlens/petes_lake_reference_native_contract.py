@@ -39,6 +39,7 @@ CUSTODY_STATE_SHA256 = "5a65cada71c845395001a109e8a93129abd4baa8691697176f6e6be3
 REQUEST_RUN_ID = "BL-2026-07-21-petes-lake-reference-request-r001"
 NATIVE_CONTRACT_RUN_ID = "BL-2026-07-21-petes-lake-reference-native-contract-r001"
 MILESTONE_BRANCH = "codex/p2o4-t33-petes-lake-milestone"
+EXCEPTION_BRANCH = "codex/bl-exc-001-v045-runtime-contract"
 REQUEST_RECEIPT_BYTES = 4_775
 REQUEST_RECEIPT_SHA256 = "8f29336c5c9f79a0ceb90b65f97f9434b71bbad8087b6dda36abf188a92aa595"
 ROOT = "mtbs/2023/mtbs_or4396912190120230825_10031414/"
@@ -67,7 +68,7 @@ TRACE_ATTRIBUTE_PATHS = (
 )
 TRACE_SCRIPT_NAME = "burnlens-inspect-petes-lake-reference-native-contract"
 TRACE_SCRIPT_TARGET = "burnlens.inspect_petes_lake_reference_native_contract:main"
-SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, "main")
+SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, EXCEPTION_BRANCH, "main")
 
 EXPECTED_MEMBERS = {
     "burn_area_shp": ROOT + f"{PAIR}_burn_area.shp",
@@ -165,9 +166,8 @@ def _scientific_source_fingerprint(source: str, label: str) -> str:
         ast.dump(ast.parse(statement).body[0], include_attributes=False)
         for statement in ("import ast", "import tomllib")
     }
-    exact_trace_assignments = {
-        node.targets[0].id: ast.dump(node, include_attributes=False)
-        for statement in (
+    exact_trace_assignments: dict[str, set[str]] = {}
+    for statement in (
             '''TRACE_PATHS = (
     ".gitattributes",
     "pyproject.toml",
@@ -189,13 +189,19 @@ def _scientific_source_fingerprint(source: str, label: str) -> str:
 )''',
             'TRACE_SCRIPT_NAME = "burnlens-inspect-petes-lake-reference-native-contract"',
             'TRACE_SCRIPT_TARGET = "burnlens.inspect_petes_lake_reference_native_contract:main"',
+            'EXCEPTION_BRANCH = "codex/bl-exc-001-v045-runtime-contract"',
             'SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, "main")',
-        )
-        for node in [ast.parse(statement).body[0]]
-        if isinstance(node, ast.Assign)
-        and len(node.targets) == 1
-        and isinstance(node.targets[0], ast.Name)
-    }
+            'SUPPORTED_REPLAY_BRANCHES = (MILESTONE_BRANCH, EXCEPTION_BRANCH, "main")',
+    ):
+        node = ast.parse(statement).body[0]
+        if (
+            isinstance(node, ast.Assign)
+            and len(node.targets) == 1
+            and isinstance(node.targets[0], ast.Name)
+        ):
+            exact_trace_assignments.setdefault(node.targets[0].id, set()).add(
+                ast.dump(node, include_attributes=False)
+            )
     trace_functions = {
         "_git",
         "_git_bytes",
@@ -241,7 +247,7 @@ def _scientific_source_fingerprint(source: str, label: str) -> str:
             isinstance(node, ast.Assign)
             and len(node.targets) == 1
             and isinstance(node.targets[0], ast.Name)
-            and exact_trace_assignments.get(node.targets[0].id) == node_dump
+            and node_dump in exact_trace_assignments.get(node.targets[0].id, set())
         ):
             continue
         retained.append(node)
