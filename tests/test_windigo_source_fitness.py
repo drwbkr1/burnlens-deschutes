@@ -80,6 +80,10 @@ class WindigoSourceFitnessTests(unittest.TestCase):
             "PASS_EXACT_WINDIGO_SOURCE_FITNESS_WITH_VECTOR_EXCLUSIONS",
         )
         self.assertEqual(
+            report["label_set_version"],
+            "owner-approved-prototype-region-labels-v0.3.0",
+        )
+        self.assertEqual(
             report["evidence_comparison"][
                 "baer_mtbs_agreement_and_optical_valid_pixels"
             ],

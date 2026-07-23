@@ -56,12 +56,12 @@ from .windigo_optical_contract import (
 )
 
 
-REPORT_ID = "WINDIGO-SOURCE-FITNESS-2026-004"
-REPORT_VERSION = "windigo-source-fitness-v0.1.3"
+REPORT_ID = "WINDIGO-SOURCE-FITNESS-2026-005"
+REPORT_VERSION = "windigo-source-fitness-v0.1.4"
 PROTOCOL_VERSION = "windigo-native-source-fitness-protocol-v0.1.0"
 TASK_ISSUE = 534
 UNIT_ID = "P2O4-T35-U03"
-RUN_ID = "BL-2026-07-23-windigo-source-fitness-r004"
+RUN_ID = "BL-2026-07-23-windigo-source-fitness-r005"
 ARCHIVE_BYTES = 12_526_858
 ARCHIVE_SHA256 = "defd99749a28bd311bcab9bc75631447e1e42eecf3da66adbb3c9c1e2d6b0804"
 ARCHIVE_MEMBERS = 54
@@ -719,7 +719,7 @@ def build_report(
         "target_version": TARGET_VERSION,
         "label_protocol_version": LABEL_PROTOCOL_VERSION,
         "label_schema_version": LABEL_SCHEMA_VERSION,
-        "label_set_version": "owner-approved-prototype-region-labels-v0.2.0",
+        "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
         "dataset_version": None,
         "split_version": None,
         "baseline_version": None,
