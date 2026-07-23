@@ -2,6 +2,20 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.46.0-official-fallback-source-gate-defer - candidate - 2026-07-23
+
+### P2O4-T34 - Compare two official fallback routes and select neither
+
+- Freeze exactly McKenzie HUC8 `17090004` NWI and Milli 0843 CS.
+- Retain McKenzie as `defer` because exact local-retention, processing, derived-publication, archive-provenance, and scientific-fitness evidence remains unknown.
+- Retain Milli as `defer` because its compound Sentinel/BAER/MTBS/RAVG route lacks complete rights, trace, identity, access, provenance, and fitness evidence.
+- Stop before provider data, authentication, custody, current Milli geometry, or candidate work.
+- Add deterministic JSON/HTML/PNG comparison tooling and version it as BurnLens 0.46.0.
+- Reconstruct the exact report quartet byte-for-byte; pass original-resolution PNG inspection and owner-confirmed desktop/narrow HTML rendering.
+- Preserve the accepted v0.3 prototype evidence at ten balanced regions, 236 core pixels / 9.44 ha, 431 excluded unknown-ring pixels, and five complete events. Create no dataset, split, baseline, model, GitHub Release, or deployment.
+
+Issue #532; U01 and U04 pass; U02, U03, and milestone U05 defer. `provider_bytes_authorized` is false. One milestone PR, fresh-main package/output verification, and a remote annotated-tag peel remain release gates.
+
 ## v0.45.0-petes-lake-material-defer - verified - 2026-07-22
 
 ### P2O4-T33 - Preserve the complete Petes Lake milestone and stop honestly

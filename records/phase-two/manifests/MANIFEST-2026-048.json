@@ -1,0 +1,140 @@
+{
+  "manifest_id": "MANIFEST-2026-048",
+  "manifest_version": "0.48.0",
+  "manifest_role": "official-fallback-source-gate-milestone-closeout",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-23T16:53:39.0336681Z",
+  "milestone": "P2O4-T34",
+  "task_issue": 532,
+  "pull_request": null,
+  "branch": "codex/p2o4-t34-official-fallback-source-gate",
+  "git_base_commit": "ad298f244b0261a77ef0d6ff442da5a45738a7d9",
+  "u04_confirmed_commit": "d652e590f8f4aa378abe3a085726233c0242927f",
+  "checkpoint_commit": null,
+  "version_tag": "v0.46.0-official-fallback-source-gate-defer",
+  "version_tag_object": null,
+  "software_version": "0.46.0",
+  "report_version": "official-fallback-source-gate-v0.1.0",
+  "run_id": "BL-2026-07-23-official-fallback-closeout-r001",
+  "decision": "DEFER_BOTH_OFFICIAL_FALLBACK_CANDIDATES_SELECT_NEITHER_NO_PROVIDER_BYTES_AUTHORIZED",
+  "disposition": "defer",
+  "execution_status": "candidate",
+  "release_state": "candidate",
+  "provider_bytes_authorized": false,
+  "provider_bytes_acquired": 0,
+  "custody_mutated": false,
+  "candidates": [
+    {
+      "candidate_id": "candidate-petes-lake-mckenzie-hu8-17090004",
+      "disposition": "defer",
+      "selected": false,
+      "source_gate": "blocked"
+    },
+    {
+      "candidate_id": "candidate-milli-0843-cs-2017",
+      "disposition": "defer",
+      "selected": false,
+      "source_gate": "blocked"
+    }
+  ],
+  "selected_candidate_id": null,
+  "units": [
+    {
+      "unit_id": "P2O4-T34-U01",
+      "run_id": "BL-2026-07-23-official-fallback-entry-r001",
+      "commit": "22f5d2f2b304e1b25ac8a59e15ec2739a64ff8f5",
+      "disposition": "pass"
+    },
+    {
+      "unit_id": "P2O4-T34-U02",
+      "run_id": "BL-2026-07-23-mckenzie-huc8-metadata-r001",
+      "commit": "551774ba077a6ce118ec4aa808900ff82356a631",
+      "disposition": "defer"
+    },
+    {
+      "unit_id": "P2O4-T34-U03",
+      "run_id": "BL-2026-07-23-alternate-event-metadata-r001",
+      "commit": "41fe71d71a929f0c603222f0c78bdbf7e831d3ef",
+      "disposition": "defer"
+    },
+    {
+      "unit_id": "P2O4-T34-U04",
+      "run_id": "BL-2026-07-23-official-fallback-comparison-r001",
+      "commit": "d652e590f8f4aa378abe3a085726233c0242927f",
+      "disposition": "pass"
+    },
+    {
+      "unit_id": "P2O4-T34-U05",
+      "run_id": "BL-2026-07-23-official-fallback-closeout-r001",
+      "commit": null,
+      "disposition": "defer"
+    }
+  ],
+  "aoi_version": "multi-event-native-grids-v0.3.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "label_set_changed": false,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "measured_evidence": {
+    "accepted_event_groups": 5,
+    "accepted_burned_regions": 5,
+    "accepted_background_regions": 5,
+    "accepted_core_pixels": 236,
+    "accepted_core_area_ha": 9.44,
+    "excluded_unknown_ring_pixels": 431,
+    "new_source_assets": 0,
+    "new_candidates": 0,
+    "new_owner_responses": 0,
+    "new_labels": 0
+  },
+  "outputs": [
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-SOURCE-2026-001.json",
+      "bytes": 7801,
+      "sha256": "e9eeef28cbee91e3f1f3a8e0eac15018ceeea2281a7a7dad4a53b40d16200271"
+    },
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.json",
+      "bytes": 8529,
+      "sha256": "ff5b326f24e4ddefc0847e6789654146a6c0b99d07bc8c536722164d5ff38f8a"
+    },
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.html",
+      "bytes": 8325,
+      "sha256": "8855b8bc5599546ee42c17dd1ad29a64f680bb668f8bb1bea85042d7ce6ccad3"
+    },
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png",
+      "bytes": 211147,
+      "sha256": "0b7ef00fcb41a2f8d5fc5227f48d8a350f0a3994e6badf253cb6b435a5b857b3"
+    }
+  ],
+  "render_verification": {
+    "png": "pass: original-resolution 1600 x 1940 inspection",
+    "desktop_html": "pass: owner confirmed exact tracked HTML renders correctly",
+    "narrow_html": "pass: owner confirmed exact tracked HTML renders correctly below 760 pixels",
+    "owner_response": "Both render correctly",
+    "recorded_at_utc": "2026-07-23T16:48:41.0546965Z"
+  },
+  "quality_gates": {
+    "source_and_rights": "blocked for both candidates; no selection or acquisition",
+    "deterministic_reconstruction": "pass: production and reproduction quartet are byte-identical",
+    "focused_tests": "pass",
+    "full_tests": "pass: 544 passed, 1 skipped, 20 warnings, 83 subtests",
+    "dependency_and_lock": "pass: 66 locked distributions",
+    "privacy_and_boundary": "pass",
+    "pull_request": "pending",
+    "merged_main": "pending",
+    "package_and_tag": "pending"
+  },
+  "next_checkpoint": {
+    "status": "unassigned until this milestone is merged and verified",
+    "required_outcome": "fresh official source route that can resolve rights and evidence gates before any controlled intake",
+    "provider_bytes_authorized": false
+  }
+}
+
