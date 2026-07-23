@@ -76,7 +76,7 @@ An authenticated tag inventory at goal activation on 2026-07-13 returned no tag 
 |---|---|
 | Application | Not created |
 | AOI | `aoi-darlene3-model-v0.2.0` — accepted and shipped final modeling AOI; supersedes the discovery version for modeling |
-| Source record set | `SOURCE-2026-001` through `SOURCE-2026-036`; SOURCE-2026-034/035 retain the McKenzie/Milli defers, while SOURCE-2026-036 authorizes only the exact bounded Windigo attempt |
+| Source record set | `SOURCE-2026-001` through `SOURCE-2026-037`; SOURCE-2026-034/035 retain the McKenzie/Milli defers, SOURCE-2026-036 authorizes bounded Windigo entry, and SOURCE-2026-037 records exact delivered source fitness with vector exclusions |
 | Metadata fixture | `METADATA-2026-001`; SHA-256 `803db2b82c7d6ef23d12c34f370dd9a7504bf181f772db22d1ed55c83c6b791a` |
 | Asset/source record set | `SOURCE-2026-004` through `SOURCE-2026-008`; exact source and observation-screen packages registered in ignored local raw storage; zero raw provider bytes committed |
 | Asset-readiness fixture | `ASSET-READINESS-2026-001`; SHA-256 `c5bcfbf57cf23a7bf3ed9bd1302461b2ba1ee101ab05b7d935419223763e5ce7` |

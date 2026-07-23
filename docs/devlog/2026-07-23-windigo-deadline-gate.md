@@ -12,4 +12,12 @@ Current Sentinel terms permit exact local acquisition and attributed modified ev
 
 U02 now preserves and registers the exact Sentinel pair: 2,373,112,076 provider bytes with provider MD5/BLAKE3 and independent local SHA-256 verification. Two interrupted transport attempts remain immutable. The corrected public report exposes both instead of hiding the earlier pre interruption.
 
-Optical custody does not make Windigo event six. The one combined BAER/RAVG/MTBS request is now accepted and pending email delivery. The public receipt withholds the recipient and binds every private custody file. Delivered notices and native reference pixels must still pass before source fitness, candidates, owner review, or any label decision.
+Optical custody does not make Windigo event six. The one combined BAER/RAVG/MTBS request was accepted once. Its exact 12,526,858-byte delivery is preserved in ignored repository-local custody without publishing recipient or retrieval details.
+
+U03 reads the actual delivered source, not only catalog metadata. All 21 rasters, exact map IDs, EPSG:32610 grids, nodata, class domains, safe archive structure, extraction equality, and four rendered provider maps pass. The delivered BAER and RAVG burn-area vectors share one self-intersection. BurnLens preserves both failures, performs no repair, and uses the valid MTBS vector plus the provider-generated MTBS GeoJSON for topology.
+
+The Sentinel pair passes local quality on 10,601 of 10,778 boundary pixels and all nine registration windows. BAER SBS classes 2-4 are primary field-informed positive-reference evidence with visible preliminary/draft limitations. MTBS classes 2-4 corroborate on 9,789 optical-valid pixels. RAVG stays modeled context.
+
+No delivered class proves background. U04 must separately establish affirmative optical stability outside the official burn footprints, then propose exactly one burned and one background region with unknown rings. This source-fitness pass creates no candidate, owner response, label, dataset, split, baseline, model, accuracy, field-validation, official, endorsed, or operational claim.
+
+Three failed render/trace attempts remain retained. The final JSON, HTML, and PNG replay byte for byte. The 1800 by 1260 PNG, 1440-pixel desktop page, and 390 by 844 page pass visual review; the narrow tables scroll inside their cards without overflowing the document.
