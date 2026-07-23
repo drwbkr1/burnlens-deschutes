@@ -163,3 +163,4 @@ samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png -text
 
 # P2O4-T35 exact-byte custody reconciliation evidence.
 records/phase-two/intake/P2O4-T35-U02-windigo-public-report-r001-superseded.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-060.md text eol=lf

@@ -10,4 +10,6 @@ The initial ArcGIS rings were invalid under a naive Shapely shell-and-hole inter
 
 Current Sentinel terms permit exact local acquisition and attributed modified evidence. Current MTBS collection terms permit use with acknowledgement and limitations. The reference delivery may enter quarantine only for exact-notice and source-fitness inspection. No delivered reference pixel is licensed by assumption.
 
-U01 creates no source archive, queue request, candidate, label, dataset, split, baseline, model, metric, or Phase Two completion. The next action is a committed, pushed entry checkpoint followed by one sequential pair acquisition and one combined reference request. A terminal failure ends source work instead of opening another route.
+U02 now preserves and registers the exact Sentinel pair: 2,373,112,076 provider bytes with provider MD5/BLAKE3 and independent local SHA-256 verification. Two interrupted transport attempts remain immutable. The corrected public report exposes both instead of hiding the earlier pre interruption.
+
+Optical custody does not make Windigo event six. The next and only source action is one combined BAER/RAVG/MTBS request. Delivered notices and native reference pixels must still pass before source fitness, candidates, owner review, or any label decision.
