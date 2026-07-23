@@ -187,7 +187,7 @@ class WindigoReferenceRequestTests(unittest.TestCase):
 
             def fake_git(_root, *arguments):
                 values = {
-                    ("rev-parse", "--show-toplevel"): str(root),
+                    ("rev-parse", "--show-toplevel"): root.as_posix(),
                     ("rev-parse", "HEAD"): commit,
                     ("branch", "--show-current"): (
                         "codex/p2o4-t35-windigo-deadline-gate"

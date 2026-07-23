@@ -518,7 +518,11 @@ def build_public_request_report(
     if not re.fullmatch(r"[0-9a-f]{40}", reconciliation_commit):
         raise WindigoReferenceRequestError("reconciliation commit is invalid")
     for arguments, expected, reason in (
-        (("rev-parse", "--show-toplevel"), str(root), "repository root mismatch"),
+        (
+            ("rev-parse", "--show-toplevel"),
+            root.as_posix(),
+            "repository root mismatch",
+        ),
         (("rev-parse", "HEAD"), reconciliation_commit, "reconciliation commit mismatch"),
         (("branch", "--show-current"), BRANCH, "branch mismatch"),
         (
