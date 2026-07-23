@@ -115,6 +115,7 @@ burnlens-capture-petes-lake-wetland-custody = "burnlens.capture_petes_lake_wetla
 burnlens-inspect-petes-lake-reference-fitness = "burnlens.inspect_petes_lake_reference_fitness:main"
 burnlens-serve-review-surface = "burnlens.serve_review_surface:main"
 burnlens-build-official-fallback-source-gate = "burnlens.build_official_fallback_source_gate:main"
+burnlens-inspect-windigo-source-fitness = "burnlens.windigo_source_fitness:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
