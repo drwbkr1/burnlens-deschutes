@@ -116,6 +116,7 @@ burnlens-inspect-petes-lake-reference-fitness = "burnlens.inspect_petes_lake_ref
 burnlens-serve-review-surface = "burnlens.serve_review_surface:main"
 burnlens-build-official-fallback-source-gate = "burnlens.build_official_fallback_source_gate:main"
 burnlens-inspect-windigo-source-fitness = "burnlens.windigo_source_fitness:main"
+burnlens-build-windigo-region-proposal = "burnlens.windigo_region_proposal:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
