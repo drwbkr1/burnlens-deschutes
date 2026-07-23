@@ -11,6 +11,7 @@ from burnlens.owner_review_batch import (
     response_template,
     validate_response,
 )
+from burnlens.serve_review_surface import prepare_review_surface
 from burnlens.windigo_owner_review_surface import (
     EXPECTED_CANDIDATES,
     PROPOSAL_JSON_SHA256,
@@ -86,6 +87,8 @@ class WindigoOwnerReviewSurfaceTests(unittest.TestCase):
             self.assertNotIn("Â", html)
             self.assertTrue(all(item["decision"] is None for item in template["responses"]))
             self.assertEqual(len([item for item in bindings if item["media_type"] == "image/png"]), 2)
+            snapshot = prepare_review_surface(output / f"{SURFACE_ID}.html")
+            self.assertEqual(len(snapshot.resources), 3)
             with self.assertRaisesRegex(OwnerReviewBatchError, "already exists"):
                 write_windigo_surface(
                     PROPOSAL,

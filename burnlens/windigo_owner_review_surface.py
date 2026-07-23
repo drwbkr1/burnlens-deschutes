@@ -120,7 +120,7 @@ def _write_candidate_evidence(proposal_png: Path, evidence_root: Path) -> dict[s
             raise OwnerReviewBatchError("Windigo proposal render dimensions changed")
         evidence: dict[str, dict[str, Any]] = {}
         for candidate_id, expected in EXPECTED_CANDIDATES.items():
-            relative = f"evidence/{candidate_id}.png"
+            relative = f"{SURFACE_ID}-{candidate_id}.png"
             output = evidence_root / relative
             output.parent.mkdir(parents=True, exist_ok=True)
             image.crop(expected["crop"]).save(output, format="PNG", optimize=False)
