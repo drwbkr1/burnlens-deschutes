@@ -5,7 +5,7 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "created_at_utc": "2026-07-23T02:37:16Z",
   "lifecycle_sync_issue": 530,
-  "lifecycle_sync_pull_request": null,
+  "lifecycle_sync_pull_request": 531,
   "lifecycle_sync_branch": "codex/bl-exc-001-v045-lifecycle-sync",
   "git_base_commit": "d65c24f59ce0c854ba230aa977eaf718d881d952",
   "checkpoint_parents": [
@@ -147,7 +147,7 @@
     "documentation_and_json": "pass on fresh merged main: 121 tracked JSON documents parse; 708 tracked Markdown documents and 214 local links scan with zero missing targets; diff, LF, and privacy gates pass",
     "lifecycle_reconciliation_static": "pass before PR: 122 JSON documents parse; 709 Markdown documents and 214 local links scan with zero missing targets; 17 changed paths remain inside docs/records/root-control scope; runtime, package, test, provider, custody, and scientific inputs are unchanged",
     "remote_tag": "pass: annotated tag object 0b466402cdc36b0eacfff97d29dd16fe2a88868a remotely peels to d65c24f59ce0c854ba230aa977eaf718d881d952",
-    "repository_release": "pass through P2O4-T33 PR #527, BL-EXC-001 PR #529, exact fresh-main verification, and the remote annotated tag; lifecycle reconciliation is issue #530 with PR and next-checkpoint issue intentionally null",
+    "repository_release": "pass through P2O4-T33 PR #527, BL-EXC-001 PR #529, exact fresh-main verification, and the remote annotated tag; lifecycle reconciliation is issue #530 / PR #531 and the next-checkpoint issue remains intentionally null",
     "label_dataset_model": "blocked: Petes creates no candidate, owner response, accepted label, sixth event, dataset, split, baseline, or model",
     "public_claims": "pass: no ground-truth, independent-review, inter-rater, field-validation, official, endorsed, emergency-ready, or operational-readiness claim",
     "deployment": "not performed: no GitHub Release object or deployment"
