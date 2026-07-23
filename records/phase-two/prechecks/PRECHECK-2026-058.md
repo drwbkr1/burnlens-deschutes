@@ -94,6 +94,23 @@ The first repository-wide validation process reached its 304-second harness time
 
 The resumed runtime smoke passes `1 passed in 92.84s`; the U04 suite passes `7 passed, 2 subtests passed`; the supported `uv pip check` verifies all 66 installed packages; offline lock, compile, and diff checks pass. A direct full-suite rerun then exceeded its 904-second harness cap without a pytest result and is retained as incomplete. The final repository-local logged rerun completed normally: `544 passed`, `1 skipped`, `20 warnings`, `83 subtests passed in 1004.93s`. The warnings are the existing NumPy 2.5 shape-assignment deprecations. Its ignored stdout is 86,818 bytes / SHA-256 `413527aae5110b8bf83bd37f1956b1d220fc2805478fc38b3525393502fe5114`; stderr is zero bytes / SHA-256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
 
+## Production output
+
+The validated source checkpoint is Git commit `c5533d60c4abab7a1cd989395aee83268cbeaeec`, pushed remote-equal before generation. The production run used `generated_at_utc` `2026-07-23T16:19:47.3323318Z`, the frozen U04 run ID, and that exact clean `HEAD`. A second clean run with the same inputs produced byte-identical files.
+
+| Output | Bytes | SHA-256 |
+|---|---:|---|
+| `samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-SOURCE-2026-001.json` | 7,801 | `e9eeef28cbee91e3f1f3a8e0eac15018ceeea2281a7a7dad4a53b40d16200271` |
+| `samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.json` | 8,529 | `ff5b326f24e4ddefc0847e6789654146a6c0b99d07bc8c536722164d5ff38f8a` |
+| `samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.html` | 8,325 | `8855b8bc5599546ee42c17dd1ad29a64f680bb668f8bb1bea85042d7ce6ccad3` |
+| `samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png` | 211,147 | `0b7ef00fcb41a2f8d5fc5227f48d8a350f0a3994e6badf253cb6b435a5b857b3` |
+
+All eleven input bindings rehash, JSON parses, source/report IDs and trace fields agree, the two candidates remain deferred/blocked/unselected, `selected_candidate` is null, and provider bytes remain zero. The HTML has no script or external locator, preserves candidate identity in narrow rows, and contains no email, secret token, local absolute path, or private retrieval detail. The first privacy scan used a bare `@` sentinel and correctly failed on CSS `@media`; the bounded rerun replaced that false-positive rule with an email-address pattern and passed. The promoted files are exact copies of the production run and were written only after all destination paths were confirmed absent.
+
+The 1600-by-1940 production PNG passes original-resolution visual inspection with all ten dimensions visible and no clipping, overlap, or unsupported glyph. The in-app browser file-URL policy still prevents agent navigation to the exact HTML, and no workaround or alternate browser path is authorized. Therefore desktop and narrow-viewport HTML inspection remains pending and U04 is not yet a passed evidence unit.
+
+A final independent read-only artifact review rehashed all eleven frozen inputs and all production, reproducibility, and promoted outputs; reconciled source/report trace fields, rights language, privacy boundaries, and null advancement state; and found no material blocker to a recoverable artifact-state commit. The reviewer explicitly retained the desktop/narrow HTML inspection as the remaining U04 gate.
+
 ## Handoff
 
-Commit and push the offline tool, tests, version/lock change, and this precheck as the recoverable U04 contract. Generate the production quartet only from that exact source commit. U05 remains blocked until the production artifacts are rebuilt, rendered, inspected, independently reviewed, and committed with their exact hashes.
+Commit and push the exact production quartet and this updated record as a recoverable U04 artifact state. U04 remains active and U05 remains blocked until the exact tracked HTML passes real desktop and narrow-viewport inspection, the completed U04 diff is independently reviewed, and the unit is committed with a final disposition.

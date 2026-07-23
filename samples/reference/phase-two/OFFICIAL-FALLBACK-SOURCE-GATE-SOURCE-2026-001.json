@@ -1,0 +1,198 @@
+{
+  "source_id": "OFFICIAL-FALLBACK-SOURCE-GATE-SOURCE-2026-001",
+  "source_schema_version": "0.1.0",
+  "serialization": "UTF-8 JSON with LF canonical line endings",
+  "generated_at_utc": "2026-07-23T16:19:47.3323318Z",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 532,
+  "run_id": "BL-2026-07-23-official-fallback-comparison-r001",
+  "git_source_commit": "c5533d60c4abab7a1cd989395aee83268cbeaeec",
+  "software_version": "0.46.0",
+  "input_bindings": {
+    "entry_precheck": {
+      "path": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+      "bytes": 9419,
+      "sha256": "f2faf834f6851fbeb942f1c5e142dd9d99129e11f9949926175c1ba678bf4e56"
+    },
+    "mckenzie_source": {
+      "path": "records/phase-two/sources/SOURCE-2026-034.md",
+      "bytes": 10519,
+      "sha256": "3a69b160627c20e851bd3d2137389528d341fb8839e9782e6423c48c71f9e868"
+    },
+    "mckenzie_terms": {
+      "path": "records/phase-two/terms/TERMS-2026-029.md",
+      "bytes": 3899,
+      "sha256": "e59478ccd0769dcd71d57f09c1456eedde9ac8e25794776a6a7239a277d87048"
+    },
+    "mckenzie_gate": {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-MCKENZIE-2026-001.json",
+      "bytes": 10533,
+      "sha256": "730db939118c3f5b855a608e45f4d47cc45bb076f27acfc9fb0f8ba6526f19e2"
+    },
+    "milli_source": {
+      "path": "records/phase-two/sources/SOURCE-2026-035.md",
+      "bytes": 8969,
+      "sha256": "5855319f656172808f9638430f1ee661763c1ebbffce5b1cc7acee72f814de7a"
+    },
+    "milli_terms": {
+      "path": "records/phase-two/terms/TERMS-2026-030.md",
+      "bytes": 5154,
+      "sha256": "aaa3eb30103cd17e878679ef7614ed88913270720c783f1be74c076edb1fb7bb"
+    },
+    "milli_gate": {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-MILLI-2026-001.json",
+      "bytes": 19634,
+      "sha256": "ab4d0ad9c598f5950b5ae0e6aff2ac1c6ccae3c37622746ec501bd3cd417a40f"
+    },
+    "accepted_label_reference": {
+      "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json",
+      "bytes": 9112,
+      "sha256": "2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5"
+    },
+    "phase_two_objectives": {
+      "path": "docs/phases/phase-02/PHASE_02_OBJECTIVES.md",
+      "bytes": 15018,
+      "sha256": "3faac18bbdccf223b585e1a03829d4e115be6c1bc88afc6650eef4f3bc599d62"
+    },
+    "historical_milli_source": {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-2026-001.json",
+      "bytes": 921818,
+      "sha256": "2c78984d790046db73de68b25e2e0c87a062e2b63a5b957ed10f72382687f6ba"
+    },
+    "verified_lifecycle_manifest": {
+      "path": "records/phase-two/manifests/MANIFEST-2026-047.json",
+      "bytes": 8698,
+      "sha256": "8391a20b2bd5e9b0bccd3f2f731ff32ea44c64770fd25ba629c9ea19810e573d"
+    }
+  },
+  "candidate_order": [
+    "candidate-petes-lake-mckenzie-hu8-17090004",
+    "candidate-milli-0843-cs-2017"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "candidate-petes-lake-mckenzie-hu8-17090004",
+      "display_name": "McKenzie HUC8 NWI",
+      "gate_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MCKENZIE-2026-001",
+      "unit_disposition": "defer",
+      "gate_status": "blocked",
+      "selected": false,
+      "provider_bytes_authorized": false,
+      "gate_summary": {
+        "source_count": 1,
+        "criterion_count": 8,
+        "status_counts": {
+          "pass": 5,
+          "unknown": 3
+        },
+        "blocking_reasons": [
+          "The exact asset-specific local retention/processing and derived-publication rights remain unknown.",
+          "Archive member/project provenance, notices, mapping projects, imagery dates, and transformations remain unopened.",
+          "Project dates, scale, status, structure, coverage, geometry, Petes relationship, and scientific fitness remain unknown.",
+          "Three exploratory failed attempts lack one or more exact request locator or observation-time fields; those trace gaps are retained and not reconstructed."
+        ],
+        "live_verification_pending": [
+          "candidate-petes-lake-mckenzie-hu8-17090004:rights"
+        ]
+      }
+    },
+    {
+      "candidate_id": "candidate-milli-0843-cs-2017",
+      "display_name": "Milli 0843 CS",
+      "gate_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MILLI-2026-001",
+      "unit_disposition": "defer",
+      "gate_status": "blocked",
+      "selected": false,
+      "provider_bytes_authorized": false,
+      "gate_summary": {
+        "source_count": 4,
+        "criterion_count": 32,
+        "status_counts": {
+          "pass": 9,
+          "unknown": 23
+        },
+        "blocking_reasons": [
+          "The exact future Milli BAER, MTBS, and RAVG archive retention, processing, and derived-publication rights remain unknown.",
+          "The current terms attempts lack complete no-redirect, bounded-request, timestamp, and response-identity trace for every observation.",
+          "Current event, boundary, Portal, STAC, OData, provenance, acquisition cost, and integrity identities were not refreshed after the stop.",
+          "Complete-boundary multi-tile support, seam/grid behavior, local quality, registration, and both-class evidence remain unproved."
+        ],
+        "live_verification_pending": [
+          "candidate-milli-sentinel-2-l2a:identity",
+          "candidate-milli-sentinel-2-l2a:authority",
+          "candidate-milli-sentinel-2-l2a:access",
+          "candidate-milli-sentinel-2-l2a:rights",
+          "candidate-milli-sentinel-2-l2a:provenance",
+          "candidate-milli-baer-10004702:identity",
+          "candidate-milli-baer-10004702:authority",
+          "candidate-milli-baer-10004702:access",
+          "candidate-milli-baer-10004702:rights",
+          "candidate-milli-baer-10004702:provenance",
+          "candidate-milli-mtbs-10008215:identity",
+          "candidate-milli-mtbs-10008215:access",
+          "candidate-milli-mtbs-10008215:rights",
+          "candidate-milli-mtbs-10008215:provenance",
+          "candidate-milli-ravg-10005445:identity",
+          "candidate-milli-ravg-10005445:authority",
+          "candidate-milli-ravg-10005445:access",
+          "candidate-milli-ravg-10005445:rights",
+          "candidate-milli-ravg-10005445:provenance"
+        ]
+      }
+    }
+  ],
+  "reference_state": {
+    "event_group_count": 5,
+    "minimum_event_group_count": 6,
+    "minimum_event_group_gate_passed": false,
+    "dataset_fitness_reopened": false,
+    "cumulative_owner_approved_region_labels": 10,
+    "cumulative_accepted_core_pixels": 236,
+    "cumulative_accepted_core_area_ha": 9.44,
+    "cumulative_excluded_unknown_ring_pixels": 431,
+    "prototype_class_counts": {
+      "background": 5,
+      "burned": 5
+    },
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "phase_objective": {
+    "phase": 2,
+    "objective": 4,
+    "minimum_complete_event_groups": 6,
+    "current_complete_event_groups": 5,
+    "result": "blocked_before_six_complete_whole_event_groups",
+    "owner_yes_is_necessary_but_insufficient": true
+  },
+  "comparison_dimensions": [
+    "scientific_role",
+    "rights",
+    "uncertainty",
+    "leakage",
+    "custody",
+    "privacy_security",
+    "reproducibility",
+    "acquisition_cost",
+    "phase_objective_value",
+    "portfolio_value"
+  ],
+  "boundaries": {
+    "provider_bytes_authorized": false,
+    "provider_bytes_acquired": 0,
+    "custody_mutated": false,
+    "selected_candidate": null,
+    "candidate_created": false,
+    "owner_response_created": false,
+    "label_created": false,
+    "sixth_event_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "metric_created": false,
+    "deployment_created": false
+  }
+}
