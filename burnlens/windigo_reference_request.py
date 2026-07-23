@@ -118,6 +118,10 @@ CUSTODY_PATHS = {
         "BL-2026-07-23-windigo-reference-r001.json"
     ),
 }
+PUBLIC_REPORT_PATH = (
+    "samples/cross-event/phase-two/windigo/"
+    "WINDIGO-REFERENCE-REQUEST-2026-001.json"
+)
 
 
 class WindigoReferenceRequestError(RuntimeError):
@@ -503,3 +507,133 @@ def acquire_request_receipt(
         if not promoted:
             shutil.rmtree(temporary, ignore_errors=True)
         raise
+
+
+def build_public_request_report(
+    *,
+    repository_root: Path,
+    reconciliation_commit: str,
+) -> dict[str, Any]:
+    root = repository_root.resolve()
+    if not re.fullmatch(r"[0-9a-f]{40}", reconciliation_commit):
+        raise WindigoReferenceRequestError("reconciliation commit is invalid")
+    for arguments, expected, reason in (
+        (("rev-parse", "--show-toplevel"), str(root), "repository root mismatch"),
+        (("rev-parse", "HEAD"), reconciliation_commit, "reconciliation commit mismatch"),
+        (("branch", "--show-current"), BRANCH, "branch mismatch"),
+        (
+            ("rev-parse", f"origin/{BRANCH}"),
+            reconciliation_commit,
+            "remote checkpoint mismatch",
+        ),
+    ):
+        result = _git(root, *arguments)
+        if result.returncode != 0 or result.stdout.strip() != expected:
+            raise WindigoReferenceRequestError(reason)
+    status = _git(root, "status", "--porcelain=v1", "--untracked-files=all")
+    if status.returncode != 0 or status.stdout.strip():
+        raise WindigoReferenceRequestError("worktree must be clean")
+
+    request_directory = root / str(CUSTODY_PATHS["request_directory"])
+    expected_roster = (
+        "metadata-response.json",
+        "queue-attempt-started.json",
+        "queue-response.json",
+        "request-prepared.json",
+        "request-receipt.json",
+    )
+    if not request_directory.is_dir():
+        raise WindigoReferenceRequestError("private request custody is missing")
+    observed_roster = tuple(
+        path.name for path in sorted(request_directory.iterdir(), key=lambda path: path.name)
+    )
+    if observed_roster != expected_roster:
+        raise WindigoReferenceRequestError("private request custody roster mismatch")
+    bindings = {
+        name: {
+            "bytes": (request_directory / name).stat().st_size,
+            "sha256": _sha256_file(request_directory / name),
+        }
+        for name in expected_roster
+    }
+    retained = b"\n".join((request_directory / name).read_bytes() for name in expected_roster)
+    if re.search(rb"[^@\s]+@[^@\s]+\.[^@\s]+", retained):
+        raise WindigoReferenceRequestError("private recipient leaked into custody")
+
+    receipt = json.loads(
+        (request_directory / "request-receipt.json").read_text(encoding="utf-8")
+    )
+    payload = request_payload()
+    if (
+        receipt.get("contract_version") != CONTRACT_VERSION
+        or receipt.get("run_id") != "BL-2026-07-23-windigo-reference-request-r001"
+        or receipt.get("git_source_commit")
+        != "3bd0062abfb90ec6b0bbb542c2c2413e69ceab56"
+        or receipt.get("event_id") != EVENT_ID
+        or receipt.get("request", {}).get("state") != "ACCEPTED"
+        or receipt.get("request", {}).get("recipient") != "WITHHELD_PRIVATE"
+        or receipt.get("request", {}).get("mapping_ids") != payload["mapping_ids"]
+        or receipt.get("request", {}).get("mapping_products")
+        != payload["mapping_products"]
+        or receipt.get("queue", {}).get("accepted") is not True
+        or receipt.get("delivery", {}).get("state") != "PENDING_EMAIL_DELIVERY"
+    ):
+        raise WindigoReferenceRequestError("private request receipt binding mismatch")
+
+    report = {
+        "report_id": "WINDIGO-REFERENCE-REQUEST-2026-001",
+        "report_schema_version": "0.1.0",
+        "unit_id": UNIT_ID,
+        "run_id": receipt["run_id"],
+        "requested_at_utc": receipt["requested_at_utc"],
+        "event_id": EVENT_ID,
+        "trace": {
+            "repository": "drwbkr1/burnlens-deschutes",
+            "branch": BRANCH,
+            "request_source_commit": receipt["git_source_commit"],
+            "reconciliation_source_commit": reconciliation_commit,
+            "issue": 534,
+            "optical_report": UPSTREAM_OPTICAL_REPORT,
+        },
+        "request": {
+            "state": "ACCEPTED",
+            "projection": payload["projection"],
+            "mapping_ids": payload["mapping_ids"],
+            "mapping_products": payload["mapping_products"],
+            "mapping_product_count": len(payload["mapping_products"]),
+            "canonical_payload_sha256": receipt["request"][
+                "canonical_payload_sha256"
+            ],
+            "recipient": "WITHHELD_PRIVATE",
+        },
+        "private_custody_bindings": bindings,
+        "queue": {
+            "accepted": True,
+            "response_bytes": receipt["queue"]["bytes"],
+            "response_sha256": receipt["queue"]["sha256"],
+        },
+        "delivery": {
+            "state": "PENDING_EMAIL_DELIVERY",
+            "archives_received": 0,
+            "provider_bytes_received": 0,
+        },
+        "gate_results": {
+            "exact_current_three_row_metadata": "pass",
+            "exact_three_mapping_ids": "pass",
+            "exact_eighteen_product_families": "pass",
+            "single_queue_attempt": "pass",
+            "explicit_queue_acceptance": "pass",
+            "recipient_withheld_and_not_retained": "pass",
+            "reference_notice_and_pixel_fitness": "not executed",
+            "candidate_label_dataset_split_baseline_model": "not created",
+        },
+        "decision": "ACCEPT_REQUEST_RECEIPT_PENDING_EXACT_DELIVERY",
+        "warning": (
+            "Request acceptance is not source fitness, label truth, official status, "
+            "field validation, operational readiness, or emergency guidance."
+        ),
+    }
+    output = root / PUBLIC_REPORT_PATH
+    output.parent.mkdir(parents=True, exist_ok=True)
+    _write_json_no_overwrite(output, report)
+    return report

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -14,6 +15,7 @@ from burnlens.windigo_reference_request import (
     WindigoReferenceRequestError,
     _validate_queue_response,
     acquire_request_receipt,
+    build_public_request_report,
     normalize_metadata,
     request_payload,
 )
@@ -143,6 +145,78 @@ class WindigoReferenceRequestTests(unittest.TestCase):
                 (output / "queue-outcome-unknown.json").read_text(encoding="utf-8")
             )
             self.assertEqual(state["state"], "QUEUE_OUTCOME_UNKNOWN_DO_NOT_RETRY")
+
+    def test_public_reconciliation_withholds_recipient_and_binds_custody(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            private = root / CUSTODY_PATHS["request_directory"]
+            private.mkdir(parents=True)
+            payload = request_payload()
+            receipt = {
+                "contract_version": "windigo-reference-request-v0.1.0",
+                "requested_at_utc": "2026-07-23T21:00:00Z",
+                "run_id": "BL-2026-07-23-windigo-reference-request-r001",
+                "git_source_commit": "3bd0062abfb90ec6b0bbb542c2c2413e69ceab56",
+                "event_id": EVENT_ID,
+                "request": {
+                    "state": "ACCEPTED",
+                    "recipient": "WITHHELD_PRIVATE",
+                    "mapping_ids": payload["mapping_ids"],
+                    "mapping_products": payload["mapping_products"],
+                    "canonical_payload_sha256": "c" * 64,
+                },
+                "queue": {
+                    "accepted": True,
+                    "bytes": 16,
+                    "sha256": "d" * 64,
+                },
+                "delivery": {"state": "PENDING_EMAIL_DELIVERY"},
+            }
+            files = {
+                "metadata-response.json": metadata_bytes(),
+                "queue-attempt-started.json": b"{}\n",
+                "queue-response.json": b'{"success":true}',
+                "request-prepared.json": b"{}\n",
+                "request-receipt.json": (
+                    json.dumps(receipt, indent=2) + "\n"
+                ).encode(),
+            }
+            for name, data in files.items():
+                (private / name).write_bytes(data)
+            commit = "e" * 40
+
+            def fake_git(_root, *arguments):
+                values = {
+                    ("rev-parse", "--show-toplevel"): str(root),
+                    ("rev-parse", "HEAD"): commit,
+                    ("branch", "--show-current"): (
+                        "codex/p2o4-t35-windigo-deadline-gate"
+                    ),
+                    (
+                        "rev-parse",
+                        "origin/codex/p2o4-t35-windigo-deadline-gate",
+                    ): commit,
+                    ("status", "--porcelain=v1", "--untracked-files=all"): "",
+                }
+                return SimpleNamespace(
+                    returncode=0,
+                    stdout=values[arguments] + "\n",
+                )
+
+            with patch(
+                "burnlens.windigo_reference_request._git",
+                side_effect=fake_git,
+            ):
+                report = build_public_request_report(
+                    repository_root=root,
+                    reconciliation_commit=commit,
+                )
+            self.assertEqual(
+                report["decision"],
+                "ACCEPT_REQUEST_RECEIPT_PENDING_EXACT_DELIVERY",
+            )
+            self.assertEqual(report["request"]["recipient"], "WITHHELD_PRIVATE")
+            self.assertEqual(len(report["private_custody_bindings"]), 5)
 
 
 if __name__ == "__main__":

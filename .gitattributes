@@ -167,3 +167,4 @@ records/phase-two/prechecks/PRECHECK-2026-060.md text eol=lf
 burnlens/windigo_reference_request.py text eol=lf
 burnlens/request_windigo_reference.py text eol=lf
 tests/test_windigo_reference_request.py text eol=lf
+burnlens/reconcile_windigo_reference_request.py text eol=lf
