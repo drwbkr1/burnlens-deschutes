@@ -15,6 +15,7 @@ from burnlens.windigo_optical_contract import (
     WindigoOpticalRun,
     WindigoTrace,
     _acquire_singleton,
+    _build_public_report,
     _retained_post_failure_bytes,
     _resumable_pre_bytes,
     acquire_windigo_optical_pair,
@@ -72,7 +73,7 @@ class WindigoOpticalContractTests(unittest.TestCase):
     def test_exact_pair_contract_and_identity(self):
         self.assertEqual(CONTRACT_VERSION, "windigo-optical-intake-contract-v0.1.0")
         self.assertEqual(EVENT_ID, "OR4336312205020220730")
-        self.assertEqual(REPORT_ID, "WINDIGO-OPTICAL-CUSTODY-2026-001")
+        self.assertEqual(REPORT_ID, "WINDIGO-OPTICAL-CUSTODY-2026-002")
         self.assertEqual(validate_windigo_contracts(), [])
         self.assertEqual(sum(item.expected_size_bytes for item in WINDIGO_CONTRACTS), 2_373_112_076)
         self.assertEqual(PRE_CONTRACT.provider_id, "f1111cd2-acb1-4324-9b48-854e2e71a384")
@@ -277,6 +278,44 @@ class WindigoOpticalContractTests(unittest.TestCase):
             part.write_bytes(b"changed!")
             with self.assertRaisesRegex(AcquisitionError, "PARTIAL_BINDING"):
                 _retained_post_failure_bytes(run)
+
+    def test_reconciled_report_retains_both_failures_and_supersedes_r001(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            run = WindigoOpticalRun.create(
+                repository_root=Path(temporary),
+                generated_at_utc="2026-07-23T20:00:00Z",
+            )
+            trace = WindigoTrace(
+                git_source_commit="b" * 40,
+                verified_pre_success=True,
+                retained_post_partial_bytes=102_760_448,
+            )
+            aggregate = {
+                "run_id": "BL-2026-07-23-windigo-optical-intake-r001",
+                "generated_at_utc": "2026-07-23T19:34:56Z",
+                "transaction_order": [PRE_CONTRACT.role, POST_CONTRACT.role],
+            }
+            with patch(
+                "burnlens.windigo_optical_contract._public_package",
+                side_effect=[{"role": PRE_CONTRACT.role}, {"role": POST_CONTRACT.role}],
+            ):
+                report = _build_public_report(
+                    run=run,
+                    trace=trace,
+                    pre={},
+                    post={},
+                    aggregate=aggregate,
+                )
+            self.assertEqual(report["report_id"], "WINDIGO-OPTICAL-CUSTODY-2026-002")
+            self.assertEqual(len(report["retained_failures"]), 2)
+            self.assertEqual(
+                [item["run_id"] for item in report["retained_failures"]],
+                [
+                    "BL-2026-07-23-windigo-optical-pre-r001",
+                    "BL-2026-07-23-windigo-optical-post-r001",
+                ],
+            )
+            self.assertEqual(report["supersedes"]["bytes"], 5_338)
 
 
 if __name__ == "__main__":

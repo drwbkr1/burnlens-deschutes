@@ -12,6 +12,7 @@ from .windigo_optical_contract import (
     CdseCredentials,
     WindigoOpticalRun,
     acquire_windigo_optical_pair,
+    reconcile_windigo_public_report,
     refresh_windigo_metadata,
     verify_windigo_completed,
     verify_windigo_repository_preflight,
@@ -25,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     gate = parser.add_mutually_exclusive_group()
     gate.add_argument("--preflight-only", action="store_true")
     gate.add_argument("--verify-only", action="store_true")
+    gate.add_argument("--reconcile-only", action="store_true")
     return parser.parse_args()
 
 
@@ -49,6 +51,7 @@ def main() -> int:
         trace = verify_windigo_repository_preflight(
             run,
             existing_success_outputs=bool(args.verify_only),
+            reconcile_success_outputs=bool(args.reconcile_only),
         )
         if args.preflight_only:
             snapshot = refresh_windigo_metadata(observed_at_utc=args.generated_at_utc)
@@ -62,6 +65,10 @@ def main() -> int:
             if reasons:
                 raise AcquisitionError("WINDIGO_U02_VERIFY_FAILED", detail=",".join(reasons))
             print("PASS_WINDIGO_U02_VERIFY_ONLY_NO_CREDENTIALS")
+            return 0
+        if args.reconcile_only:
+            result = reconcile_windigo_public_report(run=run, trace=trace)
+            print(result["decision"])
             return 0
         metadata = refresh_windigo_metadata(observed_at_utc=args.generated_at_utc)
         credentials = CdseCredentials.from_environment()

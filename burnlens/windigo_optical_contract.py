@@ -36,8 +36,8 @@ PAIR_ID = "windigo-s2-optical-pair-v0.1.0"
 PRE_PACKAGE_ID = "windigo-s2-optical-pre-v0.1.0"
 POST_PACKAGE_ID = "windigo-s2-optical-post-v0.1.0"
 CONTRACT_VERSION = "windigo-optical-intake-contract-v0.1.0"
-REPORT_ID = "WINDIGO-OPTICAL-CUSTODY-2026-001"
-REPORT_SCHEMA_VERSION = "0.1.0"
+REPORT_ID = "WINDIGO-OPTICAL-CUSTODY-2026-002"
+REPORT_SCHEMA_VERSION = "0.1.1"
 REPOSITORY = "drwbkr1/burnlens-deschutes"
 BRANCH = "codex/p2o4-t35-windigo-deadline-gate"
 GIT_BASE_COMMIT = "0e58459ea45f509eca537223d872fd6992efb291"
@@ -65,6 +65,14 @@ POST_FAILURE_R001_SHA256 = (
 POST_PARTIAL_R001_BYTES = 102_760_448
 POST_PARTIAL_R001_SHA256 = (
     "3c057925cfc5323887a56d0e87487b7f95de1c1d7fb28029920b9f58e936ad77"
+)
+SUPERSEDED_REPORT_R001_PATH = (
+    "records/phase-two/intake/"
+    "P2O4-T35-U02-windigo-public-report-r001-superseded.json"
+)
+SUPERSEDED_REPORT_R001_BYTES = 5_338
+SUPERSEDED_REPORT_R001_SHA256 = (
+    "8ed642b2bc100f774f11d6e592e63f60f2fb261d23475132c3ed2b471facbe01"
 )
 
 U01_BINDINGS = {
@@ -397,7 +405,7 @@ class WindigoTrace:
             "retained_post_partial_bytes": self.retained_post_partial_bytes,
             "prior_local_interruption": (
                 "LOCAL_PROGRESS_PIPE_CLOSED_RETAINED_EXACT_PARTIAL"
-                if self.resumable_pre_bytes
+                if self.resumable_pre_bytes or self.verified_pre_success
                 else None
             ),
             "retained_pre_failure": (
@@ -409,7 +417,7 @@ class WindigoTrace:
                     "partial_sha256": PRE_PARTIAL_R001_SHA256,
                     "disposition": "failed-immutable-superseded-by-r002-resume",
                 }
-                if self.resumable_pre_bytes
+                if self.resumable_pre_bytes or self.verified_pre_success
                 else None
             ),
             "retained_post_failure": (
@@ -523,6 +531,12 @@ def _verified_pre_success(run: WindigoOpticalRun) -> bool:
         or _sha256_file(run.pre_state) != PRE_SUCCESS_R002_SHA256
     ):
         raise AcquisitionError("WINDIGO_PRE_SUCCESS_STATE_BINDING_MISMATCH")
+    if (
+        not run.pre_failure_state.is_file()
+        or run.pre_failure_state.stat().st_size != PRE_FAILURE_R001_BYTES
+        or _sha256_file(run.pre_failure_state) != PRE_FAILURE_R001_SHA256
+    ):
+        raise AcquisitionError("WINDIGO_PRE_FAILURE_STATE_BINDING_MISMATCH")
     verification = verify_registered_package(
         run.pre_destination,
         (PRE_CONTRACT,),
@@ -541,7 +555,10 @@ def verify_windigo_repository_preflight(
     run: WindigoOpticalRun,
     *,
     existing_success_outputs: bool = False,
+    reconcile_success_outputs: bool = False,
 ) -> WindigoTrace:
+    if existing_success_outputs and reconcile_success_outputs:
+        raise AcquisitionError("WINDIGO_PREFLIGHT_MODE_CONFLICT")
     root = run.repository_root
     top = _git(root, "rev-parse", "--show-toplevel")
     if top.returncode != 0 or Path(top.stdout.strip()).resolve() != root:
@@ -560,7 +577,11 @@ def verify_windigo_repository_preflight(
     if remote.returncode != 0 or remote.stdout.strip() != head.stdout.strip():
         raise AcquisitionError("WINDIGO_REMOTE_HEAD_MISMATCH")
     status = _git(root, "status", "--porcelain=v1", "--untracked-files=all")
-    allowed = f"?? {run.tracked_report.relative_to(root).as_posix()}" if existing_success_outputs else ""
+    allowed = (
+        f"?? {run.tracked_report.relative_to(root).as_posix()}"
+        if existing_success_outputs
+        else ""
+    )
     if status.returncode != 0 or status.stdout.strip().replace("\\", "/") != allowed:
         raise AcquisitionError("WINDIGO_WORKTREE_NOT_CLEAN")
     for ancestor, reason in (
@@ -603,6 +624,20 @@ def verify_windigo_repository_preflight(
     if existing_success_outputs:
         if not all(path.is_file() for path in (run.pre_state, run.post_state, run.aggregate_state, run.tracked_report)):
             raise AcquisitionError("WINDIGO_SUCCESS_OUTPUTS_MISSING")
+    elif reconcile_success_outputs:
+        if not all(
+            path.is_file()
+            for path in (
+                run.pre_state,
+                run.post_state,
+                run.aggregate_state,
+                run.pre_destination / ".burnlens-registration.json",
+                run.post_destination / ".burnlens-registration.json",
+            )
+        ):
+            raise AcquisitionError("WINDIGO_RECONCILE_INPUTS_MISSING")
+        if _path_present(run.tracked_report):
+            raise AcquisitionError("WINDIGO_RECONCILE_REPORT_ALREADY_EXISTS")
     else:
         resumable_pre_bytes = 0 if verified_pre_success else _resumable_pre_bytes(run)
         present = [
@@ -803,6 +838,104 @@ def _public_package(state: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _build_public_report(
+    *,
+    run: WindigoOpticalRun,
+    trace: WindigoTrace,
+    pre: dict[str, Any],
+    post: dict[str, Any],
+    aggregate: dict[str, Any],
+) -> dict[str, Any]:
+    trace_payload = trace.as_dict()
+    return {
+        "report_id": REPORT_ID,
+        "report_schema_version": REPORT_SCHEMA_VERSION,
+        "software_version": SOFTWARE_VERSION,
+        "unit_id": UNIT_ID,
+        "run_id": aggregate["run_id"],
+        "generated_at_utc": run.generated_at_utc,
+        "custody_generated_at_utc": aggregate["generated_at_utc"],
+        "event_id": EVENT_ID,
+        "event_group_id": EVENT_GROUP_ID,
+        "pair_id": PAIR_ID,
+        "contract_version": CONTRACT_VERSION,
+        "trace": trace_payload,
+        "transaction_order": aggregate["transaction_order"],
+        "packages": [_public_package(pre), _public_package(post)],
+        "expected_combined_bytes": sum(
+            item.expected_size_bytes for item in WINDIGO_CONTRACTS
+        ),
+        "gate_results": {
+            "exact_current_odata_identity": "pass",
+            "sequential_singleton_custody": "pass",
+            "provider_md5_blake3": "pass",
+            "local_sha256_md5_blake3": "pass",
+            "safe_zip_root_manifest_crc": "pass",
+            "post_promotion_rehash": "pass",
+            "u03_local_pixel_fitness": "not executed",
+            "reference_delivery": "not requested",
+            "candidate_label_dataset_split_baseline_model": "not created",
+        },
+        "retained_failures": [
+            item
+            for item in (
+                trace_payload["retained_pre_failure"],
+                trace_payload["retained_post_failure"],
+            )
+            if item is not None
+        ],
+        "supersedes": {
+            "report_id": "WINDIGO-OPTICAL-CUSTODY-2026-001",
+            "path": SUPERSEDED_REPORT_R001_PATH,
+            "bytes": SUPERSEDED_REPORT_R001_BYTES,
+            "sha256": SUPERSEDED_REPORT_R001_SHA256,
+            "reason": "The first generated public report omitted the retained pre interruption while preserving the post transport failure.",
+        },
+        "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT",
+        "warning": WARNING,
+    }
+
+
+def reconcile_windigo_public_report(
+    *,
+    run: WindigoOpticalRun,
+    trace: WindigoTrace,
+) -> dict[str, Any]:
+    for contract, destination in (
+        (PRE_CONTRACT, run.pre_destination),
+        (POST_CONTRACT, run.post_destination),
+    ):
+        verification = verify_registered_package(
+            destination,
+            (contract,),
+            contract_validator=_singleton_validator(contract),
+            contract_version=CONTRACT_VERSION,
+        )
+        if not verification["accepted_as_unchanged_registered_package"]:
+            raise AcquisitionError(
+                "WINDIGO_RECONCILE_PACKAGE_VERIFICATION_FAILED",
+                role=contract.role,
+            )
+    pre = json.loads(run.pre_state.read_text(encoding="utf-8"))
+    post = json.loads(run.post_state.read_text(encoding="utf-8"))
+    aggregate = json.loads(run.aggregate_state.read_text(encoding="utf-8"))
+    if pre.get("decision") != "REGISTERED_EXACT_WINDIGO_OPTICAL_SINGLETON":
+        raise AcquisitionError("WINDIGO_RECONCILE_PRE_STATE_REJECTED")
+    if post.get("decision") != "REGISTERED_EXACT_WINDIGO_OPTICAL_SINGLETON":
+        raise AcquisitionError("WINDIGO_RECONCILE_POST_STATE_REJECTED")
+    if aggregate.get("decision") != "REGISTERED_EXACT_WINDIGO_OPTICAL_PAIR":
+        raise AcquisitionError("WINDIGO_RECONCILE_AGGREGATE_STATE_REJECTED")
+    report = _build_public_report(
+        run=run,
+        trace=trace,
+        pre=pre,
+        post=post,
+        aggregate=aggregate,
+    )
+    _write_tracked_report(run, report)
+    return report
+
+
 def acquire_windigo_optical_pair(
     *,
     run: WindigoOpticalRun,
@@ -873,43 +1006,13 @@ def acquire_windigo_optical_pair(
         "warning": WARNING,
     }
     write_private_state(run.aggregate_state, aggregate, repo_root=run.repository_root)
-    report = {
-        "report_id": REPORT_ID,
-        "report_schema_version": REPORT_SCHEMA_VERSION,
-        "software_version": SOFTWARE_VERSION,
-        "unit_id": UNIT_ID,
-        "run_id": aggregate["run_id"],
-        "generated_at_utc": run.generated_at_utc,
-        "event_id": EVENT_ID,
-        "event_group_id": EVENT_GROUP_ID,
-        "pair_id": PAIR_ID,
-        "contract_version": CONTRACT_VERSION,
-        "trace": trace.as_dict(),
-        "transaction_order": aggregate["transaction_order"],
-        "packages": [_public_package(pre), _public_package(post)],
-        "expected_combined_bytes": sum(item.expected_size_bytes for item in WINDIGO_CONTRACTS),
-        "gate_results": {
-            "exact_current_odata_identity": "pass",
-            "sequential_singleton_custody": "pass",
-            "provider_md5_blake3": "pass",
-            "local_sha256_md5_blake3": "pass",
-            "safe_zip_root_manifest_crc": "pass",
-            "post_promotion_rehash": "pass",
-            "u03_local_pixel_fitness": "not executed",
-            "reference_delivery": "not requested",
-            "candidate_label_dataset_split_baseline_model": "not created",
-        },
-        "retained_failures": [
-            item
-            for item in (
-                trace.as_dict()["retained_pre_failure"],
-                trace.as_dict()["retained_post_failure"],
-            )
-            if item is not None
-        ],
-        "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT",
-        "warning": WARNING,
-    }
+    report = _build_public_report(
+        run=run,
+        trace=trace,
+        pre=pre,
+        post=post,
+        aggregate=aggregate,
+    )
     _write_tracked_report(run, report)
     return report
 

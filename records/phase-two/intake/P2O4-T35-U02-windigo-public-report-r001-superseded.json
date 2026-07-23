@@ -1,0 +1,123 @@
+{
+  "report_id": "WINDIGO-OPTICAL-CUSTODY-2026-001",
+  "report_schema_version": "0.1.0",
+  "software_version": "0.46.0",
+  "unit_id": "P2O4-T35-U02",
+  "run_id": "BL-2026-07-23-windigo-optical-intake-r001",
+  "generated_at_utc": "2026-07-23T19:34:56.3676204Z",
+  "event_id": "OR4336312205020220730",
+  "event_group_id": "event-windigo-2022",
+  "pair_id": "windigo-s2-optical-pair-v0.1.0",
+  "contract_version": "windigo-optical-intake-contract-v0.1.0",
+  "trace": {
+    "repository": "drwbkr1/burnlens-deschutes",
+    "branch": "codex/p2o4-t35-windigo-deadline-gate",
+    "task_issue": 534,
+    "git_base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
+    "u01_entry_commit": "9fba1c7a2b860fedf0cac70e355cffaa6a7dc5d8",
+    "git_source_commit": "2ccce0b185a40cde0e94f03e607b4dbd7f5a8c08",
+    "resumable_pre_bytes": 0,
+    "verified_pre_success": true,
+    "retained_post_partial_bytes": 102760448,
+    "prior_local_interruption": null,
+    "retained_pre_failure": null,
+    "retained_post_failure": {
+      "run_id": "BL-2026-07-23-windigo-optical-post-r001",
+      "state_bytes": 4243,
+      "state_sha256": "55cb89d8b03d8d254f9446c07dde01e33f1307e6c1e104ae2b8cd44ad34aadde",
+      "partial_bytes": 102760448,
+      "partial_sha256": "3c057925cfc5323887a56d0e87487b7f95de1c1d7fb28029920b9f58e936ad77",
+      "disposition": "failed-immutable-superseded-by-distinct-r002"
+    },
+    "u01_bindings": {
+      "records/phase-two/prechecks/PRECHECK-2026-059.md": {
+        "bytes": 7031,
+        "sha256": "b3e2f66d0fdc15a022556387a604208591cc90bf494508dd8134c5ea8089f506"
+      },
+      "records/phase-two/sources/SOURCE-2026-036.md": {
+        "bytes": 8940,
+        "sha256": "d8ea91debe6f02f4ca672084ad35a02e80cda1c10469cc391d8174bb8b724128"
+      },
+      "records/phase-two/terms/TERMS-2026-031.md": {
+        "bytes": 5902,
+        "sha256": "4ba57312c3be30c1c0b0c288b9d488cb3303159db275b2a477ecd5eb299d0f15"
+      },
+      "records/phase-two/intake/P2O4-T35-U01-windigo-metadata.json": {
+        "bytes": 36954,
+        "sha256": "15129b379ceec032840a897c2feb5f541ff5f6f6e83ffbafd19f0df914d6774e"
+      }
+    }
+  },
+  "transaction_order": [
+    "windigo-2022-pre",
+    "windigo-2022-post"
+  ],
+  "packages": [
+    {
+      "role": "windigo-2022-pre",
+      "provider_id": "f1111cd2-acb1-4324-9b48-854e2e71a384",
+      "native_id": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+      "bytes": 1185125439,
+      "local_hashes": {
+        "sha256": "6a62dd98ce619f53a2dc4e8348de5503edac6cfe3cf58449cdb0de98750d8034",
+        "md5": "6103928264ef49f78cbc6200e613b158",
+        "blake3": "13541bf3ea1c56269b3b4667e0051f7d95bbe7b64b69a9228ce1f2f9899fa17f"
+      },
+      "registration_manifest_sha256": "3ac05e85e5207ffb3d0ff9ea2f5e9e6332e49c298f77eff4826ee5c6aa5ad3e9",
+      "registration_run_id": "BL-2026-07-23-windigo-optical-pre-r002",
+      "archive_container": {
+        "member_count": 95,
+        "uncompressed_bytes": 1185090453,
+        "expected_root": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+        "manifest_present": true,
+        "crc_test_passed": true
+      },
+      "decision": "REGISTERED_EXACT_WINDIGO_OPTICAL_SINGLETON"
+    },
+    {
+      "role": "windigo-2022-post",
+      "provider_id": "10bb27c6-5df5-44f1-9a72-517c696cb5e1",
+      "native_id": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+      "bytes": 1187986637,
+      "local_hashes": {
+        "sha256": "18a40c3c7a8c14443892461876ed1deafab1b22d54446802cc394bd465910987",
+        "md5": "9aa84788fd136aad2da9a30dacc17330",
+        "blake3": "1923a7089f58278add5f2f2692139cbf4bf2a900ec8ca4afb8a4b8391ce89cff"
+      },
+      "registration_manifest_sha256": "7b4de9bcbe7fac9037b41dd58b0ec589283ff5bdd9a9a3f200bf5d27e7527c34",
+      "registration_run_id": "BL-2026-07-23-windigo-optical-post-r002",
+      "archive_container": {
+        "member_count": 95,
+        "uncompressed_bytes": 1187951651,
+        "expected_root": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+        "manifest_present": true,
+        "crc_test_passed": true
+      },
+      "decision": "REGISTERED_EXACT_WINDIGO_OPTICAL_SINGLETON"
+    }
+  ],
+  "expected_combined_bytes": 2373112076,
+  "gate_results": {
+    "exact_current_odata_identity": "pass",
+    "sequential_singleton_custody": "pass",
+    "provider_md5_blake3": "pass",
+    "local_sha256_md5_blake3": "pass",
+    "safe_zip_root_manifest_crc": "pass",
+    "post_promotion_rehash": "pass",
+    "u03_local_pixel_fitness": "not executed",
+    "reference_delivery": "not requested",
+    "candidate_label_dataset_split_baseline_model": "not created"
+  },
+  "retained_failures": [
+    {
+      "run_id": "BL-2026-07-23-windigo-optical-post-r001",
+      "state_bytes": 4243,
+      "state_sha256": "55cb89d8b03d8d254f9446c07dde01e33f1307e6c1e104ae2b8cd44ad34aadde",
+      "partial_bytes": 102760448,
+      "partial_sha256": "3c057925cfc5323887a56d0e87487b7f95de1c1d7fb28029920b9f58e936ad77",
+      "disposition": "failed-immutable-superseded-by-distinct-r002"
+    }
+  ],
+  "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT",
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not field validation or operational support. Official sources govern."
+}
