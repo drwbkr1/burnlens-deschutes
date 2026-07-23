@@ -130,7 +130,32 @@
     "privacy_and_boundary": "pass",
     "pull_request": "pending",
     "merged_main": "pending",
-    "package_and_tag": "pending"
+    "package": "pass at package-sensitive head a2df2efca70eccd04cebb60d855bda2cc3625800: two byte-identical 813,662-byte wheels at SHA-256 2403788d5e70b609aa8af6c89489d3382c4ca46b0d4a674df7bd25d6bf248962; 172 unique entries; 82 BurnLens commands; dependency check and installed current-head replay pass",
+    "package_and_tag": "package candidate passes; PR, merge, fresh-main repetition, and remote annotated-tag peel pending"
+  },
+  "release_package": {
+    "package_sensitive_head": "a2df2efca70eccd04cebb60d855bda2cc3625800",
+    "filename": "burnlens_deschutes-0.46.0-py3-none-any.whl",
+    "bytes": 813662,
+    "sha256": "2403788d5e70b609aa8af6c89489d3382c4ca46b0d4a674df7bd25d6bf248962",
+    "fresh_builds": 2,
+    "wheel_entries": 172,
+    "unique_entries": true,
+    "burnlens_console_commands": 82,
+    "forbidden_entries": 0,
+    "dependency_check": "pass",
+    "installed_version": "0.46.0",
+    "installed_source_gate_entry": "burnlens-build-official-fallback-source-gate=burnlens.build_official_fallback_source_gate:main"
+  },
+  "installed_replay": {
+    "retained_failed_attempt": "historical U04 source commit c5533d60c4abab7a1cd989395aee83268cbeaeec supplied against current HEAD; command failed closed with GIT_SOURCE_COMMIT_MISMATCH before output",
+    "current_head": "a2df2efca70eccd04cebb60d855bda2cc3625800",
+    "decision": "DEFER_BOTH_OFFICIAL_FALLBACK_CANDIDATES_SELECT_NEITHER_NO_PROVIDER_BYTES_AUTHORIZED",
+    "source_semantic_equal_after_commit_normalization": true,
+    "report_semantic_equal_after_trace_normalization": true,
+    "png_exact": true,
+    "png_sha256": "0b7ef00fcb41a2f8d5fc5227f48d8a350f0a3994e6badf253cb6b435a5b857b3",
+    "generator_and_focused_test_diff_from_u04_source": "none"
   },
   "next_checkpoint": {
     "status": "unassigned until this milestone is merged and verified",

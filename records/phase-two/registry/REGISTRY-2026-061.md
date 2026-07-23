@@ -50,6 +50,14 @@ Production and reproduction runs at committed source state are byte-identical. T
 
 The final repository suite for the U04 source state passes 544 tests, one expected skip, 20 retained warnings, and 83 subtests in 1004.93 seconds. Focused U04, lock, dependency, compile, diff, privacy, deterministic-artifact, and render checks pass.
 
+## Package and installed replay candidate
+
+Package-sensitive head `a2df2efca70eccd04cebb60d855bda2cc3625800` is clean, pushed, and remote-equal. Two fixed-epoch builds produce byte-identical `burnlens_deschutes-0.46.0-py3-none-any.whl` files: 813,662 bytes / SHA-256 `2403788d5e70b609aa8af6c89489d3382c4ca46b0d4a674df7bd25d6bf248962`. The wheel contains 172 unique entries, 82 BurnLens console commands, a complete RECORD, and zero sample, record, raw, download, or Git entries.
+
+An isolated Python 3.12.10 environment installs the wheel with 13 compatible distributions and resolves BurnLens 0.46.0 outside the repository. Its exact source-gate command is present. The first installed replay deliberately supplied historical U04 commit `c5533d60...` against current HEAD and failed before output with `GIT_SOURCE_COMMIT_MISMATCH`; that fail-closed attempt is retained. A current-head rerun passes with the exact decision, no selected candidate, and zero provider authorization. After removing only the current commit and the two commit-derived source/HTML hashes, its source and report objects equal the tracked U04 objects. Its PNG is byte-identical at SHA-256 `0b7ef00f...`. The generator modules and focused test have no diff from U04 source commit `c5533d60...`.
+
+This is candidate proof. PR, merge, fresh-main repetition, and the remote annotated-tag peel remain pending.
+
 ## Preserved evidence and claim boundary
 
 The accepted chain remains `multi-event-native-grids-v0.3.0` / `target-burn-scar-v0.2.0` / `burn-scar-five-state-schema-v0.1.0` / `owner-approved-prototype-region-labels-v0.3.0`. It contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events.
