@@ -43,7 +43,7 @@ class OwnerResponseIntakeTests(unittest.TestCase):
         return response
 
     def test_version_entry_point_and_contract(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.45.0")
+        self.assertEqual(burnlens.__version__, "0.46.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-build-owner-response-intake =", pyproject)
         self.assertEqual(LABEL_SET_VERSION, "owner-approved-prototype-labels-v0.1.0")
