@@ -43,7 +43,6 @@ class PetesLakeReferenceFitnessCliTests(unittest.TestCase):
         self.assertNotIn("Traceback", message)
 
     def test_broken_geo_profile_fails_bounded_without_preflight(self) -> None:
-        stderr = StringIO()
         arguments = [
             "--repository-root",
             str(Path.cwd()),
@@ -52,25 +51,35 @@ class PetesLakeReferenceFitnessCliTests(unittest.TestCase):
             "--mode",
             "preview",
         ]
-        with (
-            patch.object(command.importlib.util, "find_spec", return_value=object()),
-            patch.object(
-                command.importlib,
-                "import_module",
-                side_effect=ImportError("simulated optional binary failure"),
-            ),
-            patch.object(command, "_preflight") as preflight,
-            redirect_stderr(stderr),
-        ):
-            return_code = command.main(arguments)
+        failures = (
+            ImportError("simulated optional import failure"),
+            OSError("simulated optional binary failure"),
+            AttributeError("simulated optional initialization failure"),
+        )
+        for failure in failures:
+            with self.subTest(error_type=type(failure).__name__):
+                stderr = StringIO()
+                with (
+                    patch.object(
+                        command.importlib.util, "find_spec", return_value=object()
+                    ),
+                    patch.object(
+                        command.importlib,
+                        "import_module",
+                        side_effect=failure,
+                    ),
+                    patch.object(command, "_preflight") as preflight,
+                    redirect_stderr(stderr),
+                ):
+                    return_code = command.main(arguments)
 
-        self.assertEqual(return_code, 2)
-        preflight.assert_not_called()
-        message = stderr.getvalue()
-        self.assertIn("geo-research profile incomplete or unusable", message)
-        self.assertIn("-Profile geo-research", message)
-        self.assertNotIn("simulated optional binary failure", message)
-        self.assertNotIn("Traceback", message)
+                self.assertEqual(return_code, 2)
+                preflight.assert_not_called()
+                message = stderr.getvalue()
+                self.assertIn("geo-research profile incomplete or unusable", message)
+                self.assertIn("-Profile geo-research", message)
+                self.assertNotIn(str(failure), message)
+                self.assertNotIn("Traceback", message)
 
 
 if __name__ == "__main__":

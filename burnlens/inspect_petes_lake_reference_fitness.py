@@ -100,7 +100,7 @@ def _load_implementation() -> tuple[Callable[..., Any], Callable[..., Any]]:
         implementation = importlib.import_module(
             ".petes_lake_reference_fitness", package=__package__
         )
-    except ImportError as error:
+    except Exception as error:
         raise PetesLakeReferenceFitnessError(
             "geo-research profile incomplete or unusable; reinstall with "
             "scripts/setup_worktree.ps1 -Profile geo-research"
