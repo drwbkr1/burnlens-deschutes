@@ -8,6 +8,8 @@
 
 **Exception base / final code / tree:** `7d5c07e6b337b6b801b9d41565deedd9d2180b00` / `5e55ec8afd193d28c6c71191f0cca64c9aa31c29` / `9856fc2bbb68158a402b3ef98dbf6f2c29e055aa`
 
+**Pushed pre-PR evidence checkpoint / tree:** `184bfc9b92c4d748a7f45f24ffc6d4825eacb616` / `567c8e803258996d2478beb02de1f142e0b152b0`; the following record-only reconciliation remains package-excluded and will be checked again at the exact reviewed head before PR
+
 **Disposition / release state:** U01 `remediate`; U02 `pass`; U03 `pass`; U04 `pending`; BurnLens `0.45.0` remains an untagged candidate and `v0.45.0-petes-lake-material-defer` remains withheld
 
 ## Scope and predecessor
@@ -48,7 +50,7 @@ The pre-PR record audit parses all 121 tracked JSON documents, finds zero missin
 
 ## Corrected package and exact replay
 
-Two clean builds at code checkpoint `77d32c5e2408fa1215ca02b53ef30a0cb8c69b21` and a third fresh no-hardlink build at final code `5e55ec8afd193d28c6c71191f0cca64c9aa31c29` all produce the exact `burnlens_deschutes-0.45.0-py3-none-any.whl`: 801,911 bytes / SHA-256 `055e56b1f89be8e675960711cdfc80c59983451ee1cfe995d28ddc64d0f266f1`. The wheel contains 170 unique entries: 164 package files and six dist-info files. All 81 console commands retain their exact mappings, and RECORD covers the complete archive exactly.
+Two separate fresh no-hardlink clones at pushed evidence checkpoint `184bfc9b92c4d748a7f45f24ffc6d4825eacb616` independently produce the exact `burnlens_deschutes-0.45.0-py3-none-any.whl`: 801,911 bytes / SHA-256 `055e56b1f89be8e675960711cdfc80c59983451ee1cfe995d28ddc64d0f266f1`. The files are byte-identical and contain 170 unique entries: 164 package files and six dist-info files. All 81 console commands retain their exact mappings, RECORD has exactly 170 rows, package metadata identifies BurnLens 0.45.0, and no forbidden path is present. Both clones have the exact 207,817-byte zero-CR lock and remain clean. Earlier two-build proof at `77d32c5...` and one fresh build at final code `5e55ec8...` remain corroborating evidence with the same wheel identity.
 
 The corrected wheel and final source reproduce the same tracked pipeline outputs:
 
@@ -61,6 +63,8 @@ The corrected wheel and final source reproduce the same tracked pipeline outputs
 | U04 native-contract JSON | 32,991 | `b489bd30b467ab38f7320c9b313f904e0bbe9a33e2bed8b346230b9f48a6053c` | Exact; zero accepted reference pixels |
 
 The replay proves unchanged computation and packaging, not a Petes U05 scientific pass. Production U06-U10 remain unexecuted/deferred, Petes Lake is not event six, and `owner-approved-prototype-region-labels-v0.3.0` remains unchanged.
+
+From clean, remote-equal pushed checkpoint `184bfc9b92c4d748a7f45f24ffc6d4825eacb616`, the actual U04 command independently reconstructs the exact 32,991-byte / `b489bd30...` JSON in ignored no-overwrite storage and again reports zero accepted reference pixels. No provider call or custody mutation occurs.
 
 ## Release boundary
 
