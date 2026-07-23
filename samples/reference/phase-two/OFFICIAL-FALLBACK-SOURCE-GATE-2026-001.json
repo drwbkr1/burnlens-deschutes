@@ -1,0 +1,177 @@
+{
+  "report_id": "OFFICIAL-FALLBACK-SOURCE-GATE-2026-001",
+  "report_schema_version": "0.1.0",
+  "report_version": "official-fallback-source-gate-v0.1.0",
+  "generated_at_utc": "2026-07-23T16:19:47.3323318Z",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 532,
+  "run_id": "BL-2026-07-23-official-fallback-comparison-r001",
+  "git_source_commit": "c5533d60c4abab7a1cd989395aee83268cbeaeec",
+  "software_version": "0.46.0",
+  "source_binding": {
+    "source_id": "OFFICIAL-FALLBACK-SOURCE-GATE-SOURCE-2026-001",
+    "bytes": 7801,
+    "sha256": "e9eeef28cbee91e3f1f3a8e0eac15018ceeea2281a7a7dad4a53b40d16200271"
+  },
+  "warning": "Experimental BurnLens portfolio evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "decision": "DEFER_BOTH_OFFICIAL_FALLBACK_CANDIDATES_SELECT_NEITHER_NO_PROVIDER_BYTES_AUTHORIZED",
+  "decision_summary": "Select neither route. McKenzie HUC8 NWI and Milli 0843 CS both remain deferred because required rights and evidence gates have not passed.",
+  "selected_candidate": null,
+  "candidate_results": [
+    {
+      "candidate_id": "candidate-petes-lake-mckenzie-hu8-17090004",
+      "display_name": "McKenzie HUC8 NWI",
+      "gate_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MCKENZIE-2026-001",
+      "gate_status": "blocked",
+      "disposition": "defer",
+      "selected": false,
+      "source_count": 1,
+      "criterion_count": 8,
+      "criterion_status_counts": {
+        "pass": 5,
+        "unknown": 3
+      },
+      "blocking_reasons": [
+        "The exact asset-specific local retention/processing and derived-publication rights remain unknown.",
+        "Archive member/project provenance, notices, mapping projects, imagery dates, and transformations remain unopened.",
+        "Project dates, scale, status, structure, coverage, geometry, Petes relationship, and scientific fitness remain unknown.",
+        "Three exploratory failed attempts lack one or more exact request locator or observation-time fields; those trace gaps are retained and not reconstructed."
+      ]
+    },
+    {
+      "candidate_id": "candidate-milli-0843-cs-2017",
+      "display_name": "Milli 0843 CS",
+      "gate_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MILLI-2026-001",
+      "gate_status": "blocked",
+      "disposition": "defer",
+      "selected": false,
+      "source_count": 4,
+      "criterion_count": 32,
+      "criterion_status_counts": {
+        "pass": 9,
+        "unknown": 23
+      },
+      "blocking_reasons": [
+        "The exact future Milli BAER, MTBS, and RAVG archive retention, processing, and derived-publication rights remain unknown.",
+        "The current terms attempts lack complete no-redirect, bounded-request, timestamp, and response-identity trace for every observation.",
+        "Current event, boundary, Portal, STAC, OData, provenance, acquisition cost, and integrity identities were not refreshed after the stop.",
+        "Complete-boundary multi-tile support, seam/grid behavior, local quality, registration, and both-class evidence remain unproved."
+      ]
+    }
+  ],
+  "comparison": [
+    {
+      "dimension": "Scientific role",
+      "mckenzie": "Approximate wetlands/deepwater context and conservative exclusion for Petes Lake only.",
+      "milli": "Prospective Sentinel optical plus program-limited BAER, MTBS, and RAVG reference evidence."
+    },
+    {
+      "dimension": "Rights",
+      "mckenzie": "Local retention, processing, and derived-publication rights remain unknown; raw redistribution blocked.",
+      "milli": "Sentinel grant is supportable in principle; exact future BAER/MTBS/RAVG delivery rights remain unknown."
+    },
+    {
+      "dimension": "Uncertainty",
+      "mckenzie": "Package members, project dates, scale, coverage, omissions, and Petes relationship are unopened.",
+      "milli": "Complete-boundary union, seams, grids, cloud/snow, registration, and both-class evidence are unproved."
+    },
+    {
+      "dimension": "Leakage",
+      "mckenzie": "Same Petes event; adds no independent event and cannot establish either class.",
+      "milli": "Historically separate by 61.035 km, but current event/time/geography grouping was not refreshed."
+    },
+    {
+      "dimension": "Custody",
+      "mckenzie": "Zero bytes; prospective one 28,966,292-byte ZIP through a new controlled intake.",
+      "milli": "Zero bytes; prospective multi-tile Sentinel plus three program-source transactions."
+    },
+    {
+      "dimension": "Privacy / security",
+      "mckenzie": "Public metadata only; future archive remains untrusted and must screen notices, attributes, contacts, and logos.",
+      "milli": "Public metadata only; future provider archives and queue/email delivery details remain private and untrusted."
+    },
+    {
+      "dimension": "Reproducibility",
+      "mckenzie": "Strong live asset HEAD identity, but member provenance and incomplete failed-attempt trace block reproduction.",
+      "milli": "Historical planning snapshot only; current source roster stopped and the legacy vertex-only predicate is insufficient."
+    },
+    {
+      "dimension": "Acquisition cost",
+      "mckenzie": "Known prospective body: 28.97 MB (27.62 MiB), one ZIP; no fee/account observed at metadata stage.",
+      "milli": "Higher and unquantified; exact Sentinel roster, OData sizes, and program-delivery transactions were not refreshed."
+    },
+    {
+      "dimension": "Objective Four value",
+      "mckenzie": "Could improve exclusions but cannot provide burned plus affirmative-background cores or complete Petes.",
+      "milli": "Higher theoretical sixth-event value, but no class, unknown ring, owner review, or non-owner promotion gate exists."
+    },
+    {
+      "dimension": "Portfolio value",
+      "mckenzie": "Shows disciplined source precedence and honest exclusion-context limits.",
+      "milli": "Could show cross-event transfer and seam handling; current unresolved complexity outweighs evidence value."
+    }
+  ],
+  "reference_state": {
+    "event_group_count": 5,
+    "minimum_event_group_count": 6,
+    "minimum_event_group_gate_passed": false,
+    "dataset_fitness_reopened": false,
+    "cumulative_owner_approved_region_labels": 10,
+    "cumulative_accepted_core_pixels": 236,
+    "cumulative_accepted_core_area_ha": 9.44,
+    "cumulative_excluded_unknown_ring_pixels": 431,
+    "prototype_class_counts": {
+      "background": 5,
+      "burned": 5
+    },
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false
+  },
+  "phase_objective": {
+    "phase": 2,
+    "objective": 4,
+    "minimum_complete_event_groups": 6,
+    "current_complete_event_groups": 5,
+    "result": "blocked_before_six_complete_whole_event_groups",
+    "owner_yes_is_necessary_but_insufficient": true
+  },
+  "portfolio_narrative": "The portfolio-strengthening result is disciplined refusal: BurnLens identifies the next source weakness, tests the smallest legal and evidentiary route, retains failures, and does not turn available metadata into a sixth event or a dataset.",
+  "reconsideration": "Neither route is permanently rejected. Reconsideration requires a new issue and immutable run, stronger exact rights evidence, fresh source identities, and every applicable scientific and custody gate.",
+  "boundaries": {
+    "provider_bytes_authorized": false,
+    "provider_bytes_acquired": 0,
+    "custody_mutated": false,
+    "selected_candidate": null,
+    "candidate_created": false,
+    "owner_response_created": false,
+    "label_created": false,
+    "sixth_event_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "metric_created": false,
+    "deployment_created": false
+  },
+  "attribution": [
+    "U.S. Fish and Wildlife Service National Wetlands Inventory",
+    "Monitoring Trends in Burn Severity Project (U.S. Geological Survey and USDA Forest Service)",
+    "Copernicus Sentinel programme / European Union; no Sentinel pixels are reproduced here"
+  ],
+  "outputs": {
+    "html": {
+      "path": "OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.html",
+      "bytes": 8325,
+      "sha256": "8855b8bc5599546ee42c17dd1ad29a64f680bb668f8bb1bea85042d7ce6ccad3"
+    },
+    "png": {
+      "path": "OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png",
+      "bytes": 211147,
+      "sha256": "0b7ef00fcb41a2f8d5fc5227f48d8a350f0a3994e6badf253cb6b435a5b857b3",
+      "width": 1600,
+      "height": 1940
+    }
+  }
+}

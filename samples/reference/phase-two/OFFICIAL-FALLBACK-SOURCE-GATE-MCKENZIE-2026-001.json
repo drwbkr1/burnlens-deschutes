@@ -1,0 +1,229 @@
+{
+  "contract_version": "source-gate/v1",
+  "assessment_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MCKENZIE-2026-001",
+  "assessed_at": "2026-07-23T03:41:52.5659449Z",
+  "provider_bytes_authorized": false,
+  "intended_use": {
+    "summary": "Evaluate the official McKenzie HUC8 17090004 NWI ZIP route for selection into a separate future ignored-local controlled-intake contract and attributed derived wetlands/deepwater exclusion context; do not acquire or use the archive in this assessment.",
+    "planned_actions": [
+      "metadata review",
+      "record assessment evidence"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "candidate-petes-lake-mckenzie-hu8-17090004",
+      "name": "USFWS National Wetlands Inventory McKenzie HUC8 watershed package",
+      "locator": "https://documentst.ecosphere.fws.gov/wetlands/downloads/watershed/HU8_17090004_Watershed.zip",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://documentst.ecosphere.fws.gov/wetlands/downloads/watershed/HU8_17090004_Watershed.zip",
+              "observed_at": "2026-07-23T03:41:02.5967217Z",
+              "note": "No-redirect HEAD returned 200, application/zip, 28,966,292 bytes, last-modified 2026-05-04, exact ETag and provider version ID, with zero body bytes."
+            },
+            {
+              "type": "live",
+              "locator": "https://water.usgs.gov/GIS/huc_name.html",
+              "observed_at": "2026-07-23T03:41:00.8303476Z",
+              "note": "Official USGS HUC table contains 17090004 and McKenzie."
+            }
+          ],
+          "note": "Exact external asset and geography identities are established; internal archive identity remains a fitness/provenance blocker."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://catalog.data.gov/dataset/usfws-national-wetlands-inventory",
+              "observed_at": "2026-07-23T03:41:01.7364043Z",
+              "note": "Live federal catalog identifies the National Wetlands Inventory and Fish and Wildlife Service publisher."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/page/national-wetlands-inventory-frequently-asked-questions",
+              "observed_at": "2026-07-23T03:40:55.3628815Z",
+              "note": "Official NWI FAQ publishes watershed download guidance and the current 2026 release citation."
+            }
+          ],
+          "note": "USFWS is authoritative for NWI and USGS is authoritative for the HUC name table."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/program/national-wetlands-inventory/data-download",
+              "observed_at": "2026-07-23T03:40:09.7127469Z",
+              "note": "Canonical download guidance returned direct HTTP 200 with no redirect and describes watershed ZIP access for GIS analysis."
+            },
+            {
+              "type": "live",
+              "locator": "https://documentst.ecosphere.fws.gov/wetlands/downloads/watershed/HU8_17090004_Watershed.zip",
+              "observed_at": "2026-07-23T03:41:02.5967217Z",
+              "note": "Anonymous no-redirect HEAD returned HTTP 200 without an account, fee, cookie, credential, or body."
+            }
+          ],
+          "note": "Metadata access is currently available; availability, rate limits, and intake authorization are not implied."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/program/national-wetlands-inventory/data-download",
+              "observed_at": "2026-07-23T03:40:09.7127469Z",
+              "note": "Official guidance offers watershed ZIP downloads for GIS analysis."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/node/268813",
+              "observed_at": "2026-07-23T03:40:59.3617336Z",
+              "note": "FWS says not all site information is public domain, requests credit, and restricts logo use."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/terms/TERMS-2026-029.md",
+              "note": "Current terms decision blocks selection, acquisition, and derived publication; raw redistribution is prohibited."
+            }
+          ],
+          "note": "No exact asset-specific grant resolves the complete proposed local retention/processing and derived-publication posture."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/page/national-wetlands-inventory-frequently-asked-questions",
+              "observed_at": "2026-07-23T03:40:55.3628815Z",
+              "note": "FAQ says individual imagery dates govern mapped wetland validity."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-034.md",
+              "note": "Official external route is bound, but archive members, contributors, projects, dates, notices, and transformations remain unopened."
+            }
+          ],
+          "note": "Asset-level origin is clear, but member/project lineage required for the proposed evidence use is absent."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://documentst.ecosphere.fws.gov/wetlands/downloads/watershed/HU8_17090004_Watershed.zip",
+              "observed_at": "2026-07-23T03:41:02.5967217Z",
+              "note": "HEAD binds length, last-modified, ETag, provider version ID, media type, and range support; ETag is not treated as a cryptographic checksum."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Future plan requires re-HEAD, no-overwrite quarantine, streamed SHA-256/BLAKE3, exact length/version checks, ZIP CRC/member hashes, path/type/expansion controls, and no source use until inspection passes."
+            }
+          ],
+          "note": "A deterministic post-acquisition integrity plan exists; this assessment acquires nothing."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/page/wetlands-data-limitations-exclusions-and-precautions",
+              "observed_at": "2026-07-23T03:40:56.4010477Z",
+              "note": "Official page preserves omission, scale, field, and mapping limitations."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/page/wetlands-geodatabase-user-caution",
+              "observed_at": "2026-07-23T03:40:57.4981980Z",
+              "note": "Official user caution preserves imagery-date, currency, interpretation, and non-regulatory limits."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/page/wetlands-geodatabase-disclaimer",
+              "observed_at": "2026-07-23T03:40:58.5224770Z",
+              "note": "Official disclaimer rejects regulatory and presence/absence interpretations and warns about landscape change."
+            }
+          ],
+          "note": "Expected layers and CRS are guidance only; exact project dates, scale, status, coverage, geometry, Petes relationship, and residual uncertainty are unknown."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Metadata is public; future ZIP is untrusted and must pass traversal, symlink, expansion, type, contact, locator, attribute, notice, and logo screening before derived publication."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.fws.gov/node/268813",
+              "observed_at": "2026-07-23T03:40:59.3617336Z",
+              "note": "Current notice provides credit and logo restrictions that the publication plan preserves."
+            }
+          ],
+          "note": "Metadata-only assessment is safe; explicit controls cover a future untrusted archive."
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "status": "blocked",
+    "blocking_reasons": [
+      "The exact asset-specific local retention/processing and derived-publication rights remain unknown.",
+      "Archive member/project provenance, notices, mapping projects, imagery dates, and transformations remain unopened.",
+      "Project dates, scale, status, structure, coverage, geometry, Petes relationship, and scientific fitness remain unknown.",
+      "Three exploratory failed attempts lack one or more exact request locator or observation-time fields; those trace gaps are retained and not reconstructed."
+    ],
+    "live_verification_pending": [
+      "candidate-petes-lake-mckenzie-hu8-17090004:rights"
+    ],
+    "approved_actions": [
+      "metadata review",
+      "record assessment evidence"
+    ]
+  },
+  "write_boundary": {
+    "permitted_without_further_authorization": [
+      "read supplied metadata",
+      "record assessment evidence"
+    ],
+    "requires_explicit_authorization": [
+      "authenticate",
+      "accept terms",
+      "purchase",
+      "download content",
+      "retain or process the archive",
+      "publish derived output",
+      "publish or redistribute raw content"
+    ]
+  }
+}

@@ -106,7 +106,7 @@ class GrandviewOwnerResponseIntakeTests(unittest.TestCase):
             )
 
     def test_version_and_entry_point(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.45.0")
+        self.assertEqual(burnlens.__version__, "0.46.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-build-grandview-owner-response-intake", pyproject)
         for extension in ("json", "html"):

@@ -148,3 +148,15 @@ records/phase-two/registry/REGISTRY-2026-060.md text eol=lf
 records/phase-two/sources/SOURCE-2026-033.md text eol=lf
 docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md text eol=lf
 records/prompt-build-log/2026-07-22-bl-exc-001-sync.md text eol=lf
+
+# P2O4-T34 source-gate records have checkout-stable byte bindings.
+records/phase-two/prechecks/PRECHECK-2026-057.md text eol=lf
+records/prompt-build-log/2026-07-23-p2o4-t34.md text eol=lf
+records/phase-two/sources/SOURCE-2026-034.md text eol=lf
+records/phase-two/terms/TERMS-2026-029.md text eol=lf
+samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-MCKENZIE-2026-001.json text eol=lf
+records/phase-two/sources/SOURCE-2026-035.md text eol=lf
+records/phase-two/terms/TERMS-2026-030.md text eol=lf
+samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-MILLI-2026-001.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-058.md text eol=lf
+samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png -text
