@@ -1,0 +1,477 @@
+{
+  "contract_version": "source-gate/v1",
+  "assessment_id": "OFFICIAL-FALLBACK-SOURCE-GATE-MILLI-2026-001",
+  "assessed_at": "2026-07-23T04:10:11.5588744Z",
+  "provider_bytes_authorized": false,
+  "intended_use": {
+    "summary": "Evaluate the frozen Milli 0843 CS Sentinel, BAER, MTBS, and RAVG sources for selection into a separate future controlled-intake contract without requesting source-asset bytes.",
+    "planned_actions": [
+      "metadata review",
+      "record assessment evidence"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "candidate-milli-sentinel-2-l2a",
+      "name": "Milli Sentinel-2 L2A route through CDSE",
+      "locator": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-2026-001.json",
+              "note": "Historical 2026-07-15 metadata found zero single Sentinel items covering every Milli boundary vertex; no current STAC or OData roster was queried."
+            }
+          ],
+          "note": "No exact current scene, tile, orbit, baseline, UUID, size, checksum, or online identity is selected."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-035.md",
+              "note": "Current CDSE and Sentinel notice semantics were readable, but the page reader exposed no evidence-grade request timestamp, redirects, bounds, bytes, or hash."
+            }
+          ],
+          "note": "Historical authority is established, but U03 lacks a current evidence-grade authority observation for this component."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "The exact current STAC, OData, and future product routes were not exercised."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/terms/TERMS-2026-030.md",
+              "note": "Sentinel-data use is supportable in principle with source identification, but U03 did not bind a current evidence-grade notice to an exact scene roster."
+            }
+          ],
+          "note": "No exact future Sentinel product set is authorized by U03."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Current acquisition, tile, processing, publication, and provider product lineage is absent."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "A future route must bind exact STAC and OData identities, provider MD5 and BLAKE3, local SHA-256, safe archive structure, and no-overwrite custody before use."
+            }
+          ],
+          "note": "A deterministic integrity plan exists; no scene or byte is currently accepted."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-2026-001.json",
+              "note": "Historical metadata found zero single-item full-boundary candidates; no current stable multi-tile union, seam, grid, cloud, snow, local-pixel, or registration proof ran."
+            }
+          ],
+          "note": "Optical fitness remains unproved."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Authentication, product download, signed routes, credentials, account state, and custody mutation were forbidden."
+            }
+          ],
+          "note": "No credential, private route, account datum, or product byte was touched."
+        }
+      ]
+    },
+    {
+      "source_id": "candidate-milli-baer-10004702",
+      "name": "Milli BAER map 10004702 through the Burn Severity Portal",
+      "locator": "https://burnseverity.cr.usgs.gov/products/baer",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.json",
+              "note": "Verified prior scout binds catalog 2033, map 10004702, 24,216 acres, and nonstandard false; U03 did not refresh it."
+            }
+          ],
+          "note": "Current exact BAER catalog and delivery identity is unresolved."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "No evidence-grade current BAER authority page or catalog observation was completed."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "No current catalog record, queue route, delivery identity, or product route was exercised."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/terms/TERMS-2026-030.md",
+              "note": "Prior exact deliveries show that some preliminary thresholded BAER products restrict further distribution; a future Milli notice cannot be inherited."
+            }
+          ],
+          "note": "Local retention, processing, derived publication, and raw redistribution rights for an exact Milli BAER delivery are unknown."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Exact delivery members, notices, contributors, dates, processing, model, and transformations are unopened."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "A future delivery must use a separately authorized no-overwrite request, hash every delivered byte/member, inspect notices first, and reject unsafe archive structure."
+            }
+          ],
+          "note": "A deterministic future integrity plan exists; no delivery is accepted."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Exact product family, grid, dates, thresholds, quality, boundary relation, and permissible evidence role are unknown."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Portal queue submission, private delivery links, recipient data, email state, provider bytes, and custody mutation were forbidden."
+            }
+          ],
+          "note": "No private delivery or provider content was touched."
+        }
+      ]
+    },
+    {
+      "source_id": "candidate-milli-mtbs-10008215",
+      "name": "Milli MTBS map 10008215 through MTBS and the Burn Severity Portal",
+      "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.json",
+              "note": "Verified prior scout binds event OR4425712174320170811, catalog 11202, map 10008215, 24,065 acres, and nonstandard false; U03 did not refresh the event or map."
+            }
+          ],
+          "note": "Current exact event, boundary, map, and Portal delivery identity is unresolved."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+              "observed_at": "2026-07-23T04:06:09.8275529Z",
+              "note": "Current official USDA Forest Service MTBS boundary metadata returned 23,634 bytes with exact SHA-256 e56b96c0366a4da515f18664c1fcfad838616f5ba67c68c92f7a492d3ac412c1."
+            },
+            {
+              "type": "live",
+              "locator": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_FIRE_OCCURRENCE_PT.xml",
+              "observed_at": "2026-07-23T04:06:10.7724557Z",
+              "note": "Current official USDA Forest Service MTBS occurrence metadata returned 21,884 bytes with exact SHA-256 807638cf7b91d9847e0a87d178d7c77a4e59b35808c9930df4d683eff14e8b88."
+            }
+          ],
+          "note": "The current collection metadata establishes USDA Forest Service and joint MTBS authority; it does not establish exact Milli identity or fitness."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "No current event query, boundary query, Portal record, queue, delivery, or asset route was exercised."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+              "observed_at": "2026-07-23T04:06:09.8275529Z",
+              "note": "Current collection metadata states no use restriction except reasonable and proper acknowledgement, but the request transport trace is incomplete and no exact future Milli delivery notice was inspected."
+            }
+          ],
+          "note": "Exact delivery retention, processing, derived-publication, and raw-redistribution rights remain unresolved."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Current boundary, assessment, pre/post image, threshold, release, delivery-member, and notice lineage was not reconciled."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "A future exact request must bind event/map identity, preserve delivered bytes no-overwrite, hash and inspect every member/notice, and stop on any mismatch."
+            }
+          ],
+          "note": "A deterministic future integrity plan exists; no event record or delivery is accepted."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-035.md",
+              "note": "Current MTBS documentation preserves analyst, threshold, field-data, 30 m, revision, timing, and boundary-versus-perimeter limitations; no exact Milli pixels or geometry were inspected."
+            }
+          ],
+          "note": "MTBS remains revisable analyst-interpreted reference evidence, never automatic truth."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Only public metadata was in scope; queue submission, private delivery, provider bytes, and custody mutation were forbidden."
+            }
+          ],
+          "note": "No private delivery or provider content was touched."
+        }
+      ]
+    },
+    {
+      "source_id": "candidate-milli-ravg-10005445",
+      "name": "Milli RAVG map 10005445 through the Burn Severity Portal",
+      "locator": "https://burnseverity.cr.usgs.gov/products/ravg",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.json",
+              "note": "Verified prior scout binds catalog 1295, map 10005445, 24,299 acres, and nonstandard false; U03 did not refresh it."
+            }
+          ],
+          "note": "Current exact RAVG catalog and delivery identity is unresolved."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "No evidence-grade current RAVG authority page or catalog observation was completed."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "No current catalog record, queue route, delivery identity, or product route was exercised."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/terms/TERMS-2026-030.md",
+              "note": "Prior RAVG delivery notices commonly require acknowledgement and retain warranty/update cautions, but cannot authorize a future Milli delivery."
+            }
+          ],
+          "note": "Local retention, processing, derived publication, and raw redistribution rights for an exact Milli RAVG delivery are unknown."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": true,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Exact delivery members, notices, image dates, model/calibration context, forest applicability, and transformations are unopened."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "A future delivery must use a separately authorized no-overwrite request, hash every delivered byte/member, inspect notices first, and reject unsafe archive structure."
+            }
+          ],
+          "note": "A deterministic future integrity plan exists; no delivery is accepted."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "unknown",
+          "evidence": [],
+          "note": "Exact grid, image dates, model, sparse/non-tree behavior, forest applicability, boundary relation, and permissible evidence role are unknown."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/prechecks/PRECHECK-2026-057.md",
+              "note": "Portal queue submission, private delivery links, recipient data, email state, provider bytes, and custody mutation were forbidden."
+            }
+          ],
+          "note": "No private delivery or provider content was touched."
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "status": "blocked",
+    "blocking_reasons": [
+      "The exact future Milli BAER, MTBS, and RAVG archive retention, processing, and derived-publication rights remain unknown.",
+      "The current terms attempts lack complete no-redirect, bounded-request, timestamp, and response-identity trace for every observation.",
+      "Current event, boundary, Portal, STAC, OData, provenance, acquisition cost, and integrity identities were not refreshed after the stop.",
+      "Complete-boundary multi-tile support, seam/grid behavior, local quality, registration, and both-class evidence remain unproved."
+    ],
+    "live_verification_pending": [
+      "candidate-milli-sentinel-2-l2a:identity",
+      "candidate-milli-sentinel-2-l2a:authority",
+      "candidate-milli-sentinel-2-l2a:access",
+      "candidate-milli-sentinel-2-l2a:rights",
+      "candidate-milli-sentinel-2-l2a:provenance",
+      "candidate-milli-baer-10004702:identity",
+      "candidate-milli-baer-10004702:authority",
+      "candidate-milli-baer-10004702:access",
+      "candidate-milli-baer-10004702:rights",
+      "candidate-milli-baer-10004702:provenance",
+      "candidate-milli-mtbs-10008215:identity",
+      "candidate-milli-mtbs-10008215:access",
+      "candidate-milli-mtbs-10008215:rights",
+      "candidate-milli-mtbs-10008215:provenance",
+      "candidate-milli-ravg-10005445:identity",
+      "candidate-milli-ravg-10005445:authority",
+      "candidate-milli-ravg-10005445:access",
+      "candidate-milli-ravg-10005445:rights",
+      "candidate-milli-ravg-10005445:provenance"
+    ],
+    "approved_actions": [
+      "metadata review",
+      "record assessment evidence"
+    ]
+  },
+  "write_boundary": {
+    "permitted_without_further_authorization": [
+      "read supplied metadata",
+      "record assessment evidence"
+    ],
+    "requires_explicit_authorization": [
+      "authenticate",
+      "accept terms",
+      "purchase",
+      "download content",
+      "submit a provider queue request",
+      "retain or process an archive",
+      "publish derived output",
+      "publish or redistribute raw content"
+    ]
+  }
+}
