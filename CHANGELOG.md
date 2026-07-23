@@ -7,11 +7,13 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Record August 6, 2026 as the controlling portfolio-submission deadline.
 - Select only Windigo 2022 for one final sixth-event attempt through July 27 at 6:00 PM America/Indianapolis.
 - Pass U01 with current official event and three-program identities, valid provider-generated boundary topology, one exact same-platform/tile/orbit/baseline Sentinel pair, current terms, ignored no-overwrite custody, and one combined Portal-request contract.
-- Authorize zero provider archive bytes or queue requests before the recoverable U01 checkpoint.
+- Pass U02/U03 with exact optical/reference custody, actual delivered source fitness, valid MTBS topology, and explicit unrepaired BAER/RAVG vector exclusions.
+- Pass U04 with one deterministic burned proposal and one separately evidenced affirmative-background proposal, each with a 25-pixel core and 51-pixel unknown ring.
+- Reproduce the U04 JSON, HTML, PNG, and both candidate rasters byte for byte; create zero owner decisions or labels.
 - Select technical-case-study-only as the automatic or terminal fallback. Do not authorize baseline-first without an accepted dataset and split.
 - Preserve five accepted events and null dataset, split, baseline, and model state.
 
-Issue #534; run `BL-2026-07-23-windigo-entry-gate-r001`; U01 passes and U02 becomes eligible only after the exact entry checkpoint is committed and pushed.
+Issue #534; latest run `BL-2026-07-23-windigo-region-proposal-r001`; U01-U04 pass and only the exact two-card owner review becomes eligible.
 
 ## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 

@@ -23,3 +23,9 @@ No delivered class proves background. U04 must separately establish affirmative 
 Five failed or superseded render/trace attempts remain retained. R004 preserved every scientific value but named the prior v0.2.0 cumulative label set, so it is superseded. The first correction, ignored r005, supplied a non-existent expanded commit and failed trace binding before promotion.
 
 Corrected r006 binds exact source commit `a88b539f50262683c88ec75286ec2d60892d25fd` and current label set v0.3.0. Its JSON, HTML, and PNG replay byte for byte. The r006 1800 by 1260 PNG passes original-resolution review. Its HTML differs from the already desktop/mobile browser-validated r004 layout only in image filename, exact commit, and run ID; the in-app browser refused a new local-file navigation under its URL security policy. No bypass was attempted.
+
+U04 turns the source findings into exactly two review proposals without promoting either one. It recomputes the accepted U03 source sections and fails closed if their exact evidence drifts.
+
+The burned proposal combines the frozen optical burn route with BAER SBS 2-4 and MTBS dNBR6 2-4. The background proposal uses the frozen stability route outside a 60 m conservative source-domain buffer. RAVG remains context and exclusion only.
+
+Both proposals use 25-pixel cores and 51-pixel unknown rings. Their JSON, HTML, PNG, and rasters reproduce byte for byte. The actual production PNG passes original-resolution inspection. No owner response, label, event acceptance, dataset, split, baseline, model, or performance claim exists.

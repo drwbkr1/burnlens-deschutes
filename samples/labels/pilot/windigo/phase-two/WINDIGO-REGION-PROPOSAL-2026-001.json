@@ -1,0 +1,869 @@
+{
+  "report_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+  "report_version": "windigo-two-class-region-proposal-v0.1.0",
+  "generator_version": "windigo-region-proposal-generator-v0.1.0",
+  "protocol_version": "windigo-two-scene-two-class-proposal-protocol-v0.1.0",
+  "unit_id": "P2O4-T35-U04",
+  "generated_at_utc": "2026-07-23T21:55:13.013Z",
+  "run_id": "BL-2026-07-23-windigo-region-proposal-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 534,
+  "git_source_commit": "fc8c81ad7e0fff081299e6f72a68c957081f7867",
+  "software_version": "0.46.0",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "input_label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+  "output_label_set_version": null,
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "event": {
+    "event_group_id": "event-windigo-2022",
+    "event_id": "OR4336312205020220730",
+    "fire_name": "WINDIGO",
+    "context_buffer_m": 3000,
+    "context_bounds_utm10n": [
+      572544.002,
+      4796376.822,
+      581686.125,
+      4805416.141
+    ],
+    "context_shape_20m": [
+      453,
+      458
+    ],
+    "context_transform": [
+      20.0,
+      0.0,
+      572540.0,
+      0.0,
+      -20.0,
+      4805420.0
+    ]
+  },
+  "source_report": {
+    "report_id": "WINDIGO-SOURCE-FITNESS-2026-006",
+    "run_id": "BL-2026-07-23-windigo-source-fitness-r006",
+    "bytes": 105348,
+    "sha256": "7e0ede49bcee692c130c6f04fe90898f6c393fb57f64191da1f16c1567b724b2",
+    "source_commit": "a88b539f50262683c88ec75286ec2d60892d25fd",
+    "label_set_version": "owner-approved-prototype-region-labels-v0.3.0",
+    "fresh_reverification_run_id": "BL-2026-07-23-windigo-region-proposal-r001-source-reverification",
+    "archive_sha256": "defd99749a28bd311bcab9bc75631447e1e42eecf3da66adbb3c9c1e2d6b0804"
+  },
+  "registration": {
+    "summary": {
+      "window_count": 9,
+      "state_counts": {
+        "pass": 9,
+        "review-needed": 0,
+        "excluded": 0,
+        "fail-registration": 0
+      },
+      "p50_px": 0.0412,
+      "p95_px": 0.0796,
+      "max_px": 0.0922,
+      "max_m": 1.844,
+      "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+    },
+    "windows": [
+      {
+        "window_id": "W-01",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          572540.0,
+          4802860.0,
+          575100.0,
+          4805420.0
+        ],
+        "inside_boundary_pixels": 16384,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.921265,
+          "review_needed_fraction": 0.002075,
+          "excluded_fraction": 0.07666
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0361,
+            "coarse_peak_ratio": 56.5137,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.408321,
+            "moving_energy": 0.410238,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": 0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 23.3429,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.413119,
+            "moving_energy": 0.434004,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.05,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.051,
+            "coarse_peak_ratio": 44.934,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.460581,
+            "moving_energy": 0.456083,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "magnitude_m": 0.632,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-02",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 165,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          575840.0,
+          4802860.0,
+          578400.0,
+          4805420.0
+        ],
+        "inside_boundary_pixels": 16384,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.98938,
+          "review_needed_fraction": 0.00238,
+          "excluded_fraction": 0.00824
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0224,
+            "coarse_peak_ratio": 53.2128,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.268879,
+            "moving_energy": 0.267992,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": 0.01,
+            "magnitude_px": 0.0224,
+            "coarse_peak_ratio": 20.2512,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.285583,
+            "moving_energy": 0.314243,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 44.0611,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.393222,
+            "moving_energy": 0.386391,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.02,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0224,
+          "magnitude_m": 0.447,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-03",
+        "pixel_window": {
+          "row_offset": 0,
+          "column_offset": 330,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          579140.0,
+          4802860.0,
+          581700.0,
+          4805420.0
+        ],
+        "inside_boundary_pixels": 16256,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.990034,
+          "review_needed_fraction": 0.002522,
+          "excluded_fraction": 0.007443
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0224,
+            "coarse_peak_ratio": 64.499,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.308297,
+            "moving_energy": 0.315599,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0412,
+            "coarse_peak_ratio": 24.3383,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.539557,
+            "moving_energy": 0.545766,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0412,
+            "coarse_peak_ratio": 43.3107,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.518829,
+            "moving_energy": 0.504437,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.04,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0412,
+          "magnitude_m": 0.825,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-04",
+        "pixel_window": {
+          "row_offset": 162,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          572540.0,
+          4799620.0,
+          575100.0,
+          4802180.0
+        ],
+        "inside_boundary_pixels": 16384,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.999023,
+          "review_needed_fraction": 0.000793,
+          "excluded_fraction": 0.000183
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.03,
+            "coarse_peak_ratio": 62.881,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.246266,
+            "moving_energy": 0.236371,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0608,
+            "coarse_peak_ratio": 28.0211,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.393084,
+            "moving_energy": 0.390802,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.04,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0412,
+            "coarse_peak_ratio": 48.7142,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.42388,
+            "moving_energy": 0.409059,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.04,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0412,
+          "magnitude_m": 0.825,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-05",
+        "pixel_window": {
+          "row_offset": 162,
+          "column_offset": 165,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          575840.0,
+          4799620.0,
+          578400.0,
+          4802180.0
+        ],
+        "inside_boundary_pixels": 16384,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.989258,
+          "review_needed_fraction": 0.000488,
+          "excluded_fraction": 0.010254
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.09,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0906,
+            "coarse_peak_ratio": 8.8079,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.297902,
+            "moving_energy": 0.304253,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": -0.01,
+            "column_shift_to_apply_px": -0.11,
+            "magnitude_px": 0.1105,
+            "coarse_peak_ratio": 4.2419,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.37513,
+            "moving_energy": 0.405592,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.15,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.1513,
+            "coarse_peak_ratio": 8.824,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.564523,
+            "moving_energy": 0.585119,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.09,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0922,
+          "magnitude_m": 1.844,
+          "max_band_deviation_px": 0.1345,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-06",
+        "pixel_window": {
+          "row_offset": 162,
+          "column_offset": 330,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          579140.0,
+          4799620.0,
+          581700.0,
+          4802180.0
+        ],
+        "inside_boundary_pixels": 16256,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 78.5569,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.355094,
+            "moving_energy": 0.356703,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": 0.01,
+            "magnitude_px": 0.0806,
+            "coarse_peak_ratio": 21.1635,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.494448,
+            "moving_energy": 0.495157,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 39.7323,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.600853,
+            "moving_energy": 0.593973,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "magnitude_m": 0.632,
+          "max_band_deviation_px": 0.0539,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-07",
+        "pixel_window": {
+          "row_offset": 325,
+          "column_offset": 0,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          572540.0,
+          4796360.0,
+          575100.0,
+          4798920.0
+        ],
+        "inside_boundary_pixels": 16256,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.999569,
+          "review_needed_fraction": 0.000369,
+          "excluded_fraction": 6.2e-05
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.03,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0316,
+            "coarse_peak_ratio": 48.5191,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.187597,
+            "moving_energy": 0.168668,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0224,
+            "coarse_peak_ratio": 21.1331,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.426992,
+            "moving_energy": 0.417691,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.05,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.051,
+            "coarse_peak_ratio": 34.3621,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.293305,
+            "moving_energy": 0.271165,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.03,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0316,
+          "magnitude_m": 0.632,
+          "max_band_deviation_px": 0.02,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-08",
+        "pixel_window": {
+          "row_offset": 325,
+          "column_offset": 165,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          575840.0,
+          4796360.0,
+          578400.0,
+          4798920.0
+        ],
+        "inside_boundary_pixels": 16256,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 1.0,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 0.0
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.05,
+            "column_shift_to_apply_px": 0.0,
+            "magnitude_px": 0.05,
+            "coarse_peak_ratio": 46.6926,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.141837,
+            "moving_energy": 0.141414,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.07,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0707,
+            "coarse_peak_ratio": 13.937,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.373449,
+            "moving_energy": 0.382861,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0632,
+            "coarse_peak_ratio": 40.0776,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.29838,
+            "moving_energy": 0.276323,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.06,
+          "column_shift_to_apply_px": -0.01,
+          "magnitude_px": 0.0608,
+          "magnitude_m": 1.217,
+          "max_band_deviation_px": 0.0141,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      },
+      {
+        "window_id": "W-09",
+        "pixel_window": {
+          "row_offset": 325,
+          "column_offset": 330,
+          "height": 128,
+          "width": 128
+        },
+        "bounds_utm10n": [
+          579140.0,
+          4796360.0,
+          581700.0,
+          4798920.0
+        ],
+        "inside_boundary_pixels": 16129,
+        "pair_quality_inside_boundary": {
+          "eligible_fraction": 0.999938,
+          "review_needed_fraction": 0.0,
+          "excluded_fraction": 6.2e-05
+        },
+        "band_measurements": {
+          "B04": {
+            "row_shift_to_apply_px": 0.02,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0224,
+            "coarse_peak_ratio": 51.7703,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.209441,
+            "moving_energy": 0.217657,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B8A": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0825,
+            "coarse_peak_ratio": 14.4179,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.463802,
+            "moving_energy": 0.462363,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          },
+          "B12": {
+            "row_shift_to_apply_px": 0.05,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0539,
+            "coarse_peak_ratio": 39.574,
+            "sample_resolution_px": 0.01,
+            "reference_energy": 0.357238,
+            "moving_energy": 0.351956,
+            "confident": true,
+            "reason": "PEAK_RATIO_PASS"
+          }
+        },
+        "consensus": {
+          "row_shift_to_apply_px": 0.05,
+          "column_shift_to_apply_px": -0.02,
+          "magnitude_px": 0.0539,
+          "magnitude_m": 1.077,
+          "max_band_deviation_px": 0.0316,
+          "confident_band_count": 3
+        },
+        "state": "pass",
+        "reason_code": "CONTENT_REGISTRATION_PASS",
+        "label_effect": "none; registration evidence never assigns burned or background"
+      }
+    ]
+  },
+  "spectral_evidence": {
+    "counts": {
+      "quality_eligible": 205548,
+      "quality_review_needed": 159,
+      "quality_excluded": 1767,
+      "numeric_valid": 207474,
+      "usable": 205548,
+      "burn_screen_coherent": 9005,
+      "stable_screen_coherent": 186,
+      "burned_route": 8606,
+      "background_route": 182
+    },
+    "thresholds": {
+      "burn_dnbr_min": 0.1,
+      "burn_ndvi_loss_min": 0.05,
+      "burn_swir_gain_min": 0.02,
+      "burn_nir_loss_min": 0.02,
+      "burn_supporting_signals_min": 2,
+      "burn_neighbor_support_min_of_nine": 5,
+      "stable_abs_dnbr_max": 0.03,
+      "stable_abs_ndvi_change_max": 0.03,
+      "stable_abs_swir_change_max": 0.01,
+      "stable_abs_nir_change_max": 0.01,
+      "stable_neighbor_support_min_of_nine": 7
+    },
+    "transfer": "The established four-signal burn and stability screens transfer unchanged. No threshold, bin, component size, or tie-break was searched against Windigo."
+  },
+  "reference_exclusion": {
+    "members": {
+      "baer_sbs": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs.tif",
+      "mtbs_dnbr6": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr6.tif",
+      "ravg_cbi4": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi4.tif",
+      "ravg_ba4": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba4.tif",
+      "ravg_cc5": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc5.tif"
+    },
+    "categorical_sampling": "nearest neighbor from each native reference grid onto the 20 m context grid; no resolution gain",
+    "baer_sbs_domain_footprint_pixels": 10219,
+    "mtbs_domain_footprint_pixels": 10781,
+    "ravg_cbi_domain_footprint_pixels": 10162,
+    "program_footprint_union_pixels": 10870,
+    "program_footprint_buffer_pixels": 13335,
+    "buffer_pixels": 3,
+    "buffer_m": 60,
+    "buffer_basis": "three native 20 m proposal cells, equal to two native 30 m MTBS/RAVG cells",
+    "role": "Every program domain is used only for conservative exclusion. RAVG modeled classes and every low/zero class remain disallowed as affirmative background evidence."
+  },
+  "route_evidence": {
+    "burned": {
+      "pixels": 8606,
+      "area_hectares": 344.24,
+      "rule": "Eligible exact-pair pixels; transferred coherent four-signal burn screen; BAER SBS classes 2-4 primary; MTBS dNBR6 classes 2-4 corroborating."
+    },
+    "background": {
+      "pixels": 182,
+      "area_hectares": 7.28,
+      "component_count": 44,
+      "largest_component_pixels": 30,
+      "largest_component_sizes_pixels": [
+        30,
+        14,
+        13,
+        12,
+        11,
+        9,
+        8,
+        7,
+        6,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "rule": "Eligible exact-pair pixels; transferred coherent four-signal near-zero stability; outside the union of all delivered BAER/MTBS/RAVG program domains plus 60 m. No delivered low/zero/outside class is affirmative evidence."
+    }
+  },
+  "method": {
+    "candidate_unit": "one intact 8-connected native 20 m component",
+    "partition": "fixed 0.05 dNBR bin from the established region-candidate protocol",
+    "target_pixels": 25,
+    "selection": "minimum absolute distance to 25 pixels, then SHA-256 of proposed class, fixed bin, and ordered native-grid coordinates",
+    "unknown_ring": "one native 20 m pixel around each intact core; never promoted here",
+    "invalid_vectors": "BAER/RAVG invalid vectors remain retained and unused. Raster program domains are conservative exclusion only; valid MTBS geometry remains topology authority."
+  },
+  "summary": {
+    "candidate_count": 2,
+    "class_counts": {
+      "burned": 1,
+      "background": 1
+    },
+    "core_pixels": 50,
+    "core_area_hectares": 2.0,
+    "unknown_ring_pixels": 102,
+    "owner_responses": 0,
+    "labels_created": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "WDP-001",
+      "event_group_id": "event-windigo-2022",
+      "proposed_class": "burned",
+      "review_state": "unreviewed-no-promotion",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 51,
+      "bbox_rows_columns": [
+        208,
+        179,
+        218,
+        190
+      ],
+      "dnbr_interval": [
+        0.25,
+        0.3
+      ],
+      "dnbr_observed": {
+        "min": 0.250602,
+        "max": 0.299243,
+        "mean": 0.27145
+      },
+      "eligible_component_count": 1681,
+      "evaluated_component_count": 3816,
+      "selection_tie_sha256": "d7abdf6507745e7867b0cb45f2fbf0a2e45d5ddb19a53b5259d0bab8bcc58d10",
+      "proposal_binding_sha256": "5c42d462910feecca3c060b189cffcdd61633a2285934a64250f7b8b0aa4fcb5",
+      "candidate_raster": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-001.tif",
+      "candidate_raster_bytes": 2852,
+      "candidate_raster_sha256": "0106fe4bf81ee9614a090a38541bb78be9cf033ae6b94c9fe9f3594a62fc0e2a",
+      "owner_decision": null
+    },
+    {
+      "candidate_id": "WDP-002",
+      "event_group_id": "event-windigo-2022",
+      "proposed_class": "background",
+      "review_state": "unreviewed-no-promotion",
+      "core_pixels": 25,
+      "core_area_hectares": 1.0,
+      "unknown_ring_pixels": 51,
+      "bbox_rows_columns": [
+        131,
+        420,
+        141,
+        433
+      ],
+      "dnbr_interval": [
+        -0.05,
+        0.0
+      ],
+      "dnbr_observed": {
+        "min": -0.028045,
+        "max": -0.003139,
+        "mean": -0.015202
+      },
+      "eligible_component_count": 33,
+      "evaluated_component_count": 59,
+      "selection_tie_sha256": "bc1cc0038adf136723a67977a4b0f916fa0ab46ba508b37b92f7564282922db1",
+      "proposal_binding_sha256": "06b8a28d40abfb967a35fda06202e720b5449814e56ed55523c7fedbd3561aad",
+      "candidate_raster": "WINDIGO-REGION-PROPOSAL-2026-001-WDP-002.tif",
+      "candidate_raster_bytes": 2864,
+      "candidate_raster_sha256": "ada6b1e772a9039b5e73ed15ac184229a3df7bed7b55c402ac78e972aec6950e",
+      "owner_decision": null
+    }
+  ],
+  "decision": "PROPOSE_EXACT_WINDIGO_TWO_CLASS_REGIONS_KEEP_OWNER_REVIEW_AND_PROMOTION_CLOSED",
+  "next_gate": "P2O4-T35-U05 must build one exact two-card owner yes/no/uncertain surface bound to these candidate raster hashes. Both yes decisions are necessary but insufficient.",
+  "limitations": [
+    "The fixed spectral rules, dNBR bins, component target, and tie-break are evidence-coherence rules, not universal burn or severity thresholds.",
+    "BAER/MTBS agreement and paired optical stability are proposal evidence, not independent ground truth.",
+    "The background proposal shows stability during the exact fire-window pair outside conservative source domains; it does not prove land was never burned.",
+    "RAVG modeled effects are context and conservative exclusion only, never affirmative candidate evidence.",
+    "Only one burned and one background proposal are created; owner review and every non-owner promotion gate remain absent."
+  ],
+  "claims": {
+    "proven": [
+      "Both exact proposal routes and their selected intact components reproduce from immutable custody.",
+      "The two candidate core/ring footprints do not overlap and preserve per-candidate bindings."
+    ],
+    "not_proven": [
+      "No owner decision, label, event-six acceptance, dataset, split, baseline, model, metric, accuracy, independent validation, field validation, official status, endorsement, emergency suitability, or operational readiness exists."
+    ]
+  },
+  "deadline": {
+    "portfolio_submission": "2026-08-06",
+    "sixth_event_cutoff": "2026-07-27T18:00:00-04:00",
+    "fallback": "technical-case-study-only"
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}

@@ -88,6 +88,10 @@ samples/labels/pilot/green-ridge/phase-two/*.json text eol=lf
 samples/labels/pilot/green-ridge/phase-two/*.html text eol=lf
 samples/labels/pilot/grandview/phase-two/*.json text eol=lf
 samples/labels/pilot/grandview/phase-two/*.html text eol=lf
+samples/labels/pilot/windigo/phase-two/*.json text eol=lf
+samples/labels/pilot/windigo/phase-two/*.html text eol=lf
+samples/labels/pilot/windigo/phase-two/*.png -text
+samples/labels/pilot/windigo/phase-two/*.tif -text
 samples/labels/review/regions/phase-two/*.json text eol=lf
 samples/labels/review/regions/phase-two/*.html text eol=lf
 samples/labels/review/regions/phase-two/intake/*.json text eol=lf
