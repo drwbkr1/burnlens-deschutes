@@ -831,10 +831,10 @@ def build_report(source: dict[str, Any]) -> dict[str, Any]:
 def render_html(report: dict[str, Any]) -> str:
     products = "".join(
         "<tr>"
-        f"<td>{escape(item['role'])}</td>"
-        f"<td><code>{escape(item['native_id'])}</code></td>"
-        f"<td>{int(item['size_bytes']):,}</td>"
-        f"<td><code>{escape(item['provider_id'])}</code></td>"
+        f"<td data-label=\"Role\">{escape(item['role'])}</td>"
+        f"<td data-label=\"SAFE identity\"><code>{escape(item['native_id'])}</code></td>"
+        f"<td data-label=\"Bytes\">{int(item['size_bytes']):,}</td>"
+        f"<td data-label=\"Provider UUID\"><code>{escape(item['provider_id'])}</code></td>"
         "</tr>"
         for item in report["authorized_products"]
     )
@@ -871,7 +871,7 @@ ignition {escape(report['event']['ignition_date'])}; {report['event']['acres']:,
 <p>Valid {escape(report['boundary']['geometry_type'])}; {report['boundary']['exterior_vertex_count']:,} exterior vertices.
 Coverage uses the full Shapely polygon.</p></section>
 <h2>Exact acquisition scope</h2><table><thead><tr><th>Role</th><th>SAFE identity</th><th>Bytes</th><th>Provider UUID</th></tr></thead>
-<tbody>{products.replace('<td>', '<td data-label="Value">')}</tbody></table>
+<tbody>{products}</tbody></table>
 <section class="card"><h2>Limits retained</h2><ul>{limitations}</ul></section>
 <p class="warning"><strong>Warning.</strong> {escape(report['warning'])}</p>
 <p>Run <code>{escape(report['run_id'])}</code><br>Source commit <code>{escape(report['git_source_commit'])}</code></p>

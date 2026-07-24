@@ -205,6 +205,10 @@ class ReplacementEventSourceGateTests(unittest.TestCase):
         self.assertIn('name="viewport"', html)
         self.assertIn("full Shapely polygon", html)
         self.assertIn("No source pixel", html)
+        self.assertIn('data-label="Role"', html)
+        self.assertIn('data-label="SAFE identity"', html)
+        self.assertIn('data-label="Bytes"', html)
+        self.assertIn('data-label="Provider UUID"', html)
         self.assertNotIn("<script", html.lower())
 
     def test_tampered_roster_and_overwrite_fail_closed(self) -> None:
