@@ -1,4 +1,5 @@
 import json
+from hashlib import sha256
 from pathlib import Path
 import tempfile
 import unittest
@@ -11,6 +12,7 @@ from burnlens.replacement_event_optical_contract import (
     POST_CONTRACT,
     PRE_CONTRACT,
     REPORT_ID,
+    U01_BINDINGS,
     WARD_CREEK_CONTRACTS,
     WardCreekOpticalRun,
     acquire_ward_creek_optical_pair,
@@ -75,6 +77,13 @@ class ReplacementEventOpticalContractTests(unittest.TestCase):
         self.assertEqual(sum(item.expected_size_bytes for item in WARD_CREEK_CONTRACTS), 2_396_820_201)
         self.assertEqual(PRE_CONTRACT.provider_id, "f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7")
         self.assertEqual(POST_CONTRACT.provider_id, "51ddb0b7-8456-40a2-8301-e1651c951116")
+
+    def test_every_u01_binding_matches_the_exact_repository_bytes(self):
+        root = Path(__file__).resolve().parents[1]
+        for relative, (expected_size, expected_sha256) in U01_BINDINGS.items():
+            payload = (root / relative).read_bytes()
+            self.assertEqual(len(payload), expected_size, relative)
+            self.assertEqual(sha256(payload).hexdigest(), expected_sha256, relative)
 
     def test_live_metadata_must_match_both_exact_products(self):
         opener = SequenceOpen(

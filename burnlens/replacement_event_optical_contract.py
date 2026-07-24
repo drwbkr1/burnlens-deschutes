@@ -65,7 +65,7 @@ U01_BINDINGS = {
     ),
     "samples/reference/phase-two/REPLACEMENT-EVENT-SOURCE-GATE-REPORT-2026-001.html": (
         3_998,
-        "a645602eea5df31508353175abeeaff73fb8d39f0e432597a1d4374d75f1ec4",
+        "a645602eea5df31508353175abeefaff73fb8d39f0e432597a1d4374d75f1ec4",
     ),
     "records/phase-two/sources/SOURCE-2026-038.md": (
         5_103,
@@ -81,7 +81,7 @@ U01_BINDINGS = {
     ),
     "records/phase-two/registry/REGISTRY-2026-069.md": (
         3_665,
-        "bd0606eeefcefddb5eeb373cbc3b0ce644975e9efdd961e364bc55704c53a59",
+        "bd0606eeefcefddbd5eeb373cbc3b0ce644975e9efdd961e364bc55704c53a59",
     ),
 }
 
