@@ -11,7 +11,7 @@
 | `T36-U03` | Build one deterministic portfolio manifest and landing surface | five exact bound inputs; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9` | `pass` | first focused test expected the not-yet-generated self manifest to exist; first production render exposed one missing-favicon request; first favicon-focused run exposed a test-only inline-data-link assumption | U04 |
 | `T36-U04` | Align quickstart, case study, and repository handoff | exact U03 output | `pass` | none | U05 |
 | `T36-U05` | Real render, accessibility, privacy, link, and reproducibility QA | exact U03/U04 output; owner render confirmation | `pass` | first render retained as failed because its missing favicon made the console non-clean | U06 |
-| `T36-U06` | Release verification and August 6 submission handoff | complete unit ledger | `in_progress` | first full suite retained 553 passes / one skip / 28 stale current-version failures; first isolated check used omitted pip and source-tree import; corrected full/package/install gates pass | milestone exit |
+| `T36-U06` | Release verification and August 6 submission handoff | complete unit ledger | `pass` | first full suite retained 553 passes / one skip / 28 stale current-version failures; first isolated check used omitted pip and source-tree import; corrected candidate and fresh-main gates pass | deterministic August 6 submission bundle |
 
 The U03 source implementation adds one standard-library generator, one CLI,
 focused tests, a quickstart, explicit LF output rules, BurnLens 0.48.0, and the
@@ -41,8 +41,13 @@ SHA-256
 The isolated install resolves BurnLens 0.48.0 from `site-packages`, has 13
 compatible distributions, and passes 87 command probes.
 
-The structured release audit is valid and remains blocked only on PR, merge,
-fresh-main repetition, and remote tag verification.
+PR #541 merges at `05140217066277b254e78abb74cd8f61295449d0`.
+Fresh main repeats nine focused tests, the 581-test full suite, exact outputs,
+the canonical wheel, isolated install, and all 87 command probes. Remote
+annotated tag object `c6ed831c106da44bad3ced010fafe5abc46bd537`
+peels exactly to that merge.
+
+The structured release audit computes `verified`. U06 and P2O4-T36 pass.
 
 Dataset, split, baseline, model, deployment, GitHub Release, access, and
 public-sharing state remain unchanged.

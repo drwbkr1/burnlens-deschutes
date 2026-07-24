@@ -33,11 +33,11 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-24T04:00:00Z",
-    "branch": "codex/p2o4-t36-portfolio-reviewer-experience",
-    "remote_commit": "f9acd72798bff588edd84aa7d4f03f9a3e90219d",
-    "pull_request": null,
-    "tag_target": null,
+    "verified_at_utc": "2026-07-24T03:52:01.2018905Z",
+    "branch": "main",
+    "remote_commit": "05140217066277b254e78abb74cd8f61295449d0",
+    "pull_request": 541,
+    "tag_target": "05140217066277b254e78abb74cd8f61295449d0",
     "deployment": null
   },
   "checks": [
@@ -137,10 +137,17 @@
       "id": "CHECK-008",
       "category": "pull-request-merge-tag",
       "required": true,
-      "status": "not_run",
-      "method": "",
-      "evidence": [],
-      "reason": "The coherent candidate must be reviewed, merged, repeated from fresh main, and remotely tag-verified before shipment."
+      "status": "pass",
+      "method": "Merge one coherent milestone PR, repeat focused/full/output/package/install gates from exact main, then remotely peel the annotated tag.",
+      "evidence": [
+        "PR #541 squash-merges at 05140217066277b254e78abb74cd8f61295449d0 and closes issue #540",
+        "Fresh main: 9 focused tests and 581 full tests pass with 1 expected skip, 22 warnings, and 86 subtests",
+        "Fresh-main exact JSON and HTML reconstruction matches",
+        "Two fresh-main wheels reproduce 881,588 bytes / 4966fd403f6207a4afd63c1fa68658091467e6744dfc332313ca72b2e9811c9b",
+        "Fresh-main isolated install passes 13-distribution compatibility and 87 command routes",
+        "Remote annotated tag object c6ed831c106da44bad3ced010fafe5abc46bd537 peels to 05140217066277b254e78abb74cd8f61295449d0"
+      ],
+      "reason": ""
     },
     {
       "id": "CHECK-009",
@@ -155,26 +162,26 @@
   "truth_surfaces": [
     {
       "path_or_uri": "README.md",
-      "expected_state": "BurnLens 0.47.0 remains the verified release and 0.48.0 is a candidate.",
-      "observed_state": "Current.",
+      "expected_state": "BurnLens 0.48.0 is the verified local portfolio reviewer release.",
+      "observed_state": "Lifecycle issue #542 updates the stale candidate wording.",
       "status": "current"
     },
     {
       "path_or_uri": "docs/status/PHASE_STATUS.md",
-      "expected_state": "P2O4-T36 U01-U05 pass and U06 release verification remains active.",
-      "observed_state": "Current.",
+      "expected_state": "P2O4-T36 U01-U06 pass and the August 6 submission bundle is next.",
+      "observed_state": "Lifecycle issue #542 updates the stale candidate wording.",
       "status": "current"
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/540",
-      "expected_state": "Open milestone issue with release gates pending.",
-      "observed_state": "Issue exists and owns the active branch.",
+      "expected_state": "Closed by merged PR #541.",
+      "observed_state": "Issue #540 is closed.",
       "status": "current"
     },
     {
       "path_or_uri": "refs/tags/v0.48.0-portfolio-reviewer-experience",
-      "expected_state": "Absent until merged-main verification passes.",
-      "observed_state": "Not yet created.",
+      "expected_state": "Annotated object c6ed831c106da44bad3ced010fafe5abc46bd537 peels to 05140217066277b254e78abb74cd8f61295449d0.",
+      "observed_state": "Remote object and peeled target match.",
       "status": "current"
     }
   ],
@@ -185,8 +192,8 @@
     "No GitHub Release, deployment, public-sharing change, or operational application exists."
   ],
   "decision": {
-    "reported_status": "blocked",
-    "rationale": "All pre-merge technical, package, render, reproducibility, privacy, and claim gates pass. PR, merge, fresh-main repetition, and remote tag verification remain required.",
-    "next_action": "Open one coherent milestone PR, merge it after checks pass, repeat release verification from exact main, then create and verify the annotated tag."
+    "reported_status": "verified",
+    "rationale": "The coherent PR merged, exact fresh main repeated the focused, full, output, package, isolated-install, privacy, and claim gates, and the remote annotated tag peels exactly to the verified merge.",
+    "next_action": "Build the deterministic August 6 submission bundle from verified v0.48 without opening dataset, split, baseline, model, deployment, access, or public-sharing work."
   }
 }
