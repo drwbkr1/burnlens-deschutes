@@ -125,6 +125,7 @@ burnlens-build-six-event-dataset-sufficiency = "burnlens.build_six_event_dataset
 burnlens-build-replacement-event-source-gate = "burnlens.build_replacement_event_source_gate:main"
 burnlens-acquire-replacement-event-optical = "burnlens.acquire_replacement_event_optical:main"
 burnlens-request-replacement-event-reference = "burnlens.request_replacement_event_reference:main"
+burnlens-capture-replacement-event-reference-delivery = "burnlens.capture_replacement_event_reference_delivery:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
