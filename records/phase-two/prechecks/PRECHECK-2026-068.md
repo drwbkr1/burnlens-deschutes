@@ -57,6 +57,28 @@ or pipeline assertion failed. The bounded correction updates only those
 current-version assertions; the Windigo report's historical 0.47.0 identity
 remains unchanged. The 28 affected files then pass 183 tests and four subtests.
 
+The corrected complete suite passes 581 tests, one expected skip, 22 retained
+NumPy deprecation warnings, and 86 subtests. Compilation passes, all 143
+tracked JSON files parse, and all 751 tracked Markdown files have zero broken
+local links.
+
+Two exact Git archives of package-sensitive candidate
+`f9acd72798bff588edd84aa7d4f03f9a3e90219d`, built under
+`SOURCE_DATE_EPOCH=1784862338`, produce byte-identical 881,588-byte wheels at
+SHA-256
+`4966fd403f6207a4afd63c1fa68658091467e6744dfc332313ca72b2e9811c9b`.
+The wheel contains 185 unique entries, zero forbidden paths, and 87 commands.
+
+An ignored isolated Python 3.12.10 environment installs 13 compatible
+distributions, resolves BurnLens 0.48.0 from its own `site-packages`, and
+passes all 87 command help routes. The initial verification command used
+`python -m pip` even though the minimal uv environment intentionally omits pip,
+then imported from the repository working directory. The corrected check uses
+`uv pip check` and runs outside the source tree; the installed package passes.
+
+`RELEASE-AUDIT-2026-002` is valid and computes `blocked` only because PR,
+merge, fresh-main repetition, and remote tag verification have not run.
+
 ## Claim boundary
 
 The page presents verified technical-case-study evidence. It does not create or
