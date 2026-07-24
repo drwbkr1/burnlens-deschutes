@@ -29,6 +29,12 @@ clean, and no external URL loads.
 
 The owner opened the exact production page and confirmed it renders correctly.
 
+The first complete release suite exposed 28 stale package-version assertions.
+They all expected 0.47.0 after the intended 0.48.0 bump. No scientific,
+custody, pipeline, or rendered-output assertion failed. The bounded correction
+updates only current-version expectations and keeps historical report versions
+unchanged.
+
 This is a technical case-study interface, not a dataset, model, official
 wildfire product, field validation, operational tool, or emergency resource.
 Release verification remains the final checkpoint gate.

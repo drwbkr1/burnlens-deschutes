@@ -49,6 +49,14 @@ The first favicon-focused test then failed because the test validator treated
 the inline `data:` favicon as a filesystem target. The corrected validator
 accepts only that explicit inline asset and keeps all reviewer links local.
 
+The first complete release-candidate suite then retained 553 passes, one
+expected skip, 22 warnings, 86 subtests, and 28 failures. Every failure was the
+same current-package contract: a historical test still expected BurnLens
+0.47.0 after the intended 0.48.0 bump. No scientific, custody, rendered-output,
+or pipeline assertion failed. The bounded correction updates only those
+current-version assertions; the Windigo report's historical 0.47.0 identity
+remains unchanged. The 28 affected files then pass 183 tests and four subtests.
+
 ## Claim boundary
 
 The page presents verified technical-case-study evidence. It does not create or

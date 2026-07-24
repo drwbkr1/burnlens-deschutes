@@ -11,7 +11,7 @@
 | `T36-U03` | Build one deterministic portfolio manifest and landing surface | five exact bound inputs; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9` | `pass` | first focused test expected the not-yet-generated self manifest to exist; first production render exposed one missing-favicon request; first favicon-focused run exposed a test-only inline-data-link assumption | U04 |
 | `T36-U04` | Align quickstart, case study, and repository handoff | exact U03 output | `pass` | none | U05 |
 | `T36-U05` | Real render, accessibility, privacy, link, and reproducibility QA | exact U03/U04 output; owner render confirmation | `pass` | first render retained as failed because its missing favicon made the console non-clean | U06 |
-| `T36-U06` | Release verification and August 6 submission handoff | complete unit ledger | `in_progress` | none | milestone exit |
+| `T36-U06` | Release verification and August 6 submission handoff | complete unit ledger | `in_progress` | first full suite retained 553 passes / one skip / 28 stale current-version failures; bounded assertion correction passes 183 tests / four subtests | milestone exit |
 
 The U03 source implementation adds one standard-library generator, one CLI,
 focused tests, a quickstart, explicit LF output rules, BurnLens 0.48.0, and the
