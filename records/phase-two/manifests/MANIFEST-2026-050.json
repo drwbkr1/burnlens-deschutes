@@ -1,0 +1,99 @@
+{
+  "manifest_id": "MANIFEST-2026-050",
+  "manifest_version": "0.50.0",
+  "manifest_role": "portfolio-reviewer-experience-candidate",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-24T03:10:00Z",
+  "milestone": "P2O4-T36",
+  "task_issue": 540,
+  "pull_request": null,
+  "branch": "codex/p2o4-t36-portfolio-reviewer-experience",
+  "git_base_commit": "3dc057a210da024d4bba4e1db41e8b5c891663aa",
+  "source_commit": "7ffb8ce74350c34f60c36765e194a2aab29dbcd9",
+  "release_candidate_commit": "f9acd72798bff588edd84aa7d4f03f9a3e90219d",
+  "checkpoint_commit": null,
+  "version_tag": null,
+  "software_version": "0.48.0",
+  "run_id": "BL-2026-07-24-portfolio-reviewer-experience-r002",
+  "decision": "PRESENT_VERIFIED_TECHNICAL_CASE_STUDY_KEEP_DATASET_MODEL_CLOSED",
+  "disposition": "candidate",
+  "execution_status": "release_verification_pending",
+  "release_state": "not_shipped",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "outputs": [
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.json",
+      "bytes": 5675,
+      "sha256": "cfab6176a9e5f1e9c4636e56658cf1ded9092825c3f55c7ebfb9968b2a68a078"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html",
+      "bytes": 14602,
+      "sha256": "e133a22978d73335c8a67fa39ae5ff48279b67ac6f71c615d95f62c021fda3ae"
+    }
+  ],
+  "render_verification": {
+    "desktop": "pass: 1440 x 1000; no overflow; both exact images load",
+    "narrow": "pass: 390 x 844; no overflow; readable responsive layout",
+    "keyboard": "pass: skip link and reviewer path precede deeper evidence",
+    "links": "pass: all nine local destinations return HTTP 200",
+    "console": "pass: no errors or warnings",
+    "privacy": "pass: no external URL requests",
+    "owner_response": "It renders correctly"
+  },
+  "reproducibility": {
+    "independent_replay": "pass: ignored replay-r002 matches both outputs byte for byte",
+    "failed_attempts_retained": [
+      {
+        "run": "render-failed-r001",
+        "reason": "browser console exposed a missing favicon request"
+      },
+      {
+        "run": "focused-favicon-r001",
+        "reason": "test validator incorrectly treated an inline data URL as a filesystem target"
+      }
+    ]
+  },
+  "quality_gates": {
+    "exact_bound_inputs": "pass",
+    "claim_boundaries": "pass",
+    "local_offline_contract": "pass",
+    "deterministic_reconstruction": "pass",
+    "real_render": "pass",
+    "accessibility": "pass for tested structure, keyboard order, and responsive views",
+    "privacy": "pass",
+    "full_tests": "pass: 581 passed, 1 expected skip, 22 warnings, 86 subtests",
+    "dependency_and_lock": "pass: 66 locked distributions; uv.lock 207817 bytes / sha256 5e757a0b2ae668091471bcc22905f98486e8d73c71c50790248e6582daef04d6",
+    "package_and_install": "pass: deterministic wheel, isolated install, 87 command probes",
+    "release_verification": "pre-merge gates pass; PR, merge, fresh-main repetition, and tag pending"
+  },
+  "release_package": {
+    "package_sensitive_head": "f9acd72798bff588edd84aa7d4f03f9a3e90219d",
+    "source_date_epoch": 1784862338,
+    "filename": "burnlens_deschutes-0.48.0-py3-none-any.whl",
+    "bytes": 881588,
+    "sha256": "4966fd403f6207a4afd63c1fa68658091467e6744dfc332313ca72b2e9811c9b",
+    "fresh_git_archive_builds": 2,
+    "wheel_entries": 185,
+    "unique_entries": true,
+    "forbidden_entries": 0,
+    "burnlens_console_commands": 87,
+    "installed_distributions": 13,
+    "dependency_check": "pass",
+    "installed_version": "0.48.0",
+    "installed_source": "ignored isolated site-packages",
+    "installed_help_probes": "87 of 87 pass"
+  },
+  "release_audit": {
+    "path": "records/phase-two/release-audits/RELEASE-AUDIT-2026-002.json",
+    "computed_status": "blocked only on required PR, merge, fresh-main, and tag check"
+  },
+  "deployment_or_public_sharing_authorized": false
+}

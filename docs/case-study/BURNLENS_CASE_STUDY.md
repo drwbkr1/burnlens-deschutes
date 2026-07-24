@@ -438,6 +438,29 @@ BurnLens then preserves one exact MTBS request/delivery/native-contract chain, i
 
 The decision is `defer`, not silent success or permanent exclusion. R003 is terminal, no r004 is authorized, and partial files cannot satisfy wetland, temporal, grid-coverage, or source-precedence fitness. Production background, proposal, owner-review, response, and label units do not run. Petes Lake does not become event six. Verified BurnLens 0.45.0 packages the custody, source-fitness, batch-review, pre-reveal lock, constrained localhost, and locked geospatial-environment capabilities proven along the way. PR #529 and merge `d65c24f...` correct the package contract, and annotated tag object `0b4664...` peels exactly to the fresh-main-verified checkpoint while the accepted label set remains at five events. This is the portfolio point: reliability includes knowing when evidence is insufficient and making that stop reproducible.
 
+## A reviewer path through the evidence
+
+BurnLens originally made reviewers assemble the story across many correct but
+separate artifacts. The verified Windigo result had no link to the method,
+retained failures, reproduction steps, lineage, or this case study.
+
+[The portfolio reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html)
+turns those existing artifacts into one deterministic local path. It starts
+with Windigo as the strongest verified result. It then shows the Petes Lake
+stop, explains source roles, lists unproven claims, and exposes exact lineage.
+
+The page makes null evidence visible. Dataset, split, baseline, and model are
+not hidden behind future-work language. They appear as explicit null values.
+
+The production JSON and HTML replay byte for byte. Desktop and narrow views
+pass without overflow. Both tracked images load. All nine local destinations
+resolve. Keyboard order starts with the reviewer path. The browser console is
+clean, and no external URL loads. The owner confirmed the exact page renders
+correctly.
+
+This improves portfolio clarity only. It does not change source evidence,
+owner decisions, labels, scientific state, or use boundaries.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -453,6 +476,7 @@ The decision is `defer`, not silent success or permanent exclusion. R003 is term
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
+- Latest portfolio reviewer run: `BL-2026-07-24-portfolio-reviewer-experience-r002`; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; BurnLens 0.48.0 candidate; exact JSON/HTML replay and real render pass; release verification pending
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`

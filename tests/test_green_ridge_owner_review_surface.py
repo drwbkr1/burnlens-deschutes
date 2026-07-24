@@ -38,7 +38,7 @@ class GreenRidgeOwnerReviewSurfaceTests(unittest.TestCase):
         )
 
     def test_exact_proposals_are_bound_without_promotion(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.47.0")
+        self.assertEqual(burnlens.__version__, "0.48.0")
         self.assertEqual(self.report["report_id"], SURFACE_ID)
         self.assertEqual(self.report["summary"], {"candidate_count": 2, "owner_responses": 0, "labels_created": 0, "dataset_count": 0, "model_count": 0})
         self.assertEqual([item["candidate_id"] for item in self.report["candidates"]], ["GRP-001", "GRP-002"])

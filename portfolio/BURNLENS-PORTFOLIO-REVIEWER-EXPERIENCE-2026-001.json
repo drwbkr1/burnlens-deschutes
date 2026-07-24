@@ -1,0 +1,134 @@
+{
+  "report_id": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001",
+  "report_version": "portfolio-reviewer-experience-v0.1.0",
+  "generated_at_utc": "2026-07-24T03:10:00Z",
+  "run_id": "BL-2026-07-24-portfolio-reviewer-experience-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 540,
+  "git_source_commit": "7ffb8ce74350c34f60c36765e194a2aab29dbcd9",
+  "software_version": "0.48.0",
+  "audience": "technical and technical-adjacent portfolio reviewers",
+  "promise": "Show how versioned wildfire imagery can move through a bounded computer-vision-to-GEOINT evidence workflow without hiding uncertainty.",
+  "target_version": "target-burn-scar-v0.2.0",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "review_path": [
+    {
+      "step": 1,
+      "label": "See the strongest verified result",
+      "target": "#result",
+      "time": "45 seconds"
+    },
+    {
+      "step": 2,
+      "label": "Inspect a retained stop decision",
+      "target": "#failure",
+      "time": "45 seconds"
+    },
+    {
+      "step": 3,
+      "label": "Verify lineage and limitations",
+      "target": "#trace",
+      "time": "30 seconds"
+    }
+  ],
+  "metrics": {
+    "event_groups": 6,
+    "prototype_regions": 12,
+    "prototype_regions_by_class": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 286,
+    "accepted_core_area_ha": 11.44,
+    "excluded_unknown_ring_pixels": 533
+  },
+  "accepted_events": [
+    "Darlene",
+    "McKay",
+    "Tepee",
+    "Green Ridge",
+    "Grandview",
+    "Windigo"
+  ],
+  "strongest_result": {
+    "title": "Windigo completes the sixth prototype event",
+    "decision": "ACCEPT_WINDIGO_AS_SIXTH_OWNER_APPROVED_PROTOTYPE_EVENT_KEEP_DATASET_SPLIT_BASELINE_MODEL_CLOSED",
+    "run_id": "BL-2026-07-24-windigo-owner-response-intake-r003",
+    "git_source_commit": "68fd2171e52844f717ef0d6a1b108121cd93bee1",
+    "software_version": "0.47.0",
+    "detail_path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
+    "preview_path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png"
+  },
+  "retained_failure": {
+    "title": "Petes Lake stops before candidate generation",
+    "decision": "DEFER_PETES_LAKE_DO_NOT_PROMOTE_SIXTH_EVENT",
+    "run_id": "BL-2026-07-22-petes-lake-milestone-closeout-r001",
+    "terminal_run_id": "BL-2026-07-22-petes-lake-nwi-context-r003",
+    "git_checkpoint": "52310531ad0b8e6d07800fc752f7bf65b5fdea9a",
+    "software_version": "0.45.0",
+    "detail_path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+    "preview_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png"
+  },
+  "source_roles": [
+    "Sentinel-2 supplies optical evidence under recorded Copernicus attribution.",
+    "BAER supplies field-informed preliminary prototype-positive evidence with program cautions.",
+    "MTBS corroborates burned evidence under program-specific limits.",
+    "RAVG modeled effects remain context and conservative exclusion only.",
+    "No source product is treated as affirmative background truth without a separate route."
+  ],
+  "limitations": [
+    "Owner-approved prototype regions are not independent ground truth.",
+    "Six events satisfy only the frozen count minimum.",
+    "The separate sufficiency evaluator has not passed.",
+    "No dataset, split, baseline, model, accuracy, or inference output exists.",
+    "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready."
+  ],
+  "bound_inputs": [
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
+      "bytes": 6787,
+      "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7",
+      "role": "verified aggregate result and trace source"
+    },
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3582,
+      "sha256": "6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52",
+      "role": "verified detailed result"
+    },
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 79681,
+      "sha256": "0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05",
+      "role": "verified result preview"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+      "bytes": 626846,
+      "sha256": "4ed3870e37bf68db24805540f00614c5050c064b621ca3fc5e3c0ef244bf0d42",
+      "role": "retained snow-dominated failure preview"
+    },
+    {
+      "path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+      "bytes": 6050,
+      "sha256": "6e0cb457261cc0ef48b86b15e8b21a83ec21c4b880990d83b0c79834a26c31e7",
+      "role": "verified material-defer decision"
+    }
+  ],
+  "warning": "Experimental owner-approved prototype evidence. Not ground truth, official wildfire information, emergency guidance, field validation, a dataset, or a model. Official sources govern.",
+  "decision": "PRESENT_VERIFIED_TECHNICAL_CASE_STUDY_KEEP_DATASET_MODEL_CLOSED",
+  "outputs": [
+    {
+      "path": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html",
+      "bytes": 14602,
+      "sha256": "e133a22978d73335c8a67fa39ae5ff48279b67ac6f71c615d95f62c021fda3ae",
+      "media_type": "text/html"
+    }
+  ]
+}

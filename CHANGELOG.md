@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## Unreleased - P2O4-T36 portfolio reviewer experience
+
+- Add one deterministic, JavaScript-free, local/offline reviewer landing page.
+- Route reviewers through the verified Windigo result, retained Petes Lake stop, source roles, limitations, lineage, quickstart, and case study.
+- Make dataset, split, baseline, and model null values explicit.
+- Add a standard-library generator, one CLI, focused tests, and BurnLens 0.48.0.
+- Pass byte-identical production/replay, desktop and 390-pixel rendering, keyboard-order, image, nine-link, clean-console, and zero-external-request checks.
+- Retain the first missing-favicon render and first inline-data-link test assumption as failed evidence.
+- Record the owner's confirmation that the exact final page renders correctly.
+
+Issue #540; source commit `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; run `BL-2026-07-24-portfolio-reviewer-experience-r002`. Release verification, PR, merge, tag, and August 6 submission packaging remain pending. No dataset, split, baseline, model, deployment, GitHub Release, access, or public-sharing state changes.
+
 ## v0.47.0-windigo-sixth-prototype-event - verified - 2026-07-24
 
 - Record August 6, 2026 as the controlling portfolio-submission deadline.
