@@ -1,0 +1,30 @@
+{
+  "response_schema_version": "burnlens-owner-review-batch-response-v0.1.0",
+  "surface_id": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-23-windigo-owner-review-surface-r002",
+  "surface_revision": 1,
+  "milestone_id": "P2O4-T35",
+  "ordered_manifest_sha256": "58efe73c109f4f9197952bfb9a11103223e3d34f9cd006b686fc124fa2ce1728",
+  "completed": false,
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "owner": {
+    "attestation": false
+  },
+  "responses": [
+    {
+      "candidate_id": "WDP-001",
+      "event_group_id": "windigo-2022-OR4336312205020220730",
+      "candidate_binding_sha256": "31cd729bfa466f50145af60de680aa7fc42aadf6cb33d3ce523d6a6fbbd0296d",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "WDP-002",
+      "event_group_id": "windigo-2022-OR4336312205020220730",
+      "candidate_binding_sha256": "ec56acd1c1812f4ec8b3eda872adf86205e5fe87626c185203f6360872881ec2",
+      "decision": null,
+      "notes": ""
+    }
+  ]
+}

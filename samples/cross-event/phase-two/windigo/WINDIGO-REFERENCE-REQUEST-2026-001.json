@@ -1,0 +1,97 @@
+{
+  "report_id": "WINDIGO-REFERENCE-REQUEST-2026-001",
+  "report_schema_version": "0.1.0",
+  "unit_id": "P2O4-T35-U02",
+  "run_id": "BL-2026-07-23-windigo-reference-request-r001",
+  "requested_at_utc": "2026-07-23T20:00:57.1155704Z",
+  "event_id": "OR4336312205020220730",
+  "trace": {
+    "repository": "drwbkr1/burnlens-deschutes",
+    "branch": "codex/p2o4-t35-windigo-deadline-gate",
+    "request_source_commit": "3bd0062abfb90ec6b0bbb542c2c2413e69ceab56",
+    "reconciliation_source_commit": "cf94517d031b7c6579a7cbcb9a9f149ec15c36dd",
+    "issue": 534,
+    "optical_report": {
+      "path": "samples/cross-event/phase-two/windigo/WINDIGO-OPTICAL-CUSTODY-2026-002.json",
+      "bytes": 6579,
+      "sha256": "b05d3e71052331e094957717da798117776965b728e717bfe525b8b5196dc755",
+      "decision": "PASS_WINDIGO_OPTICAL_CUSTODY_AUTHORIZE_REFERENCE_REQUEST_PREFLIGHT"
+    }
+  },
+  "request": {
+    "state": "ACCEPTED",
+    "projection": "UTM",
+    "mapping_ids": [
+      10022395,
+      10022960,
+      10029547
+    ],
+    "mapping_products": [
+      "Metadata",
+      "Pre-fire reflectance",
+      "Post-fire reflectance",
+      "Continuous severity (i.e dnbr)",
+      "Relative continuous severity (i.e rdnbr)",
+      "Burned area boundary",
+      "Non-processing mask",
+      "KMZ",
+      "PDF",
+      "6 - Class thematic severity",
+      "Soil burn severity",
+      "Continuous basal area loss",
+      "4 - Class basal area loss",
+      "7 - Class basal area loss",
+      "Continuous canopy cover loss",
+      "5 - Class canopy cover loss",
+      "Continuous composite burn index",
+      "4 - Class composite burn index"
+    ],
+    "mapping_product_count": 18,
+    "canonical_payload_sha256": "9db51f8d1a4da6c10062f4b47490391b7c48b1cf53f74638af7bcf58f24ac5af",
+    "recipient": "WITHHELD_PRIVATE"
+  },
+  "private_custody_bindings": {
+    "metadata-response.json": {
+      "bytes": 998,
+      "sha256": "8be45eeecb4759d725c737811430691570806aa07aef423d66362d4245ca1529"
+    },
+    "queue-attempt-started.json": {
+      "bytes": 537,
+      "sha256": "643a6c7d244b55b5d8ef09d295b86e3814c44b5b68809d9884b9d45b90fa08fc"
+    },
+    "queue-response.json": {
+      "bytes": 16,
+      "sha256": "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+    },
+    "request-prepared.json": {
+      "bytes": 3838,
+      "sha256": "bb55bb5f36f5d76bbbb87752268274987bb2b96f6c749ae40f808d0e00f2879c"
+    },
+    "request-receipt.json": {
+      "bytes": 4046,
+      "sha256": "78bec99f6484b33591503d23f2db6dc141752f37f89741e7ff760c5658988d37"
+    }
+  },
+  "queue": {
+    "accepted": true,
+    "response_bytes": 16,
+    "response_sha256": "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+  },
+  "delivery": {
+    "state": "PENDING_EMAIL_DELIVERY",
+    "archives_received": 0,
+    "provider_bytes_received": 0
+  },
+  "gate_results": {
+    "exact_current_three_row_metadata": "pass",
+    "exact_three_mapping_ids": "pass",
+    "exact_eighteen_product_families": "pass",
+    "single_queue_attempt": "pass",
+    "explicit_queue_acceptance": "pass",
+    "recipient_withheld_and_not_retained": "pass",
+    "reference_notice_and_pixel_fitness": "not executed",
+    "candidate_label_dataset_split_baseline_model": "not created"
+  },
+  "decision": "ACCEPT_REQUEST_RECEIPT_PENDING_EXACT_DELIVERY",
+  "warning": "Request acceptance is not source fitness, label truth, official status, field validation, operational readiness, or emergency guidance."
+}

@@ -1,0 +1,898 @@
+{
+  "contract_version": "1.0",
+  "intake_id": "bl-2026-07-23-windigo-entry-metadata-r001",
+  "created_at": "2026-07-23T17:20:03.2609826Z",
+  "collision_policy": "fail",
+  "promotion_mode": "atomic-no-replace",
+  "secret_policy": "references-only",
+  "custody_root": "downloads/phase-two/raw/BL-2026-07-23-windigo-entry-metadata-r001",
+  "staging_root": "downloads/phase-two/staging/BL-2026-07-23-windigo-entry-metadata-r001",
+  "assets": [
+    {
+      "asset_id": "windigo-mtbs-occurrence",
+      "source": {
+        "kind": "https",
+        "uri": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/62/query?where=fire_id%3D%27OR4336312205020220730%27&outFields=fire_id,fire_name,year,ig_date,acres,latitude,longitude,map_id,map_prog,pre_id,post_id&returnGeometry=true&outSR=4326&f=json",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_FIRE_OCCURRENCE_PT.xml",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-mtbs-occurrence.json",
+      "staging_relative_path": "windigo-mtbs-occurrence/windigo-mtbs-occurrence.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": null,
+        "staged_size_bytes": null,
+        "promoted_sha256": null,
+        "promoted_size_bytes": null
+      },
+      "state": "failed",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:05.8369824Z",
+          "outcome": "failed"
+        }
+      ],
+      "failure": {
+        "code": "HTTP_400_QUERY_FIELD_MISMATCH",
+        "http_status": 400,
+        "response_bytes": 72,
+        "response_sha256": "b7328cec6dd4d8a470d2d71623d77830ee4e4992ed2a0a9345a405c2202f7c67",
+        "detail": "The requested occurrence field roster included unsupported field year; exact error bytes are retained."
+      },
+      "superseded_by": "windigo-mtbs-occurrence-r002"
+    },
+    {
+      "asset_id": "windigo-mtbs-boundary",
+      "source": {
+        "kind": "https",
+        "uri": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/63/query?where=fire_id%3D%27OR4336312205020220730%27&outFields=fire_id,fire_name,year,fire_type,acres,asmnt_type,ig_date,map_id,map_prog,pre_id,post_id,comments&returnGeometry=true&outSR=4326&f=json",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-mtbs-boundary.json",
+      "staging_relative_path": "windigo-mtbs-boundary/windigo-mtbs-boundary.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "81e46f954bfae598a9b32447f815a02dc545e73b3ae6c28fa5904cebe7a9cec2",
+        "staged_size_bytes": 104585,
+        "promoted_sha256": "81e46f954bfae598a9b32447f815a02dc545e73b3ae6c28fa5904cebe7a9cec2",
+        "promoted_size_bytes": 104585
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:07.3140385Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-portal-catalog",
+      "source": {
+        "kind": "https",
+        "uri": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id,map_id,map_prog,incid_name,event_id,ig_date,burnbndac,nonstandard,comments&cql_filter=event_id%3D%27OR4336312205020220730%27",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://burnseverity.cr.usgs.gov/compare-products",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-portal-catalog.json",
+      "staging_relative_path": "windigo-portal-catalog/windigo-portal-catalog.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": null,
+        "staged_size_bytes": null,
+        "promoted_sha256": null,
+        "promoted_size_bytes": null
+      },
+      "state": "failed",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "failed"
+        }
+      ],
+      "failure": {
+        "code": "HTTP_400_QUERY_FIELD_MISMATCH",
+        "http_status": 400,
+        "response_bytes": 855,
+        "response_sha256": "2cf4ec1a1b7cc51ac90a9f18c33d39ea1eb50d21076227b8f25820f778e0e599",
+        "detail": "The requested Portal property roster used comments instead of the live WFS field comment; exact exception bytes are retained."
+      },
+      "superseded_by": "windigo-portal-catalog-r002"
+    },
+    {
+      "asset_id": "mtbs-boundary-terms",
+      "source": {
+        "kind": "https",
+        "uri": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/mtbs-boundary.xml",
+      "staging_relative_path": "mtbs-boundary-terms/mtbs-boundary.xml.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official metadata document is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "e56b96c0366a4da515f18664c1fcfad838616f5ba67c68c92f7a492d3ac412c1",
+        "staged_size_bytes": 23634,
+        "promoted_sha256": "e56b96c0366a4da515f18664c1fcfad838616f5ba67c68c92f7a492d3ac412c1",
+        "promoted_size_bytes": 23634
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:01.3065398Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "mtbs-occurrence-terms",
+      "source": {
+        "kind": "https",
+        "uri": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_FIRE_OCCURRENCE_PT.xml",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/mtbs-occurrence.xml",
+      "staging_relative_path": "mtbs-occurrence-terms/mtbs-occurrence.xml.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official metadata document is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "807638cf7b91d9847e0a87d178d7c77a4e59b35808c9930df4d683eff14e8b88",
+        "staged_size_bytes": 21884,
+        "promoted_sha256": "807638cf7b91d9847e0a87d178d7c77a4e59b35808c9930df4d683eff14e8b88",
+        "promoted_size_bytes": 21884
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:01.7187168Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-baer",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/products/baer",
+        "authorization_ref": "public official guidance; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-baer.html",
+      "staging_relative_path": "portal-baer/portal-baer.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official guidance page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "7f89d5d76fbe368ac2276663f859b3d4aa0f080e21c56d59e5542905835f43ad",
+        "staged_size_bytes": 42891,
+        "promoted_sha256": "7f89d5d76fbe368ac2276663f859b3d4aa0f080e21c56d59e5542905835f43ad",
+        "promoted_size_bytes": 42891
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:04.5680035Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-mtbs",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/products/mtbs",
+        "authorization_ref": "public official guidance; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-mtbs.html",
+      "staging_relative_path": "portal-mtbs/portal-mtbs.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official guidance page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "4cc312026067342bc6a1d8137a1eb0c2fd272e40f65169f5c31f43dd38c1778d",
+        "staged_size_bytes": 42204,
+        "promoted_sha256": "4cc312026067342bc6a1d8137a1eb0c2fd272e40f65169f5c31f43dd38c1778d",
+        "promoted_size_bytes": 42204
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:05.2848092Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-ravg",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/products/ravg",
+        "authorization_ref": "public official guidance; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-ravg.html",
+      "staging_relative_path": "portal-ravg/portal-ravg.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official guidance page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "05ba920f3711ca024ecae6566ebe0c99e991c2119833d64bce80ee81a1a9e705",
+        "staged_size_bytes": 41305,
+        "promoted_sha256": "05ba920f3711ca024ecae6566ebe0c99e991c2119833d64bce80ee81a1a9e705",
+        "promoted_size_bytes": 41305
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:05.9954358Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-comparison",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/compare-products",
+        "authorization_ref": "public official guidance; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-comparison.html",
+      "staging_relative_path": "portal-comparison/portal-comparison.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official guidance page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "efb777c0832851ad82fa7dda0e47c5047d98b0353218a79f67a483bdcb7c0b96",
+        "staged_size_bytes": 39024,
+        "promoted_sha256": "efb777c0832851ad82fa7dda0e47c5047d98b0353218a79f67a483bdcb7c0b96",
+        "promoted_size_bytes": 39024
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:06.6921759Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "cdse-terms",
+      "source": {
+        "kind": "https",
+        "uri": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "authorization_ref": "public official terms; issue #534 P2O4-T35-U01",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/cdse-terms.html",
+      "staging_relative_path": "cdse-terms/cdse-terms.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official terms page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": null,
+        "staged_size_bytes": null,
+        "promoted_sha256": null,
+        "promoted_size_bytes": null
+      },
+      "state": "failed",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:07.2969310Z",
+          "outcome": "failed"
+        }
+      ],
+      "failure": {
+        "code": "TLS_RECV_RESET",
+        "curl_exit": 35,
+        "response_bytes": 0,
+        "response_sha256": null,
+        "detail": "The TLS connection reset before any response status or body byte was received."
+      },
+      "superseded_by": "cdse-terms-r002"
+    },
+    {
+      "asset_id": "sentinel-legal-notice",
+      "source": {
+        "kind": "https",
+        "uri": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+        "authorization_ref": "public official legal notice; issue #534 P2O4-T35-U01",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/sentinel-data-legal-notice.pdf",
+      "staging_relative_path": "sentinel-legal-notice/sentinel-data-legal-notice.pdf.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official legal-notice route publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "fa2955ff48a1d82e77fc7296d63681670ecdb9d2811a0505ae60d0683b62fa64",
+        "staged_size_bytes": 115881,
+        "promoted_sha256": "fa2955ff48a1d82e77fc7296d63681670ecdb9d2811a0505ae60d0683b62fa64",
+        "promoted_size_bytes": 115881
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:07.2969310Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a003",
+          "started_at": "2026-07-23T17:31:01.5377826Z",
+          "completed_at": "2026-07-23T17:31:53.7780271Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "cdse-sentinel-2-l2a-collection",
+      "source": {
+        "kind": "https",
+        "uri": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/cdse-sentinel-2-l2a-collection.json",
+      "staging_relative_path": "cdse-sentinel-2-l2a-collection/cdse-sentinel-2-l2a-collection.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official collection metadata is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "ed49673e2b8a21e7af93bf8af167e67cce89ec750a299eb85d39fdcbe0c0685a",
+        "staged_size_bytes": 25596,
+        "promoted_sha256": "ed49673e2b8a21e7af93bf8af167e67cce89ec750a299eb85d39fdcbe0c0685a",
+        "promoted_size_bytes": 25596
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:22:59.1303675Z",
+          "completed_at": "2026-07-23T17:24:08.0951121Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:07.2969310Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a003",
+          "started_at": "2026-07-23T17:31:01.5377826Z",
+          "completed_at": "2026-07-23T17:31:52.0842296Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-mtbs-occurrence-r002",
+      "source": {
+        "kind": "https",
+        "uri": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/62/query?where=fire_id%3D%27OR4336312205020220730%27&outFields=fire_id,fire_name,ig_date,latitude,longitude,acres,irwinid,map_id,map_prog,perim_id,pre_id,post_id,comments&returnGeometry=false&f=json",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; corrected after retained a001 field-roster failure",
+        "terms_ref": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_FIRE_OCCURRENCE_PT.xml",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-mtbs-occurrence-r002.json",
+      "staging_relative_path": "windigo-mtbs-occurrence-r002/windigo-mtbs-occurrence-r002.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "d57732f119972e3576843221aaa2f9151bbd5105d8f34fb0e28679ff3955b643",
+        "staged_size_bytes": 1660,
+        "promoted_sha256": "d57732f119972e3576843221aaa2f9151bbd5105d8f34fb0e28679ff3955b643",
+        "promoted_size_bytes": 1660
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:07.2969310Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:31:01.5377826Z",
+          "completed_at": "2026-07-23T17:31:49.7756771Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-portal-catalog-r002",
+      "source": {
+        "kind": "https",
+        "uri": "https://edcintl.cr.usgs.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=mtbs%3Afire_polygons&outputFormat=application%2Fjson&propertyName=id,map_id,map_prog,incid_name,event_id,ig_date,burnbndac,nonstandard,comment&cql_filter=event_id%3D%27OR4336312205020220730%27",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; corrected after retained a001 property-roster failure",
+        "terms_ref": "https://burnseverity.cr.usgs.gov/compare-products",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-portal-catalog-r002.json",
+      "staging_relative_path": "windigo-portal-catalog-r002/windigo-portal-catalog-r002.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "db52b7651ef15f4ed2ec1139fb72b291a1ee38da54ef6d58437f8cedc85f5e35",
+        "staged_size_bytes": 995,
+        "promoted_sha256": "db52b7651ef15f4ed2ec1139fb72b291a1ee38da54ef6d58437f8cedc85f5e35",
+        "promoted_size_bytes": 995
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:25:33.0926787Z",
+          "completed_at": "2026-07-23T17:27:07.2969310Z",
+          "outcome": "abandoned"
+        },
+        {
+          "attempt_id": "a002",
+          "started_at": "2026-07-23T17:31:01.5377826Z",
+          "completed_at": "2026-07-23T17:31:50.5143260Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "cdse-terms-r002",
+      "source": {
+        "kind": "https",
+        "uri": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "authorization_ref": "public official terms; issue #534 P2O4-T35-U01; one bounded replacement after retained TLS reset",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/cdse-terms-r002.html",
+      "staging_relative_path": "cdse-terms-r002/cdse-terms-r002.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official terms page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "38523859043f336122e03879177e21d2f9089eea09f839474f7d09ac6c0791fd",
+        "staged_size_bytes": 77862,
+        "promoted_sha256": "38523859043f336122e03879177e21d2f9089eea09f839474f7d09ac6c0791fd",
+        "promoted_size_bytes": 77862
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:31:01.5377826Z",
+          "completed_at": "2026-07-23T17:31:54.6873141Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-mtbs-boundary-geojson",
+      "source": {
+        "kind": "https",
+        "uri": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer/63/query?where=fire_id%3D%27OR4336312205020220730%27&outFields=fire_id,fire_name,year,fire_type,acres,asmnt_type,ig_date,map_id,map_prog,pre_id,post_id,comments&returnGeometry=true&outSR=4326&f=geojson",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; provider topology representation after retained raw-ring invalidity",
+        "terms_ref": "https://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.MTBS_BURN_AREA_BOUNDARY.xml",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-mtbs-boundary.geojson",
+      "staging_relative_path": "windigo-mtbs-boundary-geojson/windigo-mtbs-boundary.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The dynamic official service publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "32d316ff1f7afa84a250762b38ab241f443c6b99f4c608b47888d17b3d498271",
+        "staged_size_bytes": 103366,
+        "promoted_sha256": "32d316ff1f7afa84a250762b38ab241f443c6b99f4c608b47888d17b3d498271",
+        "promoted_size_bytes": 103366
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:36:01.5850287Z",
+          "completed_at": "2026-07-23T17:37:38.5076805Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-sentinel-stac-broad-search",
+      "source": {
+        "kind": "https",
+        "uri": "https://stac.dataspace.copernicus.eu/v1/search?collections=sentinel-2-l2a&bbox=-122.06771697210053,43.34328239111523,-122.02903496501271,43.37066539276764&datetime=2022-05-01T00%3A00%3A00Z%2F2022-11-30T23%3A59%3A59Z&limit=100",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; exact valid Windigo boundary bbox and bounded 2022 optical window",
+        "terms_ref": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-sentinel-stac-broad-search.json",
+      "staging_relative_path": "windigo-sentinel-stac-broad-search/windigo-sentinel-stac-broad-search.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official search response is dynamic and publishes no immutable digest or size."
+      },
+      "observed": {
+        "staged_sha256": "16901347f2667d0d3d43e16ebda7fabd36fbd4a3a6ba8890b51f815dc10ba1d4",
+        "staged_size_bytes": 5490973,
+        "promoted_sha256": "16901347f2667d0d3d43e16ebda7fabd36fbd4a3a6ba8890b51f815dc10ba1d4",
+        "promoted_size_bytes": 5490973
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:39:02.9324950Z",
+          "completed_at": "2026-07-23T17:40:37.1915909Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-sentinel-pre-odata",
+      "source": {
+        "kind": "https",
+        "uri": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(f1111cd2-acb1-4324-9b48-854e2e71a384)?%24select=Id,Name,ContentLength,Online,PublicationDate,ModificationDate,Checksum,ContentDate,Attributes,S3Path",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; selected pre-fire STAC product",
+        "terms_ref": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-sentinel-pre-odata.json",
+      "staging_relative_path": "windigo-sentinel-pre-odata/windigo-sentinel-pre-odata.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official product metadata response is dynamic and publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "c6c2fd2379632cf2d1b97cf4cdf7b8e80858c093e736a87c2f0d335e346792c0",
+        "staged_size_bytes": 934,
+        "promoted_sha256": "c6c2fd2379632cf2d1b97cf4cdf7b8e80858c093e736a87c2f0d335e346792c0",
+        "promoted_size_bytes": 934
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:42:10.6872413Z",
+          "completed_at": "2026-07-23T17:42:59.7313378Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "windigo-sentinel-post-odata",
+      "source": {
+        "kind": "https",
+        "uri": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(10bb27c6-5df5-44f1-9a72-517c696cb5e1)?%24select=Id,Name,ContentLength,Online,PublicationDate,ModificationDate,Checksum,ContentDate,Attributes,S3Path",
+        "authorization_ref": "public official metadata; issue #534 P2O4-T35-U01; selected post-fire STAC product",
+        "terms_ref": "https://dataspace.copernicus.eu/terms-and-conditions",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "official/windigo-sentinel-post-odata.json",
+      "staging_relative_path": "windigo-sentinel-post-odata/windigo-sentinel-post-odata.json.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official product metadata response is dynamic and publishes no immutable response digest or size."
+      },
+      "observed": {
+        "staged_sha256": "92eaf8c18f3b4c751d8c46a8b13b0e7818b7786c3ae37b126f690e6f4e1ec16b",
+        "staged_size_bytes": 934,
+        "promoted_sha256": "92eaf8c18f3b4c751d8c46a8b13b0e7818b7786c3ae37b126f690e6f4e1ec16b",
+        "promoted_size_bytes": 934
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:42:10.6872413Z",
+          "completed_at": "2026-07-23T17:43:00.9912290Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "usgs-copyrights-and-credits",
+      "source": {
+        "kind": "https",
+        "uri": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "authorization_ref": "public official policy; issue #534 P2O4-T35-U01",
+        "terms_ref": "self",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "terms/usgs-copyrights-and-credits.html",
+      "staging_relative_path": "usgs-copyrights-and-credits/usgs-copyrights-and-credits.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official policy page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "971571fe620c38ab3722322d7421d7caae5794b045784b53ca4ca419184d8270",
+        "staged_size_bytes": 90170,
+        "promoted_sha256": "971571fe620c38ab3722322d7421d7caae5794b045784b53ca4ca419184d8270",
+        "promoted_size_bytes": 90170
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:45:06.2101645Z",
+          "completed_at": "2026-07-23T17:46:12.4813030Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-direct-download-guidance",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/direct-download",
+        "authorization_ref": "public official guidance; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-direct-download.html",
+      "staging_relative_path": "portal-direct-download-guidance/portal-direct-download.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official guidance page is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "e36a7cd1423473e73253c7cc35606cc0b8cb1cedfd5648acb5a1d97938f046b4",
+        "staged_size_bytes": 31612,
+        "promoted_sha256": "e36a7cd1423473e73253c7cc35606cc0b8cb1cedfd5648acb5a1d97938f046b4",
+        "promoted_size_bytes": 31612
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:45:06.2101645Z",
+          "completed_at": "2026-07-23T17:46:13.3601852Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-viewer-shell",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/viewer/",
+        "authorization_ref": "public official viewer shell; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-viewer.html",
+      "staging_relative_path": "portal-viewer-shell/portal-viewer.html.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official viewer shell is mutable and publishes no external digest."
+      },
+      "observed": {
+        "staged_sha256": "a6a1a1da17c30cd0e9aa293f1b877f256345fd0acaea140d7994d34fe5b9c486",
+        "staged_size_bytes": 1722,
+        "promoted_sha256": "a6a1a1da17c30cd0e9aa293f1b877f256345fd0acaea140d7994d34fe5b9c486",
+        "promoted_size_bytes": 1722
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:45:06.2101645Z",
+          "completed_at": "2026-07-23T17:46:14.1204527Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "portal-viewer-main-js",
+      "source": {
+        "kind": "https",
+        "uri": "https://burnseverity.cr.usgs.gov/viewer/main.4efe56ae6161debb9eff.js",
+        "authorization_ref": "public official viewer code referenced by exact captured shell; issue #534 P2O4-T35-U01",
+        "terms_ref": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "guidance/portal-viewer-main.js",
+      "staging_relative_path": "portal-viewer-main-js/portal-viewer-main.js.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The current official viewer bundle publishes no external digest or size."
+      },
+      "observed": {
+        "staged_sha256": "5f5b42beee51a7a7ac5c0b55531a0f4ea3ec8dd290c657abc420f93a71ec67bf",
+        "staged_size_bytes": 406661,
+        "promoted_sha256": "5f5b42beee51a7a7ac5c0b55531a0f4ea3ec8dd290c657abc420f93a71ec67bf",
+        "promoted_size_bytes": 406661
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "a001",
+          "started_at": "2026-07-23T17:47:31.5170363Z",
+          "completed_at": "2026-07-23T17:48:40.8712967Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    }
+  ],
+  "extensions": {
+    "checkpoint": "P2O4-T35-U01",
+    "issue": 534,
+    "event_id": "OR4336312205020220730",
+    "provider_archive_bytes_authorized": false,
+    "cutoff_local": "2026-07-27T18:00:00-04:00",
+    "purpose": "Exact public metadata and terms capture only; no authentication, queue request, product route, or provider archive."
+  }
+}

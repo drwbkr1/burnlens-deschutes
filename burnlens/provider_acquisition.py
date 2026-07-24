@@ -542,7 +542,11 @@ def stream_asset(
 
     delete_part_on_failure = False
     try:
-        with os.fdopen(descriptor, "r+b") as handle:
+        # Keep the exact partial length visible to a later process even when a
+        # long provider stream stalls or the current process is interrupted.
+        # Buffered writes can leave a large in-memory tail whose bytes vanish
+        # from the resumable on-disk evidence when the stream fails.
+        with os.fdopen(descriptor, "r+b", buffering=0) as handle:
             try:
                 response = opener.open(request, timeout=timeout_seconds)
             except AcquisitionError:

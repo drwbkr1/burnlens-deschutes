@@ -1,0 +1,112 @@
+{
+  "manifest_id": "MANIFEST-2026-049",
+  "manifest_version": "0.49.0",
+  "manifest_role": "windigo-sixth-prototype-event-milestone-closeout",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "created_at_utc": "2026-07-24T01:10:16.8257050Z",
+  "milestone": "P2O4-T35",
+  "task_issue": 534,
+  "pull_request": null,
+  "branch": "codex/p2o4-t35-windigo-deadline-gate",
+  "git_base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
+  "release_candidate_commit": "714273adfcf8f90ab16abe798eb086201577b0e9",
+  "closeout_records_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+  "checkpoint_commit": null,
+  "version_tag": "v0.47.0-windigo-sixth-prototype-event",
+  "version_tag_object": null,
+  "software_version": "0.47.0",
+  "run_id": "BL-2026-07-24-windigo-milestone-closeout-r001",
+  "decision": "ACCEPT_WINDIGO_AS_SIXTH_OWNER_APPROVED_PROTOTYPE_EVENT_KEEP_DATASET_SPLIT_BASELINE_MODEL_CLOSED",
+  "disposition": "pass",
+  "execution_status": "candidate",
+  "release_state": "candidate",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "measured_evidence": {
+    "accepted_event_groups": 6,
+    "accepted_burned_regions": 6,
+    "accepted_background_regions": 6,
+    "accepted_core_pixels": 286,
+    "accepted_core_area_ha": 11.44,
+    "excluded_unknown_ring_pixels": 533,
+    "windigo_added_core_pixels": 50,
+    "windigo_added_core_area_ha": 2.0,
+    "windigo_excluded_ring_pixels": 102,
+    "owner_yes": 2,
+    "owner_no": 0,
+    "owner_uncertain": 0
+  },
+  "outputs": [
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
+      "bytes": 6787,
+      "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7"
+    },
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3582,
+      "sha256": "6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52"
+    },
+    {
+      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 79681,
+      "sha256": "0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05"
+    }
+  ],
+  "render_verification": {
+    "png": "pass: original-resolution 1600 x 1100 inspection",
+    "desktop_html": "pass: owner confirmed the exact tracked HTML renders correctly",
+    "narrow_html": "pass: owner confirmed the exact tracked HTML renders correctly at the requested narrow view",
+    "owner_response": "It renders correctly",
+    "recorded_at_utc": "2026-07-24T01:10:16.8257050Z"
+  },
+  "quality_gates": {
+    "source_terms_custody_quality_uncertainty_leakage": "pass for both candidates together",
+    "response_lock_and_ambiguity": "pass: sole completed final locked before reveal",
+    "owner_decisions": "pass: two yes decisions; necessary but insufficient",
+    "non_owner_recomputation": "pass",
+    "deterministic_reconstruction": "pass",
+    "focused_tests": "pass: 5 environment and 6 exact intake",
+    "full_tests": "pass: 575 passed, 1 skipped, 22 warnings, 86 subtests",
+    "dependency_and_lock": "pass: 66 locked distributions; uv.lock 207817 LF bytes / sha256 f401b5021679aaf98febc93a7638ed892250c2e2e74c14e5264737922ad8823b",
+    "json_links_privacy_claims": "pass",
+    "render": "pass",
+    "package": "pass at 714273adfcf8f90ab16abe798eb086201577b0e9",
+    "pull_request": "pending",
+    "merged_main": "pending",
+    "tag": "pending"
+  },
+  "release_package": {
+    "package_sensitive_head": "714273adfcf8f90ab16abe798eb086201577b0e9",
+    "source_date_epoch": 1784854998,
+    "filename": "burnlens_deschutes-0.47.0-py3-none-any.whl",
+    "bytes": 872766,
+    "sha256": "1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
+    "fresh_git_archive_builds": 2,
+    "wheel_entries": 183,
+    "unique_entries": true,
+    "forbidden_entries": 0,
+    "burnlens_console_commands": 86,
+    "installed_distributions": 13,
+    "dependency_check": "pass",
+    "installed_version": "0.47.0",
+    "installed_source": "ignored isolated site-packages",
+    "installed_help_probes": "86 of 86 pass"
+  },
+  "release_audit": {
+    "path": "records/phase-two/release-audits/RELEASE-AUDIT-2026-001.json",
+    "computed_status": "blocked pending PR, merge, fresh-main, and tag only"
+  },
+  "next_checkpoint": {
+    "status": "portfolio assembly after verified milestone shipment",
+    "deadline": "2026-08-06",
+    "required_outcome": "one coherent repository-owned evidence interface, reviewer journey, case study, quickstart, QA, and submission package",
+    "deployment_or_public_sharing_authorized": false
+  }
+}

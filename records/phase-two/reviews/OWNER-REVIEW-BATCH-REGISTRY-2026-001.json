@@ -1,0 +1,19 @@
+{
+  "registry_schema_version": "burnlens-owner-review-batch-registry-v0.1.0",
+  "entries": [
+    {
+      "surface_id": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001",
+      "surface_revision": 1,
+      "milestone_id": "P2O4-T35",
+      "ordered_manifest_sha256": "58efe73c109f4f9197952bfb9a11103223e3d34f9cd006b686fc124fa2ce1728",
+      "candidate_ids": [
+        "WDP-001",
+        "WDP-002"
+      ],
+      "candidate_count": 2,
+      "batch_size_exception": "single-event-pair",
+      "state": "completed",
+      "supersedes_surface_id": null
+    }
+  ]
+}

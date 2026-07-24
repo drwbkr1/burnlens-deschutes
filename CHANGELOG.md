@@ -2,7 +2,26 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.46.0-official-fallback-source-gate-defer - candidate - 2026-07-23
+## Unreleased - P2O4-T35 Windigo deadline gate
+
+- Record August 6, 2026 as the controlling portfolio-submission deadline.
+- Select only Windigo 2022 for one final sixth-event attempt through July 27 at 6:00 PM America/Indianapolis.
+- Pass U01 with current official event and three-program identities, valid provider-generated boundary topology, one exact same-platform/tile/orbit/baseline Sentinel pair, current terms, ignored no-overwrite custody, and one combined Portal-request contract.
+- Pass U02/U03 with exact optical/reference custody, actual delivered source fitness, valid MTBS topology, and explicit unrepaired BAER/RAVG vector exclusions.
+- Pass U04 with one deterministic burned proposal and one separately evidenced affirmative-background proposal, each with a 25-pixel core and 51-pixel unknown ring.
+- Reproduce the U04 JSON, HTML, PNG, and both candidate rasters byte for byte; create zero owner decisions or labels.
+- Hand off one exact blank U05 owner-review batch containing only `WDP-001` and `WDP-002`.
+- Pass manifest-bound localhost, desktop, 390-pixel, blank-state, per-candidate, summary, export, lock, replay, and software-fixture cleanup checks.
+- Lock the sole exact completed response before reveal; reconcile two yes decisions only after every source, terms, raster, quality, uncertainty, leakage, and reproducibility gate re-passes.
+- Accept Windigo as the sixth complete owner-approved prototype event with no partial promotion.
+- Advance candidate `owner-approved-prototype-region-labels-v0.4.0` to 12 balanced regions, 286 core pixels / 11.44 ha, and 533 excluded unknown-ring pixels.
+- Meet the six-event count minimum while keeping the separate sufficiency evaluator, dataset, split, baseline, and model closed.
+- Add aggregate-only JSON/HTML/PNG intake evidence and version the milestone tooling as BurnLens 0.47.0.
+- Retain technical-case-study-only as the fallback if the remaining release gate cannot pass. Do not authorize baseline-first without an accepted dataset and split.
+
+Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass. U06 candidate gates pass owner-confirmed desktop/narrow rendering, 575 tests, exact package reproduction, isolated installation, and public-claim/privacy audits. PR, merge, fresh-main verification, and tag remain pending.
+
+## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 
 ### P2O4-T34 - Compare two official fallback routes and select neither
 
@@ -14,7 +33,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Reconstruct the exact report quartet byte-for-byte; pass original-resolution PNG inspection and owner-confirmed desktop/narrow HTML rendering.
 - Preserve the accepted v0.3 prototype evidence at ten balanced regions, 236 core pixels / 9.44 ha, 431 excluded unknown-ring pixels, and five complete events. Create no dataset, split, baseline, model, GitHub Release, or deployment.
 
-Issue #532; U01 and U04 pass; U02, U03, and milestone U05 defer. `provider_bytes_authorized` is false. One milestone PR, fresh-main package/output verification, and a remote annotated-tag peel remain release gates.
+Issue #532; PR #533; U01 and U04 pass; U02, U03, and milestone U05 defer. `provider_bytes_authorized` is false. Reviewed head `2e9436e5...` merges through `0e58459e...`; fresh-main package/output gates pass; annotated tag object `ec2aad7a...` remotely peels exactly to the merge.
 
 ## v0.45.0-petes-lake-material-defer - verified - 2026-07-22
 

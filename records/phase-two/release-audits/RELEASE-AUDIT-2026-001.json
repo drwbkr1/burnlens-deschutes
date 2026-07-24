@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-001",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "data",
+    "package",
+    "public",
+    "security",
+    "external"
+  ],
+  "candidate": {
+    "base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
+    "commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+    "version": "0.47.0",
+    "tag": "v0.47.0-windigo-sixth-prototype-event",
+    "artifacts": [
+      {
+        "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6787,
+        "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7"
+      },
+      {
+        "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
+        "bytes": 3582,
+        "sha256": "6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52"
+      },
+      {
+        "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png",
+        "bytes": 79681,
+        "sha256": "0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05"
+      },
+      {
+        "path": "burnlens_deschutes-0.47.0-py3-none-any.whl",
+        "bytes": 872766,
+        "sha256": "1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7"
+      }
+    ]
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-24T01:10:16.8257050Z",
+    "branch": "codex/p2o4-t35-windigo-deadline-gate",
+    "remote_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+    "pull_request": null,
+    "tag_target": "",
+    "deployment": null
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the exact branch diff and issue #534 contract with the verified v0.46 base.",
+      "evidence": [
+        "origin/codex/p2o4-t35-windigo-deadline-gate equals e8739a90b8ed7337851afcffb313f3d4114224bf",
+        "Issue #534 remains open and names the same branch, base, event, six units, and no-dataset exit"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-002",
+      "category": "data",
+      "required": true,
+      "status": "pass",
+      "method": "Reopen exact retained source packages and recompute source pixels, candidate rasters, registration, source roles, uncertainty, leakage, and both-class promotion.",
+      "evidence": [
+        "BL-2026-07-24-windigo-owner-response-intake-r003",
+        "PRECHECK-2026-064",
+        "575 passed, 1 expected skip, 22 warnings, 86 subtests"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-003",
+      "category": "human-custody",
+      "required": true,
+      "status": "pass",
+      "method": "Find every plausible final, lock the sole completed exact response before reveal, then reconcile only the locked bytes.",
+      "evidence": [
+        "Response SHA-256 d1f77a9cf575f668ce1b8017a9b9607d72370022e8098b1b78f76dce95702104",
+        "Receipt SHA-256 2a5ab1e33ac431db86671356d067141e68186dc29daea3eb01fa76ad27cf5f2e",
+        "Two yes, zero no, zero uncertain; ambiguity false"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-004",
+      "category": "runtime",
+      "required": true,
+      "status": "pass",
+      "method": "Rebuild the locked CPython 3.12.10 geospatial profile and probe every installed command.",
+      "evidence": [
+        "66 locked distributions compatible",
+        "BurnLens 0.47.0",
+        "86 of 86 command help probes pass"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-005",
+      "category": "package",
+      "required": true,
+      "status": "pass",
+      "method": "Build twice from separate exact Git archives of package-sensitive checkpoint 714273adfcf8f90ab16abe798eb086201577b0e9 under fixed SOURCE_DATE_EPOCH 1784854998; verify the closeout records commit changes no package-sensitive path; inspect and install one wheel in an ignored isolated environment.",
+      "evidence": [
+        "Two 872,766-byte wheels are byte-identical at SHA-256 1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
+        "Diff 714273a..e8739a9 changes zero package-sensitive paths",
+        "183 unique entries, zero forbidden entries",
+        "Isolated 0.47.0 import resolves from site-packages; 13 packages compatible; 86 of 86 command help probes pass"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-006",
+      "category": "public-render",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect the exact 1600 by 1100 PNG at original resolution and obtain owner confirmation for the exact tracked HTML at the requested desktop and narrow widths.",
+      "evidence": [
+        "PNG SHA-256 0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05",
+        "Owner response: It renders correctly",
+        "Owner confirmation recorded at 2026-07-24T01:10:16.8257050Z"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-007",
+      "category": "privacy-security",
+      "required": true,
+      "status": "pass",
+      "method": "Parse tracked structured data, resolve local links, scan changed public files for private paths, retrieval routes, secrets, and raw provider bytes.",
+      "evidence": [
+        "139 JSON files parse",
+        "740 Markdown files have zero broken local links",
+        "Private response, receipt, reconciliation, provider archives, and retrieval details remain ignored"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-008",
+      "category": "claims",
+      "required": true,
+      "status": "pass",
+      "method": "Compare README, roadmap, phase status, objectives, changelog, version history, case study, decision, and prompt/build records with the exact candidate output.",
+      "evidence": [
+        "Candidate label set is stated as prototype evidence, not ground truth or a dataset",
+        "Separate sufficiency evaluator, dataset, split, baseline, and model remain closed",
+        "No independent, field, official, endorsed, emergency-ready, or operational claim is made"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-009",
+      "category": "pull-request-merge-tag",
+      "required": true,
+      "status": "not_run",
+      "method": "Open one coherent PR, verify checks and diff, merge, rebuild from fresh main, and remotely peel the annotated tag.",
+      "evidence": [],
+      "reason": "The release-candidate audit precedes the authorized shipment transaction."
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "BurnLens 0.47.0 is release-ready after owner-confirmed render; v0.46 remains the latest verified release until merge and tag.",
+      "observed_state": "Candidate truth is current.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "Six-event prototype evidence; dataset, split, baseline, and model closed; shipment pending.",
+      "observed_state": "Candidate truth is current.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/534",
+      "expected_state": "Open milestone issue with U05 acceptance evidence and U06 shipment pending.",
+      "observed_state": "Issue is open; corrected U05 comment is live.",
+      "status": "current"
+    }
+  ],
+  "limitations": [
+    "The labels are owner-approved prototype evidence, not independent ground truth.",
+    "Six events satisfy only the frozen count minimum; the separate sufficiency evaluator has not passed.",
+    "Dataset, split, baseline, and model versions remain null.",
+    "No GitHub Release, deployment, public-sharing change, or operational application exists."
+  ],
+  "decision": {
+    "reported_status": "blocked",
+    "rationale": "Every candidate gate passes, including exact owner rendering, but PR, merge, fresh-main verification, and annotated-tag peel have not run yet.",
+    "next_action": "Commit and push the U06 audit records, open one coherent milestone PR, merge after checks pass, verify fresh main, then create and remotely peel v0.47.0-windigo-sixth-prototype-event."
+  }
+}

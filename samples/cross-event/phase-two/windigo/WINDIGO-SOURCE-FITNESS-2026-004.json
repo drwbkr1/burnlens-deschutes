@@ -1,0 +1,3062 @@
+{
+  "report_id": "WINDIGO-SOURCE-FITNESS-2026-004",
+  "report_version": "windigo-source-fitness-v0.1.3",
+  "protocol_version": "windigo-native-source-fitness-protocol-v0.1.0",
+  "unit_id": "P2O4-T35-U03",
+  "generated_at_utc": "2026-07-23T21:03:53.200Z",
+  "run_id": "BL-2026-07-23-windigo-source-fitness-r004",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 534,
+  "git_source_commit": "d7ab33568445b90a3e5961927c9d780d6b934032",
+  "software_version": "0.46.0",
+  "application_version": null,
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_protocol_version": "burn-scar-label-protocol-v0.1.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.2.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "event": {
+    "event_group_id": "event-windigo-2022",
+    "event_id": "OR4336312205020220730",
+    "fire_name": "WINDIGO",
+    "ignition_date": "2022-07-30",
+    "map_ids": {
+      "BAER": 10022395,
+      "RAVG": 10022960,
+      "MTBS": 10029547
+    },
+    "official_boundary_properties": {
+      "fire_id": "OR4336312205020220730",
+      "fire_name": "WINDIGO",
+      "year": 2022,
+      "fire_type": "Wildfire",
+      "acres": 1068,
+      "asmnt_type": "Extended",
+      "ig_date": 20220730,
+      "map_id": 10029547,
+      "map_prog": "MTBS",
+      "pre_id": "A10TEP20220726_30m",
+      "post_id": "A10TEP20230721_30m",
+      "comments": null
+    }
+  },
+  "archive": {
+    "filename": "windigo-reference-delivery.zip",
+    "bytes": 12526858,
+    "sha256": "defd99749a28bd311bcab9bc75631447e1e42eecf3da66adbb3c9c1e2d6b0804",
+    "member_count": 54,
+    "file_count": 45,
+    "directory_count": 9,
+    "uncompressed_bytes": 16873532,
+    "safe_paths": true,
+    "unique_paths": true,
+    "encrypted_members": 0,
+    "symlink_members": 0,
+    "crc_pass": true,
+    "extracted_bytes_equal_archive": true,
+    "files": [
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_burn_area.shp",
+        "bytes": 59052,
+        "sha256": "8bb92c9a56beda7086f664b3ffdf187667abe2042885dc8b4ac51a3b7e4ec7f6"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_s2a_refl.tif",
+        "bytes": 1059502,
+        "sha256": "2a8cb160c90a33e11a78aaf9fa685df6f283800e1ee460d112ce9133a6f0909d"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_burn_area.shx",
+        "bytes": 108,
+        "sha256": "764a6ca84fc82957d138fc6cc94d68c9547cc6c71a0f09019936a9a256f22bd0"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220815_s2a_refl.tif",
+        "bytes": 1059502,
+        "sha256": "3c74e4d0a7a632caaf198d143ba6571f2844bb9d5cfb4793e04009361033cc20"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_burn_area.dbf",
+        "bytes": 3397,
+        "sha256": "e4a57cf12fc403070ceba40639b3dca0caafc8551d6b5346e9831262ac903bcc"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs.tif",
+        "bytes": 298081,
+        "sha256": "d03e7ac92547e52a682c3df450d51671c4074a346509e329d798767b77bfc0b5"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_dnbr.tif",
+        "bytes": 176885,
+        "sha256": "f63c59ccd839c5c4146477cd5494e7ecde8fe5202013a312b1eb15391911d352"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_burn_area.prj",
+        "bytes": 403,
+        "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_rdnbr.tif",
+        "bytes": 176885,
+        "sha256": "b6c36f8e46de2314762ac9192a6434b2e2a2984b49b3d54625e94e0b4ab1877d"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs_metadata.xml",
+        "bytes": 25281,
+        "sha256": "7e89d20852e1784cf800f5aaac4c2dd22de7ae909927985ae7c656bca66b2954"
+      },
+      {
+        "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs_iso_metadata.xml",
+        "bytes": 31181,
+        "sha256": "e031de03786ec1971e12316ee7c4ca59d011ffa5740582895cf4e25220618944"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_burn_area.shp",
+        "bytes": 63664,
+        "sha256": "927c7fd30f997488764e36655f47bddae610ef29380f9bdf063feb2462000ada"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_s2b_refl.tif",
+        "bytes": 1066648,
+        "sha256": "18d3b800350f51e96e3b69785c748deabce5c91cdb8b957d776bf198d8c39935"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_burn_area.shx",
+        "bytes": 108,
+        "sha256": "fb01c1ffcd06150dfabaa98d94112364e517185706be1e5d347f48cb3bf51835"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20221004_s2a_refl.tif",
+        "bytes": 1066648,
+        "sha256": "544a8883a895b7dc8de6b148fa3bbf2e32235998bf5fe1026c425fc0eff39327"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_burn_area.dbf",
+        "bytes": 3397,
+        "sha256": "ebffb2ee085c683e73518604796167bf0c7bdf93ec917274271251a122690a54"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_dnbr.tif",
+        "bytes": 178075,
+        "sha256": "76a50698c08097d44d26552e88ae3261d468f592847b524bb00e69aa3a5da991"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_burn_area.prj",
+        "bytes": 403,
+        "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr.tif",
+        "bytes": 178075,
+        "sha256": "22a05bcdf620e30b0cfa7db4c91451f339bcc67fcfe02c511d750d547b2c9df2"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba.tif",
+        "bytes": 355789,
+        "sha256": "06a4231fba93244bb262214483b919dd1998e4c208a1bf83919ad1068f51ec92"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_metadata.xml",
+        "bytes": 35669,
+        "sha256": "7f37395936d82133311c036a7265bffb3d86c5ca732ff5c149b90919cd3a22a9"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_iso_metadata.xml",
+        "bytes": 46755,
+        "sha256": "1bfceb8dfcdb026a248597aaad01d0e0611b63a2dd0e96588d269087a9ac0548"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba4.tif",
+        "bytes": 91965,
+        "sha256": "81ee58c69ca3744629d9c5faf350318001b72527c2919326a20f11331296627a"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_BA.pdf",
+        "bytes": 1405072,
+        "sha256": "a7277535ce30f03416fbd1469af4f9ee85590c7d88544b5c90733e3b0216ade9"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba7.tif",
+        "bytes": 91965,
+        "sha256": "fa8fbbc8f77ee1ff5e5ab1c773c453093d1b26d1aeedaf8378965f8a1f81e11d"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_CBI.pdf",
+        "bytes": 1391588,
+        "sha256": "18002f345c30827eae8f31657b3eed9a45e3468c0d32b6ff4546f4fed0fa9b98"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc.tif",
+        "bytes": 355789,
+        "sha256": "e3d01010764cacd334b753f0e61b6153565af95a491bafb1f903747d1da800f3"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_CC.pdf",
+        "bytes": 1411416,
+        "sha256": "f79eace74204eb561a2c768d0211bb4f3316c1f6f8b9ee429c0ba4105106fe4e"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc5.tif",
+        "bytes": 91965,
+        "sha256": "687d201f2400ca4085f327dc600a8e2e02ee9f99afb4fc62baa8894754305a2d"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi.tif",
+        "bytes": 355789,
+        "sha256": "5e9f93eda30418dad930ec51992ea5efb3014568c2434f1576022d1d3cbfeb86"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi4.tif",
+        "bytes": 91965,
+        "sha256": "5c1e453b40cb89a69c3478127a65dfb4d4b5d8995225bd220cd39e1729bdf381"
+      },
+      {
+        "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004.kmz",
+        "bytes": 666473,
+        "sha256": "49ce21bea236ed9baf398f29428ee45262877e3bf70ce60d5e7aff8139794f50"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_burn_area.shp",
+        "bytes": 40664,
+        "sha256": "4ea706639cabd948f82aaa9092697a364456b047747c038eedf60267c1fbc346"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_s2a_refl.tif",
+        "bytes": 1117582,
+        "sha256": "bd21522aad42c10fb0d53771a33d2cdf31fceac47deeb4bc27f10f7e0e6d66b6"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_burn_area.shx",
+        "bytes": 108,
+        "sha256": "f4a7bca76d1473c731d1f8670eaf2e6e2fc6a21cc75d26ca1b052227f1990c54"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20230721_s2a_refl.tif",
+        "bytes": 1117582,
+        "sha256": "e5c5bdd5351967616187c32affbddaa0672637041aaf2f6cd91aad917e549a0f"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_burn_area.dbf",
+        "bytes": 3397,
+        "sha256": "b0b7a61aee8ac0c5d3e9689f33b5c5b9b87c05a9b9c8b90c8229b68beba9babc"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr.tif",
+        "bytes": 186565,
+        "sha256": "168766341fcd84e6a2f4bd47a224c98db4ac659988526a5fe795ef437f9cf013"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_burn_area.prj",
+        "bytes": 403,
+        "sha256": "ab78490474b2fb27a27ad2566802a7f49338602419540dd07cbcf22af5e50b6f"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_rdnbr.tif",
+        "bytes": 186565,
+        "sha256": "68f8bee789c34c6ff66cf866e6ae46b2041dff0085f9d88d6ddcb83c5491df1f"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_metadata.xml",
+        "bytes": 37959,
+        "sha256": "7126fc1ac8396ddca4aa2a7d64db179479e49a37e27354b0ca6b6186d944d244"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr6.tif",
+        "bytes": 97776,
+        "sha256": "b865ac5b6ae3c9d8b109c5ee5d348e0c022b2bd9e7727ce692b0b6fe18d0584a"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_iso_metadata.xml",
+        "bytes": 53152,
+        "sha256": "dccb063ee1510feb63d62313702040624eef3c4e56dfc2f54daaec3aff46b948"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721.kmz",
+        "bytes": 658591,
+        "sha256": "6cc6ee4b9309a0cc4fc71a14b016c0e7f16de5e74ee17afad653061c42ec97b0"
+      },
+      {
+        "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721.pdf",
+        "bytes": 1533693,
+        "sha256": "81e7f11d2b57fa6c448db2c357f59d1b279cd880bb0b6f5e6bdc0efd0a7e3587"
+      }
+    ]
+  },
+  "metadata": [
+    {
+      "program": "BAER",
+      "path": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs_metadata.xml",
+      "bytes": 25281,
+      "sha256": "7e89d20852e1784cf800f5aaac4c2dd22de7ae909927985ae7c656bca66b2954",
+      "abstract": "This soil burn severity dataset was derived from Sentinel-2A data and field validated by a Forest Service Burned Area Emergency Response (BAER) team. It is based upon an initial Burned Area Reflectance Classification (BARC) dataset created by analyzing satellite imagery. A pre-fire and post-fire Sentinel-2A scene were processed to develop a differenced Normalized Burn Ratio (dNBR) image. The dNBR image attempts to portray the variation of burn severity within a fire and captures the combined effects of the fire to vegetation and soil components of the ecosytem. The preliminary BARC dataset was assessed by a Forest Service BAER team and modified, if necessary, based on field conditions.",
+      "purpose": "These data were created by the gtac to support Burned Area Emergency Response (BAER) teams.",
+      "access_constraints": "These data are publicly available.",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources and limitations as preliminary/draft data.",
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. This product is produced from geospatial information prepared by the U.S. Forest Service Geospatial Office. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. The U.S. Forest Service Geospatial Office make no expressed or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The U.S. Forest Service Geospatial Office reserves the right to correct, update, modify, or replace this geospatial information without notification.",
+      "iso_path": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs_iso_metadata.xml",
+      "iso_bytes": 31181,
+      "iso_sha256": "e031de03786ec1971e12316ee7c4ca59d011ffa5740582895cf4e25220618944",
+      "acknowledgement_language_present": true
+    },
+    {
+      "program": "RAVG",
+      "path": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_metadata.xml",
+      "bytes": 35669,
+      "sha256": "7f37395936d82133311c036a7265bffb3d86c5ca732ff5c149b90919cd3a22a9",
+      "abstract": "The RAVG (Rapid Assessment of Vegetation Condition after Wildfire) program provides assessments of vegetation conditions following large fires on forested lands. Fire effects are represented by three metrics: percent change in live basal area (BA), percent change in canopy cover (CC), and the standardized Composite Burn Index (CBI). These data are derived from moderate resolution multi-spectral imagery (e.g., from the Landsat 8/9 Operational Land Imager or Sentinel-2 Multispectral Instrument). Various indices, such as the Relative Differenced Normalized Burn Ratio (RdNBR), which correlate with the variation of burn severity within a fire, are calculated from a pair of images (pre- and postfire), judiciously selected to capture fire effects. The three severity metrics are in turn calculated from the index using models developed from and calibrated with field data.",
+      "purpose": "RAVG data are generated for wildland fires on forested National Forest System (NFS) lands by the USDA Forest Service Geospatial Technology and Applications Center (GTAC) to support Washington Office Forest Management staff; Regional, Forest, and District silviculturists; and other Forest Service personnel and programs involved in reforestation, restoration, or related efforts. In addition, GTAC and the U.S. Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center support other Federal and State land management agencies on a by-request basis within then-current resource constraints.",
+      "access_constraints": "None",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
+      "distribution_liability": "This product is produced from geospatial information prepared by the U.S. Geological Survey EROS and USDA Forest Service. By taking receipt of these files via electronic file transfer methods, you understand that the data may be updated due to the availability of additional data or revision of existing data. Represented features may not be in an accurate geographic location. Neither the USDA Forest Service, GTAC, the U.S. Geological Survey nor EROS make any express or implied warranty, including warranty of merchantability and fitness, with respect to the character, function, or capabilities of the data or their appropriateness for any user's purposes. The USDA Forest Service and the U.S. Geological Survey reserve the right to correct, update, modify, or replace this geospatial information without notification. Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_path": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_iso_metadata.xml",
+      "iso_bytes": 46755,
+      "iso_sha256": "1bfceb8dfcdb026a248597aaad01d0e0611b63a2dd0e96588d269087a9ac0548",
+      "acknowledgement_language_present": true
+    },
+    {
+      "program": "MTBS",
+      "path": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_metadata.xml",
+      "bytes": 37959,
+      "sha256": "7126fc1ac8396ddca4aa2a7d64db179479e49a37e27354b0ca6b6186d944d244",
+      "abstract": "The Monitoring Trends in Burn Severity (MTBS) Program assesses the frequency, extent, and magnitude (size and severity) of all large wildland fires (wildfires and prescribed fires) in the conterminous United States (CONUS), Alaska, Hawaii, and Puerto Rico for the period 1984 and beyond. All fires reported as greater than 1,000 acres in the western U.S. and greater than 500 acres in the eastern U.S. are mapped across all ownerships. MTBS produces a series of geospatial and tabular data for analysis at a range of spatial, temporal, and thematic scales and are intended to meet a variety of information needs that require consistent data about fire effects through space and time. This map layer is a thematic raster image of an individual MTBS burn severity fire, occurring during calendar year 2022. Fires omitted from this mapped inventory are those where suitable satellite imagery was not available, or fires were not discernable from available imagery.",
+      "purpose": "The data generated by MTBS will be used to identify national trends in burn severity, providing information necessary to monitor the effectiveness of the National Fire Plan and Healthy Forests Restoration Act. MTBS is sponsored by the Wildland Fire Leadership Council (WFLC), a multi-agency oversight group responsible for implementing and coordinating the National Fire Plan and Federal Wildland Fire Management Policies. The MTBS project objective is to provide consistent, 30-meter spatial resolution burn severity data and burned area delineations that will serve four primary user groups including: 1. National policies and policy makers such as the National Fire Plan and WFLC which require information about long-term trends in burn severity and recent burn severity impacts within vegetation types, fuel models, condition classes, and land management activities. 2. Field management units that benefit from mid to broad scale GIS-ready maps and data for pre- and post-fire assessment and monitoring. Field units that require finer scale burn severity data will also benefit from increased efficiency, reduced costs, and data consistency by starting with MTBS data. 3. Existing databases from other comparably scaled programs, such as Fire Regime and Condition Class (FRCC) within LANDFIRE, that will benefit from MTBS data for validation and updating of geospatial datasets. 4. Academic and government agency research entities interested in fire severity data over significant geographic and temporal extents.",
+      "access_constraints": "None",
+      "use_constraints": "There are no restrictions on use, except for reasonable and proper acknowledgement of information sources.",
+      "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.",
+      "iso_path": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_iso_metadata.xml",
+      "iso_bytes": 53152,
+      "iso_sha256": "dccb063ee1510feb63d62313702040624eef3c4e56dfc2f54daaec3aff46b948",
+      "acknowledgement_language_present": true
+    }
+  ],
+  "boundary_vectors": [
+    {
+      "program": "BAER",
+      "path": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_burn_area.shp",
+      "crs": "EPSG:32610",
+      "feature_count": 1,
+      "geometry_type": "Polygon",
+      "valid": false,
+      "validity_reason": "Self-intersection[576902.158909917 4802164.07797682]",
+      "bounds": [
+        575667.098,
+        4799483.874,
+        578678.739,
+        4802219.57
+      ],
+      "area_square_m": 4084176.109,
+      "attributes": {
+        "EVENT_ID": "OR4336312205020220730",
+        "IRWINID": "133B6706-BCF8-4EFE-BEB7-5DAC537F1380",
+        "INCID_NAME": "WINDIGO",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10022395",
+        "MAP_PROG": "BAER",
+        "ASMNT_TYPE": "Emergency",
+        "BURNBNDAC": "1201",
+        "BURNBNDLAT": "43.363",
+        "BURNBNDLON": "-122.05",
+        "IG_DATE": "2022-07-30 00:00:00",
+        "PRE_ID": "A10TEP20220726_20m",
+        "POST_ID": "A10TEP20220815_20m",
+        "PERIM_ID": null,
+        "DNBR_OFFST": "-28",
+        "DNBR_STDDV": "16",
+        "NODATA_T": "999",
+        "INCGREEN_T": "999",
+        "LOW_T": "57",
+        "MOD_T": "111",
+        "HIGH_T": "189",
+        "COMMENT": null
+      },
+      "topology_role": "excluded_from_topology_decisions_retained_as_failure",
+      "repair_performed": false
+    },
+    {
+      "program": "RAVG",
+      "path": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_burn_area.shp",
+      "crs": "EPSG:32610",
+      "feature_count": 1,
+      "geometry_type": "MultiPolygon",
+      "valid": false,
+      "validity_reason": "Self-intersection[576902.158909917 4802164.07797682]",
+      "bounds": [
+        575667.098,
+        4799483.874,
+        578678.739,
+        4802219.57
+      ],
+      "area_square_m": 4056282.413,
+      "attributes": {
+        "EVENT_ID": "OR4336312205020220730",
+        "IRWINID": "133B6706-BCF8-4EFE-BEB7-5DAC537F1380",
+        "INCID_NAME": "WINDIGO",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10022960",
+        "MAP_PROG": "RAVG",
+        "ASMNT_TYPE": "Initial",
+        "BURNBNDAC": "1005",
+        "BURNBNDLAT": "43.363",
+        "BURNBNDLON": "-122.05",
+        "IG_DATE": "2022-07-30 00:00:00",
+        "PRE_ID": "B10TEP20210924_30m",
+        "POST_ID": "A10TEP20221004_30m",
+        "PERIM_ID": null,
+        "DNBR_OFFST": "-3",
+        "DNBR_STDDV": "28",
+        "NODATA_T": null,
+        "INCGREEN_T": null,
+        "LOW_T": null,
+        "MOD_T": null,
+        "HIGH_T": null,
+        "COMMENT": null
+      },
+      "topology_role": "excluded_from_topology_decisions_retained_as_failure",
+      "repair_performed": false
+    },
+    {
+      "program": "MTBS",
+      "path": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_burn_area.shp",
+      "crs": "EPSG:32610",
+      "feature_count": 1,
+      "geometry_type": "MultiPolygon",
+      "valid": true,
+      "validity_reason": "Valid Geometry",
+      "bounds": [
+        575545.141,
+        4799376.237,
+        578687.263,
+        4802415.555
+      ],
+      "area_square_m": 4310735.995,
+      "attributes": {
+        "EVENT_ID": "OR4336312205020220730",
+        "IRWINID": "133B6706-BCF8-4EFE-BEB7-5DAC537F1380",
+        "INCID_NAME": "WINDIGO",
+        "INCID_TYPE": "Wildfire",
+        "MAP_ID": "10029547",
+        "MAP_PROG": "MTBS",
+        "ASMNT_TYPE": "Extended",
+        "BURNBNDAC": "1068",
+        "BURNBNDLAT": "43.363",
+        "BURNBNDLON": "-122.05",
+        "IG_DATE": "2022-07-30 00:00:00",
+        "PRE_ID": "A10TEP20220726_30m",
+        "POST_ID": "A10TEP20230721_30m",
+        "PERIM_ID": null,
+        "DNBR_OFFST": "0",
+        "DNBR_STDDV": "13",
+        "NODATA_T": "-970",
+        "INCGREEN_T": "-150",
+        "LOW_T": "25",
+        "MOD_T": "275",
+        "HIGH_T": "550",
+        "COMMENT": null
+      },
+      "topology_role": "authoritative_valid_topology",
+      "repair_performed": false
+    }
+  ],
+  "native_rasters": [
+    {
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_s2a_refl.tif",
+      "bytes": 1059502,
+      "sha256": "2a8cb160c90a33e11a78aaf9fa685df6f283800e1ee460d112ce9133a6f0909d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 302,
+      "height": 292,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805220.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581700.0,
+        4805220.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 593,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 675.0,
+        "p01": 707.0,
+        "p10": 731.0,
+        "p50": 769.0,
+        "p90": 859.0,
+        "p99": 989.0,
+        "max": 1904.0
+      }
+    },
+    {
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220815_s2a_refl.tif",
+      "bytes": 1059502,
+      "sha256": "3c74e4d0a7a632caaf198d143ba6571f2844bb9d5cfb4793e04009361033cc20",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 302,
+      "height": 292,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805220.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581700.0,
+        4805220.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 593,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 559.0,
+        "p01": 593.0,
+        "p10": 621.0,
+        "p50": 669.0,
+        "p90": 777.0,
+        "p99": 940.0,
+        "max": 2043.0
+      }
+    },
+    {
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs.tif",
+      "bytes": 298081,
+      "sha256": "d03e7ac92547e52a682c3df450d51671c4074a346509e329d798767b77bfc0b5",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 547,
+      "height": 541,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 255.0,
+      "resolution_m": [
+        20.000000000023753,
+        20.000000000023753
+      ],
+      "transform": [
+        20.000000000023753,
+        0.0,
+        571671.8854055163,
+        0.0,
+        -20.000000000023753,
+        4806299.722865537
+      ],
+      "bounds": [
+        571671.8854055163,
+        4795479.722865524,
+        582611.8854055293,
+        4806299.722865537
+      ],
+      "valid_pixels": 10219,
+      "nodata_pixels": 285708,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "1": 153,
+        "2": 4713,
+        "3": 5107,
+        "4": 246,
+        "255": 285708
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_dnbr.tif",
+      "bytes": 176885,
+      "sha256": "f63c59ccd839c5c4146477cd5494e7ecde8fe5202013a312b1eb15391911d352",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 302,
+      "height": 292,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805220.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581700.0,
+        4805220.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 593,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -257.0,
+        "p01": -86.0,
+        "p10": -56.0,
+        "p50": -26.0,
+        "p90": 8.0,
+        "p99": 554.0,
+        "max": 990.0
+      }
+    },
+    {
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_rdnbr.tif",
+      "bytes": 176885,
+      "sha256": "b6c36f8e46de2314762ac9192a6434b2e2a2984b49b3d54625e94e0b4ab1877d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 302,
+      "height": 292,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805220.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581700.0,
+        4805220.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 593,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -1391.0,
+        "p01": -102.0,
+        "p10": -45.0,
+        "p50": 2.0,
+        "p90": 66.0,
+        "p99": 1024.0,
+        "max": 3573.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_s2b_refl.tif",
+      "bytes": 1066648,
+      "sha256": "18d3b800350f51e96e3b69785c748deabce5c91cdb8b957d776bf198d8c39935",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 538.0,
+        "p01": 569.0,
+        "p10": 597.0,
+        "p50": 639.0,
+        "p90": 725.0,
+        "p99": 858.0,
+        "max": 2153.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20221004_s2a_refl.tif",
+      "bytes": 1066648,
+      "sha256": "544a8883a895b7dc8de6b148fa3bbf2e32235998bf5fe1026c425fc0eff39327",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 587.0,
+        "p01": 617.0,
+        "p10": 649.0,
+        "p50": 696.0,
+        "p90": 802.0,
+        "p99": 945.0,
+        "max": 2213.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_dnbr.tif",
+      "bytes": 178075,
+      "sha256": "76a50698c08097d44d26552e88ae3261d468f592847b524bb00e69aa3a5da991",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -355.0,
+        "p01": -85.0,
+        "p10": -46.0,
+        "p50": -6.0,
+        "p90": 41.0,
+        "p99": 603.1,
+        "max": 1033.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr.tif",
+      "bytes": 178075,
+      "sha256": "22a05bcdf620e30b0cfa7db4c91451f339bcc67fcfe02c511d750d547b2c9df2",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -2814.0,
+        "p01": -149.0,
+        "p10": -67.0,
+        "p50": -3.0,
+        "p90": 58.0,
+        "p99": 904.1,
+        "max": 1202.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba.tif",
+      "bytes": 355789,
+      "sha256": "06a4231fba93244bb262214483b919dd1998e4c208a1bf83919ad1068f51ec92",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba4.tif",
+      "bytes": 91965,
+      "sha256": "81ee58c69ca3744629d9c5faf350318001b72527c2919326a20f11331296627a",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 369,
+        "2": 1414,
+        "3": 1106,
+        "4": 1628
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba7.tif",
+      "bytes": 91965,
+      "sha256": "fa8fbbc8f77ee1ff5e5ab1c773c453093d1b26d1aeedaf8378965f8a1f81e11d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 369,
+        "2": 861,
+        "3": 553,
+        "4": 572,
+        "5": 534,
+        "6": 329,
+        "7": 1299
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc.tif",
+      "bytes": 355789,
+      "sha256": "e3d01010764cacd334b753f0e61b6153565af95a491bafb1f903747d1da800f3",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 100.0,
+        "max": 100.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc5.tif",
+      "bytes": 91965,
+      "sha256": "687d201f2400ca4085f327dc600a8e2e02ee9f99afb4fc62baa8894754305a2d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 339,
+        "2": 1422,
+        "3": 585,
+        "4": 535,
+        "5": 1636
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi.tif",
+      "bytes": 355789,
+      "sha256": "5e9f93eda30418dad930ec51992ea5efb3014568c2434f1576022d1d3cbfeb86",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "float32",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 87591,
+      "nodata_pixels": 1188,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -0.0015,
+        "p01": 0.0,
+        "p10": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 2.6,
+        "max": 3.0
+      }
+    },
+    {
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi4.tif",
+      "bytes": 91965,
+      "sha256": "5c1e453b40cb89a69c3478127a65dfb4d4b5d8995225bd220cd39e1729bdf381",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 52,
+        "2": 1365,
+        "3": 1771,
+        "4": 1329
+      },
+      "valid_quantiles": null
+    },
+    {
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_s2a_refl.tif",
+      "bytes": 1117582,
+      "sha256": "bd21522aad42c10fb0d53771a33d2cdf31fceac47deeb4bc27f10f7e0e6d66b6",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 91805,
+      "nodata_pixels": 1216,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 675.0,
+        "p01": 707.0,
+        "p10": 730.0,
+        "p50": 769.0,
+        "p90": 860.0,
+        "p99": 998.96,
+        "max": 1904.0
+      }
+    },
+    {
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20230721_s2a_refl.tif",
+      "bytes": 1117582,
+      "sha256": "e5c5bdd5351967616187c32affbddaa0672637041aaf2f6cd91aad917e549a0f",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 6,
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 91805,
+      "nodata_pixels": 1216,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": 585.0,
+        "p01": 629.0,
+        "p10": 657.0,
+        "p50": 708.0,
+        "p90": 820.0,
+        "p99": 1001.0,
+        "max": 1993.0
+      }
+    },
+    {
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr.tif",
+      "bytes": 186565,
+      "sha256": "168766341fcd84e6a2f4bd47a224c98db4ac659988526a5fe795ef437f9cf013",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 91805,
+      "nodata_pixels": 1216,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -261.0,
+        "p01": -48.0,
+        "p10": -24.0,
+        "p50": 4.0,
+        "p90": 43.0,
+        "p99": 639.96,
+        "max": 988.0
+      }
+    },
+    {
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_rdnbr.tif",
+      "bytes": 186565,
+      "sha256": "68f8bee789c34c6ff66cf866e6ae46b2041dff0085f9d88d6ddcb83c5491df1f",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 1,
+      "dtype": "int16",
+      "nodata": -32768.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 91805,
+      "nodata_pixels": 1216,
+      "all_bands_read": true,
+      "native_value_domain": null,
+      "valid_quantiles": {
+        "min": -1897.0,
+        "p01": -87.0,
+        "p10": -34.0,
+        "p50": 5.0,
+        "p90": 79.0,
+        "p99": 1039.0,
+        "max": 3510.0
+      }
+    },
+    {
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr6.tif",
+      "bytes": 97776,
+      "sha256": "b865ac5b6ae3c9d8b109c5ee5d348e0c022b2bd9e7727ce692b0b6fe18d0584a",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 4801,
+      "nodata_pixels": 88220,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 88220,
+        "1": 21,
+        "2": 663,
+        "3": 2471,
+        "4": 1646
+      },
+      "valid_quantiles": null
+    }
+  ],
+  "selected_evidence_products": {
+    "baer_sbs": {
+      "program": "BAER",
+      "role": "primary_field_informed_soil_burn_severity_reference",
+      "member": "baer/2022/baer_or4336312205020220730_10022395/baer_or4336312205020220730_10022395_20220726_20220815_sbs.tif",
+      "bytes": 298081,
+      "sha256": "d03e7ac92547e52a682c3df450d51671c4074a346509e329d798767b77bfc0b5",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 547,
+      "height": 541,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 255.0,
+      "resolution_m": [
+        20.000000000023753,
+        20.000000000023753
+      ],
+      "transform": [
+        20.000000000023753,
+        0.0,
+        571671.8854055163,
+        0.0,
+        -20.000000000023753,
+        4806299.722865537
+      ],
+      "bounds": [
+        571671.8854055163,
+        4795479.722865524,
+        582611.8854055293,
+        4806299.722865537
+      ],
+      "valid_pixels": 10219,
+      "nodata_pixels": 285708,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "1": 153,
+        "2": 4713,
+        "3": 5107,
+        "4": 246,
+        "255": 285708
+      },
+      "valid_quantiles": null
+    },
+    "mtbs_dnbr6": {
+      "program": "MTBS",
+      "role": "corroborating_landscape_scale_severity_reference",
+      "member": "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721_dnbr6.tif",
+      "bytes": 97776,
+      "sha256": "b865ac5b6ae3c9d8b109c5ee5d348e0c022b2bd9e7727ce692b0b6fe18d0584a",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 307,
+      "height": 303,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572520.0,
+        0.0,
+        -30.0,
+        4805460.0
+      ],
+      "bounds": [
+        572520.0,
+        4796370.0,
+        581730.0,
+        4805460.0
+      ],
+      "valid_pixels": 4801,
+      "nodata_pixels": 88220,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 88220,
+        "1": 21,
+        "2": 663,
+        "3": 2471,
+        "4": 1646
+      },
+      "valid_quantiles": null
+    },
+    "ravg_cbi4": {
+      "program": "RAVG",
+      "role": "modeled_vegetation_effect_context_only",
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cbi4.tif",
+      "bytes": 91965,
+      "sha256": "5c1e453b40cb89a69c3478127a65dfb4d4b5d8995225bd220cd39e1729bdf381",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 52,
+        "2": 1365,
+        "3": 1771,
+        "4": 1329
+      },
+      "valid_quantiles": null
+    },
+    "ravg_ba4": {
+      "program": "RAVG",
+      "role": "modeled_basal_area_context_only",
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_ba4.tif",
+      "bytes": 91965,
+      "sha256": "81ee58c69ca3744629d9c5faf350318001b72527c2919326a20f11331296627a",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 369,
+        "2": 1414,
+        "3": 1106,
+        "4": 1628
+      },
+      "valid_quantiles": null
+    },
+    "ravg_cc5": {
+      "program": "RAVG",
+      "role": "modeled_canopy_cover_context_only",
+      "member": "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_rdnbr_cc5.tif",
+      "bytes": 91965,
+      "sha256": "687d201f2400ca4085f327dc600a8e2e02ee9f99afb4fc62baa8894754305a2d",
+      "driver": "GTiff",
+      "crs": "EPSG:32610",
+      "width": 303,
+      "height": 293,
+      "band_count": 1,
+      "dtype": "uint8",
+      "nodata": null,
+      "resolution_m": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        572640.0,
+        0.0,
+        -30.0,
+        4805250.0
+      ],
+      "bounds": [
+        572640.0,
+        4796460.0,
+        581730.0,
+        4805250.0
+      ],
+      "valid_pixels": 88779,
+      "nodata_pixels": 0,
+      "all_bands_read": true,
+      "native_value_domain": {
+        "0": 84262,
+        "1": 339,
+        "2": 1422,
+        "3": 585,
+        "4": 535,
+        "5": 1636
+      },
+      "valid_quantiles": null
+    }
+  },
+  "provider_pdf_review": {
+    "decision": "PASS_EXACT_FOUR_PROVIDER_MAP_PDFS",
+    "paths": [
+      "mtbs/2022/mtbs_or4336312205020220730_10029547/mtbs_or4336312205020220730_10029547_20220726_20230721.pdf",
+      "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_BA.pdf",
+      "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_CBI.pdf",
+      "ravg/2022/ravg_or4336312205020220730_10022960/ravg_or4336312205020220730_10022960_20210924_20221004_CC.pdf"
+    ],
+    "page_count_each": 1,
+    "rendered_at_150_dpi": true,
+    "finding": "All four maps render legibly and bind the exact event. MTBS shows 1,068 acres and four observed classes. RAVG maps are explicitly modeled vegetation-condition products."
+  },
+  "optical_reverification": {
+    "pre_package": {
+      "package_id": "windigo-s2-optical-pre-v0.1.0",
+      "registration_manifest_sha256": "3ac05e85e5207ffb3d0ff9ea2f5e9e6332e49c298f77eff4826ee5c6aa5ad3e9",
+      "reason_codes": [
+        "REGISTERED_PACKAGE_VERIFIED"
+      ]
+    },
+    "post_package": {
+      "package_id": "windigo-s2-optical-post-v0.1.0",
+      "registration_manifest_sha256": "7b4de9bcbe7fac9037b41dd58b0ec589283ff5bdd9a9a3f200bf5d27e7527c34",
+      "reason_codes": [
+        "REGISTERED_PACKAGE_VERIFIED"
+      ]
+    },
+    "products": [
+      {
+        "role": "windigo-2022-pre",
+        "source_record_id": "SOURCE-2026-036",
+        "provider_id": "f1111cd2-acb1-4324-9b48-854e2e71a384",
+        "native_id": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+        "filename": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE.zip",
+        "product_metadata": {
+          "product_metadata_member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/MTD_MSIL2A.xml",
+          "tile_metadata_member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/MTD_TL.xml",
+          "product_uri": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+          "processing_baseline": "05.10",
+          "product_start_utc": "2022-07-26T18:59:31.024Z",
+          "generation_utc": "2024-07-12T04:25:51.000000Z",
+          "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20240712T042551_A037047_T10TEP_N05.10",
+          "sensing_time_utc": "2022-07-26T19:12:34.575958Z",
+          "horizontal_crs": "EPSG:32610",
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535
+        },
+        "rasters": {
+          "TCI": {
+            "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R10m/T10TEP_20220726T185931_TCI_10m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 10,
+            "source_width": 10980,
+            "source_height": 10980,
+            "source_count": 3,
+            "source_dtype": [
+              "uint8",
+              "uint8",
+              "uint8"
+            ],
+            "source_transform": [
+              10.0,
+              0.0,
+              499980.0,
+              0.0,
+              -10.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              10.0,
+              0.0,
+              575540.0,
+              0.0,
+              -10.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 7556,
+              "row_offset": 9760,
+              "width": 315,
+              "height": 305
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799370.0,
+              578690.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 43119,
+            "observed_inside_min": 9,
+            "observed_inside_max": 134
+          },
+          "B04": {
+            "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 1143,
+            "observed_inside_max": 2051
+          },
+          "B8A": {
+            "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 2029,
+            "observed_inside_max": 3916
+          },
+          "B12": {
+            "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 1267,
+            "observed_inside_max": 3109
+          },
+          "SCL": {
+            "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_SCL_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint8"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 4,
+            "observed_inside_max": 5
+          }
+        },
+        "scl_summary_inside_full_boundary": {
+          "pixel_count": 10778,
+          "classes": [
+            {
+              "value": 0,
+              "name": "No data",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 1,
+              "name": "Saturated or defective",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 2,
+              "name": "Cast or topographic shadow",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 3,
+              "name": "Cloud shadow",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 4,
+              "name": "Vegetation",
+              "pixels": 10452,
+              "percent": 96.9753
+            },
+            {
+              "value": 5,
+              "name": "Bare soil",
+              "pixels": 326,
+              "percent": 3.0247
+            },
+            {
+              "value": 6,
+              "name": "Water",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 7,
+              "name": "Unclassified",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 8,
+              "name": "Cloud medium probability",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 9,
+              "name": "Cloud high probability",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 10,
+              "name": "Thin cirrus",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 11,
+              "name": "Snow or ice",
+              "pixels": 0,
+              "percent": 0.0
+            }
+          ],
+          "excluded_pixels": 0,
+          "excluded_percent": 0.0,
+          "review_needed_pixels": 0,
+          "review_needed_percent": 0.0,
+          "eligible_land_pixels": 10778,
+          "eligible_land_percent": 100.0
+        },
+        "boundary_mask": {
+          "geometry_sha256": "b5f7059c2e66bdc965dc6afd887f7896f5dd3bb25f03b6f38ccad56986763a39",
+          "inside_20m_pixel_centers": 10778,
+          "inside_10m_pixel_centers": 43119
+        }
+      },
+      {
+        "role": "windigo-2022-post",
+        "source_record_id": "SOURCE-2026-036",
+        "provider_id": "10bb27c6-5df5-44f1-9a72-517c696cb5e1",
+        "native_id": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+        "filename": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE.zip",
+        "product_metadata": {
+          "product_metadata_member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/MTD_MSIL2A.xml",
+          "tile_metadata_member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/MTD_TL.xml",
+          "product_uri": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+          "processing_baseline": "05.10",
+          "product_start_utc": "2022-08-15T18:59:31.024Z",
+          "generation_utc": "2024-07-03T12:40:31.000000Z",
+          "tile_id": "S2A_OPER_MSI_L2A_TL_S2RP_20240703T124031_A037333_T10TEP_N05.10",
+          "sensing_time_utc": "2022-08-15T19:12:37.180936Z",
+          "horizontal_crs": "EPSG:32610",
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535
+        },
+        "rasters": {
+          "TCI": {
+            "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R10m/T10TEP_20220815T185931_TCI_10m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 10,
+            "source_width": 10980,
+            "source_height": 10980,
+            "source_count": 3,
+            "source_dtype": [
+              "uint8",
+              "uint8",
+              "uint8"
+            ],
+            "source_transform": [
+              10.0,
+              0.0,
+              499980.0,
+              0.0,
+              -10.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              10.0,
+              0.0,
+              575540.0,
+              0.0,
+              -10.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 7556,
+              "row_offset": 9760,
+              "width": 315,
+              "height": 305
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799370.0,
+              578690.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 43119,
+            "observed_inside_min": 2,
+            "observed_inside_max": 255
+          },
+          "B04": {
+            "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 1121,
+            "observed_inside_max": 4403
+          },
+          "B8A": {
+            "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 1417,
+            "observed_inside_max": 4508
+          },
+          "B12": {
+            "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint16"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 1266,
+            "observed_inside_max": 4318
+          },
+          "SCL": {
+            "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_SCL_20m.jp2",
+            "driver": "JP2OpenJPEG",
+            "crs": "EPSG:32610",
+            "resolution_m": 20,
+            "source_width": 5490,
+            "source_height": 5490,
+            "source_count": 1,
+            "source_dtype": [
+              "uint8"
+            ],
+            "source_transform": [
+              20.0,
+              0.0,
+              499980.0,
+              0.0,
+              -20.0,
+              4900020.0
+            ],
+            "crop_transform": [
+              20.0,
+              0.0,
+              575540.0,
+              0.0,
+              -20.0,
+              4802420.0
+            ],
+            "crop_window": {
+              "column_offset": 3778,
+              "row_offset": 4880,
+              "width": 158,
+              "height": 153
+            },
+            "crop_bounds_utm10n": [
+              575540.0,
+              4799360.0,
+              578700.0,
+              4802420.0
+            ],
+            "boundary_pixel_rule": "pixel center inside full MTBS source geometry; no boundary shrink",
+            "inside_boundary_pixels": 10778,
+            "observed_inside_min": 2,
+            "observed_inside_max": 7
+          }
+        },
+        "scl_summary_inside_full_boundary": {
+          "pixel_count": 10778,
+          "classes": [
+            {
+              "value": 0,
+              "name": "No data",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 1,
+              "name": "Saturated or defective",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 2,
+              "name": "Cast or topographic shadow",
+              "pixels": 168,
+              "percent": 1.5587
+            },
+            {
+              "value": 3,
+              "name": "Cloud shadow",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 4,
+              "name": "Vegetation",
+              "pixels": 2884,
+              "percent": 26.7582
+            },
+            {
+              "value": 5,
+              "name": "Bare soil",
+              "pixels": 7717,
+              "percent": 71.5996
+            },
+            {
+              "value": 6,
+              "name": "Water",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 7,
+              "name": "Unclassified",
+              "pixels": 9,
+              "percent": 0.0835
+            },
+            {
+              "value": 8,
+              "name": "Cloud medium probability",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 9,
+              "name": "Cloud high probability",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 10,
+              "name": "Thin cirrus",
+              "pixels": 0,
+              "percent": 0.0
+            },
+            {
+              "value": 11,
+              "name": "Snow or ice",
+              "pixels": 0,
+              "percent": 0.0
+            }
+          ],
+          "excluded_pixels": 168,
+          "excluded_percent": 1.5587,
+          "review_needed_pixels": 9,
+          "review_needed_percent": 0.0835,
+          "eligible_land_pixels": 10601,
+          "eligible_land_percent": 98.3578
+        },
+        "boundary_mask": {
+          "geometry_sha256": "b5f7059c2e66bdc965dc6afd887f7896f5dd3bb25f03b6f38ccad56986763a39",
+          "inside_20m_pixel_centers": 10778,
+          "inside_10m_pixel_centers": 43119
+        }
+      }
+    ],
+    "pair_quality_inside_full_boundary": {
+      "pixel_count_inside_full_boundary": 10778,
+      "states": [
+        {
+          "state": "eligible-comparison",
+          "code": 0,
+          "pixels": 10601,
+          "percent": 98.3578
+        },
+        {
+          "state": "review-needed",
+          "code": 1,
+          "pixels": 9,
+          "percent": 0.0835
+        },
+        {
+          "state": "excluded",
+          "code": 2,
+          "pixels": 168,
+          "percent": 1.5587
+        }
+      ]
+    },
+    "registration": {
+      "summary": {
+        "window_count": 9,
+        "state_counts": {
+          "pass": 9,
+          "review-needed": 0,
+          "excluded": 0,
+          "fail-registration": 0
+        },
+        "p50_px": 0.0825,
+        "p95_px": 0.1014,
+        "max_px": 0.102,
+        "max_m": 2.04,
+        "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE"
+      },
+      "windows": [
+        {
+          "window_id": "W-01",
+          "pixel_window": {
+            "row_offset": 0,
+            "column_offset": 0,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575540.0,
+            4799860.0,
+            578100.0,
+            4802420.0
+          ],
+          "inside_boundary_pixels": 9131,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.989815,
+            "review_needed_fraction": 0.000657,
+            "excluded_fraction": 0.009528
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.06,
+              "column_shift_to_apply_px": 0.0,
+              "magnitude_px": 0.06,
+              "coarse_peak_ratio": 11.7023,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.273271,
+              "moving_energy": 0.300306,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.0,
+              "column_shift_to_apply_px": -0.04,
+              "magnitude_px": 0.04,
+              "coarse_peak_ratio": 3.6713,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.366238,
+              "moving_energy": 0.387792,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.1,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.102,
+              "coarse_peak_ratio": 10.0396,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.545237,
+              "moving_energy": 0.592964,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.06,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0632,
+            "magnitude_m": 1.265,
+            "max_band_deviation_px": 0.0632,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-02",
+          "pixel_window": {
+            "row_offset": 0,
+            "column_offset": 15,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575840.0,
+            4799860.0,
+            578400.0,
+            4802420.0
+          ],
+          "inside_boundary_pixels": 9661,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.981886,
+            "review_needed_fraction": 0.000828,
+            "excluded_fraction": 0.017286
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.07,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0707,
+              "coarse_peak_ratio": 11.3062,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.290864,
+              "moving_energy": 0.322761,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": -0.03,
+              "column_shift_to_apply_px": -0.05,
+              "magnitude_px": 0.0583,
+              "coarse_peak_ratio": 4.4973,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.368532,
+              "moving_energy": 0.400206,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.11,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.1118,
+              "coarse_peak_ratio": 9.7285,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.589191,
+              "moving_energy": 0.617563,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.07,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0728,
+            "magnitude_m": 1.456,
+            "max_band_deviation_px": 0.1044,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-03",
+          "pixel_window": {
+            "row_offset": 0,
+            "column_offset": 30,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            576140.0,
+            4799860.0,
+            578700.0,
+            4802420.0
+          ],
+          "inside_boundary_pixels": 9211,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.985561,
+            "review_needed_fraction": 0.000869,
+            "excluded_fraction": 0.013571
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.08,
+              "column_shift_to_apply_px": 0.0,
+              "magnitude_px": 0.08,
+              "coarse_peak_ratio": 10.5809,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.28556,
+              "moving_energy": 0.329069,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.02,
+              "column_shift_to_apply_px": -0.03,
+              "magnitude_px": 0.0361,
+              "coarse_peak_ratio": 4.3619,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.371846,
+              "moving_energy": 0.39941,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.1,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.1005,
+              "coarse_peak_ratio": 10.5504,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.576545,
+              "moving_energy": 0.622062,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0806,
+            "magnitude_m": 1.612,
+            "max_band_deviation_px": 0.0632,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-04",
+          "pixel_window": {
+            "row_offset": 12,
+            "column_offset": 0,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575540.0,
+            4799620.0,
+            578100.0,
+            4802180.0
+          ],
+          "inside_boundary_pixels": 9612,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.990325,
+            "review_needed_fraction": 0.000624,
+            "excluded_fraction": 0.009051
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.08,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0806,
+              "coarse_peak_ratio": 12.4878,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.284118,
+              "moving_energy": 0.305558,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.0,
+              "column_shift_to_apply_px": -0.06,
+              "magnitude_px": 0.06,
+              "coarse_peak_ratio": 4.0042,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.368829,
+              "moving_energy": 0.390552,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.12,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.1217,
+              "coarse_peak_ratio": 10.4761,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.560583,
+              "moving_energy": 0.618846,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0825,
+            "magnitude_m": 1.649,
+            "max_band_deviation_px": 0.0894,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-05",
+          "pixel_window": {
+            "row_offset": 12,
+            "column_offset": 15,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575840.0,
+            4799620.0,
+            578400.0,
+            4802180.0
+          ],
+          "inside_boundary_pixels": 10142,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.982745,
+            "review_needed_fraction": 0.000789,
+            "excluded_fraction": 0.016466
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.09,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0906,
+              "coarse_peak_ratio": 9.2431,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.288636,
+              "moving_energy": 0.305183,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.0,
+              "column_shift_to_apply_px": -0.09,
+              "magnitude_px": 0.09,
+              "coarse_peak_ratio": 4.1758,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.36879,
+              "moving_energy": 0.393312,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.14,
+              "column_shift_to_apply_px": -0.03,
+              "magnitude_px": 0.1432,
+              "coarse_peak_ratio": 9.5412,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.581854,
+              "moving_energy": 0.617537,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.09,
+            "column_shift_to_apply_px": -0.03,
+            "magnitude_px": 0.0949,
+            "magnitude_m": 1.897,
+            "max_band_deviation_px": 0.1082,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-06",
+          "pixel_window": {
+            "row_offset": 12,
+            "column_offset": 30,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            576140.0,
+            4799620.0,
+            578700.0,
+            4802180.0
+          ],
+          "inside_boundary_pixels": 9692,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.986277,
+            "review_needed_fraction": 0.000825,
+            "excluded_fraction": 0.012897
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.1,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.1005,
+              "coarse_peak_ratio": 9.4228,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.269845,
+              "moving_energy": 0.294739,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.03,
+              "column_shift_to_apply_px": -0.08,
+              "magnitude_px": 0.0854,
+              "coarse_peak_ratio": 3.7035,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.367506,
+              "moving_energy": 0.392201,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.13,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.1304,
+              "coarse_peak_ratio": 9.5757,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.549107,
+              "moving_energy": 0.598629,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.1,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.1005,
+            "magnitude_m": 2.01,
+            "max_band_deviation_px": 0.099,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-07",
+          "pixel_window": {
+            "row_offset": 25,
+            "column_offset": 0,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575540.0,
+            4799360.0,
+            578100.0,
+            4801920.0
+          ],
+          "inside_boundary_pixels": 9459,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.990168,
+            "review_needed_fraction": 0.000634,
+            "excluded_fraction": 0.009198
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.08,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.0806,
+              "coarse_peak_ratio": 10.0883,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.284544,
+              "moving_energy": 0.319502,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.01,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.0224,
+              "coarse_peak_ratio": 3.4814,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.369337,
+              "moving_energy": 0.391716,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.14,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.1404,
+              "coarse_peak_ratio": 7.8358,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.553115,
+              "moving_energy": 0.646807,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.08,
+            "column_shift_to_apply_px": -0.01,
+            "magnitude_px": 0.0806,
+            "magnitude_m": 1.612,
+            "max_band_deviation_px": 0.0707,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-08",
+          "pixel_window": {
+            "row_offset": 25,
+            "column_offset": 15,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            575840.0,
+            4799360.0,
+            578400.0,
+            4801920.0
+          ],
+          "inside_boundary_pixels": 9989,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.982481,
+            "review_needed_fraction": 0.000801,
+            "excluded_fraction": 0.016718
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.09,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.0922,
+              "coarse_peak_ratio": 8.9448,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.273321,
+              "moving_energy": 0.294455,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.02,
+              "column_shift_to_apply_px": -0.09,
+              "magnitude_px": 0.0922,
+              "coarse_peak_ratio": 3.5564,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.363354,
+              "moving_energy": 0.383078,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.15,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.1513,
+              "coarse_peak_ratio": 7.3715,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.544351,
+              "moving_energy": 0.615819,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.09,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.0922,
+            "magnitude_m": 1.844,
+            "max_band_deviation_px": 0.099,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        },
+        {
+          "window_id": "W-09",
+          "pixel_window": {
+            "row_offset": 25,
+            "column_offset": 30,
+            "height": 128,
+            "width": 128
+          },
+          "bounds_utm10n": [
+            576140.0,
+            4799360.0,
+            578700.0,
+            4801920.0
+          ],
+          "inside_boundary_pixels": 9539,
+          "pair_quality_inside_boundary": {
+            "eligible_fraction": 0.986057,
+            "review_needed_fraction": 0.000839,
+            "excluded_fraction": 0.013104
+          },
+          "band_measurements": {
+            "B04": {
+              "row_shift_to_apply_px": 0.1,
+              "column_shift_to_apply_px": -0.02,
+              "magnitude_px": 0.102,
+              "coarse_peak_ratio": 9.5741,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.241814,
+              "moving_energy": 0.265058,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B8A": {
+              "row_shift_to_apply_px": 0.03,
+              "column_shift_to_apply_px": -0.08,
+              "magnitude_px": 0.0854,
+              "coarse_peak_ratio": 3.3518,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.349146,
+              "moving_energy": 0.378229,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            },
+            "B12": {
+              "row_shift_to_apply_px": 0.15,
+              "column_shift_to_apply_px": -0.01,
+              "magnitude_px": 0.1503,
+              "coarse_peak_ratio": 8.3163,
+              "sample_resolution_px": 0.01,
+              "reference_energy": 0.490408,
+              "moving_energy": 0.566172,
+              "confident": true,
+              "reason": "PEAK_RATIO_PASS"
+            }
+          },
+          "consensus": {
+            "row_shift_to_apply_px": 0.1,
+            "column_shift_to_apply_px": -0.02,
+            "magnitude_px": 0.102,
+            "magnitude_m": 2.04,
+            "max_band_deviation_px": 0.0922,
+            "confident_band_count": 3
+          },
+          "state": "pass",
+          "reason_code": "CONTENT_REGISTRATION_PASS",
+          "label_effect": "none; registration evidence never assigns burned or background"
+        }
+      ]
+    },
+    "spectral_change": {
+      "valid_pair_pixels": 10601,
+      "excluded_from_spectral_summary": 177,
+      "dnbr_percentiles": {
+        "p01": -0.012584,
+        "p10": 0.092374,
+        "p25": 0.17435,
+        "p50": 0.301336,
+        "p75": 0.506345,
+        "p90": 0.69342,
+        "p99": 0.914126
+      },
+      "dnbr_min": -0.118349,
+      "dnbr_max": 1.068238,
+      "positive_change_pixels": 10437,
+      "positive_change_percent": 98.453,
+      "interpretation": "Continuous dNBR distribution is optical change evidence only; no threshold, severity class, burned label, or background label is assigned."
+    }
+  },
+  "evidence_comparison": {
+    "optical_boundary_pixels": 10778,
+    "optical_pair_valid_pixels": 10601,
+    "baer_sbs_on_optical_boundary": {
+      "1": 139,
+      "2": 4668,
+      "3": 5105,
+      "4": 246,
+      "255": 620
+    },
+    "mtbs_dnbr6_on_optical_boundary": {
+      "0": 132,
+      "1": 33,
+      "2": 1380,
+      "3": 5542,
+      "4": 3691
+    },
+    "ravg_cbi4_on_optical_boundary": {
+      "0": 649,
+      "1": 120,
+      "2": 3052,
+      "3": 3944,
+      "4": 3013
+    },
+    "ravg_ba4_on_optical_boundary": {
+      "0": 649,
+      "1": 838,
+      "2": 3155,
+      "3": 2465,
+      "4": 3671
+    },
+    "ravg_cc5_on_optical_boundary": {
+      "0": 649,
+      "1": 762,
+      "2": 3172,
+      "3": 1308,
+      "4": 1203,
+      "5": 3684
+    },
+    "baer_affirmative_pixels": 10019,
+    "baer_affirmative_and_optical_valid_pixels": 9843,
+    "mtbs_affirmative_pixels": 10613,
+    "mtbs_affirmative_and_optical_valid_pixels": 10436,
+    "baer_mtbs_affirmative_agreement_pixels": 9965,
+    "baer_mtbs_agreement_and_optical_valid_pixels": 9789,
+    "all_three_effect_agreement_pixels": 9724,
+    "all_three_effect_agreement_and_optical_valid_pixels": 9548,
+    "baer_only_affirmative_pixels": 54,
+    "mtbs_only_affirmative_pixels": 648,
+    "baer_coverage_percent": 94.2475,
+    "mtbs_coverage_percent": 98.7753,
+    "categorical_sampling": "nearest neighbor from each native grid onto the verified 20 m optical grid; no resolution gain claimed",
+    "baer_class_semantics": {
+      "1": "unburned_or_very_low_ambiguous",
+      "2": "low_soil_burn_severity",
+      "3": "moderate_soil_burn_severity",
+      "4": "high_soil_burn_severity",
+      "255": "nodata"
+    },
+    "mtbs_class_semantics": {
+      "0": "nodata",
+      "1": "unburned_to_low_or_rapid_recovery_ambiguous",
+      "2": "low_severity",
+      "3": "moderate_severity",
+      "4": "high_severity",
+      "5": "increased_greenness",
+      "6": "nonprocessing_mask"
+    },
+    "ravg_cbi_class_semantics": {
+      "0": "outside_perimeter_not_background_truth",
+      "1": "unchanged_not_proof_of_unburned",
+      "2": "low_modeled_effect",
+      "3": "moderate_modeled_effect",
+      "4": "high_modeled_effect",
+      "9": "unmappable"
+    },
+    "background_finding": "No delivered class is affirmative background truth. BAER class 1, MTBS class 1, RAVG class 1, and RAVG class 0 remain ambiguous or outside-domain states. A separate optical-stability proposal must prove any background candidate."
+  },
+  "source_precedence": {
+    "topology": "Official provider-generated MTBS GeoJSON and the valid delivered MTBS MultiPolygon govern topology.",
+    "positive_reference": "Delivered BAER SBS classes 2-4 are primary, field-informed soil burn severity evidence for this prototype. They remain preliminary/draft data and do not make BurnLens field validated.",
+    "corroboration": "MTBS classes 2-4 provide independent program-method corroboration at landscape scale.",
+    "context": "RAVG modeled vegetation effects are context only and cannot independently authorize a candidate.",
+    "invalid_vectors": "BAER and RAVG shapefiles are retained unchanged as failures, excluded from topology decisions, and never repaired."
+  },
+  "terms_and_roles": {
+    "resolved_for_bounded_prototype_evidence": true,
+    "baer": "Publicly delivered SBS may be used with acknowledgement and visible preliminary/draft limitations. The BAER team's own field-informed method is source provenance, not a BurnLens field-validation claim.",
+    "mtbs": "Use with acknowledgement and visible analyst-subjectivity, plot-data, geographic-accuracy, update, warranty, and fitness limitations.",
+    "ravg": "Use with acknowledgement and visible modeled-product, vegetation-domain, delayed-mortality, resprouting, location, update, warranty, and fitness limitations.",
+    "attribution": "USDA Forest Service Burned Area Emergency Response; Monitoring Trends in Burn Severity Project (USGS and USDA Forest Service); USDA Forest Service RAVG; Contains modified Copernicus Sentinel data 2022, accessed through CDSE."
+  },
+  "fitness_decision": {
+    "source": "PASS_EXACT_WINDIGO_SOURCE_FITNESS_WITH_VECTOR_EXCLUSIONS",
+    "burned_candidate_route": "OPEN_FOR_ONE_BAER_PRIMARY_MTBS_CORROBORATED_PROPOSAL",
+    "background_candidate_route": "OPEN_ONLY_FOR_SEPARATE_AFFIRMATIVE_OPTICAL_STABILITY_PROPOSAL",
+    "next_dependency": "P2O4-T35-U04_EXACT_TWO_CARD_PROPOSAL",
+    "checkpoint": "ACCEPT_SOURCE_FITNESS_DEFER_CANDIDATES_OWNER_DECISIONS_LABELS_DATASET_SPLIT_BASELINE_MODEL"
+  },
+  "claims": {
+    "proven": [
+      "The exact delivery, notices, safe archive, extracted bytes, identities, native rasters, class domains, nodata, PDFs, and CRS passed deterministic inspection.",
+      "The exact Sentinel pair passes quality and all nine registration windows on the valid official boundary.",
+      "BAER and MTBS agree on 9,789 optical-valid 20 m pixel centers after nearest-neighbor comparison."
+    ],
+    "not_proven": [
+      "The invalid BAER/RAVG shapefiles are not repaired or used for topology, and no delivered class is affirmative background truth.",
+      "No candidate, owner decision, label, dataset, split, baseline, model, metric, accuracy, independent ground truth, BurnLens field validation, official status, endorsement, or operational readiness is created."
+    ]
+  },
+  "deadline": {
+    "portfolio_submission": "2026-08-06",
+    "sixth_event_cutoff": "2026-07-27T18:00:00-04:00",
+    "fallback": "technical-case-study-only"
+  },
+  "warning": "Experimental BurnLens CV evidence. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+}
