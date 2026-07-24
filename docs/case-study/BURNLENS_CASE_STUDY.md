@@ -461,6 +461,32 @@ correctly.
 This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
 
+### One extract-and-open submission
+
+The reviewer page was coherent, but delivery still depended on repository
+layout. P2O4-T37 packages the exact verified public roster into one
+deterministic ZIP. A recipient extracts it and opens root `START-HERE.html`.
+No development environment or network is required.
+
+The 784,940-byte archive has SHA-256
+`3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`.
+Its 774-byte external receipt has SHA-256
+`08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`.
+Independent replays match both. The 14 unique members pass safe-structure,
+manifest, extraction, local-link, image, keyboard, console, privacy, and
+desktop/narrow Chrome checks. The owner confirmed the exact surface renders.
+
+Fresh main repeats 586 tests, the exact bundle, two byte-identical wheels, an
+isolated BurnLens 0.49.0 install, and all 88 command routes. One initial
+command-help timeout remains visible; the exact command, complete geospatial
+profile, and unchanged focused suite pass on bounded rerun. Annotated tag
+`v0.49.0-august6-submission-bundle` peels exactly to merge `8d4b81f...`.
+
+The submission is a technical case study, not a deployed analytical product.
+It contains no accepted dataset, split, baseline, model, accuracy, independent
+ground truth, field validation, official status, endorsement, operational
+readiness, or emergency suitability.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`
@@ -477,6 +503,7 @@ owner decisions, labels, scientific state, or use boundaries.
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
 - Latest portfolio reviewer run: `BL-2026-07-24-portfolio-reviewer-experience-r002`; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; verified BurnLens 0.48.0; merge `05140217066277b254e78abb74cd8f61295449d0`; exact JSON/HTML replay, real render, fresh-main suite, canonical package, isolated install, and remote tag peel pass
+- Latest submission-bundle run: `BL-2026-07-24-august6-submission-bundle-r002`; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; verified BurnLens 0.49.0; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; ZIP `3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`; receipt `08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`; exact replay, real render, fresh-main suite, reproducible package, isolated install, and remote tag peel pass
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
 - Latest MTBS reference run: `BL-2026-07-16-mtbs-cross-event-reference-r003`
@@ -528,6 +555,7 @@ owner decisions, labels, scientific state, or use boundaries.
 - Prior accepted-label release: `v0.44.0-grandview-owner-response-intake`; issue #517 / PR #522; lifecycle issue #523 / PR #524; checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`; tag object `e4f834cd3c55d44895766695a40746fa224df9bd`; run `BL-2026-07-21-grandview-owner-response-intake-r002`; ten balanced prototype regions across five events
 - Prior verified release: `v0.46.0-official-fallback-source-gate-defer`; issue #532 / PR #533; reviewed head `2e9436e5f30a7810c11313f5731ed07e39e712a0`; checkpoint `0e58459ea45f509eca537223d872fd6992efb291`; tag object `ec2aad7a706c591b23fc0b6c16891ba6be706e95`; exact McKenzie/Milli comparison selects neither; zero provider bytes, candidates, labels, data, or model advancement
 - Prior scientific-evidence release: BurnLens 0.47.0 / P2O4-T35 issue #534 / PR #535; BL-EXC-002 #536 / PR #537; intake source `68fd2171e52844f717ef0d6a1b108121cd93bee1`; candidate `714273adfcf8f90ab16abe798eb086201577b0e9`; corrected checkpoint `6a80ba14d060702d97c5d39f40cf3d6f8122ccc8`; run `BL-2026-07-24-windigo-owner-response-intake-r003`; sole exact response locked before reveal; two yes decisions plus every non-owner gate pass; prototype v0.4 has 12 balanced regions across six events; dataset/split/baseline/model remain null. The first merged-main byte gate fails closed and withholds the tag. Bounded LF remediation changes no evidence. Corrected main passes 577 tests, reproducible package, isolated install, owner-confirmed render, claim/privacy audits, and remote tag peel; tag object `31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5`.
+- Latest verified portfolio release: BurnLens 0.49.0 / P2O4-T37 issue #544 / PR #545; lifecycle #546; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; package-sensitive candidate `97ef6e2d11572fa721182cdce161714d50183dfa`; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; run `BL-2026-07-24-august6-submission-bundle-r002`; tag object `f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72`; deterministic extract-and-open technical-case-study bundle; dataset/split/baseline/model/deployment remain null.
 - Checkout-stability release: verified BurnLens `0.21.1`; issue #417 / PR #418; source `c99d6f7c932e0f64e5107da0e985ab3bcc2594e7`; merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7`; tag object `1b84f92cf4e7249e524fab095e233192698b7666`; exact authoritative outputs preserved
 - Historical bundle-request checkpoint: verified BurnLens `0.22.0`; issue #421 / PR #422; merge `1bbd3c6385f9a1c543a851a1a278e0ac976a2d57`; tag object `0407f90c855e0e4b62b37c14ae69c5a85cadcaf7`; parent #416; source `725522bd31616a258fcf399fea2a4839165e2791`; public artifacts `921a271858d7de1469e2d53d96d37c46774c126e`; run `BL-2026-07-17-current-reference-bundle-request-r001`; delivery was pending at that checkpoint and was later resolved by verified v0.24
 - Repository-truth checkpoint: BL-GOV-002 / issue #400; current workbench and dual-lock paths pass again; authenticated GitHub inventory contains 21 tags and zero Releases; obsolete Phase One backlog is reconciled without changing scientific or custody state

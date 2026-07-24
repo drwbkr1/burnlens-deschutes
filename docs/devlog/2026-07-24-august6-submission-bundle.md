@@ -30,3 +30,11 @@ retained the rejected attempt and switched to file-based Git archives.
 
 The bundle changes presentation custody only. It adds no data, model, metric,
 scientific claim, deployment, or public-sharing change.
+
+PR #545 merged cleanly. Fresh main repeated the exact archive, package,
+isolated-install, and full-suite gates. One initial help probe timed out under
+load; the exact command, complete environment verifier, and unchanged focused
+suite all passed on bounded rerun.
+
+The verified annotated tag peels exactly to the merge. The bundle is now the
+fixed input for final August 6 submission review.

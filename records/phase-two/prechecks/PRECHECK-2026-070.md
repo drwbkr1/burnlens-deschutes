@@ -76,3 +76,26 @@ retrieval detail. Supporting URLs are public official-source cautions, public
 STAC, and public GitHub trace records. `RELEASE-AUDIT-2026-003` is valid and
 computes `blocked` only because PR, merge, fresh-main repetition, and remote
 tag verification have not run.
+
+PR #545 squash-merges at
+`8d4b81f665a0850b2e173382760b2df96d9c9d20` and closes issue #544.
+Fresh main initially passes nine focused tests while one
+`burnlens-inspect-petes-lake-sources --help` process exceeds its 30-second
+per-command limit. The exact command then exits successfully in 2.564 seconds.
+The complete geo-research verifier passes all 88 command routes in 148.224
+seconds, and the unchanged focused suite passes 10 of 10 in 337.43 seconds.
+The first timeout remains retained as transient load evidence, not rewritten
+as a pass.
+
+Fresh main reconstructs the exact 784,940-byte ZIP and 774-byte receipt.
+Two independent fresh-main Git archives reproduce the exact 887,000-byte wheel
+and SHA-256
+`57b4cc8338926b583ef976d6bee698ecedf1be869944d6dee69ced78cda3da50`.
+An independent Python 3.12.10 environment installs 13 compatible
+distributions and passes all 88 command routes. The complete suite passes 586
+tests, one expected skip, 22 retained warnings, and 86 subtests.
+
+Annotated tag object `f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72`
+remotely peels exactly to merge
+`8d4b81f665a0850b2e173382760b2df96d9c9d20`.
+`RELEASE-AUDIT-2026-003` now computes `verified`. U01-U06 pass.
