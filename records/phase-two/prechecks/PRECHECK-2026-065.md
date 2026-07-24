@@ -2,7 +2,7 @@
 
 **Unit / issue / branch:** `P2O4-T35-U06` / #534 / `codex/p2o4-t35-windigo-deadline-gate`
 
-**Release-candidate commit:** `714273adfcf8f90ab16abe798eb086201577b0e9`
+**Package-sensitive / closeout-record commits:** `714273adfcf8f90ab16abe798eb086201577b0e9` / `e8739a90b8ed7337851afcffb313f3d4114224bf`
 
 **Closeout run:** `BL-2026-07-24-windigo-milestone-closeout-r001`
 
@@ -55,7 +55,7 @@ The first isolated metadata probe ran from the repository root and was rejected 
 
 ## Live repository truth
 
-Local `HEAD`, upstream tracking, and the live remote branch all equal `714273adfcf8f90ab16abe798eb086201577b0e9`. Issue #534 is open and retains the exact six-unit contract. Its U05 evidence comment was corrected in place after a PowerShell escape defect made the first live body malformed; the verified live body now contains the complete response, result, package, and remaining-gate facts.
+Closeout-record commit `e8739a90b8ed7337851afcffb313f3d4114224bf` is pushed and remote-equal. Its diff from package-sensitive checkpoint `714273adfcf8f90ab16abe798eb086201577b0e9` changes zero package-sensitive paths. Issue #534 is open and retains the exact six-unit contract. Its U05 evidence comment was corrected in place after a PowerShell escape defect made the first live body malformed; the verified live body now contains the complete response, result, package, and remaining-gate facts.
 
 `RELEASE-AUDIT-2026-001` is valid and computes `blocked` only because the PR, merge, fresh-main repetition, and remote annotated-tag peel have not run.
 

@@ -10,7 +10,7 @@
   "branch": "codex/p2o4-t35-windigo-deadline-gate",
   "git_base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
   "release_candidate_commit": "714273adfcf8f90ab16abe798eb086201577b0e9",
-  "closeout_records_commit": null,
+  "closeout_records_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
   "checkpoint_commit": null,
   "version_tag": "v0.47.0-windigo-sixth-prototype-event",
   "version_tag_object": null,

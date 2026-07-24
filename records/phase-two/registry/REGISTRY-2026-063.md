@@ -2,7 +2,7 @@
 
 **Milestone / issue / branch:** `P2O4-T35` / #534 / `codex/p2o4-t35-windigo-deadline-gate`
 
-**Base / release-candidate checkpoint:** `0e58459ea45f509eca537223d872fd6992efb291` / `714273adfcf8f90ab16abe798eb086201577b0e9`
+**Base / package-sensitive / closeout-record checkpoints:** `0e58459ea45f509eca537223d872fd6992efb291` / `714273adfcf8f90ab16abe798eb086201577b0e9` / `e8739a90b8ed7337851afcffb313f3d4114224bf`
 
 **Closeout run:** `BL-2026-07-24-windigo-milestone-closeout-r001`
 
@@ -40,6 +40,7 @@ The owner decisions are necessary evidence, not independent truth. Final r003 re
 - Canonical environment: CPython 3.12.10, 66 compatible distributions, BurnLens 0.47.0, 86 command probes.
 - Full repository: 575 passed, one expected skip, 22 retained warnings, 86 subtests.
 - Package: two byte-identical 872,766-byte wheels at SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`; 183 unique entries; zero forbidden entries.
+- Closeout-record commit `e8739a9...` changes zero package-sensitive paths from `714273a...`.
 - Isolated install: 13 compatible runtime distributions; BurnLens resolves from isolated `site-packages`; 86 of 86 help probes pass.
 - Structured, link, boundary, privacy, and claim audits: pass.
 
