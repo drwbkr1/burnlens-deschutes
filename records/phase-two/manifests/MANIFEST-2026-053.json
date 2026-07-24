@@ -49,6 +49,15 @@
       "sha256": "ad4aadf052fc135d1115f2901c593af96d5a9ca4cb80b550943703e73cdc62e7"
     }
   ],
+  "package_candidate": {
+    "filename": "burnlens_deschutes-0.50.0-py3-none-any.whl",
+    "bytes": 899515,
+    "sha256": "c3aa970694add791d17b78ee688108435bcac8921514071410dd87bf0ae84ca5",
+    "source_date_epoch": 1784913185,
+    "reproducible_builds": 2,
+    "isolated_python": "3.12.10",
+    "console_commands": 89
+  },
   "quality_gates": {
     "source_and_terms": "pass",
     "provenance_and_custody": "pass",
@@ -62,6 +71,10 @@
     "claims_and_privacy": "pass",
     "independent_audit": "block; training_authorized false",
     "six_output_replay": "pass",
-    "full_repository_suite": "595 passed; 1 expected skip; 58 warnings; 86 subtests"
+    "full_repository_suite": "595 passed; 1 expected skip; 58 warnings; 86 subtests",
+    "package_reproducibility_and_install": "pass",
+    "png_render": "pass",
+    "html_desktop_and_narrow_render": "pending owner confirmation",
+    "release_audit": "blocked only on exact HTML render"
   }
 }
