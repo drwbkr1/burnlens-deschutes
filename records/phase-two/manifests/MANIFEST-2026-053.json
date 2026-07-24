@@ -75,6 +75,6 @@
     "package_reproducibility_and_install": "pass",
     "png_render": "pass",
     "html_desktop_and_narrow_render": "pass; owner confirms correct rendering",
-    "release_audit": "verified candidate"
+    "release_audit": "verified merge and annotated tag"
   }
 }

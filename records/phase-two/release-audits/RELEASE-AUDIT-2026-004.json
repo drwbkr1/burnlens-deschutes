@@ -11,7 +11,7 @@
   ],
   "candidate": {
     "base_commit": "1c4df18d273bfa908737dca6831121db16af1d89",
-    "commit": "a94df5360ebe898e0395051ed31bcf81d5922bbc",
+    "commit": "453531937345089e0589daf8a33e0138cdd8787e",
     "version": "0.50.0",
     "tag": "v0.50.0-six-event-dataset-sufficiency",
     "artifacts": [
@@ -53,11 +53,11 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-24T17:27:34Z",
-    "branch": "codex/p2o5-t02-six-event-sufficiency",
-    "remote_commit": "a94df5360ebe898e0395051ed31bcf81d5922bbc",
+    "verified_at_utc": "2026-07-24T17:52:27Z",
+    "branch": "main",
+    "remote_commit": "85f827ef6a7ab2e3f2afea7b17d94677cd557b3e",
     "pull_request": 553,
-    "tag_target": "",
+    "tag_target": "85f827ef6a7ab2e3f2afea7b17d94677cd557b3e",
     "deployment": null
   },
   "checks": [
@@ -169,22 +169,28 @@
       "category": "pull-request",
       "required": true,
       "status": "pass",
-      "method": "Read live GitHub pull-request state against the exact remote branch.",
+      "method": "Read live GitHub pull-request and exact merge state.",
       "evidence": [
-        "Draft PR #553 targets exact base 1c4df18d273bfa908737dca6831121db16af1d89",
-        "Remote head is a94df5360ebe898e0395051ed31bcf81d5922bbc",
-        "GitHub reports MERGEABLE and CLEAN with no configured checks"
+        "PR #553 targets exact base 1c4df18d273bfa908737dca6831121db16af1d89 and reviewed head 453531937345089e0589daf8a33e0138cdd8787e",
+        "GitHub reports merged at 2026-07-24T17:28:57Z",
+        "Exact squash merge is 85f827ef6a7ab2e3f2afea7b17d94677cd557b3e"
       ],
       "reason": ""
     },
     {
       "id": "CHECK-010",
       "category": "merge-tag",
-      "required": false,
-      "status": "not_applicable",
-      "method": "",
-      "evidence": [],
-      "reason": "This is the pre-merge candidate audit. Merge and tag verification follow only after every candidate gate passes."
+      "required": true,
+      "status": "pass",
+      "method": "Repeat risk-matched gates from exact fresh main, build and install the canonical package, push the annotated tag, and remotely peel it.",
+      "evidence": [
+        "Fresh main reproduces all six tracked outputs byte for byte",
+        "Fresh main passes 595 tests, 1 expected skip, 58 warnings, and 86 subtests",
+        "Two fresh-main wheels reproduce 899,515 bytes / c3aa970694add791d17b78ee688108435bcac8921514071410dd87bf0ae84ca5",
+        "Fresh isolated CPython 3.12.10 install passes 13-distribution compatibility, 89 commands, and the new CLI help route",
+        "Annotated tag object 915ca1ea14194dce9c1de682fd50efa882c34a06 remotely peels to merge 85f827ef6a7ab2e3f2afea7b17d94677cd557b3e"
+      ],
+      "reason": ""
     },
     {
       "id": "CHECK-011",
@@ -217,8 +223,14 @@
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/pull/553",
-      "expected_state": "Draft, clean, mergeable candidate for issue #552.",
-      "observed_state": "GitHub reports draft true, CLEAN, and MERGEABLE at the recorded remote head.",
+      "expected_state": "Merged coherent checkpoint closing issue #552.",
+      "observed_state": "PR #553 merges at 85f827ef6a7ab2e3f2afea7b17d94677cd557b3e and issue #552 is closed.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "refs/tags/v0.50.0-six-event-dataset-sufficiency",
+      "expected_state": "Annotated tag peels to the exact verified merge.",
+      "observed_state": "Remote tag object 915ca1ea14194dce9c1de682fd50efa882c34a06 peels to 85f827ef6a7ab2e3f2afea7b17d94677cd557b3e.",
       "status": "current"
     }
   ],
@@ -230,7 +242,7 @@
   ],
   "decision": {
     "reported_status": "verified",
-    "rationale": "Scientific-decision integrity, reproducibility, package, PNG, exact HTML rendering, claims, privacy, and live PR checks all pass. The verified release truth is a transparent dataset-readiness block, not a dataset authorization.",
-    "next_action": "Ready and merge PR #553, repeat the risk-matched gates from exact fresh main, create and verify the annotated v0.50.0 tag, then activate entry-blocked issue #554."
+    "rationale": "Scientific-decision integrity, reproducibility, fresh-main tests and outputs, canonical package, isolated installation, PNG, exact HTML rendering, claims, privacy, merge, and remote tag checks all pass. The verified release truth is a transparent dataset-readiness block, not a dataset authorization.",
+    "next_action": "Activate P2O4-T39 / issue #554 from exact verified main and begin its fresh official-source preflight. No dataset, split, baseline, or model work may begin."
   }
 }
