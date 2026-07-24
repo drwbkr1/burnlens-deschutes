@@ -9,7 +9,7 @@
 | T37-U03 | `pass` | source `7d972bfa...`; LF remediation `660f54f...`; focused tests pass | U04 |
 | T37-U04 | `pass` | final r002 exact ZIP and receipt; replay byte-identical | U05 |
 | T37-U05 | `pass` | final r002 extraction; safe structure; real desktop/narrow Chrome QA | U06 |
-| T37-U06 | `in_progress` | 586 full tests pass; exact bundle replay; reproducible wheel; isolated 0.49 install; valid release audit blocked only on PR/merge/fresh-main/tag | milestone exit |
+| T37-U06 | `pass` | PR #545; merge `8d4b81f...`; 10 focused / 586 full fresh-main tests; exact bundle and package replay; isolated install; tag `f46c73a...` | final submission review |
 
 Retained failures:
 
@@ -29,7 +29,11 @@ Retained failures:
   PowerShell and was rejected before build; file-based Git ZIP archives
   supersede it; and
 - the first ZIP package command exceeded two minutes after package C finished;
-  package D completed separately and is byte-identical.
+  package D completed separately and is byte-identical; and
+- the first fresh-main focused run passed nine tests and timed out one
+  30-second help probe. The exact command then passed in 2.564 seconds, the
+  complete geo profile passed all 88 routes, and the repeated focused suite
+  passed 10 of 10 without changing code or environment.
 
 No scientific, label, dataset, split, baseline, model, metric, deployment,
 access, or public-sharing state changes.

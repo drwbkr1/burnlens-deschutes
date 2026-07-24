@@ -2,15 +2,16 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Unreleased - P2O4-T37 deterministic August 6 submission bundle
+## v0.49.0-august6-submission-bundle - verified - 2026-07-24
 
 - Add one standard-library, no-overwrite submission-bundle builder and command.
 - Package the exact verified v0.48 reviewer roster into a deterministic ZIP.
 - Add root `START-HERE.html`, plain reviewer instructions, an internal manifest, and an external receipt.
 - Pass byte-identical replay, safe 14-member structure, dual extraction, desktop/narrow Chrome, two-image, nine-link, keyboard, clean-console, and zero-external-request gates.
-- Version the candidate as BurnLens 0.49.0 while keeping dataset, split, baseline, and model null.
+- Version the verified milestone as BurnLens 0.49.0 while keeping dataset, split, baseline, and model null.
+- Retain one transient fresh-main help-command timeout; the exact command, complete geo profile, and unchanged focused suite pass on bounded rerun.
 
-Issue #544; source `7d972bfa3aaf86c09db3226d2b7447cdd7e16e08`; run `BL-2026-07-24-august6-submission-bundle-r001`. Full release verification remains pending. No deployment, GitHub Release, access, ownership, or public-sharing change.
+Issue #544 / PR #545; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; run `BL-2026-07-24-august6-submission-bundle-r002`; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`. Fresh main passes 10 focused and 586 full tests, exact ZIP/receipt replay, two byte-identical 887,000-byte wheels, isolated BurnLens 0.49.0 with 88 commands, and remote annotated-tag peel. Tag object `f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72` peels exactly to the merge. No deployment, GitHub Release, access, ownership, or public-sharing change.
 
 ## v0.48.0-portfolio-reviewer-experience - verified - 2026-07-24
 
