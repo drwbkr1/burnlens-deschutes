@@ -1,0 +1,919 @@
+{
+  "candidate_manifest_version": "burnlens-dataset-candidate-v0.1.0",
+  "candidate_id": "DATASET-CANDIDATE-2026-001",
+  "generated_at_utc": "2026-07-24T16:52:50Z",
+  "run_id": "BL-2026-07-24-six-event-dataset-sufficiency-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 552,
+  "git_source_commit": "e102874c2971baffd7e04214eac4e91632777960",
+  "software_version": "0.50.0",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "proposals": [
+      {
+        "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.json",
+        "bytes": 12462,
+        "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+      },
+      {
+        "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.json",
+        "bytes": 4327,
+        "sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281"
+      },
+      {
+        "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.json",
+        "bytes": 4620,
+        "sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba"
+      },
+      {
+        "path": "samples/labels/pilot/windigo/phase-two/WINDIGO-REGION-PROPOSAL-2026-001.json",
+        "bytes": 29995,
+        "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+      }
+    ],
+    "owner_intakes": [
+      {
+        "path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6149,
+        "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"
+      },
+      {
+        "path": "samples/labels/review/green-ridge/phase-two/intake/GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 8210,
+        "sha256": "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3"
+      },
+      {
+        "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 9112,
+        "sha256": "2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5"
+      },
+      {
+        "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6787,
+        "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7"
+      }
+    ],
+    "source_records": [
+      {
+        "record_id": "SOURCE-2026-007",
+        "path": "records/phase-two/sources/SOURCE-2026-007.md",
+        "bytes": 3186,
+        "sha256": "18ec272d75b8fb9bf846e9348963f45d50d816de95c3aec3d33cef81b48245f8"
+      },
+      {
+        "record_id": "SOURCE-2026-010",
+        "path": "records/phase-two/sources/SOURCE-2026-010.md",
+        "bytes": 2789,
+        "sha256": "e4909114296086681e4933da39dd3320c4511bd31176de7bf4e6574623ad3ece"
+      },
+      {
+        "record_id": "SOURCE-2026-018",
+        "path": "records/phase-two/sources/SOURCE-2026-018.md",
+        "bytes": 2372,
+        "sha256": "d48640f1f7c7e6163f41b27685a26a7644ff0e5a897952c4f61f5c01e550556b"
+      },
+      {
+        "record_id": "SOURCE-2026-020",
+        "path": "records/phase-two/sources/SOURCE-2026-020.md",
+        "bytes": 2216,
+        "sha256": "17b470f68c511ebdbb984f0c543d0246d71f5bb17b01afe0ef817e6ae512c878"
+      },
+      {
+        "record_id": "SOURCE-2026-021",
+        "path": "records/phase-two/sources/SOURCE-2026-021.md",
+        "bytes": 1567,
+        "sha256": "ac521f27e52131ad4e07c48c055995cf24630aa3f9514498d31eb8927bd55ed2"
+      },
+      {
+        "record_id": "SOURCE-2026-022",
+        "path": "records/phase-two/sources/SOURCE-2026-022.md",
+        "bytes": 2627,
+        "sha256": "b7cea1b8a9c1d05a87cb8de896de8740cf7267593e5e45308aa157039bf1e1de"
+      },
+      {
+        "record_id": "SOURCE-2026-023",
+        "path": "records/phase-two/sources/SOURCE-2026-023.md",
+        "bytes": 2260,
+        "sha256": "ecfd575da685021fbf1e7944823e934ac849ca30cca4c9bd9a406c76addb90d8"
+      },
+      {
+        "record_id": "SOURCE-2026-024",
+        "path": "records/phase-two/sources/SOURCE-2026-024.md",
+        "bytes": 2100,
+        "sha256": "86ce20dc8ea15daad91161501506b107c659a10cfaf960d0b1ddb2d4f9fd3fba"
+      },
+      {
+        "record_id": "SOURCE-2026-026",
+        "path": "records/phase-two/sources/SOURCE-2026-026.md",
+        "bytes": 2279,
+        "sha256": "d2d877eec285d2e655e715ecb5d52fcf68bffc365d440292dff13e7690f00eac"
+      },
+      {
+        "record_id": "SOURCE-2026-027",
+        "path": "records/phase-two/sources/SOURCE-2026-027.md",
+        "bytes": 1896,
+        "sha256": "d31d8271211b47124a9f2b7c106a0202ab81a171a18f95be7bcac6bfa994313f"
+      },
+      {
+        "record_id": "SOURCE-2026-036",
+        "path": "records/phase-two/sources/SOURCE-2026-036.md",
+        "bytes": 8940,
+        "sha256": "d8ea91debe6f02f4ca672084ad35a02e80cda1c10469cc391d8174bb8b724128"
+      },
+      {
+        "record_id": "SOURCE-2026-037",
+        "path": "records/phase-two/sources/SOURCE-2026-037.md",
+        "bytes": 5666,
+        "sha256": "b19f9ca9cfcfda75216a094afc7f10056d39dfdfbddda66cd15e3ff092699b37"
+      }
+    ],
+    "terms_records": [
+      {
+        "record_id": "TERMS-2026-003",
+        "path": "records/phase-two/terms/TERMS-2026-003.md",
+        "bytes": 2621,
+        "sha256": "5277fad7ca9c899d1520408eeba3cde158f7704362d28e97e6e3032ca2d1e178"
+      },
+      {
+        "record_id": "TERMS-2026-005",
+        "path": "records/phase-two/terms/TERMS-2026-005.md",
+        "bytes": 2949,
+        "sha256": "ecd8795783f8d162554af4101ba4090fffba6e36e7828bb344fa35877e842ae1"
+      },
+      {
+        "record_id": "TERMS-2026-013",
+        "path": "records/phase-two/terms/TERMS-2026-013.md",
+        "bytes": 930,
+        "sha256": "91d15105e058bb32b105e831c525a0334ff02eeecf31c04474da87615618df58"
+      },
+      {
+        "record_id": "TERMS-2026-014",
+        "path": "records/phase-two/terms/TERMS-2026-014.md",
+        "bytes": 2289,
+        "sha256": "08a5242df179fd63470ccbccfa918c63a8c345a4e08266f4236df5dc582ca88f"
+      },
+      {
+        "record_id": "TERMS-2026-016",
+        "path": "records/phase-two/terms/TERMS-2026-016.md",
+        "bytes": 1557,
+        "sha256": "6425cf9c8a29f3828a6e9b5136cd3ff788d9923328c45c5ef46efd7d8331723e"
+      },
+      {
+        "record_id": "TERMS-2026-017",
+        "path": "records/phase-two/terms/TERMS-2026-017.md",
+        "bytes": 1453,
+        "sha256": "d99840421504fd4e6e44ab3181666910c4cfc84ede7aa66f2f267732ecbdfe03"
+      },
+      {
+        "record_id": "TERMS-2026-018",
+        "path": "records/phase-two/terms/TERMS-2026-018.md",
+        "bytes": 1946,
+        "sha256": "bcf52afb0a3b2867b14064b05bad6a4571dae405d97de2bdf54e7d3f7160f809"
+      },
+      {
+        "record_id": "TERMS-2026-019",
+        "path": "records/phase-two/terms/TERMS-2026-019.md",
+        "bytes": 1747,
+        "sha256": "dd081eb7d14a42632f5fc70dfafadd08434de01c6722e49d008954648e4d8b21"
+      },
+      {
+        "record_id": "TERMS-2026-020",
+        "path": "records/phase-two/terms/TERMS-2026-020.md",
+        "bytes": 1537,
+        "sha256": "f68a57dd75189fe4656d6157103c3916c9895cbb997810afa9fec40d316b3a21"
+      },
+      {
+        "record_id": "TERMS-2026-022",
+        "path": "records/phase-two/terms/TERMS-2026-022.md",
+        "bytes": 1633,
+        "sha256": "2b3b8dc5dff3ad5c3cb1c092af3395e00fc37c2762e0117e89ae2d57b77b6038"
+      },
+      {
+        "record_id": "TERMS-2026-023",
+        "path": "records/phase-two/terms/TERMS-2026-023.md",
+        "bytes": 1438,
+        "sha256": "2c23b4318c56bcc5c7d449a301b18b6850e1bfeb1694f8868047f2694caf3c3e"
+      },
+      {
+        "record_id": "TERMS-2026-031",
+        "path": "records/phase-two/terms/TERMS-2026-031.md",
+        "bytes": 5902,
+        "sha256": "4ba57312c3be30c1c0b0c288b9d488cb3303159db275b2a477ecd5eb299d0f15"
+      },
+      {
+        "record_id": "TERMS-2026-032",
+        "path": "records/phase-two/terms/TERMS-2026-032.md",
+        "bytes": 2361,
+        "sha256": "84c9ddafae1edbb2e5dcfa9b30e7d1d95e25341dcd6e3e2cb1e678894302a313"
+      }
+    ]
+  },
+  "inventory": {
+    "event_groups": 6,
+    "owner_approved_regions": 12,
+    "class_counts": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 286,
+    "accepted_core_area_hectares": 11.44,
+    "excluded_unknown_ring_pixels": 533,
+    "maximum_event_core_share_percent": 20.6294,
+    "balanced_review_roster_is_natural_prevalence": false
+  },
+  "events": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "year": 2024,
+      "source_regime": "sentinel2-nifc-incident-context-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "NIFC_WFIGS"
+      ],
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 38,
+      "unknown_ring_pixels": 68,
+      "candidates": [
+        {
+          "candidate_id": "RCP-001",
+          "class": "background",
+          "core_pixels": 2,
+          "core_area_hectares": 0.08,
+          "unknown_ring_pixels": 12,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-001.tif",
+            "bytes": 2983,
+            "sha256": "c4008f476e9514e3a87e9bcf809c3edbc2afe3eaea80f13c961b62ebac97b988"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              450,
+              600
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              620000.0,
+              0.0,
+              -20.0,
+              4840000.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 2,
+            "unknown_ring_pixels": 12,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "RCP-002",
+          "class": "burned",
+          "core_pixels": 36,
+          "core_area_hectares": 1.44,
+          "unknown_ring_pixels": 56,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-002.tif",
+            "bytes": 3055,
+            "sha256": "c28217e87e049c7072db3a60842e08a19b3d10ed138a116a529d6c8652af7acc"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              450,
+              600
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              620000.0,
+              0.0,
+              -20.0,
+              4840000.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 36,
+            "unknown_ring_pixels": 56,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.json",
+        "bytes": 12462,
+        "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6149,
+        "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"
+      },
+      "accepted_core_share_percent": 13.2867
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "McKay 1035 NE",
+      "year": 2017,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "MTBS"
+      ],
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 39,
+      "unknown_ring_pixels": 80,
+      "candidates": [
+        {
+          "candidate_id": "RCP-003",
+          "class": "background",
+          "core_pixels": 7,
+          "core_area_hectares": 0.28,
+          "unknown_ring_pixels": 18,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-003.tif",
+            "bytes": 1525,
+            "sha256": "348b1d58ba3604e84691fd5c5180bbbde358af4e016695c7dbb05cb23fb91b25"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              105,
+              191
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              626720.0,
+              0.0,
+              -20.0,
+              4847220.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 7,
+            "unknown_ring_pixels": 18,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "RCP-004",
+          "class": "burned",
+          "core_pixels": 32,
+          "core_area_hectares": 1.28,
+          "unknown_ring_pixels": 62,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-004.tif",
+            "bytes": 1563,
+            "sha256": "738328f93c8b6bb2635cc2d13da0b40155047f80547a3042d84bec663db11e1e"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              105,
+              191
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              626720.0,
+              0.0,
+              -20.0,
+              4847220.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 32,
+            "unknown_ring_pixels": 62,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.json",
+        "bytes": 12462,
+        "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6149,
+        "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"
+      },
+      "accepted_core_share_percent": 13.6364
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "Tepee 1144 NE",
+      "year": 2018,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "MTBS"
+      ],
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 59,
+      "unknown_ring_pixels": 98,
+      "candidates": [
+        {
+          "candidate_id": "RCP-005",
+          "class": "background",
+          "core_pixels": 33,
+          "core_area_hectares": 1.32,
+          "unknown_ring_pixels": 57,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-005.tif",
+            "bytes": 1707,
+            "sha256": "0f99f0a262f26d0ffb3a7d121b907726ea2e137d043b7a3b64473b0eb79694be"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              125,
+              351
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              650820.0,
+              0.0,
+              -20.0,
+              4857540.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 33,
+            "unknown_ring_pixels": 57,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "RCP-006",
+          "class": "burned",
+          "core_pixels": 26,
+          "core_area_hectares": 1.04,
+          "unknown_ring_pixels": 41,
+          "raster": {
+            "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001-RCP-006.tif",
+            "bytes": 1691,
+            "sha256": "f8d3bc30747c48875fa0dcd6c4ed1099586aa557633d320794b65aeea216795c"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              125,
+              351
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              650820.0,
+              0.0,
+              -20.0,
+              4857540.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 26,
+            "unknown_ring_pixels": 41,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.json",
+        "bytes": 12462,
+        "sha256": "1db602a721373f29f31f9d720ea9871b99d6e391e598236681a9cb438a51b55f"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6149,
+        "sha256": "b3ee04e682c99113aa9189a905c160f99be77a98c23255eb69fa7a7c46b1dfcf"
+      },
+      "accepted_core_share_percent": 20.6294
+    },
+    {
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "fire_name": "Green Ridge 0684 CS",
+      "year": 2020,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "BAER",
+        "MTBS",
+        "RAVG"
+      ],
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 87,
+      "candidates": [
+        {
+          "candidate_id": "GRP-001",
+          "class": "burned",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 50,
+          "raster": {
+            "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-001.tif",
+            "bytes": 3504,
+            "sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              518,
+              728
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              607020.0,
+              0.0,
+              -20.0,
+              4929300.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 50,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "GRP-002",
+          "class": "background",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 37,
+          "raster": {
+            "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001-GRP-002.tif",
+            "bytes": 3496,
+            "sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              518,
+              728
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              607020.0,
+              0.0,
+              -20.0,
+              4929300.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 37,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.json",
+        "bytes": 4327,
+        "sha256": "b984ea5675f5114b615ab540552630847532a6492f0133ce80dd125b1c9d0281"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/green-ridge/phase-two/intake/GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 8210,
+        "sha256": "ccfcca5d458b7ced654088bb96a959ce26293469f69e39f3dbb08b7e29b1d3c3"
+      },
+      "accepted_core_share_percent": 17.4825
+    },
+    {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "fire_name": "Grandview 0558 OD",
+      "year": 2021,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "BAER",
+        "MTBS",
+        "RAVG"
+      ],
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 98,
+      "candidates": [
+        {
+          "candidate_id": "GVP-001",
+          "class": "burned",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 46,
+          "raster": {
+            "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-001.tif",
+            "bytes": 3958,
+            "sha256": "453adb2edafaf72569a60d98f93d923fe02352c9b0454930c8902b9b2b828933"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              749,
+              592
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              619600.0,
+              0.0,
+              -20.0,
+              4928420.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 46,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "GVP-002",
+          "class": "background",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 52,
+          "raster": {
+            "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001-GVP-002.tif",
+            "bytes": 3976,
+            "sha256": "2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              749,
+              592
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              619600.0,
+              0.0,
+              -20.0,
+              4928420.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 52,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.json",
+        "bytes": 4620,
+        "sha256": "ee1259142c9069c4057366f21320c4e61cc6c9cd412038955938370397c3aaba"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 9112,
+        "sha256": "2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5"
+      },
+      "accepted_core_share_percent": 17.4825
+    },
+    {
+      "event_group_id": "event-windigo-2022",
+      "fire_name": "Windigo",
+      "year": 2022,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_programs": [
+        "COPERNICUS_SENTINEL_2",
+        "BAER",
+        "MTBS",
+        "RAVG"
+      ],
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 102,
+      "candidates": [
+        {
+          "candidate_id": "WDP-001",
+          "class": "burned",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 51,
+          "raster": {
+            "path": "samples/labels/pilot/windigo/phase-two/WINDIGO-REGION-PROPOSAL-2026-001-WDP-001.tif",
+            "bytes": 2852,
+            "sha256": "0106fe4bf81ee9614a090a38541bb78be9cf033ae6b94c9fe9f3594a62fc0e2a"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              453,
+              458
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              572540.0,
+              0.0,
+              -20.0,
+              4805420.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 51,
+            "core_is_one_8_connected_component": true
+          }
+        },
+        {
+          "candidate_id": "WDP-002",
+          "class": "background",
+          "core_pixels": 25,
+          "core_area_hectares": 1.0,
+          "unknown_ring_pixels": 51,
+          "raster": {
+            "path": "samples/labels/pilot/windigo/phase-two/WINDIGO-REGION-PROPOSAL-2026-001-WDP-002.tif",
+            "bytes": 2864,
+            "sha256": "ada6b1e772a9039b5e73ed15ac184229a3df7bed7b55c402ac78e972aec6950e"
+          },
+          "raster_contract": {
+            "crs": "EPSG:32610",
+            "shape": [
+              453,
+              458
+            ],
+            "transform": [
+              20.0,
+              0.0,
+              572540.0,
+              0.0,
+              -20.0,
+              4805420.0
+            ],
+            "nodata": 255,
+            "dtype": "uint8",
+            "class_domain": [
+              0,
+              1,
+              2
+            ],
+            "core_pixels": 25,
+            "unknown_ring_pixels": 51,
+            "core_is_one_8_connected_component": true
+          }
+        }
+      ],
+      "proposal": {
+        "path": "samples/labels/pilot/windigo/phase-two/WINDIGO-REGION-PROPOSAL-2026-001.json",
+        "bytes": 29995,
+        "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+      },
+      "owner_intake": {
+        "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
+        "bytes": 6787,
+        "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7"
+      },
+      "accepted_core_share_percent": 17.4825
+    }
+  ],
+  "source_regime_counts": {
+    "sentinel2-baer-mtbs-ravg-current-v1": 3,
+    "sentinel2-mtbs-current-v1": 2,
+    "sentinel2-nifc-incident-context-v1": 1
+  },
+  "source_program_counts": {
+    "BAER": 3,
+    "COPERNICUS_SENTINEL_2": 6,
+    "MTBS": 5,
+    "NIFC_WFIGS": 1,
+    "RAVG": 3
+  },
+  "partition_feasibility": {
+    "total_2_2_2_assignments": 90,
+    "valid_assignments": 0,
+    "closest_assignment": {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-darlene3-or-2024",
+          "event-grandview-0558-od-2021"
+        ]
+      },
+      "violations": [
+        "regime_unique_to_one_role:sentinel2-nifc-incident-context-v1",
+        "program_unique_to_one_role:NIFC_WFIGS"
+      ]
+    },
+    "required_rules": [
+      "two whole event groups in each role before patching",
+      "at least one never-tuned transfer event in validation and test",
+      "every source program represented in at least two split roles",
+      "every exact source regime represented in at least two split roles"
+    ]
+  },
+  "limitations": [
+    "The labels are disclosed owner-approved prototype regions, not independent ground truth.",
+    "The balanced review roster does not estimate natural burned/background prevalence.",
+    "Only 286 native 20 m core pixels are accepted; any later model is a small-data experiment.",
+    "Darlene 3 is the sole NIFC incident-context event, so its exact source-program regime and the NIFC program can occur in only one split role."
+  ],
+  "boundaries": {
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false
+  }
+}

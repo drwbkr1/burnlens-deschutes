@@ -1,0 +1,67 @@
+{
+  "manifest_id": "MANIFEST-2026-053",
+  "manifest_version": "0.53.0",
+  "manifest_role": "six-event-dataset-sufficiency-block",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "milestone": "P2O5-T02",
+  "task_issue": 552,
+  "branch": "codex/p2o5-t02-six-event-sufficiency",
+  "git_base_commit": "1c4df18d273bfa908737dca6831121db16af1d89",
+  "generator_source_commit": "e102874c2971baffd7e04214eac4e91632777960",
+  "software_version": "0.50.0",
+  "run_id": "BL-2026-07-24-six-event-dataset-sufficiency-r003",
+  "decision": "BLOCK_DATASET_CANDIDATE_REMEDIATE_SOURCE_REGIME_SPLIT_FITNESS",
+  "disposition": "block",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "training_authorized": false,
+  "outputs": [
+    {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-001.json",
+      "bytes": 29274,
+      "sha256": "110ac030030c7028f1578b3301b2f66626605628b7c9dbba96d3f32fbfa89c9a"
+    },
+    {
+      "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-001.json",
+      "bytes": 7145,
+      "sha256": "9b1cffa2e7d54df5ca46214423570252ff76d96a192424fc83e6fd14546c8aaf"
+    },
+    {
+      "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-001.json",
+      "bytes": 2785,
+      "sha256": "fedc0a652fd72c6aa669223cf0965c5cf2256636f162db44e8d5d45f21f064b5"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.json",
+      "bytes": 10087,
+      "sha256": "a3fa779669143333fbc2b9b27fb35d210d0847283ef754c9e7f1f39a0c30908b"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.html",
+      "bytes": 6302,
+      "sha256": "40c0d1301ac281265fc14a84bfcbd64ece6a780a0b2b8f9a89effcf44c298f08"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.png",
+      "bytes": 101320,
+      "sha256": "ad4aadf052fc135d1115f2901c593af96d5a9ca4cb80b550943703e73cdc62e7"
+    }
+  ],
+  "quality_gates": {
+    "source_and_terms": "pass",
+    "provenance_and_custody": "pass",
+    "schema_and_quality": "pass",
+    "coverage_and_balance": "pass",
+    "uncertainty_and_exclusions": "pass",
+    "leakage_and_split_fitness": "block",
+    "reproducibility": "pass",
+    "evaluation_design": "block",
+    "human_review": "pass",
+    "claims_and_privacy": "pass",
+    "independent_audit": "block; training_authorized false",
+    "six_output_replay": "pass",
+    "full_repository_suite": "595 passed; 1 expected skip; 58 warnings; 86 subtests"
+  }
+}

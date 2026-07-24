@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## P2O5-T02 six-event dataset sufficiency - block candidate - 2026-07-24
+
+- Add a deterministic BurnLens 0.50.0 region-level sufficiency evaluator.
+- Reconstruct 12 owner-approved prototype regions, 286 accepted core pixels, and 533 excluded unknown-ring pixels across six whole events.
+- Pass source/terms, custody, raster, coverage, uncertainty, reproducibility, owner-review, and claims/privacy gates.
+- Block leakage/split fitness and evaluation design because all 90 whole-event 2/2/2 assignments leave Darlene's NIFC regime in one role.
+- Keep `training_authorized` false and create no dataset, split, baseline, model, metric, inference output, or terminal fallback.
+- Retain failed r001 commit binding and r002 directory-dependent replay evidence; final r003 reproduces all six tracked outputs and agrees with an independent readiness audit.
+- Reclassify the verified August 6 ZIP as an interim contingency technical case study, not final BurnLens readiness.
+
+Issue #552; source `e102874c2971baffd7e04214eac4e91632777960`; run `BL-2026-07-24-six-event-dataset-sufficiency-r003`. The smallest credible next route is one fully gated replacement event under a replicated source regime, exclusion of Darlene, and a complete sufficiency rerun.
+
 ## P2O4-T38 final submission readiness - verified - 2026-07-24
 
 - Extract and validate the exact verified v0.49 ZIP as a recipient.

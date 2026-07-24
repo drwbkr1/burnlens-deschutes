@@ -1,0 +1,258 @@
+{
+  "report_id": "SIX-EVENT-DATASET-SUFFICIENCY-2026-001",
+  "report_version": "six-event-dataset-sufficiency-v0.1.0",
+  "generated_at_utc": "2026-07-24T16:52:50Z",
+  "run_id": "BL-2026-07-24-six-event-dataset-sufficiency-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 552,
+  "git_source_commit": "e102874c2971baffd7e04214eac4e91632777960",
+  "software_version": "0.50.0",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "bindings": {
+    "candidate_manifest": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-001.json",
+      "bytes": 29274,
+      "sha256": "110ac030030c7028f1578b3301b2f66626605628b7c9dbba96d3f32fbfa89c9a"
+    },
+    "audit_contract": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-001.json",
+      "bytes": 7145,
+      "sha256": "9b1cffa2e7d54df5ca46214423570252ff76d96a192424fc83e6fd14546c8aaf"
+    },
+    "audit_decision": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-001.json",
+      "bytes": 2785,
+      "sha256": "fedc0a652fd72c6aa669223cf0965c5cf2256636f162db44e8d5d45f21f064b5"
+    }
+  },
+  "inventory": {
+    "event_groups": 6,
+    "owner_approved_regions": 12,
+    "class_counts": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 286,
+    "accepted_core_area_hectares": 11.44,
+    "excluded_unknown_ring_pixels": 533,
+    "maximum_event_core_share_percent": 20.6294,
+    "balanced_review_roster_is_natural_prevalence": false
+  },
+  "events": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "fire_name": "Darlene 3",
+      "year": 2024,
+      "source_regime": "sentinel2-nifc-incident-context-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 38,
+      "unknown_ring_pixels": 68,
+      "accepted_core_share_percent": 13.2867
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "McKay 1035 NE",
+      "year": 2017,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 39,
+      "unknown_ring_pixels": 80,
+      "accepted_core_share_percent": 13.6364
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "Tepee 1144 NE",
+      "year": 2018,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 59,
+      "unknown_ring_pixels": 98,
+      "accepted_core_share_percent": 20.6294
+    },
+    {
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "fire_name": "Green Ridge 0684 CS",
+      "year": 2020,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 87,
+      "accepted_core_share_percent": 17.4825
+    },
+    {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "fire_name": "Grandview 0558 OD",
+      "year": 2021,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 98,
+      "accepted_core_share_percent": 17.4825
+    },
+    {
+      "event_group_id": "event-windigo-2022",
+      "fire_name": "Windigo",
+      "year": 2022,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 102,
+      "accepted_core_share_percent": 17.4825
+    }
+  ],
+  "partition_feasibility": {
+    "total_2_2_2_assignments": 90,
+    "valid_assignments": 0,
+    "closest_assignment": {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-darlene3-or-2024",
+          "event-grandview-0558-od-2021"
+        ]
+      },
+      "violations": [
+        "regime_unique_to_one_role:sentinel2-nifc-incident-context-v1",
+        "program_unique_to_one_role:NIFC_WFIGS"
+      ]
+    },
+    "required_rules": [
+      "two whole event groups in each role before patching",
+      "at least one never-tuned transfer event in validation and test",
+      "every source program represented in at least two split roles",
+      "every exact source regime represented in at least two split roles"
+    ]
+  },
+  "gate_results": {
+    "source-and-terms": {
+      "status": "pass",
+      "finding": "Every intake binds exact current source and terms records; provider bytes remain private and official sources govern.",
+      "remediation": ""
+    },
+    "provenance-and-custody": {
+      "status": "pass",
+      "finding": "All proposals, rasters, aggregate intakes, source records, and terms records match immutable byte and SHA-256 identities.",
+      "remediation": ""
+    },
+    "schema-and-quality": {
+      "status": "pass",
+      "finding": "All 12 EPSG:32610 rasters are single-band, nodata 255, domain 0/1/2/255, count-exact, and contain one 8-connected core.",
+      "remediation": ""
+    },
+    "coverage-and-balance": {
+      "status": "pass",
+      "finding": "Six events each contribute one burned and one background region; no event exceeds 20.6294% of 286 accepted core pixels. Balanced review sampling remains explicitly non-prevalence.",
+      "remediation": ""
+    },
+    "uncertainty-and-exclusions": {
+      "status": "pass",
+      "finding": "All 533 reviewed unknown-ring pixels remain explicit value-2 exclusions and are never background.",
+      "remediation": ""
+    },
+    "leakage-and-split-fitness": {
+      "status": "block",
+      "finding": "All 90 whole-event 2/2/2 assignments fail the frozen source-program/regime replication rule. Unique program(s): NIFC_WFIGS. Unique exact regime(s): sentinel2-nifc-incident-context-v1.",
+      "remediation": "Add and fully gate one comparable event under either replicated MTBS-current or BAER+MTBS+RAVG-current regime, then exclude the unique Darlene NIFC-regime event from the six-event dataset candidate; or add a second fully equivalent NIFC-regime event. Re-run every gate before split creation."
+    },
+    "reproducibility": {
+      "status": "pass",
+      "finding": "The evaluator reopens and validates every tracked input and raster under the locked repository environment.",
+      "remediation": ""
+    },
+    "evaluation-design": {
+      "status": "block",
+      "finding": "Three never-tuned transfer events exist, but no split can satisfy both transfer reservation and the frozen exact-regime replication rule. Held-out evaluation therefore cannot be locked yet.",
+      "remediation": "Resolve split fitness, then lock train/validation/test before any patch generation or method selection."
+    },
+    "human-review": {
+      "status": "pass",
+      "finding": "Every accepted region has exact owner-yes custody plus passed non-owner gates; yes remains necessary but insufficient.",
+      "remediation": ""
+    },
+    "claims-and-privacy": {
+      "status": "pass",
+      "finding": "The audit exposes only aggregate tracked evidence and preserves null dataset/split/baseline/model versions and prototype-label limitations.",
+      "remediation": ""
+    }
+  },
+  "decision": "BLOCK_DATASET_CANDIDATE_REMEDIATE_SOURCE_REGIME_SPLIT_FITNESS",
+  "audit_decision": "block",
+  "blocking_gate_ids": [
+    "evaluation-design",
+    "leakage-and-split-fitness"
+  ],
+  "failed_count_checks": [
+    "unique-exact-source-regimes",
+    "unique-source-programs",
+    "valid-2-2-2-assignments"
+  ],
+  "minimum_remediation": {
+    "action": "Add and fully gate one event under the existing MTBS-current or BAER+MTBS+RAVG-current regime, exclude Darlene's unique NIFC-regime event from the dataset candidate, and rerun sufficiency.",
+    "why_smallest": "The remaining five events already cover two replicated source-program regimes, both classes, unknown rings, three never-tuned transfers, and event dominance. One replacement event can restore six-event split fitness if every source, terms, quality, owner, and leakage gate passes.",
+    "terminal_fallback_activated": false
+  },
+  "schedule": {
+    "target_date": "2026-08-06",
+    "risk": "critical",
+    "impact": "A new event requires source/terms verification, two-scene custody, raster fitness, two-class proposal, owner review, response intake, rerun sufficiency, dataset/splits/baselines, and U-Net work. Delay directly compresses model evaluation and GEOINT integration."
+  },
+  "boundaries": {
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false
+  },
+  "warning": "Experimental BurnLens owner-approved prototype evidence. Not independent ground truth, official wildfire information, emergency guidance, or field validation. Official sources govern.",
+  "outputs": [
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.html",
+      "bytes": 6302,
+      "sha256": "40c0d1301ac281265fc14a84bfcbd64ece6a780a0b2b8f9a89effcf44c298f08"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.png",
+      "bytes": 101320,
+      "sha256": "ad4aadf052fc135d1115f2901c593af96d5a9ca4cb80b550943703e73cdc62e7"
+    }
+  ]
+}
