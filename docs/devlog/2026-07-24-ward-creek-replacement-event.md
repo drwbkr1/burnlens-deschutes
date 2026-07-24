@@ -13,3 +13,22 @@ Seven earlier attempts remain visible. They include a public-source timeout, two
 U01 now passes. U02 may acquire only the two frozen Sentinel archives. It must verify exact bytes, safe structure, grids, CRS, nodata, masks, local quality, and registration.
 
 MTBS remains analyst-interpreted reference evidence. Its exact archive notices still govern later use. No label, dataset, split, baseline, model, metric, or official claim advances.
+
+## 2026-07-24 - Optical custody passes
+
+The first U02 preflight failed safely. Two frozen U01 hashes were mistyped in
+the new contract. No credentials or provider bytes were used. The correction
+adds a regression that hashes every U01 input.
+
+The corrected run downloads one Sentinel archive at a time. The pre archive
+must register and rehash before the post request can begin. Both exact archives
+pass provider and local hashes, SAFE structure, CRC, CRS, grid, nodata, SCL,
+quality-mask, registration, and temporal checks.
+
+The independent intake-contract verifier rehashes both promoted files. It also
+confirms fail-on-collision and atomic-no-replace custody. The two archives total
+2,396,820,201 ignored local bytes.
+
+U02 now passes. U03 must inspect the exact MTBS delivery and its notices before
+any reference pixel can be used. Labels, datasets, splits, baselines, and models
+remain closed.
