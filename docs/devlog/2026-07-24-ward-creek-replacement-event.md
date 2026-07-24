@@ -103,3 +103,23 @@ locked `geo-research` profile and fails clearly without it.
 
 U03 now passes. U04 may establish affirmative background evidence independently
 of the burned proposal. No candidate or label advances.
+
+## 2026-07-24 - Paired stability supports an independent background route
+
+U04 reopens the exact pair and MTBS custody. It transfers the established
+near-zero stability screen without tuning.
+
+The route requires coherent optical stability and excludes the complete native
+MTBS domain plus 60 meters. It keeps 21,266 pixels in 167 intact components of
+at least one hectare.
+
+Three independent output locations reproduce the JSON, PNG, and HTML exactly.
+The PNG clearly shows both optical scenes, the exclusion domain, stability,
+eligible evidence, and zero promotion.
+
+The in-app browser blocks programmatic local-file navigation. BurnLens does not
+bypass that security policy. The exact tracked HTML still needs desktop and
+narrow confirmation before U04 can pass.
+
+No candidate, owner decision, label, dataset, split, baseline, or model
+advances.
