@@ -9,6 +9,7 @@ import unittest
 from burnlens.six_event_dataset_sufficiency import (
     DECISION,
     EVENTS,
+    SixEventDatasetSufficiencyError,
     build_audit_contract,
     build_audit_decision,
     build_candidate_manifest,
@@ -130,11 +131,24 @@ class SixEventDatasetSufficiencyTests(unittest.TestCase):
             serialized = outputs["json"].read_text(encoding="utf-8").lower()
             for forbidden in ("c:\\users", "owner_decision", "private_reconciliation"):
                 self.assertNotIn(forbidden, serialized)
+            outputs_by_name = {path.name: path for path in outputs.values()}
             for output in report["outputs"]:
-                path = ROOT / output["path"]
+                path = outputs_by_name[Path(output["path"]).name]
                 payload = path.read_bytes()
                 self.assertEqual(len(payload), output["bytes"])
                 self.assertEqual(hashlib.sha256(payload).hexdigest(), output["sha256"])
+            with self.assertRaisesRegex(
+                SixEventDatasetSufficiencyError,
+                "output already exists",
+            ):
+                write_outputs(
+                    ROOT,
+                    records,
+                    public,
+                    "2026-07-24T18:00:00Z",
+                    "BL-TEST-SIX-EVENT-DATASET-SUFFICIENCY",
+                    "a" * 40,
+                )
 
     def test_roster_is_stable(self) -> None:
         self.assertEqual(len(EVENTS), 6)

@@ -129,6 +129,22 @@ def _binding(repository_root: Path, path: Path) -> dict[str, Any]:
     return {"path": relative, "bytes": len(payload), "sha256": sha256(payload).hexdigest()}
 
 
+def _canonical_binding(path: Path, canonical_path: str) -> dict[str, Any]:
+    payload = path.read_bytes()
+    return {
+        "path": canonical_path,
+        "bytes": len(payload),
+        "sha256": sha256(payload).hexdigest(),
+    }
+
+
+def _write_new(path: Path, payload: bytes) -> None:
+    if path.exists():
+        raise SixEventDatasetSufficiencyError(f"output already exists: {path}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(payload)
+
+
 def _candidate_class(candidate: dict[str, Any]) -> str:
     value = candidate.get("candidate_class", candidate.get("proposed_class"))
     if value not in {"background", "burned"}:
@@ -911,37 +927,65 @@ def write_outputs(
 ) -> dict[str, Path]:
     candidate = build_candidate_manifest(repository_root, generated_at_utc, run_id, git_source_commit)
     candidate_path = records_directory / f"{CANDIDATE_ID}.json"
-    candidate_bytes = _json_bytes(candidate)
-    candidate_path.parent.mkdir(parents=True, exist_ok=True)
-    candidate_path.write_bytes(candidate_bytes)
-
-    contract = build_audit_contract(candidate, sha256(candidate_bytes).hexdigest())
     audit_path = records_directory / f"{AUDIT_ID}.json"
-    audit_bytes = _json_bytes(contract)
-    audit_path.write_bytes(audit_bytes)
-
-    decision = build_audit_decision(contract, sha256(audit_bytes).hexdigest())
     decision_path = records_directory / f"{DECISION_ID}.json"
-    decision_bytes = _json_bytes(decision)
-    decision_path.write_bytes(decision_bytes)
-
-    bindings = {
-        "candidate_manifest": _binding(repository_root, candidate_path),
-        "audit_contract": _binding(repository_root, audit_path),
-        "audit_decision": _binding(repository_root, decision_path),
-    }
-    report = build_report(candidate, contract, decision, bindings)
-    public_directory.mkdir(parents=True, exist_ok=True)
     json_path = public_directory / f"{REPORT_ID}.json"
     html_path = public_directory / f"{REPORT_ID}.html"
     png_path = public_directory / f"{REPORT_ID}.png"
-    html_path.write_text(render_html(report), encoding="utf-8", newline="\n")
+    requested_paths = (
+        candidate_path,
+        audit_path,
+        decision_path,
+        json_path,
+        html_path,
+        png_path,
+    )
+    existing_paths = [path for path in requested_paths if path.exists()]
+    if existing_paths:
+        raise SixEventDatasetSufficiencyError(
+            "output already exists: "
+            + ", ".join(str(path) for path in existing_paths)
+        )
+    candidate_bytes = _json_bytes(candidate)
+    _write_new(candidate_path, candidate_bytes)
+
+    contract = build_audit_contract(candidate, sha256(candidate_bytes).hexdigest())
+    audit_bytes = _json_bytes(contract)
+    _write_new(audit_path, audit_bytes)
+
+    decision = build_audit_decision(contract, sha256(audit_bytes).hexdigest())
+    decision_bytes = _json_bytes(decision)
+    _write_new(decision_path, decision_bytes)
+
+    bindings = {
+        "candidate_manifest": _canonical_binding(
+            candidate_path,
+            f"records/phase-two/readiness/{candidate_path.name}",
+        ),
+        "audit_contract": _canonical_binding(
+            audit_path,
+            f"records/phase-two/readiness/{audit_path.name}",
+        ),
+        "audit_decision": _canonical_binding(
+            decision_path,
+            f"records/phase-two/readiness/{decision_path.name}",
+        ),
+    }
+    report = build_report(candidate, contract, decision, bindings)
+    public_directory.mkdir(parents=True, exist_ok=True)
+    _write_new(html_path, render_html(report).encode("utf-8"))
     render_png(report, png_path)
     report["outputs"] = [
-        _binding(repository_root, html_path),
-        _binding(repository_root, png_path),
+        _canonical_binding(
+            html_path,
+            f"samples/labels/readiness/phase-two/{html_path.name}",
+        ),
+        _canonical_binding(
+            png_path,
+            f"samples/labels/readiness/phase-two/{png_path.name}",
+        ),
     ]
-    json_path.write_bytes(_json_bytes(report))
+    _write_new(json_path, _json_bytes(report))
     return {
         "candidate": candidate_path,
         "audit": audit_path,
