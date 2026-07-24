@@ -17,10 +17,9 @@ from PIL import Image, ImageDraw, ImageFont
 import rasterio
 
 import burnlens
-from .owner_review_batch import validate_completed_response
+from .owner_review_batch import build_surface, validate_completed_response
 from .owner_review_batch_lock import (
     LOCK_VERSION,
-    validate_surface,
 )
 from .windigo_owner_review_surface import (
     EVENT_GROUP_ID as REVIEW_EVENT_GROUP_ID,
@@ -177,11 +176,16 @@ def _validate_surface(path: Path) -> tuple[dict[str, Any], bytes]:
     _assert(_sha256_bytes(data) == EXPECTED_SURFACE_SHA256, "surface hash changed")
     surface = _json(data, path.name)
     try:
-        binding = validate_surface(surface)
+        rebuilt = build_surface(surface.get("batch_manifest"))
     except Exception as error:
         raise WindigoOwnerResponseIntakeError("surface reconstruction failed") from error
-    _assert(binding["surface_id"] == SURFACE_ID, "surface identity changed")
-    _assert(binding["task_issue"] == TASK_ISSUE, "surface issue changed")
+    rebuilt["software_version"] = surface.get("software_version")
+    _assert(
+        all(surface.get(key) == value for key, value in rebuilt.items()),
+        "surface reconstruction changed",
+    )
+    _assert(surface.get("report_id") == SURFACE_ID, "surface identity changed")
+    _assert(surface.get("task_issue") == TASK_ISSUE, "surface issue changed")
     _assert(surface.get("summary", {}).get("owner_responses") == 0, "surface already contains responses")
     _assert(surface.get("summary", {}).get("labels_created") == 0, "surface already contains labels")
     return surface, data
