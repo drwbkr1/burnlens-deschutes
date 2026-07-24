@@ -1,16 +1,19 @@
 {
   "manifest_id": "MANIFEST-2026-052",
   "manifest_version": "0.52.0",
-  "manifest_role": "final-submission-readiness-candidate",
+  "manifest_role": "verified-final-submission-readiness",
   "repository": "drwbkr1/burnlens-deschutes",
   "milestone": "P2O4-T38",
   "task_issue": 548,
-  "branch": "codex/p2o4-t38-final-submission-readiness",
+  "branch": "main",
   "git_base_commit": "ca5a2cee130da0e918b061206998b096a302a6f7",
   "software_version": "0.49.0",
   "run_id": "BL-2026-07-24-final-submission-readiness-r001",
   "decision": "READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY",
-  "disposition": "candidate",
+  "disposition": "verified",
+  "pull_request": 549,
+  "release_checkpoint": "c1e91637f39bc84bd5a8c08440a0117ec4173bd6",
+  "lifecycle_issue": 550,
   "dataset_version": null,
   "split_version": null,
   "baseline_version": null,
@@ -30,13 +33,13 @@
   "outputs": [
     {
       "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-READINESS-2026-001.json",
-      "bytes": 4396,
-      "sha256": "4e505cc54f8198f2dcb533be507771f83a163d1bf1fd209a6b00f02f9c36f85f"
+      "bytes": 4512,
+      "sha256": "bb5cf7ef7ff27166242939b1c8a240d14c1dac66d35e6e690f39c57a08a0e35e"
     },
     {
       "path": "portfolio/submission/SUBMISSION-HANDOFF.md",
-      "bytes": 1622,
-      "sha256": "732e8febb44c24ccb76c0770778527f2dd7a6a2dc54c725d484dbeeb88391cda"
+      "bytes": 1720,
+      "sha256": "ab848b9eceb4aae3af9804ac8cca9323cd27bded33ac22b37a04967ff8df3196"
     }
   ],
   "quality_gates": {
@@ -47,7 +50,7 @@
     "nine_destinations": "pass",
     "claims_rights_privacy": "pass",
     "submission_comprehension": "pass",
-    "records_release_verification": "pending"
+    "records_release_verification": "149 JSON; 764 Markdown; 313 links; exact four-output hashes; PR #549 and main c1e91637 pass"
   },
   "deployment_or_public_sharing_authorized": false
 }

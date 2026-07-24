@@ -13,5 +13,6 @@ One loopback favicon request returns 404 after opening the detail page. The
 intended file workflow and content are unaffected. Repacking would add more
 risk than value, so BurnLens retains the observation.
 
-The candidate decision is ready for owner submission as an offline technical
-case study. No external submission or sharing change occurs here.
+The verified decision is ready for owner submission as an offline technical
+case study. PR #549 and exact main repeat every records-only gate. No external
+submission or sharing change occurs here.

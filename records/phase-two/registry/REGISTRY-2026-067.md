@@ -8,7 +8,7 @@
 | T38-U01 | `pass` | exact ZIP/receipt; safe no-overwrite 14-member extraction; manifest passes | U02 |
 | T38-U02 | `pass` | desktop/narrow render; strongest-result walk; 9/9 destinations; claims/rights/privacy checks | U03 |
 | T38-U03 | `pass` | no material defect; readiness JSON and owner handoff; no repackaging | U04 |
-| T38-U04 | `in_progress` | local JSON/link/claim/privacy/scope/diff/output-hash gates pass; PR/main gates pending | milestone exit |
+| T38-U04 | `pass` | PR #549; main `c1e9163...`; 149 JSON; 764 Markdown / 313 links; exact four-output hashes | owner submission stop |
 
 The loopback favicon 404, synthetic-Tab limitation, and plain-browser Markdown
 behavior remain explicit. They do not change the intended extracted-file
