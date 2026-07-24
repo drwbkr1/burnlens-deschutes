@@ -1,6 +1,6 @@
 # REGISTRY-2026-064 - BL-EXC-002 Windigo checkout-byte remediation
 
-**Issue / branch:** #536 / `codex/bl-exc-002-windigo-byte-stability`
+**Issue / branch / candidate:** #536 / `codex/bl-exc-002-windigo-byte-stability` / `e5743c723bfebfb13108458f8ace2e8e429517e1`
 
 **Parent milestone / PR / failed merge:** P2O4-T35 / #535 / `00d01402657e92357f5f4c795ba9a4f4fd99038a`
 
@@ -22,7 +22,7 @@ The cause is path coverage, not scientific or custody drift: Git stored the corr
 | attribute regression | pass: all bound text paths resolve to `text=set`, `eol=lf`; PNG resolves to `text=unset` |
 | focused replay | pass: eight tests |
 | complete repository | pass: 577 tests, one expected skip, 22 warnings, 86 subtests |
-| package | pending exact committed exception head |
+| package | pass: two exact-candidate 872,766-byte wheels reproduce SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7` |
 | exception PR / corrected main / tag | pending |
 
 The first candidate focused run exposed the missing nested output rule. The second exposed path-separator quoting in the new test. Both remain part of the failure chain.

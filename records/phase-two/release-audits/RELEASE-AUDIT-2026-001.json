@@ -11,8 +11,8 @@
     "external"
   ],
   "candidate": {
-    "base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
-    "commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+    "base_commit": "00d01402657e92357f5f4c795ba9a4f4fd99038a",
+    "commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
     "version": "0.47.0",
     "tag": "v0.47.0-windigo-sixth-prototype-event",
     "artifacts": [
@@ -40,9 +40,9 @@
   },
   "live_truth": {
     "verified_at_utc": "2026-07-24T01:10:16.8257050Z",
-    "branch": "codex/p2o4-t35-windigo-deadline-gate",
-    "remote_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
-    "pull_request": 535,
+    "branch": "codex/bl-exc-002-windigo-byte-stability",
+    "remote_commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
+    "pull_request": null,
     "tag_target": "",
     "deployment": null
   },
@@ -54,8 +54,8 @@
       "status": "pass",
       "method": "Compare the exact branch diff and issue #534 contract with the verified v0.46 base.",
       "evidence": [
-        "origin/codex/p2o4-t35-windigo-deadline-gate equals e8739a90b8ed7337851afcffb313f3d4114224bf",
-        "Issue #534 remains open and names the same branch, base, event, six units, and no-dataset exit"
+        "origin/codex/bl-exc-002-windigo-byte-stability equals e5743c723bfebfb13108458f8ace2e8e429517e1",
+        "Issue #536 limits the exception to checkout attributes, one regression test, and release-truth records"
       ],
       "reason": ""
     },
@@ -106,6 +106,7 @@
       "method": "Build twice from separate exact Git archives of package-sensitive checkpoint 714273adfcf8f90ab16abe798eb086201577b0e9 under fixed SOURCE_DATE_EPOCH 1784854998; verify the closeout records commit changes no package-sensitive path; inspect and install one wheel in an ignored isolated environment.",
       "evidence": [
         "Two 872,766-byte wheels are byte-identical at SHA-256 1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
+        "Exception candidate e5743c723bfebfb13108458f8ace2e8e429517e1 reproduces the same wheel exactly",
         "Diff 714273a..e8739a9 changes zero package-sensitive paths",
         "183 unique entries, zero forbidden entries",
         "Isolated 0.47.0 import resolves from site-packages; 13 packages compatible; 86 of 86 command help probes pass"
@@ -164,6 +165,15 @@
         "BL-EXC-002 issue #536 owns the checkout-byte remediation; tag withheld"
       ],
       "reason": ""
+    },
+    {
+      "id": "CHECK-010",
+      "category": "exception-ship",
+      "required": true,
+      "status": "not_run",
+      "method": "Open and merge the BL-EXC-002 PR, repeat the exact-output, full-suite, package, and isolated-install gates from corrected origin/main, then peel the annotated tag.",
+      "evidence": [],
+      "reason": "Exception candidate passes locally and is awaiting its PR transaction."
     }
   ],
   "truth_surfaces": [

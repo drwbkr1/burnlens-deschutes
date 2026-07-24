@@ -12,6 +12,8 @@
   "release_candidate_commit": "714273adfcf8f90ab16abe798eb086201577b0e9",
   "closeout_records_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
   "checkpoint_commit": "00d01402657e92357f5f4c795ba9a4f4fd99038a",
+  "remediation_issue": 536,
+  "exception_candidate_commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
   "version_tag": "v0.47.0-windigo-sixth-prototype-event",
   "version_tag_object": null,
   "software_version": "0.47.0",
@@ -77,7 +79,7 @@
     "dependency_and_lock": "pass: 66 locked distributions; uv.lock 207817 LF bytes / sha256 f401b5021679aaf98febc93a7638ed892250c2e2e74c14e5264737922ad8823b",
     "json_links_privacy_claims": "pass",
     "render": "pass",
-    "package": "pass at 714273adfcf8f90ab16abe798eb086201577b0e9",
+    "package": "pass at 714273adfcf8f90ab16abe798eb086201577b0e9 and exact exception candidate e5743c723bfebfb13108458f8ace2e8e429517e1",
     "pull_request": "pass: PR #535 squash-merged",
     "merged_main": "fail: exact checkout bytes drifted; 569 passed, 1 skipped, 6 Windigo intake setup errors",
     "tag": "pending"

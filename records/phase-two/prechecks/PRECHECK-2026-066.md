@@ -4,7 +4,7 @@
 
 **Failed merged checkpoint:** `00d01402657e92357f5f4c795ba9a4f4fd99038a`
 
-**Branch:** `codex/bl-exc-002-windigo-byte-stability`
+**Branch / candidate:** `codex/bl-exc-002-windigo-byte-stability` / `e5743c723bfebfb13108458f8ace2e8e429517e1`
 
 **Disposition:** `REMEDIATE_CHECKOUT_BYTES_WITHOUT_CHANGING_EVIDENCE`
 
@@ -51,6 +51,8 @@ The working-tree line-ending normalization is mechanical only. Git blob hashes f
 
 ## Remaining exit gates
 
-Commit and push the exception. Prove its fixed-epoch wheel is byte-identical to SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`. Open and merge one exception PR. Then repeat the focused/full suite from fresh corrected `origin/main`, reproduce the exact public outputs and package, and remotely peel the annotated v0.47 tag to the corrected merge.
+Two exact Git archives of committed exception candidate `e5743c723bfebfb13108458f8ace2e8e429517e1`, built under the original `SOURCE_DATE_EPOCH=1784854998`, reproduce the canonical wheel exactly: 872,766 bytes / SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`.
+
+Open and merge one exception PR. Then repeat the focused/full suite from fresh corrected `origin/main`, reproduce the exact public outputs and package, and remotely peel the annotated v0.47 tag to the corrected merge.
 
 No GitHub Release, deployment, dataset, split, baseline, or model is authorized.
