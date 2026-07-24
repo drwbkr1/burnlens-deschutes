@@ -82,3 +82,24 @@ change with the checkout and are not scientific evidence.
 BurnLens keeps r002 unchanged as a reproducibility failure. R003 removes only
 the ambient path fields. It must reproduce every public byte before the render
 gate can close.
+
+## 2026-07-24 - U03 closes after replay and package remediation
+
+R003 removes only the four local extraction paths. A detached checkout uses a
+different extraction location and reproduces the JSON, PNG, and HTML exactly.
+The scientific findings do not change.
+
+The owner confirms the r002 HTML renders correctly. R003 keeps the same layout
+and exact image bytes. Only its report identity, run identity, and source
+commit text change.
+
+A runtime-only wheel then reveals one packaging defect. The new command imports
+optional geospatial libraries before showing help. The failed wheel remains
+evidence.
+
+A wrapper-only fix delays that import. A fresh runtime install now exercises
+all 94 command help paths. Actual Ward Creek inspection still requires the
+locked `geo-research` profile and fails clearly without it.
+
+U03 now passes. U04 may establish affirmative background evidence independently
+of the burned proposal. No candidate or label advances.
