@@ -1,18 +1,19 @@
 # PRECHECK-2026-074 — Ward Creek optical custody
 
-**Date:** 2026-07-24  
-**Unit / issue / branch:** `P2O4-T39-U02` / #554 / `codex/p2o4-t39-replacement-event`  
-**Disposition:** `pass`  
+**Date:** 2026-07-24
+**Unit / issue / branch:** `P2O4-T39-U02` / #554 / `codex/p2o4-t39-replacement-event`
+**Disposition:** `pass`
 **Next dependency:** `P2O4-T39-U03`
 
 ## Bound entry
 
 U02 starts only after U01 passes and is recoverably pushed at
 `11c5ad377cb6a65242720ae819c769b29b82cee2`. The acquisition implementation
-is pushed at `8a0b1ee39e06b75a87bf594b80e3a69805f2bfa0`. The first credential-free
+is pushed at `8a0b1eea063078375470487e69de1b26e0bf7ad7`. The first credential-free
 preflight then fails closed on two mistyped U01 digest constants. It acquires
 zero provider bytes and creates no custody target. Correction
-`3b3406b` repairs only those constants and adds an all-binding regression test.
+`3b3406b5e875889b4c282130d1ed5270e33a7572` repairs only those constants and
+adds an all-binding regression test.
 
 The corrected preflight verifies:
 

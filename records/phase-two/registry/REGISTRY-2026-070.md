@@ -1,14 +1,14 @@
 # REGISTRY-2026-070 — P2O4-T39 Ward Creek optical custody
 
-**Recorded:** 2026-07-24  
-**Issue:** #554  
-**Repository:** `drwbkr1/burnlens-deschutes`  
+**Recorded:** 2026-07-24
+**Issue:** #554
+**Repository:** `drwbkr1/burnlens-deschutes`
 **Branch:** `codex/p2o4-t39-replacement-event`
 
 | Unit | Run | State | Immutable output | Next dependency |
 |---|---|---|---|---|
 | `P2O4-T39-U01` | `BL-2026-07-24-p2o4-t39-u01-r008` | `pass` | Ward Creek official source/terms/exact-pair gate at `11c5ad377cb6a65242720ae819c769b29b82cee2` | U02 |
-| `P2O4-T39-U02-PREFLIGHT-R001` | credential-free | `failed-retained` | Exact preflight rejects two mistyped U01 hashes before credential use; zero provider bytes and zero custody targets | remediated by `3b3406b` |
+| `P2O4-T39-U02-PREFLIGHT-R001` | credential-free | `failed-retained` | Exact preflight rejects two mistyped U01 hashes before credential use; zero provider bytes and zero custody targets | remediated by `3b3406b5e875889b4c282130d1ed5270e33a7572` |
 | `P2O4-T39-U02` | `BL-2026-07-24-ward-creek-optical-intake-r001` | `pass` | Exact two-archive ignored custody plus tracked `WARD-CREEK-OPTICAL-CUSTODY-2026-001.json` | U03 |
 
 ## U02 registered packages

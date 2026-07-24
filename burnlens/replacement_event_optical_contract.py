@@ -383,7 +383,15 @@ def verify_ward_creek_repository_preflight(
     remote = _git(root, "rev-parse", f"origin/{BRANCH}")
     if remote.returncode != 0 or remote.stdout.strip() != commit:
         raise AcquisitionError("WARD_CREEK_REMOTE_HEAD_MISMATCH")
-    allowed = f"?? {run.tracked_report.relative_to(root).as_posix()}" if existing_success_outputs else ""
+    report_relative = run.tracked_report.relative_to(root).as_posix()
+    report_tracking = _git(root, "ls-files", "--error-unmatch", "--", report_relative)
+    allowed = (
+        ""
+        if existing_success_outputs and report_tracking.returncode == 0
+        else f"?? {report_relative}"
+        if existing_success_outputs
+        else ""
+    )
     status = _git(root, "status", "--porcelain=v1", "--untracked-files=all")
     if status.returncode != 0 or status.stdout.strip().replace("\\", "/") != allowed:
         raise AcquisitionError("WARD_CREEK_WORKTREE_NOT_CLEAN")
@@ -410,9 +418,12 @@ def verify_ward_creek_repository_preflight(
             raise AcquisitionError("WARD_CREEK_PRIVATE_PATH_NOT_IGNORED", detail=relative)
         if _git(root, "ls-files", "--error-unmatch", "--", relative).returncode != 1:
             raise AcquisitionError("WARD_CREEK_PRIVATE_PATH_TRACKED", detail=relative)
-    report_relative = run.tracked_report.relative_to(root).as_posix()
     if _git(root, "check-ignore", "--quiet", "--no-index", "--", report_relative).returncode != 1:
         raise AcquisitionError("WARD_CREEK_TRACKED_REPORT_IGNORED")
+    if existing_success_outputs and report_tracking.returncode not in {0, 1}:
+        raise AcquisitionError("WARD_CREEK_TRACKED_REPORT_STATE_INVALID")
+    if not existing_success_outputs and report_tracking.returncode != 1:
+        raise AcquisitionError("WARD_CREEK_TRACKED_REPORT_ALREADY_TRACKED")
     if existing_success_outputs:
         required = [
             run.intake_contract,
