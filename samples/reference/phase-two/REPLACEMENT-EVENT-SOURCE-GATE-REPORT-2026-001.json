@@ -1,0 +1,66 @@
+{
+  "authorized_products": [
+    {
+      "blake3": "737a71d70c36ae8d65d26df28e87730d08ed0bade1d2a327cce8a6b812a32c2a",
+      "md5": "7de4c0076a9ed4a3024ef46474b2aaac",
+      "native_id": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE",
+      "provider_id": "f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7",
+      "role": "pre",
+      "size_bytes": 1198399787
+    },
+    {
+      "blake3": "eaf090416dd240478d85389ba018f1d193e09c270ff40a6f346ee9c4f8110eaf",
+      "md5": "28f18e0328dd4cb8ab45446a1a238fb0",
+      "native_id": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE",
+      "provider_id": "51ddb0b7-8456-40a2-8301-e1651c951116",
+      "role": "post",
+      "size_bytes": 1198420414
+    }
+  ],
+  "boundary": {
+    "area_square_degrees": 0.0009553536724757831,
+    "bounds_wgs84": [
+      -120.902079,
+      44.915764,
+      -120.856115,
+      44.955295
+    ],
+    "coverage_predicate": "shapely.geometry.shape(item.geometry).covers(boundary)",
+    "empty": false,
+    "exterior_vertex_count": 3340,
+    "geometry_type": "Polygon",
+    "valid": true
+  },
+  "decision": "PASS_WARD_CREEK_U01_AUTHORIZE_EXACT_OPTICAL_PAIR_ONLY",
+  "event": {
+    "acres": 2070,
+    "assessment_type": "Initial",
+    "catalog_id": 34073,
+    "event_id": "OR4494912090120190812",
+    "event_name": "WARD CREEK 0769 RN",
+    "fire_type": "Wildfire",
+    "ignition_date": "2019-08-12",
+    "map_id": 10016337,
+    "mtbs_post_id": "804502920190830",
+    "mtbs_pre_id": "804502920190729"
+  },
+  "git_source_commit": "41b451d180f962aa1216384925c650fa43fcb9d6",
+  "limitations": [
+    "MTBS is analyst-interpreted remote-sensing evidence, not field truth.",
+    "Cloud metadata is scene-level and does not prove pixel usability inside the event.",
+    "No archive, raster, label, dataset, split, baseline, or model was created.",
+    "Exact MTBS bundle processing and redistribution remain conditional on archive notices.",
+    "No official, endorsed, field-validated, operational, or emergency-ready status is implied."
+  ],
+  "provider_bytes_acquired": 0,
+  "report_id": "REPLACEMENT-EVENT-SOURCE-GATE-REPORT-2026-001",
+  "run_id": "BL-2026-07-24-p2o4-t39-u01-r008",
+  "schema_version": "0.1.0",
+  "software_version": "0.50.0",
+  "source_binding": {
+    "bytes": 17056,
+    "sha256": "a429705f39819c57c5f2e6d1bb906fbbcbe43936f06ba410632b116f995f7515",
+    "source_id": "REPLACEMENT-EVENT-SOURCE-2026-001"
+  },
+  "warning": "Experimental BurnLens portfolio evidence. Not official wildfire information. Not emergency guidance. Not field validation, endorsement, or operational support. Official sources govern."
+}
