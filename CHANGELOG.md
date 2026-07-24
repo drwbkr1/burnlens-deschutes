@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Unreleased - P2O4-T35 Windigo deadline gate
+## v0.47.0-windigo-sixth-prototype-event - verified - 2026-07-24
 
 - Record August 6, 2026 as the controlling portfolio-submission deadline.
 - Select only Windigo 2022 for one final sixth-event attempt through July 27 at 6:00 PM America/Indianapolis.
@@ -19,7 +19,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Add aggregate-only JSON/HTML/PNG intake evidence and version the milestone tooling as BurnLens 0.47.0.
 - Retain technical-case-study-only as the fallback if the remaining release gate cannot pass. Do not authorize baseline-first without an accepted dataset and split.
 
-Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass. U06 candidate gates pass owner-confirmed desktop/narrow rendering, 575 tests, exact package reproduction, isolated installation, and public-claim/privacy audits. PR, merge, fresh-main verification, and tag remain pending.
+Issue #534 / PR #535 first merges at `00d01402657e92357f5f4c795ba9a4f4fd99038a`. Fresh Windows main passes the environment and 86 command probes, then fails six Windigo exact-byte setup gates after checkout converts bound text to CRLF. The tag is withheld. BL-EXC-002 / issue #536 / PR #537 adds only explicit LF attributes, one regression, and release-truth records. Corrected main `6a80ba14d060702d97c5d39f40cf3d6f8122ccc8` preserves every scientific and public-output Git blob, passes eight focused and 577 full tests with one expected skip and 86 subtests, reproduces the 872,766-byte wheel / SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`, and passes a 13-distribution isolated install with 86 commands. Annotated tag object `31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5` remotely peels exactly to corrected main. Lifecycle issue #538 records the August 6 portfolio handoff.
 
 PR #535 squash-merges at `00d01402657e92357f5f4c795ba9a4f4fd99038a`, but fresh-main release verification withholds the tag after Windows checkout converts exact bound-record and nested intake text to CRLF. The fail-closed suite retains 569 passes / one expected skip / six setup errors. BL-EXC-002 / issue #536 adds only exact LF checkout coverage and regression evidence; all scientific values, owner decisions, label counts, public Git blobs, dataset/split/baseline/model nulls, and version identity remain unchanged.
 
