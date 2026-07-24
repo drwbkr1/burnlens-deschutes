@@ -74,3 +74,11 @@ native rasters, class domain, and nine optical registration windows. It finds
 The exact PNG looks correct. Automated local HTML navigation is blocked by the
 browser policy. BurnLens retains that limit and keeps U04 closed until the
 exact HTML receives desktop and narrow-width confirmation.
+
+An exact detached replay then catches a narrower defect. The picture and HTML
+match byte-for-byte, but JSON records four local extraction paths. Those paths
+change with the checkout and are not scientific evidence.
+
+BurnLens keeps r002 unchanged as a reproducibility failure. R003 removes only
+the ambient path fields. It must reproduce every public byte before the render
+gate can close.

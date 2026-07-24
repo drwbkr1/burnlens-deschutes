@@ -24,3 +24,10 @@ Its decision is:
 The PNG is visually inspected. The browser refuses automated local-file
 navigation. BurnLens retains that limitation and waits for exact user-render
 confirmation instead of bypassing the browser policy.
+
+## Subsequent replay result
+
+REGISTRY-2026-073 supersedes the r002 state. Exact detached replay reproduces
+HTML and PNG but not JSON because four public fields contain ambient extracted
+paths. R002 is retained as `failed-reproducibility-retained`. U04 remains
+closed.

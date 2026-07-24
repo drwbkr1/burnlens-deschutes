@@ -42,12 +42,12 @@ from .replacement_event_optical_contract import (
 )
 
 
-REPORT_ID = "WARD-CREEK-REFERENCE-FITNESS-2026-001"
-REPORT_VERSION = "ward-creek-reference-fitness-v0.1.0"
-PROTOCOL_VERSION = "ward-creek-reference-fitness-protocol-v0.1.0"
+REPORT_ID = "WARD-CREEK-REFERENCE-FITNESS-2026-002"
+REPORT_VERSION = "ward-creek-reference-fitness-v0.1.1"
+PROTOCOL_VERSION = "ward-creek-reference-fitness-protocol-v0.1.1"
 UNIT_ID = "P2O4-T39-U03"
 TASK_ISSUE = 554
-RUN_ID = "BL-2026-07-24-ward-creek-reference-fitness-r002"
+RUN_ID = "BL-2026-07-24-ward-creek-reference-fitness-r003"
 ARCHIVE_BYTES = 4_385_952
 ARCHIVE_SHA256 = "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18"
 ARCHIVE_MEMBERS = 16
@@ -213,7 +213,6 @@ def _write_exact_extraction(archive: ZipFile, root: Path) -> dict[str, Any]:
             target.write(data)
         parts[extension] = {
             "member": member,
-            "path": path.as_posix(),
             "bytes": len(data),
             "sha256": _digest(data),
         }

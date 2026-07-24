@@ -65,6 +65,13 @@ local HTML is blocked by the browser URL policy. That block is retained and
 not bypassed. U03 remains `machine-pass-render-pending` until the exact HTML
 receives a real local desktop and narrow-viewport render confirmation.
 
+## Subsequent replay result
+
+PRECHECK-2026-078 supersedes this disposition. A detached exact-source replay
+proves HTML and PNG bytes but exposes checkout-dependent JSON extraction paths.
+R002 is therefore `failed-reproducibility-retained`, not a passing U03
+candidate. Its exact bytes remain unchanged.
+
 ## Decision boundary
 
 No U04 work starts from machine evidence alone. No candidate, owner response,

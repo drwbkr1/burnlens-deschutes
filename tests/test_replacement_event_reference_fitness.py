@@ -38,7 +38,7 @@ class ReplacementEventReferenceFitnessTests(unittest.TestCase):
             self.assertEqual(metadata["iso"]["sha256"], "fa6fa6fc897a73d5272b48bf906b3605775b3a89a093d42922cc14ff38a7ffb1")
 
     def test_run_id_is_exact(self) -> None:
-        self.assertEqual(RUN_ID, "BL-2026-07-24-ward-creek-reference-fitness-r002")
+        self.assertEqual(RUN_ID, "BL-2026-07-24-ward-creek-reference-fitness-r003")
         self.assertEqual(ARCHIVE_SHA256, "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18")
         self.assertEqual(EXPECTED_DNBR6_DOMAIN["2"], 8_287)
 
@@ -69,6 +69,10 @@ class ReplacementEventReferenceFitnessTests(unittest.TestCase):
             self.assertEqual(report["fitness_decision"]["source"], "PASS_EXACT_WARD_CREEK_MTBS_SOURCE_FITNESS")
             self.assertIsNone(report["dataset_version"])
             self.assertIsNone(report["model_version"])
+            self.assertNotIn(
+                "path",
+                report["boundary"]["components"]["shp"],
+            )
             html = render_html(report, "evidence.png")
             self.assertNotIn("official status", html.lower().split("what this proves")[1].split("what this does not prove")[0])
             self.assertEqual(previews["boundary_mask20"].shape, (219, 183))
