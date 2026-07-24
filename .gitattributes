@@ -107,6 +107,9 @@ samples/labels/review/grandview/phase-two/intake/*.html text eol=lf
 samples/labels/review/windigo/phase-two/*.json text eol=lf
 samples/labels/review/windigo/phase-two/*.html text eol=lf
 samples/labels/review/windigo/phase-two/*.png -text
+samples/labels/review/windigo/phase-two/intake/*.json text eol=lf
+samples/labels/review/windigo/phase-two/intake/*.html text eol=lf
+samples/labels/review/windigo/phase-two/intake/*.png -text
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
@@ -170,7 +173,15 @@ samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png -text
 
 # P2O4-T35 exact-byte custody reconciliation evidence.
 records/phase-two/intake/P2O4-T35-U02-windigo-public-report-r001-superseded.json text eol=lf
+records/phase-two/sources/SOURCE-2026-036.md text eol=lf
+records/phase-two/sources/SOURCE-2026-037.md text eol=lf
+records/phase-two/terms/TERMS-2026-031.md text eol=lf
+records/phase-two/terms/TERMS-2026-032.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-059.md text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-060.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-061.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-062.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-063.md text eol=lf
 burnlens/windigo_reference_request.py text eol=lf
 burnlens/request_windigo_reference.py text eol=lf
 tests/test_windigo_reference_request.py text eol=lf

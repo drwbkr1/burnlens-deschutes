@@ -50,12 +50,55 @@ PRIVATE_AVAILABLE = all(
     path.exists()
     for path in (PRE, POST, ARCHIVE, EXTRACTED, BOUNDARY, RESPONSE, RECEIPT)
 )
+BOUND_RECORD_PATHS = (
+    "records/phase-two/sources/SOURCE-2026-036.md",
+    "records/phase-two/sources/SOURCE-2026-037.md",
+    "records/phase-two/terms/TERMS-2026-031.md",
+    "records/phase-two/terms/TERMS-2026-032.md",
+    "records/phase-two/prechecks/PRECHECK-2026-059.md",
+    "records/phase-two/prechecks/PRECHECK-2026-060.md",
+    "records/phase-two/prechecks/PRECHECK-2026-061.md",
+    "records/phase-two/prechecks/PRECHECK-2026-062.md",
+    "records/phase-two/prechecks/PRECHECK-2026-063.md",
+)
 
 
 def _ignored_temporary_directory():
     downloads = ROOT / "downloads"
     downloads.mkdir(parents=True, exist_ok=True)
     return TemporaryDirectory(dir=downloads)
+
+
+class WindigoOwnerResponseCheckoutContractTests(unittest.TestCase):
+    def test_every_exact_record_binding_has_an_explicit_lf_checkout_contract(self) -> None:
+        for path in BOUND_RECORD_PATHS:
+            completed = subprocess.run(
+                ["git", "check-attr", "text", "eol", "--", path],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn(f"{path}: text: set", completed.stdout)
+            self.assertIn(f"{path}: eol: lf", completed.stdout)
+
+    def test_public_intake_outputs_have_explicit_checkout_contracts(self) -> None:
+        public_directory = PUBLIC_DIRECTORY.relative_to(ROOT).as_posix()
+        expected = {
+            f"{public_directory}/{REPORT_ID}.json": ("set", "lf"),
+            f"{public_directory}/{REPORT_ID}.html": ("set", "lf"),
+            f"{public_directory}/{REPORT_ID}.png": ("unset", "unspecified"),
+        }
+        for path, (text_value, eol_value) in expected.items():
+            completed = subprocess.run(
+                ["git", "check-attr", "text", "eol", "--", path],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn(f"{path}: text: {text_value}", completed.stdout)
+            self.assertIn(f"{path}: eol: {eol_value}", completed.stdout)
 
 
 @unittest.skipUnless(PRIVATE_AVAILABLE, "exact ignored Windigo custody is unavailable")
