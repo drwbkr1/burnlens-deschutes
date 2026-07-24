@@ -9,7 +9,7 @@
 | T37-U03 | `pass` | source `7d972bfa...`; LF remediation `660f54f...`; focused tests pass | U04 |
 | T37-U04 | `pass` | final r002 exact ZIP and receipt; replay byte-identical | U05 |
 | T37-U05 | `pass` | final r002 extraction; safe structure; real desktop/narrow Chrome QA | U06 |
-| T37-U06 | `in_progress` | first full suite retained; 29 stale current-version assertions corrected; 187 affected tests pass; full/package/install/release gates pending | milestone exit |
+| T37-U06 | `in_progress` | 586 full tests pass; exact bundle replay; reproducible wheel; isolated 0.49 install; valid release audit blocked only on PR/merge/fresh-main/tag | milestone exit |
 
 Retained failures:
 
@@ -24,7 +24,12 @@ Retained failures:
 - the first full candidate suite passed 557 tests and failed only 29 stale
   current-package `0.48.0` assertions after the intentional `0.49.0` bump; and
 - the first affected-test rerun exceeded a two-minute shell limit without a
-  reported failure; the bounded longer rerun passed all 187 affected tests.
+  reported failure; the bounded longer rerun passed all 187 affected tests;
+- the first package-isolation attempt corrupted a binary TAR stream through
+  PowerShell and was rejected before build; file-based Git ZIP archives
+  supersede it; and
+- the first ZIP package command exceeded two minutes after package C finished;
+  package D completed separately and is byte-identical.
 
 No scientific, label, dataset, split, baseline, model, metric, deployment,
 access, or public-sharing state changes.
