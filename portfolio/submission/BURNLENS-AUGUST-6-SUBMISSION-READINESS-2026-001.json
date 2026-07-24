@@ -6,6 +6,9 @@
   "repository": "drwbkr1/burnlens-deschutes",
   "repository_commit": "ca5a2cee130da0e918b061206998b096a302a6f7",
   "task_issue": 548,
+  "pull_request": 549,
+  "release_checkpoint": "c1e91637f39bc84bd5a8c08440a0117ec4173bd6",
+  "lifecycle_issue": 550,
   "software_version": "0.49.0",
   "source_release": "v0.49.0-august6-submission-bundle",
   "source_release_commit": "8d4b81f665a0850b2e173382760b2df96d9c9d20",
@@ -79,7 +82,7 @@
     "No deployment, GitHub Release, access change, or public-sharing action has occurred."
   ],
   "decision": {
-    "status": "candidate",
+    "status": "verified",
     "value": "READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY",
     "rationale": "Every material recipient, integrity, render, navigation, claims, rights, privacy, and reproducibility gate passes. The retained limitations do not require repackaging the verified bundle.",
     "owner_action": "Submit the exact ZIP bytes through the owner's chosen portfolio channel only after independently confirming that channel's access and sharing settings."

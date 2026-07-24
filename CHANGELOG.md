@@ -2,15 +2,15 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Unreleased - P2O4-T38 final submission readiness
+## P2O4-T38 final submission readiness - verified - 2026-07-24
 
 - Extract and validate the exact verified v0.49 ZIP as a recipient.
 - Pass desktop/narrow rendering, strongest-result navigation, both images, all nine destinations, claims, rights, privacy, and comprehension gates.
 - Publish one exact readiness JSON and concise owner handoff without repackaging the ZIP.
 - Retain the loopback favicon 404, in-app synthetic-Tab limitation, and plain-browser Markdown behavior.
-- Select `READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY`, pending records-only release verification.
+- Verify `READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY` through exact-main records checks.
 
-Issue #548; run `BL-2026-07-24-final-submission-readiness-r001`. No software version, tag, deployment, GitHub Release, access, ownership, public-sharing, scientific, label, dataset, split, baseline, model, metric, accuracy, or inference change.
+Issue #548 / PR #549; run `BL-2026-07-24-final-submission-readiness-r001`; merge `c1e91637f39bc84bd5a8c08440a0117ec4173bd6`. Exact main parses 149 JSON files, checks 764 Markdown files / 313 links, and matches all four submission/readiness hashes. No software version, tag, deployment, GitHub Release, access, ownership, public-sharing, scientific, label, dataset, split, baseline, model, metric, accuracy, or inference change.
 
 ## v0.49.0-august6-submission-bundle - verified - 2026-07-24
 

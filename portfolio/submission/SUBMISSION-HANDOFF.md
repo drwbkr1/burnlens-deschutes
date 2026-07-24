@@ -38,5 +38,6 @@ an external submission channel, confirm its audience and sharing settings.
 Submit only the exact ZIP above. Do not submit private custody, raw provider
 packages, credentials, owner-response bytes, or retrieval details.
 
-The current readiness decision is candidate until issue #548 merges and exact
-main repeats the records-only verification.
+The readiness decision is verified through issue #548 / PR #549 and exact
+main `c1e91637f39bc84bd5a8c08440a0117ec4173bd6`. External submission remains
+an owner action because the destination controls access and sharing.

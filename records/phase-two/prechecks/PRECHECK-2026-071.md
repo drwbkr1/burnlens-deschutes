@@ -45,3 +45,13 @@ the verified ZIP would create more release risk than value. The candidate
 decision is
 `READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY`, pending
 records-only PR and exact-main verification.
+
+PR #549 merges at
+`c1e91637f39bc84bd5a8c08440a0117ec4173bd6` and closes issue #548.
+Exact main parses 149 tracked JSON files, checks 764 tracked Markdown files /
+313 links with zero broken local links, and reproduces the exact ZIP, receipt,
+readiness JSON, and owner-handoff hashes. T38-U01 through U04 pass.
+
+The decision is verified. No software version or tag changes. External
+submission remains an owner action because its destination controls access
+and public-sharing state.

@@ -491,9 +491,9 @@ P2O4-T38 then repeats the exact ZIP as a recipient. Safe extraction, both
 viewports, both images, the strongest-result path, all nine destinations,
 claims, source roles, attribution, privacy, and comprehension pass. A
 loopback-only favicon request and an in-app synthetic-Tab limitation remain
-visible but do not affect the intended extracted-file path. The candidate
-decision is ready for owner submission as an offline technical case study,
-pending records-only release verification.
+visible but do not affect the intended extracted-file path. PR #549 and exact
+main verify readiness for owner submission as an offline technical case study.
+External submission remains an owner action.
 
 ## Traceability snapshot
 
