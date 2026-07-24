@@ -122,6 +122,7 @@ burnlens-build-windigo-owner-response-intake = "burnlens.build_windigo_owner_res
 burnlens-build-portfolio-reviewer-experience = "burnlens.build_portfolio_reviewer_experience:main"
 burnlens-build-submission-bundle = "burnlens.build_submission_bundle:main"
 burnlens-build-six-event-dataset-sufficiency = "burnlens.build_six_event_dataset_sufficiency:main"
+burnlens-build-replacement-event-source-gate = "burnlens.build_replacement_event_source_gate:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
