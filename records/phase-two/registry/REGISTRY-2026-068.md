@@ -11,6 +11,6 @@
 | U03 r003 | `block` | six outputs reproduce exactly; independent audit agrees; 0 valid 2/2/2 assignments | U04 |
 | U04 r001 | `failed` | the package verifier used an invalid PowerShell selector; ignored exact attempt retained | r002 |
 | U04 r002 | `failed` | two 899,515-byte wheels differed without a fixed build epoch; ignored exact attempt retained | r003 |
-| U04 r003 | `block` | fixed-epoch wheels repeat at SHA-256 `c3aa9706...`; isolated 0.50.0 install, 89 commands, PNG render, 595 tests, one expected skip, 58 warnings, and 86 subtests pass; owner confirms the exact HTML renders correctly at desktop and narrow width | merge/tag verification, then #554 |
+| U04 r003 | `block` | merge `85f827e...` reproduces all six outputs; 595 tests, one expected skip, 58 warnings, and 86 subtests pass; fixed-epoch wheels repeat at SHA-256 `c3aa9706...`; isolated 0.50.0 install, 89 commands, PNG, and owner-confirmed HTML pass; tag object `915ca1e...` peels to the merge | #554 |
 
 The tracked run creates no dataset, split, baseline, model, metric, training authorization, deployment, external submission, or public-sharing change.

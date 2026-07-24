@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## P2O5-T02 six-event dataset sufficiency - block candidate - 2026-07-24
+## v0.50.0-six-event-dataset-sufficiency - verified block - 2026-07-24
 
 - Add a deterministic BurnLens 0.50.0 region-level sufficiency evaluator.
 - Reconstruct 12 owner-approved prototype regions, 286 accepted core pixels, and 533 excluded unknown-ring pixels across six whole events.
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain failed r001 commit binding and r002 directory-dependent replay evidence; final r003 reproduces all six tracked outputs and agrees with an independent readiness audit.
 - Reclassify the verified August 6 ZIP as an interim contingency technical case study, not final BurnLens readiness.
 
-Issue #552; source `e102874c2971baffd7e04214eac4e91632777960`; run `BL-2026-07-24-six-event-dataset-sufficiency-r003`. The smallest credible next route is one fully gated replacement event under a replicated source regime, exclusion of Darlene, and a complete sufficiency rerun.
+Issue #552 / PR #553; merge `85f827ef6a7ab2e3f2afea7b17d94677cd557b3e`; annotated tag object `915ca1ea14194dce9c1de682fd50efa882c34a06`; source `e102874c2971baffd7e04214eac4e91632777960`; run `BL-2026-07-24-six-event-dataset-sufficiency-r003`. Fresh main reproduces all six outputs, passes 595 tests with one expected skip and 86 subtests, reproduces the 899,515-byte wheel, and passes isolated installation. Issue #554 owns one fully gated replacement event under a replicated source regime, exclusion of Darlene, and a complete sufficiency rerun.
 
 ## P2O4-T38 final submission readiness - verified - 2026-07-24
 
