@@ -1,0 +1,184 @@
+{
+  "report_id": "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "windigo-owner-response-intake-v0.1.0",
+  "generated_at_utc": "2026-07-24T00:30:48.455Z",
+  "run_id": "BL-2026-07-24-windigo-owner-response-intake-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 534,
+  "unit_id": "P2O4-T35-U05",
+  "git_source_commit": "68fd2171e52844f717ef0d6a1b108121cd93bee1",
+  "software_version": "0.47.0",
+  "aoi_version": "multi-event-native-grids-v0.4.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "prior_label_intake": {
+      "report_id": "GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001",
+      "run_id": "BL-2026-07-21-grandview-owner-response-intake-r002",
+      "bytes": 9112,
+      "sha256": "2897656ad13164295ad2fda78887d8a41b920dfe73e39c12396e55a034b081b5"
+    },
+    "source_report": {
+      "report_id": "WINDIGO-SOURCE-FITNESS-2026-006",
+      "run_id": "BL-2026-07-23-windigo-source-fitness-r006",
+      "bytes": 105348,
+      "sha256": "7e0ede49bcee692c130c6f04fe90898f6c393fb57f64191da1f16c1567b724b2"
+    },
+    "proposal": {
+      "report_id": "WINDIGO-REGION-PROPOSAL-2026-001",
+      "run_id": "BL-2026-07-23-windigo-region-proposal-r001",
+      "bytes": 29995,
+      "sha256": "612143b0d54f6203026f00cc7848ea4d073b219967c75014b5d119ed85ec7365"
+    },
+    "surface": {
+      "report_id": "WINDIGO-OWNER-REVIEW-SURFACE-2026-001",
+      "run_id": "BL-2026-07-23-windigo-owner-review-surface-r002",
+      "bytes": 13597,
+      "sha256": "507a23044b2285462e5c5f7573111fbbb8a5fa52aae11a2956b99c9d8b936e12",
+      "ordered_manifest_sha256": "58efe73c109f4f9197952bfb9a11103223e3d34f9cd006b686fc124fa2ce1728"
+    },
+    "response": {
+      "bytes": 1061,
+      "sha256": "d1f77a9cf575f668ce1b8017a9b9607d72370022e8098b1b78f76dce95702104"
+    },
+    "receipt": {
+      "bytes": 2700,
+      "sha256": "2a5ab1e33ac431db86671356d067141e68186dc29daea3eb01fa76ad27cf5f2e"
+    },
+    "private_reconciliation": {
+      "bytes": 8155,
+      "sha256": "76304545350ac17e98a9a2f212a30dc4105039ad3c9b2214a4012dcd92a8c6af",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "record_bindings": [
+    {
+      "record_id": "SOURCE-2026-036",
+      "bytes": 8940,
+      "sha256": "d8ea91debe6f02f4ca672084ad35a02e80cda1c10469cc391d8174bb8b724128"
+    },
+    {
+      "record_id": "SOURCE-2026-037",
+      "bytes": 5666,
+      "sha256": "b19f9ca9cfcfda75216a094afc7f10056d39dfdfbddda66cd15e3ff092699b37"
+    },
+    {
+      "record_id": "TERMS-2026-031",
+      "bytes": 5902,
+      "sha256": "4ba57312c3be30c1c0b0c288b9d488cb3303159db275b2a477ecd5eb299d0f15"
+    },
+    {
+      "record_id": "TERMS-2026-032",
+      "bytes": 2361,
+      "sha256": "84c9ddafae1edbb2e5dcfa9b30e7d1d95e25341dcd6e3e2cb1e678894302a313"
+    },
+    {
+      "record_id": "PRECHECK-2026-059",
+      "bytes": 7031,
+      "sha256": "b3e2f66d0fdc15a022556387a604208591cc90bf494508dd8134c5ea8089f506"
+    },
+    {
+      "record_id": "PRECHECK-2026-060",
+      "bytes": 5676,
+      "sha256": "c70cbe543c1ed7e8c04c7ff80ec0ba141f98f9af97b208d339ef4d3d6d92ad32"
+    },
+    {
+      "record_id": "PRECHECK-2026-061",
+      "bytes": 6697,
+      "sha256": "31b513a5174ef716e6adf8f6b32ce59156992467cd3ed31e4f3934ff880891da"
+    },
+    {
+      "record_id": "PRECHECK-2026-062",
+      "bytes": 6088,
+      "sha256": "f628aa09f9831a58bf3e45c5bff5ac586cfa77bf313f7e7e388e885172f0ecea"
+    },
+    {
+      "record_id": "PRECHECK-2026-063",
+      "bytes": 5449,
+      "sha256": "71ac1e551a6a6327bcabe2ae24ff308b75cf6fe03a9357dd61db7074322ea45d"
+    }
+  ],
+  "decision_counts": {
+    "yes": 2,
+    "no": 0,
+    "uncertain": 0
+  },
+  "outcome": {
+    "windigo_owner_approved_region_labels": 2,
+    "windigo_class_counts": {
+      "background": 1,
+      "burned": 1
+    },
+    "windigo_accepted_core_pixels": 50,
+    "windigo_reviewed_unknown_ring_pixels": 102,
+    "windigo_excluded_unknown_ring_pixels": 102,
+    "windigo_event_complete": true,
+    "no_partial_event_promotion": true,
+    "cumulative_owner_approved_region_labels": 12,
+    "cumulative_prototype_label_class_counts": {
+      "background": 6,
+      "burned": 6
+    },
+    "cumulative_accepted_core_pixels": 286,
+    "cumulative_accepted_core_area_ha": 11.44,
+    "cumulative_excluded_unknown_ring_pixels": 533,
+    "event_group_count": 6,
+    "minimum_event_group_count": 6,
+    "minimum_event_group_gate_passed": true,
+    "separate_sufficiency_evaluator_passed": false,
+    "dataset_fitness_reopened": false
+  },
+  "promotion_gates": {
+    "exact_response_and_pre_reveal_custody": true,
+    "exact_source_pixel_recomputation": true,
+    "candidate_raster_reconstruction": true,
+    "source_and_terms": true,
+    "quality_and_registration": true,
+    "unknown_ring_excluded": true,
+    "event_level_leakage_control": true,
+    "both_classes_and_no_partial_promotion": true
+  },
+  "privacy": {
+    "notes_public": false,
+    "unit_decisions_public": false,
+    "private_paths_public": false
+  },
+  "boundaries": {
+    "owner_review_is_independent_ground_truth": false,
+    "unknown_ring_is_background": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "accuracy_or_operational_claim_created": false
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2022, accessed through CDSE.",
+    "BAER evidence is field-informed preliminary prototype-positive evidence with program cautions.",
+    "MTBS evidence corroborates the burned proposal under program-specific limits.",
+    "RAVG modeled effects remain context and conservative exclusion only."
+  ],
+  "warning": "Experimental owner-approved prototype regions, not ground truth, a dataset, official wildfire information, emergency guidance, or field validation. Official sources govern.",
+  "decision": "ACCEPT_WINDIGO_AS_SIXTH_OWNER_APPROVED_PROTOTYPE_EVENT_KEEP_DATASET_SPLIT_BASELINE_MODEL_CLOSED",
+  "next_gate": "P2O4-T35-U06 must close the milestone and hand off the August 6 portfolio assembly. A separate sufficiency evaluator is still required before any dataset or split work.",
+  "outputs": [
+    {
+      "path": "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3582,
+      "sha256": "6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52",
+      "media_type": "text/html"
+    },
+    {
+      "path": "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 79681,
+      "sha256": "0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05",
+      "media_type": "image/png"
+    }
+  ]
+}

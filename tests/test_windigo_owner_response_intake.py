@@ -44,6 +44,8 @@ SURFACE = ROOT / (
 LOCKED = ROOT / "downloads/phase-two/review-responses/P2O4-T35-U05/locked"
 RESPONSE = LOCKED / "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-d1f77a9cf575f668.json"
 RECEIPT = LOCKED / "WINDIGO-OWNER-REVIEW-SURFACE-2026-001-RECEIPT-d1f77a9cf575f668.json"
+PUBLIC_DIRECTORY = ROOT / "samples/labels/review/windigo/phase-two/intake"
+PUBLIC_REPORT = PUBLIC_DIRECTORY / f"{REPORT_ID}.json"
 PRIVATE_AVAILABLE = all(
     path.exists()
     for path in (PRE, POST, ARCHIVE, EXTRACTED, BOUNDARY, RESPONSE, RECEIPT)
@@ -157,6 +159,31 @@ class WindigoOwnerResponseIntakeTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(result.returncode, 0, str(path))
+
+    @unittest.skipUnless(PUBLIC_REPORT.is_file(), "tracked Windigo intake is unavailable")
+    def test_public_candidate_is_aggregate_only_and_self_bound(self) -> None:
+        report_bytes = PUBLIC_REPORT.read_bytes()
+        report = json.loads(report_bytes)
+        self.assertEqual(report["software_version"], "0.47.0")
+        self.assertEqual(report["label_set_version"], LABEL_SET_VERSION)
+        self.assertEqual(report["decision_counts"], {"yes": 2, "no": 0, "uncertain": 0})
+        self.assertEqual(report["outcome"]["cumulative_owner_approved_region_labels"], 12)
+        self.assertEqual(report["outcome"]["event_group_count"], 6)
+        self.assertFalse(report["outcome"]["dataset_fitness_reopened"])
+        for output in report["outputs"]:
+            path = PUBLIC_DIRECTORY / output["path"]
+            self.assertEqual(path.stat().st_size, output["bytes"])
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), output["sha256"])
+        serialized = report_bytes.decode("utf-8").lower()
+        for forbidden in (
+            "candidate_id",
+            "owner_decision",
+            "note_present",
+            "note_sha256",
+            "c:\\users",
+            "downloads",
+        ):
+            self.assertNotIn(forbidden, serialized)
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@
       ],
       "candidate_count": 2,
       "batch_size_exception": "single-event-pair",
-      "state": "active",
+      "state": "completed",
       "supersedes_surface_id": null
     }
   ]

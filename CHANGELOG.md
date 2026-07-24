@@ -12,10 +12,14 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Reproduce the U04 JSON, HTML, PNG, and both candidate rasters byte for byte; create zero owner decisions or labels.
 - Hand off one exact blank U05 owner-review batch containing only `WDP-001` and `WDP-002`.
 - Pass manifest-bound localhost, desktop, 390-pixel, blank-state, per-candidate, summary, export, lock, replay, and software-fixture cleanup checks.
-- Select technical-case-study-only as the automatic or terminal fallback. Do not authorize baseline-first without an accepted dataset and split.
-- Preserve five accepted events and null dataset, split, baseline, and model state.
+- Lock the sole exact completed response before reveal; reconcile two yes decisions only after every source, terms, raster, quality, uncertainty, leakage, and reproducibility gate re-passes.
+- Accept Windigo as the sixth complete owner-approved prototype event with no partial promotion.
+- Advance candidate `owner-approved-prototype-region-labels-v0.4.0` to 12 balanced regions, 286 core pixels / 11.44 ha, and 533 excluded unknown-ring pixels.
+- Meet the six-event count minimum while keeping the separate sufficiency evaluator, dataset, split, baseline, and model closed.
+- Add aggregate-only JSON/HTML/PNG intake evidence and version the milestone tooling as BurnLens 0.47.0.
+- Retain technical-case-study-only as the fallback if the remaining release gate cannot pass. Do not authorize baseline-first without an accepted dataset and split.
 
-Issue #534; latest run `BL-2026-07-23-windigo-owner-review-surface-r002`; U01-U04 pass and U05 awaits the exact owner export with zero decisions or labels.
+Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass and U06 release closure remains pending.
 
 ## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 

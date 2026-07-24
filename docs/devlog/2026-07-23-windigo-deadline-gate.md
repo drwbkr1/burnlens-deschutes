@@ -34,4 +34,18 @@ U05 packages those exact proposals into one blank two-card review. R001 fails sa
 
 The corrected surface reproduces all six files. It passes the in-app desktop workflow and a 390 by 844 Chromium workflow without page overflow. A marked software fixture verifies final summary, hash-named export, completed-envelope validation, and session lock, then is deleted.
 
-The real surface is reset to zero decisions and stays open on a manifest-bound localhost route. BurnLens stops for the owner before response lock, reveal, reconciliation, labels, event acceptance, or U06.
+The real surface was reset to zero decisions and handed to the owner on the manifest-bound localhost route.
+
+The owner returned one completed exact export. BurnLens found no second completed Windigo final. It locked the exact 1,061 bytes before reading any decision or note and wrote a 2,700-byte pre-reveal receipt. Only then did it reveal the aggregate: two yes, zero no, zero uncertain.
+
+Yes was not treated as promotion. Final r003 reopens the registered Sentinel pair, the complete three-program archive, extracted files, provider GeoJSON, source-fitness report, proposal, surface, candidate rasters, terms, and prior accepted labels. It reproduces the U04 source-pixel computation, both cores, both rings, registration, source roles, and event bindings.
+
+Both classes pass together. Windigo adds 50 core pixels / 2.00 ha and excludes 102 ring pixels. Candidate `owner-approved-prototype-region-labels-v0.4.0` is balanced at six regions per class, 286 core pixels / 11.44 ha, and 533 excluded ring pixels across six events.
+
+Six events are only a count gate. The sufficiency evaluator has not passed, so BurnLens creates no dataset, split, baseline, model, metric, accuracy, field-validation, official, endorsed, emergency-ready, or operational claim.
+
+The final public PNG passes original-resolution inspection. Automated local-file navigation remains security-policy blocked and was not bypassed. Exact owner confirmation of the final HTML is the last render gate before U06 can ship the milestone.
+
+Release-candidate verification then caught two package-contract drifts without changing scientific state. The locked environment still identified the editable distribution as 0.46.0, and the command-inventory test still expected 85 entries. BurnLens refreshed the one-line project version in the existing 66-package lock, rebuilt the canonical geospatial environment, and updated the frozen inventory to the actual 86 loadable/help-capable commands.
+
+The refreshed environment passes runtime and geospatial smoke checks, all 86 command probes, dependency health, and lock freshness. Focused environment tests pass 5/5; exact Windigo intake tests pass 6/6; the full custody-enabled repository passes 575 tests with one expected skip, 22 retained NumPy deprecation warnings, and 86 subtests. The lock remains 207,817 LF bytes at SHA-256 `f401b5021679aaf98febc93a7638ed892250c2e2e74c14e5264737922ad8823b`.
