@@ -74,7 +74,7 @@
     "full_repository_suite": "595 passed; 1 expected skip; 58 warnings; 86 subtests",
     "package_reproducibility_and_install": "pass",
     "png_render": "pass",
-    "html_desktop_and_narrow_render": "pending owner confirmation",
-    "release_audit": "blocked only on exact HTML render"
+    "html_desktop_and_narrow_render": "pass; owner confirms correct rendering",
+    "release_audit": "verified candidate"
   }
 }

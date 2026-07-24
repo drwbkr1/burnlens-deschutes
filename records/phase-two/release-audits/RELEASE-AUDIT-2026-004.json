@@ -11,7 +11,7 @@
   ],
   "candidate": {
     "base_commit": "1c4df18d273bfa908737dca6831121db16af1d89",
-    "commit": "17e3366c7232ff692f246077e583a6ff1c83cd9d",
+    "commit": "a94df5360ebe898e0395051ed31bcf81d5922bbc",
     "version": "0.50.0",
     "tag": "v0.50.0-six-event-dataset-sufficiency",
     "artifacts": [
@@ -53,9 +53,9 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-24T17:17:44Z",
+    "verified_at_utc": "2026-07-24T17:27:34Z",
     "branch": "codex/p2o5-t02-six-event-sufficiency",
-    "remote_commit": "17e3366c7232ff692f246077e583a6ff1c83cd9d",
+    "remote_commit": "a94df5360ebe898e0395051ed31bcf81d5922bbc",
     "pull_request": 553,
     "tag_target": "",
     "deployment": null
@@ -142,10 +142,14 @@
       "id": "CHECK-007",
       "category": "public-html-render",
       "required": true,
-      "status": "not_run",
-      "method": "",
-      "evidence": [],
-      "reason": "The in-app browser refuses local file navigation under its security policy. The exact tracked HTML still requires owner confirmation at desktop and narrow width; no alternate browser surface was used to bypass that gate."
+      "status": "pass",
+      "method": "Have the owner open the exact tracked HTML and inspect it at the requested desktop and narrow-window widths.",
+      "evidence": [
+        "Owner response after the exact-path handoff: it renders correctly",
+        "The confirmation answers the explicit desktop and narrow-width verification request",
+        "No alternate browser surface was used to bypass the in-app local-file security policy"
+      ],
+      "reason": ""
     },
     {
       "id": "CHECK-008",
@@ -168,7 +172,7 @@
       "method": "Read live GitHub pull-request state against the exact remote branch.",
       "evidence": [
         "Draft PR #553 targets exact base 1c4df18d273bfa908737dca6831121db16af1d89",
-        "Remote head is 17e3366c7232ff692f246077e583a6ff1c83cd9d",
+        "Remote head is a94df5360ebe898e0395051ed31bcf81d5922bbc",
         "GitHub reports MERGEABLE and CLEAN with no configured checks"
       ],
       "reason": ""
@@ -180,7 +184,7 @@
       "status": "not_applicable",
       "method": "",
       "evidence": [],
-      "reason": "The candidate remains a draft PR and must not merge or tag before the required exact HTML render gate passes."
+      "reason": "This is the pre-merge candidate audit. Merge and tag verification follow only after every candidate gate passes."
     },
     {
       "id": "CHECK-011",
@@ -208,7 +212,7 @@
     {
       "path_or_uri": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.html",
       "expected_state": "Exact deterministic browser-readable decision surface.",
-      "observed_state": "Bytes and replay are verified; real desktop and narrow rendering await owner confirmation.",
+      "observed_state": "Bytes and replay are verified; the owner confirms correct desktop and narrow-width rendering.",
       "status": "current"
     },
     {
@@ -222,12 +226,11 @@
     "The labels are owner-approved prototype evidence, not independent ground truth.",
     "The six-event candidate fails leakage-resistant split fitness because one source regime has only one event.",
     "Dataset, split, baseline, and model versions remain null; training remains unauthorized.",
-    "The August 6 bundle remains an interim contingency technical case study, not the intended final portfolio submission.",
-    "The exact HTML has not yet passed real desktop and narrow viewport confirmation."
+    "The August 6 bundle remains an interim contingency technical case study, not the intended final portfolio submission."
   ],
   "decision": {
-    "reported_status": "blocked",
-    "rationale": "Scientific, reproducibility, package, PNG, claims, privacy, and live PR checks pass, but the required exact HTML desktop and narrow render gate has not been observed.",
-    "next_action": "Obtain owner confirmation of the exact tracked HTML at desktop and narrow width, then reconcile this audit before merge and tag."
+    "reported_status": "verified",
+    "rationale": "Scientific-decision integrity, reproducibility, package, PNG, exact HTML rendering, claims, privacy, and live PR checks all pass. The verified release truth is a transparent dataset-readiness block, not a dataset authorization.",
+    "next_action": "Ready and merge PR #553, repeat the risk-matched gates from exact fresh main, create and verify the annotated v0.50.0 tag, then activate entry-blocked issue #554."
   }
 }

@@ -12,4 +12,4 @@ The first full-suite run reported 590 passes, one skip, and three pre-existing c
 
 Package QA retains three attempts. The first verifier used an invalid PowerShell selector. The second built two different wheels without a fixed epoch. Final r003 fixes the epoch and reproduces two 899,515-byte wheels at SHA-256 `c3aa970694add791d17b78ee688108435bcac8921514071410dd87bf0ae84ca5`. An isolated CPython 3.12.10 install verifies BurnLens 0.50.0, 13 compatible distributions, 89 commands, and the new help route.
 
-The tracked PNG passes original-resolution inspection. The exact HTML remains the sole release-audit stop because the in-app browser refuses local-file navigation. The owner must confirm desktop and narrow-width rendering before merge or tag.
+The tracked PNG passes original-resolution inspection. The in-app browser refuses local-file navigation, so the owner opens the exact tracked HTML and confirms correct desktop and narrow-width rendering. Release audit `RELEASE-AUDIT-2026-004` verifies the candidate without changing its scientific block.
