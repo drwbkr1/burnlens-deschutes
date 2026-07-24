@@ -6,12 +6,6 @@ import argparse
 from pathlib import Path
 import sys
 
-from .replacement_event_reference_fitness import (
-    ReplacementEventReferenceFitnessError,
-    build_report,
-    write_outputs,
-)
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -29,6 +23,23 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     arguments = parse_args()
+    try:
+        from .replacement_event_reference_fitness import (
+            ReplacementEventReferenceFitnessError,
+            build_report,
+            write_outputs,
+        )
+    except ModuleNotFoundError as error:
+        if error.name in {"geopandas", "pyogrio", "pyproj", "shapely"}:
+            print(
+                "WARD_CREEK_REFERENCE_FITNESS_FAILED: "
+                "optional geospatial dependencies are unavailable; "
+                "run scripts/setup_worktree.ps1 -Profile geo-research",
+                file=sys.stderr,
+            )
+            return 2
+        raise
+
     try:
         report, previews = build_report(
             repository_root=arguments.repository_root,
