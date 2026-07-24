@@ -60,7 +60,7 @@ The private response, receipt, reconciliation, provider bytes, retrieval details
 - R002 under BurnLens 0.47.0 failed closed before output because the generic batch reconstruction treated the frozen 0.46.0 surface version as mutable current software. No response, label, public output, or custody state changed.
 - R003 validates the exact frozen surface independently of the later tool version while preserving all immutable review bindings.
 
-The final 1,600 by 1,100 PNG passes original-resolution inspection. The tracked HTML preserves responsive two-column metrics below 700 pixels, bounded local assets, alternative text, no form controls, and no horizontal body overflow rule. A fresh in-app `file://` navigation was blocked by the browser security policy and was not bypassed. Exact owner confirmation of the final HTML remains the only pending render gate before milestone release.
+The final 1,600 by 1,100 PNG passes original-resolution inspection. The tracked HTML preserves responsive two-column metrics below 700 pixels, bounded local assets, alternative text, no form controls, and no horizontal body overflow rule. A fresh in-app `file://` navigation was blocked by the browser security policy and was not bypassed. The owner subsequently confirmed the exact requested desktop and narrow render with `It renders correctly`; PRECHECK-2026-065 owns the release-candidate closure.
 
 ## Disposition and next dependency
 

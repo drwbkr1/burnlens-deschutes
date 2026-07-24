@@ -19,4 +19,4 @@
 | Cumulative prototype evidence | `owner-approved-prototype-region-labels-v0.4.0`; six burned + six background regions; 286 core pixels / 11.44 ha; 533 ring pixels excluded; six complete events |
 | Dataset/split/baseline/model | Null; separate sufficiency evaluator not passed |
 
-The final HTML awaits exact owner render confirmation because automated `file://` navigation is security-policy blocked and was not bypassed. The candidate may not ship until that render gate and the remaining U06 release gates pass.
+The final HTML now passes exact owner-confirmed desktop and narrow rendering with the response `It renders correctly`. Automated `file://` navigation remained security-policy blocked and was not bypassed. PRECHECK-2026-065 and REGISTRY-2026-063 own the U06 release candidate and remaining shipment gates.

@@ -19,7 +19,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Add aggregate-only JSON/HTML/PNG intake evidence and version the milestone tooling as BurnLens 0.47.0.
 - Retain technical-case-study-only as the fallback if the remaining release gate cannot pass. Do not authorize baseline-first without an accepted dataset and split.
 
-Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass and U06 release closure remains pending.
+Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass. U06 candidate gates pass owner-confirmed desktop/narrow rendering, 575 tests, exact package reproduction, isolated installation, and public-claim/privacy audits. PR, merge, fresh-main verification, and tag remain pending.
 
 ## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 

@@ -44,8 +44,12 @@ Both classes pass together. Windigo adds 50 core pixels / 2.00 ha and excludes 1
 
 Six events are only a count gate. The sufficiency evaluator has not passed, so BurnLens creates no dataset, split, baseline, model, metric, accuracy, field-validation, official, endorsed, emergency-ready, or operational claim.
 
-The final public PNG passes original-resolution inspection. Automated local-file navigation remains security-policy blocked and was not bypassed. Exact owner confirmation of the final HTML is the last render gate before U06 can ship the milestone.
+The final public PNG passes original-resolution inspection. Automated local-file navigation remains security-policy blocked and was not bypassed. The owner subsequently opened the exact tracked HTML at the requested desktop and narrow views and confirmed `It renders correctly`, closing the render gate.
 
 Release-candidate verification then caught two package-contract drifts without changing scientific state. The locked environment still identified the editable distribution as 0.46.0, and the command-inventory test still expected 85 entries. BurnLens refreshed the one-line project version in the existing 66-package lock, rebuilt the canonical geospatial environment, and updated the frozen inventory to the actual 86 loadable/help-capable commands.
 
 The refreshed environment passes runtime and geospatial smoke checks, all 86 command probes, dependency health, and lock freshness. Focused environment tests pass 5/5; exact Windigo intake tests pass 6/6; the full custody-enabled repository passes 575 tests with one expected skip, 22 retained NumPy deprecation warnings, and 86 subtests. The lock remains 207,817 LF bytes at SHA-256 `f401b5021679aaf98febc93a7638ed892250c2e2e74c14e5264737922ad8823b`.
+
+Two separate exact Git archives of pushed checkpoint `714273adfcf8f90ab16abe798eb086201577b0e9` build byte-identical 872,766-byte wheels at SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`. The wheel contains 183 unique entries and zero forbidden paths. An ignored isolated Python 3.12.10 environment installs 13 compatible runtime distributions, resolves BurnLens 0.47.0 from `site-packages`, and passes all 86 command help probes.
+
+The first live U05 issue comment encoded newlines incorrectly and exposed a malformed public handoff. BurnLens corrected that same comment in place and verified the complete live body before proceeding. No repository or scientific state changed.
