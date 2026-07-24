@@ -116,10 +116,10 @@ class EnvironmentProfileTests(unittest.TestCase):
         self.assertEqual(payload["status"], "PASS")
         self.assertEqual(payload["profile"], "runtime")
         self.assertEqual(payload["checks"]["runtime"]["raster_sum"], 120)
-        self.assertEqual(payload["checks"]["console_entry_points"]["count"], 88)
-        self.assertEqual(payload["checks"]["console_entry_points"]["help_count"], 88)
+        self.assertEqual(payload["checks"]["console_entry_points"]["count"], 89)
+        self.assertEqual(payload["checks"]["console_entry_points"]["help_count"], 89)
         self.assertEqual(
-            len(payload["checks"]["console_entry_points"]["names"]), 88
+            len(payload["checks"]["console_entry_points"]["names"]), 89
         )
 
     @unittest.skipUnless(
