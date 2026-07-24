@@ -10,6 +10,7 @@
 | `P2O4-T39-U01` | `BL-2026-07-24-p2o4-t39-u01-r008` | `pass` | Ward Creek official source/terms/exact-pair gate at `11c5ad377cb6a65242720ae819c769b29b82cee2` | U02 |
 | `P2O4-T39-U02-PREFLIGHT-R001` | credential-free | `failed-retained` | Exact preflight rejects two mistyped U01 hashes before credential use; zero provider bytes and zero custody targets | remediated by `3b3406b5e875889b4c282130d1ed5270e33a7572` |
 | `P2O4-T39-U02` | `BL-2026-07-24-ward-creek-optical-intake-r001` | `pass` | Exact two-archive ignored custody plus tracked `WARD-CREEK-OPTICAL-CUSTODY-2026-001.json` | U03 |
+| `P2O4-T39-U03-REQUEST` | `BL-2026-07-24-ward-creek-reference-request-r001` | `request-accepted-delivery-pending` | One exact MTBS-only map-10016337 queue receipt; zero delivered bytes | exact delivery custody |
 
 ## U02 registered packages
 
@@ -31,3 +32,9 @@ report is 16,317 bytes / SHA-256
 U02 advances only the exact Ward Creek optical pair. U03 is the sole eligible
 next unit. No candidate, owner response, label, dataset, split, baseline,
 model, metric, inference output, deployment, or external submission exists.
+
+At `2026-07-24T20:22:15.169Z`, the official queue accepts the single exact
+Ward Creek MTBS request. Its tracked public report is 3,413 bytes / SHA-256
+`ad8f70ee3cbda8fcff77755486d0cb400a3a5b3c2bc09b99813e8a95abd3d54f`.
+Request acceptance changes neither the U03 `pending` disposition nor any
+scientific/data/model gate.

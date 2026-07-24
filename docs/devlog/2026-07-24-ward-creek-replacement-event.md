@@ -32,3 +32,16 @@ confirms fail-on-collision and atomic-no-replace custody. The two archives total
 U02 now passes. U03 must inspect the exact MTBS delivery and its notices before
 any reference pixel can be used. Labels, datasets, splits, baselines, and models
 remain closed.
+
+## 2026-07-24 - Exact MTBS request accepted
+
+The current Portal still exposes one standard Ward Creek MTBS map. BurnLens
+requests only its ten applicable product families in native UTM. It excludes
+every BAER and RAVG-only family.
+
+The queue accepts one request. The recipient remains private. The exact
+response and receipt stay in ignored no-overwrite custody. No delivery archive
+has arrived yet.
+
+U03 remains pending. The archive notices, rights, files, classes, masks, grids,
+nodata, cautions, and local pixels still need inspection.
