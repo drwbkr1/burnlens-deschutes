@@ -4,6 +4,7 @@ from copy import deepcopy
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import Mock, patch
 
 from shapely.geometry import Polygon, mapping
 
@@ -21,6 +22,7 @@ from burnlens.replacement_event_source_gate import (
     build_report,
     render_html,
     validate_source,
+    validate_repository_trace,
     write_outputs,
 )
 
@@ -220,6 +222,32 @@ class ReplacementEventSourceGateTests(unittest.TestCase):
                 ReplacementEventSourceGateError, "OUTPUT_ALREADY_EXISTS"
             ):
                 write_outputs(source=source, output_directory=output)
+
+    def test_repository_trace_rejects_commit_or_relevant_drift(self) -> None:
+        with patch(
+            "burnlens.replacement_event_source_gate.subprocess.run",
+            side_effect=[
+                Mock(stdout=str(Path.cwd()) + "\n"),
+                Mock(stdout="b" * 40 + "\n"),
+                Mock(stdout=""),
+            ],
+        ):
+            with self.assertRaisesRegex(
+                ReplacementEventSourceGateError, "GIT_SOURCE_COMMIT_MISMATCH"
+            ):
+                validate_repository_trace(Path.cwd(), "a" * 40)
+        with patch(
+            "burnlens.replacement_event_source_gate.subprocess.run",
+            side_effect=[
+                Mock(stdout=str(Path.cwd()) + "\n"),
+                Mock(stdout="a" * 40 + "\n"),
+                Mock(stdout=" M burnlens/replacement_event_source_gate.py\n"),
+            ],
+        ):
+            with self.assertRaisesRegex(
+                ReplacementEventSourceGateError, "GIT_RELEVANT_WORKTREE_DIRTY"
+            ):
+                validate_repository_trace(Path.cwd(), "a" * 40)
 
 
 if __name__ == "__main__":

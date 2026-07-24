@@ -6,7 +6,11 @@ import argparse
 import json
 from pathlib import Path
 
-from .replacement_event_source_gate import capture_source_gate, write_outputs
+from .replacement_event_source_gate import (
+    capture_source_gate,
+    validate_repository_trace,
+    write_outputs,
+)
 
 
 def main() -> int:
@@ -21,6 +25,8 @@ def main() -> int:
     parser.add_argument("--git-source-commit", required=True)
     parser.add_argument("--output-directory", required=True, type=Path)
     args = parser.parse_args()
+    repository_root = Path(__file__).resolve().parents[1]
+    validate_repository_trace(repository_root, args.git_source_commit)
     source = capture_source_gate(
         accessed_at_utc=args.accessed_at_utc,
         run_id=args.run_id,

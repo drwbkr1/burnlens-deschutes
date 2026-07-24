@@ -14,6 +14,7 @@ from html import escape
 import json
 from pathlib import Path
 import re
+import subprocess
 import time
 from typing import Any
 from urllib.error import HTTPError
@@ -190,6 +191,49 @@ def _iso_utc(value: str) -> datetime:
 def _validate_commit(value: str) -> None:
     if not re.fullmatch(r"[0-9a-f]{40}", value):
         raise ReplacementEventSourceGateError("GIT_SOURCE_COMMIT_INVALID")
+
+
+def validate_repository_trace(repository_root: Path, git_source_commit: str) -> None:
+    """Require the live repository to match the declared committed source."""
+
+    _validate_commit(git_source_commit)
+    try:
+        top_level = subprocess.run(
+            ["git", "-C", str(repository_root), "rev-parse", "--show-toplevel"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        head = subprocess.run(
+            ["git", "-C", str(repository_root), "rev-parse", "HEAD"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        status = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(repository_root),
+                "status",
+                "--short",
+                "--",
+                "burnlens",
+                "pyproject.toml",
+                "uv.lock",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError) as error:
+        raise ReplacementEventSourceGateError("GIT_TRACE_UNAVAILABLE") from error
+    if Path(top_level).resolve() != repository_root.resolve():
+        raise ReplacementEventSourceGateError("GIT_REPOSITORY_ROOT_MISMATCH")
+    if head != git_source_commit:
+        raise ReplacementEventSourceGateError("GIT_SOURCE_COMMIT_MISMATCH")
+    if status:
+        raise ReplacementEventSourceGateError("GIT_RELEVANT_WORKTREE_DIRTY")
 
 
 def _criterion(
