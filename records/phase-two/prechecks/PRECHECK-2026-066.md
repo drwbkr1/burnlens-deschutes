@@ -49,10 +49,18 @@ The regression test asks Git for the effective `text` and `eol` attributes on ev
 
 The working-tree line-ending normalization is mechanical only. Git blob hashes for every bound record and public output equal the merged index; the exception changes only `.gitattributes`, the regression test, and release-truth records.
 
-## Remaining exit gates
+## Candidate package gate
 
 Two exact Git archives of committed exception candidate `e5743c723bfebfb13108458f8ace2e8e429517e1`, built under the original `SOURCE_DATE_EPOCH=1784854998`, reproduce the canonical wheel exactly: 872,766 bytes / SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`.
 
-Open and merge one exception PR. Then repeat the focused/full suite from fresh corrected `origin/main`, reproduce the exact public outputs and package, and remotely peel the annotated v0.47 tag to the corrected merge.
+## Verified exit
+
+PR #537 merges the exception at corrected checkpoint `6a80ba14d060702d97c5d39f40cf3d6f8122ccc8` and closes issue #536.
+
+The canonical checkout is clean and equals `origin/main`. Every bound record and final public output retains its exact LF size and SHA-256 identity. The corrected-main focused suite passes eight tests. The complete suite passes 577 tests with one expected skip, 22 retained warnings, and 86 subtests.
+
+Two new corrected-main Git archives under retained package attempt `r003` reproduce the canonical 872,766-byte wheel / SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7`. The first archive command attempt and the lean-runtime no-isolation attempt remain in ignored local staging as failed evidence. Neither produced an accepted wheel. A fresh isolated Python 3.12.10 environment installs 13 compatible distributions, imports BurnLens 0.47.0 from its own `site-packages`, and passes all 86 installed command help routes.
+
+Annotated tag object `31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5` remotely peels exactly to `6a80ba14d060702d97c5d39f40cf3d6f8122ccc8` as `v0.47.0-windigo-sixth-prototype-event`.
 
 No GitHub Release, deployment, dataset, split, baseline, or model is authorized.

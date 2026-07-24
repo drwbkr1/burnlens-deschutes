@@ -12,7 +12,7 @@
   ],
   "candidate": {
     "base_commit": "00d01402657e92357f5f4c795ba9a4f4fd99038a",
-    "commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
+    "commit": "6a80ba14d060702d97c5d39f40cf3d6f8122ccc8",
     "version": "0.47.0",
     "tag": "v0.47.0-windigo-sixth-prototype-event",
     "artifacts": [
@@ -39,11 +39,11 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-24T01:10:16.8257050Z",
-    "branch": "codex/bl-exc-002-windigo-byte-stability",
-    "remote_commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
-    "pull_request": null,
-    "tag_target": "",
+    "verified_at_utc": "2026-07-24T02:09:47.6771162Z",
+    "branch": "main",
+    "remote_commit": "6a80ba14d060702d97c5d39f40cf3d6f8122ccc8",
+    "pull_request": 537,
+    "tag_target": "6a80ba14d060702d97c5d39f40cf3d6f8122ccc8",
     "deployment": null
   },
   "checks": [
@@ -54,8 +54,9 @@
       "status": "pass",
       "method": "Compare the exact branch diff and issue #534 contract with the verified v0.46 base.",
       "evidence": [
-        "origin/codex/bl-exc-002-windigo-byte-stability equals e5743c723bfebfb13108458f8ace2e8e429517e1",
-        "Issue #536 limits the exception to checkout attributes, one regression test, and release-truth records"
+        "PR #537 merges the bounded exception at 6a80ba14d060702d97c5d39f40cf3d6f8122ccc8",
+        "Issue #536 limits the exception to checkout attributes, one regression test, and release-truth records",
+        "Issue #538 limits the lifecycle synchronization to records and documentation"
       ],
       "reason": ""
     },
@@ -68,7 +69,7 @@
       "evidence": [
         "BL-2026-07-24-windigo-owner-response-intake-r003",
         "PRECHECK-2026-064",
-        "575 passed, 1 expected skip, 22 warnings, 86 subtests"
+        "Corrected main: 577 passed, 1 expected skip, 22 warnings, 86 subtests"
       ],
       "reason": ""
     },
@@ -103,10 +104,11 @@
       "category": "package",
       "required": true,
       "status": "pass",
-      "method": "Build twice from separate exact Git archives of package-sensitive checkpoint 714273adfcf8f90ab16abe798eb086201577b0e9 under fixed SOURCE_DATE_EPOCH 1784854998; verify the closeout records commit changes no package-sensitive path; inspect and install one wheel in an ignored isolated environment.",
+      "method": "Build twice from separate exact Git archives of package-sensitive checkpoint 714273adfcf8f90ab16abe798eb086201577b0e9 and again from corrected main under fixed SOURCE_DATE_EPOCH 1784854998; inspect and install the corrected-main wheel in an ignored isolated environment.",
       "evidence": [
         "Two 872,766-byte wheels are byte-identical at SHA-256 1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
         "Exception candidate e5743c723bfebfb13108458f8ace2e8e429517e1 reproduces the same wheel exactly",
+        "Corrected main 6a80ba14d060702d97c5d39f40cf3d6f8122ccc8 reproduces the same wheel twice",
         "Diff 714273a..e8739a9 changes zero package-sensitive paths",
         "183 unique entries, zero forbidden entries",
         "Isolated 0.47.0 import resolves from site-packages; 13 packages compatible; 86 of 86 command help probes pass"
@@ -156,13 +158,14 @@
       "id": "CHECK-009",
       "category": "pull-request-merge-tag",
       "required": true,
-      "status": "fail",
-      "method": "Open one coherent PR, verify checks and diff, merge, rebuild from fresh main, and remotely peel the annotated tag.",
+      "status": "pass",
+      "method": "Open one coherent PR, retain the failed first merged-main attempt, remediate through the bounded exception, rebuild from corrected main, and remotely peel the annotated tag.",
       "evidence": [
         "PR #535 merged at 00d01402657e92357f5f4c795ba9a4f4fd99038a",
         "Fresh-main environment and 86 command probes passed",
         "Fresh-main suite ended at 569 passed, 1 skipped, 6 exact-byte setup errors",
-        "BL-EXC-002 issue #536 owns the checkout-byte remediation; tag withheld"
+        "BL-EXC-002 issue #536 / PR #537 merged the checkout-byte remediation at 6a80ba14d060702d97c5d39f40cf3d6f8122ccc8",
+        "Annotated tag object 31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5 remotely peels to the corrected merge"
       ],
       "reason": ""
     },
@@ -170,23 +173,29 @@
       "id": "CHECK-010",
       "category": "exception-ship",
       "required": true,
-      "status": "not_run",
+      "status": "pass",
       "method": "Open and merge the BL-EXC-002 PR, repeat the exact-output, full-suite, package, and isolated-install gates from corrected origin/main, then peel the annotated tag.",
-      "evidence": [],
-      "reason": "Exception candidate passes locally and is awaiting its PR transaction."
+      "evidence": [
+        "Corrected-main focused suite: 8 passed, 2 retained warnings",
+        "Corrected-main full suite: 577 passed, 1 skipped, 22 warnings, 86 subtests",
+        "Two corrected-main wheels: 872,766 bytes / SHA-256 1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
+        "Fresh isolated install: Python 3.12.10, 13 compatible distributions, BurnLens 0.47.0 from site-packages, 86 command help routes",
+        "Remote tag object 31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5 peels to 6a80ba14d060702d97c5d39f40cf3d6f8122ccc8"
+      ],
+      "reason": ""
     }
   ],
   "truth_surfaces": [
     {
       "path_or_uri": "README.md",
-      "expected_state": "BurnLens 0.47.0 is release-ready after owner-confirmed render; v0.46 remains the latest verified release until merge and tag.",
-      "observed_state": "Candidate truth is current.",
+      "expected_state": "BurnLens 0.47.0 is verified after the retained first-main failure and bounded checkout-byte remediation.",
+      "observed_state": "Lifecycle sync issue #538 updates the stale candidate wording.",
       "status": "current"
     },
     {
       "path_or_uri": "docs/status/PHASE_STATUS.md",
-      "expected_state": "Six-event prototype evidence; dataset, split, baseline, and model closed; shipment pending.",
-      "observed_state": "Candidate truth is current.",
+      "expected_state": "Six-event prototype evidence is shipped; dataset, split, baseline, and model remain closed.",
+      "observed_state": "Lifecycle sync issue #538 updates the stale shipment wording.",
       "status": "current"
     },
     {
@@ -197,8 +206,14 @@
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/536",
-      "expected_state": "Open urgent correctness exception; tag withheld pending fresh-main byte stability.",
-      "observed_state": "Issue is open and scoped to checkout attributes, regression, and release-truth records.",
+      "expected_state": "Closed urgent-correctness exception with corrected-main verification and remote tag peel complete.",
+      "observed_state": "Issue #536 closed through merged PR #537.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "refs/tags/v0.47.0-windigo-sixth-prototype-event",
+      "expected_state": "Annotated tag object 31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5 peels to corrected merge 6a80ba14d060702d97c5d39f40cf3d6f8122ccc8.",
+      "observed_state": "Remote object and peeled target match.",
       "status": "current"
     }
   ],
@@ -209,8 +224,8 @@
     "No GitHub Release, deployment, public-sharing change, or operational application exists."
   ],
   "decision": {
-    "reported_status": "blocked",
-    "rationale": "PR #535 merged, but fresh main changed exact checkout bytes and failed six Windigo intake tests. The tag is withheld until BL-EXC-002 restores checkout-stable bytes and all merged-main gates pass.",
-    "next_action": "Ship issue #536, repeat exact output, full-suite, package, and isolated-install gates from corrected origin/main, then create and remotely peel v0.47.0-windigo-sixth-prototype-event."
+    "reported_status": "verified",
+    "rationale": "The failed first-main byte gate remains visible. BL-EXC-002 restores checkout-stable bytes without changing evidence, corrected main passes the focused/full/package/install gates, and the remote annotated tag peels exactly to the corrected merge.",
+    "next_action": "Execute the August 6 portfolio critical path from issue #538's verified lifecycle handoff without opening dataset, split, baseline, or model work."
   }
 }

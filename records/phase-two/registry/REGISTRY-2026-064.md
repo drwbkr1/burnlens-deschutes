@@ -23,9 +23,11 @@ The cause is path coverage, not scientific or custody drift: Git stored the corr
 | focused replay | pass: eight tests |
 | complete repository | pass: 577 tests, one expected skip, 22 warnings, 86 subtests |
 | package | pass: two exact-candidate 872,766-byte wheels reproduce SHA-256 `1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7` |
-| exception PR / corrected main / tag | pending |
+| exception PR / corrected main / tag | pass: PR #537 merges at `6a80ba14d060702d97c5d39f40cf3d6f8122ccc8`; corrected main passes 8 focused and 577 full tests with one expected skip and 86 subtests; tag object `31cf93a13b8d7d7f2f4a4730cffe5960d7469cb5` peels exactly to the merge |
 
 The first candidate focused run exposed the missing nested output rule. The second exposed path-separator quoting in the new test. Both remain part of the failure chain.
+
+The corrected-main packaging chain also retains two non-product attempts. The first used invalid PowerShell `git archive` argument syntax and produced no archive or wheel. The second correctly archived the source but the lean runtime refused a no-isolation build because it intentionally excludes setuptools. Accepted `r003` uses the declared isolated build system and produces two byte-identical canonical wheels. Its fresh isolated installation resolves only from `site-packages`, reports version 0.47.0, and passes 86 command help routes.
 
 ## Scientific and public boundary
 
