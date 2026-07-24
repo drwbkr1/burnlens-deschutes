@@ -41,10 +41,11 @@ The August 6 critical path now has a verified offline submission artifact.
 P2O4-T37 / issue #544 / PR #545 ships BurnLens 0.49.0 at merge
 `8d4b81f665a0850b2e173382760b2df96d9c9d20`; annotated tag object
 `f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72` peels exactly to that merge.
-P2O4-T38 is the next bounded milestone: audit the exact bundle as a submission
-recipient would, tighten only repository-owned reviewer instructions or
-packaging defects that the audit proves, and produce the final no-deployment
-submission handoff. It must not reopen source scouting, scientific evidence,
+P2O4-T38 / issue #548 is the active bounded milestone. Its candidate
+recipient-style audit passes exact extraction, rendering, navigation,
+claims/rights/privacy, and comprehension without finding a material bundle
+defect. It produces a concise owner handoff and awaits records-only release
+verification. It must not reopen source scouting, scientific evidence,
 dataset, split, baseline, model, deployment, access, or public-sharing work.
 
 ## Non-negotiable boundaries
@@ -202,7 +203,7 @@ August 6, 2026 is the controlling portfolio-submission deadline. The current cri
 3. **Reviewer-visible integration — verified:** P2O4-T36 / issue #540 / PR #541 ships one repository-owned local/offline evidence interface and reviewer journey. Exact production/replay, desktop/narrow rendering, links, images, keyboard order, console, privacy, owner-render, fresh-main, package, install, and remote-tag gates pass.
 4. **Case study and reviewer guide — verified:** the landing page, quickstart, and case study make the promise, strongest verified result, stop decision, technical depth, reproduction path, traceability, and limitations legible quickly.
 5. **Submission QA and package — verified:** P2O4-T37 / issue #544 / PR #545 ships one deterministic August 6 ZIP from verified v0.48. Exact replay, safe extraction, reviewer instructions, inventory, desktop/narrow opening, links, images, privacy, claims, 586-test fresh main, reproducible package, isolated install, 88 commands, and remote tag pass.
-6. **Final submission readiness — next:** P2O4-T38 will walk the exact verified bundle as a recipient, confirm the submission instructions and receipt, repeat claims/rights/privacy/accessibility checks, and produce the final no-deployment handoff. It may fix only audit-proven presentation or packaging defects.
+6. **Final submission readiness — candidate active:** P2O4-T38 / issue #548 walks the exact verified bundle as a recipient, confirms the submission instructions and receipt, repeats claims/rights/privacy/accessibility checks, and produces the final no-deployment handoff. Every material local gate passes; records-only release verification remains.
 
 Low-value source scouting, repeated provider retries, recursive lifecycle churn, speculative model work, and roadmap breadth are deferred until after submission. Do not create a dataset, split, baseline, or model merely when a sixth event arrives. Deployment or a public-sharing change remains an owner stop condition.
 

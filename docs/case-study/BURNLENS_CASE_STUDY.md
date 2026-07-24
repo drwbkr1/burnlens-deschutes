@@ -487,6 +487,14 @@ It contains no accepted dataset, split, baseline, model, accuracy, independent
 ground truth, field validation, official status, endorsement, operational
 readiness, or emergency suitability.
 
+P2O4-T38 then repeats the exact ZIP as a recipient. Safe extraction, both
+viewports, both images, the strongest-result path, all nine destinations,
+claims, source roles, attribution, privacy, and comprehension pass. A
+loopback-only favicon request and an in-app synthetic-Tab limitation remain
+visible but do not affect the intended extracted-file path. The candidate
+decision is ready for owner submission as an offline technical case study,
+pending records-only release verification.
+
 ## Traceability snapshot
 
 - AOI: `aoi-darlene3-model-v0.2.0`

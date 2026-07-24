@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "readiness_id": "BURNLENS-AUGUST-6-SUBMISSION-READINESS-2026-001",
+  "run_id": "BL-2026-07-24-final-submission-readiness-r001",
+  "generated_at_utc": "2026-07-24T15:37:58.5648575Z",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "repository_commit": "ca5a2cee130da0e918b061206998b096a302a6f7",
+  "task_issue": 548,
+  "software_version": "0.49.0",
+  "source_release": "v0.49.0-august6-submission-bundle",
+  "source_release_commit": "8d4b81f665a0850b2e173382760b2df96d9c9d20",
+  "source_release_tag_object": "f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72",
+  "bundle": {
+    "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001.zip",
+    "bytes": 784940,
+    "sha256": "3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53"
+  },
+  "receipt": {
+    "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001-RECEIPT.json",
+    "bytes": 774,
+    "sha256": "08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf"
+  },
+  "analytical_versions": {
+    "dataset": null,
+    "split": null,
+    "baseline": null,
+    "model": null
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "name": "exact-input-custody",
+      "status": "pass",
+      "evidence": "Tracked ZIP and receipt match their verified v0.49 sizes and SHA-256 identities."
+    },
+    {
+      "id": "CHECK-002",
+      "name": "safe-extraction-and-manifest",
+      "status": "pass",
+      "evidence": "No-overwrite recipient extraction contains 14 unique safe members; every internal manifest size and SHA-256 passes."
+    },
+    {
+      "id": "CHECK-003",
+      "name": "recipient-instructions",
+      "status": "pass",
+      "evidence": "SUBMISSION-README.txt requires complete extraction, identifies START-HERE.html, needs no Python, account, credential, or network, and states the use boundary."
+    },
+    {
+      "id": "CHECK-004",
+      "name": "real-render-and-navigation",
+      "status": "pass",
+      "evidence": "Desktop and 390 by 844 browser checks have no horizontal overflow; both images load; the strongest-result navigation works; all nine file destinations return HTTP 200; the console has zero warnings or errors."
+    },
+    {
+      "id": "CHECK-005",
+      "name": "claims-rights-privacy",
+      "status": "pass",
+      "evidence": "Official-source precedence, Copernicus attribution, BAER/MTBS/RAVG roles, null analytical stages, prohibited claims, no private path, no email, no secret assignment, and zero start-page external URLs pass."
+    },
+    {
+      "id": "CHECK-006",
+      "name": "reproducibility",
+      "status": "pass",
+      "evidence": "The verified v0.49 release already repeats the exact ZIP, receipt, 887000-byte wheel, isolated 13-distribution install, 88 commands, and 586-test suite from fresh main."
+    },
+    {
+      "id": "CHECK-007",
+      "name": "submission-comprehension",
+      "status": "pass",
+      "evidence": "The page leads with the strongest result, retains a failed route, explains source roles and limitations, exposes lineage, and completes the stated two-minute reviewer path."
+    }
+  ],
+  "retained_limitations": [
+    "One loopback-only favicon request from the linked detail page returned HTTP 404; intended extracted-file use, page content, navigation, and console behavior are unaffected.",
+    "The in-app browser did not transfer focus from BODY through its synthetic Tab control; the exact v0.49 Chrome keyboard-order gate remains the controlling passed evidence.",
+    "Markdown depth links open as browser text unless the recipient uses a Markdown viewer.",
+    "The labels are owner-approved prototype evidence, not independent ground truth.",
+    "No accepted dataset, split, baseline, model, accuracy, or inference output exists.",
+    "No deployment, GitHub Release, access change, or public-sharing action has occurred."
+  ],
+  "decision": {
+    "status": "candidate",
+    "value": "READY_FOR_OWNER_SUBMISSION_AS_OFFLINE_TECHNICAL_CASE_STUDY",
+    "rationale": "Every material recipient, integrity, render, navigation, claims, rights, privacy, and reproducibility gate passes. The retained limitations do not require repackaging the verified bundle.",
+    "owner_action": "Submit the exact ZIP bytes through the owner's chosen portfolio channel only after independently confirming that channel's access and sharing settings."
+  },
+  "deployment_or_public_sharing_authorized": false
+}
