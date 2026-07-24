@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.49.0"
+version = "0.50.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.12"
 license = "MIT"
@@ -121,6 +121,7 @@ burnlens-build-windigo-owner-review-surface = "burnlens.build_windigo_owner_revi
 burnlens-build-windigo-owner-response-intake = "burnlens.build_windigo_owner_response_intake:main"
 burnlens-build-portfolio-reviewer-experience = "burnlens.build_portfolio_reviewer_experience:main"
 burnlens-build-submission-bundle = "burnlens.build_submission_bundle:main"
+burnlens-build-six-event-dataset-sufficiency = "burnlens.build_six_event_dataset_sufficiency:main"
 
 [tool.setuptools]
 packages = ["burnlens"]

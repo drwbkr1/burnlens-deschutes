@@ -1,0 +1,97 @@
+{
+  "audit_result_version": "dataset-readiness-result-v1",
+  "decision_id": "DATASET-READINESS-DECISION-2026-001",
+  "audit_id": "DATASET-READINESS-AUDIT-2026-001",
+  "candidate_id": "DATASET-CANDIDATE-2026-001",
+  "candidate_manifest_sha256": "110ac030030c7028f1578b3301b2f66626605628b7c9dbba96d3f32fbfa89c9a",
+  "audit_input_sha256": "9b1cffa2e7d54df5ca46214423570252ff76d96a192424fc83e6fd14546c8aaf",
+  "decision": "block",
+  "blocking_required_gate_ids": [
+    "evaluation-design",
+    "leakage-and-split-fitness"
+  ],
+  "deferred_required_gate_ids": [],
+  "count_results": [
+    {
+      "check_id": "minimum-event-groups",
+      "observed": 6,
+      "operator": ">=",
+      "threshold": 6,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "binary-classes-per-event",
+      "observed": 2,
+      "operator": ">=",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unknown-ring-pixels",
+      "observed": 533,
+      "operator": ">",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "maximum-event-core-share-percent",
+      "observed": 20.6294,
+      "operator": "<=",
+      "threshold": 50,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "never-tuned-transfer-events",
+      "observed": 3,
+      "operator": ">=",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "valid-2-2-2-assignments",
+      "observed": 0,
+      "operator": ">=",
+      "threshold": 1,
+      "on_failure": "block",
+      "satisfied": false,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unique-exact-source-regimes",
+      "observed": 1,
+      "operator": "==",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": false,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unique-source-programs",
+      "observed": 1,
+      "operator": "==",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": false,
+      "can_authorize_training": false
+    }
+  ],
+  "failed_blocking_count_checks": [
+    "unique-exact-source-regimes",
+    "unique-source-programs",
+    "valid-2-2-2-assignments"
+  ],
+  "count_thresholds_can_establish_readiness_alone": false,
+  "training_authorized": false,
+  "training_authorization_reason": "Dataset-readiness evidence never substitutes for a separate model-readiness decision.",
+  "next_action": "Execute one bounded regime-replication remediation before reassessment."
+}

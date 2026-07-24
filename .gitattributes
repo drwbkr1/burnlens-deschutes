@@ -82,6 +82,8 @@ samples/labels/review/phase-two/*.txt text eol=lf
 # Prototype-label readiness evidence has an exact cross-platform byte contract.
 samples/labels/readiness/phase-two/*.json text eol=lf
 samples/labels/readiness/phase-two/*.html text eol=lf
+records/phase-two/readiness/*.json text eol=lf
+samples/labels/readiness/phase-two/*.png -text
 samples/labels/pilot/phase-two/*.json text eol=lf
 samples/labels/pilot/phase-two/*.html text eol=lf
 samples/labels/pilot/green-ridge/phase-two/*.json text eol=lf
@@ -200,3 +202,20 @@ records/phase-two/release-audits/RELEASE-AUDIT-2026-002.json text eol=lf
 portfolio/submission/*.json text eol=lf
 portfolio/submission/*.md text eol=lf
 portfolio/submission/*.zip -text
+
+# P2O5-T02 sufficiency decision and current-truth surfaces.
+README.md text eol=lf
+CHANGELOG.md text eol=lf
+docs/roadmap/BURNLENS_BUILD_ROADMAP.md text eol=lf
+docs/status/PHASE_STATUS.md text eol=lf
+docs/status/VERSION_HISTORY.md text eol=lf
+records/PROMPT_BUILD_LOG.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-072.md text eol=lf
+records/phase-two/reviews/DATASET_FITNESS-2026-002.md text eol=lf
+records/phase-two/reviews/USE_BOUNDARY-2026-041.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-068.md text eol=lf
+records/phase-two/manifests/MANIFEST-2026-053.json text eol=lf
+records/phase-two/release-audits/RELEASE-AUDIT-2026-004.json text eol=lf
+records/prompt-build-log/2026-07-24-p2o5-t02.md text eol=lf
+docs/phase-two/objective-five/SIX_EVENT_DATASET_SUFFICIENCY_DECISION.md text eol=lf
+docs/devlog/2026-07-24-six-event-dataset-sufficiency.md text eol=lf
