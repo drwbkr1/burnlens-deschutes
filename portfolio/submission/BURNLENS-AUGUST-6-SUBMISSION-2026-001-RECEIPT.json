@@ -1,0 +1,21 @@
+{
+  "receipt_id": "BURNLENS-AUGUST-6-SUBMISSION-2026-001-RECEIPT",
+  "bundle_id": "BURNLENS-AUGUST-6-SUBMISSION-2026-001",
+  "generated_at_utc": "2026-07-24T04:30:00Z",
+  "run_id": "BL-2026-07-24-august6-submission-bundle-r002",
+  "git_source_commit": "660f54f4e4786de57257ce12fb24fa31c282cf8d",
+  "software_version": "0.49.0",
+  "archive": {
+    "path": "BURNLENS-AUGUST-6-SUBMISSION-2026-001.zip",
+    "bytes": 784940,
+    "sha256": "3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53"
+  },
+  "internal_manifest": {
+    "path": "BUNDLE-MANIFEST.json",
+    "bytes": 3358,
+    "sha256": "661b9a794facea4b7121955eeca539262fc877fca359df9fb821fcbb98906d10"
+  },
+  "member_count": 14,
+  "safe_structure": true,
+  "deployment_or_public_sharing_authorized": false
+}

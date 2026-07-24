@@ -2,6 +2,16 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## Unreleased - P2O4-T37 deterministic August 6 submission bundle
+
+- Add one standard-library, no-overwrite submission-bundle builder and command.
+- Package the exact verified v0.48 reviewer roster into a deterministic ZIP.
+- Add root `START-HERE.html`, plain reviewer instructions, an internal manifest, and an external receipt.
+- Pass byte-identical replay, safe 14-member structure, dual extraction, desktop/narrow Chrome, two-image, nine-link, keyboard, clean-console, and zero-external-request gates.
+- Version the candidate as BurnLens 0.49.0 while keeping dataset, split, baseline, and model null.
+
+Issue #544; source `7d972bfa3aaf86c09db3226d2b7447cdd7e16e08`; run `BL-2026-07-24-august6-submission-bundle-r001`. Full release verification remains pending. No deployment, GitHub Release, access, ownership, or public-sharing change.
+
 ## v0.48.0-portfolio-reviewer-experience - verified - 2026-07-24
 
 - Add one deterministic, JavaScript-free, local/offline reviewer landing page.

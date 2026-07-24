@@ -1,0 +1,26 @@
+# REGISTRY-2026-066 - deterministic August 6 submission bundle
+
+**Issue / branch:** #544 / `codex/p2o4-t37-august6-submission-bundle`
+
+| Unit | Disposition | Evidence | Next |
+|---|---|---|---|
+| T37-U01 | `pass` | verified v0.48 tool rerun; extract-and-open gap | U02 |
+| T37-U02 | `pass` | PRECHECK-2026-069; exact 11-asset public roster | U03 |
+| T37-U03 | `pass` | source `7d972bfa...`; LF remediation `660f54f...`; focused tests pass | U04 |
+| T37-U04 | `pass` | final r002 exact ZIP and receipt; replay byte-identical | U05 |
+| T37-U05 | `pass` | final r002 extraction; safe structure; real desktop/narrow Chrome QA | U06 |
+| T37-U06 | `in_progress` | full/package/install/release gates pending | milestone exit |
+
+Retained failures:
+
+- the first environment smoke correctly found installed metadata still at
+  0.48.0 after the 0.49.0 source bump; locked environment refresh resolved it;
+- production r001 exposed five missing LF checkout contracts and remains
+  ignored; r002 binds checkout-stable bytes;
+- the first Playwright launch lacked its managed browser binary; installed
+  local Chrome was used without download; and
+- the first mobile check assumed an absent CSS class; corrected inspection
+  changes no artifact.
+
+No scientific, label, dataset, split, baseline, model, metric, deployment,
+access, or public-sharing state changes.
