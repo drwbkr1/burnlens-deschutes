@@ -66,3 +66,11 @@ The first production fitness command used a mistyped full commit string.
 BurnLens caught the mismatch before staging. It retains the exact failed
 outputs in ignored custody. The corrected r002 command compares the supplied
 commit with repository `HEAD` before it opens the archive.
+
+The corrected r002 run passes the exact boundary, analyst thresholds, all five
+native rasters, class domain, and nine optical registration windows. It finds
+19,700 MTBS class-2/3 pixel centers on the verified optical grid.
+
+The exact PNG looks correct. Automated local HTML navigation is blocked by the
+browser policy. BurnLens retains that limit and keeps U04 closed until the
+exact HTML receives desktop and narrow-width confirmation.
