@@ -68,6 +68,7 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.assertIn('id="failure"', html)
             self.assertIn('id="trace"', html)
             self.assertIn('class="skip"', html)
+            self.assertIn('<link rel="icon" href="data:,">', html)
             self.assertIn("@media(max-width:430px)", html)
             self.assertIn("@media(prefers-reduced-motion:reduce)", html)
             self.assertEqual(payload["outputs"][0]["path"], f"{REPORT_ID}.html")
@@ -110,7 +111,7 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         links = re.findall(r'(?:href|src)="([^"]+)"', html)
         self.assertGreaterEqual(len(links), 16)
         for target in links:
-            if target.startswith(("#", "http://", "https://")):
+            if target.startswith(("#", "data:", "http://", "https://")):
                 continue
             if target == f"{REPORT_ID}.json":
                 continue

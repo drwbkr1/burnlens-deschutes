@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|
 | `T36-U01` | Run the current tool and inspect the current rendered reviewer surface | exact v0.47 custody; tracked Windigo HTML | `pass` | none | U02 |
 | `T36-U02` | Freeze reviewer questions, input roster, claim boundaries, lineage, and local/offline contract | PRECHECK-2026-067; issue #540 | `pass` | none | U03 |
-| `T36-U03` | Build one deterministic portfolio manifest and landing surface | five exact bound inputs; source checkpoint pending | `in_progress` | first focused test expected the not-yet-generated self manifest to exist; test corrected to exempt only that future output | U04 |
+| `T36-U03` | Build one deterministic portfolio manifest and landing surface | five exact bound inputs; source checkpoint pending | `in_progress` | first focused test expected the not-yet-generated self manifest to exist; first production render exposed one missing-favicon 404; first favicon-focused run exposed a test-only inline-data-link assumption | U04 |
 | `T36-U04` | Align quickstart, case study, and repository handoff | exact U03 output | `blocked_on_U03` | none | U05 |
 | `T36-U05` | Real render, accessibility, privacy, link, and reproducibility QA | exact U03/U04 output | `blocked_on_U04` | none | U06 |
 | `T36-U06` | Release verification and August 6 submission handoff | complete unit ledger | `blocked_on_U05` | none | milestone exit |

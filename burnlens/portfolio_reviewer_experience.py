@@ -313,6 +313,7 @@ def render_html(report: dict[str, Any]) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="BurnLens verified CV-to-GEOINT portfolio evidence and limitations.">
+<link rel="icon" href="data:,">
 <title>BurnLens — evidence before claims</title>
 <style>
 :root{{--ink:#15221d;--muted:#52615a;--paper:#f5f0e7;--card:#fffdf8;--forest:#102c27;--teal:#08776d;--ember:#dc6d22;--line:#d8cec0;--focus:#ffbf47}}
