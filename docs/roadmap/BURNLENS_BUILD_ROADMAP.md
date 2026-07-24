@@ -189,9 +189,9 @@ August 6, 2026 is the controlling portfolio-submission deadline. The current cri
 
 1. **Completed bounded sixth-event attempt:** P2O4-T35 / issue #534 / PR #535 and BL-EXC-002 / #536 / PR #537 ship verified Windigo 2022. The failed first-main byte gate remains visible; corrected main and the remote annotated tag pass. Windigo is the sixth owner-approved prototype event.
 2. **Deadline decision:** Dataset, split, baseline, and model stay closed because only the count minimum passes. The submission path is technical-case-study-first unless the separate sufficiency evaluator later passes inside a bounded deadline-safe checkpoint.
-3. **Reviewer-visible integration:** lock one repository-owned local/offline evidence interface and reviewer journey. Integrate real outputs, honest failure states, limitations, and source precedence rather than adding parallel systems.
-4. **Case study and reviewer guide:** make the promise, strongest verified result, stop decision, technical depth, reproduction path, and limitations legible quickly.
-5. **Submission QA and package:** run responsive, accessibility, reproducibility, privacy, claim, package, install, link, and release audits; produce one verified August 6 submission package with remediation time.
+3. **Reviewer-visible integration — candidate complete:** P2O4-T36 / issue #540 produces one repository-owned local/offline evidence interface and reviewer journey. Exact production/replay, desktop/narrow rendering, links, images, keyboard order, console, privacy, and owner-render gates pass.
+4. **Case study and reviewer guide — candidate complete:** the landing page, quickstart, and case study make the promise, strongest verified result, stop decision, technical depth, reproduction path, traceability, and limitations legible quickly.
+5. **Submission QA and package — active:** complete full repository, package, isolated-install, release-truth, merged-main, and tag verification, then produce one deterministic August 6 submission package with remediation time.
 
 Low-value source scouting, repeated provider retries, recursive lifecycle churn, speculative model work, and roadmap breadth are deferred until after submission. Do not create a dataset, split, baseline, or model merely when a sixth event arrives. Deployment or a public-sharing change remains an owner stop condition.
 
