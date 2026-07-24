@@ -51,8 +51,8 @@ BOUND_ASSETS = (
     ),
     BoundAsset(
         "portfolio/README.md",
-        2359,
-        "d7c4c6393c7e35b0f4be8d3b91374971b1694c2989bd38cfba822d7363a6f4cb",
+        2300,
+        "bacaae92ed18a35777528ed48dc01ddd0b8d59820ced94b199d15e4e75581d3f",
         "reviewer quickstart",
     ),
     BoundAsset(
@@ -71,8 +71,8 @@ BOUND_ASSETS = (
     ),
     BoundAsset(
         "docs/phase-two/objective-four/WINDIGO_OWNER_RESPONSE_INTAKE_DECISION.md",
-        1585,
-        "58aac9fe3325f9b79cb43381445ed097987dd6db618642bf85df9d5bbc9693b0",
+        1566,
+        "0abe41f3966d48eb02fff59ac434414a52620c973d1cbe69b14497419c93b6bb",
         "strongest-result decision",
     ),
     BoundAsset(
@@ -90,20 +90,20 @@ BOUND_ASSETS = (
     ),
     BoundAsset(
         "records/prompt-build-log/2026-07-21-p2o4-t33.md",
-        117601,
-        "336b75091c22f54d751d98b11a30fefa736d4536e8249ca2109bfdaaf126119a",
+        116961,
+        "135515b59a72890bca472fa09798966d7c7648082196693ec09b71164f5b4bdb",
         "retained-stop execution ledger",
     ),
     BoundAsset(
         "docs/case-study/BURNLENS_CASE_STUDY.md",
-        84610,
-        "8f714bd3672dd9fc5de3fa21f5944bcf7e1fa55cf85922db15df413ac312ebc1",
+        84039,
+        "49c4810b19fadae38d7dfe8146a17ccaa44954a18170105736c77c409de80e5c",
         "full case study",
     ),
     BoundAsset(
         "records/phase-two/release-audits/RELEASE-AUDIT-2026-002.json",
-        8776,
-        "13d098c5f5fae219a3c3a8041245517f793761f3ff07ced4c12686caa604390f",
+        8577,
+        "f69f8d711c49b55482fcce7b5a27515118213cc050fd506d808607285c810a4f",
         "verified v0.48 release audit",
     ),
 )
