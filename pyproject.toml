@@ -118,6 +118,7 @@ burnlens-build-official-fallback-source-gate = "burnlens.build_official_fallback
 burnlens-inspect-windigo-source-fitness = "burnlens.windigo_source_fitness:main"
 burnlens-build-windigo-region-proposal = "burnlens.windigo_region_proposal:main"
 burnlens-build-windigo-owner-review-surface = "burnlens.build_windigo_owner_review_surface:main"
+burnlens-build-windigo-owner-response-intake = "burnlens.build_windigo_owner_response_intake:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
