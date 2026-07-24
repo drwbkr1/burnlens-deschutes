@@ -249,7 +249,7 @@ class OwnerWaiverRevealReadinessTests(unittest.TestCase):
             )
 
     def test_current_package_version_and_entry_points_are_explicit(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.48.0")
+        self.assertEqual(burnlens.__version__, "0.49.0")
         pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
         self.assertIn('burnlens-authorize-label-review-reveal =', pyproject)
         self.assertIn('burnlens-run-owner-waiver-reveal-readiness-qa =', pyproject)

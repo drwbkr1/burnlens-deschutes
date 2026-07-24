@@ -39,5 +39,11 @@ contracts. Commit `660f54f...` adds those contracts and binds exact LF bytes.
 Final r002 rebuilds, replays, extracts, validates, and renders from that
 checkout-stable source.
 
-The browser and loopback server were stopped. U01-U05 pass. U06 release
-verification remains.
+The browser and loopback server were stopped. The first full candidate suite
+then returned 557 passes, one skip, and 29 failures. Every failure was a stale
+current-package `0.48.0` assertion after the intentional `0.49.0` bump; no
+submission, scientific, custody, or render assertion failed. The bounded
+current-version correction passes all 187 affected tests, with 21 existing
+NumPy deprecation warnings and four subtests. The first two-minute affected
+test invocation timed out without a reported failure; the retained rerun
+completed in 182.72 seconds. U01-U05 pass. U06 release verification remains.

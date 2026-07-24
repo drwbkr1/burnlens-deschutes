@@ -17,5 +17,9 @@ The first archive exposed missing LF checkout rules for five text members.
 BurnLens retained it as failure evidence, added explicit contracts, and rebuilt
 final r002 from checkout-stable bytes.
 
+The first full suite exposed 29 stale package-version expectations. BurnLens
+retained that run and updated only current-package assertions. The historical
+v0.48 report identity remains fixed. All 187 affected tests now pass.
+
 The bundle changes presentation custody only. It adds no data, model, metric,
 scientific claim, deployment, or public-sharing change.

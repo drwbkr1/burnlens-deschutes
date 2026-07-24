@@ -123,7 +123,7 @@ class WindigoOwnerResponseIntakeTests(unittest.TestCase):
         )
 
     def test_version_entry_point_and_exact_custody_constants(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.48.0")
+        self.assertEqual(burnlens.__version__, "0.49.0")
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn("burnlens-build-windigo-owner-response-intake", pyproject)
         self.assertEqual(EXPECTED_RESPONSE_BYTES, RESPONSE.stat().st_size)
