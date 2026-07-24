@@ -45,3 +45,19 @@ has arrived yet.
 
 U03 remains pending. The archive notices, rights, files, classes, masks, grids,
 nodata, cautions, and local pixels still need inspection.
+
+## 2026-07-24 - Exact MTBS delivery enters custody
+
+The provider completion message binds the exact Ward Creek event and MTBS map.
+One private HTTPS route supplies one archive. BurnLens retains neither the
+recipient nor the route.
+
+The exact archive passes safe-path, encryption, link, roster, and CRC checks.
+Before opening any raster, BurnLens reads both embedded metadata notices.
+They allow use with reasonable source acknowledgement and retain update,
+location, warranty, and fitness cautions.
+
+Custody now passes. Native source fitness remains separate. The committed
+inspector must still verify the boundary, all five rasters, class domain,
+grids, nodata, optical quality, and local registration before U03 can finish.
+No candidate or label advances.
