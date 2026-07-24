@@ -99,11 +99,10 @@ Traceability is necessary but not sufficient for public release. Release control
 
 BurnLens uses `0.y.z` versions because the project is experimental, portfolio-first, and not stable or production-facing.
 
-The latest verified repository release is BurnLens 0.47.0. BurnLens 0.48.0 is
-the P2O4-T36 portfolio reviewer-experience candidate until its full release,
-merged-main, and tag gates pass. A local reviewer surface is not a deployment
-or a claim of dataset, model, official, field, operational, or emergency
-readiness.
+The latest verified repository release is BurnLens 0.48.0 at
+`v0.48.0-portfolio-reviewer-experience`. A local reviewer surface is not a
+deployment or a claim of dataset, model, official, field, operational, or
+emergency readiness.
 
 While BurnLens remains in `0.y.z`:
 

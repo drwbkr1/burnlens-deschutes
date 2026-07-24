@@ -6,19 +6,22 @@
   "created_at_utc": "2026-07-24T03:10:00Z",
   "milestone": "P2O4-T36",
   "task_issue": 540,
-  "pull_request": null,
+  "pull_request": 541,
   "branch": "codex/p2o4-t36-portfolio-reviewer-experience",
   "git_base_commit": "3dc057a210da024d4bba4e1db41e8b5c891663aa",
   "source_commit": "7ffb8ce74350c34f60c36765e194a2aab29dbcd9",
   "release_candidate_commit": "f9acd72798bff588edd84aa7d4f03f9a3e90219d",
-  "checkpoint_commit": null,
-  "version_tag": null,
+  "checkpoint_commit": "05140217066277b254e78abb74cd8f61295449d0",
+  "lifecycle_issue": 542,
+  "version_tag": "v0.48.0-portfolio-reviewer-experience",
+  "version_tag_object": "c6ed831c106da44bad3ced010fafe5abc46bd537",
+  "version_tag_target": "05140217066277b254e78abb74cd8f61295449d0",
   "software_version": "0.48.0",
   "run_id": "BL-2026-07-24-portfolio-reviewer-experience-r002",
   "decision": "PRESENT_VERIFIED_TECHNICAL_CASE_STUDY_KEEP_DATASET_MODEL_CLOSED",
-  "disposition": "candidate",
-  "execution_status": "release_verification_pending",
-  "release_state": "not_shipped",
+  "disposition": "pass",
+  "execution_status": "verified",
+  "release_state": "shipped",
   "aoi_version": "multi-event-native-grids-v0.4.0",
   "target_version": "target-burn-scar-v0.2.0",
   "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
@@ -72,7 +75,7 @@
     "full_tests": "pass: 581 passed, 1 expected skip, 22 warnings, 86 subtests",
     "dependency_and_lock": "pass: 66 locked distributions; uv.lock 207817 bytes / sha256 5e757a0b2ae668091471bcc22905f98486e8d73c71c50790248e6582daef04d6",
     "package_and_install": "pass: deterministic wheel, isolated install, 87 command probes",
-    "release_verification": "pre-merge gates pass; PR, merge, fresh-main repetition, and tag pending"
+    "release_verification": "pass: PR #541, fresh-main repetition, and remote annotated tag peel"
   },
   "release_package": {
     "package_sensitive_head": "f9acd72798bff588edd84aa7d4f03f9a3e90219d",
@@ -93,7 +96,7 @@
   },
   "release_audit": {
     "path": "records/phase-two/release-audits/RELEASE-AUDIT-2026-002.json",
-    "computed_status": "blocked only on required PR, merge, fresh-main, and tag check"
+    "computed_status": "verified"
   },
   "deployment_or_public_sharing_authorized": false
 }

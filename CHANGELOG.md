@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## Unreleased - P2O4-T36 portfolio reviewer experience
+## v0.48.0-portfolio-reviewer-experience - verified - 2026-07-24
 
 - Add one deterministic, JavaScript-free, local/offline reviewer landing page.
 - Route reviewers through the verified Windigo result, retained Petes Lake stop, source roles, limitations, lineage, quickstart, and case study.
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain the first missing-favicon render and first inline-data-link test assumption as failed evidence.
 - Record the owner's confirmation that the exact final page renders correctly.
 
-Issue #540; source commit `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; run `BL-2026-07-24-portfolio-reviewer-experience-r002`. Release verification, PR, merge, tag, and August 6 submission packaging remain pending. No dataset, split, baseline, model, deployment, GitHub Release, access, or public-sharing state changes.
+Issue #540 / PR #541; source commit `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; merge `05140217066277b254e78abb74cd8f61295449d0`; run `BL-2026-07-24-portfolio-reviewer-experience-r002`. Fresh main passes 581 tests, exact output reconstruction, canonical 881,588-byte packaging, isolated BurnLens 0.48.0, 87 command routes, and remote annotated-tag peel. Tag object `c6ed831c106da44bad3ced010fafe5abc46bd537` peels exactly to the merge. Lifecycle issue #542 hands off the deterministic August 6 submission bundle. No dataset, split, baseline, model, deployment, GitHub Release, access, or public-sharing state changes.
 
 ## v0.47.0-windigo-sixth-prototype-event - verified - 2026-07-24
 

@@ -39,6 +39,10 @@ The corrected repository passes 581 tests, one expected skip, and 86 subtests.
 Two clean-archive builds produce the same wheel. A fresh isolated install loads
 BurnLens 0.48.0 from `site-packages` and passes all 87 command routes.
 
+PR #541 merges the coherent milestone. Fresh main repeats the exact outputs,
+full suite, wheel, isolated install, and command gates. The remote annotated
+tag peels exactly to the merge.
+
 This is a technical case-study interface, not a dataset, model, official
 wildfire product, field validation, operational tool, or emergency resource.
-Release verification remains the final checkpoint gate.
+The deterministic August 6 submission bundle is the next checkpoint.
