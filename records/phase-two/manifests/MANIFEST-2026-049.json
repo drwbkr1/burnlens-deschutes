@@ -6,20 +6,22 @@
   "created_at_utc": "2026-07-24T01:10:16.8257050Z",
   "milestone": "P2O4-T35",
   "task_issue": 534,
-  "pull_request": null,
+  "pull_request": 535,
   "branch": "codex/p2o4-t35-windigo-deadline-gate",
   "git_base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
   "release_candidate_commit": "714273adfcf8f90ab16abe798eb086201577b0e9",
   "closeout_records_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "00d01402657e92357f5f4c795ba9a4f4fd99038a",
+  "remediation_issue": 536,
+  "exception_candidate_commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
   "version_tag": "v0.47.0-windigo-sixth-prototype-event",
   "version_tag_object": null,
   "software_version": "0.47.0",
   "run_id": "BL-2026-07-24-windigo-milestone-closeout-r001",
   "decision": "ACCEPT_WINDIGO_AS_SIXTH_OWNER_APPROVED_PROTOTYPE_EVENT_KEEP_DATASET_SPLIT_BASELINE_MODEL_CLOSED",
   "disposition": "pass",
-  "execution_status": "candidate",
-  "release_state": "candidate",
+  "execution_status": "merged",
+  "release_state": "remediation_required",
   "aoi_version": "multi-event-native-grids-v0.4.0",
   "target_version": "target-burn-scar-v0.2.0",
   "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
@@ -77,9 +79,9 @@
     "dependency_and_lock": "pass: 66 locked distributions; uv.lock 207817 LF bytes / sha256 f401b5021679aaf98febc93a7638ed892250c2e2e74c14e5264737922ad8823b",
     "json_links_privacy_claims": "pass",
     "render": "pass",
-    "package": "pass at 714273adfcf8f90ab16abe798eb086201577b0e9",
-    "pull_request": "pending",
-    "merged_main": "pending",
+    "package": "pass at 714273adfcf8f90ab16abe798eb086201577b0e9 and exact exception candidate e5743c723bfebfb13108458f8ace2e8e429517e1",
+    "pull_request": "pass: PR #535 squash-merged",
+    "merged_main": "fail: exact checkout bytes drifted; 569 passed, 1 skipped, 6 Windigo intake setup errors",
     "tag": "pending"
   },
   "release_package": {
@@ -101,10 +103,10 @@
   },
   "release_audit": {
     "path": "records/phase-two/release-audits/RELEASE-AUDIT-2026-001.json",
-    "computed_status": "blocked pending PR, merge, fresh-main, and tag only"
+    "computed_status": "blocked on BL-EXC-002 fresh-main checkout-byte remediation and tag"
   },
   "next_checkpoint": {
-    "status": "portfolio assembly after verified milestone shipment",
+    "status": "BL-EXC-002 issue #536 before verified milestone shipment",
     "deadline": "2026-08-06",
     "required_outcome": "one coherent repository-owned evidence interface, reviewer journey, case study, quickstart, QA, and submission package",
     "deployment_or_public_sharing_authorized": false

@@ -11,8 +11,8 @@
     "external"
   ],
   "candidate": {
-    "base_commit": "0e58459ea45f509eca537223d872fd6992efb291",
-    "commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+    "base_commit": "00d01402657e92357f5f4c795ba9a4f4fd99038a",
+    "commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
     "version": "0.47.0",
     "tag": "v0.47.0-windigo-sixth-prototype-event",
     "artifacts": [
@@ -40,8 +40,8 @@
   },
   "live_truth": {
     "verified_at_utc": "2026-07-24T01:10:16.8257050Z",
-    "branch": "codex/p2o4-t35-windigo-deadline-gate",
-    "remote_commit": "e8739a90b8ed7337851afcffb313f3d4114224bf",
+    "branch": "codex/bl-exc-002-windigo-byte-stability",
+    "remote_commit": "e5743c723bfebfb13108458f8ace2e8e429517e1",
     "pull_request": null,
     "tag_target": "",
     "deployment": null
@@ -54,8 +54,8 @@
       "status": "pass",
       "method": "Compare the exact branch diff and issue #534 contract with the verified v0.46 base.",
       "evidence": [
-        "origin/codex/p2o4-t35-windigo-deadline-gate equals e8739a90b8ed7337851afcffb313f3d4114224bf",
-        "Issue #534 remains open and names the same branch, base, event, six units, and no-dataset exit"
+        "origin/codex/bl-exc-002-windigo-byte-stability equals e5743c723bfebfb13108458f8ace2e8e429517e1",
+        "Issue #536 limits the exception to checkout attributes, one regression test, and release-truth records"
       ],
       "reason": ""
     },
@@ -106,6 +106,7 @@
       "method": "Build twice from separate exact Git archives of package-sensitive checkpoint 714273adfcf8f90ab16abe798eb086201577b0e9 under fixed SOURCE_DATE_EPOCH 1784854998; verify the closeout records commit changes no package-sensitive path; inspect and install one wheel in an ignored isolated environment.",
       "evidence": [
         "Two 872,766-byte wheels are byte-identical at SHA-256 1fabf5408113dcd238871070a3fbe0105526a845c66eb8f0f48edcb99595aea7",
+        "Exception candidate e5743c723bfebfb13108458f8ace2e8e429517e1 reproduces the same wheel exactly",
         "Diff 714273a..e8739a9 changes zero package-sensitive paths",
         "183 unique entries, zero forbidden entries",
         "Isolated 0.47.0 import resolves from site-packages; 13 packages compatible; 86 of 86 command help probes pass"
@@ -155,10 +156,24 @@
       "id": "CHECK-009",
       "category": "pull-request-merge-tag",
       "required": true,
-      "status": "not_run",
+      "status": "fail",
       "method": "Open one coherent PR, verify checks and diff, merge, rebuild from fresh main, and remotely peel the annotated tag.",
+      "evidence": [
+        "PR #535 merged at 00d01402657e92357f5f4c795ba9a4f4fd99038a",
+        "Fresh-main environment and 86 command probes passed",
+        "Fresh-main suite ended at 569 passed, 1 skipped, 6 exact-byte setup errors",
+        "BL-EXC-002 issue #536 owns the checkout-byte remediation; tag withheld"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-010",
+      "category": "exception-ship",
+      "required": true,
+      "status": "not_run",
+      "method": "Open and merge the BL-EXC-002 PR, repeat the exact-output, full-suite, package, and isolated-install gates from corrected origin/main, then peel the annotated tag.",
       "evidence": [],
-      "reason": "The release-candidate audit precedes the authorized shipment transaction."
+      "reason": "Exception candidate passes locally and is awaiting its PR transaction."
     }
   ],
   "truth_surfaces": [
@@ -176,8 +191,14 @@
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/534",
-      "expected_state": "Open milestone issue with U05 acceptance evidence and U06 shipment pending.",
-      "observed_state": "Issue is open; corrected U05 comment is live.",
+      "expected_state": "Closed by merged PR #535 with release verification delegated to exception #536.",
+      "observed_state": "Issue is closed; corrected U05 comment and merged PR remain live.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/536",
+      "expected_state": "Open urgent correctness exception; tag withheld pending fresh-main byte stability.",
+      "observed_state": "Issue is open and scoped to checkout attributes, regression, and release-truth records.",
       "status": "current"
     }
   ],
@@ -189,7 +210,7 @@
   ],
   "decision": {
     "reported_status": "blocked",
-    "rationale": "Every candidate gate passes, including exact owner rendering, but PR, merge, fresh-main verification, and annotated-tag peel have not run yet.",
-    "next_action": "Commit and push the U06 audit records, open one coherent milestone PR, merge after checks pass, verify fresh main, then create and remotely peel v0.47.0-windigo-sixth-prototype-event."
+    "rationale": "PR #535 merged, but fresh main changed exact checkout bytes and failed six Windigo intake tests. The tag is withheld until BL-EXC-002 restores checkout-stable bytes and all merged-main gates pass.",
+    "next_action": "Ship issue #536, repeat exact output, full-suite, package, and isolated-install gates from corrected origin/main, then create and remotely peel v0.47.0-windigo-sixth-prototype-event."
   }
 }

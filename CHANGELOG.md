@@ -21,6 +21,8 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 
 Issue #534; final intake run `BL-2026-07-24-windigo-owner-response-intake-r003`; U01-U05 pass. U06 candidate gates pass owner-confirmed desktop/narrow rendering, 575 tests, exact package reproduction, isolated installation, and public-claim/privacy audits. PR, merge, fresh-main verification, and tag remain pending.
 
+PR #535 squash-merges at `00d01402657e92357f5f4c795ba9a4f4fd99038a`, but fresh-main release verification withholds the tag after Windows checkout converts exact bound-record and nested intake text to CRLF. The fail-closed suite retains 569 passes / one expected skip / six setup errors. BL-EXC-002 / issue #536 adds only exact LF checkout coverage and regression evidence; all scientific values, owner decisions, label counts, public Git blobs, dataset/split/baseline/model nulls, and version identity remain unchanged.
+
 ## v0.46.0-official-fallback-source-gate-defer - verified - 2026-07-23
 
 ### P2O4-T34 - Compare two official fallback routes and select neither
