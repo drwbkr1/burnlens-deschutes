@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from hashlib import sha256
 from pathlib import Path
+import subprocess
 from tempfile import TemporaryDirectory
 import unittest
 from zipfile import ZipFile
@@ -37,7 +38,7 @@ class ReplacementEventReferenceFitnessTests(unittest.TestCase):
             self.assertEqual(metadata["iso"]["sha256"], "fa6fa6fc897a73d5272b48bf906b3605775b3a89a093d42922cc14ff38a7ffb1")
 
     def test_run_id_is_exact(self) -> None:
-        self.assertEqual(RUN_ID, "BL-2026-07-24-ward-creek-reference-fitness-r001")
+        self.assertEqual(RUN_ID, "BL-2026-07-24-ward-creek-reference-fitness-r002")
         self.assertEqual(ARCHIVE_SHA256, "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18")
         self.assertEqual(EXPECTED_DNBR6_DOMAIN["2"], 8_287)
 
@@ -45,14 +46,21 @@ class ReplacementEventReferenceFitnessTests(unittest.TestCase):
     def test_exact_sources_pass_without_creating_labels(self) -> None:
         with TemporaryDirectory(dir=ROOT / "downloads/phase-two/runs/P2O4-T39-U03") as temporary:
             temporary = Path(temporary)
+            head = subprocess.run(
+                ["git", "-C", str(ROOT), "rev-parse", "HEAD"],
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
             report, previews = build_report(
+                repository_root=ROOT,
                 pre_package=PRE,
                 post_package=POST,
                 archive_path=ARCHIVE,
                 extracted_root=temporary / "extracted",
                 generated_at_utc="2026-07-24T21:00:00Z",
                 run_id=RUN_ID,
-                git_source_commit="0" * 40,
+                git_source_commit=head,
             )
             evidence = report["evidence_comparison"]
             self.assertEqual(evidence["mtbs_affirmative_pixels"], 19_700)
@@ -64,6 +72,21 @@ class ReplacementEventReferenceFitnessTests(unittest.TestCase):
             html = render_html(report, "evidence.png")
             self.assertNotIn("official status", html.lower().split("what this proves")[1].split("what this does not prove")[0])
             self.assertEqual(previews["boundary_mask20"].shape, (219, 183))
+
+    @unittest.skipUnless(PRE.is_dir() and POST.is_dir() and ARCHIVE.is_file(), "ignored exact custody unavailable")
+    def test_wrong_commit_fails_before_source_inspection(self) -> None:
+        with TemporaryDirectory(dir=ROOT / "downloads/phase-two/runs/P2O4-T39-U03") as temporary:
+            with self.assertRaisesRegex(ReplacementEventReferenceFitnessError, "repository HEAD"):
+                build_report(
+                    repository_root=ROOT,
+                    pre_package=PRE,
+                    post_package=POST,
+                    archive_path=ARCHIVE,
+                    extracted_root=Path(temporary) / "never-created",
+                    generated_at_utc="2026-07-24T21:00:00Z",
+                    run_id=RUN_ID,
+                    git_source_commit="0" * 40,
+                )
 
     def test_notice_mutation_fails_closed(self) -> None:
         if not ARCHIVE.is_file():

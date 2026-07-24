@@ -61,3 +61,8 @@ Custody now passes. Native source fitness remains separate. The committed
 inspector must still verify the boundary, all five rasters, class domain,
 grids, nodata, optical quality, and local registration before U03 can finish.
 No candidate or label advances.
+
+The first production fitness command used a mistyped full commit string.
+BurnLens caught the mismatch before staging. It retains the exact failed
+outputs in ignored custody. The corrected r002 command compares the supplied
+commit with repository `HEAD` before it opens the archive.

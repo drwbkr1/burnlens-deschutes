@@ -12,6 +12,7 @@ from hashlib import sha256
 from html import escape
 import json
 from pathlib import Path, PurePosixPath
+import subprocess
 from typing import Any
 from xml.etree import ElementTree as ET
 from zipfile import BadZipFile, ZipFile
@@ -46,7 +47,7 @@ REPORT_VERSION = "ward-creek-reference-fitness-v0.1.0"
 PROTOCOL_VERSION = "ward-creek-reference-fitness-protocol-v0.1.0"
 UNIT_ID = "P2O4-T39-U03"
 TASK_ISSUE = 554
-RUN_ID = "BL-2026-07-24-ward-creek-reference-fitness-r001"
+RUN_ID = "BL-2026-07-24-ward-creek-reference-fitness-r002"
 ARCHIVE_BYTES = 4_385_952
 ARCHIVE_SHA256 = "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18"
 ARCHIVE_MEMBERS = 16
@@ -366,6 +367,7 @@ def _sample_reference(
 
 def build_report(
     *,
+    repository_root: Path,
     pre_package: Path,
     post_package: Path,
     archive_path: Path,
@@ -376,8 +378,23 @@ def build_report(
 ) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
     if run_id != RUN_ID:
         raise ReplacementEventReferenceFitnessError("run ID drifted")
-    if len(git_source_commit) != 40:
-        raise ReplacementEventReferenceFitnessError("exact source commit required")
+    repository_root = repository_root.resolve()
+    top = subprocess.run(
+        ["git", "-C", str(repository_root), "rev-parse", "--show-toplevel"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    head = subprocess.run(
+        ["git", "-C", str(repository_root), "rev-parse", "HEAD"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    if Path(top).resolve() != repository_root or git_source_commit != head:
+        raise ReplacementEventReferenceFitnessError(
+            "git source commit does not match repository HEAD"
+        )
     archive_summary = _inspect_archive(archive_path)
     with ZipFile(archive_path) as archive:
         metadata = _inspect_metadata(archive)

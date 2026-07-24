@@ -15,6 +15,7 @@ from .replacement_event_reference_fitness import (
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repository-root", type=Path, required=True)
     parser.add_argument("--pre-package", type=Path, required=True)
     parser.add_argument("--post-package", type=Path, required=True)
     parser.add_argument("--archive", type=Path, required=True)
@@ -30,6 +31,7 @@ def main() -> int:
     arguments = parse_args()
     try:
         report, previews = build_report(
+            repository_root=arguments.repository_root,
             pre_package=arguments.pre_package,
             post_package=arguments.post_package,
             archive_path=arguments.archive,
