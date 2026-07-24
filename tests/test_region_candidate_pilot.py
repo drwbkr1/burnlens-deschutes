@@ -47,7 +47,7 @@ def _unit(sample_id: str, event_id: str, candidate_class: str, row: int, column:
 
 class RegionCandidatePilotTests(unittest.TestCase):
     def test_version_and_generator_are_frozen(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.48.0")
+        self.assertEqual(burnlens.__version__, "0.49.0")
         self.assertEqual(GENERATOR_VERSION, "region-candidate-generator-v0.1.0")
 
     def test_component_is_intact_and_ring_is_one_pixel(self) -> None:

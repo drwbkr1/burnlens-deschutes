@@ -1,0 +1,46 @@
+{
+  "manifest_id": "MANIFEST-2026-051",
+  "manifest_version": "0.51.0",
+  "manifest_role": "august-6-submission-bundle-candidate",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "milestone": "P2O4-T37",
+  "task_issue": 544,
+  "branch": "codex/p2o4-t37-august6-submission-bundle",
+  "git_base_commit": "07cc4177de193b1261ee468e577245c11c1d4a52",
+  "source_commit": "660f54f4e4786de57257ce12fb24fa31c282cf8d",
+  "package_source_commit": "97ef6e2d11572fa721182cdce161714d50183dfa",
+  "software_version": "0.49.0",
+  "run_id": "BL-2026-07-24-august6-submission-bundle-r002",
+  "decision": "PACKAGE_VERIFIED_LOCAL_REVIEWER_PATH_WITHOUT_EXPANDING_CLAIMS",
+  "disposition": "candidate",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "outputs": [
+    {
+      "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001.zip",
+      "bytes": 784940,
+      "sha256": "3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53"
+    },
+    {
+      "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001-RECEIPT.json",
+      "bytes": 774,
+      "sha256": "08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf"
+    }
+  ],
+  "quality_gates": {
+    "bound_roster": "pass",
+    "deterministic_replay": "pass",
+    "safe_archive_structure": "pass",
+    "dual_extraction": "pass",
+    "desktop_narrow_render": "pass on final r002 extracted bytes",
+    "links_images_keyboard_console_privacy": "pass",
+    "full_suite": "586 passed; 1 expected skip; 22 warnings; 86 subtests",
+    "package_reproducibility": "two byte-identical 887000-byte wheels at 57b4cc8338926b583ef976d6bee698ecedf1be869944d6dee69ced78cda3da50",
+    "isolated_install": "Python 3.12.10; 13 compatible distributions; 88 of 88 commands",
+    "release_audit": "RELEASE-AUDIT-2026-003 valid; blocked only on PR, merge, fresh-main repetition, and remote tag",
+    "release_verification": "pending coherent PR, fresh-main repetition, and remote tag"
+  },
+  "deployment_or_public_sharing_authorized": false
+}

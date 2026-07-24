@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-003",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "package",
+    "public",
+    "security",
+    "external"
+  ],
+  "candidate": {
+    "base_commit": "07cc4177de193b1261ee468e577245c11c1d4a52",
+    "commit": "97ef6e2d11572fa721182cdce161714d50183dfa",
+    "version": "0.49.0",
+    "tag": "v0.49.0-august6-submission-bundle",
+    "artifacts": [
+      {
+        "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001.zip",
+        "bytes": 784940,
+        "sha256": "3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53"
+      },
+      {
+        "path": "portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001-RECEIPT.json",
+        "bytes": 774,
+        "sha256": "08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf"
+      },
+      {
+        "path": "burnlens_deschutes-0.49.0-py3-none-any.whl",
+        "bytes": 887000,
+        "sha256": "57b4cc8338926b583ef976d6bee698ecedf1be869944d6dee69ced78cda3da50"
+      }
+    ]
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-24T05:30:00Z",
+    "branch": "codex/p2o4-t37-august6-submission-bundle",
+    "remote_commit": "97ef6e2d11572fa721182cdce161714d50183dfa",
+    "pull_request": null,
+    "tag_target": null,
+    "deployment": null
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the exact branch diff with issue #544 and verified v0.48 main.",
+      "evidence": [
+        "Only the deterministic local bundle builder, exact public bundle, tests, version metadata, and trace records change",
+        "Dataset, split, baseline, model, deployment, access, and public-sharing state remain unchanged"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-002",
+      "category": "runtime",
+      "required": true,
+      "status": "pass",
+      "method": "Run focused tests, the actual builder, deterministic replay, compilation, tracked JSON parsing, and the complete custody-enabled repository suite.",
+      "evidence": [
+        "Affected current-version files after bounded correction: 187 passed, 21 warnings, 4 subtests",
+        "Full suite: 586 passed, 1 expected skip, 22 warnings, 86 subtests",
+        "Compilation passes and all 147 tracked JSON files parse"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-003",
+      "category": "package",
+      "required": true,
+      "status": "pass",
+      "method": "Build twice from separate exact Git ZIP archives under SOURCE_DATE_EPOCH 1784868552, inspect the wheel, install it into an ignored isolated Python 3.12.10 environment, and probe every command.",
+      "evidence": [
+        "Two 887,000-byte wheels are byte-identical at SHA-256 57b4cc8338926b583ef976d6bee698ecedf1be869944d6dee69ced78cda3da50",
+        "187 unique entries, zero forbidden entries, 88 console commands",
+        "Isolated BurnLens 0.49.0 resolves from site-packages",
+        "13 compatible distributions and 88 of 88 command help routes pass"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-004",
+      "category": "public-render",
+      "required": true,
+      "status": "pass",
+      "method": "Extract the exact production ZIP, serve it only on loopback, and exercise the start page in real desktop and narrow Chrome viewports.",
+      "evidence": [
+        "1440 by 1000 and 390 by 844 views have no horizontal overflow",
+        "Both exact images load and all nine local destinations return HTTP 200",
+        "Reviewer-first keyboard order, clean console, and zero external requests pass",
+        "Owner response: It renders correctly"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-005",
+      "category": "reproducibility",
+      "required": true,
+      "status": "pass",
+      "method": "Rebuild the exact ZIP and receipt with the recorded timestamp, run ID, source commit, and bound roster into independent ignored directories.",
+      "evidence": [
+        "ZIP repeats at 784,940 bytes / 3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53",
+        "Receipt repeats at 774 bytes / 08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf",
+        "Archive contains 14 unique safe members and a verified internal manifest"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-006",
+      "category": "privacy-security",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect every text member and archive path for private paths, personal email, secret assignments, retrieval details, unsafe names, and active external dependencies.",
+      "evidence": [
+        "No private path, personal email, credential, token, secret, or retrieval detail appears",
+        "All 758 tracked Markdown files have zero broken local links",
+        "Public URLs in supporting evidence are limited to official source cautions, public STAC, and public GitHub trace records",
+        "The start page makes zero external requests"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-007",
+      "category": "claims",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the bundle, README, quickstart, case study, roadmap, phase status, changelog, version history, and records with verified v0.48 evidence.",
+      "evidence": [
+        "Owner-approved regions remain prototype evidence, not independent ground truth",
+        "Dataset, split, baseline, and model remain explicit null values",
+        "No accuracy, field-validation, official, endorsed, operational, or emergency-ready claim is made"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-008",
+      "category": "pull-request-merge-tag",
+      "required": true,
+      "status": "not_run",
+      "method": "Merge one coherent milestone PR, repeat focused/full/output/package/install gates from exact main, then remotely peel the annotated tag.",
+      "evidence": [],
+      "reason": "PR, merge, fresh-main verification, and tag creation have not run."
+    },
+    {
+      "id": "CHECK-009",
+      "category": "deployment",
+      "required": false,
+      "status": "not_applicable",
+      "method": "",
+      "evidence": [],
+      "reason": "Issue #544 explicitly selects a local-only submission artifact and authorizes no deployment or public-sharing change."
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "BurnLens 0.49.0 is the candidate deterministic August 6 submission bundle.",
+      "observed_state": "Candidate wording is current; lifecycle verification awaits merge and tag.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "P2O4-T37 U01-U05 pass and U06 release verification remains.",
+      "observed_state": "Candidate wording is current.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/544",
+      "expected_state": "Open until the coherent milestone PR merges.",
+      "observed_state": "Issue #544 is open.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "refs/tags/v0.49.0-august6-submission-bundle",
+      "expected_state": "Absent before verified merge.",
+      "observed_state": "Tag has not been created.",
+      "status": "current"
+    }
+  ],
+  "limitations": [
+    "The labels are owner-approved prototype evidence, not independent ground truth.",
+    "Six events satisfy only the frozen count minimum; the separate sufficiency evaluator has not passed.",
+    "Dataset, split, baseline, and model versions remain null.",
+    "No GitHub Release, deployment, public-sharing change, or operational application exists."
+  ],
+  "decision": {
+    "reported_status": "blocked",
+    "rationale": "All local candidate gates pass; release verification remains blocked only on coherent PR merge, exact fresh-main repetition, and remote annotated-tag verification.",
+    "next_action": "Open and merge the coherent P2O4-T37 PR, repeat the exact gates from fresh main, and create and remotely verify the annotated v0.49 tag."
+  }
+}

@@ -8,6 +8,8 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 P2O4-T36 / issue #540 / PR #541 ships verified BurnLens 0.48.0. Its deterministic, offline page connects the verified Windigo result, the retained Petes Lake stop, source roles, limitations, reproduction steps, case study, and exact lineage. Desktop and 390-pixel rendering, keyboard order, nine local links, image loading, clean-console, zero-external-request, and byte-identical replay gates pass. Fresh main passes 581 tests, the canonical package, isolated install, and all 87 command routes. Annotated tag object `c6ed831c106da44bad3ced010fafe5abc46bd537` peels exactly to merge `05140217066277b254e78abb74cd8f61295449d0`. No deployment or public-sharing change is authorized.
 
+[Use the candidate August 6 submission ZIP](portfolio/submission/BURNLENS-AUGUST-6-SUBMISSION-2026-001.zip) for the one-step extract-and-open handoff. P2O4-T37 / issue #544 binds it to exact verified public evidence; deterministic replay, safe dual extraction, and real desktop/narrow Chrome checks pass. Full release gates remain pending.
+
 ## Verified status
 
 The latest verified release is `v0.48.0-portfolio-reviewer-experience`. P2O4-T36 / issue #540 / PR #541 merges at `05140217066277b254e78abb74cd8f61295449d0`. Fresh main passes exact output replay, nine focused tests, 581 full tests with one expected skip and 86 subtests, two byte-identical 881,588-byte wheels / SHA-256 `4966fd403f6207a4afd63c1fa68658091467e6744dfc332313ca72b2e9811c9b`, an isolated BurnLens 0.48.0 install, and all 87 commands. Annotated tag object `c6ed831c106da44bad3ced010fafe5abc46bd537` remotely peels exactly to the merge.
