@@ -110,6 +110,8 @@ samples/labels/review/windigo/phase-two/*.png -text
 samples/labels/review/windigo/phase-two/intake/*.json text eol=lf
 samples/labels/review/windigo/phase-two/intake/*.html text eol=lf
 samples/labels/review/windigo/phase-two/intake/*.png -text
+portfolio/*.json text eol=lf
+portfolio/*.html text eol=lf
 
 # Cross-event source and feasibility evidence have explicit cross-platform serialization contracts.
 samples/cross-event/phase-two/*.json text eol=lf
