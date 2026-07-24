@@ -188,3 +188,9 @@ burnlens/windigo_reference_request.py text eol=lf
 burnlens/request_windigo_reference.py text eol=lf
 tests/test_windigo_reference_request.py text eol=lf
 burnlens/reconcile_windigo_reference_request.py text eol=lf
+
+# P2O4-T36/T37 portfolio and deterministic submission outputs.
+portfolio/*.html text eol=lf
+portfolio/*.json text eol=lf
+portfolio/submission/*.json text eol=lf
+portfolio/submission/*.zip -text
