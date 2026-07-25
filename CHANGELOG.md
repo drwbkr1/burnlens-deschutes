@@ -2,6 +2,18 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.51.0-replacement-six-event-sufficiency - release candidate - 2026-07-25
+
+- Complete Ward Creek's source, custody, reference, background, proposal, owner-review, pre-reveal lock, reconciliation, and two-class promotion path.
+- Version `owner-approved-prototype-region-labels-v0.5.0` at 14 balanced regions, 325 core pixels, and 599 excluded unknown-ring pixels across seven events.
+- Build the exact six-event candidate from McKay, Tepee, Green Ridge, Grandview, Windigo, and Ward Creek while preserving and excluding Darlene.
+- Pass all ten required non-count readiness gates and find 54 valid whole-event 2/2/2 assignments.
+- Reproduce the independent readiness decision byte for byte with `training_authorized` false.
+- Retain r001's audit-serialization remediation and r002's desktop status-column render remediation.
+- Create no dataset, split, baseline, model, metric, training, inference, deployment, or external submission.
+
+Issue #554; branch `codex/p2o4-t39-replacement-event`; analytical source `af37f80dd17febacfbb1cf2801665d74edb16475`; run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`. PR, merge, package, tag, and fresh-main identities remain pending release QA.
+
 ## v0.50.0-six-event-dataset-sufficiency - verified block - 2026-07-24
 
 - Add a deterministic BurnLens 0.50.0 region-level sufficiency evaluator.
