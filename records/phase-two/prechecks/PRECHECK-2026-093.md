@@ -88,6 +88,11 @@ Forty focused contract, split, materialization, sufficiency, and independent-QA
 tests pass with 204 retained NumPy deprecation warnings. Compilation and
 `git diff --check` pass.
 
+After the U04 outputs and records commit at
+`289ed09b7760a0f2e00efbdbf8f4939dd8aa5b04`, the clean full repository suite
+passes 683 tests, one expected skip, 228 retained NumPy deprecation warnings,
+and 86 subtests in 713.56 seconds.
+
 ## Boundary and handoff
 
 The accepted decision is:
