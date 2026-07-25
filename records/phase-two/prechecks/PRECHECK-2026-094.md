@@ -124,6 +124,11 @@ warning, or browser error exists.
 Thirty-three focused dataset/baseline tests pass with 132 retained NumPy
 deprecation warnings. Compilation and `git diff --check` pass.
 
+After the accepted outputs and records commit at
+`ca0e977046f3442ee03d5d178624ea525df8ee62`, the clean full repository suite
+passes 691 tests, one expected skip, 228 retained warnings, and 86 subtests in
+541.42 seconds.
+
 ## Boundary and handoff
 
 The accepted decision is:

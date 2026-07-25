@@ -11,6 +11,7 @@
 | `P2O5-T03-U05-EVALUATION-R001` | `BL-2026-07-25-p2o5-t03-u05-evaluation-r001`; `220ce86...` | three retained outputs | frozen metrics complete; excluded nonfinite display cast warns | `remediate-retained` | neutral display fill |
 | `P2O5-T03-U05-EVALUATION-R002` | `BL-2026-07-25-p2o5-t03-u05-evaluation-r002`; `f1406b3...` | three retained outputs | exact metrics/replay/render pass; selection-bias limitation omitted | `remediate-retained` | explicit limitation |
 | `P2O5-T03-U05-EVALUATION-R003` | `BL-2026-07-25-p2o5-t03-u05-evaluation-r003`; `bfd5c6c9a137b0888d9678b176cf2412a1e18805` | JSON `a8ba82f9...`; HTML `109075ca...`; PNG `49bf3686...` | unchanged analytical result; exact replay; desktop/narrow render; 33 focused tests; complete limitations | `pass-reproducible-non-model-baseline-evaluation` | `P2O5-T03-U06` |
+| `P2O5-T03-U05-SUITE-R001` | committed checkpoint `ca0e977046f3442ee03d5d178624ea525df8ee62` | 691 pass / 1 expected skip / 228 warnings / 86 subtests | full clean repository regression passes in 541.42 seconds | `pass` | U05 record sync |
 
 The single analytical test opening fixes 89 cores across Ward Creek and
 Windigo. RBR, dNBR, and dNDVI each score 1.0000 event-class macro Dice and IoU.
