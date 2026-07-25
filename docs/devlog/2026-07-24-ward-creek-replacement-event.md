@@ -154,3 +154,17 @@ byte-identical, safe, and pass a fresh isolated 96-command runtime.
 U05 now passes. U06 may build the exact blank two-question owner-review batch.
 No owner response or label exists yet. Dataset, split, baseline, and model work
 remain closed.
+
+## 2026-07-24 - The exact Ward Creek owner review is ready
+
+The U06 page contains only the two U05 candidates. It keeps the 14-pixel burned
+core limitation visible and asks one neutral yes/no/uncertain question per
+candidate.
+
+Three runs reproduce all six files. Desktop and narrow interaction checks pass.
+A software-only export proves the final summary, hash-named response, and
+browser lock. That fixture was removed and never became owner evidence.
+
+The live page is blank again. U06 now stops for the owner's exact export.
+BurnLens will lock returned bytes before reading either decision. U07 remains
+closed, and no label or data/model artifact advances.
