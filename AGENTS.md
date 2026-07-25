@@ -67,9 +67,12 @@ source-to-promotion chain. The exact replacement candidate contains McKay,
 Tepee, Green Ridge, Grandview, Windigo, and Ward Creek while excluding
 Darlene. All ten required non-count readiness gates pass, and 54 whole-event
 2/2/2 assignments satisfy frozen leakage controls. The independent readiness
-audit agrees byte for byte and keeps `training_authorized=false`. Milestone
-release QA, PR, merge, fresh-main, and tag verification remain pending. After
-shipping, the next checkpoint may create the accepted dataset, lock one
+audit agrees byte for byte and keeps `training_authorized=false`. Release-code
+candidate `064da9a...` passes 656 tests, exact six-output replay, real
+desktop/narrow rendering, two byte-identical 993,480-byte wheels, and an
+isolated 99-command lean runtime. Draft PR #557 is clean and mergeable; merge,
+fresh-main, and tag verification remain pending. After shipping, the next
+checkpoint may create the accepted dataset, lock one
 whole-event split before patching, run dataset QA, and establish the strongest
 justified non-model baselines. No dataset, split, baseline, model, metric,
 inference, deployment, or external submission exists yet.

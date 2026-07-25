@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain r001's audit-serialization remediation and r002's desktop status-column render remediation.
 - Create no dataset, split, baseline, model, metric, training, inference, deployment, or external submission.
 
-Issue #554; branch `codex/p2o4-t39-replacement-event`; analytical source `af37f80dd17febacfbb1cf2801665d74edb16475`; run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`. PR, merge, package, tag, and fresh-main identities remain pending release QA.
+Issue #554 / draft PR #557; branch `codex/p2o4-t39-replacement-event`; analytical source `af37f80dd17febacfbb1cf2801665d74edb16475`; run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`; release-code candidate `064da9a89202f84fe377d74a01caa4e81a88252d`. The candidate passes 656 tests with one expected skip and 86 subtests, exact six-output replay, real desktop/narrow rendering, two byte-identical 993,480-byte wheels at SHA-256 `414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477`, and an isolated 99-command lean runtime. The first 993,307-byte wheel remains retained because an optional GeoPandas import escaped the lean-runtime boundary. Merge, fresh-main, and tag identities remain pending.
 
 ## v0.50.0-six-event-dataset-sufficiency - verified block - 2026-07-24
 

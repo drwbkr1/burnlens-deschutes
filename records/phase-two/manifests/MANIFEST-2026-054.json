@@ -1,0 +1,84 @@
+{
+  "manifest_id": "MANIFEST-2026-054",
+  "manifest_version": "0.54.0",
+  "manifest_role": "replacement-six-event-dataset-sufficiency-pass",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "milestone": "P2O4-T39",
+  "task_issue": 554,
+  "pull_request": 557,
+  "branch": "codex/p2o4-t39-replacement-event",
+  "git_base_commit": "657ba657ab9d23964dcaf76d377aec3a10e814da",
+  "release_code_candidate": "064da9a89202f84fe377d74a01caa4e81a88252d",
+  "generator_source_commit": "af37f80dd17febacfbb1cf2801665d74edb16475",
+  "software_version": "0.51.0",
+  "run_id": "BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003",
+  "decision": "PASS_SIX_EVENT_DATASET_SUFFICIENCY_AUTHORIZE_DATASET_SPLIT_QA_BASELINE_CHECKPOINT",
+  "disposition": "pass",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "training_authorized": false,
+  "outputs": [
+    {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    },
+    {
+      "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-002.json",
+      "bytes": 6601,
+      "sha256": "50e3b9f3c6c33a9f8cd36cf0952bf5033c039e68ffc864bf952ddec5442e6ed4"
+    },
+    {
+      "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-002.json",
+      "bytes": 7088,
+      "sha256": "39e7a56199f67bcf397b6d73e6795a2e36528ff0577b7314a8414f21321ce5d8"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.json",
+      "bytes": 9429,
+      "sha256": "88cbe6ae01af322d7f80ff8a76b3dce698c08b53394a7e68faec2f5cb198ef0a"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "bytes": 6357,
+      "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+      "bytes": 101221,
+      "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761"
+    }
+  ],
+  "package_candidate": {
+    "filename": "burnlens_deschutes-0.51.0-py3-none-any.whl",
+    "bytes": 993480,
+    "sha256": "414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477",
+    "source_date_epoch": 1784996074,
+    "reproducible_builds": 2,
+    "archive_entries": 209,
+    "isolated_python": "3.12.10",
+    "runtime_distributions": 13,
+    "console_commands": 99
+  },
+  "quality_gates": {
+    "source_and_terms": "pass",
+    "provenance_and_custody": "pass",
+    "schema_and_quality": "pass",
+    "coverage_and_balance": "pass",
+    "uncertainty_and_exclusions": "pass",
+    "leakage_and_split_fitness": "pass",
+    "reproducibility": "pass",
+    "evaluation_design": "pass",
+    "human_review": "pass",
+    "claims_and_privacy": "pass",
+    "independent_audit": "pass; training_authorized false",
+    "six_output_replay": "pass",
+    "full_repository_suite": "656 passed; 1 expected skip; 96 warnings; 86 subtests",
+    "package_reproducibility_and_install": "pass",
+    "png_render": "pass",
+    "html_desktop_and_narrow_render": "pass",
+    "release_audit": "candidate pass; merge and annotated tag pending"
+  }
+}

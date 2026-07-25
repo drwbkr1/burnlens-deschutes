@@ -222,3 +222,23 @@ status text stays legible, and browser logs stay clean.
 
 This result authorizes a separate dataset and split checkpoint. It creates no
 dataset, baseline, model, metric, or training authorization.
+
+## 2026-07-25 - Release QA catches the optional-import boundary
+
+The first v0.51 wheel is deterministic, but a lean install finds one command
+that imports GeoPandas before it can display help.
+
+BurnLens retains that 993,307-byte wheel and its failed verifier. The wrapper
+now parses arguments first, loads optional geospatial code only for real
+execution, and points operators to the locked `geo-research` profile.
+
+The correction changes no scientific output. All six accepted readiness files
+replay byte for byte from their recorded 0.50.0 scientific source.
+
+The final repository suite passes 656 tests plus 86 subtests. Two 993,480-byte
+wheels are identical. A fresh isolated Python 3.12.10 runtime loads and probes
+all 99 commands.
+
+The exact desktop and narrow readiness page remains clean. Draft PR #557 is
+clean and mergeable. The release is still a candidate until merge,
+fresh-main repetition, and annotated-tag verification pass.
