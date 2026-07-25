@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-25
 
-**Issue:** #564
+**Issue / PR:** #564 / #565
 
 **Verified checkpoint:** `dfb11c8b823e224aceb76be74003464973e33c2d`
 

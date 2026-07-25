@@ -1,6 +1,6 @@
 # BurnLens 0.52 lifecycle sync
 
-Issue #564 begins from verified merged main
+Issue #564 / PR #565 begins from verified merged main
 `dfb11c8b823e224aceb76be74003464973e33c2d`. Annotated tag object
 `7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf` remotely peels exactly to that
 checkpoint.
