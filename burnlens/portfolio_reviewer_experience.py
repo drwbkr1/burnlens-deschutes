@@ -288,10 +288,12 @@ def build_report(
             "run_id": readiness["run_id"],
             "git_source_commit": readiness["git_source_commit"],
             "software_version": SOFTWARE_VERSION,
-            "detail_path": _bound_input_path("model-readiness semantic report"),
-            "preview_path": _bound_input_path("model-readiness visual evidence"),
+            "detail_path": _bound_input_path("accepted model-readiness detail"),
+            "preview_path": _bound_input_path(
+                "accepted bounded U-Net contract preview"
+            ),
             "baseline_detail_path": _bound_input_path(
-                "selected baseline semantic report"
+                "accepted baseline detail"
             ),
         },
         "retained_failure": {

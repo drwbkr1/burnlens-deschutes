@@ -578,8 +578,8 @@ External submission remains an owner action.
 
 ## Traceability snapshot
 
-- Current dataset: `burnlens-dataset-v0.1.0`; manifest SHA-256 `e0b7a4a5bad6daaa3de105bc78f1e72475004fe82ad1ed6335542620eef19272`
-- Current split: `burnlens-whole-event-split-v0.1.0`; manifest SHA-256 `a62db633068b523db45d66a49394979e040af79736ae5caec2a131cded66e5bc`
+- Current dataset: `burnlens-dataset-v0.1.0`; manifest SHA-256 `e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16`
+- Current split: `burnlens-whole-event-split-v0.1.0`; manifest SHA-256 `a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99`
 - Current baseline: `burnlens-baseline-v0.1.0`; run `BL-2026-07-25-p2o5-t03-u05-baseline-r003`; JSON SHA-256 `a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221`
 - Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`; model version null
 - AOI: `aoi-darlene3-model-v0.2.0`
