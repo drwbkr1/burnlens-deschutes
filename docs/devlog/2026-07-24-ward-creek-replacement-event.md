@@ -133,3 +133,24 @@ different surface or change the machine evidence.
 
 U04 now passes. U05 is eligible but has not started. No candidate, owner
 decision, label, dataset, split, baseline, or model advances in this closure.
+
+## 2026-07-24 - U05 proposes one intact core per class
+
+U05 reopens the exact Ward Creek custody and recomputes both proposal routes.
+The established fixed-bin selector chooses intact native-grid components.
+
+The burned proposal has 14 pixels, not the 25-pixel target. It is the nearest
+eligible intact component. BurnLens keeps that visible instead of changing its
+shape. The background proposal has exactly 25 pixels. Their 66 surrounding
+ring pixels remain unknown and excluded.
+
+Three output locations reproduce all five files exactly. The rendered report
+passes desktop and narrow browser checks. The full suite passes.
+
+Two ordinary wheels expose timestamp-only nondeterminism in six metadata
+members. That failed attempt remains visible. Fixed-epoch wheels are
+byte-identical, safe, and pass a fresh isolated 96-command runtime.
+
+U05 now passes. U06 may build the exact blank two-question owner-review batch.
+No owner response or label exists yet. Dataset, split, baseline, and model work
+remain closed.

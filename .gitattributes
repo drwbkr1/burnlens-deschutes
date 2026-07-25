@@ -223,3 +223,9 @@ records/prompt-build-log/2026-07-24-p2o5-t02.md text eol=lf
 records/prompt-build-log/2026-07-24-p2o5-t02-sync.md text eol=lf
 docs/phase-two/objective-five/SIX_EVENT_DATASET_SUFFICIENCY_DECISION.md text eol=lf
 docs/devlog/2026-07-24-six-event-dataset-sufficiency.md text eol=lf
+
+# P2O4-T39 U05 exact Ward Creek proposal outputs.
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.json text eol=lf
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.html text eol=lf
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.png -text
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.tif -text
