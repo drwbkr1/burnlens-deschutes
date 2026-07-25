@@ -123,6 +123,7 @@ burnlens-build-ward-creek-owner-response-intake = "burnlens.build_ward_creek_own
 burnlens-build-portfolio-reviewer-experience = "burnlens.build_portfolio_reviewer_experience:main"
 burnlens-build-submission-bundle = "burnlens.build_submission_bundle:main"
 burnlens-build-six-event-dataset-sufficiency = "burnlens.build_six_event_dataset_sufficiency:main"
+burnlens-build-replacement-six-event-dataset-sufficiency = "burnlens.build_replacement_six_event_dataset_sufficiency:main"
 burnlens-build-replacement-event-source-gate = "burnlens.build_replacement_event_source_gate:main"
 burnlens-acquire-replacement-event-optical = "burnlens.acquire_replacement_event_optical:main"
 burnlens-request-replacement-event-reference = "burnlens.request_replacement_event_reference:main"

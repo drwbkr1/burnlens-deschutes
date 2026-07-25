@@ -257,3 +257,8 @@ records/phase-two/prechecks/PRECHECK-2026-084.md text eol=lf
 samples/labels/review/ward-creek/phase-two/intake/*.json text eol=lf
 samples/labels/review/ward-creek/phase-two/intake/*.html text eol=lf
 samples/labels/review/ward-creek/phase-two/intake/*.png -text
+
+# P2O4-T39 U08 replacement six-event sufficiency.
+burnlens/replacement_six_event_dataset_sufficiency.py text eol=lf
+burnlens/build_replacement_six_event_dataset_sufficiency.py text eol=lf
+tests/test_replacement_six_event_dataset_sufficiency.py text eol=lf
