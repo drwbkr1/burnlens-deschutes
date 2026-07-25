@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Issue `AUTHORIZE_BOUNDED_UNET` under a one-model, CPU-only, no-search, no-augmentation, no-test-tuning, rejection-first contract.
 - Update the repository-owned reviewer path and case study while keeping model, weights, training, inference, deployment, and final-submission readiness absent.
 
-Issue #562; accepted runs `BL-2026-07-25-p2o5-t03-u03-materialize-r002`, `BL-2026-07-25-p2o5-t03-u04-dataset-qa-r004`, `BL-2026-07-25-p2o5-t03-u05-baseline-r003`, and `BL-2026-07-25-p2o5-t03-u06-readiness-r002`. U07 live merge, fresh-main package/runtime, and annotated-tag verification remain pending.
+Issue #562; accepted runs `BL-2026-07-25-p2o5-t03-u03-materialize-r002`, `BL-2026-07-25-p2o5-t03-u04-dataset-qa-r004`, `BL-2026-07-25-p2o5-t03-u05-baseline-r003`, `BL-2026-07-25-p2o5-t03-u06-readiness-r002`, and `BL-2026-07-25-p2o5-t03-u07-portfolio-r003`. Candidate `4655db6...` passes 695 tests with one expected skip and 86 subtests, exact reviewer replay plus desktop/narrow rendering, two identical 1,050,456-byte wheels at SHA-256 `eff2396b...`, and an isolated 105-command runtime. U07 live merge, fresh-main verification, and annotated-tag peel remain pending.
 
 ## v0.51.0-replacement-six-event-sufficiency - verified - 2026-07-25
 

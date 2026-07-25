@@ -41,3 +41,20 @@ result but not added value. A weaker or invalid model is rejected.
 
 No model, weights, training run, model evaluation, inference, deployment, or
 final-submission-ready claim exists at this checkpoint.
+
+Release QA retains two reviewer-page failures before accepting report
+`2026-004`: one positional binding error and one missing explanation of
+candidate-selection bias. The accepted page replays exactly and passes real
+desktop/narrow rendering, both images, evidence links, keyboard order,
+privacy, and zero-external-request gates.
+
+Canonical release QA also retains one wrong lean-profile invocation and one
+full-suite run with two stale release-contract assertions. After the explicit
+105-command and LF-checkout corrections, the complete suite passes 695 tests,
+one expected skip, 228 warnings, and 86 subtests.
+
+Two fixed-epoch Git-archive builds produce identical 1,050,456-byte BurnLens
+0.52.0 wheels at SHA-256 `eff2396b...`. An isolated CPython 3.12.10 runtime
+loads 13 compatible distributions and all 105 command help routes. Merge,
+fresh-main repetition, and remote annotated-tag verification remain required
+before this becomes a verified release or Phase Three training begins.
