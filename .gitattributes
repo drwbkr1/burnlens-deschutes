@@ -321,3 +321,12 @@ records/phase-two/readiness/DATASET-READINESS-DECISION-2026-003.json text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-090.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-084.md text eol=lf
 records/prompt-build-log/2026-07-25-p2o5-t03.md text eol=lf
+
+# P2O5-T03 U02 deterministic whole-event split ranking and lock.
+burnlens/whole_event_split.py text eol=lf
+burnlens/build_whole_event_split.py text eol=lf
+tests/test_whole_event_split.py text eol=lf
+records/phase-two/manifests/WHOLE-EVENT-SPLIT-RANKING-2026-001.json text eol=lf
+records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-091.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-085.md text eol=lf
