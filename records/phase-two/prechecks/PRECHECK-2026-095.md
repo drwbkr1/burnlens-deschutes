@@ -137,6 +137,13 @@ Nineteen focused model-readiness, baseline, and dataset-QA tests pass under the
 locked CPython 3.12.10 environment in 22.403 seconds with only the existing
 NumPy deprecation warnings. Compilation and `git diff --check` pass.
 
+After accepted outputs and records commit
+`535e7f338a51dd5ceba65e3dd0d6cc2525f66b7b`, explicit `unittest` discovery
+passes 692 tests with one expected skip in 540.969 seconds. The canonical
+`pytest` suite then passes 695 tests, one expected skip, 228 retained NumPy
+deprecation warnings, and 86 subtests in 582.05 seconds. A preceding bare
+`unittest` invocation discovers zero tests and is rejected as evidence.
+
 ## Boundary and next dependency
 
 No model, weights, training run, model evaluation, inference, deployment, or

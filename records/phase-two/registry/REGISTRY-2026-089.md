@@ -10,6 +10,7 @@
 | `P2O5-T03-U06-READINESS-R001` | `BL-2026-07-25-p2o5-t03-u06-readiness-r001`; `28c456b...` | five exact retained outputs | all analytical gates/replay and desktop pass; narrow document 409 / 375 CSS pixels | `remediate-retained` | wrap machine tokens |
 | `P2O5-T03-U06-VERIFY-V001` | system-Python focused command | no product output | invalid environment lacks `rasterio`; locked-environment rerun passes 19 tests | `invalid-environment-retained` | use `.venv` only |
 | `P2O5-T03-U06-READINESS-R002` | `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; `4caf37e52591933c2c03ae050926d5123e47ed2f` | audit `eebd08f...`; decision `74fd1c21...`; contract `670dbb07...`; HTML `6e80c26c...`; PNG `6fc5d5b2...` | ten exact inputs; nine substantive gates; exact replay; 19 focused tests; desktop/narrow render; empty browser log | `authorize-bounded-unet-rejection-first` | `P2O5-T03-U07` |
+| `P2O5-T03-U06-SUITE-R001` | committed checkpoint `535e7f338a51dd5ceba65e3dd0d6cc2525f66b7b` | 695 pass / 1 expected skip / 228 warnings / 86 subtests | canonical full pytest regression passes in 582.05 seconds; separate unittest discovery passes 692 / 1 skip | `pass` | U06 record sync and push |
 
 Authorization is narrow and delayed until U07 is merged, tagged, and verified.
 It permits one CPU-only U-Net experiment under the exact contract. No model,
