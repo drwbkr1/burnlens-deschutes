@@ -1,0 +1,205 @@
+{
+  "audit_result_version": "dataset-readiness-result-v1",
+  "audit_id": "DATASET-READINESS-AUDIT-2026-002",
+  "candidate_id": "DATASET-CANDIDATE-2026-002",
+  "candidate_manifest_sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2",
+  "audit_input_sha256": "50e3b9f3c6c33a9f8cd36cf0952bf5033c039e68ffc864bf952ddec5442e6ed4",
+  "decision": "pass",
+  "pass_evidence": [
+    {
+      "gate_id": "claims-and-privacy",
+      "category": "claims_and_privacy",
+      "required": true,
+      "evidence_refs": [
+        "owner intake privacy and boundaries",
+        "BurnLens use boundary and source precedence"
+      ],
+      "finding": "The audit exposes only aggregate tracked evidence and preserves null dataset/split/baseline/model versions and prototype-label limitations.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "coverage-and-balance",
+      "category": "coverage_and_balance",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json inventory",
+        "issue #554 success exit"
+      ],
+      "finding": "Six events each contribute one burned and one background region; no event exceeds 20.5575% of 287 accepted core pixels. Balanced review sampling remains explicitly non-prevalence.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "evaluation-design",
+      "category": "evaluation_design",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json partition_feasibility",
+        "three never-tuned transfer events"
+      ],
+      "finding": "Three never-tuned transfer events exist and 54 whole-event assignments can reserve transfer evidence in validation and test while replicating both exact source regimes.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "human-review",
+      "category": "human_review",
+      "required": true,
+      "evidence_refs": [
+        "five aggregate owner-response intake reports",
+        "owner intake promotion_gates"
+      ],
+      "finding": "Every accepted region has exact owner-yes custody plus passed non-owner gates; yes remains necessary but insufficient.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "leakage-and-split-fitness",
+      "category": "leakage_and_split_fitness",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json partition_feasibility",
+        "issue #554 exact six-event roster"
+      ],
+      "finding": "54 of 90 whole-event 2/2/2 assignments satisfy transfer reservation and exact source-program/regime replication. Darlene is excluded.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "provenance-and-custody",
+      "category": "provenance_and_custody",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json input_bindings",
+        "five aggregate owner-intake reports covering six events"
+      ],
+      "finding": "All proposals, rasters, aggregate intakes, source records, and terms records match immutable byte and SHA-256 identities.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "reproducibility",
+      "category": "reproducibility",
+      "required": true,
+      "evidence_refs": [
+        "locked uv environment",
+        "DATASET-CANDIDATE-2026-002.json exact reconstruction"
+      ],
+      "finding": "The evaluator reopens and validates every tracked input and raster under the locked repository environment.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "schema-and-quality",
+      "category": "schema_and_quality",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json events[].candidates[].raster_contract",
+        "owner intake promotion_gates.quality_and_registration"
+      ],
+      "finding": "All 12 EPSG:32610 rasters are single-band, nodata 255, domain 0/1/2/255, count-exact, and contain one 8-connected core.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "source-and-terms",
+      "category": "source_and_terms",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/sources",
+        "records/phase-two/terms",
+        "owner intake promotion_gates.source_and_terms"
+      ],
+      "finding": "Every intake binds exact current source and terms records; provider bytes remain private and official sources govern.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "uncertainty-and-exclusions",
+      "category": "uncertainty_and_exclusions",
+      "required": true,
+      "evidence_refs": [
+        "DATASET-CANDIDATE-2026-002.json inventory.excluded_unknown_ring_pixels",
+        "candidate raster value 2 contracts"
+      ],
+      "finding": "All 531 reviewed unknown-ring pixels remain explicit value-2 exclusions and are never background.",
+      "remediation": ""
+    }
+  ],
+  "block_evidence": [],
+  "defer_evidence": [],
+  "blocking_required_gate_ids": [],
+  "deferred_required_gate_ids": [],
+  "count_results": [
+    {
+      "check_id": "minimum-event-groups",
+      "observed": 6,
+      "operator": ">=",
+      "threshold": 6,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "binary-classes-per-event",
+      "observed": 2,
+      "operator": ">=",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unknown-ring-pixels",
+      "observed": 531,
+      "operator": ">",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "maximum-event-core-share-percent",
+      "observed": 20.5575,
+      "operator": "<=",
+      "threshold": 50,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "never-tuned-transfer-events",
+      "observed": 3,
+      "operator": ">=",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "valid-2-2-2-assignments",
+      "observed": 54,
+      "operator": ">=",
+      "threshold": 1,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unique-exact-source-regimes",
+      "observed": 0,
+      "operator": "==",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "unique-source-programs",
+      "observed": 0,
+      "operator": "==",
+      "threshold": 0,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    }
+  ],
+  "failed_blocking_count_checks": [],
+  "failed_deferred_count_checks": [],
+  "count_thresholds_can_establish_readiness_alone": false,
+  "training_authorized": false,
+  "training_authorization_reason": "Dataset-readiness evidence never substitutes for separate training authorization.",
+  "next_action": "Seek separate authorization for dataset creation, splitting, or training; this audit grants none."
+}

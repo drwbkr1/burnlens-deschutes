@@ -1,0 +1,63 @@
+{
+  "report_id": "WARD-CREEK-REFERENCE-CUSTODY-2026-001",
+  "report_schema_version": "0.1.0",
+  "unit_id": "P2O4-T39-U03",
+  "run_id": "BL-2026-07-24-ward-creek-reference-delivery-r001",
+  "captured_at_utc": "2026-07-24T20:35:54.316Z",
+  "event_id": "OR4494912090120190812",
+  "map_id": 10016337,
+  "trace": {
+    "repository": "drwbkr1/burnlens-deschutes",
+    "branch": "codex/p2o4-t39-replacement-event",
+    "issue": 554,
+    "git_source_commit": "62bee5f577e358c6dbd891359923b6aae4cbb188",
+    "request_report": {
+      "path": "samples/reference/phase-two/WARD-CREEK-REFERENCE-REQUEST-2026-001.json",
+      "bytes": 3413,
+      "sha256": "ad8f70ee3cbda8fcff77755486d0cb400a3a5b3c2bc09b99813e8a95abd3d54f"
+    }
+  },
+  "delivery_message": {
+    "sender_domain": "usgs.gov",
+    "subject": "MTBS Web Viewer Order Complete",
+    "received_at_utc": "2026-07-24T20:23:22Z",
+    "expiry_text": "2026-08-23 15:23:21",
+    "recipient": "WITHHELD_PRIVATE",
+    "message_id": "WITHHELD_PRIVATE"
+  },
+  "archive": {
+    "bytes": 4385952,
+    "sha256": "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18",
+    "provider_route_retained": false,
+    "inspection": {
+      "member_count": 16,
+      "file_count": 13,
+      "directory_count": 3,
+      "uncompressed_bytes": 5462721,
+      "unique_safe_paths": true,
+      "encrypted_members": 0,
+      "symlink_members": 0,
+      "crc_test_passed": true,
+      "event_identity_present": true,
+      "map_identity_present": true,
+      "notice_candidate_count": 2,
+      "notice_candidate_names": [
+        "mtbs/2019/mtbs_or4494912090120190812_10016337/mtbs_or4494912090120190812_10016337_20190729_20190830_metadata.xml",
+        "mtbs/2019/mtbs_or4494912090120190812_10016337/mtbs_or4494912090120190812_10016337_20190729_20190830_iso_metadata.xml"
+      ]
+    }
+  },
+  "gate_results": {
+    "exact_request_binding": "pass",
+    "exact_message_identity": "pass",
+    "https_provider_host_no_substitution": "pass",
+    "single_bounded_get": "pass",
+    "safe_unique_unencrypted_no_symlink_zip": "pass",
+    "full_crc": "pass",
+    "event_and_map_identity": "pass",
+    "terms_notices_and_native_pixels": "not executed",
+    "candidate_label_dataset_split_baseline_model": "not created"
+  },
+  "decision": "PASS_WARD_CREEK_REFERENCE_CUSTODY_OPEN_EXACT_NOTICES_NEXT",
+  "warning": "Exact archive custody is not source fitness, label truth, official status, field validation, operational readiness, or emergency guidance."
+}

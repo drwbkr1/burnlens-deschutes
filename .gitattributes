@@ -177,6 +177,9 @@ samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png -text
 
 # P2O4-T35 exact-byte custody reconciliation evidence.
 records/phase-two/intake/P2O4-T35-U02-windigo-public-report-r001-superseded.json text eol=lf
+samples/reference/phase-two/WARD-CREEK-OPTICAL-CUSTODY-2026-001.json text eol=lf
+samples/reference/phase-two/WARD-CREEK-REFERENCE-REQUEST-2026-001.json text eol=lf
+samples/reference/phase-two/WARD-CREEK-REFERENCE-CUSTODY-2026-001.json text eol=lf
 records/phase-two/sources/SOURCE-2026-036.md text eol=lf
 records/phase-two/sources/SOURCE-2026-037.md text eol=lf
 records/phase-two/terms/TERMS-2026-031.md text eol=lf
@@ -220,3 +223,42 @@ records/prompt-build-log/2026-07-24-p2o5-t02.md text eol=lf
 records/prompt-build-log/2026-07-24-p2o5-t02-sync.md text eol=lf
 docs/phase-two/objective-five/SIX_EVENT_DATASET_SUFFICIENCY_DECISION.md text eol=lf
 docs/devlog/2026-07-24-six-event-dataset-sufficiency.md text eol=lf
+
+# P2O4-T39 U05 exact Ward Creek proposal outputs.
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.json text eol=lf
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.html text eol=lf
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.png -text
+samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.tif -text
+
+# P2O4-T39 U06 exact Ward Creek owner-review implementation and outputs.
+burnlens/ward_creek_owner_review_surface.py text eol=lf
+burnlens/build_ward_creek_owner_review_surface.py text eol=lf
+tests/test_ward_creek_owner_review_surface.py text eol=lf
+samples/labels/review/ward-creek/phase-two/*.json text eol=lf
+samples/labels/review/ward-creek/phase-two/*.html text eol=lf
+samples/labels/review/ward-creek/phase-two/*.png -text
+
+# P2O4-T39 U07 exact Ward Creek response intake and outputs.
+burnlens/ward_creek_owner_response_intake.py text eol=lf
+burnlens/build_ward_creek_owner_response_intake.py text eol=lf
+tests/test_ward_creek_owner_response_intake.py text eol=lf
+records/phase-two/sources/SOURCE-2026-038.md text eol=lf
+records/phase-two/terms/TERMS-2026-033.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-073.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-074.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-076.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-078.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-079.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-080.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-081.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-082.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-083.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-084.md text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.json text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.html text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.png -text
+
+# P2O4-T39 U08 replacement six-event sufficiency.
+burnlens/replacement_six_event_dataset_sufficiency.py text eol=lf
+burnlens/build_replacement_six_event_dataset_sufficiency.py text eol=lf
+tests/test_replacement_six_event_dataset_sufficiency.py text eol=lf

@@ -108,6 +108,22 @@ The smallest credible remediation is one complete replacement event under the al
 
 Verified BurnLens 0.50.0 preserves that negative result as a release-quality evidence checkpoint. Merge `85f827e...` reproduces all six outputs, passes 595 tests with one expected skip and 86 subtests, rebuilds the exact 899,515-byte wheel twice, passes an isolated 89-command install, and retains owner-confirmed desktop/narrow rendering. Annotated tag object `915ca1e...` peels to the merge. Issue #554 owns the bounded replacement-event attempt; no dataset or model is implied by this release.
 
+Issue #554 then completes Ward Creek as a seventh prototype event. Its exact
+owner response is locked before reveal, and both proposed classes pass every
+source, custody, quality, uncertainty, leakage, and reproducibility gate.
+
+The replacement candidate uses McKay, Tepee, Green Ridge, Grandview, Windigo,
+and Ward Creek. Darlene remains preserved but excluded. The candidate contains
+287 accepted core pixels and 531 explicit unknown-ring exclusions.
+
+All ten readiness gates pass. Fifty-four whole-event 2/2/2 assignments satisfy
+the frozen transfer, source-program, and source-regime rules. The independent
+audit agrees byte for byte and keeps training unauthorized.
+
+This is the strongest Phase Two result so far, but it is not a dataset or
+model. The next checkpoint must version the dataset, lock a split before
+patching, run QA, and establish the strongest justified non-model baselines.
+
 Petes Lake demonstrates why that failure-retention rule matters. Its first bounded NWI request returned the exact pre-registered official metadata bytes, but BurnLens's local validator collapsed qualified field names and falsely rejected the required `Wetlands.OBJECTID` type after a joined field overwrote it. The pipeline stopped before request two and preserved the failed contract, plan, terms receipt, dispatch receipt, and response. U05R1 checkpoint `8b0267e096654e919427947ca8a566352deb73c2` corrects the qualifier handling, rehashes the original evidence on every later state load, and registers a wholly disjoint r002 intake.
 
 R002 validates the fix and safely promotes seven ordered assets: complete Wetlands metadata/count/ID/geometry/post-check evidence plus Data Source layer metadata. The next single-attempt Data Source pre-count POST fails before a response object opens, retaining a durable dispatch receipt and an exact zero-byte partial while leaving four later assets untouched. The code had discarded the underlying open exception, so BurnLens does not guess whether the cause was HTTP, timeout, DNS/TLS/socket, provider, request, or local network. U05R2 checkpoint `1b8c1ad52043536f243b178d279922ceb469103d` proves type-only controlled failure evidence, exact failed-byte rehash, all 24 prior-evidence bindings, same-source request equivalence, disjoint r003 custody, no retry, privacy, external-validator compatibility, and full offline regression coverage. Final r003 then independently promotes the same seven roles before its asset-eight open observes HTTP 500; four assets remain unexecuted. R003 is terminal and no r004 is authorized. This is reliability evidence—not completed custody, wetland fitness, reference truth, a candidate, or a sixth accepted event.

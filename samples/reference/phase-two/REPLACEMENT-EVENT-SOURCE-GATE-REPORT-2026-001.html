@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens Ward Creek source gate</title>
+<style>
+:root{--ink:#17211d;--muted:#58645e;--paper:#f6f2e8;--card:#fffdf7;--green:#0f6b4f;--line:#d8d2c4;}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);
+font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1080px;margin:auto;padding:36px 24px 64px}
+.eyebrow{color:var(--green);font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2rem,5vw,4.5rem);line-height:1;margin:.15em 0}.lede{max-width:760px;color:var(--muted);font-size:1.15rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.card{background:var(--card);
+border:1px solid var(--line);border-radius:16px;padding:20px}.metric{font-size:2rem;font-weight:800;color:var(--green)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+code{font-size:.8rem;overflow-wrap:anywhere}.warning{border-left:5px solid #9b5b23;padding:14px 18px;background:#fff6e8}
+@media(max-width:760px){.grid{grid-template-columns:1fr}table,thead,tbody,tr,th,td{display:block}thead{display:none}
+tr{padding:12px;border-bottom:1px solid var(--line)}td{border:0;padding:5px 0}td:before{content:attr(data-label);font-weight:700;display:block}}
+</style></head><body><main>
+<p class="eyebrow">BurnLens / Phase Two / P2O4-T39-U01</p>
+<h1>Ward Creek passes the metadata-only source gate.</h1>
+<p class="lede">One exact Sentinel-2 pair may proceed to controlled acquisition. No source pixel, label, dataset, split, baseline, or model is accepted.</p>
+<section class="grid">
+<div class="card"><div class="metric">1</div><div>fresh candidate event</div></div>
+<div class="card"><div class="metric">2</div><div>exact optical archives authorized</div></div>
+<div class="card"><div class="metric">0</div><div>provider bytes acquired in U01</div></div>
+</section>
+<section class="card"><h2>Event binding</h2>
+<p><strong>WARD CREEK 0769 RN</strong><br>
+Event <code>OR4494912090120190812</code>; MTBS map 10016337;
+ignition 2019-08-12; 2,070 acres.</p>
+<p>Valid Polygon; 3,340 exterior vertices.
+Coverage uses the full Shapely polygon.</p></section>
+<h2>Exact acquisition scope</h2><table><thead><tr><th>Role</th><th>SAFE identity</th><th>Bytes</th><th>Provider UUID</th></tr></thead>
+<tbody><tr><td data-label="Role">pre</td><td data-label="SAFE identity"><code>S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE</code></td><td data-label="Bytes">1,198,399,787</td><td data-label="Provider UUID"><code>f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7</code></td></tr><tr><td data-label="Role">post</td><td data-label="SAFE identity"><code>S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE</code></td><td data-label="Bytes">1,198,420,414</td><td data-label="Provider UUID"><code>51ddb0b7-8456-40a2-8301-e1651c951116</code></td></tr></tbody></table>
+<section class="card"><h2>Limits retained</h2><ul><li>MTBS is analyst-interpreted remote-sensing evidence, not field truth.</li><li>Cloud metadata is scene-level and does not prove pixel usability inside the event.</li><li>No archive, raster, label, dataset, split, baseline, or model was created.</li><li>Exact MTBS bundle processing and redistribution remain conditional on archive notices.</li><li>No official, endorsed, field-validated, operational, or emergency-ready status is implied.</li></ul></section>
+<p class="warning"><strong>Warning.</strong> Experimental BurnLens portfolio evidence. Not official wildfire information. Not emergency guidance. Not field validation, endorsement, or operational support. Official sources govern.</p>
+<p>Run <code>BL-2026-07-24-p2o4-t39-u01-r008</code><br>Source commit <code>41b451d180f962aa1216384925c650fa43fcb9d6</code></p>
+</main></body></html>

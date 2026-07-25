@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-005",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "data",
+    "package",
+    "public",
+    "external"
+  ],
+  "candidate": {
+    "base_commit": "657ba657ab9d23964dcaf76d377aec3a10e814da",
+    "commit": "064da9a89202f84fe377d74a01caa4e81a88252d",
+    "version": "0.51.0",
+    "tag": "v0.51.0-replacement-six-event-sufficiency",
+    "artifacts": [
+      {
+        "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+        "bytes": 30504,
+        "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+      },
+      {
+        "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-002.json",
+        "bytes": 6601,
+        "sha256": "50e3b9f3c6c33a9f8cd36cf0952bf5033c039e68ffc864bf952ddec5442e6ed4"
+      },
+      {
+        "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-002.json",
+        "bytes": 7088,
+        "sha256": "39e7a56199f67bcf397b6d73e6795a2e36528ff0577b7314a8414f21321ce5d8"
+      },
+      {
+        "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.json",
+        "bytes": 9429,
+        "sha256": "88cbe6ae01af322d7f80ff8a76b3dce698c08b53394a7e68faec2f5cb198ef0a"
+      },
+      {
+        "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+        "bytes": 6357,
+        "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326"
+      },
+      {
+        "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+        "bytes": 101221,
+        "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761"
+      },
+      {
+        "path": "burnlens_deschutes-0.51.0-py3-none-any.whl",
+        "bytes": 993480,
+        "sha256": "414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477"
+      }
+    ]
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-25T16:34:06Z",
+    "branch": "codex/p2o4-t39-replacement-event",
+    "remote_commit": "064da9a89202f84fe377d74a01caa4e81a88252d",
+    "pull_request": 557,
+    "tag_target": "",
+    "deployment": null
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the exact branch diff with issue #554, checkpoint-policy-v0.1.0, the execution goal, and verified main.",
+      "evidence": [
+        "The branch completes exactly one Ward Creek replacement-event path and one replacement six-event sufficiency rerun",
+        "Darlene is excluded from the candidate but retained as immutable historical evidence",
+        "No dataset, split, baseline, model, metric, inference output, deployment, external submission, or public-sharing change is created"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-002",
+      "category": "runtime",
+      "required": true,
+      "status": "pass",
+      "method": "Run focused release remediation tests, compilation, lock and dependency checks, tracked JSON parsing, Markdown target checks, diff checks, and the complete custody-enabled suite.",
+      "evidence": [
+        "Focused Ward Creek intake and environment verification: 15 passed",
+        "Full suite: 656 passed, 1 expected skip, 96 warnings, 86 subtests",
+        "uv lock --check, uv pip check, compilation, 175 tracked JSON parses, 810 Markdown files with zero missing among 239 detected local links, and git diff --check pass"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-003",
+      "category": "data-readiness",
+      "required": true,
+      "status": "pass",
+      "method": "Run the full dataset-readiness gate over the exact replacement six-event evidence and independently evaluate the tracked audit.",
+      "evidence": [
+        "All ten required gate families pass",
+        "The exact candidate contains 12 balanced regions, 287 accepted core pixels, and 531 excluded unknown-ring pixels",
+        "Fifty-four of 90 whole-event 2/2/2 assignments preserve transfer reservation and exact source-program/regime replication",
+        "The independent audit agrees byte for byte and records training_authorized false"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-004",
+      "category": "reproducibility",
+      "required": true,
+      "status": "pass",
+      "method": "Rebuild the candidate, audit, decision, JSON, HTML, and PNG from the exact recorded scientific source into independent ignored storage.",
+      "evidence": [
+        "All six tracked outputs reproduce byte for byte",
+        "Replay r001 remains retained because canonical working-directory precedence loaded current version metadata instead of the recorded source",
+        "Replay r002 runs from extracted source af37f80dd17febacfbb1cf2801665d74edb16475 and matches all accepted hashes"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-005",
+      "category": "package",
+      "required": true,
+      "status": "pass",
+      "method": "Build twice at fixed epoch 1784996074, inspect archive safety and metadata, install into isolated CPython 3.12.10, and verify the complete lean-runtime command contract.",
+      "evidence": [
+        "Two 993,480-byte wheels are byte-identical at SHA-256 414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477",
+        "The 209 entries are unique and safe with no traversal, absolute path, or symlink",
+        "A fresh isolated install passes 13-distribution dependency compatibility, BurnLens 0.51.0 import, and all 99 command load/help probes",
+        "The first 993,307-byte wheel and its eager-GeoPandas runtime failure remain retained; correction 064da9a is covered by focused and full regression"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-006",
+      "category": "public-png-render",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect the exact tracked PNG at original resolution and compare it with the JSON decision.",
+      "evidence": [
+        "The six-event, 12-region, 287-core-pixel, 54-valid-assignment summary is legible",
+        "All ten visible pass gates agree with the exact JSON decision"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-007",
+      "category": "public-html-render",
+      "required": true,
+      "status": "pass",
+      "method": "Open the exact tracked HTML through the repository-local loopback route at desktop and exact narrow viewport widths.",
+      "evidence": [
+        "The exact page passes 1280 by 720 and 390 by 844 inspection",
+        "Document width remains inside each viewport; tables scroll only inside their containers; status cells remain legible",
+        "Browser warning and error logs are empty"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-008",
+      "category": "claims-privacy",
+      "required": true,
+      "status": "pass",
+      "method": "Compare public outputs and current truth surfaces with the readiness decision, use boundary, owner-review limitations, and added-line privacy scans.",
+      "evidence": [
+        "Outputs describe owner-approved prototype regions, not independent ground truth",
+        "Dataset, split, baseline, model, and training remain absent or false",
+        "No private path, credential, token, recipient, live retrieval URL, accuracy, field-validation, official, endorsed, operational, emergency-ready, or final-submission-ready claim appears"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-009",
+      "category": "pull-request",
+      "required": true,
+      "status": "pass",
+      "method": "Read live GitHub pull-request state against the exact remote branch.",
+      "evidence": [
+        "Draft PR #557 targets exact base 657ba657ab9d23964dcaf76d377aec3a10e814da",
+        "The initial audited remote head is 064da9a89202f84fe377d74a01caa4e81a88252d",
+        "GitHub reports MERGEABLE and CLEAN with no configured checks"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-010",
+      "category": "merge-tag",
+      "required": false,
+      "status": "not_applicable",
+      "method": "",
+      "evidence": [],
+      "reason": "The audited candidate is not merged or tagged yet. Fresh-main repetition and the exact annotated-tag peel remain mandatory before verified release status."
+    },
+    {
+      "id": "CHECK-011",
+      "category": "deployment",
+      "required": false,
+      "status": "not_applicable",
+      "method": "",
+      "evidence": [],
+      "reason": "Issue #554 creates no deployment, GitHub Release, external submission, access, ownership, or public-sharing change."
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "BurnLens 0.51.0 is a passing replacement six-event release candidate while dataset, split, baseline, and model remain absent.",
+      "observed_state": "The branch states the exact readiness pass and preserves the separate next checkpoint.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "P2O4-T39 passes scientific sufficiency and remains pending merge, fresh-main, and tag verification.",
+      "observed_state": "The current branch records that boundary and keeps training closed.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "expected_state": "Exact deterministic browser-readable pass surface.",
+      "observed_state": "Bytes, replay, desktop, narrow viewport, and clean browser logs are verified.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/pull/557",
+      "expected_state": "Draft, clean, mergeable candidate for issue #554.",
+      "observed_state": "GitHub reports draft true, CLEAN, and MERGEABLE at the audited remote head.",
+      "status": "current"
+    }
+  ],
+  "limitations": [
+    "The labels are owner-approved prototype evidence, not independent ground truth.",
+    "The accepted cores contain only 287 native 20-meter pixels.",
+    "The balanced review roster does not estimate natural class prevalence.",
+    "Dataset, split, baseline, and model versions remain null; training remains unauthorized.",
+    "The August 6 bundle remains an interim contingency technical case study, not the intended final portfolio submission.",
+    "Merge, fresh-main repetition, and annotated-tag verification remain pending."
+  ],
+  "decision": {
+    "reported_status": "pending",
+    "rationale": "Scientific-decision integrity, reproducibility, full regression, deterministic package, isolated lean-runtime installation, PNG, HTML, claims, privacy, and live draft-PR checks pass. The candidate is not yet merged or tagged.",
+    "next_action": "Review the exact PR diff, mark PR #557 ready, merge only if live state remains clean, repeat risk-matched gates from fresh main, create the annotated v0.51 tag, and verify its remote peel."
+  }
+}

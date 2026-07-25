@@ -1,0 +1,30 @@
+{
+  "response_schema_version": "burnlens-owner-review-batch-response-v0.1.0",
+  "surface_id": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001",
+  "surface_run_id": "BL-2026-07-24-ward-creek-owner-review-surface-r001",
+  "surface_revision": 1,
+  "milestone_id": "P2O4-T39",
+  "ordered_manifest_sha256": "f6db197a811291dbd3c0fa44feff82a5e556dd68803549af0b4070a0cdbc4f51",
+  "completed": false,
+  "review_started_at_utc": null,
+  "review_completed_at_utc": null,
+  "owner": {
+    "attestation": false
+  },
+  "responses": [
+    {
+      "candidate_id": "WCP-001",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_binding_sha256": "b884380b8bed4c380a5f257b364ac2870546be438b0c96fd75488135e16012b9",
+      "decision": null,
+      "notes": ""
+    },
+    {
+      "candidate_id": "WCP-002",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_binding_sha256": "30b5ceef7b0368dc7d0ff4d1cf5df06ec144754bfeeda9fb87f92bf5c8aece44",
+      "decision": null,
+      "notes": ""
+    }
+  ]
+}

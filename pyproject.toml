@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.50.0"
+version = "0.51.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.12"
 license = "MIT"
@@ -119,9 +119,19 @@ burnlens-inspect-windigo-source-fitness = "burnlens.windigo_source_fitness:main"
 burnlens-build-windigo-region-proposal = "burnlens.windigo_region_proposal:main"
 burnlens-build-windigo-owner-review-surface = "burnlens.build_windigo_owner_review_surface:main"
 burnlens-build-windigo-owner-response-intake = "burnlens.build_windigo_owner_response_intake:main"
+burnlens-build-ward-creek-owner-response-intake = "burnlens.build_ward_creek_owner_response_intake:main"
 burnlens-build-portfolio-reviewer-experience = "burnlens.build_portfolio_reviewer_experience:main"
 burnlens-build-submission-bundle = "burnlens.build_submission_bundle:main"
 burnlens-build-six-event-dataset-sufficiency = "burnlens.build_six_event_dataset_sufficiency:main"
+burnlens-build-replacement-six-event-dataset-sufficiency = "burnlens.build_replacement_six_event_dataset_sufficiency:main"
+burnlens-build-replacement-event-source-gate = "burnlens.build_replacement_event_source_gate:main"
+burnlens-acquire-replacement-event-optical = "burnlens.acquire_replacement_event_optical:main"
+burnlens-request-replacement-event-reference = "burnlens.request_replacement_event_reference:main"
+burnlens-capture-replacement-event-reference-delivery = "burnlens.capture_replacement_event_reference_delivery:main"
+burnlens-inspect-replacement-event-reference-fitness = "burnlens.inspect_replacement_event_reference_fitness:main"
+burnlens-inspect-ward-creek-background-evidence = "burnlens.inspect_ward_creek_background_evidence:main"
+burnlens-build-ward-creek-region-proposal = "burnlens.inspect_ward_creek_region_proposal:main"
+burnlens-build-ward-creek-owner-review-surface = "burnlens.build_ward_creek_owner_review_surface:main"
 
 [tool.setuptools]
 packages = ["burnlens"]

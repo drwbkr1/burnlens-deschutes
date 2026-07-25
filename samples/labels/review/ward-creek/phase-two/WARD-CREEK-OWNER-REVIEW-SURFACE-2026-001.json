@@ -1,0 +1,340 @@
+{
+  "report_id": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001",
+  "report_version": "owner-review-batch-surface-v0.1.0",
+  "response_schema_version": "burnlens-owner-review-batch-response-v0.1.0",
+  "review_protocol_version": "owner-confirmed-prototype-label-review-v0.2.0",
+  "surface_revision": 1,
+  "generated_at_utc": "2026-07-25T03:24:49Z",
+  "run_id": "BL-2026-07-24-ward-creek-owner-review-surface-r001",
+  "milestone_id": "P2O4-T39",
+  "task_issue": 554,
+  "git_source_commit": "ba2a482161b5d34f9cef702dce422d888e108b4f",
+  "software_version": "0.50.0",
+  "ordered_manifest_sha256": "f6db197a811291dbd3c0fa44feff82a5e556dd68803549af0b4070a0cdbc4f51",
+  "batch_manifest": {
+    "manifest_schema_version": "burnlens-owner-review-batch-manifest-v0.1.0",
+    "surface_id": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001",
+    "surface_revision": 1,
+    "surface_run_id": "BL-2026-07-24-ward-creek-owner-review-surface-r001",
+    "milestone_id": "P2O4-T39",
+    "task_issue": 554,
+    "generated_at_utc": "2026-07-25T03:24:49Z",
+    "git_source_commit": "ba2a482161b5d34f9cef702dce422d888e108b4f",
+    "title": "Ward Creek exact two-card owner review",
+    "review_groups": [
+      {
+        "event_group_id": "event-ward-creek-2019",
+        "event_label": "Ward Creek 2019",
+        "context": "Review both disclosed proposals independently. One is proposed burned and one background; neither is a label before exact response lock and non-owner reconciliation.",
+        "candidate_ids": [
+          "WCP-001",
+          "WCP-002"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "WCP-001",
+        "event_group_id": "event-ward-creek-2019",
+        "proposed_class": "burned",
+        "question": "Should this exact region become an owner-approved prototype burned label?",
+        "proposition_basis": "Usable paired optical change passes the frozen coherent burn screen, and native MTBS dNBR6 classes 2-4 provide separate reference support.",
+        "limitations": [
+          "This is disclosed prototype evidence, not ground truth or independent validation.",
+          "A yes is necessary but insufficient; every non-owner gate must still pass.",
+          "The burned core is 14 pixels, not the 25-pixel target; BurnLens preserves the nearest eligible intact component instead of forcing it.",
+          "MTBS is official mapping evidence; BurnLens is not field validated."
+        ],
+        "facts": [
+          {
+            "label": "Event",
+            "value": "Ward Creek 2019 / OR4494912090120190812"
+          },
+          {
+            "label": "Core",
+            "value": "14 native 20 m pixels / 0.56 ha"
+          },
+          {
+            "label": "Unknown ring",
+            "value": "26 excluded pixels"
+          },
+          {
+            "label": "Target",
+            "value": "25 pixels; actual gap -11"
+          },
+          {
+            "label": "Selection",
+            "value": "fixed dNBR interval [0.35, 0.4]; tie 6c9480200d0db636a97aea5dbe2cc3f14011c21522779e6dfabc4de00ae9c72b"
+          }
+        ],
+        "proposal_binding": {
+          "record_id": "WARD-CREEK-REGION-PROPOSAL-2026-001",
+          "bytes": 8433,
+          "sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638"
+        },
+        "candidate_raster_binding": {
+          "path": "WARD-CREEK-REGION-PROPOSAL-2026-001-WCP-001.tif",
+          "bytes": 3253,
+          "sha256": "a9b525cca8461fb9550988b045878cae41e17b9fa0c4d5db55de87ebeabdeccc"
+        },
+        "evidence_images": [
+          {
+            "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-001.png",
+            "bytes": 24515,
+            "sha256": "cef7e0887182d4376acb59fc8692bf52ef90711723ced3867778b70b46dbc455",
+            "alt": "Exact WCP-001 proposed burned evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+          }
+        ],
+        "candidate_binding_sha256": "b884380b8bed4c380a5f257b364ac2870546be438b0c96fd75488135e16012b9"
+      },
+      {
+        "candidate_id": "WCP-002",
+        "event_group_id": "event-ward-creek-2019",
+        "proposed_class": "background",
+        "question": "Should this exact region become an owner-approved prototype background label?",
+        "proposition_basis": "Usable paired optical stability passes the frozen multi-signal coherence rule outside the complete native MTBS domain plus 60 meters.",
+        "limitations": [
+          "This is disclosed prototype evidence, not ground truth or independent validation.",
+          "A yes is necessary but insufficient; every non-owner gate must still pass.",
+          "The background proposal shows stability in this exact fire-window pair; it does not prove the land was never burned."
+        ],
+        "facts": [
+          {
+            "label": "Event",
+            "value": "Ward Creek 2019 / OR4494912090120190812"
+          },
+          {
+            "label": "Core",
+            "value": "25 native 20 m pixels / 1.00 ha"
+          },
+          {
+            "label": "Unknown ring",
+            "value": "40 excluded pixels"
+          },
+          {
+            "label": "Target",
+            "value": "25 pixels; actual gap +0"
+          },
+          {
+            "label": "Selection",
+            "value": "fixed dNBR interval [0.0, 0.05]; tie 01b368b6cb160e37334029294e492fbd1963eeb2634c96a58a3facf9458c5677"
+          }
+        ],
+        "proposal_binding": {
+          "record_id": "WARD-CREEK-REGION-PROPOSAL-2026-001",
+          "bytes": 8433,
+          "sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638"
+        },
+        "candidate_raster_binding": {
+          "path": "WARD-CREEK-REGION-PROPOSAL-2026-001-WCP-002.tif",
+          "bytes": 3267,
+          "sha256": "787bf4455104bbc5ac34b56f409db27b60417b96d5b551687e375bc302c6dfe3"
+        },
+        "evidence_images": [
+          {
+            "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-002.png",
+            "bytes": 25398,
+            "sha256": "f6340ec044c3c79c22c97d32bc710f544fe659575cb9c094c136a93cba139857",
+            "alt": "Exact WCP-002 proposed background evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+          }
+        ],
+        "candidate_binding_sha256": "30b5ceef7b0368dc7d0ff4d1cf5df06ec144754bfeeda9fb87f92bf5c8aece44"
+      }
+    ],
+    "batch_size_exception": "single-event-pair",
+    "supersedes_surface_id": null
+  },
+  "review_groups": [
+    {
+      "event_group_id": "event-ward-creek-2019",
+      "event_label": "Ward Creek 2019",
+      "context": "Review both disclosed proposals independently. One is proposed burned and one background; neither is a label before exact response lock and non-owner reconciliation.",
+      "candidate_ids": [
+        "WCP-001",
+        "WCP-002"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "WCP-001",
+      "event_group_id": "event-ward-creek-2019",
+      "proposed_class": "burned",
+      "question": "Should this exact region become an owner-approved prototype burned label?",
+      "proposition_basis": "Usable paired optical change passes the frozen coherent burn screen, and native MTBS dNBR6 classes 2-4 provide separate reference support.",
+      "limitations": [
+        "This is disclosed prototype evidence, not ground truth or independent validation.",
+        "A yes is necessary but insufficient; every non-owner gate must still pass.",
+        "The burned core is 14 pixels, not the 25-pixel target; BurnLens preserves the nearest eligible intact component instead of forcing it.",
+        "MTBS is official mapping evidence; BurnLens is not field validated."
+      ],
+      "facts": [
+        {
+          "label": "Event",
+          "value": "Ward Creek 2019 / OR4494912090120190812"
+        },
+        {
+          "label": "Core",
+          "value": "14 native 20 m pixels / 0.56 ha"
+        },
+        {
+          "label": "Unknown ring",
+          "value": "26 excluded pixels"
+        },
+        {
+          "label": "Target",
+          "value": "25 pixels; actual gap -11"
+        },
+        {
+          "label": "Selection",
+          "value": "fixed dNBR interval [0.35, 0.4]; tie 6c9480200d0db636a97aea5dbe2cc3f14011c21522779e6dfabc4de00ae9c72b"
+        }
+      ],
+      "proposal_binding": {
+        "record_id": "WARD-CREEK-REGION-PROPOSAL-2026-001",
+        "bytes": 8433,
+        "sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638"
+      },
+      "candidate_raster_binding": {
+        "path": "WARD-CREEK-REGION-PROPOSAL-2026-001-WCP-001.tif",
+        "bytes": 3253,
+        "sha256": "a9b525cca8461fb9550988b045878cae41e17b9fa0c4d5db55de87ebeabdeccc"
+      },
+      "evidence_images": [
+        {
+          "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-001.png",
+          "bytes": 24515,
+          "sha256": "cef7e0887182d4376acb59fc8692bf52ef90711723ced3867778b70b46dbc455",
+          "alt": "Exact WCP-001 proposed burned evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+        }
+      ],
+      "candidate_binding_sha256": "b884380b8bed4c380a5f257b364ac2870546be438b0c96fd75488135e16012b9"
+    },
+    {
+      "candidate_id": "WCP-002",
+      "event_group_id": "event-ward-creek-2019",
+      "proposed_class": "background",
+      "question": "Should this exact region become an owner-approved prototype background label?",
+      "proposition_basis": "Usable paired optical stability passes the frozen multi-signal coherence rule outside the complete native MTBS domain plus 60 meters.",
+      "limitations": [
+        "This is disclosed prototype evidence, not ground truth or independent validation.",
+        "A yes is necessary but insufficient; every non-owner gate must still pass.",
+        "The background proposal shows stability in this exact fire-window pair; it does not prove the land was never burned."
+      ],
+      "facts": [
+        {
+          "label": "Event",
+          "value": "Ward Creek 2019 / OR4494912090120190812"
+        },
+        {
+          "label": "Core",
+          "value": "25 native 20 m pixels / 1.00 ha"
+        },
+        {
+          "label": "Unknown ring",
+          "value": "40 excluded pixels"
+        },
+        {
+          "label": "Target",
+          "value": "25 pixels; actual gap +0"
+        },
+        {
+          "label": "Selection",
+          "value": "fixed dNBR interval [0.0, 0.05]; tie 01b368b6cb160e37334029294e492fbd1963eeb2634c96a58a3facf9458c5677"
+        }
+      ],
+      "proposal_binding": {
+        "record_id": "WARD-CREEK-REGION-PROPOSAL-2026-001",
+        "bytes": 8433,
+        "sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638"
+      },
+      "candidate_raster_binding": {
+        "path": "WARD-CREEK-REGION-PROPOSAL-2026-001-WCP-002.tif",
+        "bytes": 3267,
+        "sha256": "787bf4455104bbc5ac34b56f409db27b60417b96d5b551687e375bc302c6dfe3"
+      },
+      "evidence_images": [
+        {
+          "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-002.png",
+          "bytes": 25398,
+          "sha256": "f6340ec044c3c79c22c97d32bc710f544fe659575cb9c094c136a93cba139857",
+          "alt": "Exact WCP-002 proposed background evidence: pre and post optical views, candidate core, unknown ring, and permitted source evidence."
+        }
+      ],
+      "candidate_binding_sha256": "30b5ceef7b0368dc7d0ff4d1cf5df06ec144754bfeeda9fb87f92bf5c8aece44"
+    }
+  ],
+  "batch_policy": {
+    "default_minimum_candidates": 4,
+    "default_maximum_candidates": 6,
+    "hard_maximum_candidates": 8,
+    "single_event_pair_exception": "single-event-pair",
+    "bulk_approval_allowed": false,
+    "prefilled_decisions_allowed": false,
+    "missing_decision_means_uncertain": false
+  },
+  "decision_contract": {
+    "yes": "owner supports the disclosed proposed class; every non-owner gate remains mandatory",
+    "no": "owner rejects this proposal; no opposite class is inferred",
+    "uncertain": "evidence is insufficient or conflicting; the candidate remains excluded",
+    "prior_decisions_inherited": false
+  },
+  "response_custody_contract": {
+    "hash_named_drafts": true,
+    "all_candidates_required_for_completion": true,
+    "one_batch_attestation_required": true,
+    "final_review_summary_required": true,
+    "hash_named_exact_response": true,
+    "browser_session_locks_after_finalization": true,
+    "distinct_completed_exports_require_owner_designation": true
+  },
+  "summary": {
+    "candidate_count": 2,
+    "event_group_count": 1,
+    "owner_responses": 0,
+    "labels_created": 0
+  },
+  "claim_boundaries": {
+    "owner_response_collected": false,
+    "label_created": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "independent_ground_truth_inter_rater_field_official_or_operational_claimed": false
+  },
+  "warning": "Experimental BurnLens candidate review. Not ground truth, a dataset, official wildfire information, or emergency guidance. Official sources govern.",
+  "decision": "BATCH_SURFACE_CONTRACT_READY_KEEP_OWNER_RESPONSE_AND_PROMOTION_SEPARATE",
+  "outputs": [
+    {
+      "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001.html",
+      "bytes": 18875,
+      "sha256": "750d1e67839141032f0abcfe28bac04131b67a985463272eb669047fc4061a1f",
+      "media_type": "text/html"
+    },
+    {
+      "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-BATCH-MANIFEST.json",
+      "bytes": 5930,
+      "sha256": "3abd8318d1caeb4845ddc3d9f311d8360a74505ef880d3b1c22e767f8ae27754",
+      "media_type": "application/json"
+    },
+    {
+      "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-RESPONSE-TEMPLATE.json",
+      "bytes": 997,
+      "sha256": "dbbef7132c935d2ed2e2a4fe6058243d911af72623833af0ec063d17016f5a49",
+      "media_type": "application/json"
+    },
+    {
+      "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-001.png",
+      "bytes": 24515,
+      "sha256": "cef7e0887182d4376acb59fc8692bf52ef90711723ced3867778b70b46dbc455",
+      "media_type": "image/png"
+    },
+    {
+      "path": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001-WCP-002.png",
+      "bytes": 25398,
+      "sha256": "f6340ec044c3c79c22c97d32bc710f544fe659575cb9c094c136a93cba139857",
+      "media_type": "image/png"
+    }
+  ]
+}

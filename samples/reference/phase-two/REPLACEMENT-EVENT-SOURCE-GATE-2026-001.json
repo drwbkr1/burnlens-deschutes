@@ -1,0 +1,393 @@
+{
+  "assessed_at": "2026-07-24T19:01:34.734Z",
+  "assessment_id": "REPLACEMENT-EVENT-SOURCE-GATE-2026-001",
+  "authorized_provider_byte_scope": {
+    "combined_expected_bytes": 2396820201,
+    "products": [
+      {
+        "blake3": "737a71d70c36ae8d65d26df28e87730d08ed0bade1d2a327cce8a6b812a32c2a",
+        "md5": "7de4c0076a9ed4a3024ef46474b2aaac",
+        "native_id": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE",
+        "provider_id": "f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7",
+        "role": "pre",
+        "size_bytes": 1198399787
+      },
+      {
+        "blake3": "eaf090416dd240478d85389ba018f1d193e09c270ff40a6f346ee9c4f8110eaf",
+        "md5": "28f18e0328dd4cb8ab45446a1a238fb0",
+        "native_id": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE",
+        "provider_id": "51ddb0b7-8456-40a2-8301-e1651c951116",
+        "role": "post",
+        "size_bytes": 1198420414
+      }
+    ],
+    "provider": "Copernicus Data Space Ecosystem",
+    "roles": [
+      "pre",
+      "post"
+    ]
+  },
+  "contract_version": "source-gate/v1",
+  "decision": {
+    "approved_actions": [
+      "metadata review",
+      "record assessment evidence",
+      "acquire the exact two frozen Ward Creek Sentinel archives into ignored repository-local custody"
+    ],
+    "blocking_reasons": [],
+    "live_verification_pending": [],
+    "status": "ready"
+  },
+  "intended_use": {
+    "planned_actions": [
+      "metadata review",
+      "record assessment evidence",
+      "acquire the exact two frozen Ward Creek Sentinel archives into ignored repository-local custody"
+    ],
+    "summary": "Select exactly one Ward Creek optical pair for controlled U02 acquisition before any pixel, label, dataset, split, baseline, or model decision."
+  },
+  "provider_bytes_authorized": true,
+  "sources": [
+    {
+      "criteria": [
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "event OR4494912090120190812",
+              "type": "static"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "map 10016337",
+              "type": "static"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "Portal catalog 34073",
+              "type": "static"
+            }
+          ],
+          "id": "identity",
+          "note": "Three official routes agree on the exact event and map identity.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "Current USDA Forest Service Enterprise Data Warehouse MTBS service",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "Current USGS Burn Severity Portal catalog",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "authority",
+          "note": "MTBS is the applicable official program source, not field truth.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "credential-free WFS receipt 089e5fb0d4605acd44a52243b9ab31e6d5a511612e0bf3c4b498f97c5b730bba",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "credential-free MTBS boundary receipt 8e6cb13fc5e32a998712f6a9b8ba4c48951c4d80d5c6b46b6e6be6bbcf4fd030",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "access",
+          "note": "Public metadata routes were live during this run.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "live USGS licensing receipt 3247cae0e7b40bd450db028d3b16b00d4f21c04c886e65360e52396b3fc1254a",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "metadata review and internal evidence assessment only",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "rights",
+          "note": "Metadata review is permitted. Exact bundle processing or redistribution remains conditional on inspection of delivered archive notices because MTBS is interagency.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "Portal, occurrence, and boundary identities agree",
+              "type": "static"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "pre 804502920190729; post 804502920190830",
+              "type": "static"
+            }
+          ],
+          "id": "provenance",
+          "note": "Event, analyst-selected Landsat dates, map ID, and geometry are traceable.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "valid Polygon; 3340 exterior vertices",
+              "type": "static"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "bounds [-120.902079, 44.915764, -120.856115, 44.955295]",
+              "type": "static"
+            }
+          ],
+          "id": "integrity",
+          "note": "The full valid boundary is retained for polygon coverage tests.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "current MTBS regime needed to replace sole NIFC-context event",
+              "type": "static"
+            },
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "Initial assessment; analyst-interpreted remote-sensing reference only",
+              "type": "static"
+            }
+          ],
+          "id": "fitness",
+          "note": "The source is fit for candidate-event preflight, not automatic label truth.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+              "note": "public metadata only; zero credential, recipient, retrieval, or provider archive bytes",
+              "type": "static"
+            }
+          ],
+          "id": "privacy-security",
+          "note": "No private delivery route or credential was used or recorded.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        }
+      ],
+      "locator": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_MTBS_01/MapServer",
+      "name": "Current MTBS Ward Creek event metadata and boundary",
+      "source_id": "mtbs-ward-creek-current"
+    },
+    {
+      "criteria": [
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "pre f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7",
+              "type": "static"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "post 51ddb0b7-8456-40a2-8301-e1651c951116",
+              "type": "static"
+            }
+          ],
+          "id": "identity",
+          "note": "Frozen STAC, OData UUID, and SAFE names agree.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "Current CDSE Sentinel-2 L2A STAC collection",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "Current CDSE OData product metadata",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "authority",
+          "note": "STAC governs discovery geometry; OData governs archive size and checksums.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "credential-free STAC receipt 0d345b4f16d85390f07644dc381bdc7e7af53bfca5b06b5cba3b4c7750a84205",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "both exact OData products online",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "access",
+          "note": "Both products are currently online; no archive route was opened.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "live Sentinel legal notice receipt fa2955ff48a1d82e77fc7296d63681670ecdb9d2811a0505ae60d0683b62fa64",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "live CDSE terms receipt 0852b1a69fc8d1e4fa899a4ccaf48bd473b7450cfdbc634c14879d51d6a5e2ab",
+              "observed_at": "2026-07-24T19:01:34.734Z",
+              "type": "live"
+            }
+          ],
+          "id": "rights",
+          "note": "Sentinel data permit lawful reuse with required source notice and no warranty.",
+          "required": true,
+          "requires_live": true,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "STAC product UUID and SAFE identity agree with OData",
+              "type": "static"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "same Sentinel-2A platform, tile 10TFQ, orbit 13, baseline 05.00",
+              "type": "static"
+            }
+          ],
+          "id": "provenance",
+          "note": "The pair preserves one platform, tile, orbit, processor baseline, and product type.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "combined OData archive bytes 2396820201",
+              "type": "static"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "exact MD5 and BLAKE3 available for both archives",
+              "type": "static"
+            }
+          ],
+          "id": "integrity",
+          "note": "Future acquisition must match exact OData size, MD5, and BLAKE3.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "Shapely full-polygon covers passes for both selected items",
+              "type": "static"
+            },
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "2019-08-01 pre and 2019-08-31 post bracket 2019-08-12 ignition",
+              "type": "static"
+            }
+          ],
+          "id": "fitness",
+          "note": "The pair is temporal pre/post evidence; pixel fitness remains a later gate.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        },
+        {
+          "evidence": [
+            {
+              "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+              "note": "public metadata only; exact download requires the existing protected local CDSE account",
+              "type": "static"
+            }
+          ],
+          "id": "privacy-security",
+          "note": "No token, credential, private URL, or provider byte is in this artifact.",
+          "required": true,
+          "requires_live": false,
+          "status": "pass"
+        }
+      ],
+      "locator": "https://stac.dataspace.copernicus.eu/v1/search",
+      "name": "Exact CDSE Sentinel-2 L2A Ward Creek optical pair",
+      "source_id": "cdse-sentinel-2-ward-creek-pair"
+    }
+  ],
+  "write_boundary": {
+    "permitted_without_further_authorization": [
+      "read supplied metadata",
+      "record assessment evidence",
+      "authenticate with the existing protected local CDSE account",
+      "download only the two exact frozen Sentinel archives",
+      "preserve exact bytes in ignored repository-local custody without overwrite"
+    ],
+    "requires_explicit_authorization": [
+      "accept changed terms",
+      "purchase",
+      "acquire a different event or product",
+      "publish or redistribute provider archives",
+      "use any source pixel for a label"
+    ]
+  }
+}

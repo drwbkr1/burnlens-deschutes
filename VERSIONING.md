@@ -99,10 +99,11 @@ Traceability is necessary but not sufficient for public release. Release control
 
 BurnLens uses `0.y.z` versions because the project is experimental, portfolio-first, and not stable or production-facing.
 
-The latest verified repository release is BurnLens 0.48.0 at
-`v0.48.0-portfolio-reviewer-experience`. A local reviewer surface is not a
-deployment or a claim of dataset, model, official, field, operational, or
-emergency readiness.
+The latest verified repository release is BurnLens 0.50.0 at
+`v0.50.0-six-event-dataset-sufficiency`. BurnLens 0.51.0 is the active
+replacement-six-event sufficiency candidate. A local reviewer surface or
+readiness pass is not a deployment or a claim of dataset, model, official,
+field, operational, or emergency readiness.
 
 While BurnLens remains in `0.y.z`:
 
@@ -138,10 +139,10 @@ A BurnLens version number means the artifact is operational, official, field-val
 |---|---|
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
-| Current phase posture | Phase Two remains active under `checkpoint-policy-v0.1.0`; verified P2O4-T35 accepts Windigo as the sixth owner-approved prototype event. The count minimum passes while dataset fitness remains a separate closed gate. |
-| Current repository baseline | Latest verified tag is `v0.46.0-official-fallback-source-gate-defer` at merge `0e58459ea45f509eca537223d872fd6992efb291`; annotated tag object `ec2aad7a706c591b23fc0b6c16891ba6be706e95` remotely peels exactly to that merge. P2O4-T34 / issue #532 / PR #533 preserves both route defers and the deterministic source-gate report. |
-| Active analytical decision | Candidate `owner-approved-prototype-region-labels-v0.4.0` contains six burned and six background regions, 286 core pixels / 11.44 ha, and 533 excluded unknown-ring pixels across six complete events. It is prototype evidence, not ground truth or a dataset. |
-| Baseline verification | Verified v0.47 is the repository baseline. PR #535's first merged main failed six exact-byte checkout gates and withheld the tag. BL-EXC-002 / PR #537 corrects only checkout contracts; corrected main passes owner-confirmed rendering, 577 tests, reproducible package, isolated install, claim/privacy audits, and remote annotated-tag verification. |
+| Current phase posture | Phase Two remains active under `checkpoint-policy-v0.1.0`; P2O4-T39 reaches its scientific success exit while dataset, split, QA, baselines, and model readiness remain separate. |
+| Current repository baseline | Latest verified tag is `v0.50.0-six-event-dataset-sufficiency` at merge `85f827ef6a7ab2e3f2afea7b17d94677cd557b3e`; annotated tag object `915ca1ea14194dce9c1de682fd50efa882c34a06` remotely peels exactly to that merge. |
+| Active analytical decision | `DATASET-CANDIDATE-2026-002` contains six burned and six background regions, 287 core pixels / 11.48 ha, and 531 excluded unknown-ring pixels across six complete events. All ten readiness gates pass, but no dataset or split exists. |
+| Baseline verification | BurnLens 0.51.0 is the active release candidate. Final run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003` passes the independent readiness audit and real desktop/narrow rendering. Release-code candidate `064da9a...` passes 656 tests, deterministic 993,480-byte packaging, and an isolated 99-command lean runtime. Draft PR #557 is clean and mergeable; merge, fresh-main, and tag verification remain pending. |
 | Data/model/run/map/application status | Exact provider packages, response bytes, receipts, and unit-level reconciliation remain in ignored local storage. Petes terminal run `BL-2026-07-22-petes-lake-nwi-context-r003` supports only a material-defer decision; it creates no candidate or accepted event. No accepted dataset, split, baseline, model, analytical inference result, deployment, independent review, inter-rater validation, consensus, field validation, official status, or operational readiness exists. |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 

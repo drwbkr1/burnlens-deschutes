@@ -1,0 +1,203 @@
+{
+  "report_id": "WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001",
+  "report_version": "ward-creek-owner-response-intake-v0.1.0",
+  "generated_at_utc": "2026-07-25T04:54:19.767Z",
+  "run_id": "BL-2026-07-25-ward-creek-owner-response-intake-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 554,
+  "unit_id": "P2O4-T39-U07",
+  "git_source_commit": "a7f599ce650975a92dc2c712e10d6ca4ce947627",
+  "software_version": "0.50.0",
+  "aoi_version": "multi-event-native-grids-v0.5.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "input_bindings": {
+    "prior_label_intake": {
+      "report_id": "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001",
+      "run_id": "BL-2026-07-24-windigo-owner-response-intake-r003",
+      "bytes": 6787,
+      "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7"
+    },
+    "background_report": {
+      "bytes": 27905,
+      "sha256": "acf5b02c314b7dfdee94d8709323117f24e1966042818c37ef7431085813933c",
+      "report_id": "WARD-CREEK-BACKGROUND-EVIDENCE-2026-001"
+    },
+    "sufficiency_report": {
+      "bytes": 10087,
+      "sha256": "a3fa779669143333fbc2b9b27fb35d210d0847283ef754c9e7f1f39a0c30908b",
+      "report_id": "SIX-EVENT-DATASET-SUFFICIENCY-2026-001"
+    },
+    "proposal": {
+      "report_id": "WARD-CREEK-REGION-PROPOSAL-2026-001",
+      "run_id": "BL-2026-07-24-ward-creek-region-proposal-r001",
+      "bytes": 8433,
+      "sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638"
+    },
+    "surface": {
+      "report_id": "WARD-CREEK-OWNER-REVIEW-SURFACE-2026-001",
+      "run_id": "BL-2026-07-24-ward-creek-owner-review-surface-r001",
+      "bytes": 14344,
+      "sha256": "416b36127015820285c0dfd53592b6391530a6a610f532589a68ef06dc0ba57e",
+      "ordered_manifest_sha256": "f6db197a811291dbd3c0fa44feff82a5e556dd68803549af0b4070a0cdbc4f51"
+    },
+    "response": {
+      "bytes": 1041,
+      "sha256": "aadd221da037ab7fc89bd04fb4532651b917190ac55e97ee7f4d5ce4eb951dbc"
+    },
+    "receipt": {
+      "bytes": 2692,
+      "sha256": "dba7d81aa21dde09b21d549dba7440363906ab3cebfb4d14e958588fb2efc4bf"
+    },
+    "private_reconciliation": {
+      "bytes": 8810,
+      "sha256": "25bf6ac1c4e8bfc3bea697f8e2e84053d3122b89681ea1cdafb058515afef93c",
+      "committed": false,
+      "ignored": true
+    }
+  },
+  "record_bindings": [
+    {
+      "record_id": "SOURCE-2026-038",
+      "bytes": 5103,
+      "sha256": "239192c10e16f69ed6218c8e8766ba2a79826618095c30b6ab5561cbaed740c3"
+    },
+    {
+      "record_id": "TERMS-2026-033",
+      "bytes": 4058,
+      "sha256": "e8f55e33c67edad1462676812ec20663e96e239e45fa908ef13c33571fede268"
+    },
+    {
+      "record_id": "PRECHECK-2026-073",
+      "bytes": 5322,
+      "sha256": "9bac466cdeeb9c11067ac3e4cd3ddf7a549bd16d07242715af6a7e40912496cb"
+    },
+    {
+      "record_id": "PRECHECK-2026-074",
+      "bytes": 5117,
+      "sha256": "f1b23a223937de6049d6df9766c93d97073f8d810a35788a523ba5c7349a88cd"
+    },
+    {
+      "record_id": "PRECHECK-2026-076",
+      "bytes": 2315,
+      "sha256": "f87ee52b14ffb757148e98b79014e0b356a735aefa3475fc6ee499d7f5eb9393"
+    },
+    {
+      "record_id": "PRECHECK-2026-078",
+      "bytes": 1841,
+      "sha256": "761999c941ad079f7677f1e53cc0624495c3db0f5c5f873c6aca31715c61ed5b"
+    },
+    {
+      "record_id": "PRECHECK-2026-079",
+      "bytes": 3879,
+      "sha256": "2920b3fd816df19c7e00671d695ad99441d615b2614fda261d287b03cca6708d"
+    },
+    {
+      "record_id": "PRECHECK-2026-080",
+      "bytes": 4129,
+      "sha256": "9964b9f4f2b1733bfc826b51dd30bdd5fe88e19b626be9b8d35efb54feba9b2c"
+    },
+    {
+      "record_id": "PRECHECK-2026-081",
+      "bytes": 2294,
+      "sha256": "057355ae3939cbe08403b9002faf3797220a250d4339ea122fc2c40b2872e865"
+    },
+    {
+      "record_id": "PRECHECK-2026-082",
+      "bytes": 4893,
+      "sha256": "ced071f5188c7e856719b1b2f299d531d4e102ddb4b9e47e8e456f67f21072e6"
+    },
+    {
+      "record_id": "PRECHECK-2026-083",
+      "bytes": 3950,
+      "sha256": "31e3796fba82abb459b7d1aece17e4b2558d89fa915d21f5f6c8d199e72cb56f"
+    },
+    {
+      "record_id": "PRECHECK-2026-084",
+      "bytes": 2278,
+      "sha256": "3da9ef5bfcadc5f09c8b9765695968ed42689ae40c203d3802aabfc9303ad01e"
+    }
+  ],
+  "decision_counts": {
+    "yes": 2,
+    "no": 0,
+    "uncertain": 0
+  },
+  "outcome": {
+    "ward_creek_owner_approved_region_labels": 2,
+    "ward_creek_class_counts": {
+      "background": 1,
+      "burned": 1
+    },
+    "ward_creek_accepted_core_pixels": 39,
+    "ward_creek_reviewed_unknown_ring_pixels": 66,
+    "ward_creek_excluded_unknown_ring_pixels": 66,
+    "ward_creek_event_complete": true,
+    "no_partial_event_promotion": true,
+    "cumulative_owner_approved_region_labels": 14,
+    "cumulative_prototype_label_class_counts": {
+      "background": 7,
+      "burned": 7
+    },
+    "cumulative_accepted_core_pixels": 325,
+    "cumulative_accepted_core_area_ha": 13.0,
+    "cumulative_excluded_unknown_ring_pixels": 599,
+    "event_group_count": 7,
+    "six_event_sufficiency_rerun_eligible": true,
+    "separate_sufficiency_evaluator_passed": false,
+    "dataset_fitness_reopened": false,
+    "training_authorized": false
+  },
+  "promotion_gates": {
+    "exact_response_and_pre_reveal_custody": true,
+    "exact_source_pixel_recomputation": true,
+    "candidate_raster_reconstruction": true,
+    "source_and_terms": true,
+    "quality_and_registration": true,
+    "unknown_ring_excluded": true,
+    "event_level_leakage_control": true,
+    "both_classes_and_no_partial_promotion": true
+  },
+  "privacy": {
+    "notes_public": false,
+    "unit_decisions_public": false,
+    "private_paths_public": false
+  },
+  "boundaries": {
+    "owner_review_is_independent_ground_truth": false,
+    "unknown_ring_is_background": false,
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false,
+    "accuracy_or_operational_claim_created": false
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2019, accessed through CDSE.",
+    "MTBS is analyst-interpreted remotely sensed reference evidence from USGS and USDA Forest Service, not field truth.",
+    "The affirmative-background route is specific to the exact paired optical window and conservative MTBS exclusion."
+  ],
+  "warning": "Experimental owner-approved prototype regions, not ground truth, a dataset, official wildfire information, emergency guidance, or field validation. Official sources govern.",
+  "decision": "ACCEPT_WARD_CREEK_AS_SEVENTH_OWNER_APPROVED_PROTOTYPE_EVENT_AUTHORIZE_SIX_EVENT_SUFFICIENCY_RERUN",
+  "next_gate": "P2O4-T39-U08 must construct the exact six-event candidate that excludes Darlene, then rerun every Phase Two sufficiency gate. No dataset, split, baseline, or training action is authorized by this intake.",
+  "outputs": [
+    {
+      "path": "WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html",
+      "bytes": 3589,
+      "sha256": "16d57c1a736d5fce5cc143bd89dfa999862cf81344798533e307019ff4d1a749",
+      "media_type": "text/html"
+    },
+    {
+      "path": "WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 71166,
+      "sha256": "3ef086ec09130f472264ce202f1acb8edb513ade47af0456d1ef58f40a6cd9a8",
+      "media_type": "image/png"
+    }
+  ]
+}
