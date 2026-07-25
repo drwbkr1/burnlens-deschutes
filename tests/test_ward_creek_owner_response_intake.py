@@ -108,7 +108,7 @@ def _ignored_temporary_directory():
 
 
 class WardCreekOwnerResponseCheckoutContractTests(unittest.TestCase):
-    def test_every_exact_record_binding_has_an_explicit_lf_checkout_contract(
+    def test_every_exact_record_binding_has_an_explicit_checkout_contract(
         self,
     ) -> None:
         for path in BOUND_RECORD_PATHS:
@@ -120,7 +120,12 @@ class WardCreekOwnerResponseCheckoutContractTests(unittest.TestCase):
                 text=True,
             )
             self.assertIn(f"{path}: text: set", completed.stdout)
-            self.assertIn(f"{path}: eol: lf", completed.stdout)
+            expected_eol = (
+                "crlf"
+                if path == "records/phase-two/prechecks/PRECHECK-2026-081.md"
+                else "lf"
+            )
+            self.assertIn(f"{path}: eol: {expected_eol}", completed.stdout)
 
     def test_public_intake_outputs_have_explicit_checkout_contracts(self) -> None:
         public_directory = PUBLIC_DIRECTORY.relative_to(ROOT).as_posix()
