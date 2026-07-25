@@ -1,0 +1,45 @@
+{
+  "failure_record_version": "burnlens-retained-baseline-failure-v0.1.0",
+  "failure_id": "P2O5-T03-U05-R001-NONFINITE-RENDER-WARNING",
+  "unit_id": "P2O5-T03-U05",
+  "run_id": "BL-2026-07-25-p2o5-t03-u05-evaluation-r001",
+  "generated_at_utc": "2026-07-25T20:13:41Z",
+  "git_source_commit": "220ce86cf056f81bf94a1c88141ca3082ab99b42",
+  "disposition": "RETAINED_RENDER_FAILURE_NOT_PROMOTED",
+  "failure_class": "EXCLUDED_NONFINITE_DISPLAY_CAST_WARNING",
+  "reason": "The single frozen test evaluation completed and fixed all metrics, but rendering excluded nonfinite pixels emitted a NumPy invalid-cast warning and displayed them through an implicit cast.",
+  "analytical_state": {
+    "test_analytical_open_count_before": 0,
+    "test_analytical_open_count_after": 1,
+    "selected_family": "rbr-threshold",
+    "selected_threshold": 0.041043221950531006,
+    "selection_changed_after_test": false,
+    "test_tuning": false,
+    "selected_test_event_class_macro_dice": 1.0,
+    "selected_test_event_class_macro_iou": 1.0
+  },
+  "promotion": {
+    "baseline_evaluation_promoted": false,
+    "model_created": false,
+    "training_authorized": false
+  },
+  "retained_outputs": [
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r001-invalid.json",
+      "bytes": 20758,
+      "sha256": "7a0f0a627aaabe4dcabc2f6a2d960a1d5f34d8affc7375a145dd67e138169530"
+    },
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r001-invalid.html",
+      "bytes": 3392,
+      "sha256": "3677186e63827b850fefda16ae11848402de8e21ac9207037c898200eec0aeb1"
+    },
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r001-invalid.png",
+      "bytes": 169252,
+      "sha256": "f8476a972bc1c271617a4c00a4151d562099648cd6315bdc9a2466634d164d9d"
+    }
+  ],
+  "remediation": "Display-only code now maps excluded nonfinite false-color pixels to a neutral color before uint8 conversion. Metrics, threshold, selected family, predictions on metric-mask pixels, and test interpretation remain unchanged.",
+  "replay_boundary": "The corrected run is a deterministic render remediation and verification of the already fixed single analytical opening, not a second selection or test-tuning event."
+}

@@ -8,6 +8,7 @@ import numpy as np
 
 from burnlens.baseline_evaluation import (
     Example,
+    _false_color,
     _selection_key,
     evaluate,
     fit_signal_family,
@@ -111,6 +112,12 @@ class BaselineEvaluationTests(unittest.TestCase):
     def test_prediction_rejects_missing_signal_threshold(self) -> None:
         with self.assertRaisesRegex(Exception, "threshold"):
             predict(self.examples[0], "dnbr-threshold", None)
+
+    def test_false_color_neutralizes_nonfinite_excluded_pixels(self) -> None:
+        features = self.examples[0].features.copy()
+        features[:, 0, 0] = np.nan
+        image = _false_color(features, 0)
+        self.assertEqual(image.getpixel((0, 0)), (218, 213, 201))
 
     def test_html_preserves_claim_and_training_boundaries(self) -> None:
         report = {

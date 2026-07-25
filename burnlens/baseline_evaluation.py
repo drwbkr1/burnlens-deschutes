@@ -664,8 +664,12 @@ def _false_color(features: np.ndarray, start: int) -> Image.Image:
     rgb = np.stack(
         [features[start + 2], features[start + 1], features[start]], axis=-1
     )
-    rgb = np.clip(rgb / 0.5, 0.0, 1.0)
-    return Image.fromarray((rgb * 255.0).astype(np.uint8), mode="RGB").resize(
+    finite = np.isfinite(rgb).all(axis=-1)
+    display = np.full((*finite.shape, 3), (218, 213, 201), dtype=np.uint8)
+    display[finite] = (
+        np.clip(rgb[finite] / 0.5, 0.0, 1.0) * 255.0
+    ).astype(np.uint8)
+    return Image.fromarray(display, mode="RGB").resize(
         (128, 128), resample=Image.Resampling.NEAREST
     )
 

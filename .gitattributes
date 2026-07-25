@@ -364,5 +364,8 @@ records/phase-two/manifests/BASELINE-SELECTION-2026-001.json text eol=lf
 samples/baselines/burnlens-baseline-v0.1.0/*.json text eol=lf
 samples/baselines/burnlens-baseline-v0.1.0/*.html text eol=lf
 samples/baselines/burnlens-baseline-v0.1.0/*.png -text
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.png -text
 records/phase-two/prechecks/PRECHECK-2026-094.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-088.md text eol=lf

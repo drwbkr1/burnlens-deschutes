@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens baseline evaluation</title>
+<style>
+:root{--ink:#17242c;--paper:#f4f1e8;--card:#fff;--teal:#147f75;--orange:#df5f32;--line:#d6d0c2}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Arial,sans-serif;overflow-x:hidden}
+main{max-width:1180px;margin:auto;padding:42px 24px 72px}h1{font-size:clamp(2rem,5vw,4.1rem);line-height:1;margin:.2em 0}h2{margin-top:2.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}.card strong{overflow-wrap:anywhere}
+.warn{border-left:7px solid var(--orange)}img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}code{overflow-wrap:anywhere}
+@media(max-width:760px){main{padding:24px 14px 50px}table{table-layout:fixed}}
+</style></head><body><main>
+<p>BURNLENS / PHASE TWO / ISSUE #562 / U05</p>
+<h1>A transparent baseline meets the sealed test once.</h1>
+<div class="card warn">Owner-approved prototype labels, not independent ground truth or field validation. Two test events support no generalization claim.</div>
+<div class="card"><strong>rbr-threshold</strong><br>
+Validation selected this frozen family before the test opened. Test event-class macro Dice:
+<strong>1.0000</strong>.
+IoU: <strong>1.0000</strong>.</div>
+<h2>Inspectable test evidence</h2>
+<img src="BASELINE-EVALUATION-2026-001.png" width="1800" height="1180" alt="Four sealed-test BurnLens patches with pre and post imagery, prototype cores, and selected-baseline errors">
+<h2>Frozen family comparison</h2><div class="card"><table><thead><tr><th>Family</th><th>Dice</th><th>IoU</th><th>Event Dice range</th></tr></thead><tbody><tr><td>rbr-threshold</td><td>1.0000</td><td>1.0000</td><td>1.0000–1.0000</td></tr><tr><td>dnbr-threshold</td><td>1.0000</td><td>1.0000</td><td>1.0000–1.0000</td></tr><tr><td>dndvi-threshold</td><td>1.0000</td><td>1.0000</td><td>1.0000–1.0000</td></tr><tr><td>constant-background</td><td>0.3620</td><td>0.2853</td><td>0.3333–0.3906</td></tr><tr><td>constant-burned</td><td>0.2987</td><td>0.2147</td><td>0.2642–0.3333</td></tr></tbody></table></div>
+<h2>Selected family by event</h2><div class="card"><table><thead><tr><th>Event</th><th>Cores</th><th>Macro Dice</th><th>Macro IoU</th></tr></thead><tbody><tr><td>event-ward-creek-2019</td><td>39</td><td>1.0000</td><td>1.0000</td></tr><tr><td>event-windigo-2022</td><td>50</td><td>1.0000</td><td>1.0000</td></tr></tbody></table></div>
+<h2>Boundary</h2><div class="card"><p>Test analytical-open count: 1. No threshold or family changed after opening. No confidence interval is reported because two event groups cannot support population inference.</p>
+<p>Training remains unauthorized pending U06. Model none. Operational and emergency use prohibited.</p></div>
+<p>Trace: commit <code>220ce86cf056f81bf94a1c88141ca3082ab99b42</code> · run <code>BL-2026-07-25-p2o5-t03-u05-evaluation-r001</code> · dataset <code>burnlens-dataset-v0.1.0</code> · split <code>burnlens-whole-event-split-v0.1.0</code> · baseline <code>burnlens-baseline-v0.1.0</code>.</p>
+</main></body></html>
