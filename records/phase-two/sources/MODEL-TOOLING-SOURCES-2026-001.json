@@ -1,0 +1,111 @@
+{
+  "source_record_version": "burnlens-model-tooling-sources-v0.1.0",
+  "source_record_id": "MODEL-TOOLING-SOURCES-2026-001",
+  "unit_id": "P2O5-T03-U06",
+  "researched_at_utc": "2026-07-25T20:40:03Z",
+  "purpose": "Bind the smallest reproducible local framework and numerical limits for a single bounded U-Net-style binary segmentation experiment.",
+  "sources": [
+    {
+      "source_id": "pytorch-2.13-reproducibility",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/2.13/notes/randomness.html",
+      "accessed_at_utc": "2026-07-25T20:40:03Z",
+      "role": "reproducibility_contract",
+      "findings": [
+        "PyTorch does not guarantee complete reproducibility across releases, commits, platforms, or CPU and GPU execution.",
+        "A fixed release, platform, and device can reduce nondeterminism by controlling random sources.",
+        "Python, NumPy, and PyTorch random generators must be seeded.",
+        "torch.use_deterministic_algorithms(True) selects deterministic implementations where available and raises when no deterministic implementation exists."
+      ],
+      "boundary": "BurnLens may require exact replay only on the locked local CPU environment; it may not imply universal bitwise reproducibility."
+    },
+    {
+      "source_id": "pytorch-2.13-bce-with-logits",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/2.13/generated/torch.nn.BCEWithLogitsLoss.html",
+      "accessed_at_utc": "2026-07-25T20:40:03Z",
+      "role": "loss_contract",
+      "findings": [
+        "BCEWithLogitsLoss combines sigmoid and binary cross entropy using a numerically stable formulation.",
+        "reduction='none' returns one loss value per input element.",
+        "An unreduced loss permits BurnLens to apply its exact loss mask before computing the mean."
+      ],
+      "boundary": "The framework defines the primitive; BurnLens owns and must verify the loss-mask semantics."
+    },
+    {
+      "source_id": "pytorch-2.13-numerical-accuracy",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/2.13/notes/numerical_accuracy.html",
+      "accessed_at_utc": "2026-07-25T20:40:03Z",
+      "role": "numerical_limit",
+      "findings": [
+        "Floating-point operations are not associative and mathematically identical calculations need not be bitwise identical.",
+        "Bitwise identity is not guaranteed across releases, platforms, or CPU and GPU backends.",
+        "Finite-input and finite-output checks are required because different backends and intermediate values can behave differently."
+      ],
+      "boundary": "BurnLens must record the exact framework, device, dtype, environment, and replay tolerances rather than claim platform-independent identity."
+    },
+    {
+      "source_id": "pytorch-start-locally",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/get-started/locally/",
+      "accessed_at_utc": "2026-07-25T20:40:03Z",
+      "role": "platform_support",
+      "findings": [
+        "Windows and CPU-only installation are supported choices.",
+        "The official Windows guidance supports Python 3.9 through 3.12.",
+        "Python 3.12.10 in the locked BurnLens environment is within the stated range."
+      ],
+      "boundary": "Support documentation does not prove the future BurnLens lock or training run; the exact locked environment must pass separately."
+    }
+  ],
+  "local_feasibility_probe": {
+    "executed_at_utc": "2026-07-25T20:40:03Z",
+    "command": "uv pip install --dry-run torch setuptools==82.0.0",
+    "network_role": "resolver metadata only; no package installation",
+    "result": "pass",
+    "resolved": [
+      "torch==2.13.0",
+      "setuptools==82.0.0",
+      "filelock==3.32.0",
+      "fsspec==2026.6.0",
+      "jinja2==3.1.6",
+      "markupsafe==3.0.3",
+      "mpmath==1.3.0",
+      "networkx==3.6.1",
+      "sympy==1.14.0"
+    ],
+    "would_download_packages": 8,
+    "would_install_packages": 9,
+    "installed_packages_changed": false,
+    "build_constraint_preserved": "setuptools>=82,<83",
+    "boundary": "The probe proves a compatible resolution exists; Phase Three must add, lock, synchronize, audit, and smoke-test the dependency before model code or training."
+  },
+  "local_compute_observation": {
+    "observed_at_utc": "2026-07-25T20:40:03Z",
+    "operating_system": "Windows",
+    "python": "CPython 3.12.10",
+    "uv": "0.10.7",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1365U",
+    "physical_cores": 10,
+    "logical_processors": 12,
+    "physical_memory_bytes": 34000240640,
+    "nvidia_smi_available": false,
+    "selected_device": "cpu",
+    "boundary": "CPU-only execution is the locked first route. GPU, mixed precision, distributed training, and cloud compute are outside the first experiment."
+  },
+  "rights_and_access": {
+    "access": "Public official documentation and local package-resolver metadata were read without authentication.",
+    "retained_third_party_bytes": 0,
+    "installed_third_party_packages": 0,
+    "paid_service_or_secret": false,
+    "downstream_role": "tooling selection, reproducibility limits, and future environment gate"
+  },
+  "stop_conditions": {
+    "licensing_or_terms_ambiguity": false,
+    "paid_service_or_secret": false,
+    "private_data": false,
+    "unsupported_platform": false,
+    "unresolved_dependency_constraint": false
+  }
+}
