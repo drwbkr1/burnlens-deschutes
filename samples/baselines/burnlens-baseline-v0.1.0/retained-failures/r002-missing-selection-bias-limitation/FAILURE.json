@@ -1,0 +1,44 @@
+{
+  "failure_record_version": "burnlens-retained-baseline-failure-v0.1.0",
+  "failure_id": "P2O5-T03-U05-R002-MISSING-SELECTION-BIAS-LIMITATION",
+  "unit_id": "P2O5-T03-U05",
+  "run_id": "BL-2026-07-25-p2o5-t03-u05-evaluation-r002",
+  "generated_at_utc": "2026-07-25T20:15:37Z",
+  "git_source_commit": "f1406b3c85b5d9a40b6202956983fa5c1f32bf17",
+  "disposition": "RETAINED_TRANSPARENCY_FAILURE_NOT_PROMOTED",
+  "failure_class": "MISSING_CANDIDATE_SELECTION_BIAS_LIMITATION",
+  "reason": "The exact metrics, replay, and desktop/narrow render passed, but the report did not explicitly state that evidence-backed candidate construction may favor the spectral separability being measured.",
+  "analytical_state": {
+    "test_analytical_open_count": 1,
+    "selected_family": "rbr-threshold",
+    "selected_threshold": 0.041043221950531006,
+    "selection_changed_after_test": false,
+    "test_tuning": false,
+    "selected_test_event_class_macro_dice": 1.0,
+    "selected_test_event_class_macro_iou": 1.0
+  },
+  "promotion": {
+    "baseline_evaluation_promoted": false,
+    "model_created": false,
+    "training_authorized": false
+  },
+  "retained_outputs": [
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r002-invalid.json",
+      "bytes": 20758,
+      "sha256": "04c985cf1c94c425a0efe235c29f060cd64dd7e7f09a60dc9a5fd5229c8529bb"
+    },
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r002-invalid.html",
+      "bytes": 3392,
+      "sha256": "abe312560b3db3b13d7b0a5ac9ca581e9fdd9396e05419cc45bda17bf9e70c69"
+    },
+    {
+      "path": "BASELINE-EVALUATION-2026-001-r002-invalid.png",
+      "bytes": 169275,
+      "sha256": "49bf3686fd7b109572fcbff8abb8e35d7d9054c7b2dd9e26e70cc26975700060"
+    }
+  ],
+  "remediation": "The report now explicitly separates perfect selected-core classification from natural-prevalence, unreviewed-area, full-scar, independent-ground-truth, field-validation, and generalization evidence.",
+  "replay_boundary": "The corrected report preserves every analytical value from the already fixed single test opening."
+}

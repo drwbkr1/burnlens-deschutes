@@ -142,12 +142,16 @@ class BaselineEvaluationTests(unittest.TestCase):
                     "event_macro_dice_range": [0.5, 0.5],
                 }
             ],
+            "limitations": [
+                "Candidate construction may favor spectral separability."
+            ],
             "git_source_commit": "a" * 40,
             "run_id": "BL-TEST",
         }
         html = render_evaluation_html(report, "test.png")
         self.assertIn("Training remains unauthorized", html)
         self.assertIn("not independent ground truth", html)
+        self.assertIn("favor spectral separability", html)
         self.assertNotIn("generalizes", html.lower())
 
 

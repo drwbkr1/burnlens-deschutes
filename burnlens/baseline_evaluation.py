@@ -793,6 +793,9 @@ def render_evaluation_html(report: dict[str, Any], png_name: str) -> str:
         )
         for item in report["selected_test_metrics"]["events"]
     )
+    limitations = "".join(
+        f"<li>{escape(item)}</li>" for item in report["limitations"]
+    )
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BurnLens baseline evaluation</title>
@@ -816,6 +819,7 @@ IoU: <strong>{report['selected_test_metrics']['event_class_macro_iou']:.4f}</str
 <img src="{escape(png_name)}" width="1800" height="1180" alt="Four sealed-test BurnLens patches with pre and post imagery, prototype cores, and selected-baseline errors">
 <h2>Frozen family comparison</h2><div class="card"><table><thead><tr><th>Family</th><th>Dice</th><th>IoU</th><th>Event Dice range</th></tr></thead><tbody>{rows}</tbody></table></div>
 <h2>Selected family by event</h2><div class="card"><table><thead><tr><th>Event</th><th>Cores</th><th>Macro Dice</th><th>Macro IoU</th></tr></thead><tbody>{events}</tbody></table></div>
+<h2>Limits</h2><div class="card"><ul>{limitations}</ul></div>
 <h2>Boundary</h2><div class="card"><p>Test analytical-open count: 1. No threshold or family changed after opening. No confidence interval is reported because two event groups cannot support population inference.</p>
 <p>Training remains unauthorized pending U06. Model none. Operational and emergency use prohibited.</p></div>
 <p>Trace: commit <code>{escape(report['git_source_commit'])}</code> · run <code>{escape(report['run_id'])}</code> · dataset <code>{DATASET_ID}</code> · split <code>{SPLIT_ID}</code> · baseline <code>{BASELINE_VERSION}</code>.</p>
@@ -885,6 +889,24 @@ def build_evaluation(
             "confidence_interval": None,
             "population_inference": False,
         },
+        "limitations": [
+            (
+                "The test contains only 89 owner-approved prototype core pixels "
+                "from two event groups."
+            ),
+            (
+                "Candidate construction used optical and official-reference "
+                "evidence, which may favor the spectral separability measured here."
+            ),
+            (
+                "Perfect core classification does not measure unreviewed pixels, "
+                "unknown rings, complete burn scars, or natural prevalence."
+            ),
+            (
+                "The result is not independent ground truth, field validation, "
+                "generalization evidence, or operational readiness."
+            ),
+        ],
         "claims": {
             "prototype_labels_only": True,
             "independent_ground_truth": False,
