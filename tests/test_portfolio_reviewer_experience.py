@@ -31,6 +31,18 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
     def test_version_and_exact_inputs(self) -> None:
         self.assertEqual(burnlens.__version__, "0.52.0")
         self.assertEqual(self.report["software_version"], "0.52.0")
+        self.assertEqual(
+            self.report["release_tag"],
+            "v0.52.0-dataset-baseline-model-readiness",
+        )
+        self.assertEqual(
+            self.report["release_commit"],
+            "dfb11c8b823e224aceb76be74003464973e33c2d",
+        )
+        self.assertEqual(
+            self.report["release_tag_object"],
+            "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
+        )
         self.assertEqual(len(self.report["bound_inputs"]), len(BOUND_INPUTS))
 
     def test_report_preserves_claim_and_data_boundaries(self) -> None:
@@ -115,6 +127,10 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.assertIn('<link rel="icon" href="data:,">', html)
             self.assertIn("@media(max-width:430px)", html)
             self.assertIn("@media(prefers-reduced-motion:reduce)", html)
+            self.assertIn(
+                "Verified BurnLens 0.52.0 authorizes the bounded U-Net contract",
+                html,
+            )
             for image_target in re.findall(r'<img src="([^"]+)"', html):
                 self.assertTrue(image_target.endswith(".png"), image_target)
             self.assertEqual(payload["outputs"][0]["path"], f"{REPORT_ID}.html")

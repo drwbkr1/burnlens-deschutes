@@ -91,6 +91,16 @@
         "sha256": "cc64bbceb2f6c490dc4a84e6bf9322800820591a5c05e252f665da2ce7d9ee10"
       },
       {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.json",
+        "bytes": 7668,
+        "sha256": "3b0db0a20c1ce9e6d1962fdcf8642772ab2c3ee6ef209d48b64500ad05c71d77"
+      },
+      {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html",
+        "bytes": 16341,
+        "sha256": "3c754e5630c3fd5fc02c6ceb289896e48b4e41064a04f4dd9a594d1409f8fbe4"
+      },
+      {
         "path": "burnlens_deschutes-0.52.0-py3-none-any.whl",
         "bytes": 1050456,
         "sha256": "eff2396b1c9bde38b0b5de5464169798874015259659dd460dc035186e22db99"
@@ -98,11 +108,11 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-25T22:20:03Z",
-    "branch": "codex/p2o5-t03-dataset-split-baselines",
-    "remote_commit": "1a2c3dd4ba09c40c1de70a3be0f0304c7b618fb9",
+    "verified_at_utc": "2026-07-25T22:39:57Z",
+    "branch": "main",
+    "remote_commit": "dfb11c8b823e224aceb76be74003464973e33c2d",
     "pull_request": 563,
-    "tag_target": "",
+    "tag_target": "dfb11c8b823e224aceb76be74003464973e33c2d",
     "deployment": null
   },
   "checks": [
@@ -143,7 +153,7 @@
         "Baseline v0.1.0 is frozen against the locked split and reports its validation selection and test evaluation without test-set tuning",
         "The perfect selected-core RBR result is explicitly bounded by candidate-construction bias and is not a full-scene generalization claim",
         "U06 returns AUTHORIZE_BOUNDED_UNET and REJECTION_FIRST_SINGLE_MODEL_EXPERIMENT with stop, budget, reproducibility, and claims gates",
-        "Training remains closed until merge, fresh-main verification, and exact tag verification"
+        "Verified merge, fresh-main verification, and exact tag peel clear only the frozen rejection-first U-Net contract for execution"
       ],
       "reason": ""
     },
@@ -221,20 +231,25 @@
       "status": "pass",
       "method": "Read live GitHub pull-request state against the exact remote branch.",
       "evidence": [
-        "Draft PR #563 targets exact base 1debea556a5fb2fc8eda87a234f106655cdc37db",
-        "The audited remote head is 1a2c3dd4ba09c40c1de70a3be0f0304c7b618fb9",
-        "GitHub reports MERGEABLE and CLEAN with no configured checks or reviews"
+        "PR #563 targets exact base 1debea556a5fb2fc8eda87a234f106655cdc37db",
+        "The final reviewed remote head is 3a6871a0c484264c9bb09bd3907d00d0663adf18",
+        "GitHub reports the PR merged at dfb11c8b823e224aceb76be74003464973e33c2d and issue #562 closed"
       ],
       "reason": ""
     },
     {
       "id": "CHECK-010",
       "category": "merge-tag",
-      "required": false,
-      "status": "not_applicable",
-      "method": "",
-      "evidence": [],
-      "reason": "The audited candidate is not merged or tagged yet. Fresh-main repetition and the exact annotated-tag peel remain mandatory before verified release status."
+      "required": true,
+      "status": "pass",
+      "method": "Verify the squash merge, repeat risk-matched gates from exact origin/main, create the annotated tag, and read its remote object and peeled target.",
+      "evidence": [
+        "PR #563 squash-merges exact reviewed head 3a6871a0c484264c9bb09bd3907d00d0663adf18 at dfb11c8b823e224aceb76be74003464973e33c2d",
+        "Fresh merged main passes 695 tests, 1 expected skip, 228 warnings, and 86 subtests",
+        "Fresh merged main reproduces the exact reviewer JSON and HTML plus two 1,050,456-byte wheels at SHA-256 eff2396b1c9bde38b0b5de5464169798874015259659dd460dc035186e22db99",
+        "Remote annotated tag object 7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf peels exactly to dfb11c8b823e224aceb76be74003464973e33c2d"
+      ],
+      "reason": ""
     },
     {
       "id": "CHECK-011",
@@ -249,26 +264,26 @@
   "truth_surfaces": [
     {
       "path_or_uri": "README.md",
-      "expected_state": "BurnLens 0.52.0 is a passing Phase Two release candidate with accepted prototype dataset, split, baselines, and bounded model-readiness decision.",
-      "observed_state": "The branch records that exact candidate state and preserves the trained-model threshold.",
+      "expected_state": "BurnLens 0.52.0 is the verified Phase Two release with accepted prototype dataset, split, baselines, and bounded model-readiness decision.",
+      "observed_state": "The lifecycle branch records the exact merged and tagged state while preserving the trained-model threshold.",
       "status": "current"
     },
     {
       "path_or_uri": "docs/status/PHASE_STATUS.md",
-      "expected_state": "P2O5-T03 passes its scientific units and remains pending merge, fresh-main, and tag verification.",
-      "observed_state": "The current branch records that boundary and keeps Phase Three execution closed.",
+      "expected_state": "P2O5-T03 is verified and only its exact rejection-first U-Net contract is executable.",
+      "observed_state": "The lifecycle branch records the verified boundary and keeps all broader model work closed.",
       "status": "current"
     },
     {
-      "path_or_uri": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html",
+      "path_or_uri": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html",
       "expected_state": "Exact deterministic reviewer surface that exposes the accepted evidence and the absent-model boundary.",
-      "observed_state": "Bytes, replay, desktop, narrow viewport, keyboard, image, link, and clean browser-log checks pass.",
+      "observed_state": "The lifecycle surface binds the verified release identities while preserving the accepted evidence and absent-model boundary; exact replay, desktop, narrow viewport, keyboard, image, link, and clean browser-log gates apply.",
       "status": "current"
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/pull/563",
-      "expected_state": "Draft, clean, mergeable candidate for issue #562.",
-      "observed_state": "GitHub reports draft true, CLEAN, and MERGEABLE at the audited remote head.",
+      "expected_state": "Merged reviewed milestone for issue #562.",
+      "observed_state": "GitHub reports PR #563 merged and issue #562 closed.",
       "status": "current"
     }
   ],
@@ -278,11 +293,11 @@
     "Candidate construction may favor measured spectral separability and the balanced review roster does not estimate natural class prevalence.",
     "No trained model, model metric, inference output, or deployment exists.",
     "The August 6 bundle remains an interim contingency technical case study, not the intended final portfolio submission.",
-    "Merge, fresh-main repetition, and annotated-tag verification remain pending."
+    "The verified release authorizes one bounded experiment; it does not establish that a useful model exists."
   ],
   "decision": {
-    "reported_status": "pending",
-    "rationale": "Dataset and split integrity, independent QA, baseline and model-readiness decisions, reproducibility, full regression, deterministic package, isolated runtime, rendered reviewer experience, claims, privacy, and live draft-PR checks pass. The candidate is not yet merged or tagged.",
-    "next_action": "Evaluate this audit, commit and push the exact record, re-read live PR state, mark PR #563 ready, merge only if it remains clean, repeat risk-matched gates from fresh main, create the annotated v0.52 tag, and verify its remote peel."
+    "reported_status": "verified",
+    "rationale": "Dataset and split integrity, independent QA, baseline and model-readiness decisions, reproducibility, full pre-merge and fresh-main regression, deterministic package, isolated runtime, rendered reviewer experience, claims, privacy, merged-PR, and remote annotated-tag checks pass.",
+    "next_action": "Synchronize current repository truth through lifecycle issue #564, then open and execute one separate Phase Three milestone under the exact frozen rejection-first U-Net contract."
   }
 }

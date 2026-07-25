@@ -55,6 +55,8 @@ one expected skip, 228 warnings, and 86 subtests.
 
 Two fixed-epoch Git-archive builds produce identical 1,050,456-byte BurnLens
 0.52.0 wheels at SHA-256 `eff2396b...`. An isolated CPython 3.12.10 runtime
-loads 13 compatible distributions and all 105 command help routes. Merge,
-fresh-main repetition, and remote annotated-tag verification remain required
-before this becomes a verified release or Phase Three training begins.
+loads 13 compatible distributions and all 105 command help routes. U07 merges
+through PR #563 at `dfb11c8...`; fresh main repeats all 695 tests, the exact
+reviewer outputs, and the wheel identity. Annotated tag object `7041ef76...`
+peels exactly to that merge. Phase Three may now execute only the frozen
+rejection-first training contract.

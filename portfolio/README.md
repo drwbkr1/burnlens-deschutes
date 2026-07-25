@@ -2,7 +2,7 @@
 
 ## Two-minute path
 
-1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html`.
+1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html`.
 2. Read the accepted dataset, split, baseline, and model-readiness result.
 3. Read the retained Petes Lake stop.
 4. Check the lineage table and explicit null versions.
@@ -23,8 +23,8 @@ Tepee, Green Ridge, Grandview, Windigo, and Ward Creek. The whole-event split
 is frozen before patching, dataset QA independently reconstructs every patch,
 and train-only normalization excludes validation and test. The selected RBR
 baseline reaches 1.0 Dice and IoU on the 89 selected test cores under the one
-authorized sealed test opening. The explicit decision authorizes one bounded
-rejection-first U-Net after the U07 release is verified.
+authorized sealed test opening. Verified BurnLens 0.52.0 makes the explicit
+decision's one bounded rejection-first U-Net contract executable.
 
 ## What BurnLens does not prove
 
@@ -61,9 +61,9 @@ same timestamp, run ID, and commit. The JSON and HTML must match byte for byte.
 ## Deeper review
 
 - Read the [full case study](../docs/case-study/BURNLENS_CASE_STUDY.md).
-- Read the [model-readiness decision](../docs/phase-two/objective-five/MODEL_READINESS_DECISION.md).
+- Read the [model-readiness decision](../records/phase-two/readiness/MODEL-READINESS-DECISION-2026-001.json).
 - Read the [Petes Lake material-defer decision](../docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md).
-- Inspect the [v0.51 release audit](../records/phase-two/release-audits/RELEASE-AUDIT-2026-006.json).
+- Inspect the [v0.52 release audit](../records/phase-two/release-audits/RELEASE-AUDIT-2026-007.json).
 
 Official sources govern. This local portfolio surface is explanatory evidence,
 not an operational wildfire application.
