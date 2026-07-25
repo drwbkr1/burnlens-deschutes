@@ -16,10 +16,8 @@ import rasterio
 from rasterio.transform import array_bounds
 from rasterio.windows import Window, from_bounds
 
-from . import __version__
-
-
 DATASET_VERSION = "burnlens-dataset-v0.1.0"
+SOFTWARE_VERSION = "0.51.0"
 DATASET_ID = "DATASET-2026-001"
 DATASET_MANIFEST_VERSION = "burnlens-dataset-manifest-v0.1.0"
 TASK_ISSUE = 562
@@ -678,7 +676,7 @@ def materialize(
             "task_issue": TASK_ISSUE,
             "unit_id": UNIT_ID,
             "git_source_commit": git_source_commit,
-            "software_version": __version__,
+            "software_version": SOFTWARE_VERSION,
             "inputs": {
                 "dataset_contract": _binding(root, CONTRACT_PATH),
                 "whole_event_split": _binding(root, SPLIT_PATH),

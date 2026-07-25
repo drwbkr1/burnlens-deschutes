@@ -11,9 +11,6 @@ from typing import Any
 
 from PIL import Image, ImageDraw, ImageFont
 
-from . import __version__
-
-
 AUDIT_ID = "MODEL-READINESS-AUDIT-2026-001"
 DECISION_ID = "MODEL-READINESS-DECISION-2026-001"
 CONTRACT_ID = "BOUNDED-UNET-TRAINING-CONTRACT-2026-001"
@@ -21,6 +18,7 @@ AUDIT_VERSION = "burnlens-model-readiness-audit-v0.1.0"
 CONTRACT_VERSION = "burnlens-bounded-unet-training-contract-v0.1.0"
 TASK_ISSUE = 562
 UNIT_ID = "P2O5-T03-U06"
+SOFTWARE_VERSION = "0.51.0"
 DEADLINE = "2026-08-06"
 WARNING = (
     "Owner-approved prototype evidence, not independent ground truth, field "
@@ -162,7 +160,7 @@ def training_contract(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version_at_decision": __version__,
+        "software_version_at_decision": SOFTWARE_VERSION,
         "authorization": {
             "decision": "AUTHORIZE_BOUNDED_UNET",
             "scope": "one rejection-first CPU-only U-Net training/evaluation milestone",
@@ -521,7 +519,7 @@ def audit(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "inputs": bindings,
         "gates": gates,
         "evidence_summary": {

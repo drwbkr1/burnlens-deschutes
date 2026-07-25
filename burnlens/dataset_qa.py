@@ -17,10 +17,8 @@ import rasterio
 from rasterio.transform import array_bounds
 from rasterio.windows import Window, from_bounds
 
-from . import __version__
-
-
 REPORT_ID = "DATASET-QA-2026-001"
+SOFTWARE_VERSION = "0.51.0"
 REPORT_VERSION = "burnlens-dataset-qa-v0.1.0"
 NORMALIZATION_ID = "TRAIN-NORMALIZATION-2026-001"
 NORMALIZATION_VERSION = "burnlens-train-normalization-v0.1.0"
@@ -597,7 +595,7 @@ def build_report(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "inputs": {
             "dataset_manifest": _binding(root, DATASET_MANIFEST_PATH),
             "dataset_contract": _binding(root, CONTRACT_PATH),
@@ -670,7 +668,7 @@ def build_report(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "dataset_manifest_sha256": DATASET_MANIFEST_SHA256,
         "split_manifest_sha256": SPLIT_SHA256,
         "training_event_group_ids": split["selection"]["roles"]["train"][

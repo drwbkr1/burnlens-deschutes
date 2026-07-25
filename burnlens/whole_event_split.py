@@ -10,10 +10,8 @@ import os
 from pathlib import Path
 from typing import Any
 
-from . import __version__
-
-
 RANKING_ID = "WHOLE-EVENT-SPLIT-RANKING-2026-001"
+SOFTWARE_VERSION = "0.51.0"
 SPLIT_ID = "WHOLE-EVENT-SPLIT-2026-001"
 SPLIT_VERSION = "burnlens-whole-event-split-v0.1.0"
 RANKING_VERSION = "burnlens-whole-event-split-ranking-v0.1.0"
@@ -363,7 +361,7 @@ def build_outputs(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "inputs": {
             "dataset_contract": _binding(root, CONTRACT_PATH),
             "dataset_candidate": _binding(root, CANDIDATE_PATH),
@@ -407,7 +405,7 @@ def build_outputs(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "dataset_version": "burnlens-dataset-v0.1.0",
         "split_version": SPLIT_VERSION,
         "dataset_created": False,

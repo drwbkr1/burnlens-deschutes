@@ -10,10 +10,8 @@ from typing import Any
 
 import rasterio
 
-from . import __version__
-
-
 CONTRACT_ID = "DATASET-BUILD-CONTRACT-2026-001"
+SOFTWARE_VERSION = "0.51.0"
 CONTRACT_VERSION = "burnlens-dataset-build-contract-v0.1.0"
 AUDIT_ID = "DATASET-READINESS-AUDIT-2026-003"
 CANDIDATE_ID = "DATASET-CANDIDATE-2026-002"
@@ -325,7 +323,7 @@ def build_contract(
         "task_issue": TASK_ISSUE,
         "unit_id": UNIT_ID,
         "git_source_commit": git_source_commit,
-        "software_version": __version__,
+        "software_version": SOFTWARE_VERSION,
         "candidate": _binding(root, CANDIDATE_PATH),
         "accepted_readiness": {
             "audit": prior_audit,
