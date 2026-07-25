@@ -1,0 +1,266 @@
+{
+  "report_id": "SIX-EVENT-DATASET-SUFFICIENCY-2026-002",
+  "report_version": "six-event-dataset-sufficiency-v0.2.0",
+  "generated_at_utc": "2026-07-25T15:29:16.140Z",
+  "run_id": "BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 554,
+  "unit_id": "P2O4-T39-U08",
+  "git_source_commit": "af37f80dd17febacfbb1cf2801665d74edb16475",
+  "software_version": "0.50.0",
+  "aoi_version": "multi-event-native-grids-v0.5.0",
+  "target_version": "target-burn-scar-v0.2.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "bindings": {
+    "candidate_manifest": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    },
+    "audit_contract": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-002.json",
+      "bytes": 6601,
+      "sha256": "50e3b9f3c6c33a9f8cd36cf0952bf5033c039e68ffc864bf952ddec5442e6ed4"
+    },
+    "audit_decision": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-002.json",
+      "bytes": 7088,
+      "sha256": "39e7a56199f67bcf397b6d73e6795a2e36528ff0577b7314a8414f21321ce5d8"
+    }
+  },
+  "inventory": {
+    "event_groups": 6,
+    "owner_approved_regions": 12,
+    "class_counts": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 287,
+    "accepted_core_area_hectares": 11.48,
+    "excluded_unknown_ring_pixels": 531,
+    "maximum_event_core_share_percent": 20.5575,
+    "balanced_review_roster_is_natural_prevalence": false
+  },
+  "events": [
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "fire_name": "McKay 1035 NE",
+      "year": 2017,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 39,
+      "unknown_ring_pixels": 80,
+      "accepted_core_share_percent": 13.5889
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "fire_name": "Tepee 1144 NE",
+      "year": 2018,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 59,
+      "unknown_ring_pixels": 98,
+      "accepted_core_share_percent": 20.5575
+    },
+    {
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "fire_name": "Green Ridge 0684 CS",
+      "year": 2020,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 87,
+      "accepted_core_share_percent": 17.4216
+    },
+    {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "fire_name": "Grandview 0558 OD",
+      "year": 2021,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 98,
+      "accepted_core_share_percent": 17.4216
+    },
+    {
+      "event_group_id": "event-windigo-2022",
+      "fire_name": "Windigo",
+      "year": 2022,
+      "source_regime": "sentinel2-baer-mtbs-ravg-current-v1",
+      "never_tuned_transfer": true,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 50,
+      "unknown_ring_pixels": 102,
+      "accepted_core_share_percent": 17.4216
+    },
+    {
+      "event_group_id": "event-ward-creek-2019",
+      "fire_name": "Ward Creek",
+      "year": 2019,
+      "source_regime": "sentinel2-mtbs-current-v1",
+      "never_tuned_transfer": false,
+      "class_counts": {
+        "background": 1,
+        "burned": 1
+      },
+      "core_pixels": 39,
+      "unknown_ring_pixels": 66,
+      "accepted_core_share_percent": 13.5889
+    }
+  ],
+  "excluded_event_groups": [
+    {
+      "event_group_id": "event-darlene3-or-2024",
+      "reason": "Unique NIFC context regime excluded under issue #554; historical evidence remains immutable."
+    }
+  ],
+  "source_regime_counts": {
+    "sentinel2-baer-mtbs-ravg-current-v1": 3,
+    "sentinel2-mtbs-current-v1": 3
+  },
+  "source_program_counts": {
+    "BAER": 3,
+    "COPERNICUS_SENTINEL_2": 6,
+    "MTBS": 6,
+    "RAVG": 3
+  },
+  "partition_feasibility": {
+    "total_2_2_2_assignments": 90,
+    "valid_assignments": 54,
+    "closest_assignment": {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ]
+      },
+      "violations": []
+    },
+    "required_rules": [
+      "two whole event groups in each role before patching",
+      "at least one never-tuned transfer event in validation and test",
+      "every source program represented in at least two split roles",
+      "every exact source regime represented in at least two split roles"
+    ]
+  },
+  "gate_results": {
+    "source-and-terms": {
+      "status": "pass",
+      "finding": "Every intake binds exact current source and terms records; provider bytes remain private and official sources govern.",
+      "remediation": ""
+    },
+    "provenance-and-custody": {
+      "status": "pass",
+      "finding": "All proposals, rasters, aggregate intakes, source records, and terms records match immutable byte and SHA-256 identities.",
+      "remediation": ""
+    },
+    "schema-and-quality": {
+      "status": "pass",
+      "finding": "All 12 EPSG:32610 rasters are single-band, nodata 255, domain 0/1/2/255, count-exact, and contain one 8-connected core.",
+      "remediation": ""
+    },
+    "coverage-and-balance": {
+      "status": "pass",
+      "finding": "Six events each contribute one burned and one background region; no event exceeds 20.5575% of 287 accepted core pixels. Balanced review sampling remains explicitly non-prevalence.",
+      "remediation": ""
+    },
+    "uncertainty-and-exclusions": {
+      "status": "pass",
+      "finding": "All 531 reviewed unknown-ring pixels remain explicit value-2 exclusions and are never background.",
+      "remediation": ""
+    },
+    "leakage-and-split-fitness": {
+      "status": "pass",
+      "finding": "54 of 90 whole-event 2/2/2 assignments satisfy transfer reservation and exact source-program/regime replication. Darlene is excluded.",
+      "remediation": ""
+    },
+    "reproducibility": {
+      "status": "pass",
+      "finding": "The evaluator reopens and validates every tracked input and raster under the locked repository environment.",
+      "remediation": ""
+    },
+    "evaluation-design": {
+      "status": "pass",
+      "finding": "Three never-tuned transfer events exist and 54 whole-event assignments can reserve transfer evidence in validation and test while replicating both exact source regimes.",
+      "remediation": ""
+    },
+    "human-review": {
+      "status": "pass",
+      "finding": "Every accepted region has exact owner-yes custody plus passed non-owner gates; yes remains necessary but insufficient.",
+      "remediation": ""
+    },
+    "claims-and-privacy": {
+      "status": "pass",
+      "finding": "The audit exposes only aggregate tracked evidence and preserves null dataset/split/baseline/model versions and prototype-label limitations.",
+      "remediation": ""
+    }
+  },
+  "decision": "PASS_SIX_EVENT_DATASET_SUFFICIENCY_AUTHORIZE_DATASET_SPLIT_QA_BASELINE_CHECKPOINT",
+  "audit_decision": "pass",
+  "blocking_gate_ids": [],
+  "failed_count_checks": [],
+  "next_checkpoint": {
+    "scope": "Create the accepted versioned dataset, lock one of the valid whole-event splits before patching, run dataset QA, and evaluate strongest justified non-model baselines.",
+    "training_authorized": false,
+    "dataset_created_here": false,
+    "split_created_here": false
+  },
+  "schedule": {
+    "target_date": "2026-08-06",
+    "risk": "critical",
+    "impact": "Dataset/split/QA/baselines, model readiness, U-Net training, evaluation, and the GEOINT vertical slice remain on the critical path."
+  },
+  "boundaries": {
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false
+  },
+  "warning": "Experimental BurnLens owner-approved prototype evidence. Not independent ground truth, official wildfire information, emergency guidance, or field validation. Official sources govern.",
+  "outputs": [
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "bytes": 6357,
+      "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+      "bytes": 101221,
+      "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761"
+    }
+  ]
+}

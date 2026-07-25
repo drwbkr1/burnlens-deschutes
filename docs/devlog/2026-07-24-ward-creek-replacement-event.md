@@ -199,3 +199,26 @@ overflow or browser errors.
 
 The next checkpoint drops Darlene from the candidate pool and reruns all six
 event sufficiency gates. Training remains unauthorized.
+
+## 2026-07-25 - The replacement six-event candidate passes
+
+BurnLens rebuilds the candidate from McKay, Tepee, Green Ridge, Grandview,
+Windigo, and Ward Creek. Darlene stays preserved but is excluded.
+
+The candidate has 12 prototype regions and 287 accepted core pixels. It keeps
+531 surrounding pixels explicitly unknown and excluded.
+
+Both source regimes now appear in three events. Fifty-four whole-event splits
+satisfy every frozen transfer, program, and regime rule.
+
+The first run exposed a mismatch with the independent audit schema. BurnLens
+retains it and makes the project output byte-identical to the audit utility.
+
+The second run passes science but wraps status text vertically. BurnLens
+retains it and fixes only the report layout.
+
+The third run passes desktop and narrow rendering. Tables remain contained,
+status text stays legible, and browser logs stay clean.
+
+This result authorizes a separate dataset and split checkpoint. It creates no
+dataset, baseline, model, metric, or training authorization.
