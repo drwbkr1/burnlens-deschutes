@@ -64,6 +64,27 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.report["baseline_version"], "burnlens-baseline-v0.1.0"
         )
         self.assertIsNone(self.report["model_version"])
+        self.assertEqual(
+            self.report["retained_failure"]["preview_path"],
+            (
+                "samples/cross-event/phase-two/petes-lake/"
+                "PETES-LAKE-SOURCE-FITNESS-2026-001.png"
+            ),
+        )
+        self.assertEqual(
+            self.report["retained_failure"]["detail_path"],
+            (
+                "docs/phase-two/objective-four/"
+                "PETES_LAKE_MATERIAL_DEFER_DECISION.md"
+            ),
+        )
+        self.assertEqual(
+            self.report["strongest_result"]["baseline_detail_path"],
+            (
+                "samples/baselines/burnlens-baseline-v0.1.0/"
+                "BASELINE-EVALUATION-2026-001.html"
+            ),
+        )
         limitations = " ".join(self.report["limitations"]).lower()
         for phrase in (
             "not independent ground truth",
@@ -93,6 +114,8 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.assertIn('<link rel="icon" href="data:,">', html)
             self.assertIn("@media(max-width:430px)", html)
             self.assertIn("@media(prefers-reduced-motion:reduce)", html)
+            for image_target in re.findall(r'<img src="([^"]+)"', html):
+                self.assertTrue(image_target.endswith(".png"), image_target)
             self.assertEqual(payload["outputs"][0]["path"], f"{REPORT_ID}.html")
             serialized = (html + json.dumps(payload)).lower()
             for forbidden in (

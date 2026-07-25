@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Any
 
 
-REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-002"
-REPORT_VERSION = "portfolio-reviewer-experience-v0.3.0"
+REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-003"
+REPORT_VERSION = "portfolio-reviewer-experience-v0.3.1"
 SOFTWARE_VERSION = "0.52.0"
 TASK_ISSUE = 562
 
@@ -129,6 +129,15 @@ def _validate_bound_inputs(repository_root: Path) -> dict[str, Path]:
             raise PortfolioReviewerExperienceError(f"bound input hash changed: {item.path}")
         resolved[item.path] = path
     return resolved
+
+
+def _bound_input_path(role: str) -> str:
+    matches = [item.path for item in BOUND_INPUTS if item.role == role]
+    if len(matches) != 1:
+        raise PortfolioReviewerExperienceError(
+            f"expected exactly one bound input for role {role!r}; found {len(matches)}"
+        )
+    return matches[0]
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -279,9 +288,11 @@ def build_report(
             "run_id": readiness["run_id"],
             "git_source_commit": readiness["git_source_commit"],
             "software_version": SOFTWARE_VERSION,
-            "detail_path": BOUND_INPUTS[1].path,
-            "preview_path": BOUND_INPUTS[2].path,
-            "baseline_detail_path": BOUND_INPUTS[6].path,
+            "detail_path": _bound_input_path("model-readiness semantic report"),
+            "preview_path": _bound_input_path("model-readiness visual evidence"),
+            "baseline_detail_path": _bound_input_path(
+                "selected baseline semantic report"
+            ),
         },
         "retained_failure": {
             "title": "Petes Lake stops before candidate generation",
@@ -290,8 +301,10 @@ def build_report(
             "terminal_run_id": "BL-2026-07-22-petes-lake-nwi-context-r003",
             "git_checkpoint": "52310531ad0b8e6d07800fc752f7bf65b5fdea9a",
             "software_version": "0.45.0",
-            "detail_path": BOUND_INPUTS[4].path,
-            "preview_path": BOUND_INPUTS[3].path,
+            "detail_path": _bound_input_path("verified material-defer decision"),
+            "preview_path": _bound_input_path(
+                "retained snow-dominated failure preview"
+            ),
         },
         "source_roles": [
             "Sentinel-2 supplies optical evidence under recorded Copernicus attribution.",

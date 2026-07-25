@@ -536,7 +536,7 @@ This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
 
 P2O5-T03 updates that repository-owned path without rewriting the verified
-historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-002.html)
+historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-003.html)
 binds the accepted dataset, whole-event split, baseline, and model-readiness
 evidence while keeping model version null and the retained Petes Lake failure
 visible. It is the current Phase Two handoff, not a trained-model result or a
