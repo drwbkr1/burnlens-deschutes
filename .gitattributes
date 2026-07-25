@@ -330,3 +330,12 @@ records/phase-two/manifests/WHOLE-EVENT-SPLIT-RANKING-2026-001.json text eol=lf
 records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-091.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-085.md text eol=lf
+
+# P2O5-T03 U03 exact native-grid dataset materialization.
+burnlens/dataset_materialization.py text eol=lf
+burnlens/build_dataset.py text eol=lf
+tests/test_dataset_materialization.py text eol=lf
+samples/datasets/burnlens-dataset-v0.1.0/*.json text eol=lf
+samples/datasets/burnlens-dataset-v0.1.0/**/*.npy -text
+records/phase-two/prechecks/PRECHECK-2026-092.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-086.md text eol=lf
