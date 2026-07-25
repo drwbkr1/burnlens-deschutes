@@ -1,0 +1,181 @@
+{
+  "protocol_version": "burnlens-baseline-preregistration-v0.1.0",
+  "protocol_id": "BASELINE-PREREGISTRATION-2026-001",
+  "generated_at_utc": "2026-07-25T20:12:09Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u05-preregistration-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U05",
+  "git_source_commit": "b4720cabd26adf77859a4e0024428aa80fe9a119",
+  "software_version": "0.51.0",
+  "dataset_id": "burnlens-dataset-v0.1.0",
+  "split_id": "burnlens-whole-event-split-v0.1.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "inputs": {
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "whole_event_split": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "train_normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "primary_source_record": {
+      "path": "records/phase-two/sources/BASELINE-PRIMARY-SOURCES-2026-001.json",
+      "bytes": 5813,
+      "sha256": "88a3ac0bb98890e9a5c779b45223a3e9079b8fc2faa94c6f50f3a9560d43972b"
+    }
+  },
+  "role_rosters": {
+    "train": [
+      "train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64",
+      "train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64",
+      "train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64",
+      "train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64"
+    ],
+    "validation": [
+      "validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64",
+      "validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64",
+      "validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64",
+      "validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64"
+    ],
+    "test": [
+      "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "test--event-windigo-2022--WDP-001--r180c151h64w64",
+      "test--event-windigo-2022--WDP-002--r103c393h64w64"
+    ]
+  },
+  "channel_contract": {
+    "order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "units": "unitless bottom-of-atmosphere reflectance",
+    "local_resampling": "none"
+  },
+  "families": [
+    {
+      "family_id": "rbr-threshold",
+      "eligible_for_selection": true,
+      "score": "dNBR / (prefire_NBR + 1.001)",
+      "prediction": "burned when score >= fitted threshold",
+      "source_ids": [
+        "burn-severity-portal-glossary",
+        "parks-dillon-miller-2014-rbr"
+      ]
+    },
+    {
+      "family_id": "dnbr-threshold",
+      "eligible_for_selection": true,
+      "score": "prefire_NBR - postfire_NBR",
+      "prediction": "burned when score >= fitted threshold",
+      "source_ids": [
+        "burn-severity-portal-glossary",
+        "mtbs-mapping-method"
+      ]
+    },
+    {
+      "family_id": "dndvi-threshold",
+      "eligible_for_selection": true,
+      "score": "prefire_NDVI - postfire_NDVI",
+      "prediction": "burned when score >= fitted threshold",
+      "source_ids": [
+        "burn-severity-portal-glossary"
+      ]
+    },
+    {
+      "family_id": "constant-background",
+      "eligible_for_selection": true,
+      "score": "none",
+      "prediction": "background for every metric-mask pixel",
+      "source_ids": []
+    },
+    {
+      "family_id": "constant-burned",
+      "eligible_for_selection": true,
+      "score": "none",
+      "prediction": "burned for every metric-mask pixel",
+      "source_ids": []
+    }
+  ],
+  "excluded_families": [
+    {
+      "family_id": "rdnbr-threshold",
+      "reason": "Published scale-dependent denominator is singular at prefire NBR zero; no new epsilon or exclusion is permitted."
+    },
+    {
+      "family_id": "learned-classifier",
+      "reason": "U05 is restricted to non-model baselines."
+    }
+  ],
+  "fit_contract": {
+    "threshold_source": "training core pixels only",
+    "candidate_thresholds": "midpoints between sorted unique finite training-core scores",
+    "prediction_comparator": "score >= threshold",
+    "training_objective_order": [
+      "maximize event-class macro Dice",
+      "maximize event-class macro IoU",
+      "maximize worst-event macro Dice",
+      "minimize absolute burned-count error",
+      "prefer higher threshold"
+    ],
+    "validation_family_selection_order": [
+      "maximize event-class macro Dice",
+      "maximize event-class macro IoU",
+      "maximize worst-event macro Dice",
+      "maximize fixed-method training event-class macro Dice",
+      "prefer family order rbr, dnbr, dndvi, constant-background, constant-burned"
+    ]
+  },
+  "metric_contract": {
+    "mask": "loss_mask only; state 0 background and 1 burned",
+    "primary": [
+      "event-class macro Dice",
+      "event-class macro IoU"
+    ],
+    "required_detail": [
+      "per-event and per-class confusion counts",
+      "per-event and per-class Dice and IoU",
+      "pooled core-only class Dice and IoU",
+      "exact denominators"
+    ],
+    "uncertainty": "report the exact two-test-event range; no confidence interval or population inference is permitted"
+  },
+  "test_open_contract": {
+    "analytical_open_count_before": 0,
+    "selection_must_be_committed_before_open": true,
+    "open_count_authorized": 1,
+    "evaluate_all_frozen_families_in_one_process": true,
+    "selection_after_test": "prohibited",
+    "test_tuning": "prohibited",
+    "test_render_before_open": "prohibited"
+  },
+  "claims": {
+    "prototype_labels_only": true,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "operational_or_emergency_use": false
+  },
+  "boundaries": {
+    "test_pixels_read": false,
+    "threshold_fitted": false,
+    "baseline_selected": false,
+    "metric_result_created": false,
+    "model_created": false,
+    "training_authorized": false
+  },
+  "next_dependency": "fit thresholds on train and select family on validation"
+}
