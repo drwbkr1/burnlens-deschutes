@@ -618,7 +618,7 @@ def render_html(
 main{{max-width:1120px;margin:auto;padding:28px}}h1{{font-size:clamp(2rem,6vw,4.5rem);line-height:.95;margin:.25rem 0 1rem}}
 h2{{margin-top:0}}.eyebrow{{font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}}
 .grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}}
-.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}}
+.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0;overflow-wrap:anywhere}}
 .decision{{border-left:8px solid var(--green)}}.metric{{font-size:2rem;font-weight:850}}.muted{{color:var(--muted)}}
 .pass{{display:inline-block;background:#dcefe6;color:#104a39;border-radius:999px;padding:.1rem .55rem;font-weight:800}}
 .table-wrap{{overflow-x:auto}}table{{width:100%;border-collapse:collapse;min-width:720px}}th,td{{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}}

@@ -380,5 +380,9 @@ records/phase-two/readiness/MODEL-READINESS-DECISION-2026-001.json text eol=lf
 records/phase-two/manifests/BOUNDED-UNET-TRAINING-CONTRACT-2026-001.json text eol=lf
 samples/qa/phase-two/model-readiness-v0.1.0/*.html text eol=lf
 samples/qa/phase-two/model-readiness-v0.1.0/*.png -text
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.png -text
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.md text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-095.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-089.md text eol=lf

@@ -1,0 +1,229 @@
+{
+  "training_contract_version": "burnlens-bounded-unet-training-contract-v0.1.0",
+  "training_contract_id": "BOUNDED-UNET-TRAINING-CONTRACT-2026-001",
+  "generated_at_utc": "2026-07-25T20:48:15Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u06-readiness-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U06",
+  "git_source_commit": "28c456b5ae7a84f3438f1cc5a1b178d31e6555ab",
+  "software_version_at_decision": "0.51.0",
+  "authorization": {
+    "decision": "AUTHORIZE_BOUNDED_UNET",
+    "scope": "one rejection-first CPU-only U-Net training/evaluation milestone",
+    "model_code_authorized_after_verified_u07_release": true,
+    "training_authorized_after_verified_u07_release": true,
+    "architecture_search_authorized": false,
+    "hyperparameter_search_authorized": false,
+    "test_tuning_authorized": false,
+    "deployment_authorized": false,
+    "claim_of_model_value_authorized": false
+  },
+  "exact_inputs": {
+    "dataset_id": "DATASET-2026-001",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "split_id": "WHOLE-EVENT-SPLIT-2026-001",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "split_manifest": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "normalization_id": "TRAIN-NORMALIZATION-2026-001",
+    "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "baseline_evaluation": {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    },
+    "baseline_family": "rbr-threshold",
+    "baseline_threshold": 0.041043221950531006
+  },
+  "data_contract": {
+    "input_channels": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "input_channel_count": 6,
+    "input_shape": [
+      6,
+      64,
+      64
+    ],
+    "input_dtype": "float32",
+    "source_resolution_m": 20,
+    "local_resampling": "none",
+    "normalization": "frozen per-channel train-only mean/std",
+    "target_shape": [
+      1,
+      64,
+      64
+    ],
+    "target_classes": {
+      "background": 0,
+      "burned": 1
+    },
+    "excluded_states": {
+      "unknown": 2,
+      "nodata": 255
+    },
+    "loss_and_metric_mask": "exact dataset loss mask; unknown, nodata, and invalid pixels never contribute",
+    "train_patch_count": 4,
+    "validation_patch_count": 4,
+    "test_patch_count": 4,
+    "batch_order": "canonical manifest order",
+    "augmentation": "none",
+    "shuffle": false
+  },
+  "architecture": {
+    "family": "U-Net-style binary semantic segmentation",
+    "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+    "encoder_channels": [
+      16,
+      32
+    ],
+    "bottleneck_channels": 64,
+    "decoder_channels": [
+      32,
+      16
+    ],
+    "convolution_blocks": "two 3x3 stride-1 padding-1 convolutions with ReLU per block",
+    "downsampling": "2x2 max pooling",
+    "upsampling": "2x2 transposed convolution with skip concatenation",
+    "output_head": "1x1 convolution to one logit channel",
+    "batch_normalization": false,
+    "dropout": false,
+    "pretrained_weights": false,
+    "model_count": 1
+  },
+  "optimization": {
+    "framework": "torch==2.13.0",
+    "python": "CPython 3.12.10",
+    "device": "cpu",
+    "dtype": "float32",
+    "seed": 20260725,
+    "seed_python": true,
+    "seed_numpy": true,
+    "seed_torch": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "loss": "BCEWithLogitsLoss(reduction='none')",
+    "loss_reduction": "mean over exact loss-mask pixels only",
+    "positive_class_weight": null,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 4,
+    "maximum_epochs": 200,
+    "early_stopping_patience": 25,
+    "early_stopping_min_delta": 1e-06,
+    "gradient_clipping": null,
+    "mixed_precision": false
+  },
+  "checkpoint_selection": {
+    "probability_threshold": 0.5,
+    "primary": "maximize validation event-class macro Dice",
+    "tie_break_1": "maximize validation event-class macro IoU",
+    "tie_break_2": "minimize validation masked BCE",
+    "tie_break_3": "earliest epoch",
+    "test_access": "one model-evaluation opening only after code, environment, weights checkpoint, and selection are frozen",
+    "post_test_changes": "none; any change requires a new model version and leaves the original result immutable"
+  },
+  "evaluation": {
+    "primary_metrics": [
+      "event-class macro Dice",
+      "event-class macro IoU",
+      "worst-event macro Dice"
+    ],
+    "required_breakdowns": [
+      "event",
+      "class",
+      "support",
+      "TP",
+      "FP",
+      "FN",
+      "Dice denominator",
+      "IoU denominator"
+    ],
+    "strongest_baseline": {
+      "family": "rbr-threshold",
+      "test_event_class_macro_dice": 1.0,
+      "test_event_class_macro_iou": 1.0,
+      "test_core_pixels": 89
+    },
+    "analytical_winner_rule": "The model must exceed the RBR baseline on event-class macro Dice and not be lower on event-class macro IoU or worst-event macro Dice. Because the baseline is already 1.0 on all three, the model cannot become the analytical winner on this frozen test metric.",
+    "matching_rule": "Matching the baseline is a valid trained-model result but does not establish added value, generalization, or model superiority.",
+    "rejection_rule": "A lower, invalid, contaminated, nonfinite, or irreproducible result rejects the model as the analytical winner; the baseline remains the accepted method."
+  },
+  "reproducibility_gates": {
+    "dependency_gate": "add torch 2.13.0 to the appropriate profile, resolve with setuptools 82.0.0, lock, uv sync --locked, pip check, audit, and isolated setup smoke test",
+    "environment_capture": [
+      "uv.lock SHA-256",
+      "Python version",
+      "torch version and build",
+      "CPU identity",
+      "thread settings",
+      "torch configuration"
+    ],
+    "finite_checks": [
+      "normalized inputs",
+      "logits",
+      "unreduced loss",
+      "masked loss",
+      "gradients",
+      "weights",
+      "probabilities"
+    ],
+    "replay": "repeat the complete training and evaluation on the same locked CPU environment; require identical selected epoch, weights SHA-256, predictions, and metrics",
+    "cross_platform_claim": false
+  },
+  "stop_conditions": [
+    "locked dependency resolution or isolated setup fails",
+    "exact dataset, split, normalization, or baseline binding drifts",
+    "any train/validation/test event or patch crosses roles",
+    "unknown, nodata, or invalid pixels enter loss or metrics",
+    "test data influences architecture, hyperparameters, stopping, or checkpoint selection",
+    "any required tensor, loss, gradient, weight, probability, or metric is nonfinite",
+    "same-environment replay differs",
+    "a result cannot be rendered and inspected",
+    "a claim exceeds the evidence or established use boundaries"
+  ],
+  "required_outputs": [
+    "locked environment and dependency evidence",
+    "architecture/config manifest",
+    "training history and selected-checkpoint record",
+    "weights with exact byte count and SHA-256",
+    "model card",
+    "train/validation diagnostics",
+    "single frozen-test evaluation against RBR",
+    "event/class denominator table",
+    "inspectable error and prediction renders",
+    "same-environment exact replay",
+    "explicit model-accepted or model-rejected decision"
+  ],
+  "limitations": [
+    "Owner-approved prototype evidence, not independent ground truth, field validation, generalization, official information, or operational guidance.",
+    "Only four train patches and two train events exist.",
+    "The 89-core test set is selected prototype evidence, not natural prevalence.",
+    "Candidate construction used optical and official-reference evidence and may favor spectral separability.",
+    "The RBR baseline already reaches the metric ceiling on the frozen test cores.",
+    "The experiment can satisfy the requirement to build, train, and evaluate a U-Net while still rejecting it as the analytical winner."
+  ],
+  "next_dependency": "P2O5-T03-U07 verified milestone release, followed by a separate issue-backed Phase Three training/evaluation checkpoint"
+}
