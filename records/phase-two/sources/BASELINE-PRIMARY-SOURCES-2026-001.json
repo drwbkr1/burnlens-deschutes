@@ -1,0 +1,120 @@
+{
+  "source_record_version": "burnlens-baseline-primary-sources-v0.1.0",
+  "source_record_id": "BASELINE-PRIMARY-SOURCES-2026-001",
+  "unit_id": "P2O5-T03-U05",
+  "researched_at_utc": "2026-07-25T20:06:33Z",
+  "purpose": "Justify transparent non-model burn-scar baseline families compatible with the exact BurnLens dataset contract.",
+  "sources": [
+    {
+      "source_id": "burn-severity-portal-glossary",
+      "authority": "U.S. Geological Survey Burn Severity Portal",
+      "url": "https://burnseverity.cr.usgs.gov/glossary",
+      "accessed_at_utc": "2026-07-25T20:06:33Z",
+      "role": "official_formula_and_use_context",
+      "findings": [
+        "NBR contrasts near infrared and shortwave infrared response.",
+        "dNBR is prefire NBR minus postfire NBR and may discriminate burned from unburned areas.",
+        "dNDVI is prefire NDVI minus postfire NDVI and may also discriminate burned from unburned areas.",
+        "RBR is dNBR divided by prefire NBR plus 1.001.",
+        "RdNBR divides dNBR by the square root of absolute scaled prefire NBR."
+      ],
+      "boundary": "Official formula and reference role only; it does not supply BurnLens thresholds, labels, accuracy, or operational validation."
+    },
+    {
+      "source_id": "mtbs-mapping-method",
+      "authority": "Monitoring Trends in Burn Severity",
+      "url": "https://www.mtbs.gov/baer",
+      "accessed_at_utc": "2026-07-25T20:06:33Z",
+      "role": "official_method_and_limitations",
+      "findings": [
+        "MTBS produces NBR and dNBR imagery and thematic classes from prefire and postfire satellite observations.",
+        "Scene timing, cloud, smoke, active fire, terrain shadow, and ecological timing affect mapping fitness.",
+        "BAER analysts may adjust BARC products with field observations."
+      ],
+      "boundary": "MTBS and BAER methods justify a spectral-index baseline, not direct transfer of program classes or field-validation claims."
+    },
+    {
+      "source_id": "mtbs-threshold-faq",
+      "authority": "Monitoring Trends in Burn Severity",
+      "url": "https://www.mtbs.gov/index.php/faqs",
+      "accessed_at_utc": "2026-07-25T20:06:33Z",
+      "role": "official_threshold_caution",
+      "findings": [
+        "Thresholding continuous burn-severity indices is a substantive procedure.",
+        "Thresholds vary by fire and ecological setting.",
+        "Applied MTBS thresholds are published in product metadata."
+      ],
+      "boundary": "BurnLens must fit its own prototype threshold without presenting it as a universal or MTBS threshold."
+    },
+    {
+      "source_id": "parks-dillon-miller-2014-rbr",
+      "authority": "USDA Forest Service Rocky Mountain Research Station",
+      "url": "https://research.fs.usda.gov/treesearch/46610",
+      "doi": "10.3390/rs6031827",
+      "accessed_at_utc": "2026-07-25T20:06:33Z",
+      "role": "primary_research_family_justification",
+      "findings": [
+        "The study proposes RBR as an alternative to dNBR and RdNBR.",
+        "It compares all three indices across 18 western U.S. fires using Landsat and field-based burn-severity measurements.",
+        "The reported advantage is study-specific and does not transfer as a BurnLens performance claim."
+      ],
+      "boundary": "RBR is an eligible family; the paper's Landsat severity results are not BurnLens metrics or validation."
+    },
+    {
+      "source_id": "sentinel-2-user-handbook",
+      "authority": "European Space Agency",
+      "url": "https://sentinels.copernicus.eu/documents/247904/685211/Sentinel-2_User_Handbook",
+      "accessed_at_utc": "2026-07-25T20:06:33Z",
+      "role": "official_sensor_band_identity",
+      "findings": [
+        "Sentinel-2 B8A is a near-infrared band centered near 865 nm at 20 m instrument resolution.",
+        "Sentinel-2 B12 is a shortwave-infrared band centered near 2190 nm at 20 m instrument resolution.",
+        "Sentinel-2 B04 is a red band centered near 665 nm at 10 m instrument resolution."
+      ],
+      "boundary": "BurnLens uses the provider-produced Level-2A R20m B04 member already frozen in the dataset and performs no local resampling."
+    }
+  ],
+  "family_decisions": [
+    {
+      "family": "dnbr-threshold",
+      "decision": "include",
+      "reason": "Officially used pre/post NBR change family; exact B8A and B12 channels exist."
+    },
+    {
+      "family": "rbr-threshold",
+      "decision": "include",
+      "reason": "Primary research and the official glossary support RBR; exact required channels exist and the published 1.001 denominator is fully specified."
+    },
+    {
+      "family": "dndvi-threshold",
+      "decision": "include",
+      "reason": "Official glossary recognizes dNDVI for burned/unburned discrimination; exact B04 and B8A channels exist."
+    },
+    {
+      "family": "rdnbr-threshold",
+      "decision": "exclude",
+      "reason": "The published scale-dependent denominator is singular at prefire NBR zero. Adding an epsilon or exclusion rule would introduce an unjustified prototype choice."
+    },
+    {
+      "family": "constant-background",
+      "decision": "include_reference",
+      "reason": "Required non-informative sanity reference for class imbalance and value-added interpretation."
+    },
+    {
+      "family": "constant-burned",
+      "decision": "include_reference",
+      "reason": "Required complementary non-informative sanity reference."
+    }
+  ],
+  "rights_and_access": {
+    "access": "Public official pages and primary-publication metadata were read without authentication.",
+    "retained_third_party_bytes": 0,
+    "quoted_long_passages": false,
+    "downstream_role": "method justification and caution only"
+  },
+  "stop_conditions": {
+    "licensing_or_terms_ambiguity": false,
+    "paid_service_or_secret": false,
+    "private_data": false
+  }
+}

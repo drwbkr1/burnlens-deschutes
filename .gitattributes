@@ -353,3 +353,16 @@ samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.html text eol=lf
 samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.png -text
 records/phase-two/prechecks/PRECHECK-2026-093.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-087.md text eol=lf
+
+# P2O5-T03 U05 baseline preregistration, selection, and evaluation.
+burnlens/baseline_evaluation.py text eol=lf
+burnlens/run_baseline_evaluation.py text eol=lf
+tests/test_baseline_evaluation.py text eol=lf
+records/phase-two/sources/BASELINE-PRIMARY-SOURCES-2026-001.json text eol=lf
+records/phase-two/manifests/BASELINE-PREREGISTRATION-2026-001.json text eol=lf
+records/phase-two/manifests/BASELINE-SELECTION-2026-001.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.html text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.png -text
+records/phase-two/prechecks/PRECHECK-2026-094.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-088.md text eol=lf
