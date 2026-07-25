@@ -1,0 +1,58 @@
+{
+  "failure_record_version": "burnlens-retained-dataset-qa-failure-v0.1.0",
+  "failure_id": "P2O5-T03-U04-R002-NARROW-RENDER-OVERFLOW",
+  "unit_id": "P2O5-T03-U04",
+  "run_id": "BL-2026-07-25-p2o5-t03-u04-dataset-qa-r002",
+  "generated_at_utc": "2026-07-25T19:36:35Z",
+  "disposition": "RETAINED_FAILED_NOT_PROMOTED",
+  "failure_class": "NARROW_VIEWPORT_HORIZONTAL_OVERFLOW",
+  "reason": "The exact desktop report rendered correctly, but both 650-pixel evidence tables expanded the document to 764 pixels at the required 390 by 844 viewport.",
+  "git_source_commit": "dcb2afc6d08e6faeb81703762aeb3fa988b16d7f",
+  "render_evidence": {
+    "desktop_1280_by_720": {
+      "decision": "PASS",
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "image_natural_width": 1800,
+      "image_natural_height": 1240,
+      "console_errors_or_warnings": 0
+    },
+    "narrow_390_by_844": {
+      "decision": "FAIL",
+      "document_client_width": 375,
+      "document_scroll_width": 764,
+      "table_width": 650,
+      "console_errors_or_warnings": 0
+    }
+  },
+  "promotion": {
+    "dataset_qa_passed": false,
+    "normalization_promoted": false,
+    "baseline_preregistration_authorized": false,
+    "test_analytical_open_count": 0,
+    "training_authorized": false
+  },
+  "retained_outputs": [
+    {
+      "path": "DATASET-QA-2026-001-r002-invalid.json",
+      "bytes": 5648,
+      "sha256": "f9208c025368558fe45292f430497b78ddf17b92aedcd4548809b25d4032caae"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r002-invalid.html",
+      "bytes": 4654,
+      "sha256": "6a37c8578a416878fc2d263e82888844d1b2331dc9b670264a9947a3408cd1bf"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r002-invalid.png",
+      "bytes": 281760,
+      "sha256": "c1f8fe50b326f2ae75fdd6babc4103eaf9599c6ea4ad3b04811954ab7a5becde"
+    },
+    {
+      "path": "TRAIN-NORMALIZATION-2026-001-r002-invalid.json",
+      "bytes": 2694,
+      "sha256": "62d4d406b8c4514078ed5ebbef969cd19070b183c77c877d3b66f909762d265d"
+    }
+  ],
+  "remediation": "The narrow breakpoint removes the table minimum width, enables fixed layout and cell wrapping, and clips page-level horizontal overflow while preserving table containment."
+}

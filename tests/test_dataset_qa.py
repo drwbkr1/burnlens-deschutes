@@ -83,6 +83,8 @@ class DatasetQaTests(unittest.TestCase):
         html = render_html(self.report, "DATASET-QA-2026-001.png")
         self.assertIn("test analysis remains sealed", html)
         self.assertIn("Training remains unauthorized", html)
+        self.assertIn("table{min-width:0;table-layout:fixed}", html)
+        self.assertIn("body{overflow-x:hidden}", html)
         self.assertNotIn("ground truth achieved", html.lower())
 
     def test_runner_rejects_non_head_or_abbreviated_commit(self) -> None:
