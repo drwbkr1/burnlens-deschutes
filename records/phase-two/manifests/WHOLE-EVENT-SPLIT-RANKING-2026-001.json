@@ -1,0 +1,5997 @@
+{
+  "ranking_version": "burnlens-whole-event-split-ranking-v0.1.0",
+  "ranking_id": "WHOLE-EVENT-SPLIT-RANKING-2026-001",
+  "generated_at_utc": "2026-07-25T18:42:15.175Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u02-whole-event-split-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U02",
+  "git_source_commit": "c719bf79b4c01cd4016c33649c17f26f9d4ada97",
+  "software_version": "0.51.0",
+  "inputs": {
+    "dataset_contract": {
+      "path": "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+      "bytes": 29653,
+      "sha256": "f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f"
+    },
+    "dataset_candidate": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    }
+  },
+  "ranking_predeclaration": {
+    "criteria_in_order": [
+      "source_regime_role_deviation_ascending",
+      "transfer_status_role_deviation_ascending",
+      "train_core_pixels_descending",
+      "validation_test_core_pixel_difference_ascending",
+      "test_minimum_event_year_descending",
+      "test_event_year_sum_descending",
+      "train_event_year_span_ascending",
+      "validation_event_year_span_ascending",
+      "canonical_role_event_ids_ascending"
+    ],
+    "direction_note": "Every criterion is applied in the declared order; the final canonical role/event string is only a deterministic tie-break.",
+    "pixel_values_opened": false,
+    "test_pixels_opened": false,
+    "patches_created": false
+  },
+  "assignment_inventory": {
+    "total_assignments": 90,
+    "valid_assignments": 54,
+    "rejected_assignments": 36,
+    "rejection_reason_counts": {
+      "test_lacks_never_tuned_transfer_event": 18,
+      "validation_lacks_never_tuned_transfer_event": 18
+    }
+  },
+  "ranked_valid_assignments": [
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 1
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 2
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 5,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 3
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 4
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 5,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 5
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 6
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 7
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 8
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-ward-creek-2019\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 9
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 10
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4037,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-ward-creek-2019\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 11
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 109,
+        "validation_test_core_pixel_difference": 0,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4037,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 12
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 13
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 14
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 15
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 5,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 16
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 17
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 5,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 18
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 19
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 20
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 21
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 22
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 5,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"validation\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 23
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-ward-creek-2019\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 24
+    },
+    {
+      "roles": {
+        "train": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 25
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 5,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 26
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 5,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"validation\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 27
+    },
+    {
+      "roles": {
+        "train": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 28
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 4,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"validation\":[\"event-ward-creek-2019\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 29
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 5,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 30
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 31
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 32
+    },
+    {
+      "roles": {
+        "train": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"validation\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 33
+    },
+    {
+      "roles": {
+        "train": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 34
+    },
+    {
+      "roles": {
+        "train": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4037,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"validation\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 35
+    },
+    {
+      "roles": {
+        "train": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 0,
+        "transfer_status_role_deviation": 0,
+        "train_core_pixels": 89,
+        "validation_test_core_pixel_difference": 20,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4037,
+        "train_event_year_span": 3,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 36
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2021,
+        "test_event_year_sum": 4043,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 37
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2021,
+        "test_event_year_sum": 4043,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 38
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4042,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 39
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4042,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 40
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-ward-creek-2019\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 41
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 5,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 42
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ],
+        "test": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-ward-creek-2019",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2019,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 168,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 43
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-ward-creek-2019\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2021,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 44
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-tepee-1144-ne-2018"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-ward-creek-2019"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2019,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-ward-creek-2019\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2017,
+            2018
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 40,
+            "burned": 58
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2020,
+            2019
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 39
+          },
+          "unknown_ring_pixels": 153,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 45
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ],
+        "test": [
+          "event-mckay-1035-ne-2017",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-mckay-1035-ne-2017\",\"event-windigo-2022\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2017,
+            2022
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 182,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 46
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2021,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 178,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 47
+    },
+    {
+      "roles": {
+        "train": [
+          "event-tepee-1144-ne-2018",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-mckay-1035-ne-2017"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 98,
+        "validation_test_core_pixel_difference": 11,
+        "test_minimum_event_year": 2017,
+        "test_event_year_sum": 4037,
+        "train_event_year_span": 1,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-mckay-1035-ne-2017\"],\"train\":[\"event-tepee-1144-ne-2018\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2018,
+            2019
+          ],
+          "core_pixels": 98,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 40
+          },
+          "unknown_ring_pixels": 164,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-mckay-1035-ne-2017"
+          ],
+          "event_years": [
+            2020,
+            2017
+          ],
+          "core_pixels": 89,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 57
+          },
+          "unknown_ring_pixels": 167,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 48
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2021,
+        "test_event_year_sum": 4043,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 49
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4042,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 3,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 50
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2020,
+        "test_event_year_sum": 4041,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 4,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        }
+      },
+      "rank": 51
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-green-ridge-0684-cs-2020"
+        ],
+        "test": [
+          "event-tepee-1144-ne-2018",
+          "event-windigo-2022"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4040,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-tepee-1144-ne-2018\",\"event-windigo-2022\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-green-ridge-0684-cs-2020\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-green-ridge-0684-cs-2020"
+          ],
+          "event_years": [
+            2021,
+            2020
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-tepee-1144-ne-2018",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2018,
+            2022
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 52
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-green-ridge-0684-cs-2020",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-grandview-0558-od-2021",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4039,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 2,
+        "canonical_role_event_ids": "{\"test\":[\"event-grandview-0558-od-2021\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-green-ridge-0684-cs-2020\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2020,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 189,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2021,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 196,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 53
+    },
+    {
+      "roles": {
+        "train": [
+          "event-mckay-1035-ne-2017",
+          "event-ward-creek-2019"
+        ],
+        "validation": [
+          "event-grandview-0558-od-2021",
+          "event-windigo-2022"
+        ],
+        "test": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ]
+      },
+      "score_components": {
+        "source_regime_role_deviation": 4,
+        "transfer_status_role_deviation": 2,
+        "train_core_pixels": 78,
+        "validation_test_core_pixel_difference": 9,
+        "test_minimum_event_year": 2018,
+        "test_event_year_sum": 4038,
+        "train_event_year_span": 2,
+        "validation_event_year_span": 1,
+        "canonical_role_event_ids": "{\"test\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"train\":[\"event-mckay-1035-ne-2017\",\"event-ward-creek-2019\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-windigo-2022\"]}"
+      },
+      "role_summaries": {
+        "train": {
+          "event_group_ids": [
+            "event-mckay-1035-ne-2017",
+            "event-ward-creek-2019"
+          ],
+          "event_years": [
+            2017,
+            2019
+          ],
+          "core_pixels": 78,
+          "class_core_pixels": {
+            "background": 32,
+            "burned": 46
+          },
+          "unknown_ring_pixels": 146,
+          "source_regime_counts": {
+            "sentinel2-mtbs-current-v1": 2
+          },
+          "source_programs": [
+            "COPERNICUS_SENTINEL_2",
+            "MTBS"
+          ],
+          "never_tuned_transfer_events": 0
+        },
+        "validation": {
+          "event_group_ids": [
+            "event-grandview-0558-od-2021",
+            "event-windigo-2022"
+          ],
+          "event_years": [
+            2021,
+            2022
+          ],
+          "core_pixels": 100,
+          "class_core_pixels": {
+            "background": 50,
+            "burned": 50
+          },
+          "unknown_ring_pixels": 200,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 2
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 2
+        },
+        "test": {
+          "event_group_ids": [
+            "event-green-ridge-0684-cs-2020",
+            "event-tepee-1144-ne-2018"
+          ],
+          "event_years": [
+            2020,
+            2018
+          ],
+          "core_pixels": 109,
+          "class_core_pixels": {
+            "background": 58,
+            "burned": 51
+          },
+          "unknown_ring_pixels": 185,
+          "source_regime_counts": {
+            "sentinel2-baer-mtbs-ravg-current-v1": 1,
+            "sentinel2-mtbs-current-v1": 1
+          },
+          "source_programs": [
+            "BAER",
+            "COPERNICUS_SENTINEL_2",
+            "MTBS",
+            "RAVG"
+          ],
+          "never_tuned_transfer_events": 1
+        }
+      },
+      "rank": 54
+    }
+  ],
+  "selected_rank": 1,
+  "selected_roles": {
+    "train": [
+      "event-green-ridge-0684-cs-2020",
+      "event-tepee-1144-ne-2018"
+    ],
+    "validation": [
+      "event-grandview-0558-od-2021",
+      "event-mckay-1035-ne-2017"
+    ],
+    "test": [
+      "event-ward-creek-2019",
+      "event-windigo-2022"
+    ]
+  },
+  "boundaries": {
+    "dataset_created": false,
+    "split_locked": true,
+    "patches_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "test_pixels_opened": false,
+    "training_authorized": false
+  }
+}

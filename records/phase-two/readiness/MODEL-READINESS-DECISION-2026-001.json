@@ -1,0 +1,36 @@
+{
+  "decision_version": "burnlens-model-readiness-decision-v0.1.0",
+  "decision_id": "MODEL-READINESS-DECISION-2026-001",
+  "generated_at_utc": "2026-07-25T20:52:03Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u06-readiness-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U06",
+  "git_source_commit": "4caf37e52591933c2c03ae050926d5123e47ed2f",
+  "decision": "AUTHORIZE_BOUNDED_UNET",
+  "qualifier": "REJECTION_FIRST_SINGLE_MODEL_EXPERIMENT",
+  "training_authorized": true,
+  "authorization_effective_after": "P2O5-T03-U07 milestone release is merged, tagged, and verified",
+  "training_contract_id": "BOUNDED-UNET-TRAINING-CONTRACT-2026-001",
+  "rationale": [
+    "All exact Phase Two dataset, split, QA, normalization, and baseline gates pass.",
+    "The selected U-Net family fits the established binary mask-first CV task.",
+    "A compatible CPU-only PyTorch resolution exists within the locked Python and setuptools constraints.",
+    "The experiment is bounded to one model and can honestly reject the model if it does not add value.",
+    "The strongest RBR baseline already reaches 1.0 on every frozen primary test metric, so the model cannot be claimed as the analytical winner on this evidence."
+  ],
+  "claims": {
+    "phase_two_package_ready_for_bounded_training": true,
+    "model_exists": false,
+    "model_trained": false,
+    "model_evaluated": false,
+    "model_adds_value": false,
+    "generalization": false,
+    "independent_validation": false,
+    "field_validation": false,
+    "operational_readiness": false,
+    "final_submission_ready": false
+  },
+  "fallback_if_phase_three_fails": "retain RBR as the accepted analytical method, preserve the trained U-Net as an honestly rejected experiment if its run is valid, and do not advance model-value claims",
+  "next_dependency": "P2O5-T03-U07 verified milestone release, followed by a separate issue-backed Phase Three training/evaluation checkpoint"
+}

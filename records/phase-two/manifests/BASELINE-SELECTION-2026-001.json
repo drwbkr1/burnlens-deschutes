@@ -1,0 +1,1227 @@
+{
+  "selection_version": "burnlens-baseline-selection-v0.1.0",
+  "selection_id": "BASELINE-SELECTION-2026-001",
+  "generated_at_utc": "2026-07-25T20:12:56Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u05-selection-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U05",
+  "git_source_commit": "f48ef98e16841d8e255fb1ba96a2a5cf806361a1",
+  "software_version": "0.51.0",
+  "dataset_id": "burnlens-dataset-v0.1.0",
+  "split_id": "burnlens-whole-event-split-v0.1.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "inputs": {
+    "protocol": {
+      "path": "records/phase-two/manifests/BASELINE-PREREGISTRATION-2026-001.json",
+      "bytes": 6301,
+      "sha256": "31eb08ae88ee0b4425dce8af3e47475e38a4d9adb9249af7381fc5d608799bb5"
+    },
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "whole_event_split": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "train_normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "primary_source_record": {
+      "path": "records/phase-two/sources/BASELINE-PRIMARY-SOURCES-2026-001.json",
+      "bytes": 5813,
+      "sha256": "88a3ac0bb98890e9a5c779b45223a3e9079b8fc2faa94c6f50f3a9560d43972b"
+    }
+  },
+  "attempted_families": [
+    {
+      "family_id": "rbr-threshold",
+      "candidate_threshold_count": 108,
+      "candidate_threshold_sha256": "4f38dbfaa0f3f00bac9c0ecc89cfd1744e997279ba85f7f6736467a82e79415f",
+      "chosen_threshold": 0.041043221950531006,
+      "training_metrics": {
+        "family_id": "rbr-threshold",
+        "threshold": 0.041043221950531006,
+        "event_count": 2,
+        "core_pixels": 109,
+        "true_burned_pixels": 51,
+        "predicted_burned_pixels": 51,
+        "event_class_macro_dice": 1.0,
+        "event_class_macro_iou": 1.0,
+        "worst_event_macro_dice": 1.0,
+        "event_macro_dice_range": [
+          1.0,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          1.0,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 58,
+            "predicted": 58,
+            "true_positive": 58,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 116,
+            "iou_denominator": 58,
+            "dice": 1.0,
+            "iou": 1.0
+          },
+          {
+            "class": "burned",
+            "support": 51,
+            "predicted": 51,
+            "true_positive": 51,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 102,
+            "iou_denominator": 51,
+            "dice": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-green-ridge-0684-cs-2020",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          },
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "core_pixels": 59,
+            "classes": [
+              {
+                "class": "background",
+                "support": 33,
+                "predicted": 33,
+                "true_positive": 33,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 66,
+                "iou_denominator": 33,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 26,
+                "predicted": 26,
+                "true_positive": 26,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 52,
+                "iou_denominator": 26,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      },
+      "fit_objective": [
+        1.0,
+        1.0,
+        1.0,
+        -0.0,
+        0.041043221950531006
+      ],
+      "validation_metrics": {
+        "family_id": "rbr-threshold",
+        "threshold": 0.041043221950531006,
+        "event_count": 2,
+        "core_pixels": 89,
+        "true_burned_pixels": 57,
+        "predicted_burned_pixels": 47,
+        "event_class_macro_dice": 0.8541666666666667,
+        "event_class_macro_iou": 0.7757757757757757,
+        "worst_event_macro_dice": 0.7083333333333334,
+        "event_macro_dice_range": [
+          0.7083333333333334,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          0.5515515515515516,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 32,
+            "predicted": 42,
+            "true_positive": 30,
+            "false_positive": 12,
+            "false_negative": 2,
+            "dice_denominator": 74,
+            "iou_denominator": 44,
+            "dice": 0.8108108108108109,
+            "iou": 0.6818181818181818
+          },
+          {
+            "class": "burned",
+            "support": 57,
+            "predicted": 47,
+            "true_positive": 45,
+            "false_positive": 2,
+            "false_negative": 12,
+            "dice_denominator": 104,
+            "iou_denominator": 59,
+            "dice": 0.8653846153846154,
+            "iou": 0.7627118644067796
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 35,
+                "true_positive": 23,
+                "false_positive": 12,
+                "false_negative": 2,
+                "dice_denominator": 60,
+                "iou_denominator": 37,
+                "dice": 0.7666666666666667,
+                "iou": 0.6216216216216216
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 15,
+                "true_positive": 13,
+                "false_positive": 2,
+                "false_negative": 12,
+                "dice_denominator": 40,
+                "iou_denominator": 27,
+                "dice": 0.65,
+                "iou": 0.48148148148148145
+              }
+            ],
+            "macro_dice": 0.7083333333333334,
+            "macro_iou": 0.5515515515515516
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 7,
+                "true_positive": 7,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 14,
+                "iou_denominator": 7,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 32,
+                "true_positive": 32,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 64,
+                "iou_denominator": 32,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "family_id": "dnbr-threshold",
+      "candidate_threshold_count": 108,
+      "candidate_threshold_sha256": "f79c57e618c2f961fcec1bd1b2ab32f730bd24f360c0e7eca489c9a3305a8b78",
+      "chosen_threshold": 0.05970039591193199,
+      "training_metrics": {
+        "family_id": "dnbr-threshold",
+        "threshold": 0.05970039591193199,
+        "event_count": 2,
+        "core_pixels": 109,
+        "true_burned_pixels": 51,
+        "predicted_burned_pixels": 51,
+        "event_class_macro_dice": 1.0,
+        "event_class_macro_iou": 1.0,
+        "worst_event_macro_dice": 1.0,
+        "event_macro_dice_range": [
+          1.0,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          1.0,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 58,
+            "predicted": 58,
+            "true_positive": 58,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 116,
+            "iou_denominator": 58,
+            "dice": 1.0,
+            "iou": 1.0
+          },
+          {
+            "class": "burned",
+            "support": 51,
+            "predicted": 51,
+            "true_positive": 51,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 102,
+            "iou_denominator": 51,
+            "dice": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-green-ridge-0684-cs-2020",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          },
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "core_pixels": 59,
+            "classes": [
+              {
+                "class": "background",
+                "support": 33,
+                "predicted": 33,
+                "true_positive": 33,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 66,
+                "iou_denominator": 33,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 26,
+                "predicted": 26,
+                "true_positive": 26,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 52,
+                "iou_denominator": 26,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      },
+      "fit_objective": [
+        1.0,
+        1.0,
+        1.0,
+        -0.0,
+        0.05970039591193199
+      ],
+      "validation_metrics": {
+        "family_id": "dnbr-threshold",
+        "threshold": 0.05970039591193199,
+        "event_count": 2,
+        "core_pixels": 89,
+        "true_burned_pixels": 57,
+        "predicted_burned_pixels": 33,
+        "event_class_macro_dice": 0.6621621621621622,
+        "event_class_macro_iou": 0.62,
+        "worst_event_macro_dice": 0.32432432432432434,
+        "event_macro_dice_range": [
+          0.32432432432432434,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          0.24,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 32,
+            "predicted": 56,
+            "true_positive": 31,
+            "false_positive": 25,
+            "false_negative": 1,
+            "dice_denominator": 88,
+            "iou_denominator": 57,
+            "dice": 0.7045454545454546,
+            "iou": 0.543859649122807
+          },
+          {
+            "class": "burned",
+            "support": 57,
+            "predicted": 33,
+            "true_positive": 32,
+            "false_positive": 1,
+            "false_negative": 25,
+            "dice_denominator": 90,
+            "iou_denominator": 58,
+            "dice": 0.7111111111111111,
+            "iou": 0.5517241379310345
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 49,
+                "true_positive": 24,
+                "false_positive": 25,
+                "false_negative": 1,
+                "dice_denominator": 74,
+                "iou_denominator": 50,
+                "dice": 0.6486486486486487,
+                "iou": 0.48
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 1,
+                "true_positive": 0,
+                "false_positive": 1,
+                "false_negative": 25,
+                "dice_denominator": 26,
+                "iou_denominator": 26,
+                "dice": 0.0,
+                "iou": 0.0
+              }
+            ],
+            "macro_dice": 0.32432432432432434,
+            "macro_iou": 0.24
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 7,
+                "true_positive": 7,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 14,
+                "iou_denominator": 7,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 32,
+                "true_positive": 32,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 64,
+                "iou_denominator": 32,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "family_id": "dndvi-threshold",
+      "candidate_threshold_count": 108,
+      "candidate_threshold_sha256": "9fc14a0d7409a3417d35846a5551610adcdf35d8f7b0dd88d1a6613e32878012",
+      "chosen_threshold": 0.033301085233688354,
+      "training_metrics": {
+        "family_id": "dndvi-threshold",
+        "threshold": 0.033301085233688354,
+        "event_count": 2,
+        "core_pixels": 109,
+        "true_burned_pixels": 51,
+        "predicted_burned_pixels": 51,
+        "event_class_macro_dice": 1.0,
+        "event_class_macro_iou": 1.0,
+        "worst_event_macro_dice": 1.0,
+        "event_macro_dice_range": [
+          1.0,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          1.0,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 58,
+            "predicted": 58,
+            "true_positive": 58,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 116,
+            "iou_denominator": 58,
+            "dice": 1.0,
+            "iou": 1.0
+          },
+          {
+            "class": "burned",
+            "support": 51,
+            "predicted": 51,
+            "true_positive": 51,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 102,
+            "iou_denominator": 51,
+            "dice": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-green-ridge-0684-cs-2020",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 25,
+                "true_positive": 25,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 50,
+                "iou_denominator": 25,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          },
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "core_pixels": 59,
+            "classes": [
+              {
+                "class": "background",
+                "support": 33,
+                "predicted": 33,
+                "true_positive": 33,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 66,
+                "iou_denominator": 33,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 26,
+                "predicted": 26,
+                "true_positive": 26,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 52,
+                "iou_denominator": 26,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      },
+      "fit_objective": [
+        1.0,
+        1.0,
+        1.0,
+        -0.0,
+        0.033301085233688354
+      ],
+      "validation_metrics": {
+        "family_id": "dndvi-threshold",
+        "threshold": 0.033301085233688354,
+        "event_count": 2,
+        "core_pixels": 89,
+        "true_burned_pixels": 57,
+        "predicted_burned_pixels": 55,
+        "event_class_macro_dice": 0.7996794871794872,
+        "event_class_macro_iou": 0.7140522875816994,
+        "worst_event_macro_dice": 0.5993589743589745,
+        "event_macro_dice_range": [
+          0.5993589743589745,
+          1.0
+        ],
+        "event_macro_iou_range": [
+          0.42810457516339867,
+          1.0
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 32,
+            "predicted": 34,
+            "true_positive": 23,
+            "false_positive": 11,
+            "false_negative": 9,
+            "dice_denominator": 66,
+            "iou_denominator": 43,
+            "dice": 0.696969696969697,
+            "iou": 0.5348837209302325
+          },
+          {
+            "class": "burned",
+            "support": 57,
+            "predicted": 55,
+            "true_positive": 46,
+            "false_positive": 9,
+            "false_negative": 11,
+            "dice_denominator": 112,
+            "iou_denominator": 66,
+            "dice": 0.8214285714285714,
+            "iou": 0.696969696969697
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 27,
+                "true_positive": 16,
+                "false_positive": 11,
+                "false_negative": 9,
+                "dice_denominator": 52,
+                "iou_denominator": 36,
+                "dice": 0.6153846153846154,
+                "iou": 0.4444444444444444
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 23,
+                "true_positive": 14,
+                "false_positive": 9,
+                "false_negative": 11,
+                "dice_denominator": 48,
+                "iou_denominator": 34,
+                "dice": 0.5833333333333334,
+                "iou": 0.4117647058823529
+              }
+            ],
+            "macro_dice": 0.5993589743589745,
+            "macro_iou": 0.42810457516339867
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 7,
+                "true_positive": 7,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 14,
+                "iou_denominator": 7,
+                "dice": 1.0,
+                "iou": 1.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 32,
+                "true_positive": 32,
+                "false_positive": 0,
+                "false_negative": 0,
+                "dice_denominator": 64,
+                "iou_denominator": 32,
+                "dice": 1.0,
+                "iou": 1.0
+              }
+            ],
+            "macro_dice": 1.0,
+            "macro_iou": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "family_id": "constant-background",
+      "candidate_threshold_count": 0,
+      "candidate_threshold_sha256": null,
+      "chosen_threshold": null,
+      "training_metrics": {
+        "family_id": "constant-background",
+        "threshold": null,
+        "event_count": 2,
+        "core_pixels": 109,
+        "true_burned_pixels": 51,
+        "predicted_burned_pixels": 0,
+        "event_class_macro_dice": 0.34601449275362317,
+        "event_class_macro_iou": 0.26483050847457623,
+        "worst_event_macro_dice": 0.3333333333333333,
+        "event_macro_dice_range": [
+          0.3333333333333333,
+          0.358695652173913
+        ],
+        "event_macro_iou_range": [
+          0.25,
+          0.2796610169491525
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 58,
+            "predicted": 109,
+            "true_positive": 58,
+            "false_positive": 51,
+            "false_negative": 0,
+            "dice_denominator": 167,
+            "iou_denominator": 109,
+            "dice": 0.6946107784431138,
+            "iou": 0.5321100917431193
+          },
+          {
+            "class": "burned",
+            "support": 51,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 51,
+            "dice_denominator": 51,
+            "iou_denominator": 51,
+            "dice": 0.0,
+            "iou": 0.0
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-green-ridge-0684-cs-2020",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              }
+            ],
+            "macro_dice": 0.3333333333333333,
+            "macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "core_pixels": 59,
+            "classes": [
+              {
+                "class": "background",
+                "support": 33,
+                "predicted": 59,
+                "true_positive": 33,
+                "false_positive": 26,
+                "false_negative": 0,
+                "dice_denominator": 92,
+                "iou_denominator": 59,
+                "dice": 0.717391304347826,
+                "iou": 0.559322033898305
+              },
+              {
+                "class": "burned",
+                "support": 26,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 26,
+                "dice_denominator": 26,
+                "iou_denominator": 26,
+                "dice": 0.0,
+                "iou": 0.0
+              }
+            ],
+            "macro_dice": 0.358695652173913,
+            "macro_iou": 0.2796610169491525
+          }
+        ]
+      },
+      "validation_metrics": {
+        "family_id": "constant-background",
+        "threshold": null,
+        "event_count": 2,
+        "core_pixels": 89,
+        "true_burned_pixels": 57,
+        "predicted_burned_pixels": 0,
+        "event_class_macro_dice": 0.2427536231884058,
+        "event_class_macro_iou": 0.16987179487179488,
+        "worst_event_macro_dice": 0.15217391304347827,
+        "event_macro_dice_range": [
+          0.15217391304347827,
+          0.3333333333333333
+        ],
+        "event_macro_iou_range": [
+          0.08974358974358974,
+          0.25
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 32,
+            "predicted": 89,
+            "true_positive": 32,
+            "false_positive": 57,
+            "false_negative": 0,
+            "dice_denominator": 121,
+            "iou_denominator": 89,
+            "dice": 0.5289256198347108,
+            "iou": 0.3595505617977528
+          },
+          {
+            "class": "burned",
+            "support": 57,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 57,
+            "dice_denominator": 57,
+            "iou_denominator": 57,
+            "dice": 0.0,
+            "iou": 0.0
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              }
+            ],
+            "macro_dice": 0.3333333333333333,
+            "macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 39,
+                "true_positive": 7,
+                "false_positive": 32,
+                "false_negative": 0,
+                "dice_denominator": 46,
+                "iou_denominator": 39,
+                "dice": 0.30434782608695654,
+                "iou": 0.1794871794871795
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 32,
+                "dice_denominator": 32,
+                "iou_denominator": 32,
+                "dice": 0.0,
+                "iou": 0.0
+              }
+            ],
+            "macro_dice": 0.15217391304347827,
+            "macro_iou": 0.08974358974358974
+          }
+        ]
+      }
+    },
+    {
+      "family_id": "constant-burned",
+      "candidate_threshold_count": 0,
+      "candidate_threshold_sha256": null,
+      "chosen_threshold": null,
+      "training_metrics": {
+        "family_id": "constant-burned",
+        "threshold": null,
+        "event_count": 2,
+        "core_pixels": 109,
+        "true_burned_pixels": 51,
+        "predicted_burned_pixels": 109,
+        "event_class_macro_dice": 0.3196078431372549,
+        "event_class_macro_iou": 0.2351694915254237,
+        "worst_event_macro_dice": 0.3058823529411765,
+        "event_macro_dice_range": [
+          0.3058823529411765,
+          0.3333333333333333
+        ],
+        "event_macro_iou_range": [
+          0.22033898305084745,
+          0.25
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 58,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 58,
+            "dice_denominator": 58,
+            "iou_denominator": 58,
+            "dice": 0.0,
+            "iou": 0.0
+          },
+          {
+            "class": "burned",
+            "support": 51,
+            "predicted": 109,
+            "true_positive": 51,
+            "false_positive": 58,
+            "false_negative": 0,
+            "dice_denominator": 160,
+            "iou_denominator": 109,
+            "dice": 0.6375,
+            "iou": 0.46788990825688076
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-green-ridge-0684-cs-2020",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              }
+            ],
+            "macro_dice": 0.3333333333333333,
+            "macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-tepee-1144-ne-2018",
+            "core_pixels": 59,
+            "classes": [
+              {
+                "class": "background",
+                "support": 33,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 33,
+                "dice_denominator": 33,
+                "iou_denominator": 33,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 26,
+                "predicted": 59,
+                "true_positive": 26,
+                "false_positive": 33,
+                "false_negative": 0,
+                "dice_denominator": 85,
+                "iou_denominator": 59,
+                "dice": 0.611764705882353,
+                "iou": 0.4406779661016949
+              }
+            ],
+            "macro_dice": 0.3058823529411765,
+            "macro_iou": 0.22033898305084745
+          }
+        ]
+      },
+      "validation_metrics": {
+        "family_id": "constant-burned",
+        "threshold": null,
+        "event_count": 2,
+        "core_pixels": 89,
+        "true_burned_pixels": 57,
+        "predicted_burned_pixels": 89,
+        "event_class_macro_dice": 0.392018779342723,
+        "event_class_macro_iou": 0.3301282051282051,
+        "worst_event_macro_dice": 0.3333333333333333,
+        "event_macro_dice_range": [
+          0.3333333333333333,
+          0.4507042253521127
+        ],
+        "event_macro_iou_range": [
+          0.25,
+          0.41025641025641024
+        ],
+        "pooled_classes": [
+          {
+            "class": "background",
+            "support": 32,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 32,
+            "dice_denominator": 32,
+            "iou_denominator": 32,
+            "dice": 0.0,
+            "iou": 0.0
+          },
+          {
+            "class": "burned",
+            "support": 57,
+            "predicted": 89,
+            "true_positive": 57,
+            "false_positive": 32,
+            "false_negative": 0,
+            "dice_denominator": 146,
+            "iou_denominator": 89,
+            "dice": 0.7808219178082192,
+            "iou": 0.6404494382022472
+          }
+        ],
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              }
+            ],
+            "macro_dice": 0.3333333333333333,
+            "macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 7,
+                "dice_denominator": 7,
+                "iou_denominator": 7,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 39,
+                "true_positive": 32,
+                "false_positive": 7,
+                "false_negative": 0,
+                "dice_denominator": 71,
+                "iou_denominator": 39,
+                "dice": 0.9014084507042254,
+                "iou": 0.8205128205128205
+              }
+            ],
+            "macro_dice": 0.4507042253521127,
+            "macro_iou": 0.41025641025641024
+          }
+        ]
+      }
+    }
+  ],
+  "selected": {
+    "family_id": "rbr-threshold",
+    "threshold": 0.041043221950531006,
+    "selection_key": [
+      0.8541666666666667,
+      0.7757757757757757,
+      0.7083333333333334,
+      1.0,
+      5.0
+    ],
+    "selection_source": "validation events only after train-only fitting"
+  },
+  "boundaries": {
+    "train_pixels_read": true,
+    "validation_pixels_read": true,
+    "test_pixels_read": false,
+    "test_analytical_open_count": 0,
+    "selection_frozen": true,
+    "metric_result_created": false,
+    "model_created": false,
+    "training_authorized": false
+  },
+  "next_dependency": "commit exact selection, then perform the one authorized test open"
+}

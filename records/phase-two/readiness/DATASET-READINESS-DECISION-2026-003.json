@@ -1,0 +1,196 @@
+{
+  "audit_result_version": "dataset-readiness-result-v1",
+  "audit_id": "DATASET-READINESS-AUDIT-2026-003",
+  "candidate_id": "DATASET-CANDIDATE-2026-002",
+  "candidate_manifest_sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2",
+  "audit_input_sha256": "f5af1b8bd8a103fd2b216e92cef02f57c3328b1524278275e94671d2a0724166",
+  "decision": "pass",
+  "pass_evidence": [
+    {
+      "gate_id": "claims-and-privacy",
+      "category": "claims_and_privacy",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "The contract contains no private response bytes or routes and keeps all dataset, split, baseline, model, training, validation, and generalization claims false.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "coverage-and-balance",
+      "category": "coverage_and_balance",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "The roster remains six events with one approved core per class per event, 287 total core pixels, and an explicit non-prevalence limitation.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "evaluation-design",
+      "category": "evaluation_design",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "Masked core-only Dice/IoU, per-event and class slices, exact denominators, macro aggregation, and one-time test opening are frozen before split selection.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "human-review",
+      "category": "human_review",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "Every candidate core retains owner-yes custody plus non-owner promotion gates; owner approval remains necessary but not independent truth.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "leakage-and-split-fitness",
+      "category": "leakage_and_split_fitness",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "Split-before-patch, whole-event grouping, sealed-test rules, and all event/scene/geography/time/source-regime group keys are frozen; no split is selected.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "provenance-and-custody",
+      "category": "provenance_and_custody",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "Five proposal, five owner-intake, 27 source/terms, 12 raster, prior readiness, and six-event optical lineages remain exact; raw archives stay ignored and require U03 reverification.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "reproducibility",
+      "category": "reproducibility",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "The deterministic contract builder reopens every tracked binding and refuses roster, hash, raster, band, grid, or reflectance-metadata drift.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "schema-and-quality",
+      "category": "schema_and_quality",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "All candidate rasters retain their exact EPSG:32610 20 m contracts; every optical pair exposes aligned native B04/B8A/B12/SCL grids and complete reflectance metadata.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "source-and-terms",
+      "category": "source_and_terms",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "Every exact source and terms binding in the candidate was rehashed; the six optical source reports are separately byte-bound.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "uncertainty-and-exclusions",
+      "category": "uncertainty_and_exclusions",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+        "contract-sha256:f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f",
+        "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json"
+      ],
+      "finding": "The contract excludes value-2 rings, source-invalid pixels, and all unreviewed zero-valued candidate-raster context from loss and metrics.",
+      "remediation": ""
+    }
+  ],
+  "block_evidence": [],
+  "defer_evidence": [],
+  "blocking_required_gate_ids": [],
+  "deferred_required_gate_ids": [],
+  "count_results": [
+    {
+      "check_id": "exact-event-groups",
+      "observed": 6,
+      "operator": "==",
+      "threshold": 6,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "exact-owner-approved-regions",
+      "observed": 12,
+      "operator": "==",
+      "threshold": 12,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "accepted-core-pixels",
+      "observed": 287,
+      "operator": "==",
+      "threshold": 287,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "explicit-unknown-ring-pixels",
+      "observed": 531,
+      "operator": "==",
+      "threshold": 531,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "common-input-channels",
+      "observed": 6,
+      "operator": "==",
+      "threshold": 6,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "valid-whole-event-assignments",
+      "observed": 54,
+      "operator": "==",
+      "threshold": 54,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    }
+  ],
+  "failed_blocking_count_checks": [],
+  "failed_deferred_count_checks": [],
+  "count_thresholds_can_establish_readiness_alone": false,
+  "training_authorized": false,
+  "training_authorization_reason": "Dataset-readiness evidence never substitutes for separate training authorization.",
+  "next_action": "Seek separate authorization for dataset creation, splitting, or training; this audit grants none."
+}

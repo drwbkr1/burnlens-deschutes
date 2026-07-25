@@ -2,6 +2,17 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.52.0-dataset-baseline-model-readiness - candidate - 2026-07-25
+
+- Accept `burnlens-dataset-v0.1.0`: 12 native-grid 64-by-64 patches, 287 selected cores, and 531 excluded unknown-ring pixels across six whole events.
+- Lock `burnlens-whole-event-split-v0.1.0` before patch generation, with 2/2/2 train/validation/test event roles and no source-product overlap across roles.
+- Independently reconstruct every patch, verify train-only normalization, and pass duplicate, contamination, grid, schema, custody, and exact-replay QA.
+- Preregister spectral baselines before the one sealed test opening; keep RBR selected by validation precedence and report its 1.0 selected-core test Dice/IoU with explicit candidate-selection-bias limits.
+- Issue `AUTHORIZE_BOUNDED_UNET` under a one-model, CPU-only, no-search, no-augmentation, no-test-tuning, rejection-first contract.
+- Update the repository-owned reviewer path and case study while keeping model, weights, training, inference, deployment, and final-submission readiness absent.
+
+Issue #562; accepted runs `BL-2026-07-25-p2o5-t03-u03-materialize-r002`, `BL-2026-07-25-p2o5-t03-u04-dataset-qa-r004`, `BL-2026-07-25-p2o5-t03-u05-baseline-r003`, `BL-2026-07-25-p2o5-t03-u06-readiness-r002`, and `BL-2026-07-25-p2o5-t03-u07-portfolio-r003`. Candidate `4655db6...` passes 695 tests with one expected skip and 86 subtests, exact reviewer replay plus desktop/narrow rendering, two identical 1,050,456-byte wheels at SHA-256 `eff2396b...`, and an isolated 105-command runtime. U07 live merge, fresh-main verification, and annotated-tag peel remain pending.
+
 ## v0.51.0-replacement-six-event-sufficiency - verified - 2026-07-25
 
 - Complete Ward Creek's source, custody, reference, background, proposal, owner-review, pre-reveal lock, reconciliation, and two-class promotion path.

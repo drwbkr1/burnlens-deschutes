@@ -310,3 +310,89 @@ records/phase-two/release-audits/RELEASE-AUDIT-2026-006.json text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-089.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-083.md text eol=lf
 records/prompt-build-log/2026-07-25-v051-lifecycle-sync.md text eol=lf
+
+# P2O5-T03 U01 exact dataset, preprocessing, and evaluation contract.
+burnlens/dataset_build_contract.py text eol=lf
+burnlens/build_dataset_contract.py text eol=lf
+tests/test_dataset_build_contract.py text eol=lf
+records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json text eol=lf
+records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-003.json text eol=lf
+records/phase-two/readiness/DATASET-READINESS-DECISION-2026-003.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-090.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-084.md text eol=lf
+records/prompt-build-log/2026-07-25-p2o5-t03.md text eol=lf
+
+# P2O5-T03 U02 deterministic whole-event split ranking and lock.
+burnlens/whole_event_split.py text eol=lf
+burnlens/build_whole_event_split.py text eol=lf
+tests/test_whole_event_split.py text eol=lf
+records/phase-two/manifests/WHOLE-EVENT-SPLIT-RANKING-2026-001.json text eol=lf
+records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-091.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-085.md text eol=lf
+
+# P2O5-T03 U03 exact native-grid dataset materialization.
+burnlens/dataset_materialization.py text eol=lf
+burnlens/build_dataset.py text eol=lf
+tests/test_dataset_materialization.py text eol=lf
+samples/datasets/burnlens-dataset-v0.1.0/*.json text eol=lf
+samples/datasets/burnlens-dataset-v0.1.0/**/*.npy -text
+records/phase-two/prechecks/PRECHECK-2026-092.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-086.md text eol=lf
+
+# P2O5-T03 U04 independent dataset QA and train-only normalization.
+burnlens/dataset_qa.py text eol=lf
+burnlens/run_dataset_qa.py text eol=lf
+tests/test_dataset_qa.py text eol=lf
+records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/*.json text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/*.html text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/*.png -text
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.png -text
+records/phase-two/prechecks/PRECHECK-2026-093.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-087.md text eol=lf
+
+# P2O5-T03 U05 baseline preregistration, selection, and evaluation.
+burnlens/baseline_evaluation.py text eol=lf
+burnlens/run_baseline_evaluation.py text eol=lf
+tests/test_baseline_evaluation.py text eol=lf
+records/phase-two/sources/BASELINE-PRIMARY-SOURCES-2026-001.json text eol=lf
+records/phase-two/manifests/BASELINE-PREREGISTRATION-2026-001.json text eol=lf
+records/phase-two/manifests/BASELINE-SELECTION-2026-001.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.html text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/*.png -text
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.png -text
+records/phase-two/prechecks/PRECHECK-2026-094.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-088.md text eol=lf
+
+# P2O5-T03 U06 bounded U-Net model-readiness decision.
+burnlens/model_readiness.py text eol=lf
+burnlens/run_model_readiness.py text eol=lf
+tests/test_model_readiness.py text eol=lf
+records/phase-two/sources/MODEL-TOOLING-SOURCES-2026-001.json text eol=lf
+records/phase-two/readiness/MODEL-READINESS-AUDIT-2026-001.json text eol=lf
+records/phase-two/readiness/MODEL-READINESS-DECISION-2026-001.json text eol=lf
+records/phase-two/manifests/BOUNDED-UNET-TRAINING-CONTRACT-2026-001.json text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/*.html text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/*.png -text
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.png -text
+samples/qa/phase-two/model-readiness-v0.1.0/retained-failures/**/*.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-095.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-089.md text eol=lf
+
+# P2O5-T03 U07 coherent Phase Two release and portfolio handoff.
+burnlens/portfolio_reviewer_experience.py text eol=lf
+tests/test_portfolio_reviewer_experience.py text eol=lf
+docs/devlog/2026-07-25-phase-two-dataset-baseline-model-readiness.md text eol=lf
+portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.json text eol=lf
+portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-096.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-090.md text eol=lf
+records/phase-two/release-audits/RELEASE-AUDIT-2026-007.json text eol=lf

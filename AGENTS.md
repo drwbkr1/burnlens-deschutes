@@ -61,21 +61,18 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O4-T39 / issue #554 reaches its scientific success exit on the active
-BurnLens 0.51.0 milestone candidate. Ward Creek passes the complete
-source-to-promotion chain. The exact replacement candidate contains McKay,
-Tepee, Green Ridge, Grandview, Windigo, and Ward Creek while excluding
-Darlene. All ten required non-count readiness gates pass, and 54 whole-event
-2/2/2 assignments satisfy frozen leakage controls. The independent readiness
-audit agrees byte for byte and keeps `training_authorized=false`. Release-code
-candidate `064da9a...` passes 656 tests, exact six-output replay, real
-desktop/narrow rendering, two byte-identical 993,480-byte wheels, and an
-isolated 99-command lean runtime. Draft PR #557 is clean and mergeable; merge,
-fresh-main, and tag verification remain pending. After shipping, the next
-checkpoint may create the accepted dataset, lock one
-whole-event split before patching, run dataset QA, and establish the strongest
-justified non-model baselines. No dataset, split, baseline, model, metric,
-inference, deployment, or external submission exists yet.
+P2O5-T03 / issue #562 is the active Phase Two release checkpoint. U01-U06
+accept `burnlens-dataset-v0.1.0`, lock
+`burnlens-whole-event-split-v0.1.0` before patching, independently reconstruct
+and audit all 12 native-grid patches, evaluate preregistered baselines, and
+issue `AUTHORIZE_BOUNDED_UNET` under a rejection-first single-model contract.
+The roles are Green Ridge plus Tepee for train, Grandview plus McKay for
+validation, and Ward Creek plus Windigo for test. The selected RBR baseline
+scores 1.0 Dice and IoU on 89 selected test cores, with the explicit warning
+that candidate construction may favor spectral separability. U07 must ship
+and verify the coherent 0.52.0 release before Phase Three can execute the
+contract. No model, weights, training run, model evaluation, inference,
+deployment, generalization claim, or external submission exists yet.
 
 P2O4-T01 through P2O4-T19 ship verified proposal, source, review, custody, remediation, exact owner-review, and owner-response evidence through `v0.31.0-region-owner-response-intake`. Historical 6/0/50 exclusions are not inherited. Verified P2O4-T21 through P2O4-T26 complete the Green Ridge event path and establish `owner-approved-prototype-region-labels-v0.2.0`: four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded unknown-ring pixels across four events. Verified P2O4-T27 through P2O4-T31 complete Grandview optical, official-reference, background, proposal, and blank-review evidence through `v0.43.0-grandview-owner-review-surface`. P2O4-T32 / issue #517 / PR #522 ships verified BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`: the exact 887-byte export is operator-locked before reveal, and two yes decisions plus both 25-pixel cores pass response custody, reproducibility, source/terms, quality/registration, unknown-ring exclusion, and event-level leakage gates. Verified owner-approved prototype evidence `owner-approved-prototype-region-labels-v0.3.0` contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. BL-GOV-003 / issue #525 activates `checkpoint-policy-v0.1.0`; P2O4-T33 / issue #521 / PR #527 and BL-EXC-001 / issue #528 / PR #529 now ship verified `v0.45.0-petes-lake-material-defer` at merge `d65c24f59ce0c854ba230aa977eaf718d881d952`. Fresh-main runtime, dev, geo-research, custody-enabled replay, deterministic package, and remote annotated-tag gates pass; tag object `0b466402cdc36b0eacfff97d29dd16fe2a88868a` peels exactly to the merge. This is a verified software and evidence-preservation checkpoint, not scientific acceptance of Petes Lake. Event count alone cannot authorize a dataset. Dataset, split, baseline, model, deployed analytical application, and independent scientific fitness remain absent. Never claim reviewer two, inter-rater agreement, consensus, field validation, official status, endorsement, or operational readiness.
 

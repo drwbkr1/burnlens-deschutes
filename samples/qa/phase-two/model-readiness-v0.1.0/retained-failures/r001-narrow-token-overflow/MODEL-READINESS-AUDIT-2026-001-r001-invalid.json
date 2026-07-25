@@ -1,0 +1,163 @@
+{
+  "audit_version": "burnlens-model-readiness-audit-v0.1.0",
+  "audit_id": "MODEL-READINESS-AUDIT-2026-001",
+  "generated_at_utc": "2026-07-25T20:48:15Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u06-readiness-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U06",
+  "git_source_commit": "28c456b5ae7a84f3438f1cc5a1b178d31e6555ab",
+  "software_version": "0.51.0",
+  "inputs": {
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "dataset_candidate": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    },
+    "split_manifest": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "dataset_qa": {
+      "path": "samples/qa/phase-two/dataset-v0.1.0/DATASET-QA-2026-001.json",
+      "bytes": 5648,
+      "sha256": "90aafef4c9deb8e9d06c2c2dc63f4f238e0229e4615dc29e1686803efa342f5a"
+    },
+    "normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "baseline_protocol": {
+      "path": "records/phase-two/manifests/BASELINE-PREREGISTRATION-2026-001.json",
+      "bytes": 6301,
+      "sha256": "31eb08ae88ee0b4425dce8af3e47475e38a4d9adb9249af7381fc5d608799bb5"
+    },
+    "baseline_selection": {
+      "path": "records/phase-two/manifests/BASELINE-SELECTION-2026-001.json",
+      "bytes": 37091,
+      "sha256": "061596f7df68844319cc3c5a5d8d0b19124cecc812e59c3a7eda9d5d3e68c1c3"
+    },
+    "baseline_evaluation": {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    },
+    "model_family_decision": {
+      "path": "docs/phase-one/objective-two/MODEL_FAMILY_DECISION.md",
+      "bytes": 9029,
+      "sha256": "3e4ac46a0e046d9c678f5ee10faecfb8e457b70fb909926bdd61916914789f56"
+    },
+    "phase_two_objective": {
+      "path": "docs/phases/phase-02/PHASE_02_OBJECTIVES.md",
+      "bytes": 14092,
+      "sha256": "9e5150976d8a1af531c5cb320059111d019fcd1d07ab60753de0bfc18edad18e"
+    },
+    "tooling_sources": {
+      "path": "records/phase-two/sources/MODEL-TOOLING-SOURCES-2026-001.json",
+      "bytes": 5462,
+      "sha256": "5e55f5fb5572a9ccfaef79d1c91f0b965771d1a99a047540598fc158ed190ffc"
+    }
+  },
+  "gates": {
+    "exact_package_identity": {
+      "status": "pass",
+      "finding": "exact dataset and whole-event split identities match"
+    },
+    "dataset_scope": {
+      "status": "pass",
+      "finding": "six events, twelve patches, 287 cores, and 531 unknown-ring pixels match"
+    },
+    "whole_event_split": {
+      "status": "pass",
+      "finding": "locked whole-event 4/4/4 patch split remains exact"
+    },
+    "independent_dataset_qa": {
+      "status": "pass",
+      "finding": "independent dataset QA passed"
+    },
+    "train_only_normalization": {
+      "status": "pass",
+      "finding": "normalization is owned by training events only"
+    },
+    "baseline_selection_integrity": {
+      "status": "pass",
+      "finding": "RBR selection was frozen from train and validation before test"
+    },
+    "single_baseline_test_open": {
+      "status": "pass",
+      "finding": "baseline test opening is single, frozen, and untuned"
+    },
+    "baseline_ceiling_visible": {
+      "status": "pass",
+      "finding": "RBR reaches the frozen selected-core metric ceiling and cannot be numerically exceeded"
+    },
+    "tooling_feasibility": {
+      "status": "pass",
+      "finding": "official tooling research and local CPU-only dry-run pass without installation"
+    }
+  },
+  "evidence_summary": {
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "event_groups": 6,
+    "patches_by_role": {
+      "test": 4,
+      "train": 4,
+      "validation": 4
+    },
+    "accepted_core_pixels": 287,
+    "unknown_ring_pixels": 531,
+    "strongest_baseline": "rbr-threshold",
+    "baseline_test_event_class_macro_dice": 1.0,
+    "baseline_test_event_class_macro_iou": 1.0,
+    "baseline_test_core_pixels": 89,
+    "baseline_test_analytical_open_count": 1,
+    "model_count": 0,
+    "training_run_count": 0
+  },
+  "portfolio_and_schedule": {
+    "portfolio_promise": "trained binary segmentation model in a reproducible imagery-to-GEOINT workflow",
+    "deadline": "2026-08-06",
+    "days_remaining_at_audit": 12,
+    "status": "aggressive; model and GEOINT outputs do not yet exist",
+    "critical_path": [
+      "verified U07 Phase Two release",
+      "locked Phase Three environment and model implementation",
+      "single U-Net training and exact replay",
+      "frozen-test evaluation against RBR",
+      "honest model acceptance or rejection",
+      "smallest georeferenced inference-to-overlay vertical slice",
+      "repository-owned application, case study, and release QA"
+    ]
+  },
+  "decision": "AUTHORIZE_BOUNDED_UNET",
+  "decision_qualifier": "REJECTION_FIRST_SINGLE_MODEL_EXPERIMENT",
+  "training_contract_id": "BOUNDED-UNET-TRAINING-CONTRACT-2026-001",
+  "limitations": [
+    "Owner-approved prototype evidence, not independent ground truth, field validation, generalization, official information, or operational guidance.",
+    "Only four train patches and two train events exist.",
+    "The 89-core test set is selected prototype evidence, not natural prevalence.",
+    "Candidate construction used optical and official-reference evidence and may favor spectral separability.",
+    "The RBR baseline already reaches the metric ceiling on the frozen test cores.",
+    "The experiment can satisfy the requirement to build, train, and evaluate a U-Net while still rejecting it as the analytical winner."
+  ],
+  "boundaries": {
+    "all_gates_passed": true,
+    "test_analytical_open_count": 1,
+    "model_created": false,
+    "model_trained": false,
+    "metric_result_created": true,
+    "training_authorized": true,
+    "deployment_authorized": false,
+    "final_submission_ready": false
+  },
+  "next_dependency": "P2O5-T03-U07 verified milestone release, followed by a separate issue-backed Phase Three training/evaluation checkpoint",
+  "warning": "Owner-approved prototype evidence, not independent ground truth, field validation, generalization, official information, or operational guidance."
+}

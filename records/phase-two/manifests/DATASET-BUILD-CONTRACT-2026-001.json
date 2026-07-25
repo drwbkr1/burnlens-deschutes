@@ -1,0 +1,704 @@
+{
+  "contract_version": "burnlens-dataset-build-contract-v0.1.0",
+  "contract_id": "DATASET-BUILD-CONTRACT-2026-001",
+  "generated_at_utc": "2026-07-25T18:36:24.619Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u01-dataset-contract-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U01",
+  "git_source_commit": "0a1d5335b5b2598a2bc81bbfd55d643994632ab9",
+  "software_version": "0.51.0",
+  "candidate": {
+    "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+    "bytes": 30504,
+    "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+  },
+  "accepted_readiness": {
+    "audit": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-AUDIT-2026-002.json",
+      "bytes": 6601,
+      "sha256": "50e3b9f3c6c33a9f8cd36cf0952bf5033c039e68ffc864bf952ddec5442e6ed4"
+    },
+    "decision": {
+      "path": "records/phase-two/readiness/DATASET-READINESS-DECISION-2026-002.json",
+      "bytes": 7088,
+      "sha256": "39e7a56199f67bcf397b6d73e6795a2e36528ff0577b7314a8414f21321ce5d8"
+    },
+    "decision_value": "pass",
+    "training_authorized": false
+  },
+  "output_versions": {
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "baseline_version": null,
+    "model_version": null
+  },
+  "eligible_event_group_ids": [
+    "event-mckay-1035-ne-2017",
+    "event-tepee-1144-ne-2018",
+    "event-green-ridge-0684-cs-2020",
+    "event-grandview-0558-od-2021",
+    "event-windigo-2022",
+    "event-ward-creek-2019"
+  ],
+  "source_pairs": [
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "source_report": {
+        "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.json",
+        "bytes": 75333,
+        "sha256": "c9aa90894150e081a6df26b8ee16c502bd532b67d7ecd493e038a366a480b34f"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "mckay-2017-pre",
+          "provider_id": "a50825f5-3169-42a7-ae55-2eea540e7330",
+          "native_id": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+          "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2017-07-29T19:02:25.781754Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "mckay-2017-post",
+          "provider_id": "53af4b67-470d-4421-8901-54064d9aab1d",
+          "native_id": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+          "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2017-09-27T19:02:20.822324Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_SCL_20m.jp2"
+          }
+        }
+      ]
+    },
+    {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "source_report": {
+        "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.json",
+        "bytes": 75333,
+        "sha256": "c9aa90894150e081a6df26b8ee16c502bd532b67d7ecd493e038a366a480b34f"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "tepee-2018-pre",
+          "provider_id": "637dfcb9-6a28-487e-b6b3-9645ddc40dcc",
+          "native_id": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+          "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2018-08-11T19:12:15.299391Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "tepee-2018-post",
+          "provider_id": "84d6af81-f343-4410-a09e-711b553f2f11",
+          "native_id": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+          "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2018-09-20T19:12:13.124395Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_SCL_20m.jp2"
+          }
+        }
+      ]
+    },
+    {
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "source_report": {
+        "path": "samples/cross-event/phase-two/GREEN-RIDGE-SOURCE-FITNESS-2026-001.json",
+        "bytes": 46579,
+        "sha256": "74c546b9f3fcb8d37da94121bec2209b9f4bc1cc88737097dd114f5137cc3927"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "green-ridge-2020-pre",
+          "provider_id": "13b49b0d-390d-4a1b-90a6-c06fc5feac75",
+          "native_id": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+          "filename": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2020-08-10T19:12:09.844505Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "green-ridge-2020-post",
+          "provider_id": "bfb174db-0438-45c8-b59d-feb76f58c029",
+          "native_id": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE",
+          "filename": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2020-09-29T19:12:09.525181Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_SCL_20m.jp2"
+          }
+        }
+      ]
+    },
+    {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "source_report": {
+        "path": "samples/cross-event/phase-two/GRANDVIEW-SOURCE-FITNESS-2026-001.json",
+        "bytes": 46721,
+        "sha256": "27399249cddeec91f554831dfc27e2c5111109a21abf272e753ea86e9c8a409f"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "grandview-2021-pre",
+          "provider_id": "09ac9f82-cbf8-4e30-a24a-36f719678e95",
+          "native_id": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE",
+          "filename": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2021-06-03T19:02:10.753344Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "grandview-2021-post",
+          "provider_id": "c627f11b-37a9-44b4-b481-1f34af3a6304",
+          "native_id": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE",
+          "filename": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2021-07-23T19:02:11.84911Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B04_20m.jp2",
+            "B8A": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B8A_20m.jp2",
+            "B12": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B12_20m.jp2",
+            "SCL": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_SCL_20m.jp2"
+          }
+        }
+      ]
+    },
+    {
+      "event_group_id": "event-windigo-2022",
+      "source_report": {
+        "path": "samples/cross-event/phase-two/windigo/WINDIGO-SOURCE-FITNESS-2026-006.json",
+        "bytes": 105348,
+        "sha256": "7e0ede49bcee692c130c6f04fe90898f6c393fb57f64191da1f16c1567b724b2"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "windigo-2022-pre",
+          "provider_id": "f1111cd2-acb1-4324-9b48-854e2e71a384",
+          "native_id": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+          "filename": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE.zip",
+          "processing_baseline": "05.10",
+          "sensing_time_utc": "2022-07-26T19:12:34.575958Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "windigo-2022-post",
+          "provider_id": "10bb27c6-5df5-44f1-9a72-517c696cb5e1",
+          "native_id": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+          "filename": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE.zip",
+          "processing_baseline": "05.10",
+          "sensing_time_utc": "2022-08-15T19:12:37.180936Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            499980.0,
+            0.0,
+            -20.0,
+            4900020.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_SCL_20m.jp2"
+          }
+        }
+      ]
+    },
+    {
+      "event_group_id": "event-ward-creek-2019",
+      "source_report": {
+        "path": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+        "bytes": 61346,
+        "sha256": "f31bc51c64dae60b5a419146f4183b960b8504044f79e7505018a630c47c466d"
+      },
+      "products": [
+        {
+          "temporal_role": "pre",
+          "role": "ward-creek-2019-pre",
+          "provider_id": "f6b6697d-5b7d-4049-8caf-8b0c7fdad4b7",
+          "native_id": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE",
+          "filename": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2019-08-01T19:12:11.014978Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_SCL_20m.jp2"
+          }
+        },
+        {
+          "temporal_role": "post",
+          "role": "ward-creek-2019-post",
+          "provider_id": "51ddb0b7-8456-40a2-8301-e1651c951116",
+          "native_id": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE",
+          "filename": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE.zip",
+          "processing_baseline": "05.00",
+          "sensing_time_utc": "2019-08-31T19:12:07.040104Z",
+          "crs": "EPSG:32610",
+          "resolution_m": 20,
+          "source_shape": [
+            5490,
+            5490
+          ],
+          "source_transform": [
+            20.0,
+            0.0,
+            600000.0,
+            0.0,
+            -20.0,
+            5000040.0
+          ],
+          "boa_quantification_value": 10000.0,
+          "boa_offsets": {
+            "B04": -1000.0,
+            "B8A": -1000.0,
+            "B12": -1000.0
+          },
+          "nodata_dn": 0,
+          "saturated_dn": 65535,
+          "members": {
+            "B04": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B04_20m.jp2",
+            "B8A": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B8A_20m.jp2",
+            "B12": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B12_20m.jp2",
+            "SCL": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_SCL_20m.jp2"
+          }
+        }
+      ]
+    }
+  ],
+  "input_contract": {
+    "channel_order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "channel_units": "Sentinel-2 L2A bottom-of-atmosphere reflectance",
+    "reflectance_formula": "(DN + band-specific BOA_ADD_OFFSET) / BOA_QUANTIFICATION_VALUE",
+    "dtype": "float32",
+    "native_grid": {
+      "crs": "EPSG:32610",
+      "resolution_m": 20,
+      "resampling": "prohibited",
+      "reprojection": "prohibited",
+      "mosaicking": "prohibited"
+    },
+    "pair_validity": {
+      "eligible_scl_classes": [
+        4,
+        5
+      ],
+      "review_scl_classes": [
+        7
+      ],
+      "excluded_scl_classes": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "review_pixels_in_loss_or_metrics": false,
+      "all_six_reflectance_channels_must_be_numeric_valid": true,
+      "nodata_and_saturated_dn_are_invalid": true
+    }
+  },
+  "label_contract": {
+    "source_candidate_value_meaning": {
+      "0": "outside this candidate; unreviewed and excluded",
+      "1": "owner-approved candidate core",
+      "2": "explicit unknown ring; excluded",
+      "255": "source nodata if present; excluded"
+    },
+    "combined_state_values": {
+      "0": "owner-approved background core",
+      "1": "owner-approved burned core",
+      "2": "union of explicit unknown rings",
+      "255": "unreviewed, source-invalid, or nodata"
+    },
+    "loss_mask": "combined state is 0 or 1 AND pair validity passes; no other pixel contributes to loss",
+    "metric_mask": "byte-identical to loss_mask",
+    "unknown_is_background": false,
+    "outside_candidate_is_background": false,
+    "class_assignment_source": "candidate class plus exact owner-yes intake"
+  },
+  "patch_contract": {
+    "split_before_patch": true,
+    "patch_size_pixels": [
+      64,
+      64
+    ],
+    "patch_size_meters": [
+      1280,
+      1280
+    ],
+    "one_patch_per_candidate": true,
+    "candidate_count": 12,
+    "placement": "center on the integer floor of the value-1 core centroid, then shift the fixed window minimally inside the native event grid without padding",
+    "core_clipping": "prohibited",
+    "augmentation": "not part of dataset bytes",
+    "cross_event_mixing": "prohibited",
+    "patch_id": "dataset version + split role + event group + candidate ID + native integer window"
+  },
+  "normalization_contract": {
+    "stored_features": "unstandardized float32 reflectance",
+    "statistics_owner": "locked training events only",
+    "eligible_statistics_pixels": "pair-valid pixels inside training patches; labels are not required for normalization statistics",
+    "method": "per-channel global mean and population standard deviation",
+    "standardization": "(value - train_mean) / max(train_std, 1e-6)",
+    "validation_or_test_statistics": "prohibited",
+    "clipping": "none"
+  },
+  "split_contract": {
+    "roles": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "whole_event_groups_per_role": 2,
+    "group_before_patch": true,
+    "group_keys": [
+      "event_group_id",
+      "scene_group",
+      "geography_group",
+      "time_group",
+      "exact source regime"
+    ],
+    "valid_assignment_count": 54,
+    "selection": "U02 must predeclare and apply one deterministic ranking over all 54 valid assignments; this contract selects none",
+    "test_sealed_until": "baseline families, preprocessing, thresholds, patch roster, and selection rule are frozen"
+  },
+  "evaluation_contract": {
+    "unit_of_independence": "whole event group",
+    "primary_metrics": [
+      "masked burned-class Dice",
+      "masked burned-class IoU"
+    ],
+    "required_slices": [
+      "per event",
+      "per class",
+      "source regime",
+      "never-tuned transfer status"
+    ],
+    "required_denominators": [
+      "evaluated core pixels",
+      "burned core pixels",
+      "background core pixels",
+      "events"
+    ],
+    "aggregation": "report per-event metrics and macro event mean; pixel-pooled results are secondary and explicitly identified",
+    "test_open_count": 1,
+    "threshold_or_method_tuning_on_test": "prohibited",
+    "uncertainty": "report exact event results and small-n limitations; do not claim population generalization"
+  },
+  "reproducibility_and_custody": {
+    "raw_provider_archives": "remain ignored repository-local custody and must pass exact registration/hash verification before U03 reads them",
+    "tracked_outputs": "manifests, contracts, checksums, QA, and bounded derived samples only",
+    "no_overwrite": true,
+    "retained_failures": true
+  },
+  "limitations": [
+    "Only 287 owner-approved prototype core pixels exist across six events.",
+    "The 531 unknown-ring pixels and every unreviewed pixel remain excluded.",
+    "Owner approval is not independent ground truth or field validation.",
+    "Balanced reviewed regions do not estimate natural class prevalence.",
+    "A later dataset pass cannot itself authorize model training."
+  ],
+  "boundaries": {
+    "dataset_created": false,
+    "split_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false,
+    "generalization_claimed": false
+  },
+  "next_dependency": "P2O5-T03-U02"
+}

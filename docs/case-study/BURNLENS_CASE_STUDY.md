@@ -477,6 +477,41 @@ BurnLens then preserves one exact MTBS request/delivery/native-contract chain, i
 
 The decision is `defer`, not silent success or permanent exclusion. R003 is terminal, no r004 is authorized, and partial files cannot satisfy wetland, temporal, grid-coverage, or source-precedence fitness. Production background, proposal, owner-review, response, and label units do not run. Petes Lake does not become event six. Verified BurnLens 0.45.0 packages the custody, source-fitness, batch-review, pre-reveal lock, constrained localhost, and locked geospatial-environment capabilities proven along the way. PR #529 and merge `d65c24f...` correct the package contract, and annotated tag object `0b4664...` peels exactly to the fresh-main-verified checkpoint while the accepted label set remains at five events. This is the portfolio point: reliability includes knowing when evidence is insufficient and making that stop reproducible.
 
+## Phase Two package: a small accepted dataset with visible limits
+
+Ward Creek replaces Darlene in the exact six-event pool, making a
+leakage-resistant whole-event split possible without placing a source regime
+in only one role. P2O5-T03 freezes the contract and split before creating
+patches. `burnlens-dataset-v0.1.0` contains 12 native-grid 64-by-64 patches,
+287 owner-approved prototype core pixels, and 531 unknown-ring pixels that
+remain excluded from loss and metrics. `burnlens-whole-event-split-v0.1.0`
+assigns Green Ridge and Tepee to train, Grandview and McKay to validation, and
+Ward Creek and Windigo to test. No event, Sentinel product, scene, geography,
+time group, or patch crosses roles.
+
+Independent QA reopens the registered source archives, reconstructs all 12
+patches without importing the materializer, verifies every grid, domain,
+mask, and source binding, rejects duplicates and cross-role overlaps, and
+computes normalization from train pixels only. This is an accepted prototype
+dataset, not independent ground truth or a natural-prevalence sample.
+
+The baseline protocol is committed before arrays are opened. RBR, dNBR, and
+dNDVI are fitted on train and selected on validation; the test is opened once
+after the method and threshold are frozen. RBR remains selected by validation
+precedence and scores 1.0 Dice and IoU on the 89 selected test cores. That
+perfect selected-core result is deliberately not presented as generalization:
+candidate construction used optical and official-reference evidence and may
+favor spectral separability. The evaluation does not cover unknown rings,
+unreviewed pixels, complete scars, natural prevalence, independent truth, or
+field conditions.
+
+U06 therefore authorizes a rejection-first experiment, not a model-value
+claim. After the coherent U07 release is verified, Phase Three may train
+exactly one small CPU-only U-Net under the frozen contract. There is no
+architecture search, augmentation, test tuning, or second model. Matching the
+perfect baseline is a valid trained result but not added value; a weaker or
+invalid model is rejected and RBR remains the analytical choice.
+
 ## A reviewer path through the evidence
 
 BurnLens originally made reviewers assemble the story across many correct but
@@ -499,6 +534,13 @@ correctly.
 
 This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
+
+P2O5-T03 updates that repository-owned path without rewriting the verified
+historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html)
+binds the accepted dataset, whole-event split, baseline, and model-readiness
+evidence while keeping model version null and the retained Petes Lake failure
+visible. It is the current Phase Two handoff, not a trained-model result or a
+deployed application.
 
 ### One extract-and-open submission
 
@@ -536,6 +578,10 @@ External submission remains an owner action.
 
 ## Traceability snapshot
 
+- Current dataset: `burnlens-dataset-v0.1.0`; manifest SHA-256 `e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16`
+- Current split: `burnlens-whole-event-split-v0.1.0`; manifest SHA-256 `a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99`
+- Current baseline: `burnlens-baseline-v0.1.0`; run `BL-2026-07-25-p2o5-t03-u05-baseline-r003`; JSON SHA-256 `a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221`
+- Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`; model version null
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Target-decision evidence run: `BL-2026-07-14-target-decision-r002`

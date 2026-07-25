@@ -29,8 +29,8 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         )
 
     def test_version_and_exact_inputs(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.51.0")
-        self.assertEqual(self.report["software_version"], "0.51.0")
+        self.assertEqual(burnlens.__version__, "0.52.0")
+        self.assertEqual(self.report["software_version"], "0.52.0")
         self.assertEqual(len(self.report["bound_inputs"]), len(BOUND_INPUTS))
 
     def test_report_preserves_claim_and_data_boundaries(self) -> None:
@@ -42,22 +42,55 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         )
         self.assertEqual(self.report["metrics"]["accepted_core_pixels"], 287)
         self.assertEqual(self.report["metrics"]["excluded_unknown_ring_pixels"], 531)
-        self.assertEqual(self.report["metrics"]["valid_whole_event_assignments"], 54)
-        self.assertEqual(self.report["metrics"]["readiness_gates_passed"], 10)
+        self.assertEqual(
+            self.report["metrics"]["patches_by_role"],
+            {"test": 4, "train": 4, "validation": 4},
+        )
+        self.assertEqual(self.report["metrics"]["readiness_gates_passed"], 9)
+        self.assertEqual(
+            self.report["metrics"]["baseline_test_event_class_macro_dice"],
+            1.0,
+        )
         self.assertNotIn("Darlene", self.report["accepted_events"])
         self.assertIn("Ward Creek", self.report["accepted_events"])
-        for key in (
-            "dataset_version",
-            "split_version",
-            "baseline_version",
-            "model_version",
-        ):
-            self.assertIsNone(self.report[key])
+        self.assertEqual(
+            self.report["dataset_version"], "burnlens-dataset-v0.1.0"
+        )
+        self.assertEqual(
+            self.report["split_version"],
+            "burnlens-whole-event-split-v0.1.0",
+        )
+        self.assertEqual(
+            self.report["baseline_version"], "burnlens-baseline-v0.1.0"
+        )
+        self.assertIsNone(self.report["model_version"])
+        self.assertEqual(
+            self.report["retained_failure"]["preview_path"],
+            (
+                "samples/cross-event/phase-two/petes-lake/"
+                "PETES-LAKE-SOURCE-FITNESS-2026-001.png"
+            ),
+        )
+        self.assertEqual(
+            self.report["retained_failure"]["detail_path"],
+            (
+                "docs/phase-two/objective-four/"
+                "PETES_LAKE_MATERIAL_DEFER_DECISION.md"
+            ),
+        )
+        self.assertEqual(
+            self.report["strongest_result"]["baseline_detail_path"],
+            (
+                "samples/baselines/burnlens-baseline-v0.1.0/"
+                "BASELINE-EVALUATION-2026-001.html"
+            ),
+        )
         limitations = " ".join(self.report["limitations"]).lower()
         for phrase in (
             "not independent ground truth",
-            "authorizes only",
-            "no dataset",
+            "twelve 64 by 64",
+            "may favor the measured spectral separability",
+            "no model",
             "not official",
         ):
             self.assertIn(phrase, limitations)
@@ -82,6 +115,8 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.assertIn('<link rel="icon" href="data:,">', html)
             self.assertIn("@media(max-width:430px)", html)
             self.assertIn("@media(prefers-reduced-motion:reduce)", html)
+            for image_target in re.findall(r'<img src="([^"]+)"', html):
+                self.assertTrue(image_target.endswith(".png"), image_target)
             self.assertEqual(payload["outputs"][0]["path"], f"{REPORT_ID}.html")
             serialized = (html + json.dumps(payload)).lower()
             for forbidden in (

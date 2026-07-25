@@ -1,0 +1,87 @@
+{
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "normalization_id": "TRAIN-NORMALIZATION-2026-001",
+  "statistics_owner": "locked training events only",
+  "channel_order": [
+    "pre_B04",
+    "pre_B8A",
+    "pre_B12",
+    "post_B04",
+    "post_B8A",
+    "post_B12"
+  ],
+  "method": "per-channel global mean and population standard deviation",
+  "standardization": "(value - train_mean) / max(train_std, 1e-6)",
+  "validation_pixels_used": false,
+  "test_pixels_used": false,
+  "channels": [
+    {
+      "channel": "pre_B04",
+      "eligible_pixel_count": 14723,
+      "mean": 0.08975772609267363,
+      "population_std": 0.04449842295525843,
+      "minimum": 0.010200000368058681,
+      "maximum": 0.2630000114440918
+    },
+    {
+      "channel": "pre_B8A",
+      "eligible_pixel_count": 14723,
+      "mean": 0.18928176321806342,
+      "population_std": 0.02431832649796389,
+      "minimum": 0.1137000024318695,
+      "maximum": 0.3944999873638153
+    },
+    {
+      "channel": "pre_B12",
+      "eligible_pixel_count": 14723,
+      "mean": 0.16114088157455653,
+      "population_std": 0.06944866658891363,
+      "minimum": 0.03009999915957451,
+      "maximum": 0.34290000796318054
+    },
+    {
+      "channel": "post_B04",
+      "eligible_pixel_count": 14723,
+      "mean": 0.08174106506106384,
+      "population_std": 0.03737384052008506,
+      "minimum": 0.009700000286102295,
+      "maximum": 0.25529998540878296
+    },
+    {
+      "channel": "post_B8A",
+      "eligible_pixel_count": 14723,
+      "mean": 0.15204657335852764,
+      "population_std": 0.03537933934914044,
+      "minimum": 0.048700001090765,
+      "maximum": 0.3880999982357025
+    },
+    {
+      "channel": "post_B12",
+      "eligible_pixel_count": 14723,
+      "mean": 0.15124375473563437,
+      "population_std": 0.0654270367631097,
+      "minimum": 0.019500000402331352,
+      "maximum": 0.322299987077713
+    }
+  ],
+  "generated_at_utc": "2026-07-25T19:33:29Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u04-dataset-qa-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U04",
+  "git_source_commit": "d63c8a5f3a6c9e47a74923fa00f2fc50ea00a5e7",
+  "software_version": "0.51.0",
+  "dataset_manifest_sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16",
+  "split_manifest_sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99",
+  "training_event_group_ids": [
+    "event-green-ridge-0684-cs-2020",
+    "event-tepee-1144-ne-2018"
+  ],
+  "boundaries": {
+    "validation_pixels_used": false,
+    "test_pixels_used": false,
+    "baseline_created": false,
+    "model_created": false,
+    "training_authorized": false
+  }
+}

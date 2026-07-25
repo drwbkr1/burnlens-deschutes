@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.51.0"
+version = "0.52.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.12"
 license = "MIT"
@@ -132,6 +132,12 @@ burnlens-inspect-replacement-event-reference-fitness = "burnlens.inspect_replace
 burnlens-inspect-ward-creek-background-evidence = "burnlens.inspect_ward_creek_background_evidence:main"
 burnlens-build-ward-creek-region-proposal = "burnlens.inspect_ward_creek_region_proposal:main"
 burnlens-build-ward-creek-owner-review-surface = "burnlens.build_ward_creek_owner_review_surface:main"
+burnlens-build-dataset-contract = "burnlens.build_dataset_contract:main"
+burnlens-build-whole-event-split = "burnlens.build_whole_event_split:main"
+burnlens-build-dataset = "burnlens.build_dataset:main"
+burnlens-run-dataset-qa = "burnlens.run_dataset_qa:main"
+burnlens-run-baseline-evaluation = "burnlens.run_baseline_evaluation:main"
+burnlens-run-model-readiness = "burnlens.run_model_readiness:main"
 
 [tool.setuptools]
 packages = ["burnlens"]

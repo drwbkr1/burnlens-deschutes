@@ -1,0 +1,1397 @@
+{
+  "dataset_manifest_version": "burnlens-dataset-manifest-v0.1.0",
+  "dataset_id": "DATASET-2026-001",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "generated_at_utc": "2026-07-25T18:51:40.192Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u03-dataset-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U03",
+  "git_source_commit": "3e383ec413dad5ece1245951660197051a401e1c",
+  "software_version": "0.51.0",
+  "inputs": {
+    "dataset_contract": {
+      "path": "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+      "bytes": 29653,
+      "sha256": "f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f"
+    },
+    "whole_event_split": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "dataset_candidate": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    }
+  },
+  "source_archive_verification": {
+    "archive_count": 12,
+    "total_bytes": 13633040965,
+    "all_sha256_match": true,
+    "all_single_link": true,
+    "archives": [
+      {
+        "role": "grandview-2021-post",
+        "package_id": "grandview-s2-optical-pair-v0.1.0",
+        "registration_run_id": "BL-2026-07-20-grandview-optical-intake-r001",
+        "registration_manifest_sha256": "5bc9d6f14ccbdc87b4e7b4a8298e7eaccb05718f47c25ce28fda530d57e1fcf1",
+        "native_id": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE",
+        "filename": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE.zip",
+        "bytes": 968566283,
+        "sha256": "ea7dd9a64b4bf4b50532c215c47f10ed9f6129926d8a4925229441ec5feedf10",
+        "md5": "6cb18ff38e0e7b0f7375145651e0938e",
+        "blake3": "ae5a557545eb28cf199bba8457d6cffd770c25ca67230e27c0bea00ace326fd8",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "grandview-2021-pre",
+        "package_id": "grandview-s2-optical-pair-v0.1.0",
+        "registration_run_id": "BL-2026-07-20-grandview-optical-intake-r001",
+        "registration_manifest_sha256": "5bc9d6f14ccbdc87b4e7b4a8298e7eaccb05718f47c25ce28fda530d57e1fcf1",
+        "native_id": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE",
+        "filename": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE.zip",
+        "bytes": 954915511,
+        "sha256": "3826904feb93becbdcd200f36d6fd892ce2ef000e04b5189cc4b72a186e90491",
+        "md5": "128033615ac0bbacdb01c90440fa31cf",
+        "blake3": "1bfc2618bc9fa27b5c9425697b8b93b749d3f624397bc0fc60f631fa7a6ea458",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "green-ridge-2020-post",
+        "package_id": "green-ridge-s2-optical-pair-v0.1.0",
+        "registration_run_id": "BL-2026-07-19-green-ridge-optical-intake-r001",
+        "registration_manifest_sha256": "09a0f3772fb3567632a2417c6d64b472b5a32b6a8b50eea4141dec7726dbb281",
+        "native_id": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE",
+        "filename": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE.zip",
+        "bytes": 1197623643,
+        "sha256": "31fe8628271d18ce1aa74dd672b14ab2c681184fbd12d0f8f9d1f7dc91e8fdc5",
+        "md5": "c4621bad458e78bc660fe9cbbda37fda",
+        "blake3": "4ec71a9af55cb84a1eec8c174a96fa5689841aa8771bf86f6c655ac9e7046be9",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "green-ridge-2020-pre",
+        "package_id": "green-ridge-s2-optical-pair-v0.1.0",
+        "registration_run_id": "BL-2026-07-19-green-ridge-optical-intake-r001",
+        "registration_manifest_sha256": "09a0f3772fb3567632a2417c6d64b472b5a32b6a8b50eea4141dec7726dbb281",
+        "native_id": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+        "filename": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE.zip",
+        "bytes": 1190832495,
+        "sha256": "4d8abc07dedeab2e029d279c812f0302c304042af2415c95f1b4e066aede7a3f",
+        "md5": "42e951ef3b0bbdefc652a9c3009b7b81",
+        "blake3": "e1dacd034aa05af169af627a664142750d9220297b7cb8d5c7b67b4122cb2794",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "mckay-2017-post",
+        "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "registration_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+        "registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "native_id": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE",
+        "filename": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE.zip",
+        "bytes": 1144426057,
+        "sha256": "a735ecc6da284dbeb864210928dfc2997a9e2cbf50722b699a5fa6625d874555",
+        "md5": "cb4501abcb2af4b05d7f5b1c55fe6c48",
+        "blake3": "0a68c875b5303a823e44887617c77ea439c39b3e0517d4cc457bf7edf98aa8da",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "mckay-2017-pre",
+        "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "registration_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+        "registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "native_id": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+        "filename": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE.zip",
+        "bytes": 1132353399,
+        "sha256": "32f5529cc254d74dffca4fc80774b0401dab96aa7dcdfd55d2b0440a7cefa8e7",
+        "md5": "1bd2d39175ac50d2982c806275a57063",
+        "blake3": "20fbb16b1611f9592cb437823f6834ffc8eea57f63866ac2515c7f4e86f020d2",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "tepee-2018-post",
+        "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "registration_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+        "registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "native_id": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE",
+        "filename": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE.zip",
+        "bytes": 1144413287,
+        "sha256": "9ff4bf957bfdc8d282ee5799a73d607d12e8c0f0c8499f7ad2e52fada3854366",
+        "md5": "f65b6a470713ee0599df8d16f3ba6e92",
+        "blake3": "87602ae65a1821f0d50bab85fb6775cdcba9ee48a839a96a4d654f28f078829f",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "tepee-2018-pre",
+        "package_id": "burnlens-cross-event-optical-package-v0.1.0",
+        "registration_run_id": "BL-2026-07-16-cross-event-optical-intake-r005",
+        "registration_manifest_sha256": "7827232e4986d8209fefd4ebbe160d3c9432bcd18562fad0587afcf6d79ed26c",
+        "native_id": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+        "filename": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE.zip",
+        "bytes": 1129978013,
+        "sha256": "3d99aec012745da9231bec45c294a2914b5d6eb77a27dbbe4a720554ae0af609",
+        "md5": "d88c6f1bdc9e9108c64cb95eaa0da5c9",
+        "blake3": "5c1b3c25b7d2e3e22f1eb474054396a2fb87d0d1748ca7a50edbb9799d523f46",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "ward-creek-2019-post",
+        "package_id": "ward-creek-s2-optical-post-v0.1.0",
+        "registration_run_id": "BL-2026-07-24-ward-creek-2019-post-r001",
+        "registration_manifest_sha256": "d4511d52832fad466c4d843f1c16d1246235afad36dbe7f50883303a99fe0f43",
+        "native_id": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE",
+        "filename": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE.zip",
+        "bytes": 1198420414,
+        "sha256": "4374b4bf5a446244b7d8ad6ce6eed1fa8e93aef711df7e785a95581698fd53d0",
+        "md5": "28f18e0328dd4cb8ab45446a1a238fb0",
+        "blake3": "eaf090416dd240478d85389ba018f1d193e09c270ff40a6f346ee9c4f8110eaf",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "ward-creek-2019-pre",
+        "package_id": "ward-creek-s2-optical-pre-v0.1.0",
+        "registration_run_id": "BL-2026-07-24-ward-creek-2019-pre-r001",
+        "registration_manifest_sha256": "7dfaf433af866fbd6064e35b04825a3aa1ce303c88e981616ab8821245399b98",
+        "native_id": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE",
+        "filename": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE.zip",
+        "bytes": 1198399787,
+        "sha256": "0c03929bcc8697ab83eedcc2a4bbe6e1f428f2636a3477533ca101101b724961",
+        "md5": "7de4c0076a9ed4a3024ef46474b2aaac",
+        "blake3": "737a71d70c36ae8d65d26df28e87730d08ed0bade1d2a327cce8a6b812a32c2a",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "windigo-2022-post",
+        "package_id": "windigo-s2-optical-post-v0.1.0",
+        "registration_run_id": "BL-2026-07-23-windigo-optical-post-r002",
+        "registration_manifest_sha256": "7b4de9bcbe7fac9037b41dd58b0ec589283ff5bdd9a9a3f200bf5d27e7527c34",
+        "native_id": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE",
+        "filename": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE.zip",
+        "bytes": 1187986637,
+        "sha256": "18a40c3c7a8c14443892461876ed1deafab1b22d54446802cc394bd465910987",
+        "md5": "9aa84788fd136aad2da9a30dacc17330",
+        "blake3": "1923a7089f58278add5f2f2692139cbf4bf2a900ec8ca4afb8a4b8391ce89cff",
+        "filesystem_link_count": 1
+      },
+      {
+        "role": "windigo-2022-pre",
+        "package_id": "windigo-s2-optical-pre-v0.1.0",
+        "registration_run_id": "BL-2026-07-23-windigo-optical-pre-r002",
+        "registration_manifest_sha256": "3ac05e85e5207ffb3d0ff9ea2f5e9e6332e49c298f77eff4826ee5c6aa5ad3e9",
+        "native_id": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+        "filename": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE.zip",
+        "bytes": 1185125439,
+        "sha256": "6a62dd98ce619f53a2dc4e8348de5503edac6cfe3cf58449cdb0de98750d8034",
+        "md5": "6103928264ef49f78cbc6200e613b158",
+        "blake3": "13541bf3ea1c56269b3b4667e0051f7d95bbe7b64b69a9228ce1f2f9899fa17f",
+        "filesystem_link_count": 1
+      }
+    ]
+  },
+  "dataset_contract": {
+    "format": "one directory per candidate patch; NumPy .npy arrays without pickles",
+    "patch_shape": [
+      64,
+      64
+    ],
+    "feature_shape": [
+      6,
+      64,
+      64
+    ],
+    "feature_dtype": "float32",
+    "state_dtype": "uint8",
+    "mask_dtype": "uint8",
+    "channel_order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "invalid_feature_value": "NaN",
+    "state_values": {
+      "0": "owner-approved background core",
+      "1": "owner-approved burned core",
+      "2": "union of explicit unknown rings",
+      "255": "unreviewed, source-invalid, or nodata"
+    },
+    "loss_mask": "combined state is 0 or 1 AND pair validity passes; no other pixel contributes to loss",
+    "metric_mask": "byte-identical to loss_mask",
+    "normalization_statistics_created": false,
+    "resampling": "none",
+    "reprojection": "none",
+    "mosaicking": "none"
+  },
+  "inventory": {
+    "event_groups": 6,
+    "patches": 12,
+    "patches_by_role": {
+      "test": 4,
+      "train": 4,
+      "validation": 4
+    },
+    "accepted_core_pixels": 287,
+    "class_core_pixels": {
+      "background": 140,
+      "burned": 147
+    },
+    "source_unknown_ring_pixels": 531,
+    "test_open_count": 0
+  },
+  "patches": [
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "split_role": "test",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-001",
+      "class": "burned",
+      "window": {
+        "row_offset": 168,
+        "column_offset": 236,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 14,
+      "unknown_ring_pixels_in_patch": 26,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 14,
+      "registration_state_counts_on_event_grid": {
+        "pass": 250677,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B12_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "4034070f6913c00028cb4980375ee6d5719a2bcda545ee0b364a99fa760727e3"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "43842138739e72655876b7a3d298a6d671fd9c91f8deadbc4bdbbbe504ff69b1"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "0ddc8acaf4a4c2f73d5a60f58006f7b1520b9efb99a494e37544014bdfb4f2c9"
+        }
+      ]
+    },
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "split_role": "test",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-002",
+      "class": "background",
+      "window": {
+        "row_offset": 68,
+        "column_offset": 401,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 40,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 250677,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B12_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "0cac49a855d07d91c743e8024f0f1cf04a3f23301fc1dcfe8985c9d0caf3ca50"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "f1ac5ebb76908fcf0553316db36d298bce901c8d208003868bd403a498f4fa46"
+        },
+        {
+          "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "923109ba696fbade72da3b2b1a49c3ed3ee8191cb35551a0133b99a5a5b07fa1"
+        }
+      ]
+    },
+    {
+      "patch_id": "test--event-windigo-2022--WDP-001--r180c151h64w64",
+      "split_role": "test",
+      "event_group_id": "event-windigo-2022",
+      "candidate_id": "WDP-001",
+      "class": "burned",
+      "window": {
+        "row_offset": 180,
+        "column_offset": 151,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        575560.0,
+        0.0,
+        -20.0,
+        4801820.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 51,
+      "input_valid_pixels": 4051,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 207474,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "windigo-2022-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "ee05b92709836c19064a57f652cb61166f23929225daa7b6ef88396bce9089a3"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "0836bbab60907a9edecaf4e5db9468d57c5f9b12f573b4cc38310186dad6589d"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "269a9b91438e1b5f880cf25c5051401e6aa86169e0c39cbec213863396b68847"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "3e89e3c2bdb5e07b32bebf490a3aef53b1832d95fedb82f1419d5e4c088fc453"
+        }
+      ]
+    },
+    {
+      "patch_id": "test--event-windigo-2022--WDP-002--r103c393h64w64",
+      "split_role": "test",
+      "event_group_id": "event-windigo-2022",
+      "candidate_id": "WDP-002",
+      "class": "background",
+      "window": {
+        "row_offset": 103,
+        "column_offset": 393,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        580400.0,
+        0.0,
+        -20.0,
+        4803360.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 51,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 207474,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "windigo-2022-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "e07ce3cd2c89ece9801a8bd227a8bfff9be3c78de6527c6fd62d17e38bc87d06"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "8a22f97e9b381f61a938551105cc5cceeabee429137b14990e5d01c756f2f743"
+        },
+        {
+          "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "aadc1d9c2707c56df5354ed02d6a667143c5c7d22e89eafa6e7c54717e74d3a4"
+        }
+      ]
+    },
+    {
+      "patch_id": "train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64",
+      "split_role": "train",
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "candidate_id": "GRP-001",
+      "class": "burned",
+      "window": {
+        "row_offset": 252,
+        "column_offset": 149,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        610000.0,
+        0.0,
+        -20.0,
+        4924260.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 50,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 377104,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B04_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B8A_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B12_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B04_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B8A_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "427c78c5d398d3cacb5a6e8bdbeb24578f88bfa4ec0bd51a2fe25c28f7db1c22"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "be64273a917c1a5b17c4db43d58837b18e7a18c9e30890f3d7ddcb4401c19cc4"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "c8bbf36ef78710220cb17fad81bb33eaee7667520191ba20b0303c23a571c50c"
+        }
+      ]
+    },
+    {
+      "patch_id": "train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64",
+      "split_role": "train",
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "candidate_id": "GRP-002",
+      "class": "background",
+      "window": {
+        "row_offset": 438,
+        "column_offset": 580,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        618620.0,
+        0.0,
+        -20.0,
+        4920540.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 37,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 377104,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B04_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B8A_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE/GRANULE/L2A_T10TFQ_A017914_20200810T190422/IMG_DATA/R20m/T10TFQ_20200810T185919_B12_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B04_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B8A_20m.jp2"
+        },
+        {
+          "role": "green-ridge-2020-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE/GRANULE/L2A_T10TFQ_A018629_20200929T190122/IMG_DATA/R20m/T10TFQ_20200929T190109_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "3d5755a6733f5e4b636c9055ac135af3698d094811da00d4c18feae75b304edd"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "403d49de4a12a0268be7402d21e9ca6eba7e0663ce35a9ea804a31f9bbd18e67"
+        },
+        {
+          "path": "patches/train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "65c7602337577c438d1ed8f1c85ccd8de32565a3f2aa4d7d8044dca9df9d02aa"
+        }
+      ]
+    },
+    {
+      "patch_id": "train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64",
+      "split_role": "train",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "candidate_id": "RCP-005",
+      "class": "background",
+      "window": {
+        "row_offset": 3,
+        "column_offset": 287,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        656560.0,
+        0.0,
+        -20.0,
+        4857480.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 33,
+      "unknown_ring_pixels_in_patch": 57,
+      "input_valid_pixels": 3910,
+      "loss_pixels": 33,
+      "registration_state_counts_on_event_grid": {
+        "pass": 14125,
+        "review_needed": 14125,
+        "excluded": 15625,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "tepee-2018-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B04_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B8A_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B12_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B04_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B8A_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "7463fb44dec3e83109141fdbf021beb0f29c9ad572033fb05b092a7da883701e"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "b7628d131ef9947d6033dad0442c00a241a727c54b2aa5cc06df7c66f9ab0aab"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "10d18c0f68c8916ee7a7fa37ec819a5a7ff13764d6d22aeacaf9dceca3c6ef71"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "b4c80fdd8d9cd7d66c6f0c51927af00feef04cbee9121a484e7b19408fb40aca"
+        }
+      ]
+    },
+    {
+      "patch_id": "train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64",
+      "split_role": "train",
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "candidate_id": "RCP-006",
+      "class": "burned",
+      "window": {
+        "row_offset": 6,
+        "column_offset": 219,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        655200.0,
+        0.0,
+        -20.0,
+        4857420.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 26,
+      "unknown_ring_pixels_in_patch": 41,
+      "input_valid_pixels": 2621,
+      "loss_pixels": 26,
+      "registration_state_counts_on_event_grid": {
+        "pass": 14125,
+        "review_needed": 14125,
+        "excluded": 15625,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "tepee-2018-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B04_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B8A_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE/GRANULE/L2A_T10TFP_A007475_20180811T190338/IMG_DATA/R20m/T10TFP_20180811T185909_B12_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B04_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B8A_20m.jp2"
+        },
+        {
+          "role": "tepee-2018-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE/GRANULE/L2A_T10TFP_A008047_20180920T190438/IMG_DATA/R20m/T10TFP_20180920T190049_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "1a5a3dc12dd4cc206d565e2b935607cfdad8d42d52eb97af1fc96033cc236de8"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "093b5aee782a863ace20832e39c758688524cba6eed7c38859683e2dddd15039"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "7386ee38fa47a2f785ed6cfff3d25d57e43d9f258edf246a165ea542e2e886ed"
+        },
+        {
+          "path": "patches/train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "aa3d4a04315f002d7c994221784d422d92fcf16ccb15d7c62545026b33d7b7b8"
+        }
+      ]
+    },
+    {
+      "patch_id": "validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64",
+      "split_role": "validation",
+      "event_group_id": "event-grandview-0558-od-2021",
+      "candidate_id": "GVP-001",
+      "class": "burned",
+      "window": {
+        "row_offset": 197,
+        "column_offset": 297,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        625540.0,
+        0.0,
+        -20.0,
+        4924480.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 46,
+      "input_valid_pixels": 3836,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 443408,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "grandview-2021-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B04_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B8A_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B12_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B04_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B8A_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "4ef40aaaf2fab0f00706a2b5706e70e332d030ee20f77335960c72974626db48"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "06c97d4153038f8ea9b2b79fd7f2c75860e89be6c2d80fd54a70f3623205a67f"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "47c76fd2b2a8f3e0eef42bb42980125353f282ba5349501737847cd19348fbfb"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "9fc0f3124f54e8c9ac2d3ff396767b6432cd6908559d5bba3941ce822d59d875"
+        }
+      ]
+    },
+    {
+      "patch_id": "validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64",
+      "split_role": "validation",
+      "event_group_id": "event-grandview-0558-od-2021",
+      "candidate_id": "GVP-002",
+      "class": "background",
+      "window": {
+        "row_offset": 598,
+        "column_offset": 339,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        626380.0,
+        0.0,
+        -20.0,
+        4916460.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 52,
+      "input_valid_pixels": 4090,
+      "loss_pixels": 25,
+      "registration_state_counts_on_event_grid": {
+        "pass": 443408,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "grandview-2021-pre",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B04_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-pre",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B8A_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-pre",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE/GRANULE/L2A_T10TFQ_A022161_20210603T185928/IMG_DATA/R20m/T10TFQ_20210603T184919_B12_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B04",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B04_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B8A",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B8A_20m.jp2"
+        },
+        {
+          "role": "grandview-2021-post",
+          "band": "B12",
+          "member": "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE/GRANULE/L2A_T10TFQ_A022876_20210723T185617/IMG_DATA/R20m/T10TFQ_20210723T184919_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "3a2aee3de820b6981ea0dd42d37484c879fe2da178fbb4c11300c9ea8618fbfa"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "8ed3c2a5957159c54d0b0867559f8cac341956adc1eee5ba3647b29198011bd9"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "297a75576670aa5f20efe6a0a6c4b3f9d84c139f342b32e0b3dbf1e9921b239e"
+        },
+        {
+          "path": "patches/validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "42bfd335013cf5a0e875c1712b1c541d108c6e01937a9f604389a26a3e19c715"
+        }
+      ]
+    },
+    {
+      "patch_id": "validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64",
+      "split_role": "validation",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "candidate_id": "RCP-003",
+      "class": "background",
+      "window": {
+        "row_offset": 0,
+        "column_offset": 7,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        626860.0,
+        0.0,
+        -20.0,
+        4847220.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 7,
+      "unknown_ring_pixels_in_patch": 18,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 7,
+      "registration_state_counts_on_event_grid": {
+        "pass": 20055,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "mckay-2017-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B04_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B8A_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B12_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B04_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B8A_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "a91d87bc8846a5c74f56914dc7fc7b144732f369d5c589854bac5e548b45e61f"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "44b1466e08250a97b1ea1a1ac428c1083e6d9832bee560f2251384b349ba80e2"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "9c43287bd1a73c438d312044af5d9d409d0ad57b3e8a8a07e877a361d0ec344b"
+        }
+      ]
+    },
+    {
+      "patch_id": "validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64",
+      "split_role": "validation",
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "candidate_id": "RCP-004",
+      "class": "burned",
+      "window": {
+        "row_offset": 21,
+        "column_offset": 66,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        628040.0,
+        0.0,
+        -20.0,
+        4846800.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 32,
+      "unknown_ring_pixels_in_patch": 62,
+      "input_valid_pixels": 4096,
+      "loss_pixels": 32,
+      "registration_state_counts_on_event_grid": {
+        "pass": 20055,
+        "review_needed": 0,
+        "excluded": 0,
+        "uncovered": 0
+      },
+      "source_members": [
+        {
+          "role": "mckay-2017-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B04_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B8A_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE/GRANULE/L2A_T10TFP_A010978_20170729T185816/IMG_DATA/R20m/T10TFP_20170729T184921_B12_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B04_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B8A_20m.jp2"
+        },
+        {
+          "role": "mckay-2017-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE/GRANULE/L2A_T10TFP_A011836_20170927T185820/IMG_DATA/R20m/T10TFP_20170927T185131_B12_20m.jp2"
+        }
+      ],
+      "files": [
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "59556bfa3e28a14816ba6fd5f073e911670afec2450795cb904b324e72de5dc5"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "78e786c001af7220c5bfcc60f7bbaaf929766845e52f34a6a58f14bf9751fb9a"
+        },
+        {
+          "path": "patches/validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "0964755e4517760e51c7803870cf86f411f85ebc6d821e4bab27eb4f59320ce1"
+        }
+      ]
+    }
+  ],
+  "attribution": "Contains modified Copernicus Sentinel data 2017-2022, accessed through the Copernicus Data Space Ecosystem; prototype region labels derive from disclosed official BAER/MTBS/RAVG evidence roles and owner review.",
+  "limitations": [
+    "This is a sparse owner-approved prototype dataset, not independent ground truth.",
+    "Only 287 labeled core pixels exist across twelve patches and six events.",
+    "The balanced review roster does not estimate natural prevalence.",
+    "Unknown rings, unreviewed context, invalid source pixels, and unassessed registration context never contribute to loss or metrics.",
+    "The test roster is locked and its open count remains zero."
+  ],
+  "boundaries": {
+    "dataset_created": true,
+    "split_locked": true,
+    "dataset_qa_passed": false,
+    "normalization_statistics_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "metric_result_created": false,
+    "test_pixels_opened": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false,
+    "generalization_claimed": false
+  },
+  "next_dependency": "P2O5-T03-U04"
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens model-readiness decision</title>
+<style>
+:root{--ink:#17201d;--muted:#58635f;--paper:#f3efe5;--card:#fffdf8;--green:#175b47;--gold:#b87920;--line:#d7d0c2}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main{max-width:1120px;margin:auto;padding:28px}h1{font-size:clamp(2rem,6vw,4.5rem);line-height:.95;margin:.25rem 0 1rem}
+h2{margin-top:0}.eyebrow{font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.decision{border-left:8px solid var(--green)}.metric{font-size:2rem;font-weight:850}.muted{color:var(--muted)}
+.pass{display:inline-block;background:#dcefe6;color:#104a39;border-radius:999px;padding:.1rem .55rem;font-weight:800}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+code{overflow-wrap:anywhere}footer{margin-top:22px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){main{padding:18px}.grid{grid-template-columns:1fr}h1{font-size:2.4rem}.metric{font-size:1.7rem}}
+</style>
+</head>
+<body><main>
+<p class="eyebrow">P2O5-T03 · U06 · Phase Two</p>
+<h1>Bounded U-Net authorized.<br>The baseline still leads.</h1>
+<section class="card decision">
+<h2>AUTHORIZE_BOUNDED_UNET</h2>
+<p><strong>REJECTION_FIRST_SINGLE_MODEL_EXPERIMENT</strong></p>
+<p>One CPU-only model experiment may start only after the U07 release is merged, tagged, and verified. The experiment is designed to produce a valid trained-model evaluation and to reject the model honestly if it does not beat the transparent baseline.</p>
+<p><strong>No model-value, generalization, or final-readiness claim is authorized.</strong></p>
+</section>
+<section class="grid">
+<div class="card"><div class="metric">6 events</div><div class="muted">whole-event 2 / 2 / 2 split</div></div>
+<div class="card"><div class="metric">287 cores</div><div class="muted">531 unknown-ring pixels excluded</div></div>
+<div class="card"><div class="metric">RBR 1.000</div><div class="muted">Dice and IoU on 89 selected test cores</div></div>
+</section>
+<section class="card"><h2>Why proceed</h2><ul><li>All exact Phase Two dataset, split, QA, normalization, and baseline gates pass.</li><li>The selected U-Net family fits the established binary mask-first CV task.</li><li>A compatible CPU-only PyTorch resolution exists within the locked Python and setuptools constraints.</li><li>The experiment is bounded to one model and can honestly reject the model if it does not add value.</li><li>The strongest RBR baseline already reaches 1.0 on every frozen primary test metric, so the model cannot be claimed as the analytical winner on this evidence.</li></ul></section>
+<section class="card"><h2>Exact readiness gates</h2><div class="table-wrap"><table><thead><tr><th>Gate</th><th>State</th><th>Finding</th></tr></thead><tbody><tr><td>Exact Package Identity</td><td><span class='pass'>PASS</span></td><td>exact dataset and whole-event split identities match</td></tr><tr><td>Dataset Scope</td><td><span class='pass'>PASS</span></td><td>six events, twelve patches, 287 cores, and 531 unknown-ring pixels match</td></tr><tr><td>Whole Event Split</td><td><span class='pass'>PASS</span></td><td>locked whole-event 4/4/4 patch split remains exact</td></tr><tr><td>Independent Dataset Qa</td><td><span class='pass'>PASS</span></td><td>independent dataset QA passed</td></tr><tr><td>Train Only Normalization</td><td><span class='pass'>PASS</span></td><td>normalization is owned by training events only</td></tr><tr><td>Baseline Selection Integrity</td><td><span class='pass'>PASS</span></td><td>RBR selection was frozen from train and validation before test</td></tr><tr><td>Single Baseline Test Open</td><td><span class='pass'>PASS</span></td><td>baseline test opening is single, frozen, and untuned</td></tr><tr><td>Baseline Ceiling Visible</td><td><span class='pass'>PASS</span></td><td>RBR reaches the frozen selected-core metric ceiling and cannot be numerically exceeded</td></tr><tr><td>Tooling Feasibility</td><td><span class='pass'>PASS</span></td><td>official tooling research and local CPU-only dry-run pass without installation</td></tr></tbody></table></div></section>
+<section class="card"><h2>Frozen experiment</h2>
+<img src="MODEL-READINESS-DECISION-2026-001.png" alt="Bounded U-Net training contract diagram">
+<p>The test already served one frozen baseline evaluation. It may not tune the model. Model checkpoint selection is validation-only, followed by one final model evaluation against the unchanged RBR result.</p>
+</section>
+<section class="card"><h2>Limits that control the claim</h2><ul><li>Owner-approved prototype evidence, not independent ground truth, field validation, generalization, official information, or operational guidance.</li><li>Only four train patches and two train events exist.</li><li>The 89-core test set is selected prototype evidence, not natural prevalence.</li><li>Candidate construction used optical and official-reference evidence and may favor spectral separability.</li><li>The RBR baseline already reaches the metric ceiling on the frozen test cores.</li><li>The experiment can satisfy the requirement to build, train, and evaluate a U-Net while still rejecting it as the analytical winner.</li></ul></section>
+<footer>
+Run <code>BL-2026-07-25-p2o5-t03-u06-readiness-r001</code> · source <code>28c456b5ae7a84f3438f1cc5a1b178d31e6555ab</code> · contract <code>BOUNDED-UNET-TRAINING-CONTRACT-2026-001</code><br>
+Owner-approved prototype evidence, not independent ground truth, field validation, generalization, official information, or operational guidance.
+</footer>
+</main></body></html>

@@ -134,7 +134,10 @@ class SubmissionBundleTests(unittest.TestCase):
     def test_current_mutable_case_study_is_not_silently_rebundled(self) -> None:
         with self.assertRaisesRegex(
             SubmissionBundleError,
-            "bound asset size changed: docs/case-study/BURNLENS_CASE_STUDY.md",
+            (
+                "bound asset size changed: "
+                "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html"
+            ),
         ):
             build_bundle_contents(
                 repository_root=ROOT,

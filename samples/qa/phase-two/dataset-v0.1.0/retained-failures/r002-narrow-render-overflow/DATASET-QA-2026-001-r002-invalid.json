@@ -1,0 +1,154 @@
+{
+  "report_version": "burnlens-dataset-qa-v0.1.0",
+  "report_id": "DATASET-QA-2026-001",
+  "generated_at_utc": "2026-07-25T19:36:35Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u04-dataset-qa-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U04",
+  "git_source_commit": "dcb2afc6d08e6faeb81703762aeb3fa988b16d7f",
+  "software_version": "0.51.0",
+  "inputs": {
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "dataset_contract": {
+      "path": "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+      "bytes": 29653,
+      "sha256": "f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f"
+    },
+    "whole_event_split": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "dataset_candidate": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    }
+  },
+  "independence": "This QA does not import the materializer. It independently reopens registrations, provider archives, candidate rasters, dataset arrays, and split metadata.",
+  "gates": {
+    "exact_dataset_file_bindings": "pass: 48 of 48 patch files",
+    "archive_custody": "pass: 12 single-link archives / 13,633,040,965 bytes",
+    "source_to_patch_reconstruction": "pass: 12 of 12 patches",
+    "array_schema_and_domains": "pass",
+    "core_and_unknown_counts": "pass: 287 core / 531 unknown",
+    "exact_duplicate_features": "pass: zero",
+    "cross_role_spatial_overlap": "pass: zero",
+    "cross_role_source_product_overlap": "pass: zero",
+    "train_only_normalization": "pass",
+    "render_scope": "pass: train and validation only; test not rendered"
+  },
+  "inventory": {
+    "event_groups": 6,
+    "patches": 12,
+    "reconstructed_patches": 12,
+    "verified_patch_files": 48,
+    "core_pixels": {
+      "background": 140,
+      "burned": 147
+    },
+    "total_core_pixels": 287,
+    "unknown_ring_pixels": 531,
+    "train_normalization_pixels_per_channel": 14723,
+    "rendered_patches": 8,
+    "rendered_roles": [
+      "train",
+      "validation"
+    ],
+    "test_rendered": false,
+    "test_analytical_open_count": 0
+  },
+  "normalization": {
+    "normalization_version": "burnlens-train-normalization-v0.1.0",
+    "normalization_id": "TRAIN-NORMALIZATION-2026-001",
+    "statistics_owner": "locked training events only",
+    "channel_order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "method": "per-channel global mean and population standard deviation",
+    "standardization": "(value - train_mean) / max(train_std, 1e-6)",
+    "validation_pixels_used": false,
+    "test_pixels_used": false,
+    "channels": [
+      {
+        "channel": "pre_B04",
+        "eligible_pixel_count": 14723,
+        "mean": 0.08975772609267363,
+        "population_std": 0.04449842295525843,
+        "minimum": 0.010200000368058681,
+        "maximum": 0.2630000114440918
+      },
+      {
+        "channel": "pre_B8A",
+        "eligible_pixel_count": 14723,
+        "mean": 0.18928176321806342,
+        "population_std": 0.02431832649796389,
+        "minimum": 0.1137000024318695,
+        "maximum": 0.3944999873638153
+      },
+      {
+        "channel": "pre_B12",
+        "eligible_pixel_count": 14723,
+        "mean": 0.16114088157455653,
+        "population_std": 0.06944866658891363,
+        "minimum": 0.03009999915957451,
+        "maximum": 0.34290000796318054
+      },
+      {
+        "channel": "post_B04",
+        "eligible_pixel_count": 14723,
+        "mean": 0.08174106506106384,
+        "population_std": 0.03737384052008506,
+        "minimum": 0.009700000286102295,
+        "maximum": 0.25529998540878296
+      },
+      {
+        "channel": "post_B8A",
+        "eligible_pixel_count": 14723,
+        "mean": 0.15204657335852764,
+        "population_std": 0.03537933934914044,
+        "minimum": 0.048700001090765,
+        "maximum": 0.3880999982357025
+      },
+      {
+        "channel": "post_B12",
+        "eligible_pixel_count": 14723,
+        "mean": 0.15124375473563437,
+        "population_std": 0.0654270367631097,
+        "minimum": 0.019500000402331352,
+        "maximum": 0.322299987077713
+      }
+    ]
+  },
+  "limitations": [
+    "Only two events and 109 labeled core pixels are available for training.",
+    "Validation and test each contain only two event groups.",
+    "Integrity-only test reconstruction emitted no test statistics or images and does not count as an analytical test opening.",
+    "Exact source/group separation cannot establish geographic or population representativeness.",
+    "Owner-approved prototype labels are not independent ground truth."
+  ],
+  "decision": "PASS_INDEPENDENT_DATASET_QA_AUTHORIZE_BASELINE_PREREGISTRATION_ONLY",
+  "boundaries": {
+    "dataset_qa_passed": true,
+    "normalization_statistics_created": true,
+    "test_analytical_open_count": 0,
+    "baseline_created": false,
+    "model_created": false,
+    "metric_result_created": false,
+    "training_authorized": false,
+    "independent_ground_truth_claimed": false,
+    "generalization_claimed": false
+  },
+  "next_dependency": "P2O5-T03-U05",
+  "warning": "Owner-approved prototype evidence, not independent ground truth or field validation. Official sources govern."
+}

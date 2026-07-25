@@ -1,0 +1,356 @@
+{
+  "split_manifest_version": "burnlens-whole-event-split-v0.1.0",
+  "split_id": "WHOLE-EVENT-SPLIT-2026-001",
+  "generated_at_utc": "2026-07-25T18:42:15.175Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u02-whole-event-split-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U02",
+  "git_source_commit": "c719bf79b4c01cd4016c33649c17f26f9d4ada97",
+  "software_version": "0.51.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "dataset_created": false,
+  "inputs": {
+    "dataset_contract": {
+      "path": "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+      "bytes": 29653,
+      "sha256": "f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f"
+    },
+    "dataset_candidate": {
+      "path": "records/phase-two/readiness/DATASET-CANDIDATE-2026-002.json",
+      "bytes": 30504,
+      "sha256": "4a9646af493cdce81d0cd57405ebccf0dfecf5ca77c96930d0837c3b7d4e65f2"
+    },
+    "ranking": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-RANKING-2026-001.json",
+      "bytes": 173367,
+      "sha256": "a513edff663dea74f5ed5e6a50c9e50175f27bc8fdd9aecf7ebe4056582397f9"
+    }
+  },
+  "selection": {
+    "rank": 1,
+    "criteria_in_order": [
+      "source_regime_role_deviation_ascending",
+      "transfer_status_role_deviation_ascending",
+      "train_core_pixels_descending",
+      "validation_test_core_pixel_difference_ascending",
+      "test_minimum_event_year_descending",
+      "test_event_year_sum_descending",
+      "train_event_year_span_ascending",
+      "validation_event_year_span_ascending",
+      "canonical_role_event_ids_ascending"
+    ],
+    "score_components": {
+      "source_regime_role_deviation": 0,
+      "transfer_status_role_deviation": 0,
+      "train_core_pixels": 109,
+      "validation_test_core_pixel_difference": 0,
+      "test_minimum_event_year": 2019,
+      "test_event_year_sum": 4041,
+      "train_event_year_span": 2,
+      "validation_event_year_span": 4,
+      "canonical_role_event_ids": "{\"test\":[\"event-ward-creek-2019\",\"event-windigo-2022\"],\"train\":[\"event-green-ridge-0684-cs-2020\",\"event-tepee-1144-ne-2018\"],\"validation\":[\"event-grandview-0558-od-2021\",\"event-mckay-1035-ne-2017\"]}"
+    },
+    "roles": {
+      "train": {
+        "event_group_ids": [
+          "event-green-ridge-0684-cs-2020",
+          "event-tepee-1144-ne-2018"
+        ],
+        "event_years": [
+          2020,
+          2018
+        ],
+        "core_pixels": 109,
+        "class_core_pixels": {
+          "background": 58,
+          "burned": 51
+        },
+        "unknown_ring_pixels": 185,
+        "source_regime_counts": {
+          "sentinel2-baer-mtbs-ravg-current-v1": 1,
+          "sentinel2-mtbs-current-v1": 1
+        },
+        "source_programs": [
+          "BAER",
+          "COPERNICUS_SENTINEL_2",
+          "MTBS",
+          "RAVG"
+        ],
+        "never_tuned_transfer_events": 1
+      },
+      "validation": {
+        "event_group_ids": [
+          "event-grandview-0558-od-2021",
+          "event-mckay-1035-ne-2017"
+        ],
+        "event_years": [
+          2021,
+          2017
+        ],
+        "core_pixels": 89,
+        "class_core_pixels": {
+          "background": 32,
+          "burned": 57
+        },
+        "unknown_ring_pixels": 178,
+        "source_regime_counts": {
+          "sentinel2-baer-mtbs-ravg-current-v1": 1,
+          "sentinel2-mtbs-current-v1": 1
+        },
+        "source_programs": [
+          "BAER",
+          "COPERNICUS_SENTINEL_2",
+          "MTBS",
+          "RAVG"
+        ],
+        "never_tuned_transfer_events": 1
+      },
+      "test": {
+        "event_group_ids": [
+          "event-ward-creek-2019",
+          "event-windigo-2022"
+        ],
+        "event_years": [
+          2019,
+          2022
+        ],
+        "core_pixels": 89,
+        "class_core_pixels": {
+          "background": 50,
+          "burned": 39
+        },
+        "unknown_ring_pixels": 168,
+        "source_regime_counts": {
+          "sentinel2-baer-mtbs-ravg-current-v1": 1,
+          "sentinel2-mtbs-current-v1": 1
+        },
+        "source_programs": [
+          "BAER",
+          "COPERNICUS_SENTINEL_2",
+          "MTBS",
+          "RAVG"
+        ],
+        "never_tuned_transfer_events": 1
+      }
+    }
+  },
+  "group_bindings": {
+    "event-grandview-0558-od-2021": {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "scene_group_id": "scene-52480bb8110475c9",
+      "geography_group_id": "geography-6d8988c636f1219c",
+      "time_group_id": "time-010c76aca52d4e22",
+      "source_regime_group_id": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_product_native_ids": [
+        "S2B_MSIL2A_20210603T184919_N0500_R113_T10TFQ_20230130T001253.SAFE",
+        "S2B_MSIL2A_20210723T184919_N0500_R113_T10TFQ_20230131T130926.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2021-06-03T19:02:10.753344Z",
+        "2021-07-23T19:02:11.84911Z"
+      ]
+    },
+    "event-green-ridge-0684-cs-2020": {
+      "event_group_id": "event-green-ridge-0684-cs-2020",
+      "scene_group_id": "scene-e0c1b2d5410e4216",
+      "geography_group_id": "geography-48c2a06c36cae4a6",
+      "time_group_id": "time-c8dca0b161d6b730",
+      "source_regime_group_id": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_product_native_ids": [
+        "S2B_MSIL2A_20200810T185919_N0500_R013_T10TFQ_20230509T050550.SAFE",
+        "S2B_MSIL2A_20200929T190109_N0500_R013_T10TFQ_20230427T010543.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2020-08-10T19:12:09.844505Z",
+        "2020-09-29T19:12:09.525181Z"
+      ]
+    },
+    "event-mckay-1035-ne-2017": {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "scene_group_id": "scene-add80d3d408bf64d",
+      "geography_group_id": "geography-880312ff6cabc533",
+      "time_group_id": "time-bf60ed592330ab14",
+      "source_regime_group_id": "sentinel2-mtbs-current-v1",
+      "source_product_native_ids": [
+        "S2A_MSIL2A_20170729T184921_N0500_R113_T10TFP_20230917T022841.SAFE",
+        "S2A_MSIL2A_20170927T185131_N0500_R113_T10TFP_20230824T183525.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2017-07-29T19:02:25.781754Z",
+        "2017-09-27T19:02:20.822324Z"
+      ]
+    },
+    "event-tepee-1144-ne-2018": {
+      "event_group_id": "event-tepee-1144-ne-2018",
+      "scene_group_id": "scene-1711b54a308f6f1d",
+      "geography_group_id": "geography-5fba95338d0a6611",
+      "time_group_id": "time-4d9211150514853b",
+      "source_regime_group_id": "sentinel2-mtbs-current-v1",
+      "source_product_native_ids": [
+        "S2B_MSIL2A_20180811T185909_N0500_R013_T10TFP_20230815T160827.SAFE",
+        "S2B_MSIL2A_20180920T190049_N0500_R013_T10TFP_20230803T120358.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2018-08-11T19:12:15.299391Z",
+        "2018-09-20T19:12:13.124395Z"
+      ]
+    },
+    "event-ward-creek-2019": {
+      "event_group_id": "event-ward-creek-2019",
+      "scene_group_id": "scene-a021c106412e6728",
+      "geography_group_id": "geography-c8095d60443fe241",
+      "time_group_id": "time-0ae3f1f16b5d75fc",
+      "source_regime_group_id": "sentinel2-mtbs-current-v1",
+      "source_product_native_ids": [
+        "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE",
+        "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2019-08-01T19:12:11.014978Z",
+        "2019-08-31T19:12:07.040104Z"
+      ]
+    },
+    "event-windigo-2022": {
+      "event_group_id": "event-windigo-2022",
+      "scene_group_id": "scene-e78909721773383a",
+      "geography_group_id": "geography-46d365f9de5e3c69",
+      "time_group_id": "time-4fbc084020362b45",
+      "source_regime_group_id": "sentinel2-baer-mtbs-ravg-current-v1",
+      "source_product_native_ids": [
+        "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE",
+        "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE"
+      ],
+      "source_sensing_times_utc": [
+        "2022-07-26T19:12:34.575958Z",
+        "2022-08-15T19:12:37.180936Z"
+      ]
+    }
+  },
+  "candidate_bindings": {
+    "event-mckay-1035-ne-2017": [
+      {
+        "candidate_id": "RCP-003",
+        "class": "background",
+        "core_pixels": 7,
+        "raster_sha256": "348b1d58ba3604e84691fd5c5180bbbde358af4e016695c7dbb05cb23fb91b25"
+      },
+      {
+        "candidate_id": "RCP-004",
+        "class": "burned",
+        "core_pixels": 32,
+        "raster_sha256": "738328f93c8b6bb2635cc2d13da0b40155047f80547a3042d84bec663db11e1e"
+      }
+    ],
+    "event-tepee-1144-ne-2018": [
+      {
+        "candidate_id": "RCP-005",
+        "class": "background",
+        "core_pixels": 33,
+        "raster_sha256": "0f99f0a262f26d0ffb3a7d121b907726ea2e137d043b7a3b64473b0eb79694be"
+      },
+      {
+        "candidate_id": "RCP-006",
+        "class": "burned",
+        "core_pixels": 26,
+        "raster_sha256": "f8d3bc30747c48875fa0dcd6c4ed1099586aa557633d320794b65aeea216795c"
+      }
+    ],
+    "event-green-ridge-0684-cs-2020": [
+      {
+        "candidate_id": "GRP-001",
+        "class": "burned",
+        "core_pixels": 25,
+        "raster_sha256": "6a1244b9f84917699100be0621c6e2916b6345a734e904e7b1c9b2f242af2f8f"
+      },
+      {
+        "candidate_id": "GRP-002",
+        "class": "background",
+        "core_pixels": 25,
+        "raster_sha256": "0367f034a3df187a04523b9179a82be7e563a8a4bc00a7683669c9530a2812b8"
+      }
+    ],
+    "event-grandview-0558-od-2021": [
+      {
+        "candidate_id": "GVP-001",
+        "class": "burned",
+        "core_pixels": 25,
+        "raster_sha256": "453adb2edafaf72569a60d98f93d923fe02352c9b0454930c8902b9b2b828933"
+      },
+      {
+        "candidate_id": "GVP-002",
+        "class": "background",
+        "core_pixels": 25,
+        "raster_sha256": "2f83c1822da6a8e9aadbfcad097cc1b5ed1ea118277ea0e99784e7c97dc26e91"
+      }
+    ],
+    "event-windigo-2022": [
+      {
+        "candidate_id": "WDP-001",
+        "class": "burned",
+        "core_pixels": 25,
+        "raster_sha256": "0106fe4bf81ee9614a090a38541bb78be9cf033ae6b94c9fe9f3594a62fc0e2a"
+      },
+      {
+        "candidate_id": "WDP-002",
+        "class": "background",
+        "core_pixels": 25,
+        "raster_sha256": "ada6b1e772a9039b5e73ed15ac184229a3df7bed7b55c402ac78e972aec6950e"
+      }
+    ],
+    "event-ward-creek-2019": [
+      {
+        "candidate_id": "WCP-001",
+        "class": "burned",
+        "core_pixels": 14,
+        "raster_sha256": "a9b525cca8461fb9550988b045878cae41e17b9fa0c4d5db55de87ebeabdeccc"
+      },
+      {
+        "candidate_id": "WCP-002",
+        "class": "background",
+        "core_pixels": 25,
+        "raster_sha256": "787bf4455104bbc5ac34b56f409db27b60417b96d5b551687e375bc302c6dfe3"
+      }
+    ]
+  },
+  "leakage_assertions": {
+    "whole_event_group_crosses_roles": false,
+    "scene_group_crosses_roles": false,
+    "geography_group_crosses_roles": false,
+    "time_group_crosses_roles": false,
+    "candidate_crosses_roles": false,
+    "patch_created_before_split": false,
+    "validation_or_test_used_for_normalization": false,
+    "test_used_for_method_or_threshold_selection": false
+  },
+  "sealed_test": {
+    "event_group_ids": [
+      "event-ward-creek-2019",
+      "event-windigo-2022"
+    ],
+    "pixel_values_opened": false,
+    "open_count": 0,
+    "maximum_open_count": 1,
+    "may_open_only_after": "U05 freezes baseline families, preprocessing, thresholds, patch roster, and selection rule"
+  },
+  "limitations": [
+    "The split contains only two event groups per role.",
+    "Training has 109 accepted core pixels; validation and test each have 89.",
+    "Each role has one exact source regime and one never-tuned-transfer status event.",
+    "Owner-approved prototype labels are not independent ground truth.",
+    "The locked split does not authorize dataset materialization or training."
+  ],
+  "boundaries": {
+    "split_locked": true,
+    "dataset_created": false,
+    "patches_created": false,
+    "normalization_statistics_created": false,
+    "baseline_created": false,
+    "model_created": false,
+    "metric_result_created": false,
+    "test_pixels_opened": false,
+    "training_authorized": false
+  },
+  "next_dependency": "P2O5-T03-U03"
+}
