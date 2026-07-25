@@ -30,7 +30,7 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
 
     def test_version_and_exact_inputs(self) -> None:
         self.assertEqual(burnlens.__version__, "0.51.0")
-        self.assertEqual(self.report["software_version"], "0.48.0")
+        self.assertEqual(self.report["software_version"], "0.51.0")
         self.assertEqual(len(self.report["bound_inputs"]), len(BOUND_INPUTS))
 
     def test_report_preserves_claim_and_data_boundaries(self) -> None:
@@ -40,6 +40,12 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.report["metrics"]["prototype_regions_by_class"],
             {"background": 6, "burned": 6},
         )
+        self.assertEqual(self.report["metrics"]["accepted_core_pixels"], 287)
+        self.assertEqual(self.report["metrics"]["excluded_unknown_ring_pixels"], 531)
+        self.assertEqual(self.report["metrics"]["valid_whole_event_assignments"], 54)
+        self.assertEqual(self.report["metrics"]["readiness_gates_passed"], 10)
+        self.assertNotIn("Darlene", self.report["accepted_events"])
+        self.assertIn("Ward Creek", self.report["accepted_events"])
         for key in (
             "dataset_version",
             "split_version",
@@ -48,7 +54,12 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         ):
             self.assertIsNone(self.report[key])
         limitations = " ".join(self.report["limitations"]).lower()
-        for phrase in ("not independent ground truth", "no dataset", "not official"):
+        for phrase in (
+            "not independent ground truth",
+            "authorizes only",
+            "no dataset",
+            "not official",
+        ):
             self.assertIn(phrase, limitations)
 
     def test_outputs_are_deterministic_semantic_private_safe_and_no_overwrite(self) -> None:
