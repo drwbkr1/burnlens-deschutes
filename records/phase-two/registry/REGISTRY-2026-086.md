@@ -10,6 +10,7 @@
 | `P2O5-T03-U03-R002` | `BL-2026-07-25-p2o5-t03-u03-dataset-r002`; source `3e383ec...` | 13,633,040,965 registered archive bytes; contract `f6106691...`; split `a62e66f4...`; candidate `4a9646af...` | 49 files / 1,388,556 bytes; manifest `e0b7ac66...`; tree `9fb4f839...` | all archive identities/hashes/single links; native grids; cores/unknowns; no overlap/clipping; exact full replay; 18 focused tests | `pass-dataset-created-test-sealed-training-false` | `P2O5-T03-U04` |
 | `P2O5-T03-U03-SUITE-R001` | foreground full suite | U03 working tree | no terminal result | caller time box exceeded at five minutes | `incomplete-retained` | logged suite |
 | `P2O5-T03-U03-SUITE-R002` | logged full suite | U03 working tree | 674 pass / 1 skip / 2 fail | dataset tests pass; stale bundle assertion and expected uncommitted checkout-byte failure isolated | `remediate-retained` | commit and final rerun |
+| `P2O5-T03-U03-SUITE-R003` | logged full suite at `b7a58b3...` | committed U03 checkpoint | 676 pass / 1 skip / 120 warnings / 86 subtests | checkout bytes, frozen-bundle safety, dataset, environment, and full regression pass | `pass` | U03 record sync |
 
 The accepted dataset contains twelve 64 by 64 native-grid patches, six
 unstandardized float32 reflectance channels, explicit state and validity

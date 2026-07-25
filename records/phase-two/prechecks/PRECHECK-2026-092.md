@@ -77,8 +77,12 @@ uncommitted records. The other was a stale frozen-bundle test that expected
 the mutable case study to be the first changed bound asset; v0.51 now changes
 the portfolio page first. The assertion now expects that earlier valid safety
 failure. Thirteen focused bundle/materialization tests pass after correction.
-The checkout-byte guard and full suite require the committed checkpoint before
-their final rerun.
+
+After commit `b7a58b3900ea4ff2d3ace5f5e819f2269bb41e62`, the checkout-byte
+guard, frozen-bundle guard, and dataset tests pass together: 15 tests with 24
+retained warnings. The final logged full suite passes 676 tests, one expected
+skip, 120 retained warnings, and 86 subtests in 694.96 seconds. No failure or
+stderr remains.
 
 ## Test and training boundary
 
