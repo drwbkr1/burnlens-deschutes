@@ -1,0 +1,154 @@
+{
+  "audit_result_version": "dataset-readiness-result-v1",
+  "audit_id": "ward-creek-prototype-label-readiness-2026-001",
+  "candidate_id": "ward-creek-two-class-prototype-label-candidate-v0.1.0",
+  "candidate_manifest_sha256": "06100de3df058b397f3a797069a2705eea3d7f79c71dfa333a11698331b13638",
+  "audit_input_sha256": "ae4badb8b45153174c20280dce88c7650c08a3fcecf3647d858ea5f299b352bf",
+  "decision": "pass",
+  "pass_evidence": [
+    {
+      "gate_id": "human-review",
+      "category": "human_review",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-083.md",
+        "records/phase-two/prechecks/PRECHECK-2026-084.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "One unambiguous completed owner response was locked before reveal and contains two yes decisions bound to the exact two-candidate surface.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "leakage-and-split-fitness",
+      "category": "leakage_and_split_fitness",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-082.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "Ward Creek has a distinct event group and year, its two candidates do not overlap, and this pass authorizes only a later whole-event sufficiency rerun.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "provenance-and-custody",
+      "category": "provenance_and_custody",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-074.md",
+        "records/phase-two/prechecks/PRECHECK-2026-076.md",
+        "records/phase-two/prechecks/PRECHECK-2026-084.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "The exact provider bytes, source artifacts, proposal, surface, response, receipt, and private reconciliation have immutable hashes and no-overwrite custody.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "reproducibility",
+      "category": "reproducibility",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-078.md",
+        "records/phase-two/prechecks/PRECHECK-2026-079.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "The accepted U03 evidence and both U07 candidate rasters reconstruct from exact locked inputs while retained failed replay evidence remains visible.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "schema-and-quality",
+      "category": "schema_and_quality",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-079.md",
+        "records/phase-two/prechecks/PRECHECK-2026-081.md",
+        "records/phase-two/prechecks/PRECHECK-2026-082.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "Both candidate rasters reproduce on the exact native grid with the expected CRS, class domain, core pixels, quality masks, registration, and source-pixel routes.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "source-and-terms",
+      "category": "source_and_terms",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/sources/SOURCE-2026-038.md",
+        "records/phase-two/terms/TERMS-2026-033.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "Exact Sentinel and MTBS identities, source roles, bounded use, attribution, and archive-notice limits remain resolved for prototype evidence.",
+      "remediation": ""
+    },
+    {
+      "gate_id": "uncertainty-and-exclusions",
+      "category": "uncertainty_and_exclusions",
+      "required": true,
+      "evidence_refs": [
+        "records/phase-two/prechecks/PRECHECK-2026-082.md",
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "All 66 reviewed unknown-ring pixels remain explicit and excluded; none are coerced to burned or background.",
+      "remediation": ""
+    }
+  ],
+  "block_evidence": [],
+  "defer_evidence": [
+    {
+      "gate_id": "coverage-and-balance",
+      "category": "coverage_and_balance",
+      "required": false,
+      "evidence_refs": [
+        "samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.json"
+      ],
+      "finding": "Ward Creek adds one region per class, but complete six-event coverage, dominance, and regime fitness have not yet been rerun.",
+      "remediation": "Run P2O4-T39-U08 on the exact six-event candidate that excludes Darlene."
+    },
+    {
+      "gate_id": "evaluation-design",
+      "category": "evaluation_design",
+      "required": false,
+      "evidence_refs": [
+        "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-001.json"
+      ],
+      "finding": "The prior evaluation design is blocked for the Darlene-containing pool and must be reassessed against the replacement-event candidate.",
+      "remediation": "Rerun the frozen evaluation-design and whole-event assignment gates in U08."
+    }
+  ],
+  "blocking_required_gate_ids": [],
+  "deferred_required_gate_ids": [],
+  "count_results": [
+    {
+      "check_id": "exact-owner-response-count",
+      "observed": 2,
+      "operator": "==",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "exact-promoted-class-count",
+      "observed": 2,
+      "operator": "==",
+      "threshold": 2,
+      "on_failure": "block",
+      "satisfied": true,
+      "can_authorize_training": false
+    },
+    {
+      "check_id": "prototype-event-pool-count",
+      "observed": 7,
+      "operator": ">=",
+      "threshold": 7,
+      "on_failure": "informational",
+      "satisfied": true,
+      "can_authorize_training": false
+    }
+  ],
+  "failed_blocking_count_checks": [],
+  "failed_deferred_count_checks": [],
+  "count_thresholds_can_establish_readiness_alone": false,
+  "training_authorized": false,
+  "training_authorization_reason": "Dataset-readiness evidence never substitutes for separate training authorization.",
+  "next_action": "Seek separate authorization for dataset creation, splitting, or training; this audit grants none."
+}

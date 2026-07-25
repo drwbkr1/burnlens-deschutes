@@ -181,3 +181,21 @@ cannot enter review evidence.
 The lock is now a tracked checkpoint. Aggregate reconciliation may follow, but
 owner approval alone cannot promote either region. Every non-owner gate and the
 both-class rule still apply.
+
+## 2026-07-25 - Ward Creek passes, but the dataset still does not exist
+
+The locked response contains two yes decisions. BurnLens independently
+reconstructs both exact source routes, candidate rasters, quality checks,
+uncertainty rings, event identity, and source/terms evidence before promotion.
+
+Both classes pass together. Ward Creek adds 39 accepted core pixels. All 66
+ring pixels remain unknown and excluded. The prototype pool now has seven
+events, but it is still not a dataset.
+
+The first public report exposed a narrow-screen overflow. BurnLens retains that
+failure, fixes only the long-decision wrapping, and reruns the complete intake
+from a new commit. The corrected desktop and narrow pages render without
+overflow or browser errors.
+
+The next checkpoint drops Darlene from the candidate pool and reruns all six
+event sufficiency gates. Training remains unauthorized.
