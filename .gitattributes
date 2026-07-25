@@ -229,3 +229,11 @@ samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.json text eol
 samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.html text eol=lf
 samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.png -text
 samples/labels/pilot/ward-creek/phase-two/region-proposal-v0.1.0/*.tif -text
+
+# P2O4-T39 U06 exact Ward Creek owner-review implementation and outputs.
+burnlens/ward_creek_owner_review_surface.py text eol=lf
+burnlens/build_ward_creek_owner_review_surface.py text eol=lf
+tests/test_ward_creek_owner_review_surface.py text eol=lf
+samples/labels/review/ward-creek/phase-two/*.json text eol=lf
+samples/labels/review/ward-creek/phase-two/*.html text eol=lf
+samples/labels/review/ward-creek/phase-two/*.png -text
