@@ -311,6 +311,8 @@ class WardCreekOwnerResponseIntakeTests(unittest.TestCase):
                 html,
             )
             self.assertIn("Notes and unit decisions remain private", html)
+            self.assertIn("overflow-wrap:anywhere", html)
+            self.assertIn("max-width:100%", html)
             self.assertNotIn("Ãƒ", html)
             with self.assertRaisesRegex(
                 WardCreekOwnerResponseIntakeError,
