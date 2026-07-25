@@ -6,16 +6,8 @@ import argparse
 from pathlib import Path
 import sys
 
-from .ward_creek_owner_response_intake import (
-    WardCreekOwnerResponseIntakeError,
-    build_private_reconciliation,
-    public_report,
-    write_private_no_overwrite,
-    write_public_no_overwrite,
-)
 
-
-def main() -> int:
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repository-root", type=Path, required=True)
     parser.add_argument("--pre-package", type=Path, required=True)
@@ -33,7 +25,30 @@ def main() -> int:
     parser.add_argument("--generated-at-utc", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--git-source-commit", required=True)
-    args = parser.parse_args()
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    try:
+        from .ward_creek_owner_response_intake import (
+            WardCreekOwnerResponseIntakeError,
+            build_private_reconciliation,
+            public_report,
+            write_private_no_overwrite,
+            write_public_no_overwrite,
+        )
+    except ModuleNotFoundError as error:
+        if error.name in {"geopandas", "pyogrio", "pyproj", "shapely"}:
+            print(
+                "WARD_CREEK_OWNER_RESPONSE_INTAKE_FAILED: "
+                "optional geospatial dependencies are unavailable; "
+                "run scripts/setup_worktree.ps1 -Profile geo-research",
+                file=sys.stderr,
+            )
+            return 2
+        raise
+
     try:
         repository_root = args.repository_root.resolve()
         private = build_private_reconciliation(
