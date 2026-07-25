@@ -369,3 +369,16 @@ samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.html text eol=
 samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.png -text
 records/phase-two/prechecks/PRECHECK-2026-094.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-088.md text eol=lf
+
+# P2O5-T03 U06 bounded U-Net model-readiness decision.
+burnlens/model_readiness.py text eol=lf
+burnlens/run_model_readiness.py text eol=lf
+tests/test_model_readiness.py text eol=lf
+records/phase-two/sources/MODEL-TOOLING-SOURCES-2026-001.json text eol=lf
+records/phase-two/readiness/MODEL-READINESS-AUDIT-2026-001.json text eol=lf
+records/phase-two/readiness/MODEL-READINESS-DECISION-2026-001.json text eol=lf
+records/phase-two/manifests/BOUNDED-UNET-TRAINING-CONTRACT-2026-001.json text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/*.html text eol=lf
+samples/qa/phase-two/model-readiness-v0.1.0/*.png -text
+records/phase-two/prechecks/PRECHECK-2026-095.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-089.md text eol=lf
