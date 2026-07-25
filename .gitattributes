@@ -237,3 +237,23 @@ tests/test_ward_creek_owner_review_surface.py text eol=lf
 samples/labels/review/ward-creek/phase-two/*.json text eol=lf
 samples/labels/review/ward-creek/phase-two/*.html text eol=lf
 samples/labels/review/ward-creek/phase-two/*.png -text
+
+# P2O4-T39 U07 exact Ward Creek response intake and outputs.
+burnlens/ward_creek_owner_response_intake.py text eol=lf
+burnlens/build_ward_creek_owner_response_intake.py text eol=lf
+tests/test_ward_creek_owner_response_intake.py text eol=lf
+records/phase-two/sources/SOURCE-2026-038.md text eol=lf
+records/phase-two/terms/TERMS-2026-033.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-073.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-074.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-076.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-078.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-079.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-080.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-081.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-082.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-083.md text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-084.md text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.json text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.html text eol=lf
+samples/labels/review/ward-creek/phase-two/intake/*.png -text
