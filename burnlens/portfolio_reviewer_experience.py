@@ -11,9 +11,9 @@ from typing import Any
 
 
 REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001"
-REPORT_VERSION = "portfolio-reviewer-experience-v0.1.0"
-SOFTWARE_VERSION = "0.48.0"
-TASK_ISSUE = 540
+REPORT_VERSION = "portfolio-reviewer-experience-v0.2.0"
+SOFTWARE_VERSION = "0.51.0"
+TASK_ISSUE = 560
 
 
 class PortfolioReviewerExperienceError(ValueError):
@@ -31,30 +31,30 @@ class BoundInput:
 BOUND_INPUTS = (
     BoundInput(
         path=(
-            "samples/labels/review/windigo/phase-two/intake/"
-            "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json"
+            "samples/labels/readiness/phase-two/"
+            "SIX-EVENT-DATASET-SUFFICIENCY-2026-002.json"
         ),
-        bytes=6787,
-        sha256="f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7",
-        role="verified aggregate result and trace source",
+        bytes=9429,
+        sha256="88cbe6ae01af322d7f80ff8a76b3dce698c08b53394a7e68faec2f5cb198ef0a",
+        role="verified replacement six-event sufficiency result and trace source",
     ),
     BoundInput(
         path=(
-            "samples/labels/review/windigo/phase-two/intake/"
-            "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html"
+            "samples/labels/readiness/phase-two/"
+            "SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html"
         ),
-        bytes=3582,
-        sha256="6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52",
-        role="verified detailed result",
+        bytes=6357,
+        sha256="0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326",
+        role="verified replacement six-event sufficiency detail",
     ),
     BoundInput(
         path=(
-            "samples/labels/review/windigo/phase-two/intake/"
-            "WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png"
+            "samples/labels/readiness/phase-two/"
+            "SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png"
         ),
-        bytes=79681,
-        sha256="0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05",
-        role="verified result preview",
+        bytes=101221,
+        sha256="b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761",
+        role="verified replacement six-event sufficiency preview",
     ),
     BoundInput(
         path=(
@@ -115,38 +115,63 @@ def build_report(
     """Validate exact evidence and build the public portfolio manifest."""
     repository_root = repository_root.resolve()
     inputs = _validate_bound_inputs(repository_root)
-    windigo_path = inputs[BOUND_INPUTS[0].path]
-    windigo = _load_json(windigo_path)
+    readiness_path = inputs[BOUND_INPUTS[0].path]
+    readiness = _load_json(readiness_path)
 
     expected = {
-        "software_version": "0.47.0",
-        "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
-        "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
+        "software_version": "0.50.0",
+        "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+        "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
         "dataset_version": None,
         "split_version": None,
         "baseline_version": None,
         "model_version": None,
+        "decision": (
+            "PASS_SIX_EVENT_DATASET_SUFFICIENCY_"
+            "AUTHORIZE_DATASET_SPLIT_QA_BASELINE_CHECKPOINT"
+        ),
     }
     for key, value in expected.items():
-        if windigo.get(key) != value:
-            raise PortfolioReviewerExperienceError(f"Windigo trace changed: {key}")
+        if readiness.get(key) != value:
+            raise PortfolioReviewerExperienceError(f"readiness trace changed: {key}")
 
-    outcome = windigo.get("outcome")
-    if not isinstance(outcome, dict):
-        raise PortfolioReviewerExperienceError("Windigo outcome is missing")
-    required_outcome = {
-        "cumulative_owner_approved_region_labels": 12,
-        "cumulative_accepted_core_pixels": 286,
-        "cumulative_accepted_core_area_ha": 11.44,
-        "cumulative_excluded_unknown_ring_pixels": 533,
-        "event_group_count": 6,
-        "minimum_event_group_gate_passed": True,
-        "separate_sufficiency_evaluator_passed": False,
-        "dataset_fitness_reopened": False,
+    inventory = readiness.get("inventory")
+    if not isinstance(inventory, dict):
+        raise PortfolioReviewerExperienceError("readiness inventory is missing")
+    required_inventory = {
+        "event_groups": 6,
+        "owner_approved_regions": 12,
+        "class_counts": {"background": 6, "burned": 6},
+        "accepted_core_pixels": 287,
+        "accepted_core_area_hectares": 11.48,
+        "excluded_unknown_ring_pixels": 531,
+        "balanced_review_roster_is_natural_prevalence": False,
     }
-    for key, value in required_outcome.items():
-        if outcome.get(key) != value:
-            raise PortfolioReviewerExperienceError(f"Windigo outcome changed: {key}")
+    for key, value in required_inventory.items():
+        if inventory.get(key) != value:
+            raise PortfolioReviewerExperienceError(f"readiness inventory changed: {key}")
+
+    partition = readiness.get("partition_feasibility")
+    if not isinstance(partition, dict) or partition.get("valid_assignments") != 54:
+        raise PortfolioReviewerExperienceError("readiness split feasibility changed")
+    gates = readiness.get("gate_results")
+    if not isinstance(gates, dict) or len(gates) != 10:
+        raise PortfolioReviewerExperienceError("readiness gate roster changed")
+    if any(item.get("status") != "pass" for item in gates.values()):
+        raise PortfolioReviewerExperienceError("a readiness gate is no longer passing")
+    boundaries = readiness.get("boundaries")
+    required_boundaries = {
+        "dataset_created": False,
+        "split_created": False,
+        "baseline_created": False,
+        "model_created": False,
+        "training_authorized": False,
+        "independent_ground_truth_claimed": False,
+    }
+    if not isinstance(boundaries, dict) or any(
+        boundaries.get(key) != value for key, value in required_boundaries.items()
+    ):
+        raise PortfolioReviewerExperienceError("readiness boundary changed")
 
     if len(git_source_commit) != 40:
         raise PortfolioReviewerExperienceError("git source commit must be a full 40-character ID")
@@ -167,10 +192,10 @@ def build_report(
             "Show how versioned wildfire imagery can move through a bounded "
             "computer-vision-to-GEOINT evidence workflow without hiding uncertainty."
         ),
-        "target_version": windigo["target_version"],
-        "aoi_version": windigo["aoi_version"],
-        "label_schema_version": windigo["label_schema_version"],
-        "label_set_version": windigo["label_set_version"],
+        "target_version": readiness["target_version"],
+        "aoi_version": readiness["aoi_version"],
+        "label_schema_version": readiness["label_schema_version"],
+        "label_set_version": readiness["label_set_version"],
         "dataset_version": None,
         "split_version": None,
         "baseline_version": None,
@@ -196,29 +221,26 @@ def build_report(
             },
         ],
         "metrics": {
-            "event_groups": outcome["event_group_count"],
-            "prototype_regions": outcome["cumulative_owner_approved_region_labels"],
-            "prototype_regions_by_class": {"background": 6, "burned": 6},
-            "accepted_core_pixels": outcome["cumulative_accepted_core_pixels"],
-            "accepted_core_area_ha": outcome["cumulative_accepted_core_area_ha"],
-            "excluded_unknown_ring_pixels": outcome[
-                "cumulative_excluded_unknown_ring_pixels"
+            "event_groups": inventory["event_groups"],
+            "prototype_regions": inventory["owner_approved_regions"],
+            "prototype_regions_by_class": inventory["class_counts"],
+            "accepted_core_pixels": inventory["accepted_core_pixels"],
+            "accepted_core_area_ha": inventory["accepted_core_area_hectares"],
+            "excluded_unknown_ring_pixels": inventory[
+                "excluded_unknown_ring_pixels"
             ],
+            "valid_whole_event_assignments": partition["valid_assignments"],
+            "readiness_gates_passed": len(gates),
         },
         "accepted_events": [
-            "Darlene",
-            "McKay",
-            "Tepee",
-            "Green Ridge",
-            "Grandview",
-            "Windigo",
+            event["fire_name"] for event in readiness["events"]
         ],
         "strongest_result": {
-            "title": "Windigo completes the sixth prototype event",
-            "decision": windigo["decision"],
-            "run_id": windigo["run_id"],
-            "git_source_commit": windigo["git_source_commit"],
-            "software_version": windigo["software_version"],
+            "title": "Replacement six-event sufficiency passes",
+            "decision": readiness["decision"],
+            "run_id": readiness["run_id"],
+            "git_source_commit": readiness["git_source_commit"],
+            "software_version": readiness["software_version"],
             "detail_path": BOUND_INPUTS[1].path,
             "preview_path": BOUND_INPUTS[2].path,
         },
@@ -241,8 +263,9 @@ def build_report(
         ],
         "limitations": [
             "Owner-approved prototype regions are not independent ground truth.",
-            "Six events satisfy only the frozen count minimum.",
-            "The separate sufficiency evaluator has not passed.",
+            "The sufficiency pass authorizes only a separate dataset, split, QA, and baseline checkpoint.",
+            "The accepted cores contain only 287 native 20-meter pixels.",
+            "The balanced review roster does not estimate natural class prevalence.",
             "No dataset, split, baseline, model, accuracy, or inference output exists.",
             "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready.",
         ],
@@ -260,7 +283,10 @@ def build_report(
             "official wildfire information, emergency guidance, field validation, "
             "a dataset, or a model. Official sources govern."
         ),
-        "decision": "PRESENT_VERIFIED_TECHNICAL_CASE_STUDY_KEEP_DATASET_MODEL_CLOSED",
+        "decision": (
+            "PRESENT_VERIFIED_SIX_EVENT_SUFFICIENCY_"
+            "KEEP_DATASET_MODEL_CLOSED"
+        ),
     }
 
 
@@ -324,13 +350,13 @@ def render_html(report: dict[str, Any]) -> str:
 <a class="skip" href="#main">Skip to evidence</a>
 <header>
 <nav aria-label="Primary"><a class="brand" href="#top">BURNLENS</a><ul><li><a href="#result">Result</a></li><li><a href="#failure">Failure</a></li><li><a href="#method">Method</a></li><li><a href="#trace">Trace</a></li></ul></nav>
-<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Technical case study</strong>Six verified prototype events. Dataset and model gates remain closed.</aside></div>
+<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Phase Two evidence</strong>Six-event sufficiency passes. Dataset and model gates remain closed.</aside></div>
 </header>
 <main id="main">
 <p class="warning">{escape(report["warning"])}</p>
 <div class="review-path" aria-label="Two-minute reviewer path">{review_steps}</div>
-<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">A complete evidence chain, with restraint.</h2><p>BurnLens preserves source roles, uncertainty, owner decisions, and failure states. It does not convert a promising count into training readiness.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>{metrics["prototype_regions"]}</strong>prototype regions</div><div class="metric"><strong>{metrics["accepted_core_area_ha"]}</strong>accepted core hectares</div><div class="metric"><strong>0</strong>datasets or models</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
-<section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest verified result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>One burned and one affirmative-background region advance together only after exact source, custody, quality, uncertainty, leakage, and owner gates pass.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Windigo aggregate intake evidence showing the sixth prototype event"></a><div class="evidence-copy"><span class="pill">Verified result</span><h3>Owner-approved prototype evidence</h3><p>Six burned and six background regions now span six events. The unknown rings remain excluded. This is not independent ground truth.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open detailed result</a><a class="button secondary" href="../docs/phase-two/objective-four/WINDIGO_OWNER_RESPONSE_INTAKE_DECISION.md">Read decision</a></div></div></article></section>
+<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">A complete evidence chain, with restraint.</h2><p>BurnLens preserves source roles, uncertainty, owner decisions, and failure states. Every readiness gate passes, while training remains unauthorized.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>{metrics["prototype_regions"]}</strong>prototype regions</div><div class="metric"><strong>{metrics["valid_whole_event_assignments"]}</strong>valid whole-event splits</div><div class="metric"><strong>0</strong>datasets or models</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
+<section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest verified result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>The exact candidate passes all {metrics["readiness_gates_passed"]} source, custody, schema, quality, uncertainty, leakage, reproducibility, evaluation, review, claims, and privacy gates.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Replacement six-event sufficiency evidence showing all ten passing readiness gates"></a><div class="evidence-copy"><span class="pill">Verified result</span><h3>Candidate ready for the next data checkpoint</h3><p>Six burned and six background regions span six events. All 531 unknown-ring pixels remain excluded. The pass authorizes dataset, split, QA, and baseline work, not training.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open detailed result</a><a class="button secondary" href="../docs/phase-two/objective-five/REPLACEMENT_SIX_EVENT_DATASET_SUFFICIENCY_DECISION.md">Read decision</a></div></div></article></section>
 <section id="failure" aria-labelledby="failure-heading"><div class="section-head"><p class="eyebrow">Reliability is visible</p><h2 id="failure-heading">{escape(failure["title"])}</h2><p>BurnLens keeps a snow-dominated source failure and a terminal partial-custody stop instead of manufacturing a sixth event from incomplete evidence.</p></div><article class="evidence"><a href="{_repo_href(failure["preview_path"])}"><img src="{_repo_href(failure["preview_path"])}" alt="Petes Lake snow-dominated source-fitness failure evidence"></a><div class="evidence-copy"><span class="pill stop">Retained stop</span><h3>Defer is a product decision</h3><p>Seven valid assets remain evidence. One failed asset and four unexecuted assets cannot become a complete scientific package. Candidate generation never starts.</p><p><code>{escape(failure["terminal_run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(failure["detail_path"])}">Read material-defer decision</a><a class="button secondary" href="../records/prompt-build-log/2026-07-21-p2o4-t33.md">Inspect milestone log</a></div></div></article></section>
 <section id="method" aria-labelledby="method-heading"><div class="section-head"><p class="eyebrow">Method and boundaries</p><h2 id="method-heading">Different sources have different jobs.</h2><p>Source precedence is part of the product. Context is not relabeled as truth, and ambiguous pixels stay unknown.</p></div><div class="split"><div class="panel"><h3>Source roles</h3><ul>{source_items}</ul></div><div class="panel"><h3>What remains unproven</h3><ul>{limitation_items}</ul></div></div></section>
 <section id="trace" aria-labelledby="trace-heading"><div class="section-head"><p class="eyebrow">Lineage</p><h2 id="trace-heading">Null is a valid version.</h2><p>Every displayed claim binds to the current portfolio build and the evidence-bearing run. Missing analytical stages stay explicit.</p></div><table><tbody>{trace_rows}</tbody></table><details><summary>Exact bound inputs</summary><ul>{''.join(f'<li><code>{escape(item["path"])}</code> — {item["bytes"]:,} bytes — <code>{escape(item["sha256"])}</code></li>' for item in report["bound_inputs"])}</ul></details><div class="button-row"><a class="button" href="{REPORT_ID}.json">Open machine-readable manifest</a><a class="button secondary" href="../docs/case-study/BURNLENS_CASE_STUDY.md">Read full case study</a><a class="button secondary" href="README.md">Reviewer quickstart</a></div></section>
