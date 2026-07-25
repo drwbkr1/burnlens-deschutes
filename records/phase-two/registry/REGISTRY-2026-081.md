@@ -1,7 +1,9 @@
 # REGISTRY-2026-081 - P2O4-T39 U08 sufficiency closure
 
-**Recorded:** 2026-07-25  
-**Issue:** #554  
+**Recorded:** 2026-07-25
+
+**Issue:** #554
+
 **Branch:** `codex/p2o4-t39-replacement-event`
 
 | Unit | Identity | State | Evidence | Next dependency |

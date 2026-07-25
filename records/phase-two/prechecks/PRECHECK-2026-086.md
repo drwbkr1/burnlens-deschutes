@@ -1,10 +1,15 @@
 # PRECHECK-2026-086 - Replacement six-event dataset sufficiency
 
-**Date:** 2026-07-25  
-**Unit / issue:** `P2O4-T39-U08` / #554  
-**Final run:** `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`  
-**Scientific source commit:** `af37f80dd17febacfbb1cf2801665d74edb16475`  
-**Disposition:** `pass-training-false`  
+**Date:** 2026-07-25
+
+**Unit / issue:** `P2O4-T39-U08` / #554
+
+**Final run:** `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`
+
+**Scientific source commit:** `af37f80dd17febacfbb1cf2801665d74edb16475`
+
+**Disposition:** `pass-training-false`
+
 **Next dependency:** separate dataset, whole-event split, QA, and baseline milestone
 
 ## Exact candidate
