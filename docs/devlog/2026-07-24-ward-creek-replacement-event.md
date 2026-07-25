@@ -242,3 +242,24 @@ all 99 commands.
 The exact desktop and narrow readiness page remains clean. Draft PR #557 is
 clean and mergeable. The release is still a candidate until merge,
 fresh-main repetition, and annotated-tag verification pass.
+
+## 2026-07-25 - Fresh main catches checkout-byte drift
+
+PR #557 merges at `7f7b332...`. The first full suite from the Windows main
+checkout fails exact Ward Creek bindings. BurnLens withholds the v0.51 tag.
+
+The Git blobs and all six scientific outputs remain unchanged. Forty new text
+paths have checkout bytes that need explicit contracts. One historical
+precheck is intentionally CRLF-bound; every other affected text path is LF.
+
+BL-EXC-003 adds those exact contracts and regression coverage. A separate
+fresh clone passes the checkout proof. The canonical custody-backed suite
+passes 658 tests plus 86 subtests.
+
+An isolated replay from `af37f80...` reproduces all six accepted artifacts.
+Two fixed-epoch wheels reproduce the accepted 993,480-byte SHA-256. A fresh
+Python 3.12.10 runtime passes all 99 commands.
+
+The exception changes no evidence or scientific decision. Draft PR #559 must
+merge and corrected main must repeat the gates before BurnLens creates or
+peels the v0.51 tag.

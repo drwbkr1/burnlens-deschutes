@@ -304,3 +304,6 @@ samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/*.json text eol=
 samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/*.html text eol=lf
 scripts/invoke_replacement_event_optical_intake.ps1 text eol=lf
 scripts/invoke_replacement_event_reference_request.ps1 text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-088.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-082.md text eol=lf
+records/phase-two/release-audits/RELEASE-AUDIT-2026-006.json text eol=lf
