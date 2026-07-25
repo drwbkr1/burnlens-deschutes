@@ -123,3 +123,13 @@ narrow confirmation before U04 can pass.
 
 No candidate, owner decision, label, dataset, split, baseline, or model
 advances.
+
+## 2026-07-24 - Owner confirmation closes U04
+
+The owner confirms that the exact tracked Ward Creek background-evidence HTML
+renders correctly at both desktop and narrow widths. This confirmation binds
+the 4,224-byte file at SHA-256 `f0c4bd76...`; it does not substitute a
+different surface or change the machine evidence.
+
+U04 now passes. U05 is eligible but has not started. No candidate, owner
+decision, label, dataset, split, baseline, or model advances in this closure.
