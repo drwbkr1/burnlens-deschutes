@@ -2,7 +2,7 @@
 
 ## Two-minute path
 
-1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-003.html`.
+1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html`.
 2. Read the accepted dataset, split, baseline, and model-readiness result.
 3. Read the retained Petes Lake stop.
 4. Check the lineage table and explicit null versions.

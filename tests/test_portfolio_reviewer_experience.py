@@ -89,6 +89,7 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         for phrase in (
             "not independent ground truth",
             "twelve 64 by 64",
+            "may favor the measured spectral separability",
             "no model",
             "not official",
         ):

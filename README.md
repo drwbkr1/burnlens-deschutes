@@ -8,7 +8,7 @@ BurnLens is not yet model-bearing portfolio ready. P2O5-T03 / issue #562 convert
 
 The verified August 6 ZIP is an interim contingency technical case study. It is preserved and usable for that limited purpose, but it is not the intended final BurnLens submission. The minimum intended submission threshold remains a trained bounded U-Net, reproducible evaluation against a justified baseline, and an inspectable GEOINT application path.
 
-[Open the current local portfolio reviewer experience](portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-003.html), then use the [two-minute quickstart](portfolio/README.md).
+[Open the current local portfolio reviewer experience](portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html), then use the [two-minute quickstart](portfolio/README.md).
 
 P2O4-T36 / issue #540 / PR #541 ships verified BurnLens 0.48.0. Its deterministic, offline page connects the verified Windigo result, the retained Petes Lake stop, source roles, limitations, reproduction steps, case study, and exact lineage. Desktop and 390-pixel rendering, keyboard order, nine local links, image loading, clean-console, zero-external-request, and byte-identical replay gates pass. Fresh main passes 581 tests, the canonical package, isolated install, and all 87 command routes. Annotated tag object `c6ed831c106da44bad3ced010fafe5abc46bd537` peels exactly to merge `05140217066277b254e78abb74cd8f61295449d0`. No deployment or public-sharing change is authorized.
 

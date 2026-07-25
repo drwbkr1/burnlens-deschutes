@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Any
 
 
-REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-003"
-REPORT_VERSION = "portfolio-reviewer-experience-v0.3.1"
+REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004"
+REPORT_VERSION = "portfolio-reviewer-experience-v0.3.2"
 SOFTWARE_VERSION = "0.52.0"
 TASK_ISSUE = 562
 
@@ -320,6 +320,7 @@ def build_report(
             "The accepted dataset contains twelve 64 by 64 prototype patches from six whole events.",
             "The accepted cores contain only 287 native 20-meter pixels.",
             "The balanced review roster does not estimate natural class prevalence.",
+            "Candidate construction used optical and official-reference evidence and may favor the measured spectral separability.",
             "The RBR result is perfect only on 89 selected prototype test cores and does not establish generalization.",
             "No model, weights, training run, model evaluation, accuracy claim, or inference output exists.",
             "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready.",
