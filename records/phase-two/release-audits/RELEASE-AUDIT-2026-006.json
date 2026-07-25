@@ -53,11 +53,11 @@
     ]
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-25T17:42:50Z",
-    "branch": "codex/bl-exc-003-v051-checkout-bytes",
-    "remote_commit": "cb1f383c8f908882c4f83e8e75aa19c119e316a2",
+    "verified_at_utc": "2026-07-25T18:05:00Z",
+    "branch": "main",
+    "remote_commit": "c39a2c543be2f7884eff264a733821f367f49776",
     "pull_request": 559,
-    "tag_target": "",
+    "tag_target": "c39a2c543be2f7884eff264a733821f367f49776",
     "deployment": null
   },
   "checks": [
@@ -148,11 +148,16 @@
     {
       "id": "CHECK-008",
       "category": "merge-tag",
-      "required": false,
-      "status": "not_applicable",
-      "method": "",
-      "evidence": [],
-      "reason": "The correction is not merged and the annotated v0.51 tag is deliberately withheld pending corrected fresh-main verification."
+      "required": true,
+      "status": "pass",
+      "method": "Verify merged PR state, corrected remote main, risk-matched fresh-main gates, annotated tag object, and remote peel.",
+      "evidence": [
+        "PR #559 squash-merges at corrected checkpoint c39a2c543be2f7884eff264a733821f367f49776",
+        "A new remote-main Windows clone passes four checkout tests; canonical main passes 25 focused tests and the complete 658-test / 86-subtest suite",
+        "Corrected main reproduces all six outputs, the exact deterministic wheel, and the 99-command isolated runtime",
+        "Annotated tag object 61fad1ab87d2158b4a862f9866f72ac6ad70da7e remotely peels exactly to corrected main"
+      ],
+      "reason": ""
     },
     {
       "id": "CHECK-009",
@@ -167,8 +172,8 @@
   "truth_surfaces": [
     {
       "path_or_uri": "README.md",
-      "expected_state": "v0.51 remains an unreleased candidate while BL-EXC-003 corrects checkout stability.",
-      "observed_state": "The repository identifies merged P2O4-T39, the fresh-main failure, the exception, and the withheld tag.",
+      "expected_state": "v0.51 is verified while dataset, split, baseline, model, and training remain absent.",
+      "observed_state": "The repository identifies the retained checkout failure, corrected checkpoint, verified tag peel, and unchanged analytical boundaries.",
       "status": "current"
     },
     {
@@ -179,8 +184,8 @@
     },
     {
       "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/pull/559",
-      "expected_state": "Draft, clean, mergeable exception candidate.",
-      "observed_state": "GitHub reports draft true, CLEAN, and MERGEABLE at the initial audited head.",
+      "expected_state": "Merged exception checkpoint.",
+      "observed_state": "GitHub reports PR #559 merged at c39a2c543be2f7884eff264a733821f367f49776.",
       "status": "current"
     }
   ],
@@ -189,11 +194,11 @@
     "The accepted cores contain only 287 native 20-meter pixels.",
     "Dataset, split, baseline, and model versions remain null; training remains unauthorized.",
     "The August 6 bundle remains an interim contingency technical case study.",
-    "Exception merge, corrected fresh-main repetition, and annotated-tag verification remain pending."
+    "No GitHub Release, deployment, access, ownership, external submission, or public-sharing change exists."
   ],
   "decision": {
-    "reported_status": "pending",
-    "rationale": "Checkout, focused, full-suite, replay, package, runtime, claims, privacy, and live draft-PR gates pass. The correction is not merged or tagged.",
-    "next_action": "Review and merge PR #559, repeat the risk-matched gates from corrected fresh main, create the annotated v0.51 tag, and verify its remote peel."
+    "reported_status": "verified",
+    "rationale": "Checkout, focused, full-suite, replay, package, runtime, claims, privacy, merge, corrected-main, and remote annotated-tag gates pass.",
+    "next_action": "Create the separate accepted-dataset, whole-event split, QA, strongest justified non-model baseline, and explicit model-readiness milestone."
   }
 }

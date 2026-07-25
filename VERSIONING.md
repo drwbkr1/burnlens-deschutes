@@ -99,9 +99,8 @@ Traceability is necessary but not sufficient for public release. Release control
 
 BurnLens uses `0.y.z` versions because the project is experimental, portfolio-first, and not stable or production-facing.
 
-The latest verified repository release is BurnLens 0.50.0 at
-`v0.50.0-six-event-dataset-sufficiency`. BurnLens 0.51.0 is the active
-replacement-six-event sufficiency candidate. A local reviewer surface or
+The latest verified repository release is BurnLens 0.51.0 at
+`v0.51.0-replacement-six-event-sufficiency`. A local reviewer surface or
 readiness pass is not a deployment or a claim of dataset, model, official,
 field, operational, or emergency readiness.
 
@@ -140,9 +139,9 @@ A BurnLens version number means the artifact is operational, official, field-val
 | Controlling execution authority | `docs/governance/BURNLENS_EXECUTION_GOAL.md` |
 | Current taxonomy artifact | `docs/phase-one/objective-five/VERSION_TAXONOMY.md` |
 | Current phase posture | Phase Two remains active under `checkpoint-policy-v0.1.0`; P2O4-T39 reaches its scientific success exit while dataset, split, QA, baselines, and model readiness remain separate. |
-| Current repository baseline | Latest verified tag is `v0.50.0-six-event-dataset-sufficiency` at merge `85f827ef6a7ab2e3f2afea7b17d94677cd557b3e`; annotated tag object `915ca1ea14194dce9c1de682fd50efa882c34a06` remotely peels exactly to that merge. |
+| Current repository baseline | Latest verified tag is `v0.51.0-replacement-six-event-sufficiency` at corrected checkpoint `c39a2c543be2f7884eff264a733821f367f49776`; annotated tag object `61fad1ab87d2158b4a862f9866f72ac6ad70da7e` remotely peels exactly to that checkpoint. |
 | Active analytical decision | `DATASET-CANDIDATE-2026-002` contains six burned and six background regions, 287 core pixels / 11.48 ha, and 531 excluded unknown-ring pixels across six complete events. All ten readiness gates pass, but no dataset or split exists. |
-| Baseline verification | BurnLens 0.51.0 is the active release candidate. P2O4-T39 merges through PR #557 at `7f7b332...`, but its first fresh-main checkout fails exact-byte bindings and withholds the tag. BL-EXC-003 candidate `cb1f383...` passes a fresh-clone checkout proof, 25 focused tests, 658 full-suite tests plus 86 subtests, exact replay, deterministic 993,480-byte packaging, and an isolated 99-command runtime. Exception merge, corrected-main repetition, and tag verification remain pending. |
+| Baseline verification | BurnLens 0.51.0 is verified. P2O4-T39 merges through PR #557, then BL-EXC-003 / PR #559 retains and corrects the first fresh-main checkout failure. Corrected main passes a new Windows clone, 25 focused tests, 658 full-suite tests plus 86 subtests, exact replay, deterministic 993,480-byte packaging, and an isolated 99-command runtime. The remote annotated tag peels exactly to corrected main. |
 | Data/model/run/map/application status | Exact provider packages, response bytes, receipts, and unit-level reconciliation remain in ignored local storage. Petes terminal run `BL-2026-07-22-petes-lake-nwi-context-r003` supports only a material-defer decision; it creates no candidate or accepted event. No accepted dataset, split, baseline, model, analytical inference result, deployment, independent review, inter-rater validation, consensus, field validation, official status, or operational readiness exists. |
 | Repository boundary | Application, website, and case study must live in `drwbkr1/burnlens-deschutes` |
 

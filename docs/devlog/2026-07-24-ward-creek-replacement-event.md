@@ -263,3 +263,20 @@ Python 3.12.10 runtime passes all 99 commands.
 The exception changes no evidence or scientific decision. Draft PR #559 must
 merge and corrected main must repeat the gates before BurnLens creates or
 peels the v0.51 tag.
+
+## 2026-07-25 - v0.51 verifies and the reviewer page catches up
+
+PR #559 merges at `c39a2c5...`. Corrected main passes a new Windows clone, the
+focused byte gates, 658 tests plus 86 subtests, exact replay, deterministic
+packaging, and a fresh 99-command runtime.
+
+Annotated tag object `61fad1ab...` remotely peels exactly to corrected main.
+The release still creates no dataset or model.
+
+The existing reviewer page is now the highest user-visible stale surface. It
+still lists Darlene and says the sufficiency evaluator has not passed.
+Lifecycle issue #560 rebuilds it from the exact v0.51 readiness evidence.
+
+The new page lists the replacement six events, shows all ten passing gates and
+54 valid whole-event assignments, and keeps dataset/model versions null. It
+passes deterministic replay plus real desktop and narrow browser checks.

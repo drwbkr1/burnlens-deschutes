@@ -307,3 +307,6 @@ scripts/invoke_replacement_event_reference_request.ps1 text eol=lf
 records/phase-two/prechecks/PRECHECK-2026-088.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-082.md text eol=lf
 records/phase-two/release-audits/RELEASE-AUDIT-2026-006.json text eol=lf
+records/phase-two/prechecks/PRECHECK-2026-089.md text eol=lf
+records/phase-two/registry/REGISTRY-2026-083.md text eol=lf
+records/prompt-build-log/2026-07-25-v051-lifecycle-sync.md text eol=lf

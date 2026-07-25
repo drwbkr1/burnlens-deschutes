@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.51.0-replacement-six-event-sufficiency - release candidate - 2026-07-25
+## v0.51.0-replacement-six-event-sufficiency - verified - 2026-07-25
 
 - Complete Ward Creek's source, custody, reference, background, proposal, owner-review, pre-reveal lock, reconciliation, and two-class promotion path.
 - Version `owner-approved-prototype-region-labels-v0.5.0` at 14 balanced regions, 325 core pixels, and 599 excluded unknown-ring pixels across seven events.
@@ -12,7 +12,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Retain r001's audit-serialization remediation and r002's desktop status-column render remediation.
 - Create no dataset, split, baseline, model, metric, training, inference, deployment, or external submission.
 
-Issue #554 / merged PR #557; analytical source `af37f80dd17febacfbb1cf2801665d74edb16475`; run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`; merge `7f7b332ed0cecccb7956d93bf7589f2d2497db03`. The first merged-main Windows checkout exposes exact-byte drift and withholds the tag. BL-EXC-003 / issue #558 / draft PR #559 preserves one intentional CRLF precheck and enforces LF for every other affected text path. Exception candidate `cb1f383...` passes a clean fresh clone, 25 focused tests, 658 full-suite tests with one expected skip and 86 subtests, exact six-output replay, two byte-identical 993,480-byte wheels at SHA-256 `414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477`, and a fresh isolated 99-command runtime. Corrected-main and tag identities remain pending.
+Issue #554 / merged PR #557; analytical source `af37f80dd17febacfbb1cf2801665d74edb16475`; run `BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003`; first merge `7f7b332ed0cecccb7956d93bf7589f2d2497db03`. The first merged-main Windows checkout exposes exact-byte drift and withholds the tag. BL-EXC-003 / issue #558 / merged PR #559 preserves one intentional CRLF precheck and enforces LF for every other affected text path. Corrected main `c39a2c5...` passes a new Windows clone, 25 focused tests, 658 full-suite tests with one expected skip and 86 subtests, exact six-output replay, two byte-identical 993,480-byte wheels at SHA-256 `414fa8c118ac538239906c4b6e9437eaaeb07fd27be40b44c617415791674477`, and a fresh isolated 99-command runtime. Annotated tag object `61fad1ab87d2158b4a862f9866f72ac6ad70da7e` peels exactly to corrected main. Lifecycle issue #560 updates the repository-owned reviewer page and case study without changing analytical state.
 
 ## v0.50.0-six-event-dataset-sufficiency - verified block - 2026-07-24
 

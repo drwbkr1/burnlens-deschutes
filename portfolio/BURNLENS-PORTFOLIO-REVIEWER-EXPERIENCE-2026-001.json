@@ -1,18 +1,18 @@
 {
   "report_id": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001",
-  "report_version": "portfolio-reviewer-experience-v0.1.0",
-  "generated_at_utc": "2026-07-24T03:10:00Z",
-  "run_id": "BL-2026-07-24-portfolio-reviewer-experience-r002",
+  "report_version": "portfolio-reviewer-experience-v0.2.0",
+  "generated_at_utc": "2026-07-25T18:10:24.695Z",
+  "run_id": "BL-2026-07-25-v051-portfolio-sync-r001",
   "repository": "drwbkr1/burnlens-deschutes",
-  "task_issue": 540,
-  "git_source_commit": "7ffb8ce74350c34f60c36765e194a2aab29dbcd9",
-  "software_version": "0.48.0",
+  "task_issue": 560,
+  "git_source_commit": "7228be5bce01165775a46767d898ae03b893b8cc",
+  "software_version": "0.51.0",
   "audience": "technical and technical-adjacent portfolio reviewers",
   "promise": "Show how versioned wildfire imagery can move through a bounded computer-vision-to-GEOINT evidence workflow without hiding uncertainty.",
   "target_version": "target-burn-scar-v0.2.0",
-  "aoi_version": "multi-event-native-grids-v0.4.0",
-  "label_schema_version": "burn-scar-five-state-schema-v0.1.0",
-  "label_set_version": "owner-approved-prototype-region-labels-v0.4.0",
+  "aoi_version": "multi-event-native-grids-v0.5.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
   "dataset_version": null,
   "split_version": null,
   "baseline_version": null,
@@ -44,26 +44,28 @@
       "background": 6,
       "burned": 6
     },
-    "accepted_core_pixels": 286,
-    "accepted_core_area_ha": 11.44,
-    "excluded_unknown_ring_pixels": 533
+    "accepted_core_pixels": 287,
+    "accepted_core_area_ha": 11.48,
+    "excluded_unknown_ring_pixels": 531,
+    "valid_whole_event_assignments": 54,
+    "readiness_gates_passed": 10
   },
   "accepted_events": [
-    "Darlene",
-    "McKay",
-    "Tepee",
-    "Green Ridge",
-    "Grandview",
-    "Windigo"
+    "McKay 1035 NE",
+    "Tepee 1144 NE",
+    "Green Ridge 0684 CS",
+    "Grandview 0558 OD",
+    "Windigo",
+    "Ward Creek"
   ],
   "strongest_result": {
-    "title": "Windigo completes the sixth prototype event",
-    "decision": "ACCEPT_WINDIGO_AS_SIXTH_OWNER_APPROVED_PROTOTYPE_EVENT_KEEP_DATASET_SPLIT_BASELINE_MODEL_CLOSED",
-    "run_id": "BL-2026-07-24-windigo-owner-response-intake-r003",
-    "git_source_commit": "68fd2171e52844f717ef0d6a1b108121cd93bee1",
-    "software_version": "0.47.0",
-    "detail_path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
-    "preview_path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png"
+    "title": "Replacement six-event sufficiency passes",
+    "decision": "PASS_SIX_EVENT_DATASET_SUFFICIENCY_AUTHORIZE_DATASET_SPLIT_QA_BASELINE_CHECKPOINT",
+    "run_id": "BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003",
+    "git_source_commit": "af37f80dd17febacfbb1cf2801665d74edb16475",
+    "software_version": "0.50.0",
+    "detail_path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+    "preview_path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png"
   },
   "retained_failure": {
     "title": "Petes Lake stops before candidate generation",
@@ -84,29 +86,30 @@
   ],
   "limitations": [
     "Owner-approved prototype regions are not independent ground truth.",
-    "Six events satisfy only the frozen count minimum.",
-    "The separate sufficiency evaluator has not passed.",
+    "The sufficiency pass authorizes only a separate dataset, split, QA, and baseline checkpoint.",
+    "The accepted cores contain only 287 native 20-meter pixels.",
+    "The balanced review roster does not estimate natural class prevalence.",
     "No dataset, split, baseline, model, accuracy, or inference output exists.",
     "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready."
   ],
   "bound_inputs": [
     {
-      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.json",
-      "bytes": 6787,
-      "sha256": "f948b69c20fe02a166c51a4856e319860a2d0c112922a5bbfef6f002717da2f7",
-      "role": "verified aggregate result and trace source"
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.json",
+      "bytes": 9429,
+      "sha256": "88cbe6ae01af322d7f80ff8a76b3dce698c08b53394a7e68faec2f5cb198ef0a",
+      "role": "verified replacement six-event sufficiency result and trace source"
     },
     {
-      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.html",
-      "bytes": 3582,
-      "sha256": "6f6b9cd17494a42833ce14073bd9c6413c035963df0e445975e000c9fd35cc52",
-      "role": "verified detailed result"
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "bytes": 6357,
+      "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326",
+      "role": "verified replacement six-event sufficiency detail"
     },
     {
-      "path": "samples/labels/review/windigo/phase-two/intake/WINDIGO-OWNER-RESPONSE-INTAKE-2026-001.png",
-      "bytes": 79681,
-      "sha256": "0a2acfa7e23f8d6b31dcb4468474600f165840fccfa096a86521010ce6253b05",
-      "role": "verified result preview"
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+      "bytes": 101221,
+      "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761",
+      "role": "verified replacement six-event sufficiency preview"
     },
     {
       "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
@@ -122,12 +125,12 @@
     }
   ],
   "warning": "Experimental owner-approved prototype evidence. Not ground truth, official wildfire information, emergency guidance, field validation, a dataset, or a model. Official sources govern.",
-  "decision": "PRESENT_VERIFIED_TECHNICAL_CASE_STUDY_KEEP_DATASET_MODEL_CLOSED",
+  "decision": "PRESENT_VERIFIED_SIX_EVENT_SUFFICIENCY_KEEP_DATASET_MODEL_CLOSED",
   "outputs": [
     {
       "path": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html",
-      "bytes": 14602,
-      "sha256": "e133a22978d73335c8a67fa39ae5ff48279b67ac6f71c615d95f62c021fda3ae",
+      "bytes": 14774,
+      "sha256": "92003963dd03182b4d60e30d1b9e6dd62fe39805514a8aee0021071da15e73e7",
       "media_type": "text/html"
     }
   ]
