@@ -216,6 +216,12 @@ class ReplacementSixEventDatasetSufficiencyTests(unittest.TestCase):
             self.assertFalse(
                 report["next_checkpoint"]["training_authorized"]
             )
+            html = outputs["html"].read_text(encoding="utf-8")
+            self.assertIn(
+                ".pass{color:var(--pass);font-weight:800;"
+                "min-width:76px;white-space:nowrap}",
+                html,
+            )
             self.assertTrue(
                 all(
                     value is False

@@ -979,7 +979,7 @@ header{{background:#103f39;color:white;padding:42px max(24px,5vw)}}main{{max-wid
 h1{{margin:0 0 8px;font-size:clamp(2rem,5vw,3.2rem)}}h2{{margin-top:36px}}.metrics{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
 .card{{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}}.big{{font-size:2.35rem;font-weight:700}}
 .scroll{{max-width:100%;overflow:auto}}table{{width:100%;border-collapse:collapse;background:white}}th,td{{text-align:left;padding:12px;border-bottom:1px solid #d8e1df;vertical-align:top}}
-.pass{{color:var(--pass);font-weight:800}}code{{overflow-wrap:anywhere}}
+thead th{{white-space:nowrap}}.pass{{color:var(--pass);font-weight:800;min-width:76px;white-space:nowrap}}code{{overflow-wrap:anywhere}}
 .decision{{border-left:8px solid var(--pass)}}@media(max-width:760px){{.metrics{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 @media(max-width:430px){{.metrics{{grid-template-columns:1fr}}th,td{{min-width:145px}}main{{padding:20px 12px 42px}}}}
 </style></head><body><header><h1>Replacement six-event sufficiency passes</h1>
