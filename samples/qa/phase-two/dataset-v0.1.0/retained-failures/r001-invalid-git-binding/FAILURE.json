@@ -1,0 +1,42 @@
+{
+  "failure_record_version": "burnlens-retained-dataset-qa-failure-v0.1.0",
+  "failure_id": "P2O5-T03-U04-R001-INVALID-GIT-BINDING",
+  "unit_id": "P2O5-T03-U04",
+  "run_id": "BL-2026-07-25-p2o5-t03-u04-dataset-qa-r001",
+  "generated_at_utc": "2026-07-25T19:33:29Z",
+  "disposition": "RETAINED_FAILED_NOT_PROMOTED",
+  "failure_class": "INVALID_GIT_SOURCE_BINDING",
+  "reason": "The caller supplied a nonexistent full commit string. The runner accepted it without verifying that it matched repository HEAD.",
+  "supplied_git_source_commit": "d63c8a5f3a6c9e47a74923fa00f2fc50ea00a5e7",
+  "actual_git_head_at_attempt": "d63c8a5ad9de825e13804394c295205393be6133",
+  "promotion": {
+    "dataset_qa_passed": false,
+    "normalization_promoted": false,
+    "baseline_preregistration_authorized": false,
+    "test_analytical_open_count": 0,
+    "training_authorized": false
+  },
+  "retained_outputs": [
+    {
+      "path": "DATASET-QA-2026-001-r001-invalid.json",
+      "bytes": 5648,
+      "sha256": "0bd68c4608b9eccee6c0b302b336f1aefb01e7562e194d1844142907888c5bdc"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r001-invalid.html",
+      "bytes": 4654,
+      "sha256": "50a0cef418f385f1a1cb9722825cdbc45f0cd8ac04d7f6478bb5a41d14863b72"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r001-invalid.png",
+      "bytes": 281760,
+      "sha256": "c1f8fe50b326f2ae75fdd6babc4103eaf9599c6ea4ad3b04811954ab7a5becde"
+    },
+    {
+      "path": "TRAIN-NORMALIZATION-2026-001-r001-invalid.json",
+      "bytes": 2694,
+      "sha256": "7d3503899b78a1531fb256fb15a0a636a12a3becaf3358cdabed4a3c0de1e54e"
+    }
+  ],
+  "remediation": "The runner now rejects abbreviated, malformed, or non-HEAD commit identities before building any output."
+}

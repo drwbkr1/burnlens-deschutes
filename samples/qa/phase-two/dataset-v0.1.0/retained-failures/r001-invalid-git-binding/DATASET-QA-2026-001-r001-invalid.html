@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens dataset QA</title>
+<style>
+:root{--ink:#17242c;--muted:#58636a;--paper:#f4f1e8;--card:#fff;--teal:#147f75;--orange:#df5f32;--line:#d6d0c2}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Arial,sans-serif}
+main{max-width:1180px;margin:auto;padding:42px 24px 72px}h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1;margin:.2em 0}h2{margin-top:2.2rem}
+.warn,.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}.warn{border-left:7px solid var(--orange)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric strong{display:block;font-size:2.2rem;color:var(--teal)}img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}code{overflow-wrap:anywhere}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}main{padding:24px 14px 50px}}
+</style></head><body><main>
+<p>BURNLENS / PHASE TWO / ISSUE #562 / U04</p>
+<h1>Every dataset patch reconstructs; test analysis remains sealed.</h1>
+<div class="warn">Owner-approved prototype evidence, not independent ground truth or field validation. Official sources govern.</div>
+<div class="grid">
+<div class="card metric"><strong>12/12</strong>patches reconstructed</div>
+<div class="card metric"><strong>287</strong>accepted core pixels</div>
+<div class="card metric"><strong>531</strong>unknown-ring pixels</div>
+<div class="card metric"><strong>0</strong>test analytical opens</div>
+</div>
+<h2>Rendered train and validation evidence</h2>
+<p>The figure uses fixed false-color display scaling. It is not preprocessing. Test patches are not rendered.</p>
+<img src="DATASET-QA-2026-001.png" width="1800" height="1240" alt="Eight BurnLens train and validation patches showing pre and post false color, label states, and input-valid masks">
+<h2>Independent gates</h2><div class="card table"><table><tr><th scope='row'>exact dataset file bindings</th><td>pass: 48 of 48 patch files</td></tr><tr><th scope='row'>archive custody</th><td>pass: 12 single-link archives / 13,633,040,965 bytes</td></tr><tr><th scope='row'>source to patch reconstruction</th><td>pass: 12 of 12 patches</td></tr><tr><th scope='row'>array schema and domains</th><td>pass</td></tr><tr><th scope='row'>core and unknown counts</th><td>pass: 287 core / 531 unknown</td></tr><tr><th scope='row'>exact duplicate features</th><td>pass: zero</td></tr><tr><th scope='row'>cross role spatial overlap</th><td>pass: zero</td></tr><tr><th scope='row'>cross role source product overlap</th><td>pass: zero</td></tr><tr><th scope='row'>train only normalization</th><td>pass</td></tr><tr><th scope='row'>render scope</th><td>pass: train and validation only; test not rendered</td></tr></table></div>
+<h2>Train-only normalization</h2><div class="card table"><table><thead><tr><th>Channel</th><th>Pixels</th><th>Mean</th><th>Population std</th></tr></thead><tbody><tr><td>pre_B04</td><td>14,723</td><td>0.089758</td><td>0.044498</td></tr><tr><td>pre_B8A</td><td>14,723</td><td>0.189282</td><td>0.024318</td></tr><tr><td>pre_B12</td><td>14,723</td><td>0.161141</td><td>0.069449</td></tr><tr><td>post_B04</td><td>14,723</td><td>0.081741</td><td>0.037374</td></tr><tr><td>post_B8A</td><td>14,723</td><td>0.152047</td><td>0.035379</td></tr><tr><td>post_B12</td><td>14,723</td><td>0.151244</td><td>0.065427</td></tr></tbody></table></div>
+<h2>Limits and next gate</h2><div class="card"><ul><li>Only two events and 109 labeled core pixels are available for training.</li><li>Validation and test each contain only two event groups.</li><li>Integrity-only test reconstruction emitted no test statistics or images and does not count as an analytical test opening.</li><li>Exact source/group separation cannot establish geographic or population representativeness.</li><li>Owner-approved prototype labels are not independent ground truth.</li></ul>
+<p><strong>PASS_INDEPENDENT_DATASET_QA_AUTHORIZE_BASELINE_PREREGISTRATION_ONLY</strong></p>
+<p>Only baseline preregistration may follow. Training remains unauthorized.</p></div>
+<p>Trace: commit <code>d63c8a5f3a6c9e47a74923fa00f2fc50ea00a5e7</code> · run <code>BL-2026-07-25-p2o5-t03-u04-dataset-qa-r001</code> · dataset <code>burnlens-dataset-v0.1.0</code> · split <code>burnlens-whole-event-split-v0.1.0</code> · model none.</p>
+</main></body></html>

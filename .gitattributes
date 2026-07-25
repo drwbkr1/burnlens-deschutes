@@ -348,5 +348,8 @@ records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json text eol=lf
 samples/qa/phase-two/dataset-v0.1.0/*.json text eol=lf
 samples/qa/phase-two/dataset-v0.1.0/*.html text eol=lf
 samples/qa/phase-two/dataset-v0.1.0/*.png -text
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.json text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.html text eol=lf
+samples/qa/phase-two/dataset-v0.1.0/retained-failures/**/*.png -text
 records/phase-two/prechecks/PRECHECK-2026-093.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-087.md text eol=lf

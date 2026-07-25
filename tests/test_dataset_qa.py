@@ -13,6 +13,7 @@ from burnlens.dataset_qa import (
     build_report,
     render_html,
 )
+from burnlens.run_dataset_qa import verify_git_source_commit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -83,6 +84,12 @@ class DatasetQaTests(unittest.TestCase):
         self.assertIn("test analysis remains sealed", html)
         self.assertIn("Training remains unauthorized", html)
         self.assertNotIn("ground truth achieved", html.lower())
+
+    def test_runner_rejects_non_head_or_abbreviated_commit(self) -> None:
+        with self.assertRaisesRegex(Exception, "full lowercase SHA-1"):
+            verify_git_source_commit(ROOT, "d63c8a5")
+        with self.assertRaisesRegex(Exception, "commit mismatch"):
+            verify_git_source_commit(ROOT, "0" * 40)
 
 
 if __name__ == "__main__":
