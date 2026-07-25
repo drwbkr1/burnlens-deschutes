@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.52.0-dataset-baseline-model-readiness - candidate - 2026-07-25
+## v0.52.0-dataset-baseline-model-readiness - verified - 2026-07-25
 
 - Accept `burnlens-dataset-v0.1.0`: 12 native-grid 64-by-64 patches, 287 selected cores, and 531 excluded unknown-ring pixels across six whole events.
 - Lock `burnlens-whole-event-split-v0.1.0` before patch generation, with 2/2/2 train/validation/test event roles and no source-product overlap across roles.
@@ -11,7 +11,7 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Issue `AUTHORIZE_BOUNDED_UNET` under a one-model, CPU-only, no-search, no-augmentation, no-test-tuning, rejection-first contract.
 - Update the repository-owned reviewer path and case study while keeping model, weights, training, inference, deployment, and final-submission readiness absent.
 
-Issue #562; accepted runs `BL-2026-07-25-p2o5-t03-u03-materialize-r002`, `BL-2026-07-25-p2o5-t03-u04-dataset-qa-r004`, `BL-2026-07-25-p2o5-t03-u05-baseline-r003`, `BL-2026-07-25-p2o5-t03-u06-readiness-r002`, and `BL-2026-07-25-p2o5-t03-u07-portfolio-r003`. Candidate `4655db6...` passes 695 tests with one expected skip and 86 subtests, exact reviewer replay plus desktop/narrow rendering, two identical 1,050,456-byte wheels at SHA-256 `eff2396b...`, and an isolated 105-command runtime. U07 live merge, fresh-main verification, and annotated-tag peel remain pending.
+Issue #562 / PR #563; accepted runs `BL-2026-07-25-p2o5-t03-u03-materialize-r002`, `BL-2026-07-25-p2o5-t03-u04-dataset-qa-r004`, `BL-2026-07-25-p2o5-t03-u05-baseline-r003`, `BL-2026-07-25-p2o5-t03-u06-readiness-r002`, and `BL-2026-07-25-p2o5-t03-u07-portfolio-r003`. Package-sensitive candidate `4655db6...` passes 695 tests with one expected skip and 86 subtests, exact reviewer replay plus desktop/narrow rendering, two identical 1,050,456-byte wheels at SHA-256 `eff2396b...`, and an isolated 105-command runtime. Fresh merged main `dfb11c8...` repeats all 695 tests plus the exact reviewer and wheel identities. Annotated tag object `7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf` peels exactly to that merge. Lifecycle issue #564 records the verified state before Phase Three begins.
 
 ## v0.51.0-replacement-six-event-sufficiency - verified - 2026-07-25
 

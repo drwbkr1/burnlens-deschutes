@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 
-REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004"
+REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005"
 REPORT_VERSION = "portfolio-reviewer-experience-v0.3.2"
 SOFTWARE_VERSION = "0.52.0"
 TASK_ISSUE = 562
@@ -218,6 +218,9 @@ def build_report(
         "task_issue": TASK_ISSUE,
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
+        "release_tag": "v0.52.0-dataset-baseline-model-readiness",
+        "release_commit": "dfb11c8b823e224aceb76be74003464973e33c2d",
+        "release_tag_object": "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
         "audience": "technical and technical-adjacent portfolio reviewers",
         "promise": (
             "Show how versioned wildfire imagery can move through a bounded "
@@ -375,6 +378,9 @@ def render_html(report: dict[str, Any]) -> str:
         for label, value in (
             ("Repository commit", report["git_source_commit"]),
             ("Application version", report["software_version"]),
+            ("Verified release tag", report["release_tag"]),
+            ("Verified release commit", report["release_commit"]),
+            ("Annotated tag object", report["release_tag_object"]),
             ("Target version", report["target_version"]),
             ("AOI version", report["aoi_version"]),
             ("Label schema", report["label_schema_version"]),
@@ -408,7 +414,7 @@ def render_html(report: dict[str, Any]) -> str:
 <main id="main">
 <p class="warning">{escape(report["warning"])}</p>
 <div class="review-path" aria-label="Two-minute reviewer path">{review_steps}</div>
-<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">A complete Phase Two package, with restraint.</h2><p>BurnLens preserves source roles, uncertainty, whole-event separation, owner decisions, and failure states. The bounded U-Net experiment is authorized only after this release is verified.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>12</strong>native-grid patches</div><div class="metric"><strong>RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}</strong>Dice and IoU on selected test cores</div><div class="metric"><strong>0</strong>trained models</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
+<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">A complete Phase Two package, with restraint.</h2><p>BurnLens preserves source roles, uncertainty, whole-event separation, owner decisions, and failure states. Verified BurnLens 0.52.0 authorizes the bounded U-Net contract for one rejection-first execution.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>12</strong>native-grid patches</div><div class="metric"><strong>RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}</strong>Dice and IoU on selected test cores</div><div class="metric"><strong>0</strong>trained models</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
 <section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest verified result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>The exact dataset, split, QA, normalization, baseline, and tooling package passes all {metrics["readiness_gates_passed"]} model-readiness gates.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Bounded U-Net training contract with the RBR baseline retained as the comparison"></a><div class="evidence-copy"><span class="pill">Verified result</span><h3>One rejection-first model experiment</h3><p>Six events contribute twelve native-grid patches and 287 accepted cores. All 531 unknown-ring pixels remain excluded. RBR reaches 1.0 on 89 selected test cores; that result is transparent but not generalization.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open readiness decision</a><a class="button secondary" href="{_repo_href(result["baseline_detail_path"])}">Inspect baseline evaluation</a></div></div></article></section>
 <section id="failure" aria-labelledby="failure-heading"><div class="section-head"><p class="eyebrow">Reliability is visible</p><h2 id="failure-heading">{escape(failure["title"])}</h2><p>BurnLens keeps a snow-dominated source failure and a terminal partial-custody stop instead of manufacturing a sixth event from incomplete evidence.</p></div><article class="evidence"><a href="{_repo_href(failure["preview_path"])}"><img src="{_repo_href(failure["preview_path"])}" alt="Petes Lake snow-dominated source-fitness failure evidence"></a><div class="evidence-copy"><span class="pill stop">Retained stop</span><h3>Defer is a product decision</h3><p>Seven valid assets remain evidence. One failed asset and four unexecuted assets cannot become a complete scientific package. Candidate generation never starts.</p><p><code>{escape(failure["terminal_run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(failure["detail_path"])}">Read material-defer decision</a><a class="button secondary" href="../records/prompt-build-log/2026-07-21-p2o4-t33.md">Inspect milestone log</a></div></div></article></section>
 <section id="method" aria-labelledby="method-heading"><div class="section-head"><p class="eyebrow">Method and boundaries</p><h2 id="method-heading">Different sources have different jobs.</h2><p>Source precedence is part of the product. Context is not relabeled as truth, and ambiguous pixels stay unknown.</p></div><div class="split"><div class="panel"><h3>Source roles</h3><ul>{source_items}</ul></div><div class="panel"><h3>What remains unproven</h3><ul>{limitation_items}</ul></div></div></section>

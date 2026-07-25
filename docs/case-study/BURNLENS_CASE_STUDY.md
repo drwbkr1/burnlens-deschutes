@@ -506,8 +506,8 @@ unreviewed pixels, complete scars, natural prevalence, independent truth, or
 field conditions.
 
 U06 therefore authorizes a rejection-first experiment, not a model-value
-claim. After the coherent U07 release is verified, Phase Three may train
-exactly one small CPU-only U-Net under the frozen contract. There is no
+claim. Verified BurnLens 0.52.0 now permits Phase Three to train exactly one
+small CPU-only U-Net under the frozen contract. There is no
 architecture search, augmentation, test tuning, or second model. Matching the
 perfect baseline is a valid trained result but not added value; a weaker or
 invalid model is rejected and RBR remains the analytical choice.
@@ -536,11 +536,12 @@ This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
 
 P2O5-T03 updates that repository-owned path without rewriting the verified
-historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html)
+historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html)
 binds the accepted dataset, whole-event split, baseline, and model-readiness
 evidence while keeping model version null and the retained Petes Lake failure
-visible. It is the current Phase Two handoff, not a trained-model result or a
-deployed application.
+visible. BurnLens 0.52.0 verifies that exact handoff through merged-main
+regression, exact replay, deterministic packaging, and an annotated tag. It is
+not a trained-model result or a deployed application.
 
 ### One extract-and-open submission
 
