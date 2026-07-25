@@ -128,6 +128,7 @@ burnlens-request-replacement-event-reference = "burnlens.request_replacement_eve
 burnlens-capture-replacement-event-reference-delivery = "burnlens.capture_replacement_event_reference_delivery:main"
 burnlens-inspect-replacement-event-reference-fitness = "burnlens.inspect_replacement_event_reference_fitness:main"
 burnlens-inspect-ward-creek-background-evidence = "burnlens.inspect_ward_creek_background_evidence:main"
+burnlens-build-ward-creek-region-proposal = "burnlens.inspect_ward_creek_region_proposal:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
