@@ -168,3 +168,16 @@ browser lock. That fixture was removed and never became owner evidence.
 The live page is blank again. U06 now stops for the owner's exact export.
 BurnLens will lock returned bytes before reading either decision. U07 remains
 closed, and no label or data/model artifact advances.
+
+## 2026-07-25 - The exact response is locked before reveal
+
+One completed export exists. Its envelope, roster, bindings, chronology,
+attestation, and hash-named filename pass without reading decisions or notes.
+
+BurnLens preserves the 1,041 exact bytes and a private receipt in ignored,
+no-overwrite custody. The removed browser fixture has different bytes and
+cannot enter review evidence.
+
+The lock is now a tracked checkpoint. Aggregate reconciliation may follow, but
+owner approval alone cannot promote either region. Every non-owner gate and the
+both-class rule still apply.
