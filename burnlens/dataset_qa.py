@@ -823,7 +823,7 @@ def render_html(report: dict[str, Any], png_name: str) -> str:
 :root{{--ink:#17242c;--muted:#58636a;--paper:#f4f1e8;--card:#fff;--teal:#147f75;--orange:#df5f32;--line:#d6d0c2}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Arial,sans-serif}}
 main{{max-width:1180px;margin:auto;padding:42px 24px 72px}}h1{{font-size:clamp(2rem,5vw,4.2rem);line-height:1;margin:.2em 0}}h2{{margin-top:2.2rem}}
-.warn,.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}}.warn{{border-left:7px solid var(--orange)}}
+.warn,.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}}.warn{{border-left:7px solid var(--orange)}}.card strong{{overflow-wrap:anywhere}}
 .grid{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}}.metric strong{{display:block;font-size:2.2rem;color:var(--teal)}}img{{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;background:#fff}}
 .table{{max-width:100%;overflow-x:auto}}table{{border-collapse:collapse;width:100%;min-width:650px}}th,td{{text-align:left;padding:10px;border-bottom:1px solid var(--line)}}code{{overflow-wrap:anywhere}}
 @media(max-width:760px){{body{{overflow-x:hidden}}.grid{{grid-template-columns:repeat(2,1fr)}}main{{padding:24px 14px 50px}}table{{min-width:0;table-layout:fixed}}th,td{{overflow-wrap:anywhere}}}}

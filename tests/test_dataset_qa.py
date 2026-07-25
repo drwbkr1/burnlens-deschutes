@@ -85,6 +85,7 @@ class DatasetQaTests(unittest.TestCase):
         self.assertIn("Training remains unauthorized", html)
         self.assertIn("table{min-width:0;table-layout:fixed}", html)
         self.assertIn("body{overflow-x:hidden}", html)
+        self.assertIn(".card strong{overflow-wrap:anywhere}", html)
         self.assertNotIn("ground truth achieved", html.lower())
 
     def test_runner_rejects_non_head_or_abbreviated_commit(self) -> None:

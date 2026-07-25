@@ -1,0 +1,55 @@
+{
+  "failure_record_version": "burnlens-retained-dataset-qa-failure-v0.1.0",
+  "failure_id": "P2O5-T03-U04-R003-NARROW-DECISION-OVERFLOW",
+  "unit_id": "P2O5-T03-U04",
+  "run_id": "BL-2026-07-25-p2o5-t03-u04-dataset-qa-r003",
+  "generated_at_utc": "2026-07-25T19:42:58Z",
+  "disposition": "RETAINED_FAILED_NOT_PROMOTED",
+  "failure_class": "NARROW_VIEWPORT_MACHINE_TOKEN_OVERFLOW",
+  "reason": "The responsive tables fit the required narrow viewport, but the unbroken machine decision token still expanded the document to 764 pixels.",
+  "git_source_commit": "4df233fe8e9140a20d14a867252f4cbd92d11a8b",
+  "render_evidence": {
+    "narrow_390_by_844": {
+      "decision": "FAIL",
+      "document_client_width": 375,
+      "document_scroll_width": 764,
+      "table_client_widths": [
+        305,
+        305
+      ],
+      "overflowing_element": "strong",
+      "overflowing_text": "PASS_INDEPENDENT_DATASET_QA_AUTHORIZE_BASELINE_PREREGISTRATION_ONLY",
+      "console_errors_or_warnings": 0
+    }
+  },
+  "promotion": {
+    "dataset_qa_passed": false,
+    "normalization_promoted": false,
+    "baseline_preregistration_authorized": false,
+    "test_analytical_open_count": 0,
+    "training_authorized": false
+  },
+  "retained_outputs": [
+    {
+      "path": "DATASET-QA-2026-001-r003-invalid.json",
+      "bytes": 5648,
+      "sha256": "3b9907ac0a31c89bd19841a10f244fd83f1cab9b208ad0e2558be2c8ad4009f3"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r003-invalid.html",
+      "bytes": 4758,
+      "sha256": "ec387459d2b76ce5477f588ad849022f32be134c13f37368dbb81ee919b8563b"
+    },
+    {
+      "path": "DATASET-QA-2026-001-r003-invalid.png",
+      "bytes": 281760,
+      "sha256": "c1f8fe50b326f2ae75fdd6babc4103eaf9599c6ea4ad3b04811954ab7a5becde"
+    },
+    {
+      "path": "TRAIN-NORMALIZATION-2026-001-r003-invalid.json",
+      "bytes": 2694,
+      "sha256": "55991e6b3954785b7dcd6fc90c51a5f39ada6b7301b916f124695c7f4cd33aae"
+    }
+  ],
+  "remediation": "Strong decision text inside evidence cards now wraps at arbitrary safe break opportunities."
+}
