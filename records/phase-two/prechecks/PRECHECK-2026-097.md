@@ -26,6 +26,20 @@ The exact reviewer replay reproduces:
 - JSON: 7,473 bytes / SHA-256 `1fc9f1e6...`;
 - HTML: 15,980 bytes / SHA-256 `cc64bbce...`.
 
+Lifecycle source `b52c9c237ed37ba07707c5339bd4343f3374319a` then builds the
+current verified-release reviewer surface under run
+`BL-2026-07-25-v052-lifecycle-portfolio-r001`:
+
+- JSON: 7,668 bytes / SHA-256 `3b0db0a2...`;
+- HTML: 16,341 bytes / SHA-256 `3c754e56...`.
+
+The prior `2026-004` outputs remain unchanged candidate-era evidence.
+An independent ignored replay matches both lifecycle outputs byte for byte.
+Real Chrome passes 1,280 by 720 and 390 by 844 views with document widths
+equal to each viewport, both 1,800-pixel evidence images loaded, skip-link
+keyboard focus first, verified tag/commit/object and null model visible, no
+console diagnostics, and zero external requests.
+
 Two merged-main fixed-epoch builds reproduce the audited 1,050,456-byte
 BurnLens 0.52.0 wheel at SHA-256 `eff2396b...`. Because the bytes match the
 fully inspected candidate exactly, the 221 safe unique entries, version and

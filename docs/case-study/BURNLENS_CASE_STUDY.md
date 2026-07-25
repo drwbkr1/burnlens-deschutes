@@ -543,6 +543,12 @@ visible. BurnLens 0.52.0 verifies that exact handoff through merged-main
 regression, exact replay, deterministic packaging, and an annotated tag. It is
 not a trained-model result or a deployed application.
 
+Lifecycle run `BL-2026-07-25-v052-lifecycle-portfolio-r001` creates the
+current `2026-005` page from source `b52c9c2...`. Its 7,668-byte JSON and
+16,341-byte HTML bind the verified release commit and annotated-tag object
+directly while keeping model version null. The `2026-004` page remains
+unchanged candidate-era evidence.
+
 ### One extract-and-open submission
 
 The reviewer page was coherent, but delivery still depended on repository

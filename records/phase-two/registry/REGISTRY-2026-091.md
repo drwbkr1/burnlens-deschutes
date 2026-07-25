@@ -11,6 +11,7 @@
 | `P2O5-T03-U07-REPLAY-R001` | portfolio run `BL-2026-07-25-p2o5-t03-u07-portfolio-r003`; source `403a2f3...` | JSON `1fc9f1e6...`; HTML `cc64bbce...`; exact bytes | `pass` | package |
 | `P2O5-T03-U07-PACKAGE-MAIN-R001` | fixed epoch `1785016562`; two merged-main builds | 1,050,456 bytes / `eff2396b...`; exact audited candidate identity | `pass` | tag |
 | `P2O5-T03-U07-TAG-R001` | object `7041ef76...`; tag `v0.52.0-dataset-baseline-model-readiness` | remote peel equals `dfb11c8...` | `pass` | lifecycle sync |
+| `P2O5-T03-U07-SYNC-PORTFOLIO-R001` | run `BL-2026-07-25-v052-lifecycle-portfolio-r001`; source `b52c9c2...` | JSON 7,668 / `3b0db0a2...`; HTML 16,341 / `3c754e56...`; exact replay; 1,280/390 Chrome; both images; keyboard; zero diagnostics/requests | `pass` | lifecycle PR |
 | `P2O5-T03-U07-SYNC-R001` | issue #564; current repository truth only | claims, links, JSON, LF, focused regression, live PR, post-merge main | `in-progress` | Phase Three issue |
 
 The release creates no model, training run, inference, deployment, external

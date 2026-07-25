@@ -91,6 +91,16 @@
         "sha256": "cc64bbceb2f6c490dc4a84e6bf9322800820591a5c05e252f665da2ce7d9ee10"
       },
       {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.json",
+        "bytes": 7668,
+        "sha256": "3b0db0a20c1ce9e6d1962fdcf8642772ab2c3ee6ef209d48b64500ad05c71d77"
+      },
+      {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html",
+        "bytes": 16341,
+        "sha256": "3c754e5630c3fd5fc02c6ceb289896e48b4e41064a04f4dd9a594d1409f8fbe4"
+      },
+      {
         "path": "burnlens_deschutes-0.52.0-py3-none-any.whl",
         "bytes": 1050456,
         "sha256": "eff2396b1c9bde38b0b5de5464169798874015259659dd460dc035186e22db99"
@@ -265,9 +275,9 @@
       "status": "current"
     },
     {
-      "path_or_uri": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-004.html",
+      "path_or_uri": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html",
       "expected_state": "Exact deterministic reviewer surface that exposes the accepted evidence and the absent-model boundary.",
-      "observed_state": "Bytes, replay, desktop, narrow viewport, keyboard, image, link, and clean browser-log checks pass.",
+      "observed_state": "The lifecycle surface binds the verified release identities while preserving the accepted evidence and absent-model boundary; exact replay, desktop, narrow viewport, keyboard, image, link, and clean browser-log gates apply.",
       "status": "current"
     },
     {
