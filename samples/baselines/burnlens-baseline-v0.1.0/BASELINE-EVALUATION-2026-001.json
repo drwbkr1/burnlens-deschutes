@@ -1,0 +1,756 @@
+{
+  "evaluation_version": "burnlens-baseline-evaluation-v0.1.0",
+  "evaluation_id": "BASELINE-EVALUATION-2026-001",
+  "generated_at_utc": "2026-07-25T20:22:11Z",
+  "run_id": "BL-2026-07-25-p2o5-t03-u05-evaluation-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 562,
+  "unit_id": "P2O5-T03-U05",
+  "git_source_commit": "bfd5c6c9a137b0888d9678b176cf2412a1e18805",
+  "software_version": "0.51.0",
+  "dataset_id": "burnlens-dataset-v0.1.0",
+  "split_id": "burnlens-whole-event-split-v0.1.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "inputs": {
+    "protocol": {
+      "path": "records/phase-two/manifests/BASELINE-PREREGISTRATION-2026-001.json",
+      "bytes": 6301,
+      "sha256": "31eb08ae88ee0b4425dce8af3e47475e38a4d9adb9249af7381fc5d608799bb5"
+    },
+    "selection": {
+      "path": "records/phase-two/manifests/BASELINE-SELECTION-2026-001.json",
+      "bytes": 37091,
+      "sha256": "061596f7df68844319cc3c5a5d8d0b19124cecc812e59c3a7eda9d5d3e68c1c3"
+    },
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "whole_event_split": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "train_normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "primary_source_record": {
+      "path": "records/phase-two/sources/BASELINE-PRIMARY-SOURCES-2026-001.json",
+      "bytes": 5813,
+      "sha256": "88a3ac0bb98890e9a5c779b45223a3e9079b8fc2faa94c6f50f3a9560d43972b"
+    }
+  },
+  "selected": {
+    "family_id": "rbr-threshold",
+    "threshold": 0.041043221950531006,
+    "selection_key": [
+      0.8541666666666667,
+      0.7757757757757757,
+      0.7083333333333334,
+      1.0,
+      5.0
+    ],
+    "selection_source": "validation events only after train-only fitting"
+  },
+  "test_family_metrics": [
+    {
+      "family_id": "rbr-threshold",
+      "threshold": 0.041043221950531006,
+      "event_count": 2,
+      "core_pixels": 89,
+      "true_burned_pixels": 39,
+      "predicted_burned_pixels": 39,
+      "event_class_macro_dice": 1.0,
+      "event_class_macro_iou": 1.0,
+      "worst_event_macro_dice": 1.0,
+      "event_macro_dice_range": [
+        1.0,
+        1.0
+      ],
+      "event_macro_iou_range": [
+        1.0,
+        1.0
+      ],
+      "pooled_classes": [
+        {
+          "class": "background",
+          "support": 50,
+          "predicted": 50,
+          "true_positive": 50,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 100,
+          "iou_denominator": 50,
+          "dice": 1.0,
+          "iou": 1.0
+        },
+        {
+          "class": "burned",
+          "support": 39,
+          "predicted": 39,
+          "true_positive": 39,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 78,
+          "iou_denominator": 39,
+          "dice": 1.0,
+          "iou": 1.0
+        }
+      ],
+      "events": [
+        {
+          "event_group_id": "event-ward-creek-2019",
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 14,
+              "predicted": 14,
+              "true_positive": 14,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 28,
+              "iou_denominator": 14,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        },
+        {
+          "event_group_id": "event-windigo-2022",
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        }
+      ]
+    },
+    {
+      "family_id": "dnbr-threshold",
+      "threshold": 0.05970039591193199,
+      "event_count": 2,
+      "core_pixels": 89,
+      "true_burned_pixels": 39,
+      "predicted_burned_pixels": 39,
+      "event_class_macro_dice": 1.0,
+      "event_class_macro_iou": 1.0,
+      "worst_event_macro_dice": 1.0,
+      "event_macro_dice_range": [
+        1.0,
+        1.0
+      ],
+      "event_macro_iou_range": [
+        1.0,
+        1.0
+      ],
+      "pooled_classes": [
+        {
+          "class": "background",
+          "support": 50,
+          "predicted": 50,
+          "true_positive": 50,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 100,
+          "iou_denominator": 50,
+          "dice": 1.0,
+          "iou": 1.0
+        },
+        {
+          "class": "burned",
+          "support": 39,
+          "predicted": 39,
+          "true_positive": 39,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 78,
+          "iou_denominator": 39,
+          "dice": 1.0,
+          "iou": 1.0
+        }
+      ],
+      "events": [
+        {
+          "event_group_id": "event-ward-creek-2019",
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 14,
+              "predicted": 14,
+              "true_positive": 14,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 28,
+              "iou_denominator": 14,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        },
+        {
+          "event_group_id": "event-windigo-2022",
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        }
+      ]
+    },
+    {
+      "family_id": "dndvi-threshold",
+      "threshold": 0.033301085233688354,
+      "event_count": 2,
+      "core_pixels": 89,
+      "true_burned_pixels": 39,
+      "predicted_burned_pixels": 39,
+      "event_class_macro_dice": 1.0,
+      "event_class_macro_iou": 1.0,
+      "worst_event_macro_dice": 1.0,
+      "event_macro_dice_range": [
+        1.0,
+        1.0
+      ],
+      "event_macro_iou_range": [
+        1.0,
+        1.0
+      ],
+      "pooled_classes": [
+        {
+          "class": "background",
+          "support": 50,
+          "predicted": 50,
+          "true_positive": 50,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 100,
+          "iou_denominator": 50,
+          "dice": 1.0,
+          "iou": 1.0
+        },
+        {
+          "class": "burned",
+          "support": 39,
+          "predicted": 39,
+          "true_positive": 39,
+          "false_positive": 0,
+          "false_negative": 0,
+          "dice_denominator": 78,
+          "iou_denominator": 39,
+          "dice": 1.0,
+          "iou": 1.0
+        }
+      ],
+      "events": [
+        {
+          "event_group_id": "event-ward-creek-2019",
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 14,
+              "predicted": 14,
+              "true_positive": 14,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 28,
+              "iou_denominator": 14,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        },
+        {
+          "event_group_id": "event-windigo-2022",
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "macro_dice": 1.0,
+          "macro_iou": 1.0
+        }
+      ]
+    },
+    {
+      "family_id": "constant-background",
+      "threshold": null,
+      "event_count": 2,
+      "core_pixels": 89,
+      "true_burned_pixels": 39,
+      "predicted_burned_pixels": 0,
+      "event_class_macro_dice": 0.36197916666666663,
+      "event_class_macro_iou": 0.28525641025641024,
+      "worst_event_macro_dice": 0.3333333333333333,
+      "event_macro_dice_range": [
+        0.3333333333333333,
+        0.390625
+      ],
+      "event_macro_iou_range": [
+        0.25,
+        0.32051282051282054
+      ],
+      "pooled_classes": [
+        {
+          "class": "background",
+          "support": 50,
+          "predicted": 89,
+          "true_positive": 50,
+          "false_positive": 39,
+          "false_negative": 0,
+          "dice_denominator": 139,
+          "iou_denominator": 89,
+          "dice": 0.7194244604316546,
+          "iou": 0.5617977528089888
+        },
+        {
+          "class": "burned",
+          "support": 39,
+          "predicted": 0,
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 39,
+          "dice_denominator": 39,
+          "iou_denominator": 39,
+          "dice": 0.0,
+          "iou": 0.0
+        }
+      ],
+      "events": [
+        {
+          "event_group_id": "event-ward-creek-2019",
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 39,
+              "true_positive": 25,
+              "false_positive": 14,
+              "false_negative": 0,
+              "dice_denominator": 64,
+              "iou_denominator": 39,
+              "dice": 0.78125,
+              "iou": 0.6410256410256411
+            },
+            {
+              "class": "burned",
+              "support": 14,
+              "predicted": 0,
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 14,
+              "dice_denominator": 14,
+              "iou_denominator": 14,
+              "dice": 0.0,
+              "iou": 0.0
+            }
+          ],
+          "macro_dice": 0.390625,
+          "macro_iou": 0.32051282051282054
+        },
+        {
+          "event_group_id": "event-windigo-2022",
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 50,
+              "true_positive": 25,
+              "false_positive": 25,
+              "false_negative": 0,
+              "dice_denominator": 75,
+              "iou_denominator": 50,
+              "dice": 0.6666666666666666,
+              "iou": 0.5
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 0,
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 25,
+              "dice_denominator": 25,
+              "iou_denominator": 25,
+              "dice": 0.0,
+              "iou": 0.0
+            }
+          ],
+          "macro_dice": 0.3333333333333333,
+          "macro_iou": 0.25
+        }
+      ]
+    },
+    {
+      "family_id": "constant-burned",
+      "threshold": null,
+      "event_count": 2,
+      "core_pixels": 89,
+      "true_burned_pixels": 39,
+      "predicted_burned_pixels": 89,
+      "event_class_macro_dice": 0.29874213836477986,
+      "event_class_macro_iou": 0.21474358974358976,
+      "worst_event_macro_dice": 0.2641509433962264,
+      "event_macro_dice_range": [
+        0.2641509433962264,
+        0.3333333333333333
+      ],
+      "event_macro_iou_range": [
+        0.1794871794871795,
+        0.25
+      ],
+      "pooled_classes": [
+        {
+          "class": "background",
+          "support": 50,
+          "predicted": 0,
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 50,
+          "dice_denominator": 50,
+          "iou_denominator": 50,
+          "dice": 0.0,
+          "iou": 0.0
+        },
+        {
+          "class": "burned",
+          "support": 39,
+          "predicted": 89,
+          "true_positive": 39,
+          "false_positive": 50,
+          "false_negative": 0,
+          "dice_denominator": 128,
+          "iou_denominator": 89,
+          "dice": 0.609375,
+          "iou": 0.43820224719101125
+        }
+      ],
+      "events": [
+        {
+          "event_group_id": "event-ward-creek-2019",
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 0,
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 25,
+              "dice_denominator": 25,
+              "iou_denominator": 25,
+              "dice": 0.0,
+              "iou": 0.0
+            },
+            {
+              "class": "burned",
+              "support": 14,
+              "predicted": 39,
+              "true_positive": 14,
+              "false_positive": 25,
+              "false_negative": 0,
+              "dice_denominator": 53,
+              "iou_denominator": 39,
+              "dice": 0.5283018867924528,
+              "iou": 0.358974358974359
+            }
+          ],
+          "macro_dice": 0.2641509433962264,
+          "macro_iou": 0.1794871794871795
+        },
+        {
+          "event_group_id": "event-windigo-2022",
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 0,
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 25,
+              "dice_denominator": 25,
+              "iou_denominator": 25,
+              "dice": 0.0,
+              "iou": 0.0
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 50,
+              "true_positive": 25,
+              "false_positive": 25,
+              "false_negative": 0,
+              "dice_denominator": 75,
+              "iou_denominator": 50,
+              "dice": 0.6666666666666666,
+              "iou": 0.5
+            }
+          ],
+          "macro_dice": 0.3333333333333333,
+          "macro_iou": 0.25
+        }
+      ]
+    }
+  ],
+  "selected_test_metrics": {
+    "family_id": "rbr-threshold",
+    "threshold": 0.041043221950531006,
+    "event_count": 2,
+    "core_pixels": 89,
+    "true_burned_pixels": 39,
+    "predicted_burned_pixels": 39,
+    "event_class_macro_dice": 1.0,
+    "event_class_macro_iou": 1.0,
+    "worst_event_macro_dice": 1.0,
+    "event_macro_dice_range": [
+      1.0,
+      1.0
+    ],
+    "event_macro_iou_range": [
+      1.0,
+      1.0
+    ],
+    "pooled_classes": [
+      {
+        "class": "background",
+        "support": 50,
+        "predicted": 50,
+        "true_positive": 50,
+        "false_positive": 0,
+        "false_negative": 0,
+        "dice_denominator": 100,
+        "iou_denominator": 50,
+        "dice": 1.0,
+        "iou": 1.0
+      },
+      {
+        "class": "burned",
+        "support": 39,
+        "predicted": 39,
+        "true_positive": 39,
+        "false_positive": 0,
+        "false_negative": 0,
+        "dice_denominator": 78,
+        "iou_denominator": 39,
+        "dice": 1.0,
+        "iou": 1.0
+      }
+    ],
+    "events": [
+      {
+        "event_group_id": "event-ward-creek-2019",
+        "core_pixels": 39,
+        "classes": [
+          {
+            "class": "background",
+            "support": 25,
+            "predicted": 25,
+            "true_positive": 25,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 50,
+            "iou_denominator": 25,
+            "dice": 1.0,
+            "iou": 1.0
+          },
+          {
+            "class": "burned",
+            "support": 14,
+            "predicted": 14,
+            "true_positive": 14,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 28,
+            "iou_denominator": 14,
+            "dice": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "macro_dice": 1.0,
+        "macro_iou": 1.0
+      },
+      {
+        "event_group_id": "event-windigo-2022",
+        "core_pixels": 50,
+        "classes": [
+          {
+            "class": "background",
+            "support": 25,
+            "predicted": 25,
+            "true_positive": 25,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 50,
+            "iou_denominator": 25,
+            "dice": 1.0,
+            "iou": 1.0
+          },
+          {
+            "class": "burned",
+            "support": 25,
+            "predicted": 25,
+            "true_positive": 25,
+            "false_positive": 0,
+            "false_negative": 0,
+            "dice_denominator": 50,
+            "iou_denominator": 25,
+            "dice": 1.0,
+            "iou": 1.0
+          }
+        ],
+        "macro_dice": 1.0,
+        "macro_iou": 1.0
+      }
+    ]
+  },
+  "uncertainty": {
+    "test_event_groups": 2,
+    "reporting": "exact event range only",
+    "confidence_interval": null,
+    "population_inference": false
+  },
+  "limitations": [
+    "The test contains only 89 owner-approved prototype core pixels from two event groups.",
+    "Candidate construction used optical and official-reference evidence, which may favor the spectral separability measured here.",
+    "Perfect core classification does not measure unreviewed pixels, unknown rings, complete burn scars, or natural prevalence.",
+    "The result is not independent ground truth, field validation, generalization evidence, or operational readiness."
+  ],
+  "claims": {
+    "prototype_labels_only": true,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "operational_or_emergency_use": false
+  },
+  "boundaries": {
+    "test_analytical_open_count_before": 0,
+    "test_analytical_open_count_after": 1,
+    "test_tuning": false,
+    "selection_changed_after_test": false,
+    "metric_result_created": true,
+    "model_created": false,
+    "training_authorized": false
+  },
+  "decision": "PASS_REPRODUCIBLE_NON_MODEL_BASELINE_EVALUATION",
+  "next_dependency": "P2O5-T03-U06 model-readiness audit"
+}
