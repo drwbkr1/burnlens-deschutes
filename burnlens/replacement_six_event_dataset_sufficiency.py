@@ -750,6 +750,22 @@ def build_audit_decision(
     contract_sha256: str,
 ) -> dict[str, Any]:
     required = set(contract["required_gate_ids"])
+    evidence: dict[str, list[dict[str, Any]]] = {
+        "pass": [],
+        "block": [],
+        "defer": [],
+    }
+    for gate in contract["gates"]:
+        evidence[gate["status"]].append(
+            {
+                "gate_id": gate["gate_id"],
+                "category": gate["category"],
+                "required": gate["required"],
+                "evidence_refs": gate["evidence_refs"],
+                "finding": gate["finding"],
+                "remediation": gate["remediation"],
+            }
+        )
     blocking_gates = sorted(
         gate["gate_id"]
         for gate in contract["gates"]
@@ -761,7 +777,8 @@ def build_audit_decision(
         if gate["gate_id"] in required and gate["status"] == "defer"
     )
     count_results: list[dict[str, Any]] = []
-    failed_counts: list[str] = []
+    failed_blocking_counts: list[str] = []
+    failed_deferred_counts: list[str] = []
     for check in contract["count_checks"]:
         observed = check["observed"]
         threshold = check["threshold"]
@@ -780,20 +797,33 @@ def build_audit_decision(
             }
         )
         if not satisfied and check["on_failure"] == "block":
-            failed_counts.append(check["check_id"])
-    if blocking_gates or failed_counts:
+            failed_blocking_counts.append(check["check_id"])
+        elif not satisfied and check["on_failure"] == "defer":
+            failed_deferred_counts.append(check["check_id"])
+    if blocking_gates or failed_blocking_counts:
         decision = "block"
-    elif deferred_gates:
+        next_action = (
+            "Remediate, exclude, or stop on the blocking evidence before "
+            "reassessment."
+        )
+    elif deferred_gates or failed_deferred_counts:
         decision = "defer"
+        next_action = (
+            "Gather the named missing evidence or authority, then rerun "
+            "the audit."
+        )
     else:
         decision = "pass"
+        next_action = (
+            "Seek separate authorization for dataset creation, splitting, "
+            "or training; this audit grants none."
+        )
     if decision != "pass":
         raise SixEventDatasetSufficiencyError(
             "replacement readiness audit did not pass"
         )
     return {
         "audit_result_version": "dataset-readiness-result-v1",
-        "decision_id": DECISION_ID,
         "audit_id": contract["audit_id"],
         "candidate_id": contract["candidate_id"],
         "candidate_manifest_sha256": contract[
@@ -801,20 +831,34 @@ def build_audit_decision(
         ],
         "audit_input_sha256": contract_sha256,
         "decision": decision,
+        "pass_evidence": sorted(
+            evidence["pass"],
+            key=lambda item: item["gate_id"],
+        ),
+        "block_evidence": sorted(
+            evidence["block"],
+            key=lambda item: item["gate_id"],
+        ),
+        "defer_evidence": sorted(
+            evidence["defer"],
+            key=lambda item: item["gate_id"],
+        ),
         "blocking_required_gate_ids": blocking_gates,
         "deferred_required_gate_ids": deferred_gates,
         "count_results": count_results,
-        "failed_blocking_count_checks": sorted(failed_counts),
+        "failed_blocking_count_checks": sorted(
+            failed_blocking_counts
+        ),
+        "failed_deferred_count_checks": sorted(
+            failed_deferred_counts
+        ),
         "count_thresholds_can_establish_readiness_alone": False,
         "training_authorized": False,
         "training_authorization_reason": (
-            "Dataset-readiness evidence never substitutes for the separate "
-            "dataset/split/QA/baseline and model-readiness checkpoints."
+            "Dataset-readiness evidence never substitutes for separate "
+            "training authorization."
         ),
-        "next_action": (
-            "Open the separately authorized dataset, whole-event split, QA, "
-            "and strongest non-model baseline checkpoint. Training remains closed."
-        ),
+        "next_action": next_action,
     }
 
 

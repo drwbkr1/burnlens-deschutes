@@ -166,6 +166,13 @@ class ReplacementSixEventDatasetSufficiencyTests(unittest.TestCase):
             self.decision["failed_blocking_count_checks"],
             [],
         )
+        self.assertEqual(
+            self.decision["failed_deferred_count_checks"],
+            [],
+        )
+        self.assertEqual(len(self.decision["pass_evidence"]), 10)
+        self.assertEqual(self.decision["block_evidence"], [])
+        self.assertEqual(self.decision["defer_evidence"], [])
         self.assertTrue(
             all(
                 result["satisfied"]
