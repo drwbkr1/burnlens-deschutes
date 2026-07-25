@@ -106,6 +106,31 @@ class DatasetMaterializationTests(unittest.TestCase):
         self.assertEqual(int(passed.sum()), 4)
         self.assertEqual(counts["uncovered"], 12)
 
+    def test_event_level_all_pass_registration_covers_event_grid(self) -> None:
+        registration = {
+            "summary": {
+                "state_counts": {
+                    "pass": 9,
+                    "review-needed": 0,
+                    "excluded": 0,
+                    "fail-registration": 0,
+                },
+                "machine_decision": "PASS_LOCAL_CONTENT_REGISTRATION_GATE",
+            },
+            "windows": [],
+        }
+        passed, counts = _registration_pass_mask(registration, (4, 4))
+        self.assertTrue(np.all(passed))
+        self.assertEqual(
+            counts,
+            {
+                "pass": 16,
+                "review_needed": 0,
+                "excluded": 0,
+                "uncovered": 0,
+            },
+        )
+
     def test_locked_split_has_zero_test_open_count(self) -> None:
         self.assertEqual(self.split["sealed_test"]["open_count"], 0)
         self.assertFalse(self.split["sealed_test"]["pixel_values_opened"])

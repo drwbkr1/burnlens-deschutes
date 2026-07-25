@@ -310,6 +310,22 @@ def _registration(
 def _registration_pass_mask(
     registration: dict[str, Any], shape: tuple[int, int]
 ) -> tuple[np.ndarray, dict[str, int]]:
+    summary = registration.get("summary", {})
+    state_counts = summary.get("state_counts", {})
+    if (
+        state_counts
+        and int(state_counts.get("pass", 0)) > 0
+        and int(state_counts.get("review-needed", 0)) == 0
+        and int(state_counts.get("excluded", 0)) == 0
+        and int(state_counts.get("fail-registration", 0)) == 0
+        and str(summary.get("machine_decision", "")).startswith("PASS_")
+    ):
+        return np.ones(shape, dtype=bool), {
+            "pass": int(shape[0] * shape[1]),
+            "review_needed": 0,
+            "excluded": 0,
+            "uncovered": 0,
+        }
     state = np.full(shape, 3, dtype=np.uint8)
     rank = {"pass": 0, "review-needed": 1, "excluded": 2}
     covered = np.zeros(shape, dtype=bool)
