@@ -1,0 +1,77 @@
+{
+  "record_version": "burnlens-phase-five-reliability-interface-record-v0.1.0",
+  "record_id": "PHASE-FIVE-RELIABILITY-INTERFACE-RECORD-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U03",
+  "issue": 574,
+  "run_id": "BL-2026-07-26-p5o1-t01-u03-reliability-interface-r001",
+  "generated_at_utc": "2026-07-26T21:54:45Z",
+  "implementation_commit": "81473b03e897ced8a682b0bf3d428a75bab674ff",
+  "interface_version": "burnlens-phase-five-reliability-interface-v0.1.0",
+  "inputs": [
+    {
+      "path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "role": "verified canonical Phase Four interface"
+    },
+    {
+      "path": "samples/qa/phase-five/failure-injection-v0.1.0/PHASE-FIVE-FAILURE-INJECTION-2026-001.json",
+      "bytes": 4590,
+      "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4",
+      "role": "passed U02 failure and recovery evidence"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/qa/phase-five/reliability-interface-v0.1.0/PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.html",
+      "bytes": 179808,
+      "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316"
+    },
+    {
+      "path": "samples/qa/phase-five/reliability-interface-v0.1.0/PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.json",
+      "bytes": 3000,
+      "sha256": "33a9cf2f8b630cf49285683c39745f01f4c52fe8aa90b9811a1c6aab87b6d2dc"
+    }
+  ],
+  "changed_user_visible_behavior": [
+    "The rejected U-Net group is hidden in initial HTML before JavaScript executes.",
+    "The skip link targets a focusable main evidence region.",
+    "A no-script warning explains that accepted RBR and the textual equivalent remain visible while the rejected U-Net remains hidden.",
+    "A four-step reviewer path and exact U02 failure evidence are visible."
+  ],
+  "automated_gates": {
+    "deterministic_replay": "pass",
+    "unique_dom_ids": "pass; 27 IDs",
+    "native_keyboard_controls": "pass; 3 buttons and 12 inputs",
+    "focusable_skip_target": "pass",
+    "rejected_diagnostic_hidden_before_script": "pass",
+    "no_script_explanation": "pass",
+    "text_equivalent": "pass",
+    "non_color_failure_language": "pass",
+    "narrow_reflow_contract": "pass",
+    "reduced_motion_contract": "pass",
+    "strict_offline_csp": "pass",
+    "external_runtime_references": "zero",
+    "declared_contrast_pairs": "pass; minimum measured ratio 6.219 for content accents and 14.264 for focus indicator",
+    "html_byte_budget": "pass; 179808 <= 250000"
+  },
+  "render_evidence": {
+    "canonical_interface_owner_confirmed": true,
+    "canonical_interface_sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+    "hardened_desktop": "pending owner confirmation",
+    "hardened_narrow_390x844": "pending owner confirmation",
+    "hardened_keyboard_journey": "pending owner confirmation",
+    "automation_file_url_block": "retained",
+    "browser_policy_bypass": false
+  },
+  "analytical_posture": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_accepted": false,
+    "rejected_model_outperformed_rbr": false,
+    "analytical_output_changed": false
+  },
+  "disposition": "pending-render-review",
+  "next_dependency": "Owner confirms exact desktop, 390x844 narrow, and keyboard journey; then finalize U03 or remediate."
+}
