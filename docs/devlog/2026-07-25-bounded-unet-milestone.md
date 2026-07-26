@@ -181,3 +181,18 @@ analytical winner. RBR remains primary. Phase Four should build a
 baseline-first georeferenced run and show the U-Net only as a visibly rejected
 diagnostic, making the model-bearing path inspectable without manufacturing
 model value.
+
+## 2026-07-26 — close the fresh-checkout byte gap before portfolio binding
+
+The final reviewer page will bind exact Phase Three evidence bytes, so its
+source must survive a fresh Windows checkout. A pre-generation audit found that
+the Phase Three record tree and objective document did not yet have explicit LF
+checkout rules while the canonical checkout uses `core.autocrlf=true`.
+
+The package record already matched its committed blob and retained SHA-256
+`22552092843ad5e83fcacdcaaf1d9c035a09d9e75e260503cbb560b9d2dc3443`;
+no scientific or package byte changed. BurnLens now applies explicit LF
+contracts to Phase Three JSON, Markdown, and the Phase Three objective before
+generating the reviewer artifact. This is a portability correction only: it
+does not reopen training, evaluation, the one test opening, or the rejected
+model decision.
