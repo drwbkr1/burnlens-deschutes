@@ -28,6 +28,11 @@ from PR #569.
 | `P4O1-T01-U04-MTBS-REUSE-R001` | archive `d94dfb16...`; event `OR4494912090120190812`; map `10016337` | Existing governed 4,385,952-byte archive; 16 members / 13 files; one valid EPSG:32610 boundary / 8,378,927.386 m2 | Full CRC, exact four-member boundary hashes, event/map identity, geometry, embedded rights, and live role cautions pass. Reference context only, never ground truth or operational incident perimeter. U04 `pass`. | U05 overlays and deterministic summary |
 | `P4O1-T01-U05-OVERLAY-R001` | run `BL-2026-07-26-p4o1-t01-u05-overlay-r001`; source `2f96cc6...` | 10 ignored files / 774,062 bytes; inventory 945 bytes / `770f580e...`; manifest 8,088 bytes / `cf235bee...`; four web context layers, five observations, and 1600x1000 quicklook | Native EPSG:32610 measurements and web EPSG:4326 context independently pass. WCP-001 RBR is 141.44 ha with 94.19% MTBS overlap. WCP-002 RBR is 66.76 ha with zero MTBS overlap, retained as visible baseline false-positive-risk evidence. The rendered quicklook and all claim boundaries pass. U05 `pass`. | U06 repository-owned evidence interface |
 | `P4O1-T01-U05-DUPLICATE-R002` | retained no-overwrite attempt | Existing accepted U05 run ID and manifest `cf235bee...` | Duplicate invocation exits 1 with `run already exists`; the manifest hash remains exact. `retained-no-overwrite-refusal`. | U06 |
+| `P4O1-T01-U06-INTERFACE-R001` | run `BL-2026-07-26-p4o1-t01-u06-interface-r001`; source `f9f9cc6...` | Self-contained HTML 177,505 bytes / `ed5c24f...`; JSON 12,429 bytes / `378fded5...`; desktop interaction screenshot 261,002 bytes / `69129a6e...` | Exact inputs, deterministic build, and interaction run, but patch focus scales the redundant SVG label until it obscures WCP-002. `retained-failed-render-qa`. | Hide redundant patch labels only while focused |
+| `P4O1-T01-U06-INTERFACE-R002` | run `BL-2026-07-26-p4o1-t01-u06-interface-r002`; source `5072a57...` | Tracked self-contained HTML 177,666 bytes / `7a657ad7...`; JSON 12,429 bytes / `8686766d...`; six layers, six opacity controls, three focus controls, textual equivalent, lineage, warnings, and six-state taxonomy | Desktop 1440x1000 and narrow 390x844 render/interaction pass with zero horizontal overflow, console error, page error, or external request. Keyboard controls, visible focus, non-color roles, representative contrast, exact replay, privacy, and claims pass. U06 `pass`. | U07 immutable run package and clean reproduction |
+| `P4O1-T01-U06-IAB-FILE-R001` | retained browser-transport attempt | Direct local file navigation | Empty security-policy page; no application defect inferred. `retained-browser-transport-block`. | Loopback transport |
+| `P4O1-T01-U06-IAB-LOOPBACK-R001` | retained browser-transport attempt | Temporary loopback URL | In-app browser returns `ERR_BLOCKED_BY_CLIENT`; no application defect inferred. `retained-browser-transport-block`. | System-Chrome local QA |
+| `P4O1-T01-U06-DUPLICATE-R003` | retained no-overwrite attempt | Existing accepted U06 output directory | Duplicate invocation exits 1 with `refusing to overwrite nonempty output directory`; both accepted hashes remain exact. `retained-no-overwrite-refusal`. | U07 |
 
 ## Current truth
 
@@ -56,7 +61,12 @@ from PR #569.
   `BL-2026-07-26-p4o1-t01-u05-overlay-r001`. Its exact native measurements,
   web context layers, deterministic observations, and rendered quicklook pass.
   The background patch visibly preserves the accepted baseline's
-  false-positive risk. U06 is eligible.
+  false-positive risk.
+- U06 is complete at source `5072a57...` and run
+  `BL-2026-07-26-p4o1-t01-u06-interface-r002`. Its tracked self-contained
+  interface passes real desktop and narrow interaction, accessibility,
+  privacy, claims, offline, and exact-replay gates. R001 remains a visible
+  failed render-QA attempt. U07 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
