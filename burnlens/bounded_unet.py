@@ -620,4 +620,3 @@ def load_checkpoint(
     optimizer.load_state_dict(payload["optimizer_state"])
     require_finite_training_state(model)
     return epoch, EarlyStoppingState.from_dict(payload["early_stopping"])
-
