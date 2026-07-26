@@ -1,7 +1,9 @@
 # PRECHECK-2026-005 — P3O1-T01 release-candidate checkout remediation
 
-**Recorded:** 2026-07-26  
-**Issue:** #566  
+**Recorded:** 2026-07-26
+
+**Issue:** #566
+
 **Candidate before remediation:** `d1101a06e9fd512096aa398687838ab2ab0e8278`
 
 ## Retained attempts
