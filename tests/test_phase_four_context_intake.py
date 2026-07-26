@@ -6,8 +6,8 @@ import unittest
 
 from burnlens.phase_four_context_intake import (
     PhaseFourContextIntakeError,
-    _load_exact_plan,
     validate_feature_collection,
+    validate_finalized_context_intake,
 )
 
 
@@ -25,12 +25,10 @@ def _feature(object_id: int, geometry: dict, fields: set[str]) -> dict:
 
 
 class PhaseFourContextIntakeTests(unittest.TestCase):
-    def test_exact_authorized_plan_loads(self) -> None:
-        plan = _load_exact_plan(ROOT)
-        self.assertEqual(len(plan["assets"]), 8)
-        self.assertTrue(
-            all(asset["state"] == "authorized" for asset in plan["assets"])
-        )
+    def test_exact_finalized_custody_revalidates(self) -> None:
+        result = validate_finalized_context_intake(ROOT)
+        self.assertEqual(result["asset_count"], 8)
+        self.assertEqual(result["bytes"], 890072)
 
     def test_valid_line_feature_collection_passes(self) -> None:
         from burnlens.phase_four_context_intake import ASSET_RULES

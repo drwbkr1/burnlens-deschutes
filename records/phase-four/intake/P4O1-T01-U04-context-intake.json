@@ -25,13 +25,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "8725602d400859e9c4de39bf49f2da0aa4dba370017ba2eba1aa519cc9db0a19",
+        "staged_size_bytes": 43209,
+        "promoted_sha256": "8725602d400859e9c4de39bf49f2da0aa4dba370017ba2eba1aa519cc9db0a19",
+        "promoted_size_bytes": 43209
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-secondary-highways-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -52,13 +59,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "548f7fb9d24c82924b50664d7116bfc63ad4ece1dd340396a2c12fb2b183b3ce",
+        "staged_size_bytes": 53039,
+        "promoted_sha256": "548f7fb9d24c82924b50664d7116bfc63ad4ece1dd340396a2c12fb2b183b3ce",
+        "promoted_size_bytes": 53039
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-local-connecting-roads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -79,13 +93,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "f5a45d456bf6e77be36ab36b3889fb69d9d3516e4ec0d72b671e4c39039c7528",
+        "staged_size_bytes": 157522,
+        "promoted_sha256": "f5a45d456bf6e77be36ab36b3889fb69d9d3516e4ec0d72b671e4c39039c7528",
+        "promoted_size_bytes": 157522
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-local-roads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -106,13 +127,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "58b7e58b38725ab68c3b36ffdbc5b3d4c280711acdef205be2e5ac0fdce311ee",
+        "staged_size_bytes": 1690,
+        "promoted_sha256": "58b7e58b38725ab68c3b36ffdbc5b3d4c280711acdef205be2e5ac0fdce311ee",
+        "promoted_size_bytes": 1690
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-cemeteries-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -133,13 +161,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "4b8c8204b0b0218259d3d4da40f27e66825973a10c283c617f18e55fab8a68ae",
+        "staged_size_bytes": 1144,
+        "promoted_sha256": "4b8c8204b0b0218259d3d4da40f27e66825973a10c283c617f18e55fab8a68ae",
+        "promoted_size_bytes": 1144
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-post-offices-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -160,13 +195,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "3a859a9ad7181fc66968e21751d2e31da19efc6b2c38ccd2ee2750102c76d3b9",
+        "staged_size_bytes": 606,
+        "promoted_sha256": "3a859a9ad7181fc66968e21751d2e31da19efc6b2c38ccd2ee2750102c76d3b9",
+        "promoted_size_bytes": 606
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-fire-ems-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -187,13 +229,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "879ebed8c87327d8f5bd67d235ca3a8c110e0dd4b17a7e8b46b945e4c7f6489d",
+        "staged_size_bytes": 1327,
+        "promoted_sha256": "879ebed8c87327d8f5bd67d235ca3a8c110e0dd4b17a7e8b46b945e4c7f6489d",
+        "promoted_size_bytes": 1327
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-trailheads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     },
@@ -214,13 +263,20 @@
         "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
       },
       "observed": {
-        "staged_sha256": null,
-        "staged_size_bytes": null,
-        "promoted_sha256": null,
-        "promoted_size_bytes": null
+        "staged_sha256": "0975718f7af35e472f32d130f715d9aba025a7a172eeb2cc5be8e5e0a2fc7085",
+        "staged_size_bytes": 631535,
+        "promoted_sha256": "0975718f7af35e472f32d130f715d9aba025a7a172eeb2cc5be8e5e0a2fc7085",
+        "promoted_size_bytes": 631535
       },
-      "state": "authorized",
-      "attempts": [],
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nbd-blm-boundary-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
       "failure": null,
       "superseded_by": null
     }
@@ -261,6 +317,13 @@
       "nbd-blm-boundary": 1
     },
     "resume_policy": "No resume. Each response is small; an interrupted or ambiguous transfer is retained as failed and retried under a new asset ID and path.",
-    "response_policy": "Require HTTP 200, application/geo+json or JSON-compatible content, no ArcGIS error object, exact FeatureCollection schema, expected feature count, valid finite EPSG:4326 geometry, minimal declared attributes, and no unexpected personal or secret field."
+    "response_policy": "Require HTTP 200, application/geo+json or JSON-compatible content, no ArcGIS error object, exact FeatureCollection schema, expected feature count, valid finite EPSG:4326 geometry, minimal declared attributes, and no unexpected personal or secret field.",
+    "state": "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05",
+    "run_id": "BL-2026-07-26-p4o1-t01-u04-context-r001",
+    "git_source_commit": "20940438319a31022196739463a3be091e21fd3b",
+    "completed_at_utc": "2026-07-26T18:03:52Z",
+    "asset_count": 8,
+    "all_promoted": true,
+    "all_single_link": true
   }
 }

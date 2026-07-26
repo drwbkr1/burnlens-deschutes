@@ -21,6 +21,9 @@ PLAN_PATH = Path(
 PLAN_SHA256 = (
     "c7bd8ffee3f0088bdbc86df70ef9a0bddbb417b4e0eb0c15693fe15b65918001"
 )
+FINAL_CONTRACT_SHA256 = (
+    "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd"
+)
 SOURCE_GATE_PATH = Path(
     "records/phase-four/sources/"
     "PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json"
@@ -300,6 +303,72 @@ def _load_exact_plan(root: Path) -> dict[str, Any]:
     }:
         raise PhaseFourContextIntakeError("metadata count contract drift")
     return plan
+
+
+def validate_finalized_context_intake(
+    repository_root: Path,
+) -> dict[str, Any]:
+    """Revalidate the exact promoted U04 custody without contacting USGS."""
+
+    root = repository_root.resolve()
+    contract_path = root / PLAN_PATH
+    gate_path = root / SOURCE_GATE_PATH
+    if _sha256_file(contract_path) != FINAL_CONTRACT_SHA256:
+        raise PhaseFourContextIntakeError("final intake contract hash drift")
+    if _sha256_file(gate_path) != SOURCE_GATE_SHA256:
+        raise PhaseFourContextIntakeError("source gate hash drift")
+    contract = _read_json(contract_path)
+    if (
+        contract.get("extensions", {}).get("state")
+        != "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05"
+        or contract["extensions"].get("asset_count") != len(ASSET_RULES)
+        or contract["extensions"].get("all_promoted") is not True
+        or contract["extensions"].get("all_single_link") is not True
+    ):
+        raise PhaseFourContextIntakeError("final intake state drift")
+    summaries: list[dict[str, Any]] = []
+    for asset in contract.get("assets", []):
+        asset_id = asset.get("asset_id")
+        if asset_id not in ASSET_RULES or asset.get("state") != "promoted":
+            raise PhaseFourContextIntakeError("final asset state drift")
+        destination = _asset_path(root, contract, asset, "destination")
+        observed = asset.get("observed", {})
+        digest = observed.get("promoted_sha256")
+        size = observed.get("promoted_size_bytes")
+        if (
+            not destination.is_file()
+            or destination.is_symlink()
+            or destination.stat().st_nlink != 1
+            or destination.stat().st_size != size
+            or _sha256_file(destination) != digest
+            or observed.get("staged_sha256") != digest
+            or observed.get("staged_size_bytes") != size
+        ):
+            raise PhaseFourContextIntakeError(
+                f"final custody identity drift: {asset_id}"
+            )
+        validation = validate_feature_collection(
+            destination.read_bytes(),
+            asset_id=asset_id,
+        )
+        summaries.append(
+            {
+                "asset_id": asset_id,
+                "bytes": size,
+                "sha256": digest,
+                "validation": validation,
+            }
+        )
+    if [item["asset_id"] for item in summaries] != list(ASSET_RULES):
+        raise PhaseFourContextIntakeError("final asset roster drift")
+    return {
+        "state": "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05",
+        "contract_sha256": FINAL_CONTRACT_SHA256,
+        "source_gate_sha256": SOURCE_GATE_SHA256,
+        "asset_count": len(summaries),
+        "bytes": sum(item["bytes"] for item in summaries),
+        "assets": summaries,
+    }
 
 
 def validate_feature_collection(

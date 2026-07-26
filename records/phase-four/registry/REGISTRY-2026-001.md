@@ -23,6 +23,9 @@ from PR #569.
 | `P4O1-T01-U03-GEOSPATIAL-R002` | run `BL-2026-07-26-p4o1-t01-u03-geospatial-r002`; source `618fdd4...` | Same bounded product roster; sized fallback quicklook 41,774 bytes / `be12c40e...` | Visual hierarchy is restored, but the fallback font lacks the em-dash glyph and renders a visible square. `retained-failed-render-qa`. | Use a portable separator |
 | `P4O1-T01-U03-GEOSPATIAL-R003` | run `BL-2026-07-26-p4o1-t01-u03-geospatial-r003`; source `761ef33...` | 18 ignored files / 549,068 bytes; inventory 1,827 bytes / `79124d13...`; manifest 11,446 bytes / `dc751576...`; 10 rasters, 202 accepted RBR polygons, GeoJSON, and 1280x720 quicklook | Native-grid GeoTIFFs pass; GeoPackage opens in the locked stack; every geometry is valid; polygon rasterization exactly reproduces 3,536 and 1,669 RBR-positive pixels; rendered quicklook passes visual QA; model remains rejected. U03 `pass`. | U04 context source and terms gate |
 | `P4O1-T01-U03-DUPLICATE-R004` | retained no-overwrite attempt | Existing accepted U03 run ID and 18 files | Duplicate invocation exits 1 with `run already exists`; file count and every SHA-256 remain unchanged. `retained-no-overwrite-refusal`. | U04 |
+| `P4O1-T01-U04-SOURCE-GATE-R001` | `PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001`; commit `73d565e...` | Four separate sources; 32 required criteria; 35 evidence items, including 23 fresh live observations | TNM NTD, NSD, NBD and exact local Ward Creek MTBS reuse pass identity, authority, access, rights, provenance, integrity, fitness, and privacy/security. Bounded GeoJSON intake only; no bulk package or new MTBS request. `ready`. | Commit exact intake plan |
+| `P4O1-T01-U04-INTAKE-R001` | run `BL-2026-07-26-p4o1-t01-u04-context-r001`; source `2094043...` | Eight promoted GeoJSON responses / 890,072 bytes; final contract 17,290 bytes / `3cc26f5b...`; run inventory 25,215 bytes / `948f6b26...` | Exact counts: 169 roads, eight selected public facilities, and one BLM boundary; minimal fields, valid finite EPSG:4326 geometry, HTTPS, no redirects, no auth, no overwrite, and single-link custody pass. | Revalidate exact local MTBS boundary |
+| `P4O1-T01-U04-MTBS-REUSE-R001` | archive `d94dfb16...`; event `OR4494912090120190812`; map `10016337` | Existing governed 4,385,952-byte archive; 16 members / 13 files; one valid EPSG:32610 boundary / 8,378,927.386 m2 | Full CRC, exact four-member boundary hashes, event/map identity, geometry, embedded rights, and live role cautions pass. Reference context only, never ground truth or operational incident perimeter. U04 `pass`. | U05 overlays and deterministic summary |
 
 ## Current truth
 
@@ -44,7 +47,10 @@ from PR #569.
 - U03 is complete at source `761ef33...` and accepted run
   `BL-2026-07-26-p4o1-t01-u03-geospatial-r003`. Its ten native-grid rasters,
   accepted RBR vectors, web representation, and rendered quicklook pass.
-  U04 is eligible.
+- U04 is complete at source `2094043...` and run
+  `BL-2026-07-26-p4o1-t01-u04-context-r001`. Eight exact public TNM query
+  responses and the already-governed exact Ward Creek MTBS boundary pass.
+  U05 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
