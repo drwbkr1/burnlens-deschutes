@@ -481,7 +481,11 @@ samples/runs/phase-four/**/*.css text eol=lf
 samples/runs/phase-four/**/*.js text eol=lf
 samples/runs/phase-four/**/*.md text eol=lf
 samples/runs/phase-four/**/*.txt text eol=lf
+samples/runs/phase-four/**/*.sha256 text eol=lf
 samples/runs/phase-four/**/*.geojson text eol=lf
 samples/runs/phase-four/**/*.png -text
+samples/runs/phase-four/**/*.npy -text
 samples/runs/phase-four/**/*.tif -text
 samples/runs/phase-four/**/*.gpkg -text
+portfolio/phase-four/**/*.json text eol=lf
+portfolio/phase-four/**/*.zip -text
