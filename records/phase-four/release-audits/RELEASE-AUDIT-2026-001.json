@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "release_id": "RELEASE-AUDIT-2026-001",
-  "recorded_at_utc": "2026-07-26T19:49:37Z",
+  "recorded_at_utc": "2026-07-26T20:33:44Z",
   "risk_classes": [
     "documentation",
     "runtime",
@@ -21,7 +21,7 @@
     "branch": "codex/p4o1-t01-rbr-geoint-milestone",
     "branch_base": "e8745b70c4cfe0d070e08e399efbab09e74cd06f",
     "u07_checkpoint": "8b92d97be055a6314586c8ea5437c828666291e8",
-    "candidate_commit": null,
+    "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
     "merge_commit": null,
     "tag_object": null,
     "tag_peeled_target": null,
@@ -128,11 +128,11 @@
       "id": "CHECK-007",
       "category": "full-regression",
       "required": true,
-      "status": "pending-committed-head-rerun",
+      "status": "pass",
       "evidence": [
-        "Pre-commit run retains 755 passed, one skipped, 252 warnings, and 86 subtests with four expected pre-commit failures.",
-        "Three failures correctly report editable distribution 0.53.0 versus pyproject/source 0.54.0 before environment synchronization.",
-        "One checkout-contract failure correctly lists the 48 uncommitted release-candidate files. A committed-head rerun is required."
+        "The exact focused checkout gate passes 9 tests in 274.43 seconds at clean committed candidate e52aa69a6fc837ae0a472549d34703761261dbd9.",
+        "The complete repository regression passes 759 tests, one expected skip, 252 existing NumPy deprecation warnings, and 86 subtests in 880.69 seconds at that same clean committed head.",
+        "The earlier pre-commit and checkout-contract failures remain retained; no application or scientific defect is inferred from them."
       ]
     },
     {
@@ -208,6 +208,27 @@
       "working_tree_bytes_match_commit": false,
       "application_or_scientific_defect_inferred": false,
       "next_gate": "commit the bounded LF remediation and rerun the exact focused gate"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R003",
+      "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
+      "disposition": "pass",
+      "passed": 9,
+      "duration_seconds": 274.43,
+      "explicit_attribute_check_passed": true,
+      "working_tree_bytes_match_commit": true,
+      "version_contract_passed": true
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FULL-REGRESSION-R002",
+      "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
+      "disposition": "pass",
+      "passed": 759,
+      "failed": 0,
+      "skipped": 1,
+      "warnings": 252,
+      "subtests_passed": 86,
+      "duration_seconds": 880.69
     }
   ],
   "truth_surfaces": [
@@ -246,8 +267,8 @@
     "access_ownership_or_public_sharing_change": false
   },
   "decision": {
-    "reported_status": "candidate",
-    "rationale": "U01-U07 and candidate changed-risk gates pass. Committed-head full regression, PR review/merge, fresh-main verification, and remote tag remain required.",
-    "next_action": "Commit and push the coherent candidate, rerun the full suite at clean committed head, open and review one PR, merge, repeat fresh-main gates, and tag only after success."
+    "reported_status": "candidate-ready-for-pr",
+    "rationale": "U01-U07, candidate changed-risk gates, exact checkout verification, and the complete committed-head regression pass. PR review/merge, fresh-main verification, and remote tag remain required.",
+    "next_action": "Commit and push the audit closeout, run final changed-risk checks, open and review one PR, merge, repeat fresh-main gates, and tag only after success."
   }
 }

@@ -40,6 +40,8 @@ from PR #569.
 | `P4O1-T01-U08-FULL-REGRESSION-R001` | retained pre-commit regression | 755 passed / 4 failed / 1 skipped / 252 warnings / 86 subtests | Three environment profiles correctly report installed editable 0.53.0 versus source/lock 0.54.0 before sync; checkout-contract test correctly finds 48 uncommitted candidate files. `retained-pre-commit-state-failure`; no application/scientific defect inferred. | Sync lock, commit candidate, rerun clean committed head |
 | `P4O1-T01-U08-CHECKOUT-R001` | committed candidate `8651718...` | Seven environment-profile tests plus two checkout-contract tests | Editable 0.54.0 and worktree-byte checks pass; the explicit-attribute test alone finds the new Phase Four devlog lacks a text/LF rule. `retained-checkout-contract-failure`; no product/scientific defect. | Add exact devlog LF rule and rerun |
 | `P4O1-T01-U08-CHECKOUT-R002` | uncommitted LF remediation | Seven environment-profile tests plus two checkout-contract tests | LF attribute check passes; eight tests pass and the worktree-byte test alone correctly finds the four uncommitted remediation files. `retained-pre-commit-state-failure`; no product/scientific defect. | Commit remediation and rerun exact gate |
+| `P4O1-T01-U08-CHECKOUT-R003` | clean committed candidate `e52aa69...` | Seven environment-profile tests plus two checkout-contract tests | All 9 pass in 274.43 seconds; version, explicit attributes, and working-tree bytes agree exactly. `pass`. | Full regression |
+| `P4O1-T01-U08-FULL-REGRESSION-R002` | clean committed candidate `e52aa69...` | Complete repository suite | 759 passed / 0 failed / 1 expected skip / 252 existing NumPy deprecation warnings / 86 subtests in 880.69 seconds. `pass`. | PR review, merge, fresh-main verification, tag |
 
 ## Current truth
 
@@ -82,7 +84,9 @@ from PR #569.
 - U08 is active. BurnLens 0.54.0, current truth surfaces, case study,
   quickstart, and release records form one candidate. Focused tests, both
   package validators, fixed-epoch wheels, isolated install, and all 114
-  command helps pass. A clean committed-head full regression is the next gate.
+  command helps pass. The exact checkout gate and complete clean committed-head
+  regression pass at `e52aa69...`. PR review, merge, fresh-main verification,
+  and annotated-tag verification remain.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
