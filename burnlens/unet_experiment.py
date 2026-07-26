@@ -358,6 +358,14 @@ def load_test_access_grant(
     patch_ids = value.get("test_patch_ids")
     if not isinstance(patch_ids, list) or len(patch_ids) != 4:
         raise UNetExperimentError("test authorization patch roster drift")
+    manifest = _bound_json(
+        root, DATASET_MANIFEST_PATH, DATASET_MANIFEST_SHA256
+    )
+    expected_patch_ids = [
+        item["patch_id"] for item in _test_roster(manifest)
+    ]
+    if patch_ids != expected_patch_ids:
+        raise UNetExperimentError("test authorization patch roster drift")
     try:
         relative = resolved_path.relative_to(resolved_root)
     except ValueError as exc:

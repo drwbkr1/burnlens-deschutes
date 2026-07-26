@@ -71,25 +71,53 @@ class UNetExperimentTests(unittest.TestCase):
             authorization.write_text(
                 json.dumps(value), encoding="utf-8", newline="\n"
             )
-            grant = load_test_access_grant(
-                root,
-                authorization,
-                config_sha256="a" * 64,
-                weights_sha256="b" * 64,
-                selection_sha256="c" * 64,
-                environment_capture_sha256="d" * 64,
-            )
+            roster = [{"patch_id": item} for item in ["a", "b", "c", "d"]]
+            with (
+                mock.patch("burnlens.unet_experiment._bound_json", return_value={}),
+                mock.patch("burnlens.unet_experiment._test_roster", return_value=roster),
+            ):
+                grant = load_test_access_grant(
+                    root,
+                    authorization,
+                    config_sha256="a" * 64,
+                    weights_sha256="b" * 64,
+                    selection_sha256="c" * 64,
+                    environment_capture_sha256="d" * 64,
+                )
             self.assertTrue(grant.authorized)
             self.assertEqual(grant.opening_id, "TEST-OPEN-2026-001")
-            with self.assertRaisesRegex(UNetExperimentError, "weights_sha256"):
+            with (
+                self.assertRaisesRegex(UNetExperimentError, "weights_sha256"),
+                mock.patch("burnlens.unet_experiment._bound_json", return_value={}),
+                mock.patch("burnlens.unet_experiment._test_roster", return_value=roster),
+            ):
+                    load_test_access_grant(
+                        root,
+                        authorization,
+                        config_sha256="a" * 64,
+                        weights_sha256="e" * 64,
+                        selection_sha256="c" * 64,
+                        environment_capture_sha256="d" * 64,
+                    )
+            value["test_patch_ids"] = ["a", "b", "c", "wrong"]
+            authorization.write_text(
+                json.dumps(value), encoding="utf-8", newline="\n"
+            )
+            with (
+                self.assertRaisesRegex(UNetExperimentError, "patch roster"),
+                mock.patch("burnlens.unet_experiment._bound_json", return_value={}),
+                mock.patch("burnlens.unet_experiment._test_roster", return_value=roster),
+                mock.patch("numpy.load") as array_load,
+            ):
                 load_test_access_grant(
                     root,
                     authorization,
                     config_sha256="a" * 64,
-                    weights_sha256="e" * 64,
+                    weights_sha256="b" * 64,
                     selection_sha256="c" * 64,
                     environment_capture_sha256="d" * 64,
                 )
+            array_load.assert_not_called()
 
     def test_two_epoch_preflight_is_exact_and_never_loads_test_arrays(self) -> None:
         with tempfile.TemporaryDirectory(prefix="burnlens-preflight-") as directory:
