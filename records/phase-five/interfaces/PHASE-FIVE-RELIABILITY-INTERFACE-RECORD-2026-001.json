@@ -59,9 +59,16 @@
   "render_evidence": {
     "canonical_interface_owner_confirmed": true,
     "canonical_interface_sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
-    "hardened_desktop": "pending owner confirmation",
-    "hardened_narrow_390x844": "pending owner confirmation",
-    "hardened_keyboard_journey": "pending owner confirmation",
+    "hardened_desktop": "pass; owner confirmed",
+    "hardened_narrow_390x844": "pass; owner confirmed",
+    "hardened_keyboard_journey": "pass; owner confirmed",
+    "owner_confirmation_received_at_utc": "2026-07-26T22:06:05Z",
+    "owner_receipt": {
+      "path": "records/phase-five/interfaces/PHASE-FIVE-RELIABILITY-INTERFACE-OWNER-RENDER-RECEIPT-2026-001.json",
+      "bytes": 1346,
+      "sha256": "9487263767cb6260fce4170dc3e1b432c530b3f489de605e6c2d5c74f4971787"
+    },
+    "formal_accessibility_certification_claimed": false,
     "automation_file_url_block": "retained",
     "browser_policy_bypass": false
   },
@@ -72,6 +79,6 @@
     "rejected_model_outperformed_rbr": false,
     "analytical_output_changed": false
   },
-  "disposition": "pending-render-review",
-  "next_dependency": "Owner confirms exact desktop, 390x844 narrow, and keyboard journey; then finalize U03 or remediate."
+  "disposition": "pass",
+  "next_dependency": "P5O1-T01-U04"
 }
