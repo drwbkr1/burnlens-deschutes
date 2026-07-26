@@ -600,7 +600,9 @@ def _quicklook_bytes(
         body_font = ImageFont.truetype("DejaVuSans.ttf", 20)
         small_font = ImageFont.truetype("DejaVuSans.ttf", 16)
     except OSError:
-        title_font = body_font = small_font = ImageFont.load_default()
+        title_font = ImageFont.load_default(size=34)
+        body_font = ImageFont.load_default(size=20)
+        small_font = ImageFont.load_default(size=16)
     draw.text(
         (40, 28),
         "BurnLens Ward Creek — accepted RBR vs rejected U-Net",
