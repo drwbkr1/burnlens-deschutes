@@ -16,9 +16,16 @@ Convert the accepted model or baseline into a reproducible inference-to-GEOINT w
 
 ## Current status
 
-**Proposed — blocked.**
+**Active — incomplete.**
 
-Phase Four depends on an accepted Phase Three model package or an explicitly approved Phase Two baseline-only path.
+Verified BurnLens 0.53.0 supplies the explicit
+`baseline-primary-with-rejected-model-diagnostic` handoff. RBR is the accepted
+analytical method; the frozen U-Net may appear only as visibly rejected
+diagnostic evidence. Phase Four may not retrain, retune, or reopen the test set.
+Phase Four may not be deferred in favor of a Phase 3B remediation milestone.
+Lessons from the U-Net failure belong in final recommendations for a
+separately governed follow-on experiment; planning or implementation of that
+experiment is not part of this phase or the current project.
 
 ## Phase purpose
 

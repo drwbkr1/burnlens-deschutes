@@ -10,10 +10,10 @@ from pathlib import Path
 from typing import Any
 
 
-REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006"
-REPORT_VERSION = "portfolio-reviewer-experience-v0.4.0"
+REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007"
+REPORT_VERSION = "portfolio-reviewer-experience-v0.4.1"
 SOFTWARE_VERSION = "0.53.0"
-TASK_ISSUE = 566
+TASK_ISSUE = 568
 
 
 class PortfolioReviewerExperienceError(ValueError):
@@ -316,10 +316,10 @@ def build_report(
         "task_issue": TASK_ISSUE,
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
-        "checkpoint_status": "candidate-pr-release-pending",
-        "release_tag": "v0.52.0-dataset-baseline-model-readiness",
-        "release_commit": "dfb11c8b823e224aceb76be74003464973e33c2d",
-        "release_tag_object": "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
+        "checkpoint_status": "verified-release-phase-four-ready",
+        "release_tag": "v0.53.0-bounded-unet-rejected-model",
+        "release_commit": "5a0f8ac027ae20ff9193948506f590afbfb64554",
+        "release_tag_object": "d66dd7fdc9f2f155d1799cb1e85e77dadd76311a",
         "audience": "technical and technical-adjacent portfolio reviewers",
         "promise": (
             "Show how versioned wildfire imagery can move through a bounded "
@@ -536,7 +536,7 @@ def render_html(report: dict[str, Any]) -> str:
 <a class="skip" href="#main">Skip to evidence</a>
 <header>
 <nav aria-label="Primary"><a class="brand" href="#top">BURNLENS</a><ul><li><a href="#result">Result</a></li><li><a href="#failure">Failure</a></li><li><a href="#method">Method</a></li><li><a href="#trace">Trace</a></li></ul></nav>
-<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Phase Three candidate</strong>The U-Net is trained, evaluated, and reproducible. It is rejected as the analytical winner; the GEOINT application remains unbuilt.</aside></div>
+<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Phase Three verified</strong>The U-Net is trained, evaluated, and reproducible. It is rejected as the analytical winner; the GEOINT application remains unbuilt.</aside></div>
 </header>
 <main id="main">
 <p class="warning">{escape(report["warning"])}</p>
@@ -545,7 +545,7 @@ def render_html(report: dict[str, Any]) -> str:
 <section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest current result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>One frozen CPU U-Net trains, consumes its model test opening once, and replays exactly. It predicts all {metrics["model_test_core_pixels"]} selected test cores as burned and loses to the frozen RBR baseline.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Phase Three decision showing exact U-Net replay, rejected model metrics, and retained RBR baseline"></a><div class="evidence-copy"><span class="pill stop">Valid rejected model</span><h3>Reproducible does not mean accepted</h3><p>The trained U-Net scores {metrics["model_test_event_class_macro_dice"]:.3f} macro Dice against RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}. RBR remains the analytical method; the U-Net is diagnostic evidence only.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open model decision</a><a class="button secondary" href="{_repo_href(result["model_card_path"])}">Read model card</a><a class="button secondary" href="{_repo_href(result["baseline_detail_path"])}">Inspect baseline</a></div></div></article></section>
 <section id="failure" aria-labelledby="failure-heading"><div class="section-head"><p class="eyebrow">Reliability is visible</p><h2 id="failure-heading">{escape(failure["title"])}</h2><p>BurnLens keeps a snow-dominated source failure and a terminal partial-custody stop instead of manufacturing a sixth event from incomplete evidence.</p></div><article class="evidence"><a href="{_repo_href(failure["preview_path"])}"><img src="{_repo_href(failure["preview_path"])}" alt="Petes Lake snow-dominated source-fitness failure evidence"></a><div class="evidence-copy"><span class="pill stop">Retained stop</span><h3>Defer is a product decision</h3><p>Seven valid assets remain evidence. One failed asset and four unexecuted assets cannot become a complete scientific package. Candidate generation never starts.</p><p><code>{escape(failure["terminal_run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(failure["detail_path"])}">Read material-defer decision</a><a class="button secondary" href="../records/prompt-build-log/2026-07-21-p2o4-t33.md">Inspect milestone log</a></div></div></article></section>
 <section id="method" aria-labelledby="method-heading"><div class="section-head"><p class="eyebrow">Method and boundaries</p><h2 id="method-heading">Different sources have different jobs.</h2><p>Source precedence is part of the product. Context is not relabeled as truth, and ambiguous pixels stay unknown.</p></div><div class="split"><div class="panel"><h3>Source roles</h3><ul>{source_items}</ul></div><div class="panel"><h3>What remains unproven</h3><ul>{limitation_items}</ul></div></div></section>
-<section id="trace" aria-labelledby="trace-heading"><div class="section-head"><p class="eyebrow">Lineage</p><h2 id="trace-heading">Every stage has a version.</h2><p>Every displayed claim binds to the current portfolio build and evidence-bearing run. The model version and rejected analytical status are explicit; the latest verified repository tag remains 0.52.0 until this candidate passes release gates.</p></div><table><tbody>{trace_rows}</tbody></table><details><summary>Exact bound inputs</summary><ul>{''.join(f'<li><code>{escape(item["path"])}</code> — {item["bytes"]:,} bytes — <code>{escape(item["sha256"])}</code></li>' for item in report["bound_inputs"])}</ul></details><div class="button-row"><a class="button" href="{REPORT_ID}.json">Open machine-readable manifest</a><a class="button secondary" href="../docs/case-study/BURNLENS_CASE_STUDY.md">Read full case study</a><a class="button secondary" href="README.md">Reviewer quickstart</a></div></section>
+<section id="trace" aria-labelledby="trace-heading"><div class="section-head"><p class="eyebrow">Lineage</p><h2 id="trace-heading">Every stage has a version.</h2><p>Every displayed claim binds to the current portfolio build and evidence-bearing run. The model version, rejected analytical status, verified merge, and annotated v0.53 release tag are explicit.</p></div><table><tbody>{trace_rows}</tbody></table><details><summary>Exact bound inputs</summary><ul>{''.join(f'<li><code>{escape(item["path"])}</code> — {item["bytes"]:,} bytes — <code>{escape(item["sha256"])}</code></li>' for item in report["bound_inputs"])}</ul></details><div class="button-row"><a class="button" href="{REPORT_ID}.json">Open machine-readable manifest</a><a class="button secondary" href="../docs/case-study/BURNLENS_CASE_STUDY.md">Read full case study</a><a class="button secondary" href="README.md">Reviewer quickstart</a></div></section>
 </main>
 <footer><div><strong>BurnLens {escape(report["software_version"])}</strong><p>Run <code>{escape(report["run_id"])}</code> · commit <code>{escape(report["git_source_commit"])}</code> · issue #{report["task_issue"]}. Local/offline repository evidence; no deployed application.</p></div></footer>
 </body>

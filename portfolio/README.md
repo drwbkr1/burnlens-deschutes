@@ -2,7 +2,7 @@
 
 ## Two-minute path
 
-1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html`.
+1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html`.
 2. Read the trained, reproducible, and rejected U-Net result beside RBR.
 3. Read the retained Petes Lake stop.
 4. Check the lineage table, rejected-model status, and remaining GEOINT gap.
@@ -69,7 +69,7 @@ same timestamp, run ID, and commit. The JSON and HTML must match byte for byte.
 - Open the [Phase Three model decision](../samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html).
 - Read the [rejected-model package record](../records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json).
 - Read the [Petes Lake material-defer decision](../docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md).
-- Inspect the [latest verified v0.52 release audit](../records/phase-two/release-audits/RELEASE-AUDIT-2026-007.json).
+- Inspect the [latest verified v0.53 release audit](../records/phase-three/release-audits/RELEASE-AUDIT-2026-002.json).
 
 Official sources govern. This local portfolio surface is explanatory evidence,
 not an operational wildfire application.

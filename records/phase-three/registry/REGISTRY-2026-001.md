@@ -51,6 +51,11 @@
 | `P3O1-T01-U06-RELEASE-QA-R002` | targeted checkout plus environment profiles | eight environment tests pass; checkout still rejects uncommitted CRLF working bytes | `retained-precommit-failure` | commit LF bytes, then rerun |
 | `P3O1-T01-U06-RELEASE-QA-R003` | exact clean, remote-equal candidate `938cc94d5a8cb952054977fa765b9400a66daf02` | 729 pass / 1 expected skip / 228 warnings / 86 subtests in 2,032.18 seconds; 11 focused passes; compile, lock, dependency, diff, checkout, model-package, and portfolio gates pass | `pass-clean-candidate` | deterministic package |
 | `P3O1-T01-U06-RELEASE-QA-R004` | `BL-2026-07-26-p3o1-t01-release-r001`; fixed epoch `1785040797`; two 1,106,162-byte wheels / `15b8b84f...` | byte-identical independent archive builds; 230 unique safe entries; valid RECORD; MIT metadata/license; zero private/custody/download paths; fresh Python 3.12.10 model install; 23 compatible distributions; BurnLens 0.53.0; Torch 2.13.0+cpu; 107/107 command-help probes | `pass-candidate-pr-ready` | issue closeout and coherent PR |
+| `P3O1-T01-PR-R001` | PR #567; exact head `9cfdeef5bc0ff4b30457e5cd39dc9014aab45811` | mergeable/clean; complete 117-file secret/private-path scan; issue #566 closeout | `pass-merged` | fresh main |
+| `P3O1-T01-FRESH-MAIN-R001` | merge `5a0f8ac027ae20ff9193948506f590afbfb64554`; run `BL-2026-07-26-p3o1-t01-fresh-main-r001` | 729 pass / 1 expected skip / 228 warnings / 86 subtests in 802.35 seconds; exact model and reviewer identities | `pass` | fresh package |
+| `P3O1-T01-FRESH-PACKAGE-R001` | first wrapper; ignored run-state retained under fresh-main r001 | PowerShell treated normal build progress on stderr as terminating; no accepted wheel comparison | `retained-tool-failure` | corrected wrapper |
+| `P3O1-T01-FRESH-PACKAGE-R002` | run `BL-2026-07-26-p3o1-t01-fresh-main-package-r002`; two 1,106,162-byte wheels / `15b8b84f...` | both wheels byte-identical to each other and to the reviewed candidate | `pass` | annotated tag |
+| `P3O1-T01-TAG-R001` | tag object `d66dd7fdc9f2f155d1799cb1e85e77dadd76311a`; peeled target `5a0f8ac027ae20ff9193948506f590afbfb64554` | local and remote annotated identity and peel | `pass-verified-release` | lifecycle sync |
 
 U01 opens no dataset array. U02 and U03 use only train/validation arrays for
 bounded smoke evidence. U04 performs the one authorized substantive
@@ -65,6 +70,8 @@ and packages the result as
 method, while RBR becomes the Phase Four primary route and the frozen U-Net may
 appear only as a visibly rejected diagnostic. No second test opening,
 georeferenced inference, deployment, generalization, or final-submission-ready
-claim exists. The clean candidate, deterministic package, and isolated-install
-gates pass. The exact next gate is the coherent milestone PR and release
-verification.
+claim exists. The clean candidate, coherent PR, fresh-main suite,
+deterministic package, isolated install, and remote annotated-tag gates pass.
+Verified BurnLens 0.53.0 closes Phase Three with a transparent baseline-first
+decision. The exact next gate is the issue-backed Phase Four RBR-primary
+GEOINT vertical slice.

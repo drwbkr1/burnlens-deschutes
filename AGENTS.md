@@ -31,7 +31,7 @@ BurnLens Deschutes is an experimental, portfolio-first computer vision and GEOIN
 
 The first task is experimental binary semantic segmentation for wildfire-relevant screening. Active-fire / hotspot-informed masking was the planned primary target, but P2O2-T04 proved it could not define defensible 10-20 m labels. The owner activated the established burn-scar binary-mask fallback on 2026-07-14. Active-fire observations remain complementary reference evidence only.
 
-P2O4-T10B / issue #403 / PR #412 has shipped verified `v0.20.0-single-reviewer-reconciliation`, opening and reconciling one exact blinded response under the explicit reviewer-two waiver. Its 6 burned / 0 background / 50 ignored result remains immutable historical evidence, but the owner replaced that route on 2026-07-17 with `owner-confirmed-prototype-label-review-v0.1.0`. P2O4-T12 / issue #416 / PR #430 verified the exact current BAER/RAVG/MTBS bundles. P2O4-T14 / issue #432 / PR #434 now reopens all 56 original units as disclosed evidence-backed candidates and accepts only owner yes, no, or uncertain. A yes is necessary but not sufficient for an owner-approved prototype label; source, reproducibility, quality, and leakage gates must also pass. No and uncertain remain excluded. One reviewer remains one reviewer, and this route never supports independent-ground-truth, inter-rater, field-validation, official, endorsed, enterprise, or operational claims. Do not begin splits, baselines, or models early.
+P2O4-T10B / issue #403 / PR #412 has shipped verified `v0.20.0-single-reviewer-reconciliation`, opening and reconciling one exact blinded response under the explicit reviewer-two waiver. Its 6 burned / 0 background / 50 ignored result remains immutable historical evidence, but the owner replaced that route on 2026-07-17 with `owner-confirmed-prototype-label-review-v0.1.0`. P2O4-T12 / issue #416 / PR #430 verified the exact current BAER/RAVG/MTBS bundles. P2O4-T14 / issue #432 / PR #434 now reopens all 56 original units as disclosed evidence-backed candidates and accepts only owner yes, no, or uncertain. A yes is necessary but not sufficient for an owner-approved prototype label; source, reproducibility, quality, and leakage gates must also pass. No and uncertain remain excluded. One reviewer remains one reviewer, and this route never supports independent-ground-truth, inter-rater, field-validation, official, endorsed, enterprise, or operational claims. Those gates were later satisfied only through the verified Phase Two dataset/split/baseline milestone; do not reopen or weaken them during integration.
 
 The analytical chain is:
 
@@ -61,20 +61,35 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-P2O5-T03 / issue #562 is the active Phase Two release checkpoint. U01-U06
-accept `burnlens-dataset-v0.1.0`, lock
-`burnlens-whole-event-split-v0.1.0` before patching, independently reconstruct
-and audit all 12 native-grid patches, evaluate preregistered baselines, and
-issue `AUTHORIZE_BOUNDED_UNET` under a rejection-first single-model contract.
-The roles are Green Ridge plus Tepee for train, Grandview plus McKay for
-validation, and Ward Creek plus Windigo for test. The selected RBR baseline
-scores 1.0 Dice and IoU on 89 selected test cores, with the explicit warning
-that candidate construction may favor spectral separability. U07 must ship
-and verify the coherent 0.52.0 release before Phase Three can execute the
-contract. No model, weights, training run, model evaluation, inference,
-deployment, generalization claim, or external submission exists yet.
+Verified `v0.53.0-bounded-unet-rejected-model` is the active repository
+baseline. P3O1-T01 / issue #566 / PR #567 merges at
+`5a0f8ac027ae20ff9193948506f590afbfb64554`; annotated tag object
+`d66dd7fdc9f2f155d1799cb1e85e77dadd76311a` peels exactly to that
+checkpoint. Fresh main passes 729 tests with one expected skip and 86
+subtests; deterministic package and isolated model-runtime gates pass.
 
-P2O4-T01 through P2O4-T19 ship verified proposal, source, review, custody, remediation, exact owner-review, and owner-response evidence through `v0.31.0-region-owner-response-intake`. Historical 6/0/50 exclusions are not inherited. Verified P2O4-T21 through P2O4-T26 complete the Green Ridge event path and establish `owner-approved-prototype-region-labels-v0.2.0`: four burned and four background regions, 186 core pixels / 7.44 ha, and 333 excluded unknown-ring pixels across four events. Verified P2O4-T27 through P2O4-T31 complete Grandview optical, official-reference, background, proposal, and blank-review evidence through `v0.43.0-grandview-owner-review-surface`. P2O4-T32 / issue #517 / PR #522 ships verified BurnLens 0.44.0 at checkpoint `5e1d5a05dbb09e8ac42be5928b2d042a0737336e`: the exact 887-byte export is operator-locked before reveal, and two yes decisions plus both 25-pixel cores pass response custody, reproducibility, source/terms, quality/registration, unknown-ring exclusion, and event-level leakage gates. Verified owner-approved prototype evidence `owner-approved-prototype-region-labels-v0.3.0` contains five burned and five background regions, 236 core pixels / 9.44 ha, and 431 excluded unknown-ring pixels across five complete events. BL-GOV-003 / issue #525 activates `checkpoint-policy-v0.1.0`; P2O4-T33 / issue #521 / PR #527 and BL-EXC-001 / issue #528 / PR #529 now ship verified `v0.45.0-petes-lake-material-defer` at merge `d65c24f59ce0c854ba230aa977eaf718d881d952`. Fresh-main runtime, dev, geo-research, custody-enabled replay, deterministic package, and remote annotated-tag gates pass; tag object `0b466402cdc36b0eacfff97d29dd16fe2a88868a` peels exactly to the merge. This is a verified software and evidence-preservation checkpoint, not scientific acceptance of Petes Lake. Event count alone cannot authorize a dataset. Dataset, split, baseline, model, deployed analytical application, and independent scientific fitness remain absent. Never claim reviewer two, inter-rater agreement, consensus, field validation, official status, endorsement, or operational readiness.
+Phase Three is complete through the approved
+`baseline-primary-with-rejected-model-diagnostic` route. RBR remains the
+accepted analytical method at frozen threshold `0.041043221950531006`. The
+bounded U-Net is a valid trained, once-evaluated, exactly reproduced, and
+rejected model artifact: it predicts all 89 selected test cores burned and
+scores macro Dice `0.29874213836477986` against RBR `1.0`. Its failure is a
+first-class technical result and must remain visible; never claim it
+outperformed RBR.
+
+Phase Four is the active project work. Build the complete current project
+through an RBR-primary georeferenced analytical run, visibly rejected U-Net
+probability/error diagnostics, valid raster/vector products, transparent
+overlays and summaries, immutable run packaging, and a repository-owned
+evidence interface. Do not defer Phase Four and do not create a Phase 3B
+remediation milestone. Model lessons may become recommendations for a
+separately governed follow-on experiment, but planning or implementing that
+experiment is outside this project and prohibited here.
+
+No georeferenced analytical raster, vector product, integrated application,
+deployment, generalization claim, or final-submission-ready claim exists yet.
+The historical checkpoint facts below remain audit evidence, not current
+sequencing authority.
 
 - Issue #521 closes at its verified U11 material-defer exit: disposition `defer`, execution `complete`, release `verified`. U01/U02 pass; the planned U03 r001 snow failure is immutable; replacement U03 passes with explicit spatial exclusions; and U04 passes the exact terms-first MTBS delivery/native contract while accepting zero reference pixels. U05 r001 retains a corrected local-validator failure, r002 retains seven promoted assets plus an unknown-cause provider-open failure, and final authorized r003 retains the same seven assets before asset eight observes HTTP 500. R003 is terminal, no r004 is authorized, U05 scientific fitness does not pass, and production U06-U10 remain unexecuted/deferred. BL-EXC-001 U04 passes only after PR #529, merge `d65c24f...`, fresh-main repetition, and exact remote tag verification. Petes Lake is not a sixth accepted event; the five-event prototype label set remains unchanged and dataset/split/baseline/model gates remain blocked.
 - `aoi-darlene3-model-v0.2.0` is the accepted 12 km by 9 km final modeling AOI, derived reproducibly from one retained public NIFC reference feature.
@@ -85,7 +100,7 @@ P2O4-T01 through P2O4-T19 ship verified proposal, source, review, custody, remed
 - `TARGET-DECISION-2026-001` is the preserved pre-remediation run that exposed checkout-dependent input hashing after merge. Corrected run `TARGET-DECISION-2026-002` activates `target-burn-scar-v0.2.0`, retains the active-fire path as complementary reference only, and records that the current official MTBS occurrence layers expose no Darlene 3 feature in the frozen AOI. MTBS remains relevant methodology and potential cross-fire or future reference evidence, not current Darlene 3 truth.
 - `OPTICAL-PAIR-2026-001` opens the exact real pre/post TCI, B04, B8A, B12, and SCL AOI pixels. Pairwise quality is 98.9137% eligible, 0.7641% review-needed, and 0.3222% excluded. Continuous dNBR is threshold-free change evidence; the later NIFC outline is context only.
 - `CONTENT-REGISTRATION-2026-001` re-verifies that pair and measures independent B04/B8A/B12 gradient translation in twelve fixed windows. All pass; median residual is 0.0224 pixel and maximum is 0.0361 pixel / about 0.72 m. Product QC remains context and window passes never override SCL states.
-- `LABEL-PROPOSAL-2026-001` implements `burn-scar-five-state-schema-v0.1.0`; `LABEL-QA-2026-001` independently recomputes the shared contract with zero disagreement. `CROSS-EVENT-FITNESS-2026-001` freezes acquisition groups; `CROSS-EVENT-SOURCE-FITNESS-2026-001` proves the exact pixels with exclusions. `CROSS-EVENT-LABEL-TRANSFER-2026-001` preserves five-state uncertainty across Tepee/McKay; its separate QA reproduces every state/target pixel. The shipped offline review workbench is a response-capture surface, not an analytical inference application. No accepted dataset, split, baseline output, trained model, analytical metric, deployment, independent human annotation, or field validation exists.
+- At the historical label-transfer checkpoint, `LABEL-PROPOSAL-2026-001` implements `burn-scar-five-state-schema-v0.1.0`; `LABEL-QA-2026-001` independently recomputes the shared contract with zero disagreement. `CROSS-EVENT-FITNESS-2026-001` freezes acquisition groups; `CROSS-EVENT-SOURCE-FITNESS-2026-001` proves the exact pixels with exclusions. `CROSS-EVENT-LABEL-TRANSFER-2026-001` preserves five-state uncertainty across Tepee/McKay; its separate QA reproduces every state/target pixel. The shipped offline review workbench is a response-capture surface, not an analytical inference application. At that checkpoint no accepted dataset, split, baseline output, trained model, analytical metric, deployment, independent human annotation, or field validation existed.
 - Passing authentication or registration alone does not establish fire presence, label fitness, data fitness, or analytical value. Provider bytes and secrets must never be committed.
 
 P2O2-T04 preserves active-fire reference semantics under `weak-reference-label-feasibility-v0.1.0`. P2O2-T06 preserves the five-state design; P2O3-T01 satisfies the local-translation prerequisite; P2O4-T01 implements one exact proposal and separate software QA; P2O4-T02 freezes two additional whole-event acquisition groups without calling them partitions; P2O4-T04 transfers proposal evidence without calling it accepted truth. Do not coerce 375 m points, non-detections, buffers, dNBR/SCL, product QC, registration windows, the later NIFC/MTBS boundaries, catalogue cloud metadata, software agreement, or an owner response into ground truth. Unknown, excluded, and review-needed pixels never become background silently. Explicit owner yes plus passed provenance, reproducibility, source/terms, quality, and event-level leakage gates must precede any prototype-label promotion; a dataset or split requires the resulting accepted set to satisfy the Phase Two class, coverage, and leakage outcomes.
