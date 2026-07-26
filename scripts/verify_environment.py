@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib
 import importlib.metadata
 import json
@@ -18,7 +19,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILES = ("runtime", "dev", "geo-research")
+PROFILES = ("runtime", "dev", "geo-research", "model-research")
 IMPORT_NAMES = {
     "Pillow": "PIL",
     "pystac-client": "pystac_client",
@@ -43,10 +44,12 @@ def _requirements(profile: str) -> list[tuple[str, str]]:
     project = _load_project()["project"]
     raw = list(project["dependencies"])
     optional = project.get("optional-dependencies", {})
-    if profile in {"dev", "geo-research"}:
+    if profile in {"dev", "geo-research", "model-research"}:
         raw.extend(optional["dev"])
     if profile == "geo-research":
         raw.extend(optional["geo-research"])
+    if profile == "model-research":
+        raw.extend(optional["model"])
     return [_parse_exact_requirement(item) for item in raw]
 
 
@@ -307,6 +310,45 @@ def _verify_geo_functions() -> dict[str, Any]:
     }
 
 
+def _verify_model_functions() -> dict[str, Any]:
+    import torch
+
+    if torch.__version__.split("+", 1)[0] != "2.13.0":
+        raise RuntimeError(f"Torch runtime version mismatch: {torch.__version__}")
+    if torch.cuda.is_available():
+        raise RuntimeError("Model-research profile must use the frozen CPU execution path")
+    if torch.version.cuda is not None:
+        raise RuntimeError(f"Model-research profile resolved a CUDA build: {torch.version.cuda}")
+
+    torch.manual_seed(20260725)
+    torch.use_deterministic_algorithms(True, warn_only=False)
+    torch.set_num_threads(1)
+    torch.set_num_interop_threads(1)
+    first = torch.arange(1 * 6 * 8 * 8, dtype=torch.float32).reshape(1, 6, 8, 8)
+    kernel = torch.arange(4 * 6 * 3 * 3, dtype=torch.float32).reshape(4, 6, 3, 3)
+    output_a = torch.nn.functional.conv2d(first, kernel, padding=1)
+    output_b = torch.nn.functional.conv2d(first, kernel, padding=1)
+    if not torch.equal(output_a, output_b):
+        raise RuntimeError("Synthetic CPU convolution did not replay exactly")
+    if not torch.isfinite(output_a).all():
+        raise RuntimeError("Synthetic CPU convolution produced a nonfinite value")
+
+    return {
+        "build_config": torch.__config__.show(),
+        "cuda_available": torch.cuda.is_available(),
+        "cuda_build": torch.version.cuda,
+        "deterministic_algorithms": torch.are_deterministic_algorithms_enabled(),
+        "deterministic_warn_only": torch.is_deterministic_algorithms_warn_only_enabled(),
+        "interop_threads": torch.get_num_interop_threads(),
+        "seed": 20260725,
+        "synthetic_output_sha256": hashlib.sha256(
+            output_a.detach().numpy().tobytes(order="C")
+        ).hexdigest(),
+        "threads": torch.get_num_threads(),
+        "torch": torch.__version__,
+    }
+
+
 def verify(profile: str) -> dict[str, Any]:
     _verify_python_pin()
     versions = _verify_versions(profile)
@@ -316,6 +358,8 @@ def verify(profile: str) -> dict[str, Any]:
     }
     if profile == "geo-research":
         checks["geo_research"] = _verify_geo_functions()
+    if profile == "model-research":
+        checks["model_research"] = _verify_model_functions()
     return {
         "checks": checks,
         "packages": versions,

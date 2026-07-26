@@ -1,0 +1,15 @@
+version = 1
+name = "BurnLens bounded U-Net research (Windows CPU)"
+
+[setup]
+script = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup_worktree.ps1 -Profile model-research"
+
+[[actions]]
+name = "Verify model environment"
+icon = "run"
+command = ".\\.venv\\Scripts\\python.exe scripts\\verify_environment.py --profile model-research"
+
+[[actions]]
+name = "Run BurnLens tests"
+icon = "run"
+command = ".\\.venv\\Scripts\\python.exe -m pytest -q"

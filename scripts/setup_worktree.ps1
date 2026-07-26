@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('runtime', 'dev', 'geo-research')]
+    [ValidateSet('runtime', 'dev', 'geo-research', 'model-research')]
     [string]$Profile = 'dev'
 )
 
@@ -84,6 +84,9 @@ try {
         }
         'geo-research' {
             $syncArguments += @('--extra', 'dev', '--extra', 'geo-research')
+        }
+        'model-research' {
+            $syncArguments += @('--extra', 'dev', '--extra', 'model')
         }
     }
 

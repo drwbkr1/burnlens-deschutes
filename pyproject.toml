@@ -31,6 +31,10 @@ geo-research = [
   "shapely==2.1.2",
   "xarray==2026.7.0",
 ]
+model = [
+  "setuptools==82.0.0",
+  "torch==2.13.0",
+]
 
 [project.scripts]
 burnlens-viirs-access-precheck = "burnlens.viirs_access_precheck:main"

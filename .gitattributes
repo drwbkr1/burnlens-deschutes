@@ -403,3 +403,12 @@ records/phase-two/registry/REGISTRY-2026-091.md text eol=lf
 records/prompt-build-log/2026-07-25-v052-lifecycle-sync.md text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.json text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html text eol=lf
+
+# P3O1-T01 U01 locked bounded-model environment.
+pyproject.toml text eol=lf
+uv.lock text eol=lf
+scripts/setup_worktree.ps1 text eol=lf
+scripts/verify_environment.py text eol=lf
+tests/test_environment_profiles.py text eol=lf
+.codex/environments/model.toml text eol=lf
+docs/workflows/MODEL_ENVIRONMENT.md text eol=lf

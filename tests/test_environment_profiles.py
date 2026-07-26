@@ -19,6 +19,7 @@ GEO_MODULES = (
     "shapely",
     "xarray",
 )
+MODEL_MODULES = ("torch",)
 
 
 def _run_smoke(profile: str) -> tuple[subprocess.CompletedProcess[str], dict[str, object]]:
@@ -44,6 +45,7 @@ class EnvironmentProfileTests(unittest.TestCase):
         requirements = list(project["dependencies"])
         requirements.extend(project["optional-dependencies"]["dev"])
         requirements.extend(project["optional-dependencies"]["geo-research"])
+        requirements.extend(project["optional-dependencies"]["model"])
 
         self.assertEqual(len(requirements), len(set(requirements)))
         for requirement in requirements:
@@ -110,6 +112,46 @@ class EnvironmentProfileTests(unittest.TestCase):
         self.assertNotIn("credentials\\", setup.lower())
         self.assertTrue((ROOT / "uv.lock").is_file())
 
+    def test_codex_environment_selects_locked_model_profile(self) -> None:
+        with (ROOT / ".codex" / "environments" / "model.toml").open("rb") as stream:
+            environment = tomllib.load(stream)
+        setup = (ROOT / "scripts" / "setup_worktree.ps1").read_text(encoding="utf-8")
+
+        self.assertEqual(set(environment), {"version", "name", "setup", "actions"})
+        self.assertEqual(environment["version"], 1)
+        self.assertEqual(
+            environment["name"], "BurnLens bounded U-Net research (Windows CPU)"
+        )
+        self.assertEqual(
+            environment["setup"],
+            {
+                "script": (
+                    "powershell.exe -NoProfile -ExecutionPolicy Bypass "
+                    "-File scripts/setup_worktree.ps1 -Profile model-research"
+                )
+            },
+        )
+        self.assertEqual(
+            environment["actions"],
+            [
+                {
+                    "name": "Verify model environment",
+                    "icon": "run",
+                    "command": (
+                        ".\\.venv\\Scripts\\python.exe "
+                        "scripts\\verify_environment.py --profile model-research"
+                    ),
+                },
+                {
+                    "name": "Run BurnLens tests",
+                    "icon": "run",
+                    "command": ".\\.venv\\Scripts\\python.exe -m pytest -q",
+                },
+            ],
+        )
+        self.assertIn("'model-research'", setup)
+        self.assertIn("'--extra', 'model'", setup)
+
     def test_runtime_profile_smoke(self) -> None:
         completed, payload = _run_smoke("runtime")
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
@@ -134,6 +176,24 @@ class EnvironmentProfileTests(unittest.TestCase):
         self.assertEqual(payload["checks"]["geo_research"]["geopackage_rows"], 1)
         self.assertEqual(payload["checks"]["geo_research"]["overlap_area_m2"], 800.0)
         self.assertEqual(payload["checks"]["geo_research"]["projected_area_m2"], 1600.0)
+
+    @unittest.skipUnless(
+        all(importlib.util.find_spec(module) is not None for module in MODEL_MODULES),
+        "model optional dependencies are not installed",
+    )
+    def test_model_research_profile_smoke(self) -> None:
+        completed, payload = _run_smoke("model-research")
+        self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+        self.assertEqual(payload["status"], "PASS")
+        self.assertEqual(payload["profile"], "model-research")
+        model = payload["checks"]["model_research"]
+        self.assertEqual(model["torch"].split("+", 1)[0], "2.13.0")
+        self.assertFalse(model["cuda_available"])
+        self.assertIsNone(model["cuda_build"])
+        self.assertTrue(model["deterministic_algorithms"])
+        self.assertFalse(model["deterministic_warn_only"])
+        self.assertEqual(model["threads"], 1)
+        self.assertEqual(model["interop_threads"], 1)
 
 
 if __name__ == "__main__":
