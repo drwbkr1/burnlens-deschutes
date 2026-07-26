@@ -26,6 +26,8 @@ from PR #569.
 | `P4O1-T01-U04-SOURCE-GATE-R001` | `PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001`; commit `73d565e...` | Four separate sources; 32 required criteria; 35 evidence items, including 23 fresh live observations | TNM NTD, NSD, NBD and exact local Ward Creek MTBS reuse pass identity, authority, access, rights, provenance, integrity, fitness, and privacy/security. Bounded GeoJSON intake only; no bulk package or new MTBS request. `ready`. | Commit exact intake plan |
 | `P4O1-T01-U04-INTAKE-R001` | run `BL-2026-07-26-p4o1-t01-u04-context-r001`; source `2094043...` | Eight promoted GeoJSON responses / 890,072 bytes; final contract 17,290 bytes / `3cc26f5b...`; run inventory 25,215 bytes / `948f6b26...` | Exact counts: 169 roads, eight selected public facilities, and one BLM boundary; minimal fields, valid finite EPSG:4326 geometry, HTTPS, no redirects, no auth, no overwrite, and single-link custody pass. | Revalidate exact local MTBS boundary |
 | `P4O1-T01-U04-MTBS-REUSE-R001` | archive `d94dfb16...`; event `OR4494912090120190812`; map `10016337` | Existing governed 4,385,952-byte archive; 16 members / 13 files; one valid EPSG:32610 boundary / 8,378,927.386 m2 | Full CRC, exact four-member boundary hashes, event/map identity, geometry, embedded rights, and live role cautions pass. Reference context only, never ground truth or operational incident perimeter. U04 `pass`. | U05 overlays and deterministic summary |
+| `P4O1-T01-U05-OVERLAY-R001` | run `BL-2026-07-26-p4o1-t01-u05-overlay-r001`; source `2f96cc6...` | 10 ignored files / 774,062 bytes; inventory 945 bytes / `770f580e...`; manifest 8,088 bytes / `cf235bee...`; four web context layers, five observations, and 1600x1000 quicklook | Native EPSG:32610 measurements and web EPSG:4326 context independently pass. WCP-001 RBR is 141.44 ha with 94.19% MTBS overlap. WCP-002 RBR is 66.76 ha with zero MTBS overlap, retained as visible baseline false-positive-risk evidence. The rendered quicklook and all claim boundaries pass. U05 `pass`. | U06 repository-owned evidence interface |
+| `P4O1-T01-U05-DUPLICATE-R002` | retained no-overwrite attempt | Existing accepted U05 run ID and manifest `cf235bee...` | Duplicate invocation exits 1 with `run already exists`; the manifest hash remains exact. `retained-no-overwrite-refusal`. | U06 |
 
 ## Current truth
 
@@ -37,8 +39,8 @@ from PR #569.
   background on their exact EPSG:32610 native 20 m grids.
 - Existing Phase Two and Phase Three artifacts are read-only inputs.
 - No Phase 3B, second experiment, new label, dataset, split, AOI, threshold,
-  provider transaction, context acquisition, deployment, or public-sharing
-  change exists through U03.
+  provider transaction, deployment, or public-sharing change exists through
+  U05.
 - U01 is complete at the independently verified `f43907f...` checkpoint; its
   next eligible dependency is U02.
 - U02 is complete at source `cf67113...` and run
@@ -50,7 +52,11 @@ from PR #569.
 - U04 is complete at source `2094043...` and run
   `BL-2026-07-26-p4o1-t01-u04-context-r001`. Eight exact public TNM query
   responses and the already-governed exact Ward Creek MTBS boundary pass.
-  U05 is eligible.
+- U05 is complete at source `2f96cc6...` and run
+  `BL-2026-07-26-p4o1-t01-u05-overlay-r001`. Its exact native measurements,
+  web context layers, deterministic observations, and rendered quicklook pass.
+  The background patch visibly preserves the accepted baseline's
+  false-positive risk. U06 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
