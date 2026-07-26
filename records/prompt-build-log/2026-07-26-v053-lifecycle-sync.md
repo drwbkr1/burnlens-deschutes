@@ -23,9 +23,10 @@ reviewer JSON is 9,861 bytes at SHA-256 `a8e38133...`; its HTML is 18,212
 bytes at SHA-256 `81d32577...`. An ignored replay matches both outputs
 exactly. Deterministic structural, source-binding, link, fragment, image,
 claims, and privacy checks pass. The in-app browser security policy blocks
-agent navigation to local `file:` pages, so exact owner-operated desktop and
-narrow rendering remains the lifecycle pull-request gate; no workaround is
-attempted.
+agent navigation to local `file:` pages, so no workaround is attempted. The
+owner confirmed at `2026-07-26T16:59:07Z` that the exact lifecycle reviewer
+surface renders correctly, satisfying the required owner-operated real-render
+gate before merge.
 
 One combined lifecycle wrapper later exceeds its 184-second limit while the
 environment portability suite is still running. No analytical or public
@@ -33,6 +34,25 @@ artifact changes. A bounded rerun of the four directly applicable
 dependency/lock/Codex-selector checks passes 4/4; unrelated runtime-profile
 smokes are not repeated because the verified v0.53 release already passed
 them and this sync changes documentation and presentation truth only.
+
+One broad live pull-request metadata query also times out. A narrow live query
+then confirms PR #569 remains open, draft, clean, and mergeable at exact head
+`8b631c14ba147b17afa2d2f08440dfc2655a03db` against exact base
+`5a0f8ac027ae20ff9193948506f590afbfb64554`, with no required checks reported.
+
+The generic `audit-release-truth` skill evaluator is also retained as
+inapplicable after it rejects the established BurnLens release-audit schema:
+that helper expects its own `candidate`, `live_truth`, method, and
+truth-surface vocabulary. BurnLens's repository checks remain authoritative;
+the focused lifecycle suite passes 8/8, compilation, lock freshness, and
+dependency health pass, and the exact replay and repository structure gates
+are run separately.
+
+A first repository-wide local-link sweep is retained as over-broad because it
+correctly finds deliberately missing image targets inside six tracked
+`retained-failures` HTML artifacts. Those invalid attempts must remain
+immutable. The applicable changed-surface and exact current-reviewer link
+checks exclude historical retained failures and pass separately.
 
 The synchronized truth is precise: Phase Three is accepted and verified; the
 U-Net is a valid trained, evaluated, reproducible, and rejected model artifact;
