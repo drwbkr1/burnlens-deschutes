@@ -605,7 +605,7 @@ def _quicklook_bytes(
         small_font = ImageFont.load_default(size=16)
     draw.text(
         (40, 28),
-        "BurnLens Ward Creek — accepted RBR vs rejected U-Net",
+        "BurnLens Ward Creek - accepted RBR vs rejected U-Net",
         fill="#f5f1e8",
         font=title_font,
     )
@@ -670,7 +670,7 @@ def _quicklook_bytes(
     draw.text(
         (60, 630),
         (
-            "Experimental output — not official, operational, field-validated, "
+            "Experimental output - not official, operational, field-validated, "
             "or suitable for emergency decisions."
         ),
         fill="#f5c56b",
