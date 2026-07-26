@@ -154,14 +154,23 @@ class EnvironmentProfileTests(unittest.TestCase):
 
     def test_runtime_profile_smoke(self) -> None:
         completed, payload = _run_smoke("runtime")
+        with (ROOT / "pyproject.toml").open("rb") as stream:
+            expected_commands = tomllib.load(stream)["project"]["scripts"]
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
         self.assertEqual(payload["status"], "PASS")
         self.assertEqual(payload["profile"], "runtime")
         self.assertEqual(payload["checks"]["runtime"]["raster_sum"], 120)
-        self.assertEqual(payload["checks"]["console_entry_points"]["count"], 114)
-        self.assertEqual(payload["checks"]["console_entry_points"]["help_count"], 114)
         self.assertEqual(
-            len(payload["checks"]["console_entry_points"]["names"]), 114
+            payload["checks"]["console_entry_points"]["count"],
+            len(expected_commands),
+        )
+        self.assertEqual(
+            payload["checks"]["console_entry_points"]["help_count"],
+            len(expected_commands),
+        )
+        self.assertEqual(
+            payload["checks"]["console_entry_points"]["names"],
+            sorted(expected_commands),
         )
 
     @unittest.skipUnless(
