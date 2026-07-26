@@ -1,0 +1,12 @@
+{
+  "attempt_version": "burnlens-phase-four-context-intake-v0.1.0",
+  "generated_at_utc": "2026-07-26T18:03:52Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u04-context-r001",
+  "git_source_commit": "20940438319a31022196739463a3be091e21fd3b",
+  "status": "COMPLETE",
+  "state": "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05",
+  "asset_count": 8,
+  "total_bytes": 890072,
+  "result_sha256": "ea191987eb9d634cdc64fc0ed91c229a1681aa38c2abf0939e14efc049045f1b",
+  "final_contract_sha256": "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd"
+}

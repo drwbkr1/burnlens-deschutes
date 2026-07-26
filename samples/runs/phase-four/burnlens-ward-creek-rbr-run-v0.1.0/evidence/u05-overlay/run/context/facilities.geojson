@@ -1,0 +1,159 @@
+{
+  "type": "FeatureCollection",
+  "name": "BurnLens bounded TNM selected public-facility context",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "cemetery-6456518",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.99205365,
+          45.05329256
+        ]
+      },
+      "properties": {
+        "context_class": "cemetery",
+        "source_object_id": 6456518,
+        "name": "Criterion Cemetery",
+        "source_dataset_id": "041457e7-bbf0-4ec3-a5aa-75249256bd48",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cemetery-6640088",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.69474651,
+          44.92602947
+        ]
+      },
+      "properties": {
+        "context_class": "cemetery",
+        "source_object_id": 6640088,
+        "name": "Antelope Old Cemetery",
+        "source_dataset_id": "68744463-fee5-44f0-a888-f1e7a25424c7",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cemetery-6749017",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.71845858,
+          44.9162258
+        ]
+      },
+      "properties": {
+        "context_class": "cemetery",
+        "source_object_id": 6749017,
+        "name": "Antelope Cemetery",
+        "source_dataset_id": "97083a50-a83b-46f1-bd94-837664f06e04",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "post-office-6651161",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.75295335,
+          45.00338671
+        ]
+      },
+      "properties": {
+        "context_class": "post-office",
+        "source_object_id": 6651161,
+        "name": "Shaniko Post Office",
+        "source_dataset_id": "3d33c0ab-b8a1-57a3-bd02-bad6fa72dbed",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "post-office-6652864",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.72273005,
+          44.90976559
+        ]
+      },
+      "properties": {
+        "context_class": "post-office",
+        "source_object_id": 6652864,
+        "name": "Antelope Post Office",
+        "source_dataset_id": "17cf87ac-cd91-54a2-8d1d-eb2274fb9be9",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fire-ems-6678030",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.75235774,
+          45.0040317
+        ]
+      },
+      "properties": {
+        "context_class": "fire-ems",
+        "source_object_id": 6678030,
+        "name": "Shaniko Volunteer Fire Department",
+        "source_dataset_id": "75acb001-2c6b-59b0-ba05-2ce2287ed994",
+        "source_originator": "U.S. Geological Survey",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trailhead-6798839",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.99886998,
+          45.04481179
+        ]
+      },
+      "properties": {
+        "context_class": "trailhead",
+        "source_object_id": 6798839,
+        "name": "East Criterion Trailhead",
+        "source_dataset_id": "{7875DC51-B4F9-45C2-94FC-A71B8D71214B}",
+        "source_originator": "Department of the Interior, Bureau of Land Management",
+        "analytical_status": "official-context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "trailhead-6871713",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.00813095,
+          45.0489093
+        ]
+      },
+      "properties": {
+        "context_class": "trailhead",
+        "source_object_id": 6871713,
+        "name": "West Criterion Trailhead",
+        "source_dataset_id": "{7875DC51-B4F9-45C2-94FC-A71B8D71214B}",
+        "source_originator": "Department of the Interior, Bureau of Land Management",
+        "analytical_status": "official-context"
+      }
+    }
+  ],
+  "warning": "Published selected facility points do not establish current operation, availability, capacity, or emergency suitability."
+}

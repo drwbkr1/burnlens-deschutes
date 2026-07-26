@@ -1,0 +1,30 @@
+{
+  "validation_version": "burnlens-phase-four-geospatial-validation-v0.1.0",
+  "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+  "raster_count": 10,
+  "all_rasters_read_back_exact": true,
+  "native_crs": "EPSG:32610",
+  "native_resolution_m": 20,
+  "vector_layer": "rbr_accepted",
+  "geometry_type": "MULTIPOLYGON",
+  "geometry_count": 202,
+  "all_geometries_valid": true,
+  "polygonization_connectivity": 4,
+  "raw_binary_polygonization": true,
+  "simplification": "none",
+  "vector_summary": {
+    "WCP-001": {
+      "component_count": 28,
+      "pixel_count": 3536,
+      "area_m2": 1414400.0
+    },
+    "WCP-002": {
+      "component_count": 174,
+      "pixel_count": 1669,
+      "area_m2": 667600.0
+    }
+  },
+  "web_representation_crs": "EPSG:4326",
+  "web_coordinate_rounding_decimal_places": 8,
+  "raster_vector_pixel_counts_match": true
+}

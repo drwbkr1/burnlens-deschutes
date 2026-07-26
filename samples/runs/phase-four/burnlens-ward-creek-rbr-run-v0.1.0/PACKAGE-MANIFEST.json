@@ -1,0 +1,366 @@
+{
+  "package_manifest_version": "burnlens-phase-four-package-manifest-v0.1.0",
+  "package_id": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001",
+  "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+  "generated_at_utc": "2026-07-26T18:58:22Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "unit_id": "P4O1-T01-U07",
+  "git_source_commit": "733a3c265be2c351a50bfd356d1b45da15cbfec0",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_diagnostic": "burnlens-unet-binary-v0.1.0",
+  "source_count": 56,
+  "payload_file_count_excluding_manifest": 65,
+  "payload_inventory": [
+    {
+      "path": "CHECKSUMS.sha256",
+      "bytes": 7547,
+      "sha256": "eb08e65924a61ed0ca80018500e5693cce2a104cbcfcc95355d691b301838d7e"
+    },
+    {
+      "path": "config/MAP-CONFIG.json",
+      "bytes": 1065,
+      "sha256": "842ca0df0c2d3e7df600082256cbc185ef006615c60f7811ce38137138b1ff75"
+    },
+    {
+      "path": "evidence/records/u01-contract/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+      "bytes": 19991,
+      "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec"
+    },
+    {
+      "path": "evidence/records/u02-analysis/PHASE-FOUR-ANALYSIS-RECORD-2026-001.json",
+      "bytes": 7100,
+      "sha256": "0b242293b63b502ea66cf35393a50eb7c81bcbea22550c677c074023f0bea94c"
+    },
+    {
+      "path": "evidence/records/u03-geospatial/PHASE-FOUR-GEOSPATIAL-RECORD-2026-001.json",
+      "bytes": 9119,
+      "sha256": "002860f20df5a2441e71e4b5b27dffdc238c0269a67493900d847e9af9b2e5c9"
+    },
+    {
+      "path": "evidence/records/u04-context/PHASE-FOUR-CONTEXT-CUSTODY-RECORD-2026-001.json",
+      "bytes": 7449,
+      "sha256": "1ced1aa1ddf950f4bc70f4217d2d6a5139df82a7bae9a65aa8d88928d65f0547"
+    },
+    {
+      "path": "evidence/records/u04-intake/P4O1-T01-U04-context-intake.json",
+      "bytes": 17290,
+      "sha256": "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd"
+    },
+    {
+      "path": "evidence/records/u04-source-gate/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+      "bytes": 25265,
+      "sha256": "12c273f24565d4899517d64408654128c62a0b8ba9e8f58d3dd898dacaef7a28"
+    },
+    {
+      "path": "evidence/records/u05-overlay/PHASE-FOUR-OVERLAY-RECORD-2026-001.json",
+      "bytes": 8555,
+      "sha256": "48556442dd519fe7300f8793b47778ac628fc8c16fbb61bda85cde57cf0bbd59"
+    },
+    {
+      "path": "evidence/records/u06-interface/PHASE-FOUR-INTERFACE-RECORD-2026-001.json",
+      "bytes": 9809,
+      "sha256": "84ecf5553a91e1cf4f2e81899a80dd5c5e64b4972199c650ac13b4e472a40bda"
+    },
+    {
+      "path": "evidence/u02-analysis/run/ANALYSIS-MANIFEST.json",
+      "bytes": 12244,
+      "sha256": "c969bb10a1a0716ce41bbc7b176c3cb8af498fd5a9821c5122486bca397acfa6"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-001/exclusion.npy",
+      "bytes": 4224,
+      "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-001/rbr-binary.npy",
+      "bytes": 4224,
+      "sha256": "873effcca85720ca5b77e327f2d86cb7927e1abd689c8d924bd6624f1f075379"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-001/rbr-score.npy",
+      "bytes": 16512,
+      "sha256": "0f330d70d7ddd1a1c9cad13d2d252bf610d3d2b2dc521c3e0e0444d85ad0b046"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-001/unet-binary-diagnostic.npy",
+      "bytes": 4224,
+      "sha256": "9209ad1a5f35fbf60e7599ffce489ce32c672763e6956a29a7d7671c60c51e36"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-001/unet-probability-diagnostic.npy",
+      "bytes": 16512,
+      "sha256": "7a702a3c147b8f04885d6049d59f48d0a75511931ec4a30a3717e5777c90ce33"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-002/exclusion.npy",
+      "bytes": 4224,
+      "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-002/rbr-binary.npy",
+      "bytes": 4224,
+      "sha256": "3dea50519d39438ede0b0d61c2798468c2b39d8f58082a6751d3bc734ee5e640"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-002/rbr-score.npy",
+      "bytes": 16512,
+      "sha256": "65c44dd181ffd65e9f7d314c034152105cc3da78f6aa28f24f0076b5f67ad497"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-002/unet-binary-diagnostic.npy",
+      "bytes": 4224,
+      "sha256": "3f0355fc9b90cba2e1ac8770925fef019777704cf708eaff30d1cfae45807433"
+    },
+    {
+      "path": "evidence/u02-analysis/run/patches/WCP-002/unet-probability-diagnostic.npy",
+      "bytes": 16512,
+      "sha256": "559bc7949f2764f4b8c176eb4c274fe70f1b39ef050ba493ed4f743f7ffc9564"
+    },
+    {
+      "path": "evidence/u02-analysis/run/RUN-COMPLETE.json",
+      "bytes": 398,
+      "sha256": "b20c8758e343ebe4dee2ba7e30d9dce4e213a1248bcc7e6e369fd2e9b4f292a3"
+    },
+    {
+      "path": "evidence/u02-analysis/run/RUN-STARTED.json",
+      "bytes": 254,
+      "sha256": "6a45ea2b2eb845e547e3d0c7c014897beb072df2df10eec23c11495f8bb15e55"
+    },
+    {
+      "path": "evidence/u02-analysis/run/STATUS.json",
+      "bytes": 415,
+      "sha256": "6e8da3e8ef72604eaf3a63ce0a9e1522cbb26e029fbd9c3c16663237119d56db"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/GEOSPATIAL-MANIFEST.json",
+      "bytes": 11446,
+      "sha256": "dc7515763ace956987c8a8c6acad9da49ab847567fdf4eec4a3a537123a982ea"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/GEOSPATIAL-QUICKLOOK.png",
+      "bytes": 40962,
+      "sha256": "dfd746726f2958bd7d90430008b5b5773ec489edbd8b4b61f7aa2b76dafbcfae"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/GEOSPATIAL-VALIDATION.json",
+      "bytes": 856,
+      "sha256": "a37f6b29bfd6b60bad0ca09604cbddbb11e54c91b8ec346079b363fbdbe81d19"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-001/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "f86a363a30fff3968c27c3f5a9ba65a348d327f1989a41a384bd149fd94455f7"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-001/rbr-binary.tif",
+      "bytes": 1370,
+      "sha256": "e9f85df3efa24fd7796e9d7326dec0adc9ecf9a9cd0a68b9c46774437de6222c"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-001/rbr-score.tif",
+      "bytes": 15666,
+      "sha256": "082f92a7ad489f35d157d0981a2c12d182c356c05883026888c9aa39a9730416"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-001/unet-binary-diagnostic.tif",
+      "bytes": 1142,
+      "sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-001/unet-probability-diagnostic.tif",
+      "bytes": 13616,
+      "sha256": "f7c6b87a8dd9b229f2cd021af7b4bd4d1c6af6acecb3f22b13dcdbc4906991a3"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-002/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "721bbe0986332bf648e9d5cc48d5047b758f64c71b962588f82ecc7436b0452f"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-002/rbr-binary.tif",
+      "bytes": 1784,
+      "sha256": "13f4776bb07ef8d66069eef17dab167eaa804706dd0d0674beeed3b76245a3d8"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-002/rbr-score.tif",
+      "bytes": 16130,
+      "sha256": "50ccbed7637d916ab3df7d9a5a608092808932fa2f27b4f45c1a889ddf825c5f"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-002/unet-binary-diagnostic.tif",
+      "bytes": 1306,
+      "sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/patches/WCP-002/unet-probability-diagnostic.tif",
+      "bytes": 14108,
+      "sha256": "3ee1c600aeea6c430e00f0d07a33c51c876dfee0e91d6548f146d809ffb79222"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/RUN-COMPLETE.json",
+      "bytes": 400,
+      "sha256": "7f8c3143fb6da33af0fca696dd2086a4f5882074c589be3b24c57c880c626918"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/RUN-STARTED.json",
+      "bytes": 256,
+      "sha256": "325711f5f1c93609286a1d79ac9ecb90f31c818b69a90b378844b28d2f34cbcb"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/STATUS.json",
+      "bytes": 483,
+      "sha256": "42e95214da39144614bad2685dd6ccd4e38d311ec69941098c8c9e17ddc3ad07"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/vectors/rbr-accepted-polygons.geojson",
+      "bytes": 312627,
+      "sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af"
+    },
+    {
+      "path": "evidence/u03-geospatial/run/vectors/rbr-accepted-polygons.gpkg",
+      "bytes": 114688,
+      "sha256": "99d083f124907c9098520e5508f811d29316a7d9232e0a783982ed1552131eee"
+    },
+    {
+      "path": "evidence/u04-context/run/CONTEXT-INTAKE-RESULT.json",
+      "bytes": 7117,
+      "sha256": "ea191987eb9d634cdc64fc0ed91c229a1681aa38c2abf0939e14efc049045f1b"
+    },
+    {
+      "path": "evidence/u04-context/run/INTAKE-CONTRACT-FINAL.json",
+      "bytes": 17290,
+      "sha256": "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd"
+    },
+    {
+      "path": "evidence/u04-context/run/RUN-COMPLETE.json",
+      "bytes": 548,
+      "sha256": "a0e172258c233f22a8e590dc458a1dc00cf42345c6966e957c207a1ec069248d"
+    },
+    {
+      "path": "evidence/u04-context/run/RUN-STARTED.json",
+      "bytes": 260,
+      "sha256": "17c5b99438ea959a6ce44a974d8f55d620af58f7b85fcaf1b16a61e8317e717c"
+    },
+    {
+      "path": "evidence/u05-overlay/run/analysis/OVERLAY-SUMMARY.json",
+      "bytes": 8081,
+      "sha256": "f60f43d48913e8c8431a76783bb9c8713fbb9b465f26b473a97ec00b3d41135d"
+    },
+    {
+      "path": "evidence/u05-overlay/run/context/blm-boundary.geojson",
+      "bytes": 36884,
+      "sha256": "6c2b64a0dee303f3258748f5500a31e8797139d140341565a1e7146c287d69c2"
+    },
+    {
+      "path": "evidence/u05-overlay/run/context/facilities.geojson",
+      "bytes": 4529,
+      "sha256": "ae565fafd92afac99c37c48a727d0e86b2c995ec83f29fa895d24c15d478ca1b"
+    },
+    {
+      "path": "evidence/u05-overlay/run/context/roads.geojson",
+      "bytes": 348717,
+      "sha256": "8f94577b5ce12db980b489954febf7c1ea1f6830e3c63c357deb763a0810c004"
+    },
+    {
+      "path": "evidence/u05-overlay/run/OVERLAY-MANIFEST.json",
+      "bytes": 8088,
+      "sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8"
+    },
+    {
+      "path": "evidence/u05-overlay/run/OVERLAY-QUICKLOOK.png",
+      "bytes": 99654,
+      "sha256": "4764170a7c45659e1b3038a512c6344f769972fbe6dbd16ee04811366539d6b1"
+    },
+    {
+      "path": "evidence/u05-overlay/run/reference/mtbs-ward-creek-boundary.geojson",
+      "bytes": 267090,
+      "sha256": "b9c9ebc134811f1ce93194716c2c46a49bac751773bfa19da2d94f04d9fc3f14"
+    },
+    {
+      "path": "evidence/u05-overlay/run/RUN-COMPLETE.json",
+      "bytes": 396,
+      "sha256": "703822a563b6da4cf365a0887fdf52a99c622bbd957b778ae59ef20e509683d3"
+    },
+    {
+      "path": "evidence/u05-overlay/run/RUN-STARTED.json",
+      "bytes": 253,
+      "sha256": "24fc12ffc765f3dcc75ddb9cd31bb0dc296c00e290ba519adf414110f78c95a3"
+    },
+    {
+      "path": "evidence/u05-overlay/run/STATUS.json",
+      "bytes": 370,
+      "sha256": "a2ecbcec80acc7e26a937307ff9ececb28202252891770e69e42a9136d190640"
+    },
+    {
+      "path": "interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    },
+    {
+      "path": "interface/interface-manifest.json",
+      "bytes": 12429,
+      "sha256": "8686766d026d413e0075eb974a0c08ba870c9110b006ba26abe28d505bf6313c"
+    },
+    {
+      "path": "inventory/SOURCE-INVENTORY.json",
+      "bytes": 21452,
+      "sha256": "39d748dbd09a56b252f99cee2089e5f05892ee86448d14197c0c77b501a3a1bc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 762,
+      "sha256": "723fc16e8f7314af9351229839e1899f29bbeec4c89063db40d19f5f12cf0b3b"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 667,
+      "sha256": "3278cb759c5ff95db439731fa9f30520ee41199dea701f01c375f86f1e1c9533"
+    },
+    {
+      "path": "replay/REPLAY-CONTRACT.json",
+      "bytes": 383,
+      "sha256": "0cd452b17ca4b9ed6c26b1997bf8221923d5cfb6a9d974182a4ef05b5582ad12"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 868,
+      "sha256": "3ff7e93ca34ddd1554494ad5cedec1ca245e32e8554449a0e594e0399923b867"
+    },
+    {
+      "path": "status/STATUS.json",
+      "bytes": 446,
+      "sha256": "1a720a4451243f51628a8edb1675f42344cc7870337ee4a592564b22f1bfdc83"
+    },
+    {
+      "path": "WARNINGS.md",
+      "bytes": 788,
+      "sha256": "7b0425e385c0cd4e779fb3df7bbbd067bf06dc9405d99101ef7ca6b8b57eca4e"
+    }
+  ],
+  "entrypoint": "interface/index.html",
+  "validation_entrypoint": "burnlens-validate-phase-four-package",
+  "warnings": "WARNINGS.md",
+  "report": "REPORT.md",
+  "map_config": "config/MAP-CONFIG.json",
+  "source_inventory": "inventory/SOURCE-INVENTORY.json",
+  "checksums": "CHECKSUMS.sha256",
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "external_request": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "official_operational_field_validated_endorsed_or_emergency_claim": false
+  },
+  "disposition": "package-candidate-pending-clean-reproduction",
+  "next_dependency": "P4O1-T01-U07 clean environment reproduction"
+}

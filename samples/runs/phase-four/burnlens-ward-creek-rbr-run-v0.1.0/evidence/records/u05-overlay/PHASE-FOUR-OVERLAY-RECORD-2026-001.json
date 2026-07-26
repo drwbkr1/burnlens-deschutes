@@ -1,0 +1,224 @@
+{
+  "record_version": "burnlens-phase-four-overlay-record-v0.1.0",
+  "record_id": "PHASE-FOUR-OVERLAY-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T18:25:44Z",
+  "unit_id": "P4O1-T01-U05",
+  "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "git_source_commit": "2f96cc6387086e1391ce6f0e4bf5a18741456b4a",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "inputs": {
+    "geospatial_record": {
+      "path": "records/phase-four/geospatial/PHASE-FOUR-GEOSPATIAL-RECORD-2026-001.json",
+      "bytes": 9119,
+      "sha256": "002860f20df5a2441e71e4b5b27dffdc238c0269a67493900d847e9af9b2e5c9"
+    },
+    "context_custody_record": {
+      "path": "records/phase-four/context/PHASE-FOUR-CONTEXT-CUSTODY-RECORD-2026-001.json",
+      "bytes": 7449,
+      "sha256": "1ced1aa1ddf950f4bc70f4217d2d6a5139df82a7bae9a65aa8d88928d65f0547"
+    },
+    "mtbs_reference_fitness": {
+      "path": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+      "sha256": "f31bc51c64dae60b5a419146f4183b960b8504044f79e7505018a630c47c466d"
+    },
+    "mtbs_archive": {
+      "path": "downloads/phase-two/raw/ward-creek-mtbs-reference-v0.1.0/ward-creek-mtbs-reference-delivery-001.zip",
+      "bytes": 4385952,
+      "sha256": "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18",
+      "tracked": false,
+      "custody": "repository-local ignored governed source"
+    }
+  },
+  "products": {
+    "summary_version": "burnlens-phase-four-overlay-v0.1.0",
+    "measurement_crs": "EPSG:32610",
+    "web_context_crs": "EPSG:4326",
+    "frozen_context_envelope_epsg_32610": [
+      657220.0,
+      4968520.0,
+      681800.0,
+      4991800.0
+    ],
+    "context_buffer_m": 10000,
+    "geojson_count": 4,
+    "observation_count": 5,
+    "quicklook_dimensions": [
+      1600,
+      1000
+    ],
+    "accepted_method_only_measurements": true,
+    "rejected_unet_used_for_measurement": false
+  },
+  "measurements": {
+    "WCP-001": {
+      "owner_approved_prototype_class": "burned",
+      "accepted_rbr_area_ha": 141.44,
+      "accepted_rbr_patch_fraction_pct": 86.33,
+      "mtbs_overlap_area_ha": 133.22,
+      "accepted_rbr_inside_mtbs_pct": 94.19,
+      "accepted_rbr_outside_mtbs_area_ha": 8.22,
+      "blm_overlap_area_ha": 0.0,
+      "selected_road_intersection_length_m": 0.0,
+      "nearest_selected_secondary_highway_m": 1152.7,
+      "selected_facilities_inside_patch": 0,
+      "selected_facilities_inside_accepted_rbr": 0,
+      "nearest_selected_facility_m": 10513.5
+    },
+    "WCP-002": {
+      "owner_approved_prototype_class": "background",
+      "accepted_rbr_area_ha": 66.76,
+      "accepted_rbr_patch_fraction_pct": 40.75,
+      "mtbs_overlap_area_ha": 0.0,
+      "accepted_rbr_inside_mtbs_pct": 0.0,
+      "accepted_rbr_outside_mtbs_area_ha": 66.76,
+      "blm_overlap_area_ha": 0.0,
+      "selected_road_intersection_length_m": 0.0,
+      "nearest_selected_secondary_highway_m": 2188.1,
+      "selected_facilities_inside_patch": 0,
+      "selected_facilities_inside_accepted_rbr": 0,
+      "nearest_selected_facility_m": 6671.2,
+      "failure_evidence": "The accepted RBR covers 66.76 ha in the owner-approved background patch with zero MTBS overlap; this is visible baseline false-positive-risk evidence."
+    },
+    "context_envelope": {
+      "secondary_highway_features": 28,
+      "secondary_highway_clipped_length_km": 50.78,
+      "local_connecting_road_features": 30,
+      "local_connecting_road_clipped_length_km": 28.99,
+      "local_road_features": 111,
+      "local_road_clipped_length_km": 88.49,
+      "selected_facility_features": 8,
+      "blm_features": 1,
+      "mtbs_boundary_area_ha": 837.89
+    }
+  },
+  "ignored_run_inventory": {
+    "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+    "file_count": 10,
+    "bytes": 774062,
+    "inventory_format": "case-insensitive sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 945,
+    "inventory_sha256": "770f580e3c4d97af1271a01b87136612b3ac2c57cef91f68271f7962f18bbf4c",
+    "files": [
+      {
+        "path": "analysis/OVERLAY-SUMMARY.json",
+        "bytes": 8081,
+        "sha256": "f60f43d48913e8c8431a76783bb9c8713fbb9b465f26b473a97ec00b3d41135d"
+      },
+      {
+        "path": "context/blm-boundary.geojson",
+        "bytes": 36884,
+        "sha256": "6c2b64a0dee303f3258748f5500a31e8797139d140341565a1e7146c287d69c2"
+      },
+      {
+        "path": "context/facilities.geojson",
+        "bytes": 4529,
+        "sha256": "ae565fafd92afac99c37c48a727d0e86b2c995ec83f29fa895d24c15d478ca1b"
+      },
+      {
+        "path": "context/roads.geojson",
+        "bytes": 348717,
+        "sha256": "8f94577b5ce12db980b489954febf7c1ea1f6830e3c63c357deb763a0810c004"
+      },
+      {
+        "path": "OVERLAY-MANIFEST.json",
+        "bytes": 8088,
+        "sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8"
+      },
+      {
+        "path": "OVERLAY-QUICKLOOK.png",
+        "bytes": 99654,
+        "sha256": "4764170a7c45659e1b3038a512c6344f769972fbe6dbd16ee04811366539d6b1"
+      },
+      {
+        "path": "reference/mtbs-ward-creek-boundary.geojson",
+        "bytes": 267090,
+        "sha256": "b9c9ebc134811f1ce93194716c2c46a49bac751773bfa19da2d94f04d9fc3f14"
+      },
+      {
+        "path": "RUN-COMPLETE.json",
+        "bytes": 396,
+        "sha256": "703822a563b6da4cf365a0887fdf52a99c622bbd957b778ae59ef20e509683d3"
+      },
+      {
+        "path": "RUN-STARTED.json",
+        "bytes": 253,
+        "sha256": "24fc12ffc765f3dcc75ddb9cd31bb0dc296c00e290ba519adf414110f78c95a3"
+      },
+      {
+        "path": "STATUS.json",
+        "bytes": 370,
+        "sha256": "a2ecbcec80acc7e26a937307ff9ececb28202252891770e69e42a9136d190640"
+      }
+    ]
+  },
+  "independent_validation": {
+    "validated_at_utc": "2026-07-26T18:25:44Z",
+    "all_manifest_receipts_exact": true,
+    "all_run_file_receipts_exact": true,
+    "all_geojson_opens_in_locked_geopandas_stack": true,
+    "all_geojson_crs_epsg_4326": true,
+    "all_geojson_geometries_nonempty_and_valid": true,
+    "all_geojson_coordinate_domains_valid": true,
+    "accepted_rbr_area_recomputed_from_exact_geopackage": true,
+    "mtbs_overlap_recomputed_from_exact_archive": true,
+    "quicklook_rendered_and_inspected": true,
+    "quicklook_draw_order_preserves_context_over_accepted_fill": true,
+    "focused_tests": "21 passed",
+    "compile": "pass",
+    "lock": "pass",
+    "dependency_check": "75 distributions compatible",
+    "cli_help": "pass",
+    "duplicate_attempt_refused_without_mutation": true
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "P4O1-T01-U05-DUPLICATE-R002",
+      "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+      "disposition": "retained-no-overwrite-refusal",
+      "exit_code": 1,
+      "error": "run already exists",
+      "preexisting_manifest_sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8",
+      "postattempt_manifest_sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8",
+      "preexisting_bytes_changed": false
+    }
+  ],
+  "gates": {
+    "exact_input_identity": "pass",
+    "source_precedence": "pass",
+    "terms_and_role": "pass",
+    "native_measurement_crs": "pass",
+    "accepted_rbr_only_measurements": "pass",
+    "context_geometry_and_crs": "pass",
+    "deterministic_observations": "pass",
+    "rendered_quicklook": "pass on r001",
+    "failure_state_visibility": "pass",
+    "no_overwrite": "pass",
+    "reproducibility": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "repository_owned_interface": "pending U06"
+  },
+  "boundaries": {
+    "accepted_analytical_method": "burnlens-baseline-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "unet_used_for_measurement": false,
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "new_label_dataset_split_aoi_threshold_or_training": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "routing_closure_tactical_property_legal_safety_or_emergency_use": false,
+    "official_operational_field_validated_or_endorsed_claim": false,
+    "interface_complete": false,
+    "deployment": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U06 repository-owned evidence interface"
+}

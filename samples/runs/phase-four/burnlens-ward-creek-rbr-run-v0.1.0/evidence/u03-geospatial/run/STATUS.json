@@ -1,0 +1,13 @@
+{
+  "status_version": "burnlens-phase-four-geospatial-status-v0.1.0",
+  "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+  "state": "accepted-baseline",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "geospatial_products_complete": true,
+  "context_complete": false,
+  "publishable": false,
+  "next_dependency": "P4O1-T01-U04 context source and terms gate"
+}

@@ -1,0 +1,199 @@
+{
+  "summary_version": "burnlens-phase-four-overlay-v0.1.0",
+  "generated_at_utc": "2026-07-26T18:24:06Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "metrics": {
+    "measurement_crs": "EPSG:32610",
+    "distance_units": "meters",
+    "length_units": "meters with display kilometers",
+    "area_units": "square meters with display hectares",
+    "rounding": {
+      "area_m2": 3,
+      "area_ha": 2,
+      "percent": 2,
+      "distance_m": 1,
+      "length_km": 2
+    },
+    "context_envelope": {
+      "bounds": [
+        657220.0,
+        4968520.0,
+        681800.0,
+        4991800.0
+      ],
+      "buffer_m": 10000,
+      "road_summary": {
+        "secondary-highway": {
+          "feature_count": 28,
+          "clipped_length_km": 50.78
+        },
+        "local-connecting-road": {
+          "feature_count": 30,
+          "clipped_length_km": 28.99
+        },
+        "local-road": {
+          "feature_count": 111,
+          "clipped_length_km": 88.49
+        }
+      },
+      "facility_count": 8,
+      "blm_feature_count": 1
+    },
+    "mtbs_boundary_area_ha": 837.89,
+    "patches": {
+      "WCP-001": {
+        "patch_area_m2": 1638400.0,
+        "accepted_rbr_area_m2": 1414400.0,
+        "accepted_rbr_area_ha": 141.44,
+        "accepted_rbr_patch_fraction_pct": 86.33,
+        "mtbs_overlap_area_m2": 1332237.194,
+        "mtbs_overlap_area_ha": 133.22,
+        "accepted_rbr_inside_mtbs_pct": 94.19,
+        "accepted_rbr_outside_mtbs_area_ha": 8.22,
+        "blm_overlap_area_m2": 0.0,
+        "blm_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_blm_pct": 0.0,
+        "roads": {
+          "secondary-highway": {
+            "feature_count_in_context_package": 28,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 1152.7
+          },
+          "local-connecting-road": {
+            "feature_count_in_context_package": 30,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 8463.7
+          },
+          "local-road": {
+            "feature_count_in_context_package": 111,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 5625.5
+          }
+        },
+        "facilities": {
+          "cemetery": {
+            "feature_count_in_context_package": 3,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 11817.1
+          },
+          "post-office": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 10513.5
+          },
+          "fire-ems": {
+            "feature_count_in_context_package": 1,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 10592.1
+          },
+          "trailhead": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 13933.5
+          }
+        }
+      },
+      "WCP-002": {
+        "patch_area_m2": 1638400.0,
+        "accepted_rbr_area_m2": 667600.0,
+        "accepted_rbr_area_ha": 66.76,
+        "accepted_rbr_patch_fraction_pct": 40.75,
+        "mtbs_overlap_area_m2": 0.0,
+        "mtbs_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_mtbs_pct": 0.0,
+        "accepted_rbr_outside_mtbs_area_ha": 66.76,
+        "blm_overlap_area_m2": 0.0,
+        "blm_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_blm_pct": 0.0,
+        "roads": {
+          "secondary-highway": {
+            "feature_count_in_context_package": 28,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 2188.1
+          },
+          "local-connecting-road": {
+            "feature_count_in_context_package": 30,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 6144.5
+          },
+          "local-road": {
+            "feature_count_in_context_package": 111,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 2959.9
+          }
+        },
+        "facilities": {
+          "cemetery": {
+            "feature_count_in_context_package": 3,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 9352.2
+          },
+          "post-office": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 6671.2
+          },
+          "fire-ems": {
+            "feature_count_in_context_package": 1,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 6751.3
+          },
+          "trailhead": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 15239.5
+          }
+        }
+      }
+    }
+  },
+  "observations": [
+    {
+      "observation_id": "P4O1-T01-U05-OBS-001",
+      "title": "Burned prototype patch",
+      "text": "Accepted RBR covers 141.44 ha of WCP-001; 94.19% of that footprint overlaps the exact MTBS burned-area boundary.",
+      "interpretation_boundary": "This is bounded spatial agreement with an analyst-interpreted official-program reference, not field validation or complete-scar accuracy."
+    },
+    {
+      "observation_id": "P4O1-T01-U05-OBS-002",
+      "title": "Background prototype patch",
+      "text": "Accepted RBR covers 66.76 ha or 40.75% of WCP-002, with 0.00% overlap with the exact MTBS boundary.",
+      "interpretation_boundary": "This full-patch result is visible false-positive-risk evidence for the baseline; it is not a label metric, prevalence estimate, or generalization claim."
+    },
+    {
+      "observation_id": "P4O1-T01-U05-OBS-003",
+      "title": "Selected road context",
+      "text": "No selected TNM road line intersects the accepted RBR footprint in either patch. The nearest selected secondary highway is 1.15 km from WCP-001 and 2.19 km from WCP-002.",
+      "interpretation_boundary": "The selected layer roster and frozen envelope limit this observation; it is not access, closure, routing, or safety guidance."
+    },
+    {
+      "observation_id": "P4O1-T01-U05-OBS-004",
+      "title": "Selected public-facility context",
+      "text": "None of the eight selected TNM public-facility points lies inside either patch or accepted RBR footprint. The nearest selected point is 10.51 km from WCP-001 and 6.67 km from WCP-002.",
+      "interpretation_boundary": "Absence or distance in this selected public dataset does not establish facility operation, availability, capacity, or emergency suitability."
+    },
+    {
+      "observation_id": "P4O1-T01-U05-OBS-005",
+      "title": "Selected planning boundary",
+      "text": "The selected TNM BLM boundary has zero overlap with both accepted RBR footprints.",
+      "interpretation_boundary": "This generalized planning layer is not a cadastral, survey, access, ownership, or legal determination."
+    }
+  ],
+  "source_precedence": [
+    "USGS/USDA Forest Service MTBS governs its official-program reference facts.",
+    "USGS The National Map sources govern their road, facility, and planning-context facts.",
+    "BurnLens RBR is the accepted analytical output only for this bounded demonstration.",
+    "The rejected U-Net is excluded from every U05 measurement."
+  ],
+  "warning": "Experimental descriptive screening evidence. Not official, operational, field-validated, endorsed, or suitable for routing, tactical, property, legal, safety, or emergency decisions."
+}

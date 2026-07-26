@@ -1,0 +1,203 @@
+{
+  "record_version": "burnlens-phase-four-analysis-record-v0.1.0",
+  "record_id": "PHASE-FOUR-ANALYSIS-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T17:25:03Z",
+  "unit_id": "P4O1-T01-U02",
+  "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "git_source_commit": "cf67113dbae0e05dd034b0cca5d2a98f2a4bfb9f",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "contract": {
+    "path": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+    "bytes": 19991,
+    "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec"
+  },
+  "methods": {
+    "accepted": {
+      "version": "burnlens-baseline-v0.1.0",
+      "family": "rbr-threshold",
+      "threshold": 0.041043221950531006
+    },
+    "rejected_diagnostic": {
+      "version": "burnlens-unet-binary-v0.1.0",
+      "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+      "threshold": 0.5,
+      "accepted": false,
+      "outperformed_rbr": false,
+      "probability_calibrated": false
+    }
+  },
+  "patch_facts": {
+    "WCP-001": {
+      "prototype_class": "burned",
+      "valid_pixels": 4096,
+      "excluded_pixels": 0,
+      "rbr_positive_pixels": 3536,
+      "unet_diagnostic_positive_pixels": 4095,
+      "agreement_pixels": 3535,
+      "rbr_only_positive_pixels": 1,
+      "unet_only_positive_pixels": 560,
+      "rbr_min": -0.02186017856001854,
+      "rbr_max": 0.5072318315505981,
+      "unet_probability_min": 0.498269259929657,
+      "unet_probability_max": 0.6333008408546448
+    },
+    "WCP-002": {
+      "prototype_class": "background",
+      "valid_pixels": 4096,
+      "excluded_pixels": 0,
+      "rbr_positive_pixels": 1669,
+      "unet_diagnostic_positive_pixels": 3206,
+      "agreement_pixels": 1495,
+      "rbr_only_positive_pixels": 532,
+      "unet_only_positive_pixels": 2069,
+      "rbr_min": -0.04154209792613983,
+      "rbr_max": 0.13176590204238892,
+      "unet_probability_min": 0.47677454352378845,
+      "unet_probability_max": 0.623180627822876
+    }
+  },
+  "ignored_run_inventory": {
+    "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+    "file_count": 14,
+    "bytes": 104703,
+    "inventory_format": "case-insensitive sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 1416,
+    "inventory_sha256": "28739c6d14be43d491743d75d70a00a9f0885bd45523dc9649f50ff0c1b86171",
+    "files": [
+      {
+        "path": "ANALYSIS-MANIFEST.json",
+        "bytes": 12244,
+        "sha256": "c969bb10a1a0716ce41bbc7b176c3cb8af498fd5a9821c5122486bca397acfa6"
+      },
+      {
+        "path": "patches/WCP-001/exclusion.npy",
+        "bytes": 4224,
+        "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+      },
+      {
+        "path": "patches/WCP-001/rbr-binary.npy",
+        "bytes": 4224,
+        "sha256": "873effcca85720ca5b77e327f2d86cb7927e1abd689c8d924bd6624f1f075379"
+      },
+      {
+        "path": "patches/WCP-001/rbr-score.npy",
+        "bytes": 16512,
+        "sha256": "0f330d70d7ddd1a1c9cad13d2d252bf610d3d2b2dc521c3e0e0444d85ad0b046"
+      },
+      {
+        "path": "patches/WCP-001/unet-binary-diagnostic.npy",
+        "bytes": 4224,
+        "sha256": "9209ad1a5f35fbf60e7599ffce489ce32c672763e6956a29a7d7671c60c51e36"
+      },
+      {
+        "path": "patches/WCP-001/unet-probability-diagnostic.npy",
+        "bytes": 16512,
+        "sha256": "7a702a3c147b8f04885d6049d59f48d0a75511931ec4a30a3717e5777c90ce33"
+      },
+      {
+        "path": "patches/WCP-002/exclusion.npy",
+        "bytes": 4224,
+        "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+      },
+      {
+        "path": "patches/WCP-002/rbr-binary.npy",
+        "bytes": 4224,
+        "sha256": "3dea50519d39438ede0b0d61c2798468c2b39d8f58082a6751d3bc734ee5e640"
+      },
+      {
+        "path": "patches/WCP-002/rbr-score.npy",
+        "bytes": 16512,
+        "sha256": "65c44dd181ffd65e9f7d314c034152105cc3da78f6aa28f24f0076b5f67ad497"
+      },
+      {
+        "path": "patches/WCP-002/unet-binary-diagnostic.npy",
+        "bytes": 4224,
+        "sha256": "3f0355fc9b90cba2e1ac8770925fef019777704cf708eaff30d1cfae45807433"
+      },
+      {
+        "path": "patches/WCP-002/unet-probability-diagnostic.npy",
+        "bytes": 16512,
+        "sha256": "559bc7949f2764f4b8c176eb4c274fe70f1b39ef050ba493ed4f743f7ffc9564"
+      },
+      {
+        "path": "RUN-COMPLETE.json",
+        "bytes": 398,
+        "sha256": "b20c8758e343ebe4dee2ba7e30d9dce4e213a1248bcc7e6e369fd2e9b4f292a3"
+      },
+      {
+        "path": "RUN-STARTED.json",
+        "bytes": 254,
+        "sha256": "6a45ea2b2eb845e547e3d0c7c014897beb072df2df10eec23c11495f8bb15e55"
+      },
+      {
+        "path": "STATUS.json",
+        "bytes": 415,
+        "sha256": "6e8da3e8ef72604eaf3a63ce0a9e1522cbb26e029fbd9c3c16663237119d56db"
+      }
+    ]
+  },
+  "independent_validation": {
+    "validated_at_utc": "2026-07-26T17:25:03Z",
+    "rbr_recomputed_from_bound_features": true,
+    "rbr_arrays_exact": true,
+    "unet_probability_arrays_exact_to_phase_three": true,
+    "unet_binary_arrays_exact_to_phase_three": true,
+    "exclusion_arrays_exact_to_input_valid": true,
+    "manifest_receipts_exact": true,
+    "focused_tests": "8 passed",
+    "git_worktree_clean": true
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "P4O1-T01-U02-DUPLICATE-R002",
+      "disposition": "retained-no-overwrite-refusal",
+      "exit_code": 1,
+      "error": "run already exists",
+      "preexisting_file_count": 14,
+      "postattempt_file_count": 14,
+      "preexisting_bytes_changed": false
+    }
+  ],
+  "gates": {
+    "frozen_contract_and_inputs": "pass",
+    "RBR_formula_and_threshold": "pass",
+    "model_weights_and_threshold": "pass",
+    "normalization_and_channel_order": "pass",
+    "shape_dtype_finite_domain": "pass",
+    "invalid_and_exclusion_semantics": "pass",
+    "deterministic_outputs": "pass",
+    "Phase_Three_diagnostic_identity": "pass",
+    "no_overwrite": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "geospatial_products": "pending U03"
+  },
+  "boundaries": {
+    "accepted_analytical_method": "burnlens-baseline-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "retraining": false,
+    "retuning": false,
+    "model_selection": false,
+    "second_model_test_opening_for_selection": false,
+    "source_test_role_arrays_read_for_fixed_integration": true,
+    "dataset_changed": false,
+    "split_changed": false,
+    "label_changed": false,
+    "aoi_changed": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "context_source_used": false,
+    "geospatial_product_accepted": false,
+    "deployment": false,
+    "official_operational_or_emergency_claim": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U03 geospatial products"
+}

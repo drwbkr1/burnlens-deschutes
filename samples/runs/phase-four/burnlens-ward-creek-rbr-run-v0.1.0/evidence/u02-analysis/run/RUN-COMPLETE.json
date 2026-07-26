@@ -1,0 +1,10 @@
+{
+  "attempt_version": "burnlens-phase-four-attempt-v0.1.0",
+  "generated_at_utc": "2026-07-26T17:23:34Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+  "git_source_commit": "cf67113dbae0e05dd034b0cca5d2a98f2a4bfb9f",
+  "status": "COMPLETE",
+  "state": "accepted-baseline",
+  "output_count": 12,
+  "manifest_sha256": "c969bb10a1a0716ce41bbc7b176c3cb8af498fd5a9821c5122486bca397acfa6"
+}

@@ -1,0 +1,13 @@
+{
+  "status_version": "burnlens-phase-four-package-status-v0.1.0",
+  "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+  "state": "accepted-baseline",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_diagnostic": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "phase_3b_created": false,
+  "second_experiment_planned": false,
+  "deployment": false,
+  "external_requests": false
+}

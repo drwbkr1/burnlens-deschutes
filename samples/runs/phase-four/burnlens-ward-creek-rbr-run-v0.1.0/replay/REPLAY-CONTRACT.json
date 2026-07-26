@@ -1,0 +1,12 @@
+{
+  "replay_contract_version": "burnlens-phase-four-replay-v0.1.0",
+  "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+  "validator": "burnlens-validate-phase-four-package",
+  "required_profile": [
+    "model",
+    "geo-research"
+  ],
+  "expected_result": "PACKAGE_VALIDATION_PASS",
+  "directory_and_archive_validation_required": true,
+  "fresh_environment_required": true
+}
