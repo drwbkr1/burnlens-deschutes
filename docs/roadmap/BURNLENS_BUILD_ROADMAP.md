@@ -37,17 +37,19 @@ The portfolio must prove:
 
 Every artifact should improve the tool, make the method more transparent, strengthen the evidence, or make the portfolio case more defensible.
 
-The August 6 critical path now has a verified offline submission artifact.
-P2O4-T37 / issue #544 / PR #545 ships BurnLens 0.49.0 at merge
-`8d4b81f665a0850b2e173382760b2df96d9c9d20`; annotated tag object
-`f46c73aaaa10fb0e91a4cd6f1e94085f3bf50b72` peels exactly to that merge.
-P2O4-T38 / issue #548 / PR #549 is verified. Its recipient-style audit passes
-exact extraction, rendering, navigation, claims/rights/privacy, and
-comprehension without finding a material bundle defect. Exact main verifies
-the concise owner handoff. No autonomous repository milestone precedes owner
-submission direction because the external destination controls access and
-sharing. Source scouting, scientific evidence, dataset, split, baseline,
-model, deployment, access, and public-sharing work remain closed.
+The August 6 critical path retains a verified offline contingency case-study
+artifact from P2O4-T37/P2O4-T38, but that package is not the intended final
+BurnLens submission. Verified BurnLens 0.52.0 supplies the accepted prototype
+dataset, whole-event split, independent QA, RBR baseline, and model-readiness
+decision. P3O1-T01 / issue #566 then trains, evaluates once, and exactly
+reproduces the bounded U-Net. The model predicts all 89 selected test cores as
+burned and is rejected against RBR, so Phase Four must use RBR as the primary
+analytical route and show the frozen U-Net only as a visibly rejected
+diagnostic. The active critical path is the coherent Phase Three release,
+followed by the smallest valid georeferenced baseline run and repository-owned
+evidence interface. External submission and public-sharing remain closed until
+the minimum model-bearing GEOINT threshold passes or the owner explicitly
+authorizes the contingency route.
 
 ## Non-negotiable boundaries
 

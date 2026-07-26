@@ -196,3 +196,19 @@ contracts to Phase Three JSON, Markdown, and the Phase Three objective before
 generating the reviewer artifact. This is a portability correction only: it
 does not reopen training, evaluation, the one test opening, or the rejected
 model decision.
+
+## 2026-07-26 — make the model failure legible in one reviewer path
+
+The updated reviewer page no longer stops at model readiness. It puts the exact
+trained result beside RBR: 0.299 macro Dice against 1.000, all 89 selected test
+cores predicted burned, and a large `VALID REJECTED MODEL` label. The model
+card and decision remain one click away, while the same page carries the Petes
+Lake stop and exact lineage.
+
+This is the product value of the checkpoint. A reviewer can see that BurnLens
+completed the model experiment without being asked to mistake completion for
+success. The exact JSON and HTML replay byte for byte, the real desktop and
+narrow pages remain contained, every repository destination resolves, and no
+external resource loads. The next user-visible weakness is now clear rather
+than hidden: BurnLens still needs a georeferenced RBR-primary analytical run
+and application path.

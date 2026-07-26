@@ -571,19 +571,34 @@ correctly.
 This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
 
-P2O5-T03 updates that repository-owned path without rewriting the verified
-historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html)
+P2O5-T03 updated that repository-owned path without rewriting earlier verified
+pages. The historical
+[`2026-005` reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html)
 binds the accepted dataset, whole-event split, baseline, and model-readiness
-evidence while keeping model version null and the retained Petes Lake failure
-visible. BurnLens 0.52.0 verifies that exact handoff through merged-main
-regression, exact replay, deterministic packaging, and an annotated tag. It is
-not a trained-model result or a deployed application.
+evidence while keeping model version null. BurnLens 0.52.0 verifies that exact
+Phase Two handoff through merged-main regression, exact replay, deterministic
+packaging, and an annotated tag.
 
-Lifecycle run `BL-2026-07-25-v052-lifecycle-portfolio-r001` creates the
-current `2026-005` page from source `b52c9c2...`. Its 7,668-byte JSON and
-16,341-byte HTML bind the verified release commit and annotated-tag object
-directly while keeping model version null. The `2026-004` page remains
-unchanged candidate-era evidence.
+P3O1-T01 creates the
+[current candidate reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html)
+from exact remote-equal source
+`5cbf32f43fdaa2830bb26f2177db3b7112384b5d`. Run
+`BL-2026-07-26-p3o1-t01-u06-portfolio-r001` binds the trained, evaluated, and
+reproduced U-Net beside the frozen RBR result and keeps the Petes Lake stop
+visible. Its 9,859-byte JSON has SHA-256
+`9c536bc374007723f66a8f36000a7848bb1fd038dd76ea8bcdb702b4fad851c0`;
+its 18,256-byte HTML has SHA-256
+`ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9`.
+Both outputs replay byte for byte. Desktop and 390-by-844 browser checks have
+no document overflow, both evidence images load at native dimensions, all ten
+repository-file links return HTTP 200, all six fragment targets exist, and
+browser logs and external resources remain empty.
+
+The page does not turn reproducibility into model acceptance. It says the
+U-Net predicts all 89 selected test cores as burned, scores 0.299 macro Dice
+against RBR 1.000, and is rejected as the analytical winner. No georeferenced
+inference, integrated application, deployment, generalization, operational,
+emergency, official, field-validated, or final-submission-ready claim advances.
 
 ### One extract-and-open submission
 
@@ -640,7 +655,7 @@ External submission remains an owner action.
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
-- Latest portfolio reviewer run: `BL-2026-07-24-portfolio-reviewer-experience-r002`; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; verified BurnLens 0.48.0; merge `05140217066277b254e78abb74cd8f61295449d0`; exact JSON/HTML replay, real render, fresh-main suite, canonical package, isolated install, and remote tag peel pass
+- Latest portfolio reviewer run: candidate `BL-2026-07-26-p3o1-t01-u06-portfolio-r001`; source `5cbf32f43fdaa2830bb26f2177db3b7112384b5d`; BurnLens 0.53.0 candidate; exact 9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`; byte-identical replay, desktop/narrow render, images, links, fragments, claim boundaries, and zero-external-resource checks pass; PR, merge, fresh-main, package/install, and annotated tag remain
 - Latest submission-bundle run: `BL-2026-07-24-august6-submission-bundle-r002`; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; verified BurnLens 0.49.0; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; ZIP `3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`; receipt `08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`; exact replay, real render, fresh-main suite, reproducible package, isolated install, and remote tag peel pass
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`

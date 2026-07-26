@@ -1,0 +1,109 @@
+{
+  "schema_version": "phase-three-portfolio-reviewer-record-v0.1.0",
+  "record_id": "PHASE-THREE-PORTFOLIO-REVIEWER-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T03:35:54Z",
+  "issue": 566,
+  "milestone_id": "P3O1-T01",
+  "unit_id": "P3O1-T01-U06-PORTFOLIO-R001",
+  "run_id": "BL-2026-07-26-p3o1-t01-u06-portfolio-r001",
+  "source_commit": "5cbf32f43fdaa2830bb26f2177db3b7112384b5d",
+  "source_state": "pushed-remote-equal-clean-before-generation",
+  "software_version": "0.53.0",
+  "report_id": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006",
+  "report_version": "portfolio-reviewer-experience-v0.4.0",
+  "decision": "PRESENT_PHASE_THREE_REJECTED_MODEL_BASELINE_HANDOFF",
+  "model_version": "burnlens-unet-binary-v0.1.0",
+  "model_status": "valid-trained-evaluated-rejected-model",
+  "model_package": "burnlens-unet-rejected-package-v0.1.1",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "phase_four_route": "baseline-primary-with-rejected-model-diagnostic",
+  "outputs": [
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.json",
+      "bytes": 9859,
+      "sha256": "9c536bc374007723f66a8f36000a7848bb1fd038dd76ea8bcdb702b4fad851c0"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html",
+      "bytes": 18256,
+      "sha256": "ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9"
+    }
+  ],
+  "deterministic_replay": {
+    "run_root": "runs/phase-three/BL-2026-07-26-p3o1-t01-u06-portfolio-replay-r001",
+    "custody": "repository-local-ignored",
+    "same_timestamp_run_and_source": true,
+    "json_exact": true,
+    "html_exact": true,
+    "overwrite_attempted": false
+  },
+  "render_verification": {
+    "route": "repository-local-http",
+    "desktop": {
+      "viewport_width": 1280,
+      "viewport_height": 720,
+      "document_client_width": 1265,
+      "document_scroll_width": 1265,
+      "document_scroll_height": 5286,
+      "overflow": false
+    },
+    "narrow": {
+      "viewport_width": 390,
+      "viewport_height": 844,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "document_scroll_height": 8373,
+      "overflow": false,
+      "intentional_off_canvas_element": "unfocused-skip-link-only"
+    },
+    "loaded_images": [
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+        "natural_width": 1800,
+        "natural_height": 1120,
+        "complete": true
+      },
+      {
+        "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+        "natural_width": 1800,
+        "natural_height": 1240,
+        "complete": true
+      }
+    ],
+    "fragment_targets": {
+      "checked": 6,
+      "passed": 6
+    },
+    "repository_file_links": {
+      "checked": 10,
+      "http_200": 10
+    },
+    "step_navigation": {
+      "result_hash": "#result",
+      "trace_hash": "#trace",
+      "targets_visible": true
+    },
+    "browser_logs": [],
+    "external_resources": []
+  },
+  "claim_gates": {
+    "trained_evaluated_reproduced": true,
+    "analytical_winner": false,
+    "model_accepted": false,
+    "model_released_as_analytical_method": false,
+    "rbr_primary": true,
+    "ground_truth": false,
+    "generalization": false,
+    "georeferenced_inference": false,
+    "integrated_application": false,
+    "deployed": false,
+    "official": false,
+    "endorsed": false,
+    "field_validated": false,
+    "operational": false,
+    "emergency_ready": false,
+    "final_submission_ready": false
+  },
+  "disposition": "pass-candidate-pr-release-pending",
+  "next_dependency": "coherent-milestone-pr-full-regression-package-install-merge-fresh-main-annotated-tag"
+}

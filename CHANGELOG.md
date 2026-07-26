@@ -24,6 +24,10 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Update the repository-owned reviewer experience and case study without
   claiming model acceptance, added value, generalization, georeferenced
   inference, deployment, or final-submission readiness.
+- Generate the exact `2026-006` reviewer JSON/HTML from remote-equal source
+  `5cbf32f...`; replay both outputs byte for byte and verify desktop/narrow
+  rendering, images, links, fragments, browser logs, and zero external
+  resources.
 
 Issue #566; substantive training
 `BL-2026-07-25-p3o1-t01-u04-training-r001`; one-time model test
@@ -32,6 +36,8 @@ Issue #566; substantive training
 `90ab4ab42d6ceb11c2987efb0b737c016712cea8`; eight files / 583,992
 bytes / inventory SHA-256
 `ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438`.
+Portfolio run `BL-2026-07-26-p3o1-t01-u06-portfolio-r001` produces exact
+9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`.
 Coherent PR, full regression, deterministic package/install, merge,
 fresh-main, and annotated-tag gates remain.
 
