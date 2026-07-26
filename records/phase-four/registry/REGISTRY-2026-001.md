@@ -33,6 +33,8 @@ from PR #569.
 | `P4O1-T01-U06-IAB-FILE-R001` | retained browser-transport attempt | Direct local file navigation | Empty security-policy page; no application defect inferred. `retained-browser-transport-block`. | Loopback transport |
 | `P4O1-T01-U06-IAB-LOOPBACK-R001` | retained browser-transport attempt | Temporary loopback URL | In-app browser returns `ERR_BLOCKED_BY_CLIENT`; no application defect inferred. `retained-browser-transport-block`. | System-Chrome local QA |
 | `P4O1-T01-U06-DUPLICATE-R003` | retained no-overwrite attempt | Existing accepted U06 output directory | Duplicate invocation exits 1 with `refusing to overwrite nonempty output directory`; both accepted hashes remain exact. `retained-no-overwrite-refusal`. | U07 |
+| `P4O1-T01-U07-PACKAGE-R001` | run `BL-2026-07-26-p4o1-t01-u07-package-r001`; source `733a3c2...`; portability `25926b2...` | 66 extracted files / 1,795,388 bytes; ZIP 487,893 bytes / `91308a2f...`; manifest `b15f5d00...`; checksums `eb08e659...`; receipt `e2c80230...` | Both tracked forms validate; a fresh locked detached checkout reproduces the ZIP byte-identically, renders the packaged interface at desktop and narrow widths, and passes contract/compile/JSON/privacy/claim gates. The naive custody-dependent builder suite retains `11 passed, 1 failed, 18 errors` because ignored U02-U05 custody is correctly absent; no application/package defect is inferred. U07 `pass`. | U08 milestone release and portfolio handoff |
+| `P4O1-T01-U07-DUPLICATE-R002` | retained no-overwrite attempt | Existing extracted directory, ZIP, receipt, manifest, and checksums | Duplicate invocation exits 1 with `refusing to overwrite nonempty extracted directory`; all four tracked hashes remain unchanged. `retained-no-overwrite-refusal`. | U08 |
 
 ## Current truth
 
@@ -45,7 +47,7 @@ from PR #569.
 - Existing Phase Two and Phase Three artifacts are read-only inputs.
 - No Phase 3B, second experiment, new label, dataset, split, AOI, threshold,
   provider transaction, deployment, or public-sharing change exists through
-  U05.
+  U07.
 - U01 is complete at the independently verified `f43907f...` checkpoint; its
   next eligible dependency is U02.
 - U02 is complete at source `cf67113...` and run
@@ -66,7 +68,12 @@ from PR #569.
   `BL-2026-07-26-p4o1-t01-u06-interface-r002`. Its tracked self-contained
   interface passes real desktop and narrow interaction, accessibility,
   privacy, claims, offline, and exact-replay gates. R001 remains a visible
-  failed render-QA attempt. U07 is eligible.
+  failed render-QA attempt.
+- U07 is complete at source `733a3c2...`, portability commit `25926b2...`,
+  and run `BL-2026-07-26-p4o1-t01-u07-package-r001`. The 66-file extracted
+  package and exact ZIP validate and reproduce byte-identically in a clean
+  detached checkout. Its packaged interface passes desktop and narrow render
+  and interaction. U08 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
