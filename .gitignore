@@ -214,6 +214,10 @@ tempCodeRunnerFile.py
 # PyPI configuration file
 .pypirc
 
+# Repository-local Phase Three substantive run state. Controlled candidate
+# artifacts are promoted separately under samples/models/.
+runs/phase-three/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/
