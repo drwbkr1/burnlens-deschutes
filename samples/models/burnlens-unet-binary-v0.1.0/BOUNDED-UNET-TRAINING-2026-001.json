@@ -1,0 +1,327 @@
+{
+  "training_version": "burnlens-bounded-unet-training-v0.1.0",
+  "training_id": "BOUNDED-UNET-TRAINING-2026-001",
+  "generated_at_utc": "2026-07-26T01:36:46Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u04-training-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U04",
+  "git_source_commit": "5179a745f091c29d095461d511633f055967ef91",
+  "software_version": "0.52.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "protocol": {
+    "path": "records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json",
+    "bytes": 12308,
+    "sha256": "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6",
+    "source_commit": "fbb2e923ae7f9ca9ed7dbb317e4235a236ae2411"
+  },
+  "environment_capture": {
+    "path": "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json",
+    "bytes": 8146,
+    "sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+  },
+  "architecture": {
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "family": "U-Net-style binary semantic segmentation",
+    "input_shape": [
+      6,
+      64,
+      64
+    ],
+    "encoder_channels": [
+      16,
+      32
+    ],
+    "bottleneck_channels": 64,
+    "decoder_channels": [
+      32,
+      16
+    ],
+    "output_channels": 1,
+    "batch_normalization": false,
+    "dropout": false,
+    "pretrained_weights": false,
+    "trainable_parameter_count": 117473
+  },
+  "optimization": {
+    "framework": "torch==2.13.0",
+    "python": "CPython 3.12.10",
+    "device": "cpu",
+    "dtype": "float32",
+    "seed": 20260725,
+    "seed_python": true,
+    "seed_numpy": true,
+    "seed_torch": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "loss": "BCEWithLogitsLoss(reduction='none')",
+    "loss_reduction": "mean over exact loss-mask pixels only",
+    "positive_class_weight": null,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 4,
+    "maximum_epochs": 200,
+    "early_stopping_patience": 25,
+    "early_stopping_min_delta": 1e-06,
+    "gradient_clipping": null,
+    "mixed_precision": false,
+    "num_workers": 0,
+    "intra_op_threads": 1,
+    "interop_threads": 1
+  },
+  "training": {
+    "substantive_run_count": 1,
+    "epoch_count": 35,
+    "final_epoch": 35,
+    "stopped_early": true,
+    "duration_seconds": 18.76287959999172,
+    "history": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-HISTORY-2026-001.json",
+      "bytes": 112949,
+      "sha256": "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8"
+    },
+    "roster": {
+      "train_patch_ids": [
+        "train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64",
+        "train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64",
+        "train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64",
+        "train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64"
+      ],
+      "train_event_group_ids": [
+        "event-green-ridge-0684-cs-2020",
+        "event-tepee-1144-ne-2018"
+      ],
+      "train_core_pixels": 109,
+      "validation_patch_ids": [
+        "validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64",
+        "validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64",
+        "validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64",
+        "validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64"
+      ],
+      "validation_event_group_ids": [
+        "event-grandview-0558-od-2021",
+        "event-mckay-1035-ne-2017"
+      ],
+      "validation_core_pixels": 89,
+      "test_patch_ids_opened": [],
+      "test_event_group_ids_opened": []
+    },
+    "environment": {
+      "torch": "2.13.0+cpu",
+      "device": "cpu",
+      "seed": 20260725,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false,
+      "threads": 1,
+      "interop_threads": 1
+    }
+  },
+  "selection": {
+    "selection_version": "burnlens-bounded-unet-checkpoint-selection-v0.1.0",
+    "selection_id": "BOUNDED-UNET-CHECKPOINT-SELECTION-2026-001",
+    "run_id": "BL-2026-07-25-p3o1-t01-u04-training-r001",
+    "git_source_commit": "5179a745f091c29d095461d511633f055967ef91",
+    "rule": [
+      "maximize validation event-class macro Dice",
+      "maximize validation event-class macro IoU",
+      "minimize validation masked BCE",
+      "earliest epoch"
+    ],
+    "selected_epoch": 10,
+    "selected_train_masked_bce": 0.6315077543258667,
+    "validation": {
+      "event_count": 2,
+      "core_pixels": 89,
+      "masked_bce": 0.6219634259684702,
+      "event_class_macro_dice": 0.7253521126760564,
+      "event_class_macro_iou": 0.7051282051282051,
+      "worst_event_macro_dice": 0.4507042253521127,
+      "events": [
+        {
+          "event_group_id": "event-grandview-0558-od-2021",
+          "patch_count": 2,
+          "masked_bce": 0.6708055138587952,
+          "threshold": 0.5,
+          "core_pixels": 50,
+          "classes": [
+            {
+              "class": "background",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            },
+            {
+              "class": "burned",
+              "support": 25,
+              "predicted": 25,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0,
+              "dice_denominator": 50,
+              "iou_denominator": 25,
+              "dice": 1.0,
+              "iou": 1.0
+            }
+          ],
+          "class_macro_dice": 1.0,
+          "class_macro_iou": 1.0
+        },
+        {
+          "event_group_id": "event-mckay-1035-ne-2017",
+          "patch_count": 2,
+          "masked_bce": 0.5593453645706177,
+          "threshold": 0.5,
+          "core_pixels": 39,
+          "classes": [
+            {
+              "class": "background",
+              "support": 7,
+              "predicted": 0,
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 7,
+              "dice_denominator": 7,
+              "iou_denominator": 7,
+              "dice": 0.0,
+              "iou": 0.0
+            },
+            {
+              "class": "burned",
+              "support": 32,
+              "predicted": 39,
+              "true_positive": 32,
+              "false_positive": 7,
+              "false_negative": 0,
+              "dice_denominator": 71,
+              "iou_denominator": 39,
+              "dice": 0.9014084507042254,
+              "iou": 0.8205128205128205
+            }
+          ],
+          "class_macro_dice": 0.4507042253521127,
+          "class_macro_iou": 0.41025641025641024
+        }
+      ]
+    },
+    "early_stopping": {
+      "best_epoch": 10,
+      "best_event_class_macro_dice": 0.7253521126760564,
+      "best_event_class_macro_iou": 0.7051282051282051,
+      "best_masked_bce": 0.6219634259684702,
+      "epochs_without_improvement": 0
+    },
+    "weights": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    "selected_checkpoint": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/selected-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "5c867cda6fc41d1105330e6bc9af87286e16f4db3bbc5fbd99e40e714a90dd4c"
+    },
+    "final_checkpoint": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/final-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "6ba5d90f76bcb5e9c6ae54d5d0c8b0d836417bd83ed848dcaa8335c356bc4cc3"
+    },
+    "test_arrays_opened": false,
+    "test_open_count": 0,
+    "record": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/CHECKPOINT-SELECTION-2026-001.json",
+      "bytes": 3683,
+      "sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+    }
+  },
+  "config": {
+    "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-CONFIG-2026-001.json",
+    "bytes": 12238,
+    "sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+  },
+  "warnings": [
+    "Validation selection is not a locked-test evaluation.",
+    "The frozen RBR baseline remains at the selected-core metric ceiling.",
+    "Owner-approved prototype labels are not independent ground truth or field validation."
+  ],
+  "gates": {
+    "protocol_bound": true,
+    "environment_bound": true,
+    "one_substantive_run": true,
+    "train_and_validation_only": true,
+    "test_arrays_opened": false,
+    "finite": true,
+    "exact_loss_mask": true,
+    "complete_epoch_history": true,
+    "validation_only_selection": true,
+    "selected_checkpoint_reload": true,
+    "weights_reload": true,
+    "atomic_candidate_promotion": true,
+    "render_required": true
+  },
+  "boundaries": {
+    "test_arrays_opened": false,
+    "test_open_count": 0,
+    "test_metrics_created": false,
+    "architecture_or_hyperparameter_search": false,
+    "second_model": false,
+    "dataset_split_label_normalization_or_baseline_changed": false,
+    "model_value_claim": false,
+    "inference_or_deployment": false,
+    "final_submission_ready": false
+  },
+  "disposition": "candidate-frozen-pending-one-test-opening",
+  "next_dependency": "P3O1-T01-U05 exact authorization-bound single test opening after U04 evidence is committed and pushed",
+  "outputs": {
+    "config": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-CONFIG-2026-001.json",
+      "bytes": 12238,
+      "sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+    },
+    "history": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-HISTORY-2026-001.json",
+      "bytes": 112949,
+      "sha256": "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8"
+    },
+    "selection": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/CHECKPOINT-SELECTION-2026-001.json",
+      "bytes": 3683,
+      "sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+    },
+    "weights": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    "selected_checkpoint": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/selected-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "5c867cda6fc41d1105330e6bc9af87286e16f4db3bbc5fbd99e40e714a90dd4c"
+    },
+    "final_checkpoint": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/final-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "6ba5d90f76bcb5e9c6ae54d5d0c8b0d836417bd83ed848dcaa8335c356bc4cc3"
+    },
+    "html": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "bytes": 8176,
+      "sha256": "92ee0952fe1f82b5350919593120132a5ed6c7690e2fd08fc781750af608296b"
+    },
+    "png": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.png",
+      "bytes": 80920,
+      "sha256": "a781271cccbc17bda35fa5e5a07bf9af0cc965c5938cd0733b47fe80acb372f6"
+    }
+  }
+}

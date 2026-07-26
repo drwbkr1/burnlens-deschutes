@@ -2,6 +2,45 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.53.0-bounded-unet-rejected-model - release candidate - 2026-07-25
+
+- Lock one exact CPU-only U-Net environment, implementation, and experiment
+  protocol before substantive training.
+- Run one 35-epoch experiment, select epoch 10 from validation only, and
+  preserve the McKay all-burned validation failure.
+- Consume the Ward Creek/Windigo model test opening once; report all 89
+  selected cores predicted burned, macro Dice `0.29874213836477986`, macro IoU
+  `0.21474358974358976`, and worst-event Dice `0.2641509433962264`.
+- Reject the model as the analytical winner against frozen RBR's 1.0 while
+  preserving it as a valid trained/evaluated artifact.
+- Reproduce all 35 history rows and exact 479,573-byte weights without
+  reopening test source arrays.
+- Create `burnlens-unet-rejected-package-v0.1.1` with a model card, inference
+  contract, decision render, 15 exact lineage bindings, and a
+  `baseline-primary-with-rejected-model-diagnostic` Phase Four handoff.
+- Retain the first implicit-lineage package, one premature timeout, one
+  duplicate-launch receipt, and the final package-exists refusal as failed
+  evidence.
+- Update the repository-owned reviewer experience and case study without
+  claiming model acceptance, added value, generalization, georeferenced
+  inference, deployment, or final-submission readiness.
+- Generate the exact `2026-006` reviewer JSON/HTML from remote-equal source
+  `5cbf32f...`; replay both outputs byte for byte and verify desktop/narrow
+  rendering, images, links, fragments, browser logs, and zero external
+  resources.
+
+Issue #566; substantive training
+`BL-2026-07-25-p3o1-t01-u04-training-r001`; one-time model test
+`BL-2026-07-25-p3o1-t01-u05-test-r001`; accepted replay/package
+`BL-2026-07-25-p3o1-t01-u06-replay-r003`; package source
+`90ab4ab42d6ceb11c2987efb0b737c016712cea8`; eight files / 583,992
+bytes / inventory SHA-256
+`ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438`.
+Portfolio run `BL-2026-07-26-p3o1-t01-u06-portfolio-r001` produces exact
+9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`.
+Coherent PR, full regression, deterministic package/install, merge,
+fresh-main, and annotated-tag gates remain.
+
 ## v0.52.0-dataset-baseline-model-readiness - verified - 2026-07-25
 
 - Accept `burnlens-dataset-v0.1.0`: 12 native-grid 64-by-64 patches, 287 selected cores, and 531 excluded unknown-ring pixels across six whole events.

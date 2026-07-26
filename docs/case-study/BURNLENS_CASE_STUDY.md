@@ -512,6 +512,42 @@ architecture search, augmentation, test tuning, or second model. Matching the
 perfect baseline is a valid trained result but not added value; a weaker or
 invalid model is rejected and RBR remains the analytical choice.
 
+## Phase Three model: reproducible, evaluated, and rejected
+
+P3O1-T01 executes that contract without broadening it. The model is a
+117,473-parameter, six-channel U-Net trained on Green Ridge and Tepee and
+selected from Grandview and McKay validation evidence. One substantive
+35-epoch CPU run selects epoch 10 before Ward Creek and Windigo are opened.
+The validation aggregate looks promising, but McKay already exposes an
+all-burned failure that the portfolio keeps visible.
+
+The one authorization-bound test opening confirms the weakness. The model
+predicts all 89 selected cores as burned: 39 burned and 50 background. Its
+event-class macro Dice is `0.29874213836477986`, macro IoU
+`0.21474358974358976`, and worst-event Dice `0.2641509433962264`, versus RBR
+`1.0` on all three measures. The threshold remains 0.5, the probabilities are
+descriptive rather than calibrated confidence, and no retry or test tuning is
+authorized.
+
+![Phase Three model decision](../../samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png)
+
+U06 then repeats all 35 train/validation history rows and reproduces the exact
+479,573-byte weights at SHA-256 `703d9257...`. It verifies the immutable U05
+prediction evidence without reopening source test arrays. The first package
+attempt remains a traceability failure because its manifest left lineage hops
+implicit. Corrected `burnlens-unet-rejected-package-v0.1.1` binds 15 exact
+inputs from software and AOI through config, environment, authorization,
+evaluation, and baseline. Its eight files total 583,992 bytes at canonical
+inventory SHA-256 `ce39c41c...`.
+
+The decision is `reject-model-retain-baseline`. This is not a hidden failure:
+BurnLens now has a valid trained, evaluated, and reproducible model artifact,
+but it does not claim that artifact adds analytical value. Phase Four should
+use RBR for the georeferenced analytical raster and display the frozen U-Net
+probability/error output only as a visibly rejected diagnostic. No
+georeferenced inference, generalization, independent ground truth, field
+validation, operational readiness, or final-submission-ready claim exists.
+
 ## A reviewer path through the evidence
 
 BurnLens originally made reviewers assemble the story across many correct but
@@ -535,19 +571,34 @@ correctly.
 This improves portfolio clarity only. It does not change source evidence,
 owner decisions, labels, scientific state, or use boundaries.
 
-P2O5-T03 updates that repository-owned path without rewriting the verified
-historical page. [The current reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html)
+P2O5-T03 updated that repository-owned path without rewriting earlier verified
+pages. The historical
+[`2026-005` reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html)
 binds the accepted dataset, whole-event split, baseline, and model-readiness
-evidence while keeping model version null and the retained Petes Lake failure
-visible. BurnLens 0.52.0 verifies that exact handoff through merged-main
-regression, exact replay, deterministic packaging, and an annotated tag. It is
-not a trained-model result or a deployed application.
+evidence while keeping model version null. BurnLens 0.52.0 verifies that exact
+Phase Two handoff through merged-main regression, exact replay, deterministic
+packaging, and an annotated tag.
 
-Lifecycle run `BL-2026-07-25-v052-lifecycle-portfolio-r001` creates the
-current `2026-005` page from source `b52c9c2...`. Its 7,668-byte JSON and
-16,341-byte HTML bind the verified release commit and annotated-tag object
-directly while keeping model version null. The `2026-004` page remains
-unchanged candidate-era evidence.
+P3O1-T01 creates the
+[current candidate reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html)
+from exact remote-equal source
+`5cbf32f43fdaa2830bb26f2177db3b7112384b5d`. Run
+`BL-2026-07-26-p3o1-t01-u06-portfolio-r001` binds the trained, evaluated, and
+reproduced U-Net beside the frozen RBR result and keeps the Petes Lake stop
+visible. Its 9,859-byte JSON has SHA-256
+`9c536bc374007723f66a8f36000a7848bb1fd038dd76ea8bcdb702b4fad851c0`;
+its 18,256-byte HTML has SHA-256
+`ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9`.
+Both outputs replay byte for byte. Desktop and 390-by-844 browser checks have
+no document overflow, both evidence images load at native dimensions, all ten
+repository-file links return HTTP 200, all six fragment targets exist, and
+browser logs and external resources remain empty.
+
+The page does not turn reproducibility into model acceptance. It says the
+U-Net predicts all 89 selected test cores as burned, scores 0.299 macro Dice
+against RBR 1.000, and is rejected as the analytical winner. No georeferenced
+inference, integrated application, deployment, generalization, operational,
+emergency, official, field-validated, or final-submission-ready claim advances.
 
 ### One extract-and-open submission
 
@@ -588,7 +639,9 @@ External submission remains an owner action.
 - Current dataset: `burnlens-dataset-v0.1.0`; manifest SHA-256 `e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16`
 - Current split: `burnlens-whole-event-split-v0.1.0`; manifest SHA-256 `a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99`
 - Current baseline: `burnlens-baseline-v0.1.0`; run `BL-2026-07-25-p2o5-t03-u05-baseline-r003`; JSON SHA-256 `a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221`
-- Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`; model version null
+- Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`
+- Current model artifact: `burnlens-unet-binary-v0.1.0`; training `BL-2026-07-25-p3o1-t01-u04-training-r001`; one-time test `BL-2026-07-25-p3o1-t01-u05-test-r001`; exact replay/package `BL-2026-07-25-p3o1-t01-u06-replay-r003`; weights SHA-256 `703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334`; status `valid-trained-evaluated-rejected-model`
+- Current model package: `burnlens-unet-rejected-package-v0.1.1`; manifest SHA-256 `6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441`; inventory SHA-256 `ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438`; accepted analytical model remains null
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Target-decision evidence run: `BL-2026-07-14-target-decision-r002`
@@ -602,7 +655,7 @@ External submission remains an owner action.
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
-- Latest portfolio reviewer run: `BL-2026-07-24-portfolio-reviewer-experience-r002`; source `7ffb8ce74350c34f60c36765e194a2aab29dbcd9`; verified BurnLens 0.48.0; merge `05140217066277b254e78abb74cd8f61295449d0`; exact JSON/HTML replay, real render, fresh-main suite, canonical package, isolated install, and remote tag peel pass
+- Latest portfolio reviewer run: candidate `BL-2026-07-26-p3o1-t01-u06-portfolio-r001`; source `5cbf32f43fdaa2830bb26f2177db3b7112384b5d`; BurnLens 0.53.0 candidate; exact 9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`; byte-identical replay, desktop/narrow render, images, links, fragments, claim boundaries, and zero-external-resource checks pass; PR, merge, fresh-main, package/install, and annotated tag remain
 - Latest submission-bundle run: `BL-2026-07-24-august6-submission-bundle-r002`; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; verified BurnLens 0.49.0; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; ZIP `3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`; receipt `08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`; exact replay, real render, fresh-main suite, reproducible package, isolated install, and remote tag peel pass
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`

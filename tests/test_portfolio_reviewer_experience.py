@@ -29,8 +29,12 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         )
 
     def test_version_and_exact_inputs(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.52.0")
-        self.assertEqual(self.report["software_version"], "0.52.0")
+        self.assertEqual(burnlens.__version__, "0.53.0")
+        self.assertEqual(self.report["software_version"], "0.53.0")
+        self.assertEqual(
+            self.report["checkpoint_status"],
+            "candidate-pr-release-pending",
+        )
         self.assertEqual(
             self.report["release_tag"],
             "v0.52.0-dataset-baseline-model-readiness",
@@ -75,7 +79,23 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         self.assertEqual(
             self.report["baseline_version"], "burnlens-baseline-v0.1.0"
         )
-        self.assertIsNone(self.report["model_version"])
+        self.assertEqual(
+            self.report["model_version"],
+            "burnlens-unet-binary-v0.1.0",
+        )
+        self.assertEqual(
+            self.report["model_status"],
+            "valid-trained-evaluated-rejected-model",
+        )
+        self.assertEqual(
+            self.report["model_package_version"],
+            "burnlens-unet-rejected-package-v0.1.1",
+        )
+        self.assertEqual(
+            self.report["metrics"]["model_test_event_class_macro_dice"],
+            0.29874213836477986,
+        )
+        self.assertEqual(self.report["metrics"]["model_test_open_count"], 1)
         self.assertEqual(
             self.report["retained_failure"]["preview_path"],
             (
@@ -102,7 +122,8 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             "not independent ground truth",
             "twelve 64 by 64",
             "may favor the measured spectral separability",
-            "no model",
+            "valid trained and evaluated",
+            "no georeferenced model inference",
             "not official",
         ):
             self.assertIn(phrase, limitations)
@@ -128,9 +149,11 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
             self.assertIn("@media(max-width:430px)", html)
             self.assertIn("@media(prefers-reduced-motion:reduce)", html)
             self.assertIn(
-                "Verified BurnLens 0.52.0 authorizes the bounded U-Net contract",
+                "One complete model experiment, with an honest rejection.",
                 html,
             )
+            self.assertIn("U-Net 0.299", html)
+            self.assertIn("Valid rejected model", html)
             for image_target in re.findall(r'<img src="([^"]+)"', html):
                 self.assertTrue(image_target.endswith(".png"), image_target)
             self.assertEqual(payload["outputs"][0]["path"], f"{REPORT_ID}.html")

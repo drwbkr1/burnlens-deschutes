@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens bounded U-Net test evaluation</title>
+<style>
+:root{--ink:#17211d;--paper:#f4f0e8;--card:#fff;--green:#23634c;--red:#9a3e32;--line:#d5d0c4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Arial,sans-serif;overflow-x:hidden}
+main{max-width:1180px;margin:auto;padding:42px 24px 72px}h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.02;margin:.2em 0}h2{margin-top:2.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0;overflow-wrap:anywhere}.warn{border-left:7px solid var(--red)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.metric strong{display:block;font-size:1.7rem;color:var(--green)}
+img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}table{border-collapse:collapse;width:100%;min-width:760px}
+th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}code{overflow-wrap:anywhere}a:focus{outline:3px solid var(--green);outline-offset:3px}
+@media(max-width:600px){main{padding:24px 14px 50px}}
+</style></head><body><main id="main">
+<p>BURNLENS / PHASE THREE / ISSUE #566 / U05</p>
+<h1>The first U-Net meets the sealed test once.</h1>
+<div class="card warn">Prototype evidence, not ground truth. Owner-approved cores from two events do not establish field validity, generalization, complete-scar area, or operational readiness. This result cannot be retried or tuned.</div>
+<div class="metrics">
+<div class="card metric">Event-class Dice<strong>0.2987</strong></div>
+<div class="card metric">Event-class IoU<strong>0.2147</strong></div>
+<div class="card metric">Worst event Dice<strong>0.2642</strong></div>
+<div class="card metric">Masked BCE<strong>0.7281</strong></div>
+</div>
+<div class="card"><strong>Baseline comparison: BELOW_RBR_REJECT_AS_ANALYTICAL_WINNER</strong><br>Frozen RBR Dice/IoU/worst-event: 1.0000 / 1.0000 / 1.0000. Model: 0.2987 / 0.2147 / 0.2642. A valid trained result is not automatically added value.</div>
+<h2>Geospatially bound prediction and error evidence</h2>
+<img src="BOUNDED-UNET-TEST-EVALUATION-2026-001.png" width="2100" height="1540" alt="Four Ward Creek and Windigo test patches showing pre and post false color, burned probability, prototype cores, and model errors with CRS and extent annotations">
+<h2>Event results</h2><div class="table-wrap"><table><thead><tr><th>Event</th><th>Cores</th><th>BCE</th><th>Macro Dice</th><th>Macro IoU</th><th>Area difference, pixels</th></tr></thead><tbody><tr><td>event-ward-creek-2019</td><td>39</td><td>0.7636</td><td>0.2642</td><td>0.1795</td><td>25</td></tr><tr><td>event-windigo-2022</td><td>50</td><td>0.7004</td><td>0.3333</td><td>0.2500</td><td>25</td></tr></tbody></table></div>
+<h2>Event and class denominators</h2><div class="table-wrap"><table><thead><tr><th>Event</th><th>Class</th><th>Support</th><th>Predicted</th><th>TP</th><th>FP</th><th>FN</th><th>Dice denominator</th><th>IoU denominator</th><th>Dice</th><th>IoU</th><th>Precision</th><th>Recall</th></tr></thead><tbody><tr><td>event-ward-creek-2019</td><td>background</td><td>25</td><td>0</td><td>0</td><td>0</td><td>25</td><td>25</td><td>25</td><td>0.0000</td><td>0.0000</td><td>undefined</td><td>0.0000</td></tr><tr><td>event-ward-creek-2019</td><td>burned</td><td>14</td><td>39</td><td>14</td><td>25</td><td>0</td><td>53</td><td>39</td><td>0.5283</td><td>0.3590</td><td>0.3590</td><td>1.0000</td></tr><tr><td>event-windigo-2022</td><td>background</td><td>25</td><td>0</td><td>0</td><td>0</td><td>25</td><td>25</td><td>25</td><td>0.0000</td><td>0.0000</td><td>undefined</td><td>0.0000</td></tr><tr><td>event-windigo-2022</td><td>burned</td><td>25</td><td>50</td><td>25</td><td>25</td><td>0</td><td>75</td><td>50</td><td>0.6667</td><td>0.5000</td><td>0.5000</td><td>1.0000</td></tr></tbody></table></div>
+<h2>Frozen threshold sensitivity</h2><div class="card"><p>0.25 and 0.75 are diagnostics only. The operating threshold remains 0.50; no selection or retuning is permitted.</p></div>
+<div class="table-wrap"><table><thead><tr><th>Threshold</th><th>Status</th><th>Predicted burned</th><th>Macro Dice</th><th>Macro IoU</th></tr></thead><tbody><tr><td>0.25</td><td>diagnostic-only-no-selection-or-retuning</td><td>89</td><td>0.3047</td><td>0.2191</td></tr><tr><td>0.50</td><td>frozen-operating-threshold</td><td>89</td><td>0.3047</td><td>0.2191</td></tr><tr><td>0.75</td><td>diagnostic-only-no-selection-or-retuning</td><td>0</td><td>0.3597</td><td>0.2809</td></tr></tbody></table></div>
+<h2>Probability status</h2><div class="card"><strong>descriptive-only-not-calibrated</strong><br>
+Brier score 0.2673; fixed-bin descriptive ECE 0.1532. Two event groups and 89 prototype cores cannot support a calibrated probability or population-calibration claim.</div>
+<h2>Patch lineage</h2><div class="table-wrap"><table><thead><tr><th>Candidate</th><th>Event</th><th>Proposed class</th><th>CRS</th><th>Transform</th><th>Window</th></tr></thead><tbody><tr><td>WCP-001</td><td>event-ward-creek-2019</td><td>burned</td><td>EPSG:32610</td><td>[20.0, 0.0, 667220.0, 0.0, -20.0, 4979800.0]</td><td>{&#x27;row_offset&#x27;: 168, &#x27;column_offset&#x27;: 236, &#x27;height&#x27;: 64, &#x27;width&#x27;: 64}</td></tr><tr><td>WCP-002</td><td>event-ward-creek-2019</td><td>background</td><td>EPSG:32610</td><td>[20.0, 0.0, 670520.0, 0.0, -20.0, 4981800.0]</td><td>{&#x27;row_offset&#x27;: 68, &#x27;column_offset&#x27;: 401, &#x27;height&#x27;: 64, &#x27;width&#x27;: 64}</td></tr><tr><td>WDP-001</td><td>event-windigo-2022</td><td>burned</td><td>EPSG:32610</td><td>[20.0, 0.0, 575560.0, 0.0, -20.0, 4801820.0]</td><td>{&#x27;row_offset&#x27;: 180, &#x27;column_offset&#x27;: 151, &#x27;height&#x27;: 64, &#x27;width&#x27;: 64}</td></tr><tr><td>WDP-002</td><td>event-windigo-2022</td><td>background</td><td>EPSG:32610</td><td>[20.0, 0.0, 580400.0, 0.0, -20.0, 4803360.0]</td><td>{&#x27;row_offset&#x27;: 103, &#x27;column_offset&#x27;: 393, &#x27;height&#x27;: 64, &#x27;width&#x27;: 64}</td></tr></tbody></table></div>
+<h2>Boundary</h2><div class="card"><p>Analytical test-open count: 1. Candidate config, weights, selection, environment, roster, threshold, and code were frozen before opening. No model, threshold, or code retry is authorized.</p><p>This is an evaluated model candidate, not an accepted or released model. U06 must reproduce it exactly and decide whether to package or reject it.</p></div>
+<p>Trace: commit <code>4f71ec7c61ac0ca1b1dcfcd995d1444c9ec00c9e</code> · run <code>BL-2026-07-25-p3o1-t01-u05-test-r001</code> · model <code>burnlens-unet-binary-v0.1.0</code> · dataset <code>burnlens-dataset-v0.1.0</code> · split <code>burnlens-whole-event-split-v0.1.0</code>.</p>
+</main></body></html>

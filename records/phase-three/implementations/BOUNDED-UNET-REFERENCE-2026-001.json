@@ -1,0 +1,169 @@
+{
+  "implementation_record_version": "burnlens-bounded-unet-reference-v0.1.0",
+  "implementation_record_id": "BOUNDED-UNET-REFERENCE-2026-001",
+  "generated_at_utc": "2026-07-26T00:30:03Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u02-reference-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U02",
+  "git_source_commit": "552f47d629f275fc732a36d9d7362b3e3ffc40a8",
+  "git_base_commit": "1328e4423f365a73310c67b7989407612b7dcffa",
+  "software_version": "0.52.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "environment_capture_id": "MODEL-ENVIRONMENT-CAPTURE-2026-001",
+  "exact_outputs": [
+    {
+      "path": "burnlens/bounded_unet.py",
+      "bytes": 23729,
+      "sha256": "36bedaf8846d09e1805fd7cedc951a09d4d4cdbb79cb1453124061f192ebd7b6",
+      "role": "reference implementation"
+    },
+    {
+      "path": "tests/test_bounded_unet.py",
+      "bytes": 11764,
+      "sha256": "d92fbad45b113bf48dd3441c2baaf7d600970625526d2fe9baf301ceae18489e",
+      "role": "repository-safe verification"
+    }
+  ],
+  "architecture": {
+    "family": "U-Net-style binary semantic segmentation",
+    "input_shape": [
+      6,
+      64,
+      64
+    ],
+    "encoder_channels": [
+      16,
+      32
+    ],
+    "bottleneck_channels": 64,
+    "decoder_channels": [
+      32,
+      16
+    ],
+    "output_channels": 1,
+    "conv2d_count": 11,
+    "conv_transpose2d_count": 2,
+    "max_pool2d_count": 2,
+    "trainable_parameter_count": 117473,
+    "batch_normalization": false,
+    "dropout": false,
+    "pretrained_weights": false,
+    "device": "cpu",
+    "dtype": "float32"
+  },
+  "implemented_contract": {
+    "manifest_bound_loader": "Verifies the exact dataset, normalization, and training-contract hashes before loading only requested train/validation patches in canonical manifest order.",
+    "normalization": "Exact frozen train-only per-channel mean and population standard deviation; invalid input pixels are neutralized to zero only after standardization.",
+    "target": "state == 1 as one float32 target channel",
+    "loss_mask": "Exact input_valid AND state in {0,1}; unknown, nodata, invalid, and excluded pixels cannot contribute.",
+    "loss": "BCEWithLogitsLoss reduction none, then mean over the exact nonempty bool mask",
+    "metrics": "Mask-only background/burned confusion counts, supports, predicted counts, Dice and IoU denominators, class-macro Dice and IoU",
+    "optimizer": "Adam, learning rate 0.001, weight decay 0",
+    "determinism": "seed 20260725, Python/NumPy/Torch seeds, deterministic algorithms with warn_only false, one intra-op and one inter-op thread",
+    "finite_checks": [
+      "normalized input",
+      "model input",
+      "logits",
+      "unreduced loss",
+      "masked loss",
+      "weights",
+      "gradients",
+      "probabilities"
+    ],
+    "early_stopping": "validation event-class macro Dice, then IoU, then masked BCE, then earliest epoch; patience 25; minimum delta 1e-6",
+    "checkpoint": "self-generated exact schema, CPU load, strict state dict, finite-state verification, no overwrite, epoch and early-stopping recovery",
+    "test_lock": "Any request containing role test raises SealedTestAccessError before JSON or NumPy array access; U05 must add and freeze the one-opening mechanism."
+  },
+  "verification_attempts": [
+    {
+      "attempt_id": "P3O1-T01-U02-TEST-R001",
+      "result": "retained_failure",
+      "facts": "10 tests passed and one failed because the test asserted a brittle total nn.Module count of 26 while the explicit Sequential containers make the observed total 36.",
+      "disposition": "The invalid proxy assertion was replaced with exact architectural primitives and parameter count; no model implementation changed."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-TEST-R002",
+      "result": "pass",
+      "facts": "11 focused tests passed after the architecture assertion correction."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-TEST-R003",
+      "result": "pass",
+      "facts": "12 focused tests passed after adding the permitted real train/validation smoke."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-COMPAT-R001",
+      "result": "pass",
+      "facts": "26 bounded-model, environment-profile, model-readiness, and baseline tests passed; compileall, uv lock --check, and diff checks passed."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-FORMAT-R001",
+      "result": "retained_warning",
+      "facts": "The first pushed implementation commit emitted git diff --check warning for one extra blank line at EOF.",
+      "disposition": "Follow-up commit 552f47d removes the blank line; py_compile and clean diff checks pass."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-DETACHED-R001",
+      "result": "pass",
+      "facts": "Fresh detached worktree at exact source commit rebuilt the 28-distribution model profile, passed dependency integrity and 105/105 command probes, then passed 24 bounded-model, model-readiness, and baseline tests in 6.96 seconds."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-REAL-SMOKE-R001",
+      "result": "pass_with_operator_warning",
+      "facts": "The one-step train/validation-only smoke passed but the ad hoc reporting expression converted a requires-grad loss tensor directly to float and emitted a PyTorch warning.",
+      "disposition": "No training behavior was affected; the reporting expression was rerun with explicit detach and warnings-as-errors."
+    },
+    {
+      "attempt_id": "P3O1-T01-U02-REAL-SMOKE-R002",
+      "result": "pass",
+      "facts": "Warnings-as-errors run passed with four train patches / 109 core pixels, four validation patches / 89 core pixels, train loss 0.7024460434913635, validation loss 0.6723253130912781, validation pooled class-macro Dice 0.3904109589041096, validation pooled class-macro IoU 0.3202247191011236, and ephemeral one-step state SHA-256 7398e4496bf4aca0c14f031a832f1184e71426ab5165329ce95bf64cefa35b1f."
+    }
+  ],
+  "synthetic_reproducibility": {
+    "scope": "two examples, one optimizer step, generated inputs and targets only",
+    "first_loss": 0.6861169338226318,
+    "second_loss": 0.6861169338226318,
+    "first_state_sha256": "c24028406999d0e35f91e35cbea00af60a1e0d13bf648fbb386d51e8c1447e32",
+    "second_state_sha256": "c24028406999d0e35f91e35cbea00af60a1e0d13bf648fbb386d51e8c1447e32",
+    "exact": true
+  },
+  "gates": {
+    "frozen_architecture": "pass",
+    "manifest_and_hash_binding": "pass",
+    "train_only_normalization": "pass",
+    "loss_mask_exclusion": "pass",
+    "finite_forward_backward": "pass",
+    "optimizer_contract": "pass",
+    "early_stopping_order": "pass",
+    "checkpoint_recovery": "pass",
+    "checkpoint_no_overwrite": "pass",
+    "deterministic_tiny_run": "pass",
+    "train_validation_only_smoke": "pass",
+    "sealed_test_lock": "pass",
+    "fresh_detached_reconstruction": "pass",
+    "security_and_rights": "unchanged_from_u01",
+    "render": "not_applicable_to_nonvisual_reference_unit",
+    "privacy": "pass",
+    "claims": "pass"
+  },
+  "boundaries": {
+    "substantive_training_run": false,
+    "weights_promoted": false,
+    "checkpoint_promoted": false,
+    "test_arrays_opened": false,
+    "test_metrics_created": false,
+    "architecture_or_hyperparameter_search": false,
+    "second_model": false,
+    "dataset_split_label_normalization_or_baseline_changed": false,
+    "model_value_claim": false,
+    "inference_or_deployment": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P3O1-T01-U03 frozen experiment protocol, one-opening mechanism, train/validation preflight, and rendered diagnostics"
+}

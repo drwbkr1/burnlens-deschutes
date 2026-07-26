@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('runtime', 'dev', 'geo-research')]
+    [ValidateSet('runtime', 'dev', 'geo-research', 'model-research')]
     [string]$Profile = 'dev'
 )
 
@@ -77,6 +77,8 @@ try {
         }
     }
 
+    # Keep setup profiles least-privilege. Complete release QA may explicitly
+    # sync both geo-research and model extras before running the full suite.
     $syncArguments = @('sync', '--locked')
     switch ($Profile) {
         'dev' {
@@ -84,6 +86,9 @@ try {
         }
         'geo-research' {
             $syncArguments += @('--extra', 'dev', '--extra', 'geo-research')
+        }
+        'model-research' {
+            $syncArguments += @('--extra', 'dev', '--extra', 'model')
         }
     }
 

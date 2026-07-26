@@ -1,0 +1,227 @@
+{
+  "evaluation_record_version": "burnlens-bounded-unet-test-evaluation-record-v0.1.0",
+  "evaluation_record_id": "BOUNDED-UNET-TEST-EVALUATION-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T02:34:07Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u05-test-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U05",
+  "git_source_commit": "4f71ec7c61ac0ca1b1dcfcd995d1444c9ec00c9e",
+  "software_version": "0.52.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "authorization": {
+    "path": "records/phase-three/test-openings/BOUNDED-UNET-TEST-AUTHORIZATION-2026-001.json",
+    "bytes": 970,
+    "sha256": "8e0e6442196a5995f39b7fb7bd857a25f8a59698a4f6ccceaed03aa36f25194b",
+    "opening_id": "TEST-OPEN-P3O1-T01-U05-2026-001",
+    "status_before": "AUTHORIZED_NOT_OPENED",
+    "open_count_before": 0,
+    "open_count_authorized": 1,
+    "open_count_after": 1,
+    "retry_authorized": false
+  },
+  "candidate_bindings": {
+    "config_sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b",
+    "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+    "selection_sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4",
+    "environment_capture_sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36",
+    "training_report_sha256": "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57",
+    "baseline_sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+  },
+  "test_roster": {
+    "event_group_ids": [
+      "event-ward-creek-2019",
+      "event-windigo-2022"
+    ],
+    "patch_ids": [
+      "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "test--event-windigo-2022--WDP-001--r180c151h64w64",
+      "test--event-windigo-2022--WDP-002--r103c393h64w64"
+    ],
+    "core_pixels": 89,
+    "background_support": 50,
+    "burned_support": 39
+  },
+  "test_metrics": {
+    "threshold": 0.5,
+    "masked_bce": 0.7280717492103577,
+    "true_burned_pixels": 39,
+    "predicted_burned_pixels": 89,
+    "event_class_macro_dice": 0.29874213836477986,
+    "event_class_macro_iou": 0.21474358974358976,
+    "worst_event_macro_dice": 0.2641509433962264,
+    "pooled_background": {
+      "support": 50,
+      "predicted": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 50,
+      "dice_denominator": 50,
+      "iou_denominator": 50,
+      "dice": 0.0,
+      "iou": 0.0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "pooled_burned": {
+      "support": 39,
+      "predicted": 89,
+      "true_positive": 39,
+      "false_positive": 50,
+      "false_negative": 0,
+      "dice_denominator": 128,
+      "iou_denominator": 89,
+      "dice": 0.609375,
+      "iou": 0.43820224719101125,
+      "precision": 0.43820224719101125,
+      "recall": 1.0
+    },
+    "selected_core_area_difference": {
+      "signed_pixels": 50,
+      "signed_m2": 20000.0,
+      "relative_to_true_burned": 1.2820512820512822,
+      "complete_scar_area_claim": false
+    },
+    "threshold_sensitivity": {
+      "0.25_predicted_burned": 89,
+      "0.50_predicted_burned": 89,
+      "0.75_predicted_burned": 0,
+      "diagnostic_only": true,
+      "threshold_retuned": false
+    },
+    "probability_status": {
+      "status": "descriptive-only-not-calibrated",
+      "brier_score": 0.26725009083747864,
+      "fixed_bin_expected_calibration_error": 0.15315773781765715,
+      "calibration_claim": false
+    }
+  },
+  "events": [
+    {
+      "event_group_id": "event-ward-creek-2019",
+      "core_pixels": 39,
+      "true_burned_pixels": 14,
+      "predicted_burned_pixels": 39,
+      "masked_bce": 0.7635942101478577,
+      "class_macro_dice": 0.2641509433962264,
+      "class_macro_iou": 0.1794871794871795,
+      "background_false_negatives": 25,
+      "burned_false_positives": 25
+    },
+    {
+      "event_group_id": "event-windigo-2022",
+      "core_pixels": 50,
+      "true_burned_pixels": 25,
+      "predicted_burned_pixels": 50,
+      "masked_bce": 0.7003642320632935,
+      "class_macro_dice": 0.3333333333333333,
+      "class_macro_iou": 0.25,
+      "background_false_negatives": 25,
+      "burned_false_positives": 25
+    }
+  ],
+  "baseline_comparison": {
+    "baseline_family": "rbr-threshold",
+    "baseline_event_class_macro_dice": 1.0,
+    "baseline_event_class_macro_iou": 1.0,
+    "baseline_worst_event_macro_dice": 1.0,
+    "model_analytical_winner": false,
+    "status": "BELOW_RBR_REJECT_AS_ANALYTICAL_WINNER"
+  },
+  "tracked_output_inventory": {
+    "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0",
+    "file_count": 12,
+    "bytes": 340542,
+    "inventory_format": "sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 1653,
+    "inventory_sha256": "f850ed080d0cb7bb75143ae54f743c7750a4d2c4153e46eebde86107c4b71d5a",
+    "report": {
+      "bytes": 26268,
+      "sha256": "8d3e0652b71f0052ea54ac67caa280eaa15aad3e4055568948e58306b4c72e35"
+    },
+    "html": {
+      "bytes": 7022,
+      "sha256": "15944fb9fdd577727bc899220b61859b3fc77895e9552858e019821f7f4114f7"
+    },
+    "png": {
+      "bytes": 217578,
+      "sha256": "9a8b13e63c7c65015c8065c56805c1fbb264154095ebddd32921268b5d9b7459"
+    },
+    "opening_receipt": {
+      "bytes": 6730,
+      "sha256": "2613172f06478801aadf51ea63cd4ee0b00e87ba47f81a9f7d53f3c4eb605ab1"
+    },
+    "prediction_array_count": 8
+  },
+  "ignored_run_custody": {
+    "path": "runs/phase-three/BL-2026-07-25-p3o1-t01-u05-test-r001",
+    "file_count": 14,
+    "bytes": 342124,
+    "inventory_bytes": 1954,
+    "inventory_sha256": "ab59e80c4d86e5302493cbd4eaed98a04dfbec044f1f4940c3b4aa4f21cba31f",
+    "opening_started_retained": true,
+    "opening_consumed_retained": true
+  },
+  "verification_attempts": [
+    {
+      "attempt_id": "P3O1-T01-U05-TEST-R001",
+      "result": "pass-consumed",
+      "facts": "The exact clean remote-equal authorization commit opened the ordered four-patch Ward Creek/Windigo roster once and atomically promoted 12 tracked outputs."
+    },
+    {
+      "attempt_id": "P3O1-T01-U05-VERIFY-R001",
+      "result": "retained-tool-failure",
+      "facts": "The first inventory verifier used System.Convert.ToHexString, unavailable in the current PowerShell/.NET host. No data or output changed."
+    },
+    {
+      "attempt_id": "P3O1-T01-U05-VERIFY-R002",
+      "result": "pass",
+      "facts": "Eleven receipt-bound files match; all 12 promoted files equal ignored working bytes; eight arrays have exact schema and prediction equals probability >= 0.5; event/class denominators and baseline comparison recompute."
+    },
+    {
+      "attempt_id": "P3O1-T01-U05-RENDER-R001",
+      "result": "pass",
+      "facts": "The exact loopback HTML passes desktop and 390-by-844 inspection with no document overflow, a complete 2100-by-1540 image, four contained tables, no external resources, and visible one-opening, prototype-label, no-retry, no-ground-truth, and no-acceptance boundaries. The PNG visibly preserves all four geospatially annotated patches and failures."
+    }
+  ],
+  "gates": {
+    "candidate_bindings": "pass",
+    "authorization_bindings": "pass",
+    "exact_test_roster": "pass",
+    "single_opening": "pass-consumed",
+    "finite": "pass",
+    "exact_loss_mask_and_denominators": "pass",
+    "threshold_not_retuned": "pass",
+    "probability_status": "pass-descriptive-only",
+    "baseline_comparison": "pass-model-rejected-as-analytical-winner",
+    "prediction_integrity": "pass",
+    "render": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "u06_exact_replay_and_package": "pending"
+  },
+  "boundaries": {
+    "test_arrays_opened": true,
+    "test_open_count": 1,
+    "retry_authorized": false,
+    "test_tuning": false,
+    "post_test_code_model_config_or_threshold_change": false,
+    "accepted_model": false,
+    "released_model": false,
+    "model_value_claim": false,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "complete_scar_area_claim": false,
+    "inference_or_deployment": false,
+    "final_submission_ready": false
+  },
+  "disposition": "pass-test-evaluated-candidate-rejected-as-analytical-winner-pending-u06-package-decision",
+  "next_dependency": "P3O1-T01-U06 exact train replay, immutable U05 evaluation verification, model or valid rejected-model package, model card, inference contract, and Phase Four recommendation without a second test opening"
+}

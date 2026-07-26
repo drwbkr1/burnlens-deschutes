@@ -370,6 +370,8 @@ samples/baselines/burnlens-baseline-v0.1.0/retained-failures/**/*.png -text
 records/phase-two/prechecks/PRECHECK-2026-094.md text eol=lf
 records/phase-two/registry/REGISTRY-2026-088.md text eol=lf
 
+/.gitignore text eol=lf
+
 # P2O5-T03 U06 bounded U-Net model-readiness decision.
 burnlens/model_readiness.py text eol=lf
 burnlens/run_model_readiness.py text eol=lf
@@ -403,3 +405,60 @@ records/phase-two/registry/REGISTRY-2026-091.md text eol=lf
 records/prompt-build-log/2026-07-25-v052-lifecycle-sync.md text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.json text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html text eol=lf
+
+# P3O1-T01 U01 locked bounded-model environment.
+pyproject.toml text eol=lf
+uv.lock text eol=lf
+scripts/setup_worktree.ps1 text eol=lf
+scripts/verify_environment.py text eol=lf
+tests/test_environment_profiles.py text eol=lf
+.codex/environments/model.toml text eol=lf
+docs/workflows/MODEL_ENVIRONMENT.md text eol=lf
+records/phase-three/sources/MODEL-ENVIRONMENT-SOURCE-GATE-2026-001.json text eol=lf
+records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-001.md text eol=lf
+records/phase-three/registry/REGISTRY-2026-001.md text eol=lf
+records/prompt-build-log/2026-07-25-p3o1-t01.md text eol=lf
+docs/devlog/2026-07-25-bounded-unet-milestone.md text eol=lf
+burnlens/bounded_unet.py text eol=lf
+tests/test_bounded_unet.py text eol=lf
+records/phase-three/implementations/BOUNDED-UNET-REFERENCE-2026-001.json text eol=lf
+burnlens/unet_experiment.py text eol=lf
+burnlens/build_unet_preflight.py text eol=lf
+tests/test_unet_experiment.py text eol=lf
+records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json text eol=lf
+records/phase-three/protocols/EXPERIMENT-PROTOCOL-FREEZE-2026-001.json text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-002.md text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.json text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.html text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.png -text
+burnlens/bounded_unet_training.py text eol=lf
+burnlens/run_bounded_unet_training.py text eol=lf
+tests/test_bounded_unet_training.py text eol=lf
+samples/models/burnlens-unet-binary-v0.1.0/*.json text eol=lf
+samples/models/burnlens-unet-binary-v0.1.0/*.html text eol=lf
+samples/models/burnlens-unet-binary-v0.1.0/*.png -text
+samples/models/burnlens-unet-binary-v0.1.0/*.pt -text
+records/phase-three/training/BOUNDED-UNET-TRAINING-RECORD-2026-001.json text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-003.md text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-004.md text eol=lf
+records/phase-three/evaluations/BOUNDED-UNET-TEST-EVALUATION-RECORD-2026-001.json text eol=lf
+burnlens/bounded_unet_evaluation.py text eol=lf
+burnlens/run_bounded_unet_evaluation.py text eol=lf
+tests/test_bounded_unet_evaluation.py text eol=lf
+records/phase-three/test-openings/*.json text eol=lf
+samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.json text eol=lf
+samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.html text eol=lf
+samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.png -text
+samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/**/*.npy -text
+burnlens/bounded_unet_package.py text eol=lf
+burnlens/run_bounded_unet_package.py text eol=lf
+tests/test_bounded_unet_package.py text eol=lf
+records/phase-three/**/*.json text eol=lf
+records/phase-three/**/*.md text eol=lf
+docs/phases/phase-03/*.md text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.json text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.html text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.md text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.png -text
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.pt -text

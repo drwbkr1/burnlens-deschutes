@@ -1,0 +1,234 @@
+{
+  "training_record_version": "burnlens-bounded-unet-training-record-v0.1.0",
+  "training_record_id": "BOUNDED-UNET-TRAINING-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T01:48:44Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u04-training-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U04",
+  "git_source_commit": "5179a745f091c29d095461d511633f055967ef91",
+  "software_version": "0.52.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "exact_inputs": [
+    {
+      "path": "records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json",
+      "bytes": 12308,
+      "sha256": "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6"
+    },
+    {
+      "path": "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json",
+      "bytes": 8146,
+      "sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+    },
+    {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    },
+    {
+      "path": "records/phase-two/manifests/BOUNDED-UNET-TRAINING-CONTRACT-2026-001.json",
+      "bytes": 8992,
+      "sha256": "670dbb0712768dd0b8ef47a2c5305b736b21139029017a194e4ed747029c9166"
+    }
+  ],
+  "exact_source_outputs": [
+    {
+      "path": "burnlens/bounded_unet_training.py",
+      "bytes": 43586,
+      "sha256": "e37e21276b42f62bd430d382d554b4a7ef444bd4dd09935576b41f2f9d58aa24"
+    },
+    {
+      "path": "burnlens/run_bounded_unet_training.py",
+      "bytes": 2024,
+      "sha256": "4ed40c1d68eef630b62ef1c03d810736c61f01c565a2b5ae0713c6293e696b9d"
+    },
+    {
+      "path": "tests/test_bounded_unet_training.py",
+      "bytes": 7770,
+      "sha256": "7363f1cbb8314c786617a6f51d1128368b5e9ff985c8554a10da59040cce9d7e"
+    }
+  ],
+  "exact_candidate_outputs": [
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-CONFIG-2026-001.json",
+      "bytes": 12238,
+      "sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-HISTORY-2026-001.json",
+      "bytes": 112949,
+      "sha256": "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/CHECKPOINT-SELECTION-2026-001.json",
+      "bytes": 3683,
+      "sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/selected-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "5c867cda6fc41d1105330e6bc9af87286e16f4db3bbc5fbd99e40e714a90dd4c"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/final-checkpoint.pt",
+      "bytes": 1441007,
+      "sha256": "6ba5d90f76bcb5e9c6ae54d5d0c8b0d836417bd83ed848dcaa8335c356bc4cc3"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.json",
+      "bytes": 11548,
+      "sha256": "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "bytes": 8176,
+      "sha256": "92ee0952fe1f82b5350919593120132a5ed6c7690e2fd08fc781750af608296b"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.png",
+      "bytes": 80920,
+      "sha256": "a781271cccbc17bda35fa5e5a07bf9af0cc965c5938cd0733b47fe80acb372f6"
+    }
+  ],
+  "ignored_run_custody": {
+    "path": "runs/phase-three/BL-2026-07-25-p3o1-t01-u04-training-r001",
+    "file_count": 43,
+    "bytes": 3592037,
+    "epoch_record_count": 35,
+    "inventory_format": "sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 4030,
+    "inventory_sha256": "e260d8b98b20b523f7b636bb95a179a13addfb7441f853bdeebaa1b7d2f54b19",
+    "overwrite": false
+  },
+  "training": {
+    "substantive_run_count": 1,
+    "epoch_count": 35,
+    "maximum_epochs": 200,
+    "stopped_early": true,
+    "duration_seconds": 18.76287959999172,
+    "selected_epoch": 10,
+    "selected_train_masked_bce": 0.6315077543258667,
+    "validation_masked_bce": 0.6219634259684702,
+    "validation_event_class_macro_dice": 0.7253521126760564,
+    "validation_event_class_macro_iou": 0.7051282051282051,
+    "validation_worst_event_macro_dice": 0.4507042253521127,
+    "train_patch_count": 4,
+    "train_core_pixels": 109,
+    "validation_patch_count": 4,
+    "validation_core_pixels": 89,
+    "runtime_warnings": []
+  },
+  "validation_events": [
+    {
+      "event_group_id": "event-grandview-0558-od-2021",
+      "core_pixels": 50,
+      "background_support": 25,
+      "burned_support": 25,
+      "predicted_background": 25,
+      "predicted_burned": 25,
+      "masked_bce": 0.6708055138587952,
+      "class_macro_dice": 1.0,
+      "class_macro_iou": 1.0
+    },
+    {
+      "event_group_id": "event-mckay-1035-ne-2017",
+      "core_pixels": 39,
+      "background_support": 7,
+      "burned_support": 32,
+      "predicted_background": 0,
+      "predicted_burned": 39,
+      "masked_bce": 0.5593453645706177,
+      "class_macro_dice": 0.4507042253521127,
+      "class_macro_iou": 0.41025641025641024
+    }
+  ],
+  "verification_attempts": [
+    {
+      "attempt_id": "P3O1-T01-U04-TEST-R001",
+      "result": "retained_failure",
+      "facts": "24 tests passed and five failed: two synthetic ModelExample fixtures did not match the current schema, and three environment-profile checks observed a stale editable installation that did not yet expose the new CLI.",
+      "disposition": "Correct the test fixtures and resynchronize the exact locked model environment; training had not begun."
+    },
+    {
+      "attempt_id": "P3O1-T01-U04-TEST-R002",
+      "result": "pass",
+      "facts": "29 focused tests passed with one expected geo-profile skip after exact locked-environment resynchronization."
+    },
+    {
+      "attempt_id": "P3O1-T01-U04-DETACHED-R001",
+      "result": "pass",
+      "facts": "A fresh detached worktree at 5179a745 used the 28-distribution model profile, exposed 107 of 107 installed commands, passed deterministic CPU smoke and 35 focused tests, then passed compilation, lock freshness, diff, and real train/validation entry checks."
+    },
+    {
+      "attempt_id": "P3O1-T01-U04-TRAINING-R001",
+      "result": "pass_candidate_frozen",
+      "facts": "The only authorized substantive run completed 35 append-only epochs and stopped under the frozen patience rule. Epoch 10 was selected from validation only. Ward Creek and Windigo remained unopened."
+    },
+    {
+      "attempt_id": "P3O1-T01-U04-CANDIDATE-VERIFY-R001",
+      "result": "pass",
+      "facts": "All nine promoted receipts match; 35 retained epoch files equal the tracked history; selection and early stopping recompute to epochs 10 and 35; selected/final checkpoints and selected model-only weights reload; selected and final states differ; no test request exists."
+    },
+    {
+      "attempt_id": "P3O1-T01-U04-RENDER-R001",
+      "result": "pass_with_tool_limit",
+      "facts": "The exact loopback HTML was inspected at 1280x720 and 390x844. It had no document overflow, a complete 1800x1200 chart, all 35 history rows, no external resources or browser logs, internal narrow-table overflow, and visible candidate, sealed-test, prototype-label, and no-model-value boundaries.",
+      "limitation": "The browser tool did not verify a horizontal-scroll gesture; the table's 308-pixel client width and 860-pixel scroll width prove contained overflow. Full-page tiling was unreliable, so direct viewport screenshots and rendered DOM facts were used."
+    }
+  ],
+  "gates": {
+    "frozen_protocol": "pass",
+    "frozen_environment": "pass",
+    "one_substantive_run": "pass",
+    "complete_append_only_history": "pass",
+    "finite_and_exact_loss_mask": "pass",
+    "validation_only_selection": "pass",
+    "candidate_integrity_and_reload": "pass",
+    "sealed_test": "pass",
+    "detached_source_reconstruction": "pass",
+    "render": "pass_with_tool_limit",
+    "privacy": "pass",
+    "claims": "pass",
+    "source_rights_security": "unchanged_from_u01"
+  },
+  "boundaries": {
+    "accepted_model": false,
+    "released_model": false,
+    "test_arrays_opened": false,
+    "test_open_count": 0,
+    "test_metrics_created": false,
+    "architecture_or_hyperparameter_search": false,
+    "second_model": false,
+    "dataset_split_label_normalization_or_baseline_changed": false,
+    "model_value_claim": false,
+    "inference_or_deployment": false,
+    "final_submission_ready": false
+  },
+  "disposition": "pass-candidate-frozen",
+  "next_dependency": "P3O1-T01-U05 exact authorization-bound single test opening after this U04 evidence is committed and pushed"
+}

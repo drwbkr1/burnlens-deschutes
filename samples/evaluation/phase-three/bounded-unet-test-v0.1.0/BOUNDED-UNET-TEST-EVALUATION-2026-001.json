@@ -1,0 +1,705 @@
+{
+  "evaluation_version": "burnlens-bounded-unet-test-evaluation-v0.1.0",
+  "evaluation_id": "BOUNDED-UNET-TEST-EVALUATION-2026-001",
+  "generated_at_utc": "2026-07-26T02:30:24Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u05-test-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U05",
+  "git_source_commit": "4f71ec7c61ac0ca1b1dcfcd995d1444c9ec00c9e",
+  "software_version": "0.52.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "opening": {
+    "opening_id": "TEST-OPEN-P3O1-T01-U05-2026-001",
+    "authorization_path": "records/phase-three/test-openings/BOUNDED-UNET-TEST-AUTHORIZATION-2026-001.json",
+    "authorization_sha256": "8e0e6442196a5995f39b7fb7bd857a25f8a59698a4f6ccceaed03aa36f25194b",
+    "open_count_before": 0,
+    "open_count_after": 1,
+    "test_event_group_ids": [
+      "event-ward-creek-2019",
+      "event-windigo-2022"
+    ],
+    "test_patch_ids": [
+      "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "test--event-windigo-2022--WDP-001--r180c151h64w64",
+      "test--event-windigo-2022--WDP-002--r103c393h64w64"
+    ]
+  },
+  "bindings": {
+    "config": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-CONFIG-2026-001.json",
+      "bytes": 12238,
+      "sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+    },
+    "weights": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    "selection": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/CHECKPOINT-SELECTION-2026-001.json",
+      "bytes": 3683,
+      "sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+    },
+    "training_report": {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.json",
+      "bytes": 11548,
+      "sha256": "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57"
+    },
+    "environment_capture": {
+      "path": "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json",
+      "bytes": 8146,
+      "sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+    },
+    "baseline": {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    },
+    "normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    }
+  },
+  "patches": {
+    "test--event-ward-creek-2019--WCP-001--r168c236h64w64": {
+      "patch_id": "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-001",
+      "proposed_class": "burned",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "window": {
+        "row_offset": 168,
+        "column_offset": 236,
+        "height": 64,
+        "width": 64
+      },
+      "core_pixels": 14,
+      "unknown_ring_pixels_in_patch": 26,
+      "input_valid_pixels": 4096,
+      "source_members": [
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B12_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B12_20m.jp2"
+        }
+      ]
+    },
+    "test--event-ward-creek-2019--WCP-002--r68c401h64w64": {
+      "patch_id": "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-002",
+      "proposed_class": "background",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "window": {
+        "row_offset": 68,
+        "column_offset": 401,
+        "height": 64,
+        "width": 64
+      },
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 40,
+      "input_valid_pixels": 4096,
+      "source_members": [
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190801T185921_N0500_R013_T10TFQ_20230707T221135.SAFE/GRANULE/L2A_T10TFQ_A021460_20190801T190257/IMG_DATA/R20m/T10TFQ_20190801T185921_B12_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B04_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B8A_20m.jp2"
+        },
+        {
+          "role": "ward-creek-2019-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20190831T185921_N0500_R013_T10TFQ_20230528T200015.SAFE/GRANULE/L2A_T10TFQ_A021889_20190831T190547/IMG_DATA/R20m/T10TFQ_20190831T185921_B12_20m.jp2"
+        }
+      ]
+    },
+    "test--event-windigo-2022--WDP-001--r180c151h64w64": {
+      "patch_id": "test--event-windigo-2022--WDP-001--r180c151h64w64",
+      "event_group_id": "event-windigo-2022",
+      "candidate_id": "WDP-001",
+      "proposed_class": "burned",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        575560.0,
+        0.0,
+        -20.0,
+        4801820.0
+      ],
+      "window": {
+        "row_offset": 180,
+        "column_offset": 151,
+        "height": 64,
+        "width": 64
+      },
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 51,
+      "input_valid_pixels": 4051,
+      "source_members": [
+        {
+          "role": "windigo-2022-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2"
+        }
+      ]
+    },
+    "test--event-windigo-2022--WDP-002--r103c393h64w64": {
+      "patch_id": "test--event-windigo-2022--WDP-002--r103c393h64w64",
+      "event_group_id": "event-windigo-2022",
+      "candidate_id": "WDP-002",
+      "proposed_class": "background",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        580400.0,
+        0.0,
+        -20.0,
+        4803360.0
+      ],
+      "window": {
+        "row_offset": 103,
+        "column_offset": 393,
+        "height": 64,
+        "width": 64
+      },
+      "core_pixels": 25,
+      "unknown_ring_pixels_in_patch": 51,
+      "input_valid_pixels": 4096,
+      "source_members": [
+        {
+          "role": "windigo-2022-pre",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-pre",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220726T185931_N0510_R013_T10TEP_20240712T042551.SAFE/GRANULE/L2A_T10TEP_A037047_20220726T190831/IMG_DATA/R20m/T10TEP_20220726T185931_B12_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B04",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B04_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B8A",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B8A_20m.jp2"
+        },
+        {
+          "role": "windigo-2022-post",
+          "band": "B12",
+          "member": "S2A_MSIL2A_20220815T185931_N0510_R013_T10TEP_20240703T124031.SAFE/GRANULE/L2A_T10TEP_A037333_20220815T190407/IMG_DATA/R20m/T10TEP_20220815T185931_B12_20m.jp2"
+        }
+      ]
+    }
+  },
+  "prediction_outputs": {
+    "test--event-ward-creek-2019--WCP-001--r168c236h64w64": {
+      "probability": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-ward-creek-2019--WCP-001--r168c236h64w64/probability.npy",
+        "bytes": 16512,
+        "sha256": "7a702a3c147b8f04885d6049d59f48d0a75511931ec4a30a3717e5777c90ce33"
+      },
+      "prediction": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-ward-creek-2019--WCP-001--r168c236h64w64/prediction.npy",
+        "bytes": 4224,
+        "sha256": "9209ad1a5f35fbf60e7599ffce489ce32c672763e6956a29a7d7671c60c51e36"
+      }
+    },
+    "test--event-ward-creek-2019--WCP-002--r68c401h64w64": {
+      "probability": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-ward-creek-2019--WCP-002--r68c401h64w64/probability.npy",
+        "bytes": 16512,
+        "sha256": "559bc7949f2764f4b8c176eb4c274fe70f1b39ef050ba493ed4f743f7ffc9564"
+      },
+      "prediction": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-ward-creek-2019--WCP-002--r68c401h64w64/prediction.npy",
+        "bytes": 4224,
+        "sha256": "3f0355fc9b90cba2e1ac8770925fef019777704cf708eaff30d1cfae45807433"
+      }
+    },
+    "test--event-windigo-2022--WDP-001--r180c151h64w64": {
+      "probability": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-windigo-2022--WDP-001--r180c151h64w64/probability.npy",
+        "bytes": 16512,
+        "sha256": "b221718248526add393680d2d1f234e8b2e8116957d2a3c9eb906412d674b89e"
+      },
+      "prediction": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-windigo-2022--WDP-001--r180c151h64w64/prediction.npy",
+        "bytes": 4224,
+        "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+      }
+    },
+    "test--event-windigo-2022--WDP-002--r103c393h64w64": {
+      "probability": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-windigo-2022--WDP-002--r103c393h64w64/probability.npy",
+        "bytes": 16512,
+        "sha256": "33fdfd4a681261e39cf66bb53938c04c3f54d980a5c73810209b3614eb505cc8"
+      },
+      "prediction": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/test--event-windigo-2022--WDP-002--r103c393h64w64/prediction.npy",
+        "bytes": 4224,
+        "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+      }
+    }
+  },
+  "test_metrics": {
+    "event_count": 2,
+    "core_pixels": 89,
+    "threshold": 0.5,
+    "masked_bce": 0.7280717492103577,
+    "true_burned_pixels": 39,
+    "predicted_burned_pixels": 89,
+    "event_class_macro_dice": 0.29874213836477986,
+    "event_class_macro_iou": 0.21474358974358976,
+    "worst_event_macro_dice": 0.2641509433962264,
+    "event_macro_dice_range": [
+      0.2641509433962264,
+      0.3333333333333333
+    ],
+    "event_macro_iou_range": [
+      0.1794871794871795,
+      0.25
+    ],
+    "pooled_classes": [
+      {
+        "class": "background",
+        "support": 50,
+        "predicted": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 50,
+        "dice_denominator": 50,
+        "iou_denominator": 50,
+        "precision_denominator": 0,
+        "recall_denominator": 50,
+        "dice": 0.0,
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0
+      },
+      {
+        "class": "burned",
+        "support": 39,
+        "predicted": 89,
+        "true_positive": 39,
+        "false_positive": 50,
+        "false_negative": 0,
+        "dice_denominator": 128,
+        "iou_denominator": 89,
+        "precision_denominator": 89,
+        "recall_denominator": 39,
+        "dice": 0.609375,
+        "iou": 0.43820224719101125,
+        "precision": 0.43820224719101125,
+        "recall": 1.0
+      }
+    ],
+    "pooled_area_difference": {
+      "scope": "selected prototype cores only",
+      "pixel_area_m2": 400.0,
+      "signed_pixels": 50,
+      "absolute_pixels": 50,
+      "signed_m2": 20000.0,
+      "absolute_m2": 20000.0,
+      "relative_to_true_burned": 1.2820512820512822
+    },
+    "events": [
+      {
+        "event_group_id": "event-ward-creek-2019",
+        "patch_count": 2,
+        "threshold": 0.5,
+        "core_pixels": 39,
+        "true_burned_pixels": 14,
+        "predicted_burned_pixels": 39,
+        "masked_bce": 0.7635942101478577,
+        "classes": [
+          {
+            "class": "background",
+            "support": 25,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 25,
+            "dice_denominator": 25,
+            "iou_denominator": 25,
+            "precision_denominator": 0,
+            "recall_denominator": 25,
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": null,
+            "recall": 0.0
+          },
+          {
+            "class": "burned",
+            "support": 14,
+            "predicted": 39,
+            "true_positive": 14,
+            "false_positive": 25,
+            "false_negative": 0,
+            "dice_denominator": 53,
+            "iou_denominator": 39,
+            "precision_denominator": 39,
+            "recall_denominator": 14,
+            "dice": 0.5283018867924528,
+            "iou": 0.358974358974359,
+            "precision": 0.358974358974359,
+            "recall": 1.0
+          }
+        ],
+        "class_macro_dice": 0.2641509433962264,
+        "class_macro_iou": 0.1794871794871795,
+        "area_difference": {
+          "scope": "selected prototype cores only",
+          "pixel_area_m2": 400.0,
+          "signed_pixels": 25,
+          "absolute_pixels": 25,
+          "signed_m2": 10000.0,
+          "absolute_m2": 10000.0,
+          "relative_to_true_burned": 1.7857142857142858
+        }
+      },
+      {
+        "event_group_id": "event-windigo-2022",
+        "patch_count": 2,
+        "threshold": 0.5,
+        "core_pixels": 50,
+        "true_burned_pixels": 25,
+        "predicted_burned_pixels": 50,
+        "masked_bce": 0.7003642320632935,
+        "classes": [
+          {
+            "class": "background",
+            "support": 25,
+            "predicted": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 25,
+            "dice_denominator": 25,
+            "iou_denominator": 25,
+            "precision_denominator": 0,
+            "recall_denominator": 25,
+            "dice": 0.0,
+            "iou": 0.0,
+            "precision": null,
+            "recall": 0.0
+          },
+          {
+            "class": "burned",
+            "support": 25,
+            "predicted": 50,
+            "true_positive": 25,
+            "false_positive": 25,
+            "false_negative": 0,
+            "dice_denominator": 75,
+            "iou_denominator": 50,
+            "precision_denominator": 50,
+            "recall_denominator": 25,
+            "dice": 0.6666666666666666,
+            "iou": 0.5,
+            "precision": 0.5,
+            "recall": 1.0
+          }
+        ],
+        "class_macro_dice": 0.3333333333333333,
+        "class_macro_iou": 0.25,
+        "area_difference": {
+          "scope": "selected prototype cores only",
+          "pixel_area_m2": 400.0,
+          "signed_pixels": 25,
+          "absolute_pixels": 25,
+          "signed_m2": 10000.0,
+          "absolute_m2": 10000.0,
+          "relative_to_true_burned": 1.0
+        }
+      }
+    ],
+    "threshold_sensitivity": [
+      {
+        "threshold": 0.25,
+        "status": "diagnostic-only-no-selection-or-retuning",
+        "core_pixels": 89,
+        "predicted_burned_pixels": 89,
+        "class_macro_dice": 0.3046875,
+        "class_macro_iou": 0.21910112359550563,
+        "area_difference": {
+          "scope": "selected prototype cores only",
+          "pixel_area_m2": 400.0,
+          "signed_pixels": 50,
+          "absolute_pixels": 50,
+          "signed_m2": 20000.0,
+          "absolute_m2": 20000.0,
+          "relative_to_true_burned": 1.2820512820512822
+        }
+      },
+      {
+        "threshold": 0.5,
+        "status": "frozen-operating-threshold",
+        "core_pixels": 89,
+        "predicted_burned_pixels": 89,
+        "class_macro_dice": 0.3046875,
+        "class_macro_iou": 0.21910112359550563,
+        "area_difference": {
+          "scope": "selected prototype cores only",
+          "pixel_area_m2": 400.0,
+          "signed_pixels": 50,
+          "absolute_pixels": 50,
+          "signed_m2": 20000.0,
+          "absolute_m2": 20000.0,
+          "relative_to_true_burned": 1.2820512820512822
+        }
+      },
+      {
+        "threshold": 0.75,
+        "status": "diagnostic-only-no-selection-or-retuning",
+        "core_pixels": 89,
+        "predicted_burned_pixels": 0,
+        "class_macro_dice": 0.3597122302158273,
+        "class_macro_iou": 0.2808988764044944,
+        "area_difference": {
+          "scope": "selected prototype cores only",
+          "pixel_area_m2": 400.0,
+          "signed_pixels": -39,
+          "absolute_pixels": 39,
+          "signed_m2": -15600.0,
+          "absolute_m2": 15600.0,
+          "relative_to_true_burned": -1.0
+        }
+      }
+    ],
+    "probability_calibration": {
+      "status": "descriptive-only-not-calibrated",
+      "method": "ten fixed-width bins over selected prototype cores",
+      "core_pixels": 89,
+      "brier_score": 0.26725009083747864,
+      "expected_calibration_error": 0.15315773781765715,
+      "bins": [
+        {
+          "lower_inclusive": 0.0,
+          "upper_inclusive_if_final_else_exclusive": 0.1,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.1,
+          "upper_inclusive_if_final_else_exclusive": 0.2,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.2,
+          "upper_inclusive_if_final_else_exclusive": 0.30000000000000004,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.30000000000000004,
+          "upper_inclusive_if_final_else_exclusive": 0.4,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.4,
+          "upper_inclusive_if_final_else_exclusive": 0.5,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.5,
+          "upper_inclusive_if_final_else_exclusive": 0.6000000000000001,
+          "count": 77,
+          "mean_probability": 0.5895307064056396,
+          "observed_burned_fraction": 0.45454545454545453
+        },
+        {
+          "lower_inclusive": 0.6000000000000001,
+          "upper_inclusive_if_final_else_exclusive": 0.7000000000000001,
+          "count": 12,
+          "mean_probability": 0.6030978560447693,
+          "observed_burned_fraction": 0.3333333333333333
+        },
+        {
+          "lower_inclusive": 0.7000000000000001,
+          "upper_inclusive_if_final_else_exclusive": 0.8,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.8,
+          "upper_inclusive_if_final_else_exclusive": 0.9,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        },
+        {
+          "lower_inclusive": 0.9,
+          "upper_inclusive_if_final_else_exclusive": 1.0,
+          "count": 0,
+          "mean_probability": null,
+          "observed_burned_fraction": null
+        }
+      ],
+      "limitations": "Two event groups and 89 prototype cores cannot support a calibrated probability or population-calibration claim."
+    }
+  },
+  "baseline_comparison": {
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "baseline_family": "rbr-threshold",
+    "baseline_threshold": 0.041043221950531006,
+    "baseline_metrics": {
+      "event_class_macro_dice": 1.0,
+      "event_class_macro_iou": 1.0,
+      "worst_event_macro_dice": 1.0
+    },
+    "model_metrics": {
+      "event_class_macro_dice": 0.29874213836477986,
+      "event_class_macro_iou": 0.21474358974358976,
+      "worst_event_macro_dice": 0.2641509433962264
+    },
+    "analytical_winner": false,
+    "status": "BELOW_RBR_REJECT_AS_ANALYTICAL_WINNER",
+    "threshold_retuned": false
+  },
+  "warnings": [
+    "Owner-approved prototype labels are not independent ground truth or field validation.",
+    "Two test event groups support no population or generalization inference.",
+    "Area differences cover selected prototype cores only, not complete burn scars.",
+    "Threshold sensitivity is diagnostic only; the frozen 0.5 threshold was not changed.",
+    "The candidate is not accepted or released until exact U06 replay and decision."
+  ],
+  "gates": {
+    "candidate_bindings": "pass",
+    "authorization_bindings": "pass",
+    "exact_test_roster": "pass",
+    "single_opening": "pass",
+    "finite": "pass",
+    "exact_loss_mask": "pass",
+    "event_class_denominators": "pass",
+    "threshold_not_retuned": "pass",
+    "probability_status": "descriptive-only-not-calibrated",
+    "render_required": "pass",
+    "replay_required": "pending-u06"
+  },
+  "boundaries": {
+    "test_arrays_opened": true,
+    "test_open_count": 1,
+    "test_tuning": false,
+    "post_test_code_model_config_or_threshold_change": false,
+    "accepted_model": false,
+    "released_model": false,
+    "model_value_claim": false,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "inference_or_deployment": false,
+    "final_submission_ready": false
+  },
+  "disposition": "test-evaluated-candidate-pending-u06-exact-replay-and-decision",
+  "next_dependency": "P3O1-T01-U06 exact same-environment replay, package, model card, decision, and Phase Four handoff"
+}
