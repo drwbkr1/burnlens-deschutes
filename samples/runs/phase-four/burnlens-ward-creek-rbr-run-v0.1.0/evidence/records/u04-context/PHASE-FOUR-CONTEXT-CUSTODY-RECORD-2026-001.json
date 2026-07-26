@@ -1,0 +1,202 @@
+{
+  "record_version": "burnlens-phase-four-context-custody-record-v0.1.0",
+  "record_id": "PHASE-FOUR-CONTEXT-CUSTODY-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T18:08:47Z",
+  "unit_id": "P4O1-T01-U04",
+  "run_id": "BL-2026-07-26-p4o1-t01-u04-context-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "git_source_commit": "20940438319a31022196739463a3be091e21fd3b",
+  "software_version_at_execution": "0.53.0",
+  "state": "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05",
+  "source_gate": {
+    "path": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+    "bytes": 25265,
+    "sha256": "12c273f24565d4899517d64408654128c62a0b8ba9e8f58d3dd898dacaef7a28",
+    "sources": 4,
+    "required_criteria": 32,
+    "evidence_items": 35,
+    "live_evidence_items": 23,
+    "decision": "ready"
+  },
+  "intake": {
+    "path": "records/phase-four/intake/P4O1-T01-U04-context-intake.json",
+    "bytes": 17290,
+    "sha256": "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd",
+    "initial_authorized_plan_bytes": 14328,
+    "initial_authorized_plan_sha256": "c7bd8ffee3f0088bdbc86df70ef9a0bddbb417b4e0eb0c15693fe15b65918001",
+    "asset_count": 8,
+    "bytes": 890072,
+    "all_promoted": true,
+    "all_single_link": true,
+    "collision_policy": "fail",
+    "promotion_mode": "atomic-no-replace",
+    "secret_policy": "references-only",
+    "validator": "valid with --verify-files"
+  },
+  "context_envelope": {
+    "basis_crs": "EPSG:32610",
+    "basis_bounds": [
+      657220.0,
+      4968520.0,
+      681800.0,
+      4991800.0
+    ],
+    "buffer_m": 10000,
+    "query_crs": "EPSG:4326",
+    "query_bounds": [
+      -121.01030156016445,
+      44.85276135586534,
+      -120.6910778474689,
+      45.0563170040272
+    ]
+  },
+  "tnm_assets": [
+    {
+      "asset_id": "ntd-secondary-highways",
+      "bytes": 43209,
+      "sha256": "8725602d400859e9c4de39bf49f2da0aa4dba370017ba2eba1aa519cc9db0a19",
+      "feature_count": 28,
+      "geometry": "LineString"
+    },
+    {
+      "asset_id": "ntd-local-connecting-roads",
+      "bytes": 53039,
+      "sha256": "548f7fb9d24c82924b50664d7116bfc63ad4ece1dd340396a2c12fb2b183b3ce",
+      "feature_count": 30,
+      "geometry": "LineString"
+    },
+    {
+      "asset_id": "ntd-local-roads",
+      "bytes": 157522,
+      "sha256": "f5a45d456bf6e77be36ab36b3889fb69d9d3516e4ec0d72b671e4c39039c7528",
+      "feature_count": 111,
+      "geometry": "LineString"
+    },
+    {
+      "asset_id": "nsd-cemeteries",
+      "bytes": 1690,
+      "sha256": "58b7e58b38725ab68c3b36ffdbc5b3d4c280711acdef205be2e5ac0fdce311ee",
+      "feature_count": 3,
+      "geometry": "Point"
+    },
+    {
+      "asset_id": "nsd-post-offices",
+      "bytes": 1144,
+      "sha256": "4b8c8204b0b0218259d3d4da40f27e66825973a10c283c617f18e55fab8a68ae",
+      "feature_count": 2,
+      "geometry": "Point"
+    },
+    {
+      "asset_id": "nsd-fire-ems",
+      "bytes": 606,
+      "sha256": "3a859a9ad7181fc66968e21751d2e31da19efc6b2c38ccd2ee2750102c76d3b9",
+      "feature_count": 1,
+      "geometry": "Point"
+    },
+    {
+      "asset_id": "nsd-trailheads",
+      "bytes": 1327,
+      "sha256": "879ebed8c87327d8f5bd67d235ca3a8c110e0dd4b17a7e8b46b945e4c7f6489d",
+      "feature_count": 2,
+      "geometry": "Point"
+    },
+    {
+      "asset_id": "nbd-blm-boundary",
+      "bytes": 631535,
+      "sha256": "0975718f7af35e472f32d130f715d9aba025a7a172eeb2cc5be8e5e0a2fc7085",
+      "feature_count": 1,
+      "geometry": "MultiPolygon"
+    }
+  ],
+  "mtbs_reference_reuse": {
+    "source_report_path": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+    "event_id": "OR4494912090120190812",
+    "map_id": 10016337,
+    "archive_bytes": 4385952,
+    "archive_sha256": "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18",
+    "archive_member_count": 16,
+    "archive_file_count": 13,
+    "full_crc": true,
+    "boundary_feature_count": 1,
+    "boundary_crs": "EPSG:32610",
+    "boundary_geometry": "Polygon",
+    "boundary_valid": true,
+    "boundary_area_m2": 8378927.386,
+    "boundary_member_hashes_exact": true,
+    "rights": "No use restriction except reasonable acknowledgement; retain USGS/USDA Forest Service MTBS credit, mutable-product, positional, utility, and no-warranty cautions.",
+    "role": "official-program reference context only"
+  },
+  "ignored_run_inventory": {
+    "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u04-context-r001",
+    "file_count": 4,
+    "bytes": 25215,
+    "inventory_format": "case-insensitive sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 368,
+    "inventory_sha256": "948f6b26f87aaff9dd20dde102f3bafea2a839664dc1aa67f3482452a4b4accb",
+    "files": [
+      {
+        "path": "CONTEXT-INTAKE-RESULT.json",
+        "bytes": 7117,
+        "sha256": "ea191987eb9d634cdc64fc0ed91c229a1681aa38c2abf0939e14efc049045f1b"
+      },
+      {
+        "path": "INTAKE-CONTRACT-FINAL.json",
+        "bytes": 17290,
+        "sha256": "3cc26f5be2fcb811dfe46a95dbdd9daf828457b7b10d6918a307b30450abfdcd"
+      },
+      {
+        "path": "RUN-COMPLETE.json",
+        "bytes": 548,
+        "sha256": "a0e172258c233f22a8e590dc458a1dc00cf42345c6966e957c207a1ec069248d"
+      },
+      {
+        "path": "RUN-STARTED.json",
+        "bytes": 260,
+        "sha256": "17c5b99438ea959a6ce44a974d8f55d620af58f7b85fcaf1b16a61e8317e717c"
+      }
+    ]
+  },
+  "gates": {
+    "identity": "pass",
+    "authority": "pass",
+    "access": "pass",
+    "rights": "pass",
+    "provenance": "pass",
+    "integrity": "pass",
+    "fitness_for_context_role": "pass",
+    "privacy_security": "pass",
+    "exact_feature_counts": "pass",
+    "minimal_field_rosters": "pass",
+    "geometry_types_validity_and_finite_domain": "pass",
+    "no_overwrite_and_single_link_custody": "pass",
+    "reproducible_offline_revalidation": "pass",
+    "render": "not applicable; U04 creates no public or reviewer surface",
+    "leakage": "not applicable to model evaluation; context sources remain excluded from labels, model input, thresholding, selection, and metrics"
+  },
+  "limitations": [
+    "TNM services are mutable; exact acquired response bytes govern this run.",
+    "Road context is not routing, closure, access, or safety authority.",
+    "Facility points do not establish current operation, availability, capacity, or emergency suitability.",
+    "The BLM layer is generalized planning context, not a cadastral, survey, access, or legal determination.",
+    "The MTBS boundary is analyst-interpreted remotely sensed reference evidence, not an incident perimeter, independent ground truth, field validation, or endorsement.",
+    "Official and context sources govern their own facts; BurnLens output remains experimental."
+  ],
+  "boundaries": {
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "context_used_for_threshold_or_selection": false,
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "bulk_package_acquired": false,
+    "authentication_used": false,
+    "paid_service_used": false,
+    "native_provider_response_publishable": false,
+    "routing_closure_tactical_property_or_emergency_use": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U05 overlays and deterministic descriptive summary"
+}

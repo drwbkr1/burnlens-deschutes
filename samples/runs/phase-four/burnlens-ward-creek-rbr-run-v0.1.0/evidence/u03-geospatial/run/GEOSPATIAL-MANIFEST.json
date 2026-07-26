@@ -1,0 +1,412 @@
+{
+  "geospatial_version": "burnlens-phase-four-geospatial-v0.1.0",
+  "geospatial_id": "PHASE-FOUR-GEOSPATIAL-PRODUCTS-2026-001",
+  "generated_at_utc": "2026-07-26T17:43:04Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "unit_id": "P4O1-T01-U03",
+  "git_source_commit": "761ef33abd70de8b348b22870a5b9c30a3406c28",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "contract": {
+    "path": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+    "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec"
+  },
+  "u02_analysis": {
+    "record_path": "records/phase-four/analyses/PHASE-FOUR-ANALYSIS-RECORD-2026-001.json",
+    "record_sha256": "0b242293b63b502ea66cf35393a50eb7c81bcbea22550c677c074023f0bea94c",
+    "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+    "inventory_sha256": "28739c6d14be43d491743d75d70a00a9f0885bd45523dc9649f50ff0c1b86171",
+    "manifest_sha256": "c969bb10a1a0716ce41bbc7b176c3cb8af498fd5a9821c5122486bca397acfa6"
+  },
+  "accepted_method": "burnlens-baseline-v0.1.0 rbr-threshold",
+  "rejected_diagnostic": {
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "accepted": false,
+    "outperformed_rbr": false,
+    "probability_calibrated": false
+  },
+  "rasters": [
+    {
+      "path": "patches/WCP-001/rbr-score.tif",
+      "bytes": 15666,
+      "sha256": "082f92a7ad489f35d157d0981a2c12d182c356c05883026888c9aa39a9730416",
+      "candidate_id": "WCP-001",
+      "role": "rbr-score",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0
+    },
+    {
+      "path": "patches/WCP-001/rbr-binary.tif",
+      "bytes": 1370,
+      "sha256": "e9f85df3efa24fd7796e9d7326dec0adc9ecf9a9cd0a68b9c46774437de6222c",
+      "candidate_id": "WCP-001",
+      "role": "rbr-binary",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    },
+    {
+      "path": "patches/WCP-001/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "f86a363a30fff3968c27c3f5a9ba65a348d327f1989a41a384bd149fd94455f7",
+      "candidate_id": "WCP-001",
+      "role": "exclusion",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    },
+    {
+      "path": "patches/WCP-001/unet-probability-diagnostic.tif",
+      "bytes": 13616,
+      "sha256": "f7c6b87a8dd9b229f2cd021af7b4bd4d1c6af6acecb3f22b13dcdbc4906991a3",
+      "candidate_id": "WCP-001",
+      "role": "unet-probability",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0
+    },
+    {
+      "path": "patches/WCP-001/unet-binary-diagnostic.tif",
+      "bytes": 1142,
+      "sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5",
+      "candidate_id": "WCP-001",
+      "role": "unet-binary",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    },
+    {
+      "path": "patches/WCP-002/rbr-score.tif",
+      "bytes": 16130,
+      "sha256": "50ccbed7637d916ab3df7d9a5a608092808932fa2f27b4f45c1a889ddf825c5f",
+      "candidate_id": "WCP-002",
+      "role": "rbr-score",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0
+    },
+    {
+      "path": "patches/WCP-002/rbr-binary.tif",
+      "bytes": 1784,
+      "sha256": "13f4776bb07ef8d66069eef17dab167eaa804706dd0d0674beeed3b76245a3d8",
+      "candidate_id": "WCP-002",
+      "role": "rbr-binary",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    },
+    {
+      "path": "patches/WCP-002/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "721bbe0986332bf648e9d5cc48d5047b758f64c71b962588f82ecc7436b0452f",
+      "candidate_id": "WCP-002",
+      "role": "exclusion",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    },
+    {
+      "path": "patches/WCP-002/unet-probability-diagnostic.tif",
+      "bytes": 14108,
+      "sha256": "3ee1c600aeea6c430e00f0d07a33c51c876dfee0e91d6548f146d809ffb79222",
+      "candidate_id": "WCP-002",
+      "role": "unet-probability",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0
+    },
+    {
+      "path": "patches/WCP-002/unet-binary-diagnostic.tif",
+      "bytes": 1306,
+      "sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297",
+      "candidate_id": "WCP-002",
+      "role": "unet-binary",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "dtype": "uint8",
+      "nodata": 255
+    }
+  ],
+  "vectors": {
+    "authoritative": {
+      "path": "vectors/rbr-accepted-polygons.gpkg",
+      "bytes": 114688,
+      "sha256": "99d083f124907c9098520e5508f811d29316a7d9232e0a783982ed1552131eee"
+    },
+    "web": {
+      "path": "vectors/rbr-accepted-polygons.geojson",
+      "bytes": 312627,
+      "sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af"
+    },
+    "summary": {
+      "WCP-001": {
+        "component_count": 28,
+        "pixel_count": 3536,
+        "area_m2": 1414400.0
+      },
+      "WCP-002": {
+        "component_count": 174,
+        "pixel_count": 1669,
+        "area_m2": 667600.0
+      }
+    }
+  },
+  "quicklook": {
+    "path": "GEOSPATIAL-QUICKLOOK.png",
+    "bytes": 40962,
+    "sha256": "dfd746726f2958bd7d90430008b5b5773ec489edbd8b4b61f7aa2b76dafbcfae"
+  },
+  "validation": {
+    "validation_version": "burnlens-phase-four-geospatial-validation-v0.1.0",
+    "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+    "raster_count": 10,
+    "all_rasters_read_back_exact": true,
+    "native_crs": "EPSG:32610",
+    "native_resolution_m": 20,
+    "vector_layer": "rbr_accepted",
+    "geometry_type": "MULTIPOLYGON",
+    "geometry_count": 202,
+    "all_geometries_valid": true,
+    "polygonization_connectivity": 4,
+    "raw_binary_polygonization": true,
+    "simplification": "none",
+    "vector_summary": {
+      "WCP-001": {
+        "component_count": 28,
+        "pixel_count": 3536,
+        "area_m2": 1414400.0
+      },
+      "WCP-002": {
+        "component_count": 174,
+        "pixel_count": 1669,
+        "area_m2": 667600.0
+      }
+    },
+    "web_representation_crs": "EPSG:4326",
+    "web_coordinate_rounding_decimal_places": 8,
+    "raster_vector_pixel_counts_match": true
+  },
+  "output_inventory": [
+    {
+      "path": "GEOSPATIAL-QUICKLOOK.png",
+      "bytes": 40962,
+      "sha256": "dfd746726f2958bd7d90430008b5b5773ec489edbd8b4b61f7aa2b76dafbcfae"
+    },
+    {
+      "path": "GEOSPATIAL-VALIDATION.json",
+      "bytes": 856,
+      "sha256": "a37f6b29bfd6b60bad0ca09604cbddbb11e54c91b8ec346079b363fbdbe81d19"
+    },
+    {
+      "path": "patches/WCP-001/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "f86a363a30fff3968c27c3f5a9ba65a348d327f1989a41a384bd149fd94455f7"
+    },
+    {
+      "path": "patches/WCP-001/rbr-binary.tif",
+      "bytes": 1370,
+      "sha256": "e9f85df3efa24fd7796e9d7326dec0adc9ecf9a9cd0a68b9c46774437de6222c"
+    },
+    {
+      "path": "patches/WCP-001/rbr-score.tif",
+      "bytes": 15666,
+      "sha256": "082f92a7ad489f35d157d0981a2c12d182c356c05883026888c9aa39a9730416"
+    },
+    {
+      "path": "patches/WCP-001/unet-binary-diagnostic.tif",
+      "bytes": 1142,
+      "sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5"
+    },
+    {
+      "path": "patches/WCP-001/unet-probability-diagnostic.tif",
+      "bytes": 13616,
+      "sha256": "f7c6b87a8dd9b229f2cd021af7b4bd4d1c6af6acecb3f22b13dcdbc4906991a3"
+    },
+    {
+      "path": "patches/WCP-002/exclusion.tif",
+      "bytes": 1114,
+      "sha256": "721bbe0986332bf648e9d5cc48d5047b758f64c71b962588f82ecc7436b0452f"
+    },
+    {
+      "path": "patches/WCP-002/rbr-binary.tif",
+      "bytes": 1784,
+      "sha256": "13f4776bb07ef8d66069eef17dab167eaa804706dd0d0674beeed3b76245a3d8"
+    },
+    {
+      "path": "patches/WCP-002/rbr-score.tif",
+      "bytes": 16130,
+      "sha256": "50ccbed7637d916ab3df7d9a5a608092808932fa2f27b4f45c1a889ddf825c5f"
+    },
+    {
+      "path": "patches/WCP-002/unet-binary-diagnostic.tif",
+      "bytes": 1306,
+      "sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297"
+    },
+    {
+      "path": "patches/WCP-002/unet-probability-diagnostic.tif",
+      "bytes": 14108,
+      "sha256": "3ee1c600aeea6c430e00f0d07a33c51c876dfee0e91d6548f146d809ffb79222"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 483,
+      "sha256": "42e95214da39144614bad2685dd6ccd4e38d311ec69941098c8c9e17ddc3ad07"
+    },
+    {
+      "path": "vectors/rbr-accepted-polygons.geojson",
+      "bytes": 312627,
+      "sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af"
+    },
+    {
+      "path": "vectors/rbr-accepted-polygons.gpkg",
+      "bytes": 114688,
+      "sha256": "99d083f124907c9098520e5508f811d29316a7d9232e0a783982ed1552131eee"
+    }
+  ],
+  "warnings": [
+    "Experimental BurnLens CV output; official sources govern.",
+    "RBR is the accepted method only for this bounded demonstration.",
+    "The U-Net is a rejected diagnostic and did not outperform RBR.",
+    "Polygons are raw 4-connected representations of accepted RBR pixels, not official fire perimeters.",
+    "No context source, exposure-style summary, or public interface is accepted at U03."
+  ],
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "retraining": false,
+    "retuning": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "context_source_used": false,
+    "context_complete": false,
+    "summary_complete": false,
+    "interface_complete": false,
+    "deployment": false,
+    "official_operational_or_emergency_claim": false
+  },
+  "disposition": "pass-geospatial-products-pending-context",
+  "next_dependency": "P4O1-T01-U04 context source and terms gate"
+}

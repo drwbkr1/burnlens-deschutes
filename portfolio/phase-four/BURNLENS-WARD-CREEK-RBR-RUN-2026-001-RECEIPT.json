@@ -1,0 +1,22 @@
+{
+  "receipt_version": "burnlens-phase-four-package-receipt-v0.1.0",
+  "package_id": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001",
+  "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+  "generated_at_utc": "2026-07-26T18:58:22Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+  "git_source_commit": "733a3c265be2c351a50bfd356d1b45da15cbfec0",
+  "archive": {
+    "path": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+    "bytes": 487893,
+    "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "member_count": 66,
+    "root": "burnlens-ward-creek-rbr-run-v0.1.0"
+  },
+  "extracted": {
+    "file_count": 66,
+    "bytes": 1795388,
+    "manifest_sha256": "b15f5d00c5a54c57b493dc902dc78c8c25a143efc3b069ff4d68b796b4543c4e",
+    "checksums_sha256": "eb08e65924a61ed0ca80018500e5693cce2a104cbcfcc95355d691b301838d7e"
+  },
+  "state": "package-candidate-pending-clean-reproduction"
+}

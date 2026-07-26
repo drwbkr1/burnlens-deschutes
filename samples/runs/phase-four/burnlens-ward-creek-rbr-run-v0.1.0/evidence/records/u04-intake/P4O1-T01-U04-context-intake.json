@@ -1,0 +1,329 @@
+{
+  "contract_version": "1.0",
+  "intake_id": "p4o1-t01-u04-context-2026-001",
+  "created_at": "2026-07-26T17:54:25Z",
+  "collision_policy": "fail",
+  "promotion_mode": "atomic-no-replace",
+  "secret_policy": "references-only",
+  "custody_root": "downloads/phase-four/context-custody",
+  "staging_root": "downloads/phase-four/context-staging/p4o1-t01-u04-context-2026-001",
+  "assets": [
+    {
+      "asset_id": "ntd-secondary-highways",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/30/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cpermanent_identifier%2Csource_datasetid%2Csource_datadesc%2Csource_originator%2Cloaddate%2Ctnmfrc%2Cmtfcc_code%2Cname%2Cglobalid&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/transportation/layer-30-secondary-highways.geojson",
+      "staging_relative_path": "ntd-secondary-highways/layer-30-secondary-highways.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "8725602d400859e9c4de39bf49f2da0aa4dba370017ba2eba1aa519cc9db0a19",
+        "staged_size_bytes": 43209,
+        "promoted_sha256": "8725602d400859e9c4de39bf49f2da0aa4dba370017ba2eba1aa519cc9db0a19",
+        "promoted_size_bytes": 43209
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-secondary-highways-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "ntd-local-connecting-roads",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/31/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cpermanent_identifier%2Csource_datasetid%2Csource_datadesc%2Csource_originator%2Cloaddate%2Ctnmfrc%2Cmtfcc_code%2Cname%2Cglobalid&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/transportation/layer-31-local-connecting-roads.geojson",
+      "staging_relative_path": "ntd-local-connecting-roads/layer-31-local-connecting-roads.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "548f7fb9d24c82924b50664d7116bfc63ad4ece1dd340396a2c12fb2b183b3ce",
+        "staged_size_bytes": 53039,
+        "promoted_sha256": "548f7fb9d24c82924b50664d7116bfc63ad4ece1dd340396a2c12fb2b183b3ce",
+        "promoted_size_bytes": 53039
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-local-connecting-roads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "ntd-local-roads",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer/32/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cpermanent_identifier%2Csource_datasetid%2Csource_datadesc%2Csource_originator%2Cloaddate%2Ctnmfrc%2Cmtfcc_code%2Cname%2Cglobalid&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/transportation/layer-32-local-roads.geojson",
+      "staging_relative_path": "ntd-local-roads/layer-32-local-roads.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "f5a45d456bf6e77be36ab36b3889fb69d9d3516e4ec0d72b671e4c39039c7528",
+        "staged_size_bytes": 157522,
+        "promoted_sha256": "f5a45d456bf6e77be36ab36b3889fb69d9d3516e4ec0d72b671e4c39039c7528",
+        "promoted_size_bytes": 157522
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "ntd-local-roads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "nsd-cemeteries",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/37/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CSOURCE_DATASETID%2CSOURCE_DATADESC%2CSOURCE_ORIGINATOR%2CLOADDATE%2CFTYPE%2CFCODE%2CNAME%2CPOINTLOCATIONTYPE%2CADMINTYPE%2CGNIS_ID%2CGLOBALID&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/structures/layer-37-cemeteries.geojson",
+      "staging_relative_path": "nsd-cemeteries/layer-37-cemeteries.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "58b7e58b38725ab68c3b36ffdbc5b3d4c280711acdef205be2e5ac0fdce311ee",
+        "staged_size_bytes": 1690,
+        "promoted_sha256": "58b7e58b38725ab68c3b36ffdbc5b3d4c280711acdef205be2e5ac0fdce311ee",
+        "promoted_size_bytes": 1690
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-cemeteries-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "nsd-post-offices",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/38/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CSOURCE_DATASETID%2CSOURCE_DATADESC%2CSOURCE_ORIGINATOR%2CLOADDATE%2CFTYPE%2CFCODE%2CNAME%2CPOINTLOCATIONTYPE%2CADMINTYPE%2CGNIS_ID%2CGLOBALID&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/structures/layer-38-post-offices.geojson",
+      "staging_relative_path": "nsd-post-offices/layer-38-post-offices.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "4b8c8204b0b0218259d3d4da40f27e66825973a10c283c617f18e55fab8a68ae",
+        "staged_size_bytes": 1144,
+        "promoted_sha256": "4b8c8204b0b0218259d3d4da40f27e66825973a10c283c617f18e55fab8a68ae",
+        "promoted_size_bytes": 1144
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-post-offices-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "nsd-fire-ems",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/51/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CSOURCE_DATASETID%2CSOURCE_DATADESC%2CSOURCE_ORIGINATOR%2CLOADDATE%2CFTYPE%2CFCODE%2CNAME%2CPOINTLOCATIONTYPE%2CADMINTYPE%2CGNIS_ID%2CGLOBALID&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/structures/layer-51-fire-ems.geojson",
+      "staging_relative_path": "nsd-fire-ems/layer-51-fire-ems.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "3a859a9ad7181fc66968e21751d2e31da19efc6b2c38ccd2ee2750102c76d3b9",
+        "staged_size_bytes": 606,
+        "promoted_sha256": "3a859a9ad7181fc66968e21751d2e31da19efc6b2c38ccd2ee2750102c76d3b9",
+        "promoted_size_bytes": 606
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-fire-ems-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "nsd-trailheads",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/61/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CSOURCE_DATASETID%2CSOURCE_DATADESC%2CSOURCE_ORIGINATOR%2CLOADDATE%2CFTYPE%2CFCODE%2CNAME%2CPOINTLOCATIONTYPE%2CADMINTYPE%2CGNIS_ID%2CGLOBALID&returnGeometry=true&outSR=4326&orderByFields=OBJECTID%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/structures/layer-61-trailheads.geojson",
+      "staging_relative_path": "nsd-trailheads/layer-61-trailheads.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "879ebed8c87327d8f5bd67d235ca3a8c110e0dd4b17a7e8b46b945e4c7f6489d",
+        "staged_size_bytes": 1327,
+        "promoted_sha256": "879ebed8c87327d8f5bd67d235ca3a8c110e0dd4b17a7e8b46b945e4c7f6489d",
+        "promoted_size_bytes": 1327
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nsd-trailheads-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    },
+    {
+      "asset_id": "nbd-blm-boundary",
+      "source": {
+        "kind": "https",
+        "uri": "https://carto.nationalmap.gov/arcgis/rest/services/govunits/MapServer/36/query?where=1%3D1&geometry=-121.01030156016445%2C44.85276135586534%2C-120.6910778474689%2C45.0563170040272&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=objectid%2Cpermanent_identifier%2Csource_datasetid%2Csource_datadesc%2Csource_originator%2Cloaddate%2Cname%2Cftype%2Cfcode%2Cadmintype%2Cownerormanagingagency%2Cglobalid&returnGeometry=true&outSR=4326&orderByFields=objectid%20ASC&returnZ=false&returnM=false&f=geojson",
+        "authorization_ref": "Issue #570 and PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+        "terms_ref": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+        "transport_exception_ref": null
+      },
+      "destination_relative_path": "tnm/boundaries/layer-36-blm.geojson",
+      "staging_relative_path": "nbd-blm-boundary/layer-36-blm.geojson.part",
+      "expected": {
+        "sha256": null,
+        "size_bytes": null,
+        "unavailable_reason": "The mutable public ArcGIS query service publishes no response checksum or byte count; exact staged bytes become the controlled identity."
+      },
+      "observed": {
+        "staged_sha256": "0975718f7af35e472f32d130f715d9aba025a7a172eeb2cc5be8e5e0a2fc7085",
+        "staged_size_bytes": 631535,
+        "promoted_sha256": "0975718f7af35e472f32d130f715d9aba025a7a172eeb2cc5be8e5e0a2fc7085",
+        "promoted_size_bytes": 631535
+      },
+      "state": "promoted",
+      "attempts": [
+        {
+          "attempt_id": "nbd-blm-boundary-r001",
+          "started_at": "2026-07-26T18:03:52Z",
+          "completed_at": "2026-07-26T18:03:52Z",
+          "outcome": "succeeded"
+        }
+      ],
+      "failure": null,
+      "superseded_by": null
+    }
+  ],
+  "extensions": {
+    "unit_id": "P4O1-T01-U04",
+    "repository": "drwbkr1/burnlens-deschutes",
+    "issue": 570,
+    "source_gate": {
+      "path": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+      "sha256": "12c273f24565d4899517d64408654128c62a0b8ba9e8f58d3dd898dacaef7a28"
+    },
+    "context_envelope": {
+      "basis_crs": "EPSG:32610",
+      "basis_bounds": [
+        657220.0,
+        4968520.0,
+        681800.0,
+        4991800.0
+      ],
+      "buffer_m": 10000,
+      "query_crs": "EPSG:4326",
+      "query_bounds": [
+        -121.01030156016445,
+        44.85276135586534,
+        -120.6910778474689,
+        45.0563170040272
+      ]
+    },
+    "metadata_only_expected_counts": {
+      "ntd-secondary-highways": 28,
+      "ntd-local-connecting-roads": 30,
+      "ntd-local-roads": 111,
+      "nsd-cemeteries": 3,
+      "nsd-post-offices": 2,
+      "nsd-fire-ems": 1,
+      "nsd-trailheads": 2,
+      "nbd-blm-boundary": 1
+    },
+    "resume_policy": "No resume. Each response is small; an interrupted or ambiguous transfer is retained as failed and retried under a new asset ID and path.",
+    "response_policy": "Require HTTP 200, application/geo+json or JSON-compatible content, no ArcGIS error object, exact FeatureCollection schema, expected feature count, valid finite EPSG:4326 geometry, minimal declared attributes, and no unexpected personal or secret field.",
+    "state": "PASS_EXACT_PUBLIC_TNM_CONTEXT_CUSTODY_FOR_U05",
+    "run_id": "BL-2026-07-26-p4o1-t01-u04-context-r001",
+    "git_source_commit": "20940438319a31022196739463a3be091e21fd3b",
+    "completed_at_utc": "2026-07-26T18:03:52Z",
+    "asset_count": 8,
+    "all_promoted": true,
+    "all_single_link": true
+  }
+}

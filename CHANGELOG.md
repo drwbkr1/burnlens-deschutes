@@ -2,6 +2,39 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.54.0-rbr-geoint-milestone - candidate - 2026-07-26
+
+- Complete the owner-approved
+  `baseline-primary-with-rejected-model-diagnostic` route without Phase 3B,
+  retraining, retuning, a second test opening, or a second experiment.
+- Run exact RBR and the frozen rejected U-Net on Ward Creek WCP-001 and
+  WCP-002 while excluding the U-Net from every accepted measurement.
+- Write ten native-grid GeoTIFFs, 202 accepted-RBR polygons, deliberate web
+  vectors, and independently validated CRS/transform/nodata/domain lineage.
+- Gate and acquire the smallest legally usable official context package, then
+  compute deterministic non-operational area and overlap observations.
+- Preserve WCP-002's 66.76 ha accepted-RBR / zero-MTBS-overlap result as
+  visible baseline false-positive-risk evidence.
+- Ship one self-contained local interface with six layers, six opacity
+  controls, three patch-focus controls, textual equivalence, warnings, source
+  roles, lineage, and the complete run-state taxonomy.
+- Package U01-U06 into 66 files / 1,795,388 bytes and one deterministic
+  487,893-byte ZIP at SHA-256 `91308a2f...`.
+- Validate both tracked package forms, reproduce the ZIP byte-identically
+  from a clean detached checkout, render desktop and narrow interactions, and
+  retain expected custody-prerequisite test failures honestly.
+- Update the roadmap, phase status, case study, portfolio quickstart,
+  changelog, version history, prompt/build log, registry, and human-readable
+  devlog for one coherent Phase Five handoff.
+
+Issue #570; package run
+`BL-2026-07-26-p4o1-t01-u07-package-r001`; exact package source
+`733a3c265be2c351a50bfd356d1b45da15cbfec0`; ZIP SHA-256
+`91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e`.
+Merge, fresh-main regression, package/install checks, and annotated tag remain
+U08 release gates. No GitHub Release, deployment, access, ownership,
+public-sharing, or external-submission change is part of this candidate.
+
 ## v0.53.0-bounded-unet-rejected-model - verified - 2026-07-26
 
 - Lock one exact CPU-only U-Net environment, implementation, and experiment

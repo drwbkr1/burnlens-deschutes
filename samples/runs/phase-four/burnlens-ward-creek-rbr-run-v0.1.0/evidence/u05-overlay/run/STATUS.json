@@ -1,0 +1,11 @@
+{
+  "status_version": "burnlens-phase-four-overlay-v0.1.0",
+  "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+  "state": "accepted-baseline",
+  "overlay_complete": true,
+  "summary_complete": true,
+  "interface_complete": false,
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "next_dependency": "P4O1-T01-U06 repository-owned evidence interface"
+}

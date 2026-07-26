@@ -1,0 +1,321 @@
+{
+  "analysis_version": "burnlens-phase-four-analysis-v0.1.0",
+  "analysis_id": "PHASE-FOUR-ANALYSIS-2026-001",
+  "generated_at_utc": "2026-07-26T17:23:34Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "unit_id": "P4O1-T01-U02",
+  "git_source_commit": "cf67113dbae0e05dd034b0cca5d2a98f2a4bfb9f",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "contract": {
+    "path": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+    "bytes": 19991,
+    "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec"
+  },
+  "versions": {
+    "target_version": "target-burn-scar-v0.2.0",
+    "modeling_aoi_version": "aoi-darlene3-model-v0.2.0",
+    "integration_geography_version": "ward-creek-two-patch-native-grid-v0.1.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "normalization_version": "burnlens-train-normalization-v0.1.0",
+    "source_label_state_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "prototype_label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_package_version": "burnlens-unet-rejected-package-v0.1.1",
+    "run_package_candidate_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+    "interface_candidate_version": "burnlens-geoint-evidence-interface-v0.1.0"
+  },
+  "methods": {
+    "accepted": {
+      "version": "burnlens-baseline-v0.1.0",
+      "family": "rbr-threshold",
+      "formula": "RBR = ((pre_NBR - post_NBR) / (pre_NBR + 1.001)); NBR = (B8A - B12) / (B8A + B12)",
+      "threshold": 0.041043221950531006,
+      "comparison": "RBR >= threshold",
+      "role": "accepted analytical output",
+      "test_event_class_macro_dice": 1.0,
+      "generalization_claim": false
+    },
+    "rejected_diagnostic": {
+      "version": "burnlens-unet-binary-v0.1.0",
+      "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+      "threshold": 0.5,
+      "accepted": false,
+      "outperformed_rbr": false,
+      "role": "reviewer-visible rejected-model probability, binary, and disagreement diagnostic only",
+      "failure": "The frozen model predicts all 89 selected test cores burned and scores macro Dice 0.29874213836477986 against RBR 1.0.",
+      "probability_semantics": "descriptive sigmoid score, not calibrated confidence",
+      "test_event_class_macro_dice": 0.29874213836477986,
+      "generalization_claim": false
+    }
+  },
+  "execution": {
+    "seed": 20260725,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "threads": 1,
+    "interop_threads": 1,
+    "device": "cpu",
+    "dtype": "float32",
+    "model_training": false,
+    "threshold_tuning": false,
+    "model_selection": false,
+    "metric_selection": false,
+    "source_test_role_arrays_read_for_fixed_integration": true,
+    "phase_three_model_selection_test_open_count": 1,
+    "phase_four_integration_read_count": 1
+  },
+  "patches": [
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-001",
+      "prototype_class": "burned",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "input_bindings": [
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "4034070f6913c00028cb4980375ee6d5719a2bcda545ee0b364a99fa760727e3"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "43842138739e72655876b7a3d298a6d671fd9c91f8deadbc4bdbbbe504ff69b1"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "0ddc8acaf4a4c2f73d5a60f58006f7b1520b9efb99a494e37544014bdfb4f2c9"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "patches/WCP-001/rbr-score.npy",
+          "bytes": 16512,
+          "sha256": "0f330d70d7ddd1a1c9cad13d2d252bf610d3d2b2dc521c3e0e0444d85ad0b046"
+        },
+        {
+          "path": "patches/WCP-001/rbr-binary.npy",
+          "bytes": 4224,
+          "sha256": "873effcca85720ca5b77e327f2d86cb7927e1abd689c8d924bd6624f1f075379"
+        },
+        {
+          "path": "patches/WCP-001/exclusion.npy",
+          "bytes": 4224,
+          "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+        },
+        {
+          "path": "patches/WCP-001/unet-probability-diagnostic.npy",
+          "bytes": 16512,
+          "sha256": "7a702a3c147b8f04885d6049d59f48d0a75511931ec4a30a3717e5777c90ce33"
+        },
+        {
+          "path": "patches/WCP-001/unet-binary-diagnostic.npy",
+          "bytes": 4224,
+          "sha256": "9209ad1a5f35fbf60e7599ffce489ce32c672763e6956a29a7d7671c60c51e36"
+        }
+      ],
+      "facts": {
+        "valid_pixels": 4096,
+        "excluded_pixels": 0,
+        "rbr_positive_pixels": 3536,
+        "unet_diagnostic_positive_pixels": 4095,
+        "agreement_pixels": 3535,
+        "rbr_only_positive_pixels": 1,
+        "unet_only_positive_pixels": 560,
+        "rbr_min": -0.02186017856001854,
+        "rbr_max": 0.5072318315505981,
+        "unet_probability_min": 0.498269259929657,
+        "unet_probability_max": 0.6333008408546448
+      }
+    },
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-002",
+      "prototype_class": "background",
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "shape": [
+        64,
+        64
+      ],
+      "input_bindings": [
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "0cac49a855d07d91c743e8024f0f1cf04a3f23301fc1dcfe8985c9d0caf3ca50"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "f1ac5ebb76908fcf0553316db36d298bce901c8d208003868bd403a498f4fa46"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "923109ba696fbade72da3b2b1a49c3ed3ee8191cb35551a0133b99a5a5b07fa1"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "patches/WCP-002/rbr-score.npy",
+          "bytes": 16512,
+          "sha256": "65c44dd181ffd65e9f7d314c034152105cc3da78f6aa28f24f0076b5f67ad497"
+        },
+        {
+          "path": "patches/WCP-002/rbr-binary.npy",
+          "bytes": 4224,
+          "sha256": "3dea50519d39438ede0b0d61c2798468c2b39d8f58082a6751d3bc734ee5e640"
+        },
+        {
+          "path": "patches/WCP-002/exclusion.npy",
+          "bytes": 4224,
+          "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+        },
+        {
+          "path": "patches/WCP-002/unet-probability-diagnostic.npy",
+          "bytes": 16512,
+          "sha256": "559bc7949f2764f4b8c176eb4c274fe70f1b39ef050ba493ed4f743f7ffc9564"
+        },
+        {
+          "path": "patches/WCP-002/unet-binary-diagnostic.npy",
+          "bytes": 4224,
+          "sha256": "3f0355fc9b90cba2e1ac8770925fef019777704cf708eaff30d1cfae45807433"
+        }
+      ],
+      "facts": {
+        "valid_pixels": 4096,
+        "excluded_pixels": 0,
+        "rbr_positive_pixels": 1669,
+        "unet_diagnostic_positive_pixels": 3206,
+        "agreement_pixels": 1495,
+        "rbr_only_positive_pixels": 532,
+        "unet_only_positive_pixels": 2069,
+        "rbr_min": -0.04154209792613983,
+        "rbr_max": 0.13176590204238892,
+        "unet_probability_min": 0.47677454352378845,
+        "unet_probability_max": 0.623180627822876
+      }
+    }
+  ],
+  "output_inventory": [
+    {
+      "path": "STATUS.json",
+      "bytes": 415,
+      "sha256": "6e8da3e8ef72604eaf3a63ce0a9e1522cbb26e029fbd9c3c16663237119d56db"
+    },
+    {
+      "path": "patches/WCP-001/exclusion.npy",
+      "bytes": 4224,
+      "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+    },
+    {
+      "path": "patches/WCP-001/rbr-binary.npy",
+      "bytes": 4224,
+      "sha256": "873effcca85720ca5b77e327f2d86cb7927e1abd689c8d924bd6624f1f075379"
+    },
+    {
+      "path": "patches/WCP-001/rbr-score.npy",
+      "bytes": 16512,
+      "sha256": "0f330d70d7ddd1a1c9cad13d2d252bf610d3d2b2dc521c3e0e0444d85ad0b046"
+    },
+    {
+      "path": "patches/WCP-001/unet-binary-diagnostic.npy",
+      "bytes": 4224,
+      "sha256": "9209ad1a5f35fbf60e7599ffce489ce32c672763e6956a29a7d7671c60c51e36"
+    },
+    {
+      "path": "patches/WCP-001/unet-probability-diagnostic.npy",
+      "bytes": 16512,
+      "sha256": "7a702a3c147b8f04885d6049d59f48d0a75511931ec4a30a3717e5777c90ce33"
+    },
+    {
+      "path": "patches/WCP-002/exclusion.npy",
+      "bytes": 4224,
+      "sha256": "9d578b979aaea26c86dcc69bf458fca9567ad85bea82b2c2858c125baf37da76"
+    },
+    {
+      "path": "patches/WCP-002/rbr-binary.npy",
+      "bytes": 4224,
+      "sha256": "3dea50519d39438ede0b0d61c2798468c2b39d8f58082a6751d3bc734ee5e640"
+    },
+    {
+      "path": "patches/WCP-002/rbr-score.npy",
+      "bytes": 16512,
+      "sha256": "65c44dd181ffd65e9f7d314c034152105cc3da78f6aa28f24f0076b5f67ad497"
+    },
+    {
+      "path": "patches/WCP-002/unet-binary-diagnostic.npy",
+      "bytes": 4224,
+      "sha256": "3f0355fc9b90cba2e1ac8770925fef019777704cf708eaff30d1cfae45807433"
+    },
+    {
+      "path": "patches/WCP-002/unet-probability-diagnostic.npy",
+      "bytes": 16512,
+      "sha256": "559bc7949f2764f4b8c176eb4c274fe70f1b39ef050ba493ed4f743f7ffc9564"
+    }
+  ],
+  "warnings": [
+    "Prototype labels are owner-approved sparse evidence, not independent ground truth.",
+    "RBR is the accepted analytical method only for this bounded demonstration.",
+    "The U-Net probability is a rejected-model descriptive score, not calibrated confidence.",
+    "A no-detection state would not mean safe, no fire, or no risk.",
+    "No geospatial raster/vector product, context overlay, summary, or public interface is accepted at U02."
+  ],
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "model_retrained": false,
+    "threshold_changed": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "label_changed": false,
+    "aoi_changed": false,
+    "context_source_used": false,
+    "geospatial_product_accepted": false,
+    "deployment": false,
+    "official_operational_or_emergency_claim": false
+  },
+  "disposition": "pass-analytical-arrays-pending-geospatial-products",
+  "next_dependency": "P4O1-T01-U03 geospatial products"
+}

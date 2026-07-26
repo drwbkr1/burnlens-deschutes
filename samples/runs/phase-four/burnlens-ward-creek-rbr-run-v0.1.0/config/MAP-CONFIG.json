@@ -1,0 +1,44 @@
+{
+  "map_config_version": "burnlens-phase-four-map-config-v0.1.0",
+  "measurement_crs": "EPSG:32610",
+  "web_crs": "EPSG:4326",
+  "default_focus": "all",
+  "layers": [
+    {
+      "id": "accepted-rbr",
+      "role": "accepted analytical output",
+      "default_visible": true,
+      "default_opacity": 0.78
+    },
+    {
+      "id": "rejected-unet",
+      "role": "rejected model diagnostic only",
+      "default_visible": false,
+      "default_opacity": 0.6
+    },
+    {
+      "id": "mtbs",
+      "role": "official-program reference context",
+      "default_visible": true,
+      "default_opacity": 1.0
+    },
+    {
+      "id": "roads",
+      "role": "selected official context; not routing",
+      "default_visible": true,
+      "default_opacity": 0.72
+    },
+    {
+      "id": "facilities",
+      "role": "selected official context; not availability",
+      "default_visible": true,
+      "default_opacity": 1.0
+    },
+    {
+      "id": "blm",
+      "role": "generalized planning context",
+      "default_visible": true,
+      "default_opacity": 0.75
+    }
+  ]
+}

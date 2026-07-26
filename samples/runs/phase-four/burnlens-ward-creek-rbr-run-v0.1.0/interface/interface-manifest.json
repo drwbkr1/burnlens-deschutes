@@ -1,0 +1,339 @@
+{
+  "interface_version": "burnlens-phase-four-interface-v0.1.0",
+  "interface_id": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001",
+  "generated_at_utc": "2026-07-26T18:46:12Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u06-interface-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "unit_id": "P4O1-T01-U06",
+  "git_source_commit": "5072a57bc75f63ebb9b66dd5a2173b6b290473d8",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "bound_inputs": [
+    {
+      "path": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+      "bytes": 19991,
+      "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec",
+      "role": "frozen Phase Four integration contract",
+      "tracked": true
+    },
+    {
+      "path": "records/phase-four/geospatial/PHASE-FOUR-GEOSPATIAL-RECORD-2026-001.json",
+      "bytes": 9119,
+      "sha256": "002860f20df5a2441e71e4b5b27dffdc238c0269a67493900d847e9af9b2e5c9",
+      "role": "accepted Phase Four geospatial record",
+      "tracked": true
+    },
+    {
+      "path": "records/phase-four/overlays/PHASE-FOUR-OVERLAY-RECORD-2026-001.json",
+      "bytes": 8555,
+      "sha256": "48556442dd519fe7300f8793b47778ac628fc8c16fbb61bda85cde57cf0bbd59",
+      "role": "accepted Phase Four overlay record",
+      "tracked": true
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u03-geospatial-r003/vectors/rbr-accepted-polygons.geojson",
+      "bytes": 312627,
+      "sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af",
+      "role": "accepted RBR web vector",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u03-geospatial-r003/patches/WCP-001/unet-binary-diagnostic.tif",
+      "bytes": 1142,
+      "sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5",
+      "role": "WCP-001 rejected U-Net diagnostic raster",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u03-geospatial-r003/patches/WCP-002/unet-binary-diagnostic.tif",
+      "bytes": 1306,
+      "sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297",
+      "role": "WCP-002 rejected U-Net diagnostic raster",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/OVERLAY-MANIFEST.json",
+      "bytes": 8088,
+      "sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8",
+      "role": "accepted U05 overlay manifest",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/analysis/OVERLAY-SUMMARY.json",
+      "bytes": 8081,
+      "sha256": "f60f43d48913e8c8431a76783bb9c8713fbb9b465f26b473a97ec00b3d41135d",
+      "role": "accepted U05 deterministic summary",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/context/roads.geojson",
+      "bytes": 348717,
+      "sha256": "8f94577b5ce12db980b489954febf7c1ea1f6830e3c63c357deb763a0810c004",
+      "role": "bounded TNM road context",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/context/facilities.geojson",
+      "bytes": 4529,
+      "sha256": "ae565fafd92afac99c37c48a727d0e86b2c995ec83f29fa895d24c15d478ca1b",
+      "role": "bounded TNM facility context",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/context/blm-boundary.geojson",
+      "bytes": 36884,
+      "sha256": "6c2b64a0dee303f3258748f5500a31e8797139d140341565a1e7146c287d69c2",
+      "role": "bounded TNM BLM context",
+      "tracked": false
+    },
+    {
+      "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u05-overlay-r001/reference/mtbs-ward-creek-boundary.geojson",
+      "bytes": 267090,
+      "sha256": "b9c9ebc134811f1ce93194716c2c46a49bac751773bfa19da2d94f04d9fc3f14",
+      "role": "exact governed Ward Creek MTBS web boundary",
+      "tracked": false
+    }
+  ],
+  "map": {
+    "self_contained": true,
+    "offline": true,
+    "external_requests": 0,
+    "viewbox": "0 0 1000 660",
+    "bounds_epsg_4326": [
+      -121.01030156016445,
+      44.85276135586534,
+      -120.6910778474689,
+      45.0563170040272
+    ],
+    "accepted_rbr_features": 202,
+    "rejected_unet_diagnostic_features": 2,
+    "mtbs_features": 1,
+    "road_features": 167,
+    "facility_features": 8,
+    "blm_features": 1,
+    "layer_controls": [
+      "accepted-rbr",
+      "rejected-unet",
+      "mtbs",
+      "roads",
+      "facilities",
+      "blm"
+    ],
+    "opacity_controls": true,
+    "patch_focus_controls": [
+      "all",
+      "WCP-001",
+      "WCP-002"
+    ],
+    "textual_equivalent": true,
+    "non_color_cues": true
+  },
+  "measurements": {
+    "WCP-001": {
+      "patch_area_m2": 1638400.0,
+      "accepted_rbr_area_m2": 1414400.0,
+      "accepted_rbr_area_ha": 141.44,
+      "accepted_rbr_patch_fraction_pct": 86.33,
+      "mtbs_overlap_area_m2": 1332237.194,
+      "mtbs_overlap_area_ha": 133.22,
+      "accepted_rbr_inside_mtbs_pct": 94.19,
+      "accepted_rbr_outside_mtbs_area_ha": 8.22,
+      "blm_overlap_area_m2": 0.0,
+      "blm_overlap_area_ha": 0.0,
+      "accepted_rbr_inside_blm_pct": 0.0,
+      "roads": {
+        "secondary-highway": {
+          "feature_count_in_context_package": 28,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 1152.7
+        },
+        "local-connecting-road": {
+          "feature_count_in_context_package": 30,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 8463.7
+        },
+        "local-road": {
+          "feature_count_in_context_package": 111,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 5625.5
+        }
+      },
+      "facilities": {
+        "cemetery": {
+          "feature_count_in_context_package": 3,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 11817.1
+        },
+        "post-office": {
+          "feature_count_in_context_package": 2,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 10513.5
+        },
+        "fire-ems": {
+          "feature_count_in_context_package": 1,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 10592.1
+        },
+        "trailhead": {
+          "feature_count_in_context_package": 2,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 13933.5
+        }
+      }
+    },
+    "WCP-002": {
+      "patch_area_m2": 1638400.0,
+      "accepted_rbr_area_m2": 667600.0,
+      "accepted_rbr_area_ha": 66.76,
+      "accepted_rbr_patch_fraction_pct": 40.75,
+      "mtbs_overlap_area_m2": 0.0,
+      "mtbs_overlap_area_ha": 0.0,
+      "accepted_rbr_inside_mtbs_pct": 0.0,
+      "accepted_rbr_outside_mtbs_area_ha": 66.76,
+      "blm_overlap_area_m2": 0.0,
+      "blm_overlap_area_ha": 0.0,
+      "accepted_rbr_inside_blm_pct": 0.0,
+      "roads": {
+        "secondary-highway": {
+          "feature_count_in_context_package": 28,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 2188.1
+        },
+        "local-connecting-road": {
+          "feature_count_in_context_package": 30,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 6144.5
+        },
+        "local-road": {
+          "feature_count_in_context_package": 111,
+          "accepted_rbr_intersection_length_m": 0.0,
+          "nearest_distance_to_accepted_rbr_m": 2959.9
+        }
+      },
+      "facilities": {
+        "cemetery": {
+          "feature_count_in_context_package": 3,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 9352.2
+        },
+        "post-office": {
+          "feature_count_in_context_package": 2,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 6671.2
+        },
+        "fire-ems": {
+          "feature_count_in_context_package": 1,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 6751.3
+        },
+        "trailhead": {
+          "feature_count_in_context_package": 2,
+          "count_inside_patch": 0,
+          "count_inside_accepted_rbr": 0,
+          "nearest_distance_to_accepted_rbr_m": 15239.5
+        }
+      }
+    }
+  },
+  "lineage": {
+    "Application version": "0.53.0",
+    "Interface version": "burnlens-phase-four-interface-v0.1.0",
+    "Interface run": "BL-2026-07-26-p4o1-t01-u06-interface-r002",
+    "Interface source commit": "5072a57bc75f63ebb9b66dd5a2173b6b290473d8",
+    "Accepted analytical method": "burnlens-baseline-v0.1.0",
+    "Rejected diagnostic model": "burnlens-unet-binary-v0.1.0",
+    "Rejected model package": "burnlens-unet-rejected-package-v0.1.1",
+    "Dataset version": "burnlens-dataset-v0.1.0",
+    "Whole-event split": "burnlens-whole-event-split-v0.1.0",
+    "Source state schema": "burn-scar-five-state-schema-v0.1.0",
+    "Dataset label schema": "burn-scar-binary-region-label-schema-v0.3.0",
+    "Prototype label set": "owner-approved-prototype-region-labels-v0.5.0",
+    "Analytical run": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+    "Geospatial run": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+    "Context run": "BL-2026-07-26-p4o1-t01-u04-context-r001",
+    "Overlay run": "BL-2026-07-26-p4o1-t01-u05-overlay-r001"
+  },
+  "run_state_taxonomy": [
+    {
+      "name": "Accepted",
+      "meaning": "All required gates pass for the declared bounded role.",
+      "current": "Active: accepted RBR baseline",
+      "status": "active"
+    },
+    {
+      "name": "Degraded",
+      "meaning": "Output exists with a material quality limitation.",
+      "current": "Not active in accepted run",
+      "status": "inactive"
+    },
+    {
+      "name": "No detection",
+      "meaning": "A valid run reports no accepted detection.",
+      "current": "Not active in accepted run",
+      "status": "inactive"
+    },
+    {
+      "name": "Fallback",
+      "meaning": "A declared fallback route ran instead of the primary route.",
+      "current": "Not active; RBR is primary",
+      "status": "inactive"
+    },
+    {
+      "name": "Failed",
+      "meaning": "The attempt cannot satisfy its declared output gates.",
+      "current": "Retained: U03 render QA r001/r002",
+      "status": "retained"
+    },
+    {
+      "name": "Withheld",
+      "meaning": "Output is intentionally not released from custody.",
+      "current": "Not active in accepted run",
+      "status": "inactive"
+    }
+  ],
+  "accessibility": {
+    "semantic_landmarks": true,
+    "skip_link": true,
+    "keyboard_native_controls": true,
+    "visible_focus": true,
+    "reduced_motion": true,
+    "responsive_narrow_layout": true,
+    "svg_title_and_description": true,
+    "map_textual_equivalent": true,
+    "role_not_conveyed_by_color_alone": true
+  },
+  "warning": "Experimental owner-approved prototype evidence. Not independent ground truth, official, field-validated, endorsed, operational, or suitable for routing, closure, tactical, property, legal, safety, or emergency decisions.",
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "unet_used_for_measurement": false,
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "external_requests": false,
+    "user_upload": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "official_operational_field_validated_endorsed_or_emergency_claim": false
+  },
+  "disposition": "pass-interface-candidate-pending-render-qa",
+  "next_dependency": "P4O1-T01-U06 real desktop and narrow interaction QA",
+  "outputs": [
+    {
+      "path": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    }
+  ]
+}

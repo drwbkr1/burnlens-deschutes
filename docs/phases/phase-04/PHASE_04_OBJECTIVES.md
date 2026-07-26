@@ -16,16 +16,17 @@ Convert the accepted model or baseline into a reproducible inference-to-GEOINT w
 
 ## Current status
 
-**Active — incomplete.**
+**Release candidate — U01-U07 accepted; U08 verification active.**
 
-Verified BurnLens 0.53.0 supplies the explicit
-`baseline-primary-with-rejected-model-diagnostic` handoff. RBR is the accepted
-analytical method; the frozen U-Net may appear only as visibly rejected
-diagnostic evidence. Phase Four may not retrain, retune, or reopen the test set.
-Phase Four may not be deferred in favor of a Phase 3B remediation milestone.
-Lessons from the U-Net failure belong in final recommendations for a
-separately governed follow-on experiment; planning or implementation of that
-experiment is not part of this phase or the current project.
+Verified BurnLens 0.53.0 supplied the explicit
+`baseline-primary-with-rejected-model-diagnostic` handoff. P4O1-T01 / issue
+#570 now has one exact accepted RBR run, native-grid rasters, accepted vectors,
+bounded context, deterministic observations, a self-contained evidence
+interface, and immutable run package. The frozen U-Net remains visibly
+rejected diagnostic evidence and contributes no measurement. Phase Four has
+not retrained, retuned, reopened the test set, created Phase 3B, or planned or
+implemented a second experiment. U08 must review, merge, verify fresh main,
+and hand the exact candidate to Phase Five before this phase is complete.
 
 ## Phase purpose
 
@@ -167,7 +168,7 @@ Phase Four does not:
 - add live wildfire monitoring or emergency feeds;
 - perform user-uploaded inference;
 - recommend evacuation routes, closures, tactical actions, or property-level outcomes;
-- publish the final case study or production release;
+- publish a deployed production service or external submission;
 - blend official and BurnLens outputs into one unlabeled fire layer.
 
 ## Fixed boundaries

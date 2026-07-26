@@ -1,0 +1,12 @@
+{
+  "status_version": "burnlens-phase-four-run-status-v0.1.0",
+  "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+  "state": "accepted-baseline",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "complete": true,
+  "publishable": false,
+  "next_dependency": "P4O1-T01-U03 geospatial products"
+}

@@ -1,0 +1,10 @@
+{
+  "attempt_version": "burnlens-phase-four-overlay-v0.1.0",
+  "generated_at_utc": "2026-07-26T18:24:06Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+  "git_source_commit": "2f96cc6387086e1391ce6f0e4bf5a18741456b4a",
+  "status": "COMPLETE",
+  "state": "accepted-baseline",
+  "output_count": 8,
+  "manifest_sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8"
+}

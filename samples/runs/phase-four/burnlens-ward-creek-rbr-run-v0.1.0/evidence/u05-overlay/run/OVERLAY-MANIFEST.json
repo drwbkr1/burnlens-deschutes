@@ -1,0 +1,232 @@
+{
+  "overlay_version": "burnlens-phase-four-overlay-v0.1.0",
+  "overlay_id": "PHASE-FOUR-OVERLAY-2026-001",
+  "generated_at_utc": "2026-07-26T18:24:06Z",
+  "run_id": "BL-2026-07-26-p4o1-t01-u05-overlay-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "unit_id": "P4O1-T01-U05",
+  "git_source_commit": "2f96cc6387086e1391ce6f0e4bf5a18741456b4a",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "inputs": [
+    {
+      "path": "records/phase-four/geospatial/PHASE-FOUR-GEOSPATIAL-RECORD-2026-001.json",
+      "sha256": "002860f20df5a2441e71e4b5b27dffdc238c0269a67493900d847e9af9b2e5c9"
+    },
+    {
+      "path": "records/phase-four/context/PHASE-FOUR-CONTEXT-CUSTODY-RECORD-2026-001.json",
+      "sha256": "1ced1aa1ddf950f4bc70f4217d2d6a5139df82a7bae9a65aa8d88928d65f0547"
+    },
+    {
+      "path": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+      "sha256": "f31bc51c64dae60b5a419146f4183b960b8504044f79e7505018a630c47c466d"
+    },
+    {
+      "path": "downloads/phase-two/raw/ward-creek-mtbs-reference-v0.1.0/ward-creek-mtbs-reference-delivery-001.zip",
+      "sha256": "d94dfb1609c882fdd26119b2be03cea486af1bbb85e4c9607f108f9455f61d18",
+      "tracked": false
+    }
+  ],
+  "measurement_contract": {
+    "measurement_crs": "EPSG:32610",
+    "distance_units": "meters",
+    "length_units": "meters with display kilometers",
+    "area_units": "square meters with display hectares",
+    "rounding": {
+      "area_m2": 3,
+      "area_ha": 2,
+      "percent": 2,
+      "distance_m": 1,
+      "length_km": 2
+    },
+    "context_envelope": {
+      "bounds": [
+        657220.0,
+        4968520.0,
+        681800.0,
+        4991800.0
+      ],
+      "buffer_m": 10000,
+      "road_summary": {
+        "secondary-highway": {
+          "feature_count": 28,
+          "clipped_length_km": 50.78
+        },
+        "local-connecting-road": {
+          "feature_count": 30,
+          "clipped_length_km": 28.99
+        },
+        "local-road": {
+          "feature_count": 111,
+          "clipped_length_km": 88.49
+        }
+      },
+      "facility_count": 8,
+      "blm_feature_count": 1
+    },
+    "mtbs_boundary_area_ha": 837.89,
+    "patches": {
+      "WCP-001": {
+        "patch_area_m2": 1638400.0,
+        "accepted_rbr_area_m2": 1414400.0,
+        "accepted_rbr_area_ha": 141.44,
+        "accepted_rbr_patch_fraction_pct": 86.33,
+        "mtbs_overlap_area_m2": 1332237.194,
+        "mtbs_overlap_area_ha": 133.22,
+        "accepted_rbr_inside_mtbs_pct": 94.19,
+        "accepted_rbr_outside_mtbs_area_ha": 8.22,
+        "blm_overlap_area_m2": 0.0,
+        "blm_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_blm_pct": 0.0,
+        "roads": {
+          "secondary-highway": {
+            "feature_count_in_context_package": 28,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 1152.7
+          },
+          "local-connecting-road": {
+            "feature_count_in_context_package": 30,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 8463.7
+          },
+          "local-road": {
+            "feature_count_in_context_package": 111,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 5625.5
+          }
+        },
+        "facilities": {
+          "cemetery": {
+            "feature_count_in_context_package": 3,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 11817.1
+          },
+          "post-office": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 10513.5
+          },
+          "fire-ems": {
+            "feature_count_in_context_package": 1,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 10592.1
+          },
+          "trailhead": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 13933.5
+          }
+        }
+      },
+      "WCP-002": {
+        "patch_area_m2": 1638400.0,
+        "accepted_rbr_area_m2": 667600.0,
+        "accepted_rbr_area_ha": 66.76,
+        "accepted_rbr_patch_fraction_pct": 40.75,
+        "mtbs_overlap_area_m2": 0.0,
+        "mtbs_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_mtbs_pct": 0.0,
+        "accepted_rbr_outside_mtbs_area_ha": 66.76,
+        "blm_overlap_area_m2": 0.0,
+        "blm_overlap_area_ha": 0.0,
+        "accepted_rbr_inside_blm_pct": 0.0,
+        "roads": {
+          "secondary-highway": {
+            "feature_count_in_context_package": 28,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 2188.1
+          },
+          "local-connecting-road": {
+            "feature_count_in_context_package": 30,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 6144.5
+          },
+          "local-road": {
+            "feature_count_in_context_package": 111,
+            "accepted_rbr_intersection_length_m": 0.0,
+            "nearest_distance_to_accepted_rbr_m": 2959.9
+          }
+        },
+        "facilities": {
+          "cemetery": {
+            "feature_count_in_context_package": 3,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 9352.2
+          },
+          "post-office": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 6671.2
+          },
+          "fire-ems": {
+            "feature_count_in_context_package": 1,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 6751.3
+          },
+          "trailhead": {
+            "feature_count_in_context_package": 2,
+            "count_inside_patch": 0,
+            "count_inside_accepted_rbr": 0,
+            "nearest_distance_to_accepted_rbr_m": 15239.5
+          }
+        }
+      }
+    }
+  },
+  "observation_count": 5,
+  "output_inventory": [
+    {
+      "path": "analysis/OVERLAY-SUMMARY.json",
+      "bytes": 8081,
+      "sha256": "f60f43d48913e8c8431a76783bb9c8713fbb9b465f26b473a97ec00b3d41135d"
+    },
+    {
+      "path": "context/blm-boundary.geojson",
+      "bytes": 36884,
+      "sha256": "6c2b64a0dee303f3258748f5500a31e8797139d140341565a1e7146c287d69c2"
+    },
+    {
+      "path": "context/facilities.geojson",
+      "bytes": 4529,
+      "sha256": "ae565fafd92afac99c37c48a727d0e86b2c995ec83f29fa895d24c15d478ca1b"
+    },
+    {
+      "path": "context/roads.geojson",
+      "bytes": 348717,
+      "sha256": "8f94577b5ce12db980b489954febf7c1ea1f6830e3c63c357deb763a0810c004"
+    },
+    {
+      "path": "OVERLAY-QUICKLOOK.png",
+      "bytes": 99654,
+      "sha256": "4764170a7c45659e1b3038a512c6344f769972fbe6dbd16ee04811366539d6b1"
+    },
+    {
+      "path": "reference/mtbs-ward-creek-boundary.geojson",
+      "bytes": 267090,
+      "sha256": "b9c9ebc134811f1ce93194716c2c46a49bac751773bfa19da2d94f04d9fc3f14"
+    }
+  ],
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "unet_used_for_measurement": false,
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "routing_closure_tactical_property_legal_safety_or_emergency_use": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "interface_complete": false,
+    "deployment": false
+  },
+  "disposition": "pass-overlay-summary-pending-interface",
+  "next_dependency": "P4O1-T01-U06 repository-owned evidence interface"
+}

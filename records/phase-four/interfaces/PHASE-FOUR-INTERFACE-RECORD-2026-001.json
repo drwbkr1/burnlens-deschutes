@@ -1,0 +1,253 @@
+{
+  "record_version": "burnlens-phase-four-interface-record-v0.1.0",
+  "record_id": "PHASE-FOUR-INTERFACE-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T18:49:03Z",
+  "unit_id": "P4O1-T01-U06",
+  "accepted_run_id": "BL-2026-07-26-p4o1-t01-u06-interface-r002",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "git_source_commit": "5072a57bc75f63ebb9b66dd5a2173b6b290473d8",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "inputs": {
+    "bound_input_count": 12,
+    "tracked_input_count": 3,
+    "ignored_run_input_count": 9,
+    "all_exact_size_and_sha256_gates": true,
+    "integration_contract_sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec",
+    "geospatial_record_sha256": "002860f20df5a2441e71e4b5b27dffdc238c0269a67493900d847e9af9b2e5c9",
+    "overlay_record_sha256": "48556442dd519fe7300f8793b47778ac628fc8c16fbb61bda85cde57cf0bbd59",
+    "overlay_manifest_sha256": "cf235bee576b4a1c0158a6e68511ce1ef0751061eb2dd8e3e666ef35fd7bbce8",
+    "accepted_rbr_geojson_sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af",
+    "WCP-001_rejected_unet_diagnostic_sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5",
+    "WCP-002_rejected_unet_diagnostic_sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297"
+  },
+  "accepted_outputs": {
+    "directory": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0",
+    "interface_version": "burnlens-phase-four-interface-v0.1.0",
+    "interface_id": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001",
+    "files": [
+      {
+        "path": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+        "bytes": 177666,
+        "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+      },
+      {
+        "path": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.json",
+        "bytes": 12429,
+        "sha256": "8686766d026d413e0075eb974a0c08ba870c9110b006ba26abe28d505bf6313c"
+      }
+    ],
+    "self_contained": true,
+    "offline_application_dependencies": 0,
+    "external_resource_references": 0,
+    "network_calls_in_application": 0,
+    "map_layer_count": 6,
+    "checkbox_layer_control_count": 6,
+    "opacity_control_count": 6,
+    "patch_focus_control_count": 3,
+    "accepted_rbr_feature_count": 202,
+    "rejected_unet_diagnostic_feature_count": 152,
+    "road_feature_count": 169,
+    "facility_feature_count": 8,
+    "mtbs_feature_count": 1,
+    "blm_feature_count": 1,
+    "textual_equivalent": true,
+    "exact_lineage": true,
+    "warning_panel": true,
+    "source_roles": true,
+    "accepted_degraded_no_detection_fallback_failed_withheld_taxonomy": true
+  },
+  "browser_qa": {
+    "transport": "temporary loopback HTTP only for automated render QA; application remains self-contained local/offline HTML",
+    "loopback_origin": "http://127.0.0.1:8877",
+    "loopback_document_requests": 1,
+    "external_requests": 0,
+    "server_process_stopped": true,
+    "port_listening_after_qa": false,
+    "browser_process_stopped": true,
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "http_status": 200,
+      "ready_state": "complete",
+      "console_errors": 0,
+      "page_errors": 0,
+      "horizontal_overflow_px": 0,
+      "default_rejected_unet_hidden": true,
+      "default_active_layers": [
+        "accepted-rbr",
+        "mtbs",
+        "roads",
+        "facilities",
+        "blm"
+      ],
+      "keyboard_patch_focus": true,
+      "keyboard_layer_toggle": true,
+      "visible_keyboard_focus": true,
+      "opacity_interaction": true,
+      "focused_patch_label_hidden": true,
+      "focused_patch_evidence_unobscured": true,
+      "initial_screenshot": {
+        "path": "runs/phase-four/u06-interface-desktop-r002.png",
+        "bytes": 254223,
+        "sha256": "38e1238299f17ce8e0b8ff1485a220af5810c78196d31a95a1cd0b3e6af63cce",
+        "tracked": false
+      },
+      "focused_screenshot": {
+        "path": "runs/phase-four/u06-interface-desktop-focused-r002.png",
+        "bytes": 262130,
+        "sha256": "e097fc80220612d2e52f066ea66a55353de75fc34090ce0203c42ed3d5842088",
+        "tracked": false
+      }
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "ready_state": "complete",
+      "console_errors": 0,
+      "page_errors": 0,
+      "horizontal_overflow_px": 0,
+      "workspace_column_width_px": 366,
+      "controls_column_width_px": 332,
+      "keyboard_layer_toggle": true,
+      "focused_patch_label_hidden": true,
+      "rejected_unet_diagnostic_visible_when_selected": true,
+      "warning_present": true,
+      "textual_equivalent_present": true,
+      "screenshot": {
+        "path": "runs/phase-four/u06-interface-narrow-r002.png",
+        "bytes": 49381,
+        "sha256": "984b027f08dee66ef00e5899bd96c3430831ea9b4fc43ed153f4c0f0e022a3e5",
+        "tracked": false
+      }
+    },
+    "representative_text_contrast_ratios": {
+      "primary_text_on_page": 16.04,
+      "muted_text_on_panel": 8.41,
+      "eyebrow_on_panel": 10.09,
+      "accepted_RBR_text_on_panel": 7.94,
+      "warning_text_on_warning_panel": 10.07,
+      "rejected_model_text_on_panel": 6.22,
+      "active_button_text_on_button": 9.67
+    }
+  },
+  "retained_attempts": [
+    {
+      "run_id": "BL-2026-07-26-p4o1-t01-u06-interface-r001",
+      "git_source_commit": "f9f9cc665d9972cf66df3ebc1d0b5f9458f14d32",
+      "retained_path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u06-interface-r001",
+      "files": [
+        {
+          "path": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+          "bytes": 177505,
+          "sha256": "ed5c24f6dfff9939d8197639681314f779c2767620f2c2a1c153c0406cff113b"
+        },
+        {
+          "path": "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.json",
+          "bytes": 12429,
+          "sha256": "378fded583da1f940f021b94b9b9ae2345243b29f7df19d292bfe6c44fbb5253"
+        }
+      ],
+      "qa_screenshot": {
+        "path": "runs/phase-four/u06-interface-desktop-interaction-r001.png",
+        "bytes": 261002,
+        "sha256": "69129a6e02856a570c488da9a805257af2d339729c7509d6ca20015447865f08"
+      },
+      "disposition": "retained-failed-render-qa",
+      "failure": "Patch-focus view scaled the redundant SVG patch label until it obscured WCP-002 evidence."
+    },
+    {
+      "attempt_id": "P4O1-T01-U06-IAB-FILE-R001",
+      "disposition": "retained-browser-transport-block",
+      "result": "Direct file navigation returned an empty security-policy page; no application defect inferred."
+    },
+    {
+      "attempt_id": "P4O1-T01-U06-IAB-LOOPBACK-R001",
+      "disposition": "retained-browser-transport-block",
+      "result": "The in-app browser refused loopback with ERR_BLOCKED_BY_CLIENT; no application defect inferred."
+    },
+    {
+      "attempt_id": "P4O1-T01-U06-PLAYWRIGHT-BUNDLED-R001",
+      "disposition": "retained-environment-tool-miss",
+      "result": "Bundled Playwright had no downloaded managed Chromium; QA continued with installed system Chrome through the same local Playwright API."
+    },
+    {
+      "attempt_id": "P4O1-T01-U06-DUPLICATE-R003",
+      "run_id": "BL-2026-07-26-p4o1-t01-u06-interface-r002",
+      "disposition": "retained-no-overwrite-refusal",
+      "exit_code": 1,
+      "error": "refusing to overwrite nonempty output directory",
+      "preexisting_bytes_changed": false
+    }
+  ],
+  "independent_validation": {
+    "all_bound_input_receipts_exact": true,
+    "accepted_html_receipt_exact": true,
+    "accepted_json_parses": true,
+    "accepted_json_binds_html": true,
+    "exact_rebuild_byte_identical": true,
+    "semantic_and_interaction_contract": true,
+    "no_external_resources": true,
+    "no_private_path_or_delivery_detail": true,
+    "source_precedence_visible": true,
+    "failure_evidence_visible": true,
+    "rejected_model_status_visible": true,
+    "run_state_taxonomy_visible": true,
+    "focused_phase_four_tests": "26 passed",
+    "interface_tests": "5 passed",
+    "compile": "pass",
+    "lock": "pass",
+    "dependency_check": "75 distributions compatible",
+    "cli_help": "pass",
+    "duplicate_attempt_refused_without_mutation": true
+  },
+  "gates": {
+    "exact_inputs": "pass",
+    "accepted_RBR_and_rejected_UNet_separation": "pass",
+    "official_context_and_reference_roles": "pass",
+    "layer_controls": "pass",
+    "opacity_controls": "pass",
+    "patch_focus": "pass on r002",
+    "textual_equivalent": "pass",
+    "lineage": "pass",
+    "warning_panel": "pass",
+    "run_state_visibility": "pass",
+    "desktop_render_and_interaction": "pass on r002",
+    "narrow_render_and_interaction": "pass on r002",
+    "keyboard_and_non_color_access": "pass",
+    "contrast": "pass for representative text pairs",
+    "offline_and_external_requests": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "determinism": "pass",
+    "no_overwrite": "pass",
+    "immutable_run_package": "pending U07"
+  },
+  "boundaries": {
+    "accepted_analytical_method": "burnlens-baseline-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "unet_used_for_measurement": false,
+    "context_is_label_truth": false,
+    "context_is_model_input": false,
+    "new_label_dataset_split_aoi_threshold_or_training": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "external_application_request": false,
+    "user_upload": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "official_operational_field_validated_endorsed_or_emergency_claim": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U07 immutable run package and clean reproduction"
+}

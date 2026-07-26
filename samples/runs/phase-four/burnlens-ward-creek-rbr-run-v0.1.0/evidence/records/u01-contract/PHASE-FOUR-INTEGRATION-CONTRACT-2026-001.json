@@ -1,0 +1,489 @@
+{
+  "contract_version": "burnlens-phase-four-integration-contract-v0.1.0",
+  "contract_id": "PHASE-FOUR-INTEGRATION-CONTRACT-2026-001",
+  "generated_at_utc": "2026-07-26T17:07:35Z",
+  "unit_id": "P4O1-T01-U01",
+  "run_id": "BL-2026-07-26-p4o1-t01-u01-contract-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "exact_branch_base": "e8745b70c4cfe0d070e08e399efbab09e74cd06f",
+  "software_version_at_execution": "0.53.0",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "objective": "Produce one reproducible Ward Creek analytical run whose accepted RBR output, visibly rejected U-Net diagnostic, georeferenced products, bounded context, deterministic descriptive summary, immutable run package, and repository-owned evidence interface agree exactly.",
+  "promise": {
+    "target_user": "technical and technical-adjacent portfolio reviewer",
+    "cv_task": "experimental binary semantic segmentation for burn-scar screening",
+    "workflow": [
+      "versioned optical imagery",
+      "deterministic preprocessing",
+      "accepted RBR baseline mask",
+      "visibly rejected U-Net probability and binary diagnostics",
+      "georeferenced raster",
+      "vector polygons",
+      "transparent context overlays",
+      "descriptive summary",
+      "immutable run package",
+      "repository-owned evidence interface"
+    ],
+    "source_precedence": "Official sources govern; BurnLens outputs are experimental derived evidence.",
+    "warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern."
+  },
+  "versions": {
+    "target_version": "target-burn-scar-v0.2.0",
+    "modeling_aoi_version": "aoi-darlene3-model-v0.2.0",
+    "integration_geography_version": "ward-creek-two-patch-native-grid-v0.1.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "normalization_version": "burnlens-train-normalization-v0.1.0",
+    "source_label_state_schema_version": "burn-scar-five-state-schema-v0.1.0",
+    "dataset_label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "prototype_label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_package_version": "burnlens-unet-rejected-package-v0.1.1",
+    "run_package_candidate_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+    "interface_candidate_version": "burnlens-geoint-evidence-interface-v0.1.0"
+  },
+  "analytical_methods": {
+    "accepted": {
+      "version": "burnlens-baseline-v0.1.0",
+      "family": "rbr-threshold",
+      "formula": "RBR = ((pre_NBR - post_NBR) / (pre_NBR + 1.001)); NBR = (B8A - B12) / (B8A + B12)",
+      "threshold": 0.041043221950531006,
+      "comparison": "RBR >= threshold",
+      "role": "accepted analytical output",
+      "test_event_class_macro_dice": 1.0,
+      "generalization_claim": false
+    },
+    "rejected_diagnostic": {
+      "version": "burnlens-unet-binary-v0.1.0",
+      "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+      "threshold": 0.5,
+      "accepted": false,
+      "outperformed_rbr": false,
+      "role": "reviewer-visible rejected-model probability, binary, and disagreement diagnostic only",
+      "failure": "The frozen model predicts all 89 selected test cores burned and scores macro Dice 0.29874213836477986 against RBR 1.0.",
+      "probability_semantics": "descriptive sigmoid score, not calibrated confidence",
+      "test_event_class_macro_dice": 0.29874213836477986,
+      "generalization_claim": false
+    }
+  },
+  "frozen_bindings": [
+    {
+      "role": "modeling AOI lineage",
+      "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.json",
+      "bytes": 8962,
+      "sha256": "305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c"
+    },
+    {
+      "role": "dataset build contract",
+      "path": "records/phase-two/manifests/DATASET-BUILD-CONTRACT-2026-001.json",
+      "bytes": 29653,
+      "sha256": "f6106691d42692f39684ed43c35f7c097d51f08b13c3dc3bf1e030ca9687b67f"
+    },
+    {
+      "role": "dataset manifest",
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    {
+      "role": "whole-event split",
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    {
+      "role": "training normalization",
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    {
+      "role": "accepted RBR evaluation",
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    },
+    {
+      "role": "rejected model weights",
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    {
+      "role": "rejected model package manifest",
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-PACKAGE-MANIFEST.json",
+      "bytes": 7112,
+      "sha256": "6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441"
+    },
+    {
+      "role": "rejected model inference contract",
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/INFERENCE-CONTRACT.json",
+      "bytes": 1589,
+      "sha256": "bb6cc5dfb0a989458ab9a60c2f9756c9bd530c67e265b96c4d27e7e0fa979a03"
+    },
+    {
+      "role": "Phase Three model decision",
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-DECISION.json",
+      "bytes": 1474,
+      "sha256": "c9fa8b4e93268de81571d251fd423ab0dfcd706083694a452f1fcdc6c057c118"
+    },
+    {
+      "role": "rejected model package record",
+      "path": "records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json",
+      "bytes": 9916,
+      "sha256": "22552092843ad5e83fcacdcaaf1d9c035a09d9e75e260503cbb560b9d2dc3443"
+    }
+  ],
+  "package_inventory_binding": {
+    "path": "samples/model-packages/burnlens-unet-binary-v0.1.0",
+    "file_count": 8,
+    "bytes": 583992,
+    "inventory_format": "case-insensitive sorted UTF-8 rows of repository-relative path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 1185,
+    "inventory_sha256": "ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438"
+  },
+  "integration_roster": [
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+      "split_role": "test",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-001",
+      "class": "burned",
+      "shape": [
+        64,
+        64
+      ],
+      "window": {
+        "row_offset": 168,
+        "column_offset": 236,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        667220.0,
+        0.0,
+        -20.0,
+        4979800.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 14,
+      "unknown_ring_pixels": 26,
+      "input_valid_pixels": 4096,
+      "files": [
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "4034070f6913c00028cb4980375ee6d5719a2bcda545ee0b364a99fa760727e3"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "43842138739e72655876b7a3d298a6d671fd9c91f8deadbc4bdbbbe504ff69b1"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "0ddc8acaf4a4c2f73d5a60f58006f7b1520b9efb99a494e37544014bdfb4f2c9"
+        }
+      ]
+    },
+    {
+      "patch_id": "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+      "split_role": "test",
+      "event_group_id": "event-ward-creek-2019",
+      "candidate_id": "WCP-002",
+      "class": "background",
+      "shape": [
+        64,
+        64
+      ],
+      "window": {
+        "row_offset": 68,
+        "column_offset": 401,
+        "height": 64,
+        "width": 64
+      },
+      "crs": "EPSG:32610",
+      "transform": [
+        20.0,
+        0.0,
+        670520.0,
+        0.0,
+        -20.0,
+        4981800.0
+      ],
+      "channel_order": [
+        "pre_B04",
+        "pre_B8A",
+        "pre_B12",
+        "post_B04",
+        "post_B8A",
+        "post_B12"
+      ],
+      "core_pixels": 25,
+      "unknown_ring_pixels": 40,
+      "input_valid_pixels": 4096,
+      "files": [
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/features.npy",
+          "bytes": 98432,
+          "sha256": "0cac49a855d07d91c743e8024f0f1cf04a3f23301fc1dcfe8985c9d0caf3ca50"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/input_valid.npy",
+          "bytes": 4224,
+          "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/loss_mask.npy",
+          "bytes": 4224,
+          "sha256": "f1ac5ebb76908fcf0553316db36d298bce901c8d208003868bd403a498f4fa46"
+        },
+        {
+          "path": "samples/datasets/burnlens-dataset-v0.1.0/patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/state.npy",
+          "bytes": 4224,
+          "sha256": "923109ba696fbade72da3b2b1a49c3ed3ee8191cb35551a0133b99a5a5b07fa1"
+        }
+      ]
+    }
+  ],
+  "component_ownership": {
+    "burnlens.phase_four_contract": "Validate the exact integration contract and frozen byte identities without opening arrays.",
+    "burnlens.phase_four_runner": "Load approved arrays after U01, apply exact RBR and frozen U-Net diagnostics, enforce run state, and write immutable analytical arrays and receipts.",
+    "burnlens.phase_four_geospatial": "Create and independently validate native-grid raster products, accepted RBR vectors, and deliberate web representations.",
+    "burnlens.phase_four_context": "Enforce the fresh context source/terms gate and bounded no-overwrite intake before any context byte is used.",
+    "burnlens.phase_four_summary": "Compute deterministic descriptive measurements with declared CRS, units, denominators, exclusions, and rounding.",
+    "burnlens.phase_four_interface": "Render only an accepted static run package in a repository-owned accessible offline evidence interface.",
+    "burnlens.phase_four_package": "Inventory, checksum, reproduce, and promote one internally consistent Phase Four run package without overwrite."
+  },
+  "run_state_taxonomy": {
+    "accepted-baseline": {
+      "meaning": "The intentionally approved RBR path completed and every run-level gate passed.",
+      "analytical_method": "burnlens-baseline-v0.1.0",
+      "model_role": "rejected diagnostic only"
+    },
+    "degraded": {
+      "meaning": "Output exists, but source or processing warnings materially limit interpretation.",
+      "publishable": false
+    },
+    "no-detection": {
+      "meaning": "Processing passed and RBR retained no positive pixels.",
+      "does_not_mean_safe": true
+    },
+    "fallback-baseline": {
+      "meaning": "Reserved taxonomy state for a documented model-path failure; this milestone begins baseline-primary and does not mislabel RBR as an emergency fallback.",
+      "accepted_for_this_route": false
+    },
+    "failed": {
+      "meaning": "No valid run package was produced.",
+      "publishable": false
+    },
+    "withheld": {
+      "meaning": "Artifacts exist but a release-blocking source, privacy, quality, or verification condition prevents display or interpretation.",
+      "publishable": false
+    }
+  },
+  "output_contract": {
+    "rbr_score_raster": {
+      "format": "GeoTIFF",
+      "dtype": "float32",
+      "crs": "copy exact source patch CRS",
+      "transform": "copy exact source patch affine transform",
+      "nodata": -9999.0,
+      "units": "unitless RBR",
+      "role": "accepted continuous analytical score"
+    },
+    "rbr_binary_raster": {
+      "format": "GeoTIFF",
+      "dtype": "uint8",
+      "domain": {
+        "0": "not retained by frozen RBR threshold",
+        "1": "retained by frozen RBR threshold",
+        "255": "source invalid or excluded"
+      },
+      "nodata": 255,
+      "role": "accepted analytical binary output"
+    },
+    "exclusion_raster": {
+      "format": "GeoTIFF",
+      "dtype": "uint8",
+      "domain": {
+        "0": "input valid",
+        "1": "source invalid or excluded"
+      },
+      "nodata": 255,
+      "role": "explicit invalid and exclusion semantics"
+    },
+    "unet_probability_diagnostic_raster": {
+      "format": "GeoTIFF",
+      "dtype": "float32",
+      "nodata": -9999.0,
+      "role": "rejected-model descriptive sigmoid diagnostic, not calibrated confidence"
+    },
+    "unet_binary_diagnostic_raster": {
+      "format": "GeoTIFF",
+      "dtype": "uint8",
+      "domain": {
+        "0": "diagnostic probability below 0.5",
+        "1": "diagnostic probability at least 0.5",
+        "255": "source invalid or excluded"
+      },
+      "nodata": 255,
+      "role": "visibly rejected diagnostic only"
+    },
+    "rbr_polygon_vector": {
+      "authoritative_format": "GeoPackage",
+      "web_format": "GeoJSON",
+      "source": "raw accepted RBR binary raster",
+      "postprocessing": "none before raw polygonization; any later simplification must be separate and measured",
+      "role": "accepted-baseline vector representation"
+    },
+    "summary": {
+      "format": "JSON and textual HTML equivalent",
+      "language": "deterministic descriptive observations only",
+      "required_fields": [
+        "CRS",
+        "units",
+        "rounding",
+        "denominators",
+        "exclusions",
+        "source precedence",
+        "warnings"
+      ]
+    },
+    "run_manifest": {
+      "format": "JSON",
+      "required_traceability": [
+        "Git commit",
+        "software version",
+        "baseline version",
+        "model version and rejected status",
+        "dataset version",
+        "split version",
+        "label schema versions",
+        "modeling AOI and integration geography versions",
+        "run ID",
+        "source records",
+        "processing time",
+        "warnings",
+        "limitations",
+        "source precedence",
+        "artifact inventory"
+      ]
+    },
+    "checksums": {
+      "format": "sorted UTF-8 SHA-256 inventory",
+      "algorithm": "SHA-256",
+      "overwrite": false
+    },
+    "interface": {
+      "format": "local offline HTML, CSS, and JavaScript plus static run assets",
+      "analytical_processing": false,
+      "external_requests": 0,
+      "required_states": [
+        "accepted-baseline",
+        "degraded",
+        "no-detection",
+        "fallback-baseline",
+        "failed",
+        "withheld"
+      ]
+    }
+  },
+  "run_contract": {
+    "run_id_pattern": "^BL-[0-9]{4}-[0-9]{2}-[0-9]{2}-p4o1-t01-u0[2-8]-[a-z0-9-]+-r[0-9]{3}$",
+    "run_root": "runs/phase-four/<immutable-run-id>",
+    "candidate_package_root": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0",
+    "overwrite": false,
+    "atomic_promotion": true,
+    "failed_attempt_retention": true,
+    "test_source_arrays_for_model_selection": false,
+    "integration_use_of_exact_frozen_test_patches": "authorized only for the fixed Phase Four display run; no threshold, selection, model, metric, or comparison may change"
+  },
+  "failure_behavior": [
+    "Fail before output when contract, path, size, SHA-256, channel order, shape, dtype, CRS, transform, threshold, weights, normalization, or roster differs.",
+    "Never coerce invalid, unknown, excluded, or missing pixels to background.",
+    "Retain a failed attempt and do not reuse its run ID.",
+    "Never substitute the rejected U-Net diagnostic for accepted RBR output.",
+    "Use no-detection only after successful processing; never imply safe or no fire.",
+    "Use withheld when source rights, privacy, quality, or verification blocks display.",
+    "Do not promote a partial package."
+  ],
+  "evidence_units": [
+    "P4O1-T01-U01 architecture and run contract",
+    "P4O1-T01-U02 deterministic analytical runner",
+    "P4O1-T01-U03 geospatial products",
+    "P4O1-T01-U04 context source and terms gate with bounded intake",
+    "P4O1-T01-U05 overlays and deterministic summary",
+    "P4O1-T01-U06 repository-owned evidence interface",
+    "P4O1-T01-U07 immutable package and clean reproduction",
+    "P4O1-T01-U08 coherent milestone release and Phase Five handoff"
+  ],
+  "entry_attempts": [
+    {
+      "attempt_id": "P4O1-T01-U01-ENTRY-R001",
+      "execution": "failed",
+      "disposition": "retained-tool-reconstruction-failure",
+      "facts": "Every file hash passed, but the first package-inventory reconstruction used case-sensitive ordering and produced 27ccfbc... instead of the frozen Windows canonical inventory.",
+      "data_drift": false
+    },
+    {
+      "attempt_id": "P4O1-T01-U01-ENTRY-R002",
+      "execution": "complete",
+      "disposition": "pass",
+      "facts": "Case-insensitive canonical ordering reproduces the exact 1,185-byte package inventory at ce39c41c...; eleven frozen bindings and eight Ward Creek patch-array bindings match.",
+      "arrays_opened": false
+    }
+  ],
+  "gates": {
+    "lifecycle_dependency": "pass at PR #569 merge e8745b70c4cfe0d070e08e399efbab09e74cd06f",
+    "clean_remote_equal_base": "pass",
+    "frozen_bindings": "pass",
+    "package_inventory": "pass after retained ordering remediation",
+    "ward_creek_roster": "pass",
+    "source_and_terms": "pass inherited for frozen Phase Two and Phase Three inputs; fresh context gate remains U04",
+    "arrays_opened": "pass false",
+    "provider_transaction": "pass none",
+    "claims": "pass",
+    "privacy": "pass",
+    "phase_3b": "pass absent"
+  },
+  "boundaries": {
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "retraining": false,
+    "retuning": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "label_changed": false,
+    "aoi_changed": false,
+    "model_superiority_claim": false,
+    "operational_claim": false,
+    "provider_bytes_acquired": false,
+    "context_bytes_acquired": false,
+    "deployment": false,
+    "public_sharing_changed": false
+  },
+  "follow_on_recommendation_boundary": "U-Net failure lessons may be stated only as recommendations for a separately governed follow-on experiment. This contract does not plan, scope, authorize, or implement that experiment.",
+  "disposition": "pass-contract-candidate",
+  "next_dependency": "Commit, independently validate, and push U01; then execute P4O1-T01-U02 against this exact contract without tuning or changing any frozen input."
+}

@@ -10,7 +10,13 @@ It is not official wildfire information, emergency guidance, or an operational s
 
 BurnLens has established its governing task and source boundaries, selected exact Sentinel-2 and NOAA-21 VIIRS candidates, and implemented a fail-closed download validator. The validator caught a subtle but consequential failure: an unauthenticated data-looking URL returned an Earthdata Login HTML page with HTTP 200. BurnLens rejected and deleted it instead of registering it as NetCDF/HDF5.
 
-The current candidate checkpoint shows the same reliability posture at the source-selection boundary. BurnLens compared the official McKenzie HUC8 NWI route with Milli's Sentinel/BAER/MTBS/RAVG route, retained every source-rights and trace gap, and selected neither. The exact report renders at desktop and narrow widths without turning metadata readiness into acquisition or label readiness.
+The current Phase Four candidate carries the same reliability posture into an
+actual CV-to-GEOINT run. RBR is the accepted analytical method, the U-Net is a
+visibly rejected diagnostic, and one Ward Creek package binds exact arrays,
+native rasters, vectors, context, observations, interface, replay, warnings,
+and checksums. WCP-002 deliberately keeps 66.76 ha of accepted-RBR
+false-positive-risk evidence visible instead of presenting an apparently
+clean success.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 
@@ -548,6 +554,60 @@ probability/error output only as a visibly rejected diagnostic. No
 georeferenced inference, generalization, independent ground truth, field
 validation, operational readiness, or final-submission-ready claim exists.
 
+## Phase Four product: baseline primary, rejected model visible
+
+P4O1-T01 does not defer integration or invent a better second model. It runs
+the exact frozen RBR and U-Net contracts on Ward Creek WCP-001 and WCP-002.
+RBR is the accepted analytical output. The U-Net uses its frozen 0.5 threshold
+and exact weights, but it remains diagnostic only and contributes no area,
+overlap, distance, count, or other measurement.
+
+Run `BL-2026-07-26-p4o1-t01-u03-geospatial-r003` writes ten native-grid
+GeoTIFFs for RBR score/binary/exclusion and U-Net probability/binary
+diagnostics. It also writes 202 accepted-RBR polygons plus a deliberate web
+representation. Independent validation reopens the rasters and vectors,
+checks CRS, transform, bounds, nodata, domains, geometry, and rasterization,
+and reproduces exactly 3,536 WCP-001 and 1,669 WCP-002 RBR-positive pixels.
+Two earlier quicklooks remain failed render-QA evidence: one used text that
+was too small and one exposed a missing glyph.
+
+Bounded official context passes separate source, terms, custody, and role
+gates before use. BurnLens measures in native EPSG:32610 and then presents
+context in EPSG:4326. WCP-001 contains 141.44 ha of accepted RBR, of which
+133.22 ha or 94.19% overlaps the exact analyst-interpreted MTBS boundary.
+WCP-002 contains 66.76 ha of accepted RBR and zero MTBS overlap. That second
+result is first-class false-positive-risk evidence, not suppressed as an
+inconvenient background failure. Roads are not routing, facility points are
+not availability, the BLM boundary is not a legal determination, and MTBS is
+reference context rather than ground truth or an operational perimeter.
+
+[The Phase Four evidence interface](../../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html)
+is one self-contained local page with six layers, six opacity controls, three
+patch-focus controls, a textual equivalent, exact lineage, warnings, source
+roles, and the complete run-state taxonomy. The rejected U-Net is off by
+default; turning it on adds magenta hatching without changing the orange
+accepted RBR or any analytical role. Desktop 1440-by-1000 and narrow
+390-by-844 interaction pass with keyboard controls, visible focus, no
+horizontal overflow, no external requests, and no console or page error.
+
+Accepted package run `BL-2026-07-26-p4o1-t01-u07-package-r001` freezes 66
+files and 1,795,388 extracted bytes. Its 487,893-byte ZIP has SHA-256
+`91308a2f...`; manifest and checksum hashes are `b15f5d00...` and
+`eb08e659...`. A fresh detached checkout validates both tracked forms,
+repackages the ZIP byte-identically, and renders the packaged interface.
+The broad custody-dependent builder suite is not misreported: it produces
+11 passes, one failure, and 18 errors because intentionally ignored U02-U05
+provider and run custody is absent. The portable tracked-package gates pass
+without those source bytes.
+
+The result is a valid baseline-first GEOINT candidate, not a model-success
+story. The U-Net's failure is the technical lesson: the accepted training
+evidence was too small and spectrally selected to establish model value, and
+the model collapsed to all-burned predictions. A separately governed
+follow-on experiment could investigate more diverse independently reviewed
+regions, stronger background coverage, calibration, and architecture or loss
+changes. The current project does not plan or implement that experiment.
+
 ## A reviewer path through the evidence
 
 BurnLens originally made reviewers assemble the story across many correct but
@@ -599,15 +659,18 @@ PR #567 merges the exact reviewed milestone at
 with one expected skip and 86 subtests, and the exact 1,106,162-byte wheel
 retains SHA-256 `15b8b84f...`. Annotated tag object
 `d66dd7fdc9f2f155d1799cb1e85e77dadd76311a` peels exactly to the merge.
-The [current lifecycle reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html)
-binds that verified release identity without changing the model, evidence, or
-decision.
+The [2026-007 lifecycle reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html)
+remains immutable Phase Three evidence. The current two-minute path now starts
+with the [Phase Four interface](../../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html)
+and its exact immutable package, while keeping the Phase Three decision and
+retained Petes Lake stop available for deeper review.
 
 The page does not turn reproducibility into model acceptance. It says the
 U-Net predicts all 89 selected test cores as burned, scores 0.299 macro Dice
-against RBR 1.000, and is rejected as the analytical winner. No georeferenced
-inference, integrated application, deployment, generalization, operational,
-emergency, official, field-validated, or final-submission-ready claim advances.
+against RBR 1.000, and is rejected as the analytical winner. Phase Four adds
+georeferenced baseline output and an integrated local application, but no
+deployment, generalization, operational, emergency, official, field-validated,
+or final-submission-ready claim advances.
 
 ### One extract-and-open submission
 
@@ -664,7 +727,8 @@ External submission remains an owner action.
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
-- Latest portfolio reviewer run: lifecycle `BL-2026-07-26-v053-lifecycle-portfolio-r001`; source `56ae10ac34fe585b1469b41f3ae3c60957e1881b`; verified BurnLens 0.53.0; exact 9,861-byte JSON / `a8e38133...` and 18,212-byte HTML / `81d32577...`; byte-identical replay and deterministic structural checks pass; exact owner-operated desktop/narrow rendering remains the lifecycle PR gate
+- Latest Phase Four run package: `BL-2026-07-26-p4o1-t01-u07-package-r001`; source `733a3c265be2c351a50bfd356d1b45da15cbfec0`; 66 files / 1,795,388 bytes; ZIP 487,893 bytes / `91308a2f...`; byte-identical clean-checkout repack and desktop/narrow packaged-interface QA pass
+- Prior portfolio reviewer run: lifecycle `BL-2026-07-26-v053-lifecycle-portfolio-r001`; source `56ae10ac34fe585b1469b41f3ae3c60957e1881b`; verified BurnLens 0.53.0; exact 9,861-byte JSON / `a8e38133...` and 18,212-byte HTML / `81d32577...`; retained as immutable Phase Three lifecycle evidence
 - Latest submission-bundle run: `BL-2026-07-24-august6-submission-bundle-r002`; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; verified BurnLens 0.49.0; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; ZIP `3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`; receipt `08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`; exact replay, real render, fresh-main suite, reproducible package, isolated install, and remote tag peel pass
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`
@@ -756,6 +820,6 @@ External submission remains an owner action.
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
 - Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels are insufficient. Verified `v0.28.0-label-region-remediation-plan` defines contiguous-region review and six-event/source-regime gates. Verified `v0.29.0-region-candidate-pilot` executes six no-promotion regions on actual evidence; issue #457 owned their exact owner-review surface at that checkpoint. This is not review completion, a dataset, or training.
 - Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
-- Public application: no deployment; shipped local/offline workbench `label-review-handoff-workbench-v0.1.0`; this repository case study, README, and static evidence reports are the public presentation surfaces
+- Public application: no deployment; the self-contained local/offline Phase Four evidence interface is the current analytical presentation surface, while historical review workbenches and static reports remain traceable evidence
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
