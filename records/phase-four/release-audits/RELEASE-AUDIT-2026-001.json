@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "release_id": "RELEASE-AUDIT-2026-001",
-  "recorded_at_utc": "2026-07-26T20:33:44Z",
+  "recorded_at_utc": "2026-07-26T20:39:01Z",
   "risk_classes": [
     "documentation",
     "runtime",
@@ -17,11 +17,11 @@
     "tag": "v0.54.0-rbr-geoint-milestone",
     "state": "candidate",
     "issue": 570,
-    "pull_request": null,
+    "pull_request": 571,
     "branch": "codex/p4o1-t01-rbr-geoint-milestone",
     "branch_base": "e8745b70c4cfe0d070e08e399efbab09e74cd06f",
     "u07_checkpoint": "8b92d97be055a6314586c8ea5437c828666291e8",
-    "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
+    "candidate_commit": "269c65ff14e8c1107bdf9af9fe101d6f8ae5ead8",
     "merge_commit": null,
     "tag_object": null,
     "tag_peeled_target": null,
@@ -152,7 +152,8 @@
       "required": true,
       "status": "pending",
       "evidence": [
-        "Candidate commit, PR review, merge, fresh-main regression, and remote annotated-tag peel remain U08 gates.",
+        "PR #571 is clean and mergeable at exact reviewed candidate 269c65ff14e8c1107bdf9af9fe101d6f8ae5ead8; GitHub reports no configured status checks.",
+        "Merge, fresh-main regression, and remote annotated-tag peel remain U08 gates.",
         "No GitHub Release, deployment, access, ownership, or public-sharing change is required."
       ]
     }
@@ -269,6 +270,6 @@
   "decision": {
     "reported_status": "candidate-ready-for-pr",
     "rationale": "U01-U07, candidate changed-risk gates, exact checkout verification, and the complete committed-head regression pass. PR review/merge, fresh-main verification, and remote tag remain required.",
-    "next_action": "Commit and push the audit closeout, run final changed-risk checks, open and review one PR, merge, repeat fresh-main gates, and tag only after success."
+    "next_action": "Bind PR #571, repeat final changed-risk checks at the updated head, merge the clean reviewed PR, repeat fresh-main gates, and tag only after success."
   }
 }

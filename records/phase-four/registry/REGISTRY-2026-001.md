@@ -85,8 +85,9 @@ from PR #569.
   quickstart, and release records form one candidate. Focused tests, both
   package validators, fixed-epoch wheels, isolated install, and all 114
   command helps pass. The exact checkout gate and complete clean committed-head
-  regression pass at `e52aa69...`. PR review, merge, fresh-main verification,
-  and annotated-tag verification remain.
+  regression pass at `e52aa69...`. PR #571 is clean and mergeable at reviewed
+  candidate `269c65f...`; merge, fresh-main verification, and annotated-tag
+  verification remain.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
