@@ -188,6 +188,26 @@
       "subtests_passed": 86,
       "application_or_scientific_defect_inferred": false,
       "next_gate": "sync locked editable environment, commit candidate, and rerun exact full suite at clean committed head"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R001",
+      "candidate_commit": "86517188b6d8d017ab0e9a9ec839f19dfe8d3479",
+      "disposition": "retained-checkout-contract-failure",
+      "result": "Eight focused environment and checkout tests pass; one checkout-attribute test fails because the new Phase Four devlog has no explicit text/eol contract.",
+      "version_mismatch_remediated": true,
+      "working_tree_bytes_match_commit": true,
+      "application_or_scientific_defect_inferred": false,
+      "next_gate": "add one exact LF attribute for the new devlog, commit, and rerun"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R002",
+      "candidate_commit": "86517188b6d8d017ab0e9a9ec839f19dfe8d3479",
+      "disposition": "retained-pre-commit-state-failure",
+      "result": "Eight focused environment and checkout tests pass; the worktree-byte test alone correctly finds the four uncommitted LF-remediation files.",
+      "explicit_attribute_check_passed": true,
+      "working_tree_bytes_match_commit": false,
+      "application_or_scientific_defect_inferred": false,
+      "next_gate": "commit the bounded LF remediation and rerun the exact focused gate"
     }
   ],
   "truth_surfaces": [

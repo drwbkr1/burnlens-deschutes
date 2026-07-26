@@ -475,6 +475,7 @@ tests/test_phase_four_*.py text eol=lf
 records/phase-four/**/*.json text eol=lf
 records/phase-four/**/*.md text eol=lf
 records/prompt-build-log/2026-07-26-p4o1-t01.md text eol=lf
+docs/devlog/2026-07-26-phase-four-rbr-geoint-milestone.md text eol=lf
 samples/runs/phase-four/**/*.json text eol=lf
 samples/runs/phase-four/**/*.html text eol=lf
 samples/runs/phase-four/**/*.css text eol=lf
