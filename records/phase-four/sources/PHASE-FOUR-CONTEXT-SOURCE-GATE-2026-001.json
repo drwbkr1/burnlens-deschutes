@@ -1,0 +1,561 @@
+{
+  "contract_version": "source-gate/v1",
+  "assessment_id": "PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+  "assessed_at": "2026-07-26T17:54:25Z",
+  "intended_use": {
+    "summary": "Acquire the smallest exact public USGS road, selected public-facility, and BLM-boundary GeoJSON query responses around the bounded Ward Creek integration geography; reuse the exact already-governed Ward Creek MTBS boundary; then create attributed, deterministic, non-operational context overlays and descriptive measurements.",
+    "planned_actions": [
+      "metadata review",
+      "acquire exact public GeoJSON query responses",
+      "retain exact responses in ignored repository-local custody",
+      "create attributed deterministic derivatives",
+      "use the exact local MTBS boundary as official reference context"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "usgs-ntd-arcgis-2026-001",
+      "name": "USGS The National Map National Transportation Dataset ArcGIS service",
+      "locator": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://tnmaccess.nationalmap.gov/api/v1/datasets",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Official TNMAccess catalog identifies National Transportation Dataset (NTD), bi-monthly refresh, public MapServer, and state/national products."
+            }
+          ],
+          "note": "Use only MapServer layers 30 Secondary Highways, 31 Local Connecting Roads, and 32 Local Roads."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-sources-were-used-create-boundaries-structures-and-transportation-layers-national-map",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS says TNM transportation roads draw from Census TIGER/Line plus USGS major-road and US Forest Service road updates."
+            }
+          ],
+          "note": "Authoritative enough for contextual roads, not routing, closure, access, or safety authority."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Credential-free HTTPS ArcGIS count probes returned 28 secondary, 30 local-connecting, and 111 local-road features in the frozen 10 km context envelope."
+            }
+          ],
+          "note": "No account, secret, payment, click-through, or bulk request is needed."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS states TNM map services and downloaded data are free and public domain, requests originating-agency acknowledgement, and imposes no use restriction."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS-authored data are public domain; non-USGS marked content remains excluded and USGS credit is requested."
+            }
+          ],
+          "note": "Credit U.S. Geological Survey, National Geospatial Program; do not use USGS marks or imply endorsement."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-sources-were-used-create-boundaries-structures-and-transportation-layers-national-map",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Publisher documents source lineage from Census TIGER/Line, USGS updates, and US Forest Service road data."
+            }
+          ],
+          "note": "Exact query, envelope, fields, source response bytes, and derivative operations must remain recorded."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+              "note": "The Phase Four contract requires exact source identity, immutable no-overwrite custody, byte count, SHA-256, schema and geospatial validation, and fail-closed replay before use."
+            }
+          ],
+          "note": "The mutable service publishes no response checksum; post-acquisition exact bytes and SHA-256 become the controlled identity."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/transportation/MapServer",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "The service exposes line geometry and road classes, and bounded count probes show a small non-empty roster inside the exact 10 km analysis envelope."
+            }
+          ],
+          "note": "Fit only for reproducible proximity, intersection, and length observations after native-CRS transformation; temporally current road status is unknown."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "docs/phases/phase-04/PHASE_04_OBJECTIVES.md",
+              "note": "Phase Four prohibits routing, closures, tactical actions, property outcomes, live monitoring, and unlabeled official/BurnLens blending."
+            }
+          ],
+          "note": "Public road geometry contains no required personal identifier; retain only needed public attributes and scan responses before promotion."
+        }
+      ]
+    },
+    {
+      "source_id": "usgs-nsd-arcgis-2026-001",
+      "name": "USGS The National Map National Structures Dataset ArcGIS service",
+      "locator": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://tnmaccess.nationalmap.gov/api/v1/datasets",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Official TNMAccess catalog identifies National Structures Dataset (NSD), monthly refresh, public MapServer, and state/national products."
+            }
+          ],
+          "note": "Use only layers 37 Cemeteries, 38 Post Offices, 51 Fire Stations/EMS Stations, and 61 Trailheads."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://data.usgs.gov/datacatalog/data/USGS%3Adb4fb1b6-1282-4e5b-9866-87a68912c5d1",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "The USGS catalog identifies the public NSD, its selected facility classes, national coverage, USGS publisher, and public-domain label."
+            }
+          ],
+          "note": "Authoritative enough for selected public-facility context, not facility condition, availability, capacity, or emergency response."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Credential-free HTTPS count probes returned three cemeteries, two post offices, one fire/EMS station, and two trailheads in the frozen 10 km context envelope."
+            }
+          ],
+          "note": "No account, secret, payment, click-through, or bulk request is needed."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS states TNM map services and downloaded data are free and public domain, with requested originating-agency acknowledgement."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS-authored data are public domain; marked non-USGS content remains excluded."
+            }
+          ],
+          "note": "Credit U.S. Geological Survey, National Geospatial Program; do not use USGS marks or imply endorsement."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-sources-were-used-create-boundaries-structures-and-transportation-layers-national-map",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS says structures combine state and National Map Corps inputs reconciled with GNIS names and locations."
+            }
+          ],
+          "note": "Exact query, layer identity, response bytes, and derivative operations must remain recorded."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+              "note": "The Phase Four contract requires immutable no-overwrite custody, exact byte and hash receipts, and deterministic structural/geospatial validation."
+            }
+          ],
+          "note": "The service publishes no response checksum; exact acquired bytes and SHA-256 become the controlled identity."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Selected point layers are non-empty inside the 10 km envelope and provide a bounded public-facility context roster."
+            }
+          ],
+          "note": "Fit only for reproducible count and distance observations; absence does not prove no structure, and presence does not establish current operation or emergency availability."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "docs/phases/phase-04/PHASE_04_OBJECTIVES.md",
+              "note": "Phase Four prohibits tactical, routing, safety, property, live-monitoring, and emergency-use interpretation."
+            }
+          ],
+          "note": "Only published public-facility records and minimal attributes may be retained; exclude personal contacts, addresses not needed for display, and any unexpected sensitive field."
+        }
+      ]
+    },
+    {
+      "source_id": "usgs-nbd-arcgis-2026-001",
+      "name": "USGS The National Map National Boundary Dataset ArcGIS service",
+      "locator": "https://carto.nationalmap.gov/arcgis/rest/services/govunits/MapServer",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://tnmaccess.nationalmap.gov/api/v1/datasets",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Official TNMAccess catalog identifies the National Boundary Dataset, monthly refresh, public MapServer, and state/national products."
+            }
+          ],
+          "note": "Use only MapServer layer 36 Bureau of Land Management."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-sources-were-used-create-boundaries-structures-and-transportation-layers-national-map",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS identifies BLM among primary TNM boundary sources."
+            }
+          ],
+          "note": "Authoritative enough for generalized planning-boundary context, not legal land-status determination."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/govunits/MapServer",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Credential-free HTTPS count probe returned one BLM polygon intersecting the frozen 10 km context envelope."
+            }
+          ],
+          "note": "No account, secret, payment, click-through, or bulk request is needed."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS states TNM map services and downloaded data are free and public domain, with requested originating-agency acknowledgement."
+            }
+          ],
+          "note": "Credit U.S. Geological Survey, National Geospatial Program; preserve BLM source identity and do not imply legal or agency endorsement."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-sources-were-used-create-boundaries-structures-and-transportation-layers-national-map",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "USGS documents BLM as a primary boundary source in the aggregated NBD."
+            }
+          ],
+          "note": "Exact query response and clipping/reprojection lineage must remain explicit."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+              "note": "The Phase Four contract requires no-overwrite custody, exact byte/hash receipts, geometry validation, and fail-closed replay."
+            }
+          ],
+          "note": "The dynamic service has no response checksum; acquired bytes and SHA-256 become the exact identity."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://carto.nationalmap.gov/arcgis/rest/services/govunits/MapServer/36",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Layer 36 exposes polygon geometry and one feature intersects the bounded Ward Creek context envelope."
+            }
+          ],
+          "note": "Fit for a generalized planning-boundary overlay and overlap observation; not cadastral, survey, access, or legal authority."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "docs/phases/phase-04/PHASE_04_OBJECTIVES.md",
+              "note": "Phase Four requires official/context separation and prohibits tactical, property, and decision-authority claims."
+            }
+          ],
+          "note": "Public generalized boundary geometry contains no required personal data; retain minimal public attributes only."
+        }
+      ]
+    },
+    {
+      "source_id": "mtbs-ward-creek-10016337-local-reuse",
+      "name": "Exact Ward Creek 2019 MTBS burned-area boundary from governed local custody",
+      "locator": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+              "note": "Exact event OR4494912090120190812, map 10016337, archive SHA-256 d94dfb16..., and four burn-boundary member hashes are frozen."
+            }
+          ],
+          "note": "Reuse only the exact one-feature EPSG:32610 burned-area boundary."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Current official MTBS site identifies the USGS/USDA Forest Service multiagency program and its burned-area boundary and burn-severity products."
+            }
+          ],
+          "note": "Official-program reference context, not BurnLens ground truth, field validation, incident perimeter, or endorsement."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/WARD-CREEK-REFERENCE-CUSTODY-2026-001.json",
+              "note": "Exact archive is already preserved in ignored repository-local custody; the private delivery route and recipient are withheld."
+            }
+          ],
+          "note": "No new download, authentication, provider request, or live substitution is permitted."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+              "note": "Embedded FGDC/ISO notices state no use restriction except reasonable acknowledgement, require MTBS/USGS/USDA Forest Service credit, and preserve update, positional, utility, and warranty cautions."
+            }
+          ],
+          "note": "A derived, attributed boundary representation is permitted; do not redistribute the native archive or imply endorsement."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/registry/REGISTRY-2026-074.md",
+              "note": "Phase Two records exact request, delivery, archive, embedded terms, native boundary, failures, reproducibility remediation, and accepted source-fitness run."
+            }
+          ],
+          "note": "Any Phase Four representation must bind the exact four shapefile members and document reprojection or serialization."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/ward-creek/reference-fitness-v0.1.1/WARD-CREEK-REFERENCE-FITNESS-2026-002.json",
+              "note": "Archive safety, CRC, member hashes, one valid polygon, EPSG:32610, bounds, area, attributes, and exact replay all pass."
+            }
+          ],
+          "note": "Phase Four must independently reopen exact local members and compare identity before creating a derived representation."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/mapping-methods",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Current methods describe analyst-delineated burned-area boundaries from imagery and change products, subjective severity interpretation, limited field data, and evolving methods."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/product-descriptions",
+              "observed_at": "2026-07-26T17:54:07Z",
+              "note": "Current product page defines the burned-area boundary as imagery/change-product detected fire extent and distinguishes masks for clouds, shadows, snow, and anomalies."
+            }
+          ],
+          "note": "Fit as attributed official-program reference context for bounded visual comparison; not an operational incident perimeter or independent ground truth."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/reference/phase-two/WARD-CREEK-REFERENCE-CUSTODY-2026-001.json",
+              "note": "Private recipient, message ID, and provider route are withheld; the accepted public evidence contains no credential or delivery URL."
+            }
+          ],
+          "note": "No secret-bearing or private delivery material may enter tracked evidence or the interface."
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "status": "ready",
+    "blocking_reasons": [],
+    "live_verification_pending": [],
+    "approved_actions": [
+      "metadata review",
+      "acquire exact public GeoJSON query responses",
+      "retain exact responses in ignored repository-local custody",
+      "create attributed deterministic derivatives",
+      "use the exact local MTBS boundary as official reference context"
+    ]
+  },
+  "write_boundary": {
+    "permitted_without_further_authorization": [
+      "perform the frozen public ArcGIS queries",
+      "write only to unique ignored staging paths",
+      "verify exact response bytes and geospatial structure",
+      "promote by atomic no-replace into ignored repository-local custody",
+      "create repository-safe attributed derivatives after all gates pass"
+    ],
+    "requires_explicit_authorization": [
+      "authenticate or accept changed terms",
+      "purchase or use a paid service",
+      "download a state or national bulk package",
+      "substitute a different service or layer",
+      "publish native provider responses",
+      "change public-sharing access or ownership",
+      "use the data for routing, closures, tactical, property, safety, or emergency decisions"
+    ]
+  }
+}
