@@ -579,8 +579,8 @@ evidence while keeping model version null. BurnLens 0.52.0 verifies that exact
 Phase Two handoff through merged-main regression, exact replay, deterministic
 packaging, and an annotated tag.
 
-P3O1-T01 creates the
-[current candidate reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html)
+P3O1-T01 creates the verified
+[`2026-006` reviewer evidence](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html)
 from exact remote-equal source
 `5cbf32f43fdaa2830bb26f2177db3b7112384b5d`. Run
 `BL-2026-07-26-p3o1-t01-u06-portfolio-r001` binds the trained, evaluated, and
@@ -593,6 +593,15 @@ Both outputs replay byte for byte. Desktop and 390-by-844 browser checks have
 no document overflow, both evidence images load at native dimensions, all ten
 repository-file links return HTTP 200, all six fragment targets exist, and
 browser logs and external resources remain empty.
+
+PR #567 merges the exact reviewed milestone at
+`5a0f8ac027ae20ff9193948506f590afbfb64554`. Fresh main repeats 729 tests
+with one expected skip and 86 subtests, and the exact 1,106,162-byte wheel
+retains SHA-256 `15b8b84f...`. Annotated tag object
+`d66dd7fdc9f2f155d1799cb1e85e77dadd76311a` peels exactly to the merge.
+The [current lifecycle reviewer experience](../../portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html)
+binds that verified release identity without changing the model, evidence, or
+decision.
 
 The page does not turn reproducibility into model acceptance. It says the
 U-Net predicts all 89 selected test cores as burned, scores 0.299 macro Dice
@@ -655,7 +664,7 @@ External submission remains an owner action.
 - Latest owner-response intake run: `BL-2026-07-18-owner-response-intake-r002`
 - Latest region-candidate pilot run: `BL-2026-07-18-region-candidate-pilot-r006`
 - Latest region-owner response-intake run: `BL-2026-07-19-region-owner-response-intake-r001`
-- Latest portfolio reviewer run: candidate `BL-2026-07-26-p3o1-t01-u06-portfolio-r001`; source `5cbf32f43fdaa2830bb26f2177db3b7112384b5d`; BurnLens 0.53.0 candidate; exact 9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`; byte-identical replay, desktop/narrow render, images, links, fragments, claim boundaries, and zero-external-resource checks pass; PR, merge, fresh-main, package/install, and annotated tag remain
+- Latest portfolio reviewer run: lifecycle `BL-2026-07-26-v053-lifecycle-portfolio-r001`; source `56ae10ac34fe585b1469b41f3ae3c60957e1881b`; verified BurnLens 0.53.0; exact 9,861-byte JSON / `a8e38133...` and 18,212-byte HTML / `81d32577...`; byte-identical replay and deterministic structural checks pass; exact owner-operated desktop/narrow rendering remains the lifecycle PR gate
 - Latest submission-bundle run: `BL-2026-07-24-august6-submission-bundle-r002`; source `660f54f4e4786de57257ce12fb24fa31c282cf8d`; verified BurnLens 0.49.0; merge `8d4b81f665a0850b2e173382760b2df96d9c9d20`; ZIP `3d50c6ec627e9b15c63fa84a034e60dddbcccbdd27f182af316a08de3bd13b53`; receipt `08b507a3adddb66a1b50838cbe23c3e13e6d6b9742d4d3fa274a4c7d282fddbf`; exact replay, real render, fresh-main suite, reproducible package, isolated install, and remote tag peel pass
 - Latest owner-region review-surface run: `BL-2026-07-18-region-owner-review-surface-r005`
 - Latest cross-event source-fitness run: `BL-2026-07-16-cross-event-source-fitness-r006`

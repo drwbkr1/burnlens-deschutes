@@ -16,7 +16,7 @@ Build and evaluate one bounded U-Net-style segmentation model against the accept
 
 ## Current status
 
-**Candidate complete — P3O1-T01 U01-U06 pass; coherent PR and release verification remain.**
+**Accepted and verified — P3O1-T01 / issue #566 / PR #567 ships BurnLens 0.53.0.**
 
 The accepted Phase Two package, locked split, baseline, and explicit model-work
 authorization produced one bounded CPU U-Net. It trained once, consumed its
@@ -132,9 +132,9 @@ Phase Three's candidate exit is complete only when:
 - a clean environment can reproduce the accepted inference behavior within documented tolerance;
 - the Phase Four decision is reviewed and merged.
 
-All analytical/package conditions now pass on the milestone branch. Review,
-merge, fresh-main, and applicable version/tag gates remain before the phase is
-verified complete.
+All analytical, package, review, merge, fresh-main, deterministic-install, and
+annotated-tag conditions pass. Phase Four may proceed only through the
+baseline-primary/rejected-model-diagnostic handoff.
 
 ## Dependencies
 

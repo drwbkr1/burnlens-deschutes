@@ -227,3 +227,19 @@ confirms the checkout mismatch again before commit. The correction is limited
 to meaningful release-QA notes and exact LF formatting in those three files.
 No scientific or model evidence changes, and the PR remains blocked until a
 clean exact commit passes the same contract and full suite.
+
+## 2026-07-26 — verify the rejection before building the map
+
+The corrected candidate passes 729 tests, one expected skip, 86 subtests, and
+the deterministic package/install audit. PR #567 merges the exact reviewed
+head at `5a0f8ac027ae20ff9193948506f590afbfb64554`; fresh main repeats the full
+suite in 802.35 seconds. Two fresh-main wheel builds match the reviewed
+1,106,162-byte package at SHA-256 `15b8b84f...`, and the isolated model
+runtime exposes all 107 command routes.
+
+Annotated tag object `d66dd7fdc9f2f155d1799cb1e85e77dadd76311a`
+peels exactly to that merge. This turns the model result into verified
+repository evidence without turning a rejected model into an accepted method.
+RBR remains primary. The next product weakness is no longer model ambiguity;
+it is the missing georeferenced analytical run and inspectable GEOINT
+interface.

@@ -462,3 +462,9 @@ samples/model-packages/burnlens-unet-binary-v0.1.0/*.html text eol=lf
 samples/model-packages/burnlens-unet-binary-v0.1.0/*.md text eol=lf
 samples/model-packages/burnlens-unet-binary-v0.1.0/*.png -text
 samples/model-packages/burnlens-unet-binary-v0.1.0/*.pt -text
+
+# BurnLens 0.53 lifecycle truth synchronization and Phase Four activation.
+docs/phases/phase-04/PHASE_04_OBJECTIVES.md text eol=lf
+records/prompt-build-log/2026-07-26-v053-lifecycle-sync.md text eol=lf
+portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.json text eol=lf
+portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html text eol=lf

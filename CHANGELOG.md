@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.53.0-bounded-unet-rejected-model - release candidate - 2026-07-25
+## v0.53.0-bounded-unet-rejected-model - verified - 2026-07-26
 
 - Lock one exact CPU-only U-Net environment, implementation, and experiment
   protocol before substantive training.
@@ -38,8 +38,13 @@ bytes / inventory SHA-256
 `ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438`.
 Portfolio run `BL-2026-07-26-p3o1-t01-u06-portfolio-r001` produces exact
 9,859-byte JSON / `9c536bc3...` and 18,256-byte HTML / `ba345974...`.
-Coherent PR, full regression, deterministic package/install, merge,
-fresh-main, and annotated-tag gates remain.
+PR #567 merges exact reviewed head through checkpoint
+`5a0f8ac027ae20ff9193948506f590afbfb64554`. Fresh main passes 729 tests
+with one expected skip and 86 subtests. The 1,106,162-byte wheel reproduces
+the reviewed SHA-256 `15b8b84f...`; isolated CPython 3.12.10 passes all 107
+command-help probes. Annotated tag object
+`d66dd7fdc9f2f155d1799cb1e85e77dadd76311a` peels exactly to the merge.
+No GitHub Release or deployment exists.
 
 ## v0.52.0-dataset-baseline-model-readiness - verified - 2026-07-25
 
