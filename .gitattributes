@@ -451,3 +451,11 @@ samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.json text eol=lf
 samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.html text eol=lf
 samples/evaluation/phase-three/bounded-unet-test-v0.1.0/*.png -text
 samples/evaluation/phase-three/bounded-unet-test-v0.1.0/predictions/**/*.npy -text
+burnlens/bounded_unet_package.py text eol=lf
+burnlens/run_bounded_unet_package.py text eol=lf
+tests/test_bounded_unet_package.py text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.json text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.html text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.md text eol=lf
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.png -text
+samples/model-packages/burnlens-unet-binary-v0.1.0/*.pt -text
