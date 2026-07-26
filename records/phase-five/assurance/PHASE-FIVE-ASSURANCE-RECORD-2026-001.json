@@ -114,6 +114,58 @@
       "status": "pass"
     }
   },
+  "regression_validation": {
+    "source_commit": "4b3d648ee186338262e9701894286d3f3dac1fb3",
+    "collection_count": 779,
+    "passed": 778,
+    "skipped": 1,
+    "subtests_passed": 86,
+    "warnings": 412,
+    "batch_results": [
+      {
+        "batch": 1,
+        "test_files": 30,
+        "passed": 181,
+        "skipped": 0,
+        "subtests_passed": 6,
+        "seconds": 350.70
+      },
+      {
+        "batch": 2,
+        "test_files": 30,
+        "passed": 178,
+        "skipped": 0,
+        "subtests_passed": 16,
+        "seconds": 167.66
+      },
+      {
+        "batch": 3,
+        "test_files": 30,
+        "passed": 256,
+        "skipped": 1,
+        "subtests_passed": 31,
+        "seconds": 125.22
+      },
+      {
+        "batch": 4,
+        "test_files": 30,
+        "passed": 159,
+        "skipped": 0,
+        "subtests_passed": 33,
+        "seconds": 162.51
+      },
+      {
+        "batch": 5,
+        "test_files": 1,
+        "passed": 4,
+        "skipped": 0,
+        "subtests_passed": 0,
+        "seconds": 23.99
+      }
+    ],
+    "checkout_contract_clean_rerun": "pass",
+    "status": "pass"
+  },
   "render_evidence": {
     "transport": "temporary repository-local loopback HTTP server",
     "dom_snapshot": "pass; all headings, tables, limitations, route, exact run, commit, and archive hash exposed",
