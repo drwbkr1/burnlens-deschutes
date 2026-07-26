@@ -1,0 +1,255 @@
+{
+  "record_version": "burnlens-phase-four-geospatial-record-v0.1.0",
+  "record_id": "PHASE-FOUR-GEOSPATIAL-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T17:45:00Z",
+  "unit_id": "P4O1-T01-U03",
+  "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "git_source_commit": "761ef33abd70de8b348b22870a5b9c30a3406c28",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "contract": {
+    "path": "records/phase-four/contracts/PHASE-FOUR-INTEGRATION-CONTRACT-2026-001.json",
+    "bytes": 19991,
+    "sha256": "a50966b3f9d082bc5700c001e3f3d3f0dbc372ad775d3e95ddcec8261ad631ec"
+  },
+  "u02_analysis": {
+    "record_path": "records/phase-four/analyses/PHASE-FOUR-ANALYSIS-RECORD-2026-001.json",
+    "record_bytes": 7100,
+    "record_sha256": "0b242293b63b502ea66cf35393a50eb7c81bcbea22550c677c074023f0bea94c",
+    "run_id": "BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+    "inventory_sha256": "28739c6d14be43d491743d75d70a00a9f0885bd45523dc9649f50ff0c1b86171"
+  },
+  "products": {
+    "raster_count": 10,
+    "native_crs": "EPSG:32610",
+    "native_resolution_m": 20,
+    "native_shape": [
+      64,
+      64
+    ],
+    "accepted_method_rasters": [
+      "rbr-score",
+      "rbr-binary",
+      "exclusion"
+    ],
+    "rejected_model_diagnostic_rasters": [
+      "unet-probability",
+      "unet-binary"
+    ],
+    "accepted_vector_layer": "rbr_accepted",
+    "accepted_vector_geometry_type": "MULTIPOLYGON",
+    "accepted_vector_feature_count": 202,
+    "polygonization_connectivity": 4,
+    "simplification": "none",
+    "web_vector_crs": "EPSG:4326",
+    "quicklook_dimensions": [
+      1280,
+      720
+    ]
+  },
+  "raster_vector_reconciliation": {
+    "WCP-001": {
+      "rbr_positive_pixels": 3536,
+      "vector_pixel_count": 3536,
+      "area_m2": 1414400.0,
+      "rasterized_vector_exact_to_rbr_binary": true
+    },
+    "WCP-002": {
+      "rbr_positive_pixels": 1669,
+      "vector_pixel_count": 1669,
+      "area_m2": 667600.0,
+      "rasterized_vector_exact_to_rbr_binary": true
+    }
+  },
+  "ignored_run_inventory": {
+    "path": "runs/phase-four/BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+    "file_count": 18,
+    "bytes": 549068,
+    "inventory_format": "case-insensitive sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 1827,
+    "inventory_sha256": "79124d1310faffd08bbde565198cde0ed0d77e8270a0781cd1132e590a37b192",
+    "files": [
+      {
+        "path": "GEOSPATIAL-MANIFEST.json",
+        "bytes": 11446,
+        "sha256": "dc7515763ace956987c8a8c6acad9da49ab847567fdf4eec4a3a537123a982ea"
+      },
+      {
+        "path": "GEOSPATIAL-QUICKLOOK.png",
+        "bytes": 40962,
+        "sha256": "dfd746726f2958bd7d90430008b5b5773ec489edbd8b4b61f7aa2b76dafbcfae"
+      },
+      {
+        "path": "GEOSPATIAL-VALIDATION.json",
+        "bytes": 856,
+        "sha256": "a37f6b29bfd6b60bad0ca09604cbddbb11e54c91b8ec346079b363fbdbe81d19"
+      },
+      {
+        "path": "patches/WCP-001/exclusion.tif",
+        "bytes": 1114,
+        "sha256": "f86a363a30fff3968c27c3f5a9ba65a348d327f1989a41a384bd149fd94455f7"
+      },
+      {
+        "path": "patches/WCP-001/rbr-binary.tif",
+        "bytes": 1370,
+        "sha256": "e9f85df3efa24fd7796e9d7326dec0adc9ecf9a9cd0a68b9c46774437de6222c"
+      },
+      {
+        "path": "patches/WCP-001/rbr-score.tif",
+        "bytes": 15666,
+        "sha256": "082f92a7ad489f35d157d0981a2c12d182c356c05883026888c9aa39a9730416"
+      },
+      {
+        "path": "patches/WCP-001/unet-binary-diagnostic.tif",
+        "bytes": 1142,
+        "sha256": "e1d4b4b4e9d46db8d501a161426ddd7ce8c21f2cf57be430d542250df221acb5"
+      },
+      {
+        "path": "patches/WCP-001/unet-probability-diagnostic.tif",
+        "bytes": 13616,
+        "sha256": "f7c6b87a8dd9b229f2cd021af7b4bd4d1c6af6acecb3f22b13dcdbc4906991a3"
+      },
+      {
+        "path": "patches/WCP-002/exclusion.tif",
+        "bytes": 1114,
+        "sha256": "721bbe0986332bf648e9d5cc48d5047b758f64c71b962588f82ecc7436b0452f"
+      },
+      {
+        "path": "patches/WCP-002/rbr-binary.tif",
+        "bytes": 1784,
+        "sha256": "13f4776bb07ef8d66069eef17dab167eaa804706dd0d0674beeed3b76245a3d8"
+      },
+      {
+        "path": "patches/WCP-002/rbr-score.tif",
+        "bytes": 16130,
+        "sha256": "50ccbed7637d916ab3df7d9a5a608092808932fa2f27b4f45c1a889ddf825c5f"
+      },
+      {
+        "path": "patches/WCP-002/unet-binary-diagnostic.tif",
+        "bytes": 1306,
+        "sha256": "c9302441fde15574ac3745b40033352a11f9b19289681c4c1e2b0bd0b08ab297"
+      },
+      {
+        "path": "patches/WCP-002/unet-probability-diagnostic.tif",
+        "bytes": 14108,
+        "sha256": "3ee1c600aeea6c430e00f0d07a33c51c876dfee0e91d6548f146d809ffb79222"
+      },
+      {
+        "path": "RUN-COMPLETE.json",
+        "bytes": 400,
+        "sha256": "7f8c3143fb6da33af0fca696dd2086a4f5882074c589be3b24c57c880c626918"
+      },
+      {
+        "path": "RUN-STARTED.json",
+        "bytes": 256,
+        "sha256": "325711f5f1c93609286a1d79ac9ecb90f31c818b69a90b378844b28d2f34cbcb"
+      },
+      {
+        "path": "STATUS.json",
+        "bytes": 483,
+        "sha256": "42e95214da39144614bad2685dd6ccd4e38d311ec69941098c8c9e17ddc3ad07"
+      },
+      {
+        "path": "vectors/rbr-accepted-polygons.geojson",
+        "bytes": 312627,
+        "sha256": "31ce37dd18e608881bc151103217f5e205a6c713175556359e2662a118f5e8af"
+      },
+      {
+        "path": "vectors/rbr-accepted-polygons.gpkg",
+        "bytes": 114688,
+        "sha256": "99d083f124907c9098520e5508f811d29316a7d9232e0a783982ed1552131eee"
+      }
+    ]
+  },
+  "independent_validation": {
+    "validated_at_utc": "2026-07-26T17:45:00Z",
+    "all_manifest_receipts_exact": true,
+    "all_geotiff_crs_transform_shape_dtype_nodata_exact": true,
+    "all_binary_domains_valid": true,
+    "all_float_values_finite_outside_nodata": true,
+    "geopackage_opens_in_locked_geopandas_stack": true,
+    "geopackage_integrity_check": "ok",
+    "geopackage_application_id": 1196444487,
+    "geopackage_user_version": 10300,
+    "all_geometries_valid": true,
+    "rasterized_vectors_exact_to_rbr_binary": true,
+    "geojson_epsg_4326_domain_valid": true,
+    "quicklook_rendered_and_inspected": true,
+    "focused_tests": "13 passed",
+    "duplicate_attempt_refused_without_mutation": true
+  },
+  "retained_attempts": [
+    {
+      "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r001",
+      "git_source_commit": "6c085c96647bc5b20712ccd1c73a342be08dffb3",
+      "file_count": 18,
+      "bytes": 529710,
+      "inventory_sha256": "2bcb968f84a708324e171b621c151f112217d76df9e14f422cd7030714ebd17b",
+      "quicklook_sha256": "a4db4f11f412f74717b796326100f11075071bfc83dd2a7c05afafef87642ac0",
+      "disposition": "retained-failed-render-qa",
+      "failure": "Windows font fallback rendered portfolio evidence text too small."
+    },
+    {
+      "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r002",
+      "git_source_commit": "618fdd4b84f15cff01fde964dce38f2f48d4db8e",
+      "file_count": 18,
+      "bytes": 549880,
+      "inventory_sha256": "b3caf9f2b3c44e766aa60c4bcda7de026e8f721ed2729e1e9a5976ec486295c8",
+      "quicklook_sha256": "be12c40e59e791a7d8bb755e98c567867ef3eb0dac1ea6f4e9b1f798f96a4c23",
+      "disposition": "retained-failed-render-qa",
+      "failure": "Sized fallback restored hierarchy but lacked the em-dash glyph."
+    },
+    {
+      "attempt_id": "P4O1-T01-U03-DUPLICATE-R004",
+      "run_id": "BL-2026-07-26-p4o1-t01-u03-geospatial-r003",
+      "disposition": "retained-no-overwrite-refusal",
+      "exit_code": 1,
+      "error": "run already exists",
+      "preexisting_file_count": 18,
+      "postattempt_file_count": 18,
+      "preexisting_bytes_changed": false
+    }
+  ],
+  "gates": {
+    "frozen_contract_and_U02_run": "pass",
+    "native_grid_and_crs": "pass",
+    "raster_dtype_nodata_and_domain": "pass",
+    "accepted_RBR_vectorization": "pass",
+    "raster_vector_roundtrip": "pass",
+    "geometry_validity": "pass",
+    "geopackage_interoperability": "pass",
+    "web_vector_representation": "pass",
+    "rendered_quicklook": "pass on r003",
+    "determinism": "pass",
+    "no_overwrite": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "context": "pending U04"
+  },
+  "boundaries": {
+    "accepted_analytical_method": "burnlens-baseline-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "retraining": false,
+    "retuning": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "label_changed": false,
+    "aoi_changed": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "context_source_used": false,
+    "context_complete": false,
+    "summary_complete": false,
+    "interface_complete": false,
+    "deployment": false,
+    "official_operational_or_emergency_claim": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U04 context source and terms gate"
+}

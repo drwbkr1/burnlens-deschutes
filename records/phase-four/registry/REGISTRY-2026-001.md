@@ -19,6 +19,10 @@ from PR #569.
 | `P4O1-T01-U02-ANALYSIS-R001` | run `BL-2026-07-26-p4o1-t01-u02-analysis-r001` | 14 ignored files / 104,703 bytes; inventory 1,416 bytes / `28739c6d...`; manifest 12,244 bytes / `c969bb10...` | State `accepted-baseline`. WCP-001: RBR 3,536 positives, rejected U-Net 4,095. WCP-002: RBR 1,669, rejected U-Net 3,206. No accepted model or geospatial product. | Independent validation |
 | `P4O1-T01-U02-VERIFY-R001` | record `PHASE-FOUR-ANALYSIS-RECORD-2026-001` | Exact U02 arrays plus frozen Phase Three probability/prediction arrays | Independent RBR formula replay is exact; rejected-U-Net probability and binary arrays equal Phase Three values; exclusion equals inverse input-valid; receipts pass; 8 focused tests pass. U02 `pass`. | U03 geospatial products |
 | `P4O1-T01-U02-DUPLICATE-R002` | retained no-overwrite attempt | Existing U02 run ID and 14 files | Duplicate invocation exits 1 with `run already exists`; file count and every SHA-256 remain unchanged. `retained-no-overwrite-refusal`. | U03 |
+| `P4O1-T01-U03-GEOSPATIAL-R001` | run `BL-2026-07-26-p4o1-t01-u03-geospatial-r001`; source `6c085c9...` | Ten GeoTIFFs, GeoPackage, GeoJSON, quicklook, validation, status, and custody files | Raster/vector integrity passes, but the Windows font fallback renders portfolio evidence text too small. `retained-failed-render-qa`. | Correct deterministic fallback sizing |
+| `P4O1-T01-U03-GEOSPATIAL-R002` | run `BL-2026-07-26-p4o1-t01-u03-geospatial-r002`; source `618fdd4...` | Same bounded product roster; sized fallback quicklook 41,774 bytes / `be12c40e...` | Visual hierarchy is restored, but the fallback font lacks the em-dash glyph and renders a visible square. `retained-failed-render-qa`. | Use a portable separator |
+| `P4O1-T01-U03-GEOSPATIAL-R003` | run `BL-2026-07-26-p4o1-t01-u03-geospatial-r003`; source `761ef33...` | 18 ignored files / 549,068 bytes; inventory 1,827 bytes / `79124d13...`; manifest 11,446 bytes / `dc751576...`; 10 rasters, 202 accepted RBR polygons, GeoJSON, and 1280x720 quicklook | Native-grid GeoTIFFs pass; GeoPackage opens in the locked stack; every geometry is valid; polygon rasterization exactly reproduces 3,536 and 1,669 RBR-positive pixels; rendered quicklook passes visual QA; model remains rejected. U03 `pass`. | U04 context source and terms gate |
+| `P4O1-T01-U03-DUPLICATE-R004` | retained no-overwrite attempt | Existing accepted U03 run ID and 18 files | Duplicate invocation exits 1 with `run already exists`; file count and every SHA-256 remain unchanged. `retained-no-overwrite-refusal`. | U04 |
 
 ## Current truth
 
@@ -30,13 +34,17 @@ from PR #569.
   background on their exact EPSG:32610 native 20 m grids.
 - Existing Phase Two and Phase Three artifacts are read-only inputs.
 - No Phase 3B, second experiment, new label, dataset, split, AOI, threshold,
-  provider transaction, context acquisition, inference output, deployment, or
-  public-sharing change exists at U01.
+  provider transaction, context acquisition, deployment, or public-sharing
+  change exists through U03.
 - U01 is complete at the independently verified `f43907f...` checkpoint; its
   next eligible dependency is U02.
 - U02 is complete at source `cf67113...` and run
   `BL-2026-07-26-p4o1-t01-u02-analysis-r001`. RBR is the accepted analytical
-  output; the U-Net remains a visibly rejected diagnostic. U03 is eligible.
+  output; the U-Net remains a visibly rejected diagnostic.
+- U03 is complete at source `761ef33...` and accepted run
+  `BL-2026-07-26-p4o1-t01-u03-geospatial-r003`. Its ten native-grid rasters,
+  accepted RBR vectors, web representation, and rendered quicklook pass.
+  U04 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
