@@ -154,6 +154,7 @@ burnlens-validate-phase-four-package = "burnlens.validate_phase_four_package:mai
 burnlens-validate-phase-five-contract = "burnlens.validate_phase_five_contract:main"
 burnlens-run-phase-five-failure-injection = "burnlens.phase_five_failure_injection:main"
 burnlens-validate-phase-five-failure-injection = "burnlens.validate_phase_five_failure_injection:main"
+burnlens-run-phase-five-reliability-interface = "burnlens.phase_five_interface:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
