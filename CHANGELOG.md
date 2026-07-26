@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.54.0-rbr-geoint-milestone - candidate - 2026-07-26
+## v0.54.0-rbr-geoint-milestone - verified - 2026-07-26
 
 - Complete the owner-approved
   `baseline-primary-with-rejected-model-diagnostic` route without Phase 3B,
@@ -26,14 +26,19 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Update the roadmap, phase status, case study, portfolio quickstart,
   changelog, version history, prompt/build log, registry, and human-readable
   devlog for one coherent Phase Five handoff.
+- Merge reviewed PR #571 at `8660ccba...`; preserve the tracked-only
+  full-suite custody-prerequisite failure, pass the explicit portable roster
+  and both package validators, reproduce the reviewed wheel exactly, and pass
+  all 114 installed command-help routes.
+- Verify annotated tag object `4a7a54b...` peels exactly to the merge.
 
 Issue #570; package run
 `BL-2026-07-26-p4o1-t01-u07-package-r001`; exact package source
 `733a3c265be2c351a50bfd356d1b45da15cbfec0`; ZIP SHA-256
 `91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e`.
-Merge, fresh-main regression, package/install checks, and annotated tag remain
-U08 release gates. No GitHub Release, deployment, access, ownership,
-public-sharing, or external-submission change is part of this candidate.
+Issue #572 records the lifecycle-only Phase Five handoff. No GitHub Release,
+deployment, access, ownership, public-sharing, or external-submission change
+is part of this verified release.
 
 ## v0.53.0-bounded-unet-rejected-model - verified - 2026-07-26
 

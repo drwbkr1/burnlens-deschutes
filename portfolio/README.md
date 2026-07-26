@@ -79,7 +79,7 @@ repack the accepted package byte-identically.
 - Open the [Phase Three model decision](../samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html).
 - Read the [rejected-model package record](../records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json).
 - Read the [Petes Lake material-defer decision](../docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md).
-- Inspect the [latest verified v0.53 release audit](../records/phase-three/release-audits/RELEASE-AUDIT-2026-002.json) until the 0.54 milestone completes its fresh-main gate.
+- Inspect the [verified v0.54 Phase Four release audit](../records/phase-four/release-audits/RELEASE-AUDIT-2026-001.json).
 
 Official sources govern. This local portfolio surface is explanatory evidence,
 not an operational wildfire application.

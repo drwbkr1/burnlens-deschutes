@@ -16,17 +16,19 @@ Convert the accepted model or baseline into a reproducible inference-to-GEOINT w
 
 ## Current status
 
-**Release candidate — U01-U07 accepted; U08 verification active.**
+**Accepted and verified — U01-U08 complete.**
 
 Verified BurnLens 0.53.0 supplied the explicit
 `baseline-primary-with-rejected-model-diagnostic` handoff. P4O1-T01 / issue
-#570 now has one exact accepted RBR run, native-grid rasters, accepted vectors,
+#570 / PR #571 now has one exact accepted RBR run, native-grid rasters, accepted vectors,
 bounded context, deterministic observations, a self-contained evidence
 interface, and immutable run package. The frozen U-Net remains visibly
 rejected diagnostic evidence and contributes no measurement. Phase Four has
 not retrained, retuned, reopened the test set, created Phase 3B, or planned or
-implemented a second experiment. U08 must review, merge, verify fresh main,
-and hand the exact candidate to Phase Five before this phase is complete.
+implemented a second experiment. Reviewed head `d856a06...` merges at
+`8660ccb...`; exact tracked-package, portable-regression, deterministic-wheel,
+isolated-runtime, command-help, and remote annotated-tag gates pass. Issue
+#572 records the lifecycle-only handoff to Phase Five.
 
 ## Phase purpose
 
