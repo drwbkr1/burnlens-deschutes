@@ -19,6 +19,9 @@ PACKAGE_ID = "BURNLENS-WARD-CREEK-RBR-RUN-2026-001"
 ARCHIVE_NAME = f"{PACKAGE_ID}.zip"
 RECEIPT_NAME = f"{PACKAGE_ID}-RECEIPT.json"
 SOFTWARE_VERSION = "0.54.0"
+MAX_ARCHIVE_BYTES = 750_000
+MAX_ARCHIVE_MEMBERS = 66
+MAX_EXTRACTED_BYTES = 2_500_000
 RUN_ID_PATTERN = re.compile(
     r"^BL-[0-9]{4}-[0-9]{2}-[0-9]{2}-p4o1-t01-u07-package-r[0-9]{3}$"
 )
@@ -591,30 +594,61 @@ def _safe_member(name: str) -> bool:
     )
 
 
+def _safe_payload_path(name: str) -> bool:
+    pure = PurePosixPath(name)
+    return (
+        not pure.is_absolute()
+        and "\\" not in name
+        and all(part not in {"", ".", ".."} for part in pure.parts)
+        and len(pure.parts) >= 1
+    )
+
+
 def _validate_extracted(root: Path) -> dict[str, Any]:
     import geopandas as gpd
     import numpy as np
     import pyogrio
     import rasterio
 
+    if not root.is_dir():
+        raise PhaseFourPackageError("extracted package directory missing")
+    symlinks = [path for path in root.rglob("*") if path.is_symlink()]
+    if symlinks:
+        raise PhaseFourPackageError("symlink prohibited in extracted package")
     manifest = _load_json(root / "PACKAGE-MANIFEST.json")
     if (
-        manifest.get("package_version") != PACKAGE_VERSION
+        manifest.get("package_id") != PACKAGE_ID
+        or manifest.get("package_version") != PACKAGE_VERSION
+        or manifest.get("repository") != "drwbkr1/burnlens-deschutes"
+        or manifest.get("issue") != 570
+        or manifest.get("unit_id") != "P4O1-T01-U07"
+        or not RUN_ID_PATTERN.fullmatch(str(manifest.get("run_id", "")))
         or manifest.get("state") != "accepted-baseline"
+        or manifest.get("route")
+        != "baseline-primary-with-rejected-model-diagnostic"
+        or manifest.get("accepted_method") != "burnlens-baseline-v0.1.0"
+        or manifest.get("rejected_diagnostic")
+        != "burnlens-unet-binary-v0.1.0"
+        or manifest.get("entrypoint") != "interface/index.html"
+        or manifest.get("checksums") != "CHECKSUMS.sha256"
         or manifest.get("boundaries", {}).get("model_accepted") is not False
         or manifest.get("boundaries", {}).get("model_outperformed_rbr")
         is not False
     ):
-        raise PhaseFourPackageError("package manifest state drift")
-    checksum_lines = (root / "CHECKSUMS.sha256").read_text(
-        encoding="utf-8"
-    ).splitlines()
+        raise PhaseFourPackageError("package manifest binding drift")
+    try:
+        checksum_lines = (root / "CHECKSUMS.sha256").read_text(
+            encoding="utf-8"
+        ).splitlines()
+    except (OSError, UnicodeDecodeError) as exc:
+        raise PhaseFourPackageError("invalid checksum roster") from exc
     expected_checksums = {}
     for line in checksum_lines:
         digest, separator, relative = line.partition("  ")
         if (
             separator != "  "
             or not re.fullmatch(r"[0-9a-f]{64}", digest)
+            or not _safe_payload_path(relative)
             or relative in expected_checksums
         ):
             raise PhaseFourPackageError("invalid checksum roster")
@@ -624,9 +658,23 @@ def _validate_extracted(root: Path) -> dict[str, Any]:
         if not path.is_file() or _sha256_file(path) != digest:
             raise PhaseFourPackageError(f"checksum mismatch: {relative}")
     inventory = manifest.get("payload_inventory")
-    if not isinstance(inventory, list):
+    if (
+        not isinstance(inventory, list)
+        or manifest.get("payload_file_count_excluding_manifest")
+        != len(inventory)
+        or len(inventory) != len(expected_checksums) + 1
+    ):
         raise PhaseFourPackageError("payload inventory missing")
+    inventory_paths = []
     for item in inventory:
+        if (
+            not isinstance(item, dict)
+            or not _safe_payload_path(str(item.get("path", "")))
+            or not isinstance(item.get("bytes"), int)
+            or not re.fullmatch(r"[0-9a-f]{64}", str(item.get("sha256", "")))
+        ):
+            raise PhaseFourPackageError("invalid payload inventory")
+        inventory_paths.append(item["path"])
         path = root / item["path"]
         if (
             not path.is_file()
@@ -636,6 +684,22 @@ def _validate_extracted(root: Path) -> dict[str, Any]:
             raise PhaseFourPackageError(
                 f"manifest receipt mismatch: {item['path']}"
             )
+    if (
+        len(inventory_paths) != len(set(inventory_paths))
+        or set(inventory_paths)
+        != set(expected_checksums) | {"CHECKSUMS.sha256"}
+    ):
+        raise PhaseFourPackageError("manifest/checksum roster mismatch")
+    actual_files = {
+        path.relative_to(root).as_posix()
+        for path in root.rglob("*")
+        if path.is_file()
+    }
+    if actual_files != set(expected_checksums) | {
+        "CHECKSUMS.sha256",
+        "PACKAGE-MANIFEST.json",
+    }:
+        raise PhaseFourPackageError("unrostered or missing package member")
     interface = (root / "interface/index.html").read_text(encoding="utf-8")
     lower = interface.lower()
     if (
@@ -719,21 +783,38 @@ def validate_package(package_path: Path) -> dict[str, Any]:
         return _validate_extracted(source)
     if not source.is_file() or source.suffix.casefold() != ".zip":
         raise PhaseFourPackageError("package path must be a directory or ZIP")
-    with zipfile.ZipFile(source) as archive:
-        infos = archive.infolist()
-        names = [info.filename for info in infos]
-        if (
-            not infos
-            or len(names) != len(set(names))
-            or any(not _safe_member(name) for name in names)
-            or any(info.flag_bits & 0x1 for info in infos)
-            or archive.testzip() is not None
-        ):
-            raise PhaseFourPackageError("unsafe or corrupt archive")
-        with TemporaryDirectory(prefix="burnlens-phase-four-") as temporary:
-            destination = Path(temporary)
-            archive.extractall(destination)
-            return _validate_extracted(destination / PACKAGE_VERSION)
+    if source.stat().st_size > MAX_ARCHIVE_BYTES:
+        raise PhaseFourPackageError("archive exceeds byte budget")
+    try:
+        with zipfile.ZipFile(source) as archive:
+            infos = archive.infolist()
+            names = [info.filename for info in infos]
+            if not infos:
+                raise PhaseFourPackageError("archive is empty")
+            if len(infos) != MAX_ARCHIVE_MEMBERS:
+                raise PhaseFourPackageError("archive member-count drift")
+            if len(names) != len(set(names)):
+                raise PhaseFourPackageError("archive duplicate members")
+            if any(not _safe_member(name) for name in names):
+                raise PhaseFourPackageError("archive member path unsafe")
+            if any(info.is_dir() for info in infos):
+                raise PhaseFourPackageError("archive directories prohibited")
+            if any(info.flag_bits & 0x1 for info in infos):
+                raise PhaseFourPackageError("encrypted archive prohibited")
+            if sum(info.file_size for info in infos) > MAX_EXTRACTED_BYTES:
+                raise PhaseFourPackageError(
+                    "archive extracted byte budget exceeded"
+                )
+            if archive.testzip() is not None:
+                raise PhaseFourPackageError("archive CRC failure")
+            with TemporaryDirectory(
+                prefix="burnlens-phase-four-"
+            ) as temporary:
+                destination = Path(temporary)
+                archive.extractall(destination)
+                return _validate_extracted(destination / PACKAGE_VERSION)
+    except (zipfile.BadZipFile, OSError) as exc:
+        raise PhaseFourPackageError("unsafe or corrupt archive") from exc
 
 
 def _require_clean_head(root: Path, git_source_commit: str) -> None:

@@ -101,7 +101,10 @@ class PhaseFourPackageTests(unittest.TestCase):
         with TemporaryDirectory(dir=ROOT / "downloads") as temporary:
             path = Path(temporary) / "bad.zip"
             path.write_bytes(b"not a zip")
-            with self.assertRaises(zipfile.BadZipFile):
+            with self.assertRaisesRegex(
+                PhaseFourPackageError,
+                "unsafe or corrupt archive",
+            ):
                 validate_package(path)
 
 
