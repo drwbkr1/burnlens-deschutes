@@ -49,6 +49,8 @@
 | `P3O1-T01-U06-PORTFOLIO-R001` | run `BL-2026-07-26-p3o1-t01-u06-portfolio-r001`; JSON 9,859 bytes / `9c536bc3...`; HTML 18,256 bytes / `ba345974...` | exact replay; desktop/narrow no overflow; two native-size images; 10 repository links and 6 fragments pass; no browser log or external resource; visible rejected-model and use boundaries | `pass-candidate-pr-release-pending` | coherent milestone PR |
 | `P3O1-T01-U06-RELEASE-QA-R001` | candidate `d1101a0...`; combined full suite | 728 pass / 1 expected skip / 86 subtests; one three-file working-byte checkout mismatch | `retained-checkout-failure` | exact LF remediation |
 | `P3O1-T01-U06-RELEASE-QA-R002` | targeted checkout plus environment profiles | eight environment tests pass; checkout still rejects uncommitted CRLF working bytes | `retained-precommit-failure` | commit LF bytes, then rerun |
+| `P3O1-T01-U06-RELEASE-QA-R003` | exact clean, remote-equal candidate `938cc94d5a8cb952054977fa765b9400a66daf02` | 729 pass / 1 expected skip / 228 warnings / 86 subtests in 2,032.18 seconds; 11 focused passes; compile, lock, dependency, diff, checkout, model-package, and portfolio gates pass | `pass-clean-candidate` | deterministic package |
+| `P3O1-T01-U06-RELEASE-QA-R004` | `BL-2026-07-26-p3o1-t01-release-r001`; fixed epoch `1785040797`; two 1,106,162-byte wheels / `15b8b84f...` | byte-identical independent archive builds; 230 unique safe entries; valid RECORD; MIT metadata/license; zero private/custody/download paths; fresh Python 3.12.10 model install; 23 compatible distributions; BurnLens 0.53.0; Torch 2.13.0+cpu; 107/107 command-help probes | `pass-candidate-pr-ready` | issue closeout and coherent PR |
 
 U01 opens no dataset array. U02 and U03 use only train/validation arrays for
 bounded smoke evidence. U04 performs the one authorized substantive
@@ -63,5 +65,6 @@ and packages the result as
 method, while RBR becomes the Phase Four primary route and the frozen U-Net may
 appear only as a visibly rejected diagnostic. No second test opening,
 georeferenced inference, deployment, generalization, or final-submission-ready
-claim exists. The exact next gate is the coherent milestone PR and release
+claim exists. The clean candidate, deterministic package, and isolated-install
+gates pass. The exact next gate is the coherent milestone PR and release
 verification.

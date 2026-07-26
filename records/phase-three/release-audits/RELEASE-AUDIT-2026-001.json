@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-001",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "model",
+    "package",
+    "public",
+    "external"
+  ],
+  "candidate": {
+    "base_commit": "c290e90c76e29c2bd33423f5c51878c950412b1d",
+    "package_sensitive_commit": "938cc94d5a8cb952054977fa765b9400a66daf02",
+    "branch": "codex/p3o1-t01-bounded-unet-milestone",
+    "version": "0.53.0",
+    "tag": "v0.53.0-bounded-unet-rejected-model",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "model_package_version": "burnlens-unet-rejected-package-v0.1.1",
+    "artifacts": [
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+        "bytes": 479573,
+        "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+      },
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-PACKAGE-MANIFEST.json",
+        "bytes": 7112,
+        "sha256": "6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441"
+      },
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+        "bytes": 2789,
+        "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560"
+      },
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/INFERENCE-CONTRACT.json",
+        "bytes": 1589,
+        "sha256": "bb6cc5dfb0a989458ab9a60c2f9756c9bd530c67e265b96c4d27e7e0fa979a03"
+      },
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-DECISION.json",
+        "bytes": 1474,
+        "sha256": "c9fa8b4e93268de81571d251fd423ab0dfcd706083694a452f1fcdc6c057c118"
+      },
+      {
+        "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/REPRODUCIBILITY-REPORT.json",
+        "bytes": 7962,
+        "sha256": "25d1873d36751aec1e547213dd34b9f46ffc8cc3541235cd0f11321f12e3101c"
+      },
+      {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.json",
+        "bytes": 9859,
+        "sha256": "9c536bc374007723f66a8f36000a7848bb1fd038dd76ea8bcdb702b4fad851c0"
+      },
+      {
+        "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html",
+        "bytes": 18256,
+        "sha256": "ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9"
+      },
+      {
+        "path": "burnlens_deschutes-0.53.0-py3-none-any.whl",
+        "bytes": 1106162,
+        "sha256": "15b8b84f5fa6a60c51cb82dc2fc001dd4740a84704ee1ecf2c827da1e7961b8b"
+      }
+    ]
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-26T15:06:13Z",
+    "branch": "codex/p3o1-t01-bounded-unet-milestone",
+    "remote_commit": "938cc94d5a8cb952054977fa765b9400a66daf02",
+    "pull_request": null,
+    "tag_target": null,
+    "deployment": null
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the exact branch, complete evidence-unit ledger, issue #566, checkpoint policy, execution goal, Phase Three objective, and verified main.",
+      "evidence": [
+        "The branch executes only the six dependency-ordered bounded-U-Net units authorized by issue #566",
+        "The dataset, labels, split, normalization, baseline, source precedence, target, and use boundary remain frozen",
+        "The result is reject-model-retain-baseline; RBR remains the accepted analytical route"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-002",
+      "category": "model-evidence",
+      "required": true,
+      "status": "pass",
+      "method": "Audit the exact training contract, append-only run, validation selection, one test opening, baseline comparison, failure analysis, replay, package, and Phase Four handoff.",
+      "evidence": [
+        "One 117,473-parameter CPU U-Net trained for 35 epochs and selected epoch 10 using validation evidence only",
+        "The one authorized Ward Creek/Windigo test opening was consumed exactly once with no tuning or retry",
+        "The model predicts all 89 selected test cores burned and scores event-class macro Dice 0.29874213836477986 against RBR 1.0",
+        "The 35-row history, selected epoch, weights SHA-256, predictions, and metrics replay exactly",
+        "The model is rejected as the analytical winner and retained only as a visibly rejected diagnostic"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-003",
+      "category": "runtime",
+      "required": true,
+      "status": "pass",
+      "method": "Run focused checks, compilation, lock and dependency checks, diff and checkout checks, and the complete custody-enabled combined-profile suite from the exact clean remote-equal candidate.",
+      "evidence": [
+        "Focused clean-checkout/model/package/portfolio suite: 11 passed in 67.11 seconds",
+        "Complete combined-profile suite: 729 passed, 1 expected skip, 228 warnings, and 86 subtests in 2032.18 seconds",
+        "Compilation, uv lock --check, dependency health, git diff --check, and checkout-byte gates pass",
+        "The earlier model-only collection failure, wrapper timeout, checkout mismatch, and precommit mismatch remain retained in PRECHECK-2026-005"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-004",
+      "category": "reproducibility",
+      "required": true,
+      "status": "pass",
+      "method": "Recompute the accepted U06 replay/package bindings and replay the exact reviewer artifacts from their recorded source commits.",
+      "evidence": [
+        "Replay BL-2026-07-25-p3o1-t01-u06-replay-r003 reproduces all 35 history rows, epochs 10 and 35, weights 703d9257..., immutable evaluation, and the eight-file package",
+        "The package contains 8 files / 583,992 bytes at inventory ce39c41c...",
+        "Reviewer run BL-2026-07-26-p3o1-t01-u06-portfolio-r001 reproduces its JSON and HTML byte for byte",
+        "No replay reopens Ward Creek or Windigo source arrays"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-005",
+      "category": "package",
+      "required": true,
+      "status": "pass",
+      "method": "Build twice from independent exact Git archives at fixed epoch 1785040797, inspect archive safety, metadata, and RECORD, install the exact wheel into fresh CPython 3.12.10 with the model extra, and probe the complete command roster.",
+      "evidence": [
+        "Two 1,106,162-byte wheels are byte-identical at SHA-256 15b8b84f5fa6a60c51cb82dc2fc001dd4740a84704ee1ecf2c827da1e7961b8b",
+        "All 230 entries are unique and safe; RECORD digests and sizes pass; MIT metadata and packaged license pass",
+        "No traversal, absolute, backslash, private, custody, credential, retrieval, run-state, or download entry exists",
+        "Fresh CPython 3.12.10 installs 23 compatible distributions, BurnLens 0.53.0, setuptools 82.0.0, and Torch 2.13.0+cpu with no CUDA build or availability",
+        "All 107 installed BurnLens command-help probes pass from site-packages"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-006",
+      "category": "public-render",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect the exact repository-owned Phase Three reviewer HTML at desktop and narrow viewport widths and verify its images, links, fragments, overflow, browser log, and external requests.",
+      "evidence": [
+        "The exact 18,256-byte HTML passes desktop and 390-by-844 inspection with no overflow",
+        "Both native-size images, 10 repository links, and 6 fragments pass",
+        "Browser diagnostics and external requests are empty",
+        "The rejection, RBR-primary handoff, one-opening boundary, prototype-label limitation, and use warning are visible"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-007",
+      "category": "claims-privacy",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the reviewer surface, package, case study, and current truth surfaces with the source-precedence, prototype-label, model-status, privacy, and use-boundary contracts.",
+      "evidence": [
+        "The model is described as trained, evaluated, reproducible, and rejected, not accepted or superior",
+        "Outputs do not claim independent ground truth, field validation, generalization, official status, endorsement, operational readiness, emergency suitability, or final-submission readiness",
+        "No private recipient, retrieval URL, credential, token, provider secret, or private owner-response bytes appear"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "CHECK-008",
+      "category": "pull-request",
+      "required": true,
+      "status": "pending",
+      "method": "Open one coherent issue-backed milestone pull request from the exact reviewed remote branch, then verify checks and reviewed head.",
+      "evidence": [],
+      "reason": "The candidate package and audit gates pass; the pull request has not yet opened."
+    },
+    {
+      "id": "CHECK-009",
+      "category": "merge-tag",
+      "required": true,
+      "status": "pending",
+      "method": "Merge only the verified reviewed head, repeat risk-matched checks from fresh main, create the annotated tag, and verify the remote tag object and peeled target.",
+      "evidence": [],
+      "reason": "Merge, fresh-main, and annotated-tag gates follow the coherent pull request."
+    },
+    {
+      "id": "CHECK-010",
+      "category": "deployment",
+      "required": false,
+      "status": "not_applicable",
+      "method": "",
+      "evidence": [],
+      "reason": "Issue #566 creates no deployment, GitHub Release, external submission, access, ownership, or public-sharing change."
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "BurnLens 0.53.0 remains a release candidate until PR, merge, fresh-main, and tag gates pass.",
+      "observed_state": "Current candidate wording is accurate and preserves the rejected-model and absent-GEOINT boundaries.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "P3O1-T01 U01-U06 pass as a candidate; RBR is primary and the U-Net is rejected.",
+      "observed_state": "Current status records the candidate exit and keeps Phase Four blocked on a verified Phase Three release.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html",
+      "expected_state": "Exact deterministic reviewer evidence for the trained, evaluated, reproducible, rejected U-Net and RBR-primary handoff.",
+      "observed_state": "Exact replay and desktop/narrow rendered inspection pass with visible limitations and warning.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "https://github.com/drwbkr1/burnlens-deschutes/issues/566",
+      "expected_state": "Open milestone issue until the coherent PR merges and release verification passes.",
+      "observed_state": "Issue is open and records U01-U05; U06 and release-candidate closeout comment remain to be added.",
+      "status": "pending_update"
+    }
+  ],
+  "limitations": [
+    "The labels are owner-approved prototype evidence, not independent ground truth.",
+    "The accepted cores contain only 287 native 20-meter pixels.",
+    "Candidate construction and the selected-core evaluation may favor RBR and do not establish full-scene generalization.",
+    "The U-Net predicts every selected test core burned and is rejected as the analytical winner.",
+    "The model probabilities are diagnostic scores, not calibrated confidence.",
+    "No georeferenced inference raster, vector product, integrated analytical application, deployment, field validation, official status, endorsement, operational readiness, emergency suitability, or final-submission-ready claim exists."
+  ],
+  "decision": {
+    "reported_status": "candidate_ready",
+    "rationale": "Scope, model-evidence, one-opening, exact replay, clean combined regression, deterministic package, isolated runtime, real rendered output, claims, and privacy gates pass. Shipment remains withheld until the coherent PR, reviewed-head, merge, fresh-main, and remote annotated-tag checks pass.",
+    "next_action": "Commit and push this closeout evidence, update issue #566, open the coherent milestone pull request, and execute the remaining release gates."
+  }
+}
