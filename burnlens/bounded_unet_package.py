@@ -19,17 +19,43 @@ from burnlens.bounded_unet_evaluation import _require_exact_git_source
 from burnlens.bounded_unet_training import _run_training_loop
 
 
-PACKAGE_VERSION = "burnlens-unet-rejected-package-v0.1.0"
-PACKAGE_ID = "BURNLENS-UNET-REJECTED-PACKAGE-2026-001"
+PACKAGE_VERSION = "burnlens-unet-rejected-package-v0.1.1"
+PACKAGE_ID = "BURNLENS-UNET-REJECTED-PACKAGE-2026-002"
+SOFTWARE_VERSION = "0.52.0"
 MODEL_VERSION = "burnlens-unet-binary-v0.1.0"
 DATASET_VERSION = "burnlens-dataset-v0.1.0"
 SPLIT_VERSION = "burnlens-whole-event-split-v0.1.0"
 NORMALIZATION_VERSION = "burnlens-train-normalization-v0.1.0"
 LABEL_SCHEMA_VERSION = "burn-scar-binary-region-label-schema-v0.3.0"
 BASELINE_VERSION = "burnlens-baseline-v0.1.0"
+AOI_VERSION = "aoi-darlene3-model-v0.2.0"
+AOI_PATH = Path("samples/aoi/phase-two/AOI-FINAL-2026-001.json")
+AOI_SHA256 = "305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c"
+DATASET_MANIFEST_PATH = (
+    Path("samples/datasets") / DATASET_VERSION / "DATASET-MANIFEST.json"
+)
+DATASET_MANIFEST_SHA256 = (
+    "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+)
+SPLIT_MANIFEST_PATH = Path(
+    "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json"
+)
+SPLIT_MANIFEST_SHA256 = (
+    "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+)
+NORMALIZATION_PATH = Path(
+    "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json"
+)
+NORMALIZATION_SHA256 = (
+    "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+)
 MODEL_DIRECTORY = Path("samples/models") / MODEL_VERSION
 WEIGHTS_PATH = MODEL_DIRECTORY / f"{MODEL_VERSION}.pt"
 WEIGHTS_SHA256 = "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+TRAINING_CONFIG_PATH = MODEL_DIRECTORY / "TRAINING-CONFIG-2026-001.json"
+TRAINING_CONFIG_SHA256 = (
+    "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+)
 TRAINING_HISTORY_PATH = MODEL_DIRECTORY / "TRAINING-HISTORY-2026-001.json"
 TRAINING_HISTORY_SHA256 = (
     "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8"
@@ -37,6 +63,30 @@ TRAINING_HISTORY_SHA256 = (
 TRAINING_REPORT_PATH = MODEL_DIRECTORY / "BOUNDED-UNET-TRAINING-2026-001.json"
 TRAINING_REPORT_SHA256 = (
     "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57"
+)
+CHECKPOINT_SELECTION_PATH = MODEL_DIRECTORY / "CHECKPOINT-SELECTION-2026-001.json"
+CHECKPOINT_SELECTION_SHA256 = (
+    "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+)
+PROTOCOL_PATH = Path(
+    "records/phase-three/manifests/"
+    "BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json"
+)
+PROTOCOL_SHA256 = (
+    "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6"
+)
+ENVIRONMENT_CAPTURE_PATH = Path(
+    "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json"
+)
+ENVIRONMENT_CAPTURE_SHA256 = (
+    "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+)
+TEST_AUTHORIZATION_PATH = Path(
+    "records/phase-three/test-openings/"
+    "BOUNDED-UNET-TEST-AUTHORIZATION-2026-001.json"
+)
+TEST_AUTHORIZATION_SHA256 = (
+    "8e0e6442196a5995f39b7fb7bd857a25f8a59698a4f6ccceaed03aa36f25194b"
 )
 EVALUATION_DIRECTORY = Path(
     "samples/evaluation/phase-three/bounded-unet-test-v0.1.0"
@@ -106,6 +156,54 @@ def _identity(root: Path, relative: Path, expected_sha256: str) -> dict[str, Any
         "path": relative.as_posix(),
         "bytes": path.stat().st_size,
         "sha256": digest,
+    }
+
+
+def build_lineage(root: Path) -> dict[str, Any]:
+    """Bind every public package claim to the frozen repository evidence."""
+
+    bindings = {
+        "aoi": (AOI_PATH, AOI_SHA256),
+        "dataset_manifest": (DATASET_MANIFEST_PATH, DATASET_MANIFEST_SHA256),
+        "split_manifest": (SPLIT_MANIFEST_PATH, SPLIT_MANIFEST_SHA256),
+        "normalization": (NORMALIZATION_PATH, NORMALIZATION_SHA256),
+        "experiment_protocol": (PROTOCOL_PATH, PROTOCOL_SHA256),
+        "training_config": (TRAINING_CONFIG_PATH, TRAINING_CONFIG_SHA256),
+        "environment_capture": (
+            ENVIRONMENT_CAPTURE_PATH,
+            ENVIRONMENT_CAPTURE_SHA256,
+        ),
+        "training_history": (TRAINING_HISTORY_PATH, TRAINING_HISTORY_SHA256),
+        "training_report": (TRAINING_REPORT_PATH, TRAINING_REPORT_SHA256),
+        "checkpoint_selection": (
+            CHECKPOINT_SELECTION_PATH,
+            CHECKPOINT_SELECTION_SHA256,
+        ),
+        "test_authorization": (
+            TEST_AUTHORIZATION_PATH,
+            TEST_AUTHORIZATION_SHA256,
+        ),
+        "test_evaluation": (EVALUATION_PATH, EVALUATION_SHA256),
+        "test_opening_receipt": (
+            OPENING_RECEIPT_PATH,
+            OPENING_RECEIPT_SHA256,
+        ),
+        "test_evaluation_record": (U05_RECORD_PATH, U05_RECORD_SHA256),
+        "baseline_evaluation": (BASELINE_PATH, BASELINE_SHA256),
+    }
+    return {
+        "software_version_at_execution": SOFTWARE_VERSION,
+        "aoi_version": AOI_VERSION,
+        "model_version": MODEL_VERSION,
+        "dataset_version": DATASET_VERSION,
+        "split_version": SPLIT_VERSION,
+        "normalization_version": NORMALIZATION_VERSION,
+        "label_schema_version": LABEL_SCHEMA_VERSION,
+        "baseline_version": BASELINE_VERSION,
+        "bindings": {
+            name: _identity(root, path, digest)
+            for name, (path, digest) in bindings.items()
+        },
     }
 
 
@@ -362,8 +460,10 @@ def build_decision(
 
 def build_inference_contract() -> dict[str, Any]:
     return {
-        "inference_contract_version": "burnlens-unet-inference-contract-v0.1.0",
-        "inference_contract_id": "BOUNDED-UNET-INFERENCE-CONTRACT-2026-001",
+        "inference_contract_version": "burnlens-unet-inference-contract-v0.1.1",
+        "inference_contract_id": "BOUNDED-UNET-INFERENCE-CONTRACT-2026-002",
+        "software_version_at_execution": SOFTWARE_VERSION,
+        "aoi_version": AOI_VERSION,
         "model_version": MODEL_VERSION,
         "analytical_status": "rejected-as-analytical-winner",
         "permitted_role": "reviewer-visible rejected-model diagnostic only",
@@ -472,6 +572,9 @@ The model must not be used as the accepted perimeter or area estimator.
 
 - source commit: `{git_source_commit}`
 - replay run: `{run_id}`
+- software at execution: `{SOFTWARE_VERSION}`
+- rejected-model package: `{PACKAGE_VERSION}`
+- AOI: `{AOI_VERSION}`
 - model: `{MODEL_VERSION}`
 - dataset: `{DATASET_VERSION}`
 - split: `{SPLIT_VERSION}`
@@ -589,7 +692,7 @@ The U-Net predicts all 89 selected test cores as burned. This is a valid trained
 <a href="../../evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html">One-time test evaluation</a> ·
 <a href="MODEL-CARD.md">Model card</a></p></div>
 <h2>Boundary</h2><div class="card"><p>No second test opening, model acceptance, model release, georeferenced inference, deployment, field validation, generalization, or operational/emergency claim exists.</p></div>
-<p>Trace: commit <code>{git_source_commit}</code> · run <code>{run_id}</code> · model <code>{MODEL_VERSION}</code> · dataset <code>{DATASET_VERSION}</code> · split <code>{SPLIT_VERSION}</code>.</p>
+<p>Trace: commit <code>{git_source_commit}</code> · run <code>{run_id}</code> · software <code>{SOFTWARE_VERSION}</code> · package <code>{PACKAGE_VERSION}</code> · AOI <code>{AOI_VERSION}</code> · model <code>{MODEL_VERSION}</code> · dataset <code>{DATASET_VERSION}</code> · split <code>{SPLIT_VERSION}</code>.</p>
 </main></body></html>
 """.encode("utf-8")
 
@@ -620,15 +723,19 @@ def run_replay_and_package(
 
     replay = run_training_replay(root, run_directory / "replay-training")
     evaluation = verify_immutable_evaluation(root)
+    lineage = build_lineage(root)
     decision = build_decision(replay, evaluation)
     inference_contract = build_inference_contract()
     replay_report = {
-        "reproducibility_version": "burnlens-unet-reproducibility-v0.1.0",
-        "reproducibility_id": "BOUNDED-UNET-REPRODUCIBILITY-2026-001",
+        "reproducibility_version": "burnlens-unet-reproducibility-v0.1.1",
+        "reproducibility_id": "BOUNDED-UNET-REPRODUCIBILITY-2026-002",
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
         "git_source_commit": git_source_commit,
+        "software_version_at_execution": SOFTWARE_VERSION,
+        "aoi_version": AOI_VERSION,
         "model_version": MODEL_VERSION,
+        "lineage": lineage,
         "training_replay": replay,
         "immutable_evaluation_verification": evaluation,
         "gates": {
@@ -686,6 +793,8 @@ def run_replay_and_package(
         "generated_at_utc": generated_at_utc,
         "run_id": run_id,
         "git_source_commit": git_source_commit,
+        "software_version_at_execution": SOFTWARE_VERSION,
+        "aoi_version": AOI_VERSION,
         "model_version": MODEL_VERSION,
         "model_status": "valid-trained-evaluated-rejected-model",
         "dataset_version": DATASET_VERSION,
@@ -693,6 +802,7 @@ def run_replay_and_package(
         "normalization_version": NORMALIZATION_VERSION,
         "label_schema_version": LABEL_SCHEMA_VERSION,
         "baseline_version": BASELINE_VERSION,
+        "lineage": lineage,
         "decision": decision["decision"],
         "weights": {
             **weights_receipt,

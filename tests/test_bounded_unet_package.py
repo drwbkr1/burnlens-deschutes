@@ -5,9 +5,13 @@ from pathlib import Path
 import numpy as np
 
 from burnlens.bounded_unet_package import (
+    AOI_VERSION,
+    PACKAGE_VERSION,
+    SOFTWARE_VERSION,
     WEIGHTS_SHA256,
     build_decision,
     build_inference_contract,
+    build_lineage,
     build_model_card,
     render_decision_html,
     render_decision_png,
@@ -68,6 +72,8 @@ def test_decision_retains_baseline_and_model_as_rejected_diagnostic() -> None:
 
 def test_inference_contract_is_bounded_and_preserves_model_status() -> None:
     contract = build_inference_contract()
+    assert contract["software_version_at_execution"] == SOFTWARE_VERSION
+    assert contract["aoi_version"] == AOI_VERSION
     assert contract["inputs"]["shape"] == [6, 64, 64]
     assert contract["outputs"]["binary_diagnostic"] == "probability >= 0.5"
     assert contract["analytical_status"] == "rejected-as-analytical-winner"
@@ -87,8 +93,39 @@ def test_model_card_and_decision_render_are_offline_and_explicit() -> None:
     png = render_decision_png(decision)
     assert "rejected as the analytical winner" in card
     assert WEIGHTS_SHA256 in card
+    assert SOFTWARE_VERSION in card
+    assert PACKAGE_VERSION in card
+    assert AOI_VERSION in card
     assert "The model is reproducible. It is not the winner." in html
     assert "No second test opening" in html
     assert "http://" not in html and "https://" not in html
     assert "<script" not in html
     assert png.startswith(b"\x89PNG\r\n\x1a\n")
+
+
+def test_lineage_binds_all_frozen_repository_evidence() -> None:
+    lineage = build_lineage(ROOT)
+    assert lineage["software_version_at_execution"] == SOFTWARE_VERSION
+    assert lineage["aoi_version"] == AOI_VERSION
+    assert lineage["model_version"] == "burnlens-unet-binary-v0.1.0"
+    assert set(lineage["bindings"]) == {
+        "aoi",
+        "dataset_manifest",
+        "split_manifest",
+        "normalization",
+        "experiment_protocol",
+        "training_config",
+        "environment_capture",
+        "training_history",
+        "training_report",
+        "checkpoint_selection",
+        "test_authorization",
+        "test_evaluation",
+        "test_opening_receipt",
+        "test_evaluation_record",
+        "baseline_evaluation",
+    }
+    assert all(
+        item["bytes"] > 0 and len(item["sha256"]) == 64
+        for item in lineage["bindings"].values()
+    )
