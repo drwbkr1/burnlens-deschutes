@@ -29,11 +29,16 @@
 | `P3O1-T01-U04-TRAINING-R001` | `BL-2026-07-25-p3o1-t01-u04-training-r001`; 43 ignored files / 3,592,037 bytes; inventory `e260d8b9...` | one 35-epoch run; epoch 10 selected from validation; append-only custody; test unopened | `pass-candidate-frozen` | independent verification |
 | `P3O1-T01-U04-CANDIDATE-VERIFY-R001` | nine candidate artifacts; weights `703d9257...`; selection `6dcae9af...` | exact receipts; history/selection/stopping recomputation; checkpoints reload; no test request | `pass` | render |
 | `P3O1-T01-U04-RENDER-R001` | exact 8,176-byte HTML and 80,920-byte PNG | desktop/narrow layout; complete chart; 35 rows; contained table overflow; no external resources/logs; visible boundaries | `pass-with-tool-limit` | commit and push U04 evidence |
+| `P3O1-T01-U05-TEST-R001` | first evaluator suite | collection failure from wrong environment-path import; zero tests and zero array access | `retained-failure` | correct import |
+| `P3O1-T01-U05-PREFLIGHT-R001-R003` | validation-only renderer rehearsals | retained narrow overflow, PNG annotation overlap, and false test-opening wording; test open-count zero | `retained-render-failures` | correct before freeze |
+| `P3O1-T01-U05-CODE-R001` | `aa6b7f385224943a4550657318117dbec1b038c2`; remote-equal branch | exact roster enforcement; candidate/clean-HEAD/unused-opening gates; complete metrics, arrays, render, and no-retry paths | `pass` | exact preflight |
+| `P3O1-T01-U05-PREFLIGHT-R005` | `BL-2026-07-25-p3o1-t01-u05-preflight-r005`; validation only | 39 focused tests; compile/lock/diff; desktop/narrow render; three-artifact exact replay; test open-count zero | `pass-preopen` | authorization |
 
 U01 opens no dataset array. U02 and U03 open only the permitted train and
 validation arrays for bounded ephemeral smoke evidence. U04 performs the one
 authorized substantive train/validation experiment and freezes a validation-only
 candidate. Sealed Ward Creek/Windigo test arrays remain unopened. No accepted or
 released model, test metric, model-value claim, inference, or deployment exists.
-The exact next eligible unit is `P3O1-T01-U05`, but only after the U04 evidence
-commit is pushed.
+U05's evaluator and no-retry opening path are now frozen and preflighted. The
+exact next eligible action is the committed `AUTHORIZED_NOT_OPENED` record;
+only then may the one analytical opening occur.

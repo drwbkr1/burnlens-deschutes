@@ -103,3 +103,25 @@ limitation rather than overstated as an interaction pass.
 This is a candidate, not an accepted or released model. U05 is now the single
 high-risk gate: one exact, authorization-bound test opening against Ward Creek
 and Windigo, with no retry or tuning path.
+
+## 2026-07-25 — rehearse the dangerous path without touching the test
+
+The U05 evaluator now exists, but it first runs against validation only. That
+rehearsal caught three reviewer-visible problems before the irreversible
+opening: a long status escaped the narrow viewport, patch annotations covered
+their imagery, and generic production wording falsely implied the sealed test
+had already opened. Each failure remains named; the final renderer says exactly
+what it is—a validation-only preflight with open-count zero.
+
+The scientific path is equally explicit. The evaluator cannot accept any four
+patch IDs merely because the count matches. It requires the ordered manifest
+roster, exact candidate hashes, a clean source commit, one fixed threshold, and
+an opening ID that has never acquired a consumed receipt. Its outputs preserve
+probabilities and decisions per patch, class denominators, threshold
+diagnostics, descriptive probability status, and the comparison the portfolio
+needs: a trained result may be valid while still losing to the perfect frozen
+RBR baseline.
+
+The exact source and rendered preflight now replay byte-for-byte. Ward Creek
+and Windigo are still sealed. The next commit will be intentionally small: the
+single authorization object that makes the one-way test opening possible.

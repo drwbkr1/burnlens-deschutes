@@ -441,6 +441,7 @@ samples/models/burnlens-unet-binary-v0.1.0/*.png -text
 samples/models/burnlens-unet-binary-v0.1.0/*.pt -text
 records/phase-three/training/BOUNDED-UNET-TRAINING-RECORD-2026-001.json text eol=lf
 records/phase-three/prechecks/PRECHECK-2026-003.md text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-004.md text eol=lf
 burnlens/bounded_unet_evaluation.py text eol=lf
 burnlens/run_bounded_unet_evaluation.py text eol=lf
 tests/test_bounded_unet_evaluation.py text eol=lf
