@@ -1,0 +1,151 @@
+{
+  "package_version": "burnlens-unet-rejected-package-v0.1.1",
+  "package_id": "BURNLENS-UNET-REJECTED-PACKAGE-2026-002",
+  "generated_at_utc": "2026-07-26T03:01:59Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r003",
+  "git_source_commit": "90ab4ab42d6ceb11c2987efb0b737c016712cea8",
+  "software_version_at_execution": "0.52.0",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "model_version": "burnlens-unet-binary-v0.1.0",
+  "model_status": "valid-trained-evaluated-rejected-model",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "lineage": {
+    "software_version_at_execution": "0.52.0",
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "normalization_version": "burnlens-train-normalization-v0.1.0",
+    "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "bindings": {
+      "aoi": {
+        "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.json",
+        "bytes": 8962,
+        "sha256": "305ddda2eda96fa31e8fb410891d3dc9c0f2b4930af5fc8ee6d2df9bae0b856c"
+      },
+      "dataset_manifest": {
+        "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+        "bytes": 55308,
+        "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+      },
+      "split_manifest": {
+        "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+        "bytes": 12312,
+        "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+      },
+      "normalization": {
+        "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+        "bytes": 2694,
+        "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+      },
+      "experiment_protocol": {
+        "path": "records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json",
+        "bytes": 12308,
+        "sha256": "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6"
+      },
+      "training_config": {
+        "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-CONFIG-2026-001.json",
+        "bytes": 12238,
+        "sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b"
+      },
+      "environment_capture": {
+        "path": "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json",
+        "bytes": 8146,
+        "sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+      },
+      "training_history": {
+        "path": "samples/models/burnlens-unet-binary-v0.1.0/TRAINING-HISTORY-2026-001.json",
+        "bytes": 112949,
+        "sha256": "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8"
+      },
+      "training_report": {
+        "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.json",
+        "bytes": 11548,
+        "sha256": "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57"
+      },
+      "checkpoint_selection": {
+        "path": "samples/models/burnlens-unet-binary-v0.1.0/CHECKPOINT-SELECTION-2026-001.json",
+        "bytes": 3683,
+        "sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4"
+      },
+      "test_authorization": {
+        "path": "records/phase-three/test-openings/BOUNDED-UNET-TEST-AUTHORIZATION-2026-001.json",
+        "bytes": 970,
+        "sha256": "8e0e6442196a5995f39b7fb7bd857a25f8a59698a4f6ccceaed03aa36f25194b"
+      },
+      "test_evaluation": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.json",
+        "bytes": 26268,
+        "sha256": "8d3e0652b71f0052ea54ac67caa280eaa15aad3e4055568948e58306b4c72e35"
+      },
+      "test_opening_receipt": {
+        "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-OPENING-RECEIPT-2026-001.json",
+        "bytes": 6730,
+        "sha256": "2613172f06478801aadf51ea63cd4ee0b00e87ba47f81a9f7d53f3c4eb605ab1"
+      },
+      "test_evaluation_record": {
+        "path": "records/phase-three/evaluations/BOUNDED-UNET-TEST-EVALUATION-RECORD-2026-001.json",
+        "bytes": 8810,
+        "sha256": "1d02b26535ef492eedc8ef5211ffafdbcb3a605f76aee2ef95eb1949bff1e2cc"
+      },
+      "baseline_evaluation": {
+        "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+        "bytes": 21257,
+        "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+      }
+    }
+  },
+  "decision": "reject-model-retain-baseline",
+  "weights": {
+    "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+    "bytes": 479573,
+    "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+  },
+  "outputs": {
+    "burnlens-unet-binary-v0.1.0.pt": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/burnlens-unet-binary-v0.1.0.pt",
+      "bytes": 479573,
+      "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+    },
+    "INFERENCE-CONTRACT.json": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/INFERENCE-CONTRACT.json",
+      "bytes": 1589,
+      "sha256": "bb6cc5dfb0a989458ab9a60c2f9756c9bd530c67e265b96c4d27e7e0fa979a03"
+    },
+    "MODEL-CARD.md": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+      "bytes": 2789,
+      "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560"
+    },
+    "PHASE-THREE-DECISION.json": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-DECISION.json",
+      "bytes": 1474,
+      "sha256": "c9fa8b4e93268de81571d251fd423ab0dfcd706083694a452f1fcdc6c057c118"
+    },
+    "PHASE-THREE-MODEL-DECISION.html": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "bytes": 3981,
+      "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e"
+    },
+    "PHASE-THREE-MODEL-DECISION.png": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+      "bytes": 79512,
+      "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08"
+    },
+    "REPRODUCIBILITY-REPORT.json": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/REPRODUCIBILITY-REPORT.json",
+      "bytes": 7962,
+      "sha256": "25d1873d36751aec1e547213dd34b9f46ffc8cc3541235cd0f11321f12e3101c"
+    }
+  },
+  "test_open_count": 1,
+  "second_test_opening": false,
+  "accepted_model": false,
+  "released_model": false,
+  "next_dependency": "Phase Four issue-backed baseline-primary vertical slice with the rejected U-Net shown only as transparent diagnostic evidence"
+}

@@ -38,12 +38,26 @@
 | `P3O1-T01-U05-VERIFY-R001` | first inventory verifier | unavailable `System.Convert.ToHexString`; no output change | `retained-tool-failure` | compatible verifier |
 | `P3O1-T01-U05-VERIFY-R002` | 12 outputs / 340,542 bytes / inventory `f850ed08...` | receipts/promotion/array schema/threshold predictions/denominators/baseline comparison | `pass` | render |
 | `P3O1-T01-U05-RENDER-R001` | exact 7,022-byte HTML and 217,578-byte PNG | desktop/narrow layout; complete four-patch geospatial evidence; contained tables; no external resources; visible boundaries | `pass` | U06 |
+| `P3O1-T01-U06-REPLAY-R001` | `BL-2026-07-25-p3o1-t01-u06-replay-r001`; source `241da6b...` | history and weights exact; public package lacks complete explicit lineage | `retained-traceability-failure` | metadata-only correction |
+| `P3O1-T01-U06-CODE-R002` | `90ab4ab42d6ceb11c2987efb0b737c016712cea8`; remote-equal branch | package v0.1.1 explicitly binds software, AOI, dataset, split, normalization, protocol, config, environment, selection, authorization, evaluation, receipt, record, and baseline | `pass` | fresh replay |
+| `P3O1-T01-U06-REPLAY-R002` | one-second wrapper; zero run/package bytes before retained receipt | process terminated during interpreter startup; no replay or test access | `retained-tool-failure` | fresh run ID |
+| `P3O1-T01-U06-REPLAY-R003` | `BL-2026-07-25-p3o1-t01-u06-replay-r003`; 49 ignored files / 4,046,814 bytes / inventory `86d8b489...` | exact 35-row history, epochs 10/35, weights `703d9257...`; atomic eight-file package; duplicate-launch failure retained but bytes unchanged | `pass-with-retained-tool-failure` | independent verification |
+| `P3O1-T01-U06-REPLAY-R004` | package-exists fail-closed receipt only | no replay or package mutation | `retained-tool-failure` | verify r003 |
+| `P3O1-T01-U06-VERIFY-R001` | package v0.1.1; 8 files / 583,992 bytes / inventory `ce39c41c...` | candidate/package/receipt/15-lineage-binding equality; five tests; compile/lock/diff | `pass` | render |
+| `P3O1-T01-U06-RENDER-R001` | exact 3,981-byte HTML and 79,512-byte PNG | desktop/narrow layout; complete image; three valid local links; no overflow/external resources; visible rejection, lineage, and boundaries | `pass` | coherent milestone PR |
 
 U01 opens no dataset array. U02 and U03 use only train/validation arrays for
 bounded smoke evidence. U04 performs the one authorized substantive
 train/validation experiment and freezes a validation-only candidate. U05 then
 consumes the single Ward Creek/Windigo opening. The candidate predicts all 89
 selected test cores as burned and is rejected as the analytical winner against
-perfect RBR. It remains a valid evaluated but unaccepted branch candidate. No
-second test opening, inference, deployment, or final model decision exists.
-The exact next eligible unit is `P3O1-T01-U06`.
+perfect RBR. U06 reproduces all 35 train/validation history rows and exact
+weights without reopening test source arrays, verifies immutable U05 outputs,
+and packages the result as
+`burnlens-unet-rejected-package-v0.1.1`. The decision is
+`reject-model-retain-baseline`: the model remains unaccepted as an analytical
+method, while RBR becomes the Phase Four primary route and the frozen U-Net may
+appear only as a visibly rejected diagnostic. No second test opening,
+georeferenced inference, deployment, generalization, or final-submission-ready
+claim exists. The exact next gate is the coherent milestone PR and release
+verification.

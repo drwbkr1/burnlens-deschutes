@@ -151,3 +151,33 @@ The final Phase Three unit now has a crisp job: reproduce the training bytes,
 package this valid rejected-model evidence, write the model card and inference
 contract, and choose a Phase Four path that demonstrates the model honestly
 without pretending it outperforms the baseline.
+
+## 2026-07-25 — reproducible does not mean accepted
+
+The complete train/validation replay lands on the same answer byte for byte:
+35 history rows, selected epoch 10, final epoch 35, and the exact model weights
+all match. BurnLens then checks the already preserved U05 probability and
+prediction artifacts without reopening the source test arrays. The one test
+opening remains one.
+
+The first package still failed a portfolio requirement. Its results were
+correct, but its manifest made several lineage hops implicit. BurnLens retains
+that attempt, adds explicit bindings from software and AOI through protocol,
+environment, authorization, evaluation, and baseline, and reruns the exact
+train/validation replay. The final v0.1.1 package has eight files and an exact
+inventory; the rendered page names its source commit, run, software, package,
+AOI, model, dataset, and split.
+
+The launcher history is also honest. One one-second wrapper ended before a run
+started. A duplicate background launcher wrote a run-exists failure while the
+original completed, and a later wrapper correctly refused to overwrite the
+already promoted package. Those receipts remain in ignored custody.
+Independent checks prove they did not change the accepted replay or package
+bytes.
+
+Phase Three now has a decision rather than a hopeful candidate. The U-Net is a
+valid trained, evaluated, reproducible artifact—and it is rejected as the
+analytical winner. RBR remains primary. Phase Four should build a
+baseline-first georeferenced run and show the U-Net only as a visibly rejected
+diagnostic, making the model-bearing path inspectable without manufacturing
+model value.

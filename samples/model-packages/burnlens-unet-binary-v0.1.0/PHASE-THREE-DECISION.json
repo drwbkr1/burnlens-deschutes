@@ -1,0 +1,32 @@
+{
+  "decision_version": "burnlens-phase-three-model-decision-v0.1.0",
+  "decision_id": "PHASE-THREE-MODEL-DECISION-2026-001",
+  "decision": "reject-model-retain-baseline",
+  "candidate_classification": "valid-trained-evaluated-rejected-model",
+  "analytical_method": "burnlens-baseline-v0.1.0 rbr-threshold",
+  "model_analytical_winner": false,
+  "model_accepted": false,
+  "model_released": false,
+  "reason": "The exact U-Net replay is reproducible, but its frozen test predicts all 89 selected cores as burned and scores event-class macro Dice 0.29874213836477986 versus RBR 1.0.",
+  "phase_four_recommendation": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "analytical_output": "RBR remains the accepted method",
+    "model_role": "Show the frozen U-Net probability/error evidence as a visibly rejected model-bearing diagnostic, never as the accepted perimeter.",
+    "required_vertical_slice": [
+      "georeferenced RBR analytical raster",
+      "georeferenced rejected-U-Net probability diagnostic",
+      "side-by-side error and uncertainty visibility",
+      "immutable run package and repository-owned reviewer interface"
+    ]
+  },
+  "claims": {
+    "valid_trained_model_artifact": true,
+    "model_added_value": false,
+    "model_superiority": false,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "operational_or_emergency_ready": false,
+    "final_submission_ready": false
+  }
+}

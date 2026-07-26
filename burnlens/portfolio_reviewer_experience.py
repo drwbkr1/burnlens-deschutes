@@ -10,10 +10,10 @@ from pathlib import Path
 from typing import Any
 
 
-REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005"
-REPORT_VERSION = "portfolio-reviewer-experience-v0.3.2"
-SOFTWARE_VERSION = "0.52.0"
-TASK_ISSUE = 562
+REPORT_ID = "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006"
+REPORT_VERSION = "portfolio-reviewer-experience-v0.4.0"
+SOFTWARE_VERSION = "0.53.0"
+TASK_ISSUE = 566
 
 
 class PortfolioReviewerExperienceError(ValueError):
@@ -94,6 +94,51 @@ BOUND_INPUTS = (
     ),
     BoundInput(
         path=(
+            "records/phase-three/packages/"
+            "BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json"
+        ),
+        bytes=9916,
+        sha256="22552092843ad5e83fcacdcaaf1d9c035a09d9e75e260503cbb560b9d2dc3443",
+        role="Phase Three rejected-model package record",
+    ),
+    BoundInput(
+        path=(
+            "samples/model-packages/burnlens-unet-binary-v0.1.0/"
+            "MODEL-PACKAGE-MANIFEST.json"
+        ),
+        bytes=7112,
+        sha256="6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441",
+        role="Phase Three rejected-model package manifest",
+    ),
+    BoundInput(
+        path=(
+            "samples/model-packages/burnlens-unet-binary-v0.1.0/"
+            "PHASE-THREE-MODEL-DECISION.html"
+        ),
+        bytes=3981,
+        sha256="36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e",
+        role="Phase Three model decision detail",
+    ),
+    BoundInput(
+        path=(
+            "samples/model-packages/burnlens-unet-binary-v0.1.0/"
+            "PHASE-THREE-MODEL-DECISION.png"
+        ),
+        bytes=79512,
+        sha256="7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08",
+        role="Phase Three model decision preview",
+    ),
+    BoundInput(
+        path=(
+            "samples/model-packages/burnlens-unet-binary-v0.1.0/"
+            "MODEL-CARD.md"
+        ),
+        bytes=2789,
+        sha256="a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560",
+        role="Phase Three rejected-model card",
+    ),
+    BoundInput(
+        path=(
             "samples/cross-event/phase-two/petes-lake/"
             "PETES-LAKE-SOURCE-FITNESS-2026-001.png"
         ),
@@ -160,10 +205,24 @@ def build_report(
     """Validate exact evidence and build the public portfolio manifest."""
     repository_root = repository_root.resolve()
     inputs = _validate_bound_inputs(repository_root)
-    readiness = _load_json(inputs[BOUND_INPUTS[0].path])
-    dataset = _load_json(inputs[BOUND_INPUTS[3].path])
-    split = _load_json(inputs[BOUND_INPUTS[4].path])
-    baseline = _load_json(inputs[BOUND_INPUTS[5].path])
+    readiness = _load_json(
+        inputs[_bound_input_path("accepted Phase Two model-readiness audit")]
+    )
+    dataset = _load_json(
+        inputs[_bound_input_path("accepted versioned dataset manifest")]
+    )
+    split = _load_json(
+        inputs[_bound_input_path("locked leakage-resistant whole-event split")]
+    )
+    baseline = _load_json(
+        inputs[_bound_input_path("accepted reproducible RBR baseline evaluation")]
+    )
+    package_record = _load_json(
+        inputs[_bound_input_path("Phase Three rejected-model package record")]
+    )
+    package_manifest = _load_json(
+        inputs[_bound_input_path("Phase Three rejected-model package manifest")]
+    )
 
     if (
         readiness.get("decision") != "AUTHORIZE_BOUNDED_UNET"
@@ -203,6 +262,45 @@ def build_report(
         != 1.0
     ):
         raise PortfolioReviewerExperienceError("baseline identity changed")
+    if (
+        package_record.get("decision") != "reject-model-retain-baseline"
+        or package_record.get("model_status")
+        != "valid-trained-evaluated-rejected-model"
+        or package_record.get("run_id")
+        != "BL-2026-07-25-p3o1-t01-u06-replay-r003"
+        or package_record.get("training_replay", {}).get("history_exact") is not True
+        or package_record.get("training_replay", {}).get("weights_bytes_exact")
+        is not True
+        or package_record.get("immutable_evaluation_verification", {}).get(
+            "test_source_arrays_reopened"
+        )
+        is not False
+        or package_record.get("immutable_evaluation_verification", {}).get(
+            "test_open_count"
+        )
+        != 1
+        or package_record.get("tracked_package_inventory", {}).get("file_count")
+        != 8
+        or package_record.get("tracked_package_inventory", {}).get("bytes")
+        != 583992
+    ):
+        raise PortfolioReviewerExperienceError(
+            "Phase Three package record changed"
+        )
+    if (
+        package_manifest.get("package_version")
+        != "burnlens-unet-rejected-package-v0.1.1"
+        or package_manifest.get("model_version")
+        != "burnlens-unet-binary-v0.1.0"
+        or package_manifest.get("decision") != "reject-model-retain-baseline"
+        or package_manifest.get("accepted_model") is not False
+        or package_manifest.get("released_model") is not False
+        or package_manifest.get("test_open_count") != 1
+        or len(package_manifest.get("lineage", {}).get("bindings", {})) != 15
+    ):
+        raise PortfolioReviewerExperienceError(
+            "Phase Three package manifest changed"
+        )
 
     if len(git_source_commit) != 40:
         raise PortfolioReviewerExperienceError("git source commit must be a full 40-character ID")
@@ -218,6 +316,7 @@ def build_report(
         "task_issue": TASK_ISSUE,
         "git_source_commit": git_source_commit,
         "software_version": SOFTWARE_VERSION,
+        "checkpoint_status": "candidate-pr-release-pending",
         "release_tag": "v0.52.0-dataset-baseline-model-readiness",
         "release_commit": "dfb11c8b823e224aceb76be74003464973e33c2d",
         "release_tag_object": "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
@@ -233,7 +332,9 @@ def build_report(
         "dataset_version": dataset["dataset_version"],
         "split_version": split["split_version"],
         "baseline_version": baseline["baseline_version"],
-        "model_version": None,
+        "model_version": package_record["model_version"],
+        "model_status": package_record["model_status"],
+        "model_package_version": package_record["package_version"],
         "review_path": [
             {
                 "step": 1,
@@ -276,6 +377,21 @@ def build_report(
             "baseline_test_event_class_macro_iou": baseline[
                 "selected_test_metrics"
             ]["event_class_macro_iou"],
+            "model_test_event_class_macro_dice": package_record[
+                "immutable_evaluation_verification"
+            ]["event_class_macro_dice"],
+            "model_test_event_class_macro_iou": package_record[
+                "immutable_evaluation_verification"
+            ]["event_class_macro_iou"],
+            "model_test_predicted_burned_pixels": package_record[
+                "immutable_evaluation_verification"
+            ]["predicted_burned_pixels"],
+            "model_test_core_pixels": package_record[
+                "immutable_evaluation_verification"
+            ]["core_pixels"],
+            "model_test_open_count": package_record[
+                "immutable_evaluation_verification"
+            ]["test_open_count"],
         },
         "accepted_events": [
             "McKay 1035 NE",
@@ -286,14 +402,19 @@ def build_report(
             "Windigo",
         ],
         "strongest_result": {
-            "title": "A bounded U-Net is authorized; RBR remains the bar",
-            "decision": readiness["decision"],
-            "run_id": readiness["run_id"],
-            "git_source_commit": readiness["git_source_commit"],
+            "title": "The model is reproducible. It is not the winner.",
+            "decision": package_record["decision"],
+            "run_id": package_record["run_id"],
+            "git_source_commit": package_record["git_source_commit"],
             "software_version": SOFTWARE_VERSION,
-            "detail_path": _bound_input_path("accepted model-readiness detail"),
+            "detail_path": _bound_input_path(
+                "Phase Three model decision detail"
+            ),
             "preview_path": _bound_input_path(
-                "accepted bounded U-Net contract preview"
+                "Phase Three model decision preview"
+            ),
+            "model_card_path": _bound_input_path(
+                "Phase Three rejected-model card"
             ),
             "baseline_detail_path": _bound_input_path(
                 "accepted baseline detail"
@@ -325,7 +446,9 @@ def build_report(
             "The balanced review roster does not estimate natural class prevalence.",
             "Candidate construction used optical and official-reference evidence and may favor the measured spectral separability.",
             "The RBR result is perfect only on 89 selected prototype test cores and does not establish generalization.",
-            "No model, weights, training run, model evaluation, accuracy claim, or inference output exists.",
+            "One valid trained and evaluated U-Net exists, but it predicts every selected test core as burned and is rejected as the analytical winner.",
+            "The rejected model is not an accepted perimeter, accuracy claim, calibrated confidence output, or evidence of generalization.",
+            "No georeferenced model inference, integrated analytical application, deployment, or final-submission-ready claim exists.",
             "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready.",
         ],
         "bound_inputs": [
@@ -338,11 +461,12 @@ def build_report(
             for item in BOUND_INPUTS
         ],
         "warning": (
-            "Experimental owner-approved prototype dataset and baseline evidence. "
-            "Not ground truth, official wildfire information, emergency guidance, "
-            "field validation, generalization, or a model. Official sources govern."
+            "Experimental owner-approved prototype data, baseline, and rejected-model "
+            "evidence. Not ground truth, official wildfire information, emergency "
+            "guidance, field validation, generalization, or an accepted model. "
+            "Official sources govern."
         ),
-        "decision": "PRESENT_PHASE_TWO_DATASET_BASELINE_MODEL_READINESS",
+        "decision": "PRESENT_PHASE_THREE_REJECTED_MODEL_BASELINE_HANDOFF",
     }
 
 
@@ -378,9 +502,10 @@ def render_html(report: dict[str, Any]) -> str:
         for label, value in (
             ("Repository commit", report["git_source_commit"]),
             ("Application version", report["software_version"]),
-            ("Verified release tag", report["release_tag"]),
-            ("Verified release commit", report["release_commit"]),
-            ("Annotated tag object", report["release_tag_object"]),
+            ("Checkpoint status", report["checkpoint_status"]),
+            ("Latest verified release tag", report["release_tag"]),
+            ("Latest verified release commit", report["release_commit"]),
+            ("Latest annotated tag object", report["release_tag_object"]),
             ("Target version", report["target_version"]),
             ("AOI version", report["aoi_version"]),
             ("Label schema", report["label_schema_version"]),
@@ -389,6 +514,8 @@ def render_html(report: dict[str, Any]) -> str:
             ("Split version", report["split_version"]),
             ("Baseline version", report["baseline_version"]),
             ("Model version", report["model_version"]),
+            ("Model status", report["model_status"]),
+            ("Model package", report["model_package_version"]),
             ("Portfolio run", report["run_id"]),
         )
     )
@@ -409,16 +536,16 @@ def render_html(report: dict[str, Any]) -> str:
 <a class="skip" href="#main">Skip to evidence</a>
 <header>
 <nav aria-label="Primary"><a class="brand" href="#top">BURNLENS</a><ul><li><a href="#result">Result</a></li><li><a href="#failure">Failure</a></li><li><a href="#method">Method</a></li><li><a href="#trace">Trace</a></li></ul></nav>
-<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Phase Two package</strong>Dataset, split, QA, and baseline pass. The U-Net is authorized but not yet built or trained.</aside></div>
+<div class="hero" id="top"><div><p class="eyebrow">Experimental CV-to-GEOINT evidence</p><h1>Evidence before claims.</h1><p class="lede">{escape(report["promise"])}</p></div><aside class="hero-note" aria-label="Current posture"><strong>Phase Three candidate</strong>The U-Net is trained, evaluated, and reproducible. It is rejected as the analytical winner; the GEOINT application remains unbuilt.</aside></div>
 </header>
 <main id="main">
 <p class="warning">{escape(report["warning"])}</p>
 <div class="review-path" aria-label="Two-minute reviewer path">{review_steps}</div>
-<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">A complete Phase Two package, with restraint.</h2><p>BurnLens preserves source roles, uncertainty, whole-event separation, owner decisions, and failure states. Verified BurnLens 0.52.0 authorizes the bounded U-Net contract for one rejection-first execution.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>12</strong>native-grid patches</div><div class="metric"><strong>RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}</strong>Dice and IoU on selected test cores</div><div class="metric"><strong>0</strong>trained models</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
-<section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest verified result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>The exact dataset, split, QA, normalization, baseline, and tooling package passes all {metrics["readiness_gates_passed"]} model-readiness gates.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Bounded U-Net training contract with the RBR baseline retained as the comparison"></a><div class="evidence-copy"><span class="pill">Verified result</span><h3>One rejection-first model experiment</h3><p>Six events contribute twelve native-grid patches and 287 accepted cores. All 531 unknown-ring pixels remain excluded. RBR reaches 1.0 on 89 selected test cores; that result is transparent but not generalization.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open readiness decision</a><a class="button secondary" href="{_repo_href(result["baseline_detail_path"])}">Inspect baseline evaluation</a></div></div></article></section>
+<section aria-labelledby="proof-heading"><div class="section-head"><p class="eyebrow">What is actually proven</p><h2 id="proof-heading">One complete model experiment, with an honest rejection.</h2><p>BurnLens preserves source roles, uncertainty, whole-event separation, one-time test custody, and failure states. The exact U-Net replay reproduces the selected epoch and weights without reopening source test arrays.</p></div><div class="metrics"><div class="metric"><strong>{metrics["event_groups"]}</strong>complete event groups</div><div class="metric"><strong>12</strong>native-grid patches</div><div class="metric"><strong>RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}</strong>test Dice</div><div class="metric"><strong>U-Net {metrics["model_test_event_class_macro_dice"]:.3f}</strong>test Dice; rejected</div></div><ol class="events" aria-label="Accepted event groups">{events}</ol></section>
+<section id="result" aria-labelledby="result-heading"><div class="section-head"><p class="eyebrow">Strongest current result</p><h2 id="result-heading">{escape(result["title"])}</h2><p>One frozen CPU U-Net trains, consumes its model test opening once, and replays exactly. It predicts all {metrics["model_test_core_pixels"]} selected test cores as burned and loses to the frozen RBR baseline.</p></div><article class="evidence"><a href="{_repo_href(result["preview_path"])}"><img src="{_repo_href(result["preview_path"])}" alt="Phase Three decision showing exact U-Net replay, rejected model metrics, and retained RBR baseline"></a><div class="evidence-copy"><span class="pill stop">Valid rejected model</span><h3>Reproducible does not mean accepted</h3><p>The trained U-Net scores {metrics["model_test_event_class_macro_dice"]:.3f} macro Dice against RBR {metrics["baseline_test_event_class_macro_dice"]:.3f}. RBR remains the analytical method; the U-Net is diagnostic evidence only.</p><p><code>{escape(result["run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(result["detail_path"])}">Open model decision</a><a class="button secondary" href="{_repo_href(result["model_card_path"])}">Read model card</a><a class="button secondary" href="{_repo_href(result["baseline_detail_path"])}">Inspect baseline</a></div></div></article></section>
 <section id="failure" aria-labelledby="failure-heading"><div class="section-head"><p class="eyebrow">Reliability is visible</p><h2 id="failure-heading">{escape(failure["title"])}</h2><p>BurnLens keeps a snow-dominated source failure and a terminal partial-custody stop instead of manufacturing a sixth event from incomplete evidence.</p></div><article class="evidence"><a href="{_repo_href(failure["preview_path"])}"><img src="{_repo_href(failure["preview_path"])}" alt="Petes Lake snow-dominated source-fitness failure evidence"></a><div class="evidence-copy"><span class="pill stop">Retained stop</span><h3>Defer is a product decision</h3><p>Seven valid assets remain evidence. One failed asset and four unexecuted assets cannot become a complete scientific package. Candidate generation never starts.</p><p><code>{escape(failure["terminal_run_id"])}</code></p><div class="button-row"><a class="button" href="{_repo_href(failure["detail_path"])}">Read material-defer decision</a><a class="button secondary" href="../records/prompt-build-log/2026-07-21-p2o4-t33.md">Inspect milestone log</a></div></div></article></section>
 <section id="method" aria-labelledby="method-heading"><div class="section-head"><p class="eyebrow">Method and boundaries</p><h2 id="method-heading">Different sources have different jobs.</h2><p>Source precedence is part of the product. Context is not relabeled as truth, and ambiguous pixels stay unknown.</p></div><div class="split"><div class="panel"><h3>Source roles</h3><ul>{source_items}</ul></div><div class="panel"><h3>What remains unproven</h3><ul>{limitation_items}</ul></div></div></section>
-<section id="trace" aria-labelledby="trace-heading"><div class="section-head"><p class="eyebrow">Lineage</p><h2 id="trace-heading">Every stage has a version.</h2><p>Every displayed claim binds to the current portfolio build and evidence-bearing run. The model version stays explicit and null until training succeeds.</p></div><table><tbody>{trace_rows}</tbody></table><details><summary>Exact bound inputs</summary><ul>{''.join(f'<li><code>{escape(item["path"])}</code> — {item["bytes"]:,} bytes — <code>{escape(item["sha256"])}</code></li>' for item in report["bound_inputs"])}</ul></details><div class="button-row"><a class="button" href="{REPORT_ID}.json">Open machine-readable manifest</a><a class="button secondary" href="../docs/case-study/BURNLENS_CASE_STUDY.md">Read full case study</a><a class="button secondary" href="README.md">Reviewer quickstart</a></div></section>
+<section id="trace" aria-labelledby="trace-heading"><div class="section-head"><p class="eyebrow">Lineage</p><h2 id="trace-heading">Every stage has a version.</h2><p>Every displayed claim binds to the current portfolio build and evidence-bearing run. The model version and rejected analytical status are explicit; the latest verified repository tag remains 0.52.0 until this candidate passes release gates.</p></div><table><tbody>{trace_rows}</tbody></table><details><summary>Exact bound inputs</summary><ul>{''.join(f'<li><code>{escape(item["path"])}</code> — {item["bytes"]:,} bytes — <code>{escape(item["sha256"])}</code></li>' for item in report["bound_inputs"])}</ul></details><div class="button-row"><a class="button" href="{REPORT_ID}.json">Open machine-readable manifest</a><a class="button secondary" href="../docs/case-study/BURNLENS_CASE_STUDY.md">Read full case study</a><a class="button secondary" href="README.md">Reviewer quickstart</a></div></section>
 </main>
 <footer><div><strong>BurnLens {escape(report["software_version"])}</strong><p>Run <code>{escape(report["run_id"])}</code> · commit <code>{escape(report["git_source_commit"])}</code> · issue #{report["task_issue"]}. Local/offline repository evidence; no deployed application.</p></div></footer>
 </body>

@@ -16,15 +16,26 @@ Build and evaluate one bounded U-Net-style segmentation model against the accept
 
 ## Current status
 
-**Proposed — blocked.**
+**Candidate complete — P3O1-T01 U01-U06 pass; coherent PR and release verification remain.**
 
-Phase Three depends on an accepted Phase Two package, target decision, locked split, baseline evidence, and explicit model-work authorization.
+The accepted Phase Two package, locked split, baseline, and explicit model-work
+authorization produced one bounded CPU U-Net. It trained once, consumed its
+model test opening once, replayed exactly, and was rejected as the analytical
+winner. `burnlens-unet-rejected-package-v0.1.1` preserves the complete
+lineage, model card, inference contract, weights, evaluation, limitations, and
+the Phase Four baseline-primary/rejected-diagnostic handoff.
 
 ## Phase purpose
 
 Phase Three answers one central question:
 
 > Does one bounded U-Net-style segmentation model add measurable, inspectable, and reproducible value beyond the simpler Phase Two baselines?
+
+P3O1-T01 answers: **no added analytical value on the frozen selected-core
+test, but a valid and exactly reproducible trained-model artifact**. The U-Net
+predicts all 89 selected cores as burned and scores event-class macro Dice
+`0.29874213836477986` against RBR `1.0`. RBR remains the accepted analytical
+method.
 
 The phase is not an architecture competition. It creates one understandable training system, a small predeclared experiment matrix, one frozen candidate or baseline-only decision, one final locked-test evaluation, a model card, and a versioned handoff for geospatial integration.
 
@@ -110,7 +121,7 @@ Phase Three must produce:
 
 ## Completion evidence
 
-Phase Three is complete only when:
+Phase Three's candidate exit is complete only when:
 
 - the experiment protocol was fixed before substantive training;
 - the selected threshold was chosen without test-set evidence;
@@ -120,6 +131,10 @@ Phase Three is complete only when:
 - the model card states intended and prohibited uses;
 - a clean environment can reproduce the accepted inference behavior within documented tolerance;
 - the Phase Four decision is reviewed and merged.
+
+All analytical/package conditions now pass on the milestone branch. Review,
+merge, fresh-main, and applicable version/tag gates remain before the phase is
+verified complete.
 
 ## Dependencies
 

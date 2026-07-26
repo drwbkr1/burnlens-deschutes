@@ -512,6 +512,42 @@ architecture search, augmentation, test tuning, or second model. Matching the
 perfect baseline is a valid trained result but not added value; a weaker or
 invalid model is rejected and RBR remains the analytical choice.
 
+## Phase Three model: reproducible, evaluated, and rejected
+
+P3O1-T01 executes that contract without broadening it. The model is a
+117,473-parameter, six-channel U-Net trained on Green Ridge and Tepee and
+selected from Grandview and McKay validation evidence. One substantive
+35-epoch CPU run selects epoch 10 before Ward Creek and Windigo are opened.
+The validation aggregate looks promising, but McKay already exposes an
+all-burned failure that the portfolio keeps visible.
+
+The one authorization-bound test opening confirms the weakness. The model
+predicts all 89 selected cores as burned: 39 burned and 50 background. Its
+event-class macro Dice is `0.29874213836477986`, macro IoU
+`0.21474358974358976`, and worst-event Dice `0.2641509433962264`, versus RBR
+`1.0` on all three measures. The threshold remains 0.5, the probabilities are
+descriptive rather than calibrated confidence, and no retry or test tuning is
+authorized.
+
+![Phase Three model decision](../../samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png)
+
+U06 then repeats all 35 train/validation history rows and reproduces the exact
+479,573-byte weights at SHA-256 `703d9257...`. It verifies the immutable U05
+prediction evidence without reopening source test arrays. The first package
+attempt remains a traceability failure because its manifest left lineage hops
+implicit. Corrected `burnlens-unet-rejected-package-v0.1.1` binds 15 exact
+inputs from software and AOI through config, environment, authorization,
+evaluation, and baseline. Its eight files total 583,992 bytes at canonical
+inventory SHA-256 `ce39c41c...`.
+
+The decision is `reject-model-retain-baseline`. This is not a hidden failure:
+BurnLens now has a valid trained, evaluated, and reproducible model artifact,
+but it does not claim that artifact adds analytical value. Phase Four should
+use RBR for the georeferenced analytical raster and display the frozen U-Net
+probability/error output only as a visibly rejected diagnostic. No
+georeferenced inference, generalization, independent ground truth, field
+validation, operational readiness, or final-submission-ready claim exists.
+
 ## A reviewer path through the evidence
 
 BurnLens originally made reviewers assemble the story across many correct but
@@ -588,7 +624,9 @@ External submission remains an owner action.
 - Current dataset: `burnlens-dataset-v0.1.0`; manifest SHA-256 `e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16`
 - Current split: `burnlens-whole-event-split-v0.1.0`; manifest SHA-256 `a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99`
 - Current baseline: `burnlens-baseline-v0.1.0`; run `BL-2026-07-25-p2o5-t03-u05-baseline-r003`; JSON SHA-256 `a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221`
-- Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`; model version null
+- Current model-readiness decision: `AUTHORIZE_BOUNDED_UNET`; run `BL-2026-07-25-p2o5-t03-u06-readiness-r002`; audit SHA-256 `eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4`
+- Current model artifact: `burnlens-unet-binary-v0.1.0`; training `BL-2026-07-25-p3o1-t01-u04-training-r001`; one-time test `BL-2026-07-25-p3o1-t01-u05-test-r001`; exact replay/package `BL-2026-07-25-p3o1-t01-u06-replay-r003`; weights SHA-256 `703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334`; status `valid-trained-evaluated-rejected-model`
+- Current model package: `burnlens-unet-rejected-package-v0.1.1`; manifest SHA-256 `6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441`; inventory SHA-256 `ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438`; accepted analytical model remains null
 - AOI: `aoi-darlene3-model-v0.2.0`
 - Evidence run: `BL-2026-07-14-aoi-final-r001`
 - Target-decision evidence run: `BL-2026-07-14-target-decision-r002`

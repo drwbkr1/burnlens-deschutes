@@ -1,0 +1,47 @@
+{
+  "inference_contract_version": "burnlens-unet-inference-contract-v0.1.1",
+  "inference_contract_id": "BOUNDED-UNET-INFERENCE-CONTRACT-2026-002",
+  "software_version_at_execution": "0.52.0",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "model_version": "burnlens-unet-binary-v0.1.0",
+  "analytical_status": "rejected-as-analytical-winner",
+  "permitted_role": "reviewer-visible rejected-model diagnostic only",
+  "inputs": {
+    "channel_order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "shape": [
+      6,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "grid": "one common native 20-metre projected grid",
+    "normalization": "burnlens-train-normalization-v0.1.0",
+    "invalid_input": "set normalized values to zero and exclude downstream"
+  },
+  "outputs": {
+    "logit": "one float32 binary logit per pixel",
+    "probability": "sigmoid(logit)",
+    "binary_diagnostic": "probability >= 0.5",
+    "georeferencing": "copy exact source patch CRS, affine transform, extent, and nodata mask"
+  },
+  "required_co_display": {
+    "accepted_method": "burnlens-baseline-v0.1.0 rbr-threshold",
+    "model_status": "rejected",
+    "failure": "all-selected-core burned collapse on frozen test",
+    "unknown_and_invalid": "visibly excluded, never coerced to background"
+  },
+  "prohibited": [
+    "use as the accepted analytical perimeter",
+    "threshold retuning",
+    "population/generalization claim",
+    "complete-scar area claim",
+    "official, field-validated, operational, or emergency use"
+  ]
+}
