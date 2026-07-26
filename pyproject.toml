@@ -144,6 +144,7 @@ burnlens-run-baseline-evaluation = "burnlens.run_baseline_evaluation:main"
 burnlens-run-model-readiness = "burnlens.run_model_readiness:main"
 burnlens-build-unet-preflight = "burnlens.build_unet_preflight:main"
 burnlens-run-bounded-unet-training = "burnlens.run_bounded_unet_training:main"
+burnlens-run-phase-four-analysis = "burnlens.run_phase_four_analysis:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
