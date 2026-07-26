@@ -1,0 +1,22 @@
+{
+  "authorization_version": "burnlens-sealed-test-authorization-v0.1.0",
+  "opening_id": "TEST-OPEN-P3O1-T01-U05-2026-001",
+  "authorization_unit": "P3O1-T01-U05",
+  "status": "AUTHORIZED_NOT_OPENED",
+  "open_count_before": 0,
+  "open_count_authorized": 1,
+  "config_sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b",
+  "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+  "selection_sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4",
+  "environment_capture_sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36",
+  "test_event_group_ids": [
+    "event-ward-creek-2019",
+    "event-windigo-2022"
+  ],
+  "test_patch_ids": [
+    "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+    "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+    "test--event-windigo-2022--WDP-001--r180c151h64w64",
+    "test--event-windigo-2022--WDP-002--r103c393h64w64"
+  ]
+}
