@@ -38,6 +38,40 @@ dependency inventory and classify the current vulnerability result. The
 inventory improves transparency but does not prove that the software is
 vulnerability-free.
 
+## PyPA pip-audit
+
+Source: [PyPA pip-audit](https://github.com/pypa/pip-audit)
+
+The current primary documentation identifies `pip-audit` as a scanner for
+known Python dependency vulnerabilities, documents installed-environment
+auditing with `--path`, JSON output, and exit code `1` when findings exist,
+and explicitly warns that the tool is not a static code analyzer or a defense
+against malicious packages. BurnLens therefore retains the exact nonzero
+result, classifies every unique advisory, and makes no vulnerability-free
+claim.
+
+## GitHub Advisory Database
+
+Source:
+[GHSA-h35f-9h28-mq5c](https://github.com/advisories/GHSA-h35f-9h28-mq5c)
+
+The 2026-07-26 API snapshot classifies the setuptools finding as medium
+severity with CVSS 3.1 score 6.1 and a fixed version of 83.0.0. The affected
+path is `MANIFEST.in` exclusion matching for macOS source-distribution builds.
+BurnLens retains setuptools 82.0.0 because the frozen model environment
+requires that pin, discloses the finding, and verifies the bounded mitigation:
+Windows/NTFS, no `MANIFEST.in`, normalized ASCII tracked paths, no source
+distribution, and a ZIP-only release package.
+
+## SPDX
+
+Source: [SPDX overview](https://spdx.dev/about/overview/)
+
+SPDX is an open standard for communicating software bill-of-materials,
+provenance, licensing, and security information. U04 records a
+release-scoped component and rights inventory but does not label the
+project-specific JSON as SPDX or claim formal SPDX conformance.
+
 ## Decisions
 
 - Phase Five accessibility target: bounded WCAG 2.2 AA-oriented review.
@@ -45,6 +79,9 @@ vulnerability-free.
   extraction.
 - Required supply-chain evidence: exact release dependency inventory plus
   vulnerability classification.
+- A known medium advisory may pass only with its exact identity, severity,
+  affected path, bounded mitigation, retained raw result, and explicit
+  no-vulnerability-free-claim limitation.
 - Project-specific offline performance budgets are explicitly local design
   constraints, not externally asserted universal standards.
 - Browser security policy remains controlling. The blocked local `file://`

@@ -1,0 +1,931 @@
+{
+  "report_version": "burnlens-phase-five-assurance-v0.1.0",
+  "report_id": "PHASE-FIVE-ASSURANCE-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U04",
+  "issue": 574,
+  "run_id": "BL-2026-07-26-p5o1-t01-u04-assurance-r002",
+  "generated_at_utc": "2026-07-26T22:19:26Z",
+  "git_source_commit": "e14717aeef7ac23c22d37b701327f63ac8613df2",
+  "release_scope": {
+    "archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    },
+    "extracted": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0",
+    "interface": {
+      "path": "samples/qa/phase-five/reliability-interface-v0.1.0/PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.html",
+      "bytes": 179808,
+      "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316"
+    },
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic": "burnlens-unet-binary-v0.1.0"
+  },
+  "checks": {
+    "dependency_health": {
+      "commands": [
+        {
+          "command": [
+            "uv",
+            "lock",
+            "--check"
+          ],
+          "exit_code": 0,
+          "status": "pass"
+        },
+        {
+          "command": [
+            "uv",
+            "pip",
+            "check",
+            "--python",
+            "C:\\Projects\\Active\\burnlens-deschutes\\.venv\\Scripts\\python.exe"
+          ],
+          "exit_code": 0,
+          "status": "pass"
+        }
+      ],
+      "status": "pass"
+    },
+    "known_vulnerability_classification": {
+      "scanner": "pip-audit 2.10.1",
+      "audit_path": "pip-audit.json",
+      "audit_bytes": 8609,
+      "audit_sha256": "0650b170213ef3d66a3eb02264cb5eeec33e8bf89f297b39e4ec4b40c8a55ad2",
+      "dependency_count": 75,
+      "raw_vulnerability_count": 2,
+      "unique_advisory_count": 1,
+      "findings": [
+        {
+          "package": "setuptools",
+          "version": "82.0.0",
+          "id": "PYSEC-2026-3447",
+          "aliases": [
+            "BIT-setuptools-2026-59890",
+            "CVE-2026-59890",
+            "GHSA-h35f-9h28-mq5c"
+          ],
+          "fix_versions": [
+            "83.0.0"
+          ]
+        }
+      ],
+      "classification": {
+        "ghsa_id": "GHSA-h35f-9h28-mq5c",
+        "cve_id": "CVE-2026-59890",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+          "score": 6.1
+        },
+        "published_at": "2026-07-21T19:09:21Z",
+        "fixed_version": "83.0.0",
+        "advisory_bytes": 7271,
+        "advisory_sha256": "f6c7caa4419b8ded77f893ccbb47d973d93070e1ef6577bfa7f1e8a0ba436c97",
+        "mitigation": {
+          "windows_ntfs_route": true,
+          "manifest_in_absent": true,
+          "tracked_paths_unicode_normalized": true,
+          "tracked_paths_ascii_only": true,
+          "sdist_absent_from_release_package": true,
+          "release_format_zip_only": true
+        },
+        "disposition": "disclosed medium finding; current Windows ZIP-only release route does not exercise the macOS sdist exclusion path"
+      },
+      "known_vulnerability_free_claim": false,
+      "status": "pass-with-disclosed-medium-finding"
+    },
+    "secret_scan": {
+      "finding_count": 0,
+      "rules": [
+        "credential-assignment",
+        "private-key-header",
+        "signed-or-tokenized-url"
+      ],
+      "scope": "text-decodable files in the canonical release package",
+      "status": "pass"
+    },
+    "license_inventory": {
+      "format": "release-scoped component and rights inventory; not SPDX",
+      "project": {
+        "name": "burnlens-deschutes",
+        "license_expression": "MIT",
+        "license_path": "LICENSE",
+        "license_bytes": 1067,
+        "license_sha256": "accec00dfaedd030895e2c9cd0c7038380265fec320e6d94429ee1978ebd97d8"
+      },
+      "environment_distribution_count": 75,
+      "environment_distributions": [
+        {
+          "name": "affine",
+          "version": "2.4.0",
+          "license_expression": null,
+          "license": null,
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "attrs",
+          "version": "26.1.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "blake3",
+          "version": "1.0.9",
+          "license_expression": null,
+          "license": "CC0-1.0 OR Apache-2.0",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "boto3",
+          "version": "1.43.52",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "botocore",
+          "version": "1.43.53",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "burnlens-deschutes",
+          "version": "0.54.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "certifi",
+          "version": "2026.6.17",
+          "license_expression": null,
+          "license": "MPL-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "charset-normalizer",
+          "version": "3.4.9",
+          "license_expression": null,
+          "license": "MIT",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "click",
+          "version": "8.4.2",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "cligj",
+          "version": "0.7.2",
+          "license_expression": null,
+          "license": "BSD",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "colorama",
+          "version": "0.4.6",
+          "license_expression": null,
+          "license": null,
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "filelock",
+          "version": "3.32.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [
+            "License :: OSI Approved :: MIT License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "fsspec",
+          "version": "2026.6.0",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "geopandas",
+          "version": "1.1.4",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "h5py",
+          "version": "3.16.0",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "idna",
+          "version": "3.18",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "iniconfig",
+          "version": "2.3.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "Jinja2",
+          "version": "3.1.6",
+          "license_expression": null,
+          "license": null,
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "jmespath",
+          "version": "1.1.0",
+          "license_expression": null,
+          "license": "MIT",
+          "license_classifiers": [
+            "License :: OSI Approved :: MIT License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "jsonschema",
+          "version": "4.26.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "jsonschema-specifications",
+          "version": "2025.9.1",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "MarkupSafe",
+          "version": "3.0.3",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "mpmath",
+          "version": "1.3.0",
+          "license_expression": null,
+          "license": "BSD",
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "networkx",
+          "version": "3.6.1",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "numpy",
+          "version": "2.5.1",
+          "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "packaging",
+          "version": "26.2",
+          "license_expression": "Apache-2.0 OR BSD-2-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "pandas",
+          "version": "3.0.3",
+          "license_expression": null,
+          "license": "BSD 3-Clause License\n\n Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team\n All rights reserved.\n\n Copyright (c) 2011-2026, Open source contributors.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are met:\n\n * Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n * Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n * Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\n FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pillow",
+          "version": "12.3.0",
+          "license_expression": "MIT-CMU",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "pluggy",
+          "version": "1.6.0",
+          "license_expression": null,
+          "license": "MIT",
+          "license_classifiers": [
+            "License :: OSI Approved :: MIT License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "Pygments",
+          "version": "2.20.0",
+          "license_expression": "BSD-2-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "pyogrio",
+          "version": "0.13.0",
+          "license_expression": null,
+          "license": "MIT License\n\nCopyright (c) 2020-2024 Brendan C. Ward and pyogrio contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+          "license_classifiers": [
+            "License :: OSI Approved :: MIT License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pyparsing",
+          "version": "3.3.2",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "pyproj",
+          "version": "3.7.2",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac",
+          "version": "1.15.1",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-client",
+          "version": "0.9.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-core",
+          "version": "1.15.1",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-classification",
+          "version": "2.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-datacube",
+          "version": "2.2.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-eo",
+          "version": "1.1.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-file",
+          "version": "2.1.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-grid",
+          "version": "1.1.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-item-assets",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-label",
+          "version": "1.0.1",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-mgrs",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-mlm",
+          "version": "1.4.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-pointcloud",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-projection",
+          "version": "2.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-raster",
+          "version": "1.1.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-render",
+          "version": "2.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-sar",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-sat",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-scientific",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-storage",
+          "version": "2.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-table",
+          "version": "1.2.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-timestamps",
+          "version": "1.1.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-version",
+          "version": "1.2.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-view",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pystac-ext-xarray-assets",
+          "version": "1.0.0",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "pytest",
+          "version": "9.0.3",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.9.0.post0",
+          "license_expression": null,
+          "license": "Dual License",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License",
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "rasterio",
+          "version": "1.5.0",
+          "license_expression": "BSD-3-Clause",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "referencing",
+          "version": "0.37.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "requests",
+          "version": "2.34.2",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "rioxarray",
+          "version": "0.22.0",
+          "license_expression": null,
+          "license": "Apache",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "rpds-py",
+          "version": "2026.6.3",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "s3transfer",
+          "version": "0.19.1",
+          "license_expression": null,
+          "license": "Apache License 2.0",
+          "license_classifiers": [
+            "License :: OSI Approved :: Apache Software License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "setuptools",
+          "version": "82.0.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "shapely",
+          "version": "2.1.2",
+          "license_expression": null,
+          "license": "BSD 3-Clause",
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "six",
+          "version": "1.17.0",
+          "license_expression": null,
+          "license": "MIT",
+          "license_classifiers": [
+            "License :: OSI Approved :: MIT License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "sympy",
+          "version": "1.14.0",
+          "license_expression": null,
+          "license": "BSD",
+          "license_classifiers": [
+            "License :: OSI Approved :: BSD License"
+          ],
+          "metadata_present": true
+        },
+        {
+          "name": "torch",
+          "version": "2.13.0",
+          "license_expression": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "typing_extensions",
+          "version": "4.16.0",
+          "license_expression": "PSF-2.0",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "tzdata",
+          "version": "2026.3",
+          "license_expression": null,
+          "license": "Apache-2.0",
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "urllib3",
+          "version": "2.7.0",
+          "license_expression": "MIT",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        },
+        {
+          "name": "xarray",
+          "version": "2026.7.0",
+          "license_expression": "Apache-2.0",
+          "license": null,
+          "license_classifiers": [],
+          "metadata_present": true
+        }
+      ],
+      "missing_distribution_metadata_count": 0,
+      "dependencies_redistributed_in_phase_four_zip": false,
+      "source_rights_evidence": "evidence/records/u04-source-gate/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+      "limitation": "Installed-distribution metadata is supplier-provided inventory evidence, not legal advice or a claim that every transitive license obligation has been independently adjudicated."
+    },
+    "source_rights": {
+      "record_path": "evidence/records/u04-source-gate/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+      "record_sha256": "12c273f24565d4899517d64408654128c62a0b8ba9e8f58d3dd898dacaef7a28",
+      "source_count": 4,
+      "sources": [
+        {
+          "source_id": "usgs-ntd-arcgis-2026-001",
+          "rights": "pass",
+          "privacy_security": "pass"
+        },
+        {
+          "source_id": "usgs-nsd-arcgis-2026-001",
+          "rights": "pass",
+          "privacy_security": "pass"
+        },
+        {
+          "source_id": "usgs-nbd-arcgis-2026-001",
+          "rights": "pass",
+          "privacy_security": "pass"
+        },
+        {
+          "source_id": "mtbs-ward-creek-10016337-local-reuse",
+          "rights": "pass",
+          "privacy_security": "pass"
+        }
+      ],
+      "status": "pass"
+    },
+    "unsupported_claim_scan": {
+      "affirmative_phrase_findings": [],
+      "true_prohibited_boundary_findings": [],
+      "status": "pass"
+    },
+    "public_artifact_privacy": {
+      "finding_count": 0,
+      "rules": [
+        "email-address",
+        "local-user-path",
+        "private-delivery-marker"
+      ],
+      "scope": "text-decodable files in the canonical release package",
+      "status": "pass"
+    },
+    "safe_archive_structure": {
+      "validator": "burnlens.phase_four_package.validate_package",
+      "status": "pass"
+    },
+    "schema_and_binding_validation": {
+      "validator": "burnlens.phase_four_package.validate_package",
+      "status": "pass"
+    },
+    "checksum_validation": {
+      "validator": "burnlens.phase_four_package.validate_package",
+      "status": "pass"
+    },
+    "no_external_runtime_request": {
+      "finding_count": 0,
+      "rules": [
+        "css-url",
+        "media-src",
+        "network-api",
+        "script-src",
+        "stylesheet-href"
+      ],
+      "status": "pass"
+    },
+    "performance": {
+      "samples_seconds": {
+        "directory": [
+          2.913567,
+          1.047408,
+          1.006396
+        ],
+        "archive": [
+          2.286857,
+          2.138328,
+          2.188365
+        ]
+      },
+      "budgets": {
+        "archive_bytes": {
+          "actual": 487893,
+          "maximum": 750000
+        },
+        "extracted_bytes": {
+          "actual": 1795388,
+          "maximum": 2500000
+        },
+        "interface_html_bytes": {
+          "actual": 179808,
+          "maximum": 250000
+        },
+        "package_validation_seconds": {
+          "actual_max": 2.913567,
+          "maximum": 5.0
+        }
+      },
+      "status": "pass",
+      "basis": "Project-specific offline reviewer-path budgets; not universal web performance standards."
+    }
+  },
+  "limitations": [
+    "The dependency scan reports known advisories present in its configured feeds at scan time; it is not a vulnerability-free claim.",
+    "The license inventory records supplier metadata and source-rights evidence; it is not legal advice.",
+    "Pattern-based secret, privacy, and claim scans supplement rather than replace exact package bindings and human review.",
+    "Performance timings describe this machine and bounded offline package, not a universal browser or service benchmark.",
+    "The U-Net remains a rejected diagnostic and did not outperform RBR."
+  ],
+  "boundaries": {
+    "analytical_output_changed": false,
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "operational_claim": false,
+    "field_validation_claim": false,
+    "official_or_endorsed_claim": false,
+    "deployment": false,
+    "public_sharing_change": false
+  },
+  "disposition": "pass-with-disclosed-medium-finding",
+  "next_dependency": "P5O1-T01-U05"
+}
