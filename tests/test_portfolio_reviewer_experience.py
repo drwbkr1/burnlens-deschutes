@@ -33,19 +33,19 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         self.assertEqual(self.report["software_version"], "0.53.0")
         self.assertEqual(
             self.report["checkpoint_status"],
-            "candidate-pr-release-pending",
+            "verified-release-phase-four-ready",
         )
         self.assertEqual(
             self.report["release_tag"],
-            "v0.52.0-dataset-baseline-model-readiness",
+            "v0.53.0-bounded-unet-rejected-model",
         )
         self.assertEqual(
             self.report["release_commit"],
-            "dfb11c8b823e224aceb76be74003464973e33c2d",
+            "5a0f8ac027ae20ff9193948506f590afbfb64554",
         )
         self.assertEqual(
             self.report["release_tag_object"],
-            "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
+            "d66dd7fdc9f2f155d1799cb1e85e77dadd76311a",
         )
         self.assertEqual(len(self.report["bound_inputs"]), len(BOUND_INPUTS))
 
