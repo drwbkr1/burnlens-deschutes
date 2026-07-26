@@ -148,6 +148,7 @@ burnlens-run-phase-four-analysis = "burnlens.run_phase_four_analysis:main"
 burnlens-run-phase-four-geospatial = "burnlens.run_phase_four_geospatial:main"
 burnlens-run-phase-four-context-intake = "burnlens.run_phase_four_context_intake:main"
 burnlens-run-phase-four-overlay = "burnlens.run_phase_four_overlay:main"
+burnlens-run-phase-four-interface = "burnlens.run_phase_four_interface:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
