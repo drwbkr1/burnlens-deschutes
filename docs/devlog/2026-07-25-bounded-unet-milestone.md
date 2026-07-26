@@ -125,3 +125,29 @@ RBR baseline.
 The exact source and rendered preflight now replay byte-for-byte. Ward Creek
 and Windigo are still sealed. The next commit will be intentionally small: the
 single authorization object that makes the one-way test opening possible.
+
+## 2026-07-25 — the model fails honestly, and that is the result
+
+The opening is consumed. On Ward Creek and Windigo, the selected U-Net predicts
+every one of the 89 reviewed cores as burned. It catches all 39 burned cores
+and misclassifies all 50 background cores. The resulting event-class macro Dice
+is 0.299, far below the transparent RBR baseline's 1.0.
+
+That is not the portfolio story we might have preferred, but it is a stronger
+engineering story than a tuned or hidden failure. The configuration, weights,
+threshold, roster, and code were frozen first. The page makes the failure
+visual: the two burned patches are green in the error view, while both
+background patches are red. Fixed-threshold diagnostics also show that the
+probabilities have not learned a useful separation—0.25 and 0.50 predict all
+burned, while 0.75 predicts none.
+
+Every probability and binary array is retained with an exact receipt, the
+single opening has an immutable consumed record, and independent checks
+recompute the class denominators and baseline decision without reopening the
+source test arrays. The candidate is trained and evaluated, but it is not
+accepted or released and it is not the analytical winner.
+
+The final Phase Three unit now has a crisp job: reproduce the training bytes,
+package this valid rejected-model evidence, write the model card and inference
+contract, and choose a Phase Four path that demonstrates the model honestly
+without pretending it outperforms the baseline.

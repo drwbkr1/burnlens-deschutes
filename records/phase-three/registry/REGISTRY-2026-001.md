@@ -33,12 +33,17 @@
 | `P3O1-T01-U05-PREFLIGHT-R001-R003` | validation-only renderer rehearsals | retained narrow overflow, PNG annotation overlap, and false test-opening wording; test open-count zero | `retained-render-failures` | correct before freeze |
 | `P3O1-T01-U05-CODE-R001` | `aa6b7f385224943a4550657318117dbec1b038c2`; remote-equal branch | exact roster enforcement; candidate/clean-HEAD/unused-opening gates; complete metrics, arrays, render, and no-retry paths | `pass` | exact preflight |
 | `P3O1-T01-U05-PREFLIGHT-R005` | `BL-2026-07-25-p3o1-t01-u05-preflight-r005`; validation only | 39 focused tests; compile/lock/diff; desktop/narrow render; three-artifact exact replay; test open-count zero | `pass-preopen` | authorization |
+| `P3O1-T01-U05-AUTH-R001` | `4f71ec7c61ac0ca1b1dcfcd995d1444c9ec00c9e`; authorization `8e0e6442...` | exact config/weights/selection/environment/event/ordered-patch bindings; `AUTHORIZED_NOT_OPENED`; remote-equal clean HEAD | `pass-authorization` | one opening |
+| `P3O1-T01-U05-TEST-R001` | `BL-2026-07-25-p3o1-t01-u05-test-r001`; opening consumed 0→1 | 89 cores; finite; all predicted burned; macro Dice `0.29874213836477986`; RBR `1.0`; no tuning/retry | `pass-evaluation-reject-analytical-winner` | independent verification |
+| `P3O1-T01-U05-VERIFY-R001` | first inventory verifier | unavailable `System.Convert.ToHexString`; no output change | `retained-tool-failure` | compatible verifier |
+| `P3O1-T01-U05-VERIFY-R002` | 12 outputs / 340,542 bytes / inventory `f850ed08...` | receipts/promotion/array schema/threshold predictions/denominators/baseline comparison | `pass` | render |
+| `P3O1-T01-U05-RENDER-R001` | exact 7,022-byte HTML and 217,578-byte PNG | desktop/narrow layout; complete four-patch geospatial evidence; contained tables; no external resources; visible boundaries | `pass` | U06 |
 
-U01 opens no dataset array. U02 and U03 open only the permitted train and
-validation arrays for bounded ephemeral smoke evidence. U04 performs the one
-authorized substantive train/validation experiment and freezes a validation-only
-candidate. Sealed Ward Creek/Windigo test arrays remain unopened. No accepted or
-released model, test metric, model-value claim, inference, or deployment exists.
-U05's evaluator and no-retry opening path are now frozen and preflighted. The
-exact next eligible action is the committed `AUTHORIZED_NOT_OPENED` record;
-only then may the one analytical opening occur.
+U01 opens no dataset array. U02 and U03 use only train/validation arrays for
+bounded smoke evidence. U04 performs the one authorized substantive
+train/validation experiment and freezes a validation-only candidate. U05 then
+consumes the single Ward Creek/Windigo opening. The candidate predicts all 89
+selected test cores as burned and is rejected as the analytical winner against
+perfect RBR. It remains a valid evaluated but unaccepted branch candidate. No
+second test opening, inference, deployment, or final model decision exists.
+The exact next eligible unit is `P3O1-T01-U06`.
