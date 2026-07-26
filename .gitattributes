@@ -420,3 +420,4 @@ records/prompt-build-log/2026-07-25-p3o1-t01.md text eol=lf
 docs/devlog/2026-07-25-bounded-unet-milestone.md text eol=lf
 burnlens/bounded_unet.py text eol=lf
 tests/test_bounded_unet.py text eol=lf
+records/phase-three/implementations/BOUNDED-UNET-REFERENCE-2026-001.json text eol=lf

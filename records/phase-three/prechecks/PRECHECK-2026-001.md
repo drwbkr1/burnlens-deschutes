@@ -61,3 +61,26 @@ label change, baseline change, test opening, inference, deployment, provider
 transaction, or claim of model value. U02 may implement exactly the frozen
 single U-Net, loader, masked loss, and metrics with synthetic and permitted
 train/validation evidence only.
+
+## U02 addendum — reference path
+
+Exact cumulative source `552f47d629f275fc732a36d9d7362b3e3ffc40a8`
+implements the frozen 117,473-parameter U-Net, manifest-bound loader, exact
+normalization and mask, masked BCE, finite checks, Adam, early stopping,
+checkpoint recovery, and unconditional pre-U05 test lock. The implementation
+is 23,729 bytes / SHA-256 `36bedaf8...`; its test module is 11,764 bytes /
+SHA-256 `d92fbad4...`.
+
+The initial focused suite retained one bad test assertion about total module
+containers; exact layer-type and parameter-count assertions replace it. A
+formatting-only EOF warning is retained and corrected in the cumulative source
+commit. The fresh detached model profile passes 24 bounded-model,
+model-readiness, and baseline tests after its complete 105-command environment
+verification.
+
+Synthetic one-step replay produces identical loss and state bytes twice. A
+separate warnings-as-errors smoke performs one ephemeral optimizer step on the
+four permitted train patches and one forward-only validation evaluation. It
+uses 109 train and 89 validation core pixels and produces finite loss and
+metrics. This is implementation evidence, not the substantive U04 training
+run, and no checkpoint or weight is promoted.
