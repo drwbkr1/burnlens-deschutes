@@ -15,6 +15,10 @@ from PR #569.
 | `P4O1-T01-U01-PORTABILITY-R001` | post-commit checkout gate | Commit `09eaf6b...`; new Phase Four text families | Index and current worktree contain LF, but the first committed checkpoint lacks explicit Phase Four checkout attributes. Correct within U01 before detached verification; no artifact bytes or semantics changed. `remediate`. | Add exact LF/binary rules and verify clean checkout |
 | `P4O1-T01-U01-CUSTODY-R001` | detached-checkout preflight | Contract-declared `runs/phase-four/` root | The first preflight finds the path is not ignored and creates no directory. Add a repository-local ignore rule before any Phase Four attempt or clean-checkout state is created. `remediate`; zero run bytes created. | Verify ignore behavior, commit, and run detached checkout |
 | `P4O1-T01-U01-VERIFY-R001` | detached commit `f43907f0fc770351514410621e8bc07cd6a18195` | Fresh ignored worktree; locked 18-distribution dev environment; exact contract `a50966b3...` | Phase Four evidence checks out LF; four focused tests, loader, compilation, lock, dependency, diff, and clean-status gates pass. Temporary worktree is removed after verification. U01 `pass`. | P4O1-T01-U02 deterministic analytical runner |
+| `P4O1-T01-U02-IMPLEMENTATION-R001` | source `cf67113dbae0e05dd034b0cca5d2a98f2a4bfb9f` | Fail-closed runner, CLI, four focused runner tests, one package entry point | Exact contract/array/hash/shape/channel/normalization/weight/threshold gates; RBR primary; rejected U-Net diagnostic; no tuning or selection path; 8 combined U01/U02 tests, compilation, CLI help, lock, dependency, and diff checks pass. | Execute immutable U02 run |
+| `P4O1-T01-U02-ANALYSIS-R001` | run `BL-2026-07-26-p4o1-t01-u02-analysis-r001` | 14 ignored files / 104,703 bytes; inventory 1,416 bytes / `28739c6d...`; manifest 12,244 bytes / `c969bb10...` | State `accepted-baseline`. WCP-001: RBR 3,536 positives, rejected U-Net 4,095. WCP-002: RBR 1,669, rejected U-Net 3,206. No accepted model or geospatial product. | Independent validation |
+| `P4O1-T01-U02-VERIFY-R001` | record `PHASE-FOUR-ANALYSIS-RECORD-2026-001` | Exact U02 arrays plus frozen Phase Three probability/prediction arrays | Independent RBR formula replay is exact; rejected-U-Net probability and binary arrays equal Phase Three values; exclusion equals inverse input-valid; receipts pass; 8 focused tests pass. U02 `pass`. | U03 geospatial products |
+| `P4O1-T01-U02-DUPLICATE-R002` | retained no-overwrite attempt | Existing U02 run ID and 14 files | Duplicate invocation exits 1 with `run already exists`; file count and every SHA-256 remain unchanged. `retained-no-overwrite-refusal`. | U03 |
 
 ## Current truth
 
@@ -30,6 +34,9 @@ from PR #569.
   public-sharing change exists at U01.
 - U01 is complete at the independently verified `f43907f...` checkpoint; its
   next eligible dependency is U02.
+- U02 is complete at source `cf67113...` and run
+  `BL-2026-07-26-p4o1-t01-u02-analysis-r001`. RBR is the accepted analytical
+  output; the U-Net remains a visibly rejected diagnostic. U03 is eligible.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
