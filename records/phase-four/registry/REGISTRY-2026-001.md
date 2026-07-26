@@ -42,6 +42,12 @@ from PR #569.
 | `P4O1-T01-U08-CHECKOUT-R002` | uncommitted LF remediation | Seven environment-profile tests plus two checkout-contract tests | LF attribute check passes; eight tests pass and the worktree-byte test alone correctly finds the four uncommitted remediation files. `retained-pre-commit-state-failure`; no product/scientific defect. | Commit remediation and rerun exact gate |
 | `P4O1-T01-U08-CHECKOUT-R003` | clean committed candidate `e52aa69...` | Seven environment-profile tests plus two checkout-contract tests | All 9 pass in 274.43 seconds; version, explicit attributes, and working-tree bytes agree exactly. `pass`. | Full regression |
 | `P4O1-T01-U08-FULL-REGRESSION-R002` | clean committed candidate `e52aa69...` | Complete repository suite | 759 passed / 0 failed / 1 expected skip / 252 existing NumPy deprecation warnings / 86 subtests in 880.69 seconds. `pass`. | PR review, merge, fresh-main verification, tag |
+| `P4O1-T01-U08-FRESH-MAIN-FULL-R001` | remote main `8660ccb...`; tracked-only clone | Complete repository suite without controlled provider/context/intermediate custody | 686 passed / 2 failed / 47 skipped / 25 errors / 112 warnings / 86 subtests. Every failure/error requires controlled provider archives, finalized context custody, or ignored U02-U05 intermediate runs. `retained-custody-prerequisite-failure`; no application/scientific defect inferred. | Run the explicit portable roster and standalone package validators |
+| `P4O1-T01-U08-FRESH-MAIN-PORTABLE-R002` | remote main `8660ccb...`; tracked-only clone | Full portable roster with five custody-bound builder files excluded and two exact custody assertions deselected | 686 passed / 47 existing skips / 2 deselected / 112 warnings / 86 subtests in 374.15 seconds. Both tracked package forms separately pass the authoritative validator. `pass`. | Deterministic wheel |
+| `P4O1-T01-U08-FRESH-MAIN-WHEEL-R001` | remote main `8660ccb...`; fixed epoch/hash seed | Two fresh 1,166,315-byte BurnLens 0.54.0 wheels | Both wheels equal the reviewed candidate at `ad3ae7c8...`. `pass`. | Isolated runtime |
+| `P4O1-T01-U08-FRESH-MAIN-COMMAND-HELP-R001` | disposable PowerShell helper | Installed command roster | JSON-array deserialization is counted as one object, so the helper stops before invoking a command. `retained-helper-failure`; no package defect. | Emit one command per line |
+| `P4O1-T01-U08-FRESH-MAIN-ISOLATED-R002` | exact fresh-main wheel | CPython 3.12.10; 71 compatible distributions; BurnLens 0.54.0; Torch 2.13.0+cpu; Rasterio 1.5.0; GeoPandas 1.1.4 | Dependency health and all 114 installed command-help routes pass. `pass`. | Annotated tag |
+| `P4O1-T01-U08-SHIP-R001` | issue #570 / PR #571; reviewed `d856a06...`; merge `8660ccb...`; tag object `4a7a54b...` | Complete U01-U08 ledger and exact release identities | Merge tree equals reviewed tree `f6eca377...`; remote tag peels exactly to the merge; no GitHub Release, deployment, access, ownership, sharing, or external-submission change exists. U08 `pass`; Phase Four `verified`. | Issue #572 lifecycle sync, then Phase Five |
 
 ## Current truth
 
@@ -54,7 +60,7 @@ from PR #569.
 - Existing Phase Two and Phase Three artifacts are read-only inputs.
 - No Phase 3B, second experiment, new label, dataset, split, AOI, threshold,
   provider transaction, deployment, or public-sharing change exists through
-  U07.
+  the verified release.
 - U01 is complete at the independently verified `f43907f...` checkpoint; its
   next eligible dependency is U02.
 - U02 is complete at source `cf67113...` and run
@@ -80,14 +86,14 @@ from PR #569.
   and run `BL-2026-07-26-p4o1-t01-u07-package-r001`. The 66-file extracted
   package and exact ZIP validate and reproduce byte-identically in a clean
   detached checkout. Its packaged interface passes desktop and narrow render
-  and interaction. U08 is eligible.
-- U08 is active. BurnLens 0.54.0, current truth surfaces, case study,
-  quickstart, and release records form one candidate. Focused tests, both
-  package validators, fixed-epoch wheels, isolated install, and all 114
-  command helps pass. The exact checkout gate and complete clean committed-head
-  regression pass at `e52aa69...`. PR #571 is clean and mergeable at reviewed
-  candidate `269c65f...`; merge, fresh-main verification, and annotated-tag
-  verification remain.
+  and interaction.
+- U08 is complete. PR #571 merges reviewed head `d856a06...` through
+  `8660ccb...`; exact tracked-only package validation, declared portable
+  regression, deterministic wheel equality, isolated install, 114 command
+  helps, and remote tag peel pass. The naive fresh-clone full attempt remains
+  retained as custody-prerequisite evidence. BurnLens 0.54.0 and Phase Four
+  are verified; issue #572 owns only lifecycle truth synchronization before
+  the Phase Five checkpoint is selected.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as

@@ -10,7 +10,7 @@ It is not official wildfire information, emergency guidance, or an operational s
 
 BurnLens has established its governing task and source boundaries, selected exact Sentinel-2 and NOAA-21 VIIRS candidates, and implemented a fail-closed download validator. The validator caught a subtle but consequential failure: an unauthenticated data-looking URL returned an Earthdata Login HTML page with HTTP 200. BurnLens rejected and deleted it instead of registering it as NetCDF/HDF5.
 
-The current Phase Four candidate carries the same reliability posture into an
+The verified Phase Four release carries the same reliability posture into an
 actual CV-to-GEOINT run. RBR is the accepted analytical method, the U-Net is a
 visibly rejected diagnostic, and one Ward Creek package binds exact arrays,
 native rasters, vectors, context, observations, interface, replay, warnings,
@@ -550,9 +550,9 @@ The decision is `reject-model-retain-baseline`. This is not a hidden failure:
 BurnLens now has a valid trained, evaluated, and reproducible model artifact,
 but it does not claim that artifact adds analytical value. Phase Four should
 use RBR for the georeferenced analytical raster and display the frozen U-Net
-probability/error output only as a visibly rejected diagnostic. No
-georeferenced inference, generalization, independent ground truth, field
-validation, operational readiness, or final-submission-ready claim exists.
+probability/error output only as a visibly rejected diagnostic. No accepted
+model value, generalization, independent ground truth, field validation,
+operational readiness, or final-submission-ready claim exists.
 
 ## Phase Four product: baseline primary, rejected model visible
 
@@ -600,7 +600,14 @@ The broad custody-dependent builder suite is not misreported: it produces
 provider and run custody is absent. The portable tracked-package gates pass
 without those source bytes.
 
-The result is a valid baseline-first GEOINT candidate, not a model-success
+PR #571 merges the reviewed release at `8660ccba...`. A fresh remote clone
+retains the broader custody-bound attempt as 686 passes, two failures, 47
+skips, and 25 errors, then passes the explicit tracked-only 686-test roster
+and both package validators. Two 1,166,315-byte wheels match the reviewed
+SHA-256 `ad3ae7c8...`; an isolated 71-distribution runtime passes all 114
+command routes. Annotated tag object `4a7a54b...` peels exactly to the merge.
+
+The result is a verified baseline-first GEOINT artifact, not a model-success
 story. The U-Net's failure is the technical lesson: the accepted training
 evidence was too small and spectrally selected to establish model value, and
 the model collapsed to all-burned predictions. A separately governed
@@ -819,7 +826,7 @@ External submission remains an owner action.
 - Region pilot: generator `407981e1f98570bb8bd7695951d6cc5d67dab042`; artifacts `0e5306c6d94c54b47df40486a75e5bbd69bab62f`; run `BL-2026-07-18-region-candidate-pilot-r006`; six intact candidates / 136 core pixels / 246 unknown-ring pixels / zero region responses / zero labels
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
 - Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels are insufficient. Verified `v0.28.0-label-region-remediation-plan` defines contiguous-region review and six-event/source-regime gates. Verified `v0.29.0-region-candidate-pilot` executes six no-promotion regions on actual evidence; issue #457 owned their exact owner-review surface at that checkpoint. This is not review completion, a dataset, or training.
-- Dataset / split / baseline / model: not created; five-state proposal schema implemented as reviewable evidence only
+- Dataset / split / baseline / model: verified dataset `burnlens-dataset-v0.1.0`; split `burnlens-whole-event-split-v0.1.0`; accepted baseline `burnlens-baseline-v0.1.0`; rejected diagnostic model `burnlens-unet-binary-v0.1.0`
 - Public application: no deployment; the self-contained local/offline Phase Four evidence interface is the current analytical presentation surface, while historical review workbenches and static reports remain traceable evidence
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
