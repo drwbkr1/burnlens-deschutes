@@ -49,3 +49,30 @@ separate cumulative fix closes that formatting gate.
 No weight or checkpoint from these smokes is retained as a model. Ward Creek
 and Windigo remain sealed. U03 must now freeze the complete experiment and the
 only mechanism that can eventually open them.
+
+## 2026-07-25 — the experiment is frozen before it is run
+
+U03 makes the substantive experiment deliberately boring before it becomes
+expensive: one seed, one CPU, one model, one optimizer, one threshold, one
+stopping rule, and one checkpoint order. It also turns the future test opening
+into a concrete authorization object bound to exact config, weights, selection,
+environment, and roster hashes. A missing or drifting object fails before any
+test array is opened.
+
+The two-epoch preflight is connectivity evidence, not a model. It opens only
+the frozen train and validation roles, records every event/class denominator,
+renders the trajectory, and then discards the ephemeral state. Its validation
+Dice stays flat while BCE improves enough to select epoch two under the frozen
+tie-break. That observation is useful for proving the rule executes, not for
+claiming model quality.
+
+The exact protocol and three preflight surfaces reproduce byte-for-byte in a
+fresh detached worktree. Desktop and narrow rendering have no horizontal
+overflow or external resource, and the page keeps the model, sealed-test, and
+ground-truth limitations visible. Narrow screenshot capture timed out in the
+browser tool, so that width is retained as direct rendered-DOM evidence rather
+than overstated as a captured-image pass.
+
+Ward Creek and Windigo remain unopened. No substantive training, weight,
+checkpoint, model evaluation, inference, or portfolio-readiness claim exists.
+U04 can now run the one authorized experiment without revisiting its design.

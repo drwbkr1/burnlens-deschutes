@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BurnLens bounded U-Net preflight</title>
+<style>
+:root{--ink:#17211d;--muted:#5e6962;--paper:#f4f0e8;--card:#fff;--green:#23634c;--amber:#9a5b19}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 system-ui,sans-serif}
+a{color:var(--green)} .skip{position:absolute;left:-999px} .skip:focus{left:1rem;top:1rem;background:#fff;padding:.7rem;z-index:2}
+main{width:min(1120px,calc(100% - 2rem));margin:2rem auto 4rem} header,.card{background:var(--card);border-radius:18px;padding:clamp(1.1rem,3vw,2.2rem);margin-bottom:1.2rem}
+h1{margin:.2rem 0;font-size:clamp(2rem,6vw,3.8rem);line-height:1.05} h2{margin-top:0} .eyebrow{color:var(--green);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.warning{border-left:6px solid var(--amber);background:#fffaf0} img{display:block;width:100%;height:auto;border-radius:14px}
+.table-wrap{overflow-x:auto} table{border-collapse:collapse;width:100%;min-width:760px} th,td{padding:.65rem;border-bottom:1px solid #d9ddd9;text-align:right} th:first-child,td:first-child{text-align:left}
+code{overflow-wrap:anywhere} @media(max-width:520px){main{width:min(100% - 1rem,1120px);margin-top:.5rem} header,.card{border-radius:12px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#evidence">Skip to evidence</a>
+<main>
+<header>
+<p class="eyebrow">P3O1-T01-U03 • protocol preflight</p>
+<h1>One model path, still before training</h1>
+<p>Two deterministic train/validation-only epochs prove that the frozen data, model, loss, optimizer, metrics, and renderer connect. Ward Creek and Windigo test arrays remain unopened.</p>
+</header>
+<section class="card warning" aria-labelledby="boundary"><h2 id="boundary">Boundary</h2><ul><li>Two-epoch train/validation connectivity smoke only; not the substantive U04 training run.</li><li>No preflight weights or checkpoint may be used as the model candidate.</li><li>Owner-approved prototype labels are not independent ground truth or field validation.</li><li>The frozen RBR baseline remains at the selected-core metric ceiling.</li></ul></section>
+<section class="card" id="evidence" aria-labelledby="figure"><h2 id="figure">Rendered preflight evidence</h2><img src="BOUNDED-UNET-PREFLIGHT-2026-001.png" alt="Two-epoch BurnLens preflight chart with train and validation core counts, validation Dice and BCE, and explicit no-model boundary."></section>
+<section class="card" aria-labelledby="history"><h2 id="history">Exact two-epoch history</h2><div class="table-wrap"><table><thead><tr><th>Epoch</th><th>Train BCE</th><th>Validation BCE</th><th>Event-class macro Dice</th><th>Event-class macro IoU</th><th>Worst-event macro Dice</th></tr></thead><tbody><tr><td>1</td><td>0.702446043</td><td>0.672325308</td><td>0.392018779</td><td>0.330128205</td><td>0.333333333</td></tr><tr><td>2</td><td>0.699159265</td><td>0.671666085</td><td>0.392018779</td><td>0.330128205</td><td>0.333333333</td></tr></tbody></table></div></section>
+<section class="card" aria-labelledby="lineage"><h2 id="lineage">Lineage</h2><dl><dt>Run</dt><dd><code>BL-2026-07-25-p3o1-t01-u03-preflight-r001</code></dd><dt>Source commit</dt><dd><code>fbb2e923ae7f9ca9ed7dbb317e4235a236ae2411</code></dd><dt>Protocol SHA-256</dt><dd><code>e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6</code></dd><dt>Disposition</dt><dd><code>pass-preflight-not-model</code></dd></dl></section>
+</main>
+</body>
+</html>

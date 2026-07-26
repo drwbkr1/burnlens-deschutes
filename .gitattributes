@@ -424,3 +424,9 @@ records/phase-three/implementations/BOUNDED-UNET-REFERENCE-2026-001.json text eo
 burnlens/unet_experiment.py text eol=lf
 burnlens/build_unet_preflight.py text eol=lf
 tests/test_unet_experiment.py text eol=lf
+records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json text eol=lf
+records/phase-three/protocols/EXPERIMENT-PROTOCOL-FREEZE-2026-001.json text eol=lf
+records/phase-three/prechecks/PRECHECK-2026-002.md text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.json text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.html text eol=lf
+samples/evaluation/phase-three/preflight-v0.1.0/*.png -text

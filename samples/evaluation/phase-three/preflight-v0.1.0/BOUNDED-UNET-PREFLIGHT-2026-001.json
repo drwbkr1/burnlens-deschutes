@@ -1,0 +1,289 @@
+{
+  "preflight_version": "burnlens-bounded-unet-preflight-v0.1.0",
+  "preflight_id": "BOUNDED-UNET-PREFLIGHT-2026-001",
+  "generated_at_utc": "2026-07-26T00:40:48Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u03-preflight-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U03",
+  "git_source_commit": "fbb2e923ae7f9ca9ed7dbb317e4235a236ae2411",
+  "software_version": "0.52.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "protocol": {
+    "path": "records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json",
+    "bytes": 12308,
+    "sha256": "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6"
+  },
+  "architecture": {
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "family": "U-Net-style binary semantic segmentation",
+    "input_shape": [
+      6,
+      64,
+      64
+    ],
+    "encoder_channels": [
+      16,
+      32
+    ],
+    "bottleneck_channels": 64,
+    "decoder_channels": [
+      32,
+      16
+    ],
+    "output_channels": 1,
+    "batch_normalization": false,
+    "dropout": false,
+    "pretrained_weights": false,
+    "trainable_parameter_count": 117473
+  },
+  "environment": {
+    "torch": "2.13.0+cpu",
+    "device": "cpu",
+    "seed": 20260725,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "threads": 1,
+    "interop_threads": 1
+  },
+  "smoke_contract": {
+    "epochs": 2,
+    "batch_size": 4,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weights_retained": false,
+    "checkpoint_retained": false,
+    "substantive_training": false
+  },
+  "roster": {
+    "train_patch_ids": [
+      "train--event-green-ridge-0684-cs-2020--GRP-001--r252c149h64w64",
+      "train--event-green-ridge-0684-cs-2020--GRP-002--r438c580h64w64",
+      "train--event-tepee-1144-ne-2018--RCP-005--r3c287h64w64",
+      "train--event-tepee-1144-ne-2018--RCP-006--r6c219h64w64"
+    ],
+    "train_event_group_ids": [
+      "event-green-ridge-0684-cs-2020",
+      "event-tepee-1144-ne-2018"
+    ],
+    "train_core_pixels": 109,
+    "validation_patch_ids": [
+      "validation--event-grandview-0558-od-2021--GVP-001--r197c297h64w64",
+      "validation--event-grandview-0558-od-2021--GVP-002--r598c339h64w64",
+      "validation--event-mckay-1035-ne-2017--RCP-003--r0c7h64w64",
+      "validation--event-mckay-1035-ne-2017--RCP-004--r21c66h64w64"
+    ],
+    "validation_event_group_ids": [
+      "event-grandview-0558-od-2021",
+      "event-mckay-1035-ne-2017"
+    ],
+    "validation_core_pixels": 89,
+    "test_patch_ids_opened": [],
+    "test_event_group_ids_opened": []
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_masked_bce": 0.7024460434913635,
+      "validation": {
+        "event_count": 2,
+        "core_pixels": 89,
+        "masked_bce": 0.6723253084032723,
+        "event_class_macro_dice": 0.392018779342723,
+        "event_class_macro_iou": 0.3301282051282051,
+        "worst_event_macro_dice": 0.3333333333333333,
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "patch_count": 2,
+            "masked_bce": 0.6958901882171631,
+            "threshold": 0.5,
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              }
+            ],
+            "class_macro_dice": 0.3333333333333333,
+            "class_macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "patch_count": 2,
+            "masked_bce": 0.6421139240264893,
+            "threshold": 0.5,
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 7,
+                "dice_denominator": 7,
+                "iou_denominator": 7,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 39,
+                "true_positive": 32,
+                "false_positive": 7,
+                "false_negative": 0,
+                "dice_denominator": 71,
+                "iou_denominator": 39,
+                "dice": 0.9014084507042254,
+                "iou": 0.8205128205128205
+              }
+            ],
+            "class_macro_dice": 0.4507042253521127,
+            "class_macro_iou": 0.41025641025641024
+          }
+        ]
+      },
+      "checkpoint_improved": true,
+      "would_early_stop": false
+    },
+    {
+      "epoch": 2,
+      "train_masked_bce": 0.6991592645645142,
+      "validation": {
+        "event_count": 2,
+        "core_pixels": 89,
+        "masked_bce": 0.6716660850503472,
+        "event_class_macro_dice": 0.392018779342723,
+        "event_class_macro_iou": 0.3301282051282051,
+        "worst_event_macro_dice": 0.3333333333333333,
+        "events": [
+          {
+            "event_group_id": "event-grandview-0558-od-2021",
+            "patch_count": 2,
+            "masked_bce": 0.6963605284690857,
+            "threshold": 0.5,
+            "core_pixels": 50,
+            "classes": [
+              {
+                "class": "background",
+                "support": 25,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 25,
+                "dice_denominator": 25,
+                "iou_denominator": 25,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 25,
+                "predicted": 50,
+                "true_positive": 25,
+                "false_positive": 25,
+                "false_negative": 0,
+                "dice_denominator": 75,
+                "iou_denominator": 50,
+                "dice": 0.6666666666666666,
+                "iou": 0.5
+              }
+            ],
+            "class_macro_dice": 0.3333333333333333,
+            "class_macro_iou": 0.25
+          },
+          {
+            "event_group_id": "event-mckay-1035-ne-2017",
+            "patch_count": 2,
+            "masked_bce": 0.6400065422058105,
+            "threshold": 0.5,
+            "core_pixels": 39,
+            "classes": [
+              {
+                "class": "background",
+                "support": 7,
+                "predicted": 0,
+                "true_positive": 0,
+                "false_positive": 0,
+                "false_negative": 7,
+                "dice_denominator": 7,
+                "iou_denominator": 7,
+                "dice": 0.0,
+                "iou": 0.0
+              },
+              {
+                "class": "burned",
+                "support": 32,
+                "predicted": 39,
+                "true_positive": 32,
+                "false_positive": 7,
+                "false_negative": 0,
+                "dice_denominator": 71,
+                "iou_denominator": 39,
+                "dice": 0.9014084507042254,
+                "iou": 0.8205128205128205
+              }
+            ],
+            "class_macro_dice": 0.4507042253521127,
+            "class_macro_iou": 0.41025641025641024
+          }
+        ]
+      },
+      "checkpoint_improved": true,
+      "would_early_stop": false
+    }
+  ],
+  "selected_preflight_epoch": 2,
+  "warnings": [
+    "Two-epoch train/validation connectivity smoke only; not the substantive U04 training run.",
+    "No preflight weights or checkpoint may be used as the model candidate.",
+    "Owner-approved prototype labels are not independent ground truth or field validation.",
+    "The frozen RBR baseline remains at the selected-core metric ceiling."
+  ],
+  "gates": {
+    "protocol_bound": true,
+    "train_and_validation_only": true,
+    "test_arrays_opened": false,
+    "finite": true,
+    "exact_loss_mask": true,
+    "optimizer_step": true,
+    "render_required": true,
+    "weights_retained": false
+  },
+  "disposition": "pass-preflight-not-model",
+  "next_dependency": "P3O1-T01-U04 one substantive training run after exact U03 freeze",
+  "outputs": {
+    "png": {
+      "path": "samples/evaluation/phase-three/preflight-v0.1.0/BOUNDED-UNET-PREFLIGHT-2026-001.png",
+      "bytes": 77226,
+      "sha256": "5ed09247b98f8d3033e5c1dafef2b7cc0e07a2ff13830082e8da250a3869ba5e"
+    },
+    "html": {
+      "path": "samples/evaluation/phase-three/preflight-v0.1.0/BOUNDED-UNET-PREFLIGHT-2026-001.html",
+      "bytes": 3544,
+      "sha256": "22c4c6c6dbfb6c0df2f7cbcba54296f4407d1b9d8ac370aa5427e90bee6235a3"
+    }
+  }
+}
