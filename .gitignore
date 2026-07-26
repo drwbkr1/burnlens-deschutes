@@ -219,6 +219,11 @@ tempCodeRunnerFile.py
 # portfolio replays and release-audit scratch outputs also remain here.
 runs/phase-three/
 
+# Repository-local Phase Four immutable attempts, clean-checkout replays, and
+# intermediate run state. Accepted public artifacts are promoted separately
+# under samples/runs/phase-four/ after all package gates pass.
+runs/phase-four/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/
