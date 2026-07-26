@@ -23,8 +23,17 @@
 | `P3O1-T01-U03-PREFLIGHT-R001` | `BL-2026-07-25-p3o1-t01-u03-preflight-r001` | two train/validation epochs; 109/89 cores; finite; no weights/checkpoint; test unopened | `pass-preflight-not-model` | render |
 | `P3O1-T01-U03-RENDER-R001` | exact 3,544-byte HTML and 77,226-byte PNG | desktop/narrow layout; complete image; two rows; no external resources/logs; visible boundaries | `pass-with-tool-limit` | detached replay |
 | `P3O1-T01-U03-DETACHED-R001` | fresh detached worktree at `fbb2e92...` | exact four-artifact replay; 28 focused tests; compile; lock; diff | `pass` | U04 |
+| `P3O1-T01-U04-TEST-R001` | first focused training suite | 24 pass / two stale synthetic-fixture failures / three stale editable-install failures | `retained-failure` | correct fixtures and resync exact lock |
+| `P3O1-T01-U04-CODE-R001` | `5179a745f091c29d095461d511633f055967ef91`; remote-equal branch | frozen-protocol training harness, append-only epochs, atomic candidate, rendered diagnostics | `pass` | detached proof |
+| `P3O1-T01-U04-DETACHED-R001` | fresh model profile at `5179a745...` | 28 distributions; 107/107 commands; deterministic CPU smoke; 35 focused tests; compile/lock/diff/real-entry | `pass` | substantive run |
+| `P3O1-T01-U04-TRAINING-R001` | `BL-2026-07-25-p3o1-t01-u04-training-r001`; 43 ignored files / 3,592,037 bytes; inventory `e260d8b9...` | one 35-epoch run; epoch 10 selected from validation; append-only custody; test unopened | `pass-candidate-frozen` | independent verification |
+| `P3O1-T01-U04-CANDIDATE-VERIFY-R001` | nine candidate artifacts; weights `703d9257...`; selection `6dcae9af...` | exact receipts; history/selection/stopping recomputation; checkpoints reload; no test request | `pass` | render |
+| `P3O1-T01-U04-RENDER-R001` | exact 8,176-byte HTML and 80,920-byte PNG | desktop/narrow layout; complete chart; 35 rows; contained table overflow; no external resources/logs; visible boundaries | `pass-with-tool-limit` | commit and push U04 evidence |
 
 U01 opens no dataset array. U02 and U03 open only the permitted train and
-validation arrays for bounded ephemeral smoke evidence; sealed test arrays
-remain unopened. No substantive training or promoted model/checkpoint exists.
-The exact next eligible unit is `P3O1-T01-U04`.
+validation arrays for bounded ephemeral smoke evidence. U04 performs the one
+authorized substantive train/validation experiment and freezes a validation-only
+candidate. Sealed Ward Creek/Windigo test arrays remain unopened. No accepted or
+released model, test metric, model-value claim, inference, or deployment exists.
+The exact next eligible unit is `P3O1-T01-U05`, but only after the U04 evidence
+commit is pushed.

@@ -76,3 +76,30 @@ than overstated as a captured-image pass.
 Ward Creek and Windigo remain unopened. No substantive training, weight,
 checkpoint, model evaluation, inference, or portfolio-readiness claim exists.
 U04 can now run the one authorized experiment without revisiting its design.
+
+## 2026-07-25 — the first candidate is useful because its weakness is visible
+
+The one substantive run is complete. It trains for 35 epochs, stops under the
+frozen patience rule, and selects epoch 10 without opening the test role. The
+candidate looks strong on Grandview's balanced validation evidence, then
+collapses to all-burned predictions on McKay. That contrast is more valuable
+than the aggregate alone: it makes the model's event sensitivity inspectable
+before anyone can mistake a single validation score for generalization.
+
+The run also closes a reproducibility loop around the actual training process.
+Every epoch has an append-only record, the ignored run has a canonical
+inventory hash, and the promoted configuration, complete history, selected and
+final checkpoints, model-only weights, JSON, HTML, and PNG each have exact
+receipts. Independent checks recompute selection and early stopping and reload
+the retained states.
+
+The rendered page keeps the warning next to the result: these are
+owner-approved prototype labels, not independent ground truth, and the sealed
+test still has not been opened. Desktop and narrow layouts preserve the full
+history with contained table overflow. The browser tool could not complete a
+horizontal-scroll gesture, so the measured overflow is retained as a tool
+limitation rather than overstated as an interaction pass.
+
+This is a candidate, not an accepted or released model. U05 is now the single
+high-risk gate: one exact, authorization-bound test opening against Ward Creek
+and Windigo, with no retry or tuning path.

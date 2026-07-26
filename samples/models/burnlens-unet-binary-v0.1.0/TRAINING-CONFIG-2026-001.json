@@ -1,0 +1,318 @@
+{
+  "training_config_version": "burnlens-bounded-unet-training-config-v0.1.0",
+  "training_config_id": "BOUNDED-UNET-TRAINING-CONFIG-2026-001",
+  "generated_at_utc": "2026-07-26T01:36:46Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u04-training-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U04",
+  "git_source_commit": "5179a745f091c29d095461d511633f055967ef91",
+  "software_version": "0.52.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+  "protocol": {
+    "path": "records/phase-three/manifests/BOUNDED-UNET-EXPERIMENT-PROTOCOL-2026-001.json",
+    "bytes": 12308,
+    "sha256": "e2a0146ebcef4102b246f7a2117e09d21f441354eda0ceb4df764bbaebe940a6",
+    "source_commit": "fbb2e923ae7f9ca9ed7dbb317e4235a236ae2411"
+  },
+  "environment_capture": {
+    "path": "records/phase-three/environments/MODEL-ENVIRONMENT-CAPTURE-2026-001.json",
+    "bytes": 8146,
+    "sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36"
+  },
+  "exact_inputs": {
+    "dataset_manifest": {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16"
+    },
+    "normalization": {
+      "path": "records/phase-two/manifests/TRAIN-NORMALIZATION-2026-001.json",
+      "bytes": 2694,
+      "sha256": "6344861677753e9c96840f47e7a038a15f12a0c29759285c073f5cc6ea4bc255"
+    },
+    "training_contract": {
+      "path": "records/phase-two/manifests/BOUNDED-UNET-TRAINING-CONTRACT-2026-001.json",
+      "bytes": 8992,
+      "sha256": "670dbb0712768dd0b8ef47a2c5305b736b21139029017a194e4ed747029c9166"
+    },
+    "split_manifest": {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99"
+    },
+    "baseline_evaluation": {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+    }
+  },
+  "architecture": {
+    "family": "U-Net-style binary semantic segmentation",
+    "model_version_candidate": "burnlens-unet-binary-v0.1.0",
+    "encoder_channels": [
+      16,
+      32
+    ],
+    "bottleneck_channels": 64,
+    "decoder_channels": [
+      32,
+      16
+    ],
+    "convolution_blocks": "two 3x3 stride-1 padding-1 convolutions with ReLU per block",
+    "downsampling": "2x2 max pooling",
+    "upsampling": "2x2 transposed convolution with skip concatenation",
+    "output_head": "1x1 convolution to one logit channel",
+    "batch_normalization": false,
+    "dropout": false,
+    "pretrained_weights": false,
+    "model_count": 1
+  },
+  "data": {
+    "channel_order": [
+      "pre_B04",
+      "pre_B8A",
+      "pre_B12",
+      "post_B04",
+      "post_B8A",
+      "post_B12"
+    ],
+    "input_shape": [
+      6,
+      64,
+      64
+    ],
+    "input_dtype": "float32",
+    "target_shape": [
+      1,
+      64,
+      64
+    ],
+    "target": "state == 1",
+    "loss_mask": "exact input_valid AND state in {0,1}",
+    "normalization": "frozen train-only per-channel mean/population std",
+    "batch_order": "canonical dataset-manifest order",
+    "shuffle": false,
+    "augmentation": "none",
+    "train_events": [
+      "event-green-ridge-0684-cs-2020",
+      "event-tepee-1144-ne-2018"
+    ],
+    "validation_events": [
+      "event-grandview-0558-od-2021",
+      "event-mckay-1035-ne-2017"
+    ],
+    "test_events": [
+      "event-ward-creek-2019",
+      "event-windigo-2022"
+    ],
+    "sealed_test_roster": [
+      {
+        "patch_id": "test--event-ward-creek-2019--WCP-001--r168c236h64w64",
+        "event_group_id": "event-ward-creek-2019",
+        "files": [
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/features.npy",
+            "bytes": 98432,
+            "sha256": "4034070f6913c00028cb4980375ee6d5719a2bcda545ee0b364a99fa760727e3"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/input_valid.npy",
+            "bytes": 4224,
+            "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/loss_mask.npy",
+            "bytes": 4224,
+            "sha256": "43842138739e72655876b7a3d298a6d671fd9c91f8deadbc4bdbbbe504ff69b1"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-001--r168c236h64w64/state.npy",
+            "bytes": 4224,
+            "sha256": "0ddc8acaf4a4c2f73d5a60f58006f7b1520b9efb99a494e37544014bdfb4f2c9"
+          }
+        ]
+      },
+      {
+        "patch_id": "test--event-ward-creek-2019--WCP-002--r68c401h64w64",
+        "event_group_id": "event-ward-creek-2019",
+        "files": [
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/features.npy",
+            "bytes": 98432,
+            "sha256": "0cac49a855d07d91c743e8024f0f1cf04a3f23301fc1dcfe8985c9d0caf3ca50"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/input_valid.npy",
+            "bytes": 4224,
+            "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/loss_mask.npy",
+            "bytes": 4224,
+            "sha256": "f1ac5ebb76908fcf0553316db36d298bce901c8d208003868bd403a498f4fa46"
+          },
+          {
+            "path": "patches/test--event-ward-creek-2019--WCP-002--r68c401h64w64/state.npy",
+            "bytes": 4224,
+            "sha256": "923109ba696fbade72da3b2b1a49c3ed3ee8191cb35551a0133b99a5a5b07fa1"
+          }
+        ]
+      },
+      {
+        "patch_id": "test--event-windigo-2022--WDP-001--r180c151h64w64",
+        "event_group_id": "event-windigo-2022",
+        "files": [
+          {
+            "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/features.npy",
+            "bytes": 98432,
+            "sha256": "ee05b92709836c19064a57f652cb61166f23929225daa7b6ef88396bce9089a3"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/input_valid.npy",
+            "bytes": 4224,
+            "sha256": "0836bbab60907a9edecaf4e5db9468d57c5f9b12f573b4cc38310186dad6589d"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/loss_mask.npy",
+            "bytes": 4224,
+            "sha256": "269a9b91438e1b5f880cf25c5051401e6aa86169e0c39cbec213863396b68847"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-001--r180c151h64w64/state.npy",
+            "bytes": 4224,
+            "sha256": "3e89e3c2bdb5e07b32bebf490a3aef53b1832d95fedb82f1419d5e4c088fc453"
+          }
+        ]
+      },
+      {
+        "patch_id": "test--event-windigo-2022--WDP-002--r103c393h64w64",
+        "event_group_id": "event-windigo-2022",
+        "files": [
+          {
+            "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/features.npy",
+            "bytes": 98432,
+            "sha256": "e07ce3cd2c89ece9801a8bd227a8bfff9be3c78de6527c6fd62d17e38bc87d06"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/input_valid.npy",
+            "bytes": 4224,
+            "sha256": "fe0fc71777eafd69ae42d67057cdef223abc70a2690b29d73202b051ef90d4b7"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/loss_mask.npy",
+            "bytes": 4224,
+            "sha256": "8a22f97e9b381f61a938551105cc5cceeabee429137b14990e5d01c756f2f743"
+          },
+          {
+            "path": "patches/test--event-windigo-2022--WDP-002--r103c393h64w64/state.npy",
+            "bytes": 4224,
+            "sha256": "aadc1d9c2707c56df5354ed02d6a667143c5c7d22e89eafa6e7c54717e74d3a4"
+          }
+        ]
+      }
+    ]
+  },
+  "optimization": {
+    "framework": "torch==2.13.0",
+    "python": "CPython 3.12.10",
+    "device": "cpu",
+    "dtype": "float32",
+    "seed": 20260725,
+    "seed_python": true,
+    "seed_numpy": true,
+    "seed_torch": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "loss": "BCEWithLogitsLoss(reduction='none')",
+    "loss_reduction": "mean over exact loss-mask pixels only",
+    "positive_class_weight": null,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 4,
+    "maximum_epochs": 200,
+    "early_stopping_patience": 25,
+    "early_stopping_min_delta": 1e-06,
+    "gradient_clipping": null,
+    "mixed_precision": false,
+    "num_workers": 0,
+    "intra_op_threads": 1,
+    "interop_threads": 1
+  },
+  "checkpoint_selection": {
+    "probability_threshold": 0.5,
+    "primary": "maximize validation event-class macro Dice",
+    "tie_break_1": "maximize validation event-class macro IoU",
+    "tie_break_2": "minimize validation masked BCE",
+    "tie_break_3": "earliest epoch",
+    "test_access": "one model-evaluation opening only after code, environment, weights checkpoint, and selection are frozen",
+    "post_test_changes": "none; any change requires a new model version and leaves the original result immutable"
+  },
+  "compute_budget": {
+    "device": "one local CPU",
+    "substantive_run_count": 1,
+    "batch_size": 4,
+    "maximum_epochs": 200,
+    "early_stopping_patience": 25,
+    "preflight_epochs": 2,
+    "preflight_weights_retained": false,
+    "architecture_or_hyperparameter_search": false
+  },
+  "test_opening": {
+    "authorization_version": "burnlens-sealed-test-authorization-v0.1.0",
+    "authorization_directory": "records/phase-three/test-openings",
+    "authorization_unit": "P3O1-T01-U05",
+    "authorization_status_required": "AUTHORIZED_NOT_OPENED",
+    "open_count_before_required": 0,
+    "open_count_authorized": 1,
+    "required_candidate_bindings": [
+      "config_sha256",
+      "weights_sha256",
+      "selection_sha256",
+      "environment_capture_sha256"
+    ],
+    "missing_or_mismatched_authorization": "fail before numpy.load",
+    "receipt": "no-overwrite exact-byte receipt after the single U05 evaluation",
+    "post_test_change": "prohibited; any change creates a new model version and leaves the first result immutable"
+  },
+  "retention": {
+    "preflight": "tracked samples/evaluation/phase-three/preflight-v0.1.0",
+    "substantive_working": "ignored repository-local runs/phase-three",
+    "candidate": "tracked samples/models/burnlens-unet-binary-v0.1.0 after U04 gates",
+    "failed_attempts": "retained with immutable attempt IDs and dispositions",
+    "overwrite": "prohibited"
+  },
+  "claims": {
+    "prototype_labels_only": true,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "model_superiority": false,
+    "official_or_operational": false,
+    "final_submission_ready": false
+  },
+  "stop_conditions": [
+    "locked dependency resolution or isolated setup fails",
+    "exact dataset, split, normalization, or baseline binding drifts",
+    "any train/validation/test event or patch crosses roles",
+    "unknown, nodata, or invalid pixels enter loss or metrics",
+    "test data influences architecture, hyperparameters, stopping, or checkpoint selection",
+    "any required tensor, loss, gradient, weight, probability, or metric is nonfinite",
+    "same-environment replay differs",
+    "a result cannot be rendered and inspected",
+    "a claim exceeds the evidence or established use boundaries"
+  ],
+  "boundaries": {
+    "substantive_run_count_authorized": 1,
+    "test_arrays_opened": false,
+    "test_open_count": 0,
+    "test_access_authorized": false,
+    "architecture_or_hyperparameter_search": false,
+    "dataset_split_label_normalization_or_baseline_change": false
+  }
+}
