@@ -468,3 +468,20 @@ docs/phases/phase-04/PHASE_04_OBJECTIVES.md text eol=lf
 records/prompt-build-log/2026-07-26-v053-lifecycle-sync.md text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.json text eol=lf
 portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html text eol=lf
+
+# P4O1-T01 exact contracts, records, code, tests, and future run products.
+burnlens/phase_four_*.py text eol=lf
+tests/test_phase_four_*.py text eol=lf
+records/phase-four/**/*.json text eol=lf
+records/phase-four/**/*.md text eol=lf
+records/prompt-build-log/2026-07-26-p4o1-t01.md text eol=lf
+samples/runs/phase-four/**/*.json text eol=lf
+samples/runs/phase-four/**/*.html text eol=lf
+samples/runs/phase-four/**/*.css text eol=lf
+samples/runs/phase-four/**/*.js text eol=lf
+samples/runs/phase-four/**/*.md text eol=lf
+samples/runs/phase-four/**/*.txt text eol=lf
+samples/runs/phase-four/**/*.geojson text eol=lf
+samples/runs/phase-four/**/*.png -text
+samples/runs/phase-four/**/*.tif -text
+samples/runs/phase-four/**/*.gpkg -text
