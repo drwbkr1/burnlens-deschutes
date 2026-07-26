@@ -212,3 +212,18 @@ narrow pages remain contained, every repository destination resolves, and no
 external resource loads. The next user-visible weakness is now clear rather
 than hidden: BurnLens still needs a georeferenced RBR-primary analytical run
 and application path.
+
+## 2026-07-26 — make the canonical checkout prove its own LF contract
+
+The model and portfolio tests pass, but the complete suite finds one
+release-blocking portability defect in the long-lived Windows checkout. Three
+tracked files still carry CRLF working bytes from before their explicit LF
+rules. Git would correct them in a fresh clone; BurnLens refuses to rely on
+that inference when the canonical checkout is the release candidate.
+
+The failure is retained after 728 passing tests, one expected skip, and 86
+passing subtests. A targeted rerun passes all eight environment tests and
+confirms the checkout mismatch again before commit. The correction is limited
+to meaningful release-QA notes and exact LF formatting in those three files.
+No scientific or model evidence changes, and the PR remains blocked until a
+clean exact commit passes the same contract and full suite.

@@ -215,7 +215,8 @@ tempCodeRunnerFile.py
 .pypirc
 
 # Repository-local Phase Three substantive run state. Controlled candidate
-# artifacts are promoted separately under samples/models/.
+# artifacts are promoted separately under samples/models/. Deterministic
+# portfolio replays and release-audit scratch outputs also remain here.
 runs/phase-three/
 
 # Marimo

@@ -197,6 +197,11 @@ Owner approval is required before changing the core CV task or phase outcome; cr
 
 ## Expected handoff to Phase Four
 
+P3O1-T01 currently supplies a valid baseline-only handoff: the frozen U-Net
+trains, evaluates, and replays exactly but loses to RBR and is rejected as the
+analytical winner. Phase Four must keep RBR primary and may show the U-Net only
+as a visibly rejected diagnostic.
+
 The handoff must provide:
 
 - selected model version or baseline-only decision;

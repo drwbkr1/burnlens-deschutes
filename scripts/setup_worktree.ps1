@@ -77,6 +77,8 @@ try {
         }
     }
 
+    # Keep setup profiles least-privilege. Complete release QA may explicitly
+    # sync both geo-research and model extras before running the full suite.
     $syncArguments = @('sync', '--locked')
     switch ($Profile) {
         'dev' {

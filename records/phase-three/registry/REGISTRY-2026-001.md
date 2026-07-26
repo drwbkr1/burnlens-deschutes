@@ -47,6 +47,8 @@
 | `P3O1-T01-U06-RENDER-R001` | exact 3,981-byte HTML and 79,512-byte PNG | desktop/narrow layout; complete image; three valid local links; no overflow/external resources; visible rejection, lineage, and boundaries | `pass` | coherent milestone PR |
 | `P3O1-T01-U06-PORTABILITY-R001` | exact remote-equal source `5cbf32f43fdaa2830bb26f2177db3b7112384b5d`; package record SHA-256 `22552092...` unchanged | explicit LF contracts for Phase Three JSON/Markdown/objective under Windows `core.autocrlf=true`; no scientific or package-byte change | `pass` | reviewer build |
 | `P3O1-T01-U06-PORTFOLIO-R001` | run `BL-2026-07-26-p3o1-t01-u06-portfolio-r001`; JSON 9,859 bytes / `9c536bc3...`; HTML 18,256 bytes / `ba345974...` | exact replay; desktop/narrow no overflow; two native-size images; 10 repository links and 6 fragments pass; no browser log or external resource; visible rejected-model and use boundaries | `pass-candidate-pr-release-pending` | coherent milestone PR |
+| `P3O1-T01-U06-RELEASE-QA-R001` | candidate `d1101a0...`; combined full suite | 728 pass / 1 expected skip / 86 subtests; one three-file working-byte checkout mismatch | `retained-checkout-failure` | exact LF remediation |
+| `P3O1-T01-U06-RELEASE-QA-R002` | targeted checkout plus environment profiles | eight environment tests pass; checkout still rejects uncommitted CRLF working bytes | `retained-precommit-failure` | commit LF bytes, then rerun |
 
 U01 opens no dataset array. U02 and U03 use only train/validation arrays for
 bounded smoke evidence. U04 performs the one authorized substantive
