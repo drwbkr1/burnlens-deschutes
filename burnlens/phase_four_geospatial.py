@@ -27,7 +27,7 @@ from burnlens.phase_four_contract import load_contract
 
 
 GEOSPATIAL_VERSION = "burnlens-phase-four-geospatial-v0.1.0"
-SOFTWARE_VERSION = "0.53.0"
+SOFTWARE_VERSION = "0.54.0"
 RUN_ROOT = Path("runs/phase-four")
 U02_RECORD_PATH = Path(
     "records/phase-four/analyses/PHASE-FOUR-ANALYSIS-RECORD-2026-001.json"

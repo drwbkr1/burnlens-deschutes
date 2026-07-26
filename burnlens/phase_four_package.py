@@ -18,7 +18,7 @@ PACKAGE_VERSION = "burnlens-ward-creek-rbr-run-v0.1.0"
 PACKAGE_ID = "BURNLENS-WARD-CREEK-RBR-RUN-2026-001"
 ARCHIVE_NAME = f"{PACKAGE_ID}.zip"
 RECEIPT_NAME = f"{PACKAGE_ID}-RECEIPT.json"
-SOFTWARE_VERSION = "0.53.0"
+SOFTWARE_VERSION = "0.54.0"
 RUN_ID_PATTERN = re.compile(
     r"^BL-[0-9]{4}-[0-9]{2}-[0-9]{2}-p4o1-t01-u07-package-r[0-9]{3}$"
 )

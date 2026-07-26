@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 OVERLAY_VERSION = "burnlens-phase-four-overlay-v0.1.0"
-SOFTWARE_VERSION = "0.53.0"
+SOFTWARE_VERSION = "0.54.0"
 RUN_ROOT = Path("runs/phase-four")
 RUN_ID_PATTERN = re.compile(
     r"^BL-[0-9]{4}-[0-9]{2}-[0-9]{2}-p4o1-t01-u05-overlay-r[0-9]{3}$"

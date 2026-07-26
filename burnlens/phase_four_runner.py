@@ -31,7 +31,7 @@ from burnlens.phase_four_contract import (
 
 
 ANALYSIS_VERSION = "burnlens-phase-four-analysis-v0.1.0"
-SOFTWARE_VERSION = "0.53.0"
+SOFTWARE_VERSION = "0.54.0"
 RUN_ROOT = Path("runs/phase-four")
 DATASET_ROOT = Path("samples/datasets/burnlens-dataset-v0.1.0")
 NORMALIZATION_PATH = Path(

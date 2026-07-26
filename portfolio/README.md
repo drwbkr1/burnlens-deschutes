@@ -2,21 +2,23 @@
 
 ## Two-minute path
 
-1. Open `BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html`.
-2. Read the trained, reproducible, and rejected U-Net result beside RBR.
-3. Read the retained Petes Lake stop.
-4. Check the lineage table, rejected-model status, and remaining GEOINT gap.
+1. Open
+   `../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html`.
+2. Focus WCP-001 and WCP-002, then toggle the rejected U-Net diagnostic.
+3. Read the result comparison, source roles, warnings, and textual equivalent.
+4. Inspect `phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip`
+   or the extracted package README for exact replay and checksums.
 
-The page runs locally without a network connection. It loads only tracked
-repository files. It has no analytics, upload, credential, mailbox, provider,
-or private-custody access.
+The interface runs locally without a network connection and embeds its map
+assets. It has no analytics, upload, credential, mailbox, provider, private
+custody, or live-fire access.
 
 ## What BurnLens proves
 
 BurnLens traces a bounded burn-scar computer-vision task through versioned
 optical and official evidence, deterministic proposals, owner review,
-uncertainty boundaries, event-level leakage controls, and reproducible
-geospatial artifacts.
+uncertainty boundaries, event-level leakage controls, a trained model,
+geospatial artifacts, and an immutable run package.
 
 The accepted Phase Two package has 12 native-grid patches across McKay,
 Tepee, Green Ridge, Grandview, Windigo, and Ward Creek. The whole-event split
@@ -25,9 +27,15 @@ and train-only normalization excludes validation and test. The selected RBR
 baseline reaches 1.0 Dice and IoU on the 89 selected test cores under the one
 authorized sealed baseline opening. P3O1-T01 then trains one bounded U-Net,
 consumes its separate model test opening once, and reproduces the complete
-history and weights. The U-Net predicts every selected test core as burned and
-scores 0.299 macro Dice against RBR 1.0, so BurnLens rejects it as the
+history and weights. The U-Net predicts every selected test core as burned
+and scores 0.299 macro Dice against RBR 1.0, so BurnLens rejects it as the
 analytical winner and preserves it only as diagnostic evidence.
+
+Phase Four then applies exact RBR to Ward Creek, writes native-grid rasters
+and accepted vectors, measures bounded relationships to official context,
+preserves WCP-002's false-positive-risk evidence, and packages the complete
+evidence chain. The local interface keeps accepted RBR, rejected U-Net,
+official reference, and contextual layers visibly separate.
 
 ## What BurnLens does not prove
 
@@ -36,40 +44,42 @@ analytical winner and preserves it only as diagnostic evidence.
 - The balanced review roster does not estimate natural class prevalence.
 - One valid trained/evaluated model exists, but it is not accepted as the
   analytical method and does not demonstrate added value.
-- No georeferenced model inference, integrated analytical application,
-  deployment, or final-submission-ready evidence exists.
+- The integrated application is a bounded local/offline evidence interface,
+  not a deployed or operational system.
 - The perfect selected-core baseline does not establish natural prevalence,
   complete-scar performance, independent truth, or generalization.
 - BurnLens is not official, endorsed, field-validated, operational, or
   emergency-ready.
 
-## Rebuild
+## Replay and validate
 
-From the repository root, run:
+Validate either tracked package form from the repository root:
 
 ```powershell
-burnlens-build-portfolio-reviewer-experience `
-  --repository-root . `
-  --output-directory portfolio `
-  --generated-at-utc <RECORDED_UTC_TIMESTAMP> `
-  --run-id <IMMUTABLE_RUN_ID> `
-  --git-source-commit <FULL_40_CHARACTER_COMMIT>
+burnlens-validate-phase-four-package `
+  --package-path samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0
+
+burnlens-validate-phase-four-package `
+  --package-path portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip
 ```
 
-The builder validates the exact tracked dataset, split, baseline,
-model-readiness, rejected-model package, and Petes Lake retained-failure inputs
-before writing. It refuses changed inputs and existing outputs.
-
-For a clean reproducibility check, use a new ignored output directory and the
-same timestamp, run ID, and commit. The JSON and HTML must match byte for byte.
+The validator checks checksums, safe structure, geospatial products, interface
+semantics, analytical status, and the rejected-model boundary. Exact rebuild
+requires checkout of source commit
+`733a3c265be2c351a50bfd356d1b45da15cbfec0` plus the governed ignored custody
+listed in `REPLAY.md`; a clean tracked-only checkout can still validate and
+repack the accepted package byte-identically.
 
 ## Deeper review
 
 - Read the [full case study](../docs/case-study/BURNLENS_CASE_STUDY.md).
+- Open the [Phase Four interface](../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html).
+- Read the [immutable package report](../samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/REPORT.md).
+- Read the [Phase Four package record](../records/phase-four/packages/PHASE-FOUR-RUN-PACKAGE-RECORD-2026-001.json).
 - Open the [Phase Three model decision](../samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html).
 - Read the [rejected-model package record](../records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json).
 - Read the [Petes Lake material-defer decision](../docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md).
-- Inspect the [latest verified v0.53 release audit](../records/phase-three/release-audits/RELEASE-AUDIT-2026-002.json).
+- Inspect the [latest verified v0.53 release audit](../records/phase-three/release-audits/RELEASE-AUDIT-2026-002.json) until the 0.54 milestone completes its fresh-main gate.
 
 Official sources govern. This local portfolio surface is explanatory evidence,
 not an operational wildfire application.

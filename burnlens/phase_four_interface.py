@@ -15,7 +15,7 @@ from typing import Any, Callable, Iterable
 
 INTERFACE_VERSION = "burnlens-phase-four-interface-v0.1.0"
 INTERFACE_ID = "PHASE-FOUR-EVIDENCE-INTERFACE-2026-001"
-SOFTWARE_VERSION = "0.53.0"
+SOFTWARE_VERSION = "0.54.0"
 RUN_ID_PATTERN = re.compile(
     r"^BL-[0-9]{4}-[0-9]{2}-[0-9]{2}-p4o1-t01-u06-interface-r[0-9]{3}$"
 )

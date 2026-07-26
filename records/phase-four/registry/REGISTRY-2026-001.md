@@ -35,6 +35,9 @@ from PR #569.
 | `P4O1-T01-U06-DUPLICATE-R003` | retained no-overwrite attempt | Existing accepted U06 output directory | Duplicate invocation exits 1 with `refusing to overwrite nonempty output directory`; both accepted hashes remain exact. `retained-no-overwrite-refusal`. | U07 |
 | `P4O1-T01-U07-PACKAGE-R001` | run `BL-2026-07-26-p4o1-t01-u07-package-r001`; source `733a3c2...`; portability `25926b2...` | 66 extracted files / 1,795,388 bytes; ZIP 487,893 bytes / `91308a2f...`; manifest `b15f5d00...`; checksums `eb08e659...`; receipt `e2c80230...` | Both tracked forms validate; a fresh locked detached checkout reproduces the ZIP byte-identically, renders the packaged interface at desktop and narrow widths, and passes contract/compile/JSON/privacy/claim gates. The naive custody-dependent builder suite retains `11 passed, 1 failed, 18 errors` because ignored U02-U05 custody is correctly absent; no application/package defect is inferred. U07 `pass`. | U08 milestone release and portfolio handoff |
 | `P4O1-T01-U07-DUPLICATE-R002` | retained no-overwrite attempt | Existing extracted directory, ZIP, receipt, manifest, and checksums | Duplicate invocation exits 1 with `refusing to overwrite nonempty extracted directory`; all four tracked hashes remain unchanged. `retained-no-overwrite-refusal`. | U08 |
+| `P4O1-T01-U08-WHEEL-R001` | retained release-package attempt | Two 1,166,315-byte BurnLens 0.54.0 wheels | Hashes `d82fe154...` and `519a6055...` differ because the wrapper omitted fixed `SOURCE_DATE_EPOCH`. `retained-failed-wheel-determinism`; no tracked or scientific byte changed. | Repeat with fixed epoch |
+| `P4O1-T01-U08-WHEEL-R002` | candidate package attempt | `SOURCE_DATE_EPOCH=1785094504`; `PYTHONHASHSEED=0`; two 1,166,315-byte wheels / `ad3ae7c8...`; isolated CPython 3.12.10 | Wheels are byte-identical. Isolated BurnLens 0.54.0 imports geo/model dependencies, passes dependency health, and all 114 command helps. `pass`. | Committed-head regression |
+| `P4O1-T01-U08-FULL-REGRESSION-R001` | retained pre-commit regression | 755 passed / 4 failed / 1 skipped / 252 warnings / 86 subtests | Three environment profiles correctly report installed editable 0.53.0 versus source/lock 0.54.0 before sync; checkout-contract test correctly finds 48 uncommitted candidate files. `retained-pre-commit-state-failure`; no application/scientific defect inferred. | Sync lock, commit candidate, rerun clean committed head |
 
 ## Current truth
 
@@ -74,6 +77,10 @@ from PR #569.
   package and exact ZIP validate and reproduce byte-identically in a clean
   detached checkout. Its packaged interface passes desktop and narrow render
   and interaction. U08 is eligible.
+- U08 is active. BurnLens 0.54.0, current truth surfaces, case study,
+  quickstart, and release records form one candidate. Focused tests, both
+  package validators, fixed-epoch wheels, isolated install, and all 114
+  command helps pass. A clean committed-head full regression is the next gate.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as

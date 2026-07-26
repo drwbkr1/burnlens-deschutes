@@ -511,7 +511,7 @@ def _acquire(uri: str) -> tuple[bytes, str]:
         uri,
         headers={
             "Accept": "application/geo+json, application/json",
-            "User-Agent": "BurnLens/0.53.0 phase-four-context-intake",
+            "User-Agent": "BurnLens/0.54.0 phase-four-context-intake",
         },
         method="GET",
     )
