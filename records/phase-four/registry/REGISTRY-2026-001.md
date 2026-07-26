@@ -14,6 +14,7 @@ from PR #569.
 | `P4O1-T01-U01-CONTRACT-R001` | run `BL-2026-07-26-p4o1-t01-u01-contract-r001` | Contract JSON 19,991 bytes / `a50966b3...`; fail-closed loader 9,285 bytes / `877fd1aa...`; four-test validator 2,463 bytes / `0f4810cf...` | Candidate freezes RBR primary, rejected U-Net diagnostic, exact roster and bytes, component ownership, state taxonomy, output/run contracts, failure behavior, claims, no-Phase-3B and no-second-experiment boundaries. | Independent validation, commit, and recoverable push; then U02 |
 | `P4O1-T01-U01-PORTABILITY-R001` | post-commit checkout gate | Commit `09eaf6b...`; new Phase Four text families | Index and current worktree contain LF, but the first committed checkpoint lacks explicit Phase Four checkout attributes. Correct within U01 before detached verification; no artifact bytes or semantics changed. `remediate`. | Add exact LF/binary rules and verify clean checkout |
 | `P4O1-T01-U01-CUSTODY-R001` | detached-checkout preflight | Contract-declared `runs/phase-four/` root | The first preflight finds the path is not ignored and creates no directory. Add a repository-local ignore rule before any Phase Four attempt or clean-checkout state is created. `remediate`; zero run bytes created. | Verify ignore behavior, commit, and run detached checkout |
+| `P4O1-T01-U01-VERIFY-R001` | detached commit `f43907f0fc770351514410621e8bc07cd6a18195` | Fresh ignored worktree; locked 18-distribution dev environment; exact contract `a50966b3...` | Phase Four evidence checks out LF; four focused tests, loader, compilation, lock, dependency, diff, and clean-status gates pass. Temporary worktree is removed after verification. U01 `pass`. | P4O1-T01-U02 deterministic analytical runner |
 
 ## Current truth
 
@@ -27,6 +28,8 @@ from PR #569.
 - No Phase 3B, second experiment, new label, dataset, split, AOI, threshold,
   provider transaction, context acquisition, inference output, deployment, or
   public-sharing change exists at U01.
+- U01 is complete at the independently verified `f43907f...` checkpoint; its
+  next eligible dependency is U02.
 
 All later failed, superseded, degraded, no-detection, fallback, failed, and
 withheld attempts remain in this registry rather than being rewritten as
