@@ -24,6 +24,10 @@ from burnlens.phase_four_package import (
 
 REPORT_ID = "PHASE-FIVE-FAILURE-INJECTION-2026-001"
 REPORT_VERSION = "burnlens-phase-five-failure-injection-v0.1.0"
+RECORD_PATH = Path(
+    "records/phase-five/failure-injections/"
+    "PHASE-FIVE-FAILURE-INJECTION-RECORD-2026-001.json"
+)
 RUN_ID_PATTERN = (
     "BL-2026-07-26-p5o1-t01-u02-failure-injection-r"
 )
@@ -396,6 +400,105 @@ def run_failure_injections(
         "result_bytes": result_bytes,
         "html_bytes": html_bytes,
         "complete": complete,
+    }
+
+
+def validate_failure_record(repository_root: Path) -> dict[str, Any]:
+    """Reconstruct fixture identities and validate tracked U02 evidence."""
+
+    root = repository_root.resolve()
+    try:
+        record = json.loads((root / RECORD_PATH).read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise PhaseFiveFailureInjectionError(
+            "invalid failure-injection record"
+        ) from exc
+    if (
+        not isinstance(record, dict)
+        or record.get("record_id")
+        != "PHASE-FIVE-FAILURE-INJECTION-RECORD-2026-001"
+        or record.get("implementation_commit")
+        != "b868ff007670b98b385eaeb2060b942fb38c7a4c"
+        or record.get("disposition") != "pass"
+    ):
+        raise PhaseFiveFailureInjectionError(
+            "failure-injection record binding drift"
+        )
+    attempts = record.get("attempts")
+    if (
+        not isinstance(attempts, list)
+        or len(attempts) != 2
+        or attempts[0].get("disposition") != "remediate"
+        or attempts[1].get("disposition") != "pass"
+    ):
+        raise PhaseFiveFailureInjectionError(
+            "failure-injection attempt ledger drift"
+        )
+    passed = attempts[1]
+    fixtures = build_injection_archives(root / CANONICAL_ARCHIVE)
+    inventory = {
+        item["path"].removeprefix("fixtures/"): item
+        for item in passed["ignored_run_inventory"]["files"]
+        if item["path"].startswith("fixtures/")
+    }
+    if len(inventory) != len(EXPECTED_ERRORS):
+        raise PhaseFiveFailureInjectionError(
+            "failure fixture inventory drift"
+        )
+    for injection_id, payload in fixtures.items():
+        item = inventory.get(f"{injection_id}.zip")
+        if (
+            item is None
+            or item.get("bytes") != len(payload)
+            or item.get("sha256") != _sha256_bytes(payload)
+        ):
+            raise PhaseFiveFailureInjectionError(
+                f"failure fixture identity drift: {injection_id}"
+            )
+    for item in passed.get("public_outputs", []):
+        path = root / item["path"]
+        if (
+            not path.is_file()
+            or path.stat().st_size != item["bytes"]
+            or _sha256_file(path) != item["sha256"]
+        ):
+            raise PhaseFiveFailureInjectionError(
+                f"public failure evidence drift: {item['path']}"
+            )
+    public_json = root / (
+        "samples/qa/phase-five/failure-injection-v0.1.0/"
+        f"{REPORT_ID}.json"
+    )
+    public_html = public_json.with_suffix(".html")
+    result = json.loads(public_json.read_text(encoding="utf-8"))
+    html = public_html.read_text(encoding="utf-8")
+    if (
+        result.get("disposition") != "pass"
+        or len(result.get("injections", [])) != 5
+        or not all(
+            item.get("accepted") is False
+            and item.get("actual_error") == EXPECTED_ERRORS[item["injection_id"]]
+            for item in result["injections"]
+        )
+        or "connect-src 'none'" not in html
+        or "Failure is rejected before it can look accepted." not in html
+        or "rejected diagnostic" not in html
+        or "operational readiness" in html.lower()
+    ):
+        raise PhaseFiveFailureInjectionError(
+            "public failure evidence semantic drift"
+        )
+    canonical = _canonical_identity(root)
+    if canonical != result.get("canonical_before"):
+        raise PhaseFiveFailureInjectionError(
+            "canonical recovery identity drift"
+        )
+    return {
+        "result": "PHASE_FIVE_FAILURE_RECORD_VALIDATION_PASS",
+        "fixture_count": len(fixtures),
+        "public_output_count": len(passed["public_outputs"]),
+        "canonical_archive_sha256": canonical["archive"]["sha256"],
+        "canonical_interface_sha256": canonical["interface"]["sha256"],
     }
 
 

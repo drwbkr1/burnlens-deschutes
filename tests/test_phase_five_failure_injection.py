@@ -10,6 +10,7 @@ from burnlens.phase_five_failure_injection import (
     PhaseFiveFailureInjectionError,
     build_injection_archives,
     run_failure_injections,
+    validate_failure_record,
 )
 
 
@@ -77,6 +78,15 @@ class PhaseFiveFailureInjectionTests(unittest.TestCase):
                     git_source_commit=COMMIT,
                     require_clean=False,
                 )
+
+    def test_tracked_failure_record_reconstructs(self) -> None:
+        result = validate_failure_record(ROOT)
+        self.assertEqual(
+            result["result"],
+            "PHASE_FIVE_FAILURE_RECORD_VALIDATION_PASS",
+        )
+        self.assertEqual(result["fixture_count"], 5)
+        self.assertEqual(result["public_output_count"], 2)
 
 
 if __name__ == "__main__":

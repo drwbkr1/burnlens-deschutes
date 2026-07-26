@@ -224,6 +224,11 @@ runs/phase-three/
 # under samples/runs/phase-four/ after all package gates pass.
 runs/phase-four/
 
+# Repository-local Phase Five failure fixtures, reconstruction attempts, and
+# rollback rehearsal state. Public evidence is promoted separately under
+# samples/qa/phase-five/ after exact hash and recovery gates pass.
+runs/phase-five/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

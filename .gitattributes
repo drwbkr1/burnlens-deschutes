@@ -486,6 +486,7 @@ samples/runs/phase-four/**/*.html text eol=lf
 samples/runs/phase-four/**/*.css text eol=lf
 samples/qa/phase-five/**/*.json text eol=lf
 samples/qa/phase-five/**/*.md text eol=lf
+samples/qa/phase-five/**/*.html text eol=lf
 samples/runs/phase-four/**/*.js text eol=lf
 samples/runs/phase-four/**/*.md text eol=lf
 samples/runs/phase-four/**/*.txt text eol=lf
