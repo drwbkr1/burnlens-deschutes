@@ -58,9 +58,11 @@ class PhaseFourInterfaceTests(unittest.TestCase):
         html = self.first["outputs"][OUTPUT_HTML].decode("utf-8")
         for token in (
             'id="evidence-map"',
+            'svg.focused .patch-label',
             'data-toggle="accepted-rbr"',
             'data-toggle="rejected-unet"',
             'data-opacity="mtbs"',
+            'data-focus="WCP-002"',
             'aria-labelledby="map-title map-desc"',
             'id="text-equivalent"',
             'class="skip"',
