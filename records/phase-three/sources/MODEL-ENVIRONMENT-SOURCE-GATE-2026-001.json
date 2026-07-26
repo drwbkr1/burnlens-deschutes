@@ -1,0 +1,152 @@
+{
+  "source_gate_version": "burnlens-model-environment-source-gate-v0.1.0",
+  "source_gate_id": "MODEL-ENVIRONMENT-SOURCE-GATE-2026-001",
+  "generated_at_utc": "2026-07-26T00:07:33Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u01-environment-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U01",
+  "git_source_commit": "ddf32dbfee5a29e0fe362859c456e7a362fee20c",
+  "purpose": "Approve or stop the exact free, CPU-only framework and reproducibility environment before model implementation or dataset-array access.",
+  "sources": [
+    {
+      "source_id": "pypi-torch-2.13.0-project",
+      "authority": "Python Package Index project metadata",
+      "url": "https://pypi.org/project/torch/2.13.0/",
+      "accessed_at_utc": "2026-07-26T00:07:33Z",
+      "role": "package_identity_terms_platform",
+      "findings": [
+        "The release is torch 2.13.0, requires Python >=3.10, and is not yanked.",
+        "The PyPI metadata identifies the license expression as Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT.",
+        "The project metadata is the primary registry identity; it does not by itself prove installed execution."
+      ]
+    },
+    {
+      "source_id": "pypi-torch-2.13.0-json",
+      "authority": "Python Package Index JSON API",
+      "url": "https://pypi.org/pypi/torch/2.13.0/json",
+      "accessed_at_utc": "2026-07-26T00:07:33Z",
+      "role": "exact_distribution_identity",
+      "distribution": {
+        "filename": "torch-2.13.0-cp312-cp312-win_amd64.whl",
+        "bytes": 122057313,
+        "sha256": "024c6cc0c1b085f2f91f20a3dc27b0471d021c31ce84b81be3afdc39f791fd9d",
+        "uploaded_at_utc": "2026-07-08T16:03:53.430266Z",
+        "requires_python": ">=3.10",
+        "yanked": false
+      }
+    },
+    {
+      "source_id": "pypi-setuptools-82.0.0-json",
+      "authority": "Python Package Index JSON API",
+      "url": "https://pypi.org/pypi/setuptools/82.0.0/json",
+      "accessed_at_utc": "2026-07-26T00:07:33Z",
+      "role": "exact_build_dependency_identity",
+      "distribution": {
+        "filename": "setuptools-82.0.0-py3-none-any.whl",
+        "bytes": 1003468,
+        "sha256": "70b18734b607bd1da571d097d236cfcfacaf01de45717d59e6e04b96877532e0",
+        "uploaded_at_utc": "2026-02-08T15:08:38.723596Z",
+        "requires_python": ">=3.9",
+        "license_expression": "MIT",
+        "yanked": false
+      }
+    },
+    {
+      "source_id": "pytorch-2.13-deterministic-algorithms",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.use_deterministic_algorithms.html",
+      "accessed_at_utc": "2026-07-25T22:40:00Z",
+      "role": "deterministic_execution_contract",
+      "findings": [
+        "With warn_only false, PyTorch raises when an operation lacks a deterministic implementation.",
+        "The setting alone is not sufficient for complete application reproducibility."
+      ],
+      "boundary": "BurnLens must also freeze software, hardware, seeds, threads, data order, preprocessing, checkpoint selection, and test access."
+    },
+    {
+      "source_id": "pytorch-2.13-randomness",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+      "accessed_at_utc": "2026-07-25T22:40:00Z",
+      "role": "reproducibility_boundary",
+      "findings": [
+        "Exact reproducibility is not guaranteed across releases, commits, platforms, or CPU and GPU execution.",
+        "Python, NumPy, and PyTorch random generators must be controlled.",
+        "Deterministic operations can be slower."
+      ],
+      "boundary": "BurnLens requires exact replay only in the same locked Windows CPU environment and makes no cross-platform exactness claim."
+    },
+    {
+      "source_id": "pytorch-windows-faq",
+      "authority": "PyTorch official documentation",
+      "url": "https://docs.pytorch.org/docs/main/notes/windows.html",
+      "accessed_at_utc": "2026-07-25T22:40:00Z",
+      "role": "windows_execution",
+      "findings": [
+        "PyTorch on Windows requires a 64-bit environment.",
+        "A zero-worker data path avoids Windows multiprocessing complications for this tiny fixed experiment."
+      ]
+    },
+    {
+      "source_id": "uv-project-sync",
+      "authority": "uv official documentation",
+      "url": "https://docs.astral.sh/uv/concepts/projects/sync/",
+      "accessed_at_utc": "2026-07-25T22:40:00Z",
+      "role": "lock_and_sync_contract",
+      "findings": [
+        "uv lock --check verifies lock freshness.",
+        "Project synchronization is exact by default and supports named optional dependency profiles.",
+        "BurnLens uses uv sync --locked so evidence setup cannot rewrite the lock."
+      ]
+    },
+    {
+      "source_id": "ghsa-h35f-9h28-mq5c",
+      "authority": "GitHub Advisory Database",
+      "url": "https://github.com/advisories/GHSA-h35f-9h28-mq5c",
+      "accessed_at_utc": "2026-07-25T23:05:00Z",
+      "role": "dependency_security",
+      "findings": [
+        "Setuptools versions below 83.0.0 are affected by CVE-2026-59890.",
+        "The vulnerable path is Unicode-normalization bypass in MANIFEST.in exclusions while building an sdist on normalization-preserving macOS filesystems.",
+        "The advisory rates the issue medium with CVSS 6.1."
+      ],
+      "checkpoint_disposition": {
+        "status": "resolved_by_non_applicability_and_enforced_boundary",
+        "facts": [
+          "The locked evidence host is Windows 11 on NTFS, not macOS APFS or HFS+.",
+          "The repository has no MANIFEST.in.",
+          "All 1656 tracked paths are ASCII and NFC.",
+          "P3O1-T01 does not build or publish a source distribution."
+        ],
+        "stop_trigger": "Stop before any sdist build, macOS evidence execution, or manifest exclusion until the contract is amended to a fixed setuptools release or an equivalent reviewed mitigation."
+      }
+    }
+  ],
+  "rights_and_access": {
+    "status": "pass",
+    "access": "Public official documentation, public registry metadata, and the public advisory were read without authentication.",
+    "dependency_terms_resolved": true,
+    "paid_service_or_secret": false,
+    "provider_data_acquired": false,
+    "repository_data_or_label_rights_changed": false
+  },
+  "source_precedence": {
+    "package_identity": "PyPI release metadata and exact uv.lock distribution identity",
+    "framework_behavior": "PyTorch official documentation plus installed offline verification",
+    "environment_behavior": "uv official documentation plus repository-owned setup and smoke",
+    "security": "GitHub Advisory Database plus local applicability checks"
+  },
+  "gates": {
+    "identity": "pass",
+    "availability": "pass",
+    "terms_and_license": "pass",
+    "platform_fit": "pass",
+    "reproducibility_limits": "pass_with_explicit_same_environment_boundary",
+    "security": "pass_with_disclosed_non_applicable_setuptools_finding",
+    "paid_or_secret": "pass",
+    "provider_or_scientific_data": "not_applicable"
+  },
+  "disposition": "pass",
+  "next_dependency": "P3O1-T01-U02 reference implementation; no training or test opening"
+}
