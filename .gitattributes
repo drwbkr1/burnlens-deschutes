@@ -421,3 +421,6 @@ docs/devlog/2026-07-25-bounded-unet-milestone.md text eol=lf
 burnlens/bounded_unet.py text eol=lf
 tests/test_bounded_unet.py text eol=lf
 records/phase-three/implementations/BOUNDED-UNET-REFERENCE-2026-001.json text eol=lf
+burnlens/unet_experiment.py text eol=lf
+burnlens/build_unet_preflight.py text eol=lf
+tests/test_unet_experiment.py text eol=lf

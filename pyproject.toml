@@ -142,6 +142,7 @@ burnlens-build-dataset = "burnlens.build_dataset:main"
 burnlens-run-dataset-qa = "burnlens.run_dataset_qa:main"
 burnlens-run-baseline-evaluation = "burnlens.run_baseline_evaluation:main"
 burnlens-run-model-readiness = "burnlens.run_model_readiness:main"
+burnlens-build-unet-preflight = "burnlens.build_unet_preflight:main"
 
 [tool.setuptools]
 packages = ["burnlens"]

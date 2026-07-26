@@ -114,18 +114,37 @@ class ModelExample:
     input_valid: Tensor
 
 
-def load_model_examples(root: Path, roles: Iterable[str]) -> list[ModelExample]:
+@dataclass(frozen=True)
+class TestAccessGrant:
+    """A validated, exact-candidate capability for the single U05 opening."""
+
+    opening_id: str
+    authorization_path: str
+    authorization_sha256: str
+    config_sha256: str
+    weights_sha256: str
+    selection_sha256: str
+    authorized: bool
+
+
+def load_model_examples(
+    root: Path,
+    roles: Iterable[str],
+    test_access_grant: TestAccessGrant | None = None,
+) -> list[ModelExample]:
     """Load only permitted development roles in canonical manifest order."""
 
     requested = frozenset(roles)
     if not requested:
         raise BoundedUNetError("at least one development role is required")
     if SEALED_TEST_ROLE in requested:
-        raise SealedTestAccessError(
-            "sealed test arrays require the frozen P3O1-T01-U05 opening mechanism"
-        )
-    if not requested.issubset(ALLOWED_DEVELOPMENT_ROLES):
-        raise BoundedUNetError(f"invalid development roles: {sorted(requested)}")
+        if test_access_grant is None or not test_access_grant.authorized:
+            raise SealedTestAccessError(
+                "sealed test arrays require the frozen P3O1-T01-U05 opening mechanism"
+            )
+    allowed_roles = ALLOWED_DEVELOPMENT_ROLES | {SEALED_TEST_ROLE}
+    if not requested.issubset(allowed_roles):
+        raise BoundedUNetError(f"invalid model roles: {sorted(requested)}")
 
     manifest = _read_bound_json(
         root, DATASET_MANIFEST_PATH, DATASET_MANIFEST_SHA256
