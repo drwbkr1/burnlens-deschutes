@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-002",
+  "verified_at_utc": "2026-07-27T03:00:08Z",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "geospatial",
+    "model",
+    "data",
+    "package",
+    "public",
+    "external"
+  ],
+  "release": {
+    "version": "0.55.0",
+    "tag": "v0.55.0-baseline-first-reliability-candidate",
+    "state": "verified-baseline-first-reliability-candidate",
+    "issue": 574,
+    "pull_request": 575,
+    "lifecycle_issue": 576,
+    "branch": "codex/p5o1-t01-reliability-release-candidate",
+    "branch_base": "3c0ec9ef893b0e610c6c38c70a191e5e67c09ca9",
+    "reviewed_head": "3eb2d0a58bd7236c28df4ba50058afcedd581003",
+    "reviewed_tree": "cf7c6e184e402fd2183e40d7da2ba3b2cb95a23a",
+    "merge_commit": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+    "merge_tree": "cf7c6e184e402fd2183e40d7da2ba3b2cb95a23a",
+    "tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+    "tag_peeled_target": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+    "candidate_builder_source": "dd1c270421250ce312d548b9571f91b4b806536b",
+    "candidate_freeze_commit": "1c799cd3f40c37013c71d9af9b15caea1d9c5417",
+    "checkout_contract_remediation": "a53bcd85413c524ae9fd0ac6007ba59ba778d532",
+    "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "deployment": null,
+    "github_release": null,
+    "external_submission": null
+  },
+  "candidate_artifacts": {
+    "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+    "package": {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1",
+      "file_count": 23,
+      "bytes": 981264,
+      "index_sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2",
+      "manifest_sha256": "9651aba9ea7c9a8aa403a5fc4900f7d8709d232bcb1938c08438b0f2e22f23a4",
+      "checksums_sha256": "e80e6145fc4d6d05f8c806a7077969e1d00b7f3fc140b11095830cedaf678985",
+      "known_issues_sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17",
+      "qa_matrix_sha256": "f6df882daf1be1dbea99276a045b9d22342c11dc7e53e186a206f654081a852f"
+    },
+    "archive": {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "receipt_sha256": "74931096ef4fd7132dcb5b2dfcdc7769f622ea6a882ac7cc10901ccbf4edb2ad"
+    },
+    "wheel": {
+      "path": "runs/phase-five/u06-r002/fresh-main-wheel-r002/burnlens_deschutes-0.55.0-py3-none-any.whl",
+      "bytes": 1207948,
+      "sha256": "1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6",
+      "source_date_epoch": 1785117520,
+      "python_hash_seed": 0
+    }
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope-and-science",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The exact Phase Four analytical package, dataset, split, labels, threshold, sources, AOI, and products remain unchanged.",
+        "RBR remains the accepted analytical method.",
+        "The trained U-Net remains a rejected first-class diagnostic and did not outperform RBR; no Phase 3B or second experiment was created."
+      ]
+    },
+    {
+      "id": "CHECK-002",
+      "category": "review-and-merge",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "PR #575 merged reviewed head 3eb2d0a58bd7236c28df4ba50058afcedd581003 through true two-parent commit 7066dcd9cef555a6df0716dc7568205e7d6d395e.",
+        "The reviewed and merged trees are identical at cf7c6e184e402fd2183e40d7da2ba3b2cb95a23a.",
+        "Issue #574 closed through the merged milestone."
+      ]
+    },
+    {
+      "id": "CHECK-003",
+      "category": "fresh-main-regression",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Fresh merged main passes 789 tests, one expected skip, 422 existing warnings, and 86 subtests in 656.97 seconds.",
+        "The exact stdout log is 9,639 bytes at SHA-256 afa98909452a64b963ad6f934ab89cdf81a4c81984180d3abe5c0d0b01518a5f.",
+        "Focused checkout and candidate validation passes seven tests."
+      ]
+    },
+    {
+      "id": "CHECK-004",
+      "category": "package-and-runtime",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Both candidate directory and archive validators pass on fresh merged main.",
+        "Fresh main reproduces the exact reviewed 1,207,948-byte wheel at SHA-256 1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6.",
+        "The successful native build log is 115,240 bytes at SHA-256 35bbe6c303aec75f2c69ee86c8c735cfc1a547daab2747343317448166ce64a3."
+      ]
+    },
+    {
+      "id": "CHECK-005",
+      "category": "render-and-reproducibility",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The exact candidate passed Microsoft Edge at 1440x1000 and 390x844 with all six local links and both core interfaces returning HTTP 200.",
+        "Keyboard-first focus, no horizontal overflow, no external resources, and no browser errors passed.",
+        "Independent ignored replay, two candidate wheels, both 120-command isolated profiles, and detached rollback passed."
+      ]
+    },
+    {
+      "id": "CHECK-006",
+      "category": "known-findings-and-failures",
+      "required": true,
+      "status": "pass-with-two-visible-medium-findings",
+      "evidence": [
+        "The bounded Windows ZIP-only mitigation for setuptools 82.0.0 GHSA-h35f-9h28-mq5c / CVE-2026-59890 remains visible.",
+        "The historical Phase Four setuptools 82.0.1 builder-identity omission remains visible with an exact reconstruction workaround.",
+        "Superseded candidate r001, regression failures, dirty-checkout failure, wrapper timeout, LF-checkout failure, and the fresh-main wrapper stderr-classification failure remain retained."
+      ]
+    },
+    {
+      "id": "CHECK-007",
+      "category": "tag-and-remote-identity",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Remote annotated tag object 33072144767e70bfa538079bda3be6f798477a9f peels exactly to merge 7066dcd9cef555a6df0716dc7568205e7d6d395e.",
+        "The tag was created at 2026-07-27T02:56:42Z.",
+        "No GitHub Release object was created."
+      ]
+    },
+    {
+      "id": "CHECK-008",
+      "category": "claims-privacy-and-rights",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "No model-superiority, independent-ground-truth, generalization, field-validation, official, endorsed, operational, emergency-use, or public-production claim is made.",
+        "No private owner-response bytes, provider retrieval detail, credential, token, ignored custody path, or raw provider archive is published.",
+        "No deployment, access, ownership, public-sharing, or external-submission change occurred."
+      ]
+    }
+  ],
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "P5O1-T01-U06-FRESH-MAIN-WHEEL-R001",
+      "disposition": "retained-wrapper-failure",
+      "result": "The PowerShell wrapper promoted uv's normal build-progress stderr line to failure before recording a wheel result.",
+      "provider_or_scientific_bytes_changed": false,
+      "application_or_scientific_defect_inferred": false
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-FRESH-MAIN-WHEEL-R002",
+      "disposition": "pass",
+      "wheel_bytes": 1207948,
+      "sha256": "1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6",
+      "native_build_log_bytes": 115240,
+      "native_build_log_sha256": "35bbe6c303aec75f2c69ee86c8c735cfc1a547daab2747343317448166ce64a3"
+    }
+  ],
+  "decision": {
+    "reported_status": "verified-baseline-first-reliability-candidate",
+    "phase_five": "accepted-and-verified",
+    "phase_six": "eligible-for-issue-backed-activation",
+    "github_release": "not-created",
+    "deployment": "not-created",
+    "external_submission": "not-authorized-or-attempted",
+    "rationale": "The reviewed merge, exact tree, fresh-main regression, deterministic package and wheel, isolated runtimes, rendered application, rollback, remote tag, claims, privacy, and retained-failure gates pass with two visible medium findings."
+  }
+}

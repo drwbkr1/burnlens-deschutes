@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.55.0-baseline-first-reliability-candidate - candidate - 2026-07-26
+## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 
 - Preserve the exact verified Phase Four RBR-primary package and rejected
   U-Net diagnostic without retraining, retuning, analytical regeneration, or
@@ -34,12 +34,16 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
   contract, then pass the complete clean suite at 789 tests, one expected
   skip, 422 existing warnings, and 86 subtests.
 
-Issue #574; run
+Issue #574 / PR #575; run
 `BL-2026-07-26-p5o1-t01-u06-release-candidate-r002`; candidate source
-`dd1c270421250ce312d548b9571f91b4b806536b`. This entry remains a candidate
-until the milestone PR, fresh-main gates, and annotated tag pass. No GitHub
-Release, deployment, access, ownership, public-sharing, or external-submission
-change is included.
+`dd1c270421250ce312d548b9571f91b4b806536b`. Reviewed head `3eb2d0a...`
+merges through true two-parent commit `7066dcd...` with exact tree equality.
+Fresh main passes 789 tests with one expected skip and 86 subtests and
+reproduces the exact 1,207,948-byte wheel at `1d0e862c...`. Remote annotated
+tag object `3307214...` peels exactly to the merge. Phase Five is accepted and
+verified, with two visible medium findings and no critical/high finding. No
+GitHub Release, deployment, access, ownership, public-sharing, or
+external-submission change is included.
 
 ## v0.54.0-rbr-geoint-milestone - verified - 2026-07-26
 

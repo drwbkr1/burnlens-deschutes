@@ -12,10 +12,11 @@
    `phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip`
    or its extracted manifest and checksums.
 
-The candidate runs locally without a network connection and includes its map
-assets and QA evidence. It has no analytics, upload, credential, mailbox,
-provider, private custody, or live-fire access. It is a Phase Five candidate
-pending milestone verification, not the final Phase Six publication.
+The verified Phase Five candidate runs locally without a network connection
+and includes its map assets and QA evidence. It has no analytics, upload,
+credential, mailbox, provider, private custody, or live-fire access. Reviewed
+merge, fresh-main, exact-wheel, rendered, rollback, and remote-tag gates pass.
+It is not the final Phase Six publication.
 
 ## What BurnLens proves
 

@@ -16,15 +16,17 @@ Harden the integrated workflow into a tested, reproducible, secure, accessible, 
 
 ## Current status
 
-**Active — baseline-first candidate frozen; milestone verification pending.**
+**Accepted and verified — Phase Six eligible.**
 
-P5O1-T01 / issue #574 completes U01-U06 on its issue branch and freezes
-BurnLens 0.55.0 candidate
-`burnlens-phase-five-baseline-first-candidate-v0.1.1`. It preserves the exact
+P5O1-T01 / issue #574 / PR #575 completes U01-U06 and verifies BurnLens
+0.55.0 candidate `burnlens-phase-five-baseline-first-candidate-v0.1.1`.
+Reviewed head `3eb2d0a...` merges at `7066dcd...` with exact tree equality.
+Fresh main passes 789 tests with one expected skip and 86 subtests, reproduces
+the exact 1,207,948-byte wheel at `1d0e862c...`, and remote annotated tag
+object `3307214...` peels to the merge. The candidate preserves the exact
 Phase Four analytical package, has no open critical/high finding, and exposes
-two medium findings with impact and workaround. Milestone merge, fresh-main
-verification, and annotated tag remain before Phase Five is verified and Phase
-Six becomes eligible.
+two medium findings with impact and workaround. Phase Five is verified and
+Phase Six may now activate through a separate issue-backed checkpoint.
 
 ## Phase purpose
 
