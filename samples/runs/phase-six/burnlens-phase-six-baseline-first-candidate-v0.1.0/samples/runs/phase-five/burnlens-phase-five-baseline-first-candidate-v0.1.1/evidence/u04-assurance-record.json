@@ -1,0 +1,197 @@
+{
+  "record_version": "burnlens-phase-five-assurance-record-v0.1.0",
+  "record_id": "PHASE-FIVE-ASSURANCE-RECORD-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U04",
+  "issue": 574,
+  "run_id": "BL-2026-07-26-p5o1-t01-u04-assurance-r002",
+  "generated_at_utc": "2026-07-26T22:19:26Z",
+  "implementation_commit": "e14717aeef7ac23c22d37b701327f63ac8613df2",
+  "verification_correction_commit": "4283a292a31ec31f9c1eb84ccb01b3970bb2e96a",
+  "inputs": [
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "verified immutable Phase Four archive"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0",
+      "bytes": 1795388,
+      "file_count": 66,
+      "role": "verified immutable Phase Four extracted package"
+    },
+    {
+      "path": "samples/qa/phase-five/reliability-interface-v0.1.0/PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.html",
+      "bytes": 179808,
+      "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316",
+      "role": "owner-confirmed U03 reliability interface"
+    },
+    {
+      "path": "runs/phase-five/BL-2026-07-26-p5o1-t01-u04-assurance-r002/inputs/pip-audit.json",
+      "bytes": 8609,
+      "sha256": "0650b170213ef3d66a3eb02264cb5eeec33e8bf89f297b39e4ec4b40c8a55ad2",
+      "tracked": false,
+      "role": "exact pip-audit 2.10.1 result"
+    },
+    {
+      "path": "runs/phase-five/BL-2026-07-26-p5o1-t01-u04-assurance-r002/inputs/GHSA-h35f-9h28-mq5c.json",
+      "bytes": 7271,
+      "sha256": "f6c7caa4419b8ded77f893ccbb47d973d93070e1ef6577bfa7f1e8a0ba436c97",
+      "tracked": false,
+      "role": "exact GitHub Advisory Database snapshot"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/qa/phase-five/assurance-v0.1.0/PHASE-FIVE-ASSURANCE-2026-001.json",
+      "bytes": 31276,
+      "sha256": "89c0c7896d94ae41157367cb1b6111d0d5b93a9e0bcd49f57155cd47ae808674"
+    },
+    {
+      "path": "samples/qa/phase-five/assurance-v0.1.0/PHASE-FIVE-ASSURANCE-2026-001.html",
+      "bytes": 3974,
+      "sha256": "ef666ae359896815dd234eec2171d42f93cb0b6e2ebb1dfd66445ff3bea572e8"
+    }
+  ],
+  "required_checks": {
+    "dependency_health": "pass; uv lock --check and uv pip check",
+    "known_vulnerability_classification": "pass-with-disclosed-medium-finding",
+    "secret_scan": "pass; zero findings in text-decodable release-package files",
+    "license_inventory": "pass; 75 installed distributions, zero missing metadata, dependency bytes not redistributed in the Phase Four ZIP",
+    "source_rights": "pass; four exact source records retain passed rights and privacy/security criteria",
+    "unsupported_claim_scan": "pass; zero affirmative phrase or prohibited true-boundary findings",
+    "public_artifact_privacy": "pass; zero findings in text-decodable release-package files",
+    "safe_archive_structure": "pass",
+    "schema_and_binding_validation": "pass",
+    "checksum_validation": "pass",
+    "no_external_runtime_request": "pass; zero runtime request paths",
+    "performance": "pass"
+  },
+  "vulnerability_classification": {
+    "scanner": "pip-audit 2.10.1",
+    "audited_distribution_count": 75,
+    "raw_finding_count": 2,
+    "unique_advisory_count": 1,
+    "package": "setuptools",
+    "version": "82.0.0",
+    "ghsa_id": "GHSA-h35f-9h28-mq5c",
+    "cve_id": "CVE-2026-59890",
+    "severity": "medium",
+    "cvss_v3_score": 6.1,
+    "fixed_version": "83.0.0",
+    "mitigation": {
+      "windows_ntfs_route": true,
+      "manifest_in_absent": true,
+      "tracked_paths_unicode_normalized": true,
+      "tracked_paths_ascii_only": true,
+      "sdist_absent_from_release_package": true,
+      "release_format_zip_only": true
+    },
+    "disposition": "Disclosed medium finding. The current Windows ZIP-only release route does not exercise the advisory's macOS source-distribution exclusion path.",
+    "known_vulnerability_free_claim": false
+  },
+  "performance": {
+    "archive_bytes": {
+      "actual": 487893,
+      "maximum": 750000,
+      "status": "pass"
+    },
+    "extracted_bytes": {
+      "actual": 1795388,
+      "maximum": 2500000,
+      "status": "pass"
+    },
+    "interface_html_bytes": {
+      "actual": 179808,
+      "maximum": 250000,
+      "status": "pass"
+    },
+    "package_validation_seconds": {
+      "sample_count": 6,
+      "actual_max": 2.913567,
+      "maximum": 5.0,
+      "status": "pass"
+    }
+  },
+  "regression_validation": {
+    "source_commit": "4b3d648ee186338262e9701894286d3f3dac1fb3",
+    "collection_count": 779,
+    "passed": 778,
+    "skipped": 1,
+    "subtests_passed": 86,
+    "warnings": 412,
+    "batch_results": [
+      {
+        "batch": 1,
+        "test_files": 30,
+        "passed": 181,
+        "skipped": 0,
+        "subtests_passed": 6,
+        "seconds": 350.70
+      },
+      {
+        "batch": 2,
+        "test_files": 30,
+        "passed": 178,
+        "skipped": 0,
+        "subtests_passed": 16,
+        "seconds": 167.66
+      },
+      {
+        "batch": 3,
+        "test_files": 30,
+        "passed": 256,
+        "skipped": 1,
+        "subtests_passed": 31,
+        "seconds": 125.22
+      },
+      {
+        "batch": 4,
+        "test_files": 30,
+        "passed": 159,
+        "skipped": 0,
+        "subtests_passed": 33,
+        "seconds": 162.51
+      },
+      {
+        "batch": 5,
+        "test_files": 1,
+        "passed": 4,
+        "skipped": 0,
+        "subtests_passed": 0,
+        "seconds": 23.99
+      }
+    ],
+    "checkout_contract_clean_rerun": "pass",
+    "status": "pass"
+  },
+  "render_evidence": {
+    "transport": "temporary repository-local loopback HTTP server",
+    "dom_snapshot": "pass; all headings, tables, limitations, route, exact run, commit, and archive hash exposed",
+    "desktop_screenshot": "pass; assurance status, accepted route, disclosed finding, and check table visibly readable",
+    "server_stopped": true,
+    "external_request": false,
+    "owner_confirmation_required": false
+  },
+  "retained_failures_and_limitations": [
+    "The first implementation test run failed because the secret scanner did not detect a quoted JSON credential key. The rule was corrected before the production run.",
+    "The first bounded regression batch found the runtime environment test still hard-coded the Phase Four 114-command count. Phase Five has 119 exact commands. Verification correction 4283a292a31ec31f9c1eb84ccb01b3970bb2e96a keeps the gate strict by comparing the installed names and count with the complete current pyproject.toml roster.",
+    "A later Batch 4 attempt stopped at the expected clean-checkout guard because this U04 record, registry, research record, and prompt log were intentionally uncommitted. It must be rerun after this evidence checkpoint is committed.",
+    "The preliminary r001 audit and production r002 audit each returned exit 1 because the disclosed setuptools advisory is present; the result was classified rather than suppressed.",
+    "pip-audit can report feed duplicates: two raw findings resolve to one unique advisory.",
+    "The scan reports known advisories present in configured feeds at scan time and is not a vulnerability-free claim.",
+    "The license inventory is supplier-metadata and exact source-rights evidence, not legal advice.",
+    "Pattern scans supplement rather than replace exact bindings and human review.",
+    "Performance timings are machine-specific bounded offline measurements, not universal browser or service benchmarks."
+  ],
+  "analytical_posture": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_accepted": false,
+    "rejected_model_outperformed_rbr": false,
+    "analytical_output_changed": false
+  },
+  "disposition": "pass-with-disclosed-medium-finding",
+  "next_dependency": "P5O1-T01-U05"
+}

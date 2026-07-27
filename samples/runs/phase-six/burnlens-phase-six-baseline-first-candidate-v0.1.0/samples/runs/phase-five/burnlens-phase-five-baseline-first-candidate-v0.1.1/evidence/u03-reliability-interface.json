@@ -1,0 +1,96 @@
+{
+  "report_version": "burnlens-phase-five-reliability-interface-v0.1.0",
+  "report_id": "PHASE-FIVE-RELIABILITY-INTERFACE-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U03",
+  "run_id": "BL-2026-07-26-p5o1-t01-u03-reliability-interface-r001",
+  "generated_at_utc": "2026-07-26T21:54:45Z",
+  "git_source_commit": "81473b03e897ced8a682b0bf3d428a75bab674ff",
+  "base_interface": {
+    "path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+    "bytes": 177666,
+    "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+  },
+  "failure_report": {
+    "path": "samples/qa/phase-five/failure-injection-v0.1.0/PHASE-FIVE-FAILURE-INJECTION-2026-001.json",
+    "bytes": 4590,
+    "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4"
+  },
+  "output_html": {
+    "path": "PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.html",
+    "bytes": 179808,
+    "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316"
+  },
+  "checks": {
+    "skip_target_focusable": true,
+    "rejected_unet_hidden_without_script": true,
+    "no_script_explanation": true,
+    "keyboard_native_controls": true,
+    "focus_visible": true,
+    "text_equivalent": true,
+    "non_color_failure_language": true,
+    "narrow_reflow": true,
+    "reduced_motion": true,
+    "offline_csp": true,
+    "external_runtime_reference": false
+  },
+  "contrast": [
+    {
+      "name": "body-text",
+      "foreground": "#eaf1ec",
+      "background": "#0c1614",
+      "ratio": 16.038,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "muted-text",
+      "foreground": "#aebdb6",
+      "background": "#14221f",
+      "ratio": 8.413,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "focus-indicator",
+      "foreground": "#fff27a",
+      "background": "#14221f",
+      "ratio": 14.264,
+      "minimum": 3.0,
+      "pass": true
+    },
+    {
+      "name": "accepted-accent",
+      "foreground": "#ff9d42",
+      "background": "#14221f",
+      "ratio": 7.943,
+      "minimum": 3.0,
+      "pass": true
+    },
+    {
+      "name": "rejected-accent",
+      "foreground": "#ff66c4",
+      "background": "#14221f",
+      "ratio": 6.219,
+      "minimum": 3.0,
+      "pass": true
+    }
+  ],
+  "owner_render_evidence": {
+    "canonical_interface_sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+    "canonical_render_confirmed": true,
+    "hardened_interface_render": "pending exact owner/browser review",
+    "automation_file_url_block_retained": true,
+    "browser_policy_bypass_prohibited": true
+  },
+  "boundaries": {
+    "analytical_output_changed": false,
+    "accepted_method_changed": false,
+    "rejected_model_promoted": false,
+    "model_outperformed_rbr": false,
+    "deployment": false,
+    "public_sharing_change": false
+  },
+  "disposition": "pending-render-review",
+  "next_dependency": "Exact desktop and narrow rendered/keyboard review"
+}

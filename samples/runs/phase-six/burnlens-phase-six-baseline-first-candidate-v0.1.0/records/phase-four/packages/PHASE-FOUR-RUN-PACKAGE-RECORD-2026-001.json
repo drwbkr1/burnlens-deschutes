@@ -1,0 +1,228 @@
+{
+  "record_version": "burnlens-phase-four-run-package-record-v0.1.0",
+  "record_id": "PHASE-FOUR-RUN-PACKAGE-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T19:11:54Z",
+  "unit_id": "P4O1-T01-U07",
+  "accepted_run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 570,
+  "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+  "branch_base_commit": "e8745b70c4cfe0d070e08e399efbab09e74cd06f",
+  "git_source_commit": "733a3c265be2c351a50bfd356d1b45da15cbfec0",
+  "candidate_output_commit": "3857d5c",
+  "portability_contract_commit": "25926b2f3602ec8dd8cdcdafcb2948a406cc8dae",
+  "software_version_at_execution": "0.53.0",
+  "state": "accepted-baseline",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "package": {
+    "package_id": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001",
+    "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+    "tracked_extracted_directory": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0",
+    "tracked_archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "member_count": 66,
+      "safe_structure": true
+    },
+    "tracked_receipt": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001-RECEIPT.json",
+      "bytes": 912,
+      "sha256": "e2c8023002cd3ec692e42191beadc446944e42eb5238df61d3a5e44680161000"
+    },
+    "extracted_file_count": 66,
+    "extracted_bytes": 1795388,
+    "package_manifest": {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+      "bytes": 13689,
+      "sha256": "b15f5d00c5a54c57b493dc902dc78c8c25a143efc3b069ff4d68b796b4543c4e"
+    },
+    "checksums": {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/CHECKSUMS.sha256",
+      "bytes": 7547,
+      "sha256": "eb08e65924a61ed0ca80018500e5693cce2a104cbcfcc95355d691b301838d7e"
+    },
+    "contained_unit_records": [
+      "PHASE-FOUR-INTEGRATION-CONTRACT-2026-001",
+      "PHASE-FOUR-ANALYSIS-RECORD-2026-001",
+      "PHASE-FOUR-GEOSPATIAL-RECORD-2026-001",
+      "PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001",
+      "PHASE-FOUR-CONTEXT-CUSTODY-RECORD-2026-001",
+      "PHASE-FOUR-OVERLAY-RECORD-2026-001",
+      "PHASE-FOUR-INTERFACE-RECORD-2026-001"
+    ],
+    "includes_exact_u01_through_u06_evidence": true,
+    "includes_exact_u02_arrays_and_logs": true,
+    "includes_native_geospatial_products": true,
+    "includes_bounded_context_and_observations": true,
+    "includes_self_contained_interface": true,
+    "includes_replay_and_warning_guidance": true,
+    "includes_source_inventory_and_exact_checksums": true
+  },
+  "analytical_truth": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "accepted_method_role": "primary analytical output",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_role": "diagnostic only",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "unet_used_for_measurement": false,
+    "WCP-001": {
+      "owner_class": "burned",
+      "accepted_rbr_hectares": 141.44,
+      "mtbs_overlap_hectares": 133.22,
+      "mtbs_overlap_percent": 94.19
+    },
+    "WCP-002": {
+      "owner_class": "background",
+      "accepted_rbr_hectares": 66.76,
+      "mtbs_overlap_hectares": 0.0,
+      "mtbs_overlap_percent": 0.0,
+      "visible_interpretation": "baseline false-positive-risk evidence"
+    }
+  },
+  "clean_checkout_reproduction": {
+    "worktree": "C:/Projects/Staging/burnlens-p4-u07-verify-25926b2",
+    "worktree_role": "temporary detached verification checkout; never canonical custody",
+    "exact_commit": "25926b2f3602ec8dd8cdcdafcb2948a406cc8dae",
+    "tracked_status_before_and_after": "clean detached HEAD",
+    "environment": {
+      "python": "CPython 3.12",
+      "lock": "uv.lock",
+      "profiles": [
+        "dev",
+        "model",
+        "geo-research"
+      ],
+      "distribution_count": 75,
+      "sync_locked": "pass",
+      "dependency_check": "pass"
+    },
+    "extracted_package_validator": "pass",
+    "archive_package_validator": "pass",
+    "fresh_repack_byte_identical": true,
+    "fresh_repack_archive_bytes": 487893,
+    "fresh_repack_archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "phase_four_contract_tests": "4 passed",
+    "json_parse": "33 files passed",
+    "compile": "pass",
+    "diff": "pass",
+    "portability_attributes": {
+      "samples/runs/phase-four/**/*.sha256": "text eol=lf",
+      "samples/runs/phase-four/**/*.npy": "-text",
+      "portfolio/phase-four/**/*.json": "text eol=lf",
+      "portfolio/phase-four/**/*.zip": "-text"
+    },
+    "temporary_worktree_removed_after_verification": true
+  },
+  "custody_dependent_test_scope": {
+    "naive_fresh_checkout_combined_suite_result": "11 passed, 1 failed, 18 errors",
+    "disposition": "retained-expected-custody-prerequisite-failure",
+    "cause": "Legacy U03-U06 builder tests require ignored U02-U05 source, provider, and run custody that a fresh clone intentionally does not contain.",
+    "missing_examples": [
+      "runs/phase-four/BL-2026-07-26-p4o1-t01-u02-analysis-r001",
+      "ignored Ward Creek MTBS provider archive",
+      "ignored U04 bounded context custody responses"
+    ],
+    "application_or_package_defect_inferred": false,
+    "tracked_package_validation_affected": false,
+    "source_arrays_reopened": false,
+    "correct_fresh_checkout_gates": [
+      "tracked extracted-package validator",
+      "tracked ZIP validator",
+      "byte-identical deterministic repack",
+      "Phase Four contract tests",
+      "JSON parse",
+      "compile and diff checks",
+      "real packaged-interface render and interaction"
+    ]
+  },
+  "rendered_package_qa": {
+    "document": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+    "transport": "temporary loopback HTTP for automated QA only",
+    "loopback_origin": "http://127.0.0.1:8878",
+    "external_requests": 0,
+    "server_process_stopped": true,
+    "browser_process_stopped": true,
+    "owner_confirmed_current_render_gate": true,
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "http_status": 200,
+      "title": "BurnLens - Ward Creek evidence interface",
+      "control_count": 15,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "page_errors": 0,
+      "external_requests": 0,
+      "layer_visibility_interaction": true,
+      "opacity_interaction": true,
+      "keyboard_patch_focus": true,
+      "focused_patch_labels_hidden": true,
+      "transient_screenshot": {
+        "bytes": 623899,
+        "sha256": "d8ea78f582e8f651d94de20bb8da7815529ebe1ac5164d869056ce79b9d3ef47",
+        "retained": false
+      }
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "page_errors": 0,
+      "external_requests": 0,
+      "transient_screenshot": {
+        "bytes": 468112,
+        "sha256": "5f4af2a6244327906068838ef005eb2faaed4b1c53c6cd0d10e0a20f2721004d",
+        "retained": false
+      }
+    }
+  },
+  "no_overwrite": {
+    "attempt_id": "P4O1-T01-U07-DUPLICATE-R002",
+    "exit_code": 1,
+    "error": "refusing to overwrite nonempty extracted directory",
+    "archive_sha256_unchanged": true,
+    "receipt_sha256_unchanged": true,
+    "package_manifest_sha256_unchanged": true,
+    "checksums_sha256_unchanged": true,
+    "preexisting_bytes_changed": false
+  },
+  "gates": {
+    "exact_input_and_output_identity": "pass",
+    "safe_archive_structure": "pass",
+    "manifest_and_checksums": "pass",
+    "geospatial_products": "pass",
+    "interface_semantics": "pass",
+    "accepted_RBR_and_rejected_UNet_separation": "pass",
+    "visible_uncertainty_and_failure_state": "pass",
+    "source_precedence_and_terms": "pass",
+    "privacy_and_secrets": "pass",
+    "claims": "pass",
+    "determinism": "pass",
+    "clean_checkout_reproduction": "pass",
+    "desktop_and_narrow_render": "pass",
+    "no_overwrite": "pass",
+    "release": "pending U08"
+  },
+  "boundaries": {
+    "new_label_dataset_split_aoi_threshold_or_training": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "model_superiority_claim": false,
+    "field_validation_claim": false,
+    "official_operational_endorsed_or_emergency_claim": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "external_submission": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P4O1-T01-U08 milestone release and portfolio handoff"
+}

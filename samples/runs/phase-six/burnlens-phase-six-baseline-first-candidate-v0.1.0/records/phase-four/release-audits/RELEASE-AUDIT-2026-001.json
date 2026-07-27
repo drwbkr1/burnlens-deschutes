@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-001",
+  "recorded_at_utc": "2026-07-26T21:10:10Z",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "geospatial",
+    "model",
+    "data",
+    "package",
+    "public",
+    "external"
+  ],
+  "release": {
+    "version": "0.54.0",
+    "tag": "v0.54.0-rbr-geoint-milestone",
+    "state": "verified",
+    "issue": 570,
+    "pull_request": 571,
+    "branch": "codex/p4o1-t01-rbr-geoint-milestone",
+    "branch_base": "e8745b70c4cfe0d070e08e399efbab09e74cd06f",
+    "u07_checkpoint": "8b92d97be055a6314586c8ea5437c828666291e8",
+    "candidate_commit": "d856a06cf9c62d12d633dacd614237baf912b24f",
+    "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+    "tag_object": "4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82",
+    "tag_peeled_target": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+    "run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+    "run_state": "accepted-baseline",
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "deployment": null,
+    "github_release": null,
+    "external_submission": null
+  },
+  "candidate_artifacts": {
+    "interface": {
+      "version": "burnlens-phase-four-interface-v0.1.0",
+      "path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    },
+    "run_package": {
+      "version": "burnlens-ward-creek-rbr-run-v0.1.0",
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0",
+      "file_count": 66,
+      "bytes": 1795388,
+      "manifest_sha256": "b15f5d00c5a54c57b493dc902dc78c8c25a143efc3b069ff4d68b796b4543c4e",
+      "checksums_sha256": "eb08e65924a61ed0ca80018500e5693cce2a104cbcfcc95355d691b301838d7e"
+    },
+    "archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    }
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope-and-science",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Issue #570 preserves the frozen dataset, split, RBR threshold, U-Net weights/threshold, source precedence, and use boundaries.",
+        "RBR is the only accepted analytical method; the U-Net remains rejected diagnostic evidence and is excluded from every U03-U07 measurement.",
+        "No retraining, retuning, second test opening, Phase 3B, or second experiment occurs."
+      ]
+    },
+    {
+      "id": "CHECK-002",
+      "category": "phase-four-products",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "U01-U07 pass with exact records, immutable run IDs, checksums, retained failures, and next dependencies.",
+        "Ten native-grid GeoTIFFs, 202 accepted-RBR polygons, bounded context, deterministic observations, and the self-contained interface validate.",
+        "WCP-002 preserves 66.76 ha accepted-RBR / zero MTBS-overlap false-positive-risk evidence."
+      ]
+    },
+    {
+      "id": "CHECK-003",
+      "category": "immutable-package",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Both tracked package forms pass the package validator.",
+        "A clean detached checkout at 25926b2f3602ec8dd8cdcdafcb2948a406cc8dae reproduces the ZIP byte-identically.",
+        "A duplicate production invocation fails closed and changes none of the archive, receipt, manifest, or checksum hashes."
+      ]
+    },
+    {
+      "id": "CHECK-004",
+      "category": "render-and-accessibility",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The exact packaged interface passes 1440x1000 and 390x844 Chrome QA with zero overflow, console errors, page errors, or external requests.",
+        "Keyboard patch focus, layer visibility, opacity, focused-label behavior, non-color roles, textual equivalence, and warning visibility pass.",
+        "The owner confirmed the current rendered gate."
+      ]
+    },
+    {
+      "id": "CHECK-005",
+      "category": "candidate-runtime",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The focused changed-risk suite passes 41 tests with 24 existing NumPy deprecation warnings.",
+        "Both package validators, compilation, lock, and 75-distribution dependency health pass.",
+        "The first unfixed-epoch wheel attempt is retained; corrected fixed-epoch candidate wheels pass exactly."
+      ]
+    },
+    {
+      "id": "CHECK-006",
+      "category": "candidate-wheel",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "SOURCE_DATE_EPOCH=1785094504 and PYTHONHASHSEED=0 produce two byte-identical 1,166,315-byte wheels at SHA-256 ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94.",
+        "An isolated CPython 3.12.10 install reports BurnLens 0.54.0, imports Rasterio, GeoPandas, and Torch 2.13.0+cpu, and passes dependency health.",
+        "All 114 installed console commands return successful help."
+      ]
+    },
+    {
+      "id": "CHECK-007",
+      "category": "full-regression",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The exact focused checkout gate passes 9 tests in 274.43 seconds at clean committed candidate e52aa69a6fc837ae0a472549d34703761261dbd9.",
+        "The complete repository regression passes 759 tests, one expected skip, 252 existing NumPy deprecation warnings, and 86 subtests in 880.69 seconds at that same clean committed head.",
+        "The earlier pre-commit and checkout-contract failures remain retained; no application or scientific defect is inferred from them."
+      ]
+    },
+    {
+      "id": "CHECK-008",
+      "category": "claims-privacy-and-rights",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The release does not claim U-Net superiority, independent ground truth, generalization, field validation, official status, endorsement, operational readiness, or emergency suitability.",
+        "No private owner-response bytes, provider retrieval details, credentials, tokens, or ignored custody paths are published.",
+        "The previously passed U04 source, terms, role, and bounded-custody gates remain unchanged."
+      ]
+    },
+    {
+      "id": "CHECK-009",
+      "category": "review-merge-tag",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "PR #571 is clean and mergeable at exact reviewed head d856a06cf9c62d12d633dacd614237baf912b24f; GitHub reports no configured status checks.",
+        "The reviewed head merges through exact two-parent commit 8660ccba893b7e3acfdc361e663a6b8d59d52a34, whose tree matches the reviewed tree f6eca3779cd3d6928214bacb84f1a2ff11d87828.",
+        "Remote annotated tag object 4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82 peels exactly to the merge.",
+        "No GitHub Release, deployment, access, ownership, or public-sharing change is required."
+      ]
+    }
+  ],
+  "retained_attempts": [
+    {
+      "attempt_id": "P4O1-T01-U08-WHEEL-R001",
+      "disposition": "retained-failed-wheel-determinism",
+      "result": "Two 1,166,315-byte wheels differ because the wrapper omitted fixed SOURCE_DATE_EPOCH.",
+      "sha256_a": "d82fe154605ff37f26ada89c734a3d964ba97a3a5eb5316bbd8be234400c2316",
+      "sha256_b": "519a605585066f74c37f62a77b51527ea3acf68acfe27a7cb6cb16eea8637eb9",
+      "tracked_bytes_changed": false,
+      "scientific_state_changed": false
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-WHEEL-R002",
+      "disposition": "pass",
+      "source_date_epoch": 1785094504,
+      "python_hash_seed": 0,
+      "wheel_bytes": 1166315,
+      "sha256": "ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94",
+      "isolated_version": "0.54.0",
+      "console_commands": 114,
+      "console_help_passed": 114
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FULL-REGRESSION-R001",
+      "disposition": "retained-pre-commit-state-failure",
+      "passed": 755,
+      "failed": 4,
+      "skipped": 1,
+      "warnings": 252,
+      "subtests_passed": 86,
+      "application_or_scientific_defect_inferred": false,
+      "next_gate": "sync locked editable environment, commit candidate, and rerun exact full suite at clean committed head"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R001",
+      "candidate_commit": "86517188b6d8d017ab0e9a9ec839f19dfe8d3479",
+      "disposition": "retained-checkout-contract-failure",
+      "result": "Eight focused environment and checkout tests pass; one checkout-attribute test fails because the new Phase Four devlog has no explicit text/eol contract.",
+      "version_mismatch_remediated": true,
+      "working_tree_bytes_match_commit": true,
+      "application_or_scientific_defect_inferred": false,
+      "next_gate": "add one exact LF attribute for the new devlog, commit, and rerun"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R002",
+      "candidate_commit": "86517188b6d8d017ab0e9a9ec839f19dfe8d3479",
+      "disposition": "retained-pre-commit-state-failure",
+      "result": "Eight focused environment and checkout tests pass; the worktree-byte test alone correctly finds the four uncommitted LF-remediation files.",
+      "explicit_attribute_check_passed": true,
+      "working_tree_bytes_match_commit": false,
+      "application_or_scientific_defect_inferred": false,
+      "next_gate": "commit the bounded LF remediation and rerun the exact focused gate"
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-CHECKOUT-R003",
+      "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
+      "disposition": "pass",
+      "passed": 9,
+      "duration_seconds": 274.43,
+      "explicit_attribute_check_passed": true,
+      "working_tree_bytes_match_commit": true,
+      "version_contract_passed": true
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FULL-REGRESSION-R002",
+      "candidate_commit": "e52aa69a6fc837ae0a472549d34703761261dbd9",
+      "disposition": "pass",
+      "passed": 759,
+      "failed": 0,
+      "skipped": 1,
+      "warnings": 252,
+      "subtests_passed": 86,
+      "duration_seconds": 880.69
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FRESH-MAIN-FULL-R001",
+      "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+      "disposition": "retained-custody-prerequisite-failure",
+      "passed": 686,
+      "failed": 2,
+      "errors": 25,
+      "skipped": 47,
+      "warnings": 112,
+      "subtests_passed": 86,
+      "duration_seconds": 427.33,
+      "cause": "The tracked-only clone lacks controlled provider archives, finalized context custody, and ignored U02-U05 intermediate runs required by seven builder test surfaces and two exact custody assertions.",
+      "application_or_scientific_defect_inferred": false
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FRESH-MAIN-PORTABLE-R002",
+      "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+      "disposition": "pass",
+      "passed": 686,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 47,
+      "deselected_exact_custody_assertions": 2,
+      "warnings": 112,
+      "subtests_passed": 86,
+      "duration_seconds": 374.15,
+      "excluded_test_files": [
+        "tests/test_dataset_qa.py",
+        "tests/test_phase_four_geospatial.py",
+        "tests/test_phase_four_interface.py",
+        "tests/test_phase_four_overlay.py",
+        "tests/test_phase_four_package.py"
+      ]
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FRESH-MAIN-WHEEL-R001",
+      "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+      "disposition": "pass",
+      "source_date_epoch": 1785094504,
+      "python_hash_seed": 0,
+      "wheel_bytes": 1166315,
+      "sha256": "ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94",
+      "builds": 2,
+      "matches_reviewed_candidate": true
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FRESH-MAIN-COMMAND-HELP-R001",
+      "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+      "disposition": "retained-helper-failure",
+      "result": "The disposable PowerShell helper counted one deserialized JSON array object instead of 114 command names and stopped before invoking any command.",
+      "installed_commands_executed": 0,
+      "application_or_package_defect_inferred": false
+    },
+    {
+      "attempt_id": "P4O1-T01-U08-FRESH-MAIN-ISOLATED-R002",
+      "merge_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+      "disposition": "pass",
+      "python": "CPython 3.12.10",
+      "installed_distributions": 71,
+      "burnlens_version": "0.54.0",
+      "torch_version": "2.13.0+cpu",
+      "rasterio_version": "1.5.0",
+      "geopandas_version": "1.1.4",
+      "console_commands": 114,
+      "console_help_passed": 114,
+      "dependency_health": "pass"
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "Verified RBR-primary Phase Four release and Phase Five handoff.",
+      "status": "verified_update"
+    },
+    {
+      "path_or_uri": "portfolio/README.md",
+      "expected_state": "Two-minute path starts at the Phase Four interface and exact run package.",
+      "status": "verified_update"
+    },
+    {
+      "path_or_uri": "docs/case-study/BURNLENS_CASE_STUDY.md",
+      "expected_state": "Phase Four result, visible failures, limitations, and separate follow-on recommendation.",
+      "status": "verified_update"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "Phase Four accepted and verified; Phase Five is the next eligible milestone.",
+      "status": "verified_update"
+    }
+  ],
+  "boundaries": {
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "new_label_dataset_split_aoi_threshold_or_training": false,
+    "provider_transaction": false,
+    "external_submission": false,
+    "deployment": false,
+    "github_release": false,
+    "access_ownership_or_public_sharing_change": false
+  },
+  "decision": {
+    "reported_status": "verified",
+    "rationale": "U01-U08 pass through reviewed PR #571, exact merge-tree equality, retained fresh-clone custody limitations, explicit tracked-only regression, both tracked package validators, deterministic wheel equality, isolated runtime, and remote annotated-tag peel.",
+    "next_action": "Merge issue #572's bounded lifecycle truth synchronization, then select the highest-leverage Phase Five reliability checkpoint from the exact verified run and interface. No recursive lifecycle synchronization is required."
+  }
+}

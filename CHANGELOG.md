@@ -2,6 +2,26 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## 0.56.0-baseline-first-publication-candidate - active, not released - 2026-07-27
+
+- Freeze the Phase Six reviewer surface, reviewer journey, demonstration,
+  presentation, claim matrix, citation, maintenance posture, and public-scope
+  controls without changing analytical evidence.
+- Add a deterministic no-overwrite package builder that accepts only tracked
+  sources, preserves pinned bytes, resolves the complete local review link
+  closure, and verifies exact Phase Five directory/archive parity.
+- Retain pre-freeze r001 exactly: 117 files / 16,285,070 bytes and a
+  14,963,460-byte ZIP at SHA-256 `def1b20f...`. Structural validation and two
+  byte-identical rebuilds pass, but its declared source commit still carries
+  the 0.55.0 lock entry and cannot pass locked fresh-environment setup.
+- Update the project lock and current-version regression assertions for the
+  no-overwrite v0.1.1 / r002 correction. R001 remains failed evidence.
+
+Issue #578 remains active. U05 remediation, U06 recipient/rendered QA, and U07
+release audit are not complete. This entry is a branch candidate, not a verified tag, GitHub
+Release, deployment, publication, sharing change, or external submission.
+RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
+
 ## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 
 - Preserve the exact verified Phase Four RBR-primary package and rejected

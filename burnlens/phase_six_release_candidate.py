@@ -17,8 +17,8 @@ from urllib.parse import unquote, urlsplit
 import zipfile
 
 
-PACKAGE_VERSION = "burnlens-phase-six-baseline-first-candidate-v0.1.0"
-PACKAGE_ID = "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001"
+PACKAGE_VERSION = "burnlens-phase-six-baseline-first-candidate-v0.1.1"
+PACKAGE_ID = "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002"
 ARCHIVE_NAME = f"{PACKAGE_ID}.zip"
 RECEIPT_NAME = f"{PACKAGE_ID}-RECEIPT.json"
 SOFTWARE_VERSION = "0.56.0"

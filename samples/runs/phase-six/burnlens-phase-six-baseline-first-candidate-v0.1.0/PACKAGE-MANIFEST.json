@@ -1,0 +1,749 @@
+{
+  "manifest_version": "burnlens-phase-six-candidate-manifest-v0.1.0",
+  "package_id": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001",
+  "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.0",
+  "software_version": "0.56.0",
+  "generated_at_utc": "2026-07-27T04:18:03.323Z",
+  "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r001",
+  "git_source_commit": "488bea766dc4e5ab0f03a34f4905213b295cac2b",
+  "state": "local-pre-publication-candidate",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "canonical_entrypoint": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "public_action_authorized": false,
+  "traceability": {
+    "application_version": "0.56.0",
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "accepted_run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+    "package_run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r001",
+    "git_source_commit": "488bea766dc4e5ab0f03a34f4905213b295cac2b"
+  },
+  "attribution": [
+    "Contains modified Copernicus Sentinel data 2019.",
+    "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+    "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service."
+  ],
+  "closure": {
+    "seed_paths": [
+      "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+      "portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "docs/phase-six/REVIEWER_JOURNEY.md",
+      "docs/case-study/BURNLENS_CASE_STUDY.md"
+    ],
+    "repository_source_files": 112,
+    "complete_local_link_closure": true,
+    "complete_phase_five_directory": true
+  },
+  "files": [
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 1346,
+      "sha256": "527b0976bd3635513510fc6029c87b4669decf24d6c5d8e1869268be90fff84f",
+      "origin": "u05-generated-package-control"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1067,
+      "sha256": "accec00dfaedd030895e2c9cd0c7038380265fec320e6d94429ee1978ebd97d8",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "OPEN-FIRST.html",
+      "bytes": 3518,
+      "sha256": "380e54c2bb41d8513a14c1323f561a72eb82cb6d99f14d7d0ca73bd6c4d3c32d",
+      "origin": "u05-generated-package-control"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1130,
+      "sha256": "3a863682da099e85f2c54b0960a74d72433a0a89728e4c6ec3ea07f52a60969e",
+      "origin": "u05-generated-package-control"
+    },
+    {
+      "path": "docs/case-study/BURNLENS_CASE_STUDY.md",
+      "bytes": 104961,
+      "sha256": "2ed82149759b7aed11634e73476b835bdc7604e88ac848aa1929ed0427947c54",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-six/CLAIM_MATRIX.md",
+      "bytes": 4122,
+      "sha256": "2ac5280f7783688e73edbd21703b5b9d61810f589ad7c5635b7837e57e7ac54a",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-six/DEMO_SCRIPT.md",
+      "bytes": 3925,
+      "sha256": "b95d12e4aaf3501030af944f356a48c23f7e32fcee004366c43eee14cd4ca558",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-six/MAINTENANCE_AND_ARCHIVE.md",
+      "bytes": 4132,
+      "sha256": "8389e0c2e4762b90596f369be9f23cc17ef7b862b89b2879834933d2b6a31c7a",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-six/REVIEWER_JOURNEY.md",
+      "bytes": 10842,
+      "sha256": "74b072903c56603e390803a1eea0e1f72a2a9f019c8d2ee5a946941e645bee3f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-two/objective-five/REPLACEMENT_SIX_EVENT_DATASET_SUFFICIENCY_DECISION.md",
+      "bytes": 1773,
+      "sha256": "94db46a9548b0fad53d73a6175a6e4f3cbe20773c4087f919fc886e1498d2a68",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+      "bytes": 6050,
+      "sha256": "6e0cb457261cc0ef48b86b15e8b21a83ec21c4b880990d83b0c79834a26c31e7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html",
+      "bytes": 14774,
+      "sha256": "92003963dd03182b4d60e30d1b9e6dd62fe39805514a8aee0021071da15e73e7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.json",
+      "bytes": 5931,
+      "sha256": "ff5fb042a33393d34ca7c71a558c71283266de0a3bf40fdf7ee41c936afb8150",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.html",
+      "bytes": 16341,
+      "sha256": "3c754e5630c3fd5fc02c6ceb289896e48b4e41064a04f4dd9a594d1409f8fbe4",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-005.json",
+      "bytes": 7668,
+      "sha256": "3b0db0a20c1ce9e6d1962fdcf8642772ab2c3ee6ef209d48b64500ad05c71d77",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html",
+      "bytes": 18256,
+      "sha256": "ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.json",
+      "bytes": 9859,
+      "sha256": "9c536bc374007723f66a8f36000a7848bb1fd038dd76ea8bcdb702b4fad851c0",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html",
+      "bytes": 18212,
+      "sha256": "81d3257707269559ce523a88f6241e8bb2b681fe44c2d0ec0077e831930e2f98",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.json",
+      "bytes": 9861,
+      "sha256": "a8e38133269586ec837abb68b77423ea58b179e3f0a15a430d32006545c4a854",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/README.md",
+      "bytes": 6544,
+      "sha256": "5247ef50f2b1d0c3afcf3575b18ab81b2172217a68b96b154749b309adc4809c",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "bytes": 11203,
+      "sha256": "5b16c00d1bee7dd0ef5302bc1a0aeb61fd60a4756b214dc6517630722c0b8e98",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/phase-six/CITATION.json",
+      "bytes": 3001,
+      "sha256": "ea5b51ef442bb169353ee3c245413ff55cb2d71a16e6aa7a0b7ac4b8af13777a",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "portfolio/phase-six/CITATION.md",
+      "bytes": 1002,
+      "sha256": "f9595d7a9f8093bda6f2d68b7a2aa4510134a7ab6e1a0b06980849809cea5710",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "records/phase-four/packages/PHASE-FOUR-RUN-PACKAGE-RECORD-2026-001.json",
+      "bytes": 8721,
+      "sha256": "2d781ea3d9d217676e74888449244bc3544805e93351032a2908e510c2ef7a23",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "records/phase-four/release-audits/RELEASE-AUDIT-2026-001.json",
+      "bytes": 14840,
+      "sha256": "3942190b72e6711e7bc7bfa136c45b12b7d36a3ff05243bb72f6dc41029684c7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json",
+      "bytes": 9916,
+      "sha256": "22552092843ad5e83fcacdcaaf1d9c035a09d9e75e260503cbb560b9d2dc3443",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "records/prompt-build-log/2026-07-21-p2o4-t33.md",
+      "bytes": 116961,
+      "sha256": "135515b59a72890bca472fa09798966d7c7648082196693ec09b71164f5b4bdb",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/aoi/phase-two/AOI-FINAL-2026-001.png",
+      "bytes": 106115,
+      "sha256": "73463794d765ca1e19051bb1f5b6dac163c82da5d11a6ea3ca77ce1ea0aeb736",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html",
+      "bytes": 3921,
+      "sha256": "109075ca31cb1c01137bdccff5786c862105eb15dc1cbe15c8603dcf3d15fd99",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.png",
+      "bytes": 169275,
+      "sha256": "49bf3686fd7b109572fcbff8abb8e35d7d9054c7b2dd9e26e70cc26975700060",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/ADDITIONAL-EVENT-GROUP-PLAN-2026-001.png",
+      "bytes": 109133,
+      "sha256": "9760ee2526c8b903cab2a3bc6a51a6413d51bb1c56b9d892a21b518db965181f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-FITNESS-2026-001.png",
+      "bytes": 122947,
+      "sha256": "19eeb95e4e5362523e308233b6347a620f7c2ed7cb3beccf728522fd2255a1e0",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/CROSS-EVENT-SOURCE-FITNESS-2026-001.png",
+      "bytes": 921270,
+      "sha256": "60f33e85f9bac5026caf231895d081bf942756462721d13ab818f383a7018c13",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/GRANDVIEW-BACKGROUND-EVIDENCE-2026-001.png",
+      "bytes": 497800,
+      "sha256": "11048d7d8a4f9815ea14ac32cd46edb93ec451ef7d5aad88c3a5e375f246fe1a",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/GRANDVIEW-SOURCE-FITNESS-2026-001.png",
+      "bytes": 398143,
+      "sha256": "8a0cdb356e37e605786ae0595d373efe54843f1571fa68aa4cac1c8129059eef",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/GREEN-RIDGE-BACKGROUND-EVIDENCE-2026-001.png",
+      "bytes": 838513,
+      "sha256": "1bb509b717d5ccb04086835969f438f8f757cdd7afa559e1305432107ecbdffe",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-REPLACEMENT-SOURCE-FITNESS-2026-001.png",
+      "bytes": 588891,
+      "sha256": "fd5b9ae54e1b9c3e0d495e337387d874ae911bd0f586e835b4184312d486d931",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+      "bytes": 626846,
+      "sha256": "4ed3870e37bf68db24805540f00614c5050c064b621ca3fc5e3c0ef244bf0d42",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html",
+      "bytes": 7022,
+      "sha256": "15944fb9fdd577727bc899220b61859b3fc77895e9552858e019821f7f4114f7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.png",
+      "bytes": 217578,
+      "sha256": "9a8b13e63c7c65015c8065c56805c1fbb264154095ebddd32921268b5d9b7459",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/inspection/phase-two/SOURCE-INSPECTION-2026-001.png",
+      "bytes": 1496701,
+      "sha256": "da93de6e432296f72c8f420d0181cfc81d99be7cf70ad96fe5b7bba619739966",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/intake/phase-two/PAIR-INTAKE-REHEARSAL-2026-001.png",
+      "bytes": 113346,
+      "sha256": "c38bf7fc825dd780affe3f8d1080cffb3bdb90ef2164cb27b1295b4e54bbfcd0",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-2026-002.png",
+      "bytes": 627422,
+      "sha256": "e2862306a7c2692cccad5d52149c8af4aadb08fa978e6b0e5db54a8d95950fc4",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/cross-event/phase-two/CROSS-EVENT-LABEL-TRANSFER-QA-2026-002.png",
+      "bytes": 99698,
+      "sha256": "91dce0220578d169ee8a867dd26fdc1cd81de320bef623ff67f4bc129ee97134",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-PROPOSAL-2026-001.png",
+      "bytes": 560366,
+      "sha256": "0784c4b5cf9f91edd4bed9a44bd073de73f96c0c40e13a89de94e44d1a37f402",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/phase-two/LABEL-QA-2026-001.png",
+      "bytes": 332176,
+      "sha256": "d387a97c7306f173bb17824d43cf51f29cc2bfc9d1f036618731d880e277ceba",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/pilot/grandview/phase-two/GRANDVIEW-REGION-PROPOSAL-2026-001.png",
+      "bytes": 71701,
+      "sha256": "797dbacbaae24d43f9ed829ae0b9d64d417f3f812dc8a23ce2196ca0e6f73265",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/pilot/green-ridge/phase-two/GREEN-RIDGE-REGION-PROPOSAL-2026-001.png",
+      "bytes": 67467,
+      "sha256": "cc5fbe18515e1c149ec6bd507a90fc5485b018d092ff9d075e7d43353dea57f1",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/pilot/phase-two/REGION-CANDIDATE-PILOT-2026-001.png",
+      "bytes": 132386,
+      "sha256": "9c87f79bdaeb418aa83a5de71fdcce78760b9c60b2537bd1cbebe836c87044e8",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/LABEL-REGION-REMEDIATION-PLAN-2026-001.png",
+      "bytes": 112564,
+      "sha256": "9bab9f19568eb8f88958cc8f610ddac5710776852f1662a99081cae08fcbc3bc",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/PROTOTYPE-LABEL-SUFFICIENCY-2026-001.png",
+      "bytes": 121275,
+      "sha256": "140cd475cb3e96d1915f3720646974e0aceddf132e33ffc8d9dd873726bfa7c8",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "bytes": 6357,
+      "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+      "bytes": 101221,
+      "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/grandview/phase-two/GRANDVIEW-OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 92523,
+      "sha256": "84e642d42f728468148830326194b9648eadcf10d16b852dc22a53f4cf23ca34",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/grandview/phase-two/intake/GRANDVIEW-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 89738,
+      "sha256": "ad39379668cc8a8baed49ccc24e25828c4bed1d7dcb915c101112d53b64145e2",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/green-ridge/phase-two/intake/GREEN-RIDGE-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 76847,
+      "sha256": "44c7e6037732674692210566319aa0444911b86623632a58ad1818825566c52e",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-DESKTOP.png",
+      "bytes": 66339,
+      "sha256": "a8cec47e8907ccbb862845d7a943c8a49f968cc795033a929a088a3f6a75e026",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001-MOBILE.png",
+      "bytes": 34568,
+      "sha256": "455332989d5493c5e6250d0c9d97b527339dfe4b99b4a62d68c7e41fb8cb02d6",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-BROWSER-QA-2026-001.png",
+      "bytes": 355908,
+      "sha256": "a65eccb98f0eac55e34614916118d782aac4e9e918f864cf922e1bf27840e1e0",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-DUAL-LOCK-READINESS-QA-2026-001.png",
+      "bytes": 90714,
+      "sha256": "53fb97c99f8ec0f0da085f44c76f3993101559a65f3cccf7e8f02b556581c5e2",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-HANDOFF-2026-001.png",
+      "bytes": 93645,
+      "sha256": "fd3bfcd603c202a6ba03d21ee0d529f95a6538ec0afb1741845cc86c7cb7abb8",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-HANDOFF-QA-2026-001.png",
+      "bytes": 85638,
+      "sha256": "c94b987d4f1df5a98dcb27776572adff9bfc436c050326f9e653b3daa72bfb3c",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-PACKET-2026-001.png",
+      "bytes": 416910,
+      "sha256": "129953da93f17d618d351c4b55a08516f19f2ec10054c3594e59b5db9ef91aed",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-PACKET-QA-2026-001.png",
+      "bytes": 77956,
+      "sha256": "b018805300d1e0189d99fe4b2e00104d5dbc969037e9a168808de1d929e1768d",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-ATOMIC-INTAKE-QA-2026-001.png",
+      "bytes": 112538,
+      "sha256": "6d3c8592deadcd14ace5d2d02296331d32c1aab6edf566b8d8c2a553faf276fd",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/LABEL-REVIEW-RESPONSE-LOCK-QA-2026-001.png",
+      "bytes": 88458,
+      "sha256": "a195084ed990c5c9a8fea6d8016de86fd95f3bfb05e961d2798b224c1c46a437",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 82525,
+      "sha256": "1091a6b5460fdc5dfaa46d78cb0e7e58475eef447cb360387159f4b9394e6a9c",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/phase-two/OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 78059,
+      "sha256": "5ce16cd4cfb52d3e5ba0bc5d72ea03640d3449e0833af81c94fb47ecf568093f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/regions/phase-two/REGION-OWNER-REVIEW-SURFACE-2026-001.png",
+      "bytes": 136913,
+      "sha256": "2940d7de18fd12c81c04fad18eb86b431fe399c4cacd454f107fe3029019f288",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/labels/review/regions/phase-two/intake/REGION-OWNER-RESPONSE-INTAKE-2026-001.png",
+      "bytes": 77860,
+      "sha256": "3c8bafffddf907eb232475d40552a18e8ef048cae51f8ff6c88d72301daf76ec",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+      "bytes": 2789,
+      "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "bytes": 3981,
+      "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+      "bytes": 79512,
+      "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "bytes": 8176,
+      "sha256": "92ee0952fe1f82b5350919593120132a5ed6c7690e2fd08fc781750af608296b",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.png",
+      "bytes": 80920,
+      "sha256": "a781271cccbc17bda35fa5e5a07bf9af0cc965c5938cd0733b47fe80acb372f6",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/observation/phase-two/OBSERVATION-GEOMETRY-2026-001.png",
+      "bytes": 87051,
+      "sha256": "4dd21c3df693856fda47d23cd763054016a105d8c760181c4052411fa4ff6687",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/optical/phase-two/OPTICAL-PAIR-2026-001.png",
+      "bytes": 1043786,
+      "sha256": "947c65214805d35927307039afb54bd2674c43327f618619f3b87ad50648ec03",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/qa/phase-two/model-readiness-v0.1.0/MODEL-READINESS-DECISION-2026-001.html",
+      "bytes": 6184,
+      "sha256": "6e80c26c29875c3a05249a4f226abcc1113df32c284ba2de2963741066de0557",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/qa/phase-two/model-readiness-v0.1.0/MODEL-READINESS-DECISION-2026-001.png",
+      "bytes": 71508,
+      "sha256": "6fc5d5b23ee89ccb01c052e2534f2ec42658a01ad6de0d51c73dc61bd57cee21",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001.png",
+      "bytes": 161748,
+      "sha256": "03638e39a29205e6d237286f71c47129f330e9f7b533ae429013dfa7b805831c",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png",
+      "bytes": 211147,
+      "sha256": "0b7ef00fcb41a2f8d5fc5227f48d8a350f0a3994e6badf253cb6b435a5b857b3",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/reference/phase-two/OFFICIAL-SOURCE-SCOUT-2026-001.png",
+      "bytes": 159765,
+      "sha256": "2cb1c331dce91cdc8e9b779c4c2d1f202217f5a6506be1f6d4e73124433d47bf",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/registration/phase-two/CONTENT-REGISTRATION-2026-001.png",
+      "bytes": 1078715,
+      "sha256": "70ba55e6a15f2b712bd167e8d3d0736daf19284bae0f3f0f721a07a3e1c017f1",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/CANDIDATE-MANIFEST.json",
+      "bytes": 4774,
+      "sha256": "9651aba9ea7c9a8aa403a5fc4900f7d8709d232bcb1938c08438b0f2e22f23a4",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/CHECKSUMS.sha256",
+      "bytes": 2188,
+      "sha256": "e80e6145fc4d6d05f8c806a7077969e1d00b7f3fc140b11095830cedaf678985",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/KNOWN-ISSUES.md",
+      "bytes": 1969,
+      "sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/QA-MATRIX.json",
+      "bytes": 2126,
+      "sha256": "f6df882daf1be1dbea99276a045b9d22342c11dc7e53e186a206f654081a852f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/README.md",
+      "bytes": 1103,
+      "sha256": "b2b238cd3eed34b8b0db2d025bfe4c65ece5cae4c693ab6d9da5158c57b4fe0f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/phase-four-release-audit.json",
+      "bytes": 14840,
+      "sha256": "3942190b72e6711e7bc7bfa136c45b12b7d36a3ff05243bb72f6dc41029684c7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u01-qa-release-contract.json",
+      "bytes": 10836,
+      "sha256": "a187a9d12adea288700b25c0e3a9c18ce08dee7f5f45c46a7989ca8dc588bc4c",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u02-failure-injection-record.json",
+      "bytes": 7104,
+      "sha256": "c5ff046ebd864751bb0fac9d160331d6ee4fcb505619af036fdbeae7b216c835",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u02-failure-injection.html",
+      "bytes": 3610,
+      "sha256": "9aef845e97ea40ffd845f3b9fbbcfb071f95853138a8ff6878a7ca2d47811a61",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u02-failure-injection.json",
+      "bytes": 4590,
+      "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u03-owner-render-receipt.json",
+      "bytes": 1346,
+      "sha256": "9487263767cb6260fce4170dc3e1b432c530b3f489de605e6c2d5c74f4971787",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u03-reliability-interface-record.json",
+      "bytes": 3795,
+      "sha256": "c97811c81bc085aead30a80fe8de5eb0f2fe7a93b6620ed0da936c717af63118",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u03-reliability-interface.json",
+      "bytes": 3000,
+      "sha256": "33a9cf2f8b630cf49285683c39745f01f4c52fe8aa90b9811a1c6aab87b6d2dc",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u04-assurance-record.json",
+      "bytes": 7928,
+      "sha256": "752148bfcfd24ef4c6c2daf627f2974a27b890fc793a5cf8c8d2ac578597b195",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u04-assurance.html",
+      "bytes": 3974,
+      "sha256": "ef666ae359896815dd234eec2171d42f93cb0b6e2ebb1dfd66445ff3bea572e8",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u04-assurance.json",
+      "bytes": 31276,
+      "sha256": "89c0c7896d94ae41157367cb1b6111d0d5b93a9e0bcd49f57155cd47ae808674",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u05-clean-reconstruction-record.json",
+      "bytes": 12248,
+      "sha256": "ebe09e24add8d5d1a03a47e8faa61f4d159eea7ccab78fd4a05e65979397ab9a",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u05-clean-reconstruction.html",
+      "bytes": 6048,
+      "sha256": "9227c6af6000479b37f3480df7d85b3e4a2906971066fcbcb9fa02e2b7b7cd14",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/evidence/u05-clean-reconstruction.json",
+      "bytes": 9135,
+      "sha256": "510eec2ea8f2c75afe491c4d001d81f4453a19b96f4a3f295fcb9cfd770844c0",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html",
+      "bytes": 4007,
+      "sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/interfaces/phase-five-reliability.html",
+      "bytes": 179808,
+      "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/interfaces/phase-four-evidence.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/README.md",
+      "bytes": 762,
+      "sha256": "723fc16e8f7314af9351229839e1899f29bbeec4c89063db40d19f5f12cf0b3b",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/REPORT.md",
+      "bytes": 868,
+      "sha256": "3ff7e93ca34ddd1554494ad5cedec1ca245e32e8554449a0e594e0399923b867",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/WARNINGS.md",
+      "bytes": 788,
+      "sha256": "7b0425e385c0cd4e779fb3df7bbbd067bf06dc9405d99101ef7ca6b8b57eca4e",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/MANIFEST.json",
+      "bytes": 6247,
+      "sha256": "31c68cd8e7fc1ac4d9a5ef82c0701bbfd8b50feb202b84d9f6bf62fdf977d7c1",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/README.md",
+      "bytes": 859,
+      "sha256": "c8cee600712f963649655cfe91ab4dcb1971a02808a7d9d3cd94a3deaf5f095f",
+      "origin": "repository-tracked-exact-byte"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+      "bytes": 14798,
+      "sha256": "f0fb4b57f3be1ae9690b2252c3ecd9f0a7e125bd6e67ce8b0f4f242752cb09f8",
+      "origin": "repository-tracked-exact-byte"
+    }
+  ],
+  "boundaries": {
+    "analytical_output_changed": false,
+    "dataset_split_label_threshold_or_source_changed": false,
+    "model_decision_changed": false,
+    "phase_3b_or_second_experiment": false,
+    "provider_or_private_owner_response_included": false,
+    "deployment": false,
+    "github_release": false,
+    "access_ownership_public_sharing_publication_or_submission_change": false
+  },
+  "next_dependency": "P6O1-T01-U06 real rendered and recipient QA"
+}

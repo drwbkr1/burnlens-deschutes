@@ -1,0 +1,34 @@
+{
+  "receipt_version": "burnlens-phase-five-owner-render-receipt-v0.1.0",
+  "receipt_id": "PHASE-FIVE-RELIABILITY-INTERFACE-OWNER-RENDER-RECEIPT-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U03",
+  "issue": 574,
+  "reviewer_role": "owner",
+  "owner_confirmation_received_at_utc": "2026-07-26T22:06:05Z",
+  "confirmation_text": "desktop, narrow, and keyboard pass",
+  "candidate_binding": {
+    "branch": "codex/p5o1-t01-reliability-release-candidate",
+    "candidate_commit": "572cecad18edb4e3685db653c51c6e10d2641887",
+    "run_id": "BL-2026-07-26-p5o1-t01-u03-reliability-interface-r001",
+    "path": "samples/qa/phase-five/reliability-interface-v0.1.0/PHASE-FIVE-RELIABILITY-INTERFACE-2026-001.html",
+    "bytes": 179808,
+    "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316"
+  },
+  "review_results": {
+    "desktop_render": "pass",
+    "narrow_390x844_render": "pass",
+    "keyboard_journey": "pass",
+    "rejected_unet_starts_hidden": "pass",
+    "failure_evidence_readable": "pass"
+  },
+  "scope": {
+    "owner_confirmed_render_and_interaction": true,
+    "independent_accessibility_certification": false,
+    "third_party_validation": false,
+    "formal_wcag_conformance_claim": false,
+    "analytical_output_changed": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P5O1-T01-U04"
+}
