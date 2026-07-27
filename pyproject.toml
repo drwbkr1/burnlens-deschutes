@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "burnlens-deschutes"
-version = "0.54.0"
+version = "0.55.0"
 description = "Experimental, portfolio-first BurnLens CV-to-GEOINT evidence tooling"
 requires-python = ">=3.12"
 license = "MIT"
@@ -156,6 +156,7 @@ burnlens-run-phase-five-failure-injection = "burnlens.phase_five_failure_injecti
 burnlens-validate-phase-five-failure-injection = "burnlens.validate_phase_five_failure_injection:main"
 burnlens-run-phase-five-reliability-interface = "burnlens.phase_five_interface:main"
 burnlens-run-phase-five-assurance = "burnlens.phase_five_assurance:main"
+burnlens-run-phase-five-release-candidate = "burnlens.phase_five_release_candidate:main"
 
 [tool.setuptools]
 packages = ["burnlens"]
