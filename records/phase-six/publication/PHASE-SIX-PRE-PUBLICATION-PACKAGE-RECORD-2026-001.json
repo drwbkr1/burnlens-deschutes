@@ -1,0 +1,131 @@
+{
+  "record_version": "burnlens-phase-six-pre-publication-package-record-v0.1.0",
+  "record_id": "PHASE-SIX-PRE-PUBLICATION-PACKAGE-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U05",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r001",
+  "recorded_at_utc": "2026-07-27T04:18:03.323Z",
+  "exact_base_commit": "6c3e3728f94389ac245306dc84c36c61d68afa13",
+  "generator_source_commit": "488bea766dc4e5ab0f03a34f4905213b295cac2b",
+  "inputs": [
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+      "bytes": 14798,
+      "sha256": "f0fb4b57f3be1ae9690b2252c3ecd9f0a7e125bd6e67ce8b0f4f242752cb09f8",
+      "role": "exact U03 canonical reviewer surface"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "bytes": 11203,
+      "sha256": "5b16c00d1bee7dd0ef5302bc1a0aeb61fd60a4756b214dc6517630722c0b8e98",
+      "role": "exact U04 presentation"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "immutable RBR-primary analytical package"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "immutable Phase Five reliability candidate"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.0",
+      "files": 117,
+      "bytes": 16285070,
+      "role": "extract-and-open directory form"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001.zip",
+      "bytes": 14963460,
+      "sha256": "def1b20fd4709bc813ec286ea46b5e063f4b95576522471a4c448a69779f92c8",
+      "role": "deterministic safe-extraction archive"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001-RECEIPT.json",
+      "bytes": 1131,
+      "sha256": "b75517150d9635a2b166a210d2ab32c817bf6f20562570bd222a89069b17eee6",
+      "role": "archive and directory receipt"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.0/OPEN-FIRST.html",
+      "bytes": 3518,
+      "sha256": "380e54c2bb41d8513a14c1323f561a72eb82cb6d99f14d7d0ca73bd6c4d3c32d"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.0/PACKAGE-MANIFEST.json",
+      "bytes": 32551,
+      "sha256": "a2f6436c79e0c7427c2e193247d52ecaa315854d8c280048372f5b32f56aad60"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.0/CHECKSUMS.sha256",
+      "bytes": 16350,
+      "sha256": "e08706637cad693bd8609a4073e3cbb60e05726fc845eb9d68d3c79e26693c4a"
+    }
+  ],
+  "verification": {
+    "directory_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "archive_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "deterministic_rebuilds": {
+      "attempts": 2,
+      "archive_byte_identity": true,
+      "tracked_archive_identity": true
+    },
+    "repository_source_files": 112,
+    "package_files": 117,
+    "local_links": 165,
+    "complete_local_link_closure": true,
+    "complete_phase_five_directory_archive_parity": true,
+    "pinned_source_bytes_and_hashes": "pass",
+    "tracked_source_enforcement": "pass",
+    "fixed_zip_timestamp_and_regular_file_modes": "pass",
+    "duplicate_encrypted_traversal_symlink_and_crc_guards": "pass",
+    "no_overwrite": "pass",
+    "private_locator_secret_custody_and_model_weight_exclusion": "pass",
+    "focused_tests": "6 passed",
+    "combined_phase_five_and_phase_six_tests": "16 passed",
+    "compile": "pass",
+    "diff_check": "four expected Markdown hard-break findings inside the exact immutable Phase Five payload; no source-control whitespace defect",
+    "full_suite_attempt": {
+      "tests_passed": 766,
+      "tests_failed": 34,
+      "tests_skipped": 1,
+      "subtests_passed": 86,
+      "warnings": 422,
+      "disposition": "retained-failed-pre-freeze",
+      "finding": "The declared generator source commit contains project version 0.56.0 but uv.lock and the installed distribution remain 0.55.0. Locked fresh-environment synchronization fails closed. Thirty current-version assertions, three environment-profile checks, and the expected dirty-worktree checkout contract fail."
+    }
+  },
+  "decision": {
+    "status": "remediate",
+    "software_version": "0.56.0",
+    "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.0",
+    "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U05 corrected no-overwrite r002 from a lock-consistent clean source commit"
+  },
+  "retained_limitations": [
+    "RBR remains accepted only for one bounded Ward Creek demonstration; WCP-002 remains visible false-positive-risk evidence.",
+    "The trained U-Net remains rejected and did not outperform RBR.",
+    "Owner-approved prototype labels are not independent ground truth, inter-rater agreement, or field validation.",
+    "The exact Phase Five two-medium-finding register remains visible with impact and workaround.",
+    "R001 is structurally valid but cannot pass the fresh locked-environment gate from its declared source commit. It is retained and must not advance to U06.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, and external submission remain outside this unit."
+  ],
+  "external_action": {
+    "repository_local_package_only": true,
+    "provider_request_or_download": false,
+    "publication_or_deployment": false,
+    "access_or_ownership_change": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "receipt_version": "burnlens-phase-six-candidate-receipt-v0.1.0",
+  "package_id": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001",
+  "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.0",
+  "software_version": "0.56.0",
+  "generated_at_utc": "2026-07-27T04:18:03.323Z",
+  "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r001",
+  "git_source_commit": "488bea766dc4e5ab0f03a34f4905213b295cac2b",
+  "archive": {
+    "path": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-001.zip",
+    "bytes": 14963460,
+    "sha256": "def1b20fd4709bc813ec286ea46b5e063f4b95576522471a4c448a69779f92c8"
+  },
+  "package": {
+    "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.0",
+    "file_count": 117,
+    "bytes": 16285070,
+    "repository_source_files": 112
+  },
+  "directory_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+  "archive_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+  "local_links": 165,
+  "disposition": "pass-local-pre-publication-only",
+  "public_action_authorized": false,
+  "next_dependency": "P6O1-T01-U06 real rendered and recipient QA"
+}

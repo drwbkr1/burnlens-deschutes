@@ -1,0 +1,137 @@
+{
+  "report_id": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001",
+  "report_version": "portfolio-reviewer-experience-v0.2.0",
+  "generated_at_utc": "2026-07-25T18:10:24.695Z",
+  "run_id": "BL-2026-07-25-v051-portfolio-sync-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 560,
+  "git_source_commit": "7228be5bce01165775a46767d898ae03b893b8cc",
+  "software_version": "0.51.0",
+  "audience": "technical and technical-adjacent portfolio reviewers",
+  "promise": "Show how versioned wildfire imagery can move through a bounded computer-vision-to-GEOINT evidence workflow without hiding uncertainty.",
+  "target_version": "target-burn-scar-v0.2.0",
+  "aoi_version": "multi-event-native-grids-v0.5.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+  "dataset_version": null,
+  "split_version": null,
+  "baseline_version": null,
+  "model_version": null,
+  "review_path": [
+    {
+      "step": 1,
+      "label": "See the strongest verified result",
+      "target": "#result",
+      "time": "45 seconds"
+    },
+    {
+      "step": 2,
+      "label": "Inspect a retained stop decision",
+      "target": "#failure",
+      "time": "45 seconds"
+    },
+    {
+      "step": 3,
+      "label": "Verify lineage and limitations",
+      "target": "#trace",
+      "time": "30 seconds"
+    }
+  ],
+  "metrics": {
+    "event_groups": 6,
+    "prototype_regions": 12,
+    "prototype_regions_by_class": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 287,
+    "accepted_core_area_ha": 11.48,
+    "excluded_unknown_ring_pixels": 531,
+    "valid_whole_event_assignments": 54,
+    "readiness_gates_passed": 10
+  },
+  "accepted_events": [
+    "McKay 1035 NE",
+    "Tepee 1144 NE",
+    "Green Ridge 0684 CS",
+    "Grandview 0558 OD",
+    "Windigo",
+    "Ward Creek"
+  ],
+  "strongest_result": {
+    "title": "Replacement six-event sufficiency passes",
+    "decision": "PASS_SIX_EVENT_DATASET_SUFFICIENCY_AUTHORIZE_DATASET_SPLIT_QA_BASELINE_CHECKPOINT",
+    "run_id": "BL-2026-07-25-replacement-six-event-dataset-sufficiency-r003",
+    "git_source_commit": "af37f80dd17febacfbb1cf2801665d74edb16475",
+    "software_version": "0.50.0",
+    "detail_path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+    "preview_path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png"
+  },
+  "retained_failure": {
+    "title": "Petes Lake stops before candidate generation",
+    "decision": "DEFER_PETES_LAKE_DO_NOT_PROMOTE_SIXTH_EVENT",
+    "run_id": "BL-2026-07-22-petes-lake-milestone-closeout-r001",
+    "terminal_run_id": "BL-2026-07-22-petes-lake-nwi-context-r003",
+    "git_checkpoint": "52310531ad0b8e6d07800fc752f7bf65b5fdea9a",
+    "software_version": "0.45.0",
+    "detail_path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+    "preview_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png"
+  },
+  "source_roles": [
+    "Sentinel-2 supplies optical evidence under recorded Copernicus attribution.",
+    "BAER supplies field-informed preliminary prototype-positive evidence with program cautions.",
+    "MTBS corroborates burned evidence under program-specific limits.",
+    "RAVG modeled effects remain context and conservative exclusion only.",
+    "No source product is treated as affirmative background truth without a separate route."
+  ],
+  "limitations": [
+    "Owner-approved prototype regions are not independent ground truth.",
+    "The sufficiency pass authorizes only a separate dataset, split, QA, and baseline checkpoint.",
+    "The accepted cores contain only 287 native 20-meter pixels.",
+    "The balanced review roster does not estimate natural class prevalence.",
+    "No dataset, split, baseline, model, accuracy, or inference output exists.",
+    "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready."
+  ],
+  "bound_inputs": [
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.json",
+      "bytes": 9429,
+      "sha256": "88cbe6ae01af322d7f80ff8a76b3dce698c08b53394a7e68faec2f5cb198ef0a",
+      "role": "verified replacement six-event sufficiency result and trace source"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.html",
+      "bytes": 6357,
+      "sha256": "0fbdfd85a8055b2b560c7aac4d35424693ee60761a5f00f6f1b2f804e894c326",
+      "role": "verified replacement six-event sufficiency detail"
+    },
+    {
+      "path": "samples/labels/readiness/phase-two/SIX-EVENT-DATASET-SUFFICIENCY-2026-002.png",
+      "bytes": 101221,
+      "sha256": "b20b3852d23185c2e0aa0f9b6cfd462b22eb98dbdbdaad5b8bb9bdeb43977761",
+      "role": "verified replacement six-event sufficiency preview"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+      "bytes": 626846,
+      "sha256": "4ed3870e37bf68db24805540f00614c5050c064b621ca3fc5e3c0ef244bf0d42",
+      "role": "retained snow-dominated failure preview"
+    },
+    {
+      "path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+      "bytes": 6050,
+      "sha256": "6e0cb457261cc0ef48b86b15e8b21a83ec21c4b880990d83b0c79834a26c31e7",
+      "role": "verified material-defer decision"
+    }
+  ],
+  "warning": "Experimental owner-approved prototype evidence. Not ground truth, official wildfire information, emergency guidance, field validation, a dataset, or a model. Official sources govern.",
+  "decision": "PRESENT_VERIFIED_SIX_EVENT_SUFFICIENCY_KEEP_DATASET_MODEL_CLOSED",
+  "outputs": [
+    {
+      "path": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-001.html",
+      "bytes": 14774,
+      "sha256": "92003963dd03182b4d60e30d1b9e6dd62fe39805514a8aee0021071da15e73e7",
+      "media_type": "text/html"
+    }
+  ]
+}

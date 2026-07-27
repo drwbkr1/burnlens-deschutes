@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>BurnLens baseline-first presentation</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f5f1e8;
+      --muted: #bdc6ca;
+      --deep: #07151b;
+      --panel: #102a33;
+      --line: #2a4751;
+      --amber: #f6b64a;
+      --mint: #67d5b5;
+      --coral: #ff806b;
+      --blue: #79b8ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--deep); color: var(--ink); font: 18px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--mint); text-underline-offset: .18em; }
+    a:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; }
+    .skip { position: absolute; left: 1rem; top: -5rem; background: var(--amber); color: #07151b; padding: .6rem .9rem; z-index: 10; }
+    .skip:focus { top: 1rem; }
+    .slide {
+      min-height: 100vh;
+      padding: clamp(2rem, 7vw, 6rem);
+      display: grid;
+      align-content: center;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 88% 10%, #183b46 0, transparent 35rem),
+        linear-gradient(155deg, #07151b, #0a1d24);
+    }
+    .slide > * { width: min(100%, 1120px); margin-inline: auto; }
+    .kicker { color: var(--amber); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2 { margin: .35rem 0 1rem; line-height: .98; letter-spacing: -.045em; }
+    h1 { font-size: clamp(3.2rem, 8vw, 7.5rem); max-width: 11ch; }
+    h2 { font-size: clamp(2.5rem, 6vw, 5.5rem); max-width: 15ch; }
+    h3 { margin: 0 0 .4rem; }
+    .lede { color: #d8dfe1; font-size: clamp(1.15rem, 2.4vw, 1.55rem); max-width: 65ch; }
+    .warning { border-left: 4px solid var(--coral); background: #281b1b; padding: .8rem 1rem; max-width: 76ch; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; margin-top: 1.4rem; }
+    .card { grid-column: span 6; padding: 1.25rem; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(145deg, #102a33, #0c2027); }
+    .card.third { grid-column: span 4; }
+    .metric { display: block; margin: .5rem 0; font-size: clamp(2.6rem, 6vw, 5.5rem); line-height: 1; }
+    .accepted { color: var(--mint); }
+    .rejected { color: var(--coral); }
+    .risk { color: var(--amber); }
+    .muted { color: var(--muted); }
+    ol.chain { list-style: none; padding: 0; counter-reset: chain; display: grid; gap: .55rem; }
+    ol.chain li { counter-increment: chain; padding: .65rem .9rem; border-left: 3px solid var(--blue); background: #0d242c; }
+    ol.chain li::before { content: counter(chain) ". "; color: var(--blue); font-weight: 800; }
+    .bar { height: .8rem; background: #1a333c; border-radius: 99px; overflow: hidden; }
+    .bar span { display: block; height: 100%; border-radius: inherit; }
+    .full { width: 100%; background: var(--mint); }
+    .partial { width: 29.8742%; background: var(--coral); }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    th, td { padding: .65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--amber); }
+    code { color: #d7ebff; overflow-wrap: anywhere; }
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
+    .button { border: 1px solid var(--mint); border-radius: 999px; padding: .7rem 1rem; text-decoration: none; font-weight: 750; }
+    footer { padding: 2rem; color: var(--muted); font-size: .8rem; }
+    @media (max-width: 720px) {
+      .slide { min-height: auto; padding-block: 4rem; }
+      .card, .card.third { grid-column: 1 / -1; }
+      table { display: block; overflow-x: auto; }
+    }
+    @media print {
+      @page { size: 16in 9in; margin: 0; }
+      .slide { min-height: 9in; width: 16in; page-break-after: always; print-color-adjust: exact; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#slide-1">Skip to presentation</a>
+
+  <main>
+    <section class="slide" id="slide-1" tabindex="-1">
+      <div>
+        <div class="kicker">BurnLens · experimental CV-to-GEOINT</div>
+        <h1>Evidence wins. The model doesn’t.</h1>
+        <p class="lede">A bounded U-Net trains, evaluates, and reproduces—then loses to RBR. BurnLens rejects the model and carries the stronger baseline into one georeferenced Ward Creek evidence workflow.</p>
+        <p class="warning"><strong>Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.</strong></p>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s2">
+      <div>
+        <div class="kicker">The promise</div>
+        <h2 id="s2">A visible chain from evidence to map.</h2>
+        <ol class="chain">
+          <li>Controlled Sentinel-2 and official-program evidence.</li>
+          <li>Owner-confirmed prototype regions with explicit unknown rings.</li>
+          <li>Pre-locked whole-event split and independently rebuilt dataset.</li>
+          <li>Preregistered RBR plus one bounded CPU U-Net.</li>
+          <li>Reject the model; retain the stronger baseline.</li>
+          <li>Write georeferenced rasters, vectors, observations, and package.</li>
+          <li>Test recovery, reconstruction, rendering, rollback, and known issues.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s3">
+      <div>
+        <div class="kicker">The data boundary</div>
+        <h2 id="s3">Small, governed prototype evidence.</h2>
+        <div class="grid">
+          <article class="card third"><h3>Six events</h3><span class="metric">6</span><p>Whole-event train, validation, and test roles.</p></article>
+          <article class="card third"><h3>Twelve patches</h3><span class="metric">12</span><p>Native 64×64 Sentinel-2 patches.</p></article>
+          <article class="card third"><h3>Selected cores</h3><span class="metric">287</span><p>20-metre prototype core pixels; 531 unknown-ring pixels excluded.</p></article>
+        </div>
+        <p class="warning">Owner approval is necessary, never sufficient. These regions are not independent ground truth or a natural-prevalence sample.</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s4">
+      <div>
+        <div class="kicker">The comparison</div>
+        <h2 id="s4">The model predicts everything burned.</h2>
+        <div class="grid">
+          <article class="card">
+            <h3 class="accepted">Accepted RBR</h3>
+            <span class="metric accepted">1.000</span>
+            <p>Event-class macro Dice on 89 selected Ward Creek/Windigo test cores.</p>
+            <div class="bar" aria-hidden="true"><span class="full"></span></div>
+          </article>
+          <article class="card">
+            <h3 class="rejected">Rejected U-Net</h3>
+            <span class="metric rejected">0.299</span>
+            <p>Event-class macro Dice; all 89 selected test cores predicted burned.</p>
+            <div class="bar" aria-hidden="true"><span class="partial"></span></div>
+          </article>
+        </div>
+        <p class="lede">Decision: <code>reject-model-retain-baseline</code>. This bounded comparison does not establish universal algorithm ranking or generalization.</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s5">
+      <div>
+        <div class="kicker">The GEOINT result</div>
+        <h2 id="s5">Success and warning share the map.</h2>
+        <div class="grid">
+          <article class="card"><h3>WCP-001</h3><span class="metric accepted">141.44 ha</span><p>Accepted RBR; 94.19% overlaps analyst-interpreted MTBS context.</p></article>
+          <article class="card"><h3>WCP-002</h3><span class="metric risk">66.76 ha</span><p>Accepted RBR; 0% MTBS overlap. Visible false-positive-risk evidence.</p></article>
+        </div>
+        <div class="actions">
+          <a class="button" href="../../samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html">Open the Phase Six surface</a>
+          <a class="button" href="../../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html">Open the exact map</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s6">
+      <div>
+        <div class="kicker">Reliability and limits</div>
+        <h2 id="s6">Failure stays first-class.</h2>
+        <div class="grid">
+          <article class="card third"><h3>Recovery</h3><p>Five injected package failures stop safely and recover under the recorded contract.</p></article>
+          <article class="card third"><h3>Reconstruction</h3><p>The immutable run package repacks byte-for-byte from the tracked evidence route.</p></article>
+          <article class="card third"><h3>Rollback</h3><p>The verified predecessor remains restorable and exact.</p></article>
+          <article class="card"><h3>Two medium findings</h3><p>Bounded setuptools advisory and historical builder-identity omission; both retain impact and workaround.</p></article>
+          <article class="card"><h3>No inflated claim</h3><p>Not ground truth, generalization, model superiority, field validation, official status, endorsement, operational readiness, or emergency suitability.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" aria-labelledby="s7">
+      <div>
+        <div class="kicker">Trace and takeaway</div>
+        <h2 id="s7">The portfolio result is disciplined rejection.</h2>
+        <table>
+          <tbody>
+            <tr><th>Dataset / split</th><td><code>burnlens-dataset-v0.1.0</code> · <code>burnlens-whole-event-split-v0.1.0</code></td></tr>
+            <tr><th>Baseline / model</th><td><code>burnlens-baseline-v0.1.0</code> · <code>burnlens-unet-binary-v0.1.0</code> rejected</td></tr>
+            <tr><th>Accepted run</th><td><code>BL-2026-07-26-p4o1-t01-u07-package-r001</code></td></tr>
+            <tr><th>Phase Four ZIP</th><td><code>91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e</code></td></tr>
+            <tr><th>Verified software</th><td><code>0.55.0</code> · merge <code>7066dcd9cef555a6df0716dc7568205e7d6d395e</code></td></tr>
+          </tbody>
+        </table>
+        <p class="lede">BurnLens is stronger because it makes the failed model, the accepted baseline’s risk, and the evidence boundaries inspectable.</p>
+        <p class="muted">Contains modified Copernicus Sentinel data 2019. Map services and data available from U.S. Geological Survey, National Geospatial Program. Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    BurnLens Phase Six local pre-publication presentation · no GitHub Release, deployment, public-sharing change, publication, or external submission.
+  </footer>
+</body>
+</html>

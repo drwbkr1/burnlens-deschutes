@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>BurnLens Phase Five baseline-first candidate</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0b1417;color:#eef7f4}
+*{box-sizing:border-box}
+body{margin:0 auto;max-width:1040px;padding:clamp(1rem,4vw,3rem);line-height:1.55}
+.eyebrow{color:#92d6c4;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+h1{font-size:clamp(2rem,6vw,4.25rem);line-height:1.03;max-width:18ch;margin:.35rem 0 1rem}
+h2{font-size:1.25rem;margin-top:0}
+.lede{font-size:1.12rem;max-width:72ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.card{background:#142326;border:1px solid #315055;border-radius:14px;padding:1rem 1.2rem;margin:1rem 0}
+.pass{color:#9ee7b5;font-weight:800}.warn{color:#ffd486;font-weight:800}
+a{color:#9edff0} code{overflow-wrap:anywhere;color:#b8e9dc}
+ul{padding-left:1.3rem}
+@media(max-width:660px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<p class="eyebrow">P5O1-T01-U06 · baseline-first candidate</p>
+<h1>One exact candidate. Every material caveat visible.</h1>
+<p class="lede">BurnLens freezes the verified RBR-primary GEOINT run together with its failure, accessibility, assurance, reconstruction, and rollback evidence. The U-Net remains a rejected diagnostic and did not outperform RBR.</p>
+<div class="grid">
+<section class="card">
+<h2>Candidate disposition</h2>
+<p class="pass">Accepted baseline-first candidate, pending milestone merge, fresh-main verification, and annotated tag</p>
+<p>Software <code>0.55.0</code>; run <code>BL-2026-07-26-p5o1-t01-u06-release-candidate-r002</code>.</p>
+</section>
+<section class="card">
+<h2>Phase Six recommendation</h2>
+<p class="pass">Eligible after the exact milestone merge, fresh-main gates, and remote tag verification pass.</p>
+<p>This page is not the final Phase Six publication or submission claim.</p>
+</section>
+</div>
+<section class="card">
+<h2>Inspect the evidence</h2>
+<ul>
+<li><a href="interfaces/phase-four-evidence.html">Open the accepted RBR-primary Phase Four evidence interface</a>.</li>
+<li><a href="interfaces/phase-five-reliability.html">Open the Phase Five reliability and failure-state interface</a>.</li>
+<li><a href="evidence/u04-assurance.html">Read security, rights, integrity, claims, and performance assurance</a>.</li>
+<li><a href="evidence/u05-clean-reconstruction.html">Read clean reconstruction and rollback evidence</a>.</li>
+<li><a href="KNOWN-ISSUES.md">Read the exact known-issues register</a>.</li>
+<li><a href="QA-MATRIX.json">Inspect the machine-readable QA matrix</a>.</li>
+</ul>
+</section>
+<section class="card">
+<h2>What remains true</h2>
+<ul>
+<li>RBR is accepted; WCP-002 remains visible false-positive-risk evidence.</li>
+<li>The trained U-Net is valid diagnostic evidence but rejected and excluded from accepted measurements.</li>
+<li>Two medium issues are visible with impact and workaround; no critical or high finding remains open.</li>
+<li>The exact Phase Four ZIP remains 487,893 bytes at SHA-256 <code>91308a2f...</code>.</li>
+<li>No dataset, split, label, threshold, analytical output, model decision, deployment, access, ownership, sharing, or submission state changed.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Lineage and limits</h2>
+<p>Source commit <code>dd1c270421250ce312d548b9571f91b4b806536b</code>; generated <code>2026-07-27T01:49:33Z</code>. Exact hashes are in <code>CANDIDATE-MANIFEST.json</code> and <code>CHECKSUMS.sha256</code>.</p>
+<p class="warn">Not ground truth, generalization, model superiority, independent accessibility certification, field validation, official information, operational readiness, endorsement, emergency guidance, or final-submission readiness.</p>
+</section>
+</body>
+</html>

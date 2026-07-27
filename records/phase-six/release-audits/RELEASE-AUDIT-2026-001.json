@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-001",
+  "recorded_at_utc": "2026-07-27T16:22:45.379Z",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U07",
+  "run_id": "BL-2026-07-27-p6o1-t01-u07-release-audit-r001",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "data",
+    "model",
+    "package",
+    "public",
+    "security",
+    "external"
+  ],
+  "candidate": {
+    "version": "0.56.0",
+    "package_id": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002",
+    "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.1",
+    "commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
+    "package_source_commit": "575fcb542e356dd77c33daf74a285469ea83dbc4",
+    "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+    "exact_base": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+    "issue": 578,
+    "pull_request": null,
+    "tag": null,
+    "state": "verified-local-pre-publication-candidate",
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-27T16:22:45.379Z",
+    "repository": "drwbkr1/burnlens-deschutes",
+    "remote_commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
+    "origin_main": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+    "open_pull_request_for_branch": false,
+    "candidate_tag": null,
+    "github_release": null,
+    "deployment": null,
+    "external_submission": null,
+    "public_sharing_change": false,
+    "predecessor_tag": "v0.55.0-baseline-first-reliability-candidate",
+    "predecessor_tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+    "predecessor_peeled_commit": "7066dcd9cef555a6df0716dc7568205e7d6d395e"
+  },
+  "artifacts": {
+    "directory": {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1",
+      "files": 117,
+      "bytes": 16285070,
+      "local_links": 165
+    },
+    "archive": {
+      "path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 14963469,
+      "sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e"
+    },
+    "wheel": {
+      "filename": "burnlens_deschutes-0.56.0-py3-none-any.whl",
+      "bytes": 1228670,
+      "sha256": "3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926",
+      "builds": 2,
+      "byte_identical": true,
+      "source_date_epoch": 1785168448
+    }
+  },
+  "unit_records": [
+    {
+      "unit_id": "P6O1-T01-U01",
+      "path": "records/phase-six/publication/PHASE-SIX-PUBLIC-SCOPE-RECORD-2026-001.json",
+      "bytes": 4211,
+      "sha256": "79afcc49e70331fbcfdb3afd0725c370274ec8628ba0fa1326f758d241bbcdc1"
+    },
+    {
+      "unit_id": "P6O1-T01-U02",
+      "path": "records/phase-six/publication/PHASE-SIX-REVIEWER-NARRATIVE-RECORD-2026-001.json",
+      "bytes": 4977,
+      "sha256": "322054ace018e326cf17b111adc71757e7fc4e552663afec7082cc53c768061e"
+    },
+    {
+      "unit_id": "P6O1-T01-U03",
+      "path": "records/phase-six/publication/PHASE-SIX-PORTFOLIO-SURFACE-RECORD-2026-001.json",
+      "bytes": 6296,
+      "sha256": "93339c7494c7b51b16fc492c6bd2f1511720678336c05adf6ab99b4336ae8f57"
+    },
+    {
+      "unit_id": "P6O1-T01-U04",
+      "path": "records/phase-six/publication/PHASE-SIX-SUPPORTING-MATERIALS-RECORD-2026-001.json",
+      "bytes": 5184,
+      "sha256": "8fab4d6e044a7e2b27f737382ed3907aab84dd82d80ad30ccc7d77b141d0e1cd"
+    },
+    {
+      "unit_id": "P6O1-T01-U05",
+      "path": "records/phase-six/publication/PHASE-SIX-PRE-PUBLICATION-PACKAGE-RECORD-2026-002.json",
+      "bytes": 6275,
+      "sha256": "2124c53885c48d493b244a5bbcb920d8607eea0dd18c4dd32bdc37016b165eb2"
+    },
+    {
+      "unit_id": "P6O1-T01-U06",
+      "path": "records/phase-six/publication/PHASE-SIX-RECIPIENT-QA-RECORD-2026-001.json",
+      "bytes": 8621,
+      "sha256": "4e29ac600322d4f89189a8a9ff3c973b897de706cf05b17a5044e979f4bb238c"
+    }
+  ],
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope-science-and-phase-objective",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the exact U01-U06 records, Phase Six objective, issue #578 contract, claim matrix, and immutable Phase Two through Five evidence.",
+      "evidence": [
+        "All seven issue units are dependency-complete with immutable records and retained failures.",
+        "RBR remains the only accepted analytical method; the trained U-Net remains rejected first-class diagnostic evidence and did not outperform RBR.",
+        "No label, dataset, split, threshold, model weight, source, AOI, analytical raster, vector, or metric changed.",
+        "The result satisfies the Phase Six pre-publication proof but does not itself publish or close the project."
+      ]
+    },
+    {
+      "id": "CHECK-002",
+      "category": "package-integrity-and-reconstruction",
+      "required": true,
+      "status": "pass",
+      "method": "Validate both tracked package forms, create a short-path core.longpaths fresh clone at the corrected pushed head, and rebuild from the exact frozen arguments.",
+      "evidence": [
+        "Directory and archive validators pass at 117 files, 16,285,070 extracted bytes, 165 local links, and 14,963,469 archive bytes.",
+        "Fresh clone cd383a3791d7bb39db076c60fa9c6b5f2993f1c0 rebuilds SHA-256 5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e byte-identically.",
+        "The first U07 clone at 7c0a706d8bf9911a4ca8529e8901864ce6f76944 failed closed on a nested checksum line-ending mismatch; cd383a3 adds the explicit checkout contract and regression test.",
+        "After the living case study advanced, the builder reused the tracked frozen U05 source snapshot and reproduced the unchanged ZIP exactly."
+      ]
+    },
+    {
+      "id": "CHECK-003",
+      "category": "real-render-recipient-and-accessibility",
+      "required": true,
+      "status": "pass",
+      "method": "Reuse the exact U06 recipient extraction and inspect the rendered package through loopback HTTP at desktop and narrow widths plus independent Chrome keyboard input.",
+      "evidence": [
+        "OPEN-FIRST, the canonical surface, the Ward Creek interface, and the presentation pass at 1440x900 and 390x844 with zero horizontal overflow or browser error.",
+        "Tab exposes the skip link first and Return moves the URL and visible focus to MAIN#main.",
+        "WCP-002 and the rejected-model toggle remain usable and correctly labeled.",
+        "All 117 package files return HTTP 200 with exact byte counts; 20 HTML files and 138 references contain zero external runtime URL."
+      ]
+    },
+    {
+      "id": "CHECK-004",
+      "category": "full-regression-and-structured-evidence",
+      "required": true,
+      "status": "pass",
+      "method": "Run the full repository suite at the clean corrected pushed head, then parse every changed JSON file, compile Python sources, check the dependency lock, and run diff hygiene.",
+      "evidence": [
+        "Clean bc9646c578c199fee51ec0fd5c2db41a97d2aca9 passes 802 tests, one expected skip, 422 existing NumPy deprecation warnings, and 86 subtests in 651.56 seconds.",
+        "All 61 changed JSON files parse; Python compilation, uv lock check, dependency integrity, and git diff check pass.",
+        "The earlier clean 7c0a706 head passed 800 tests before the added checkout regression test."
+      ]
+    },
+    {
+      "id": "CHECK-005",
+      "category": "wheel-install-and-cli-runtime",
+      "required": true,
+      "status": "pass",
+      "method": "Build two fixed-epoch wheels, install the exact wheel into a fresh locked CPython 3.12.10 environment, import outside the repository, check dependencies, and invoke every registered console route with --help.",
+      "evidence": [
+        "Two 1,228,670-byte 0.56.0 wheels are byte-identical at SHA-256 3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926.",
+        "The isolated import resolves only to site-packages and reports version 0.56.0.",
+        "All 75 installed distributions are compatible and all 122 registered commands return successful help."
+      ]
+    },
+    {
+      "id": "CHECK-006",
+      "category": "rights-claims-privacy-and-security",
+      "required": true,
+      "status": "pass",
+      "method": "Re-evaluate the U01 source gate, exact public roster, claim matrix, archive inventory, package reference closure, and private/custody exclusion checks.",
+      "evidence": [
+        "The exact source gate remains ready across three sources, 24 criteria, and 32 evidence items with no stale live evidence, warning, error, or blocker.",
+        "No private owner response, provider locator, credential, token, raw provider archive, ignored custody path, or model weight is in the candidate.",
+        "No claim of independent ground truth, generalization, model superiority, field validation, official status, endorsement, operational readiness, or emergency suitability appears.",
+        "Two medium Phase Five findings remain visible with impact and workaround; zero critical or high finding is open."
+      ]
+    },
+    {
+      "id": "CHECK-007",
+      "category": "live-repository-and-rollback-truth",
+      "required": true,
+      "status": "pass",
+      "method": "Read live issue, branch, main, PR, GitHub Release, remote tag, and predecessor rollback state after pushing the corrected checkpoint.",
+      "evidence": [
+        "Issue #578 is open and the remote branch equals risk-bearing local head bc9646c578c199fee51ec0fd5c2db41a97d2aca9.",
+        "No pull request, 0.56.0 tag, GitHub Release, deployment, public-sharing change, or external submission exists.",
+        "Remote predecessor annotated tag object 33072144767e70bfa538079bda3be6f798477a9f peels exactly to 7066dcd9cef555a6df0716dc7568205e7d6d395e and its exact archive validates."
+      ]
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "P6O1-T01 U01-U07 pass locally; candidate is ready only for the owner publication stop gate.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "CHANGELOG.md",
+      "expected_state": "0.56.0 candidate records the complete local milestone and no public action.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "Phase Six pre-publication candidate verified locally; publication remains gated.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/VERSION_HISTORY.md",
+      "expected_state": "0.56.0 remains an untagged candidate with complete U07 evidence.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/roadmap/BURNLENS_BUILD_ROADMAP.md",
+      "expected_state": "Phase Six candidate complete locally; next dependency is owner publication-gate handling.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/case-study/BURNLENS_CASE_STUDY.md",
+      "expected_state": "Baseline-first portfolio candidate and limitations are current without a publication claim.",
+      "status": "current"
+    }
+  ],
+  "retained_attempts": [
+    {
+      "attempt_id": "P6O1-T01-U07-FRESH-CLONE-R001",
+      "commit": "7c0a706d8bf9911a4ca8529e8901864ce6f76944",
+      "disposition": "retained-checkout-contract-failure",
+      "result": "A clean short-path clone changed the top-level and nested Phase Six CHECKSUMS.sha256 bytes to CRLF and the directory validator failed closed.",
+      "scientific_or_candidate_archive_bytes_changed": false,
+      "next_gate": "add one recursive Phase Six SHA-256 LF contract and regression coverage"
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FOCUSED-R001",
+      "disposition": "retained-invalid-tooling-attempt",
+      "result": "A focused command named a nonexistent tests/test_checkout_contract_batching.py path and collected zero tests.",
+      "application_or_package_defect_inferred": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-CHECKOUT-FOCUSED-R002",
+      "disposition": "expected-pre-commit-contract-failure",
+      "result": "Eight tests passed; the historical worktree-byte test correctly rejected the two uncommitted remediation files.",
+      "application_or_package_defect_inferred": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-CORRECTED-R003",
+      "commit": "cd383a3791d7bb39db076c60fa9c6b5f2993f1c0",
+      "disposition": "pass",
+      "fresh_clone_package_validation": "pass",
+      "fresh_clone_rebuild_byte_identity": true,
+      "full_tests_passed": 801,
+      "tests_skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-LIVING-SOURCE-R004",
+      "disposition": "retained-current-source-pin-failure",
+      "result": "The required living case-study update no longer matched the original U05 current-source pin, so seven builder tests failed closed before output.",
+      "scientific_or_candidate_archive_bytes_changed": false,
+      "next_gate": "reconstruct from the tracked frozen U05 source snapshot once it exists"
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FROZEN-SNAPSHOT-R005",
+      "disposition": "pass",
+      "focused_tests_passed": 13,
+      "post_closeout_rebuild_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+      "matches_u05_archive": true,
+      "scientific_or_candidate_archive_bytes_changed": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-WHEEL-WRAPPER-R001",
+      "disposition": "retained-invalid-tooling-attempt",
+      "result": "PowerShell rejected an ambiguous variable interpolation in the failure-report string before either final wheel build began.",
+      "wheel_created": false,
+      "application_or_package_defect_inferred": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-INSTALL-PROBE-R002",
+      "disposition": "retained-invalid-probe",
+      "result": "The first import probe ran from the repository root and resolved the source tree; wheel equality, dependency health, and 122 installed command routes still passed.",
+      "next_gate": "repeat the import from an ignored directory outside the source package path"
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-R003",
+      "commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
+      "disposition": "pass",
+      "full_tests_passed": 802,
+      "tests_skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "duration_seconds": 651.56,
+      "wheel_bytes": 1228670,
+      "wheel_sha256": "3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926",
+      "source_date_epoch": 1785168448,
+      "wheel_builds": 2,
+      "isolated_distributions": 75,
+      "site_packages_only_import": true,
+      "registered_commands": 122,
+      "command_help_passed": 122
+    }
+  ],
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "boundaries": {
+    "repository": "burnlens-deschutes-only",
+    "burnlens_site_used": false,
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "phase_3b_or_second_experiment": false,
+    "scientific_state_changed": false,
+    "public_action_authorized": false,
+    "github_release_created": false,
+    "deployment_created": false,
+    "access_ownership_or_public_sharing_changed": false,
+    "external_submission_performed": false
+  },
+  "decision": {
+    "reported_status": "verified",
+    "candidate_disposition": "ready-for-owner-publication-gate",
+    "phase_six_status": "verified-local-pre-publication-candidate",
+    "public_action_authorized": false,
+    "rationale": "U01-U07 pass across scope, rights, narrative, real rendering, deterministic packaging, recipient use, fresh-clone reconstruction, complete regression, isolated installation, all command routes, live repository truth, and rollback. The candidate remains local and pre-publication because every publication or public-sharing action is a separate owner stop gate.",
+    "next_action": "Open one coherent milestone PR, verify and merge the reviewed repository state, then stop at the owner publication gate. Do not create a tag, GitHub Release, deployment, public-sharing change, publication, or external submission without explicit owner approval."
+  }
+}

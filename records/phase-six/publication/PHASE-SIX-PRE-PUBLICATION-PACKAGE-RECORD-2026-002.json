@@ -1,0 +1,138 @@
+{
+  "record_version": "burnlens-phase-six-pre-publication-package-record-v0.1.1",
+  "record_id": "PHASE-SIX-PRE-PUBLICATION-PACKAGE-RECORD-2026-002",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U05",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r002",
+  "recorded_at_utc": "2026-07-27T05:12:56.802Z",
+  "exact_base_commit": "6c3e3728f94389ac245306dc84c36c61d68afa13",
+  "generator_source_commit": "575fcb542e356dd77c33daf74a285469ea83dbc4",
+  "supersedes_for_advancement": {
+    "record_id": "PHASE-SIX-PRE-PUBLICATION-PACKAGE-RECORD-2026-001",
+    "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r001",
+    "archive_bytes": 14963460,
+    "archive_sha256": "def1b20fd4709bc813ec286ea46b5e063f4b95576522471a4c448a69779f92c8",
+    "reason": "R001 is retained failed pre-freeze evidence because its declared source commit cannot pass locked 0.56.0 environment setup."
+  },
+  "inputs": [
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+      "bytes": 14798,
+      "sha256": "f0fb4b57f3be1ae9690b2252c3ecd9f0a7e125bd6e67ce8b0f4f242752cb09f8",
+      "role": "exact U03 canonical reviewer surface"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "bytes": 11203,
+      "sha256": "5b16c00d1bee7dd0ef5302bc1a0aeb61fd60a4756b214dc6517630722c0b8e98",
+      "role": "exact U04 presentation"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "immutable RBR-primary analytical package"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "immutable Phase Five reliability candidate"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1",
+      "files": 117,
+      "bytes": 16285070,
+      "role": "corrected extract-and-open directory form"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 14963469,
+      "sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+      "role": "corrected deterministic safe-extraction archive"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002-RECEIPT.json",
+      "bytes": 1131,
+      "sha256": "a7345393009a9bfa2080f4793a166b0146ddf8405206508508f8cb82eda604d7",
+      "role": "archive and directory receipt"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1/OPEN-FIRST.html",
+      "bytes": 3518,
+      "sha256": "8a3ed943eae867942b3263c8c1e4ee0a63726927141293f2975b9748253a9c5e"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1/PACKAGE-MANIFEST.json",
+      "bytes": 32551,
+      "sha256": "35eaeeac9eee915d22b6fed3bbd55b37c2c520f1df0f595a26e73448957deb74"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1/CHECKSUMS.sha256",
+      "bytes": 16350,
+      "sha256": "152f8a1647d67b4cdaca0748fac643b9a94706b2735b4d9a55ff63233f538a25"
+    }
+  ],
+  "verification": {
+    "directory_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "archive_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "installed_cli_validation": "pass",
+    "deterministic_rebuilds": {
+      "attempts": 2,
+      "archive_byte_identity": true,
+      "tracked_archive_identity": true
+    },
+    "repository_source_files": 112,
+    "package_files": 117,
+    "local_links": 165,
+    "complete_local_link_closure": true,
+    "complete_phase_five_directory_archive_parity": true,
+    "pinned_source_bytes_and_hashes": "pass",
+    "tracked_source_enforcement": "pass",
+    "fixed_zip_timestamp_and_regular_file_modes": "pass",
+    "duplicate_encrypted_traversal_symlink_and_crc_guards": "pass",
+    "no_overwrite_and_r001_retention": "pass",
+    "private_locator_secret_custody_and_model_weight_exclusion": "pass",
+    "uv_lock_check": "pass",
+    "dependency_integrity": "75 installed distributions compatible",
+    "clean_source_full_suite": {
+      "tests_passed": 800,
+      "tests_failed": 0,
+      "tests_skipped": 1,
+      "subtests_passed": 86,
+      "warnings": 422
+    },
+    "checkout_contract_batching": "pass",
+    "compile": "pass"
+  },
+  "decision": {
+    "status": "pass-local-pre-publication-only",
+    "software_version": "0.56.0",
+    "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.1",
+    "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U06 real rendered and recipient QA"
+  },
+  "retained_limitations": [
+    "R001 remains immutable failed pre-freeze evidence and must not be substituted for r002.",
+    "RBR remains accepted only for one bounded Ward Creek demonstration; WCP-002 remains visible false-positive-risk evidence.",
+    "The trained U-Net remains rejected and did not outperform RBR.",
+    "Owner-approved prototype labels are not independent ground truth, inter-rater agreement, or field validation.",
+    "The exact Phase Five two-medium-finding register remains visible with impact and workaround.",
+    "U05 proves deterministic assembly and source reproducibility; real recipient extraction, browser, keyboard, narrow-width, offline, rollback, and fresh-checkout package QA belong to U06.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, and external submission remain outside this unit."
+  ],
+  "external_action": {
+    "repository_local_package_only": true,
+    "provider_request_or_download": false,
+    "publication_or_deployment": false,
+    "access_or_ownership_change": false
+  }
+}

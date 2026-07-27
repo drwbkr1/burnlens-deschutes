@@ -1,0 +1,181 @@
+{
+  "inventory_version": "burnlens-phase-six-public-artifact-inventory-v0.1.0",
+  "inventory_id": "PUBLIC-ARTIFACT-INVENTORY-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U01",
+  "issue": 578,
+  "run_id": "BL-2026-07-27-p6o1-t01-u01-public-scope-r001",
+  "exact_base_commit": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+  "scope_state": "frozen-for-local-pre-publication-candidate",
+  "public_action_authorized": false,
+  "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+  "existing_exact_inputs": [
+    {
+      "artifact_id": "P6-PUB-INPUT-001",
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "classification": "reliability-evidence",
+      "disposition": "include-exact",
+      "restriction": "Immutable Phase Five package; wrapper must disclose its frozen pre-merge wording rather than rewrite it."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-002",
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "classification": "integrated-run-evidence",
+      "disposition": "include-through-phase-five-package",
+      "restriction": "Do not create a second or modified analytical package."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-003",
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "classification": "repository-owned-application",
+      "disposition": "include-exact",
+      "restriction": "RBR accepted; U-Net rejected and off by default; WCP-002 failure remains visible."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-004",
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html",
+      "bytes": 4007,
+      "sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2",
+      "classification": "reliability-entrypoint",
+      "disposition": "include-exact-behind-current-wrapper",
+      "restriction": "Its pre-merge disposition is immutable historical candidate evidence."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-005",
+      "path": "LICENSE",
+      "bytes": 1067,
+      "sha256": "accec00dfaedd030895e2c9cd0c7038380265fec320e6d94429ee1978ebd97d8",
+      "classification": "repository-license",
+      "disposition": "include-exact",
+      "restriction": "MIT covers BurnLens-owned software and associated documentation; third-party data and derived-artifact notices remain separate."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-006",
+      "path": "records/phase-five/releases/PHASE-FIVE-RELEASE-VERIFICATION-2026-001.json",
+      "bytes": 2454,
+      "sha256": "a9c60ad96092bef87905b830ffdb33b66f0561f05ccfbf4def9ffcbe26262692",
+      "classification": "release-metadata",
+      "disposition": "include-or-link-exact",
+      "restriction": "Current verified Phase Five state; no GitHub Release or deployment implied."
+    },
+    {
+      "artifact_id": "P6-PUB-INPUT-007",
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/KNOWN-ISSUES.md",
+      "bytes": 1969,
+      "sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17",
+      "classification": "known-issues",
+      "disposition": "include-exact",
+      "restriction": "Both medium findings remain visible with impact and workaround."
+    }
+  ],
+  "planned_outputs": [
+    {
+      "artifact_id": "P6-PUB-PLAN-001",
+      "path_family": "samples/runs/phase-six/burnlens-baseline-first-portfolio-candidate-*/**",
+      "classification": "canonical-reviewer-entrypoint",
+      "required": true
+    },
+    {
+      "artifact_id": "P6-PUB-PLAN-002",
+      "path_family": "portfolio/phase-six/*.zip",
+      "classification": "deterministic-pre-publication-package",
+      "required": true
+    },
+    {
+      "artifact_id": "P6-PUB-PLAN-003",
+      "path_family": "docs/phase-six/**",
+      "classification": "scope-claims-citation-demo-maintenance",
+      "required": true
+    },
+    {
+      "artifact_id": "P6-PUB-PLAN-004",
+      "path_family": "portfolio/phase-six/*presentation*",
+      "classification": "compact-presentation",
+      "required": true
+    }
+  ],
+  "explicitly_withheld": [
+    {
+      "class": "raw-provider-archives",
+      "examples": [
+        "Sentinel SAFE archives",
+        "native Burn Severity Portal deliveries",
+        "native MTBS, BAER, RAVG, NWI, VIIRS, or NASA files"
+      ],
+      "reason": "Not required for the final reviewer route; custody, terms, size, and privacy boundaries remain."
+    },
+    {
+      "class": "private-human-review",
+      "examples": [
+        "owner response bytes",
+        "review receipts with private details",
+        "unit-level response exports"
+      ],
+      "reason": "Only aggregate, already-approved prototype-label evidence may be described."
+    },
+    {
+      "class": "credentials-and-retrieval",
+      "examples": [
+        "credentials",
+        "tokens",
+        "cookies",
+        "private provider URLs",
+        "recipient or mailbox details"
+      ],
+      "reason": "Never public."
+    },
+    {
+      "class": "ignored-custody-and-local-paths",
+      "examples": [
+        "ignored provider custody",
+        "temporary browser profiles",
+        "machine-specific absolute paths",
+        "private failure logs"
+      ],
+      "reason": "Not portable or public; only sanitized aggregate evidence may be included."
+    },
+    {
+      "class": "model-promotion",
+      "examples": [
+        "accepted U-Net perimeter",
+        "model-primary metric",
+        "model-superiority claim"
+      ],
+      "reason": "The U-Net is rejected and did not outperform RBR."
+    }
+  ],
+  "required_notices": [
+    "Contains modified Copernicus Sentinel data 2019.",
+    "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+    "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service.",
+    "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Official sources govern."
+  ],
+  "permitted_claims": [
+    "BurnLens trains and evaluates one bounded U-Net, preserves its failure, and rejects it against the stronger RBR baseline.",
+    "RBR is the accepted analytical method for one bounded Ward Creek demonstration.",
+    "The exact repository-owned interface and immutable packages are reproducible under their recorded contracts.",
+    "WCP-002 is visible false-positive-risk evidence, not a hidden failure.",
+    "Owner-approved prototype labels are not independent ground truth."
+  ],
+  "prohibited_claims": [
+    "independent ground truth",
+    "generalization",
+    "model superiority",
+    "field validation",
+    "official status",
+    "agency endorsement",
+    "operational readiness",
+    "emergency suitability",
+    "adoption",
+    "risk reduction",
+    "complete burn-scar mapping",
+    "final public release before the public-action gate"
+  ],
+  "next_dependency": "P6O1-T01-U02 reviewer narrative and repository journey"
+}

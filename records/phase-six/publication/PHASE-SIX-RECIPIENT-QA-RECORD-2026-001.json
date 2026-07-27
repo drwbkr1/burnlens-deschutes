@@ -1,0 +1,186 @@
+{
+  "record_version": "burnlens-phase-six-recipient-qa-record-v0.1.0",
+  "record_id": "PHASE-SIX-RECIPIENT-QA-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U06",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u06-recipient-qa-r001",
+  "recorded_at_utc": "2026-07-27T05:35:21.469Z",
+  "exact_base_commit": "d046f17837262476e07c2e3e2e3b8933d470bb90",
+  "candidate": {
+    "package_id": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002",
+    "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.1",
+    "source_commit": "575fcb542e356dd77c33daf74a285469ea83dbc4",
+    "run_id": "BL-2026-07-27-p6o1-t01-u05-pre-publication-package-r002",
+    "directory_files": 117,
+    "directory_bytes": 16285070,
+    "archive_bytes": 14963469,
+    "archive_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+    "local_links": 165
+  },
+  "controlled_intake": {
+    "source": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+    "recipient_staging": "ignored repository-local downloads/phase-six-u06-recipient-r001",
+    "no_overwrite": true,
+    "safe_extraction": "pass",
+    "expected_files": 117,
+    "extracted_files": 117,
+    "expected_bytes": 16285070,
+    "extracted_bytes": 16285070,
+    "relative_path_identity": true,
+    "per_file_byte_and_sha256_identity": true,
+    "validator_result": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "custody_or_private_source_added": false
+  },
+  "rendered_qa": {
+    "transport": "loopback HTTP from the exact extracted recipient copy",
+    "entrypoint": "burnlens-phase-six-baseline-first-candidate-v0.1.1/OPEN-FIRST.html",
+    "desktop": {
+      "viewport": "1440x900",
+      "entrypoint": "pass",
+      "canonical_surface": "pass",
+      "presentation": "pass",
+      "horizontal_overflow": false,
+      "console_or_page_errors": 0
+    },
+    "narrow": {
+      "viewport": "390x844",
+      "entrypoint": "pass",
+      "canonical_surface": "pass",
+      "ward_creek_interface": "pass",
+      "horizontal_overflow": false,
+      "console_or_page_errors": 0
+    },
+    "interaction": {
+      "wcp_002_focus_pressed": true,
+      "rejected_unet_default": "off",
+      "rejected_unet_toggle": "pass",
+      "analytical_role_after_toggle": "diagnostic-only"
+    },
+    "keyboard": {
+      "browser": "Google Chrome through Windows SendInput and UI Automation",
+      "first_page_focus": "Skip to package guide",
+      "activation_key": "Return",
+      "resulting_fragment": "#main",
+      "resulting_focus": "MAIN#main",
+      "visible_focus_indicator": true,
+      "status": "pass"
+    },
+    "capture_note": "One in-app full-page screenshot produced a scaled capture artifact inconsistent with computed geometry and the normal viewport capture. Normal desktop, narrow, and independent Chrome viewport renders passed; the artifact changed no candidate byte and is not treated as an application failure."
+  },
+  "http_and_offline_qa": {
+    "manifest_listed_files": 115,
+    "manifest_files_http_200_with_exact_bytes": 115,
+    "package_control_files_http_200_with_exact_bytes": [
+      "PACKAGE-MANIFEST.json",
+      "CHECKSUMS.sha256"
+    ],
+    "unique_package_files_covered": 117,
+    "server_non_200_responses": 0,
+    "html_files": 20,
+    "html_references": 138,
+    "external_auto_fetch_references": 0,
+    "external_click_only_links": 0,
+    "scripts": "none on the entrypoint, canonical surface, and presentation; one inline self-contained script on the Ward Creek interface",
+    "external_runtime_assets": 0,
+    "status": "pass"
+  },
+  "fresh_checkout_and_reproducibility": {
+    "attempts": [
+      {
+        "attempt_id": "BL-2026-07-27-p6o1-t01-u06-fresh-checkout-r001",
+        "path_role": "ignored repository-local long-path clone",
+        "head": "d046f17837262476e07c2e3e2e3b8933d470bb90",
+        "status": "failed-retained",
+        "failure": "Windows checkout rejected deeply nested retained evidence paths as filename too long; the incomplete checkout was not clean and the builder refused untracked package inputs."
+      },
+      {
+        "attempt_id": "BL-2026-07-27-p6o1-t01-u06-fresh-checkout-r002",
+        "path_role": "short ignored repository-local clone with core.longpaths enabled",
+        "head": "d046f17837262476e07c2e3e2e3b8933d470bb90",
+        "initial_worktree": "clean",
+        "tracked_archive_validation": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+        "rebuild_archive_bytes": 14963469,
+        "rebuild_archive_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+        "tracked_archive_byte_identity": true,
+        "post_build_worktree": "only expected ignored-style generated tmp output",
+        "status": "pass"
+      }
+    ],
+    "rollback": {
+      "predecessor_tag": "v0.55.0-baseline-first-reliability-candidate",
+      "local_tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+      "remote_tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+      "peeled_target": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+      "predecessor_archive_bytes": 646513,
+      "predecessor_archive_sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "predecessor_validator": "PHASE_FIVE_CANDIDATE_VALIDATION_PASS",
+      "status": "pass"
+    }
+  },
+  "retained_tooling_attempts": [
+    {
+      "attempt": "HTTP sweep r002",
+      "status": "invalid-tooling-attempt",
+      "reason": "Windows command-line quoting removed a Python string literal before the crawl began.",
+      "candidate_bytes_changed": false
+    },
+    {
+      "attempt": "HTTP sweep r003",
+      "status": "pass",
+      "requests": 116,
+      "non_200": 0,
+      "note": "115 unique manifest-listed files plus one duplicate readiness request"
+    },
+    {
+      "attempt": "HTTP controls r004",
+      "status": "pass",
+      "requests": 3,
+      "non_200": 0,
+      "note": "manifest readiness request plus exact manifest and checksum controls"
+    },
+    {
+      "attempt": "pre-commit focused regression",
+      "status": "expected-pre-commit-contract-failure",
+      "tests_passed": 7,
+      "tests_failed": 1,
+      "reason": "The historical checkout-contract test intentionally compares changed worktree bytes with HEAD and cannot pass until the bounded U06 evidence commit exists.",
+      "candidate_bytes_changed": false,
+      "required_remediation": "Rerun the identical focused suite from the committed U06 checkpoint before push."
+    }
+  ],
+  "requirements_comparison": {
+    "phase_objective": "One coherent, licensed, citable, traceable portfolio release and closeout.",
+    "issue_578_u06": "Real rendered and recipient QA.",
+    "phase_five_reference": "Exact baseline-first predecessor remains restorable and validates.",
+    "portfolio_narrative": "Accepted RBR, rejected U-Net, visible WCP-002 failure evidence, exact lineage, and non-operational limitations remain coherent in the real recipient route.",
+    "result": "pass"
+  },
+  "claims_and_boundaries": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "dataset_split_label_threshold_source_or_analytical_bytes_changed": false,
+    "phase_3b_or_second_experiment": false,
+    "private_owner_response_provider_locator_credential_or_model_weight_included": false,
+    "ground_truth_independent_validation_field_validation_official_operational_or_emergency_claim": false,
+    "github_release": false,
+    "deployment": false,
+    "access_ownership_public_sharing_publication_or_submission_change": false
+  },
+  "decision": {
+    "status": "pass-local-recipient-qa",
+    "candidate_advanced": true,
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U07 release audit and publication-gate decision"
+  },
+  "retained_limitations": [
+    "This unit proves a local recipient route, not a public deployment, GitHub Release, external submission, or independent accessibility certification.",
+    "RBR remains accepted only for one bounded Ward Creek demonstration; WCP-002 remains visible false-positive-risk evidence.",
+    "The trained U-Net remains rejected and did not outperform RBR.",
+    "Owner-approved prototype labels are not independent ground truth, inter-rater agreement, or field validation.",
+    "The Phase Five two-medium-finding register remains visible with impact and workaround.",
+    "The first fresh-checkout attempt remains failed evidence; successful r002 requires a short Windows checkout path with core.longpaths enabled."
+  ]
+}

@@ -20,6 +20,7 @@ TEXT_SUFFIXES = {
 CRLF_PATHS = {
     "records/phase-two/prechecks/PRECHECK-2026-081.md",
 }
+CHECK_ATTR_BATCH_SIZE = 100
 
 
 def _changed_paths() -> list[str]:
@@ -44,14 +45,23 @@ class V051CheckoutContractTests(unittest.TestCase):
         ]
         self.assertGreater(len(text_paths), 100)
 
-        completed = subprocess.run(
-            ["git", "check-attr", "text", "eol", "--", *text_paths],
-            cwd=ROOT,
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-        attributes = completed.stdout.splitlines()
+        attributes: list[str] = []
+        for start in range(0, len(text_paths), CHECK_ATTR_BATCH_SIZE):
+            completed = subprocess.run(
+                [
+                    "git",
+                    "check-attr",
+                    "text",
+                    "eol",
+                    "--",
+                    *text_paths[start : start + CHECK_ATTR_BATCH_SIZE],
+                ],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            attributes.extend(completed.stdout.splitlines())
         for path in text_paths:
             self.assertIn(f"{path}: text: set", attributes)
             expected_eol = "crlf" if path in CRLF_PATHS else "lf"

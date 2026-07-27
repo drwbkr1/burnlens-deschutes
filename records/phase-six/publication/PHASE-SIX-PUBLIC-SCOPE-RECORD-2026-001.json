@@ -1,0 +1,109 @@
+{
+  "record_version": "burnlens-phase-six-public-scope-record-v0.1.0",
+  "record_id": "PHASE-SIX-PUBLIC-SCOPE-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U01",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u01-public-scope-r001",
+  "recorded_at_utc": "2026-07-27T03:26:54.761Z",
+  "exact_base_commit": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+  "inputs": [
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "verified Phase Five reliability candidate"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "immutable RBR-primary analytical package"
+    },
+    {
+      "path": "records/phase-five/releases/PHASE-FIVE-RELEASE-VERIFICATION-2026-001.json",
+      "bytes": 2454,
+      "sha256": "a9c60ad96092bef87905b830ffdb33b66f0561f05ccfbf4def9ffcbe26262692",
+      "role": "verified predecessor lifecycle state"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "records/phase-six/contracts/PHASE-SIX-PUBLICATION-CONTRACT-2026-001.json",
+      "bytes": 5788,
+      "sha256": "f636d336844a5fd3e9ee9a16129d58e5cf1c273aa1b9f0ecbc79b0374c916df8"
+    },
+    {
+      "path": "records/phase-six/source-gates/PHASE-SIX-PUBLICATION-SOURCE-GATE-2026-001.json",
+      "bytes": 20620,
+      "sha256": "2dcbd7ae543fcf063542ef257c669bea55044fc97c8c4cf2568fab8b361362ba"
+    },
+    {
+      "path": "records/phase-six/publication/PUBLIC-ARTIFACT-INVENTORY-2026-001.json",
+      "bytes": 7328,
+      "sha256": "9fd49a1cd42d93c40437972cf3100b7ad0b36f4303aa36b44ab1ea50a119fc21"
+    }
+  ],
+  "verification": {
+    "source_gate_validator": {
+      "valid": true,
+      "declared_status": "ready",
+      "computed_status": "ready",
+      "sources": 3,
+      "criteria": 24,
+      "evidence_items": 32,
+      "live_evidence_items": 14,
+      "stale_live_evidence_items": 0,
+      "errors": 0,
+      "blockers": 0,
+      "warnings": 0
+    },
+    "phase_five_candidate_directory": {
+      "result": "PHASE_FIVE_CANDIDATE_VALIDATION_PASS",
+      "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+      "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+      "file_count": 23,
+      "extracted_bytes": 981264,
+      "open_findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      }
+    },
+    "phase_five_candidate_archive": {
+      "result": "PHASE_FIVE_CANDIDATE_VALIDATION_PASS",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+    },
+    "public_roster_and_withholding": "pass",
+    "required_attribution": "pass",
+    "claims_and_use_boundaries": "pass",
+    "privacy_and_secret_exclusion": "pass",
+    "json_parse": "pass",
+    "diff_check": "pass"
+  },
+  "decision": {
+    "status": "pass-local-pre-publication-only",
+    "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U02"
+  },
+  "retained_limitations": [
+    "The immutable Phase Five index retains its pre-merge wording; the Phase Six entrypoint must contextualize rather than modify it.",
+    "Two medium Phase Five reliability findings remain visible with impact and workaround.",
+    "The U-Net remains rejected and did not outperform RBR.",
+    "Owner-approved prototype labels are not independent ground truth.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, redistribution, and external submission remain outside this unit."
+  ],
+  "external_action": {
+    "repository_local_records_only": true,
+    "provider_request_or_download": false,
+    "publication_or_deployment": false,
+    "access_or_ownership_change": false
+  }
+}

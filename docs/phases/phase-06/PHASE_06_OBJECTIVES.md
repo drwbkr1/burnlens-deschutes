@@ -16,9 +16,28 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Proposed — blocked.**
+**Active — verified local pre-publication candidate; owner publication gate next.**
 
-Phase Six depends on an accepted Phase Five release candidate, verified public claims, resolved licensing for every published artifact, exact in-repository version linkage, and a reversible verified release path.
+Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
+issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
+baseline-first public roster, claims, source rights, attributions, withheld
+material, canonical reviewer route, and pre-publication quality gates before
+any final presentation or package is built. U01 passes the local public-scope
+and rights gate. U02 supplies exact 30-second, 2-minute, and 5-minute reviewer
+routes across architecture, method, evaluation, limitations, reproduction,
+known issues, citation, and lineage. U03 ships the deterministic real-rendered
+repository-owned baseline-first surface. U04 adds the fixed demo, seven-slide
+rendered presentation, claim matrix, pre-publication citation, and
+maintenance/archive posture. U05 builds corrected package v0.1.1 / r002. U06
+passes the real recipient desktop, narrow, keyboard, HTTP, fresh-checkout, and
+rollback routes. U07 retains and repairs one nested-checksum checkout defect,
+then passes the final 802-test suite, exact fresh-clone reconstruction,
+deterministic wheel, isolated install, all 122 command routes, release-truth,
+rights, claims, and privacy gates. Its disposition is
+`ready-for-owner-publication-gate`. The one coherent milestone PR and
+reviewed-merge verification remain. GitHub Release, deployment, domain,
+access, ownership, public sharing, publication, and external submission remain
+closed owner stop gates.
 
 ## Phase purpose
 

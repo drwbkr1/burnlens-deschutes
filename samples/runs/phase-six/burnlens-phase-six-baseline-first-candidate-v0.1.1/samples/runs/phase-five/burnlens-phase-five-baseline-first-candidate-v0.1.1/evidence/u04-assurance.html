@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+<title>BurnLens Phase Five assurance</title>
+<style>
+body{margin:0;background:#0b1115;color:#eef5f7;font:16px/1.55 system-ui,sans-serif}
+main{max-width:960px;margin:auto;padding:2rem 1rem 4rem}h1,h2{line-height:1.15}
+.card{background:#142028;border:1px solid #486171;border-radius:12px;padding:1rem;margin:1rem 0}
+.pass{color:#9ee6b8;font-weight:700}.warn{color:#ffd27d;font-weight:700}
+table{width:100%;border-collapse:collapse}th,td{padding:.55rem;border-bottom:1px solid #486171;text-align:left;vertical-align:top}
+code{overflow-wrap:anywhere}a{color:#9bd7ff}:focus-visible{outline:3px solid #ffdc73;outline-offset:3px}
+@media(max-width:480px){main{padding:1rem .7rem 3rem}th,td{padding:.45rem .3rem}}
+</style></head><body><main>
+<h1>BurnLens Phase Five assurance</h1>
+<p class="pass">PASS with one disclosed medium dependency finding.</p>
+<section class="card"><h2>Release route</h2>
+<p>Accepted: <code>burnlens-baseline-v0.1.0</code>. The trained U-Net remains a rejected diagnostic and did not outperform RBR.</p>
+<p>Run: <code>BL-2026-07-26-p5o1-t01-u04-assurance-r002</code><br>Source commit: <code>e14717aeef7ac23c22d37b701327f63ac8613df2</code><br>Archive SHA-256: <code>91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e</code></p></section>
+<section class="card"><h2>Assurance checks</h2><table><tbody><tr><th scope="row">dependency health</th><td>pass</td></tr><tr><th scope="row">known vulnerability classification</th><td>pass-with-disclosed-medium-finding</td></tr><tr><th scope="row">secret scan</th><td>pass</td></tr><tr><th scope="row">license inventory</th><td>recorded</td></tr><tr><th scope="row">source rights</th><td>pass</td></tr><tr><th scope="row">unsupported claim scan</th><td>pass</td></tr><tr><th scope="row">public artifact privacy</th><td>pass</td></tr><tr><th scope="row">safe archive structure</th><td>pass</td></tr><tr><th scope="row">schema and binding validation</th><td>pass</td></tr><tr><th scope="row">checksum validation</th><td>pass</td></tr><tr><th scope="row">no external runtime request</th><td>pass</td></tr><tr><th scope="row">performance</th><td>pass</td></tr></tbody></table></section>
+<section class="card"><h2>Known dependency finding</h2>
+<p class="warn">GHSA-h35f-9h28-mq5c / CVE-2026-59890, severity medium.</p>
+<p>disclosed medium finding; current Windows ZIP-only release route does not exercise the macOS sdist exclusion path. This is disclosed, not suppressed, and no vulnerability-free claim is made.</p></section>
+<section class="card"><h2>Performance budgets</h2><table><thead><tr><th>Measure</th><th>Observed</th><th>Maximum</th></tr></thead><tbody><tr><th scope="row">archive bytes</th><td>487893</td><td>750000</td></tr><tr><th scope="row">extracted bytes</th><td>1795388</td><td>2500000</td></tr><tr><th scope="row">interface html bytes</th><td>179808</td><td>250000</td></tr><tr><th scope="row">package validation seconds</th><td>2.913567</td><td>5.0</td></tr></tbody></table>
+<p>Project-specific offline reviewer-path budgets; not universal web performance standards.</p></section>
+<section class="card"><h2>Interpretation limits</h2><ul><li>The dependency scan reports known advisories present in its configured feeds at scan time; it is not a vulnerability-free claim.</li><li>The license inventory records supplier metadata and source-rights evidence; it is not legal advice.</li><li>Pattern-based secret, privacy, and claim scans supplement rather than replace exact package bindings and human review.</li><li>Performance timings describe this machine and bounded offline package, not a universal browser or service benchmark.</li><li>The U-Net remains a rejected diagnostic and did not outperform RBR.</li></ul></section>
+</main></body></html>

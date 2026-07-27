@@ -1,0 +1,220 @@
+{
+  "package_record_version": "burnlens-bounded-unet-package-record-v0.1.0",
+  "package_record_id": "BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001",
+  "recorded_at_utc": "2026-07-26T03:07:37Z",
+  "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r003",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "issue": 566,
+  "unit_id": "P3O1-T01-U06",
+  "git_source_commit": "90ab4ab42d6ceb11c2987efb0b737c016712cea8",
+  "software_version_at_execution": "0.52.0",
+  "software_version_candidate": "0.53.0",
+  "package_version": "burnlens-unet-rejected-package-v0.1.1",
+  "package_id": "BURNLENS-UNET-REJECTED-PACKAGE-2026-002",
+  "model_version": "burnlens-unet-binary-v0.1.0",
+  "model_status": "valid-trained-evaluated-rejected-model",
+  "aoi_version": "aoi-darlene3-model-v0.2.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "normalization_version": "burnlens-train-normalization-v0.1.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "input_bindings": {
+    "manifest": {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-PACKAGE-MANIFEST.json",
+      "bytes": 7112,
+      "sha256": "6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441",
+      "lineage_binding_count": 15,
+      "lineage_mismatches": 0
+    },
+    "training_config_sha256": "1f939540e23a331a7814113a02f4ad7f148197dfa294990617ad62a01d1b003b",
+    "training_history_sha256": "94195a92fac24ca087d977f3957106aa3b92dc3b18aec06746bd6a72ea70a2a8",
+    "training_report_sha256": "53a454bd082314c33e8249fdc98c62f89e7c0bb6ecc35d800dfa4f15df1fdf57",
+    "checkpoint_selection_sha256": "6dcae9af8d1a27c97a77ea90afaceaa8b0eee15cf3cfe207818380ef5e1db0c4",
+    "environment_capture_sha256": "009effea6c4b17b884c8d4e66ad51b4981c18ebfa1aed1b332391b1be8524e36",
+    "test_authorization_sha256": "8e0e6442196a5995f39b7fb7bd857a25f8a59698a4f6ccceaed03aa36f25194b",
+    "test_evaluation_sha256": "8d3e0652b71f0052ea54ac67caa280eaa15aad3e4055568948e58306b4c72e35",
+    "test_opening_receipt_sha256": "2613172f06478801aadf51ea63cd4ee0b00e87ba47f81a9f7d53f3c4eb605ab1",
+    "test_evaluation_record_sha256": "1d02b26535ef492eedc8ef5211ffafdbcb3a605f76aee2ef95eb1949bff1e2cc",
+    "baseline_sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221"
+  },
+  "training_replay": {
+    "epoch_count": 35,
+    "selected_epoch": 10,
+    "final_epoch": 35,
+    "history_exact": true,
+    "weights_bytes_exact": true,
+    "weights_bytes": 479573,
+    "weights_sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334",
+    "test_patch_ids_opened": [],
+    "test_event_group_ids_opened": []
+  },
+  "immutable_evaluation_verification": {
+    "prediction_arrays_checked": 8,
+    "test_source_arrays_reopened": false,
+    "test_open_count": 1,
+    "retry_authorized": false,
+    "metrics_recomputed_from_immutable_event_class_rows": true,
+    "binary_predictions_recomputed_from_immutable_probabilities": true,
+    "core_pixels": 89,
+    "true_burned_pixels": 39,
+    "predicted_burned_pixels": 89,
+    "masked_bce": 0.7280717492103577,
+    "event_class_macro_dice": 0.29874213836477986,
+    "event_class_macro_iou": 0.21474358974358976,
+    "worst_event_macro_dice": 0.2641509433962264,
+    "baseline_event_class_macro_dice": 1.0,
+    "baseline_event_class_macro_iou": 1.0,
+    "baseline_worst_event_macro_dice": 1.0,
+    "baseline_decision": "BELOW_RBR_REJECT_AS_ANALYTICAL_WINNER"
+  },
+  "tracked_package_inventory": {
+    "path": "samples/model-packages/burnlens-unet-binary-v0.1.0",
+    "file_count": 8,
+    "bytes": 583992,
+    "inventory_format": "sorted UTF-8 rows of path TAB bytes TAB sha256 LF",
+    "inventory_bytes": 1185,
+    "inventory_sha256": "ce39c41ca1aab2b4b88f95a4a87bd7c0f520507d75eb4452aa413129da1c3438",
+    "outputs": {
+      "burnlens-unet-binary-v0.1.0.pt": {
+        "bytes": 479573,
+        "sha256": "703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334"
+      },
+      "INFERENCE-CONTRACT.json": {
+        "bytes": 1589,
+        "sha256": "bb6cc5dfb0a989458ab9a60c2f9756c9bd530c67e265b96c4d27e7e0fa979a03"
+      },
+      "MODEL-CARD.md": {
+        "bytes": 2789,
+        "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560"
+      },
+      "MODEL-PACKAGE-MANIFEST.json": {
+        "bytes": 7112,
+        "sha256": "6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441"
+      },
+      "PHASE-THREE-DECISION.json": {
+        "bytes": 1474,
+        "sha256": "c9fa8b4e93268de81571d251fd423ab0dfcd706083694a452f1fcdc6c057c118"
+      },
+      "PHASE-THREE-MODEL-DECISION.html": {
+        "bytes": 3981,
+        "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e"
+      },
+      "PHASE-THREE-MODEL-DECISION.png": {
+        "bytes": 79512,
+        "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08"
+      },
+      "REPRODUCIBILITY-REPORT.json": {
+        "bytes": 7962,
+        "sha256": "25d1873d36751aec1e547213dd34b9f46ffc8cc3541235cd0f11321f12e3101c"
+      }
+    }
+  },
+  "ignored_run_custody": {
+    "accepted_run": {
+      "path": "runs/phase-three/BL-2026-07-25-p3o1-t01-u06-replay-r003",
+      "file_count": 49,
+      "bytes": 4046814,
+      "inventory_bytes": 8050,
+      "inventory_sha256": "86d8b489a16f6edba12a1d9899d3fc68e49bc25fa54e240ab4de4b3c6a00cc39",
+      "candidate_package_mismatches": 0,
+      "retained_duplicate_launcher_failure": true
+    },
+    "retained_attempts": [
+      {
+        "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r001",
+        "disposition": "retained-pre-release-traceability-failure",
+        "file_count": 47,
+        "bytes": 4036310,
+        "inventory_sha256": "c4e0b0b4c7ca1cd6263a3f73f8d1c34493fbe34f4e67e1ccbc4f06d13a54212a"
+      },
+      {
+        "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r002",
+        "disposition": "retained-one-second-wrapper-timeout-before-run",
+        "file_count": 1,
+        "bytes": 857,
+        "inventory_sha256": "6d778e4477488bdbc6b057984092ca6a4a7021d1764ebceed05080b20733772d"
+      },
+      {
+        "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r004",
+        "disposition": "retained-package-already-exists-fail-closed",
+        "file_count": 1,
+        "bytes": 485,
+        "inventory_sha256": "ea5f545510ee2817e4f08cdd5d6b34e7a2b7099e8d433f2cab0577a201333b8d"
+      }
+    ]
+  },
+  "verification_attempts": [
+    {
+      "attempt_id": "P3O1-T01-U06-REPLAY-R001",
+      "result": "retained-traceability-failure",
+      "facts": "Training history and weights replayed exactly, but the first package manifest omitted explicit software, AOI, config, protocol, environment, authorization, and complete lineage bindings."
+    },
+    {
+      "attempt_id": "P3O1-T01-U06-REPLAY-R002",
+      "result": "retained-tool-timeout",
+      "facts": "A one-second shell wrapper terminated before creating a run or package."
+    },
+    {
+      "attempt_id": "P3O1-T01-U06-REPLAY-R003",
+      "result": "pass-with-retained-duplicate-launch-failure",
+      "facts": "The original process completed exact replay and atomic package promotion. A duplicate launcher added a run-exists failure at the run root but did not alter replay, candidate, or package bytes."
+    },
+    {
+      "attempt_id": "P3O1-T01-U06-REPLAY-R004",
+      "result": "retained-fail-closed",
+      "facts": "The yielding wrapper observed the already promoted package and failed before a replay."
+    },
+    {
+      "attempt_id": "P3O1-T01-U06-VERIFY-R001",
+      "result": "pass",
+      "facts": "All eight promoted files match the accepted run candidate; all manifest receipts and 15 lineage bindings match; 35 history rows and weights reproduce exactly; five package tests, compile, lock, and diff checks pass."
+    },
+    {
+      "attempt_id": "P3O1-T01-U06-RENDER-R001",
+      "result": "pass",
+      "facts": "The exact loopback HTML passes 1280-by-720 and 390-by-844 inspection with no document overflow, complete 1800-by-1120 image, three valid local evidence links, zero external resources, and visible rejection, lineage, and use boundaries."
+    }
+  ],
+  "gates": {
+    "frozen_input_bindings": "pass",
+    "source_rights_and_terms": "pass-inherited-no-new-source",
+    "environment": "pass",
+    "history_exact": "pass",
+    "weights_bytes_exact": "pass",
+    "selection_and_stopping_exact": "pass",
+    "test_source_arrays_reopened": "pass-false",
+    "single_test_opening": "pass-consumed-once",
+    "immutable_prediction_integrity": "pass",
+    "baseline_comparison": "pass-model-rejected",
+    "package_traceability": "pass-after-retained-r001-remediation",
+    "package_promotion": "pass-atomic-r003",
+    "render": "pass",
+    "privacy": "pass",
+    "claims": "pass",
+    "phase_three_decision": "pass-reject-model-retain-baseline",
+    "milestone_pr_and_release": "pending"
+  },
+  "boundaries": {
+    "replay_is_hyperparameter_search": false,
+    "test_source_arrays_reopened": false,
+    "test_open_count": 1,
+    "second_test_opening": false,
+    "model_changed_after_test": false,
+    "threshold_changed_after_test": false,
+    "model_accepted": false,
+    "model_released_as_analytical_method": false,
+    "model_value_claim": false,
+    "independent_ground_truth": false,
+    "field_validation": false,
+    "generalization": false,
+    "complete_scar_area_claim": false,
+    "georeferenced_inference": false,
+    "deployment": false,
+    "final_submission_ready": false
+  },
+  "decision": "reject-model-retain-baseline",
+  "phase_four_route": "baseline-primary-with-rejected-model-diagnostic",
+  "disposition": "pass-valid-rejected-model-package-ready-for-coherent-milestone-pr",
+  "next_dependency": "one coherent P3O1-T01 PR, full regression and release gates, then an issue-backed Phase Four baseline-primary GEOINT vertical slice with the rejected U-Net shown only as diagnostic evidence"
+}

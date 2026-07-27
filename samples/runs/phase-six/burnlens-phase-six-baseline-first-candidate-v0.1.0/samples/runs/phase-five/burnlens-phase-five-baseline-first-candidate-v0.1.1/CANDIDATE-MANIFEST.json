@@ -1,0 +1,138 @@
+{
+  "manifest_version": "burnlens-phase-five-candidate-manifest-v0.1.0",
+  "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+  "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+  "software_version": "0.55.0",
+  "generated_at_utc": "2026-07-27T01:49:33Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+  "git_source_commit": "dd1c270421250ce312d548b9571f91b4b806536b",
+  "state": "accepted-baseline-first-candidate",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "phase_six_recommendation": "eligible-after-milestone-merge-tag-and-fresh-main-verification",
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "files": [
+    {
+      "path": "KNOWN-ISSUES.md",
+      "bytes": 1969,
+      "sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17"
+    },
+    {
+      "path": "QA-MATRIX.json",
+      "bytes": 2126,
+      "sha256": "f6df882daf1be1dbea99276a045b9d22342c11dc7e53e186a206f654081a852f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1103,
+      "sha256": "b2b238cd3eed34b8b0db2d025bfe4c65ece5cae4c693ab6d9da5158c57b4fe0f"
+    },
+    {
+      "path": "evidence/phase-four-release-audit.json",
+      "bytes": 14840,
+      "sha256": "3942190b72e6711e7bc7bfa136c45b12b7d36a3ff05243bb72f6dc41029684c7"
+    },
+    {
+      "path": "evidence/u01-qa-release-contract.json",
+      "bytes": 10836,
+      "sha256": "a187a9d12adea288700b25c0e3a9c18ce08dee7f5f45c46a7989ca8dc588bc4c"
+    },
+    {
+      "path": "evidence/u02-failure-injection-record.json",
+      "bytes": 7104,
+      "sha256": "c5ff046ebd864751bb0fac9d160331d6ee4fcb505619af036fdbeae7b216c835"
+    },
+    {
+      "path": "evidence/u02-failure-injection.html",
+      "bytes": 3610,
+      "sha256": "9aef845e97ea40ffd845f3b9fbbcfb071f95853138a8ff6878a7ca2d47811a61"
+    },
+    {
+      "path": "evidence/u02-failure-injection.json",
+      "bytes": 4590,
+      "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4"
+    },
+    {
+      "path": "evidence/u03-owner-render-receipt.json",
+      "bytes": 1346,
+      "sha256": "9487263767cb6260fce4170dc3e1b432c530b3f489de605e6c2d5c74f4971787"
+    },
+    {
+      "path": "evidence/u03-reliability-interface-record.json",
+      "bytes": 3795,
+      "sha256": "c97811c81bc085aead30a80fe8de5eb0f2fe7a93b6620ed0da936c717af63118"
+    },
+    {
+      "path": "evidence/u03-reliability-interface.json",
+      "bytes": 3000,
+      "sha256": "33a9cf2f8b630cf49285683c39745f01f4c52fe8aa90b9811a1c6aab87b6d2dc"
+    },
+    {
+      "path": "evidence/u04-assurance-record.json",
+      "bytes": 7928,
+      "sha256": "752148bfcfd24ef4c6c2daf627f2974a27b890fc793a5cf8c8d2ac578597b195"
+    },
+    {
+      "path": "evidence/u04-assurance.html",
+      "bytes": 3974,
+      "sha256": "ef666ae359896815dd234eec2171d42f93cb0b6e2ebb1dfd66445ff3bea572e8"
+    },
+    {
+      "path": "evidence/u04-assurance.json",
+      "bytes": 31276,
+      "sha256": "89c0c7896d94ae41157367cb1b6111d0d5b93a9e0bcd49f57155cd47ae808674"
+    },
+    {
+      "path": "evidence/u05-clean-reconstruction-record.json",
+      "bytes": 12248,
+      "sha256": "ebe09e24add8d5d1a03a47e8faa61f4d159eea7ccab78fd4a05e65979397ab9a"
+    },
+    {
+      "path": "evidence/u05-clean-reconstruction.html",
+      "bytes": 6048,
+      "sha256": "9227c6af6000479b37f3480df7d85b3e4a2906971066fcbcb9fa02e2b7b7cd14"
+    },
+    {
+      "path": "evidence/u05-clean-reconstruction.json",
+      "bytes": 9135,
+      "sha256": "510eec2ea8f2c75afe491c4d001d81f4453a19b96f4a3f295fcb9cfd770844c0"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4007,
+      "sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2"
+    },
+    {
+      "path": "interfaces/phase-five-reliability.html",
+      "bytes": 179808,
+      "sha256": "9c5b65dd5b3b83645ff59a502718c960cd8d70ed8d45628dcae8d907dafc4316"
+    },
+    {
+      "path": "interfaces/phase-four-evidence.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    },
+    {
+      "path": "phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    }
+  ],
+  "boundaries": {
+    "analytical_output_changed": false,
+    "dataset_split_label_threshold_or_source_changed": false,
+    "model_decision_changed": false,
+    "phase_3b_or_second_experiment": false,
+    "deployment": false,
+    "github_release": false,
+    "access_ownership_public_sharing_or_submission_change": false
+  }
+}

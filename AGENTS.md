@@ -61,33 +61,32 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-Verified `v0.53.0-bounded-unet-rejected-model` is the active repository
-baseline. P3O1-T01 / issue #566 / PR #567 merges at
-`5a0f8ac027ae20ff9193948506f590afbfb64554`; annotated tag object
-`d66dd7fdc9f2f155d1799cb1e85e77dadd76311a` peels exactly to that
-checkpoint. Fresh main passes 729 tests with one expected skip and 86
-subtests; deterministic package and isolated model-runtime gates pass.
+Verified `v0.55.0-baseline-first-reliability-candidate` is the active tagged
+repository baseline. P5O1-T01 / issue #574 / PR #575 merges at
+`7066dcd9cef555a6df0716dc7568205e7d6d395e`; annotated tag object
+`33072144767e70bfa538079bda3be6f798477a9f` peels exactly to that
+checkpoint. RBR remains the accepted analytical method. The bounded U-Net is
+a valid trained, once-evaluated, exactly reproduced, and rejected first-class
+diagnostic; it did not outperform RBR. Phase Four and Phase Five are accepted
+and verified through the approved
+`baseline-primary-with-rejected-model-diagnostic` route.
 
-Phase Three is complete through the approved
-`baseline-primary-with-rejected-model-diagnostic` route. RBR remains the
-accepted analytical method at frozen threshold `0.041043221950531006`. The
-bounded U-Net is a valid trained, once-evaluated, exactly reproduced, and
-rejected model artifact: it predicts all 89 selected test cores burned and
-scores macro Dice `0.29874213836477986` against RBR `1.0`. Its failure is a
-first-class technical result and must remain visible; never claim it
-outperformed RBR.
+P6O1-T01 / issue #578 is the active checkpoint from exact base
+`3097ac5308107ce75e4a517238f54cc4d15c346a`. U01-U07 pass locally.
+Risk-bearing U07 checkpoint `bc9646c578c199fee51ec0fd5c2db41a97d2aca9`
+retains and repairs the fresh-clone checksum and living-document reconstruction
+failures, then passes the exact package rebuild, 802 tests, deterministic 0.56.0 wheel,
+isolated 75-distribution install, 122 command routes, rendered recipient,
+rights, claims, privacy, rollback, and live-repository gates. Its disposition
+is `ready-for-owner-publication-gate`.
 
-Phase Four is the active project work. Build the complete current project
-through an RBR-primary georeferenced analytical run, visibly rejected U-Net
-probability/error diagnostics, valid raster/vector products, transparent
-overlays and summaries, immutable run packaging, and a repository-owned
-evidence interface. Do not defer Phase Four and do not create a Phase 3B
-remediation milestone. Model lessons may become recommendations for a
-separately governed follow-on experiment, but planning or implementing that
-experiment is outside this project and prohibited here.
+The immediate repository action is one coherent milestone PR and exact
+reviewed-merge verification. Do not create a tag, GitHub Release, deployment,
+access or ownership change, public-sharing change, publication, or external
+submission without explicit owner stop-gate handling. Do not create a Phase
+3B remediation milestone or begin planning the separately governed follow-on
+experiment.
 
-No georeferenced analytical raster, vector product, integrated application,
-deployment, generalization claim, or final-submission-ready claim exists yet.
 The historical checkpoint facts below remain audit evidence, not current
 sequencing authority.
 

@@ -2,6 +2,55 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## 0.56.0-baseline-first-publication-candidate - active, not released - 2026-07-27
+
+- Freeze the Phase Six reviewer surface, reviewer journey, demonstration,
+  presentation, claim matrix, citation, maintenance posture, and public-scope
+  controls without changing analytical evidence.
+- Add a deterministic no-overwrite package builder that accepts only tracked
+  sources, preserves pinned bytes, resolves the complete local review link
+  closure, and verifies exact Phase Five directory/archive parity.
+- Retain pre-freeze r001 exactly: 117 files / 16,285,070 bytes and a
+  14,963,460-byte ZIP at SHA-256 `def1b20f...`. Structural validation and two
+  byte-identical rebuilds pass, but its declared source commit still carries
+  the 0.55.0 lock entry and cannot pass locked fresh-environment setup.
+- Update the project lock and current-version regression assertions, batch the
+  checkout-attribute gate below the Windows command-line limit, and pass the
+  clean 800-test / one-skip / 86-subtest source gate.
+- Create no-overwrite v0.1.1 / r002: 117 files / 16,285,070 bytes and a
+  deterministic 14,963,469-byte ZIP at SHA-256 `5a314b69...`. Both installed
+  validators and two exact rebuilds pass. R001 remains failed evidence.
+- Pass U06 against the real extracted recipient copy at 1440×900 and 390×844.
+  The entrypoint, canonical surface, Ward Creek interface, presentation,
+  WCP-002 focus, rejected-model diagnostic toggle, and independent Chrome
+  keyboard route pass with no horizontal overflow or browser error.
+- Serve all 117 package files over loopback HTTP with exact byte counts and
+  zero non-200 response; 20 HTML files expose 138 references and no external
+  auto-fetch or click-only URL.
+- Retain fresh-checkout r001's Windows long-path failure, then pass r002 from a
+  clean short-path checkout with Git long-path support. The rebuilt ZIP is
+  byte-identical at `5a314b69...`; the verified Phase Five tag and package
+  remain a valid rollback.
+- Retain U07 fresh-clone r001 after strict validation exposes CRLF conversion
+  in the top-level and nested Phase Six checksum rosters. Add one recursive LF
+  checkout contract plus regression coverage at `cd383a3...`.
+- Pass the corrected short-path clone, both package validators, and an exact
+  fresh-clone ZIP rebuild. The final risk-bearing head passes 802 tests, one
+  expected skip, 422 existing warnings, and 86 subtests.
+- Preserve exact reconstruction after the living case study advances by
+  sourcing the U05 package roster from its tracked frozen snapshot. A
+  post-closeout rebuild remains byte-identical at `5a314b69...`.
+- Build two byte-identical 1,228,670-byte BurnLens 0.56.0 wheels at SHA-256
+  `3efc07da...`; install the exact wheel into a locked 75-distribution
+  environment and pass all 122 command routes.
+- Complete the structured U07 release audit with disposition
+  `ready-for-owner-publication-gate`.
+
+Issue #578 remains active pending its one coherent milestone PR. U01-U07 pass
+locally. This entry is a branch candidate, not a verified tag, GitHub
+Release, deployment, publication, sharing change, or external submission.
+RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
+
 ## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 
 - Preserve the exact verified Phase Four RBR-primary package and rejected

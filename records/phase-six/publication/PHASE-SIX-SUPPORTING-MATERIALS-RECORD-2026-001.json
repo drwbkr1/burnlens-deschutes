@@ -1,0 +1,147 @@
+{
+  "record_version": "burnlens-phase-six-supporting-materials-record-v0.1.0",
+  "record_id": "PHASE-SIX-SUPPORTING-MATERIALS-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U04",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u04-supporting-materials-r001",
+  "recorded_at_utc": "2026-07-27T04:03:28.973Z",
+  "exact_base_commit": "65eeb4e0d2e5a09e24e17bd24191314fe7efd543",
+  "inputs": [
+    {
+      "path": "records/phase-six/publication/PHASE-SIX-PORTFOLIO-SURFACE-RECORD-2026-001.json",
+      "bytes": 6296,
+      "sha256": "93339c7494c7b51b16fc492c6bd2f1511720678336c05adf6ab99b4336ae8f57",
+      "role": "passed U03 rendered surface"
+    },
+    {
+      "path": "docs/phase-six/REVIEWER_JOURNEY.md",
+      "bytes": 10842,
+      "sha256": "74b072903c56603e390803a1eea0e1f72a2a9f019c8d2ee5a946941e645bee3f",
+      "role": "passed U02 narrative contract"
+    },
+    {
+      "path": "records/phase-six/publication/PHASE-SIX-PUBLIC-SCOPE-RECORD-2026-001.json",
+      "bytes": 4211,
+      "sha256": "79afcc49e70331fbcfdb3afd0725c370274ec8628ba0fa1326f758d241bbcdc1",
+      "role": "passed U01 claims and rights boundary"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "docs/phase-six/DEMO_SCRIPT.md",
+      "bytes": 3925,
+      "sha256": "b95d12e4aaf3501030af944f356a48c23f7e32fcee004366c43eee14cd4ca558",
+      "role": "fixed 30-second, 2-minute, and 5-minute demo sequence"
+    },
+    {
+      "path": "docs/phase-six/CLAIM_MATRIX.md",
+      "bytes": 4122,
+      "sha256": "2ac5280f7783688e73edbd21703b5b9d61810f589ad7c5635b7837e57e7ac54a",
+      "role": "permitted, qualified, evidenced, and prohibited claims"
+    },
+    {
+      "path": "docs/phase-six/MAINTENANCE_AND_ARCHIVE.md",
+      "bytes": 4132,
+      "sha256": "8389e0c2e4762b90596f369be9f23cc17ef7b862b89b2879834933d2b6a31c7a",
+      "role": "maintenance, issue-intake, archive, and supersession posture"
+    },
+    {
+      "path": "portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "bytes": 11203,
+      "sha256": "5b16c00d1bee7dd0ef5302bc1a0aeb61fd60a4756b214dc6517630722c0b8e98",
+      "role": "seven-slide static presentation"
+    },
+    {
+      "path": "portfolio/phase-six/CITATION.json",
+      "bytes": 3001,
+      "sha256": "ea5b51ef442bb169353ee3c245413ff55cb2d71a16e6aa7a0b7ac4b8af13777a",
+      "role": "machine-readable pre-publication citation metadata"
+    },
+    {
+      "path": "portfolio/phase-six/CITATION.md",
+      "bytes": 1002,
+      "sha256": "f9595d7a9f8093bda6f2d68b7a2aa4510134a7ab6e1a0b06980849809cea5710",
+      "role": "human-readable pre-publication citation guidance"
+    }
+  ],
+  "presentation_contract": {
+    "slides": 7,
+    "static": true,
+    "scripts": 0,
+    "external_links": 0,
+    "external_assets": 0,
+    "print_page_size": "16in x 9in",
+    "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false
+  },
+  "verification": {
+    "citation_json_parse": "pass",
+    "presentation_semantic_contract": "pass",
+    "supporting_material_links": {
+      "count": 2,
+      "missing": 0
+    },
+    "browser": "Microsoft Edge",
+    "transport": "temporary loopback HTTP",
+    "server_process_stopped": true,
+    "browser_process_stopped": true,
+    "desktop": {
+      "viewport": [
+        1440,
+        900
+      ],
+      "http_status": 200,
+      "title": "BurnLens baseline-first presentation",
+      "slides": 7,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "page_errors": 0
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "page_errors": 0,
+      "first_focus": "Skip to presentation",
+      "skip_target": "SECTION#slide-1",
+      "skip_target_received_focus": true
+    },
+    "presentation_targets": {
+      "count": 2,
+      "http_200": 2,
+      "failed": 0
+    },
+    "claim_matrix": "pass",
+    "source_notices": "pass",
+    "privacy_and_secret_boundary": "pass",
+    "maintenance_issue_intake_archive_and_supersession": "pass",
+    "screenshots_retained": false,
+    "diff_check": "pass"
+  },
+  "citation_state": {
+    "public_release_version": null,
+    "doi": null,
+    "candidate_commit": null,
+    "reason": "U04 is pre-publication; final candidate commit is assigned only after U05-U07 and milestone verification."
+  },
+  "decision": {
+    "status": "pass-local-pre-publication-only",
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U05"
+  },
+  "retained_limitations": [
+    "The presentation is repository-linked and not yet inside the self-contained U05 package.",
+    "The citation metadata intentionally has no DOI, public release version, or final candidate commit.",
+    "The U-Net remains rejected and did not outperform RBR.",
+    "Two medium Phase Five findings remain visible.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, and external submission remain outside U04."
+  ]
+}
