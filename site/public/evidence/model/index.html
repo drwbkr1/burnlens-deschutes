@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BurnLens Phase Three model decision</title>
+<style>
+:root{--ink:#17211d;--paper:#f4f0e8;--card:#fff;--green:#23634c;--red:#9a3e32;--line:#d5d0c4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Arial,sans-serif;overflow-x:hidden}
+main{max-width:1120px;margin:auto;padding:42px 24px 72px}h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.02;margin:.2em 0}h2{margin-top:2.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0;overflow-wrap:anywhere}.reject{border-left:7px solid var(--red)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.metric strong{display:block;font-size:1.7rem;color:var(--green)}
+img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;background:#fff}code{overflow-wrap:anywhere}
+a{color:#165f4c}a:focus{outline:3px solid var(--green);outline-offset:3px}
+@media(max-width:600px){main{padding:24px 14px 50px}}
+</style></head><body><main>
+<p>BURNLENS / PHASE THREE / ISSUE #566 / U06</p>
+<h1>The model is reproducible. It is not the winner.</h1>
+<div class="card reject"><strong>Decision: reject model, retain baseline.</strong><br>
+The U-Net predicts all 89 selected test cores as burned. This is a valid trained/evaluated artifact, not an accepted model, ground truth, generalization result, or operational product.</div>
+<div class="metrics">
+<div class="card metric">Model Dice<strong>0.2987</strong></div>
+<div class="card metric">RBR Dice<strong>1.0000</strong></div>
+<div class="card metric">Selected epoch<strong>10</strong></div>
+<div class="card metric">Replay weights<strong>exact</strong></div>
+</div>
+<img src="PHASE-THREE-MODEL-DECISION.png" width="1800" height="1120" alt="BurnLens Phase Three decision: exact replay passes, the U-Net scores 0.299 against RBR 1.0, and RBR is retained">
+<h2>What passed</h2><div class="card"><ul>
+<li>All 35 train/validation history rows reproduce exactly.</li>
+<li>Selected epoch 10, final epoch 35, and weights SHA-256 <code>703d92577e2b82a4cfdec0c5e43b8d7a064253483de4ccea909209f54b802334</code> reproduce.</li>
+<li>Immutable U05 probabilities, predictions, denominators, and baseline decision reverify without a second source test-array opening.</li>
+</ul></div>
+<h2>What failed</h2><div class="card"><p>The model-value gate. Event-class macro Dice is 0.2987, macro IoU 0.2147, and worst-event Dice 0.2642, versus RBR 1.0 on all three. The model is rejected as the analytical winner.</p></div>
+<h2>Phase Four handoff</h2><div class="card"><strong>baseline-primary-with-rejected-model-diagnostic</strong><p>RBR remains the accepted method. Show the frozen U-Net probability/error evidence as a visibly rejected model-bearing diagnostic, never as the accepted perimeter.</p></div>
+<h2>Inspect the evidence</h2><div class="card">
+<p><a href="../../models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html">Training history</a> ·
+<a href="../../evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html">One-time test evaluation</a> ·
+<a href="MODEL-CARD.md">Model card</a></p></div>
+<h2>Boundary</h2><div class="card"><p>No second test opening, model acceptance, model release, georeferenced inference, deployment, field validation, generalization, or operational/emergency claim exists.</p></div>
+<p>Trace: commit <code>90ab4ab42d6ceb11c2987efb0b737c016712cea8</code> · run <code>BL-2026-07-25-p3o1-t01-u06-replay-r003</code> · software <code>0.52.0</code> · package <code>burnlens-unet-rejected-package-v0.1.1</code> · AOI <code>aoi-darlene3-model-v0.2.0</code> · model <code>burnlens-unet-binary-v0.1.0</code> · dataset <code>burnlens-dataset-v0.1.0</code> · split <code>burnlens-whole-event-split-v0.1.0</code>.</p>
+</main></body></html>

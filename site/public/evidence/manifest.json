@@ -1,0 +1,89 @@
+{
+  "manifest_version": "burnlens-sites-evidence-manifest-v0.1.0",
+  "manifest_id": "BURNLENS-SITES-EVIDENCE-MANIFEST-2026-001",
+  "release_version": "0.56.0",
+  "release_tag": "v0.56.0-baseline-first-portfolio-release",
+  "run_id": "BL-2026-07-27-p6o1-t02-u02-sites-source-r001",
+  "generated_at_utc": "2026-07-27T17:44:50.5849771Z",
+  "copy_policy": "Exact tracked repository bytes only; no provider archives, private owner responses, credentials, retrieval details, ignored custody paths, or machine-local paths.",
+  "entries": [
+    {
+      "public_path": "public/evidence/ward-creek/index.html",
+      "source_path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    },
+    {
+      "public_path": "public/evidence/ward-creek/overlay-quicklook.png",
+      "source_path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/evidence/u05-overlay/run/OVERLAY-QUICKLOOK.png",
+      "bytes": 99654,
+      "sha256": "4764170a7c45659e1b3038a512c6344f769972fbe6dbd16ee04811366539d6b1"
+    },
+    {
+      "public_path": "public/evidence/baseline/index.html",
+      "source_path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html",
+      "bytes": 3921,
+      "sha256": "109075ca31cb1c01137bdccff5786c862105eb15dc1cbe15c8603dcf3d15fd99"
+    },
+    {
+      "public_path": "public/evidence/baseline/evaluation.png",
+      "source_path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.png",
+      "bytes": 169275,
+      "sha256": "49bf3686fd7b109572fcbff8abb8e35d7d9054c7b2dd9e26e70cc26975700060"
+    },
+    {
+      "public_path": "public/evidence/baseline/BASELINE-EVALUATION-2026-001.png",
+      "source_path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.png",
+      "bytes": 169275,
+      "sha256": "49bf3686fd7b109572fcbff8abb8e35d7d9054c7b2dd9e26e70cc26975700060"
+    },
+    {
+      "public_path": "public/evidence/model/index.html",
+      "source_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "bytes": 3981,
+      "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e"
+    },
+    {
+      "public_path": "public/evidence/model/evaluation.png",
+      "source_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+      "bytes": 79512,
+      "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08"
+    },
+    {
+      "public_path": "public/evidence/model/PHASE-THREE-MODEL-DECISION.png",
+      "source_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+      "bytes": 79512,
+      "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08"
+    },
+    {
+      "public_path": "public/evidence/model/MODEL-CARD.md",
+      "source_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+      "bytes": 2789,
+      "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560"
+    },
+    {
+      "public_path": "public/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "source_path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "bytes": 8176,
+      "sha256": "92ee0952fe1f82b5350919593120132a5ed6c7690e2fd08fc781750af608296b"
+    },
+    {
+      "public_path": "public/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.png",
+      "source_path": "samples/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.png",
+      "bytes": 80920,
+      "sha256": "a781271cccbc17bda35fa5e5a07bf9af0cc965c5938cd0733b47fe80acb372f6"
+    },
+    {
+      "public_path": "public/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html",
+      "source_path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html",
+      "bytes": 7022,
+      "sha256": "15944fb9fdd577727bc899220b61859b3fc77895e9552858e019821f7f4114f7"
+    },
+    {
+      "public_path": "public/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.png",
+      "source_path": "samples/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.png",
+      "bytes": 217578,
+      "sha256": "9a8b13e63c7c65015c8065c56805c1fbb264154095ebddd32921268b5d9b7459"
+    }
+  ]
+}

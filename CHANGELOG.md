@@ -2,6 +2,28 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.56.0-baseline-first-portfolio-release - publication checkpoint active - 2026-07-27
+
+- Record the owner's explicit publication authorization and Codex Sites
+  direction in P6O1-T02 / issue #584.
+- Add the repository-owned `site/` Vinext source without reading, using, or
+  changing `burnlens-site`.
+- Preserve exact canonical evidence copies through a 13-entry byte/SHA-256
+  manifest and keep raw provider archives, private owner responses,
+  credentials, retrieval details, ignored custody paths, and machine-local
+  paths out of the public surface.
+- Present RBR as the accepted bounded method and the trained U-Net as a
+  reproducible rejected diagnostic that did not outperform RBR.
+- Pass the local build, zero-vulnerability dependency audit, rendered semantic
+  assertions, exact evidence bindings, desktop 1280-wide Chrome, narrow
+  390x844 Chrome, keyboard skip-link focus, Ward Creek evidence route, and
+  rejected-model toggle. Retain one `vinext start` asset-serving failure;
+  `vinext dev` and the Sites deployment path remain the validated render
+  routes.
+
+The annotated tag, GitHub Release, Sites deployment, production verification,
+and lifecycle closeout remain pending until this issue-backed source is merged.
+
 ## 0.56.0-baseline-first-publication-candidate - active, not released - 2026-07-27
 
 - Freeze the Phase Six reviewer surface, reviewer journey, demonstration,

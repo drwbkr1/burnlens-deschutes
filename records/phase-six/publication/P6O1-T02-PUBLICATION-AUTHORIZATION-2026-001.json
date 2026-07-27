@@ -1,0 +1,46 @@
+{
+  "record_version": "burnlens-publication-authorization-v0.1.0",
+  "record_id": "P6O1-T02-PUBLICATION-AUTHORIZATION-2026-001",
+  "milestone_id": "P6O1-T02",
+  "unit_id": "P6O1-T02-U01",
+  "issue": 584,
+  "branch": "codex/p6o1-t02-sites-publication-closeout",
+  "run_id": "BL-2026-07-27-p6o1-t02-u01-publication-authorization-r001",
+  "recorded_at_utc": "2026-07-27T17:44:50.5849771Z",
+  "exact_base_commit": "55ba5882f4927016f6510226562b99e98dedb929",
+  "owner_instruction": {
+    "received": true,
+    "date": "2026-07-27",
+    "authorized_actions": [
+      "create and verify the annotated v0.56.0 baseline-first portfolio release tag",
+      "create and verify the GitHub Release and authorized public assets",
+      "create, save, deploy, and verify the public Codex Sites release",
+      "perform the repository lifecycle synchronization and closeout"
+    ],
+    "required_destination": "Codex Sites",
+    "repository_boundary": "C:\\Projects\\Active\\burnlens-deschutes only",
+    "prohibited_repository": "burnlens-site"
+  },
+  "preserved_scientific_decision": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "accepted_method_name": "RBR",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_role": "trained, exactly reproduced, once evaluated, and rejected diagnostic",
+    "model_outperformed_baseline": false,
+    "analytical_bytes_changed": false
+  },
+  "public_candidate": {
+    "package_id": "burnlens-phase-six-baseline-first-candidate-v0.1.1",
+    "directory_files": 117,
+    "directory_bytes": 16285070,
+    "zip_path": "portfolio/phase-six/BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+    "zip_bytes": 14963469,
+    "zip_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+    "entry_disposition": "ready-for-owner-publication-gate",
+    "owner_gate_disposition": "authorized"
+  },
+  "decision": {
+    "status": "pass",
+    "next_dependency": "P6O1-T02-U02 repository-owned Sites source and exact evidence binding"
+  }
+}

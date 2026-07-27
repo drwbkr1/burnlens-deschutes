@@ -1,0 +1,110 @@
+{
+  "record_version": "burnlens-sites-source-record-v0.1.0",
+  "record_id": "P6O1-T02-SITES-SOURCE-RECORD-2026-001",
+  "milestone_id": "P6O1-T02",
+  "unit_id": "P6O1-T02-U02",
+  "issue": 584,
+  "branch": "codex/p6o1-t02-sites-publication-closeout",
+  "run_id": "BL-2026-07-27-p6o1-t02-u02-sites-source-r001",
+  "recorded_at_utc": "2026-07-27T17:44:50.5849771Z",
+  "exact_base_commit": "55ba5882f4927016f6510226562b99e98dedb929",
+  "surface": {
+    "source_root": "site",
+    "package_name": "burnlens-portfolio-site",
+    "package_version": "0.56.0",
+    "framework": "Vinext",
+    "release_tag": "v0.56.0-baseline-first-portfolio-release",
+    "hosting_project_id": "appgprj_6a67a02d7c488191b66ced0f2ac3550e",
+    "saved_version_id": null,
+    "deployment_id": null,
+    "production_url": null
+  },
+  "source_rights_recheck": [
+    {
+      "source": "Copernicus Data Space Ecosystem terms and conditions",
+      "url": "https://dataspace.copernicus.eu/terms-and-conditions",
+      "observed_date": "2026-07-27",
+      "fact_used": "Sentinel data are provided under the Copernicus Sentinel legal notice.",
+      "status": "pass"
+    },
+    {
+      "source": "Copernicus Sentinel data legal notice",
+      "url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "observed_date": "2026-07-27",
+      "fact_used": "Reproduction, distribution, communication, adaptation, and modification are permitted with the required modified-data notice.",
+      "adopted_attribution": "Contains modified Copernicus Sentinel data 2019.",
+      "status": "pass"
+    },
+    {
+      "source": "USGS The National Map use and licensing FAQ",
+      "url": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+      "observed_date": "2026-07-27",
+      "fact_used": "The National Map products and services are public domain with acknowledgment requested.",
+      "adopted_attribution": "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+      "status": "pass"
+    },
+    {
+      "source": "MTBS product descriptions and mapping methods",
+      "url": "https://www.mtbs.gov/product-descriptions",
+      "companion_url": "https://www.mtbs.gov/mapping-methods",
+      "observed_date": "2026-07-27",
+      "fact_used": "MTBS is analyst-interpreted official-program reference context and is not treated as field ground truth or an operational incident perimeter.",
+      "adopted_attribution": "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service.",
+      "status": "pass"
+    }
+  ],
+  "evidence_binding": {
+    "manifest": "site/public/evidence/manifest.json",
+    "manifest_id": "BURNLENS-SITES-EVIDENCE-MANIFEST-2026-001",
+    "entries": 13,
+    "all_public_source_bytes_equal": true,
+    "raw_provider_archives_published": 0,
+    "private_owner_responses_published": 0,
+    "credentials_or_retrieval_details_published": 0
+  },
+  "verification": {
+    "npm_install_audit": "218 packages audited; zero vulnerabilities",
+    "vinext_build": "pass",
+    "node_tests": "3 passed, 0 failed",
+    "python_binding_tests": "3 passed, 0 failed",
+    "desktop_browser": {
+      "browser": "Chrome",
+      "viewport": [1280, 575],
+      "horizontal_overflow_px": 0,
+      "title": "BurnLens — Evidence before confidence",
+      "visual_style_loaded": true
+    },
+    "narrow_browser": {
+      "browser": "Chrome",
+      "viewport": [390, 844],
+      "horizontal_overflow_px": 0,
+      "keyboard_first_focus": "Skip to evidence",
+      "skip_target": "SECTION#evidence",
+      "skip_target_received_focus": true
+    },
+    "ward_creek_route": {
+      "http_status": 200,
+      "title": "BurnLens - Ward Creek evidence interface",
+      "rejected_model_control": "checked successfully",
+      "rejected_model_role": "diagnostic only"
+    }
+  },
+  "retained_failures": [
+    {
+      "attempt": "local production preview with vinext start",
+      "observed_result": "HTML returned 200 but generated CSS and JavaScript asset URLs returned 404, leaving the page unstyled.",
+      "disposition": "retained-local-preview-tooling-failure",
+      "remediation": "Use the Vinext development render for local browser QA and require the real Codex Sites deployment to pass production asset and render validation before release closeout."
+    },
+    {
+      "attempt": "bespoke social preview generation",
+      "observed_result": "Two allowed generation attempts produced local PNG bytes without the required text treatment.",
+      "disposition": "omitted",
+      "remediation": "Publish summary metadata without og:image; do not ship an unverified social card."
+    }
+  ],
+  "decision": {
+    "status": "pass-local-pre-publication",
+    "next_dependency": "merge the exact source checkpoint, then create and verify release and deployment identities"
+  }
+}

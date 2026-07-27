@@ -86,13 +86,14 @@ with reviewed-tree equality. Fresh main exposed an undeclared ignored
 PR #581 merges the bounded fix through
 `e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A fresh
 clone of final remote main passes 15 focused tests, both candidate validators,
-the release audit, and dependency health. No technical checkpoint is active;
-the project is stopped at the owner publication gate. Do not create a tag,
-GitHub Release, deployment,
-access or ownership change, public-sharing change, publication, or external
-submission without explicit owner stop-gate handling. Do not create a Phase
-3B remediation milestone or begin planning the separately governed follow-on
-experiment.
+the release audit, and dependency health. On 2026-07-27 the owner explicitly
+authorized the pending publication actions and directed submission through
+Codex Sites. P6O1-T02 / issue #584 is the active repository-only publication
+and closeout milestone from exact main `55ba588...`; it may create the
+annotated 0.56.0 tag, GitHub Release, public Codex Sites deployment, and
+necessary lifecycle synchronization after their quality gates pass. It must
+never use `burnlens-site`, change analytical evidence, or create a Phase 3B
+remediation milestone or separately governed follow-on experiment.
 
 The historical checkpoint facts below remain audit evidence, not current
 sequencing authority.

@@ -540,6 +540,14 @@ portfolio/phase-six/**/*.json text eol=lf
 portfolio/phase-six/**/*.html text eol=lf
 portfolio/phase-six/**/*.md text eol=lf
 portfolio/phase-six/**/*.zip -text
+site/**/*.ts text eol=lf
+site/**/*.tsx text eol=lf
+site/**/*.mjs text eol=lf
+site/**/*.json text eol=lf
+site/**/*.md text eol=lf
+site/**/*.css text eol=lf
+site/**/*.html text eol=lf
+site/**/*.png -text
 burnlens/phase_six_*.py text eol=lf
 tests/test_phase_six_*.py text eol=lf
 samples/runs/phase-six/**/*.json text eol=lf
