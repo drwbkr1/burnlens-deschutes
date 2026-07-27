@@ -71,6 +71,11 @@ issue #580 retains the missing-dev-profile precursor and all five failures.
 Candidate `0ea5543...` creates the temporary parent explicitly; a clean remote
 clone passes 15 focused tests, both candidate validators, the release audit,
 and dependency health without changing any portfolio or analytical artifact.
+PR #581 merges reviewed exception head `d81aec2...` through final remote main
+`e940611...` with exact tree equality. A fresh clone of that final main repeats
+the focused tests, both validators, audit, and dependency-health checks. The
+unchanged repository-local candidate is verified at the owner publication
+gate; it is not tagged, released, deployed, shared, published, or submitted.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

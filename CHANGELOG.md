@@ -60,6 +60,14 @@ structured release audit, and dependency health. No software version,
 candidate archive, scientific state, tag, GitHub Release, deployment, sharing,
 publication, or submission changes.
 
+PR #581 merges reviewed exception head `d81aec2...` through
+`e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A fresh
+clone of that final remote main repeats the 15 focused tests, both candidate
+validators, structured release audit, and dependency-health checks. The
+unchanged candidate is therefore verified repository-local evidence at the
+owner publication gate. It is not tagged, released, deployed, shared,
+published, or submitted.
+
 ## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 
 - Preserve the exact verified Phase Four RBR-primary package and rejected

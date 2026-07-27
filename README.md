@@ -31,7 +31,7 @@ The verified Phase Four analytical predecessor is `v0.54.0-rbr-geoint-milestone`
 
 P5O1-T01 / issue #574 / PR #575 now ships verified BurnLens 0.55.0 as a baseline-first reliability candidate. [Open its exact offline index](samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html) or [inspect the 646,513-byte ZIP](portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip), SHA-256 `691c4bdd...`. U01-U06 preserve the exact Phase Four analytical package while adding fail-closed recovery, rendered reliability QA, assurance, clean reconstruction, deterministic candidate packaging, installed-wheel proof, known issues, and rollback. Reviewed head `3eb2d0a...` merges at `7066dcd...` with exact tree equality; fresh main passes 789 tests, reproduces the 1,207,948-byte wheel at `1d0e862c...`, and remote tag object `3307214...` peels to the merge. The candidate has zero open critical/high findings and two visible medium findings with impact and workaround. Phase Five is accepted and verified.
 
-P6O1-T01 / issue #578 is active from exact lifecycle merge `3097ac5...`.
+P6O1-T01 / issue #578 begins from exact lifecycle merge `3097ac5...`.
 U01 passes the local public-scope, claims, rights, attribution, withholding, and
 privacy gates. U02 supplies one current reviewer narrative around immutable
 Phase Four and Phase Five evidence. U03 adds the deterministic, real-rendered,
@@ -61,10 +61,12 @@ PR #579 merges the exact Phase Six candidate through
 Fresh main then exposes one test-fixture portability defect: the ignored
 `downloads/` parent is absent. BL-EXC-004 / issue #580 retains that failure and
 its missing-dev-profile precursor. Candidate fix `0ea5543...` creates the
-temporary parent explicitly and passes 15 tests, both candidate validators,
-the release audit, and dependency health in a clean remote clone. The
-exception merge and exact fresh-main repetition remain before the owner
-publication gate.
+temporary parent explicitly. PR #581 merges reviewed head `d81aec2...` through
+`e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A clean
+clone of that final remote main passes 15 focused tests, both candidate
+validators, the structured release audit, and dependency health. The unchanged
+repository-local candidate is verified and stopped at the owner publication
+gate; no tag or public action has occurred.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 

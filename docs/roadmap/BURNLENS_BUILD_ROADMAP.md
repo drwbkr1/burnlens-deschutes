@@ -105,7 +105,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **accepted and verified** | P3O1-T01 / issue #566 / PR #567 ships verified BurnLens 0.53.0. The model predicts all 89 cores as burned and loses to RBR 0.2987 versus 1.0 Dice. Decision: `reject-model-retain-baseline`; no second opening. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **accepted and verified** | P4O1-T01 / issue #570 / PR #571 ships one accepted RBR-primary run, valid rasters/vectors, bounded context, deterministic observations, a self-contained interface, and a 66-file immutable package in verified BurnLens 0.54.0. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
 | 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **accepted and verified** | P5O1-T01 / issue #574 / PR #575 ships the deterministic offline BurnLens 0.55.0 baseline-first candidate with two visible medium findings and no open critical/high finding. Merge, fresh-main, wheel, render, rollback, and remote-tag gates pass. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
-| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **active — milestone merged; BL-EXC-004 fresh-main repair pending** | Issue #578 / PR #579 merges U01-U07 through `35e68a5...` with exact reviewed-tree equality. Fresh main exposes one undeclared ignored test-fixture parent. BL-EXC-004 / issue #580 retains it; candidate `0ea5543...` passes 15 focused tests, both validators, release audit, and dependency health in a clean clone. Exception merge and fresh-main verification remain before the owner publication gate. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
+| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **active — verified repository-local pre-publication candidate; owner publication gate** | Issue #578 / PR #579 merges U01-U07 through `35e68a5...` with exact reviewed-tree equality. BL-EXC-004 / issue #580 / PR #581 merges the bounded fresh-main fixture correction through `e940611...`, also with exact tree equality. A fresh clone of final remote main passes 15 focused tests, both validators, release audit, and dependency health. No tag or public action has occurred. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
 
 ## Phase One — scope and control baseline
 
@@ -264,13 +264,13 @@ August 6, 2026 is an aggressive portfolio-delivery target and prioritization con
 
 Low-value source scouting, repeated provider retries, recursive lifecycle churn, and roadmap breadth are deferred. Do not create a dataset, split, baseline, or model merely when a sixth event arrives. Do not activate a terminal technical-case-study fallback without owner direction. Deployment or a public-sharing change remains an owner stop condition.
 
-P6O1-T01 / issue #578 / PR #579 is merged at `35e68a5...`. BL-EXC-004
-/ issue #580 is the active bounded closeout exception because fresh main
-exposed an undeclared ignored test-fixture parent. The immediate action is one
-reviewed exception PR and exact fresh-main verification. Tagging, GitHub
-Release creation, deployment, access or ownership change, public sharing,
-publication, and external submission remain outside that exception and require
-explicit owner stop-gate handling.
+P6O1-T01 / issue #578 / PR #579 is merged at `35e68a5...`. BL-EXC-004 /
+issue #580 / PR #581 is merged and verified through `e940611...`. The
+repository-local Phase Six candidate is verified and no technical checkpoint
+is active. The project is stopped at the owner publication gate. Tagging,
+GitHub Release creation, deployment, access or ownership change, public
+sharing, publication, and external submission require explicit owner
+stop-gate handling.
 
 ## Required reading order for long-running Codex work
 
