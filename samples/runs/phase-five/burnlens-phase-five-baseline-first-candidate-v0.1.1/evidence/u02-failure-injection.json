@@ -1,0 +1,122 @@
+{
+  "report_version": "burnlens-phase-five-failure-injection-v0.1.0",
+  "report_id": "PHASE-FIVE-FAILURE-INJECTION-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U02",
+  "run_id": "BL-2026-07-26-p5o1-t01-u02-failure-injection-r002",
+  "generated_at_utc": "2026-07-26T21:43:47Z",
+  "git_source_commit": "b868ff007670b98b385eaeb2060b942fb38c7a4c",
+  "contract_id": "PHASE-FIVE-QA-RELEASE-CONTRACT-2026-001",
+  "canonical_before": {
+    "directory_validation": "PACKAGE_VALIDATION_PASS",
+    "archive_validation": "PACKAGE_VALIDATION_PASS",
+    "archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    },
+    "interface": {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    }
+  },
+  "injections": [
+    {
+      "injection_id": "missing-required-member",
+      "fixture": {
+        "path": "fixtures/missing-required-member.zip",
+        "bytes": 428587,
+        "sha256": "3db124530d2a9d24ef27bb2da520448ac486746eb5ee3d8d3bcfd1851246b7a2"
+      },
+      "expected_error": "checksum mismatch: interface/index.html",
+      "actual_error": "checksum mismatch: interface/index.html",
+      "exception": "PhaseFourPackageError",
+      "accepted": false,
+      "canonical_recovery": "pass"
+    },
+    {
+      "injection_id": "corrupt-required-member",
+      "fixture": {
+        "path": "fixtures/corrupt-required-member.zip",
+        "bytes": 428540,
+        "sha256": "a73edde768ef3c6ceb5e660d036a4bbb7fbc0c5d0bb54b5c108922b761499417"
+      },
+      "expected_error": "checksum mismatch: interface/index.html",
+      "actual_error": "checksum mismatch: interface/index.html",
+      "exception": "PhaseFourPackageError",
+      "accepted": false,
+      "canonical_recovery": "pass"
+    },
+    {
+      "injection_id": "archive-path-traversal",
+      "fixture": {
+        "path": "fixtures/archive-path-traversal.zip",
+        "bytes": 487461,
+        "sha256": "72a3907066d11e5b13be9271b0af74a59b900fc93465e6290a6bd15b2ed2f7be"
+      },
+      "expected_error": "archive member path unsafe",
+      "actual_error": "archive member path unsafe",
+      "exception": "PhaseFourPackageError",
+      "accepted": false,
+      "canonical_recovery": "pass"
+    },
+    {
+      "injection_id": "binding-mismatch",
+      "fixture": {
+        "path": "fixtures/binding-mismatch.zip",
+        "bytes": 487875,
+        "sha256": "781d5880f7beb10f06ac37bbf33340b3a8a6fe6a322d47dc343117087362244c"
+      },
+      "expected_error": "package manifest binding drift",
+      "actual_error": "package manifest binding drift",
+      "exception": "PhaseFourPackageError",
+      "accepted": false,
+      "canonical_recovery": "pass"
+    },
+    {
+      "injection_id": "partial-package",
+      "fixture": {
+        "path": "fixtures/partial-package.zip",
+        "bytes": 4693,
+        "sha256": "25e1a1f901f49e883d75213f8927e93e4853f129df36bcdb3e74eace91695bf9"
+      },
+      "expected_error": "archive member-count drift",
+      "actual_error": "archive member-count drift",
+      "exception": "PhaseFourPackageError",
+      "accepted": false,
+      "canonical_recovery": "pass"
+    }
+  ],
+  "canonical_after": {
+    "directory_validation": "PACKAGE_VALIDATION_PASS",
+    "archive_validation": "PACKAGE_VALIDATION_PASS",
+    "archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    },
+    "interface": {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    }
+  },
+  "checks": {
+    "all_invalid_fixtures_rejected": true,
+    "all_diagnoses_exact": true,
+    "canonical_validated_after_every_injection": true,
+    "canonical_archive_hash_unchanged": true,
+    "canonical_interface_hash_unchanged": true,
+    "path_escape_created": false,
+    "accepted_output_created": false
+  },
+  "analytical_posture": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_accepted": false,
+    "rejected_model_outperformed_rbr": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P5O1-T01-U03 accessibility and reviewer clarity"
+}

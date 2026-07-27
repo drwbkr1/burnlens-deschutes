@@ -474,13 +474,19 @@ burnlens/phase_four_*.py text eol=lf
 tests/test_phase_four_*.py text eol=lf
 records/phase-four/**/*.json text eol=lf
 records/phase-four/**/*.md text eol=lf
+records/phase-five/**/*.json text eol=lf
+records/phase-five/**/*.md text eol=lf
 records/prompt-build-log/2026-07-26-p4o1-t01.md text eol=lf
+records/prompt-build-log/2026-07-26-p5o1-t01.md text eol=lf
 docs/devlog/2026-07-26-phase-four-rbr-geoint-milestone.md text eol=lf
 records/prompt-build-log/2026-07-26-v054-lifecycle-sync.md text eol=lf
 docs/devlog/2026-07-26-v054-lifecycle-sync.md text eol=lf
 samples/runs/phase-four/**/*.json text eol=lf
 samples/runs/phase-four/**/*.html text eol=lf
 samples/runs/phase-four/**/*.css text eol=lf
+samples/qa/phase-five/**/*.json text eol=lf
+samples/qa/phase-five/**/*.md text eol=lf
+samples/qa/phase-five/**/*.html text eol=lf
 samples/runs/phase-four/**/*.js text eol=lf
 samples/runs/phase-four/**/*.md text eol=lf
 samples/runs/phase-four/**/*.txt text eol=lf
@@ -492,3 +498,15 @@ samples/runs/phase-four/**/*.tif -text
 samples/runs/phase-four/**/*.gpkg -text
 portfolio/phase-four/**/*.json text eol=lf
 portfolio/phase-four/**/*.zip -text
+
+# P5O1-T01 candidate evidence and release package.
+docs/phases/phase-05/*.md text eol=lf
+docs/devlog/2026-07-26-phase-five-reliability-milestone.md text eol=lf
+samples/runs/phase-five/**/*.json text eol=lf
+samples/runs/phase-five/**/*.html text eol=lf
+samples/runs/phase-five/**/*.md text eol=lf
+samples/runs/phase-five/**/*.txt text eol=lf
+samples/runs/phase-five/**/*.sha256 text eol=lf
+samples/runs/phase-five/**/*.zip -text
+portfolio/phase-five/**/*.json text eol=lf
+portfolio/phase-five/**/*.zip -text

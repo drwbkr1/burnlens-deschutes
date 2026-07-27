@@ -16,9 +16,15 @@ Harden the integrated workflow into a tested, reproducible, secure, accessible, 
 
 ## Current status
 
-**Proposed — blocked.**
+**Active — baseline-first candidate frozen; milestone verification pending.**
 
-Phase Five depends on an accepted Phase Four run package, interface candidate, exact version chain, and explicit QA activation.
+P5O1-T01 / issue #574 completes U01-U06 on its issue branch and freezes
+BurnLens 0.55.0 candidate
+`burnlens-phase-five-baseline-first-candidate-v0.1.1`. It preserves the exact
+Phase Four analytical package, has no open critical/high finding, and exposes
+two medium findings with impact and workaround. Milestone merge, fresh-main
+verification, and annotated tag remain before Phase Five is verified and Phase
+Six becomes eligible.
 
 ## Phase purpose
 

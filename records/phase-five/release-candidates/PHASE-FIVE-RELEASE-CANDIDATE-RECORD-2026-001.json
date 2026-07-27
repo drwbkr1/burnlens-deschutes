@@ -1,0 +1,286 @@
+{
+  "record_version": "burnlens-phase-five-release-candidate-record-v0.1.0",
+  "record_id": "PHASE-FIVE-RELEASE-CANDIDATE-RECORD-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U06",
+  "issue": 574,
+  "recorded_at_utc": "2026-07-27T02:35:28Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+  "branch": "codex/p5o1-t01-reliability-release-candidate",
+  "verified_base": "3c0ec9ef893b0e610c6c38c70a191e5e67c09ca9",
+  "candidate_builder_source": "dd1c270421250ce312d548b9571f91b4b806536b",
+  "candidate_freeze_commit": "1c799cd3f40c37013c71d9af9b15caea1d9c5417",
+  "checkout_contract_remediation": "a53bcd85413c524ae9fd0ac6007ba59ba778d532",
+  "software_version": "0.55.0",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "inputs": [
+    {
+      "unit_id": "P5O1-T01-U01",
+      "path": "records/phase-five/contracts/PHASE-FIVE-QA-RELEASE-CONTRACT-2026-001.json",
+      "bytes": 10836,
+      "sha256": "a187a9d12adea288700b25c0e3a9c18ce08dee7f5f45c46a7989ca8dc588bc4c"
+    },
+    {
+      "unit_id": "P5O1-T01-U02",
+      "path": "records/phase-five/failure-injections/PHASE-FIVE-FAILURE-INJECTION-RECORD-2026-001.json",
+      "bytes": 7104,
+      "sha256": "c5ff046ebd864751bb0fac9d160331d6ee4fcb505619af036fdbeae7b216c835"
+    },
+    {
+      "unit_id": "P5O1-T01-U03",
+      "path": "records/phase-five/interfaces/PHASE-FIVE-RELIABILITY-INTERFACE-RECORD-2026-001.json",
+      "bytes": 3795,
+      "sha256": "c97811c81bc085aead30a80fe8de5eb0f2fe7a93b6620ed0da936c717af63118"
+    },
+    {
+      "unit_id": "P5O1-T01-U04",
+      "path": "records/phase-five/assurance/PHASE-FIVE-ASSURANCE-RECORD-2026-001.json",
+      "bytes": 7928,
+      "sha256": "752148bfcfd24ef4c6c2daf627f2974a27b890fc793a5cf8c8d2ac578597b195"
+    },
+    {
+      "unit_id": "P5O1-T01-U05",
+      "path": "records/phase-five/reconstruction/PHASE-FIVE-CLEAN-RECONSTRUCTION-RECORD-2026-001.json",
+      "bytes": 12248,
+      "sha256": "ebe09e24add8d5d1a03a47e8faa61f4d159eea7ccab78fd4a05e65979397ab9a"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    }
+  ],
+  "candidate": {
+    "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+    "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "generated_at_utc": "2026-07-27T01:49:33Z",
+    "package_path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "file_count": 23,
+    "bytes": 981264,
+    "archive": {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+    },
+    "receipt": {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002-RECEIPT.json",
+      "bytes": 1077,
+      "sha256": "74931096ef4fd7132dcb5b2dfcdc7769f622ea6a882ac7cc10901ccbf4edb2ad"
+    },
+    "manifest": {
+      "bytes": 4774,
+      "sha256": "9651aba9ea7c9a8aa403a5fc4900f7d8709d232bcb1938c08438b0f2e22f23a4"
+    },
+    "checksums": {
+      "bytes": 2188,
+      "sha256": "e80e6145fc4d6d05f8c806a7077969e1d00b7f3fc140b11095830cedaf678985"
+    },
+    "index": {
+      "bytes": 4007,
+      "sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2"
+    },
+    "known_issues": {
+      "bytes": 1969,
+      "sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17"
+    },
+    "qa_matrix": {
+      "bytes": 2126,
+      "sha256": "f6df882daf1be1dbea99276a045b9d22342c11dc7e53e186a206f654081a852f"
+    },
+    "readme": {
+      "bytes": 1103,
+      "sha256": "b2b238cd3eed34b8b0db2d025bfe4c65ece5cae4c693ab6d9da5158c57b4fe0f"
+    },
+    "directory_validation": "pass",
+    "archive_validation": "pass",
+    "deterministic_replay": {
+      "path": "runs/phase-five/u06-r002",
+      "archive_byte_identical": true,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+    },
+    "canonical_phase_four_archive_preserved_byte_identically": true
+  },
+  "render": {
+    "runtime": "Microsoft Edge via Playwright",
+    "served_over": "temporary loopback HTTP",
+    "desktop": {
+      "viewport": "1440x1000",
+      "http_status": 200,
+      "horizontal_overflow": false,
+      "keyboard_first_focus": "accepted RBR-primary Phase Four evidence interface"
+    },
+    "narrow": {
+      "viewport": "390x844",
+      "http_status": 200,
+      "horizontal_overflow": false,
+      "keyboard_first_focus": "accepted RBR-primary Phase Four evidence interface"
+    },
+    "local_links": {
+      "declared": 6,
+      "opened_successfully": 6,
+      "core_interfaces_opened": 2
+    },
+    "external_resource_count": 0,
+    "browser_error_count": 0,
+    "temporary_server_stopped": true,
+    "status": "pass"
+  },
+  "wheel": {
+    "source_commit": "1c799cd3f40c37013c71d9af9b15caea1d9c5417",
+    "source_date_epoch": 1785117520,
+    "python_hash_seed": 0,
+    "build_count": 2,
+    "bytes": 1207948,
+    "sha256": "1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6",
+    "byte_identical": true,
+    "locked_requirements": {
+      "bytes": 70939,
+      "sha256": "e55ceb29cfe7326cb6a9fd370419d90a2467556df1dab580aaf7cc759b73e059"
+    },
+    "isolated_install": {
+      "python": "3.12.10",
+      "distribution_count": 75,
+      "dependency_health": "pass",
+      "imported_only_from_isolated_site_packages": true,
+      "geospatial_profile": {
+        "passed": 120,
+        "total": 120,
+        "receipt_bytes": 7396,
+        "receipt_sha256": "d05a2b08d2c2ba31fc3c56c98fc3c1608279ff486b0534e268929afcd14132c3"
+      },
+      "model_profile": {
+        "passed": 120,
+        "total": 120,
+        "receipt_bytes": 8865,
+        "receipt_sha256": "acf524e4d552dc830d392fad297008a2b261d0df653554248ad992d6c2c62e4e"
+      }
+    },
+    "status": "pass"
+  },
+  "regression": {
+    "candidate_head": "a53bcd85413c524ae9fd0ac6007ba59ba778d532",
+    "passed": 789,
+    "failed": 0,
+    "skipped": 1,
+    "warnings": 422,
+    "subtests_passed": 86,
+    "seconds": 665.38,
+    "log_bytes": 9639,
+    "log_sha256": "82a11d0ed47f223676129186eefce94daafa0eeeea011e5a2bd01b57623db305",
+    "status": "pass"
+  },
+  "findings": [
+    {
+      "id": "P5-U04-KI-001",
+      "severity": "medium",
+      "state": "open-with-bounded-mitigation",
+      "summary": "The locked setuptools 82.0.0 environment retains GHSA-h35f-9h28-mq5c / CVE-2026-59890.",
+      "impact": "The affected source-distribution path is outside the accepted Windows ZIP-only release route.",
+      "workaround": "Keep the no-sdist, no-MANIFEST.in, ASCII/NFC tracked-path, ZIP-only release boundary visible and rerun the advisory gate before a later publication."
+    },
+    {
+      "id": "P5-U05-KI-001",
+      "severity": "medium",
+      "state": "open-with-verified-workaround",
+      "summary": "The Phase Four release audit omitted the setuptools 82.0.1 builder identity embedded in its historical wheel.",
+      "impact": "The locked 82.0.0 runtime rebuild is semantically equivalent but not byte-identical to that historical wheel.",
+      "workaround": "Use the verified isolated setuptools 82.0.1 build-only environment for exact historical rollback; two exact wheels reproduce at ad3ae7c8."
+    }
+  ],
+  "retained_attempts": [
+    {
+      "attempt_id": "P5O1-T01-U06-CANDIDATE-R001",
+      "disposition": "retained-superseded-pre-freeze-candidate",
+      "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.0",
+      "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-001",
+      "archive_bytes": 646501,
+      "archive_sha256": "068886affab3da4ffafb56a1f3e42e1320fbc933632752d90fb1eeaa3bf45625",
+      "reason": "Its source commit preceded the current-version and checkout-contract corrections; exact bytes remain ignored and it is not the public candidate."
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-FULL-REGRESSION-R001",
+      "disposition": "retained-pre-remediation-failure",
+      "passed": 758,
+      "failed": 31,
+      "skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "seconds": 861.68,
+      "log_bytes": 93134,
+      "log_sha256": "34b7ddd2127002582c114fbacab1fb7e8dade76ee253bb95881055883ee3a039",
+      "reason": "Thirty stale current-version assertions and one missing checkout rule were corrected; no scientific failure was inferred."
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-FULL-REGRESSION-R002",
+      "disposition": "retained-dirty-checkout-failure",
+      "passed": 788,
+      "failed": 1,
+      "skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "seconds": 743.55,
+      "log_bytes": 11567,
+      "log_sha256": "6bba4cdc7b3e297907252c0a814bc2e3846660ef4aae6c4f0d2461810a26334d",
+      "reason": "The checkout-byte gate correctly rejected the intentionally dirty candidate/docs freeze."
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-ISOLATED-PROFILES-R001",
+      "disposition": "retained-wrapper-timeout",
+      "result": "Geospatial verification passed, while the combined foreground wrapper timed out and left a zero-byte model receipt before a no-overwrite r002 model run passed.",
+      "application_or_scientific_defect_inferred": false
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-FULL-REGRESSION-R003",
+      "disposition": "retained-checkout-contract-failure",
+      "passed": 787,
+      "failed": 2,
+      "skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "seconds": 815.78,
+      "log_bytes": 80405,
+      "log_sha256": "6f643e473f48a38a81652411faa00f8a1245b9bb242374bb4fee7b34ecaaade9",
+      "reason": "The Phase Five objectives file lacked an explicit LF checkout contract and materialized as CRLF; a53bcd8 adds the exact path rule.",
+      "application_or_scientific_defect_inferred": false
+    },
+    {
+      "attempt_id": "P5O1-T01-U06-FULL-REGRESSION-R004",
+      "disposition": "pass",
+      "candidate_head": "a53bcd85413c524ae9fd0ac6007ba59ba778d532",
+      "passed": 789,
+      "failed": 0,
+      "skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "seconds": 665.38
+    }
+  ],
+  "claims_and_boundaries": {
+    "independent_ground_truth_claimed": false,
+    "generalization_claimed": false,
+    "model_superiority_claimed": false,
+    "field_validation_claimed": false,
+    "official_status_claimed": false,
+    "endorsed_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "emergency_suitability_claimed": false,
+    "github_release_created": false,
+    "deployment_created": false,
+    "access_or_public_sharing_changed": false,
+    "phase_3b_or_second_experiment_created": false,
+    "private_or_provider_bytes_published": false
+  },
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "disposition": "accepted-baseline-first-candidate-pending-milestone-verification",
+  "phase_six_recommendation": "eligible-after-milestone-merge-tag-and-fresh-main-verification",
+  "next_dependency": "one coherent P5O1-T01 milestone PR, reviewed merge, fresh-main verification, and annotated tag"
+}

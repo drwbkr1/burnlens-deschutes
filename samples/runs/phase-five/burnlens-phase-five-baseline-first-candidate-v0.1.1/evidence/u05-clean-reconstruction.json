@@ -1,0 +1,204 @@
+{
+  "report_version": "burnlens-phase-five-clean-reconstruction-summary-v0.1.0",
+  "report_id": "PHASE-FIVE-CLEAN-RECONSTRUCTION-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U05",
+  "issue": 574,
+  "generated_at_utc": "2026-07-27T00:55:57Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u05-clean-reconstruction-r004",
+  "implementation_commit": "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "result": {
+    "status": "pass",
+    "summary": "A fresh remote-equal Windows checkout reconstructs and validates the immutable Phase Four package, installs the exact locked candidate wheel, passes the tracked-only regression, and exercises an exact detached rollback to the verified v0.54 tag.",
+    "phase_six_effect": "P5O1-T01-U06 becomes eligible; this report does not itself accept or release a Phase Five candidate."
+  },
+  "clean_source": {
+    "path_class": "ignored repository-local short path; private machine path withheld",
+    "branch": "codex/p5o1-t01-reliability-release-candidate",
+    "head": "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115",
+    "remote_commit": "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115",
+    "clean": true,
+    "module_source": "burnlens/phase_five_reconstruction.py",
+    "python": "3.12.10",
+    "locked_distribution_count": 75,
+    "locked_environment_seconds": 12.553,
+    "budget_seconds": 900,
+    "status": "pass"
+  },
+  "exact_reconstruction": {
+    "source_file_count": 66,
+    "source_bytes": 1795388,
+    "reconstructed_archive_bytes": 487893,
+    "reconstructed_archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "canonical_archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "byte_identical": true,
+    "package_validation": {
+      "directory": "PACKAGE_VALIDATION_PASS",
+      "canonical_archive": "PACKAGE_VALIDATION_PASS",
+      "reconstructed_archive": "PACKAGE_VALIDATION_PASS",
+      "payload_file_count": 66,
+      "geotiff_count": 10,
+      "accepted_vector_feature_count": 202
+    },
+    "array_contracts": {
+      "comparison_count": 10,
+      "binary_comparison": "exact",
+      "floating_comparison": "absolute tolerance <= 0.000001",
+      "maximum_observed_absolute_difference": 0.0,
+      "crs": "EPSG:32610",
+      "shape": [
+        64,
+        64
+      ],
+      "status": "pass"
+    },
+    "semantic_contracts": {
+      "state": "accepted-baseline",
+      "accepted_method": "burnlens-baseline-v0.1.0",
+      "rejected_diagnostic": "burnlens-unet-binary-v0.1.0",
+      "model_accepted": false,
+      "model_outperformed_rbr": false,
+      "wcp_001_accepted_rbr_area_ha": 141.44,
+      "wcp_001_accepted_rbr_inside_mtbs_pct": 94.19,
+      "wcp_002_accepted_rbr_area_ha": 66.76,
+      "wcp_002_accepted_rbr_inside_mtbs_pct": 0.0,
+      "status": "pass"
+    },
+    "status": "pass"
+  },
+  "candidate_wheel": {
+    "software_version_at_pre_freeze": "0.54.0",
+    "release_identity": "commit-bound Phase Five candidate; not a new v0.54 release",
+    "source_commit": "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115",
+    "source_date_epoch": 1785094504,
+    "python_hash_seed": 0,
+    "build_count": 2,
+    "wheel_bytes": 1198080,
+    "wheel_sha256": "e619d3b7a5ed13fc017db37a7510a1aa7b60e532e854d966cd1c91a0a6cdae24",
+    "byte_identical": true,
+    "installed_import": "isolated site-packages",
+    "installed_distribution_count": 75,
+    "locked_transitive_versions": {
+      "botocore": "1.43.53",
+      "certifi": "2026.6.17",
+      "pandas": "3.0.3",
+      "s3transfer": "0.19.1"
+    },
+    "dependency_health": "pass",
+    "console_commands": 119,
+    "geo_profile_help_passed": 119,
+    "model_profile_help_passed": 119,
+    "status": "pass"
+  },
+  "regression": {
+    "naive_clean_clone": {
+      "status": "retained-custody-prerequisite-failure",
+      "passed": 711,
+      "failed": 2,
+      "errors": 25,
+      "skipped": 47,
+      "warnings": 282,
+      "subtests_passed": 86,
+      "seconds": 354.72,
+      "cause": "The tracked-only clone intentionally lacks ignored dataset/provider/context/intermediate custody used by five builder files and two exact-custody assertions.",
+      "application_or_scientific_defect_inferred": false
+    },
+    "portable_tracked_only": {
+      "status": "pass",
+      "passed": 711,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 47,
+      "deselected_exact_custody_assertions": 2,
+      "warnings": 282,
+      "subtests_passed": 86,
+      "seconds": 313.96,
+      "excluded_builder_test_files": [
+        "tests/test_dataset_qa.py",
+        "tests/test_phase_four_geospatial.py",
+        "tests/test_phase_four_interface.py",
+        "tests/test_phase_four_overlay.py",
+        "tests/test_phase_four_package.py"
+      ]
+    }
+  },
+  "rollback": {
+    "tag": "v0.54.0-rbr-geoint-milestone",
+    "tag_type": "annotated",
+    "tag_object": "4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82",
+    "peeled_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+    "checkout": "separate clean detached repository-local checkout",
+    "canonical_branch_moved": false,
+    "package_validation": "pass",
+    "runtime_setuptools": "82.0.0",
+    "runtime_geo_commands_passed": 114,
+    "runtime_model_commands_passed": 114,
+    "historical_wheel_builder_setuptools": "82.0.1",
+    "source_date_epoch": 1785094504,
+    "python_hash_seed": 0,
+    "historical_wheel_bytes": 1166315,
+    "historical_wheel_sha256": "ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94",
+    "rebuild_count": 2,
+    "byte_identical": true,
+    "status": "pass"
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "P5O1-T01-U05-CLONE-R001",
+      "disposition": "retained-wrapper-interruption",
+      "result": "PowerShell promoted normal Git clone progress on stderr to a terminating error and interrupted checkout before the index existed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-CLONE-R002",
+      "disposition": "retained-harness-path-depth-failure",
+      "result": "A full run-name nested checkout exceeded Git-for-Windows path handling for several tracked retained-failure filenames. The short repo-local path with core.longpaths=true passed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-WHEEL-INSTALL-R001",
+      "disposition": "retained-unlocked-install-and-import-contamination",
+      "result": "A naive wheel install resolved four transitive versions newer than uv.lock, and the first import probe resolved from the canonical working directory. The exact-lock, no-deps wheel install from a neutral directory passed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-RECONSTRUCTION-R003",
+      "disposition": "retained-source-isolation-failure",
+      "result": "The first clean-root validation imported the commit-identical module from the canonical checkout. The gate now requires its executing module to load from the exact clean source; r004 passed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-ROLLBACK-WHEEL-R001",
+      "disposition": "retained-builder-version-mismatch",
+      "result": "The locked tag runtime uses setuptools 82.0.0 and produced deterministic b20c517d... wheels. Exact comparison with the retained historical wheel isolated the difference to WHEEL generator metadata and RECORD. A build-only setuptools 82.0.1 environment reproduced ad3ae7c8... exactly."
+    }
+  ],
+  "known_issue": {
+    "id": "P5-U05-KI-001",
+    "severity": "medium",
+    "description": "The Phase Four release audit recorded the fixed epoch and wheel hash but omitted the setuptools 82.0.1 builder identity embedded in the historical wheel.",
+    "impact": "The locked v0.54 runtime alone produces a semantically equivalent but byte-different wheel.",
+    "workaround": "Use the verified build-only setuptools 82.0.1 identity with the recorded source date epoch and hash seed when exact historical wheel reconstruction is required.",
+    "phase_six_blocker": false
+  },
+  "boundaries": {
+    "analytical_output_changed": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "threshold_changed": false,
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "burnlens_site_used": false,
+    "official_operational_field_validated_endorsed_or_emergency_claim": false
+  },
+  "limitations": [
+    "This reconstructs the immutable tracked package and release contracts; it does not retrain or retune any analytical method.",
+    "Prototype labels are owner-approved evidence, not independent ground truth.",
+    "The trained U-Net remains rejected and did not outperform RBR.",
+    "The WCP-002 result remains visible false-positive-risk evidence for RBR.",
+    "No accuracy, field-validation, official, operational, endorsed, emergency-ready, vulnerability-free, or final-submission-ready claim is made."
+  ],
+  "disposition": "pass-with-visible-medium-builder-identity-issue",
+  "next_dependency": "P5O1-T01-U06 freeze one baseline-first candidate, complete known-issues and QA evidence, and make the Phase Six recommendation"
+}

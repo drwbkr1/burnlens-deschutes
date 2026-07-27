@@ -1,0 +1,311 @@
+{
+  "record_version": "burnlens-phase-five-clean-reconstruction-record-v0.1.0",
+  "record_id": "PHASE-FIVE-CLEAN-RECONSTRUCTION-RECORD-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U05",
+  "issue": 574,
+  "recorded_at_utc": "2026-07-27T01:02:47Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u05-clean-reconstruction-r004",
+  "branch": "codex/p5o1-t01-reliability-release-candidate",
+  "verified_base": "3c0ec9ef893b0e610c6c38c70a191e5e67c09ca9",
+  "implementation_commits": [
+    "724f7a3e412806a5bff06963dea38f5104350cb4",
+    "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115"
+  ],
+  "inputs": {
+    "u04_assurance_record": {
+      "path": "records/phase-five/assurance/PHASE-FIVE-ASSURANCE-RECORD-2026-001.json",
+      "bytes": 7928,
+      "sha256": "752148bfcfd24ef4c6c2daf627f2974a27b890fc793a5cf8c8d2ac578597b195"
+    },
+    "phase_four_archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    },
+    "phase_four_tag": {
+      "name": "v0.54.0-rbr-geoint-milestone",
+      "tag_object": "4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82",
+      "peeled_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34"
+    }
+  },
+  "clean_checkout": {
+    "custody": "ignored repository-local short path; private machine path withheld",
+    "source_commit": "75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115",
+    "remote_equal": true,
+    "named_branch": true,
+    "clean": true,
+    "core_longpaths": true,
+    "python": "3.12.10",
+    "locked_distribution_count": 75,
+    "combined_locked_sync_seconds": 12.553,
+    "sync_budget_seconds": 900,
+    "executing_module_source_verified": true,
+    "geospatial_profile_command_helps": {
+      "passed": 119,
+      "total": 119,
+      "environment_json_bytes": 7342,
+      "environment_json_sha256": "da1e58be7ec1947d46cfb30043ff23c2912ac50195ecb3263de2fc03b4565725"
+    },
+    "model_profile_command_helps": {
+      "passed": 119,
+      "total": 119,
+      "environment_json_bytes": 8811,
+      "environment_json_sha256": "069e2ddc401ad04516e542e03b53712f490e17024237727ad13babebbcbab57b"
+    },
+    "status": "pass"
+  },
+  "candidate_wheel": {
+    "release_identity": "commit-bound pre-freeze Phase Five candidate at software version 0.54.0; not a new v0.54 release",
+    "source_date_epoch": 1785094504,
+    "python_hash_seed": 0,
+    "build_count": 2,
+    "bytes": 1198080,
+    "sha256": "e619d3b7a5ed13fc017db37a7510a1aa7b60e532e854d966cd1c91a0a6cdae24",
+    "byte_identical": true,
+    "isolated_install": {
+      "install_mode": "exact locked environment plus candidate wheel installed with --no-deps",
+      "imported_only_from_isolated_site_packages": true,
+      "locked_distribution_count": 75,
+      "dependency_health": "pass",
+      "locked_transitive_versions": {
+        "botocore": "1.43.53",
+        "certifi": "2026.6.17",
+        "pandas": "3.0.3",
+        "s3transfer": "0.19.1"
+      },
+      "geospatial_profile_command_helps": {
+        "passed": 119,
+        "total": 119,
+        "environment_json_sha256": "da1e58be7ec1947d46cfb30043ff23c2912ac50195ecb3263de2fc03b4565725"
+      },
+      "model_profile_command_helps": {
+        "passed": 119,
+        "total": 119,
+        "environment_json_sha256": "069e2ddc401ad04516e542e03b53712f490e17024237727ad13babebbcbab57b"
+      }
+    },
+    "status": "pass"
+  },
+  "reconstruction": {
+    "tracked_file_count": 66,
+    "tracked_bytes": 1795388,
+    "reconstructed_archive_bytes": 487893,
+    "reconstructed_archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "canonical_archive_bytes": 487893,
+    "canonical_archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+    "byte_identical": true,
+    "ignored_report_json": {
+      "bytes": 18039,
+      "sha256": "f37599f9f6727fc3f32a4cf76c793054cd83ed2489e8a58d68aac861d0564529"
+    },
+    "ignored_report_html": {
+      "bytes": 3174,
+      "sha256": "37f9ccab06b32d1e6ed5a23bbcff601fa54932a3739871645f2f56f597a08496"
+    },
+    "validators": {
+      "extracted_directory": "pass",
+      "canonical_archive": "pass",
+      "reconstructed_archive": "pass",
+      "file_count": 66,
+      "geotiff_count": 10
+    },
+    "raster_contracts": {
+      "npy_geotiff_pairs": 10,
+      "binary_arrays": "exact",
+      "floating_arrays": "absolute tolerance <= 0.000001",
+      "observed_maximum_absolute_difference": 0.0,
+      "crs": "EPSG:32610",
+      "shape": [
+        64,
+        64
+      ],
+      "status": "pass"
+    },
+    "semantic_contracts": {
+      "accepted_method": "burnlens-baseline-v0.1.0",
+      "rejected_model": "burnlens-unet-binary-v0.1.0",
+      "model_outperformed_rbr": false,
+      "wcp_001_area_ha": 141.44,
+      "wcp_001_inside_mtbs_pct": 94.19,
+      "wcp_002_area_ha": 66.76,
+      "wcp_002_inside_mtbs_pct": 0.0,
+      "false_positive_risk_remains_visible": true,
+      "status": "pass"
+    },
+    "status": "pass"
+  },
+  "regression": {
+    "naive_clean_clone": {
+      "status": "retained-custody-prerequisite-failure",
+      "passed": 711,
+      "failed": 2,
+      "errors": 25,
+      "skipped": 47,
+      "warnings": 282,
+      "subtests_passed": 86,
+      "seconds": 354.72,
+      "log_bytes": 55430,
+      "log_sha256": "630a7a910ab9c99ee6a42cfd9f82fdb95c7924e58fe341d791d8d89b6581fa68",
+      "exact_failed_assertions": [
+        "tests/test_dataset_materialization.py::TestDatasetMaterialization::test_exact_registered_archive_roster_is_locally_available",
+        "tests/test_phase_four_context_intake.py::TestPhaseFourContextIntake::test_exact_finalized_custody_revalidates"
+      ],
+      "error_test_files": [
+        "tests/test_dataset_qa.py",
+        "tests/test_phase_four_geospatial.py",
+        "tests/test_phase_four_interface.py",
+        "tests/test_phase_four_overlay.py",
+        "tests/test_phase_four_package.py"
+      ],
+      "application_or_scientific_defect_inferred": false
+    },
+    "portable_tracked_only": {
+      "status": "pass",
+      "passed": 711,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 47,
+      "deselected_exact_custody_assertions": 2,
+      "warnings": 282,
+      "subtests_passed": 86,
+      "seconds": 313.96,
+      "log_bytes": 6136,
+      "log_sha256": "0c0c1ded3e4bb7aa0f2d9f5bdd6b637818f24d987d63aad5a54070f2f35b960a"
+    }
+  },
+  "rollback": {
+    "checkout": "separate clean detached repository-local checkout",
+    "tag": "v0.54.0-rbr-geoint-milestone",
+    "tag_object": "4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82",
+    "peeled_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+    "canonical_branch_moved": false,
+    "package_validation": "pass",
+    "runtime": {
+      "setuptools": "82.0.0",
+      "geospatial_command_helps": {
+        "passed": 114,
+        "total": 114,
+        "environment_json_bytes": 7075,
+        "environment_json_sha256": "a981e76f60092d754c7ab3732e39322ccd46099c14ace178975bceaaa2923d5c"
+      },
+      "model_command_helps": {
+        "passed": 114,
+        "total": 114,
+        "environment_json_bytes": 8544,
+        "environment_json_sha256": "46305743958ca64ef8086fba110615e4f6491e7d257d16dcfbe12199f1911a0a"
+      }
+    },
+    "first_rebuild": {
+      "setuptools": "82.0.0",
+      "bytes": 1166315,
+      "sha256": "b20c517d786dc6e25072b63ef7e72a744b01aa8325f0c6d3385bff5afab1f186",
+      "deterministic": true,
+      "historical_byte_match": false,
+      "difference": "Only WHEEL generator metadata and the dependent RECORD entry differ from the historical wheel."
+    },
+    "exact_historical_rebuild": {
+      "python": "3.12.10",
+      "setuptools": "82.0.1",
+      "source_date_epoch": 1785094504,
+      "python_hash_seed": 0,
+      "build_count": 2,
+      "bytes": 1166315,
+      "sha256": "ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94",
+      "byte_identical": true
+    },
+    "status": "pass"
+  },
+  "render": {
+    "served_over": "temporary loopback HTTP",
+    "desktop": {
+      "viewport": "1440x1000",
+      "title": "BurnLens Phase Five clean reconstruction",
+      "h1": "The package survives a clean checkout—and rollback is exact.",
+      "computed_body_width_px": 1040,
+      "horizontal_overflow": false,
+      "two_column_summary_grid": true,
+      "key_evidence_visible": true,
+      "normal_viewport_visual_check": "pass"
+    },
+    "narrow": {
+      "viewport": "390x844",
+      "document_client_width_px": 375,
+      "document_scroll_width_px": 375,
+      "horizontal_overflow": false,
+      "single_column_summary_grid": true,
+      "table_cells_reflow_to_blocks": true,
+      "key_evidence_visible": true,
+      "visual_check": "pass"
+    },
+    "external_resource_count": 0,
+    "browser_warning_or_error_count": 0,
+    "full_page_capture_note": "The browser screenshot stitcher duplicated and compressed the first full-page capture although DOM geometry and the normal viewport capture were correct. The artifact was treated as browser tooling output, not accepted as render evidence.",
+    "temporary_server_stopped": true,
+    "status": "pass"
+  },
+  "public_outputs": {
+    "json": {
+      "path": "samples/qa/phase-five/reconstruction-v0.1.0/PHASE-FIVE-CLEAN-RECONSTRUCTION-2026-001.json",
+      "bytes": 9135,
+      "sha256": "510eec2ea8f2c75afe491c4d001d81f4453a19b96f4a3f295fcb9cfd770844c0"
+    },
+    "html": {
+      "path": "samples/qa/phase-five/reconstruction-v0.1.0/PHASE-FIVE-CLEAN-RECONSTRUCTION-2026-001.html",
+      "bytes": 6048,
+      "sha256": "9227c6af6000479b37f3480df7d85b3e4a2906971066fcbcb9fa02e2b7b7cd14"
+    }
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "P5O1-T01-U05-CLONE-R001",
+      "disposition": "retained-wrapper-interruption",
+      "result": "PowerShell promoted normal Git progress on stderr to a terminating error and interrupted the clone before an index existed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-CLONE-R002",
+      "disposition": "retained-harness-path-depth-failure",
+      "result": "A full-name nested checkout exceeded Git-for-Windows path handling for retained long filenames; a short repository-local path with core.longpaths=true passed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-WHEEL-INSTALL-R001",
+      "disposition": "retained-unlocked-install-and-import-contamination",
+      "result": "A naive wheel install resolved four newer transitive versions and the first import probe resolved from the canonical working directory."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-RECONSTRUCTION-R003",
+      "disposition": "retained-source-isolation-failure",
+      "result": "The first clean-root validation imported the commit-identical module from the canonical checkout. The gate now requires the executing module to load from the exact clean source."
+    },
+    {
+      "attempt_id": "P5O1-T01-U05-ROLLBACK-WHEEL-R001",
+      "disposition": "retained-builder-version-mismatch",
+      "result": "The locked runtime produced deterministic semantically equivalent wheels that differed from the historical wheel only in builder generator metadata and RECORD."
+    }
+  ],
+  "known_issue": {
+    "id": "P5-U05-KI-001",
+    "severity": "medium",
+    "description": "The Phase Four release audit recorded the fixed epoch and wheel hash but omitted the setuptools 82.0.1 builder identity embedded in the historical wheel.",
+    "impact": "The locked v0.54 runtime alone produces a semantically equivalent but byte-different wheel.",
+    "workaround": "Use the verified build-only setuptools 82.0.1 identity with SOURCE_DATE_EPOCH=1785094504 and PYTHONHASHSEED=0 for exact historical wheel reconstruction.",
+    "phase_six_blocker": false
+  },
+  "boundaries": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "analytical_output_changed": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "threshold_changed": false,
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "deployment": false,
+    "public_sharing_change": false,
+    "burnlens_site_used": false,
+    "unsupported_status_claim": false
+  },
+  "disposition": "pass-with-visible-medium-builder-identity-issue",
+  "next_dependency": "P5O1-T01-U06"
+}

@@ -18,6 +18,20 @@ and checksums. WCP-002 deliberately keeps 66.76 ha of accepted-RBR
 false-positive-risk evidence visible instead of presenting an apparently
 clean success.
 
+Phase Five hardens that exact run without changing its analytical bytes.
+P5O1-T01 injects five bounded package failures, adds a separate
+owner-confirmed reliability surface, audits security/integrity/rights/claims
+and performance, reconstructs the Phase Four ZIP byte-for-byte from a fresh
+checkout, and rehearses exact rollback. U06 packages 23 files / 981,264 bytes
+into a deterministic 646,513-byte offline candidate at SHA-256 `691c4bdd...`.
+Two medium issues remain deliberately visible: the current setuptools advisory
+under the bounded ZIP-only route, and the historical omission of the
+setuptools 82.0.1 builder identity needed for exact v0.54 wheel reconstruction.
+Both have explicit impact and workaround; no critical or high finding remains
+open. The candidate is baseline-first, keeps the U-Net rejected, and is pending
+milestone merge, fresh-main verification, and annotated tag. It is not the
+final Phase Six publication or a claim of operational readiness.
+
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 
 The next evidence-visible weakness was spatial scope. The original AOI was only a metadata-discovery box. Issue #321 found the exact public NIFC Darlene 3 final-perimeter reference and used it to derive a reproducible modeling boundary.

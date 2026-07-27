@@ -29,7 +29,7 @@ class PortfolioReviewerExperienceTests(unittest.TestCase):
         )
 
     def test_version_and_exact_inputs(self) -> None:
-        self.assertEqual(burnlens.__version__, "0.54.0")
+        self.assertEqual(burnlens.__version__, "0.55.0")
         self.assertEqual(self.report["software_version"], "0.53.0")
         self.assertEqual(
             self.report["checkpoint_status"],
