@@ -498,3 +498,14 @@ samples/runs/phase-four/**/*.tif -text
 samples/runs/phase-four/**/*.gpkg -text
 portfolio/phase-four/**/*.json text eol=lf
 portfolio/phase-four/**/*.zip -text
+
+# P5O1-T01 candidate evidence and release package.
+docs/devlog/2026-07-26-phase-five-reliability-milestone.md text eol=lf
+samples/runs/phase-five/**/*.json text eol=lf
+samples/runs/phase-five/**/*.html text eol=lf
+samples/runs/phase-five/**/*.md text eol=lf
+samples/runs/phase-five/**/*.txt text eol=lf
+samples/runs/phase-five/**/*.sha256 text eol=lf
+samples/runs/phase-five/**/*.zip -text
+portfolio/phase-five/**/*.json text eol=lf
+portfolio/phase-five/**/*.zip -text
