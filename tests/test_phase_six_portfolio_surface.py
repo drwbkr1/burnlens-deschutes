@@ -76,6 +76,7 @@ class PhaseSixPortfolioSurfaceTests(unittest.TestCase):
     def test_surface_has_accessible_static_semantics(self) -> None:
         page = self.first["files"]["index.html"].decode("utf-8")
         self.assertIn('class="skip" href="#main"', page)
+        self.assertIn('<main id="main" tabindex="-1">', page)
         self.assertIn('aria-labelledby="result-title"', page)
         self.assertIn("prefers-reduced-motion", page)
         self.assertIn("WCP-002", page)

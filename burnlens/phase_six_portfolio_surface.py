@@ -341,7 +341,7 @@ def _render_html(
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section id="result" aria-labelledby="result-title">
       <div class="eyebrow">The decision</div>
       <h2 id="result-title">Reproducible model. Rejected model.</h2>
