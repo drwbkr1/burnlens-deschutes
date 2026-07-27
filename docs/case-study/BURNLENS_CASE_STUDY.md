@@ -88,10 +88,12 @@ The owner handled the publication gate on 2026-07-27. P6O1-T02 / issue #584 /
 PR #585 merges the repository-owned Sites source at `e2e0b77...` with exact
 reviewed-tree equality. Annotated tag object `31d0d35...` peels to that merge.
 The GitHub Release publishes the exact candidate ZIP, its receipt, the
-presentation, and citation material. Codex Sites version 1 deploys publicly at
-the portfolio URL above and passes anonymous desktop, narrow, keyboard,
-evidence-route, image, claims, privacy, and rejected-model interaction checks.
-The baseline-primary decision and every analytical byte remain unchanged.
+presentation, two retained historical citation snapshots, and two explicit
+final release citations. Codex Sites version 2 deploys publicly at the
+portfolio URL above and passes anonymous desktop, narrow, keyboard,
+evidence-route, image, claims, privacy, current-link, and rejected-model
+interaction checks. The baseline-primary decision and every analytical byte
+remain unchanged.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

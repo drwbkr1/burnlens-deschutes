@@ -34,3 +34,11 @@ pre-publication citation snapshots had current-sounding asset labels, and the
 site linked the case study through the pre-publication tag. BurnLens keeps
 those historical bytes, adds a clearly final citation, relabels the snapshots,
 and updates the public link before closeout.
+
+Lifecycle PR #586 merges with exact reviewed-tree equality. The Release now
+contains seven hash-verified assets: the original candidate, receipt,
+presentation, two explicitly historical citation snapshots, and two final
+release citations. Sites source `7239313...` has the exact merged `site/` tree;
+version 2 deploys successfully and repeats anonymous desktop, narrow,
+keyboard, routes, images, privacy, claims, current-link, and rejected-model
+interaction QA. P6O1-T02 completes without changing an analytical byte.

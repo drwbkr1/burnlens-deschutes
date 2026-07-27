@@ -23,16 +23,19 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 
 - Merge PR #585 at `e2e0b778...` with exact reviewed-tree equality.
 - Create annotated tag object `31d0d355...`, which peels exactly to that merge.
-- Publish five GitHub Release assets whose sizes and GitHub SHA-256 digests
-  match the tracked candidate ZIP, receipt, presentation, and citation
-  snapshots.
-- Save Sites source commit `f4d0c0bf...` as version 1, deploy it successfully,
-  set access to public under the owner's authorization, and pass anonymous
-  production desktop, 390x844, keyboard, image, evidence-route, claims,
-  privacy, and Ward Creek rejected-model interaction QA.
+- Publish seven GitHub Release assets whose sizes and GitHub SHA-256 digests
+  match the tracked candidate ZIP, receipt, presentation, historical citation
+  snapshots, and final release citations.
+- Save Sites source commit `f4d0c0bf...` as retained version 1, then publish
+  corrected source `7239313...` as version 2. The current deployment passes
+  anonymous production desktop, 390x844, keyboard, image, evidence-route,
+  claims, privacy, current-link, and Ward Creek rejected-model interaction QA.
 - Preserve the accidentally current-labelled pre-publication citation assets
   as historical snapshots and add an explicit final-release citation rather
   than deleting or silently replacing their bytes.
+- Merge lifecycle PR #586 at `bf05aef...` with exact reviewed-tree equality,
+  verify the corrected case-study route against current main, and close the
+  milestone without changing analytical evidence.
 
 The exact candidate ZIP and every analytical artifact remain unchanged.
 
