@@ -1,0 +1,23 @@
+{
+  "receipt_version": "burnlens-phase-five-candidate-receipt-v0.1.0",
+  "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+  "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+  "software_version": "0.55.0",
+  "generated_at_utc": "2026-07-27T01:49:33Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+  "git_source_commit": "dd1c270421250ce312d548b9571f91b4b806536b",
+  "archive": {
+    "path": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+    "bytes": 646513,
+    "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+  },
+  "package": {
+    "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "file_count": 23,
+    "bytes": 981264
+  },
+  "directory_validation": "PHASE_FIVE_CANDIDATE_VALIDATION_PASS",
+  "archive_validation": "PHASE_FIVE_CANDIDATE_VALIDATION_PASS",
+  "disposition": "accepted-baseline-first-candidate-pending-merge",
+  "phase_six_recommendation": "eligible-after-milestone-merge-tag-and-fresh-main-verification"
+}

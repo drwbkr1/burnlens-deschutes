@@ -2,6 +2,42 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
+## v0.55.0-baseline-first-reliability-candidate - candidate - 2026-07-26
+
+- Preserve the exact verified Phase Four RBR-primary package and rejected
+  U-Net diagnostic without retraining, retuning, analytical regeneration, or
+  a second experiment.
+- Prove five controlled package failures reject visibly, leak no accepted
+  output, and leave canonical bytes recoverable.
+- Add an owner-confirmed offline reliability surface and bounded
+  desktop/narrow/keyboard evidence without claiming accessibility
+  certification.
+- Pass dependency health, integrity, source-rights, privacy, secret, claims,
+  size, runtime, and full-regression assurance with one disclosed medium
+  setuptools advisory and bounded ZIP-only mitigation.
+- Reconstruct the 66-file Phase Four package byte-for-byte from a fresh
+  remote-equal checkout; pass an explicit 711-test portable roster and retain
+  naive-clone custody failures honestly.
+- Reproduce the exact historical v0.54 wheel after isolating its omitted
+  setuptools 82.0.1 builder identity; retain the omission as a visible medium
+  issue with an exact workaround.
+- Freeze corrected `burnlens-phase-five-baseline-first-candidate-v0.1.1`: 23
+  files / 981,264 bytes and one deterministic 646,513-byte ZIP at SHA-256
+  `691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26`.
+- Render the candidate at desktop and 390-by-844 narrow widths, open both core
+  interfaces, verify six local links, and observe zero browser warnings,
+  errors, external resources, or horizontal overflow.
+- Build two byte-identical BurnLens 0.55.0 wheels at SHA-256 `f885650e...`;
+  install the exact wheel into a locked 75-distribution environment and pass
+  both 120-command profiles.
+
+Issue #574; run
+`BL-2026-07-26-p5o1-t01-u06-release-candidate-r002`; candidate source
+`dd1c270421250ce312d548b9571f91b4b806536b`. This entry remains a candidate
+until the milestone PR, fresh-main gates, and annotated tag pass. No GitHub
+Release, deployment, access, ownership, public-sharing, or external-submission
+change is included.
+
 ## v0.54.0-rbr-geoint-milestone - verified - 2026-07-26
 
 - Complete the owner-approved
