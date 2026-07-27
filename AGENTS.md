@@ -71,8 +71,8 @@ diagnostic; it did not outperform RBR. Phase Four and Phase Five are accepted
 and verified through the approved
 `baseline-primary-with-rejected-model-diagnostic` route.
 
-P6O1-T01 / issue #578 is the active checkpoint from exact base
-`3097ac5308107ce75e4a517238f54cc4d15c346a`. U01-U07 pass locally.
+P6O1-T01 / issue #578 begins from exact base
+`3097ac5308107ce75e4a517238f54cc4d15c346a`. U01-U07 pass.
 Risk-bearing U07 checkpoint `bc9646c578c199fee51ec0fd5c2db41a97d2aca9`
 retains and repairs the fresh-clone checksum and living-document reconstruction
 failures, then passes the exact package rebuild, 802 tests, deterministic 0.56.0 wheel,
@@ -80,15 +80,15 @@ isolated 75-distribution install, 122 command routes, rendered recipient,
 rights, claims, privacy, rollback, and live-repository gates. Its disposition
 is `ready-for-owner-publication-gate`.
 
-The immediate repository action is one coherent milestone PR and exact
-reviewed-merge verification. PR #579 now merges at
-`35e68a517ed08359c813c59392f74049bd699074` with reviewed-tree equality.
-BL-EXC-004 / issue #580 is the active urgent-correctness exception because
-fresh main exposed an undeclared ignored `downloads/` test-fixture parent.
-Candidate fix `0ea5543...` passes 15 focused tests, both candidate validators,
-the release audit, and dependency health in a clean remote clone. Merge and
-fresh-main verification of that bounded exception remain before the owner
-publication gate. Do not create a tag, GitHub Release, deployment,
+PR #579 merges at `35e68a517ed08359c813c59392f74049bd699074`
+with reviewed-tree equality. Fresh main exposed an undeclared ignored
+`downloads/` test-fixture parent, which BL-EXC-004 / issue #580 retains.
+PR #581 merges the bounded fix through
+`e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A fresh
+clone of final remote main passes 15 focused tests, both candidate validators,
+the release audit, and dependency health. No technical checkpoint is active;
+the project is stopped at the owner publication gate. Do not create a tag,
+GitHub Release, deployment,
 access or ownership change, public-sharing change, publication, or external
 submission without explicit owner stop-gate handling. Do not create a Phase
 3B remediation milestone or begin planning the separately governed follow-on
