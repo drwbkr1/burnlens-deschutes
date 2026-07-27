@@ -7,6 +7,7 @@ import unittest
 
 from burnlens.phase_five_reconstruction import (
     _array_contracts,
+    _require_module_source,
     _semantic_contracts,
     _tracked_files,
     render_html,
@@ -49,6 +50,17 @@ class PhaseFiveReconstructionTests(unittest.TestCase):
             ],
             0.0,
         )
+
+    def test_reconstruction_module_must_load_from_exact_source(self) -> None:
+        self.assertEqual(
+            _require_module_source(ROOT),
+            "burnlens/phase_five_reconstruction.py",
+        )
+        with TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(
+                RuntimeError, "did not load from the clean source"
+            ):
+                _require_module_source(Path(temporary))
 
     def test_tracked_roster_rejects_an_extra_file(self) -> None:
         with TemporaryDirectory() as temporary:

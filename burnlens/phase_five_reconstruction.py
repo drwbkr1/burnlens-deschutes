@@ -127,10 +127,23 @@ def _require_clean_source(root: Path, source_commit: str) -> dict[str, Any]:
     return {
         "branch": branch,
         "head": head,
+        "implementation_module": _require_module_source(root),
         "remote_ref": remote_ref,
         "remote_commit": remote_commit,
         "status": "pass",
     }
+
+
+def _require_module_source(root: Path) -> str:
+    expected = (
+        root / "burnlens" / "phase_five_reconstruction.py"
+    ).resolve()
+    actual = Path(__file__).resolve()
+    if actual != expected:
+        raise PhaseFiveReconstructionError(
+            "reconstruction module did not load from the clean source"
+        )
+    return actual.relative_to(root).as_posix()
 
 
 def _binding_checks(root: Path) -> dict[str, Any]:
