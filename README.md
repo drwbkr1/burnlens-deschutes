@@ -10,7 +10,13 @@ BurnLens now has one verified baseline-primary CV-to-GEOINT release. P2O5-T03 / 
 
 The verified August 6 ZIP is an interim contingency technical case study. It is preserved and usable for that limited purpose, but it predates the model-bearing GEOINT path and is not the intended final BurnLens submission.
 
-[Use the current two-minute reviewer path](portfolio/README.md). The prior [2026-007 reviewer experience](portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html) remains immutable Phase Three lifecycle evidence.
+[Start with the Phase Six reviewer journey](docs/phase-six/REVIEWER_JOURNEY.md)
+for exact 30-second, 2-minute, and 5-minute paths through the accepted RBR run,
+rejected U-Net result, visible WCP-002 failure, reliability evidence,
+limitations, replay, and traceability. The [portfolio quickstart](portfolio/README.md)
+remains the short repository route. The prior
+[2026-007 reviewer experience](portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html)
+remains immutable Phase Three lifecycle evidence.
 
 P2O4-T36 / issue #540 / PR #541 ships verified BurnLens 0.48.0. Its deterministic, offline page connects the verified Windigo result, the retained Petes Lake stop, source roles, limitations, reproduction steps, case study, and exact lineage. Desktop and 390-pixel rendering, keyboard order, nine local links, image loading, clean-console, zero-external-request, and byte-identical replay gates pass. Fresh main passes 581 tests, the canonical package, isolated install, and all 87 command routes. Annotated tag object `c6ed831c106da44bad3ced010fafe5abc46bd537` peels exactly to merge `05140217066277b254e78abb74cd8f61295449d0`. No deployment or public-sharing change is authorized.
 
@@ -22,7 +28,13 @@ P2O4-T36 / issue #540 / PR #541 ships verified BurnLens 0.48.0. Its deterministi
 
 The verified Phase Four analytical predecessor is `v0.54.0-rbr-geoint-milestone`. P4O1-T01 / issue #570 / PR #571 merges reviewed head `d856a06...` through `8660ccb...`; annotated tag object `4a7a54b...` peels exactly to that merge. Accepted run `BL-2026-07-26-p4o1-t01-u07-package-r001` contains 66 files / 1,795,388 bytes; its exact 487,893-byte ZIP has SHA-256 `91308a2f...`. Both tracked forms validate, fresh remote main reproduces the reviewed 1,166,315-byte wheel at `ad3ae7c8...`, the explicit tracked-only regression passes, and the isolated 71-distribution runtime passes all 114 command routes. The naive clean-clone full suite remains retained as a controlled-custody prerequisite failure rather than being mislabeled portable. Phase Four is verified and issue #572 has synchronized its lifecycle truth.
 
-P5O1-T01 / issue #574 / PR #575 now ships verified BurnLens 0.55.0 as a baseline-first reliability candidate. [Open its exact offline index](samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html) or [inspect the 646,513-byte ZIP](portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip), SHA-256 `691c4bdd...`. U01-U06 preserve the exact Phase Four analytical package while adding fail-closed recovery, rendered reliability QA, assurance, clean reconstruction, deterministic candidate packaging, installed-wheel proof, known issues, and rollback. Reviewed head `3eb2d0a...` merges at `7066dcd...` with exact tree equality; fresh main passes 789 tests, reproduces the 1,207,948-byte wheel at `1d0e862c...`, and remote tag object `3307214...` peels to the merge. The candidate has zero open critical/high findings and two visible medium findings with impact and workaround. Phase Five is accepted and verified; Phase Six is eligible for issue-backed activation. No GitHub Release, deployment, access change, public-sharing change, or external submission exists.
+P5O1-T01 / issue #574 / PR #575 now ships verified BurnLens 0.55.0 as a baseline-first reliability candidate. [Open its exact offline index](samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html) or [inspect the 646,513-byte ZIP](portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip), SHA-256 `691c4bdd...`. U01-U06 preserve the exact Phase Four analytical package while adding fail-closed recovery, rendered reliability QA, assurance, clean reconstruction, deterministic candidate packaging, installed-wheel proof, known issues, and rollback. Reviewed head `3eb2d0a...` merges at `7066dcd...` with exact tree equality; fresh main passes 789 tests, reproduces the 1,207,948-byte wheel at `1d0e862c...`, and remote tag object `3307214...` peels to the merge. The candidate has zero open critical/high findings and two visible medium findings with impact and workaround. Phase Five is accepted and verified.
+
+P6O1-T01 / issue #578 is active from exact lifecycle merge `3097ac5...`.
+U01 passes the local public-scope, claims, rights, attribution, withholding, and
+privacy gates. U02 now supplies one current reviewer narrative around immutable
+Phase Four and Phase Five evidence. No GitHub Release, deployment, access
+change, public-sharing change, publication, or external submission exists.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 

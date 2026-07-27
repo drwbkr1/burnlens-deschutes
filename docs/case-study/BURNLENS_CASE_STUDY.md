@@ -6,6 +6,13 @@ BurnLens is an experimental CV-to-GEOINT portfolio project for technical and tec
 
 It is not official wildfire information, emergency guidance, or an operational system.
 
+For a time-bounded current review, use the
+[Phase Six reviewer journey](../phase-six/REVIEWER_JOURNEY.md). It provides
+exact 30-second, 2-minute, and 5-minute paths through the accepted RBR result,
+rejected U-Net, WCP-002 false-positive-risk evidence, reliability package,
+limitations, reproduction, and lineage. This living case study preserves the
+longer decision history.
+
 ## Current evidence, not future aspiration
 
 BurnLens has established its governing task and source boundaries, selected exact Sentinel-2 and NOAA-21 VIIRS candidates, and implemented a fail-closed download validator. The validator caught a subtle but consequential failure: an unauthenticated data-looking URL returned an Earthdata Login HTML page with HTTP 200. BurnLens rejected and deleted it instead of registering it as NetCDF/HDF5.
@@ -35,6 +42,14 @@ and remote annotated tag object `3307214...` peels to the merge. Phase Five is
 accepted and verified. The candidate is baseline-first, keeps the U-Net
 rejected, and is not the final Phase Six publication or a claim of operational
 readiness.
+
+P6O1-T01 / issue #578 begins Phase Six from exact lifecycle merge
+`3097ac5308107ce75e4a517238f54cc4d15c346a`. U01 freezes a
+repository-local public roster, current claims, official-source attribution,
+withheld private/provider material, and public-action stop gates. U02 adds the
+current reviewer narrative around immutable evidence. It does not rewrite the
+Phase Four or Phase Five packages and creates no GitHub Release, deployment,
+access change, public sharing, publication, or external submission.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

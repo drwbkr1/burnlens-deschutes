@@ -1,5 +1,12 @@
 # BurnLens reviewer quickstart
 
+## Start here
+
+Use the [Phase Six reviewer journey](../docs/phase-six/REVIEWER_JOURNEY.md) for
+exact 30-second, 2-minute, and 5-minute review paths, architecture, method,
+evaluation, limitations, reproduction, known issues, citation, and complete
+trace identities.
+
 ## Two-minute path
 
 1. Open
@@ -16,7 +23,10 @@ The verified Phase Five candidate runs locally without a network connection
 and includes its map assets and QA evidence. It has no analytics, upload,
 credential, mailbox, provider, private custody, or live-fire access. Reviewed
 merge, fresh-main, exact-wheel, rendered, rollback, and remote-tag gates pass.
-It is not the final Phase Six publication.
+It is not the final Phase Six publication. Phase Six currently wraps this
+immutable evidence in a current local pre-publication reviewer route; it has
+not created a GitHub Release, deployment, public-sharing change, publication,
+or external submission.
 
 ## What BurnLens proves
 
@@ -83,6 +93,7 @@ repack the accepted package byte-identically.
 
 ## Deeper review
 
+- Start with the [Phase Six reviewer journey](../docs/phase-six/REVIEWER_JOURNEY.md).
 - Read the [full case study](../docs/case-study/BURNLENS_CASE_STUDY.md).
 - Open the [Phase Four interface](../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html).
 - Read the [immutable package report](../samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/REPORT.md).

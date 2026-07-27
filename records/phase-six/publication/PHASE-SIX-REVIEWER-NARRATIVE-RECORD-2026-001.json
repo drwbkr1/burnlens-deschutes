@@ -1,0 +1,131 @@
+{
+  "record_version": "burnlens-phase-six-reviewer-narrative-record-v0.1.0",
+  "record_id": "PHASE-SIX-REVIEWER-NARRATIVE-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U02",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u02-reviewer-journey-r001",
+  "recorded_at_utc": "2026-07-27T03:35:51.172Z",
+  "exact_base_commit": "cc44f350801f4482f66f1d986238bd855839e66c",
+  "inputs": [
+    {
+      "path": "records/phase-six/publication/PHASE-SIX-PUBLIC-SCOPE-RECORD-2026-001.json",
+      "bytes": 4211,
+      "sha256": "79afcc49e70331fbcfdb3afd0725c370274ec8628ba0fa1326f758d241bbcdc1",
+      "role": "passed U01 public scope and rights gate"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "immutable reliability candidate"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "immutable accepted RBR-primary run"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "docs/phase-six/REVIEWER_JOURNEY.md",
+      "bytes": 10842,
+      "sha256": "74b072903c56603e390803a1eea0e1f72a2a9f019c8d2ee5a946941e645bee3f",
+      "role": "canonical Phase Six reviewer narrative"
+    },
+    {
+      "path": "README.md",
+      "bytes": 65849,
+      "sha256": "2772259318872934934da2d7ac75d946a7657d5ba15986f9729b11716ca871b1",
+      "role": "repository reviewer route"
+    },
+    {
+      "path": "portfolio/README.md",
+      "bytes": 6088,
+      "sha256": "0800553b9a8808e63a010d12b5685c33afd454897eaa9228b9cf8c946eaa6d2b",
+      "role": "portfolio quickstart route"
+    },
+    {
+      "path": "docs/case-study/BURNLENS_CASE_STUDY.md",
+      "bytes": 104592,
+      "sha256": "4179bb9b751749c6ee780689554b621b42241b52fa09fa338b27e0a0a337386a",
+      "role": "living case-study route"
+    },
+    {
+      "path": "docs/status/PHASE_STATUS.md",
+      "bytes": 46350,
+      "sha256": "24c4d940b74c9a66b80609450c55cb285211511a15baf8eb2a3f76632272d5e2",
+      "role": "current Phase Six truth"
+    },
+    {
+      "path": "docs/roadmap/BURNLENS_BUILD_ROADMAP.md",
+      "bytes": 27723,
+      "sha256": "9f9b3407abd1b2116dd333a215bb6b3a93ea2ae3b9541101d97b29e04923a7f7",
+      "role": "current roadmap state"
+    },
+    {
+      "path": "docs/phases/phase-06/PHASE_06_OBJECTIVES.md",
+      "bytes": 14169,
+      "sha256": "8ca04656e4950d2f43f61227d0761f3be97b2fe1fe7695018c659506eb2fb445",
+      "role": "Phase Six objective status"
+    }
+  ],
+  "narrative_contract": {
+    "audience": "technical and technical-adjacent portfolio reviewers",
+    "paths": [
+      "30 seconds",
+      "2 minutes",
+      "5 minutes"
+    ],
+    "required_sections": [
+      "promise and warning",
+      "evidence chain",
+      "architecture and source precedence",
+      "method and evaluation",
+      "limitations",
+      "reproduction and validation",
+      "known issues",
+      "citation and attribution",
+      "exact trace"
+    ],
+    "canonical_route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false
+  },
+  "verification": {
+    "repository_local_markdown_links": 239,
+    "missing_repository_local_links": 0,
+    "exact_30_second_path": "present",
+    "exact_2_minute_path": "present",
+    "exact_5_minute_path": "present",
+    "architecture_method_evaluation_limitations_reproduction_known_issues_citation_trace": "present",
+    "accepted_rbr_and_rejected_unet_separation": "pass",
+    "wcp_002_visible_failure_narrative": "pass",
+    "official_source_precedence": "pass",
+    "required_attribution": "pass",
+    "prohibited_claims": "absent",
+    "private_paths_credentials_retrieval_and_owner_response_bytes": "absent",
+    "immutable_phase_four_and_phase_five_bytes_changed": false,
+    "diff_check": "pass"
+  },
+  "decision": {
+    "status": "pass-local-pre-publication-only",
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U03"
+  },
+  "retained_limitations": [
+    "The Phase Six reviewer journey is Markdown, not yet the canonical rendered repository-owned surface.",
+    "The immutable Phase Five index retains pre-merge wording by design.",
+    "The U-Net remains rejected and did not outperform RBR.",
+    "The accepted baseline result is bounded selected-core evidence and does not establish generalization.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, and external submission remain outside U02."
+  ],
+  "external_action": {
+    "repository_local_documentation_only": true,
+    "publication_or_deployment": false,
+    "access_or_ownership_change": false
+  }
+}
