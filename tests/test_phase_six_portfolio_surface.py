@@ -22,6 +22,7 @@ COMMIT = "a" * 40
 class PhaseSixPortfolioSurfaceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        (ROOT / "downloads").mkdir(exist_ok=True)
         cls.first = build_surface(
             repository_root=ROOT,
             generated_at_utc=GENERATED,
