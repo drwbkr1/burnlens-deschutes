@@ -64,6 +64,14 @@ routes. The resulting disposition is `ready-for-owner-publication-gate`, not
 “published.” No GitHub Release, deployment, access change, public sharing,
 publication, or external submission exists.
 
+PR #579 merges the exact reviewed Phase Six tree at `35e68a5...`. The first
+fresh-main verification then catches one more honest portability defect: five
+tests assumed the ignored `downloads/` parent already existed. BL-EXC-004 /
+issue #580 retains the missing-dev-profile precursor and all five failures.
+Candidate `0ea5543...` creates the temporary parent explicitly; a clean remote
+clone passes 15 focused tests, both candidate validators, the release audit,
+and dependency health without changing any portfolio or analytical artifact.
+
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 
 The next evidence-visible weakness was spatial scope. The original AOI was only a metadata-discovery box. Issue #321 found the exact public NIFC Darlene 3 final-perimeter reference and used it to derive a reproducible modeling boundary.

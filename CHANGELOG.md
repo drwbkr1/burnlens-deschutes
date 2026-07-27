@@ -46,10 +46,19 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Complete the structured U07 release audit with disposition
   `ready-for-owner-publication-gate`.
 
-Issue #578 remains active pending its one coherent milestone PR. U01-U07 pass
-locally. This entry is a branch candidate, not a verified tag, GitHub
+Before merge, issue #578 remained active pending its one coherent milestone
+PR. U01-U07 passed locally. This entry is not a verified tag, GitHub
 Release, deployment, publication, sharing change, or external submission.
 RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
+
+PR #579 then merges the exact reviewed tree through `35e68a5...` and closes
+issue #578. BL-EXC-004 / issue #580 retains the first fresh-main
+missing-pytest attempt and five missing-`downloads/`-parent test failures.
+Candidate fix `0ea5543...` makes the ignored temporary parent explicit; a
+clean remote clone passes 15 focused tests, both candidate validators, the
+structured release audit, and dependency health. No software version,
+candidate archive, scientific state, tag, GitHub Release, deployment, sharing,
+publication, or submission changes.
 
 ## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 

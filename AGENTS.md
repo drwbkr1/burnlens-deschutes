@@ -81,7 +81,14 @@ rights, claims, privacy, rollback, and live-repository gates. Its disposition
 is `ready-for-owner-publication-gate`.
 
 The immediate repository action is one coherent milestone PR and exact
-reviewed-merge verification. Do not create a tag, GitHub Release, deployment,
+reviewed-merge verification. PR #579 now merges at
+`35e68a517ed08359c813c59392f74049bd699074` with reviewed-tree equality.
+BL-EXC-004 / issue #580 is the active urgent-correctness exception because
+fresh main exposed an undeclared ignored `downloads/` test-fixture parent.
+Candidate fix `0ea5543...` passes 15 focused tests, both candidate validators,
+the release audit, and dependency health in a clean remote clone. Merge and
+fresh-main verification of that bounded exception remain before the owner
+publication gate. Do not create a tag, GitHub Release, deployment,
 access or ownership change, public-sharing change, publication, or external
 submission without explicit owner stop-gate handling. Do not create a Phase
 3B remediation milestone or begin planning the separately governed follow-on

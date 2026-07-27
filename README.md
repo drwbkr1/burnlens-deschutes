@@ -56,6 +56,16 @@ structured decision is `ready-for-owner-publication-gate`. No
 GitHub Release, deployment, access change, public-sharing change, publication,
 or external submission exists.
 
+PR #579 merges the exact Phase Six candidate through
+`35e68a517ed08359c813c59392f74049bd699074` with reviewed-tree equality.
+Fresh main then exposes one test-fixture portability defect: the ignored
+`downloads/` parent is absent. BL-EXC-004 / issue #580 retains that failure and
+its missing-dev-profile precursor. Candidate fix `0ea5543...` creates the
+temporary parent explicitly and passes 15 tests, both candidate validators,
+the release audit, and dependency health in a clean remote clone. The
+exception merge and exact fresh-main repetition remain before the owner
+publication gate.
+
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 
 P2O4-T33 / issue #521 / PR #527 preserves the material-defer milestone, and BL-EXC-001 / issue #528 / PR #529 corrects its runtime contract before release. Exact reviewed head `9cc07d1767c9912b18c459794dc541417b2b13d2` reaches verified merge `d65c24f59ce0c854ba230aa977eaf718d881d952`. Fresh merged main passes all 81 command probes, the lean-dev and full geospatial profiles, custody-enabled regression and actual pipeline replay, and the deterministic 801,906-byte wheel / SHA-256 `8e17c18a53b7770b6de00b9668d02efa9b07945329672ed29883798442d906ea`.
