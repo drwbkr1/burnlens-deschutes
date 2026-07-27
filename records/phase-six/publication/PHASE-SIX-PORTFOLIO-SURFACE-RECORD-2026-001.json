@@ -1,0 +1,169 @@
+{
+  "record_version": "burnlens-phase-six-portfolio-surface-record-v0.1.0",
+  "record_id": "PHASE-SIX-PORTFOLIO-SURFACE-RECORD-2026-001",
+  "milestone_id": "P6O1-T01",
+  "unit_id": "P6O1-T01-U03",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "run_id": "BL-2026-07-27-p6o1-t01-u03-portfolio-surface-r002",
+  "recorded_at_utc": "2026-07-27T03:52:46.082Z",
+  "exact_base_commit": "86919b141118fb37366982e4c7e02e2f4fe75c19",
+  "implementation_commits": [
+    {
+      "commit": "2889d6e971a0c0f9ec62ab4624fcbc670ac1967a",
+      "role": "initial deterministic generator and tests",
+      "retained_issue": "The staged diff check reported three Markdown hard-break trailing spaces, but the first PowerShell wrapper continued into the commit."
+    },
+    {
+      "commit": "d621632d5dc68a4eab8e668563d0b64aefc25fa9",
+      "role": "normalized generated README source",
+      "retained_issue": "First rendered draft scrolled through its skip link but left keyboard focus on the document body."
+    },
+    {
+      "commit": "4e673166b1c8b3cecdadc94ccf0fa5611be58e20",
+      "role": "focusable main landmark and final production source",
+      "retained_issue": null
+    }
+  ],
+  "inputs": [
+    {
+      "path": "records/phase-six/publication/PHASE-SIX-REVIEWER-NARRATIVE-RECORD-2026-001.json",
+      "bytes": 4977,
+      "sha256": "322054ace018e326cf17b111adc71757e7fc4e552663afec7082cc53c768061e",
+      "role": "passed U02 narrative contract"
+    },
+    {
+      "path": "docs/phase-six/REVIEWER_JOURNEY.md",
+      "bytes": 10842,
+      "sha256": "74b072903c56603e390803a1eea0e1f72a2a9f019c8d2ee5a946941e645bee3f",
+      "role": "canonical narrative input"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "immutable accepted analytical run"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "immutable reliability candidate"
+    }
+  ],
+  "production_outputs": [
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html",
+      "bytes": 14798,
+      "sha256": "f0fb4b57f3be1ae9690b2252c3ecd9f0a7e125bd6e67ce8b0f4f242752cb09f8",
+      "media_type": "text/html"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/MANIFEST.json",
+      "bytes": 6247,
+      "sha256": "31c68cd8e7fc1ac4d9a5ef82c0701bbfd8b50feb202b84d9f6bf62fdf977d7c1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/README.md",
+      "bytes": 859,
+      "sha256": "c8cee600712f963649655cfe91ab4dcb1971a02808a7d9d3cd94a3deaf5f095f",
+      "media_type": "text/markdown"
+    }
+  ],
+  "retained_attempts": [
+    {
+      "run_id": "BL-2026-07-27-p6o1-t01-u03-portfolio-surface-r001",
+      "generated_at_utc": "2026-07-27T03:44:37Z",
+      "git_source_commit": "d621632d5dc68a4eab8e668563d0b64aefc25fa9",
+      "disposition": "superseded-pre-freeze-accessibility-remediation",
+      "exact_reconstructed_outputs": [
+        {
+          "path": "index.html",
+          "bytes": 14784,
+          "sha256": "cca93c71f08632e5dd13f797bc301185e3824e2b06cdcc2deaefce12a7c06728"
+        },
+        {
+          "path": "MANIFEST.json",
+          "bytes": 6247,
+          "sha256": "58c30b82c27fe1ce01102ac383c5c047eba03fb0bd8411b28138a439ad51784d"
+        },
+        {
+          "path": "README.md",
+          "bytes": 859,
+          "sha256": "380618341762892085007b4062c8bc2b2ef292824f827d948406c16786c420e5"
+        }
+      ],
+      "observed_result": "Desktop and narrow visuals, links, overflow, console, page, and scroll behavior passed. After skip-link activation, focus remained on BODY instead of the evidence landmark.",
+      "repository_bytes_committed": false
+    }
+  ],
+  "verification": {
+    "focused_tests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "compile": "pass",
+    "deterministic_build": "pass",
+    "exact_source_bindings": "pass",
+    "no_overwrite": "pass",
+    "tamper_detection": "pass",
+    "static_semantic_contract": "pass",
+    "manifest_validator": "PHASE_SIX_PORTFOLIO_SURFACE_VALIDATION_PASS",
+    "browser": "Microsoft Edge",
+    "transport": "temporary loopback HTTP",
+    "server_process_stopped": true,
+    "browser_process_stopped": true,
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "http_status": 200,
+      "title": "BurnLens — baseline first, evidence visible",
+      "h1": "Evidence wins. The model doesn’t.",
+      "horizontal_overflow_px": 0,
+      "links": 17,
+      "external_links": 0,
+      "scripts": 0,
+      "console_errors": 0,
+      "page_errors": 0
+    },
+    "narrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "page_errors": 0,
+      "first_focus": "Skip to evidence",
+      "skip_target": "MAIN#main",
+      "skip_target_received_focus": true
+    },
+    "repository_evidence_targets": {
+      "count": 9,
+      "http_200": 9,
+      "failed": 0
+    },
+    "accepted_rbr_and_rejected_unet_separation": "pass",
+    "wcp_002_visible_failure": "pass",
+    "source_precedence_and_attribution": "pass",
+    "privacy_and_public_action_boundary": "pass",
+    "screenshots_retained": false
+  },
+  "decision": {
+    "status": "pass-local-pre-publication-only",
+    "surface_version": "burnlens-baseline-first-portfolio-surface-v0.1.0",
+    "public_action_authorized": false,
+    "next_dependency": "P6O1-T01-U04"
+  },
+  "retained_limitations": [
+    "The surface links to exact repository evidence and is not yet the self-contained U05 package.",
+    "The U-Net remains rejected and did not outperform RBR.",
+    "The selected-core baseline result does not establish generalization.",
+    "Two medium Phase Five findings remain visible.",
+    "GitHub Release, deployment, domain, access, ownership, public sharing, publication, and external submission remain outside U03."
+  ]
+}

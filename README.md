@@ -10,9 +10,10 @@ BurnLens now has one verified baseline-primary CV-to-GEOINT release. P2O5-T03 / 
 
 The verified August 6 ZIP is an interim contingency technical case study. It is preserved and usable for that limited purpose, but it predates the model-bearing GEOINT path and is not the intended final BurnLens submission.
 
-[Start with the Phase Six reviewer journey](docs/phase-six/REVIEWER_JOURNEY.md)
-for exact 30-second, 2-minute, and 5-minute paths through the accepted RBR run,
-rejected U-Net result, visible WCP-002 failure, reliability evidence,
+[Open the Phase Six baseline-first portfolio surface](samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html)
+for the current rendered entrypoint. Its [reviewer journey](docs/phase-six/REVIEWER_JOURNEY.md)
+provides exact 30-second, 2-minute, and 5-minute paths through the accepted RBR
+run, rejected U-Net result, visible WCP-002 failure, reliability evidence,
 limitations, replay, and traceability. The [portfolio quickstart](portfolio/README.md)
 remains the short repository route. The prior
 [2026-007 reviewer experience](portfolio/BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-007.html)
@@ -32,9 +33,11 @@ P5O1-T01 / issue #574 / PR #575 now ships verified BurnLens 0.55.0 as a baseline
 
 P6O1-T01 / issue #578 is active from exact lifecycle merge `3097ac5...`.
 U01 passes the local public-scope, claims, rights, attribution, withholding, and
-privacy gates. U02 now supplies one current reviewer narrative around immutable
-Phase Four and Phase Five evidence. No GitHub Release, deployment, access
-change, public-sharing change, publication, or external submission exists.
+privacy gates. U02 supplies one current reviewer narrative around immutable
+Phase Four and Phase Five evidence. U03 adds the deterministic, real-rendered,
+repository-owned baseline-first surface without changing analytical bytes. No
+GitHub Release, deployment, access change, public-sharing change, publication,
+or external submission exists.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 

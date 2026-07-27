@@ -1,0 +1,147 @@
+{
+  "manifest_version": "burnlens-phase-six-portfolio-surface-manifest-v0.1.0",
+  "surface_id": "BURNLENS-PHASE-SIX-PORTFOLIO-SURFACE-2026-001",
+  "surface_version": "burnlens-baseline-first-portfolio-surface-v0.1.0",
+  "generated_at_utc": "2026-07-27T03:53:31Z",
+  "run_id": "BL-2026-07-27-p6o1-t01-u03-portfolio-surface-r002",
+  "git_source_commit": "4e673166b1c8b3cecdadc94ccf0fa5611be58e20",
+  "software_version_at_build": "0.55.0",
+  "state": "local-pre-publication-surface",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "public_action_authorized": false,
+  "sources": [
+    {
+      "path": "docs/phase-six/REVIEWER_JOURNEY.md",
+      "bytes": 10842,
+      "sha256": "74b072903c56603e390803a1eea0e1f72a2a9f019c8d2ee5a946941e645bee3f",
+      "role": "passed U02 narrative contract"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "role": "exact accepted RBR-primary evidence interface"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "bytes": 3981,
+      "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e",
+      "role": "exact rejected-model decision"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html",
+      "bytes": 3921,
+      "sha256": "109075ca31cb1c01137bdccff5786c862105eb15dc1cbe15c8603dcf3d15fd99",
+      "role": "exact accepted baseline evaluation"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html",
+      "bytes": 4007,
+      "sha256": "f05dcc11e5912e356bb9da4a1826e731cb4d8a5dff0795b4e68225421ab5bdd2",
+      "role": "exact Phase Five candidate index"
+    },
+    {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/KNOWN-ISSUES.md",
+      "bytes": 1969,
+      "sha256": "5abff617fa6bcb341d17e3ce0566de15cfed4b2b0d5cc79f0e05b64ce4007b17",
+      "role": "exact Phase Five known-issues register"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "exact immutable Phase Four run package"
+    },
+    {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26",
+      "role": "exact immutable Phase Five candidate package"
+    }
+  ],
+  "links": [
+    {
+      "id": "phase-four-interface",
+      "href": "../../phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html",
+      "repository_path": "samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html"
+    },
+    {
+      "id": "model-decision",
+      "href": "../../../model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "repository_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html"
+    },
+    {
+      "id": "baseline-evaluation",
+      "href": "../../../baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html",
+      "repository_path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html"
+    },
+    {
+      "id": "phase-five-index",
+      "href": "../../phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html",
+      "repository_path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/index.html"
+    },
+    {
+      "id": "known-issues",
+      "href": "../../phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/KNOWN-ISSUES.md",
+      "repository_path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/KNOWN-ISSUES.md"
+    },
+    {
+      "id": "phase-four-zip",
+      "href": "../../../../portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "repository_path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip"
+    },
+    {
+      "id": "phase-five-zip",
+      "href": "../../../../portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "repository_path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip"
+    },
+    {
+      "id": "reviewer-journey",
+      "href": "../../../../docs/phase-six/REVIEWER_JOURNEY.md",
+      "repository_path": "docs/phase-six/REVIEWER_JOURNEY.md"
+    },
+    {
+      "id": "case-study",
+      "href": "../../../../docs/case-study/BURNLENS_CASE_STUDY.md",
+      "repository_path": "docs/case-study/BURNLENS_CASE_STUDY.md"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "README.md",
+      "bytes": 859,
+      "sha256": "c8cee600712f963649655cfe91ab4dcb1971a02808a7d9d3cd94a3deaf5f095f",
+      "media_type": "text/markdown"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14798,
+      "sha256": "f0fb4b57f3be1ae9690b2252c3ecd9f0a7e125bd6e67ce8b0f4f242752cb09f8",
+      "media_type": "text/html"
+    }
+  ],
+  "features": {
+    "static": true,
+    "offline": true,
+    "scripts": 0,
+    "external_assets": 0,
+    "external_links": 0,
+    "keyboard_skip_link": true,
+    "responsive_breakpoint_px": 760,
+    "reduced_motion_respected": true,
+    "visible_wcp_002_failure": true,
+    "accepted_and_rejected_methods_separated": true,
+    "text_equivalent": true
+  },
+  "required_notices": [
+    "Contains modified Copernicus Sentinel data 2019.",
+    "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+    "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service.",
+    "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance."
+  ],
+  "next_dependency": "P6O1-T01-U03 real rendered and interaction QA"
+}

@@ -2,8 +2,10 @@
 
 ## Start here
 
-Use the [Phase Six reviewer journey](../docs/phase-six/REVIEWER_JOURNEY.md) for
-exact 30-second, 2-minute, and 5-minute review paths, architecture, method,
+Open the [Phase Six baseline-first portfolio surface](../samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html)
+for the current rendered entrypoint. Use the
+[Phase Six reviewer journey](../docs/phase-six/REVIEWER_JOURNEY.md) for exact
+30-second, 2-minute, and 5-minute review paths, architecture, method,
 evaluation, limitations, reproduction, known issues, citation, and complete
 trace identities.
 
