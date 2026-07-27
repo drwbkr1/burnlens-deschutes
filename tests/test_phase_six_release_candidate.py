@@ -8,6 +8,8 @@ import zipfile
 
 from burnlens.phase_six_release_candidate import (
     CANONICAL_ENTRYPOINT,
+    CASE_STUDY_PATH,
+    FROZEN_PACKAGE_DIRECTORY,
     PACKAGE_VERSION,
     PhaseSixCandidateError,
     build_candidate,
@@ -62,6 +64,24 @@ class PhaseSixReleaseCandidateTests(unittest.TestCase):
         self.assertFalse(manifest["public_action_authorized"])
         self.assertTrue(manifest["closure"]["complete_local_link_closure"])
         self.assertTrue(manifest["closure"]["complete_phase_five_directory"])
+
+    def test_living_source_drift_uses_tracked_frozen_snapshot(self) -> None:
+        self.assertNotEqual(
+            (ROOT / CASE_STUDY_PATH).read_bytes(),
+            (
+                ROOT
+                / FROZEN_PACKAGE_DIRECTORY
+                / CASE_STUDY_PATH
+            ).read_bytes(),
+        )
+        self.assertEqual(
+            self.first["files"][CASE_STUDY_PATH],
+            (
+                ROOT
+                / FROZEN_PACKAGE_DIRECTORY
+                / CASE_STUDY_PATH
+            ).read_bytes(),
+        )
 
     def test_archive_is_safe_complete_and_fixed(self) -> None:
         with zipfile.ZipFile(io.BytesIO(self.first["archive"])) as archive:

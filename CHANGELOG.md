@@ -31,9 +31,23 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
   clean short-path checkout with Git long-path support. The rebuilt ZIP is
   byte-identical at `5a314b69...`; the verified Phase Five tag and package
   remain a valid rollback.
+- Retain U07 fresh-clone r001 after strict validation exposes CRLF conversion
+  in the top-level and nested Phase Six checksum rosters. Add one recursive LF
+  checkout contract plus regression coverage at `cd383a3...`.
+- Pass the corrected short-path clone, both package validators, and an exact
+  fresh-clone ZIP rebuild. The clean corrected head passes 801 tests, one
+  expected skip, 422 existing warnings, and 86 subtests.
+- Preserve exact reconstruction after the living case study advances by
+  sourcing the U05 package roster from its tracked frozen snapshot. A
+  post-closeout rebuild remains byte-identical at `5a314b69...`.
+- Build two byte-identical 1,228,628-byte BurnLens 0.56.0 wheels at SHA-256
+  `ac9db790...`; install the exact wheel into a locked 75-distribution
+  environment and pass all 122 command routes.
+- Complete the structured U07 release audit with disposition
+  `ready-for-owner-publication-gate`.
 
-Issue #578 remains active. U01-U06 pass; U07 release audit is not complete.
-This entry is a branch candidate, not a verified tag, GitHub
+Issue #578 remains active pending its one coherent milestone PR. U01-U07 pass
+locally. This entry is a branch candidate, not a verified tag, GitHub
 Release, deployment, publication, sharing change, or external submission.
 RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
 

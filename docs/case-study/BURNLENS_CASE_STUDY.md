@@ -52,9 +52,16 @@ current reviewer narrative around immutable evidence. U03 renders that
 narrative as one deterministic, static, repository-owned baseline-first
 surface. U04 adds a fixed demo, seven-slide static presentation, exact claim
 matrix, pre-publication citation metadata, and maintenance/archive posture. It
-does not rewrite the Phase Four or Phase Five packages and creates no GitHub
-Release, deployment, access change, public sharing, publication, or external
-submission.
+does not rewrite the Phase Four or Phase Five packages. U05 builds the
+117-file corrected Phase Six package and exact 14,963,469-byte ZIP at
+`5a314b69...`. U06 passes the actual extracted desktop, narrow, keyboard,
+interaction, all-file HTTP, fresh-checkout, and rollback routes. U07 finds and
+retains one nested-checksum checkout failure, repairs it at `cd383a3...`, and
+then passes exact fresh-clone reconstruction, 801 tests, two byte-identical
+0.56.0 wheels at `ac9db790...`, a 75-distribution install, and all 122 command
+routes. The resulting disposition is `ready-for-owner-publication-gate`, not
+“published.” No GitHub Release, deployment, access change, public sharing,
+publication, or external submission exists.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

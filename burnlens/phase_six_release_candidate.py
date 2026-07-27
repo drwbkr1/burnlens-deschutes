@@ -18,6 +18,10 @@ import zipfile
 
 
 PACKAGE_VERSION = "burnlens-phase-six-baseline-first-candidate-v0.1.1"
+FROZEN_PACKAGE_DIRECTORY = (
+    "samples/runs/phase-six/"
+    "burnlens-phase-six-baseline-first-candidate-v0.1.1"
+)
 PACKAGE_ID = "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002"
 ARCHIVE_NAME = f"{PACKAGE_ID}.zip"
 RECEIPT_NAME = f"{PACKAGE_ID}-RECEIPT.json"
@@ -178,6 +182,13 @@ def _sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _source_payload(repository_root: Path, relative: str) -> bytes:
+    frozen = repository_root / FROZEN_PACKAGE_DIRECTORY / relative
+    if frozen.is_file() and not frozen.is_symlink():
+        return frozen.read_bytes()
+    return _safe_repository_file(repository_root, relative).read_bytes()
+
+
 def _json_bytes(value: Any) -> bytes:
     return (json.dumps(value, indent=2, ensure_ascii=False) + "\n").encode(
         "utf-8"
@@ -279,12 +290,12 @@ def _link_targets(source_path: str, payload: bytes) -> list[str]:
 
 def _verify_pinned_sources(repository_root: Path) -> None:
     for relative, expected_bytes, expected_sha256 in PINNED_SOURCES:
-        path = _safe_repository_file(repository_root, relative)
-        if path.stat().st_size != expected_bytes:
+        payload = _source_payload(repository_root, relative)
+        if len(payload) != expected_bytes:
             raise PhaseSixCandidateError(
                 f"pinned source byte mismatch: {relative}"
             )
-        if _sha256_file(path) != expected_sha256:
+        if _sha256_bytes(payload) != expected_sha256:
             raise PhaseSixCandidateError(
                 f"pinned source hash mismatch: {relative}"
             )
@@ -339,8 +350,7 @@ def _source_payloads(repository_root: Path) -> dict[str, bytes]:
         if relative in visited:
             continue
         visited.add(relative)
-        path = _safe_repository_file(repository_root, relative)
-        payload = path.read_bytes()
+        payload = _source_payload(repository_root, relative)
         selected.add(relative)
         for target in _link_targets(relative, payload):
             if target not in visited:
@@ -351,7 +361,7 @@ def _source_payloads(repository_root: Path) -> dict[str, bytes]:
             "package source is not tracked: " + ", ".join(untracked[:3])
         )
     return {
-        relative: _safe_repository_file(repository_root, relative).read_bytes()
+        relative: _source_payload(repository_root, relative)
         for relative in sorted(selected)
     }
 
