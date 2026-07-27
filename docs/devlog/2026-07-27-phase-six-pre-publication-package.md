@@ -21,3 +21,9 @@ recipient QA.
 This is still local pre-publication work. U06 cannot begin until the corrected
 package passes the full clean-source gate. RBR remains accepted, the U-Net
 remains rejected, WCP-002 stays visible, and no public action has occurred.
+
+The corrected source then passes 800 tests, one expected skip, 86 subtests,
+locked-environment verification, and dependency integrity. R002 keeps the
+same 117-file evidence roster and creates a new no-overwrite v0.1.1 archive at
+SHA-256 `5a314b69...`. Installed-CLI directory/archive validation and two exact
+rebuilds pass. R001 remains visible; U06 may now test r002 as a recipient.

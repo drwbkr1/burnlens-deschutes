@@ -39,12 +39,14 @@ repository-owned baseline-first surface without changing analytical bytes.
 U04 adds the fixed [demo script](docs/phase-six/DEMO_SCRIPT.md), rendered
 [seven-slide presentation](portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html),
 [claim matrix](docs/phase-six/CLAIM_MATRIX.md), citation, and maintenance/archive
-posture. U05 r001 retains a structurally valid 117-file package and
-14,963,460-byte ZIP, but its declared source commit has stale 0.55.0 lock
-metadata and fails the locked fresh-environment gate. It is immutable failed
-pre-freeze evidence, not the Phase Six candidate. A no-overwrite v0.1.1 / r002
-correction is next. No GitHub Release, deployment, access change,
-public-sharing change, publication, or external submission exists.
+posture. U05 retains r001's stale-lock source failure, then creates corrected
+[extract-and-open Phase Six candidate v0.1.1](samples/runs/phase-six/burnlens-phase-six-baseline-first-candidate-v0.1.1/OPEN-FIRST.html):
+117 files / 16,285,070 bytes and one 14,963,469-byte ZIP at SHA-256
+`5a314b69...`. Its exact source passes 800 tests, one expected skip, 86
+subtests, locked-environment and dependency-integrity gates; both package
+forms and two exact rebuilds pass. U06 recipient/rendered QA is next. No
+GitHub Release, deployment, access change, public-sharing change, publication,
+or external submission exists.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 

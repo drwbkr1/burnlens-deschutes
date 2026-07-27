@@ -92,7 +92,7 @@
     "focused_tests": "6 passed",
     "combined_phase_five_and_phase_six_tests": "16 passed",
     "compile": "pass",
-    "diff_check": "pass",
+    "diff_check": "four expected Markdown hard-break findings inside the exact immutable Phase Five payload; no source-control whitespace defect",
     "full_suite_attempt": {
       "tests_passed": 766,
       "tests_failed": 34,

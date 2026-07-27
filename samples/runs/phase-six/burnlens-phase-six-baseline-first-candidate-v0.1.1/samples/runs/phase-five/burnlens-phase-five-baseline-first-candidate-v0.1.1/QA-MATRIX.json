@@ -1,0 +1,59 @@
+{
+  "matrix_version": "burnlens-phase-five-qa-matrix-v0.1.0",
+  "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+  "software_version": "0.55.0",
+  "generated_at_utc": "2026-07-27T01:49:33Z",
+  "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+  "git_source_commit": "dd1c270421250ce312d548b9571f91b4b806536b",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "accepted_method": "burnlens-baseline-v0.1.0",
+  "rejected_model": "burnlens-unet-binary-v0.1.0",
+  "model_accepted": false,
+  "model_outperformed_rbr": false,
+  "units": [
+    {
+      "unit_id": "P5O1-T01-U01",
+      "status": "pass",
+      "result": "QA and release-control contract locked."
+    },
+    {
+      "unit_id": "P5O1-T01-U02",
+      "status": "pass",
+      "result": "Five controlled package failures reject visibly and recover safely."
+    },
+    {
+      "unit_id": "P5O1-T01-U03",
+      "status": "pass",
+      "result": "Owner-confirmed desktop, narrow, and keyboard journey on exact bytes; not formal accessibility certification."
+    },
+    {
+      "unit_id": "P5O1-T01-U04",
+      "status": "pass-with-disclosed-medium-finding",
+      "result": "Security, integrity, rights, privacy, claims, performance, and complete regression gates pass."
+    },
+    {
+      "unit_id": "P5O1-T01-U05",
+      "status": "pass-with-visible-medium-builder-identity-issue",
+      "result": "Clean reconstruction, installed candidate proof, portable regression, and exact rollback pass."
+    },
+    {
+      "unit_id": "P5O1-T01-U06",
+      "status": "candidate-freeze",
+      "result": "This package freezes the baseline-first candidate for milestone review and post-merge verification."
+    }
+  ],
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "phase_six_entry": {
+    "critical_and_high_gates_pass": true,
+    "medium_findings_visible_with_impact_and_workaround": true,
+    "rollback_succeeds": true,
+    "candidate_inspectable": true,
+    "candidate_reproducible": true,
+    "recommendation": "eligible-after-milestone-merge-tag-and-fresh-main-verification"
+  }
+}

@@ -14,11 +14,15 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
   14,963,460-byte ZIP at SHA-256 `def1b20f...`. Structural validation and two
   byte-identical rebuilds pass, but its declared source commit still carries
   the 0.55.0 lock entry and cannot pass locked fresh-environment setup.
-- Update the project lock and current-version regression assertions for the
-  no-overwrite v0.1.1 / r002 correction. R001 remains failed evidence.
+- Update the project lock and current-version regression assertions, batch the
+  checkout-attribute gate below the Windows command-line limit, and pass the
+  clean 800-test / one-skip / 86-subtest source gate.
+- Create no-overwrite v0.1.1 / r002: 117 files / 16,285,070 bytes and a
+  deterministic 14,963,469-byte ZIP at SHA-256 `5a314b69...`. Both installed
+  validators and two exact rebuilds pass. R001 remains failed evidence.
 
-Issue #578 remains active. U05 remediation, U06 recipient/rendered QA, and U07
-release audit are not complete. This entry is a branch candidate, not a verified tag, GitHub
+Issue #578 remains active. U06 recipient/rendered QA and U07 release audit are
+not complete. This entry is a branch candidate, not a verified tag, GitHub
 Release, deployment, publication, sharing change, or external submission.
 RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
 

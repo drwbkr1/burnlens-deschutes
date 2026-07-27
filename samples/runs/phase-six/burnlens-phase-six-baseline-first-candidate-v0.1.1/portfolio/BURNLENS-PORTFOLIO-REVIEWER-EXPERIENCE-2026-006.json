@@ -1,0 +1,215 @@
+{
+  "report_id": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006",
+  "report_version": "portfolio-reviewer-experience-v0.4.0",
+  "generated_at_utc": "2026-07-26T03:28:32Z",
+  "run_id": "BL-2026-07-26-p3o1-t01-u06-portfolio-r001",
+  "repository": "drwbkr1/burnlens-deschutes",
+  "task_issue": 566,
+  "git_source_commit": "5cbf32f43fdaa2830bb26f2177db3b7112384b5d",
+  "software_version": "0.53.0",
+  "checkpoint_status": "candidate-pr-release-pending",
+  "release_tag": "v0.52.0-dataset-baseline-model-readiness",
+  "release_commit": "dfb11c8b823e224aceb76be74003464973e33c2d",
+  "release_tag_object": "7041ef76ff4aac17f3bc2f8ba07b427dc858d2bf",
+  "audience": "technical and technical-adjacent portfolio reviewers",
+  "promise": "Show how versioned wildfire imagery can move through a bounded computer-vision-to-GEOINT evidence workflow without hiding uncertainty.",
+  "target_version": "target-burn-scar-v0.2.0",
+  "aoi_version": "multi-event-native-grids-v0.5.0",
+  "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+  "label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+  "dataset_version": "burnlens-dataset-v0.1.0",
+  "split_version": "burnlens-whole-event-split-v0.1.0",
+  "baseline_version": "burnlens-baseline-v0.1.0",
+  "model_version": "burnlens-unet-binary-v0.1.0",
+  "model_status": "valid-trained-evaluated-rejected-model",
+  "model_package_version": "burnlens-unet-rejected-package-v0.1.1",
+  "review_path": [
+    {
+      "step": 1,
+      "label": "See the strongest verified result",
+      "target": "#result",
+      "time": "45 seconds"
+    },
+    {
+      "step": 2,
+      "label": "Inspect a retained stop decision",
+      "target": "#failure",
+      "time": "45 seconds"
+    },
+    {
+      "step": 3,
+      "label": "Verify lineage and limitations",
+      "target": "#trace",
+      "time": "30 seconds"
+    }
+  ],
+  "metrics": {
+    "event_groups": 6,
+    "prototype_regions": 12,
+    "prototype_regions_by_class": {
+      "background": 6,
+      "burned": 6
+    },
+    "accepted_core_pixels": 287,
+    "accepted_core_area_ha": 11.48,
+    "excluded_unknown_ring_pixels": 531,
+    "patches_by_role": {
+      "test": 4,
+      "train": 4,
+      "validation": 4
+    },
+    "readiness_gates_passed": 9,
+    "baseline_test_core_pixels": 89,
+    "baseline_test_event_class_macro_dice": 1.0,
+    "baseline_test_event_class_macro_iou": 1.0,
+    "model_test_event_class_macro_dice": 0.29874213836477986,
+    "model_test_event_class_macro_iou": 0.21474358974358976,
+    "model_test_predicted_burned_pixels": 89,
+    "model_test_core_pixels": 89,
+    "model_test_open_count": 1
+  },
+  "accepted_events": [
+    "McKay 1035 NE",
+    "Tepee 1144 NE",
+    "Green Ridge 0684 CS",
+    "Grandview 0558 OD",
+    "Ward Creek",
+    "Windigo"
+  ],
+  "strongest_result": {
+    "title": "The model is reproducible. It is not the winner.",
+    "decision": "reject-model-retain-baseline",
+    "run_id": "BL-2026-07-25-p3o1-t01-u06-replay-r003",
+    "git_source_commit": "90ab4ab42d6ceb11c2987efb0b737c016712cea8",
+    "software_version": "0.53.0",
+    "detail_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+    "preview_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+    "model_card_path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+    "baseline_detail_path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html"
+  },
+  "retained_failure": {
+    "title": "Petes Lake stops before candidate generation",
+    "decision": "DEFER_PETES_LAKE_DO_NOT_PROMOTE_SIXTH_EVENT",
+    "run_id": "BL-2026-07-22-petes-lake-milestone-closeout-r001",
+    "terminal_run_id": "BL-2026-07-22-petes-lake-nwi-context-r003",
+    "git_checkpoint": "52310531ad0b8e6d07800fc752f7bf65b5fdea9a",
+    "software_version": "0.45.0",
+    "detail_path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+    "preview_path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png"
+  },
+  "source_roles": [
+    "Sentinel-2 supplies optical evidence under recorded Copernicus attribution.",
+    "BAER supplies field-informed preliminary prototype-positive evidence with program cautions.",
+    "MTBS corroborates burned evidence under program-specific limits.",
+    "RAVG modeled effects remain context and conservative exclusion only.",
+    "No source product is treated as affirmative background truth without a separate route."
+  ],
+  "limitations": [
+    "Owner-approved prototype regions are not independent ground truth.",
+    "The accepted dataset contains twelve 64 by 64 prototype patches from six whole events.",
+    "The accepted cores contain only 287 native 20-meter pixels.",
+    "The balanced review roster does not estimate natural class prevalence.",
+    "Candidate construction used optical and official-reference evidence and may favor the measured spectral separability.",
+    "The RBR result is perfect only on 89 selected prototype test cores and does not establish generalization.",
+    "One valid trained and evaluated U-Net exists, but it predicts every selected test core as burned and is rejected as the analytical winner.",
+    "The rejected model is not an accepted perimeter, accuracy claim, calibrated confidence output, or evidence of generalization.",
+    "No georeferenced model inference, integrated analytical application, deployment, or final-submission-ready claim exists.",
+    "BurnLens is not official, endorsed, field-validated, operational, or emergency-ready."
+  ],
+  "bound_inputs": [
+    {
+      "path": "records/phase-two/readiness/MODEL-READINESS-AUDIT-2026-001.json",
+      "bytes": 6781,
+      "sha256": "eebd08f25fca9b08b4f8408a768bf30eaa49e661e8aa858234da529a44b10cf4",
+      "role": "accepted Phase Two model-readiness audit"
+    },
+    {
+      "path": "samples/qa/phase-two/model-readiness-v0.1.0/MODEL-READINESS-DECISION-2026-001.html",
+      "bytes": 6184,
+      "sha256": "6e80c26c29875c3a05249a4f226abcc1113df32c284ba2de2963741066de0557",
+      "role": "accepted model-readiness detail"
+    },
+    {
+      "path": "samples/qa/phase-two/model-readiness-v0.1.0/MODEL-READINESS-DECISION-2026-001.png",
+      "bytes": 71508,
+      "sha256": "6fc5d5b23ee89ccb01c052e2534f2ec42658a01ad6de0d51c73dc61bd57cee21",
+      "role": "accepted bounded U-Net contract preview"
+    },
+    {
+      "path": "samples/datasets/burnlens-dataset-v0.1.0/DATASET-MANIFEST.json",
+      "bytes": 55308,
+      "sha256": "e0b7ac666a70e96f979c386a9d503ad45ed0baea8f21e3838ba4530d5e3d2d16",
+      "role": "accepted versioned dataset manifest"
+    },
+    {
+      "path": "records/phase-two/manifests/WHOLE-EVENT-SPLIT-2026-001.json",
+      "bytes": 12312,
+      "sha256": "a62e66f4f81a95a56a727b29bb382cb87369306f11e2f2a4527d1c7fb68d0b99",
+      "role": "locked leakage-resistant whole-event split"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.json",
+      "bytes": 21257,
+      "sha256": "a8ba82f999a87a8114c7fc417126b96c1f031e7eb9e24311df20fe32d7edb221",
+      "role": "accepted reproducible RBR baseline evaluation"
+    },
+    {
+      "path": "samples/baselines/burnlens-baseline-v0.1.0/BASELINE-EVALUATION-2026-001.html",
+      "bytes": 3921,
+      "sha256": "109075ca31cb1c01137bdccff5786c862105eb15dc1cbe15c8603dcf3d15fd99",
+      "role": "accepted baseline detail"
+    },
+    {
+      "path": "records/phase-three/packages/BOUNDED-UNET-REJECTED-PACKAGE-RECORD-2026-001.json",
+      "bytes": 9916,
+      "sha256": "22552092843ad5e83fcacdcaaf1d9c035a09d9e75e260503cbb560b9d2dc3443",
+      "role": "Phase Three rejected-model package record"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-PACKAGE-MANIFEST.json",
+      "bytes": 7112,
+      "sha256": "6bdeea3c07ed154d959468c8364e9d08a346d2d453776cb3f76c9cdbb5910441",
+      "role": "Phase Three rejected-model package manifest"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.html",
+      "bytes": 3981,
+      "sha256": "36986bcfa4ab22ded2ed7b736730a769f2223fdaf70318e1b5bf60e537aafc1e",
+      "role": "Phase Three model decision detail"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/PHASE-THREE-MODEL-DECISION.png",
+      "bytes": 79512,
+      "sha256": "7ff4065232ebe72740ce9e80726748d6cc4e4a7d593aa6bd9e491c39af9e9c08",
+      "role": "Phase Three model decision preview"
+    },
+    {
+      "path": "samples/model-packages/burnlens-unet-binary-v0.1.0/MODEL-CARD.md",
+      "bytes": 2789,
+      "sha256": "a873eeaaba97e143fc6adaa461ec6ca0cfc92e9f2d9ee73094fe735a94595560",
+      "role": "Phase Three rejected-model card"
+    },
+    {
+      "path": "samples/cross-event/phase-two/petes-lake/PETES-LAKE-SOURCE-FITNESS-2026-001.png",
+      "bytes": 626846,
+      "sha256": "4ed3870e37bf68db24805540f00614c5050c064b621ca3fc5e3c0ef244bf0d42",
+      "role": "retained snow-dominated failure preview"
+    },
+    {
+      "path": "docs/phase-two/objective-four/PETES_LAKE_MATERIAL_DEFER_DECISION.md",
+      "bytes": 6050,
+      "sha256": "6e0cb457261cc0ef48b86b15e8b21a83ec21c4b880990d83b0c79834a26c31e7",
+      "role": "verified material-defer decision"
+    }
+  ],
+  "warning": "Experimental owner-approved prototype data, baseline, and rejected-model evidence. Not ground truth, official wildfire information, emergency guidance, field validation, generalization, or an accepted model. Official sources govern.",
+  "decision": "PRESENT_PHASE_THREE_REJECTED_MODEL_BASELINE_HANDOFF",
+  "outputs": [
+    {
+      "path": "BURNLENS-PORTFOLIO-REVIEWER-EXPERIENCE-2026-006.html",
+      "bytes": 18256,
+      "sha256": "ba3459747f8285803e9348939826b5a791b663e55a6e469f9f6b5de080c2cce9",
+      "media_type": "text/html"
+    }
+  ]
+}

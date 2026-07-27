@@ -1,0 +1,179 @@
+{
+  "record_version": "burnlens-phase-five-failure-injection-record-v0.1.0",
+  "record_id": "PHASE-FIVE-FAILURE-INJECTION-RECORD-2026-001",
+  "milestone_id": "P5O1-T01",
+  "unit_id": "P5O1-T01-U02",
+  "issue": 574,
+  "contract_id": "PHASE-FIVE-QA-RELEASE-CONTRACT-2026-001",
+  "implementation_commit": "b868ff007670b98b385eaeb2060b942fb38c7a4c",
+  "canonical_inputs": {
+    "package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+    "archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+    },
+    "interface": {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7"
+    }
+  },
+  "attempts": [
+    {
+      "attempt_id": "P5O1-T01-U02-R001",
+      "execution": "complete",
+      "disposition": "remediate",
+      "source_state": "pre-remediation validator at 320271e7984d33537a6653d83ad4de6c11048871",
+      "results": [
+        {
+          "injection_id": "missing-required-member",
+          "result": "rejected",
+          "diagnosis": "checksum mismatch: interface/index.html"
+        },
+        {
+          "injection_id": "corrupt-required-member",
+          "result": "rejected",
+          "diagnosis": "checksum mismatch: interface/index.html"
+        },
+        {
+          "injection_id": "archive-path-traversal",
+          "result": "rejected",
+          "diagnosis": "unsafe or corrupt archive"
+        },
+        {
+          "injection_id": "partial-package",
+          "result": "rejected-uncontrolled",
+          "diagnosis": "raw FileNotFoundError for missing CHECKSUMS.sha256"
+        },
+        {
+          "injection_id": "binding-mismatch",
+          "result": "unexpected-pass",
+          "diagnosis": "wrong accepted method, route, and run ID returned PACKAGE_VALIDATION_PASS"
+        }
+      ],
+      "canonical_directory_after": "PACKAGE_VALIDATION_PASS",
+      "canonical_archive_after": "PACKAGE_VALIDATION_PASS",
+      "failure_retained": "A partial package lacked controlled diagnosis and a wrong manifest binding passed. No canonical byte changed."
+    },
+    {
+      "attempt_id": "P5O1-T01-U02-R002",
+      "run_id": "BL-2026-07-26-p5o1-t01-u02-failure-injection-r002",
+      "generated_at_utc": "2026-07-26T21:43:47Z",
+      "execution": "complete",
+      "disposition": "pass",
+      "source_commit": "b868ff007670b98b385eaeb2060b942fb38c7a4c",
+      "injections": [
+        {
+          "injection_id": "missing-required-member",
+          "fixture_bytes": 428587,
+          "fixture_sha256": "3db124530d2a9d24ef27bb2da520448ac486746eb5ee3d8d3bcfd1851246b7a2",
+          "diagnosis": "checksum mismatch: interface/index.html",
+          "canonical_recovery": "pass"
+        },
+        {
+          "injection_id": "corrupt-required-member",
+          "fixture_bytes": 428540,
+          "fixture_sha256": "a73edde768ef3c6ceb5e660d036a4bbb7fbc0c5d0bb54b5c108922b761499417",
+          "diagnosis": "checksum mismatch: interface/index.html",
+          "canonical_recovery": "pass"
+        },
+        {
+          "injection_id": "archive-path-traversal",
+          "fixture_bytes": 487461,
+          "fixture_sha256": "72a3907066d11e5b13be9271b0af74a59b900fc93465e6290a6bd15b2ed2f7be",
+          "diagnosis": "archive member path unsafe",
+          "canonical_recovery": "pass"
+        },
+        {
+          "injection_id": "binding-mismatch",
+          "fixture_bytes": 487875,
+          "fixture_sha256": "781d5880f7beb10f06ac37bbf33340b3a8a6fe6a322d47dc343117087362244c",
+          "diagnosis": "package manifest binding drift",
+          "canonical_recovery": "pass"
+        },
+        {
+          "injection_id": "partial-package",
+          "fixture_bytes": 4693,
+          "fixture_sha256": "25e1a1f901f49e883d75213f8927e93e4853f129df36bcdb3e74eace91695bf9",
+          "diagnosis": "archive member-count drift",
+          "canonical_recovery": "pass"
+        }
+      ],
+      "ignored_run_inventory": {
+        "path": "runs/phase-five/BL-2026-07-26-p5o1-t01-u02-failure-injection-r002",
+        "tracked": false,
+        "files": [
+          {
+            "path": "PHASE-FIVE-FAILURE-INJECTION-2026-001.json",
+            "bytes": 4590,
+            "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4"
+          },
+          {
+            "path": "RUN-COMPLETE.json",
+            "bytes": 520,
+            "sha256": "5606b3bea66c381771e46e41c63eb80d1304173cde5ae94e03cb866b203a8ab1"
+          },
+          {
+            "path": "fixtures/archive-path-traversal.zip",
+            "bytes": 487461,
+            "sha256": "72a3907066d11e5b13be9271b0af74a59b900fc93465e6290a6bd15b2ed2f7be"
+          },
+          {
+            "path": "fixtures/binding-mismatch.zip",
+            "bytes": 487875,
+            "sha256": "781d5880f7beb10f06ac37bbf33340b3a8a6fe6a322d47dc343117087362244c"
+          },
+          {
+            "path": "fixtures/corrupt-required-member.zip",
+            "bytes": 428540,
+            "sha256": "a73edde768ef3c6ceb5e660d036a4bbb7fbc0c5d0bb54b5c108922b761499417"
+          },
+          {
+            "path": "fixtures/missing-required-member.zip",
+            "bytes": 428587,
+            "sha256": "3db124530d2a9d24ef27bb2da520448ac486746eb5ee3d8d3bcfd1851246b7a2"
+          },
+          {
+            "path": "fixtures/partial-package.zip",
+            "bytes": 4693,
+            "sha256": "25e1a1f901f49e883d75213f8927e93e4853f129df36bcdb3e74eace91695bf9"
+          }
+        ]
+      },
+      "public_outputs": [
+        {
+          "path": "samples/qa/phase-five/failure-injection-v0.1.0/PHASE-FIVE-FAILURE-INJECTION-2026-001.json",
+          "bytes": 4590,
+          "sha256": "1c00be85907aa8e965b16a8520b5493cf8421b52f6c6abf7f225aeee0c7ee4b4"
+        },
+        {
+          "path": "samples/qa/phase-five/failure-injection-v0.1.0/PHASE-FIVE-FAILURE-INJECTION-2026-001.html",
+          "bytes": 3610,
+          "sha256": "9aef845e97ea40ffd845f3b9fbbcfb071f95853138a8ff6878a7ca2d47811a61"
+        }
+      ],
+      "gates": {
+        "all_invalid_fixtures_rejected": "pass",
+        "all_diagnoses_exact": "pass",
+        "canonical_validated_after_every_injection": "pass",
+        "canonical_archive_hash_unchanged": "pass",
+        "canonical_interface_hash_unchanged": "pass",
+        "path_escape_created": "false",
+        "accepted_output_created": "false",
+        "deterministic_replay": "pass",
+        "json_parse": "pass",
+        "html_structure_and_boundary_text": "pass",
+        "real_html_render": "not claimed; owned by P5O1-T01-U03"
+      }
+    }
+  ],
+  "analytical_posture": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_accepted": false,
+    "rejected_model_outperformed_rbr": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P5O1-T01-U03 accessibility, rendered-browser posture, and reviewer clarity"
+}

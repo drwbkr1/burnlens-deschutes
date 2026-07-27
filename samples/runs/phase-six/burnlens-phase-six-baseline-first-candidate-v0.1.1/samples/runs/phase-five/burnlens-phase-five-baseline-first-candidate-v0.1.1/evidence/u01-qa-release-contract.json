@@ -1,0 +1,293 @@
+{
+  "contract_version": "burnlens-phase-five-qa-release-contract-v0.1.0",
+  "contract_id": "PHASE-FIVE-QA-RELEASE-CONTRACT-2026-001",
+  "milestone_id": "P5O1-T01",
+  "issue": 574,
+  "branch": "codex/p5o1-t01-reliability-release-candidate",
+  "exact_branch_base": "3c0ec9ef893b0e610c6c38c70a191e5e67c09ca9",
+  "created_at_utc": "2026-07-26",
+  "unit_id": "P5O1-T01-U01",
+  "run_id": "BL-2026-07-26-p5o1-t01-u01-contract-r001",
+  "route": "baseline-primary-with-rejected-model-diagnostic",
+  "objective": "Prove the integrated baseline-first system can reproduce evidence, detect and communicate failures, preserve lineage, meet declared accessibility, security, and performance expectations, and roll back safely without analytical expansion.",
+  "analytical_posture": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_diagnostic_model": "burnlens-unet-binary-v0.1.0",
+    "rejected_model_accepted": false,
+    "rejected_model_outperformed_rbr": false,
+    "canonical_phase_four_run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+    "canonical_package_version": "burnlens-ward-creek-rbr-run-v0.1.0",
+    "canonical_interface_version": "burnlens-phase-four-interface-v0.1.0"
+  },
+  "frozen_release_bindings": [
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "role": "canonical archived Phase Four package"
+    },
+    {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001-RECEIPT.json",
+      "bytes": 912,
+      "sha256": "e2c8023002cd3ec692e42191beadc446944e42eb5238df61d3a5e44680161000",
+      "role": "canonical archive receipt"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+      "bytes": 13689,
+      "sha256": "b15f5d00c5a54c57b493dc902dc78c8c25a143efc3b069ff4d68b796b4543c4e",
+      "role": "canonical extracted-package manifest"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/CHECKSUMS.sha256",
+      "bytes": 7547,
+      "sha256": "eb08e65924a61ed0ca80018500e5693cce2a104cbcfcc95355d691b301838d7e",
+      "role": "canonical extracted-package checksum roster"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/interface/index.html",
+      "bytes": 177666,
+      "sha256": "7a657ad772b34ff42cf4f4024a585b70fb8e7f41bab363cd056fcf8059825fb7",
+      "role": "canonical self-contained interface"
+    },
+    {
+      "path": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/status/STATUS.json",
+      "bytes": 446,
+      "sha256": "1a720a4451243f51628a8edb1675f42344cc7870337ee4a592564b22f1bfdc83",
+      "role": "canonical accepted-baseline package state"
+    },
+    {
+      "path": "records/phase-four/release-audits/RELEASE-AUDIT-2026-001.json",
+      "bytes": 14840,
+      "sha256": "3942190b72e6711e7bc7bfa136c45b12b7d36a3ff05243bb72f6dc41029684c7",
+      "role": "verified Phase Four release audit"
+    }
+  ],
+  "evidence_units": [
+    {
+      "unit_id": "P5O1-T01-U01",
+      "purpose": "Lock QA and release-control standard",
+      "dependencies": []
+    },
+    {
+      "unit_id": "P5O1-T01-U02",
+      "purpose": "Prove fail-closed package diagnosis and safe recovery",
+      "dependencies": [
+        "P5O1-T01-U01"
+      ]
+    },
+    {
+      "unit_id": "P5O1-T01-U03",
+      "purpose": "Validate accessibility, browser posture, and reviewer clarity",
+      "dependencies": [
+        "P5O1-T01-U02"
+      ]
+    },
+    {
+      "unit_id": "P5O1-T01-U04",
+      "purpose": "Validate security, integrity, licenses, claims, and performance",
+      "dependencies": [
+        "P5O1-T01-U03"
+      ]
+    },
+    {
+      "unit_id": "P5O1-T01-U05",
+      "purpose": "Prove clean reconstruction, release identity, and rollback",
+      "dependencies": [
+        "P5O1-T01-U04"
+      ]
+    },
+    {
+      "unit_id": "P5O1-T01-U06",
+      "purpose": "Freeze the Phase Five candidate and Phase Six recommendation",
+      "dependencies": [
+        "P5O1-T01-U05"
+      ]
+    }
+  ],
+  "failure_injection_standard": {
+    "fixture_policy": "Generate each injection in a temporary or tracked synthetic fixture from canonical bytes; never overwrite canonical bytes.",
+    "canonical_bytes_must_not_change": true,
+    "silent_acceptance_prohibited": true,
+    "required_injections": [
+      {
+        "injection_id": "missing-required-member",
+        "expected_result": "failed with exact missing path and no accepted output"
+      },
+      {
+        "injection_id": "corrupt-required-member",
+        "expected_result": "failed with checksum mismatch and no accepted output"
+      },
+      {
+        "injection_id": "archive-path-traversal",
+        "expected_result": "failed before extraction and no path escapes the destination"
+      },
+      {
+        "injection_id": "binding-mismatch",
+        "expected_result": "failed with exact manifest or run binding mismatch"
+      },
+      {
+        "injection_id": "partial-package",
+        "expected_result": "failed as partial and never presented as degraded or accepted"
+      }
+    ],
+    "recovery_gate": "After every injection, both untouched canonical package forms must validate and retain their exact hashes."
+  },
+  "accessibility_standard": {
+    "target": "WCAG-2.2-AA-bounded-review",
+    "criteria": [
+      "keyboard-operable",
+      "no-keyboard-trap",
+      "focus-order",
+      "focus-visible",
+      "focus-not-obscured",
+      "non-color-communication",
+      "text-equivalent",
+      "reflow-zoom",
+      "reduced-motion",
+      "name-role-value"
+    ],
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "browser_support": [
+      "current Codex in-app Chromium-family browser where policy permits",
+      "owner-operated current desktop browser for the exact local artifact"
+    ],
+    "automation_file_url_block_retained": true,
+    "browser_policy_bypass_prohibited": true,
+    "owner_render_confirmation_at_entry": true,
+    "conformance_limit": "This is a bounded internal evidence review, not a formal third-party accessibility certification."
+  },
+  "performance_budgets": {
+    "zip_bytes_max": 750000,
+    "extracted_bytes_max": 2500000,
+    "interface_html_bytes_max": 250000,
+    "external_runtime_requests_max": 0,
+    "package_validation_seconds_max": 5.0,
+    "clean_environment_minutes_max": 15.0,
+    "budget_basis": "Project-specific limits preserve a compact offline reviewer path with headroom above the verified 0.54 artifact; they are not universal web performance standards."
+  },
+  "security_and_integrity_standard": {
+    "required_checks": [
+      "dependency-health",
+      "known-vulnerability-classification",
+      "secret-scan",
+      "license-inventory",
+      "unsupported-claim-scan",
+      "public-artifact-privacy",
+      "safe-archive-structure",
+      "schema-and-binding-validation",
+      "checksum-validation",
+      "no-external-runtime-request"
+    ],
+    "release_blockers": [
+      "exposed secret",
+      "unresolved critical or high known vulnerability in release scope",
+      "path traversal",
+      "silent checksum or binding failure",
+      "private retrieval or response detail in public artifacts",
+      "unsupported operational or model-superiority claim"
+    ]
+  },
+  "defect_severity": {
+    "critical": {
+      "phase_six_effect": "block",
+      "examples": [
+        "wrong run identity",
+        "material CRS displacement",
+        "hidden failed state",
+        "exposed secret",
+        "operational guidance",
+        "no rollback"
+      ]
+    },
+    "high": {
+      "phase_six_effect": "block-or-remove-scope",
+      "examples": [
+        "unreproducible summary",
+        "broken lineage",
+        "inaccessible core control",
+        "major supported-browser failure",
+        "no-detection implying safety"
+      ]
+    },
+    "medium": {
+      "phase_six_effect": "known-issue-with-impact-and-workaround",
+      "examples": [
+        "noncritical browser inconsistency",
+        "performance budget miss with bounded workaround"
+      ]
+    },
+    "low": {
+      "phase_six_effect": "may-defer",
+      "examples": [
+        "cosmetic defect",
+        "nonessential presentation refinement"
+      ]
+    }
+  },
+  "release_states": [
+    "candidate",
+    "accepted-baseline-first",
+    "accepted-with-caveats",
+    "remediate",
+    "rollback",
+    "stop"
+  ],
+  "research_basis": [
+    {
+      "authority": "W3C",
+      "checked_at_utc": "2026-07-26",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "fact_supported": "Keyboard operation, visible and unobscured focus, reflow, non-text contrast, and name-role-value are relevant bounded accessibility checks.",
+      "decision": "Use a WCAG 2.2 AA-oriented bounded review; do not claim formal certification.",
+      "limitation": "Automated and internal checks cannot establish complete conformance."
+    },
+    {
+      "authority": "OWASP",
+      "checked_at_utc": "2026-07-26",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/09-Test_Upload_of_Malicious_Files",
+      "fact_supported": "Archive extraction must validate paths to prevent directory traversal.",
+      "decision": "Require a hostile archive-path injection that fails before extraction.",
+      "limitation": "BurnLens accepts only its own offline package format; this does not represent a broad web-upload assessment."
+    },
+    {
+      "authority": "CISA",
+      "checked_at_utc": "2026-07-26",
+      "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/sbom/sbomresourceslibrary",
+      "fact_supported": "An SBOM records component identities and supply-chain relationships and supports release transparency.",
+      "decision": "Generate a release-scoped dependency inventory and classify vulnerability results in U04.",
+      "limitation": "An SBOM is inventory evidence, not proof that software is vulnerability-free."
+    }
+  ],
+  "boundaries": {
+    "retraining": false,
+    "retuning": false,
+    "dataset_changed": false,
+    "split_changed": false,
+    "label_changed": false,
+    "aoi_changed": false,
+    "threshold_changed": false,
+    "phase_3b_created": false,
+    "second_experiment_planned": false,
+    "second_experiment_implemented": false,
+    "model_superiority_claim": false,
+    "operational_claim": false,
+    "field_validation_claim": false,
+    "official_or_endorsed_claim": false,
+    "public_sharing_change": false,
+    "burnlens_site_used": false
+  },
+  "disposition": "pass",
+  "next_dependency": "P5O1-T01-U02 fail-closed package diagnosis and recovery"
+}
