@@ -16,7 +16,7 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Accepted and publicly verified — final lifecycle reconciliation active.**
+**Accepted, publicly verified, and complete.**
 
 Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
 issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
@@ -46,8 +46,10 @@ merged the repository-owned Sites source at `e2e0b77...`, created annotated
 tag `v0.56.0-baseline-first-portfolio-release`, published the exact GitHub
 Release assets, and deployed the public Codex Sites application. Anonymous
 desktop, narrow, keyboard, route, image, claims, privacy, and interaction QA
-pass. Final citation and lifecycle reconciliation remain active; analytical
-bytes and the RBR-accepted/U-Net-rejected decision are unchanged.
+pass. Lifecycle PR #586 adds the final release citations and living public
+truth. Sites version 2 corrects the case-study route and repeats anonymous
+production QA. Phase Six is complete; analytical bytes and the
+RBR-accepted/U-Net-rejected decision are unchanged.
 
 ## Phase purpose
 

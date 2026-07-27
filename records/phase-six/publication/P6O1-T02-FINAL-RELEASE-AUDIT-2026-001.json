@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "release_id": "v0.56.0-baseline-first-portfolio-release",
+  "risk_classes": [
+    "documentation",
+    "package",
+    "public",
+    "security",
+    "external"
+  ],
+  "candidate": {
+    "base_commit": "55ba5882f4927016f6510226562b99e98dedb929",
+    "commit": "e2e0b778038b2b5cd55258c784951ef2d1473469",
+    "version": "0.56.0",
+    "tag": "v0.56.0-baseline-first-portfolio-release",
+    "artifacts": [
+      {
+        "name": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+        "bytes": 14963469,
+        "sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e"
+      },
+      {
+        "name": "CITATION-RELEASE-2026-001.json",
+        "bytes": 3144,
+        "sha256": "83785c7040cc1b863acd6d3908e53e6f17ead70a4a79f1effec32da67d6320ad"
+      },
+      {
+        "name": "CITATION-RELEASE-2026-001.md",
+        "bytes": 1180,
+        "sha256": "70badac7f050078c2765f53a55d76c88072b6b00eb2c225836c038f61565eef3"
+      }
+    ]
+  },
+  "live_truth": {
+    "verified_at_utc": "2026-07-27T19:13:00Z",
+    "branch": "main",
+    "remote_commit": "bf05aef7194abe3d31f5f75f4d18e1100287463b",
+    "pull_request": 586,
+    "tag_target": "e2e0b778038b2b5cd55258c784951ef2d1473469",
+    "deployment": {
+      "provider": "Codex Sites",
+      "project_id": "appgprj_6a67a02d7c488191b66ced0f2ac3550e",
+      "source_commit": "723931334bf9dce5393a876d4177b369e2076be5",
+      "version_number": 2,
+      "version_id": "appgprj_6a67a02d7c488191b66ced0f2ac3550e~appgver_9a23a1d1be988191b7a1034d0ff699a1",
+      "deployment_id": "appgdep_6a67ace9915c81918c550b338dd26fa2",
+      "status": "succeeded",
+      "access": "public",
+      "url": "https://burnlens-deschutes.drew-baker-15.chatgpt.site"
+    }
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect both issue-backed PR diffs and compare analytical identities.",
+      "evidence": [
+        "source PR #585",
+        "lifecycle PR #586",
+        "P6O1-T02-PUBLICATION-VERIFICATION-2026-001"
+      ],
+      "reason": "Only repository-owned presentation, citation, publication, and living truth changed; dataset, split, baseline, model, accepted run, and candidate bytes are unchanged."
+    },
+    {
+      "id": "CHECK-002",
+      "category": "repository and tag",
+      "required": true,
+      "status": "pass",
+      "method": "Fetch origin, compare reviewed and merge trees, and dereference the annotated tag.",
+      "evidence": [
+        "PR #585 merge e2e0b778038b2b5cd55258c784951ef2d1473469",
+        "PR #586 merge bf05aef7194abe3d31f5f75f4d18e1100287463b",
+        "tag object 31d0d35583593fb7f408aed9ae0777526b54e216"
+      ],
+      "reason": "Both reviewed trees equal their merge trees and the tag peels to the exact source merge."
+    },
+    {
+      "id": "CHECK-003",
+      "category": "GitHub Release",
+      "required": true,
+      "status": "pass",
+      "method": "Read the live Release object, asset state, byte sizes, labels, and GitHub SHA-256 digests.",
+      "evidence": [
+        "https://github.com/drwbkr1/burnlens-deschutes/releases/tag/v0.56.0-baseline-first-portfolio-release",
+        "seven uploaded asset records"
+      ],
+      "reason": "The exact candidate, receipt, presentation, two labeled historical citation snapshots, and two final release citations all match tracked identities."
+    },
+    {
+      "id": "CHECK-004",
+      "category": "Sites provenance and deployment",
+      "required": true,
+      "status": "pass",
+      "method": "Compare the merged repository site tree with the pushed source tree, package with the official helper, save version 2, deploy, and poll to terminal state.",
+      "evidence": [
+        "repository and Sites tree 947c8435cd196bdd610940477dc3c196bee8e45b",
+        "Sites source 723931334bf9dce5393a876d4177b369e2076be5",
+        "deployment appgdep_6a67ace9915c81918c550b338dd26fa2"
+      ],
+      "reason": "The exact pushed source is saved as version 2 and the production deployment succeeded."
+    },
+    {
+      "id": "CHECK-005",
+      "category": "public rendering and interaction",
+      "required": true,
+      "status": "pass",
+      "method": "Inspect the anonymous live site in Chrome at desktop and 390x844, exercise keyboard skip navigation, and enable the rejected-model diagnostic on Ward Creek.",
+      "evidence": [
+        "1280x575: styled, three images loaded, zero overflow, zero console errors",
+        "390x844: three images loaded, zero overflow, skip link focuses SECTION#evidence",
+        "Ward Creek rejected U-Net toggle checked successfully with zero console errors"
+      ],
+      "reason": "The real production surface renders and the key evidence interaction works."
+    },
+    {
+      "id": "CHECK-006",
+      "category": "routes and references",
+      "required": true,
+      "status": "pass",
+      "method": "Follow redirects and request all seven production evidence routes plus the current case-study and GitHub Release links.",
+      "evidence": [
+        "nine final HTTP 200 responses",
+        "case-study link targets blob/main",
+        "Release link targets the exact 0.56.0 tag"
+      ],
+      "reason": "Every reviewer-critical destination resolves."
+    },
+    {
+      "id": "CHECK-007",
+      "category": "claims, source, and privacy",
+      "required": true,
+      "status": "pass",
+      "method": "Run site semantic/privacy tests and inspect the live claims and source attributions.",
+      "evidence": [
+        "site tests 3 passed",
+        "Phase Six changed-risk tests 16 passed",
+        "public evidence manifest has 13 exact bindings"
+      ],
+      "reason": "RBR remains accepted, the U-Net remains rejected, official sources govern, and private/provider/custody details are excluded."
+    },
+    {
+      "id": "CHECK-008",
+      "category": "reproducibility and dependencies",
+      "required": true,
+      "status": "pass",
+      "method": "Build the site, run the dependency audit, validate both exact candidate forms and the frozen portfolio surface, and check the Python environment.",
+      "evidence": [
+        "npm test: 3 passed",
+        "npm audit: zero vulnerabilities",
+        "Phase Six directory and ZIP candidate validation pass",
+        "Phase Six portfolio-surface validation pass",
+        "uv pip check: 75 compatible packages"
+      ],
+      "reason": "The changed release path and immutable candidate remain reproducible under their recorded contracts."
+    },
+    {
+      "id": "CHECK-009",
+      "category": "rollback and preservation",
+      "required": true,
+      "status": "pass",
+      "method": "Verify the annotated source tag, retained Sites version 1, immutable candidate package, and non-overwritten citation snapshots.",
+      "evidence": [
+        "tag v0.56.0-baseline-first-portfolio-release",
+        "Sites version 1 retained",
+        "candidate SHA-256 5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+        "historical CITATION.json and CITATION.md retained at original digests"
+      ],
+      "reason": "The release can be audited or rolled back without destroying predecessor evidence."
+    }
+  ],
+  "truth_surfaces": [
+    {
+      "path_or_uri": "README.md",
+      "expected_state": "Public 0.56.0 baseline-first release with RBR accepted and U-Net rejected.",
+      "observed_state": "Matches.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/status/PHASE_STATUS.md",
+      "expected_state": "Phase Six accepted, publicly verified, and complete.",
+      "observed_state": "Matches.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/roadmap/BURNLENS_BUILD_ROADMAP.md",
+      "expected_state": "All six phase outcomes complete under the approved baseline-primary route.",
+      "observed_state": "Matches.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "docs/case-study/BURNLENS_CASE_STUDY.md",
+      "expected_state": "Living case study links the public site and preserves the rejected-model result.",
+      "observed_state": "Matches.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "GitHub Release",
+      "expected_state": "Seven exact assets and explicit final-versus-historical citation roles.",
+      "observed_state": "Matches.",
+      "status": "current"
+    },
+    {
+      "path_or_uri": "Codex Sites production",
+      "expected_state": "Version 2 is public, rendered, interactive, and linked to current repository truth.",
+      "observed_state": "Matches.",
+      "status": "current"
+    }
+  ],
+  "limitations": [
+    "Two bounded full-repository suite attempts timed out before publication; the complete changed-risk suite, exact candidate validators, site tests, package checks, and dependency checks pass.",
+    "The platform appends a same-origin challenge script to served HTML; source evidence bytes remain exact in Git and the saved Sites source.",
+    "The local vinext start wrapper is rejected because generated assets returned 404; Vinext build/dev and production Sites are the accepted render paths.",
+    "No social preview image is shipped because two generated candidates failed the required local text/render gate."
+  ],
+  "decision": {
+    "reported_status": "verified",
+    "rationale": "All required release, provenance, package, public rendering, interaction, claims, privacy, route, citation, rollback, and truth-reconciliation checks pass without changing the accepted analytical result.",
+    "next_action": "Close issue #584 and the controlling BurnLens execution goal after this exact closeout record merges and fresh main repeats the bounded release audit."
+  }
+}

@@ -97,15 +97,16 @@ necessary lifecycle synchronization after their quality gates pass.
 PR #585 merges the reviewed Sites source at
 `e2e0b778038b2b5cd55258c784951ef2d1473469` with exact tree equality.
 Annotated tag object `31d0d35583593fb7f408aed9ae0777526b54e216`
-peels to that merge. The GitHub Release is public with five verified assets;
+peels to that merge. The GitHub Release is public with seven verified assets;
 the exact candidate ZIP remains 14,963,469 bytes / `5a314b69...`. Codex Sites
-version 1 deploys publicly at
+version 2 deploys publicly at
 `https://burnlens-deschutes.drew-baker-15.chatgpt.site` and passes anonymous
 desktop, narrow, keyboard, evidence-route, image, claim, privacy, and
-rejected-model interaction gates. P6O1-T02 is completing the bounded
-lifecycle/citation reconciliation. It must never use `burnlens-site`, change
-analytical evidence, or create a Phase 3B remediation milestone or separately
-governed follow-on experiment.
+rejected-model interaction gates. Final citations supersede but do not
+overwrite the two historical citation snapshots, and the public case-study
+link targets current main. P6O1-T02 is complete. It never uses
+`burnlens-site`, changes analytical evidence, or creates a Phase 3B remediation
+milestone or separately governed follow-on experiment.
 
 The historical checkpoint facts below remain audit evidence, not current
 sequencing authority.

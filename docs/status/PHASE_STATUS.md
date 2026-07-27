@@ -9,7 +9,7 @@
 | 3 — Model evidence | One bounded model adds reproducible value beyond the strongest baseline or is rejected honestly | **Accepted and verified** | P3O1-T01 / issue #566 / PR #567 ships the exact trained, once-evaluated, byte-reproduced, and honestly rejected U-Net in verified BurnLens 0.53.0. RBR remains the accepted analytical method. |
 | 4 — CV-to-GEOINT product | Accepted model/baseline becomes a valid georeferenced run and repository-owned evidence interface | **Accepted and verified** | P4O1-T01 / issue #570 / PR #571 ships exact RBR analysis, native geospatial products, bounded context, deterministic overlays, a self-contained interface, and immutable package in verified BurnLens 0.54.0. |
 | 5 — Reliability | Integrated system is reproducible, accessible, secure, failure-visible, performant, and reversible | **Accepted and verified** | P5O1-T01 / issue #574 / PR #575 ships verified BurnLens 0.55.0. Reviewed merge, exact tree, fresh-main 789-test suite, deterministic wheel, rendered candidate, rollback, and remote annotated-tag gates pass with two visible medium findings and no critical/high finding. |
-| 6 — Publication | One coherent, licensed, citable, traceable portfolio release and closeout | **Accepted and publicly verified; lifecycle reconciliation active** | P6O1-T02 / issue #584 / PR #585 merges at `e2e0b77...`; annotated tag object `31d0d35...` peels to the merge. The GitHub Release publishes five hash-verified assets. Codex Sites version 1 is publicly available at `https://burnlens-deschutes.drew-baker-15.chatgpt.site` and passes anonymous desktop, narrow, keyboard, route, image, claims, privacy, and interaction QA. The exact candidate and analytical decision are unchanged. |
+| 6 — Publication | One coherent, licensed, citable, traceable portfolio release and closeout | **Accepted, publicly verified, and complete** | P6O1-T02 / issue #584 / source PR #585 / lifecycle PR #586 publishes the exact 0.56.0 tag and GitHub Release with seven hash-verified assets. Codex Sites version 2 is public at `https://burnlens-deschutes.drew-baker-15.chatgpt.site` and passes anonymous desktop, narrow, keyboard, route, image, claims, privacy, link, and interaction QA. The exact candidate and analytical decision are unchanged. |
 
 ## Verified capability inventory
 
@@ -17,12 +17,12 @@
 |---|---|
 | Latest repository evidence baseline | Verified `v0.56.0-baseline-first-portfolio-release`; P6O1-T02 issue #584 / PR #585; checkpoint `e2e0b778038b2b5cd55258c784951ef2d1473469`; annotated tag object `31d0d35583593fb7f408aed9ae0777526b54e216` peels exactly to that checkpoint. The public GitHub Release and Codex Sites deployment are verified. |
 | Active checkpoint policy | BL-GOV-003 / issue #525 adopts `checkpoint-policy-v0.1.0`: evidence units retain independent immutable records while milestone and exception checkpoints control PR, release, and lifecycle cadence. |
-| Next designated milestone | Complete P6O1-T02's bounded final-citation, case-study-link, deployment-version, and lifecycle reconciliation, then close the issue and execution goal only after a fresh release-truth audit passes. |
+| Next designated milestone | None in the current project. P6O1-T02 is complete. Any follow-on experiment requires separate governance and may not rewrite the rejected U-Net result. |
 | Current verified release | BurnLens 0.56.0 / `v0.56.0-baseline-first-portfolio-release`. PR #585 merges reviewed head `a89123e...` through `e2e0b77...` with exact tree equality; tag object `31d0d35...` peels exactly to the merge. The public GitHub Release preserves the exact 14,963,469-byte candidate ZIP at SHA-256 `5a314b69...`, and the public Codex Sites application passes anonymous desktop, narrow, keyboard, routes, images, claims, privacy, and interaction QA. RBR remains accepted and the U-Net remains rejected. |
 | Current release candidate | Historical pre-publication candidate `burnlens-phase-six-baseline-first-candidate-v0.1.1`; P6O1-T01 merge `35e68a5...`; BL-EXC-004 merge `e940611...`; package, recipient, and release-audit runs remain exact; 117 files / 16,285,070 bytes; ZIP 14,963,469 bytes / `5a314b69...`. The exception changes only clean-checkout test-fixture setup and changes no candidate byte. Its former `ready-for-owner-publication-gate` disposition was satisfied by P6O1-T02. |
 | Official-source scout evidence | BurnLens `0.23.0`; run `BL-2026-07-17-official-source-scout-r004`; 12 bounded official responses / 7 source classes / 21 candidates / 0 labels; GW Fire ranked first; Landsat asset state `AUTHENTICATION_REQUIRED` |
 | GitHub backlog control | BL-GOV-002 / issue #400 reconciles obsolete Phase One issues and PR #307 against the verified 21-tag / zero-Release inventory and controlling `v0.0.8` baseline; historical content remains audit evidence; the later owner waiver closes #393 as superseded and activates #403 |
-| Active evidence checkpoints | P6O1-T02 / issue #584 is public and in final lifecycle reconciliation. P5O1-T01, P6O1-T01, BL-EXC-004, and PR #585 remain verified predecessors. No Phase 3B or second experiment is active. |
+| Active evidence checkpoints | None. P6O1-T02 is the verified closeout checkpoint. P5O1-T01, P6O1-T01, BL-EXC-004, source PR #585, and lifecycle PR #586 remain verified predecessors. No Phase 3B or second experiment is active. |
 | Historical reconciliation baseline | Shipped `v0.20.0-single-reviewer-reconciliation` at merge `4918024dfb83270dbbd83a5880c455cc3c01771c`; tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`; immutable 6 burned / 0 background / 50 ignored evidence, not final exclusion under the owner-confirmed route |
 | Observation-geometry baseline | BurnLens `0.5.0`; issue #333 / PR #334; generator source `89d50c24a696cc7e3ec023eec00b021a4a0cdda6`; tag object `cb9e675789d8ca4c4f8a5f4828331d41d023038e`; 65 post-merge tests passing |
 | Burn-scar target decision baseline | BurnLens `0.6.0`; issue #337 / PR #338 plus issue #339 / PR #340; remediation merge `bcb71ebd01d3184f8de24318428309e61d33e54f`; generator source `cfbf357634cdcf9e68c3af78bfcb3e195bebc17a`; target `target-burn-scar-v0.2.0`; verified annotated tag; 69 post-merge tests; no label, dataset, baseline, or model |
@@ -91,6 +91,15 @@
 P2O4-T10A ships verified BurnLens `0.19.0` through issue #407 / PR #408 at reviewed head `bb89a7bd36b60379f4c7680ae28837dd51111911` and merge `0ab2b948a4d74c770f6d23042a1d9725642eac42`. Fresh remote-main passes 176 tests, 56 JSON, 125 links, exact three-output manifest, canonical packaging, and remote tag verification; tag object `dca77c6194edfa5aadb5a4a41c5acc9ddf93e6ec` peels to the merge.
 
 ## Current checkpoint
+
+P6O1-T02 is the current verified closeout checkpoint. The public 0.56.0
+GitHub Release preserves seven hash-verified assets, including explicit final
+release citations and immutable historical pre-publication citation snapshots.
+Codex Sites version 2 deploys the exact repository-owned source at
+`https://burnlens-deschutes.drew-baker-15.chatgpt.site` and passes the final
+anonymous production QA. RBR remains accepted, the U-Net remains rejected,
+and no analytical artifact changes. The older checkpoint chronology below is
+historical evidence.
 
 P2O4-T10B / issue #403 / PR #412 ships verified BurnLens `0.20.0` at tag object `5bb840b43ae8594e02a9b026b3932bb16f83bf5b`, remotely peeled to merge `4918024dfb83270dbbd83a5880c455cc3c01771c`. Source `fda69a60b0a5e350bfe10e7388571d7c1c103735` and public artifacts `57f116aabb7c15e5d0f9d88e8088d2e50c46eb7e` produce 6 burned candidate units, 0 background units, and 50 ignored units. The preflight reveal-access sequence exception is disclosed. The decision is remediation and dataset deferral; P2O4-T11 completes the current catalog inventory without moving labels. Do not create a split, baseline, or model before label-evidence and group-overlap gates pass.
 
