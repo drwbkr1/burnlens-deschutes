@@ -472,9 +472,12 @@ def _render_readme(
 ) -> bytes:
     return f"""# BurnLens Phase Six baseline-first portfolio surface
 
-Surface: `{SURFACE_VERSION}`  
-Run: `{run_id}`  
-Source commit: `{git_source_commit}`  
+Surface: `{SURFACE_VERSION}`
+
+Run: `{run_id}`
+
+Source commit: `{git_source_commit}`
+
 Generated: `{generated_at_utc}`
 
 Open `index.html`. The page is static, offline, keyboard-readable, and contains
