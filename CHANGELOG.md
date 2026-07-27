@@ -27,9 +27,12 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Render the candidate at desktop and 390-by-844 narrow widths, open both core
   interfaces, verify six local links, and observe zero browser warnings,
   errors, external resources, or horizontal overflow.
-- Build two byte-identical BurnLens 0.55.0 wheels at SHA-256 `f885650e...`;
+- Build two byte-identical BurnLens 0.55.0 wheels at SHA-256 `1d0e862c...`;
   install the exact wheel into a locked 75-distribution environment and pass
   both 120-command profiles.
+- Retain the late LF-checkout failure, add the exact Phase Five objectives
+  contract, then pass the complete clean suite at 789 tests, one expected
+  skip, 422 existing warnings, and 86 subtests.
 
 Issue #574; run
 `BL-2026-07-26-p5o1-t01-u06-release-candidate-r002`; candidate source

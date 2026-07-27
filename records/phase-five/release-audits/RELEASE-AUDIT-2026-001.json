@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "release_id": "RELEASE-AUDIT-2026-001",
+  "recorded_at_utc": "2026-07-27T02:35:28Z",
+  "risk_classes": [
+    "documentation",
+    "runtime",
+    "geospatial",
+    "model",
+    "data",
+    "package",
+    "public",
+    "external"
+  ],
+  "release": {
+    "version": "0.55.0",
+    "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+    "state": "accepted-baseline-first-candidate-pending-milestone-verification",
+    "issue": 574,
+    "pull_request": null,
+    "branch": "codex/p5o1-t01-reliability-release-candidate",
+    "branch_base": "3c0ec9ef893b0e610c6c38c70a191e5e67c09ca9",
+    "candidate_builder_source": "dd1c270421250ce312d548b9571f91b4b806536b",
+    "candidate_freeze_commit": "1c799cd3f40c37013c71d9af9b15caea1d9c5417",
+    "checkout_contract_remediation": "a53bcd85413c524ae9fd0ac6007ba59ba778d532",
+    "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_accepted": false,
+    "model_outperformed_rbr": false,
+    "tag": null,
+    "tag_object": null,
+    "merge_commit": null,
+    "deployment": null,
+    "github_release": null,
+    "external_submission": null
+  },
+  "candidate_artifacts": {
+    "package": {
+      "path": "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1",
+      "file_count": 23,
+      "bytes": 981264,
+      "manifest_sha256": "9651aba9ea7c9a8aa403a5fc4900f7d8709d232bcb1938c08438b0f2e22f23a4",
+      "checksums_sha256": "e80e6145fc4d6d05f8c806a7077969e1d00b7f3fc140b11095830cedaf678985"
+    },
+    "archive": {
+      "path": "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 646513,
+      "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+    },
+    "phase_four_archive": {
+      "path": "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+      "bytes": 487893,
+      "sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e",
+      "preserved_byte_identically": true
+    }
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "category": "scope-and-science",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "RBR remains the accepted analytical method.",
+        "The trained U-Net remains a rejected first-class diagnostic and did not outperform RBR.",
+        "No dataset, split, label, threshold, model weight, AOI, source, or analytical output changed."
+      ]
+    },
+    {
+      "id": "CHECK-002",
+      "category": "u01-u05-evidence",
+      "required": true,
+      "status": "pass-with-two-visible-medium-findings",
+      "evidence": [
+        "U01-U05 controlling records are exact inputs with SHA-256 identities.",
+        "Failure injection, browser/reviewer clarity, assurance, clean reconstruction, and exact rollback pass.",
+        "The setuptools advisory and historical builder identity issue remain visible with impact and workaround."
+      ]
+    },
+    {
+      "id": "CHECK-003",
+      "category": "candidate-package",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Both extracted and ZIP candidate forms pass.",
+        "An independent no-overwrite replay reproduces the 646,513-byte archive at SHA-256 691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26.",
+        "The 23-file candidate carries the exact Phase Four archive plus U01-U05 evidence, known issues, QA matrix, manifest, checksums, and local index."
+      ]
+    },
+    {
+      "id": "CHECK-004",
+      "category": "render-and-accessibility",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "The corrected candidate renders in Microsoft Edge at 1440x1000 and 390x844 without horizontal overflow.",
+        "All six local links and both core interfaces return HTTP 200.",
+        "Keyboard-first focus, zero external resources, and zero browser errors pass."
+      ]
+    },
+    {
+      "id": "CHECK-005",
+      "category": "candidate-wheel-and-runtime",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Two fixed-epoch 1,207,948-byte BurnLens 0.55.0 wheels are byte-identical at SHA-256 1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6.",
+        "Fresh CPython 3.12.10 contains 75 compatible distributions and imports BurnLens only from isolated site-packages.",
+        "Both geospatial and model profiles pass all 120 installed console routes."
+      ]
+    },
+    {
+      "id": "CHECK-006",
+      "category": "full-regression-and-portability",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "Clean pushed head a53bcd85413c524ae9fd0ac6007ba59ba778d532 passes 789 tests, one expected skip, 422 existing warnings, and 86 subtests in 665.38 seconds.",
+        "The retained r003 failure exposed one missing Phase Five LF checkout rule; a53bcd8 adds the exact rule and both failed tests pass.",
+        "All earlier failed and superseded candidate, regression, wrapper, and portability attempts remain retained."
+      ]
+    },
+    {
+      "id": "CHECK-007",
+      "category": "claims-privacy-and-rights",
+      "required": true,
+      "status": "pass",
+      "evidence": [
+        "No independent ground truth, generalization, model-superiority, field-validation, official, endorsed, operational, or emergency-use claim is made.",
+        "No private owner response, provider retrieval detail, credential, token, ignored custody path, or raw provider archive is published.",
+        "The U04 source, rights, privacy, and bounded-custody gates remain unchanged."
+      ]
+    },
+    {
+      "id": "CHECK-008",
+      "category": "review-merge-tag",
+      "required": true,
+      "status": "pending",
+      "evidence": [
+        "One coherent milestone PR has not yet opened.",
+        "Reviewed merge, fresh-main verification, and annotated tag v0.55.0-baseline-first-reliability-candidate remain required.",
+        "No GitHub Release, deployment, access, ownership, or sharing change is required."
+      ]
+    }
+  ],
+  "open_findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "rollback": {
+    "verified_version": "0.54.0",
+    "tag": "v0.54.0-rbr-geoint-milestone",
+    "tag_object": "4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82",
+    "peeled_commit": "8660ccba893b7e3acfdc361e663a6b8d59d52a34",
+    "exact_historical_wheel_sha256": "ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94",
+    "status": "pass"
+  },
+  "decision": {
+    "candidate": "accept-baseline-first-pending-milestone-verification",
+    "phase_six": "recommend-eligibility-only-after-pr-merge-fresh-main-and-tag",
+    "github_release": "not-created",
+    "deployment": "not-created",
+    "external_submission": "not-authorized-or-attempted"
+  }
+}

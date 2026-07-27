@@ -2,15 +2,15 @@
 
 ## Current result
 
-P5O1-T01 / issue #574 has completed U01 through U05. The verified Phase Four
+P5O1-T01 / issue #574 has completed U01 through U06. The verified Phase Four
 RBR-primary package remains analytically unchanged: RBR is accepted, the
 trained U-Net remains a rejected diagnostic that did not outperform RBR, and
 WCP-002 remains visible false-positive-risk evidence.
 
-U06 is now eligible. It must freeze or reject one coherent baseline-first
-candidate, complete the known-issues and QA evidence package, and make an
-explicit Phase Six recommendation. No Phase Five candidate or new software
-release is accepted merely because U05 passed.
+U06 accepts corrected candidate
+`burnlens-phase-five-baseline-first-candidate-v0.1.1` pending the milestone
+PR, fresh-main verification, and annotated tag. This is a pre-merge candidate,
+not yet a verified release.
 
 ## Evidence completed
 
@@ -54,11 +54,45 @@ capture despite correct DOM geometry; the normal viewport captures and
 computed layout pass, and the tooling artifact is disclosed rather than used
 as evidence.
 
+## U06 candidate freeze
+
+Run `BL-2026-07-26-p5o1-t01-u06-release-candidate-r002` freezes 23 files /
+981,264 bytes into one deterministic 646,513-byte ZIP at SHA-256
+`691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26`.
+Both extracted and archive validators pass, and a separate ignored replay
+reproduces the archive byte-for-byte.
+
+Microsoft Edge renders the exact candidate index at 1440-by-1000 and
+390-by-844 without horizontal overflow. All six local links and both core
+interfaces return HTTP 200, keyboard-first focus is visible, and no external
+resource or browser error occurs. The temporary server is stopped.
+
+Two fixed-epoch BurnLens 0.55.0 wheels are byte-identical at 1,207,948 bytes /
+SHA-256 `1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6`.
+A fresh CPython 3.12.10 environment contains 75 compatible distributions,
+imports BurnLens only from isolated `site-packages`, and passes all 120
+console routes in both geospatial and model profiles.
+
+The first clean candidate suite exposed a missing explicit LF checkout rule
+for the Phase Five objectives file. That 787-pass / two-failure run remains
+retained. Commit `a53bcd85413c524ae9fd0ac6007ba59ba778d532` adds the
+exact rule; both failed tests pass, and the complete clean suite then passes
+789 tests, one expected skip, 422 existing warnings, and 86 subtests in
+665.38 seconds.
+
+The controlling record is 11,367 bytes / SHA-256 `76c2c129...`; the release
+audit is 7,005 bytes / SHA-256 `9f47ecbd...`. They retain the superseded r001
+candidate, all pre-remediation and dirty-checkout failures, the wrapper
+timeout, and the LF failure. U06's disposition is
+`accepted-baseline-first-candidate-pending-milestone-verification`. Phase Six
+is recommended only after the single milestone PR, reviewed merge, fresh-main
+verification, and annotated tag pass.
+
 ## Boundaries
 
 No analytical byte, dataset, split, label, model decision, threshold,
 deployment, access, ownership, public-sharing status, or external submission
 changed. No Phase 3B or second experiment was created. Phase Six remains
-blocked until U06 accepts a complete inspectable and reproducible candidate
-with all critical and high gates passed, every medium issue visible with
-impact and workaround, and rollback verified.
+blocked until the remaining milestone verification gates pass. The candidate
+has zero open critical/high findings and two visible medium findings with
+impact and workaround; rollback is verified.
