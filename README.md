@@ -44,7 +44,12 @@ posture. U05 retains r001's stale-lock source failure, then creates corrected
 117 files / 16,285,070 bytes and one 14,963,469-byte ZIP at SHA-256
 `5a314b69...`. Its exact source passes 800 tests, one expected skip, 86
 subtests, locked-environment and dependency-integrity gates; both package
-forms and two exact rebuilds pass. U06 recipient/rendered QA is next. No
+forms and two exact rebuilds pass. U06 then passes the real extracted recipient
+route at 1440×900 and 390×844, independent Chrome keyboard navigation, all 117
+HTTP-served package files, exact fresh-checkout reconstruction, and predecessor
+rollback. Fresh-checkout r001 retains its Windows long-path failure; corrected
+r002 reproduces the exact ZIP from a clean short-path checkout. U07 release
+audit is next. No
 GitHub Release, deployment, access change, public-sharing change, publication,
 or external submission exists.
 

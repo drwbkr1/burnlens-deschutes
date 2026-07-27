@@ -20,9 +20,20 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
 - Create no-overwrite v0.1.1 / r002: 117 files / 16,285,070 bytes and a
   deterministic 14,963,469-byte ZIP at SHA-256 `5a314b69...`. Both installed
   validators and two exact rebuilds pass. R001 remains failed evidence.
+- Pass U06 against the real extracted recipient copy at 1440×900 and 390×844.
+  The entrypoint, canonical surface, Ward Creek interface, presentation,
+  WCP-002 focus, rejected-model diagnostic toggle, and independent Chrome
+  keyboard route pass with no horizontal overflow or browser error.
+- Serve all 117 package files over loopback HTTP with exact byte counts and
+  zero non-200 response; 20 HTML files expose 138 references and no external
+  auto-fetch or click-only URL.
+- Retain fresh-checkout r001's Windows long-path failure, then pass r002 from a
+  clean short-path checkout with Git long-path support. The rebuilt ZIP is
+  byte-identical at `5a314b69...`; the verified Phase Five tag and package
+  remain a valid rollback.
 
-Issue #578 remains active. U06 recipient/rendered QA and U07 release audit are
-not complete. This entry is a branch candidate, not a verified tag, GitHub
+Issue #578 remains active. U01-U06 pass; U07 release audit is not complete.
+This entry is a branch candidate, not a verified tag, GitHub
 Release, deployment, publication, sharing change, or external submission.
 RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
 
