@@ -16,7 +16,7 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Active — verified local pre-publication candidate; owner publication gate next.**
+**Active — milestone merged; BL-EXC-004 fresh-main repair pending.**
 
 Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
 issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
@@ -35,7 +35,11 @@ then passes the final 802-test suite, exact fresh-clone reconstruction,
 deterministic wheel, isolated install, all 122 command routes, release-truth,
 rights, claims, and privacy gates. Its disposition is
 `ready-for-owner-publication-gate`. The one coherent milestone PR and
-reviewed-merge verification remain. GitHub Release, deployment, domain,
+reviewed-merge verification pass through PR #579 / `35e68a5...`. Fresh main
+then exposes an undeclared ignored test-fixture parent. BL-EXC-004 / issue #580
+retains it; candidate `0ea5543...` passes 15 focused tests, both candidate
+validators, release audit, and dependency health in a clean clone. The bounded
+exception merge and fresh-main verification remain. GitHub Release, deployment, domain,
 access, ownership, public sharing, publication, and external submission remain
 closed owner stop gates.
 

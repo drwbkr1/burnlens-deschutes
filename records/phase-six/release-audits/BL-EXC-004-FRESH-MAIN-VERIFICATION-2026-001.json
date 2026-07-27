@@ -1,0 +1,101 @@
+{
+  "record_version": "burnlens-bl-exc-004-fresh-main-verification-v0.1.0",
+  "record_id": "BL-EXC-004-FRESH-MAIN-VERIFICATION-2026-001",
+  "checkpoint_id": "BL-EXC-004",
+  "issue": 580,
+  "run_id": "BL-2026-07-27-bl-exc-004-fresh-main-fixture-r001",
+  "recorded_at_utc": "2026-07-27T16:32:48.855Z",
+  "branch": "codex/bl-exc-004-phase-six-fresh-main-fixture",
+  "exact_base": "35e68a517ed08359c813c59392f74049bd699074",
+  "trigger": "urgent-correctness defect blocking fresh-main verification",
+  "affected_evidence": {
+    "milestone": "P6O1-T01",
+    "issue": 578,
+    "pull_request": 579,
+    "reviewed_head": "6f8ee8bdd6bd675968432a5a051453ba2c771d62",
+    "merge_commit": "35e68a517ed08359c813c59392f74049bd699074",
+    "merge_tree": "a9a41858bcfc9538de779d2d3c0b48945494bc1a",
+    "reviewed_tree": "a9a41858bcfc9538de779d2d3c0b48945494bc1a",
+    "tree_equal": true
+  },
+  "retained_attempts": [
+    {
+      "attempt_id": "BL-EXC-004-FRESH-MAIN-R001",
+      "checkout": "clean remote main",
+      "head": "35e68a517ed08359c813c59392f74049bd699074",
+      "disposition": "retained-missing-dev-profile",
+      "result": "The default lean environment did not include pytest, so the focused command stopped before test collection.",
+      "application_or_candidate_defect_inferred": false,
+      "next_gate": "install the locked dev profile"
+    },
+    {
+      "attempt_id": "BL-EXC-004-FRESH-MAIN-R002",
+      "checkout": "same clean remote main after locked dev sync",
+      "head": "35e68a517ed08359c813c59392f74049bd699074",
+      "disposition": "retained-test-fixture-failure",
+      "tests_passed": 10,
+      "tests_failed": 5,
+      "failure": "Five Phase Six tests passed ROOT/downloads to TemporaryDirectory even though the intentionally ignored parent is absent from a fresh checkout.",
+      "application_or_candidate_defect_inferred": false,
+      "next_gate": "create the ignored temporary parent in both test-class setup paths"
+    },
+    {
+      "attempt_id": "BL-EXC-004-PRECOMMIT-R003",
+      "disposition": "expected-pre-commit-checkout-failure",
+      "tests_passed": 14,
+      "tests_failed": 1,
+      "failure": "The historical checkout-byte test correctly rejected the two uncommitted test files.",
+      "application_or_candidate_defect_inferred": false
+    }
+  ],
+  "remediation": {
+    "commit": "0ea5543c72d0506b1507af70368fc1016124e41a",
+    "change": "Both Phase Six test classes create the ignored ROOT/downloads parent before opening temporary directories.",
+    "files": [
+      {
+        "path": "tests/test_phase_six_release_candidate.py",
+        "bytes": 8048,
+        "sha256": "46e683b7b318e6151ba0ddcf395558490622c84dd537a5e2d6042c4399684f91"
+      },
+      {
+        "path": "tests/test_phase_six_portfolio_surface.py",
+        "bytes": 5359,
+        "sha256": "ff098be1308f1d0ede57cb1451fb0bac5621ddae92f8842840560c3ecfe55439"
+      }
+    ],
+    "tracked_product_or_candidate_bytes_changed": false,
+    "scientific_state_changed": false
+  },
+  "verification": {
+    "fresh_clone_head": "0ea5543c72d0506b1507af70368fc1016124e41a",
+    "fresh_clone_initial_status": "clean",
+    "environment": "locked dev profile",
+    "focused_tests_passed": 15,
+    "focused_tests_failed": 0,
+    "phase_six_directory_validator": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "phase_six_archive_validator": "PHASE_SIX_CANDIDATE_VALIDATION_PASS",
+    "release_audit_computed_status": "verified",
+    "release_audit_warnings": 0,
+    "dependency_health": "18 packages compatible",
+    "candidate_archive_bytes": 14963469,
+    "candidate_archive_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e"
+  },
+  "decision": {
+    "status": "pass-pending-exception-pr-merge",
+    "candidate_disposition": "ready-for-owner-publication-gate-after-exception-merge-verification",
+    "software_version_changed": false,
+    "tag_required": false,
+    "public_action_authorized": false,
+    "next_dependency": "one reviewed BL-EXC-004 PR and exact fresh-main verification"
+  },
+  "boundaries": {
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "label_dataset_split_threshold_model_metric_raster_or_vector_changed": false,
+    "github_release": false,
+    "deployment": false,
+    "access_ownership_or_public_sharing_change": false,
+    "publication_or_external_submission": false
+  }
+}

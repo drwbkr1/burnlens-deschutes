@@ -27,6 +27,7 @@ GENERATED = "2026-07-27T05:00:00Z"
 class PhaseSixReleaseCandidateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        (ROOT / "downloads").mkdir(exist_ok=True)
         cls.first = build_candidate(
             repository_root=ROOT,
             generated_at_utc=GENERATED,
