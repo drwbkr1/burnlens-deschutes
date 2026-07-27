@@ -22,3 +22,15 @@ No public release or deployment is claimed yet. Those facts become true only
 after the exact branch merges, the tag and GitHub Release verify, the pushed
 Sites source is saved and deployed, and the production URL passes the same
 render, asset, privacy, claims, and evidence-route gates.
+
+Those gates now pass. PR #585 merges with exact tree equality, the annotated
+tag peels to the merge, and five initial GitHub Release assets match their
+tracked sizes and SHA-256 digests. Sites version 1 is public and passes
+anonymous desktop, 390x844, keyboard, image, route, claims, privacy, and
+Ward Creek diagnostic interaction QA.
+
+The first release audit found one presentation inconsistency: the immutable
+pre-publication citation snapshots had current-sounding asset labels, and the
+site linked the case study through the pre-publication tag. BurnLens keeps
+those historical bytes, adds a clearly final citation, relabels the snapshots,
+and updates the public link before closeout.

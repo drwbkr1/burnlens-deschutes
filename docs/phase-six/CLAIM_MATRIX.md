@@ -1,7 +1,8 @@
 # BurnLens Phase Six claim matrix
 
-This matrix governs the local pre-publication candidate. Exact records and
-artifacts remain authoritative over summaries.
+This matrix originated with the local pre-publication candidate and now
+governs the unchanged analytical claims in the verified public release. Exact
+records and artifacts remain authoritative over summaries.
 
 | Topic | Permitted claim | Required qualifier | Evidence | Prohibited upgrade |
 |---|---|---|---|---|
@@ -17,8 +18,8 @@ artifacts remain authoritative over summaries.
 | Reliability | The Phase Five candidate passes recorded recovery, assurance, reconstruction, packaging, render, and rollback gates. | Two medium findings remain visible; no vulnerability-free or formal accessibility-certification claim. | Phase Five candidate and release audit. | Production-stable, vulnerability-free, WCAG-certified. |
 | Sources | Controlled derivatives carry current Copernicus, USGS, and MTBS attribution. | Official sources govern; source roles stay separate. | U01 source gate and exact notices. | Agency endorsement, source product as automatic label truth. |
 | Reproducibility | Tracked packages validate and repack under their recorded contracts. | Full analytical rebuild also needs governed ignored custody. | Phase Four replay; Phase Five reconstruction. | Raw provider bytes are public or every historical test is custody-free. |
-| Use | The surface supports portfolio review and method inspection. | Local, offline, explanatory evidence only. | Phase Six records. | Evacuation, routing, tactical, incident-command, property, insurance, legal, or regulatory use. |
-| Publication | A local pre-publication candidate exists. | Public action remains closed pending U05-U07 and owner stop-gate handling. | P6O1-T01 registry. | Published, released, deployed, publicly shared, submitted. |
+| Use | The surface supports portfolio review and method inspection. | Public explanatory presentation plus exact local/offline evidence; not an operational service. | Phase Six records. | Evacuation, routing, tactical, incident-command, property, insurance, legal, or regulatory use. |
+| Publication | The unchanged candidate is published as a verified 0.56.0 GitHub Release and repository-owned Codex Sites presentation. | Publication changes presentation and access only; it does not promote the rejected U-Net or strengthen scientific claims. | P6O1-T02 registry and publication-verification record. | Official release, agency endorsement, production wildfire system, operational readiness. |
 
 Required warning:
 

@@ -52,15 +52,20 @@ r002 reproduces the exact ZIP from a clean short-path checkout. U07 then
 retains and repairs a nested checksum LF checkout defect, passes a fresh-clone
 exact rebuild, the 802-test risk-bearing suite, two byte-identical 0.56.0
 wheels, a 75-distribution isolated install, and all 122 command routes. Its
-structured decision is `ready-for-owner-publication-gate`. No
-GitHub Release, deployment, access change, public-sharing change, publication,
-or external submission exists.
+structured decision was `ready-for-owner-publication-gate`. At that historical
+checkpoint no GitHub Release, deployment, access change, public-sharing
+change, publication, or external submission existed.
 
 The owner handled that stop gate on 2026-07-27 and directed publication
 through Codex Sites. P6O1-T02 / issue #584 now adds the public surface only
 inside this repository, then must verify the exact 0.56.0 tag, GitHub Release,
 production deployment, and lifecycle closeout. The candidate ZIP and all
 analytical evidence remain unchanged; `burnlens-site` is not used.
+
+[Open the verified public BurnLens portfolio](https://burnlens-deschutes.drew-baker-15.chatgpt.site).
+The annotated `v0.56.0-baseline-first-portfolio-release` tag and GitHub Release
+preserve the exact candidate package. RBR remains accepted; the U-Net remains
+rejected and did not outperform RBR.
 
 PR #579 merges the exact Phase Six candidate through
 `35e68a517ed08359c813c59392f74049bd699074` with reviewed-tree equality.
@@ -71,8 +76,9 @@ temporary parent explicitly. PR #581 merges reviewed head `d81aec2...` through
 `e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A clean
 clone of that final remote main passes 15 focused tests, both candidate
 validators, the structured release audit, and dependency health. The unchanged
-repository-local candidate is verified and stopped at the owner publication
-gate; no tag or public action has occurred.
+repository-local candidate passed the owner publication gate on 2026-07-27 and
+is now preserved by the verified 0.56.0 tag, GitHub Release, and public Codex
+Sites application.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 
@@ -136,7 +142,7 @@ U11R1 retains `9f440999...` as failed candidate evidence because its installed U
 - P2O4-T12 / issue #416 / PR #430 ships verified BurnLens `0.24.0` at `v0.24.0-current-reference-bundle-fitness`. `CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001` verifies two exact deliveries, seven product identities, binding terms, safe archive structure, native raster contracts, and frozen-grid MTBS/RAVG/BAER evidence. Restricted thresholded Tepee BARC remains private. [Read the decision](docs/phase-two/objective-four/CURRENT_REFERENCE_BUNDLE_FITNESS_DECISION.md) or [open the semantic report](samples/reference/phase-two/CURRENT-REFERENCE-BUNDLE-FITNESS-2026-001.html).
 - `v0.1.2-access-integrity-baseline` adds a runnable fail-closed delivery validator and a rendered precheck proving that the exact unauthenticated LP DAAC responses are login HTML rather than source assets.
 - `aoi-darlene3-model-v0.2.0` is the accepted final modeling AOI: a reproducible 12 km by 9 km Deschutes County analysis boundary derived from one cited NIFC reference feature. Its normalized report and static evidence map are geometry evidence, not a wildfire result.
-- The local pipeline exercised the authorized credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. Exact provider archives remain in ignored local custody; zero raw provider bytes are committed. The repository now contains the accepted prototype dataset, split, QA, baseline, one trained and evaluated U-Net, native-grid Phase Four output, and a local/offline analytical evidence interface. The U-Net is rejected as the analytical winner; no deployment, generalization, field validation, or public operational result exists.
+- The local pipeline exercised the authorized credentials without recording secrets, tokens, cookies, signed URLs, or credential-store details. Exact provider archives remain in ignored local custody; zero raw provider bytes are committed. The repository now contains the accepted prototype dataset, split, QA, baseline, one trained and evaluated U-Net, native-grid Phase Four output, the local/offline analytical evidence interface, and a public repository-owned Codex Sites presentation. The U-Net is rejected as the analytical winner; the deployment makes no generalization, field-validation, official, operational, or emergency-suitability claim.
 - Verified BurnLens `0.21.1` at merge `65ef67a206ebfa697e6047ca09ce26eec6a24dd7` preserves the authoritative JSON, HTML, and PNG at exactly 7,837 / 3,923 / 124,336 bytes and their recorded hashes. Fresh merged main passes 188 tests, compilation, dependency health, 60 JSON parses, 124 internal-link occurrences with no missing target, and two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`; isolated install reports `0.21.1`, 34 entry points, 75 wheel entries, and zero forbidden entries.
 - `ACCESS-2026-006` records the owner's authorization without secret material; `ACCESS-2026-007`, `ACCESS-2026-008`, and `ACCESS-2026-009` record successful runtime-only use. Run `BL-2026-07-14-observation-geometry-r002` accepts one materially improved complementary reference and explicitly defers labels and a dataset because temporal and scale mismatch remain unresolved.
 - Corrected run `BL-2026-07-14-target-decision-r002` activates the fallback target without creating label pixels; `r001` is preserved as pre-remediation evidence. Cross-event acquisition/source-fitness prove the exact local pixels; topology-stable proposal run `BL-2026-07-16-cross-event-label-transfer-r004` and QA run `BL-2026-07-16-cross-event-label-transfer-qa-r004` preserve the `r003` analytical result while making public evidence reproducible across approved storage topologies. Shipped review runs `BL-2026-07-16-label-review-packet-r001` and `BL-2026-07-16-label-review-packet-qa-r001` make independent review executable without claiming that it has happened.

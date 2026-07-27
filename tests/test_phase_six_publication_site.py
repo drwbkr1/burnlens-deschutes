@@ -51,6 +51,7 @@ def test_sites_source_preserves_public_claim_and_privacy_boundaries() -> None:
         "not independent ground truth",
         "v0.56.0-baseline-first-portfolio-release",
         'id="evidence" className="section evidence" tabIndex={-1}',
+        "blob/main/docs/case-study/BURNLENS_CASE_STUDY.md",
     ]
     for phrase in required:
         assert phrase in source

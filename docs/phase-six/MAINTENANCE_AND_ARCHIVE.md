@@ -2,9 +2,12 @@
 
 ## Current posture
 
-BurnLens is a repository-owned, local, offline portfolio project. There is no
-GitHub Release, deployment, production service, domain, public-sharing change,
-support SLA, operational monitoring, or external submission.
+BurnLens is a repository-owned, publicly released portfolio project. Release
+`v0.56.0-baseline-first-portfolio-release` and its exact assets are published
+on GitHub, and the repository-owned Codex Sites surface is public at
+https://burnlens-deschutes.drew-baker-15.chatgpt.site. The release creates no
+support SLA, operational monitoring, hosted inference, upload path, incident
+service, emergency role, or official status.
 
 The Phase Six candidate must remain reproducible and reviewable without
 implying ongoing emergency or operational support.
@@ -57,7 +60,7 @@ publication until it is resolved.
 
 ## Archive decision
 
-For the pre-publication candidate:
+For the verified public release:
 
 - retain immutable Phase Four and Phase Five tracked packages unchanged;
 - retain the Phase Six package created by U05 with its manifest and checksums;
@@ -66,7 +69,8 @@ For the pre-publication candidate:
 - exclude raw provider archives, private owner responses, credentials,
   retrieval details, ignored custody, transient screenshots, browser profiles,
   temporary servers, and machine-local logs;
-- do not create a GitHub Release or deployment during U04.
+- preserve the GitHub Release, annotated tag, exact asset digests, Sites source
+  commit, saved version, deployment identity, public URL, and rollback route.
 
 ## Supersession
 
@@ -84,7 +88,7 @@ receives a new version or run ID and retains the failed/superseded attempt.
 
 ## End-of-project closeout
 
-U07 may recommend `ready-for-owner-publication-gate`, `remediate`,
-`narrower-baseline-first-outcome`, or `stop`. Only a later explicitly
-authorized public action may create a GitHub Release, deployment, access or
-sharing change, or external submission.
+U07 recommended `ready-for-owner-publication-gate`; the owner authorized
+publication on 2026-07-27. P6O1-T02 performs the public release and closeout.
+A later change to site access, ownership, domain, analytical evidence, or
+supersession remains separately reviewable under the controlling goal.

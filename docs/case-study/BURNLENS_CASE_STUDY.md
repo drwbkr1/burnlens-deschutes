@@ -6,6 +6,13 @@ BurnLens is an experimental CV-to-GEOINT portfolio project for technical and tec
 
 It is not official wildfire information, emergency guidance, or an operational system.
 
+The verified public portfolio is
+[BurnLens — Evidence before confidence](https://burnlens-deschutes.drew-baker-15.chatgpt.site).
+Release `v0.56.0-baseline-first-portfolio-release` preserves the exact
+14,963,469-byte package at SHA-256 `5a314b69...`, the accepted RBR result, the
+rejected U-Net diagnostic, WCP-002 false-positive-risk evidence, source
+attribution, and the non-operational use boundary.
+
 For a time-bounded current review, open the
 [Phase Six baseline-first portfolio surface](../../samples/runs/phase-six/burnlens-baseline-first-portfolio-surface-v0.1.0/index.html).
 Its [reviewer journey](../phase-six/REVIEWER_JOURNEY.md) provides exact
@@ -44,7 +51,7 @@ accepted and verified. The candidate is baseline-first, keeps the U-Net
 rejected, and is not the final Phase Six publication or a claim of operational
 readiness.
 
-P6O1-T01 / issue #578 begins Phase Six from exact lifecycle merge
+P6O1-T01 / issue #578 began Phase Six from exact lifecycle merge
 `3097ac5308107ce75e4a517238f54cc4d15c346a`. U01 freezes a
 repository-local public roster, current claims, official-source attribution,
 withheld private/provider material, and public-action stop gates. U02 adds the
@@ -60,9 +67,11 @@ retains one nested-checksum checkout failure, repairs it at `cd383a3...`, and
 then passes exact fresh-clone reconstruction and frozen-snapshot replay. Final
 risk-bearing checkpoint `bc9646c...` passes 802 tests, two byte-identical
 0.56.0 wheels at `3efc07da...`, a 75-distribution install, and all 122 command
-routes. The resulting disposition is `ready-for-owner-publication-gate`, not
-“published.” No GitHub Release, deployment, access change, public sharing,
-publication, or external submission exists.
+routes. The resulting disposition was `ready-for-owner-publication-gate`, not
+“published.” At that historical checkpoint no GitHub Release, deployment,
+access change, public sharing, publication, or external submission existed.
+P6O1-T02 subsequently satisfied that gate without changing the analytical
+evidence.
 
 PR #579 merges the exact reviewed Phase Six tree at `35e68a5...`. The first
 fresh-main verification then catches one more honest portability defect: five
@@ -73,9 +82,16 @@ clone passes 15 focused tests, both candidate validators, the release audit,
 and dependency health without changing any portfolio or analytical artifact.
 PR #581 merges reviewed exception head `d81aec2...` through final remote main
 `e940611...` with exact tree equality. A fresh clone of that final main repeats
-the focused tests, both validators, audit, and dependency-health checks. The
-unchanged repository-local candidate is verified at the owner publication
-gate; it is not tagged, released, deployed, shared, published, or submitted.
+the focused tests, both validators, audit, and dependency-health checks.
+
+The owner handled the publication gate on 2026-07-27. P6O1-T02 / issue #584 /
+PR #585 merges the repository-owned Sites source at `e2e0b77...` with exact
+reviewed-tree equality. Annotated tag object `31d0d35...` peels to that merge.
+The GitHub Release publishes the exact candidate ZIP, its receipt, the
+presentation, and citation material. Codex Sites version 1 deploys publicly at
+the portfolio URL above and passes anonymous desktop, narrow, keyboard,
+evidence-route, image, claims, privacy, and rejected-model interaction checks.
+The baseline-primary decision and every analytical byte remain unchanged.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 
@@ -886,6 +902,6 @@ External submission remains an owner action.
 - Remediation proof: BurnLens `0.21.1`; fresh merged main preserves the 7,837 / 3,923 / 124,336-byte JSON/HTML/PNG and exact recorded hashes; 188 tests, compilation, dependency health, two byte-identical 348,032-byte wheels / SHA-256 `f8b1f2464fe0599d2bd5f7617a5cbfce244f94e0f3ef68952f84b7d9520d74c2`, isolated 34-entry-point install, 75 wheel entries, and zero forbidden entries pass
 - Verified `v0.27.0-prototype-label-sufficiency` proves the 24 sparse owner-approved center pixels are insufficient. Verified `v0.28.0-label-region-remediation-plan` defines contiguous-region review and six-event/source-regime gates. Verified `v0.29.0-region-candidate-pilot` executes six no-promotion regions on actual evidence; issue #457 owned their exact owner-review surface at that checkpoint. This is not review completion, a dataset, or training.
 - Dataset / split / baseline / model: verified dataset `burnlens-dataset-v0.1.0`; split `burnlens-whole-event-split-v0.1.0`; accepted baseline `burnlens-baseline-v0.1.0`; rejected diagnostic model `burnlens-unet-binary-v0.1.0`
-- Public application: no deployment; the self-contained local/offline Phase Four evidence interface is the current analytical presentation surface, while historical review workbenches and static reports remain traceable evidence
+- Public application: verified repository-owned Codex Sites presentation at `https://burnlens-deschutes.drew-baker-15.chatgpt.site`; the self-contained local/offline Phase Four evidence interface remains the analytical source surface, while historical review workbenches and static reports remain traceable evidence
 
 > Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.
