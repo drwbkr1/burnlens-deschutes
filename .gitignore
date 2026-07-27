@@ -170,7 +170,8 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# Repository-owned Codex Sites source. Generated dependencies and build outputs
+# remain ignored by site/.gitignore.
 
 # mypy
 .mypy_cache/

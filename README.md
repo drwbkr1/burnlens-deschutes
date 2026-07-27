@@ -56,6 +56,12 @@ structured decision is `ready-for-owner-publication-gate`. No
 GitHub Release, deployment, access change, public-sharing change, publication,
 or external submission exists.
 
+The owner handled that stop gate on 2026-07-27 and directed publication
+through Codex Sites. P6O1-T02 / issue #584 now adds the public surface only
+inside this repository, then must verify the exact 0.56.0 tag, GitHub Release,
+production deployment, and lifecycle closeout. The candidate ZIP and all
+analytical evidence remain unchanged; `burnlens-site` is not used.
+
 PR #579 merges the exact Phase Six candidate through
 `35e68a517ed08359c813c59392f74049bd699074` with reviewed-tree equality.
 Fresh main then exposes one test-fixture portability defect: the ignored
