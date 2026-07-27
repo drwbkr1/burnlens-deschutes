@@ -321,7 +321,7 @@ export default function Home() {
             </a>
             <a
               className="button secondary"
-              href={`${repository}/blob/${releaseTag}/docs/case-study/BURNLENS_CASE_STUDY.md`}
+              href={`${repository}/blob/main/docs/case-study/BURNLENS_CASE_STUDY.md`}
             >
               Read the full case study
             </a>

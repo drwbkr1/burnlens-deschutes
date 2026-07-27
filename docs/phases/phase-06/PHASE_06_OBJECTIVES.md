@@ -16,8 +16,7 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Active — verified repository-local pre-publication candidate; owner
-publication gate.**
+**Accepted and publicly verified — final lifecycle reconciliation active.**
 
 Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
 issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
@@ -41,9 +40,14 @@ then exposes an undeclared ignored test-fixture parent. BL-EXC-004 / issue #580
 retains it; PR #581 merges reviewed head `d81aec2...` through `e940611...` with
 exact tree equality. A fresh clone of final remote main passes 15 focused
 tests, both candidate validators, the release audit, and dependency health.
-The repository-local candidate is verified and no technical checkpoint is
-active. GitHub Release, deployment, domain, access, ownership, public sharing,
-publication, and external submission remain closed owner stop gates.
+The repository-local candidate was verified before publication. The owner
+handled the stop gate on 2026-07-27. P6O1-T02 / issue #584 / PR #585 then
+merged the repository-owned Sites source at `e2e0b77...`, created annotated
+tag `v0.56.0-baseline-first-portfolio-release`, published the exact GitHub
+Release assets, and deployed the public Codex Sites application. Anonymous
+desktop, narrow, keyboard, route, image, claims, privacy, and interaction QA
+pass. Final citation and lifecycle reconciliation remain active; analytical
+bytes and the RBR-accepted/U-Net-rejected decision are unchanged.
 
 ## Phase purpose
 

@@ -1,0 +1,62 @@
+{
+  "citation_metadata_version": "burnlens-phase-six-citation-v0.2.0",
+  "citation_id": "BURNLENS-PHASE-SIX-CITATION-RELEASE-2026-001",
+  "title": "BurnLens Deschutes: a baseline-first CV-to-GEOINT wildfire evidence workflow",
+  "creator": {
+    "repository_owner": "drwbkr1",
+    "development_role": "owner-governed project with Codex-assisted implementation"
+  },
+  "repository": "https://github.com/drwbkr1/burnlens-deschutes",
+  "portfolio_site": "https://burnlens-deschutes.drew-baker-15.chatgpt.site",
+  "license": {
+    "burnlens_code_and_documentation": "MIT",
+    "third_party_data": "separate source-specific notices and terms apply"
+  },
+  "citation_state": "verified-public-release",
+  "public_release_version": "0.56.0",
+  "public_release_tag": "v0.56.0-baseline-first-portfolio-release",
+  "public_release_url": "https://github.com/drwbkr1/burnlens-deschutes/releases/tag/v0.56.0-baseline-first-portfolio-release",
+  "doi": null,
+  "release_identity": {
+    "merge_commit": "e2e0b778038b2b5cd55258c784951ef2d1473469",
+    "tag_object": "31d0d35583593fb7f408aed9ae0777526b54e216",
+    "release_published_at_utc": "2026-07-27T18:28:17Z",
+    "release_archive_bytes": 14963469,
+    "release_archive_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e"
+  },
+  "accepted_run": {
+    "run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+    "package_id": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001",
+    "archive_bytes": 487893,
+    "archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+  },
+  "analytical_identity": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "prototype_label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "model_status": "valid-trained-evaluated-rejected",
+    "model_outperformed_rbr": false
+  },
+  "required_attribution": [
+    "Contains modified Copernicus Sentinel data 2019.",
+    "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+    "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service."
+  ],
+  "required_warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "citation_text": "BurnLens Deschutes (2026), version 0.56.0, baseline-primary-with-rejected-model-diagnostic route, release v0.56.0-baseline-first-portfolio-release, accepted run BL-2026-07-26-p4o1-t01-u07-package-r001, repository drwbkr1/burnlens-deschutes.",
+  "prohibited_implications": [
+    "official status",
+    "agency endorsement",
+    "field validation",
+    "operational readiness",
+    "emergency suitability",
+    "model superiority",
+    "generalization",
+    "DOI assignment"
+  ]
+}

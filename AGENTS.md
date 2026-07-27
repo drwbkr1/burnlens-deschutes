@@ -61,15 +61,16 @@ Official sources govern over every BurnLens-derived artifact. Hotspot detections
 
 ## Current checkpoint
 
-Verified `v0.55.0-baseline-first-reliability-candidate` is the active tagged
-repository baseline. P5O1-T01 / issue #574 / PR #575 merges at
-`7066dcd9cef555a6df0716dc7568205e7d6d395e`; annotated tag object
-`33072144767e70bfa538079bda3be6f798477a9f` peels exactly to that
-checkpoint. RBR remains the accepted analytical method. The bounded U-Net is
-a valid trained, once-evaluated, exactly reproduced, and rejected first-class
-diagnostic; it did not outperform RBR. Phase Four and Phase Five are accepted
-and verified through the approved
-`baseline-primary-with-rejected-model-diagnostic` route.
+Verified `v0.56.0-baseline-first-portfolio-release` is the active tagged
+repository baseline. P6O1-T02 / issue #584 / PR #585 merges at
+`e2e0b778038b2b5cd55258c784951ef2d1473469`; annotated tag object
+`31d0d35583593fb7f408aed9ae0777526b54e216` peels exactly to that checkpoint.
+The GitHub Release and public Codex Sites application are verified. RBR
+remains the accepted analytical method. The bounded U-Net is a valid trained,
+once-evaluated, exactly reproduced, and rejected first-class diagnostic; it
+did not outperform RBR. Phases One through Six are accepted through the
+approved `baseline-primary-with-rejected-model-diagnostic` route, with the
+final lifecycle reconciliation still active.
 
 P6O1-T01 / issue #578 begins from exact base
 `3097ac5308107ce75e4a517238f54cc4d15c346a`. U01-U07 pass.
@@ -91,9 +92,20 @@ authorized the pending publication actions and directed submission through
 Codex Sites. P6O1-T02 / issue #584 is the active repository-only publication
 and closeout milestone from exact main `55ba588...`; it may create the
 annotated 0.56.0 tag, GitHub Release, public Codex Sites deployment, and
-necessary lifecycle synchronization after their quality gates pass. It must
-never use `burnlens-site`, change analytical evidence, or create a Phase 3B
-remediation milestone or separately governed follow-on experiment.
+necessary lifecycle synchronization after their quality gates pass.
+
+PR #585 merges the reviewed Sites source at
+`e2e0b778038b2b5cd55258c784951ef2d1473469` with exact tree equality.
+Annotated tag object `31d0d35583593fb7f408aed9ae0777526b54e216`
+peels to that merge. The GitHub Release is public with five verified assets;
+the exact candidate ZIP remains 14,963,469 bytes / `5a314b69...`. Codex Sites
+version 1 deploys publicly at
+`https://burnlens-deschutes.drew-baker-15.chatgpt.site` and passes anonymous
+desktop, narrow, keyboard, evidence-route, image, claim, privacy, and
+rejected-model interaction gates. P6O1-T02 is completing the bounded
+lifecycle/citation reconciliation. It must never use `burnlens-site`, change
+analytical evidence, or create a Phase 3B remediation milestone or separately
+governed follow-on experiment.
 
 The historical checkpoint facts below remain audit evidence, not current
 sequencing authority.

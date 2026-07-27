@@ -56,6 +56,7 @@ test("renders the evidence-led BurnLens portfolio truth", async () => {
   assert.match(html, /v0\.56\.0-baseline-first-portfolio-release/);
   assert.match(html, /Skip to evidence/);
   assert.match(html, /id="evidence"[^>]*tabindex="-1"/i);
+  assert.match(html, /blob\/main\/docs\/case-study\/BURNLENS_CASE_STUDY\.md/);
 
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Codex is working/i);
   assert.doesNotMatch(html, /react-loading-skeleton/i);

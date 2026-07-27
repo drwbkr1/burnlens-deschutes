@@ -55,10 +55,11 @@ contract, fail-closed recovery, rendered reliability surface, assurance suite,
 clean reconstruction, exact rollback, known-issues register, and deterministic
 offline package are complete. Reviewed merge, exact-tree, fresh-main
 regression, deterministic-wheel, rendered-output, rollback, and remote
-annotated-tag gates pass. Phase Five is accepted and verified, and Phase Six is
-eligible for issue-backed activation. External submission and public-sharing
-remain closed until Phase Six gates pass or the owner explicitly authorizes a
-separate action.
+annotated-tag gates pass. Phase Five is accepted and verified. The owner
+authorized publication on 2026-07-27, and P6O1-T02 / issue #584 / PR #585
+publishes the unchanged candidate through the verified 0.56.0 annotated tag,
+GitHub Release, and public repository-owned Codex Sites presentation. Final
+citation and lifecycle reconciliation remain active.
 
 The current project will not create a Phase 3B remediation milestone or defer
 Phase Four. Lessons from the rejected U-Net will be included only as
@@ -105,7 +106,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **accepted and verified** | P3O1-T01 / issue #566 / PR #567 ships verified BurnLens 0.53.0. The model predicts all 89 cores as burned and loses to RBR 0.2987 versus 1.0 Dice. Decision: `reject-model-retain-baseline`; no second opening. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **accepted and verified** | P4O1-T01 / issue #570 / PR #571 ships one accepted RBR-primary run, valid rasters/vectors, bounded context, deterministic observations, a self-contained interface, and a 66-file immutable package in verified BurnLens 0.54.0. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
 | 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **accepted and verified** | P5O1-T01 / issue #574 / PR #575 ships the deterministic offline BurnLens 0.55.0 baseline-first candidate with two visible medium findings and no open critical/high finding. Merge, fresh-main, wheel, render, rollback, and remote-tag gates pass. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
-| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **active — owner-authorized Codex Sites publication and closeout** | P6O1-T02 / issue #584 starts from exact verified main `55ba588...` after the owner handled the publication stop gate. It must merge one repository-owned Sites surface, create and verify the annotated 0.56.0 tag and GitHub Release, deploy the exact pushed source through Codex Sites, validate production, and reconcile lifecycle truth. The exact candidate and baseline-primary/rejected-model decision remain unchanged. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
+| 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **accepted and publicly verified; final reconciliation active** | P6O1-T02 / issue #584 / PR #585 merges the repository-owned Sites source at `e2e0b77...`; tag object `31d0d35...` peels to that merge; five GitHub Release assets match tracked hashes; and public Codex Sites version 1 passes anonymous production QA. The exact candidate and baseline-primary/rejected-model decision remain unchanged. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
 
 ## Phase One — scope and control baseline
 
@@ -269,8 +270,10 @@ issue #580 / PR #581 is merged and verified through `e940611...`. The owner
 handled the publication stop gate on 2026-07-27 and directed submission
 through Codex Sites. P6O1-T02 / issue #584 is active from exact verified main
 `55ba588...` and owns the bounded tag, GitHub Release, repository-owned Sites
-surface, production deployment, verification, and closeout. It may not use
-`burnlens-site`, change analytical evidence, or begin Phase 3B.
+surface, production deployment, verification, and closeout. PR #585 merges at
+`e2e0b77...`; the tag, Release, and public Sites version 1 verify. The final
+citation/case-study/lifecycle reconciliation is active. The milestone may not
+use `burnlens-site`, change analytical evidence, or begin Phase 3B.
 
 ## Required reading order for long-running Codex work
 

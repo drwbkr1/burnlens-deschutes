@@ -1,0 +1,106 @@
+{
+  "record_version": "burnlens-publication-verification-v0.1.0",
+  "record_id": "P6O1-T02-PUBLICATION-VERIFICATION-2026-001",
+  "milestone_id": "P6O1-T02",
+  "units": ["P6O1-T02-U03", "P6O1-T02-U04", "P6O1-T02-U05"],
+  "issue": 584,
+  "source_pr": 585,
+  "run_id": "BL-2026-07-27-p6o1-t02-u05-publication-verification-r001",
+  "recorded_at_utc": "2026-07-27T18:30:00Z",
+  "repository_release": {
+    "source_head": "a89123ea65be176b72a6ba6684cf434ff3f49ede",
+    "merge_commit": "e2e0b778038b2b5cd55258c784951ef2d1473469",
+    "reviewed_tree_equals_merge_tree": true,
+    "tag": "v0.56.0-baseline-first-portfolio-release",
+    "tag_object": "31d0d35583593fb7f408aed9ae0777526b54e216",
+    "tag_peels_to_merge": true,
+    "release_url": "https://github.com/drwbkr1/burnlens-deschutes/releases/tag/v0.56.0-baseline-first-portfolio-release",
+    "published_at_utc": "2026-07-27T18:28:17Z",
+    "draft": false,
+    "prerelease": false
+  },
+  "release_assets": [
+    {
+      "name": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+      "bytes": 14963469,
+      "sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
+      "state": "uploaded"
+    },
+    {
+      "name": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002-RECEIPT.json",
+      "bytes": 1131,
+      "sha256": "a7345393009a9bfa2080f4793a166b0146ddf8405206508508f8cb82eda604d7",
+      "state": "uploaded"
+    },
+    {
+      "name": "BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html",
+      "bytes": 11203,
+      "sha256": "5b16c00d1bee7dd0ef5302bc1a0aeb61fd60a4756b214dc6517630722c0b8e98",
+      "state": "uploaded"
+    },
+    {
+      "name": "CITATION.json",
+      "bytes": 3001,
+      "sha256": "ea5b51ef442bb169353ee3c245413ff55cb2d71a16e6aa7a0b7ac4b8af13777a",
+      "state": "uploaded-historical-pre-publication-snapshot"
+    },
+    {
+      "name": "CITATION.md",
+      "bytes": 1002,
+      "sha256": "f9595d7a9f8093bda6f2d68b7a2aa4510134a7ab6e1a0b06980849809cea5710",
+      "state": "uploaded-historical-pre-publication-snapshot"
+    }
+  ],
+  "sites": {
+    "project_id": "appgprj_6a67a02d7c488191b66ced0f2ac3550e",
+    "source_commit": "f4d0c0bfc535fe12039b404d86decc059fce32ba",
+    "version_id": "appgprj_6a67a02d7c488191b66ced0f2ac3550e~appgver_f67bc7ce6fb88191aedfdd535f07fa06",
+    "version_number": 1,
+    "deployment_id": "appgdep_6a67a11365dc8191a9f008b58d9fed94",
+    "deployment_status": "succeeded",
+    "url": "https://burnlens-deschutes.drew-baker-15.chatgpt.site",
+    "access_mode": "public",
+    "access_revision": 2
+  },
+  "production_qa": {
+    "anonymous_access": "pass",
+    "desktop": {
+      "viewport": [1280, 575],
+      "title": "BurnLens — Evidence before confidence",
+      "styled": true,
+      "horizontal_overflow_px": 0,
+      "console_errors": 0,
+      "images_loaded": 3
+    },
+    "narrow": {
+      "viewport": [390, 844],
+      "horizontal_overflow_px": 0,
+      "images_loaded": true,
+      "keyboard_first_focus": "Skip to evidence",
+      "skip_target_received_focus": "SECTION#evidence",
+      "console_errors": 0
+    },
+    "routes_http_200": [
+      "/",
+      "/evidence/ward-creek/",
+      "/evidence/baseline/",
+      "/evidence/model/",
+      "/evidence/manifest.json",
+      "/models/burnlens-unet-binary-v0.1.0/BOUNDED-UNET-TRAINING-2026-001.html",
+      "/evaluation/phase-three/bounded-unet-test-v0.1.0/BOUNDED-UNET-TEST-EVALUATION-2026-001.html"
+    ],
+    "ward_creek_rejected_model_toggle": "pass",
+    "release_page_http_status": 200,
+    "cloudflare_static_html_transform": "The platform appends its same-origin challenge script before closing body tags; source evidence bytes remain exactly bound in Git and the saved Sites source."
+  },
+  "retained_failures": [
+    "The first remote tag push failed on transient DNS and the same exact local tag succeeded on retry.",
+    "The first full repository test command exceeded its time window and left an environment-verification child; it was safely terminated. A second bounded attempt also timed out. The changed-risk Phase Six suite passes 16 tests, Sites tests pass 3, candidate validators pass, and 75-package dependency health passes.",
+    "The GitHub Release initially labeled the immutable pre-publication CITATION.json and CITATION.md snapshots as current citation assets. They remain historical bytes and are superseded by the final release citation files."
+  ],
+  "decision": {
+    "status": "verified-needs-reconciliation",
+    "analytical_state_changed": false,
+    "next_dependency": "publish final citation assets, label historical citation snapshots, deploy the corrected case-study link, and merge lifecycle truth"
+  }
+}

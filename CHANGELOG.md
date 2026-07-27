@@ -2,7 +2,7 @@
 
 All notable BurnLens checkpoints are recorded here. Technical evidence remains in the linked issues, PRs, commits, versions, runs, and phase records.
 
-## v0.56.0-baseline-first-portfolio-release - publication checkpoint active - 2026-07-27
+## v0.56.0-baseline-first-portfolio-release - verified public release - 2026-07-27
 
 - Record the owner's explicit publication authorization and Codex Sites
   direction in P6O1-T02 / issue #584.
@@ -21,10 +21,22 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
   `vinext dev` and the Sites deployment path remain the validated render
   routes.
 
-The annotated tag, GitHub Release, Sites deployment, production verification,
-and lifecycle closeout remain pending until this issue-backed source is merged.
+- Merge PR #585 at `e2e0b778...` with exact reviewed-tree equality.
+- Create annotated tag object `31d0d355...`, which peels exactly to that merge.
+- Publish five GitHub Release assets whose sizes and GitHub SHA-256 digests
+  match the tracked candidate ZIP, receipt, presentation, and citation
+  snapshots.
+- Save Sites source commit `f4d0c0bf...` as version 1, deploy it successfully,
+  set access to public under the owner's authorization, and pass anonymous
+  production desktop, 390x844, keyboard, image, evidence-route, claims,
+  privacy, and Ward Creek rejected-model interaction QA.
+- Preserve the accidentally current-labelled pre-publication citation assets
+  as historical snapshots and add an explicit final-release citation rather
+  than deleting or silently replacing their bytes.
 
-## 0.56.0-baseline-first-publication-candidate - active, not released - 2026-07-27
+The exact candidate ZIP and every analytical artifact remain unchanged.
+
+## 0.56.0-baseline-first-publication-candidate - historical pre-publication checkpoint - 2026-07-27
 
 - Freeze the Phase Six reviewer surface, reviewer journey, demonstration,
   presentation, claim matrix, citation, maintenance posture, and public-scope
@@ -69,9 +81,10 @@ and lifecycle closeout remain pending until this issue-backed source is merged.
   `ready-for-owner-publication-gate`.
 
 Before merge, issue #578 remained active pending its one coherent milestone
-PR. U01-U07 passed locally. This entry is not a verified tag, GitHub
-Release, deployment, publication, sharing change, or external submission.
-RBR remains accepted; the U-Net remains rejected and did not outperform RBR.
+PR. U01-U07 passed locally. At this historical checkpoint the entry was not a
+verified tag, GitHub Release, deployment, publication, sharing change, or
+external submission. RBR remained accepted; the U-Net remained rejected and
+did not outperform RBR.
 
 PR #579 then merges the exact reviewed tree through `35e68a5...` and closes
 issue #578. BL-EXC-004 / issue #580 retains the first fresh-main
@@ -86,9 +99,10 @@ PR #581 merges reviewed exception head `d81aec2...` through
 `e94061127279dd86f332375f14ac110506c4e92b` with exact tree equality. A fresh
 clone of that final remote main repeats the 15 focused tests, both candidate
 validators, structured release audit, and dependency-health checks. The
-unchanged candidate is therefore verified repository-local evidence at the
-owner publication gate. It is not tagged, released, deployed, shared,
-published, or submitted.
+unchanged candidate was therefore verified repository-local evidence at the
+owner publication gate. At that checkpoint it was not tagged, released,
+deployed, shared, published, or submitted. The later P6O1-T02 checkpoint
+published those same candidate bytes.
 
 ## v0.55.0-baseline-first-reliability-candidate - verified - 2026-07-26
 
