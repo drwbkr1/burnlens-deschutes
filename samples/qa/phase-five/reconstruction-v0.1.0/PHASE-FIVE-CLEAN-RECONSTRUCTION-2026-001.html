@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+<title>BurnLens Phase Five clean reconstruction</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0d1517;color:#eef7f4}
+*{box-sizing:border-box}
+body{margin:0 auto;max-width:1040px;padding:clamp(1rem,4vw,3rem);line-height:1.55}
+.eyebrow{color:#92d6c4;text-transform:uppercase;letter-spacing:.08em;font-weight:750}
+h1{font-size:clamp(2rem,6vw,4.4rem);line-height:1.02;max-width:17ch;margin:.35rem 0 1rem}
+h2{font-size:1.25rem;margin-top:0}
+.lede{font-size:1.12rem;max-width:72ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.card{background:#142326;border:1px solid #315055;border-radius:14px;padding:1rem 1.2rem;margin:1rem 0}
+.pass{color:#9ee7b5;font-weight:800}.warn{color:#ffd486;font-weight:750}
+table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #315055;padding:.7rem;text-align:left;vertical-align:top}
+code{overflow-wrap:anywhere;color:#b8e9dc}
+ul{padding-left:1.3rem}
+@media(max-width:660px){.grid{grid-template-columns:1fr}th,td{display:block}th{border-bottom:0;padding-bottom:.1rem}td{padding-top:.1rem}}
+</style>
+</head>
+<body>
+<p class="eyebrow">P5O1-T01-U05 · clean reconstruction and rollback</p>
+<h1>The package survives a clean checkout—and rollback is exact.</h1>
+<p class="lede">A fresh remote-equal Windows checkout rebuilt the immutable Phase Four package byte-for-byte, installed the locked candidate wheel from site-packages, passed the tracked-only regression, and exercised a separate detached rollback to the verified v0.54 tag.</p>
+<div class="grid">
+<section class="card">
+<h2>U05 disposition</h2>
+<p class="pass">Pass with one visible medium builder-identity issue</p>
+<p>U06 may now freeze or reject the complete Phase Five candidate. This page does not itself release a candidate or open Phase Six.</p>
+</section>
+<section class="card">
+<h2>Analytical truth</h2>
+<p>RBR remains the accepted method. The trained U-Net remains a rejected diagnostic and did not outperform RBR. No analytical byte, dataset, split, label, threshold, or source changed.</p>
+</section>
+</div>
+<section class="card">
+<h2>Clean reconstruction</h2>
+<table>
+<tr><th>Source</th><td>Fresh clean branch at <code>75d1b77ed8a3faf0cbcf75b7f049fdb5afa9b115</code></td></tr>
+<tr><th>Environment</th><td>CPython 3.12.10; 75 locked distributions; rebuild in 12.553 seconds against a 900-second budget</td></tr>
+<tr><th>Package</th><td>66 files / 1,795,388 bytes; reconstructed ZIP 487,893 bytes / <code>91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e</code></td></tr>
+<tr><th>Three validators</th><td>Extracted directory, canonical ZIP, and reconstructed ZIP all pass at 66 files and ten GeoTIFFs</td></tr>
+<tr><th>Raster contracts</th><td>Ten NPY/GeoTIFF pairs; binary arrays exact; float arrays within 0.000001 with observed maximum difference 0; EPSG:32610</td></tr>
+<tr><th>Meaning</th><td>WCP-001 remains 141.44 ha / 94.19% MTBS overlap. WCP-002 remains 66.76 ha / 0% MTBS overlap and visible RBR false-positive-risk evidence.</td></tr>
+</table>
+</section>
+<section class="card">
+<h2>Installed candidate proof</h2>
+<p>Two fixed-epoch candidate wheels are byte-identical at 1,198,080 bytes / <code>e619d3b7a5ed13fc017db37a7510a1aa7b60e532e854d966cd1c91a0a6cdae24</code>. The independent install resolves only from isolated <code>site-packages</code>, preserves all locked transitive versions, passes dependency health, and executes 119 of 119 command help routes in both geospatial and model profiles.</p>
+<p class="warn">The current source is a commit-bound pre-freeze Phase Five candidate. It is not a new v0.54 release.</p>
+</section>
+<section class="card">
+<h2>Regression truth</h2>
+<table>
+<tr><th>Naive fresh clone</th><td>Retained: 711 passed, 2 custody failures, 25 custody-dependent errors, 47 skipped, 86 subtests. No application or scientific defect is inferred.</td></tr>
+<tr><th>Explicit portable roster</th><td class="pass">711 passed, 47 skipped, 2 exact-custody assertions deselected, 86 subtests; zero failures or errors.</td></tr>
+</table>
+</section>
+<section class="card">
+<h2>Rollback rehearsal</h2>
+<p>A separate clean detached checkout verifies annotated tag object <code>4a7a54b7fea0cba3a1c7151630e7d4ecf2d8bf82</code> peeling to <code>8660ccba893b7e3acfdc361e663a6b8d59d52a34</code>. The package validates, both 114-command profiles pass, and the canonical branch never moves.</p>
+<p>Initial tag builds with the locked runtime’s setuptools 82.0.0 were deterministic but byte-different. Exact archive comparison showed only the <code>WHEEL</code> generator field and its dependent <code>RECORD</code> entry differed. A dedicated build-only setuptools 82.0.1 environment reproduced two exact 1,166,315-byte wheels at <code>ad3ae7c8e382fa8bc01ed0e9f9f073ad628432bb9efbae92ac15afcffb619d94</code>.</p>
+<p class="warn">Known issue: the historical Phase Four audit recorded epoch and hash but omitted the 82.0.1 builder identity embedded in the wheel. Impact and workaround are now explicit.</p>
+</section>
+<section class="card">
+<h2>Retained failures and limits</h2>
+<ul>
+<li>An interrupted clone wrapper, an overlong nested checkout, an unlocked wheel install, a contaminated import probe, a source-isolation miss, and the first rollback builder mismatch remain preserved as evidence.</li>
+<li>This is package and release-control reconstruction, not retraining or retuning.</li>
+<li>Prototype labels are owner-approved evidence, not independent ground truth.</li>
+<li>No accuracy, field-validation, official, operational, endorsed, emergency-ready, vulnerability-free, or final-submission-ready claim is made.</li>
+<li>No deployment, access, ownership, public-sharing, external-submission, or <code>burnlens-site</code> action occurred.</li>
+</ul>
+</section>
+</body>
+</html>

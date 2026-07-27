@@ -48,9 +48,12 @@ analytical route and show the frozen U-Net only as a visibly rejected
 diagnostic. Verified BurnLens 0.54.0 now ships that smallest valid
 georeferenced RBR-primary run, repository-owned evidence interface, and
 immutable package, with the frozen rejected U-Net shown only as diagnostic
-evidence. Issue #572 synchronizes the release lifecycle. The next critical
-path is the highest-leverage bounded Phase Five reliability milestone against
-the exact verified run and interface. External submission and public-sharing
+evidence. Issue #572 synchronizes the release lifecycle. P5O1-T01 / issue #574
+is now the bounded Phase Five reliability milestone against that exact run and
+interface. U01-U05 pass: the contract, fail-closed recovery, rendered
+reliability surface, assurance suite, clean reconstruction, and exact rollback
+are complete. U06 is eligible and must freeze or reject one coherent candidate
+plus make the Phase Six recommendation. External submission and public-sharing
 remain closed until Phase Five and Phase Six gates pass or the owner explicitly
 authorizes the contingency route.
 
@@ -98,7 +101,7 @@ Traceability does not by itself make publication responsible. Claims review, rel
 | 2 | Data acquisition, labels, baselines, and dataset versioning | Build a complete, traceable data foundation for one bounded Deschutes County experiment, including authorized sources and AOI, reproducible preprocessing, defensible positive/negative/unknown labels, leakage-resistant splits, non-model baselines, dataset QA, and a model-readiness decision. | **accepted and verified** | BurnLens 0.52.0 versions the dataset and split, passes independent QA, evaluates preregistered baselines, and authorizes one rejection-first U-Net. | [Phase Two objectives](../phases/phase-02/PHASE_02_OBJECTIVES.md) |
 | 3 | CV model development, controlled evaluation, and model versioning | Build and evaluate one bounded U-Net-style segmentation model against the accepted Phase Two baselines, then package either a defensible model or a transparent baseline-only decision with complete lineage, error analysis, and limitations. | **accepted and verified** | P3O1-T01 / issue #566 / PR #567 ships verified BurnLens 0.53.0. The model predicts all 89 cores as burned and loses to RBR 0.2987 versus 1.0 Dice. Decision: `reject-model-retain-baseline`; no second opening. | [Phase Three objectives](../phases/phase-03/PHASE_03_OBJECTIVES.md) |
 | 4 | Inference, geospatial productization, interactive integration, and run versioning | Convert the accepted model or baseline into a reproducible inference-to-GEOINT workflow that preserves georeferencing, creates valid raster/vector artifacts, performs deterministic overlay analysis, presents an accessible evidence interface, and packages every execution as an immutable run. | **accepted and verified** | P4O1-T01 / issue #570 / PR #571 ships one accepted RBR-primary run, valid rasters/vectors, bounded context, deterministic observations, a self-contained interface, and a 66-file immutable package in verified BurnLens 0.54.0. | [Phase Four objectives](../phases/phase-04/PHASE_04_OBJECTIVES.md) |
-| 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **eligible — milestone selection pending** | Issue #572 hands off exact verified run package `burnlens-ward-creek-rbr-run-v0.1.0`, interface, release audit, retained custody caveat, and rollback posture. No Phase Five gate has yet passed. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
+| 5 | Reliability, QA, reproducibility, security, and release control | Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope. | **active — U01-U05 pass; U06 eligible** | P5O1-T01 / issue #574 binds the exact verified run package and interface. Failure recovery, rendered QA, assurance, clean reconstruction, and exact rollback pass. U06 must freeze or reject the candidate and make the Phase Six recommendation. | [Phase Five objectives](../phases/phase-05/PHASE_05_OBJECTIVES.md) |
 | 6 | Portfolio publication, public release, communication, and closeout | Publish one coherent, traceable portfolio release whose demo, case study, repository, presentation, licensing, citation, archive, and maintenance posture all refer to the same accepted evidence and limitations. | **proposed — blocked** | Accepted Phase Five release candidate, verified public claims, resolved licensing, and a repository-owned release surface. | [Phase Six objectives](../phases/phase-06/PHASE_06_OBJECTIVES.md) |
 
 ## Phase One — scope and control baseline
@@ -160,6 +163,15 @@ checkpoint selection.
 **Objective:** Harden the integrated workflow into a tested, reproducible, secure, accessible, performant, and reversible release candidate without expanding analytical scope.
 
 **What this phase must prove:** The complete system can reproduce its evidence, detect and communicate failures, preserve lineage, withstand expected defects, and roll back safely.
+
+**Current status:** P5O1-T01 / issue #574 has completed U01-U05. The
+487,893-byte Phase Four ZIP reconstructs byte-for-byte from a fresh
+remote-equal checkout; an isolated 75-distribution environment executes all
+119 current command routes; the explicit portable roster passes 711 tests;
+and a separate detached checkout reproduces the exact historical v0.54 wheel.
+One medium historical builder-identity omission remains visible with its exact
+setuptools 82.0.1 workaround. U06 is eligible but no candidate is yet frozen,
+accepted, versioned, tagged, or released.
 
 **Gate outcome:** accept a release candidate, accept with caveats, accept a baseline-first candidate, remediate, roll back, or stop release work.
 
