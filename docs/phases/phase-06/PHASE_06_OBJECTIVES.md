@@ -16,9 +16,15 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Proposed — blocked.**
+**Active — P6O1-T01 public-scope and rights freeze.**
 
-Phase Six depends on an accepted Phase Five release candidate, verified public claims, resolved licensing for every published artifact, exact in-repository version linkage, and a reversible verified release path.
+Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
+issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
+baseline-first public roster, claims, source rights, attributions, withheld
+material, canonical reviewer route, and pre-publication quality gates before
+any final presentation or package is built. GitHub Release, deployment,
+domain, access, ownership, public-sharing, publication, and external submission
+remain closed.
 
 ## Phase purpose
 

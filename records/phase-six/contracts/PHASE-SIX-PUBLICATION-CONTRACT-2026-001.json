@@ -1,0 +1,149 @@
+{
+  "contract_version": "burnlens-phase-six-publication-contract-v0.1.0",
+  "contract_id": "PHASE-SIX-PUBLICATION-CONTRACT-2026-001",
+  "milestone_id": "P6O1-T01",
+  "issue": 578,
+  "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+  "exact_base_commit": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+  "predecessor": {
+    "milestone": "P5O1-T01",
+    "merge_commit": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+    "tag": "v0.55.0-baseline-first-reliability-candidate",
+    "tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+    "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+    "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+    "candidate_run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+    "candidate_archive_bytes": 646513,
+    "candidate_archive_sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+  },
+  "frozen_route": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "phase_3b_or_second_experiment": false,
+    "canonical_public_run": "BL-2026-07-26-p4o1-t01-u07-package-r001"
+  },
+  "objective": "Build one coherent, reproducible, repository-owned baseline-first pre-publication candidate that unifies the accepted run, rejected-model result, visible failure evidence, reliability proof, source rights, citations, reviewer journey, and limitations without changing analytical evidence or public-sharing state.",
+  "units": [
+    {
+      "unit_id": "P6O1-T01-U01",
+      "name": "public-scope-claims-rights-freeze",
+      "depends_on": [
+        "verified Phase Five lifecycle"
+      ],
+      "required_outputs": [
+        "source gate",
+        "public artifact inventory",
+        "scope decision",
+        "registry entry"
+      ],
+      "status": "passed-local-pre-publication-only"
+    },
+    {
+      "unit_id": "P6O1-T01-U02",
+      "name": "reviewer-narrative-and-repository-journey",
+      "depends_on": [
+        "P6O1-T01-U01 pass"
+      ],
+      "status": "eligible"
+    },
+    {
+      "unit_id": "P6O1-T01-U03",
+      "name": "repository-owned-portfolio-surface",
+      "depends_on": [
+        "P6O1-T01-U02 pass"
+      ],
+      "status": "blocked-by-dependency"
+    },
+    {
+      "unit_id": "P6O1-T01-U04",
+      "name": "demo-presentation-citation-maintenance",
+      "depends_on": [
+        "P6O1-T01-U02 pass",
+        "P6O1-T01-U03 pass"
+      ],
+      "status": "blocked-by-dependency"
+    },
+    {
+      "unit_id": "P6O1-T01-U05",
+      "name": "deterministic-pre-publication-package",
+      "depends_on": [
+        "P6O1-T01-U01 pass",
+        "P6O1-T01-U03 pass",
+        "P6O1-T01-U04 pass"
+      ],
+      "status": "blocked-by-dependency"
+    },
+    {
+      "unit_id": "P6O1-T01-U06",
+      "name": "real-rendered-and-recipient-qa",
+      "depends_on": [
+        "P6O1-T01-U05 pass"
+      ],
+      "status": "blocked-by-dependency"
+    },
+    {
+      "unit_id": "P6O1-T01-U07",
+      "name": "release-audit-and-publication-gate-decision",
+      "depends_on": [
+        "P6O1-T01-U01 pass",
+        "P6O1-T01-U06 pass"
+      ],
+      "status": "blocked-by-dependency"
+    }
+  ],
+  "allowed_path_families": [
+    "burnlens/phase_six_*.py",
+    "tests/test_phase_six_*.py",
+    "records/phase-six/**",
+    "samples/runs/phase-six/**",
+    "portfolio/phase-six/**",
+    "portfolio/README.md",
+    "README.md",
+    "CHANGELOG.md",
+    "docs/case-study/**",
+    "docs/devlog/**",
+    "docs/phases/phase-06/**",
+    "docs/phase-six/**",
+    "docs/roadmap/BURNLENS_BUILD_ROADMAP.md",
+    "docs/status/**",
+    "records/prompt-build-log/**",
+    "records/PROMPT_BUILD_LOG.md",
+    ".gitattributes",
+    "pyproject.toml"
+  ],
+  "immutable_inputs": [
+    "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/**",
+    "portfolio/phase-four/BURNLENS-WARD-CREEK-RBR-RUN-2026-001.zip",
+    "samples/runs/phase-five/burnlens-phase-five-baseline-first-candidate-v0.1.1/**",
+    "portfolio/phase-five/BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002.zip",
+    "records/phase-five/release-candidates/PHASE-FIVE-RELEASE-CANDIDATE-RECORD-2026-001.json",
+    "records/phase-five/release-audits/RELEASE-AUDIT-2026-001.json"
+  ],
+  "required_gates": [
+    "exact predecessor and candidate identity",
+    "public artifact roster and no-silent-inclusion",
+    "source rights and attribution",
+    "claims and use boundaries",
+    "privacy, secret, and private-path exclusion",
+    "deterministic no-overwrite package",
+    "safe extraction",
+    "offline local operation",
+    "desktop, 390x844 narrow, and keyboard-first render",
+    "all local links and assets",
+    "fresh-checkout reconstruction",
+    "rollback",
+    "public action stop gate"
+  ],
+  "stop_conditions": [
+    "unresolved source license, terms, attribution, or redistribution status",
+    "change to core promise, target user, CV task, phase outcome, or use boundary",
+    "change to dataset, split, labels, source evidence, threshold, RBR result, U-Net weights, evaluation, rejection, AOI, or geospatial products",
+    "credential, token, private response, retrieval locator, provider archive, or ignored custody path would enter a tracked or public artifact",
+    "GitHub Release, deployment, domain, access, ownership, public-sharing, or external-submission action would begin",
+    "official, operational, emergency-ready, field-validated, endorsed, adoption, risk-reduction, or generalization claim",
+    "an output cannot be verified"
+  ],
+  "milestone_exit": "One coherent pre-publication candidate or a reproducible remediate, narrower, or stop disposition. Public release actions remain outside this contract."
+}

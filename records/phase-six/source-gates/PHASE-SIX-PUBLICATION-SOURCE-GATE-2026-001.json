@@ -1,0 +1,453 @@
+{
+  "contract_version": "source-gate/v1",
+  "assessment_id": "PHASE-SIX-PUBLICATION-SOURCE-GATE-2026-001",
+  "assessed_at": "2026-07-27T03:22:00Z",
+  "intended_use": {
+    "summary": "Assess whether exact already-controlled Copernicus Sentinel-derived analytical outputs, USGS The National Map derivatives, and one exact MTBS-derived Ward Creek boundary may be assembled with repository-owned material into a local pre-publication portfolio candidate. No native provider archive, live service, deployment, or publication is in scope.",
+    "planned_actions": [
+      "metadata review",
+      "assemble an attributed repository-local pre-publication candidate from exact controlled derivatives",
+      "write public-scope and citation records"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "copernicus-sentinel-ward-creek-derived-evidence",
+      "name": "Copernicus Sentinel-2 data underlying the exact Ward Creek analytical derivatives",
+      "locator": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://dataspace.copernicus.eu/terms-and-conditions",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 official CDSE terms distinguish Copernicus Sentinel data from other portal content and link the controlling Sentinel legal notice."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-038.md",
+              "note": "Exact Ward Creek Sentinel-2A pre/post UUIDs, SAFE identities, platform, tile, orbit, baseline, provider sizes, hashes, and dates are frozen."
+            }
+          ],
+          "note": "Only the exact 2019 Ward Creek products already bound into the verified dataset and analytical chain are relevant."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 official European Commission legal notice identifies the governing use conditions for Copernicus Sentinel data."
+            }
+          ],
+          "note": "Authoritative for rights and attribution; BurnLens remains responsible for its own processing and claims."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://dataspace.copernicus.eu/terms-and-conditions",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "Current terms state worldwide portal availability, registered access for EO data, service best-effort availability, and fair-use constraints."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/terms/TERMS-2026-033.md",
+              "note": "The exact products are already in governed ignored custody; Phase Six requests no new provider access or archive."
+            }
+          ],
+          "note": "No authentication, download, quota use, or service dependency is required for the pre-publication candidate."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "The official notice permits lawful reproduction, distribution, communication, adaptation, modification, combination, and combinations of those uses; modified public derivatives require the specified modified-data notice."
+            }
+          ],
+          "note": "Every public Ward Creek analytical derivative must say 'Contains modified Copernicus Sentinel data 2019.' No portal page imagery or other portal material is included."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-038.md",
+              "note": "The source record binds exact products through acquisition, local inspection, dataset construction, split, baseline, model, and Phase Four run lineage."
+            }
+          ],
+          "note": "Phase Six may reuse only the exact tracked derivatives and their existing manifests."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+              "note": "The 66-file Phase Four package binds every analytical, geospatial, context, overlay, interface, and record byte; the exact ZIP is 487,893 bytes at SHA-256 91308a2f...."
+            }
+          ],
+          "note": "The immutable Phase Four and Phase Five package validators remain the integrity authority."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-five/releases/PHASE-FIVE-RELEASE-VERIFICATION-2026-001.json",
+              "note": "The exact baseline-first candidate, rendered application, deterministic wheel, fresh-main regression, and rollback pass without changing analytical evidence."
+            }
+          ],
+          "note": "Fit only for the bounded experimental portfolio narrative, not generalization, current-fire monitoring, or operational use."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-five/assurance/PHASE-FIVE-ASSURANCE-RECORD-2026-001.json",
+              "note": "The exact candidate chain passes secret, private-path, public-artifact privacy, safe-archive, and no-external-request checks."
+            }
+          ],
+          "note": "Provider archives, credentials, account data, URLs, and ignored custody remain excluded."
+        }
+      ]
+    },
+    {
+      "source_id": "usgs-national-map-ward-creek-context-derivatives",
+      "name": "USGS The National Map road, selected facility, and generalized BLM context derivatives",
+      "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 official USGS page identifies The National Map services and downloaded data."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+              "note": "The exact NTD, NSD, and NBD service/layer identities and permitted bounded roles are frozen."
+            }
+          ],
+          "note": "Only the exact clipped derivatives already in the accepted Phase Four package are relevant."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 official USGS policy identifies USGS-produced data and information as U.S. public domain while warning that marked third-party material can differ."
+            }
+          ],
+          "note": "Authoritative for bounded context, not routing, facility availability, legal boundaries, access, ownership, or safety."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "The current official FAQ states map services and downloaded data are free and public domain."
+            },
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+              "note": "The exact bounded derivatives are already controlled inside the immutable package; no live service access is required."
+            }
+          ],
+          "note": "Phase Six performs no new ArcGIS request or bulk download."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/faqs/what-are-terms-uselicensing-map-services-and-data-national-map?page=1",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "USGS states The National Map services and downloaded data are public domain with no use restriction and requests originating-agency acknowledgement."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "USGS requests proper credit and restricts use of its trademarked identifier; no USGS logo is included."
+            }
+          ],
+          "note": "Use the acknowledgement 'Map services and data available from U.S. Geological Survey, National Geospatial Program.' Do not imply endorsement."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+              "note": "Exact source layers, bounded queries, native roles, response custody, clipping, reprojection, and derivative restrictions are recorded."
+            }
+          ],
+          "note": "The final surface must distinguish TNM context from BurnLens outputs."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+              "note": "Exact clipped road, facility, and BLM derivative bytes and SHA-256 identities are in the package manifest and checksums."
+            }
+          ],
+          "note": "No mutable service response substitutes for the accepted package bytes."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/WARNINGS.md",
+              "note": "The accepted package limits roads, facilities, and BLM geometry to descriptive planning context and states their operational, legal, and completeness limits."
+            }
+          ],
+          "note": "Fit only for the existing deterministic descriptive overlays."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-five/assurance/PHASE-FIVE-ASSURANCE-RECORD-2026-001.json",
+              "note": "The public package privacy and secret scan passes; the final candidate will retain only the exact already-published minimal attributes."
+            }
+          ],
+          "note": "No personal contacts, private properties, credentials, or live facility-status fields are added."
+        }
+      ]
+    },
+    {
+      "source_id": "mtbs-ward-creek-derived-boundary",
+      "name": "Monitoring Trends in Burn Severity Ward Creek burned-area boundary derivative",
+      "locator": "https://www.mtbs.gov/product-descriptions",
+      "criteria": [
+        {
+          "id": "identity",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/product-descriptions",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 current MTBS page defines the burned-area boundary and mask products."
+            },
+            {
+              "type": "static",
+              "locator": "records/phase-two/sources/SOURCE-2026-038.md",
+              "note": "Exact event OR4494912090120190812 and MTBS map 10016337 identities are frozen."
+            }
+          ],
+          "note": "Only the exact one-feature Ward Creek boundary derivative in the accepted package is relevant."
+        },
+        {
+          "id": "authority",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/mapping-methods",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "HTTP 200 official MTBS methods page describes the interagency remotely sensed, analyst-interpreted mapping process and its limitations."
+            }
+          ],
+          "note": "Official-program reference context, not independent ground truth, field validation, incident perimeter, or endorsement."
+        },
+        {
+          "id": "access",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+              "note": "The exact derived boundary is already in the accepted immutable package; Phase Six requests no provider archive or delivery route."
+            }
+          ],
+          "note": "Native delivery bytes, message, recipient, and retrieval URL remain excluded."
+        },
+        {
+          "id": "rights",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+              "note": "Exact embedded MTBS metadata records no use restriction except reasonable acknowledgement and permits the attributed derived boundary representation while withholding the native archive."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "Current USGS policy treats USGS-produced data as public domain, requests credit, and warns that marked third-party materials may differ."
+            }
+          ],
+          "note": "Credit Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service; do not imply endorsement or redistribute the native archive."
+        },
+        {
+          "id": "provenance",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-four/sources/PHASE-FOUR-CONTEXT-SOURCE-GATE-2026-001.json",
+              "note": "The gate binds the exact archive, four shapefile members, one valid polygon, reprojection, web serialization, and Phase Four package path."
+            }
+          ],
+          "note": "The public surface must preserve map ID, event ID, source role, and derivative status."
+        },
+        {
+          "id": "integrity",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/PACKAGE-MANIFEST.json",
+              "note": "The exact derived GeoJSON is 267,090 bytes at SHA-256 b9c9ebc1... and remains bound by package checksums."
+            }
+          ],
+          "note": "No source substitution or geometry repair is permitted."
+        },
+        {
+          "id": "fitness",
+          "required": true,
+          "requires_live": true,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/product-descriptions",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "Current MTBS product documentation defines the boundary as fire extent detected with pre/post imagery and NBR-family change products and distinguishes cloud, shadow, snow, and anomaly masks."
+            },
+            {
+              "type": "live",
+              "locator": "https://www.mtbs.gov/mapping-methods",
+              "observed_at": "2026-07-27T03:18:50.432Z",
+              "note": "Current methods preserve analyst interpretation, variable ecological thresholds, limited field data, and change over program history."
+            }
+          ],
+          "note": "Fit only for bounded official-program comparison context and the visible WCP-002 disagreement."
+        },
+        {
+          "id": "privacy-security",
+          "required": true,
+          "requires_live": false,
+          "status": "pass",
+          "evidence": [
+            {
+              "type": "static",
+              "locator": "records/phase-five/assurance/PHASE-FIVE-ASSURANCE-RECORD-2026-001.json",
+              "note": "Private delivery and retrieval details are absent from the accepted package and public privacy scan."
+            }
+          ],
+          "note": "No private email, message identifier, recipient, or provider route may be published."
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "status": "ready",
+    "blocking_reasons": [],
+    "live_verification_pending": [],
+    "approved_actions": [
+      "metadata review",
+      "assemble an attributed repository-local pre-publication candidate from exact controlled derivatives",
+      "write public-scope and citation records"
+    ]
+  },
+  "write_boundary": {
+    "permitted_without_further_authorization": [
+      "read exact tracked metadata and controlled derivatives",
+      "write source, attribution, citation, and public-scope records",
+      "assemble a repository-local pre-publication candidate from explicitly permitted tracked assets",
+      "validate exact local rendered and package outputs"
+    ],
+    "requires_explicit_authorization": [
+      "authenticate or accept changed terms",
+      "download a provider archive or native bulk dataset",
+      "publish or redistribute any artifact",
+      "create a GitHub Release",
+      "deploy or change a domain",
+      "change access, ownership, or public-sharing status",
+      "submit externally"
+    ]
+  }
+}
