@@ -12,8 +12,8 @@ from typing import Any
 import zipfile
 
 
-CANDIDATE_VERSION = "burnlens-phase-five-baseline-first-candidate-v0.1.0"
-CANDIDATE_ID = "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-001"
+CANDIDATE_VERSION = "burnlens-phase-five-baseline-first-candidate-v0.1.1"
+CANDIDATE_ID = "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002"
 ARCHIVE_NAME = f"{CANDIDATE_ID}.zip"
 RECEIPT_NAME = f"{CANDIDATE_ID}-RECEIPT.json"
 SOFTWARE_VERSION = "0.55.0"
