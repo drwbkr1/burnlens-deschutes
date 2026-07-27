@@ -96,6 +96,10 @@ repack the accepted package byte-identically.
 ## Deeper review
 
 - Start with the [Phase Six reviewer journey](../docs/phase-six/REVIEWER_JOURNEY.md).
+- Open the [Phase Six presentation](phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html).
+- Follow the [fixed demo script](../docs/phase-six/DEMO_SCRIPT.md).
+- Read the [claim matrix](../docs/phase-six/CLAIM_MATRIX.md) and
+  [citation guidance](phase-six/CITATION.md).
 - Read the [full case study](../docs/case-study/BURNLENS_CASE_STUDY.md).
 - Open the [Phase Four interface](../samples/runs/phase-four/burnlens-geoint-evidence-interface-v0.1.0/PHASE-FOUR-EVIDENCE-INTERFACE-2026-001.html).
 - Read the [immutable package report](../samples/runs/phase-four/burnlens-ward-creek-rbr-run-v0.1.0/REPORT.md).

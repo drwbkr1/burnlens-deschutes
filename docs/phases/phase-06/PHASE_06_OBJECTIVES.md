@@ -16,7 +16,7 @@ Publish one coherent, traceable portfolio release whose demo, case study, reposi
 
 ## Current status
 
-**Active — P6O1-T01 U01-U03 passed; U04 supporting materials next.**
+**Active — P6O1-T01 U01-U04 passed; U05 package next.**
 
 Verified BurnLens 0.55.0 satisfies the Phase Five predecessor gate. P6O1-T01 /
 issue #578 begins from exact lifecycle merge `3097ac5...` and freezes the
@@ -27,7 +27,9 @@ and rights gate. U02 supplies exact 30-second, 2-minute, and 5-minute reviewer
 routes across architecture, method, evaluation, limitations, reproduction,
 known issues, citation, and lineage. U03 ships the deterministic real-rendered
 repository-owned baseline-first surface. U04 owns demo, presentation, citation,
-and maintenance materials. GitHub Release, deployment,
+and maintenance materials. U04 now passes with a fixed demo, seven-slide
+rendered presentation, claim matrix, pre-publication citation, and
+maintenance/archive posture. U05 owns deterministic packaging. GitHub Release, deployment,
 domain, access, ownership, public-sharing, publication, and external submission
 remain closed.
 

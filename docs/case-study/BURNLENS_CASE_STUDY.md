@@ -50,9 +50,11 @@ repository-local public roster, current claims, official-source attribution,
 withheld private/provider material, and public-action stop gates. U02 adds the
 current reviewer narrative around immutable evidence. U03 renders that
 narrative as one deterministic, static, repository-owned baseline-first
-surface. It does not rewrite the Phase Four or Phase Five packages and creates
-no GitHub Release, deployment, access change, public sharing, publication, or
-external submission.
+surface. U04 adds a fixed demo, seven-slide static presentation, exact claim
+matrix, pre-publication citation metadata, and maintenance/archive posture. It
+does not rewrite the Phase Four or Phase Five packages and creates no GitHub
+Release, deployment, access change, public sharing, publication, or external
+submission.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

@@ -1,0 +1,63 @@
+{
+  "citation_metadata_version": "burnlens-phase-six-citation-v0.1.0",
+  "citation_id": "BURNLENS-PHASE-SIX-CITATION-2026-001",
+  "title": "BurnLens Deschutes: a baseline-first CV-to-GEOINT wildfire evidence workflow",
+  "creator": {
+    "repository_owner": "drwbkr1",
+    "development_role": "owner-governed project with Codex-assisted implementation"
+  },
+  "repository": "https://github.com/drwbkr1/burnlens-deschutes",
+  "license": {
+    "burnlens_code_and_documentation": "MIT",
+    "third_party_data": "separate source-specific notices and terms apply"
+  },
+  "citation_state": "local-pre-publication-candidate",
+  "public_release_version": null,
+  "doi": null,
+  "verified_software_baseline": {
+    "version": "0.55.0",
+    "tag": "v0.55.0-baseline-first-reliability-candidate",
+    "merge_commit": "7066dcd9cef555a6df0716dc7568205e7d6d395e"
+  },
+  "phase_six_milestone": {
+    "issue": 578,
+    "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
+    "exact_base_commit": "3097ac5308107ce75e4a517238f54cc4d15c346a",
+    "candidate_commit": null
+  },
+  "accepted_run": {
+    "run_id": "BL-2026-07-26-p4o1-t01-u07-package-r001",
+    "package_id": "BURNLENS-WARD-CREEK-RBR-RUN-2026-001",
+    "archive_bytes": 487893,
+    "archive_sha256": "91308a2ffe7095d89843edeb1634d6b1e972eb65bf1f67f38f1da0279102d84e"
+  },
+  "analytical_identity": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "aoi_version": "aoi-darlene3-model-v0.2.0",
+    "label_schema_version": "burn-scar-binary-region-label-schema-v0.3.0",
+    "prototype_label_set_version": "owner-approved-prototype-region-labels-v0.5.0",
+    "dataset_version": "burnlens-dataset-v0.1.0",
+    "split_version": "burnlens-whole-event-split-v0.1.0",
+    "baseline_version": "burnlens-baseline-v0.1.0",
+    "model_version": "burnlens-unet-binary-v0.1.0",
+    "model_status": "valid-trained-evaluated-rejected",
+    "model_outperformed_rbr": false
+  },
+  "required_attribution": [
+    "Contains modified Copernicus Sentinel data 2019.",
+    "Map services and data available from U.S. Geological Survey, National Geospatial Program.",
+    "Monitoring Trends in Burn Severity (MTBS), U.S. Geological Survey and USDA Forest Service."
+  ],
+  "required_warning": "Experimental BurnLens CV output. Not official wildfire information. Not emergency guidance. Not evacuation, routing, tactical, or incident-command support. Official sources govern.",
+  "citation_text_pre_publication": "BurnLens Deschutes (local pre-publication candidate), baseline-primary-with-rejected-model-diagnostic route, repository drwbkr1/burnlens-deschutes, verified software baseline 0.55.0, accepted run BL-2026-07-26-p4o1-t01-u07-package-r001. No DOI or public release has been assigned.",
+  "prohibited_implications": [
+    "official status",
+    "agency endorsement",
+    "field validation",
+    "operational readiness",
+    "emergency suitability",
+    "model superiority",
+    "generalization",
+    "public release before authorization"
+  ]
+}

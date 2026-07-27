@@ -35,9 +35,12 @@ P6O1-T01 / issue #578 is active from exact lifecycle merge `3097ac5...`.
 U01 passes the local public-scope, claims, rights, attribution, withholding, and
 privacy gates. U02 supplies one current reviewer narrative around immutable
 Phase Four and Phase Five evidence. U03 adds the deterministic, real-rendered,
-repository-owned baseline-first surface without changing analytical bytes. No
-GitHub Release, deployment, access change, public-sharing change, publication,
-or external submission exists.
+repository-owned baseline-first surface without changing analytical bytes.
+U04 adds the fixed [demo script](docs/phase-six/DEMO_SCRIPT.md), rendered
+[seven-slide presentation](portfolio/phase-six/BURNLENS-BASELINE-FIRST-PRESENTATION-2026-001.html),
+[claim matrix](docs/phase-six/CLAIM_MATRIX.md), citation, and maintenance/archive
+posture. No GitHub Release, deployment, access change, public-sharing change,
+publication, or external submission exists.
 
 The exact Ward Creek response was locked before reveal. Both owner decisions are yes, but each region advances only after every non-owner gate re-passes. [Open the aggregate intake report](samples/labels/review/ward-creek/phase-two/intake/WARD-CREEK-OWNER-RESPONSE-INTAKE-2026-001.html) or [read the decision](docs/phase-two/objective-four/WARD_CREEK_OWNER_RESPONSE_INTAKE_DECISION.md). `owner-approved-prototype-region-labels-v0.5.0` contains 14 balanced regions, 325 core pixels / 13.00 ha, and 599 excluded unknown-ring pixels across seven events. The six-event dataset candidate uses 12 of those regions after excluding Darlene. It is owner-approved prototype evidence, not ground truth or a dataset.
 
