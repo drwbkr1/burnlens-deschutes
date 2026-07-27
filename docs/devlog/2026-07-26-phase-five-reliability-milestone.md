@@ -8,9 +8,10 @@ trained U-Net remains a rejected diagnostic that did not outperform RBR, and
 WCP-002 remains visible false-positive-risk evidence.
 
 U06 accepts corrected candidate
-`burnlens-phase-five-baseline-first-candidate-v0.1.1` pending the milestone
-PR, fresh-main verification, and annotated tag. This is a pre-merge candidate,
-not yet a verified release.
+`burnlens-phase-five-baseline-first-candidate-v0.1.1`. PR #575 subsequently
+merges the exact reviewed head, fresh-main verification passes, and the remote
+annotated tag peels to the merge. Phase Five is now verified; lifecycle details
+are recorded in `docs/devlog/2026-07-27-v055-lifecycle-sync.md`.
 
 ## Evidence completed
 
@@ -80,19 +81,19 @@ exact rule; both failed tests pass, and the complete clean suite then passes
 789 tests, one expected skip, 422 existing warnings, and 86 subtests in
 665.38 seconds.
 
-The controlling record is 11,367 bytes / SHA-256 `76c2c129...`; the release
-audit is 7,005 bytes / SHA-256 `9f47ecbd...`. They retain the superseded r001
+The immutable pre-merge controlling record is 11,367 bytes / SHA-256
+`76c2c129...`; its pre-merge release audit is 7,005 bytes / SHA-256
+`9f47ecbd...`. They retain the superseded r001
 candidate, all pre-remediation and dirty-checkout failures, the wrapper
-timeout, and the LF failure. U06's disposition is
-`accepted-baseline-first-candidate-pending-milestone-verification`. Phase Six
-is recommended only after the single milestone PR, reviewed merge, fresh-main
-verification, and annotated tag pass.
+timeout, and the LF failure. The later lifecycle audit verifies the single
+milestone PR, reviewed merge, fresh-main suite, exact wheel, and annotated tag.
+Phase Six is eligible for issue-backed activation.
 
 ## Boundaries
 
 No analytical byte, dataset, split, label, model decision, threshold,
 deployment, access, ownership, public-sharing status, or external submission
-changed. No Phase 3B or second experiment was created. Phase Six remains
-blocked until the remaining milestone verification gates pass. The candidate
-has zero open critical/high findings and two visible medium findings with
-impact and workaround; rollback is verified.
+changed. No Phase 3B or second experiment was created. The candidate has zero
+open critical/high findings and two visible medium findings with impact and
+workaround; rollback is verified. No GitHub Release, deployment, access,
+ownership, public-sharing, or external-submission change occurred.

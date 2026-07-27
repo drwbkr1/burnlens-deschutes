@@ -28,9 +28,13 @@ Two medium issues remain deliberately visible: the current setuptools advisory
 under the bounded ZIP-only route, and the historical omission of the
 setuptools 82.0.1 builder identity needed for exact v0.54 wheel reconstruction.
 Both have explicit impact and workaround; no critical or high finding remains
-open. The candidate is baseline-first, keeps the U-Net rejected, and is pending
-milestone merge, fresh-main verification, and annotated tag. It is not the
-final Phase Six publication or a claim of operational readiness.
+open. PR #575 merges exact reviewed head `3eb2d0a...` through `7066dcd...`
+with exact tree equality. Fresh main passes 789 tests with one expected skip
+and 86 subtests, reproduces the exact 1,207,948-byte wheel at `1d0e862c...`,
+and remote annotated tag object `3307214...` peels to the merge. Phase Five is
+accepted and verified. The candidate is baseline-first, keeps the U-Net
+rejected, and is not the final Phase Six publication or a claim of operational
+readiness.
 
 ![BurnLens official fallback source gate](../../samples/reference/phase-two/OFFICIAL-FALLBACK-SOURCE-GATE-2026-001.png)
 

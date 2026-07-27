@@ -502,6 +502,8 @@ portfolio/phase-four/**/*.zip -text
 # P5O1-T01 candidate evidence and release package.
 docs/phases/phase-05/*.md text eol=lf
 docs/devlog/2026-07-26-phase-five-reliability-milestone.md text eol=lf
+records/prompt-build-log/2026-07-27-v055-lifecycle-sync.md text eol=lf
+docs/devlog/2026-07-27-v055-lifecycle-sync.md text eol=lf
 samples/runs/phase-five/**/*.json text eol=lf
 samples/runs/phase-five/**/*.html text eol=lf
 samples/runs/phase-five/**/*.md text eol=lf

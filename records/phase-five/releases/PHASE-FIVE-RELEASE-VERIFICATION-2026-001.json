@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "record_id": "PHASE-FIVE-RELEASE-VERIFICATION-2026-001",
+  "verified_at_utc": "2026-07-27T03:00:08Z",
+  "milestone_id": "P5O1-T01",
+  "lifecycle_checkpoint_id": "P5O1-T01-SYNC",
+  "milestone_issue": 574,
+  "milestone_pull_request": 575,
+  "lifecycle_issue": 576,
+  "reviewed_head": "3eb2d0a58bd7236c28df4ba50058afcedd581003",
+  "reviewed_tree": "cf7c6e184e402fd2183e40d7da2ba3b2cb95a23a",
+  "merge_commit": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+  "merge_tree": "cf7c6e184e402fd2183e40d7da2ba3b2cb95a23a",
+  "reviewed_tree_equals_merge_tree": true,
+  "tag": "v0.55.0-baseline-first-reliability-candidate",
+  "tag_object": "33072144767e70bfa538079bda3be6f798477a9f",
+  "tag_peeled_target": "7066dcd9cef555a6df0716dc7568205e7d6d395e",
+  "run_id": "BL-2026-07-26-p5o1-t01-u06-release-candidate-r002",
+  "candidate_id": "BURNLENS-PHASE-FIVE-BASELINE-FIRST-CANDIDATE-2026-002",
+  "candidate_version": "burnlens-phase-five-baseline-first-candidate-v0.1.1",
+  "candidate_archive": {
+    "bytes": 646513,
+    "sha256": "691c4bddb6754d74ca858a0b801fb21e62103032184425d2ba1b1648df1b0c26"
+  },
+  "fresh_main": {
+    "tests_passed": 789,
+    "tests_skipped": 1,
+    "warnings": 422,
+    "subtests_passed": 86,
+    "duration_seconds": 656.97,
+    "stdout_log_bytes": 9639,
+    "stdout_log_sha256": "afa98909452a64b963ad6f934ab89cdf81a4c81984180d3abe5c0d0b01518a5f",
+    "candidate_directory_validator": "pass",
+    "candidate_archive_validator": "pass",
+    "focused_checkout_and_candidate_tests": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "fresh_main_wheel": {
+    "bytes": 1207948,
+    "sha256": "1d0e862c9c7d30f148352ebcc45f22a9deb2e010dd61ba63a02db50f700177f6",
+    "matches_reviewed_candidate": true,
+    "source_date_epoch": 1785117520,
+    "python_hash_seed": 0
+  },
+  "analytical_disposition": {
+    "route": "baseline-primary-with-rejected-model-diagnostic",
+    "accepted_method": "burnlens-baseline-v0.1.0",
+    "rejected_model": "burnlens-unet-binary-v0.1.0",
+    "model_outperformed_rbr": false,
+    "phase_3b_or_second_experiment": false
+  },
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "publication_state": {
+    "github_release": null,
+    "deployment": null,
+    "access_change": null,
+    "ownership_change": null,
+    "public_sharing_change": null,
+    "external_submission": null
+  },
+  "disposition": "phase-five-accepted-and-verified-phase-six-eligible"
+}
