@@ -184,6 +184,15 @@ class PhaseSixReleaseCandidateTests(unittest.TestCase):
         self.assertNotIn(b"c:\\projects", serialized)
         self.assertNotIn(b"owner-review-surface-2026-001-response", serialized)
 
+    def test_checksum_roster_has_checkout_stable_lf_bytes(self) -> None:
+        attributes = (ROOT / ".gitattributes").read_text(
+            encoding="utf-8"
+        ).splitlines()
+        self.assertIn(
+            "samples/runs/phase-six/**/*.sha256 text eol=lf",
+            attributes,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

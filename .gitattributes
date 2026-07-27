@@ -539,3 +539,4 @@ tests/test_phase_six_*.py text eol=lf
 samples/runs/phase-six/**/*.json text eol=lf
 samples/runs/phase-six/**/*.html text eol=lf
 samples/runs/phase-six/**/*.md text eol=lf
+samples/runs/phase-six/**/*.sha256 text eol=lf
