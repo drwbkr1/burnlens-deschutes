@@ -57,8 +57,9 @@ does not rewrite the Phase Four or Phase Five packages. U05 builds the
 `5a314b69...`. U06 passes the actual extracted desktop, narrow, keyboard,
 interaction, all-file HTTP, fresh-checkout, and rollback routes. U07 finds and
 retains one nested-checksum checkout failure, repairs it at `cd383a3...`, and
-then passes exact fresh-clone reconstruction, 801 tests, two byte-identical
-0.56.0 wheels at `ac9db790...`, a 75-distribution install, and all 122 command
+then passes exact fresh-clone reconstruction and frozen-snapshot replay. Final
+risk-bearing checkpoint `bc9646c...` passes 802 tests, two byte-identical
+0.56.0 wheels at `3efc07da...`, a 75-distribution install, and all 122 command
 routes. The resulting disposition is `ready-for-owner-publication-gate`, not
 “published.” No GitHub Release, deployment, access change, public sharing,
 publication, or external submission exists.

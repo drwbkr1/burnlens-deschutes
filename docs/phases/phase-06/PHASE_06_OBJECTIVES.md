@@ -31,7 +31,7 @@ rendered presentation, claim matrix, pre-publication citation, and
 maintenance/archive posture. U05 builds corrected package v0.1.1 / r002. U06
 passes the real recipient desktop, narrow, keyboard, HTTP, fresh-checkout, and
 rollback routes. U07 retains and repairs one nested-checksum checkout defect,
-then passes the corrected 801-test suite, exact fresh-clone reconstruction,
+then passes the final 802-test suite, exact fresh-clone reconstruction,
 deterministic wheel, isolated install, all 122 command routes, release-truth,
 rights, claims, and privacy gates. Its disposition is
 `ready-for-owner-publication-gate`. The one coherent milestone PR and

@@ -50,7 +50,7 @@ HTTP-served package files, exact fresh-checkout reconstruction, and predecessor
 rollback. Fresh-checkout r001 retains its Windows long-path failure; corrected
 r002 reproduces the exact ZIP from a clean short-path checkout. U07 then
 retains and repairs a nested checksum LF checkout defect, passes a fresh-clone
-exact rebuild, the 801-test corrected-head suite, two byte-identical 0.56.0
+exact rebuild, the 802-test risk-bearing suite, two byte-identical 0.56.0
 wheels, a 75-distribution isolated install, and all 122 command routes. Its
 structured decision is `ready-for-owner-publication-gate`. No
 GitHub Release, deployment, access change, public-sharing change, publication,

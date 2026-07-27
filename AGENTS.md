@@ -73,9 +73,9 @@ and verified through the approved
 
 P6O1-T01 / issue #578 is the active checkpoint from exact base
 `3097ac5308107ce75e4a517238f54cc4d15c346a`. U01-U07 pass locally.
-Corrected U07 checkpoint `cd383a3791d7bb39db076c60fa9c6b5f2993f1c0`
-retains and repairs the first fresh-clone checksum-checkout failure, then
-passes the exact package rebuild, 801 tests, deterministic 0.56.0 wheel,
+Risk-bearing U07 checkpoint `bc9646c578c199fee51ec0fd5c2db41a97d2aca9`
+retains and repairs the fresh-clone checksum and living-document reconstruction
+failures, then passes the exact package rebuild, 802 tests, deterministic 0.56.0 wheel,
 isolated 75-distribution install, 122 command routes, rendered recipient,
 rights, claims, privacy, rollback, and live-repository gates. Its disposition
 is `ready-for-owner-publication-gate`.

@@ -35,13 +35,13 @@ All notable BurnLens checkpoints are recorded here. Technical evidence remains i
   in the top-level and nested Phase Six checksum rosters. Add one recursive LF
   checkout contract plus regression coverage at `cd383a3...`.
 - Pass the corrected short-path clone, both package validators, and an exact
-  fresh-clone ZIP rebuild. The clean corrected head passes 801 tests, one
+  fresh-clone ZIP rebuild. The final risk-bearing head passes 802 tests, one
   expected skip, 422 existing warnings, and 86 subtests.
 - Preserve exact reconstruction after the living case study advances by
   sourcing the U05 package roster from its tracked frozen snapshot. A
   post-closeout rebuild remains byte-identical at `5a314b69...`.
-- Build two byte-identical 1,228,628-byte BurnLens 0.56.0 wheels at SHA-256
-  `ac9db790...`; install the exact wheel into a locked 75-distribution
+- Build two byte-identical 1,228,670-byte BurnLens 0.56.0 wheels at SHA-256
+  `3efc07da...`; install the exact wheel into a locked 75-distribution
   environment and pass all 122 command routes.
 - Complete the structured U07 release audit with disposition
   `ready-for-owner-publication-gate`.

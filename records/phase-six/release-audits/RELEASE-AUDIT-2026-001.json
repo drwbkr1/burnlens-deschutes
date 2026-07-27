@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "release_id": "RELEASE-AUDIT-2026-001",
-  "recorded_at_utc": "2026-07-27T15:58:08.319Z",
+  "recorded_at_utc": "2026-07-27T16:22:45.379Z",
   "milestone_id": "P6O1-T01",
   "unit_id": "P6O1-T01-U07",
   "run_id": "BL-2026-07-27-p6o1-t01-u07-release-audit-r001",
@@ -19,7 +19,7 @@
     "version": "0.56.0",
     "package_id": "BURNLENS-PHASE-SIX-BASELINE-FIRST-CANDIDATE-2026-002",
     "package_version": "burnlens-phase-six-baseline-first-candidate-v0.1.1",
-    "commit": "cd383a3791d7bb39db076c60fa9c6b5f2993f1c0",
+    "commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
     "package_source_commit": "575fcb542e356dd77c33daf74a285469ea83dbc4",
     "branch": "codex/p6o1-t01-baseline-first-publication-candidate",
     "exact_base": "3097ac5308107ce75e4a517238f54cc4d15c346a",
@@ -34,9 +34,9 @@
     "model_outperformed_rbr": false
   },
   "live_truth": {
-    "verified_at_utc": "2026-07-27T15:58:08.319Z",
+    "verified_at_utc": "2026-07-27T16:22:45.379Z",
     "repository": "drwbkr1/burnlens-deschutes",
-    "remote_commit": "cd383a3791d7bb39db076c60fa9c6b5f2993f1c0",
+    "remote_commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
     "origin_main": "3097ac5308107ce75e4a517238f54cc4d15c346a",
     "open_pull_request_for_branch": false,
     "candidate_tag": null,
@@ -62,11 +62,11 @@
     },
     "wheel": {
       "filename": "burnlens_deschutes-0.56.0-py3-none-any.whl",
-      "bytes": 1228628,
-      "sha256": "ac9db790f8cacbb55e783ca62e77b185ce1e219631493390158d00364db4344d",
+      "bytes": 1228670,
+      "sha256": "3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926",
       "builds": 2,
       "byte_identical": true,
-      "source_date_epoch": 1785130788
+      "source_date_epoch": 1785168448
     }
   },
   "unit_records": [
@@ -154,8 +154,8 @@
       "status": "pass",
       "method": "Run the full repository suite at the clean corrected pushed head, then parse every changed JSON file, compile Python sources, check the dependency lock, and run diff hygiene.",
       "evidence": [
-        "Clean cd383a3791d7bb39db076c60fa9c6b5f2993f1c0 passes 801 tests, one expected skip, 422 existing NumPy deprecation warnings, and 86 subtests in 799.53 seconds.",
-        "All 60 changed JSON files parse; Python compilation, uv lock check, dependency integrity, and git diff check pass.",
+        "Clean bc9646c578c199fee51ec0fd5c2db41a97d2aca9 passes 802 tests, one expected skip, 422 existing NumPy deprecation warnings, and 86 subtests in 651.56 seconds.",
+        "All 61 changed JSON files parse; Python compilation, uv lock check, dependency integrity, and git diff check pass.",
         "The earlier clean 7c0a706 head passed 800 tests before the added checkout regression test."
       ]
     },
@@ -166,7 +166,7 @@
       "status": "pass",
       "method": "Build two fixed-epoch wheels, install the exact wheel into a fresh locked CPython 3.12.10 environment, import outside the repository, check dependencies, and invoke every registered console route with --help.",
       "evidence": [
-        "Two 1,228,628-byte 0.56.0 wheels are byte-identical at SHA-256 ac9db790f8cacbb55e783ca62e77b185ce1e219631493390158d00364db4344d.",
+        "Two 1,228,670-byte 0.56.0 wheels are byte-identical at SHA-256 3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926.",
         "The isolated import resolves only to site-packages and reports version 0.56.0.",
         "All 75 installed distributions are compatible and all 122 registered commands return successful help."
       ]
@@ -191,7 +191,7 @@
       "status": "pass",
       "method": "Read live issue, branch, main, PR, GitHub Release, remote tag, and predecessor rollback state after pushing the corrected checkpoint.",
       "evidence": [
-        "Issue #578 is open and the remote branch equals corrected local head cd383a3791d7bb39db076c60fa9c6b5f2993f1c0.",
+        "Issue #578 is open and the remote branch equals risk-bearing local head bc9646c578c199fee51ec0fd5c2db41a97d2aca9.",
         "No pull request, 0.56.0 tag, GitHub Release, deployment, public-sharing change, or external submission exists.",
         "Remote predecessor annotated tag object 33072144767e70bfa538079bda3be6f798477a9f peels exactly to 7066dcd9cef555a6df0716dc7568205e7d6d395e and its exact archive validates."
       ]
@@ -275,6 +275,37 @@
       "post_closeout_rebuild_sha256": "5a314b69e6efb64b6058d21cd33b74bef4d14c07f2bd0457eb8eea43c935ab2e",
       "matches_u05_archive": true,
       "scientific_or_candidate_archive_bytes_changed": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-WHEEL-WRAPPER-R001",
+      "disposition": "retained-invalid-tooling-attempt",
+      "result": "PowerShell rejected an ambiguous variable interpolation in the failure-report string before either final wheel build began.",
+      "wheel_created": false,
+      "application_or_package_defect_inferred": false
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-INSTALL-PROBE-R002",
+      "disposition": "retained-invalid-probe",
+      "result": "The first import probe ran from the repository root and resolved the source tree; wheel equality, dependency health, and 122 installed command routes still passed.",
+      "next_gate": "repeat the import from an ignored directory outside the source package path"
+    },
+    {
+      "attempt_id": "P6O1-T01-U07-FINAL-R003",
+      "commit": "bc9646c578c199fee51ec0fd5c2db41a97d2aca9",
+      "disposition": "pass",
+      "full_tests_passed": 802,
+      "tests_skipped": 1,
+      "warnings": 422,
+      "subtests_passed": 86,
+      "duration_seconds": 651.56,
+      "wheel_bytes": 1228670,
+      "wheel_sha256": "3efc07dae8b2d853fceecef7078b89d1b483b85e135af63dfea172fa0b561926",
+      "source_date_epoch": 1785168448,
+      "wheel_builds": 2,
+      "isolated_distributions": 75,
+      "site_packages_only_import": true,
+      "registered_commands": 122,
+      "command_help_passed": 122
     }
   ],
   "open_findings": {
